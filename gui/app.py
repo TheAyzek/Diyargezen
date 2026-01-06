@@ -9,7 +9,12 @@ from PySide6.QtWidgets import *
 from PySide6.QtCore import *
 from PySide6.QtGui import *
 
-APP_BASE_DIR = Path(__file__).resolve().parents[1]
+# PyInstaller için çalıştırma dizini: frozen ise _MEIPASS, değilse repo kökü
+if getattr(sys, "frozen", False) and hasattr(sys, "_MEIPASS"):
+    APP_BASE_DIR = Path(sys._MEIPASS)
+else:
+    APP_BASE_DIR = Path(__file__).resolve().parents[1]
+
 if str(APP_BASE_DIR) not in sys.path:
     sys.path.insert(0, str(APP_BASE_DIR))
 
