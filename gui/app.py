@@ -1982,15 +1982,14 @@ class DndPage(QWidget):
     def _load_dnd_data(self) -> dict:
         """D&D verisini yükle - cache ile optimize edilmiş"""
         if not hasattr(self.__class__, '_data_cache'):
-            base_dir = Path(__file__).resolve().parents[1]
-            data_file = base_dir / "data" / "dnd_data.json"
+            data_file = APP_BASE_DIR / "data" / "dnd_data.json"
             with open(data_file, 'r', encoding='utf-8') as f:
                 self.__class__._data_cache = json.load(f)
         return self.__class__._data_cache
 
     def _load_logo(self) -> QPixmap:
         """Logoyu yükle - küçültülmüş boyutta"""
-        logo_path = Path(__file__).resolve().parents[1] / "Gemini_Generated_Image_c510m9c510m9c510.png"
+        logo_path = APP_BASE_DIR / "Gemini_Generated_Image_c510m9c510m9c510.png"
         if logo_path.exists():
             pixmap = QPixmap(str(logo_path))
             # Logoyu küçült (maksimum 150x150, aspect ratio korunarak)
