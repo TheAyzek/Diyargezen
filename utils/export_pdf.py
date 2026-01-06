@@ -2,6 +2,8 @@ from reportlab.lib.pagesizes import letter, A4
 from reportlab.pdfgen import canvas
 from reportlab.lib.units import inch
 from reportlab.lib.utils import ImageReader
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 from pathlib import Path
 from typing import Optional
 import base64
@@ -83,6 +85,30 @@ def _draw_character_image(c: canvas.Canvas, character: dict, width: float, heigh
         pass
 
 
+def _register_turkish_font() -> str:
+    """
+    Türkçe karakter desteği için bir TrueType fontu kayıt eder.
+    Öncelikle projedeki bir font dosyasına, ardından Windows/Linux
+    sistem fontlarına bakar. Bulamazsa ReportLab'ın varsayılanını döner.
+    """
+    font_candidates = [
+        Path(__file__).resolve().parents[1] / "assets" / "fonts" / "DejaVuSans.ttf",
+        Path("C:/Windows/Fonts/arial.ttf"),
+        Path("C:/Windows/Fonts/arialuni.ttf"),
+        Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"),
+    ]
+    registered_name = "DiyargezenSans"
+    for candidate in font_candidates:
+        try:
+            if candidate.exists():
+                pdfmetrics.registerFont(TTFont(registered_name, str(candidate)))
+                return registered_name
+        except Exception:
+            # Bir font başarısız olursa diğerini dene
+            continue
+    return "Helvetica"  # Fallback (Unicode kısıtlı olabilir)
+
+
 def _create_canvas(output_path: Path, page_size: str, background_path: Optional[Path] = None):
     size = A4 if page_size.upper() == "A4" else letter
     c = canvas.Canvas(str(output_path), pagesize=size)
@@ -96,22 +122,23 @@ def _create_canvas(output_path: Path, page_size: str, background_path: Optional[
         except Exception:
             pass
 
+    # Küçük logo sağ üst köşede (fazla yer kaplamasın)
     logo_path = Path(__file__).resolve().parents[1] / "Gemini_Generated_Image_c510m9c510m9c510.png"
     if logo_path.exists():
         try:
             from PIL import Image
-            # Orijinal logo boyutunu al
             img = Image.open(str(logo_path))
             logo_width, logo_height = img.size
-            
-            # Logo için uygun konum (sol üst köşe)
-            logo_x = 50
-            logo_y = height - logo_height - 50  # Üstten 50px aşağı
-            
+            max_size = 0.6 * inch  # Çok küçük logo
+            scale = min(max_size / logo_width, max_size / logo_height, 1.0)
+            display_w = logo_width * scale
+            display_h = logo_height * scale
+            logo_x = width - display_w - (0.35 * inch)  # sağ üstten küçük boşluk
+            logo_y = height - display_h - (0.35 * inch)
             logo = ImageReader(str(logo_path))
-            c.drawImage(logo, logo_x, logo_y, width=logo_width, height=logo_height, preserveAspectRatio=True)
-        except Exception as e:
-            print(f"Logo eklenemedi: {e}")
+            c.drawImage(logo, logo_x, logo_y, width=display_w, height=display_h, preserveAspectRatio=True, mask='auto')
+        except Exception:
+            pass
     return c, width, height
 
 
@@ -124,13 +151,15 @@ def export_dnd_character_pdf(character: dict, output_path: Path, background_path
     """
     c, width, height = _create_canvas(output_path, page_size, background_path)
 
+    font_name = _register_turkish_font()
+
     margin = 0.5 * inch
     x = margin
     y = height - margin
 
     def write_line(text: str, step: float = 14):
         nonlocal y
-        c.setFont("Helvetica", 10)
+        c.setFont(font_name, 10)
         c.drawString(x, y, text)
         y -= step
 
@@ -138,16 +167,16 @@ def export_dnd_character_pdf(character: dict, output_path: Path, background_path
     _draw_character_image(c, character, width, height, x_offset=0.5, y_offset=0.5)
     
     # Başlık
-    c.setFont("Helvetica-Bold", 16)
+    c.setFont(font_name, 16)
     c.drawString(x, y, "🎲 Diyargezer - D&D 5e Karakter Kağıdı")
     y -= 25
     
     # Karakter adı
-    c.setFont("Helvetica-Bold", 14)
+    c.setFont(font_name, 14)
     c.drawString(x, y, f"Karakter: {character.get('name', 'İsimsiz Karakter')}")
     y -= 20
     
-    c.setFont("Helvetica", 10)
+    c.setFont(font_name, 10)
     write_line(f"Sistem: {character.get('system', '')}")
     write_line(f"Irk: {character.get('race', '')}")
     write_line(f"Sınıf: {character.get('class', '')}")

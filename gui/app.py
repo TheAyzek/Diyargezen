@@ -3082,7 +3082,8 @@ class DndPage(QWidget):
                 name_label = QLabel("İsim:")
                 name_edit = QLineEdit()
                 name_edit.setMaximumHeight(32)  # Daha kompakt görünüm
-                name_edit.setPlaceholderText("Karakter ismini girin...")
+                # Bu adım sadece bilgiyi göstermek için; tekrar giriş istememek adına placeholder kaldırıldı
+                name_edit.setPlaceholderText("")
                 # Karakter bilgilerini yükle
                 if hasattr(self, 'current_character') and self.current_character:
                     name_edit.setText(self.current_character.get('name', ''))
@@ -3095,7 +3096,11 @@ class DndPage(QWidget):
                             self.character_name_edit.setText(text)
                         if hasattr(self, 'current_character') and self.current_character:
                             self.current_character['name'] = text
+                            self.current_character['system'] = self.SYSTEM_NAME
                             self._auto_save_character()
+                    # Bu adımda kullanıcıdan ikinci kez giriş istenmesin diye alanı sadece-okunur yapıyoruz
+                    name_edit.setReadOnly(True)
+                    # Yine de programatik güncelleme için sinyal bağlı kalabilir
                     name_edit.textChanged.connect(update_name)
                 name_class_layout.addWidget(name_label)
                 name_class_layout.addWidget(name_edit)
@@ -3121,7 +3126,10 @@ class DndPage(QWidget):
                             self.class_cb.setCurrentText(text)
                         if hasattr(self, 'current_character') and self.current_character:
                             self.current_character['class'] = text
+                            self.current_character['system'] = self.SYSTEM_NAME
                             self._auto_save_character()
+                    # Kullanıcıdan tekrar seçim istememek için combobox'ı pasif hale getiriyoruz
+                    class_combo.setEnabled(False)
                     class_combo.currentTextChanged.connect(update_class)
                 class_combo.setMaximumHeight(32)  # Daha kompakt görünüm
                 name_class_layout.addWidget(class_label)
