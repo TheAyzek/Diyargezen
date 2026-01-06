@@ -29,7 +29,9 @@ def build_exe():
     
     # PyInstaller komutu
     cmd = [
-        "pyinstaller",
+        sys.executable,
+        "-m",
+        "PyInstaller",
         "--name=Diyargezen",
         "--onefile",  # Tek dosya olarak
         "--windowed",  # Konsol penceresi gösterme (GUI için)
