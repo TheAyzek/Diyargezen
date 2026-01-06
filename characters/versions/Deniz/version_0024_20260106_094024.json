@@ -1,0 +1,32 @@
+{
+  "version_number": 24,
+  "timestamp": "2026-01-06T09:40:24.436200",
+  "character_name": "Deniz",
+  "character_file_path": "C:\\Users\\dnssh\\OneDrive\\Belgeler\\Diyargezen\\characters\\Deniz_karakter.json",
+  "change_note": "",
+  "character_data": {
+    "_file_path": "C:\\Users\\dnssh\\OneDrive\\Belgeler\\Diyargezen\\characters\\Deniz_karakter.json",
+    "abilities": {
+      "Charisma": 9,
+      "Constitution": 9,
+      "Dexterity": 9,
+      "Intelligence": 12,
+      "Strength": 14,
+      "Wisdom": 9
+    },
+    "appearance": {},
+    "background": "Acolyte",
+    "class": "Wizard",
+    "equipment": [],
+    "feats": [],
+    "languages": [],
+    "level": 1,
+    "name": "Deniz",
+    "personality": {},
+    "physical": {},
+    "race": "Human",
+    "skills": {},
+    "spells": {},
+    "system": "DND5E"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "backgrounds": {
+    "Acolyte": {
+      "skill_proficiencies": ["Insight", "Religion"],
+      "feature": "Shelter of the Faithful"
+    },
+    "Folk Hero": {
+      "skill_proficiencies": ["Animal Handling", "Survival"],
+      "feature": "Rustic Hospitality"
+    },
+    "Noble": {
+      "skill_proficiencies": ["History", "Persuasion"],
+      "feature": "Position of Privilege"
+    }
+  }
+}
+
+

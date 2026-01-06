@@ -1,0 +1,31 @@
+{
+  "version_number": 3,
+  "timestamp": "2026-01-06T10:14:03.964220",
+  "character_name": "Ayz",
+  "character_file_path": "C:\\Users\\dnssh\\OneDrive\\Belgeler\\Diyargezen\\characters\\Ayz_karakter.json",
+  "change_note": "",
+  "character_data": {
+    "system": "DND5E",
+    "name": "Ayz",
+    "race": "Human",
+    "class": "Wizard",
+    "background": "Acolyte",
+    "level": 1,
+    "abilities": {
+      "Strength": 10,
+      "Dexterity": 9,
+      "Constitution": 9,
+      "Intelligence": 9,
+      "Wisdom": 9,
+      "Charisma": 9
+    },
+    "skills": {},
+    "equipment": [],
+    "spells": {},
+    "feats": [],
+    "languages": [],
+    "personality": {},
+    "physical": {},
+    "appearance": {}
+  }
+}

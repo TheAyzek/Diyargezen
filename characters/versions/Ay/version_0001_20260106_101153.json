@@ -1,0 +1,32 @@
+{
+  "version_number": 1,
+  "timestamp": "2026-01-06T10:11:53.284655",
+  "character_name": "Ay",
+  "character_file_path": "C:\\Users\\dnssh\\OneDrive\\Belgeler\\Diyargezen\\characters\\arty_karakter.json",
+  "change_note": "",
+  "character_data": {
+    "_file_path": "C:\\Users\\dnssh\\OneDrive\\Belgeler\\Diyargezen\\characters\\Deniz_karakter.json",
+    "abilities": {
+      "Charisma": 9,
+      "Constitution": 9,
+      "Dexterity": 9,
+      "Intelligence": 9,
+      "Strength": 9,
+      "Wisdom": 9
+    },
+    "appearance": {},
+    "background": "Acolyte",
+    "class": "Artificer",
+    "equipment": [],
+    "feats": [],
+    "languages": [],
+    "level": 1,
+    "name": "Ay",
+    "personality": {},
+    "physical": {},
+    "race": "Human",
+    "skills": {},
+    "spells": {},
+    "system": "DND5E"
+  }
+}

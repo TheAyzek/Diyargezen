@@ -1,0 +1,63 @@
+{
+  "version_number": 1,
+  "timestamp": "2025-11-26T14:43:24.948461",
+  "character_name": "asdfasdf",
+  "character_file_path": "C:\\Users\\dnssh\\OneDrive\\Belgeler\\Diyargezen\\characters\\asdfasdf_karakter.json",
+  "change_note": "",
+  "character_data": {
+    "name": "asdfasdf",
+    "race": "Aasimar",
+    "class": "Fighter",
+    "background": "Acolyte",
+    "level": 10,
+    "abilities": {
+      "Strength": 8,
+      "Dexterity": 8,
+      "Constitution": 8,
+      "Intelligence": 8,
+      "Wisdom": 8,
+      "Charisma": 8
+    },
+    "skills": {},
+    "equipment": [
+      {
+        "name": "Battleaxe",
+        "category": "Silah",
+        "weight": 4,
+        "cost": "10 gp",
+        "quantity": 1,
+        "damage": "1d8 slashing",
+        "properties": [
+          "Versatile"
+        ]
+      },
+      {
+        "name": "Arcane Focus, Orb",
+        "category": "Macera Eşyası",
+        "weight": 3,
+        "cost": "20 gp",
+        "quantity": 1,
+        "description": "Spellcasting focus for wizards"
+      },
+      {
+        "name": "Manual of Gainful Exercise",
+        "category": "Macera Eşyası",
+        "weight": 5,
+        "cost": "5,000 gp",
+        "quantity": 1,
+        "description": "Permanently increases Strength"
+      }
+    ],
+    "spells": {
+      "1st": [
+        "cantrips"
+      ]
+    },
+    "feats": [],
+    "languages": [],
+    "personality": {},
+    "physical": {},
+    "appearance": {},
+    "hp": 60
+  }
+}

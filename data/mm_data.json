@@ -1,0 +1,29 @@
+{
+  "power_levels": {
+    "PL8": { "attack_bonus_cap": 8, "effect_rank_cap": 10, "defense_cap": 8, "toughness_cap": 10 },
+    "PL10": { "attack_bonus_cap": 10, "effect_rank_cap": 10, "defense_cap": 10, "toughness_cap": 10 },
+    "PL12": { "attack_bonus_cap": 12, "effect_rank_cap": 12, "defense_cap": 12, "toughness_cap": 12 }
+  },
+  "abilities": [
+    "Strength", "Stamina", "Agility", "Dexterity", "Fighting", "Intellect", "Awareness", "Presence"
+  ],
+  "archetypes": {
+    "Blaster": {
+      "summary": "Menzilli enerji/saldırı uzmanı",
+      "suggested_powers": ["Energy Control", "Ranged Damage", "Flight"],
+      "suggested_advantages": ["Accurate Attack", "Power Attack"]
+    },
+    "Bruiser": {
+      "summary": "Yakın dövüş, yüksek dayanıklılık",
+      "suggested_powers": ["Enhanced Strength", "Protection", "Leaping"],
+      "suggested_advantages": ["Takedown", "Improved Smash"]
+    },
+    "Detective": {
+      "summary": "Zeka, beceri ve ipucu çözme",
+      "suggested_powers": ["Senses", "Comprehend", "Quickness (Mental)"],
+      "suggested_advantages": ["Assessment", "Well-Informed"]
+    }
+  }
+}
+
+

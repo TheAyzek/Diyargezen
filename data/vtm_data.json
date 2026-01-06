@@ -1,0 +1,28 @@
+{
+  "clans": {
+    "Brujah": {
+      "bane": "Öfke ve otoriteye karşı isyan tetikleyicileri",
+      "disciplines": ["Celerity", "Potence", "Presence"]
+    },
+    "Ventrue": {
+      "bane": "Seçici beslenme (özgül hedefler)",
+      "disciplines": ["Dominate", "Fortitude", "Presence"]
+    },
+    "Toreador": {
+      "bane": "Güzelliğe/aesthetiğe takıntı, dikkat dağınıklığı",
+      "disciplines": ["Auspex", "Celerity", "Presence"]
+    }
+  },
+  "attributes": {
+    "Physical": ["Strength", "Dexterity", "Stamina"],
+    "Social": ["Charisma", "Manipulation", "Composure"],
+    "Mental": ["Intelligence", "Wits", "Resolve"]
+  },
+  "skills": {
+    "Physical": ["Athletics", "Brawl", "Craft", "Drive", "Firearms", "Melee", "Larceny", "Stealth", "Survival"],
+    "Social": ["Animal Ken", "Etiquette", "Insight", "Intimidation", "Leadership", "Performance", "Persuasion", "Streetwise", "Subterfuge"],
+    "Mental": ["Academics", "Awareness", "Finance", "Investigation", "Medicine", "Occult", "Politics", "Science", "Technology"]
+  }
+}
+
+

@@ -1,0 +1,32 @@
+{
+  "version_number": 9,
+  "timestamp": "2026-01-06T09:39:10.367188",
+  "character_name": "Deniz",
+  "character_file_path": "C:\\Users\\dnssh\\OneDrive\\Belgeler\\Diyargezen\\characters\\arty_karakter.json",
+  "change_note": "",
+  "character_data": {
+    "_file_path": "C:\\Users\\dnssh\\OneDrive\\Belgeler\\Diyargezen\\characters\\Deniz_karakter.json",
+    "abilities": {
+      "Charisma": 8,
+      "Constitution": 8,
+      "Dexterity": 9,
+      "Intelligence": 8,
+      "Strength": 9,
+      "Wisdom": 8
+    },
+    "appearance": {},
+    "background": "Acolyte",
+    "class": "Artificer",
+    "equipment": [],
+    "feats": [],
+    "languages": [],
+    "level": 1,
+    "name": "Deniz",
+    "personality": {},
+    "physical": {},
+    "race": "Human",
+    "skills": {},
+    "spells": {},
+    "system": "DND5E"
+  }
+}

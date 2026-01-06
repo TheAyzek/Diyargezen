@@ -1,0 +1,31 @@
+{
+  "version_number": 4,
+  "timestamp": "2026-01-06T10:28:32.345296",
+  "character_name": "a",
+  "character_file_path": "C:\\Users\\dnssh\\OneDrive\\Belgeler\\Diyargezen\\characters\\arty_karakter.json",
+  "change_note": "",
+  "character_data": {
+    "system": "DND5E",
+    "name": "a",
+    "race": "Human",
+    "class": "Artificer",
+    "background": "Acolyte",
+    "level": 1,
+    "abilities": {
+      "Strength": 9,
+      "Dexterity": 9,
+      "Constitution": 9,
+      "Intelligence": 8,
+      "Wisdom": 8,
+      "Charisma": 8
+    },
+    "skills": {},
+    "equipment": [],
+    "spells": {},
+    "feats": [],
+    "languages": [],
+    "personality": {},
+    "physical": {},
+    "appearance": {}
+  }
+}

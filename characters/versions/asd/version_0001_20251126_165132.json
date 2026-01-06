@@ -1,0 +1,24 @@
+{
+  "version_number": 1,
+  "timestamp": "2025-11-26T16:51:32.578714",
+  "character_name": "asd",
+  "character_file_path": "C:\\Users\\dnssh\\OneDrive\\Belgeler\\Diyargezen\\characters\\asd_karakter.json",
+  "change_note": "",
+  "character_data": {
+    "system": "DND5E",
+    "name": "asd",
+    "race": "",
+    "class": "Artificer",
+    "background": "",
+    "level": 1,
+    "abilities": {},
+    "skills": {},
+    "equipment": [],
+    "spells": {},
+    "feats": [],
+    "languages": [],
+    "personality": {},
+    "physical": {},
+    "appearance": {}
+  }
+}

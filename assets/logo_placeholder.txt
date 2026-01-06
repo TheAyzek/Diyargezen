@@ -1,0 +1,16 @@
+# Diyargezer Logo Dosyası
+
+Bu klasöre "diyargezer_logo.png" adında logo dosyasını yerleştirin.
+
+Logo özellikleri:
+- Format: PNG
+- Boyut: 200x200 piksel (veya daha büyük)
+- Arka plan: Şeffaf veya koyu
+- İçerik: D&D temalı, altın renkli logo
+
+Logo otomatik olarak şu yerlere eklenecek:
+1. Uygulama penceresi ikonu
+2. Ana sayfa başlığı
+3. PDF çıktılarında
+
+Logo dosyası eklendikten sonra uygulama otomatik olarak logoyu tanıyacak.

@@ -1,0 +1,24 @@
+{
+  "version_number": 1,
+  "timestamp": "2025-11-26T21:49:59.923680",
+  "character_name": "arty",
+  "character_file_path": "C:\\Users\\dnssh\\OneDrive\\Belgeler\\Diyargezen\\characters\\arty_karakter.json",
+  "change_note": "",
+  "character_data": {
+    "system": "DND5E",
+    "name": "arty",
+    "race": "",
+    "class": "Artificer",
+    "background": "",
+    "level": 1,
+    "abilities": {},
+    "skills": {},
+    "equipment": [],
+    "spells": {},
+    "feats": [],
+    "languages": [],
+    "personality": {},
+    "physical": {},
+    "appearance": {}
+  }
+}
