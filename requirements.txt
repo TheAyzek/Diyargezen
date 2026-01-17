@@ -19,9 +19,38 @@ Pillow>=10.0.0
 # PDF parsing (kural kitabı için)
 PyPDF2>=3.0.0
 
+# Web scraping (Pathfinder 1e için)
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
 # NLP for advanced rule extraction (opsiyonel)
 # spaCy>=3.7.0
 # python -m spacy download en_core_web_sm
+
+# Development dependencies
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Build dependencies
+pyinstaller>=6.0.0
+
+# Development dependencies
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Build dependencies
+pyinstaller>=6.0.0
+
+# Development dependencies
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Build dependencies
+pyinstaller>=6.0.0
 
 # Development dependencies
 pytest>=7.0.0

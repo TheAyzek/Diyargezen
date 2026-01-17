@@ -115,6 +115,78 @@ def load_vtm_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
     return _get_or_load("vtm", _loader)
 
 
+def load_pathfinder_1e_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
+    """Pathfinder 1e verisini cache'li şekilde döndür."""
+    
+    if lazy:
+        if "pathfinder_1e" not in _LAZY_LOADERS:
+            def _loader() -> Dict[str, Any]:
+                data_path = base_dir / "data" / "pathfinder_1e_data.json"
+                return _load_json(data_path)
+            _LAZY_LOADERS["pathfinder_1e"] = LazyDataLoader(_loader)
+        return _LAZY_LOADERS["pathfinder_1e"].get()
+    
+    def _loader() -> Dict[str, Any]:
+        data_path = base_dir / "data" / "pathfinder_1e_data.json"
+        return _load_json(data_path)
+
+    return _get_or_load("pathfinder_1e", _loader)
+
+
+def clear_data_cache() -> None:
+    """Tüm data cache'lerini temizle"""
+    global _DATA_CACHE, _LAZY_LOADERS
+    _DATA_CACHE.clear()
+    for loader in _LAZY_LOADERS.values():
+        loader.clear()
+    _LAZY_LOADERS.clear()
+
+            _LAZY_LOADERS["pathfinder_1e"] = LazyDataLoader(_loader)
+        return _LAZY_LOADERS["pathfinder_1e"].get()
+    
+    def _loader() -> Dict[str, Any]:
+        data_path = base_dir / "data" / "pathfinder_1e_data.json"
+        return _load_json(data_path)
+
+    return _get_or_load("pathfinder_1e", _loader)
+
+
+def clear_data_cache() -> None:
+    """Tüm data cache'lerini temizle"""
+    global _DATA_CACHE, _LAZY_LOADERS
+    _DATA_CACHE.clear()
+    for loader in _LAZY_LOADERS.values():
+        loader.clear()
+    _LAZY_LOADERS.clear()
+
+            _LAZY_LOADERS["pathfinder_1e"] = LazyDataLoader(_loader)
+        return _LAZY_LOADERS["pathfinder_1e"].get()
+    
+    def _loader() -> Dict[str, Any]:
+        data_path = base_dir / "data" / "pathfinder_1e_data.json"
+        return _load_json(data_path)
+
+    return _get_or_load("pathfinder_1e", _loader)
+
+
+def clear_data_cache() -> None:
+    """Tüm data cache'lerini temizle"""
+    global _DATA_CACHE, _LAZY_LOADERS
+    _DATA_CACHE.clear()
+    for loader in _LAZY_LOADERS.values():
+        loader.clear()
+    _LAZY_LOADERS.clear()
+
+            _LAZY_LOADERS["pathfinder_1e"] = LazyDataLoader(_loader)
+        return _LAZY_LOADERS["pathfinder_1e"].get()
+    
+    def _loader() -> Dict[str, Any]:
+        data_path = base_dir / "data" / "pathfinder_1e_data.json"
+        return _load_json(data_path)
+
+    return _get_or_load("pathfinder_1e", _loader)
+
+
 def clear_data_cache() -> None:
     """Tüm data cache'lerini temizle"""
     global _DATA_CACHE, _LAZY_LOADERS

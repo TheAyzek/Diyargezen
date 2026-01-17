@@ -1,11 +1,15 @@
 from reportlab.lib.pagesizes import letter, A4
 from reportlab.pdfgen import canvas
-from reportlab.lib.units import inch
+from reportlab.lib.units import inch, cm
 from reportlab.lib.utils import ImageReader
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, KeepTogether
+from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
+from reportlab.lib import colors
+from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT, TA_JUSTIFY
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Dict, Any, List
 import base64
 from io import BytesIO
 
@@ -478,6 +482,105 @@ def export_vtm_character_pdf(character: dict, output_path: Path, background_path
     write(f"Chronicle: {character.get('chronicle', '-')}", 16)
     write(f"Concept: {character.get('concept', '-')}", 16)
     write("", 12)
+
+    write("Attributes:", 14, True)
+    for category, attrs in character.get("attributes", {}).items():
+        values = ", ".join(f"{attr} {score}" for attr, score in attrs.items())
+        write(f"  {category}: {values}")
+
+    write("", 12)
+    write("Skills:", 14, True)
+    for category, skills in character.get("skills", {}).items():
+        values = ", ".join(f"{skill} {score}" for skill, score in skills.items() if score)
+        if values:
+            write(f"  {category}: {values}")
+
+    disciplines = character.get("disciplines", [])
+    if disciplines:
+        write("", 12)
+        write("Disciplines:", 14, True)
+        write(", ".join(disciplines))
+
+    write("", 12)
+    write(f"Humanity: {character.get('humanity', 0)}  |  Health: {character.get('health', 0)}  |  Willpower: {character.get('willpower', 0)}")
+
+    notes = character.get("notes")
+    if notes:
+        write("", 12)
+        write("Notlar:", 14, True)
+        for line in notes.splitlines():
+            write(f"  {line}")
+
+    c.showPage()
+    c.save()
+
+
+
+    write("Attributes:", 14, True)
+    for category, attrs in character.get("attributes", {}).items():
+        values = ", ".join(f"{attr} {score}" for attr, score in attrs.items())
+        write(f"  {category}: {values}")
+
+    write("", 12)
+    write("Skills:", 14, True)
+    for category, skills in character.get("skills", {}).items():
+        values = ", ".join(f"{skill} {score}" for skill, score in skills.items() if score)
+        if values:
+            write(f"  {category}: {values}")
+
+    disciplines = character.get("disciplines", [])
+    if disciplines:
+        write("", 12)
+        write("Disciplines:", 14, True)
+        write(", ".join(disciplines))
+
+    write("", 12)
+    write(f"Humanity: {character.get('humanity', 0)}  |  Health: {character.get('health', 0)}  |  Willpower: {character.get('willpower', 0)}")
+
+    notes = character.get("notes")
+    if notes:
+        write("", 12)
+        write("Notlar:", 14, True)
+        for line in notes.splitlines():
+            write(f"  {line}")
+
+    c.showPage()
+    c.save()
+
+
+
+    write("Attributes:", 14, True)
+    for category, attrs in character.get("attributes", {}).items():
+        values = ", ".join(f"{attr} {score}" for attr, score in attrs.items())
+        write(f"  {category}: {values}")
+
+    write("", 12)
+    write("Skills:", 14, True)
+    for category, skills in character.get("skills", {}).items():
+        values = ", ".join(f"{skill} {score}" for skill, score in skills.items() if score)
+        if values:
+            write(f"  {category}: {values}")
+
+    disciplines = character.get("disciplines", [])
+    if disciplines:
+        write("", 12)
+        write("Disciplines:", 14, True)
+        write(", ".join(disciplines))
+
+    write("", 12)
+    write(f"Humanity: {character.get('humanity', 0)}  |  Health: {character.get('health', 0)}  |  Willpower: {character.get('willpower', 0)}")
+
+    notes = character.get("notes")
+    if notes:
+        write("", 12)
+        write("Notlar:", 14, True)
+        for line in notes.splitlines():
+            write(f"  {line}")
+
+    c.showPage()
+    c.save()
+
+
 
     write("Attributes:", 14, True)
     for category, attrs in character.get("attributes", {}).items():

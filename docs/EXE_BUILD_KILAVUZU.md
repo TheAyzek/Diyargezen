@@ -213,3 +213,5 @@ pyinstaller --clean Diyargezen.spec
 **Başarılar! 🚀**
 
 
+
+

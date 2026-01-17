@@ -133,3 +133,5 @@ Proje belgedeki gereksinimleri **tamamen karşılıyor** ve ayrıca şu ek özel
 **Sonuç**: Proje belgedeki gereksinimleri **%100 karşılıyor** ve ek özelliklerle zenginleştirilmiş durumda. ✅
 
 
+
+
