@@ -20,25 +20,38 @@ def show_main_menu():
     print()
     print("Hangi sistem için karakter oluşturmak istersiniz?")
     print()
-    print("1. Dungeons & Dragons 5e")
-    print("2. Pathfinder 1e")
-    print("3. Mutants & Masterminds")
-    print("4. Vampire: The Masquerade")
-    print("5. Çıkış")
+    print("1. GUI Arayüzü (Tüm Sistemler)")
+    print("2. Dungeons & Dragons 5e")
+    print("3. Pathfinder 1e")
+    print("4. Mutants & Masterminds")
+    print("5. Vampire: The Masquerade")
+    print("6. Çıkış")
     print()
 
 def get_user_choice():
     """Kullanıcı seçimini al"""
     while True:
         try:
-            choice = input("Seçiminizi yapın (1-5): ").strip()
-            if choice in ['1', '2', '3', '4', '5']:
+            choice = input("Seçiminizi yapın (1-6): ").strip()
+            if choice in ['1', '2', '3', '4', '5', '6']:
                 return choice
             else:
-                print("Geçersiz seçim! Lütfen 1-5 arası bir sayı girin.")
+                print("Geçersiz seçim! Lütfen 1-6 arası bir sayı girin.")
         except KeyboardInterrupt:
             print("\nProgram kapatılıyor...")
             sys.exit(0)
+
+def launch_gui_system():
+    """GUI Arayüzünü başlat - Tüm Sistemler"""
+    print("\nGUI Arayüzü başlatılıyor... Lütfen bekleyin.")
+    try:
+        from gui_new import main as gui_main
+        gui_main()
+    except ImportError as e:
+        print(f"GUI başlatılamadı: {e}")
+        print("PySide6 kurulu olduğundan emin olun: pip install PySide6")
+    except Exception as e:
+        print(f"GUI hatası: {e}")
 
 def launch_dnd_system():
     """D&D sistemini başlat - Sadece GUI"""
@@ -131,14 +144,16 @@ def main():
             choice = get_user_choice()
             
             if choice == '1':
-                launch_dnd_system()
+                launch_gui_system()
             elif choice == '2':
-                launch_pathfinder_system()
+                launch_dnd_system()
             elif choice == '3':
-                launch_mm_system()
+                launch_pathfinder_system()
             elif choice == '4':
-                launch_vtm_system()
+                launch_mm_system()
             elif choice == '5':
+                launch_vtm_system()
+            elif choice == '6':
                 print("\nHoşça kalın! Maceralarınızda başarılar!")
                 break
             
