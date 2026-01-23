@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 GUI Özellikleri Koruma Kontrol Scripti
 
@@ -10,7 +11,12 @@ Kullanım: python verify_gui_features.py
 
 import json
 import sys
+import os
 from pathlib import Path
+
+# Unicode support for Windows
+if os.name == 'nt':
+    os.environ['PYTHONIOENCODING'] = 'utf-8'
 
 # Workspace'e ait yollar
 WORKSPACE_ROOT = Path(__file__).parent
@@ -36,7 +42,7 @@ def print_header(title):
 
 def verify_data_files():
     """Sistem verilerinin mevcut olup olmadığını kontrol et"""
-    print_header("📊 VERİ DOSYALARI")
+    print_header("[*] VERI DOSYALARI")
     
     checks = {
         "D&D 5e": DATA_DIR / "dnd_data.json",
