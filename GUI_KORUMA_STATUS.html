@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diyargezer GUI Koruma - Durum Paneli</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h2 {
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card-icon {
+            font-size: 1.5em;
+        }
+        
+        .systems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .system {
+            background: #f5f5f5;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .system h3 {
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .system-icon {
+            font-size: 1.2em;
+        }
+        
+        .system-status {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features-list li {
+            padding: 8px 0;
+            color: #555;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .features-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .features-list li:before {
+            content: "✓ ";
+            color: #4CAF50;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .files-section {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .file-item {
+            background: #f5f5f5;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .file-name {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .file-desc {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .recent-commits {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .commit-item {
+            background: #f5f5f5;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+            font-size: 0.95em;
+            color: #333;
+        }
+        
+        .commit-hash {
+            color: #667eea;
+            font-family: monospace;
+            font-weight: bold;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left-color: #ffc107 !important;
+            color: #856404;
+        }
+        
+        .success {
+            background: #d4edda;
+            border-left-color: #28a745 !important;
+            color: #155724;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding: 20px;
+        }
+        
+        .timestamp {
+            color: white;
+            opacity: 0.8;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .systems-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🛡️ Diyargezer GUI Koruma</h1>
+            <p>Sistem-Spesifik Kurallar - Durum Paneli</p>
+            <div class="status-badge">✅ TÜM SİSTEMLER KORUNUYOR</div>
+        </div>
+        
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Sistem</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">25</div>
+                <div class="stat-label">Kritik Özellik</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">5.6 MB</div>
+                <div class="stat-label">Veri Boyutu</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">4/4</div>
+                <div class="stat-label">Kontrol Geçti</div>
+            </div>
+        </div>
+        
+        <!-- Systems Overview -->
+        <div class="card">
+            <h2><span class="card-icon">🎮</span> Sistem-Spesifik Özellikler</h2>
+            <div class="systems-grid">
+                <!-- D&D 5e -->
+                <div class="system">
+                    <h3><span class="system-icon">🐉</span> D&D 5e</h3>
+                    <ul class="features-list">
+                        <li>Point-Buy (27 puan)</li>
+                        <li>ASI Seçimi (4,8,12,16,20)</li>
+                        <li>Çok Sınıflılık</li>
+                        <li>1258+ Feat</li>
+                        <li>2469+ Büyü</li>
+                        <li>Spell Slots</li>
+                    </ul>
+                    <div class="system-status">
+                        <span>✅ Aktif</span>
+                        <span>15 Sınıf</span>
+                    </div>
+                </div>
+                
+                <!-- Pathfinder 1e -->
+                <div class="system">
+                    <h3><span class="system-icon">🧙</span> Pathfinder 1e</h3>
+                    <ul class="features-list">
+                        <li>77 Irk</li>
+                        <li>58 Sınıf</li>
+                        <li>421+ Feat</li>
+                        <li>Feat Per Level</li>
+                        <li>Prestige Classes</li>
+                        <li>Ability Progression</li>
+                    </ul>
+                    <div class="system-status">
+                        <span>✅ Aktif</span>
+                        <span>Normalize edildi</span>
+                    </div>
+                </div>
+                
+                <!-- M&M 3e -->
+                <div class="system">
+                    <h3><span class="system-icon">⚡</span> M&M 3e</h3>
+                    <ul class="features-list">
+                        <li>Power Points</li>
+                        <li>21+ Power Cat.</li>
+                        <li>Extra Selection</li>
+                        <li>Flaw Selection</li>
+                        <li>Power Levels</li>
+                        <li>Skill System</li>
+                    </ul>
+                    <div class="system-status">
+                        <span>✅ Aktif</span>
+                        <span>Modular</span>
+                    </div>
+                </div>
+                
+                <!-- VtM 5e -->
+                <div class="system">
+                    <h3><span class="system-icon">🧛</span> VtM 5e</h3>
+                    <ul class="features-list">
+                        <li>3 Klan</li>
+                        <li>Klan Mekanikler</li>
+                        <li>Disciplines</li>
+                        <li>Blood Resonance</li>
+                        <li>VtM Attributes</li>
+                        <li>Power System</li>
+                    </ul>
+                    <div class="system-status">
+                        <span>✅ Aktif</span>
+                        <span>Specialized</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Files Section -->
+        <div class="files-section">
+            <h2>📁 Koruma Dosyaları</h2>
+            
+            <div class="file-item">
+                <div class="file-name">📘 GUI_OZELLIKLER.md</div>
+                <div class="file-desc">Tüm sistem-spesifik kuralların detaylı teknik dokümantasyonu. Geliştirici referans rehberi.</div>
+            </div>
+            
+            <div class="file-item">
+                <div class="file-name">✅ GUI_KORUMA_KONTROL_LISTESI.md</div>
+                <div class="file-desc">Değişiklik öncesi kontrol listesi. Sistem-spesifik test prosedürleri.</div>
+            </div>
+            
+            <div class="file-item">
+                <div class="file-name">🔍 verify_gui_features.py</div>
+                <div class="file-desc">Otomatik doğrulama scripti. Tüm veri ve GUI bileşenlerini kontrol eder.</div>
+            </div>
+            
+            <div class="file-item">
+                <div class="file-name">📊 GUI_KORUMA_OZET_RAPORU.md</div>
+                <div class="file-desc">İcra özeti. Yapılan işler, sistem durumu, protokoller.</div>
+            </div>
+            
+            <div class="file-item">
+                <div class="file-name">🚀 DEVELOPER_QUICKSTART.md</div>
+                <div class="file-desc">Geliştirici hızlı başlangıç rehberi. Sık yapılan işlemler, sorun giderme.</div>
+            </div>
+            
+            <div class="file-item success">
+                <div class="file-name">🎮 gui/app.py</div>
+                <div class="file-desc">Ana GUI dosyası (10,319 satır). Sistem-spesifik kurallar kodlanmış. Restore: Commit 0634f35</div>
+            </div>
+        </div>
+        
+        <!-- Recent Commits -->
+        <div class="recent-commits">
+            <h2>📝 Son Commitler</h2>
+            
+            <div class="commit-item">
+                <span class="commit-hash">06bd9cd</span> - Docs: Geliştirici Hızlı Başlangıç Rehberi
+            </div>
+            
+            <div class="commit-item">
+                <span class="commit-hash">78a71c3</span> - Docs: GUI Koruma Özet Raporu ve Protokolleri
+            </div>
+            
+            <div class="commit-item">
+                <span class="commit-hash">150a489</span> - Feat: GUI Özellikleri Koruma Sistemini Kurdu
+            </div>
+            
+            <div class="commit-item success">
+                <span class="commit-hash">97bed9d</span> - Revert GUI: Restore original detailed GUI implementation
+            </div>
+            
+            <div class="commit-item">
+                <span class="commit-hash">d01fa73</span> - Update validation thresholds for Pathfinder classes
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>🛡️ Diyargezer GUI Koruma Sistemi</p>
+            <p class="timestamp">Son Güncelleme: 2026-01-23</p>
+            <p class="timestamp">Durum: ✅ TÜM SİSTEMLER KORUNUYOR</p>
+        </div>
+    </div>
+</body>
+</html>
