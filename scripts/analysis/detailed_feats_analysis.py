@@ -6,8 +6,6 @@ import sys
 import codecs
 import requests
 from bs4 import BeautifulSoup
-import re
-from urllib.parse import urljoin
 
 # UTF-8 encoding fix for Windows console
 if sys.platform == 'win32':

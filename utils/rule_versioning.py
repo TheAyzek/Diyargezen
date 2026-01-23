@@ -231,7 +231,7 @@ def format_version_info(version_meta: Dict[str, Any]) -> str:
     try:
         dt = datetime.fromisoformat(timestamp)
         formatted_time = dt.strftime("%Y-%m-%d %H:%M:%S")
-    except:
+    except Exception:
         formatted_time = timestamp
     
     if description:

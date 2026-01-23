@@ -39,7 +39,7 @@ def test_race_scraper():
         # JSON olarak kaydet
         with open("human_race_test.json", "w", encoding="utf-8") as f:
             json.dump(human_data, f, ensure_ascii=False, indent=2)
-        print(f"\n[OK] Test verisi kaydedildi: human_race_test.json")
+        print("\n[OK] Test verisi kaydedildi: human_race_test.json")
     else:
         print("[HATA] Human race verisi cekilemedi!")
     
@@ -61,7 +61,7 @@ def test_race_scraper():
         
         with open("elf_race_test.json", "w", encoding="utf-8") as f:
             json.dump(elf_data, f, ensure_ascii=False, indent=2)
-        print(f"\n[OK] Test verisi kaydedildi: elf_race_test.json")
+        print("\n[OK] Test verisi kaydedildi: elf_race_test.json")
     else:
         print("[HATA] Elf race verisi cekilemedi!")
 

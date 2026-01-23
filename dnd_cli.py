@@ -63,21 +63,7 @@ if __name__ == "__main__":
 
 
 
-from pathlib import Path
 
-from cli import CharacterContext, CharacterWizard
-from cli.steps import (
-    AbilityStep,
-    BackgroundStep,
-    ClassSkillsStep,
-    EquipmentStep,
-    IntroStep,
-    PersonalityStep,
-    RaceStep,
-    SpellsStep,
-    SummaryStep,
-)
-from utils.data_loader import load_dnd_data
 
 
 def build_wizard(base_dir: Path) -> CharacterWizard:
@@ -126,21 +112,7 @@ if __name__ == "__main__":
 
 
 
-from pathlib import Path
 
-from cli import CharacterContext, CharacterWizard
-from cli.steps import (
-    AbilityStep,
-    BackgroundStep,
-    ClassSkillsStep,
-    EquipmentStep,
-    IntroStep,
-    PersonalityStep,
-    RaceStep,
-    SpellsStep,
-    SummaryStep,
-)
-from utils.data_loader import load_dnd_data
 
 
 def build_wizard(base_dir: Path) -> CharacterWizard:
@@ -189,21 +161,7 @@ if __name__ == "__main__":
 
 
 
-from pathlib import Path
 
-from cli import CharacterContext, CharacterWizard
-from cli.steps import (
-    AbilityStep,
-    BackgroundStep,
-    ClassSkillsStep,
-    EquipmentStep,
-    IntroStep,
-    PersonalityStep,
-    RaceStep,
-    SpellsStep,
-    SummaryStep,
-)
-from utils.data_loader import load_dnd_data
 
 
 def build_wizard(base_dir: Path) -> CharacterWizard:

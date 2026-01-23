@@ -51,7 +51,7 @@ if main_content:
     
     # Başlıkları bul
     headers = main_content.find_all(['h2', 'h3', 'h4', 'h5'])
-    print(f"\n📋 İlk 20 Başlık:")
+    print("\n📋 İlk 20 Başlık:")
     for i, header in enumerate(headers[:20]):
         text = header.get_text(strip=True)
         if len(text) > 0 and len(text) < 100:

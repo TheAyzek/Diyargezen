@@ -11,7 +11,7 @@ with open(data_file, 'r', encoding='utf-8') as f:
 
 races = data.get('races', {})
 print(f"Toplam irk sayisi: {len(races)}")
-print(f"\nOrnek irklar:")
+print("\nOrnek irklar:")
 print("-" * 60)
 
 for i, (name, race) in enumerate(list(races.items())[:10]):

@@ -30,7 +30,7 @@ def main():
         progress = cache_data.get('progress', 'N/A')
         scraped_at = cache_data.get('scraped_at', 'N/A')
         
-        print(f"\n📦 Cache Durumu:")
+        print("\n📦 Cache Durumu:")
         print(f"  ✅ Çekilen feat sayısı: {total_feats}")
         print(f"  📊 İlerleme: {progress}")
         print(f"  ⏰ Son güncelleme: {scraped_at}")
@@ -42,7 +42,7 @@ def main():
                 dnd_data = json.load(f)
             
             feats_in_data = len(dnd_data.get('feats', {}))
-            print(f"\n📋 dnd_data.json Durumu:")
+            print("\n📋 dnd_data.json Durumu:")
             print(f"  ✅ Toplam feat: {feats_in_data}")
     else:
         print("\n⚠️  Cache dosyası henüz oluşturulmadı.")
@@ -57,7 +57,7 @@ def main():
             for line in lines[-10:]:
                 print(f"    {line.rstrip()}")
     else:
-        print(f"\n⚠️  Log dosyası henüz oluşturulmadı.")
+        print("\n⚠️  Log dosyası henüz oluşturulmadı.")
     
     print("\n" + "=" * 70)
 

@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 import json
 
-project_root = Path(__file__).resolve().parents[1]
+project_root = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(project_root))
 
 from utils.pathfinder_scraper import PathfinderScraper, _merge_category_data
@@ -81,7 +81,7 @@ def scrape_and_merge_spells(force_refresh: bool = False, max_spells: int = 2000)
     print("\n" + "=" * 70)
     print("BIRLESTIRME ISTATISTIKLERI")
     print("=" * 70)
-    print(f"\nBuyuler:")
+    print("\nBuyuler:")
     print(f"  - Archives of Nethys: {len(spells_aon)}")
     print(f"  - d20pfsrd.com: {len(spells_d20)}")
     print(f"  - Birlestirilmis: {len(merged_spells)}")

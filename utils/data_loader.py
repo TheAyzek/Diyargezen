@@ -1,6 +1,5 @@
-import json
 from pathlib import Path
-from typing import Dict, Any, Callable, Optional
+from typing import Dict, Any, Callable
 from utils.performance import cached_load_json, LazyDataLoader
 
 _DATA_CACHE: Dict[str, Dict[str, Any]] = {}
@@ -22,22 +21,13 @@ def load_dnd_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
     """
     D&D verisini yükler. Ana dosya: data/dnd_data.json
     Ardından data/backgrounds/*.json içindeki tüm arka planları birleştirir.
-    
-    Args:
-        base_dir: Proje ana dizini
-        lazy: Lazy loading kullanılsın mı? (sadece gerektiğinde yükle)
-    
-    Returns:
-        D&D verisi
     """
     if lazy:
-        # Lazy loading kullan
         if "dnd" not in _LAZY_LOADERS:
             def _loader() -> Dict[str, Any]:
                 data_path = base_dir / "data" / "dnd_data.json"
                 data = _load_json(data_path)
 
-                # Background uzantıları
                 backgrounds_dir = base_dir / "data" / "backgrounds"
                 merged_backgrounds: Dict[str, Any] = dict(data.get("backgrounds", {}))
                 if backgrounds_dir.exists():
@@ -47,21 +37,17 @@ def load_dnd_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
                             for name, payload in part.get("backgrounds", {}).items():
                                 merged_backgrounds[name] = payload
                         except Exception:
-                            # Bozuk dosyaları sessizce atla
                             continue
                 data["backgrounds"] = merged_backgrounds
                 return data
-            
+
             _LAZY_LOADERS["dnd"] = LazyDataLoader(_loader)
-        
         return _LAZY_LOADERS["dnd"].get()
-    
-    # Normal loading (cache ile)
+
     def _loader() -> Dict[str, Any]:
         data_path = base_dir / "data" / "dnd_data.json"
         data = _load_json(data_path)
 
-        # Background uzantıları
         backgrounds_dir = base_dir / "data" / "backgrounds"
         merged_backgrounds: Dict[str, Any] = dict(data.get("backgrounds", {}))
         if backgrounds_dir.exists():
@@ -71,7 +57,6 @@ def load_dnd_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
                     for name, payload in part.get("backgrounds", {}).items():
                         merged_backgrounds[name] = payload
                 except Exception:
-                    # Bozuk dosyaları sessizce atla
                     continue
         data["backgrounds"] = merged_backgrounds
         return data
@@ -81,7 +66,6 @@ def load_dnd_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
 
 def load_mm_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
     """M&M verisini cache'li şekilde döndür."""
-    
     if lazy:
         if "mm" not in _LAZY_LOADERS:
             def _loader() -> Dict[str, Any]:
@@ -89,7 +73,7 @@ def load_mm_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
                 return _load_json(data_path)
             _LAZY_LOADERS["mm"] = LazyDataLoader(_loader)
         return _LAZY_LOADERS["mm"].get()
-    
+
     def _loader() -> Dict[str, Any]:
         data_path = base_dir / "data" / "mm_data.json"
         return _load_json(data_path)
@@ -99,7 +83,6 @@ def load_mm_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
 
 def load_vtm_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
     """VtM verisini cache'li şekilde döndür."""
-    
     if lazy:
         if "vtm" not in _LAZY_LOADERS:
             def _loader() -> Dict[str, Any]:
@@ -107,7 +90,7 @@ def load_vtm_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
                 return _load_json(data_path)
             _LAZY_LOADERS["vtm"] = LazyDataLoader(_loader)
         return _LAZY_LOADERS["vtm"].get()
-    
+
     def _loader() -> Dict[str, Any]:
         data_path = base_dir / "data" / "vtm_data.json"
         return _load_json(data_path)
@@ -117,7 +100,6 @@ def load_vtm_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
 
 def load_pathfinder_1e_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
     """Pathfinder 1e verisini cache'li şekilde döndür."""
-    
     if lazy:
         if "pathfinder_1e" not in _LAZY_LOADERS:
             def _loader() -> Dict[str, Any]:
@@ -125,61 +107,7 @@ def load_pathfinder_1e_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any
                 return _load_json(data_path)
             _LAZY_LOADERS["pathfinder_1e"] = LazyDataLoader(_loader)
         return _LAZY_LOADERS["pathfinder_1e"].get()
-    
-    def _loader() -> Dict[str, Any]:
-        data_path = base_dir / "data" / "pathfinder_1e_data.json"
-        return _load_json(data_path)
 
-    return _get_or_load("pathfinder_1e", _loader)
-
-
-def clear_data_cache() -> None:
-    """Tüm data cache'lerini temizle"""
-    global _DATA_CACHE, _LAZY_LOADERS
-    _DATA_CACHE.clear()
-    for loader in _LAZY_LOADERS.values():
-        loader.clear()
-    _LAZY_LOADERS.clear()
-
-            _LAZY_LOADERS["pathfinder_1e"] = LazyDataLoader(_loader)
-        return _LAZY_LOADERS["pathfinder_1e"].get()
-    
-    def _loader() -> Dict[str, Any]:
-        data_path = base_dir / "data" / "pathfinder_1e_data.json"
-        return _load_json(data_path)
-
-    return _get_or_load("pathfinder_1e", _loader)
-
-
-def clear_data_cache() -> None:
-    """Tüm data cache'lerini temizle"""
-    global _DATA_CACHE, _LAZY_LOADERS
-    _DATA_CACHE.clear()
-    for loader in _LAZY_LOADERS.values():
-        loader.clear()
-    _LAZY_LOADERS.clear()
-
-            _LAZY_LOADERS["pathfinder_1e"] = LazyDataLoader(_loader)
-        return _LAZY_LOADERS["pathfinder_1e"].get()
-    
-    def _loader() -> Dict[str, Any]:
-        data_path = base_dir / "data" / "pathfinder_1e_data.json"
-        return _load_json(data_path)
-
-    return _get_or_load("pathfinder_1e", _loader)
-
-
-def clear_data_cache() -> None:
-    """Tüm data cache'lerini temizle"""
-    global _DATA_CACHE, _LAZY_LOADERS
-    _DATA_CACHE.clear()
-    for loader in _LAZY_LOADERS.values():
-        loader.clear()
-    _LAZY_LOADERS.clear()
-
-            _LAZY_LOADERS["pathfinder_1e"] = LazyDataLoader(_loader)
-        return _LAZY_LOADERS["pathfinder_1e"].get()
-    
     def _loader() -> Dict[str, Any]:
         data_path = base_dir / "data" / "pathfinder_1e_data.json"
         return _load_json(data_path)

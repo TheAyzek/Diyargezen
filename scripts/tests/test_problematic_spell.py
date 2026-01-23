@@ -46,7 +46,7 @@ for slug in problematic:
         print(f"  Duration: {spell.get('duration', '❌ None')}")
         print(f"  Description: {len(spell.get('description', ''))} karakter")
     else:
-        print(f"  ❌ Spell çekilemedi")
+        print("  ❌ Spell çekilemedi")
 
 print("\n" + "=" * 70)
 

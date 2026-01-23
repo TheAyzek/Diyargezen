@@ -4,8 +4,7 @@ Doğal dil işleme kullanarak daha akıllı kural çıkarma.
 """
 
 import re
-from typing import Dict, Any, List, Optional, Tuple
-from pathlib import Path
+from typing import Dict, Any, List, Optional
 
 # spaCy opsiyonel - yoksa pattern matching kullanılır
 try:

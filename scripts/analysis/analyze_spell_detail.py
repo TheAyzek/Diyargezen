@@ -57,7 +57,7 @@ def analyze_spell_page(url):
         spell_info['school'] = re.search(r'cantrip.*?(\w+)', text_content, re.I)
         if spell_info['school']:
             spell_info['school'] = spell_info['school'].group(1)
-        print(f"  Cantrip: Yes")
+        print("  Cantrip: Yes")
     
     # Casting Time
     casting_match = re.search(r'casting\s+time[:\s]+([^\n]+)', text_content, re.I)

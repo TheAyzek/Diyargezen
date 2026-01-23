@@ -29,7 +29,7 @@ def analyze_html_structure():
             print(f"     Parent text: {parent.get_text(strip=True)[:200]}")
             
             # Sonraki kardeşleri kontrol et
-            print(f"     Sonraki kardesler:")
+            print("     Sonraki kardesler:")
             next_sib = parent.next_sibling
             count = 0
             while next_sib and count < 5:

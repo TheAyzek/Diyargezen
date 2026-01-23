@@ -31,12 +31,12 @@ if data_file.exists():
     print(f"  Suggested Skills: {len(battlesuit.get('suggested_skills', []))}")
     
     if battlesuit.get('suggested_advantages'):
-        print(f"\n  Örnek Advantages:")
+        print("\n  Örnek Advantages:")
         for i, adv in enumerate(battlesuit['suggested_advantages'][:5]):
             print(f"    {i+1}. {adv}")
     
     if battlesuit.get('suggested_skills'):
-        print(f"\n  Örnek Skills:")
+        print("\n  Örnek Skills:")
         for i, skill in enumerate(battlesuit['suggested_skills'][:5]):
             print(f"    {i+1}. {skill}")
     

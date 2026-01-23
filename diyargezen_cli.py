@@ -69,13 +69,7 @@ Alt komutlar:
 - Şablon oluşturma / şablondan karakter yaratma
 """
 
-from InquirerPy import inquirer
 
-from dnd_cli import main as dnd_create_main
-from dnd_inventory_cli import manage_inventory as dnd_inventory_main
-from dnd_levelup_cli import main as dnd_levelup_main
-from dnd_rules_cli import main as dnd_rules_main
-from dnd_templates_cli import main as dnd_templates_main
 
 
 def main() -> None:
@@ -129,13 +123,7 @@ Alt komutlar:
 - Şablon oluşturma / şablondan karakter yaratma
 """
 
-from InquirerPy import inquirer
 
-from dnd_cli import main as dnd_create_main
-from dnd_inventory_cli import manage_inventory as dnd_inventory_main
-from dnd_levelup_cli import main as dnd_levelup_main
-from dnd_rules_cli import main as dnd_rules_main
-from dnd_templates_cli import main as dnd_templates_main
 
 
 def main() -> None:
@@ -187,13 +175,7 @@ Alt komutlar:
 - Şablon oluşturma / şablondan karakter yaratma
 """
 
-from InquirerPy import inquirer
 
-from dnd_cli import main as dnd_create_main
-from dnd_inventory_cli import manage_inventory as dnd_inventory_main
-from dnd_levelup_cli import main as dnd_levelup_main
-from dnd_rules_cli import main as dnd_rules_main
-from dnd_templates_cli import main as dnd_templates_main
 
 
 def main() -> None:

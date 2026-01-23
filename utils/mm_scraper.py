@@ -9,8 +9,8 @@ import json
 import time
 import re
 from pathlib import Path
-from typing import Dict, Any, List, Optional
-from urllib.parse import urljoin, urlparse
+from typing import Dict, Any, Optional
+from urllib.parse import urljoin
 import requests
 from bs4 import BeautifulSoup
 
@@ -1057,13 +1057,8 @@ Mutants & Masterminds Web Scraper
 d20herosrd.com sitesinden tüm kuralları ve karakter oluşturma bilgilerini çeker.
 """
 
-import json
-import time
-import re
 from pathlib import Path
-from typing import Dict, Any, List, Optional
-from urllib.parse import urljoin, urlparse
-import requests
+from typing import Dict, Any, Optional
 from bs4 import BeautifulSoup
 
 
@@ -2109,13 +2104,8 @@ Mutants & Masterminds Web Scraper
 d20herosrd.com sitesinden tüm kuralları ve karakter oluşturma bilgilerini çeker.
 """
 
-import json
-import time
-import re
 from pathlib import Path
-from typing import Dict, Any, List, Optional
-from urllib.parse import urljoin, urlparse
-import requests
+from typing import Dict, Any, Optional
 from bs4 import BeautifulSoup
 
 
@@ -3161,13 +3151,8 @@ Mutants & Masterminds Web Scraper
 d20herosrd.com sitesinden tüm kuralları ve karakter oluşturma bilgilerini çeker.
 """
 
-import json
-import time
-import re
 from pathlib import Path
-from typing import Dict, Any, List, Optional
-from urllib.parse import urljoin, urlparse
-import requests
+from typing import Dict, Any, Optional
 from bs4 import BeautifulSoup
 
 

@@ -2,15 +2,14 @@
 Kapsamli D&D 5e level up testleri
 """
 import sys
-import json
 from pathlib import Path
 
 project_root = Path(__file__).parent.parent.parent  # scripts/tests -> scripts -> project_root
 sys.path.insert(0, str(project_root))
 
 from utils.calculations import (
-    calculate_all_dnd_stats, calculate_proficiency_bonus,
-    calculate_hit_points, calculate_spell_slots
+    calculate_proficiency_bonus,
+    calculate_hit_points
 )
 from utils.data_loader import load_dnd_data
 

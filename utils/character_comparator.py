@@ -2,7 +2,7 @@
 Karakter karşılaştırma modülü
 İki karakteri karşılaştırır ve farkları tespit eder
 """
-from typing import Dict, Any, List, Tuple
+from typing import Dict, Any
 
 
 def compare_characters(char1: Dict[str, Any], char2: Dict[str, Any]) -> Dict[str, Any]:

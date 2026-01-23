@@ -108,7 +108,7 @@ def merge_pathfinder_data_from_both_sites(force_refresh: bool = False):
     print("\n" + "=" * 70)
     print("📊 BİRLEŞTİRME İSTATİSTİKLERİ")
     print("=" * 70)
-    print(f"\n🏃 Irklar:")
+    print("\n🏃 Irklar:")
     print(f"  - Archives of Nethys: {len(races_aon)}")
     print(f"  - d20pfsrd.com: {len(races_d20)}")
     print(f"  - Birleştirilmiş: {len(merged_races)}")
@@ -119,7 +119,7 @@ def merge_pathfinder_data_from_both_sites(force_refresh: bool = False):
     if common_races:
         print(f"    Örnekler: {', '.join(list(common_races)[:5])}")
     
-    print(f"\n⚔️ Sınıflar:")
+    print("\n⚔️ Sınıflar:")
     print(f"  - Archives of Nethys: {len(classes_aon)}")
     print(f"  - d20pfsrd.com: {len(classes_d20)}")
     print(f"  - Birleştirilmiş: {len(merged_classes)}")

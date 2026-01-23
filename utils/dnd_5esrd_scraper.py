@@ -408,7 +408,7 @@ class Dnd5eSrdScraper:
             if spell_links:
                 print(f"  🔄 {len(spell_links)} yeni spell çekilecek ({len(cached_names)} zaten cache'de)")
             else:
-                print(f"  ✅ Tüm spell'ler zaten cache'de!")
+                print("  ✅ Tüm spell'ler zaten cache'de!")
                 return cached_spells
         
         total = len(spell_links)
@@ -654,7 +654,7 @@ class Dnd5eSrdScraper:
             if feat_links:
                 print(f"  🔄 {len(feat_links)} yeni feat çekilecek ({len(cached_names)} zaten cache'de)")
             else:
-                print(f"  ✅ Tüm feat'ler zaten cache'de!")
+                print("  ✅ Tüm feat'ler zaten cache'de!")
                 return cached_feats
         
         total = len(feat_links)
@@ -1436,7 +1436,7 @@ class Dnd5eSrdScraper:
         if new_race_links:
             print(f"\n[*] {len(new_race_links)} yeni race cekilecek ({len(cached_names)} zaten cache'de)")
         else:
-            print(f"\n[OK] Tum race'ler zaten cache'de!")
+            print("\n[OK] Tum race'ler zaten cache'de!")
             return races
         
         # Max races limiti
@@ -1699,14 +1699,8 @@ class Dnd5eSrdScraper:
 
 """5esrd.com D&D 5e scraper"""
 
-import time
-import json
-import requests
 from bs4 import BeautifulSoup
-import re
-from pathlib import Path
 from typing import Dict, List, Optional, Any
-from urllib.parse import urljoin
 
 
 class Dnd5eSrdScraper:
@@ -2105,7 +2099,7 @@ class Dnd5eSrdScraper:
             if spell_links:
                 print(f"  🔄 {len(spell_links)} yeni spell çekilecek ({len(cached_names)} zaten cache'de)")
             else:
-                print(f"  ✅ Tüm spell'ler zaten cache'de!")
+                print("  ✅ Tüm spell'ler zaten cache'de!")
                 return cached_spells
         
         total = len(spell_links)
@@ -2351,7 +2345,7 @@ class Dnd5eSrdScraper:
             if feat_links:
                 print(f"  🔄 {len(feat_links)} yeni feat çekilecek ({len(cached_names)} zaten cache'de)")
             else:
-                print(f"  ✅ Tüm feat'ler zaten cache'de!")
+                print("  ✅ Tüm feat'ler zaten cache'de!")
                 return cached_feats
         
         total = len(feat_links)
@@ -3133,7 +3127,7 @@ class Dnd5eSrdScraper:
         if new_race_links:
             print(f"\n[*] {len(new_race_links)} yeni race cekilecek ({len(cached_names)} zaten cache'de)")
         else:
-            print(f"\n[OK] Tum race'ler zaten cache'de!")
+            print("\n[OK] Tum race'ler zaten cache'de!")
             return races
         
         # Max races limiti
@@ -3396,14 +3390,8 @@ class Dnd5eSrdScraper:
 
 """5esrd.com D&D 5e scraper"""
 
-import time
-import json
-import requests
 from bs4 import BeautifulSoup
-import re
-from pathlib import Path
 from typing import Dict, List, Optional, Any
-from urllib.parse import urljoin
 
 
 class Dnd5eSrdScraper:
@@ -3802,7 +3790,7 @@ class Dnd5eSrdScraper:
             if spell_links:
                 print(f"  🔄 {len(spell_links)} yeni spell çekilecek ({len(cached_names)} zaten cache'de)")
             else:
-                print(f"  ✅ Tüm spell'ler zaten cache'de!")
+                print("  ✅ Tüm spell'ler zaten cache'de!")
                 return cached_spells
         
         total = len(spell_links)
@@ -4048,7 +4036,7 @@ class Dnd5eSrdScraper:
             if feat_links:
                 print(f"  🔄 {len(feat_links)} yeni feat çekilecek ({len(cached_names)} zaten cache'de)")
             else:
-                print(f"  ✅ Tüm feat'ler zaten cache'de!")
+                print("  ✅ Tüm feat'ler zaten cache'de!")
                 return cached_feats
         
         total = len(feat_links)
@@ -4830,7 +4818,7 @@ class Dnd5eSrdScraper:
         if new_race_links:
             print(f"\n[*] {len(new_race_links)} yeni race cekilecek ({len(cached_names)} zaten cache'de)")
         else:
-            print(f"\n[OK] Tum race'ler zaten cache'de!")
+            print("\n[OK] Tum race'ler zaten cache'de!")
             return races
         
         # Max races limiti
@@ -5093,14 +5081,8 @@ class Dnd5eSrdScraper:
 
 """5esrd.com D&D 5e scraper"""
 
-import time
-import json
-import requests
 from bs4 import BeautifulSoup
-import re
-from pathlib import Path
 from typing import Dict, List, Optional, Any
-from urllib.parse import urljoin
 
 
 class Dnd5eSrdScraper:
@@ -5499,7 +5481,7 @@ class Dnd5eSrdScraper:
             if spell_links:
                 print(f"  🔄 {len(spell_links)} yeni spell çekilecek ({len(cached_names)} zaten cache'de)")
             else:
-                print(f"  ✅ Tüm spell'ler zaten cache'de!")
+                print("  ✅ Tüm spell'ler zaten cache'de!")
                 return cached_spells
         
         total = len(spell_links)
@@ -5745,7 +5727,7 @@ class Dnd5eSrdScraper:
             if feat_links:
                 print(f"  🔄 {len(feat_links)} yeni feat çekilecek ({len(cached_names)} zaten cache'de)")
             else:
-                print(f"  ✅ Tüm feat'ler zaten cache'de!")
+                print("  ✅ Tüm feat'ler zaten cache'de!")
                 return cached_feats
         
         total = len(feat_links)
@@ -6527,7 +6509,7 @@ class Dnd5eSrdScraper:
         if new_race_links:
             print(f"\n[*] {len(new_race_links)} yeni race cekilecek ({len(cached_names)} zaten cache'de)")
         else:
-            print(f"\n[OK] Tum race'ler zaten cache'de!")
+            print("\n[OK] Tum race'ler zaten cache'de!")
             return races
         
         # Max races limiti

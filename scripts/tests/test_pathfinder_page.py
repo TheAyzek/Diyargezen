@@ -13,7 +13,7 @@ try:
     
     print("\nPathfinderPage oluşturuluyor...")
     page = PathfinderPage()
-    print(f"✓ PathfinderPage oluşturuldu!")
+    print("✓ PathfinderPage oluşturuldu!")
     print(f"✓ Adım sayısı: {len(page.steps)}")
     print(f"✓ Data yüklendi: {len(page.data.get('races', {}))} ırk, {len(page.data.get('classes', {}))} sınıf, {len(page.data.get('feats', {}))} feat")
     

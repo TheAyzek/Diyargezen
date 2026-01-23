@@ -84,20 +84,20 @@ if char_class in classes:
                 choices = {}
             
             if features_list:
-                print(f"  OK: Features:")
+                print("  OK: Features:")
                 for feature in features_list:
                     print(f"     - {feature}")
                     gained_features.append((level, feature))
             
             if choices:
-                print(f"  WARNING: Choices (secim gerekli):")
+                print("  WARNING: Choices (secim gerekli):")
                 for choice_type, choice_options in choices.items():
                     print(f"     - {choice_type}: {', '.join(choice_options[:3])}")
                     if len(choice_options) > 3:
                         print(f"       ... ve {len(choice_options) - 3} tane daha")
             
             if not features_list and not choices:
-                print(f"  - Ozellik yok")
+                print("  - Ozellik yok")
             print()
     
     print("=" * 70)

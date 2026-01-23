@@ -7,7 +7,6 @@ import io
 import json
 import requests
 from bs4 import BeautifulSoup
-import re
 from pathlib import Path
 
 if sys.platform == 'win32':
@@ -113,7 +112,7 @@ for name, eff, desc_len in short_effects:
             eff['description'] = new_description
             print(f"  ✅ Güncellendi: {len(new_description)} karakter")
         else:
-            print(f"  ⚠️  Değişmedi")
+            print("  ⚠️  Değişmedi")
     print()
 
 # Archetype'lardaki "Effect Descriptions" string'ini temizle

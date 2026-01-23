@@ -118,7 +118,6 @@ def view_characters():
         return
     
     import json
-    import glob
     
     character_files = list(characters_dir.glob("*.json"))
     

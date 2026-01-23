@@ -12,7 +12,6 @@ sys.path.insert(0, str(project_root))
 
 import requests
 from bs4 import BeautifulSoup
-from urllib.parse import urljoin
 
 def test_aonprd_races():
     """Archives of Nethys ırk sayfasını test et"""

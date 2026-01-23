@@ -46,7 +46,7 @@ def main():
     # dnd_data.json'a entegre et
     data_file = project_root / "data" / "dnd_data.json"
     if data_file.exists():
-        print(f"\n📦 dnd_data.json'a entegre ediliyor...")
+        print("\n📦 dnd_data.json'a entegre ediliyor...")
         with open(data_file, 'r', encoding='utf-8') as f:
             dnd_data = json.load(f)
         

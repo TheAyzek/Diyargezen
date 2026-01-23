@@ -3,7 +3,6 @@
 """Parsing sorunlarını analiz et"""
 
 import sys
-from pathlib import Path
 import requests
 from bs4 import BeautifulSoup
 import re
@@ -44,7 +43,7 @@ for slug, test_name in test_spells:
     
     response = requests.get(url, timeout=30)
     if response.status_code != 200:
-        print(f"❌ Sayfa bulunamadı")
+        print("❌ Sayfa bulunamadı")
         continue
     
     soup = BeautifulSoup(response.content, 'html.parser')
@@ -77,7 +76,7 @@ for slug, test_name in test_spells:
     if ct_match:
         print(f"  ✅ Casting Time: '{ct_match.group(1).strip()}'")
     else:
-        print(f"  ❌ Casting Time: BULUNAMADI")
+        print("  ❌ Casting Time: BULUNAMADI")
         issues_found.append((slug, "Casting Time"))
     
     # Range
@@ -85,7 +84,7 @@ for slug, test_name in test_spells:
     if range_match:
         print(f"  ✅ Range: '{range_match.group(1).strip()}'")
     else:
-        print(f"  ❌ Range: BULUNAMADI")
+        print("  ❌ Range: BULUNAMADI")
         issues_found.append((slug, "Range"))
     
     # Components
@@ -94,10 +93,10 @@ for slug, test_name in test_spells:
         comp_text = comp_match.group(1).strip()
         print(f"  ✅ Components: '{comp_text[:80]}'")
         if comp_text.count('(') > comp_text.count(')'):
-            print(f"     ⚠️  Açık parantez var!")
+            print("     ⚠️  Açık parantez var!")
             issues_found.append((slug, "Components (open parenthesis)"))
     else:
-        print(f"  ❌ Components: BULUNAMADI")
+        print("  ❌ Components: BULUNAMADI")
         issues_found.append((slug, "Components"))
     
     # Duration
@@ -111,7 +110,7 @@ for slug, test_name in test_spells:
         else:
             print(f"  ✅ Duration: '{dur_text[:80]}'")
     else:
-        print(f"  ❌ Duration: BULUNAMADI")
+        print("  ❌ Duration: BULUNAMADI")
         issues_found.append((slug, "Duration"))
 
 print("\n" + "=" * 70)

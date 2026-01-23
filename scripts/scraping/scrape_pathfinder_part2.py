@@ -5,7 +5,6 @@ Pathfinder 1e - Part 2: d20pfsrd'den spell'leri çek ve tamamla
 """
 
 import sys
-import os
 from pathlib import Path
 
 # UTF-8 encoding zorla
@@ -36,7 +35,7 @@ if __name__ == "__main__":
     with open(data_file, 'r', encoding='utf-8') as f:
         existing_data = json.load(f)
     
-    print(f"[OK] Mevcut veri yüklendi:")
+    print("[OK] Mevcut veri yüklendi:")
     print(f"  - {len(existing_data.get('races', {}))} ırk")
     print(f"  - {len(existing_data.get('classes', {}))} sınıf")
     print(f"  - {len(existing_data.get('feats', {}))} feat")

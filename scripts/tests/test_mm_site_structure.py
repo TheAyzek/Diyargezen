@@ -4,7 +4,6 @@
 
 import requests
 from bs4 import BeautifulSoup
-import re
 
 BASE_URL = "https://www.d20herosrd.com"
 
@@ -77,7 +76,7 @@ def explore_page(url, name):
                     main_sections[parts[0]] = href
         
         if main_sections:
-            print(f"\n📋 Ana bölümler:")
+            print("\n📋 Ana bölümler:")
             for section, url in sorted(main_sections.items()):
                 print(f"  - {section}: {BASE_URL}{url}")
                 

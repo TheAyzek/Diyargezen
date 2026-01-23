@@ -40,7 +40,7 @@ for name, url in core_races:
     try:
         response = requests.get(url, timeout=30)
         if response.status_code == 200:
-            print(f"    ✅ Status 200")
+            print("    ✅ Status 200")
             working_races.append((name, url))
         else:
             print(f"    ❌ Status {response.status_code}")

@@ -8,7 +8,7 @@ from pathlib import Path
 project_root = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(project_root))
 
-from utils.pathfinder_scraper import PathfinderScraper, _merge_category_data
+from utils.pathfinder_scraper import _merge_category_data
 
 
 def test_merge_logic():
@@ -74,7 +74,7 @@ def test_merge_logic():
     
     # Human'ı kontrol et
     human_merged = merged.get("Human", {})
-    print(f"\n✅ Human merge kontrolü:")
+    print("\n✅ Human merge kontrolü:")
     print(f"  - Languages: {human_merged.get('languages', [])}")
     print(f"    (Primary: {primary['Human']['languages']}, Secondary: {secondary['Human']['languages']})")
     print(f"  - Traits: {human_merged.get('traits', [])}")
@@ -84,13 +84,13 @@ def test_merge_logic():
     
     # Dwarf'ı kontrol et (yeni eklenen)
     dwarf_merged = merged.get("Dwarf", {})
-    print(f"\n✅ Dwarf merge kontrolü (yeni eklenen):")
+    print("\n✅ Dwarf merge kontrolü (yeni eklenen):")
     print(f"  - Ability Score: {dwarf_merged.get('ability_score_increase', {})}")
     print(f"  - Vision: {dwarf_merged.get('vision', 'Yok')}")
     
     # Elf'i kontrol et (sadece primary'de var)
     elf_merged = merged.get("Elf", {})
-    print(f"\n✅ Elf merge kontrolü (sadece primary'de):")
+    print("\n✅ Elf merge kontrolü (sadece primary'de):")
     print(f"  - Ability Score: {elf_merged.get('ability_score_increase', {})}")
     print(f"  - Vision: {elf_merged.get('vision', 'Yok')}")
     

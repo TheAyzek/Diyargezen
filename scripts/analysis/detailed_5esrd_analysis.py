@@ -86,7 +86,7 @@ if response.status_code == 200:
     # Tekrar edenleri kaldır
     unique_spells = list(set(spell_links))
     print(f"  Toplam unique spell linki: {len(unique_spells)}")
-    print(f"  İlk 20 spell:")
+    print("  İlk 20 spell:")
     for i, (name, url) in enumerate(unique_spells[:20], 1):
         print(f"    {i:2d}. {name:40s} | {url[:60]}...")
     

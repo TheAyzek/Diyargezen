@@ -82,9 +82,9 @@ total_items = (len(abilities) + len(data.get('skills', {})) +
                len(data.get('advantages', {})) + len(data.get('powers', {})) + 
                len(power_effects) + len(data.get('archetypes', {})))
 print(f"  Toplam veri öğesi: {total_items}")
-print(f"  ✅ Tüm temel veriler çekildi")
-print(f"  ✅ GUI entegrasyonu hazır")
-print(f"  ✅ Karakter oluşturma için yeterli veri mevcut")
+print("  ✅ Tüm temel veriler çekildi")
+print("  ✅ GUI entegrasyonu hazır")
+print("  ✅ Karakter oluşturma için yeterli veri mevcut")
 print()
 
 

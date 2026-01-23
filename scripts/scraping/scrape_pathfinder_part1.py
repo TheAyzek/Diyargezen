@@ -5,7 +5,6 @@ Pathfinder 1e - Part 1: Archives of Nethys'ten feat ve spell'leri çek
 """
 
 import sys
-import os
 from pathlib import Path
 
 # UTF-8 encoding zorla

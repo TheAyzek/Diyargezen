@@ -3,10 +3,8 @@ Ek export formatları modülü
 HTML, JSON, CSV export desteği
 """
 from pathlib import Path
-from typing import Optional
 import json
 import csv
-import base64
 from datetime import datetime
 
 

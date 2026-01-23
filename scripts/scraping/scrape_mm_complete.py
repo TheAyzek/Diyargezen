@@ -41,14 +41,14 @@ def scrape_mm_complete(force_refresh: bool = False):
         try:
             with open(data_file, 'r', encoding='utf-8') as f:
                 existing_data = json.load(f)
-            print(f"📂 Mevcut veri bulundu:")
+            print("📂 Mevcut veri bulundu:")
             print(f"   - Archetypes: {len(existing_data.get('archetypes', {}))}")
             print(f"   - Abilities: {len(existing_data.get('abilities', {}))}")
             print(f"   - Skills: {len(existing_data.get('skills', {}))}")
             print(f"   - Advantages: {len(existing_data.get('advantages', {}))}")
             print(f"   - Powers: {len(existing_data.get('powers', {}))}")
-            print(f"   ✅ Mevcut veri kullanılacak.")
-            print(f"   💡 Yeniden çekmek için: python scripts/scrape_mm_complete.py --force")
+            print("   ✅ Mevcut veri kullanılacak.")
+            print("   💡 Yeniden çekmek için: python scripts/scrape_mm_complete.py --force")
             return data_file
         except Exception as e:
             print(f"⚠️  Mevcut veri yüklenemedi: {e}")
@@ -91,7 +91,7 @@ def scrape_mm_complete(force_refresh: bool = False):
     
     # İstatistikler
     print(f"\n✅ Veriler kaydedildi: {data_file}")
-    print(f"\n📊 İstatistikler:")
+    print("\n📊 İstatistikler:")
     print(f"   - Archetypes: {len(new_data.get('archetypes', {}))}")
     print(f"   - Abilities: {len(new_data.get('abilities', {}))}")
     print(f"   - Skills: {len(new_data.get('skills', {}))}")

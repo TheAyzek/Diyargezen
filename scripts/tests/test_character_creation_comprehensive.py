@@ -2,7 +2,6 @@
 Kapsamli D&D 5e karakter olusturma testleri
 """
 import sys
-import json
 from pathlib import Path
 
 project_root = Path(__file__).parent.parent.parent  # scripts/tests -> scripts -> project_root
@@ -10,8 +9,8 @@ sys.path.insert(0, str(project_root))
 
 from utils.calculations import (
     calculate_all_dnd_stats, calculate_proficiency_bonus,
-    calculate_ability_modifier, calculate_hit_points,
-    calculate_armor_class, calculate_movement_speed
+    calculate_hit_points,
+    calculate_movement_speed
 )
 from utils.data_loader import load_dnd_data
 
@@ -316,7 +315,7 @@ def test_edge_cases():
             "feats": []
         }
         stats = calculate_all_dnd_stats(character_low_abilities)
-        print(f"OK: Dusuk ability scores - Modifiers hesaplandi")
+        print("OK: Dusuk ability scores - Modifiers hesaplandi")
     except Exception as e:
         errors.append(f"Low abilities hatasi: {e}")
     

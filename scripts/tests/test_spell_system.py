@@ -2,7 +2,6 @@
 Spell sistemi kapsamli testleri
 """
 import sys
-import json
 from pathlib import Path
 
 project_root = Path(__file__).parent.parent.parent  # scripts/tests -> scripts -> project_root

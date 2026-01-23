@@ -3,7 +3,6 @@ Tüm equipment'leri scrape et ve dnd_data.json'a entegre et
 Arka planda çalışacak şekilde tasarlandı
 """
 import sys
-import os
 import json
 from pathlib import Path
 
@@ -25,7 +24,7 @@ def main():
     print("Equipment kategorileri scrape ediliyor...")
     equipment_data = scraper.scrape_all_equipment(force_refresh=False)
     
-    print(f"\n[OK] Equipment scraping tamamlandi!")
+    print("\n[OK] Equipment scraping tamamlandi!")
     print("\nScrape edilen kategoriler:")
     total_items = 0
     for category, items in equipment_data.items():

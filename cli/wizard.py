@@ -22,10 +22,7 @@ class CharacterWizard:
 
 
 
-from typing import Iterable, List
 
-from .context import CharacterContext
-from .steps import Step, StepResult
 
 
 class CharacterWizard:
@@ -44,10 +41,7 @@ class CharacterWizard:
 
 
 
-from typing import Iterable, List
 
-from .context import CharacterContext
-from .steps import Step, StepResult
 
 
 class CharacterWizard:
@@ -66,10 +60,7 @@ class CharacterWizard:
 
 
 
-from typing import Iterable, List
 
-from .context import CharacterContext
-from .steps import Step, StepResult
 
 
 class CharacterWizard:

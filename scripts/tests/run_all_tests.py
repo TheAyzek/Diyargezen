@@ -8,6 +8,7 @@ import subprocess
 project_root = Path(__file__).parent.parent.parent  # scripts/tests -> scripts -> project_root
 sys.path.insert(0, str(project_root))
 
+
 def run_test(script_path: Path, test_name: str):
     """Test script'ini calistir"""
     print(f"\n{'='*70}")
@@ -53,6 +54,7 @@ def run_test(script_path: Path, test_name: str):
         print(f"HATA: {e}")
         return False
 
+
 def main():
     """Tum testleri calistir"""
     print("=" * 70)
@@ -79,7 +81,7 @@ def main():
             success = run_test(script, test_name)
             results.append((test_name, success))
         else:
-            print(f"UYARI: Test script bulunamadi: {script_path}")
+            print(f"UYARI: Test script bulunamadi: {script}")
             results.append((test_name, False))
     
     # Ozet
@@ -101,24 +103,6 @@ def main():
         return 0
     else:
         print(f"\n[UYARI] {total - passed} test suite basarisiz.")
-        return 1
-
-if __name__ == "__main__":
-    sys.exit(main())
-
-
-        return 1
-
-if __name__ == "__main__":
-    sys.exit(main())
-
-
-        return 1
-
-if __name__ == "__main__":
-    sys.exit(main())
-
-
         return 1
 
 if __name__ == "__main__":

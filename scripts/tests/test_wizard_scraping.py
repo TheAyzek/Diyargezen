@@ -48,7 +48,7 @@ if wizard_data:
             print(f"Class Features - Scraped: {len(wizard_data.get('class_features', {}))} levels, Existing: {len(existing_wizard.get('class_features', {}))} levels")
             
             if wizard_data.get('spellcasting'):
-                print(f"\n✅ Spellcasting detected!")
+                print("\n✅ Spellcasting detected!")
                 print(f"   Ability: {wizard_data['spellcasting'].get('spellcasting_ability')}")
             else:
                 print("\n❌ Spellcasting NOT detected (should be detected for Wizard)")

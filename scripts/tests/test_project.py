@@ -155,7 +155,6 @@ def test_wizard_steps():
     print("=" * 60)
     
     try:
-        from gui.app import DndPage
         
         # DndPage sınıfını import et ama instance oluşturma (GUI gerektirir)
         # Sadece steps listesinin varlığını kontrol edelim

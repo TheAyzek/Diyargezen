@@ -3,7 +3,6 @@
 """
 import requests
 from bs4 import BeautifulSoup
-import re
 from urllib.parse import urljoin
 
 BASE_URL = "https://www.5esrd.com"

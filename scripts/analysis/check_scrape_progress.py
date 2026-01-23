@@ -5,7 +5,6 @@
 import sys
 from pathlib import Path
 import json
-from datetime import datetime
 
 if sys.platform == 'win32':
     import codecs
@@ -27,7 +26,7 @@ if cache_file.exists():
     if spells_in_cache:
         scraped_at = cache_data.get('scraped_at', 'Bilinmiyor')
         print(f"Son çekim zamanı: {scraped_at}")
-        print(f"\nİlk 5 spell:")
+        print("\nİlk 5 spell:")
         for i, name in enumerate(list(spells_in_cache.keys())[:5], 1):
             print(f"  {i}. {name}")
 else:

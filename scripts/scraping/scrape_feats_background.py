@@ -29,8 +29,8 @@ def main():
         log.write("D&D 5E FEATS SCRAPING - ARKA PLAN\n")
         log.write("=" * 70 + "\n")
         log.write(f"Başlangıç: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        log.write(f"Toplam feat sayısı: ~1368\n")
-        log.write(f"Tahmini süre: ~34 dakika (1.5 saniye/feat)\n")
+        log.write("Toplam feat sayısı: ~1368\n")
+        log.write("Tahmini süre: ~34 dakika (1.5 saniye/feat)\n")
         log.write("=" * 70 + "\n\n")
         log.flush()
         
@@ -39,8 +39,8 @@ def main():
         print("=" * 70)
         print(f"📝 Log dosyası: {log_file}")
         print(f"⏰ Başlangıç: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        print(f"📊 Toplam feat: ~1368")
-        print(f"⏱️  Tahmini süre: ~34 dakika")
+        print("📊 Toplam feat: ~1368")
+        print("⏱️  Tahmini süre: ~34 dakika")
         print("=" * 70)
         print("\n💡 İpucu: Bu pencereyi kapatabilirsiniz, çekim arka planda devam edecek.")
         print(f"   İlerlemeyi görmek için: {log_file} dosyasını kontrol edin.\n")
@@ -61,7 +61,7 @@ def main():
             # dnd_data.json'a entegre et
             data_file = project_root / "data" / "dnd_data.json"
             if data_file.exists():
-                log.write(f"\n📦 dnd_data.json'a entegre ediliyor...\n")
+                log.write("\n📦 dnd_data.json'a entegre ediliyor...\n")
                 log.flush()
                 
                 with open(data_file, 'r', encoding='utf-8') as f:
@@ -94,12 +94,12 @@ def main():
             
         except KeyboardInterrupt:
             log.write("\n⚠️  Kullanıcı tarafından durduruldu.\n")
-            log.write(f"İlerleme cache'de kaydedildi, kaldığı yerden devam edebilirsiniz.\n")
+            log.write("İlerleme cache'de kaydedildi, kaldığı yerden devam edebilirsiniz.\n")
             log.flush()
             print("\n⚠️  Durduruldu. İlerleme cache'de kaydedildi.")
         except Exception as e:
             log.write(f"\n❌ Hata: {str(e)}\n")
-            log.write(f"İlerleme cache'de kaydedildi, kaldığı yerden devam edebilirsiniz.\n")
+            log.write("İlerleme cache'de kaydedildi, kaldığı yerden devam edebilirsiniz.\n")
             log.flush()
             import traceback
             log.write(traceback.format_exc())

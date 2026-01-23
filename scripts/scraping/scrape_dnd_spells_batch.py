@@ -177,7 +177,7 @@ def main():
     remaining = total_spells - (batch_num * args.batch_size)
     if remaining > 0:
         next_start = args.start_from + (batch_num * args.batch_size)
-        print(f"📌 Sonraki batch için:")
+        print("📌 Sonraki batch için:")
         print(f"  python scripts/scrape_dnd_spells_batch.py --batch-size {args.batch_size} --start-from {next_start}")
         print()
 

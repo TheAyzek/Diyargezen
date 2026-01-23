@@ -57,7 +57,7 @@ new_class_links = [(name, url) for name, url in class_links if name not in cache
 if new_class_links:
     print(f"\n🔄 {len(new_class_links)} yeni class çekilecek ({len(cached_names)} zaten cache'de)")
 else:
-    print(f"\n✅ Tüm class'lar zaten cache'de!")
+    print("\n✅ Tüm class'lar zaten cache'de!")
     exit(0)
 
 total = len(new_class_links)
@@ -145,7 +145,7 @@ if data_file.exists():
         log.write(f"\n✅ Toplam {len(all_classes)} class çekildi!\n")
         log.write(f"Bitiş: {time.strftime('%Y-%m-%d %H:%M:%S')}\n")
         log.write(f"\n{'=' * 70}\n")
-        log.write(f"✅ CLASSES SCRAPING TAMAMLANDI\n")
+        log.write("✅ CLASSES SCRAPING TAMAMLANDI\n")
         log.write(f"{'=' * 70}\n")
 
 print("\n" + "=" * 70)

@@ -5,7 +5,7 @@ JSON'dan yüklenen kurallara göre hesaplama yapar.
 
 from typing import Dict, Any, Optional, Union
 from pathlib import Path
-from utils.rule_storage import load_rules, merge_rules_with_defaults
+from utils.rule_storage import load_rules
 from utils.calculations import (
     calculate_proficiency_bonus,
     calculate_armor_class,

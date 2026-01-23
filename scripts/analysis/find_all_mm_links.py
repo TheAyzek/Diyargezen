@@ -4,7 +4,6 @@
 
 import requests
 from bs4 import BeautifulSoup
-import re
 
 BASE_URL = "https://www.d20herosrd.com"
 

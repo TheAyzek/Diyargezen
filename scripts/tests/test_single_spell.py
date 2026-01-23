@@ -45,6 +45,6 @@ for slug, name in test_spells:
         print(f"  ✅ Ritual: {spell.get('ritual', False)}")
         print(f"  ✅ Description: {len(spell.get('description', ''))} karakter")
     else:
-        print(f"  ❌ Spell çekilemedi")
+        print("  ❌ Spell çekilemedi")
 
 

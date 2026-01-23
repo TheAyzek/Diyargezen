@@ -80,7 +80,7 @@ def analyze_feat_urls():
             print(f"  ❌ Hata: {e}")
     
     # Ana sayfadan navigation'ı kontrol et
-    print(f"\n🔍 Ana sayfadan navigation kontrol ediliyor...")
+    print("\n🔍 Ana sayfadan navigation kontrol ediliyor...")
     try:
         response = session.get(f"{BASE_URL}/", timeout=10)
         if response.status_code == 200:

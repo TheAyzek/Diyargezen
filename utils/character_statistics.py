@@ -7,7 +7,6 @@ from utils.calculations import (
     calculate_all_dnd_stats,
     calculate_all_mm_stats,
     calculate_all_vtm_stats,
-    calculate_ability_modifier,
 )
 
 
@@ -303,10 +302,10 @@ def _get_mm_recommendations(character: dict, power_level: int) -> list:
     # PL limit kontrolü
     limit = pl_limits.get(power_level, pl_limits[10])
     if defenses.get("defense", 0) < limit["defense"] * 0.8:
-        recommendations.append(f"Defense düşük. PL limitine yaklaşmayı düşünün.")
+        recommendations.append("Defense düşük. PL limitine yaklaşmayı düşünün.")
     
     if character.get("power_points", 0) < power_level * 15:
-        recommendations.append(f"Power Points az. Daha fazla güç eklemeyi düşünün.")
+        recommendations.append("Power Points az. Daha fazla güç eklemeyi düşünün.")
     
     if len(character.get("powers", [])) == 0:
         recommendations.append("Hiç power yok. Karakterinize güçler ekleyin.")

@@ -145,7 +145,7 @@ def main():
                 time.sleep(10)
                 
         except subprocess.TimeoutExpired:
-            print(f"\n⏱️ Batch timeout (5 dakika aşıldı). Devam ediliyor...")
+            print("\n⏱️ Batch timeout (5 dakika aşıldı). Devam ediliyor...")
             error_count += 1
             if error_count >= max_consecutive_errors:
                 print("❌ Çok fazla timeout, durduruluyor.")

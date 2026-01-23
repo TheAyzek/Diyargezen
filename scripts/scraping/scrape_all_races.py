@@ -4,7 +4,6 @@ Arka planda çalışacak şekilde tasarlandı
 """
 import sys
 import io
-import os
 import json
 from pathlib import Path
 

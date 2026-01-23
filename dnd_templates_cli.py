@@ -90,17 +90,8 @@ if __name__ == "__main__":
 
 
 
-import json
-from pathlib import Path
-from typing import Any, Dict
 
-from InquirerPy import inquirer
 
-from utils.template_manager import (
-    create_character_from_template,
-    list_templates,
-    save_template,
-)
 
 
 def _pick_character(base_dir: Path) -> Dict[str, Any] | None:
@@ -182,17 +173,8 @@ if __name__ == "__main__":
 
 
 
-import json
-from pathlib import Path
-from typing import Any, Dict
 
-from InquirerPy import inquirer
 
-from utils.template_manager import (
-    create_character_from_template,
-    list_templates,
-    save_template,
-)
 
 
 def _pick_character(base_dir: Path) -> Dict[str, Any] | None:
@@ -272,17 +254,8 @@ if __name__ == "__main__":
 
 
 
-import json
-from pathlib import Path
-from typing import Any, Dict
 
-from InquirerPy import inquirer
 
-from utils.template_manager import (
-    create_character_from_template,
-    list_templates,
-    save_template,
-)
 
 
 def _pick_character(base_dir: Path) -> Dict[str, Any] | None:

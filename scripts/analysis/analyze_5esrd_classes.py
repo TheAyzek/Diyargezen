@@ -41,7 +41,7 @@ for test_url in test_urls:
         if test_response.status_code == 200:
             classes_url = test_url
             response = test_response
-            print(f"  ✅ Başarılı!")
+            print("  ✅ Başarılı!")
             break
     except Exception as e:
         print(f"  ❌ Hata: {e}")

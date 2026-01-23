@@ -20,7 +20,7 @@ def test_data_loading():
         
         data = load_pathfinder_1e_data(project_root)
         
-        print(f"[OK] Veri yuklendi")
+        print("[OK] Veri yuklendi")
         print(f"  - Irk sayisi: {len(data.get('races', {}))}")
         print(f"  - Sinif sayisi: {len(data.get('classes', {}))}")
         print(f"  - Feat sayisi: {len(data.get('feats', {}))}")
@@ -29,7 +29,7 @@ def test_data_loading():
         # İlk birkaç ırkı kontrol et
         races = data.get('races', {})
         if races:
-            print(f"\n  Ornek irklar:")
+            print("\n  Ornek irklar:")
             for i, (name, race) in enumerate(list(races.items())[:5]):
                 ability = race.get('ability_score_increase_text', 'N/A')
                 vision = race.get('vision', 'normal')
@@ -65,7 +65,7 @@ def test_race_detail_structure():
             print("[HATA] Human irki bulunamadi!")
             return False
         
-        print(f"[OK] Human irki bulundu")
+        print("[OK] Human irki bulundu")
         print(f"  - Ability Score: {human.get('ability_score_increase', {})}")
         print(f"  - Size: {human.get('size', 'N/A')}")
         print(f"  - Speed: {human.get('speed', 'N/A')}")
@@ -82,7 +82,7 @@ def test_race_detail_structure():
         if missing_fields:
             print(f"[UYARI] Eksik alanlar: {missing_fields}")
         else:
-            print(f"[OK] Tum gerekli alanlar mevcut")
+            print("[OK] Tum gerekli alanlar mevcut")
         
         return True
     except Exception as e:
@@ -121,7 +121,7 @@ def test_race_auto_apply_logic():
             if ability_increases:
                 print(f"    - Ability Score Increases: {ability_increases}")
             else:
-                print(f"    - [UYARI] Ability score increases bulunamadi")
+                print("    - [UYARI] Ability score increases bulunamadi")
             
             # Vision kontrolü
             vision = race.get('vision', 'normal')
@@ -143,7 +143,7 @@ def test_race_auto_apply_logic():
             if traits:
                 print(f"    - Ilk 3 trait: {', '.join(traits[:3])}")
         
-        print(f"\n[OK] Irk otomatik uygulama mantigi test edildi")
+        print("\n[OK] Irk otomatik uygulama mantigi test edildi")
         return True
     except Exception as e:
         print(f"[HATA] Irk otomatik uygulama mantigi test edilemedi: {e}")
@@ -210,7 +210,7 @@ def test_character_creation_simulation():
             traits = human.get('traits', [])
             test_character['race_data']['traits'] = traits[:5]  # İlk 5 trait
             
-            print(f"[OK] Test karakteri olusturuldu")
+            print("[OK] Test karakteri olusturuldu")
             print(f"  - Isim: {test_character['name']}")
             print(f"  - Irk: {test_character['race']}")
             print(f"  - Sinif: {test_character['class']}")
@@ -261,7 +261,7 @@ def test_gui_pathfinder_page():
         print("[INFO] PathfinderPage olusturuluyor...")
         page = PathfinderPage()
         
-        print(f"[OK] PathfinderPage olusturuldu")
+        print("[OK] PathfinderPage olusturuldu")
         print(f"  - Sistem: {page.SYSTEM_NAME}")
         print(f"  - Adim sayisi: {len(page.steps)}")
         print(f"  - Data yuklendi: {len(page.data.get('races', {}))} irk")
@@ -274,26 +274,26 @@ def test_gui_pathfinder_page():
             # İlk birkaç ırkı listele
             print(f"  - Ornek irklar: {', '.join(list(races.keys())[:5])}")
         else:
-            print(f"  - [HATA] Hic irk yuklenemedi!")
+            print("  - [HATA] Hic irk yuklenemedi!")
             return False
         
         classes = page.data.get('classes', {})
         if classes:
             print(f"  - [OK] {len(classes)} sinif yuklendi")
         else:
-            print(f"  - [UYARI] Sinif verisi yuklenemedi (beklenen)")
+            print("  - [UYARI] Sinif verisi yuklenemedi (beklenen)")
         
         feats = page.data.get('feats', {})
         if feats:
             print(f"  - [OK] {len(feats)} feat yuklendi")
         else:
-            print(f"  - [UYARI] Feat verisi yuklenemedi (beklenen)")
+            print("  - [UYARI] Feat verisi yuklenemedi (beklenen)")
         
         # Widget'ları kontrol et
         if hasattr(page, 'ability_spins'):
             print(f"  - [OK] Ability spins widget'lari olusturuldu: {len(page.ability_spins)}")
         else:
-            print(f"  - [UYARI] Ability spins widget'lari henuz olusturulmadi")
+            print("  - [UYARI] Ability spins widget'lari henuz olusturulmadi")
         
         return True
     except Exception as e:

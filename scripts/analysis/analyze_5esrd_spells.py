@@ -6,7 +6,6 @@ import sys
 import io
 import requests
 from bs4 import BeautifulSoup
-import re
 from urllib.parse import urljoin
 
 if sys.platform == 'win32':
@@ -52,7 +51,7 @@ if response.status_code == 200:
     
     unique_spells = list(set(spell_links))
     print(f"  Toplam spell linki: {len(unique_spells)}")
-    print(f"  İlk 15 link:")
+    print("  İlk 15 link:")
     for i, (name, url) in enumerate(unique_spells[:15], 1):
         print(f"    {i:2d}. {name:40s} | {url}")
 else:
@@ -94,7 +93,7 @@ for url in db_spell_urls:
         unique_db = list(set(spell_db_links))
         print(f"    ✅ {len(unique_db)} spell linki bulundu")
         if unique_db:
-            print(f"    İlk 10:")
+            print("    İlk 10:")
             for i, (name, url_link) in enumerate(unique_db[:10], 1):
                 print(f"      {i:2d}. {name:35s} | {url_link[:70]}...")
 

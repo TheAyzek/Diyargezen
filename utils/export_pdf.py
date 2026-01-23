@@ -1,15 +1,11 @@
 from reportlab.lib.pagesizes import letter, A4
 from reportlab.pdfgen import canvas
-from reportlab.lib.units import inch, cm
+from reportlab.lib.units import inch
 from reportlab.lib.utils import ImageReader
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, PageBreak, KeepTogether
-from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.lib import colors
-from reportlab.lib.enums import TA_LEFT, TA_CENTER, TA_RIGHT, TA_JUSTIFY
 from pathlib import Path
-from typing import Optional, Dict, Any, List
+from typing import Optional
 import base64
 from io import BytesIO
 
@@ -84,7 +80,7 @@ def _draw_character_image(c: canvas.Canvas, character: dict, width: float, heigh
         
         # Resmi PDF'e ekle
         c.drawImage(image_reader, x, y, width=display_width, height=display_height, preserveAspectRatio=True)
-    except Exception as e:
+    except Exception:
         # Resim eklenemezse sessizce devam et
         pass
 

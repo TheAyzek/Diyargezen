@@ -39,7 +39,7 @@ try:
     print("-" * 70)
     app = QApplication([])
     page = MmPage()
-    print(f"  ✅ MmPage başarıyla oluşturuldu")
+    print("  ✅ MmPage başarıyla oluşturuldu")
     print(f"  ✅ Veri yüklendi: {bool(page.data)}")
     print(f"  ✅ Abilities widget'ları: {len(page.ability_spins) if hasattr(page, 'ability_spins') else 0}")
     print(f"  ✅ PL combo mevcut: {hasattr(page, 'pl_combo')}")

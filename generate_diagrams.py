@@ -4,10 +4,7 @@ Diyargezen Proje Şemaları - Görsel Diyagram Oluşturucu
 Bu script, proje şemalarını görselleştirmek için yardımcı araçlar sağlar.
 """
 
-import json
-import subprocess
 from pathlib import Path
-from typing import Dict, List, Any
 
 
 def create_project_structure_diagram() -> str:

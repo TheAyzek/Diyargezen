@@ -3,7 +3,7 @@ Kural Önizleme Modülü
 Yüklenen kuralları okunabilir formatta gösterir.
 """
 
-from typing import Dict, Any, Optional
+from typing import Dict, Any
 
 
 def format_rule_preview(rules: Dict[str, Any]) -> str:

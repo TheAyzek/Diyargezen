@@ -5,7 +5,6 @@
 import requests
 from bs4 import BeautifulSoup
 import re
-from urllib.parse import urljoin
 
 def analyze_aonprd_race():
     """Archives of Nethys'ten bir ırk sayfasını analiz et"""
