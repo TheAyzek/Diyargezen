@@ -5,7 +5,6 @@ Ana giriş noktası - Sistem seçimi ve yönlendirme
 """
 
 import sys
-import os
 from pathlib import Path
 
 # Ana dizini Python path'e ekle
@@ -22,20 +21,21 @@ def show_main_menu():
     print("Hangi sistem için karakter oluşturmak istersiniz?")
     print()
     print("1. Dungeons & Dragons 5e")
-    print("2. Mutants & Masterminds")
-    print("3. Vampire: The Masquerade")
-    print("4. Çıkış")
+    print("2. Pathfinder 1e")
+    print("3. Mutants & Masterminds")
+    print("4. Vampire: The Masquerade")
+    print("5. Çıkış")
     print()
 
 def get_user_choice():
     """Kullanıcı seçimini al"""
     while True:
         try:
-            choice = input("Seçiminizi yapın (1-4): ").strip()
-            if choice in ['1', '2', '3', '4']:
+            choice = input("Seçiminizi yapın (1-5): ").strip()
+            if choice in ['1', '2', '3', '4', '5']:
                 return choice
             else:
-                print("Geçersiz seçim! Lütfen 1-4 arası bir sayı girin.")
+                print("Geçersiz seçim! Lütfen 1-5 arası bir sayı girin.")
         except KeyboardInterrupt:
             print("\nProgram kapatılıyor...")
             sys.exit(0)
@@ -99,6 +99,30 @@ def launch_vtm_system():
     print()
     launch_dnd_gui()  # Aynı GUI, farklı sekme
 
+def launch_pathfinder_system():
+    """Pathfinder 1e sistemini başlat"""
+    print("\nPathfinder 1e CLI sistemine hoş geldiniz!")
+    print("Tüm Pathfinder özellikleri hazır:")
+    print("• 77 Irk")
+    print("• 73 Sınıf")
+    print("• 421 Feat")
+    print("• 500+ Büyü")
+    print("• CLI Arayüzü")
+    print()
+    
+    print("Pathfinder 1e CLI başlatılıyor...")
+    try:
+        import subprocess
+        import sys
+        
+        cli_path = BASE_DIR / "pathfinder_cli.py"
+        if cli_path.exists():
+            subprocess.run([sys.executable, str(cli_path)])
+        else:
+            print("CLI dosyası bulunamadı!")
+    except Exception as e:
+        print(f"CLI başlatılamadı: {e}")
+
 def main():
     """Ana fonksiyon"""
     try:
@@ -109,10 +133,12 @@ def main():
             if choice == '1':
                 launch_dnd_system()
             elif choice == '2':
-                launch_mm_system()
+                launch_pathfinder_system()
             elif choice == '3':
-                launch_vtm_system()
+                launch_mm_system()
             elif choice == '4':
+                launch_vtm_system()
+            elif choice == '5':
                 print("\nHoşça kalın! Maceralarınızda başarılar!")
                 break
             
