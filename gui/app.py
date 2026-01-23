@@ -14,10 +14,10 @@ from PySide6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout,
     QTabWidget, QLabel, QLineEdit, QComboBox, QPushButton, QMessageBox,
     QTableWidget, QTableWidgetItem, QFileDialog, QDialog, QSpinBox,
-    QCheckBox, QTextEdit, QGroupBox, QGridLayout, QListWidget, QListWidgetItem
+    QCheckBox, QTextEdit, QGroupBox, QGridLayout, QListWidget, QListWidgetItem, QScrollArea
 )
 from PySide6.QtCore import Qt
-from PySide6.QtGui import QFont, QIcon
+from PySide6.QtGui import QFont, QIcon, QPixmap
 
 
 class SystemTab(QWidget):
@@ -49,13 +49,21 @@ class SystemTab(QWidget):
         # Race/Irk
         char_layout.addWidget(QLabel("Irk:"), 1, 0)
         self.race_combo = QComboBox()
-        self.race_combo.addItems(sorted(self.data.get("races", {}).keys()))
+        races = sorted(self.data.get("races", {}).keys())
+        if races:
+            self.race_combo.addItems(races)
+        else:
+            self.race_combo.addItem("(Veri Yok)")
         char_layout.addWidget(self.race_combo, 1, 1)
         
         # Class/Sınıf
         char_layout.addWidget(QLabel("Sınıf:"), 1, 2)
         self.class_combo = QComboBox()
-        self.class_combo.addItems(sorted(self.data.get("classes", {}).keys()))
+        classes = sorted(self.data.get("classes", {}).keys())
+        if classes:
+            self.class_combo.addItems(classes)
+        else:
+            self.class_combo.addItem("(Veri Yok)")
         char_layout.addWidget(self.class_combo, 1, 3)
         
         # Level
@@ -221,30 +229,50 @@ class MainWindow(QMainWindow):
         
         # D&D 5e
         try:
-            with open(base_dir / "data" / "dnd_data.json", encoding='utf-8') as f:
-                data["D&D 5e"] = json.load(f)
-        except:
-            data["D&D 5e"] = {"races": {}, "classes": {}}
+            dnd_path = base_dir / "data" / "dnd_data.json"
+            if dnd_path.exists():
+                with open(dnd_path, encoding='utf-8') as f:
+                    data["D&D 5e"] = json.load(f)
+            else:
+                data["D&D 5e"] = {"races": {}, "classes": {}, "backgrounds": {}, "feats": {}, "spells": {}, "equipment": {}}
+        except Exception as e:
+            print(f"D&D veri yüklenemiyor: {e}")
+            data["D&D 5e"] = {"races": {}, "classes": {}, "backgrounds": {}, "feats": {}, "spells": {}, "equipment": {}}
         
         # Pathfinder 1e
         try:
-            with open(base_dir / "data" / "pathfinder_1e_data.json", encoding='utf-8') as f:
-                data["Pathfinder 1e"] = json.load(f)
-        except:
-            data["Pathfinder 1e"] = {"races": {}, "classes": {}}
+            pf_path = base_dir / "data" / "pathfinder_1e_data.json"
+            if pf_path.exists():
+                with open(pf_path, encoding='utf-8') as f:
+                    data["Pathfinder 1e"] = json.load(f)
+            else:
+                data["Pathfinder 1e"] = {"races": {}, "classes": {}, "feats": {}, "spells": {}}
+        except Exception as e:
+            print(f"Pathfinder veri yüklenemiyor: {e}")
+            data["Pathfinder 1e"] = {"races": {}, "classes": {}, "feats": {}, "spells": {}}
         
         # M&M
         try:
-            with open(base_dir / "data" / "mm_data.json", encoding='utf-8') as f:
-                data["M&M"] = json.load(f)
-        except:
+            mm_path = base_dir / "data" / "mm_data.json"
+            if mm_path.exists():
+                with open(mm_path, encoding='utf-8') as f:
+                    data["M&M"] = json.load(f)
+            else:
+                data["M&M"] = {"races": {"Human": {}}, "classes": {"Superhero": {}}}
+        except Exception as e:
+            print(f"M&M veri yüklenemiyor: {e}")
             data["M&M"] = {"races": {"Human": {}}, "classes": {"Superhero": {}}}
         
         # VtM
         try:
-            with open(base_dir / "data" / "vtm_data.json", encoding='utf-8') as f:
-                data["VtM"] = json.load(f)
-        except:
+            vtm_path = base_dir / "data" / "vtm_data.json"
+            if vtm_path.exists():
+                with open(vtm_path, encoding='utf-8') as f:
+                    data["VtM"] = json.load(f)
+            else:
+                data["VtM"] = {"races": {"Vampire": {}}, "classes": {"Clan": {}}}
+        except Exception as e:
+            print(f"VtM veri yüklenemiyor: {e}")
             data["VtM"] = {"races": {"Vampire": {}}, "classes": {"Clan": {}}}
         
         return data
@@ -256,10 +284,25 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(central)
         main_layout = QVBoxLayout(central)
         
+        # Logo ve Başlık
+        header_layout = QHBoxLayout()
+        
+        # Logo
+        logo_path = Path(__file__).parent.parent / "assets" / "diyargezer_logo.png"
+        if logo_path.exists():
+            logo_label = QLabel()
+            pixmap = QPixmap(str(logo_path))
+            scaled_pixmap = pixmap.scaledToWidth(80, Qt.SmoothTransformation)
+            logo_label.setPixmap(scaled_pixmap)
+            header_layout.addWidget(logo_label)
+        
         # Başlık
         title = QLabel("Diyargezen - Evrensel FRP Karakter Oluşturucu")
         title.setFont(QFont("Arial", 14, QFont.Bold))
-        main_layout.addWidget(title)
+        header_layout.addWidget(title)
+        header_layout.addStretch()
+        
+        main_layout.addLayout(header_layout)
         
         # Tab widget
         self.tabs = QTabWidget()

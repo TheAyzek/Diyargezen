@@ -5319,6 +5319,15 @@
     }
   },
   "classes": {
+    "Adept": {
+      "hit_die": "d6",
+      "skill_ranks_per_level": 2,
+      "class_skills": [],
+      "proficiencies": [],
+      "spellcasting": true,
+      "features": {},
+      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Adept"
+    },
     "Alchemist": {
       "hit_die": "d8",
       "skill_ranks_per_level": 2,
@@ -5327,6 +5336,15 @@
       "spellcasting": true,
       "features": {},
       "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Alchemist"
+    },
+    "alchemist’s": {
+      "hit_die": "d8",
+      "skill_ranks_per_level": 2,
+      "class_skills": [],
+      "proficiencies": [],
+      "spellcasting": true,
+      "features": {},
+      "source": "https://www.d20pfsrd.com/classes/base-classes/alchemist"
     },
     "Antipaladin": {
       "hit_die": "d10",
@@ -5348,14 +5366,23 @@
       "features": {},
       "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Arcanist"
     },
+    "Aristocrat": {
+      "hit_die": "d8",
+      "skill_ranks_per_level": 2,
+      "class_skills": [],
+      "proficiencies": [],
+      "spellcasting": false,
+      "features": {},
+      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Aristocrat"
+    },
     "Barbarian": {
       "hit_die": "d12",
       "skill_ranks_per_level": 2,
       "class_skills": [],
       "proficiencies": [],
-      "spellcasting": true,
+      "spellcasting": false,
       "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Barbarian"
+      "source": "https://www.d20pfsrd.com/classes/core-classes/barbarian"
     },
     "Barbarian (Unchained)": {
       "hit_die": "d12",
@@ -5373,7 +5400,16 @@
       "proficiencies": [],
       "spellcasting": true,
       "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Bard"
+      "source": "https://www.d20pfsrd.com/classes/core-classes/bard"
+    },
+    "bloodline": {
+      "hit_die": "d6",
+      "skill_ranks_per_level": 2,
+      "class_skills": [],
+      "proficiencies": [],
+      "spellcasting": true,
+      "features": {},
+      "source": "https://www.d20pfsrd.com/classes/core-classes/sorcerer#TOC-Bloodline"
     },
     "Bloodrager": {
       "hit_die": "d10",
@@ -5398,27 +5434,105 @@
       "skill_ranks_per_level": 2,
       "class_skills": [],
       "proficiencies": [],
-      "spellcasting": false,
+      "spellcasting": true,
       "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Cavalier"
+      "source": "https://www.d20pfsrd.com/classes/base-classes/cavalier"
     },
     "Cleric": {
       "hit_die": "d8",
       "skill_ranks_per_level": 2,
       "class_skills": [],
-      "proficiencies": [],
+      "proficiencies": [
+        "Instead of receiving an additional skill rank or hit point whenever they gain a level in a favored class",
+        "some races have the option of choosing from a number of other bonuses",
+        "depending upon their favored classes. The following options are available to the listed race who have cleric as their favored class",
+        "and unless otherwise stated",
+        "the bonus applies each time you select the listed favored class reward."
+      ],
       "spellcasting": true,
       "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Cleric"
+      "source": "https://www.d20pfsrd.com/classes/core-classes/cleric"
+    },
+    "Commoner": {
+      "hit_die": "d6",
+      "skill_ranks_per_level": 2,
+      "class_skills": [],
+      "proficiencies": [],
+      "spellcasting": false,
+      "features": {},
+      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Commoner"
+    },
+    "Companion": {
+      "hit_die": "d8",
+      "skill_ranks_per_level": 2,
+      "class_skills": [],
+      "proficiencies": [],
+      "spellcasting": false,
+      "features": {},
+      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Companion"
+    },
+    "Drake": {
+      "hit_die": "d8",
+      "skill_ranks_per_level": 2,
+      "class_skills": [],
+      "proficiencies": [],
+      "spellcasting": false,
+      "features": {},
+      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Drake"
     },
     "Druid": {
+      "hit_die": "d8",
+      "skill_ranks_per_level": 2,
+      "class_skills": [
+        "Evil",
+        "Good"
+      ],
+      "proficiencies": [
+        "Instead of receiving an additional skill rank or hit point whenever they gain a level in a favored class",
+        "some races have the option of choosing from a number of other bonuses",
+        "depending upon their favored classes. The following options are available to the listed race who have druid as their favored class",
+        "and unless otherwise stated",
+        "the bonus applies each time you select the listed favored class reward."
+      ],
+      "spellcasting": true,
+      "features": {},
+      "source": "https://www.d20pfsrd.com/classes/core-classes/druid"
+    },
+    "Eidolon": {
       "hit_die": "d8",
       "skill_ranks_per_level": 2,
       "class_skills": [],
       "proficiencies": [],
       "spellcasting": true,
       "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Druid"
+      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Eidolon"
+    },
+    "Eidolon (Unchained)": {
+      "hit_die": "d8",
+      "skill_ranks_per_level": 2,
+      "class_skills": [],
+      "proficiencies": [],
+      "spellcasting": true,
+      "features": {},
+      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Eidolon (Unchained)"
+    },
+    "Expert": {
+      "hit_die": "d8",
+      "skill_ranks_per_level": 2,
+      "class_skills": [],
+      "proficiencies": [],
+      "spellcasting": false,
+      "features": {},
+      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Expert"
+    },
+    "Familiar": {
+      "hit_die": "d8",
+      "skill_ranks_per_level": 2,
+      "class_skills": [],
+      "proficiencies": [],
+      "spellcasting": true,
+      "features": {},
+      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Familiar"
     },
     "Fighter": {
       "hit_die": "d10",
@@ -5427,7 +5541,7 @@
       "proficiencies": [],
       "spellcasting": false,
       "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Fighter"
+      "source": "https://www.d20pfsrd.com/classes/core-classes/fighter"
     },
     "Gunslinger": {
       "hit_die": "d10",
@@ -5436,7 +5550,7 @@
       "proficiencies": [],
       "spellcasting": false,
       "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Gunslinger"
+      "source": "https://www.d20pfsrd.com/classes/base-classes/gunslinger"
     },
     "Hunter": {
       "hit_die": "d8",
@@ -5508,7 +5622,7 @@
       "proficiencies": [],
       "spellcasting": true,
       "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Monk"
+      "source": "https://www.d20pfsrd.com/classes/core-classes/monk"
     },
     "Monk (Unchained)": {
       "hit_die": "d10",
@@ -5541,10 +5655,13 @@
       "hit_die": "d8",
       "skill_ranks_per_level": 2,
       "class_skills": [],
-      "proficiencies": [],
+      "proficiencies": [
+        "An oracle casts divine spells drawn from the cleric spell lists. She can cast any spell she knows without preparing it ahead of time. To learn or cast a spell",
+        "an oracle must have a Charisma score equal to at least 10 + the spell level. The Difficulty Class for a saving throw against an oracle’s spell is 10 + the spell’s level + the oracle’s Charisma modifier (see FAQ)."
+      ],
       "spellcasting": true,
       "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Oracle"
+      "source": "https://www.d20pfsrd.com/classes/base-classes/oracle"
     },
     "Paladin": {
       "hit_die": "d10",
@@ -5555,6 +5672,15 @@
       "features": {},
       "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Paladin"
     },
+    "Phantom": {
+      "hit_die": "d8",
+      "skill_ranks_per_level": 2,
+      "class_skills": [],
+      "proficiencies": [],
+      "spellcasting": true,
+      "features": {},
+      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Phantom"
+    },
     "Psychic": {
       "hit_die": "d6",
       "skill_ranks_per_level": 2,
@@ -5564,6 +5690,15 @@
       "features": {},
       "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Psychic"
     },
+    "rage": {
+      "hit_die": "d12",
+      "skill_ranks_per_level": 2,
+      "class_skills": [],
+      "proficiencies": [],
+      "spellcasting": false,
+      "features": {},
+      "source": "https://www.d20pfsrd.com/classes/core-classes/barbarian#TOC-Rage-Ex-"
+    },
     "Ranger": {
       "hit_die": "d10",
       "skill_ranks_per_level": 2,
@@ -5571,7 +5706,7 @@
       "proficiencies": [],
       "spellcasting": true,
       "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Ranger"
+      "source": "https://www.d20pfsrd.com/classes/core-classes/ranger"
     },
     "Rogue": {
       "hit_die": "d8",
@@ -5580,7 +5715,7 @@
       "proficiencies": [],
       "spellcasting": false,
       "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Rogue"
+      "source": "https://www.d20pfsrd.com/classes/core-classes/rogue"
     },
     "Rogue (Unchained)": {
       "hit_die": "d8",
@@ -5596,9 +5731,9 @@
       "skill_ranks_per_level": 2,
       "class_skills": [],
       "proficiencies": [],
-      "spellcasting": false,
+      "spellcasting": true,
       "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Samurai"
+      "source": "https://www.d20pfsrd.com/classes/alternate-classes/samurai"
     },
     "Shaman": {
       "hit_die": "d8",
@@ -5643,7 +5778,7 @@
       "proficiencies": [],
       "spellcasting": true,
       "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Sorcerer"
+      "source": "https://www.d20pfsrd.com/classes/core-classes/sorcerer"
     },
     "Spiritualist": {
       "hit_die": "d8",
@@ -5699,114 +5834,6 @@
       "features": {},
       "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Warpriest"
     },
-    "Witch": {
-      "hit_die": "d6",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Witch"
-    },
-    "Wizard": {
-      "hit_die": "d6",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Wizard"
-    },
-    "Companion": {
-      "hit_die": "d8",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": false,
-      "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Companion"
-    },
-    "Drake": {
-      "hit_die": "d8",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": false,
-      "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Drake"
-    },
-    "Eidolon": {
-      "hit_die": "d8",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Eidolon"
-    },
-    "Eidolon (Unchained)": {
-      "hit_die": "d8",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Eidolon (Unchained)"
-    },
-    "Familiar": {
-      "hit_die": "d8",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Familiar"
-    },
-    "Phantom": {
-      "hit_die": "d8",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Phantom"
-    },
-    "Adept": {
-      "hit_die": "d6",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Adept"
-    },
-    "Aristocrat": {
-      "hit_die": "d8",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": false,
-      "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Aristocrat"
-    },
-    "Commoner": {
-      "hit_die": "d6",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": false,
-      "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Commoner"
-    },
-    "Expert": {
-      "hit_die": "d8",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": false,
-      "features": {},
-      "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Expert"
-    },
     "Warrior": {
       "hit_die": "d10",
       "skill_ranks_per_level": 2,
@@ -5816,142 +5843,7 @@
       "features": {},
       "source": "https://aonprd.com/ClassDisplay.aspx?ItemName=Warrior"
     },
-    "fighter": {
-      "hit_die": "d10",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": false,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/core-classes/fighter"
-    },
-    "cleric": {
-      "hit_die": "d8",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [
-        "Instead of receiving an additional skill rank or hit point whenever they gain a level in a favored class",
-        "some races have the option of choosing from a number of other bonuses",
-        "depending upon their favored classes. The following options are available to the listed race who have cleric as their favored class",
-        "and unless otherwise stated",
-        "the bonus applies each time you select the listed favored class reward."
-      ],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/core-classes/cleric"
-    },
-    "wizard": {
-      "hit_die": "d6",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/core-classes/wizard"
-    },
-    "bloodline": {
-      "hit_die": "d6",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/core-classes/sorcerer#TOC-Bloodline"
-    },
-    "sorcerer": {
-      "hit_die": "d6",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/core-classes/sorcerer"
-    },
-    "barbarian": {
-      "hit_die": "d12",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": false,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/core-classes/barbarian"
-    },
-    "rage": {
-      "hit_die": "d12",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": false,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/core-classes/barbarian#TOC-Rage-Ex-"
-    },
-    "monk": {
-      "hit_die": "d8",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/core-classes/monk"
-    },
-    "druid": {
-      "hit_die": "d8",
-      "skill_ranks_per_level": 2,
-      "class_skills": [
-        "Evil",
-        "Good"
-      ],
-      "proficiencies": [
-        "Instead of receiving an additional skill rank or hit point whenever they gain a level in a favored class",
-        "some races have the option of choosing from a number of other bonuses",
-        "depending upon their favored classes. The following options are available to the listed race who have druid as their favored class",
-        "and unless otherwise stated",
-        "the bonus applies each time you select the listed favored class reward."
-      ],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/core-classes/druid"
-    },
-    "ranger": {
-      "hit_die": "d10",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/core-classes/ranger"
-    },
-    "alchemist’s": {
-      "hit_die": "d8",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/base-classes/alchemist"
-    },
-    "rogue": {
-      "hit_die": "d8",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": false,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/core-classes/rogue"
-    },
-    "oracle": {
-      "hit_die": "d8",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [
-        "An oracle casts divine spells drawn from the cleric spell lists. She can cast any spell she knows without preparing it ahead of time. To learn or cast a spell",
-        "an oracle must have a Charisma score equal to at least 10 + the spell level. The Difficulty Class for a saving throw against an oracle’s spell is 10 + the spell’s level + the oracle’s Charisma modifier (see FAQ)."
-      ],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/base-classes/oracle"
-    },
-    "witch": {
+    "Witch": {
       "hit_die": "d6",
       "skill_ranks_per_level": 2,
       "class_skills": [],
@@ -5960,41 +5852,14 @@
       "features": {},
       "source": "https://www.d20pfsrd.com/classes/base-classes/witch"
     },
-    "bard": {
-      "hit_die": "d8",
+    "Wizard": {
+      "hit_die": "d6",
       "skill_ranks_per_level": 2,
       "class_skills": [],
       "proficiencies": [],
       "spellcasting": true,
       "features": {},
-      "source": "https://www.d20pfsrd.com/classes/core-classes/bard"
-    },
-    "gunslinger": {
-      "hit_die": "d10",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": false,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/base-classes/gunslinger"
-    },
-    "samurai": {
-      "hit_die": "d10",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/alternate-classes/samurai"
-    },
-    "cavalier": {
-      "hit_die": "d10",
-      "skill_ranks_per_level": 2,
-      "class_skills": [],
-      "proficiencies": [],
-      "spellcasting": true,
-      "features": {},
-      "source": "https://www.d20pfsrd.com/classes/base-classes/cavalier"
+      "source": "https://www.d20pfsrd.com/classes/core-classes/wizard"
     }
   },
   "feats": {
