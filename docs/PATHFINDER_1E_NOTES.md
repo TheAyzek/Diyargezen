@@ -297,3 +297,5 @@ Detay sayfasından -> Büyü bilgilerini parse et
 
 
 
+
+

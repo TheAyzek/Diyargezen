@@ -4,93 +4,57 @@ from reportlab.lib.units import inch
 from reportlab.lib.utils import ImageReader
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.lib.colors import HexColor
 from pathlib import Path
-from typing import Optional
+from typing import Optional, Dict, Any, List
 import base64
 from io import BytesIO
 
 
 def _get_character_image_bytes(character: dict) -> Optional[BytesIO]:
-    """
-    Karakter verisinden resmi al ve BytesIO olarak döndür (PDF için)
-    
-    Args:
-        character: Karakter verisi
-    
-    Returns:
-        BytesIO veya None
-    """
+    """Karakter verisinden resmi al ve BytesIO olarak dondur"""
     image_data = character.get("image")
     if not image_data:
         return None
-    
     try:
         if isinstance(image_data, str) and image_data.startswith('data:'):
-            # Base64 string
             header, data = image_data.split(',', 1)
             image_bytes = base64.b64decode(data)
             return BytesIO(image_bytes)
         elif isinstance(image_data, str):
-            # Dosya yolu (geriye uyumluluk)
             image_path = Path(image_data)
             if image_path.exists():
                 with open(image_path, 'rb') as f:
                     return BytesIO(f.read())
     except Exception:
         pass
-    
     return None
 
 
 def _draw_character_image(c: canvas.Canvas, character: dict, width: float, height: float, x_offset: float = 0.5, y_offset: float = 0.5):
-    """
-    Karakter resmini PDF'e ekle
-    
-    Args:
-        c: ReportLab canvas
-        character: Karakter verisi
-        width: Sayfa genişliği
-        height: Sayfa yüksekliği
-        x_offset: X offset (inch cinsinden)
-        y_offset: Y offset (inch cinsinden)
-    """
+    """Karakter resmini PDF'e ekle"""
     image_bytes = _get_character_image_bytes(character)
     if not image_bytes:
         return
-    
     try:
         from PIL import Image
-        # Resmi yükle ve boyutlarını al
         img = Image.open(image_bytes)
         img_width, img_height = img.size
-        
-        # Resim boyutunu ayarla (maksimum 2 inch genişlik/yükseklik)
         max_size = 2 * inch
         scale = min(max_size / img_width, max_size / img_height, 1.0)
         display_width = img_width * scale
         display_height = img_height * scale
-        
-        # Sağ üst köşeye yerleştir
         x = width - display_width - (x_offset * inch)
         y = height - display_height - (y_offset * inch)
-        
-        # BytesIO'yu başa al (ImageReader için)
         image_bytes.seek(0)
         image_reader = ImageReader(image_bytes)
-        
-        # Resmi PDF'e ekle
         c.drawImage(image_reader, x, y, width=display_width, height=display_height, preserveAspectRatio=True)
     except Exception:
-        # Resim eklenemezse sessizce devam et
         pass
 
 
 def _register_turkish_font() -> str:
-    """
-    Türkçe karakter desteği için bir TrueType fontu kayıt eder.
-    Öncelikle projedeki bir font dosyasına, ardından Windows/Linux
-    sistem fontlarına bakar. Bulamazsa ReportLab'ın varsayılanını döner.
-    """
+    """Turkce karakter destegi icin TrueType font kayit et"""
     font_candidates = [
         Path(__file__).resolve().parents[1] / "assets" / "fonts" / "DejaVuSans.ttf",
         Path("C:/Windows/Fonts/arial.ttf"),
@@ -104,9 +68,8 @@ def _register_turkish_font() -> str:
                 pdfmetrics.registerFont(TTFont(registered_name, str(candidate)))
                 return registered_name
         except Exception:
-            # Bir font başarısız olursa diğerini dene
             continue
-    return "Helvetica"  # Fallback (Unicode kısıtlı olabilir)
+    return "Helvetica"
 
 
 def _create_canvas(output_path: Path, page_size: str, background_path: Optional[Path] = None):
@@ -114,26 +77,24 @@ def _create_canvas(output_path: Path, page_size: str, background_path: Optional[
     c = canvas.Canvas(str(output_path), pagesize=size)
     width, height = size
 
-    # Arkaplan
     if background_path and background_path.exists():
-        bg = str(background_path)
         try:
-            c.drawImage(bg, 0, 0, width=width, height=height, preserveAspectRatio=True, mask='auto')
+            c.drawImage(str(background_path), 0, 0, width=width, height=height, preserveAspectRatio=True, mask='auto')
         except Exception:
             pass
 
-    # Küçük logo sağ üst köşede (fazla yer kaplamasın)
+    # Logo
     logo_path = Path(__file__).resolve().parents[1] / "Gemini_Generated_Image_c510m9c510m9c510.png"
     if logo_path.exists():
         try:
             from PIL import Image
             img = Image.open(str(logo_path))
             logo_width, logo_height = img.size
-            max_size = 0.6 * inch  # Çok küçük logo
+            max_size = 0.6 * inch
             scale = min(max_size / logo_width, max_size / logo_height, 1.0)
             display_w = logo_width * scale
             display_h = logo_height * scale
-            logo_x = width - display_w - (0.35 * inch)  # sağ üstten küçük boşluk
+            logo_x = width - display_w - (0.35 * inch)
             logo_y = height - display_h - (0.35 * inch)
             logo = ImageReader(str(logo_path))
             c.drawImage(logo, logo_x, logo_y, width=display_w, height=display_h, preserveAspectRatio=True, mask='auto')
@@ -142,471 +103,490 @@ def _create_canvas(output_path: Path, page_size: str, background_path: Optional[
     return c, width, height
 
 
-def export_dnd_character_pdf(character: dict, output_path: Path, background_path: Optional[Path] = None, page_size: str = "A4") -> None:
+class PDFWriter:
+    """PDF yazma islemlerini yoneten yardimci sinif"""
+
+    def __init__(self, c: canvas.Canvas, width: float, height: float, font_name: str, margin: float = 0.5):
+        self.c = c
+        self.width = width
+        self.height = height
+        self.font_name = font_name
+        self.margin = margin * inch
+        self.x = self.margin
+        self.y = height - self.margin
+        self.min_y = self.margin + 0.3 * inch  # Alt sinir
+
+    def _check_page_break(self, needed: float = 20):
+        """Sayfa sonuna yaklasilmissa yeni sayfa olustur"""
+        if self.y - needed < self.min_y:
+            self.c.showPage()
+            self.y = self.height - self.margin
+            return True
+        return False
+
+    def title(self, text: str, size: int = 16):
+        self._check_page_break(30)
+        self.c.setFont(self.font_name, size)
+        self.c.drawString(self.x, self.y, text)
+        self.y -= size + 8
+
+    def header(self, text: str, size: int = 13):
+        self._check_page_break(25)
+        self.y -= 5
+        # Ince cizgi
+        self.c.setStrokeColor(HexColor("#3498db"))
+        self.c.setLineWidth(0.5)
+        self.c.line(self.x, self.y + 2, self.width - self.margin, self.y + 2)
+        self.c.setStrokeColor(HexColor("#000000"))
+        self.y -= 3
+        self.c.setFont(self.font_name, size)
+        self.c.setFillColor(HexColor("#2c3e50"))
+        self.c.drawString(self.x, self.y, text)
+        self.c.setFillColor(HexColor("#000000"))
+        self.y -= size + 4
+
+    def line(self, text: str, size: int = 10, indent: int = 0, step: float = 14):
+        self._check_page_break(step)
+        self.c.setFont(self.font_name, size)
+        self.c.drawString(self.x + indent, self.y, text)
+        self.y -= step
+
+    def key_value(self, key: str, value, indent: int = 0, size: int = 10):
+        self._check_page_break(14)
+        self.c.setFont(self.font_name, size)
+        self.c.drawString(self.x + indent, self.y, f"{key}: {value}")
+        self.y -= 14
+
+    def two_column(self, left: str, right: str, size: int = 10):
+        """Iki sutunlu satir"""
+        self._check_page_break(14)
+        self.c.setFont(self.font_name, size)
+        mid = self.width / 2
+        self.c.drawString(self.x, self.y, left)
+        self.c.drawString(mid, self.y, right)
+        self.y -= 14
+
+    def three_column(self, col1: str, col2: str, col3: str, size: int = 10):
+        """Uc sutunlu satir"""
+        self._check_page_break(14)
+        self.c.setFont(self.font_name, size)
+        third = (self.width - 2 * self.margin) / 3
+        self.c.drawString(self.x, self.y, col1)
+        self.c.drawString(self.x + third, self.y, col2)
+        self.c.drawString(self.x + 2 * third, self.y, col3)
+        self.y -= 14
+
+    def spacer(self, height: float = 8):
+        self.y -= height
+
+    def new_page(self):
+        self.c.showPage()
+        self.y = self.height - self.margin
+
+
+def export_dnd_character_pdf(
+    character: dict,
+    output_path: Path,
+    background_path: Optional[Path] = None,
+    page_size: str = "A4",
+    template: str = "standard"
+) -> None:
     """
-    D&D karakterini basit bir PDF'e yazar. Eğer background_path verilirse görseli sayfa arkaplanı olarak yerleştirir.
-    - character: dnd_creator.py'nin döndürdüğü sözlük yapısı ile uyumlu olmalı
-    - output_path: oluşturulacak PDF dosyasının yolu
-    - background_path: PNG/JPG veya PDF (tek sayfa) olabilir; varsa arkaplan olarak basılır
+    D&D karakterini PDF'e yazar - IYILESTIRILDI
+    Sayfa 1: Karakter bilgileri, istatistikler, ekipman
+    Sayfa 2: Spell Sheet (spellcaster ise)
     """
     c, width, height = _create_canvas(output_path, page_size, background_path)
-
     font_name = _register_turkish_font()
 
-    margin = 0.5 * inch
-    x = margin
-    y = height - margin
+    # Template ayarlari
+    templates = {
+        "compact":  {"title": 14, "header": 11, "normal": 9,  "line_sp": 12},
+        "detailed": {"title": 18, "header": 14, "normal": 11, "line_sp": 16},
+        "minimal":  {"title": 12, "header": 10, "normal": 8,  "line_sp": 10},
+        "standard": {"title": 16, "header": 13, "normal": 10, "line_sp": 14},
+    }
+    tpl = templates.get(template, templates["standard"])
 
-    def write_line(text: str, step: float = 14):
-        nonlocal y
-        c.setFont(font_name, 10)
-        c.drawString(x, y, text)
-        y -= step
+    _draw_character_image(c, character, width, height,
+                          x_offset=0.7 if template in ["compact", "minimal"] else 0.5,
+                          y_offset=0.7 if template in ["compact", "minimal"] else 0.5)
 
-    # Karakter resmini ekle (varsa)
-    _draw_character_image(c, character, width, height, x_offset=0.5, y_offset=0.5)
-    
-    # Başlık
-    c.setFont(font_name, 16)
-    c.drawString(x, y, "🎲 Diyargezer - D&D 5e Karakter Kağıdı")
-    y -= 25
-    
-    # Karakter adı
-    c.setFont(font_name, 14)
-    c.drawString(x, y, f"Karakter: {character.get('name', 'İsimsiz Karakter')}")
-    y -= 20
-    
-    c.setFont(font_name, 10)
-    write_line(f"Sistem: {character.get('system', '')}")
-    write_line(f"Irk: {character.get('race', '')}")
-    write_line(f"Sınıf: {character.get('class', '')}")
+    w = PDFWriter(c, width, height, font_name)
+
+    # ========================== SAYFA 1 ==========================
+    w.title("Diyargezer - D&D 5e Karakter Kagidi", tpl["title"])
+
+    # --- Temel Bilgiler ---
+    w.header("TEMEL BILGILER", tpl["header"])
+    w.two_column(
+        f"Karakter: {character.get('name', 'Isimsiz')}",
+        f"Seviye: {character.get('level', 1)}"
+    )
+    # Multiclass aware class display
+    if character.get('is_multiclass') and character.get('class_levels'):
+        class_parts = [f"{c} {l}" for c, l in character['class_levels'].items()]
+        class_text = " / ".join(class_parts)
+    else:
+        class_text = character.get('class_display', character.get('class', ''))
+    w.two_column(
+        f"Irk: {character.get('race', '')}",
+        f"Sinif: {class_text}"
+    )
     if character.get('background'):
-        write_line(f"Arka Plan: {character.get('background', '')}")
-    write_line(f"Hız: {character.get('speed', '')}")
-    write_line(f"Zırh Sınıfı: {character.get('armor_class', 10)}")
-    write_line(f"Taşıma Kapasitesi: {character.get('carry_weight', 150)} lbs")
-    write_line(f"Can Puanı: {character.get('hp_max', 8)}")
-    
-    # Equipment effects
-    equipment_effects = character.get("equipment_effects", {})
-    if equipment_effects.get("equipped_armor"):
-        write_line(f"Zırh: {equipment_effects['equipped_armor']}")
-    if equipment_effects.get("equipped_shield"):
-        write_line(f"Kalkan: {equipment_effects['equipped_shield']}")
-    if equipment_effects.get("stealth_disadvantage"):
-        write_line("Gizlenme Dezavantajı: Evet (zırh)")
-    
-    # Weapon attacks
-    weapon_attacks = equipment_effects.get("weapon_attacks", [])
-    if weapon_attacks:
-        write_line("Silah Saldırıları:")
-        for attack in weapon_attacks:
-            attack_str = f"  {attack['name']}: {attack['to_hit']} isabet, {attack['damage']} hasar"
-            if attack.get("range"):
-                attack_str += f" (menzil {attack['range']})"
-            if attack.get("versatile_damage"):
-                attack_str += f" / {attack['versatile_damage']} (versatile)"
-            write_line(attack_str)
-    
-    # Magic items
-    magic_items = [item for item in character.get("inventory", []) if item.get("category") == "magic_items"]
-    if magic_items:
-        write_line("Büyülü Eşyalar:")
-        for item in magic_items:
-            item_data = item.get("data", {})
-            rarity = item_data.get("rarity", "unknown")
-            rarity_colors = {
-                "common": "Beyaz",
-                "uncommon": "Yeşil", 
-                "rare": "Mavi",
-                "very rare": "Mor",
-                "legendary": "Turuncu",
-                "artifact": "Kırmızı"
-            }
-            rarity_text = rarity_colors.get(rarity, rarity.title())
-            write_line(f"  {item['name']} ({rarity_text})")
+        w.two_column(
+            f"Arka Plan: {character.get('background', '')}",
+            f"Hiz: {character.get('speed', 30)} ft"
+        )
+    if character.get('alignment'):
+        w.key_value("Hizalama", character['alignment'])
 
-    traits = ", ".join(character.get('race_traits', []))
-    write_line(f"Irksal Özellikler: {traits}")
-
+    # --- Yetenek Puanlari ---
+    w.header("YETENEK PUANLARI", tpl["header"])
     abilities = character.get('abilities', {})
     mods = character.get('ability_modifiers', {})
-    if abilities:
-        write_line("Yetenek Puanları ve Modifikatorler:")
-        for k in ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"]:
-            if k in abilities:
-                write_line(f"  {k}: {abilities[k]} (mod {mods.get(k, 0):+d})")
+    if not mods and abilities:
+        mods = {k: (v - 10) // 2 for k, v in abilities.items()}
 
-    write_line(f"Can Zarı: {character.get('hit_die', '')}")
-    prim = ", ".join(character.get('primary_ability', []))
-    write_line(f"Birincil Yetenek(ler): {prim}")
-    saves = ", ".join(character.get('saving_throws', []))
-    write_line(f"Kurtarış Atışları: {saves}")
+    ability_order = ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"]
+    # 3 satir, 2 sutun
+    for i in range(0, 6, 2):
+        left_ab = ability_order[i] if i < len(ability_order) else ""
+        right_ab = ability_order[i + 1] if i + 1 < len(ability_order) else ""
+        left_val = f"{left_ab[:3].upper()}: {abilities.get(left_ab, 10)} ({mods.get(left_ab, 0):+d})" if left_ab else ""
+        right_val = f"{right_ab[:3].upper()}: {abilities.get(right_ab, 10)} ({mods.get(right_ab, 0):+d})" if right_ab else ""
+        w.two_column(left_val, right_val)
 
-    # Kurtarış modları
-    save_mods = character.get('saving_throw_modifiers', {})
-    if save_mods:
-        write_line("Kurtarış Modları:")
-        for ab in ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"]:
-            if ab in save_mods:
-                write_line(f"  {ab}: {save_mods[ab]:+d}")
+    # --- Savas Istatistikleri ---
+    w.header("SAVAS ISTATISTIKLERI", tpl["header"])
+    w.three_column(
+        f"HP: {character.get('hit_points', character.get('hp', character.get('hp_max', '?')))}",
+        f"AC: {character.get('armor_class', 10)}",
+        f"Initiative: {character.get('initiative', mods.get('Dexterity', 0)):+d}"
+    )
+    w.two_column(
+        f"Proficiency Bonus: +{character.get('proficiency_bonus', 2)}",
+        f"Can Zari: {character.get('hit_die', character.get('hit_dice', ''))}"
+    )
 
-    eq = ", ".join(character.get('equipment', []))
-    if eq:
-        write_line(f"Ekipman: {eq}")
+    # Saving throws
+    save_mods = character.get('saving_throw_modifiers', character.get('saving_throws', {}))
+    if isinstance(save_mods, dict) and save_mods:
+        saves_text = "  ".join(f"{k[:3]}:{v:+d}" for k, v in save_mods.items() if isinstance(v, int))
+        if saves_text:
+            w.key_value("Kurtaris Atislari", saves_text)
+    elif isinstance(save_mods, list) and save_mods:
+        w.key_value("Kurtaris Atislari", ", ".join(save_mods))
 
-    # Ek alanlar: hizalama, diller, araçlar, kişilik
-    if character.get('alignment'):
-        write_line(f"Hizalama: {character['alignment']}")
-    langs = character.get('languages', [])
-    if langs:
-        write_line(f"Diller: {', '.join(langs)}")
-    tools = character.get('tools', [])
-    if tools:
-        write_line(f"Araç Yeterlilikleri: {', '.join(tools)}")
-    personality = character.get('personality', {})
-    if any(personality.get(k) for k in ('trait','ideal','bond','flaw')):
-        write_line("Kişilik:")
-        if personality.get('trait'): write_line(f"  Trait: {personality['trait']}")
-        if personality.get('ideal'): write_line(f"  Ideal: {personality['ideal']}")
-        if personality.get('bond'): write_line(f"  Bond: {personality['bond']}")
-        if personality.get('flaw'): write_line(f"  Flaw: {personality['flaw']}")
+    # Weapon attacks
+    equipment_effects = character.get("equipment_effects", {})
+    weapon_attacks = equipment_effects.get("weapon_attacks", [])
+    if weapon_attacks and template != "minimal":
+        w.spacer(4)
+        w.line("Silah Saldirilari:", size=tpl["normal"])
+        for atk in weapon_attacks:
+            atk_str = f"  {atk['name']}: {atk['to_hit']} isabet, {atk['damage']} hasar"
+            if atk.get("range"):
+                atk_str += f" (menzil {atk['range']})"
+            w.line(atk_str, size=tpl["normal"] - 1, indent=10)
 
-    bgf = character.get('background_features', {})
-    if bgf:
-        sp = ", ".join(bgf.get('skill_proficiencies', []))
-        write_line("Arka Plan Özellikleri:")
-        write_line(f"  Yetenek Uzmanlıkları: {sp}")
-        write_line(f"  Özellik: {bgf.get('feature', '')}")
+    # --- Spellcasting ---
+    spell_save_dc = character.get('spell_save_dc')
+    spell_attack_bonus = character.get('spell_attack_bonus')
+    spell_slots = character.get('spell_slots', {}) or {}
 
-    # Beceriler ve pasif algı
+    if spell_save_dc is not None or spell_attack_bonus is not None or spell_slots:
+        w.header("BUYU SISTEMI", tpl["header"])
+        row_parts = []
+        if spell_save_dc is not None:
+            row_parts.append(f"Spell Save DC: {spell_save_dc}")
+        if spell_attack_bonus is not None:
+            row_parts.append(f"Spell Attack: +{spell_attack_bonus}")
+        if row_parts:
+            w.line("  ".join(row_parts))
+
+        if spell_slots:
+            slots_parts = []
+            for lvl_key in sorted(spell_slots.keys(), key=lambda k: int(k) if str(k).isdigit() else 99):
+                count = spell_slots[lvl_key]
+                if count and int(count) > 0:
+                    slots_parts.append(f"Lv{lvl_key}:{count}")
+            if slots_parts:
+                w.key_value("Spell Slots", "  ".join(slots_parts))
+
+    # --- Beceriler ---
     skills = character.get('skills', {})
-    if skills:
-        write_line("Beceriler (mod):")
-        for sk in sorted(skills.keys()):
-            write_line(f"  {sk}: {skills[sk]:+d}")
-    if 'passive_perception' in character:
-        write_line(f"Pasif Algı: {character['passive_perception']}")
+    if skills and template != "minimal":
+        w.header("BECERILER", tpl["header"])
+        skill_items = sorted(skills.items())
+        for i in range(0, len(skill_items), 2):
+            left = f"{skill_items[i][0]}: {skill_items[i][1]:+d}" if i < len(skill_items) else ""
+            right = f"{skill_items[i+1][0]}: {skill_items[i+1][1]:+d}" if i + 1 < len(skill_items) else ""
+            w.two_column(left, right)
 
-    # Sınıf özel bilgiler
-    class_name = character.get('class', '')
-    if class_name in ('Wizard', 'Fighter', 'Rogue', 'Bard', 'Cleric', 'Druid', 'Sorcerer', 'Warlock', 'Paladin', 'Ranger', 'Monk', 'Barbarian', 'Artificer', 'Blood Hunter'):
-        write_line("Sınıf Yeterlilikleri:")
-        profs = character.get('class_proficiencies', {})
-        for k in ('armor','weapons','tools','languages'):
-            vals = ", ".join(profs.get(k, [])) if isinstance(profs.get(k, []), list) else str(profs.get(k, []))
-            write_line(f"  {k.capitalize()}: {vals}")
-        
-        # Sınıf beceri ustalıkları
-        class_skills = character.get('class_skill_proficiencies', [])
-        if class_skills:
-            write_line(f"Sınıf Beceri Ustalıkları: {', '.join(class_skills)}")
-        
-        # Expertise (Rogue)
-        expertise = character.get('expertise', [])
-        if expertise:
-            write_line(f"Uzmanlık (Expertise): {', '.join(expertise)}")
-        
-        # Büyüler (büyü kullanan sınıflar)
-        if class_name in ('Wizard', 'Bard', 'Cleric', 'Druid', 'Sorcerer', 'Warlock', 'Paladin', 'Ranger', 'Artificer', 'Blood Hunter'):
-            spells = character.get('spells', {})
-            if spells:
-                write_line("Büyüler:")
-                if spells.get('cantrips'):
-                    write_line(f"  Cantrips: {', '.join(spells['cantrips'])}")
-                if spells.get('level1'):
-                    write_line(f"  Seviye 1: {', '.join(spells['level1'])}")
-    
-    # Sınıf özellikleri
+        if 'passive_perception' in character:
+            w.key_value("Pasif Algi", character['passive_perception'])
+
+    # --- Ekipman ---
+    equipment = character.get('equipment', [])
+    starting_equipment = character.get('starting_equipment', [])
+    all_eq = []
+    for item in equipment:
+        if isinstance(item, dict):
+            all_eq.append(item.get('name', str(item)))
+        elif isinstance(item, str):
+            all_eq.append(item)
+    for item in starting_equipment:
+        if isinstance(item, str) and item not in all_eq:
+            all_eq.append(item)
+
+    if all_eq and template != "minimal":
+        w.header("EKIPMAN", tpl["header"])
+        # Uzun listeyi 2 sutun halinde goster
+        for i in range(0, len(all_eq), 2):
+            left = f"- {all_eq[i]}" if i < len(all_eq) else ""
+            right = f"- {all_eq[i+1]}" if i + 1 < len(all_eq) else ""
+            w.two_column(left, right)
+
+        # Encumbrance
+        try:
+            from utils.calculations import calculate_encumbrance_details
+            enc = calculate_encumbrance_details(character)
+            total_w = enc.get("total_weight", 0)
+            cap = enc.get("base_capacity", 0)
+            if total_w > 0:
+                w.key_value("Agirlik", f"{total_w:.1f} / {cap} lbs")
+        except Exception:
+            pass
+
+    # --- Irk Ozellikleri & Sinif Ozellikleri ---
+    traits = character.get('race_traits', [])
+    if traits and template != "minimal":
+        w.header("IRK OZELLIKLERI", tpl["header"])
+        w.line(", ".join(traits), size=tpl["normal"] - 1)
+
     class_features = character.get("class_features", {})
-    if class_features:
-        write_line("Sınıf Özellikleri:")
-        for level, features_data in class_features.items():
-            features = features_data.get("features", [])
-            choices = features_data.get("choices", {})
-            if features or choices:
-                write_line(f"  Seviye {level}:")
-                for feature in features:
-                    write_line(f"    - {feature}")
-                for choice_type, options in choices.items():
-                    write_line(f"    - {choice_type}: {', '.join(options)}")
+    if class_features and template == "detailed":
+        w.header("SINIF OZELLIKLERI", tpl["header"])
+        for level_key, features_data in class_features.items():
+            features = features_data.get("features", []) if isinstance(features_data, dict) else []
+            if features:
+                w.line(f"Seviye {level_key}: {', '.join(features)}", size=tpl["normal"] - 1)
 
-    # Feat'ler
+    # Feats
     feats = character.get("feats", [])
     if feats:
-        write_line("Feat'ler:")
-        for feat in feats:
-            write_line(f"  - {feat}")
+        w.header("FEAT'LER", tpl["header"])
+        w.line(", ".join(feats), size=tpl["normal"] - 1)
 
-    # Kişisel özellikler
-    personal_traits = character.get("personal_traits", {})
-    if any(personal_traits.values()):
-        write_line("Kişisel Özellikler:")
-        
-        # Fiziksel özellikler
-        if personal_traits.get("height") or personal_traits.get("weight") or personal_traits.get("age"):
-            physical = []
-            if personal_traits.get("height"):
-                physical.append(f"Boy: {personal_traits['height']}")
-            if personal_traits.get("weight"):
-                physical.append(f"Kilo: {personal_traits['weight']}")
-            if personal_traits.get("age"):
-                physical.append(f"Yaş: {personal_traits['age']}")
-            write_line(f"  Fiziksel: {', '.join(physical)}")
-        
-        # Görünüm özellikleri
-        if personal_traits.get("hair_color") or personal_traits.get("eye_color") or personal_traits.get("skin_color"):
-            appearance = []
-            if personal_traits.get("hair_color"):
-                appearance.append(f"Saç: {personal_traits['hair_color']}")
-            if personal_traits.get("eye_color"):
-                appearance.append(f"Göz: {personal_traits['eye_color']}")
-            if personal_traits.get("skin_color"):
-                appearance.append(f"Ten: {personal_traits['skin_color']}")
-            write_line(f"  Görünüm: {', '.join(appearance)}")
-        
-        # Alignment
-        if personal_traits.get("alignment"):
-            write_line(f"  Alignment: {personal_traits['alignment']}")
-        
-        # Kişilik özellikleri
-        if personal_traits.get("personality_trait") or personal_traits.get("ideal") or personal_traits.get("bond") or personal_traits.get("flaw"):
-            write_line("  Kişilik:")
-            if personal_traits.get("personality_trait"):
-                write_line(f"    Trait: {personal_traits['personality_trait']}")
-            if personal_traits.get("ideal"):
-                write_line(f"    Ideal: {personal_traits['ideal']}")
-            if personal_traits.get("bond"):
-                write_line(f"    Bond: {personal_traits['bond']}")
-            if personal_traits.get("flaw"):
-                write_line(f"    Flaw: {personal_traits['flaw']}")
-        
-        # Görünüm açıklaması
-        if personal_traits.get("appearance_description"):
-            write_line(f"  Açıklama: {personal_traits['appearance_description']}")
-        
-        # Ek diller
-        if personal_traits.get("extra_languages"):
-            write_line(f"  Ek Diller: {personal_traits['extra_languages']}")
+    # --- Diller & Araclar ---
+    langs = character.get('languages', [])
+    tools = character.get('tools', [])
+    if (langs or tools) and template != "minimal":
+        w.header("DILLER & ARACLAR", tpl["header"])
+        if langs:
+            w.key_value("Diller", ", ".join(langs))
+        if tools:
+            w.key_value("Araclar", ", ".join(tools))
+
+    # --- Kisilik ---
+    personality = character.get('personality', character.get('personal_traits', {}))
+    if personality and any(personality.get(k) for k in ('trait', 'ideal', 'bond', 'flaw', 'personality_trait')) and template != "minimal":
+        w.header("KISILIK", tpl["header"])
+        for key, label in [('trait', 'Trait'), ('personality_trait', 'Trait'), ('ideal', 'Ideal'), ('bond', 'Bond'), ('flaw', 'Flaw')]:
+            val = personality.get(key)
+            if val:
+                w.key_value(label, val, indent=10)
+
+    # ========================== SAYFA 2: SPELL SHEET ==========================
+    char_class = character.get('class', '')
+    spellcaster_classes = ['Wizard', 'Bard', 'Cleric', 'Druid', 'Sorcerer', 'Warlock', 'Paladin', 'Ranger', 'Artificer', 'Blood Hunter']
+
+    if char_class in spellcaster_classes and template != "minimal":
+        # Spell verilerini topla
+        char_spells = character.get('spells', {})
+        spellbook = character.get('spellbook', [])
+        prepared_spells = character.get('prepared_spells', [])
+
+        has_spells = False
+        if isinstance(char_spells, dict):
+            has_spells = any(isinstance(v, list) and v for v in char_spells.values())
+        elif isinstance(char_spells, list):
+            has_spells = bool(char_spells)
+        if spellbook:
+            has_spells = True
+        if prepared_spells:
+            has_spells = True
+
+        if has_spells:
+            w.new_page()
+            w.title(f"Buyu Sayfasi - {character.get('name', '')}", tpl["title"])
+
+            # Spellcasting bilgileri
+            w.header("BUYU BILGILERI", tpl["header"])
+            info_parts = [f"Sinif: {char_class}"]
+            if spell_save_dc is not None:
+                info_parts.append(f"Save DC: {spell_save_dc}")
+            if spell_attack_bonus is not None:
+                info_parts.append(f"Attack: +{spell_attack_bonus}")
+            w.line("  |  ".join(info_parts))
+
+            if spell_slots:
+                slots_line = "Spell Slots: " + "  ".join(
+                    f"Lv{k}:{v}" for k, v in sorted(
+                        ((k, v) for k, v in spell_slots.items() if str(k).isdigit() and int(v) > 0),
+                        key=lambda x: int(x[0])
+                    )
+                )
+                w.line(slots_line)
+
+            # Hazirlanmis buyuler
+            if prepared_spells:
+                if isinstance(prepared_spells, dict):
+                    flat = []
+                    for v in prepared_spells.values():
+                        if isinstance(v, list):
+                            flat.extend(v)
+                    prepared_spells = flat
+
+                w.header("HAZIRLANMIS BUYULER", tpl["header"])
+                for sp in prepared_spells:
+                    w.line(f"  - {sp}", size=tpl["normal"] - 1, indent=10)
+
+            # Spellbook (Wizard)
+            if spellbook:
+                if isinstance(spellbook, dict):
+                    w.header("SPELLBOOK", tpl["header"])
+                    for lvl_key in sorted(spellbook.keys(), key=lambda k: int(k) if str(k).isdigit() else 99):
+                        sp_list = spellbook[lvl_key]
+                        if isinstance(sp_list, list) and sp_list:
+                            lvl_label = "Cantrip" if str(lvl_key) == "0" else f"Level {lvl_key}"
+                            w.line(f"{lvl_label}:", size=tpl["normal"])
+                            for sp in sp_list:
+                                w.line(f"  - {sp}", size=tpl["normal"] - 1, indent=15)
+                elif isinstance(spellbook, list):
+                    w.header("SPELLBOOK", tpl["header"])
+                    for sp in spellbook:
+                        w.line(f"  - {sp}", size=tpl["normal"] - 1, indent=10)
+
+            # Bilinen buyuler (level bazli)
+            if isinstance(char_spells, dict):
+                w.header("BILINEN BUYULER", tpl["header"])
+                for lvl_key in sorted(char_spells.keys(), key=lambda k: int(k) if str(k).isdigit() else 99):
+                    sp_list = char_spells[lvl_key]
+                    if isinstance(sp_list, list) and sp_list:
+                        if str(lvl_key) in ("0", "cantrips"):
+                            lvl_label = "Cantrip"
+                        else:
+                            lvl_label = f"Level {lvl_key}"
+                        w.line(f"{lvl_label}:", size=tpl["normal"])
+                        for sp in sp_list:
+                            w.line(f"  - {sp}", size=tpl["normal"] - 1, indent=15)
+            elif isinstance(char_spells, list) and char_spells:
+                w.header("BILINEN BUYULER", tpl["header"])
+                for sp in char_spells:
+                    w.line(f"  - {sp}", size=tpl["normal"] - 1, indent=10)
 
     c.showPage()
     c.save()
 
 
 def export_mm_character_pdf(character: dict, output_path: Path, background_path: Optional[Path] = None, page_size: str = "A4") -> None:
-    """M&M karakterini özetleyen PDF."""
+    """M&M karakterini ozetleyen PDF."""
     c, width, height = _create_canvas(output_path, page_size, background_path)
-    
-    # Karakter resmini ekle (varsa)
-    _draw_character_image(c, character, width, height, x_offset=0.5, y_offset=0.5)
-    
-    margin = 0.5 * inch
-    x = margin
-    y = height - margin
+    _draw_character_image(c, character, width, height)
+    font_name = _register_turkish_font()
+    w = PDFWriter(c, width, height, font_name)
 
-    def write(text: str, step: float = 14, bold: bool = False):
-        nonlocal y
-        c.setFont("Helvetica-Bold" if bold else "Helvetica", 12 if bold else 10)
-        c.drawString(x, y, text)
-        y -= step
+    w.title("Diyargezer - M&M Karakter Ozeti", 16)
+    w.header("TEMEL BILGILER")
+    w.two_column(
+        f"Karakter: {character.get('name', 'Isimsiz')}",
+        f"Kod Adi: {character.get('codename', '-')}"
+    )
+    w.two_column(
+        f"Power Level: {character.get('power_level', '-')}",
+        f"Arketip: {character.get('archetype', '-')}"
+    )
 
-    write("🦸 Diyargezer - M&M Karakter Özeti", 18, True)
-    write(f"Karakter: {character.get('name', 'İsimsiz')}  |  Kod Adı: {character.get('codename', '-')}", 16)
-    write(f"Power Level: {character.get('power_level', '-')}", 16)
-    write(f"Arketip: {character.get('archetype', '-')}", 16)
-    write("", 12)
-
-    write("Ability Scores:", 14, True)
+    w.header("ABILITY SCORES")
     for ability, value in character.get("abilities", {}).items():
-        write(f"  {ability}: {value}")
+        w.key_value(ability, value, indent=10)
 
-    write("", 12)
-    write("Defenses:", 14, True)
-    for key, label in [
-        ("attack_bonus", "Attack Bonus"),
-        ("effect_rank", "Effect Rank"),
-        ("defense", "Defense"),
-        ("toughness", "Toughness"),
-    ]:
-        write(f"  {label}: {character.get('defenses', {}).get(key, 0)}")
-    write(f"Power Points: {character.get('power_points', 0)}")
+    w.header("DEFENSES")
+    for key, label in [("attack_bonus", "Attack Bonus"), ("effect_rank", "Effect Rank"),
+                       ("defense", "Defense"), ("toughness", "Toughness")]:
+        w.key_value(label, character.get('defenses', {}).get(key, 0), indent=10)
+    w.key_value("Power Points", character.get('power_points', 0))
 
     powers = character.get("powers", [])
     if powers:
-        write("", 12)
-        write("Powers:", 14, True)
+        w.header("POWERS")
         for power in powers:
-            write(f"  - {power}")
+            w.line(f"  - {power}", indent=10)
 
     advantages = character.get("advantages", [])
     if advantages:
-        write("", 12)
-        write("Advantages:", 14, True)
+        w.header("ADVANTAGES")
         for adv in advantages:
-            write(f"  - {adv}")
+            w.line(f"  - {adv}", indent=10)
 
     notes = character.get("notes")
     if notes:
-        write("", 12)
-        write("Notlar:", 14, True)
+        w.header("NOTLAR")
         for line in notes.splitlines():
-            write(f"  {line}")
+            w.line(f"  {line}", indent=10)
 
     c.showPage()
     c.save()
 
 
 def export_vtm_character_pdf(character: dict, output_path: Path, background_path: Optional[Path] = None, page_size: str = "A4") -> None:
-    """VtM karakter özet PDF'i."""
+    """VtM karakter ozet PDF'i."""
     c, width, height = _create_canvas(output_path, page_size, background_path)
-    
-    # Karakter resmini ekle (varsa)
-    _draw_character_image(c, character, width, height, x_offset=0.5, y_offset=0.5)
-    
-    margin = 0.5 * inch
-    x = margin
-    y = height - margin
+    _draw_character_image(c, character, width, height)
+    font_name = _register_turkish_font()
+    w = PDFWriter(c, width, height, font_name)
 
-    def write(text: str, step: float = 14, bold: bool = False):
-        nonlocal y
-        c.setFont("Helvetica-Bold" if bold else "Helvetica", 12 if bold else 10)
-        c.drawString(x, y, text)
-        y -= step
+    w.title("Diyargezer - VtM Karakter Ozeti", 16)
+    w.header("TEMEL BILGILER")
+    w.two_column(
+        f"Isim: {character.get('name', 'Isimsiz')}",
+        f"Clan: {character.get('clan', '-')}"
+    )
+    w.two_column(
+        f"Chronicle: {character.get('chronicle', '-')}",
+        f"Concept: {character.get('concept', '-')}"
+    )
 
-    write("🧛 Diyargezer - VtM Karakter Özeti", 18, True)
-    write(f"İsim: {character.get('name', 'İsimsiz')}  |  Clan: {character.get('clan', '-')}", 16)
-    write(f"Chronicle: {character.get('chronicle', '-')}", 16)
-    write(f"Concept: {character.get('concept', '-')}", 16)
-    write("", 12)
-
-    write("Attributes:", 14, True)
+    w.header("ATTRIBUTES")
     for category, attrs in character.get("attributes", {}).items():
         values = ", ".join(f"{attr} {score}" for attr, score in attrs.items())
-        write(f"  {category}: {values}")
+        w.key_value(category, values, indent=10)
 
-    write("", 12)
-    write("Skills:", 14, True)
+    w.header("SKILLS")
     for category, skills in character.get("skills", {}).items():
         values = ", ".join(f"{skill} {score}" for skill, score in skills.items() if score)
         if values:
-            write(f"  {category}: {values}")
+            w.key_value(category, values, indent=10)
 
     disciplines = character.get("disciplines", [])
     if disciplines:
-        write("", 12)
-        write("Disciplines:", 14, True)
-        write(", ".join(disciplines))
+        w.header("DISCIPLINES")
+        w.line(", ".join(disciplines), indent=10)
 
-    write("", 12)
-    write(f"Humanity: {character.get('humanity', 0)}  |  Health: {character.get('health', 0)}  |  Willpower: {character.get('willpower', 0)}")
-
-    notes = character.get("notes")
-    if notes:
-        write("", 12)
-        write("Notlar:", 14, True)
-        for line in notes.splitlines():
-            write(f"  {line}")
-
-    c.showPage()
-    c.save()
-
-
-
-    write("Attributes:", 14, True)
-    for category, attrs in character.get("attributes", {}).items():
-        values = ", ".join(f"{attr} {score}" for attr, score in attrs.items())
-        write(f"  {category}: {values}")
-
-    write("", 12)
-    write("Skills:", 14, True)
-    for category, skills in character.get("skills", {}).items():
-        values = ", ".join(f"{skill} {score}" for skill, score in skills.items() if score)
-        if values:
-            write(f"  {category}: {values}")
-
-    disciplines = character.get("disciplines", [])
-    if disciplines:
-        write("", 12)
-        write("Disciplines:", 14, True)
-        write(", ".join(disciplines))
-
-    write("", 12)
-    write(f"Humanity: {character.get('humanity', 0)}  |  Health: {character.get('health', 0)}  |  Willpower: {character.get('willpower', 0)}")
+    w.spacer(8)
+    w.three_column(
+        f"Humanity: {character.get('humanity', 0)}",
+        f"Health: {character.get('health', 0)}",
+        f"Willpower: {character.get('willpower', 0)}"
+    )
 
     notes = character.get("notes")
     if notes:
-        write("", 12)
-        write("Notlar:", 14, True)
+        w.header("NOTLAR")
         for line in notes.splitlines():
-            write(f"  {line}")
+            w.line(f"  {line}", indent=10)
 
     c.showPage()
     c.save()
-
-
-
-    write("Attributes:", 14, True)
-    for category, attrs in character.get("attributes", {}).items():
-        values = ", ".join(f"{attr} {score}" for attr, score in attrs.items())
-        write(f"  {category}: {values}")
-
-    write("", 12)
-    write("Skills:", 14, True)
-    for category, skills in character.get("skills", {}).items():
-        values = ", ".join(f"{skill} {score}" for skill, score in skills.items() if score)
-        if values:
-            write(f"  {category}: {values}")
-
-    disciplines = character.get("disciplines", [])
-    if disciplines:
-        write("", 12)
-        write("Disciplines:", 14, True)
-        write(", ".join(disciplines))
-
-    write("", 12)
-    write(f"Humanity: {character.get('humanity', 0)}  |  Health: {character.get('health', 0)}  |  Willpower: {character.get('willpower', 0)}")
-
-    notes = character.get("notes")
-    if notes:
-        write("", 12)
-        write("Notlar:", 14, True)
-        for line in notes.splitlines():
-            write(f"  {line}")
-
-    c.showPage()
-    c.save()
-
-
-
-    write("Attributes:", 14, True)
-    for category, attrs in character.get("attributes", {}).items():
-        values = ", ".join(f"{attr} {score}" for attr, score in attrs.items())
-        write(f"  {category}: {values}")
-
-    write("", 12)
-    write("Skills:", 14, True)
-    for category, skills in character.get("skills", {}).items():
-        values = ", ".join(f"{skill} {score}" for skill, score in skills.items() if score)
-        if values:
-            write(f"  {category}: {values}")
-
-    disciplines = character.get("disciplines", [])
-    if disciplines:
-        write("", 12)
-        write("Disciplines:", 14, True)
-        write(", ".join(disciplines))
-
-    write("", 12)
-    write(f"Humanity: {character.get('humanity', 0)}  |  Health: {character.get('health', 0)}  |  Willpower: {character.get('willpower', 0)}")
-
-    notes = character.get("notes")
-    if notes:
-        write("", 12)
-        write("Notlar:", 14, True)
-        for line in notes.splitlines():
-            write(f"  {line}")
-
-    c.showPage()
-    c.save()
-
-

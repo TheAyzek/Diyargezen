@@ -2456,5 +2456,165 @@
       "defense_cap": 15,
       "toughness_cap": 15
     }
+  },
+  "power_sets": {
+    "Elemental Control": {
+      "description": "Control over elemental forces",
+      "powers": [
+        "Blast",
+        "Create",
+        "Environment",
+        "Flight",
+        "Immunity",
+        "Move Object"
+      ]
+    },
+    "Mental Powers": {
+      "description": "Psychic and mental abilities",
+      "powers": [
+        "Mind Reading",
+        "Mental Blast",
+        "Illusion",
+        "Telekinesis",
+        "Telepathy",
+        "Mind Control"
+      ]
+    },
+    "Size Changing": {
+      "description": "Ability to change size",
+      "powers": [
+        "Growth",
+        "Shrinking",
+        "Density",
+        "Protection",
+        "Strength",
+        "Immunity"
+      ]
+    },
+    "Super-Speed": {
+      "description": "Enhanced movement and reaction speed",
+      "powers": [
+        "Speed",
+        "Quickness",
+        "Super-Movement",
+        "Strike",
+        "Deflect",
+        "Enhanced Initiative"
+      ]
+    },
+    "Super-Strength": {
+      "description": "Enhanced physical strength",
+      "powers": [
+        "Enhanced Strength",
+        "Leaping",
+        "Strike",
+        "Throwing Mastery",
+        "Lifting",
+        "Shockwave"
+      ]
+    },
+    "Telekinesis": {
+      "description": "Mental manipulation of matter",
+      "powers": [
+        "Move Object",
+        "Telekinetic Strike",
+        "Flight",
+        "Protection",
+        "Create",
+        "Blast"
+      ]
+    }
+  },
+  "complications": {
+    "Accident": {
+      "description": "Your powers sometimes activate unintentionally",
+      "frequency": "Common",
+      "severity": "Moderate"
+    },
+    "Addiction": {
+      "description": "You have an addiction that affects your behavior",
+      "frequency": "Uncommon",
+      "severity": "Major"
+    },
+    "Disability": {
+      "description": "You have a physical or mental disability",
+      "frequency": "Persistent",
+      "severity": "Major"
+    },
+    "Enemy": {
+      "description": "You have a persistent enemy or nemesis",
+      "frequency": "Common",
+      "severity": "Moderate"
+    },
+    "Fame": {
+      "description": "You are famous and recognized",
+      "frequency": "Common",
+      "severity": "Minor"
+    },
+    "Hatred": {
+      "description": "You have an irrational hatred for something",
+      "frequency": "Common",
+      "severity": "Moderate"
+    },
+    "Identity": {
+      "description": "Your heroic identity is a secret",
+      "frequency": "Common",
+      "severity": "Minor"
+    },
+    "Motivation": {
+      "description": "You have a specific motivation driving your actions",
+      "frequency": "Persistent",
+      "severity": "Minor"
+    },
+    "Obsession": {
+      "description": "You are obsessed with something",
+      "frequency": "Common",
+      "severity": "Moderate"
+    },
+    "Power Loss": {
+      "description": "Your powers can be temporarily lost",
+      "frequency": "Uncommon",
+      "severity": "Major"
+    },
+    "Prejudice": {
+      "description": "You face prejudice due to your background",
+      "frequency": "Common",
+      "severity": "Moderate"
+    },
+    "Relationship": {
+      "description": "You have important relationships that complicate your life",
+      "frequency": "Common",
+      "severity": "Minor"
+    },
+    "Reputation": {
+      "description": "You have a bad reputation",
+      "frequency": "Common",
+      "severity": "Moderate"
+    },
+    "Responsibility": {
+      "description": "You have responsibilities that limit your actions",
+      "frequency": "Persistent",
+      "severity": "Minor"
+    },
+    "Rivalry": {
+      "description": "You have a rival or competitor",
+      "frequency": "Common",
+      "severity": "Minor"
+    },
+    "Secret": {
+      "description": "You have a secret that could harm you if revealed",
+      "frequency": "Uncommon",
+      "severity": "Major"
+    },
+    "Temper": {
+      "description": "You have a bad temper",
+      "frequency": "Common",
+      "severity": "Moderate"
+    },
+    "Weakness": {
+      "description": "You have a specific weakness",
+      "frequency": "Uncommon",
+      "severity": "Major"
+    }
   }
 }

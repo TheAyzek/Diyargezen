@@ -10,6 +10,9 @@ pydantic>=2.0.0
 PySide6>=6.5.0
 qdarkstyle>=3.0.0
 
+# Modern GUI (CustomTkinter)
+customtkinter>=5.2.0
+
 # PDF export
 reportlab>=4.0.0
 

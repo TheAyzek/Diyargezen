@@ -1445,30 +1445,77 @@ def calculate_vtm_hunger_dice(humanity: int) -> int:
 
 def calculate_all_dnd_stats(character: Dict[str, Any], class_data: Optional[Dict[str, Any]] = None, race_data: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     """
-    Tüm D&D istatistiklerini hesapla - İYİLEŞTİRİLDİ (Karakter İstatistikleri İyileştirmeleri)
+    Tum D&D istatistiklerini hesapla - IYILESTIRILDI (v3)
+    Eklenenler: skills (expertise, jack of all trades), carrying_capacity, encumbrance
+    Yeni: Multiclass destegi (spell slots, hit dice, proficiency bonus)
     """
     level = character.get("level", 1)
     abilities = character.get("abilities", {})
+    is_multiclass = character.get("is_multiclass", False)
+    class_levels = character.get("class_levels", {})
+
+    # Proficiency bonus her zaman TOPLAM seviyeye gore
+    proficiency_bonus = calculate_proficiency_bonus(level)
+
+    # Multiclass spell slots
+    if is_multiclass and class_levels:
+        try:
+            from utils.multiclass import calculate_multiclass_spell_slots, calculate_multiclass_hit_dice
+            subclasses = character.get("subclasses", {})
+            spell_slots = calculate_multiclass_spell_slots(class_levels, subclasses)
+            hit_dice_display = calculate_multiclass_hit_dice(class_levels)
+        except ImportError:
+            spell_slots = calculate_spell_slots(character, class_data)
+            hit_dice_display = calculate_hit_dice_display(character, class_data)
+    else:
+        spell_slots = calculate_spell_slots(character, class_data)
+        hit_dice_display = calculate_hit_dice_display(character, class_data)
     
     stats = {
-        "proficiency_bonus": calculate_proficiency_bonus(level),
+        "proficiency_bonus": proficiency_bonus,
         "ability_modifiers": {
             ability: calculate_ability_modifier(score)
             for ability, score in abilities.items()
         },
         "armor_class": calculate_armor_class(character),
         "hit_points": calculate_hit_points(character, class_data),
-        "spell_slots": calculate_spell_slots(character, class_data),
+        "spell_slots": spell_slots,
         "spell_save_dc": calculate_spell_save_dc(character, class_data),
         "spell_attack_bonus": calculate_spell_attack_bonus(character, class_data),
         "saving_throws": calculate_saving_throws(character, class_data),
         "passive_perception": calculate_passive_perception(character),
         "initiative": calculate_initiative(character),
-        "movement_speed": calculate_movement_speed(character, race_data, class_data),  # DÜZELTİLDİ (Movement Speed Calculation)
-        "hit_dice": calculate_hit_dice_display(character, class_data),  # DÜZELTİLDİ (Hit Dice Display)
-        "jump_distance": calculate_jump_distance(character)  # İYİLEŞTİRİLDİ (Jump Distance)
+        "movement_speed": calculate_movement_speed(character, race_data, class_data),
+        "hit_dice": hit_dice_display,
+        "jump_distance": calculate_jump_distance(character),
+        "encumbrance": calculate_encumbrance_details(character),
     }
-    
+
+    # Multiclass bilgilerini koru
+    if is_multiclass:
+        stats["is_multiclass"] = True
+        stats["class_levels"] = class_levels
+        class_parts = [f"{c} {l}" for c, l in class_levels.items()]
+        stats["class_display"] = " / ".join(class_parts)
+
+    # Carrying capacity
+    str_score = abilities.get("Strength", 10)
+    stats["carrying_capacity"] = str_score * 15
+    stats["push_drag_lift"] = str_score * 30
+
+    # All skills hesaplama (expertise ve jack of all trades dahil)
+    all_skill_names = [
+        "Athletics",
+        "Acrobatics", "Sleight of Hand", "Stealth",
+        "Arcana", "History", "Investigation", "Nature", "Religion",
+        "Animal Handling", "Insight", "Medicine", "Perception", "Survival",
+        "Deception", "Intimidation", "Performance", "Persuasion"
+    ]
+    skills = {}
+    for skill_name in all_skill_names:
+        skills[skill_name] = calculate_skill_modifier(character, skill_name, class_data)
+    stats["skills"] = skills
+
     return stats
 
 

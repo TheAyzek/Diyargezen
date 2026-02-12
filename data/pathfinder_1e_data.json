@@ -24560,5 +24560,2259 @@
       "source": "https://aonprd.com/SpellDisplay.aspx?ItemName=Commune with Texts"
     }
   },
-  "items": {}
+  "items": {},
+  "skills": {
+    "Acrobatics": {
+      "ability": "dexterity",
+      "trained_only": false,
+      "description": "Acrobatics measures your ability to keep your balance while traversing narrow or treacherous surfaces, to escape from bonds, or to tumble past or through the space occupied by enemies."
+    },
+    "Appraise": {
+      "ability": "intelligence",
+      "trained_only": false,
+      "description": "Appraise determines the price of an object or identifies its magical properties."
+    },
+    "Bluff": {
+      "ability": "charisma",
+      "trained_only": false,
+      "description": "Bluff allows you to convince others that what you are saying is true when it is not, or to conceal your true emotions, intentions, or the truth in general."
+    },
+    "Climb": {
+      "ability": "strength",
+      "trained_only": false,
+      "description": "Climb measures your ability to scale walls, trees, or other steep inclines."
+    },
+    "Craft": {
+      "ability": "intelligence",
+      "trained_only": false,
+      "description": "You are skilled in crafting items and can create new items or repair existing ones."
+    },
+    "Diplomacy": {
+      "ability": "charisma",
+      "trained_only": false,
+      "description": "Diplomacy determines how well you can persuade others to agree with your arguments, to resolve differences, and to gather valuable information from people."
+    },
+    "Disable Device": {
+      "ability": "dexterity",
+      "trained_only": true,
+      "description": "You are skilled at disabling traps and other mechanical devices."
+    },
+    "Disguise": {
+      "ability": "charisma",
+      "trained_only": false,
+      "description": "Disguise allows you to change your appearance or the appearance of others."
+    },
+    "Escape Artist": {
+      "ability": "dexterity",
+      "trained_only": false,
+      "description": "Escape Artist allows you to slip out of bonds, squeeze through tight spaces, or wriggle free from grapples."
+    },
+    "Fly": {
+      "ability": "dexterity",
+      "trained_only": false,
+      "description": "Fly measures your ability to control your movement through the air when you have a fly speed or some other ability that allows you to fly."
+    },
+    "Handle Animal": {
+      "ability": "charisma",
+      "trained_only": true,
+      "description": "You are trained in working with animals, and can teach, train, or command them."
+    },
+    "Heal": {
+      "ability": "wisdom",
+      "trained_only": false,
+      "description": "Heal allows you to tend to wounds and ailments, and to keep people alive and healthy."
+    },
+    "Intimidate": {
+      "ability": "charisma",
+      "trained_only": false,
+      "description": "Intimidate allows you to use threats, hostile actions, and displays of prowess to influence others."
+    },
+    "Knowledge (Arcana)": {
+      "ability": "intelligence",
+      "trained_only": true,
+      "description": "Knowledge (arcana) covers ancient mysteries, magic traditions, arcane symbols, cryptic phrases, constructs, dragons, magical beasts, and other topics generally considered ancient or magical."
+    },
+    "Knowledge (Dungeoneering)": {
+      "ability": "intelligence",
+      "trained_only": true,
+      "description": "Knowledge (dungeoneering) covers the underground world, including caverns, dungeons, mining, spelunking, underground hazards, and mining techniques."
+    },
+    "Knowledge (Engineering)": {
+      "ability": "intelligence",
+      "trained_only": true,
+      "description": "Knowledge (engineering) covers buildings, aqueducts, bridges, fortifications, roads, and other large-scale construction and engineering feats."
+    },
+    "Knowledge (Geography)": {
+      "ability": "intelligence",
+      "trained_only": true,
+      "description": "Knowledge (geography) covers lands, terrain, climate, people, customs, local hazards, and includes knowledge of capitals, cities, and populations."
+    },
+    "Knowledge (History)": {
+      "ability": "intelligence",
+      "trained_only": true,
+      "description": "Knowledge (history) covers the history of specific cultures, wars, and legendary figures."
+    },
+    "Knowledge (Local)": {
+      "ability": "intelligence",
+      "trained_only": true,
+      "description": "Knowledge (local) covers knowledge of a particular community, including laws, personalities, rumors, and traditions."
+    },
+    "Knowledge (Nature)": {
+      "ability": "intelligence",
+      "trained_only": true,
+      "description": "Knowledge (nature) covers the natural world, including plants, animals, weather, and terrain."
+    },
+    "Knowledge (Nobility)": {
+      "ability": "intelligence",
+      "trained_only": true,
+      "description": "Knowledge (nobility) covers lineages, heraldry, personalities, and royal families."
+    },
+    "Knowledge (Planes)": {
+      "ability": "intelligence",
+      "trained_only": true,
+      "description": "Knowledge (planes) covers the planes of existence, their inhabitants, traits, and features."
+    },
+    "Knowledge (Religion)": {
+      "ability": "intelligence",
+      "trained_only": true,
+      "description": "Knowledge (religion) covers gods, religions, holy symbols, and theology."
+    },
+    "Linguistics": {
+      "ability": "intelligence",
+      "trained_only": true,
+      "description": "You are skilled at working with language, including creating ciphers, deciphering codes, and communicating in different languages."
+    },
+    "Perception": {
+      "ability": "wisdom",
+      "trained_only": false,
+      "description": "Perception measures your ability to notice details in your environment, such as hidden creatures or objects."
+    },
+    "Perform": {
+      "ability": "charisma",
+      "trained_only": false,
+      "description": "You are skilled in a form of performance, such as acting, comedy, dance, keyboard instruments, oratory, percussion instruments, string instruments, wind instruments, or sing."
+    },
+    "Profession": {
+      "ability": "wisdom",
+      "trained_only": true,
+      "description": "You are skilled in a particular profession, such as baker, blacksmith, or scribe."
+    },
+    "Ride": {
+      "ability": "dexterity",
+      "trained_only": false,
+      "description": "Ride measures your ability to control a mount in combat or other situations."
+    },
+    "Sense Motive": {
+      "ability": "wisdom",
+      "trained_only": false,
+      "description": "Sense Motive allows you to detect lies, determine another creature's true intentions, and discern a creature's trustworthiness."
+    },
+    "Sleight of Hand": {
+      "ability": "dexterity",
+      "trained_only": true,
+      "description": "Sleight of Hand allows you to perform feats of legerdemain, such as picking pockets or palming small objects."
+    },
+    "Spellcraft": {
+      "ability": "intelligence",
+      "trained_only": true,
+      "description": "Spellcraft allows you to identify spells as they are cast, to identify the properties of magic items, and to create magic items."
+    },
+    "Stealth": {
+      "ability": "dexterity",
+      "trained_only": false,
+      "description": "Stealth measures your ability to avoid detection, allowing you to slip past foes or strike from an unseen position."
+    },
+    "Survival": {
+      "ability": "wisdom",
+      "trained_only": false,
+      "description": "Survival measures your ability to survive in the wilderness, to track down prey, and to find food and water."
+    },
+    "Swim": {
+      "ability": "strength",
+      "trained_only": false,
+      "description": "Swim measures your ability to move through water."
+    },
+    "Use Magic Device": {
+      "ability": "charisma",
+      "trained_only": true,
+      "description": "You are skilled at activating magic items, even if you are not otherwise trained to do so."
+    }
+  },
+  "archetypes": {
+    "Barbarian": {
+      "Armored Hulk": {
+        "description": "Heavily armored berserker",
+        "replaces": [
+          "Fast Movement",
+          "Rage Powers"
+        ],
+        "features": [
+          "Armored Hulk",
+          "Armored Swiftness",
+          "Greater Armored Hulk",
+          "Mighty Swing"
+        ]
+      },
+      "Beast Totem": {
+        "description": "Spiritual warrior with animal totem",
+        "replaces": [
+          "Rage Powers"
+        ],
+        "features": [
+          "Totem",
+          "Totem Transformation",
+          "Aspect of the Beast",
+          "Totemic Summons"
+        ]
+      },
+      "Berserker": {
+        "description": "Uncontrolled fury and rage",
+        "replaces": [
+          "Rage Powers"
+        ],
+        "features": [
+          "Berserk Rage",
+          "Howl",
+          "Strength Surge",
+          "Moment of Clarity"
+        ]
+      },
+      "Brutal Pugilist": {
+        "description": "Unarmed combat specialist",
+        "replaces": [
+          "Rage Powers"
+        ],
+        "features": [
+          "Brutal Pugilist",
+          "Ironhide",
+          "Bonecrusher",
+          "Shatter Bones"
+        ]
+      },
+      "Deepwater Rager": {
+        "description": "Aquatic barbarian",
+        "replaces": [
+          "Rage Powers"
+        ],
+        "features": [
+          "Deepwater Rager",
+          "Aquatic Adaptation",
+          "Deepwater Warrior",
+          "Abyssal Rage"
+        ]
+      },
+      "Drunken Brute": {
+        "description": "Drunken master barbarian",
+        "replaces": [
+          "Rage Powers"
+        ],
+        "features": [
+          "Drunken Brawler",
+          "Staggering Drunk",
+          "Raging Drunk",
+          "Perfect Drunk"
+        ]
+      },
+      "Elemental Kin": {
+        "description": "Elemental blooded warrior",
+        "replaces": [
+          "Rage Powers"
+        ],
+        "features": [
+          "Elemental Fury",
+          "Elemental Movement",
+          "Elemental Body",
+          "Elemental Master"
+        ]
+      },
+      "Hurler": {
+        "description": "Master of thrown weapons",
+        "replaces": [
+          "Rage Powers"
+        ],
+        "features": [
+          "Hurler",
+          "Raging Throw",
+          "Whirlwind Throw",
+          "Mighty Throw"
+        ]
+      },
+      "Invulnerable Rager": {
+        "description": "Hardened warrior resistant to damage",
+        "replaces": [
+          "Rage Powers"
+        ],
+        "features": [
+          "Increased Damage Reduction",
+          "Internal Fortitude",
+          "Terrifying Howl",
+          "Rage Conversion"
+        ]
+      },
+      "Mounted Fury": {
+        "description": "Mounted combat specialist",
+        "replaces": [
+          "Rage Powers"
+        ],
+        "features": [
+          "Mounted Fury",
+          "Mounted Skirmisher",
+          "Mounted Charger",
+          "Mounted Overrun"
+        ]
+      },
+      "Savage Barbarian": {
+        "description": "Primitive tribal warrior",
+        "replaces": [
+          "Rage Powers"
+        ],
+        "features": [
+          "Savage",
+          "Tribal Scars",
+          "Savage Charge",
+          "Primal Fury"
+        ]
+      },
+      "Superstitious": {
+        "description": "Fearful of magic",
+        "replaces": [
+          "Rage Powers"
+        ],
+        "features": [
+          "Superstitious",
+          "Hexbane",
+          "Spell Sunder",
+          "Rage Against Magic"
+        ]
+      },
+      "Titan Mauler": {
+        "description": "Master of two-handed weapons",
+        "replaces": [
+          "Rage Powers"
+        ],
+        "features": [
+          "Titan Mauler",
+          "Titanic Blow",
+          "Titanic Charge",
+          "Titanic Defense"
+        ]
+      },
+      "Totem Warrior": {
+        "description": "Spiritual warrior with animal totems",
+        "replaces": [
+          "Rage Powers"
+        ],
+        "features": [
+          "Totem",
+          "Spirit Totem",
+          "Totem Transformation",
+          "Greater Totem"
+        ]
+      },
+      "Urban Barbarian": {
+        "description": "City-dwelling barbarian",
+        "replaces": [
+          "Rage Powers"
+        ],
+        "features": [
+          "Urban Barbarian",
+          "City Scrapper",
+          "Urban Menace",
+          "Street Fighter"
+        ]
+      },
+      "Wild Rager": {
+        "description": "Untamed primal force",
+        "replaces": [
+          "Rage Powers"
+        ],
+        "features": [
+          "Wild Rager",
+          "Primal Fury",
+          "Savage Critical",
+          "Rage Beyond Reason"
+        ]
+      }
+    },
+    "Bard": {
+      "Arcane Duelist": {
+        "description": "Sword and spell fighter",
+        "replaces": [
+          "Bardic Knowledge"
+        ],
+        "features": [
+          "Arcane Strike",
+          "Spell Combat",
+          "Spell Parry",
+          "Greater Spell Combat"
+        ]
+      },
+      "Archivist": {
+        "description": "Keeper of ancient lore",
+        "replaces": [
+          "Bardic Knowledge"
+        ],
+        "features": [
+          "Lore Keeper",
+          "Arcane Knowledge",
+          "Item Knowledge",
+          "Legend Lore"
+        ]
+      },
+      "Court Bard": {
+        "description": "Courtier and social manipulator",
+        "replaces": [
+          "Bardic Knowledge"
+        ],
+        "features": [
+          "Inspire Competence",
+          "Inspire Courage",
+          "Inspire Greatness",
+          "Dirge of Doom"
+        ]
+      },
+      "Dirge Bard": {
+        "description": "Master of mournful songs",
+        "replaces": [
+          "Bardic Knowledge"
+        ],
+        "features": [
+          "Dirge of Doom",
+          "Fearful Dirge",
+          "Haunting Melody",
+          "Deadly Dirge"
+        ]
+      },
+      "Feyspeaker": {
+        "description": "Connected to fey magic",
+        "replaces": [
+          "Bardic Knowledge"
+        ],
+        "features": [
+          "Fey Magic",
+          "Glamour",
+          "Fey Step",
+          "Fey Presence"
+        ]
+      },
+      "Flame Dancer": {
+        "description": "Fire-themed performer",
+        "replaces": [
+          "Bardic Knowledge"
+        ],
+        "features": [
+          "Flame Dance",
+          "Firebrand",
+          "Blazing Weapon",
+          "Inferno"
+        ]
+      },
+      "Geisha": {
+        "description": "Eastern court entertainer",
+        "replaces": [
+          "Bardic Knowledge"
+        ],
+        "features": [
+          "Geisha Arts",
+          "Tea Ceremony",
+          "Graceful Warrior",
+          "Perfect Performance"
+        ]
+      },
+      "Jester": {
+        "description": "Fool and trickster",
+        "replaces": [
+          "Bardic Knowledge"
+        ],
+        "features": [
+          "Jester Tricks",
+          "Slapstick",
+          "Ridicule",
+          "Greater Ridicule"
+        ]
+      },
+      "Lore Master": {
+        "description": "Keeper of ancient knowledge",
+        "replaces": [
+          "Bardic Knowledge"
+        ],
+        "features": [
+          "Lore Master",
+          "Greater Lore",
+          "True Lore",
+          "Fount of Knowledge"
+        ]
+      },
+      "Sandman": {
+        "description": "Master of sleep and dreams",
+        "replaces": [
+          "Bardic Knowledge"
+        ],
+        "features": [
+          "Sleep Song",
+          "Dream Weaver",
+          "Nightmare Weaver",
+          "Dream Master"
+        ]
+      },
+      "Savage Skald": {
+        "description": "Tribal battle singer",
+        "replaces": [
+          "Bardic Knowledge"
+        ],
+        "features": [
+          "Raging Song",
+          "Battle Cry",
+          "Inspiring Blow",
+          "Legendary Tale"
+        ]
+      },
+      "Sea Singer": {
+        "description": "Maritime performer",
+        "replaces": [
+          "Bardic Knowledge"
+        ],
+        "features": [
+          "Sea Shanty",
+          "Wave Walker",
+          "Storm Caller",
+          "Ocean Lord"
+        ]
+      },
+      "Street Performer": {
+        "description": "Urban entertainer",
+        "replaces": [
+          "Bardic Knowledge"
+        ],
+        "features": [
+          "Street Performance",
+          "Crowd Control",
+          "Urban Survival",
+          "City Secrets"
+        ]
+      },
+      "Theatrical Performer": {
+        "description": "Stage actor and dramatist",
+        "replaces": [
+          "Bardic Knowledge"
+        ],
+        "features": [
+          "Theatrical Training",
+          "Dramatic Performance",
+          "Stage Combat",
+          "Grand Finale"
+        ]
+      },
+      "Voice of the Wild": {
+        "description": "Nature-connected performer",
+        "replaces": [
+          "Bardic Knowledge"
+        ],
+        "features": [
+          "Wild Speech",
+          "Animal Speaker",
+          "Nature Magic",
+          "Druidic Harmony"
+        ]
+      }
+    },
+    "Cleric": {
+      "Angelic Priest": {
+        "description": "Servant of celestial beings",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Angelic Wings",
+          "Celestial Magic",
+          "Divine Presence",
+          "Angelic Form"
+        ]
+      },
+      "Asmodeus": {
+        "description": "Devil-worshipping priest",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Infernal Magic",
+          "Hellfire",
+          "Diabolic Pact",
+          "Lord of Hell"
+        ]
+      },
+      "Battle Cleric": {
+        "description": "War-focused divine warrior",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Battle Casting",
+          "Weapon Master",
+          "Armor Master",
+          "War Priest"
+        ]
+      },
+      "Cloistered Cleric": {
+        "description": "Scholarly priest",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Scholar",
+          "Lore Keeper",
+          "Divine Scribe",
+          "Knowledge Domain"
+        ]
+      },
+      "Crusader": {
+        "description": "Holy warrior against evil",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Crusader",
+          "Divine Favor",
+          "Smite Evil",
+          "Holy Champion"
+        ]
+      },
+      "Demonic Priest": {
+        "description": "Servant of demonic powers",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Demonic Magic",
+          "Abyssal Pact",
+          "Demonic Form",
+          "Prince of Demons"
+        ]
+      },
+      "Diabolical Priest": {
+        "description": "Hellish priest",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Hellfire",
+          "Infernal Pact",
+          "Diabolic Magic",
+          "Archfiend"
+        ]
+      },
+      "Divine Oracle": {
+        "description": "Prophetic priest",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Divine Insight",
+          "Prophecy",
+          "Foretell",
+          "Oracle"
+        ]
+      },
+      "Ecclesitheurge": {
+        "description": "Master of divine and arcane magic",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Arcane Acumen",
+          "Divine Arcana",
+          "Spell Synthesis",
+          "Mystic Theurge"
+        ]
+      },
+      "Exorcist": {
+        "description": "Expert in banishing evil spirits",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Exorcism",
+          "Turn Undead",
+          "Banish Possession",
+          "Holy Ward"
+        ]
+      },
+      "Healer": {
+        "description": "Master of healing and restoration",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Cure Undead",
+          "Restoration",
+          "Healing Hands",
+          "Mass Restoration"
+        ]
+      },
+      "Inquisitor": {
+        "description": "Hunter of heretics and monsters",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Judgment",
+          "Bane",
+          "Inquisition",
+          "True Judgment"
+        ]
+      },
+      "Monk of the Sacred Mountain": {
+        "description": "Monastic priest",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Monastic Training",
+          "Ki Pool",
+          "Sacred Mountain",
+          "Enlightened Warrior"
+        ]
+      },
+      "Nature Priest": {
+        "description": "Druidic priest",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Nature Bond",
+          "Wild Shape",
+          "Druidic Magic",
+          "Nature Lord"
+        ]
+      },
+      "Separatist": {
+        "description": "Priest of forbidden knowledge",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Forbidden Knowledge",
+          "Dark Secrets",
+          "Hidden Cult",
+          "Eldritch Priest"
+        ]
+      },
+      "Undead Lord": {
+        "description": "Master of undead",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Command Undead",
+          "Create Undead",
+          "Undead Mastery",
+          "Lich Lord"
+        ]
+      },
+      "Warpriest": {
+        "description": "Martial cleric focused on combat",
+        "replaces": [
+          "Spontaneous Casting"
+        ],
+        "features": [
+          "Weapon Proficiency",
+          "Armor Proficiency",
+          "Sacred Weapon",
+          "Battle Rage"
+        ]
+      }
+    },
+    "Druid": {
+      "Ancient Guardian": {
+        "description": "Protector of ancient sites",
+        "replaces": [
+          "Wild Shape"
+        ],
+        "features": [
+          "Ancient Lore",
+          "Guardian Spirit",
+          "Warding Circle",
+          "Ancient Defender"
+        ]
+      },
+      "Aquatic Druid": {
+        "description": "Master of water and sea",
+        "replaces": [
+          "Wild Shape"
+        ],
+        "features": [
+          "Aquatic Adaptation",
+          "Water Breathing",
+          "Water Walk",
+          "Ocean Lord"
+        ]
+      },
+      "Arctic Druid": {
+        "description": "Survivor of frozen wastes",
+        "replaces": [
+          "Wild Shape"
+        ],
+        "features": [
+          "Cold Resistance",
+          "Snow Walk",
+          "Ice Shape",
+          "Winter Lord"
+        ]
+      },
+      "Blight Druid": {
+        "description": "Master of decay and rot",
+        "replaces": [
+          "Wild Shape"
+        ],
+        "features": [
+          "Blight",
+          "Rot",
+          "Disease",
+          "Plague Lord"
+        ]
+      },
+      "Desert Druid": {
+        "description": "Survivor of arid wastes",
+        "replaces": [
+          "Wild Shape"
+        ],
+        "features": [
+          "Heat Resistance",
+          "Sand Walk",
+          "Desert Shape",
+          "Sand Lord"
+        ]
+      },
+      "Elementalist": {
+        "description": "Master of elemental forces",
+        "replaces": [
+          "Wild Shape"
+        ],
+        "features": [
+          "Elemental Fury",
+          "Elemental Movement",
+          "Elemental Body",
+          "Elemental Master"
+        ]
+      },
+      "Jungle Druid": {
+        "description": "Master of tropical forests",
+        "replaces": [
+          "Wild Shape"
+        ],
+        "features": [
+          "Jungle Adaptation",
+          "Vine Walk",
+          "Jungle Shape",
+          "Jungle Lord"
+        ]
+      },
+      "Mooncaller": {
+        "description": "Mystic connected to the moon and night",
+        "replaces": [
+          "Wild Shape"
+        ],
+        "features": [
+          "Lunar Veil",
+          "Moonlight Summons",
+          "Lunar Blessing",
+          "Moonfire"
+        ]
+      },
+      "Mountain Druid": {
+        "description": "Master of high peaks",
+        "replaces": [
+          "Wild Shape"
+        ],
+        "features": [
+          "Mountain Adaptation",
+          "Rock Walk",
+          "Mountain Shape",
+          "Mountain Lord"
+        ]
+      },
+      "Plains Druid": {
+        "description": "Master of open grasslands",
+        "replaces": [
+          "Wild Shape"
+        ],
+        "features": [
+          "Plains Adaptation",
+          "Grass Walk",
+          "Plains Shape",
+          "Plains Lord"
+        ]
+      },
+      "Shifter": {
+        "description": "Master shapeshifter",
+        "replaces": [
+          "Wild Shape"
+        ],
+        "features": [
+          "Shifter Aspect",
+          "Wild Shape",
+          "Greater Wild Shape",
+          "Shifter's Blessing"
+        ]
+      },
+      "Swamp Druid": {
+        "description": "Master of marshes and bogs",
+        "replaces": [
+          "Wild Shape"
+        ],
+        "features": [
+          "Swamp Adaptation",
+          "Mud Walk",
+          "Swamp Shape",
+          "Swamp Lord"
+        ]
+      },
+      "Urban Druid": {
+        "description": "City-dwelling nature priest",
+        "replaces": [
+          "Wild Shape"
+        ],
+        "features": [
+          "Urban Adaptation",
+          "City Shape",
+          "Urban Bond",
+          "City Lord"
+        ]
+      },
+      "Volcanic Druid": {
+        "description": "Master of fire and lava",
+        "replaces": [
+          "Wild Shape"
+        ],
+        "features": [
+          "Fire Resistance",
+          "Lava Walk",
+          "Volcanic Shape",
+          "Volcano Lord"
+        ]
+      },
+      "Woodland Druid": {
+        "description": "Master of forests",
+        "replaces": [
+          "Wild Shape"
+        ],
+        "features": [
+          "Forest Adaptation",
+          "Tree Walk",
+          "Forest Shape",
+          "Forest Lord"
+        ]
+      }
+    },
+    "Fighter": {
+      "Aldori Swordlord": {
+        "description": "Master swordsman",
+        "replaces": [
+          "Weapon Training 1-4"
+        ],
+        "features": [
+          "Aldori Dueling",
+          "Sword Training",
+          "Dueling Mastery",
+          "Sword Lord"
+        ]
+      },
+      "Archer": {
+        "description": "Master of ranged combat",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Point-Blank Shot",
+          "Precise Shot",
+          "Improved Precise Shot",
+          "Pinpoint Targeting"
+        ]
+      },
+      "Armiger": {
+        "description": "Knightly warrior",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Armiger",
+          "Knight Training",
+          "Mounted Combat",
+          "Knightly Charge"
+        ]
+      },
+      "Brawler": {
+        "description": "Unarmed combat specialist",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Brawler",
+          "Martial Flexibility",
+          "Close-Quarters Throw",
+          "Brawlers Cunning"
+        ]
+      },
+      "Cad": {
+        "description": "Dishonorable fighter",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Cad",
+          "Dirty Fighting",
+          "Sneak Attack",
+          "Backstabber"
+        ]
+      },
+      "Crossbowman": {
+        "description": "Crossbow specialist",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Crossbow Training",
+          "Rapid Reload",
+          "Crossbow Mastery",
+          "Deadly Aim"
+        ]
+      },
+      "Dragoon": {
+        "description": "Firearm specialist",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Gunslinger",
+          "Firearm Training",
+          "Rapid Reload",
+          "Pistolero"
+        ]
+      },
+      "Free Hand Fighter": {
+        "description": "Weapon and shield master",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Shield Focus",
+          "Shield Slam",
+          "Shield Master",
+          "Shield Bash"
+        ]
+      },
+      "Gladiator": {
+        "description": "Arena fighter",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Gladiator",
+          "Arena Training",
+          "Crowd Favorite",
+          "Champion"
+        ]
+      },
+      "Gunfighter": {
+        "description": "Firearm expert",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Gunslinger",
+          "Firearm Focus",
+          "Rapid Shot",
+          "Deadeye"
+        ]
+      },
+      "Lore Warden": {
+        "description": "Guardian of ancient knowledge",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Lore Warden",
+          "Ancient Knowledge",
+          "Warding Rune",
+          "Rune Warrior"
+        ]
+      },
+      "Mobile Fighter": {
+        "description": "Highly mobile warrior",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Mobile Fighter",
+          "Hit and Run",
+          "Spring Attack",
+          "Whirlwind Attack"
+        ]
+      },
+      "Phalanx Soldier": {
+        "description": "Shield wall specialist",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Phalanx Fighter",
+          "Shield Wall",
+          "Formation Fighting",
+          "Testudo"
+        ]
+      },
+      "Polearm Master": {
+        "description": "Polearm specialist",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Polearm Training",
+          "Reach Weapon",
+          "Polearm Gamble",
+          "Polearm Master"
+        ]
+      },
+      "Rondelero": {
+        "description": "Buckler specialist",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Buckler Bash",
+          "Rondelero Training",
+          "Buckler Defense",
+          "Rondelero Master"
+        ]
+      },
+      "Savage Warrior": {
+        "description": "Tribal fighter",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Savage Warrior",
+          "Tribal Scars",
+          "Rage",
+          "Savage Critical"
+        ]
+      },
+      "Shielded Fighter": {
+        "description": "Tower shield specialist",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Tower Shield Training",
+          "Shield Wall",
+          "Covering Defense",
+          "Shield Master"
+        ]
+      },
+      "Tactician": {
+        "description": "Battlefield commander",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Tactician",
+          "Battle Cry",
+          "Inspiring Command",
+          "Grand Tactician"
+        ]
+      },
+      "Thunderstriker": {
+        "description": "Hammer and mace specialist",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Hammer Training",
+          "Thunderstruck",
+          "Shatter",
+          "Thunder Master"
+        ]
+      },
+      "Titan Fighter": {
+        "description": "Two-handed weapon master",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Titan Fighter",
+          "Powerful Blow",
+          "Titanic Swing",
+          "Titan Master"
+        ]
+      },
+      "Tower Shield Specialist": {
+        "description": "Tower shield expert",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Tower Shield Proficiency",
+          "Shield Wall",
+          "Covering Defense",
+          "Fortress"
+        ]
+      },
+      "Two-Handed Fighter": {
+        "description": "Two-handed weapon specialist",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Two-Handed Training",
+          "Powerful Blow",
+          "Sweeping Strike",
+          "Two-Handed Master"
+        ]
+      },
+      "Two-Weapon Warrior": {
+        "description": "Master of dual-wielding weapons",
+        "replaces": [
+          "Weapon Training 1-2"
+        ],
+        "features": [
+          "Two-Weapon Fighting",
+          "Double Slice",
+          "Improved Two-Weapon Fighting",
+          "Greater Two-Weapon Fighting"
+        ]
+      },
+      "Weapon Master": {
+        "description": "Specialist in a single weapon type",
+        "replaces": [
+          "Weapon Training 1-4"
+        ],
+        "features": [
+          "Weapon Focus",
+          "Weapon Specialization",
+          "Greater Weapon Focus",
+          "Greater Weapon Specialization"
+        ]
+      }
+    },
+    "Monk": {
+      "Drunken Master": {
+        "description": "Intoxicated martial artist",
+        "replaces": [
+          "Bonus Feat"
+        ],
+        "features": [
+          "Drunken Ki",
+          "Staggering Drunk",
+          "Drunken Courage",
+          "Perfect Drunk"
+        ]
+      },
+      "Flowing Monk": {
+        "description": "Fluid movement specialist",
+        "replaces": [
+          "Bonus Feat"
+        ],
+        "features": [
+          "Flowing Movement",
+          "Redirect Attack",
+          "Counter Flow",
+          "Master of Flow"
+        ]
+      },
+      "Hungry Ghost Monk": {
+        "description": "Spiritually enlightened monk",
+        "replaces": [
+          "Bonus Feat"
+        ],
+        "features": [
+          "Ghostly Defense",
+          "Spiritual Guardian",
+          "Void Ki",
+          "Hungry Ghost"
+        ]
+      },
+      "Ki Mystic": {
+        "description": "Master of ki energy",
+        "replaces": [
+          "Bonus Feat"
+        ],
+        "features": [
+          "Ki Mystic",
+          "Ki Pool",
+          "Ki Strike",
+          "Ki Master"
+        ]
+      },
+      "Martial Artist": {
+        "description": "Traditional unarmed fighter",
+        "replaces": [
+          "Bonus Feat"
+        ],
+        "features": [
+          "Martial Training",
+          "Unarmed Strike",
+          "Flurry of Blows",
+          "Ki Strike"
+        ]
+      },
+      "Master of Many Styles": {
+        "description": "Flexible combatant",
+        "replaces": [
+          "Bonus Feat"
+        ],
+        "features": [
+          "Style Master",
+          "Adaptive Style",
+          "Master of Styles",
+          "Grand Master"
+        ]
+      },
+      "Monastic Tradition": {
+        "description": "Follower of a specific monastic tradition",
+        "replaces": [
+          "Bonus Feat"
+        ],
+        "features": [
+          "Tradition Feat",
+          "Ki Pool",
+          "Master of Many Styles",
+          "Grandmaster"
+        ]
+      },
+      "Qinggong Monk": {
+        "description": "Acrobatic martial artist",
+        "replaces": [
+          "Bonus Feat"
+        ],
+        "features": [
+          "Qinggong",
+          "Cloud Step",
+          "Wall Running",
+          "Heavenly Movement"
+        ]
+      },
+      "Sensei": {
+        "description": "Teacher and mentor",
+        "replaces": [
+          "Bonus Feat"
+        ],
+        "features": [
+          "Sensei",
+          "Student",
+          "Teaching",
+          "Master Sensei"
+        ]
+      },
+      "Sohei": {
+        "description": "Armored monk",
+        "replaces": [
+          "Bonus Feat"
+        ],
+        "features": [
+          "Sohei Training",
+          "Armored Monk",
+          "Weapon Training",
+          "War Monk"
+        ]
+      },
+      "Tetori Monk": {
+        "description": "Grappling specialist",
+        "replaces": [
+          "Bonus Feat"
+        ],
+        "features": [
+          "Tetori",
+          "Grappling Master",
+          "Chokehold",
+          "Tetori Master"
+        ]
+      },
+      "Weapon Adept": {
+        "description": "Specialist in exotic monk weapons",
+        "replaces": [
+          "Bonus Feat"
+        ],
+        "features": [
+          "Weapon Training",
+          "Exotic Weapon Proficiency",
+          "Weapon Specialization",
+          "Greater Weapon Specialization"
+        ]
+      },
+      "Windstep Master": {
+        "description": "Master of movement and evasion",
+        "replaces": [
+          "Bonus Feat"
+        ],
+        "features": [
+          "Windstep",
+          "Evasion",
+          "Improved Evasion",
+          "Wind Master"
+        ]
+      },
+      "Zen Archer": {
+        "description": "Monastic archer",
+        "replaces": [
+          "Bonus Feat"
+        ],
+        "features": [
+          "Zen Archer",
+          "Ki Arrow",
+          "Arrow of Heaven",
+          "Zen Master"
+        ]
+      }
+    },
+    "Paladin": {
+      "Antipaladin": {
+        "description": "Champion of evil",
+        "replaces": [
+          "Mercy"
+        ],
+        "features": [
+          "Unholy Champion",
+          "Cruelty",
+          "Fiendish Boon",
+          "Aura of Despair"
+        ]
+      },
+      "Divine Hunter": {
+        "description": "Hunter of evil creatures",
+        "replaces": [
+          "Mercy"
+        ],
+        "features": [
+          "Monster Lore",
+          "Hunter's Blessing",
+          "Divine Pursuit",
+          "Final Judgment"
+        ]
+      },
+      "Hospitaler": {
+        "description": "Healer and protector of the innocent",
+        "replaces": [
+          "Mercy"
+        ],
+        "features": [
+          "Hospitaler",
+          "Healing Hands",
+          "Greater Mercy",
+          "Mass Healing"
+        ]
+      },
+      "Oathbound Paladin": {
+        "description": "Bound by sacred oaths",
+        "replaces": [
+          "Mercy"
+        ],
+        "features": [
+          "Oath",
+          "Oathbound",
+          "Oathkeeper",
+          "Oathsworn"
+        ]
+      },
+      "Sacred Servant": {
+        "description": "Servant of a specific deity",
+        "replaces": [
+          "Mercy"
+        ],
+        "features": [
+          "Divine Servant",
+          "Domain",
+          "Divine Magic",
+          "Avatar"
+        ]
+      },
+      "Shining Knight": {
+        "description": "Radiant warrior of virtue",
+        "replaces": [
+          "Mercy"
+        ],
+        "features": [
+          "Shining Light",
+          "Aura of Courage",
+          "Glorious Aura",
+          "Holy Champion"
+        ]
+      },
+      "Templar": {
+        "description": "Religious warrior",
+        "replaces": [
+          "Mercy"
+        ],
+        "features": [
+          "Templar",
+          "Divine Judgment",
+          "Smite Heretic",
+          "Inquisitor"
+        ]
+      },
+      "Undead Scourge": {
+        "description": "Destroyer of undead",
+        "replaces": [
+          "Mercy"
+        ],
+        "features": [
+          "Undead Bane",
+          "Turn Undead",
+          "Destroy Undead",
+          "Holy Wrath"
+        ]
+      },
+      "Warrior of the Holy Light": {
+        "description": "Beacon of divine light",
+        "replaces": [
+          "Mercy"
+        ],
+        "features": [
+          "Holy Light",
+          "Divine Radiance",
+          "Lightbringer",
+          "Holy Avatar"
+        ]
+      }
+    },
+    "Ranger": {
+      "Beast Master": {
+        "description": "Master of animal companions",
+        "replaces": [
+          "Favored Terrain"
+        ],
+        "features": [
+          "Beast Master",
+          "Animal Companion",
+          "Beast Empathy",
+          "Master of Beasts"
+        ]
+      },
+      "Bow Master": {
+        "description": "Master archer",
+        "replaces": [
+          "Favored Terrain"
+        ],
+        "features": [
+          "Bow Master",
+          "Rapid Shot",
+          "Manyshot",
+          "Arrow Storm"
+        ]
+      },
+      "Deep Walker": {
+        "description": "Explorer of underground realms",
+        "replaces": [
+          "Favored Terrain"
+        ],
+        "features": [
+          "Deep Walker",
+          "Darkvision",
+          "Stonecunning",
+          "Deep Explorer"
+        ]
+      },
+      "Freebooter": {
+        "description": "Pirate and sea rover",
+        "replaces": [
+          "Favored Terrain"
+        ],
+        "features": [
+          "Freebooter",
+          "Sea Legs",
+          "Boarding Action",
+          "Pirate King"
+        ]
+      },
+      "Gloom Stalker": {
+        "description": "Hunter in darkness",
+        "replaces": [
+          "Favored Terrain"
+        ],
+        "features": [
+          "Gloom Stalker",
+          "Shadow Strike",
+          "Umbral Sight",
+          "Shadow Master"
+        ]
+      },
+      "Guide": {
+        "description": "Pathfinder and wilderness guide",
+        "replaces": [
+          "Favored Terrain"
+        ],
+        "features": [
+          "Terrain Mastery",
+          "Guide",
+          "Hearty Soul",
+          "Master Guide"
+        ]
+      },
+      "Horse Lord": {
+        "description": "Master of mounted combat",
+        "replaces": [
+          "Favored Terrain"
+        ],
+        "features": [
+          "Horse Lord",
+          "Mounted Combat",
+          "Cavalry Charge",
+          "Horse Master"
+        ]
+      },
+      "Hunter": {
+        "description": "Master hunter with animal companion",
+        "replaces": [
+          "Favored Terrain"
+        ],
+        "features": [
+          "Hunter Tactics",
+          "Precise Companion",
+          "Master Hunter",
+          "Improved Quarry"
+        ]
+      },
+      "Infiltrator": {
+        "description": "Stealthy scout and saboteur",
+        "replaces": [
+          "Favored Terrain"
+        ],
+        "features": [
+          "Camouflage",
+          "Hide in Plain Sight",
+          "Master Infiltrator",
+          "Saboteur"
+        ]
+      },
+      "Shapeshifter": {
+        "description": "Master of wild shape",
+        "replaces": [
+          "Favored Terrain"
+        ],
+        "features": [
+          "Shapeshifter",
+          "Wild Shape",
+          "Greater Wild Shape",
+          "Master Shapeshifter"
+        ]
+      },
+      "Skirmisher": {
+        "description": "Mobile fighter",
+        "replaces": [
+          "Favored Terrain"
+        ],
+        "features": [
+          "Skirmisher",
+          "Hit and Run",
+          "Ranger's Focus",
+          "Master Skirmisher"
+        ]
+      },
+      "Storm Druid": {
+        "description": "Master of weather and storms",
+        "replaces": [
+          "Favored Terrain"
+        ],
+        "features": [
+          "Storm Druid",
+          "Weather Control",
+          "Storm Shape",
+          "Storm Lord"
+        ]
+      },
+      "Trapper": {
+        "description": "Master of traps and snares",
+        "replaces": [
+          "Favored Terrain"
+        ],
+        "features": [
+          "Trapper",
+          "Trap Master",
+          "Snare Master",
+          "Master Trapper"
+        ]
+      },
+      "Urban Ranger": {
+        "description": "City-based ranger",
+        "replaces": [
+          "Favored Terrain"
+        ],
+        "features": [
+          "Urban Ranger",
+          "City Knowledge",
+          "Urban Tracking",
+          "Urban Master"
+        ]
+      },
+      "Warden": {
+        "description": "Protector of nature",
+        "replaces": [
+          "Favored Terrain"
+        ],
+        "features": [
+          "Warden",
+          "Nature's Guardian",
+          "Wild Defender",
+          "Nature's Champion"
+        ]
+      }
+    },
+    "Rogue": {
+      "Acrobat": {
+        "description": "Master of acrobatics and tumbling",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Acrobatic",
+          "Tumbling",
+          "Acrobatic Master",
+          "Tumbling Master"
+        ]
+      },
+      "Bandit": {
+        "description": "Highway robber and outlaw",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Bandit",
+          "Highway Robbery",
+          "Ambush",
+          "Bandit King"
+        ]
+      },
+      "Burglar": {
+        "description": "Master thief and infiltrator",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Burglar",
+          "Locksmith",
+          "Trap Disarmer",
+          "Master Burglar"
+        ]
+      },
+      "Carnivalist": {
+        "description": "Carnival performer and trickster",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Carnivalist",
+          "Performance",
+          "Trickster",
+          "Showman"
+        ]
+      },
+      "Cutpurse": {
+        "description": "Master pickpocket",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Cutpurse",
+          "Pickpocket",
+          "Sleight of Hand",
+          "Master Thief"
+        ]
+      },
+      "Discretion Specialist": {
+        "description": "Master of stealth and discretion",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Discretion",
+          "Silent Movement",
+          "Shadow Walker",
+          "Ghost"
+        ]
+      },
+      "Investigator": {
+        "description": "Detective and information gatherer",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Investigator",
+          "Forensic",
+          "Deduction",
+          "Master Investigator"
+        ]
+      },
+      "Knife Master": {
+        "description": "Master of dagger combat",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Knife Master",
+          "Dagger Training",
+          "Quick Draw",
+          "Knife Fighter"
+        ]
+      },
+      "Master of Disguise": {
+        "description": "Master of deception and disguise",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Disguise Master",
+          "False Face",
+          "Perfect Disguise",
+          "Master of Lies"
+        ]
+      },
+      "Night Stalker": {
+        "description": "Hunter in darkness",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Night Stalker",
+          "Darkvision",
+          "Shadow Strike",
+          "Night Master"
+        ]
+      },
+      "Poisoner": {
+        "description": "Master of poisons and toxins",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Poisoner",
+          "Poison Use",
+          "Poison Master",
+          "Death Dealer"
+        ]
+      },
+      "Rake": {
+        "description": "Charismatic rogue and duelist",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Rake",
+          "Panache",
+          "Precise Strike",
+          "Dashing"
+        ]
+      },
+      "Sapper": {
+        "description": "Master of siege warfare and demolition",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Sapper",
+          "Demolition",
+          "Siege Expert",
+          "Master Sapper"
+        ]
+      },
+      "Scout": {
+        "description": "Master of reconnaissance and survival",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Skirmisher",
+          "Battle Fortitude",
+          "Uncanny Dodge",
+          "Fast Stealth"
+        ]
+      },
+      "Spy": {
+        "description": "Master of espionage and infiltration",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Spy",
+          "Espionage",
+          "Infiltration",
+          "Master Spy"
+        ]
+      },
+      "Swashbuckler": {
+        "description": "Graceful duelist and acrobat",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Panache",
+          "Precise Strike",
+          "Swashbuckler Initiative",
+          "Derring-Do"
+        ]
+      },
+      "Thug": {
+        "description": "Brutal enforcer and intimidator",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Thug",
+          "Intimidation",
+          "Brutal Strike",
+          "Enforcer"
+        ]
+      },
+      "Trapsmith": {
+        "description": "Master trap maker and disarmer",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Trapsmith",
+          "Trap Making",
+          "Trap Disarming",
+          "Master Trapsmith"
+        ]
+      },
+      "Underground Chemist": {
+        "description": "Master of alchemy and poisons",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Chemist",
+          "Alchemy",
+          "Poison Crafting",
+          "Master Chemist"
+        ]
+      },
+      "Vigilante": {
+        "description": "Masked hero fighting crime",
+        "replaces": [
+          "Trapfinding"
+        ],
+        "features": [
+          "Vigilante",
+          "Dual Identity",
+          "Justice",
+          "Crime Fighter"
+        ]
+      }
+    },
+    "Sorcerer": {
+      "Aberrant Bloodline": {
+        "description": "Bloodline touched by alien forces",
+        "replaces": [
+          "Bloodline Arcana"
+        ],
+        "features": [
+          "Aberrant",
+          "Alien Knowledge",
+          "Tentacle",
+          "Unnatural"
+        ]
+      },
+      "Abyssal Bloodline": {
+        "description": "Bloodline of demonic descent",
+        "replaces": [
+          "Bloodline Arcana"
+        ],
+        "features": [
+          "Abyssal",
+          "Demonic",
+          "Hellfire",
+          "Infernal"
+        ]
+      },
+      "Arcane Bloodline": {
+        "description": "Bloodline of magical heritage",
+        "replaces": [
+          "Bloodline Arcana"
+        ],
+        "features": [
+          "Arcane",
+          "Spell Power",
+          "Metamagic",
+          "Arcane Master"
+        ]
+      },
+      "Celestial Bloodline": {
+        "description": "Bloodline of angelic descent",
+        "replaces": [
+          "Bloodline Arcana"
+        ],
+        "features": [
+          "Celestial",
+          "Angelic",
+          "Heavenly Fire",
+          "Divine"
+        ]
+      },
+      "Crossblooded": {
+        "description": "Bloodline mixing sorcerer",
+        "replaces": [
+          "Bloodline Arcana"
+        ],
+        "features": [
+          "Crossblooded",
+          "Bloodline Diversity",
+          "Bloodline Convergence",
+          "Ultimate Bloodline"
+        ]
+      },
+      "Destined Bloodline": {
+        "description": "Bloodline of fate and destiny",
+        "replaces": [
+          "Bloodline Arcana"
+        ],
+        "features": [
+          "Destined",
+          "Fated",
+          "Lucky",
+          "Destiny's Child"
+        ]
+      },
+      "Draconic Bloodline": {
+        "description": "Bloodline of dragon heritage",
+        "replaces": [
+          "Bloodline Arcana"
+        ],
+        "features": [
+          "Draconic",
+          "Dragon",
+          "Breath Weapon",
+          "Dragon Lord"
+        ]
+      },
+      "Elemental Bloodline": {
+        "description": "Bloodline of elemental power",
+        "replaces": [
+          "Bloodline Arcana"
+        ],
+        "features": [
+          "Elemental",
+          "Elemental Ray",
+          "Elemental Blast",
+          "Elemental Lord"
+        ]
+      },
+      "Fey Bloodline": {
+        "description": "Bloodline of fey heritage",
+        "replaces": [
+          "Bloodline Arcana"
+        ],
+        "features": [
+          "Fey",
+          "Fey Magic",
+          "Glamour",
+          "Fey Lord"
+        ]
+      },
+      "Infernal Bloodline": {
+        "description": "Bloodline of devilish descent",
+        "replaces": [
+          "Bloodline Arcana"
+        ],
+        "features": [
+          "Infernal",
+          "Diabolic",
+          "Hellfire",
+          "Archfiend"
+        ]
+      },
+      "Shadow Bloodline": {
+        "description": "Bloodline of shadow and darkness",
+        "replaces": [
+          "Bloodline Arcana"
+        ],
+        "features": [
+          "Shadow",
+          "Darkness",
+          "Shadowy",
+          "Shadow Lord"
+        ]
+      },
+      "Undead Bloodline": {
+        "description": "Bloodline of undead heritage",
+        "replaces": [
+          "Bloodline Arcana"
+        ],
+        "features": [
+          "Undead",
+          "Necrotic",
+          "Grave Touch",
+          "Death Lord"
+        ]
+      },
+      "Wildblooded": {
+        "description": "Unpredictable bloodline sorcerer",
+        "replaces": [
+          "Bloodline Arcana"
+        ],
+        "features": [
+          "Wild Magic",
+          "Surge",
+          "Controlled Surge",
+          "Wild Arcana"
+        ]
+      }
+    },
+    "Wizard": {
+      "Arcane Bomber": {
+        "description": "Master of explosive magic",
+        "replaces": [
+          "Spell Focus",
+          "Greater Spell Focus"
+        ],
+        "features": [
+          "Arcane Bomb",
+          "Explosive Spell",
+          "Chain Reaction",
+          "Bomb Master"
+        ]
+      },
+      "Arcane Trickster": {
+        "description": "Rogue-like spellcaster",
+        "replaces": [
+          "Spell Focus",
+          "Greater Spell Focus"
+        ],
+        "features": [
+          "Ranged Legerdemain",
+          "Sneak Attack",
+          "Tricky Spells",
+          "Spell Thief"
+        ]
+      },
+      "Battle Mage": {
+        "description": "Combat-focused spellcaster",
+        "replaces": [
+          "Spell Focus",
+          "Greater Spell Focus"
+        ],
+        "features": [
+          "Battle Mage",
+          "Spell Combat",
+          "Spell Parry",
+          "Arcane Warrior"
+        ]
+      },
+      "Divination Specialist": {
+        "description": "Master of divination magic",
+        "replaces": [
+          "Spell Focus",
+          "Greater Spell Focus"
+        ],
+        "features": [
+          "Spell Focus (Divination)",
+          "Greater Spell Focus (Divination)",
+          "Diviners Fortune",
+          "Scrying Adept"
+        ]
+      },
+      "Elementalist": {
+        "description": "Master of elemental magic",
+        "replaces": [
+          "Spell Focus",
+          "Greater Spell Focus"
+        ],
+        "features": [
+          "Elemental Focus",
+          "Elemental Mastery",
+          "Elemental Wall",
+          "Elemental Lord"
+        ]
+      },
+      "Enchanter": {
+        "description": "Master of enchantment magic",
+        "replaces": [
+          "Spell Focus",
+          "Greater Spell Focus"
+        ],
+        "features": [
+          "Spell Focus (Enchantment)",
+          "Greater Spell Focus (Enchantment)",
+          "Enchanting Smile",
+          "Mindbender"
+        ]
+      },
+      "Evoker": {
+        "description": "Master of destructive magic",
+        "replaces": [
+          "Spell Focus",
+          "Greater Spell Focus"
+        ],
+        "features": [
+          "Spell Focus (Evocation)",
+          "Greater Spell Focus (Evocation)",
+          "Intensify Spell",
+          "Elemental Wall"
+        ]
+      },
+      "Illusionist": {
+        "description": "Master of illusion magic",
+        "replaces": [
+          "Spell Focus",
+          "Greater Spell Focus"
+        ],
+        "features": [
+          "Spell Focus (Illusion)",
+          "Greater Spell Focus (Illusion)",
+          "Blinding Ray",
+          "Shadow Master"
+        ]
+      },
+      "Necromancer": {
+        "description": "Master of death magic",
+        "replaces": [
+          "Spell Focus",
+          "Greater Spell Focus"
+        ],
+        "features": [
+          "Spell Focus (Necromancy)",
+          "Greater Spell Focus (Necromancy)",
+          "Command Undead",
+          "Grave Touch"
+        ]
+      },
+      "Spell Sniper": {
+        "description": "Master of ranged spellcasting",
+        "replaces": [
+          "Spell Focus",
+          "Greater Spell Focus"
+        ],
+        "features": [
+          "Spell Sniper",
+          "Ranged Spell Specialization",
+          "Spell Penetration",
+          "Distant Spell"
+        ]
+      },
+      "Transmuter": {
+        "description": "Master of transformation magic",
+        "replaces": [
+          "Spell Focus",
+          "Greater Spell Focus"
+        ],
+        "features": [
+          "Spell Focus (Transmutation)",
+          "Greater Spell Focus (Transmutation)",
+          "Change Shape",
+          "Shape Master"
+        ]
+      },
+      "Universalist": {
+        "description": "Jack of all trades spellcaster",
+        "replaces": [
+          "Spell Focus",
+          "Greater Spell Focus"
+        ],
+        "features": [
+          "Universalist",
+          "Broad Study",
+          "Metamagic Knowledge",
+          "Spell Master"
+        ]
+      }
+    }
+  }
 }

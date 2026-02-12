@@ -521,3 +521,5 @@ GUI'de artık tüm spell'leri görebilirsiniz! 🎉
 
 
 
+
+

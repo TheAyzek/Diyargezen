@@ -1,28 +1,799 @@
 {
+  "system": "VAMPIRE_THE_MASQUERADE_5E",
+  "source": "worldofdarkness.com",
   "clans": {
     "Brujah": {
-      "bane": "Öfke ve otoriteye karşı isyan tetikleyicileri",
-      "disciplines": ["Celerity", "Potence", "Presence"]
+      "name": "Brujah",
+      "description": "The Learned Clan, scholars and revolutionaries",
+      "bane": "Their passionate nature makes them quick to anger, especially against those in authority",
+      "disciplines": [
+        "Celerity",
+        "Potence",
+        "Presence"
+      ],
+      "compulsion": "Rage",
+      "favored_attributes": [
+        "Strength",
+        "Charisma"
+      ],
+      "clan_weakness": "Frenzy when dealing with authority figures"
     },
-    "Ventrue": {
-      "bane": "Seçici beslenme (özgül hedefler)",
-      "disciplines": ["Dominate", "Fortitude", "Presence"]
+    "Gangrel": {
+      "name": "Gangrel",
+      "description": "The Beast Clan, savages and wanderers",
+      "bane": "Their bestial nature emerges when hungry or angry",
+      "disciplines": [
+        "Animalism",
+        "Fortitude",
+        "Protean"
+      ],
+      "compulsion": "Feral instincts",
+      "favored_attributes": [
+        "Composure",
+        "Wits"
+      ],
+      "clan_weakness": "Animalistic features emerge when hungry"
+    },
+    "Malkavian": {
+      "name": "Malkavian",
+      "description": "The Moon Clan, mad prophets and visionaries",
+      "bane": "Their fractured minds see truths others cannot",
+      "disciplines": [
+        "Auspex",
+        "Dominate",
+        "Obfuscate"
+      ],
+      "compulsion": "Madness",
+      "favored_attributes": [
+        "Intelligence",
+        "Wits"
+      ],
+      "clan_weakness": "Insanity and visions"
+    },
+    "Nosferatu": {
+      "name": "Nosferatu",
+      "description": "The Sewer Clan, monsters and informants",
+      "bane": "Their hideous appearance repels mortals",
+      "disciplines": [
+        "Animalism",
+        "Obfuscate",
+        "Potence"
+      ],
+      "compulsion": "Horror",
+      "favored_attributes": [
+        "Dexterity",
+        "Manipulation"
+      ],
+      "clan_weakness": "Repulsive appearance"
     },
     "Toreador": {
-      "bane": "Güzelliğe/aesthetiğe takıntı, dikkat dağınıklığı",
-      "disciplines": ["Auspex", "Celerity", "Presence"]
+      "name": "Toreador",
+      "description": "The Artisan Clan, artists and hedonists",
+      "bane": "Their obsession with beauty consumes them",
+      "disciplines": [
+        "Auspex",
+        "Celerity",
+        "Presence"
+      ],
+      "compulsion": "Aesthetic obsession",
+      "favored_attributes": [
+        "Charisma",
+        "Dexterity"
+      ],
+      "clan_weakness": "Obsessed with beauty and art"
+    },
+    "Tremere": {
+      "name": "Tremere",
+      "description": "The Warlock Clan, mages and schemers",
+      "bane": "Their magical bloodline carries ancient debts",
+      "disciplines": [
+        "Auspex",
+        "Blood Sorcery",
+        "Dominate"
+      ],
+      "compulsion": "Thaumaturgy",
+      "favored_attributes": [
+        "Intelligence",
+        "Resolve"
+      ],
+      "clan_weakness": "Blood magic addiction"
+    },
+    "Ventrue": {
+      "name": "Ventrue",
+      "description": "The Lord Clan, aristocrats and leaders",
+      "bane": "Their refined tastes demand only the finest blood",
+      "disciplines": [
+        "Dominate",
+        "Fortitude",
+        "Presence"
+      ],
+      "compulsion": "Leadership",
+      "favored_attributes": [
+        "Charisma",
+        "Resolve"
+      ],
+      "clan_weakness": "Selective feeding"
+    },
+    "Caitiff": {
+      "name": "Caitiff",
+      "description": "The Clanless, thin-blooded wanderers",
+      "bane": "No clan disciplines, must learn from others",
+      "disciplines": [],
+      "compulsion": "Independence",
+      "favored_attributes": [
+        "Wits",
+        "Composure"
+      ],
+      "clan_weakness": "No inherent clan advantages"
+    }
+  },
+  "predator_types": {
+    "Alleycat": {
+      "name": "Alleycat",
+      "description": "Street survivors who hunt alone",
+      "attribute_modifiers": {
+        "physical": -1,
+        "social": 1,
+        "mental": 0
+      },
+      "skill_suggestions": [
+        "Streetwise",
+        "Stealth",
+        "Survival"
+      ],
+      "feeding_pool": "Homeless, addicts, and other outcasts"
+    },
+    "Bagger": {
+      "name": "Bagger",
+      "description": "Blood bank thieves and medical professionals",
+      "attribute_modifiers": {
+        "physical": 0,
+        "social": 0,
+        "mental": 1
+      },
+      "skill_suggestions": [
+        "Medicine",
+        "Investigation",
+        "Technology"
+      ],
+      "feeding_pool": "Blood banks, hospitals, and medical facilities"
+    },
+    "Blood Leech": {
+      "name": "Blood Leech",
+      "description": "Seductive predators who use charm",
+      "attribute_modifiers": {
+        "physical": 0,
+        "social": 2,
+        "mental": -1
+      },
+      "skill_suggestions": [
+        "Persuasion",
+        "Subterfuge",
+        "Insight"
+      ],
+      "feeding_pool": "Romantic partners and admirers"
+    },
+    "Cleaver": {
+      "name": "Cleaver",
+      "description": "Brutal hunters who use violence",
+      "attribute_modifiers": {
+        "physical": 2,
+        "social": -1,
+        "mental": 0
+      },
+      "skill_suggestions": [
+        "Brawl",
+        "Intimidation",
+        "Firearms"
+      ],
+      "feeding_pool": "Criminals, thugs, and violent individuals"
+    },
+    "Consensualist": {
+      "name": "Consensualist",
+      "description": "Those who negotiate for blood",
+      "attribute_modifiers": {
+        "physical": -1,
+        "social": 1,
+        "mental": 1
+      },
+      "skill_suggestions": [
+        "Persuasion",
+        "Etiquette",
+        "Performance"
+      ],
+      "feeding_pool": "Willing donors and enthusiasts"
+    },
+    "Farmer": {
+      "name": "Farmer",
+      "description": "Those who cultivate herds of mortals",
+      "attribute_modifiers": {
+        "physical": 0,
+        "social": 1,
+        "mental": 0
+      },
+      "skill_suggestions": [
+        "Leadership",
+        "Animal Ken",
+        "Survival"
+      ],
+      "feeding_pool": "Cultivated groups of mortals"
+    },
+    "Osiris": {
+      "name": "Osiris",
+      "description": "Grave robbers and mortuary workers",
+      "attribute_modifiers": {
+        "physical": 1,
+        "social": 0,
+        "mental": 0
+      },
+      "skill_suggestions": [
+        "Occult",
+        "Investigation",
+        "Athletics"
+      ],
+      "feeding_pool": "Corpses and funeral homes"
+    },
+    "Sandman": {
+      "name": "Sandman",
+      "description": "Those who prey on the sleeping",
+      "attribute_modifiers": {
+        "physical": 0,
+        "social": 0,
+        "mental": 1
+      },
+      "skill_suggestions": [
+        "Stealth",
+        "Awareness",
+        "Investigation"
+      ],
+      "feeding_pool": "Sleeping victims"
+    },
+    "Scene Queen": {
+      "name": "Scene Queen",
+      "description": "Club predators and socialites",
+      "attribute_modifiers": {
+        "physical": 0,
+        "social": 2,
+        "mental": -1
+      },
+      "skill_suggestions": [
+        "Performance",
+        "Streetwise",
+        "Persuasion"
+      ],
+      "feeding_pool": "Club-goers and party attendees"
+    },
+    "Siren": {
+      "name": "Siren",
+      "description": "Musical and performance predators",
+      "attribute_modifiers": {
+        "physical": -1,
+        "social": 2,
+        "mental": 0
+      },
+      "skill_suggestions": [
+        "Performance",
+        "Persuasion",
+        "Insight"
+      ],
+      "feeding_pool": "Fans and admirers"
     }
   },
   "attributes": {
-    "Physical": ["Strength", "Dexterity", "Stamina"],
-    "Social": ["Charisma", "Manipulation", "Composure"],
-    "Mental": ["Intelligence", "Wits", "Resolve"]
+    "physical": [
+      "Strength",
+      "Dexterity",
+      "Stamina"
+    ],
+    "social": [
+      "Charisma",
+      "Manipulation",
+      "Composure"
+    ],
+    "mental": [
+      "Intelligence",
+      "Wits",
+      "Resolve"
+    ]
   },
   "skills": {
-    "Physical": ["Athletics", "Brawl", "Craft", "Drive", "Firearms", "Melee", "Larceny", "Stealth", "Survival"],
-    "Social": ["Animal Ken", "Etiquette", "Insight", "Intimidation", "Leadership", "Performance", "Persuasion", "Streetwise", "Subterfuge"],
-    "Mental": ["Academics", "Awareness", "Finance", "Investigation", "Medicine", "Occult", "Politics", "Science", "Technology"]
+    "physical": [
+      "Athletics",
+      "Brawl",
+      "Craft",
+      "Drive",
+      "Firearms",
+      "Larceny",
+      "Melee",
+      "Stealth",
+      "Survival"
+    ],
+    "social": [
+      "Animal Ken",
+      "Etiquette",
+      "Insight",
+      "Intimidation",
+      "Leadership",
+      "Performance",
+      "Persuasion",
+      "Streetwise",
+      "Subterfuge"
+    ],
+    "mental": [
+      "Academics",
+      "Awareness",
+      "Finance",
+      "Investigation",
+      "Medicine",
+      "Occult",
+      "Politics",
+      "Science",
+      "Technology"
+    ]
+  },
+  "backgrounds": {
+    "Allies": {
+      "name": "Allies",
+      "description": "Mortal or supernatural contacts who can help you",
+      "max_dots": 5
+    },
+    "Contacts": {
+      "name": "Contacts",
+      "description": "Information networks and informants",
+      "max_dots": 5
+    },
+    "Fame": {
+      "name": "Fame",
+      "description": "Your public recognition and reputation",
+      "max_dots": 5
+    },
+    "Haven": {
+      "name": "Haven",
+      "description": "Your base of operations and safe place",
+      "max_dots": 5
+    },
+    "Herd": {
+      "name": "Herd",
+      "description": "Regular sources of blood",
+      "max_dots": 5
+    },
+    "Influence": {
+      "name": "Influence",
+      "description": "Power and connections in mortal society",
+      "max_dots": 5
+    },
+    "Mask": {
+      "name": "Mask",
+      "description": "Your ability to maintain a false identity",
+      "max_dots": 5
+    },
+    "Mawla": {
+      "name": "Mawla",
+      "description": "A powerful supernatural patron",
+      "max_dots": 5
+    },
+    "Resources": {
+      "name": "Resources",
+      "description": "Wealth and material possessions",
+      "max_dots": 5
+    },
+    "Retainer": {
+      "name": "Retainer",
+      "description": "A loyal servant or companion",
+      "max_dots": 5
+    },
+    "Status": {
+      "name": "Status",
+      "description": "Standing within vampire society",
+      "max_dots": 5
+    }
+  },
+  "disciplines": {
+    "Animalism": {
+      "name": "Animalism",
+      "description": "Control and communication with animals",
+      "powers": {
+        "1": "Bond Famulus",
+        "2": "Sense the Beast",
+        "3": "Feral Whispers",
+        "4": "Animal Succulence",
+        "5": "Unliving Hive"
+      }
+    },
+    "Auspex": {
+      "name": "Auspex",
+      "description": "Heightened senses and perception",
+      "powers": {
+        "1": "Heightened Senses",
+        "2": "Sense the Unseen",
+        "3": "Scry the Soul",
+        "4": "Share the Senses",
+        "5": "Spirit's Touch"
+      }
+    },
+    "Blood Sorcery": {
+      "name": "Blood Sorcery",
+      "description": "Ritual magic using blood",
+      "powers": {
+        "1": "A Taste for Blood",
+        "2": "Extinguish Vitae",
+        "3": "Blood of Potency",
+        "4": "Theft of Vitae",
+        "5": "Cauldron of Blood"
+      }
+    },
+    "Celerity": {
+      "name": "Celerity",
+      "description": "Supernatural speed and reflexes",
+      "powers": {
+        "1": "Rapid Reflexes",
+        "2": "Fleetness",
+        "3": "Blink",
+        "4": "Traversal",
+        "5": "Lightning Storm"
+      }
+    },
+    "Dominate": {
+      "name": "Dominate",
+      "description": "Mental control over others",
+      "powers": {
+        "1": "Cloud Memory",
+        "2": "Mesmerize",
+        "3": "The Forgetful Mind",
+        "4": "Conditioning",
+        "5": "Mass Manipulation"
+      }
+    },
+    "Fortitude": {
+      "name": "Fortitude",
+      "description": "Enhanced durability and resilience",
+      "powers": {
+        "1": "Resilience",
+        "2": "Unswayable Mind",
+        "3": "Toughness",
+        "4": "Enduring Beasts",
+        "5": "Flesh of Marble"
+      }
+    },
+    "Obfuscate": {
+      "name": "Obfuscate",
+      "description": "Cloaking presence and actions",
+      "powers": {
+        "1": "Cloak of Shadows",
+        "2": "Silence of Death",
+        "3": "Unseen Passage",
+        "4": "Ghost in the Machine",
+        "5": "Cloak the Gathering"
+      }
+    },
+    "Potence": {
+      "name": "Potence",
+      "description": "Supernatural strength",
+      "powers": {
+        "1": "Lethal Body",
+        "2": "Soaring Leap",
+        "3": "Prowess",
+        "4": "Brutal Feed",
+        "5": "Spark of Rage"
+      }
+    },
+    "Presence": {
+      "name": "Presence",
+      "description": "Aura of supernatural charm",
+      "powers": {
+        "1": "Awe",
+        "2": "Daunt",
+        "3": "Lingering Kiss",
+        "4": "Dread Gaze",
+        "5": "Majesty"
+      }
+    },
+    "Protean": {
+      "name": "Protean",
+      "description": "Shape-shifting and earth melding",
+      "powers": {
+        "1": "Eyes of the Beast",
+        "2": "Weight of the Feather",
+        "3": "Feral Weapons",
+        "4": "Earth Meld",
+        "5": "Shapechange"
+      }
+    }
+  },
+  "merits": {
+    "Acute Sense": {
+      "type": "physical",
+      "cost": 1,
+      "description": "One of your senses is exceptionally sharp. You gain +1 die to rolls involving that sense."
+    },
+    "Ambidextrous": {
+      "type": "physical",
+      "cost": 1,
+      "description": "You have no off-hand penalty when using two weapons or performing tasks with both hands."
+    },
+    "Brawling Dodge": {
+      "type": "physical",
+      "cost": 1,
+      "description": "+1 die to dodge attempts in close combat."
+    },
+    "Disarm": {
+      "type": "physical",
+      "cost": 1,
+      "description": "+1 die to attempts to disarm opponents."
+    },
+    "Eagle Eyes": {
+      "type": "physical",
+      "cost": 2,
+      "description": "You can see clearly at extreme distances. +2 dice to perception rolls involving sight at long range."
+    },
+    "Friendly Face": {
+      "type": "social",
+      "cost": 1,
+      "description": "+1 die to social rolls with strangers."
+    },
+    "Iron Will": {
+      "type": "mental",
+      "cost": 2,
+      "description": "+2 dice to resist Dominate and other mental attacks."
+    },
+    "Lightning Reflexes": {
+      "type": "physical",
+      "cost": 1,
+      "description": "+1 die to initiative and dodge rolls."
+    },
+    "Meditative Mind": {
+      "type": "mental",
+      "cost": 1,
+      "description": "You can enter a meditative trance quickly. +1 die to meditation and concentration rolls."
+    },
+    "Unbondable": {
+      "type": "supernatural",
+      "cost": 1,
+      "description": "You cannot be blood bound."
+    }
+  },
+  "flaws": {
+    "Bad Sight": {
+      "type": "physical",
+      "cost": -1,
+      "description": "-1 die to all sight-based perception rolls."
+    },
+    "Clumsy": {
+      "type": "physical",
+      "cost": -2,
+      "description": "-2 dice to all dexterity rolls."
+    },
+    "Hard of Hearing": {
+      "type": "physical",
+      "cost": -1,
+      "description": "-1 die to hearing-based perception rolls."
+    },
+    "Short Temper": {
+      "type": "mental",
+      "cost": -2,
+      "description": "You must make a frenzy check when provoked."
+    },
+    "Shy": {
+      "type": "social",
+      "cost": -1,
+      "description": "-1 die to social rolls with strangers."
+    },
+    "Slow Reactions": {
+      "type": "physical",
+      "cost": -1,
+      "description": "-1 die to initiative rolls."
+    },
+    "Weak Willed": {
+      "type": "mental",
+      "cost": -2,
+      "description": "-2 dice to resist mental attacks."
+    },
+    "Whisper of the Damned": {
+      "type": "supernatural",
+      "cost": -1,
+      "description": "Animals react poorly to you."
+    }
+  },
+  "loresheets": {
+    "Assamite": {
+      "description": "Bloodline of assassins and warriors",
+      "dots": [
+        {
+          "name": "Bloodline Member",
+          "description": "Basic Assamite knowledge"
+        },
+        {
+          "name": "Warrior Training",
+          "description": "Combat bonuses"
+        },
+        {
+          "name": "Taste of Death",
+          "description": "Poison resistance"
+        },
+        {
+          "name": "Bloodline Prestige",
+          "description": "Status among Assamites"
+        },
+        {
+          "name": "Master Assassin",
+          "description": "Legendary assassin abilities"
+        }
+      ]
+    },
+    "Brujah": {
+      "description": "Clan of rebels and philosophers",
+      "dots": [
+        {
+          "name": "Clan Member",
+          "description": "Basic Brujah knowledge"
+        },
+        {
+          "name": "Revolutionary",
+          "description": "Leadership in rebellion"
+        },
+        {
+          "name": "Scholar of the Revolution",
+          "description": "Historical knowledge"
+        },
+        {
+          "name": "Icon of the Revolution",
+          "description": "Inspiring presence"
+        },
+        {
+          "name": "Architect of the Revolution",
+          "description": "Master strategist"
+        }
+      ]
+    },
+    "Gangrel": {
+      "description": "Clan of wanderers and shapeshifters",
+      "dots": [
+        {
+          "name": "Clan Member",
+          "description": "Basic Gangrel knowledge"
+        },
+        {
+          "name": "Wanderer",
+          "description": "Survival skills"
+        },
+        {
+          "name": "Beast Master",
+          "description": "Animal control"
+        },
+        {
+          "name": "Protean Master",
+          "description": "Advanced shapeshifting"
+        },
+        {
+          "name": "Primal Fury",
+          "description": "Legendary beast form"
+        }
+      ]
+    },
+    "Malkavian": {
+      "description": "Clan of lunatics and seers",
+      "dots": [
+        {
+          "name": "Clan Member",
+          "description": "Basic Malkavian knowledge"
+        },
+        {
+          "name": "Seer",
+          "description": "Prophetic visions"
+        },
+        {
+          "name": "Mad Oracle",
+          "description": "Insane insights"
+        },
+        {
+          "name": "Keeper of Secrets",
+          "description": "Hidden knowledge"
+        },
+        {
+          "name": "Voice of Madness",
+          "description": "Reality-warping madness"
+        }
+      ]
+    },
+    "Nosferatu": {
+      "description": "Clan of monsters and informants",
+      "dots": [
+        {
+          "name": "Clan Member",
+          "description": "Basic Nosferatu knowledge"
+        },
+        {
+          "name": "Whisper Network",
+          "description": "Information network"
+        },
+        {
+          "name": "Sewer King",
+          "description": "Underground mastery"
+        },
+        {
+          "name": "Master of Whispers",
+          "description": "Supreme informant"
+        },
+        {
+          "name": "Lord of the Damned",
+          "description": "Terrifying presence"
+        }
+      ]
+    },
+    "Toreador": {
+      "description": "Clan of artists and hedonists",
+      "dots": [
+        {
+          "name": "Clan Member",
+          "description": "Basic Toreador knowledge"
+        },
+        {
+          "name": "Artistic Genius",
+          "description": "Creative mastery"
+        },
+        {
+          "name": "Muse",
+          "description": "Inspiring presence"
+        },
+        {
+          "name": "Patron of the Arts",
+          "description": "Cultural influence"
+        },
+        {
+          "name": "Living Legend",
+          "description": "Immortal artist"
+        }
+      ]
+    },
+    "Tremere": {
+      "description": "Clan of wizards and schemers",
+      "dots": [
+        {
+          "name": "Clan Member",
+          "description": "Basic Tremere knowledge"
+        },
+        {
+          "name": "Apprentice",
+          "description": "Basic magic training"
+        },
+        {
+          "name": "Regent",
+          "description": "Chantry leadership"
+        },
+        {
+          "name": "Master",
+          "description": "Advanced magic"
+        },
+        {
+          "name": "Grand Master",
+          "description": "Supreme sorcerer"
+        }
+      ]
+    },
+    "Ventrue": {
+      "description": "Clan of lords and tycoons",
+      "dots": [
+        {
+          "name": "Clan Member",
+          "description": "Basic Ventrue knowledge"
+        },
+        {
+          "name": "Dynast",
+          "description": "Noble heritage"
+        },
+        {
+          "name": "Magnate",
+          "description": "Business empire"
+        },
+        {
+          "name": "Patriarch",
+          "description": "Family leadership"
+        },
+        {
+          "name": "Prince",
+          "description": "Domain rulership"
+        }
+      ]
+    }
   }
 }
-
-

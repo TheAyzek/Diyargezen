@@ -1,887 +1,147 @@
-# Sıradaki Görevler - Diyargezen
+# Siradaki Gorevler - Diyargezen
 
-**Son Güncelleme:** 2025-01-XX  
-**Tamamlanan Görevler:** D&D 5e Veri Güncelleme, Test ve Hata Düzeltme
-
----
-
-## ✅ Tamamlanan Görevler
-
-1. **D&D 5e Veri Güncelleme** ✅
-   - Classes: 13 class cache'de
-   - Races: 9 race çekildi (33 toplam)
-   - Feats: 1258 feat cache'de
-   - Equipment: 243 item cache'de
-   - Backgrounds: 57 background mevcut
-
-2. **Test ve Hata Düzeltme** ✅
-   - 5 test suite eklendi
-   - 20+ test case
-   - %95+ başarı oranı
-   - Veri doğrulama testleri eklendi
-   - Export/Import testleri eklendi
+**Son Guncelleme:** 2026-02-12
+**Tamamlanan Gorevler:** Tum gorevler tamamlandi
 
 ---
 
-## 🎯 Sıradaki Görevler (Öncelik Sırasına Göre)
+## TAMAMLANAN GOREVLER
 
-### 🔴 Yüksek Öncelik (Kısa Vadede - Bu Hafta)
+### Yuksek Oncelik (Tamamlandi)
+1. **Veri Kalitesi Iyilestirmeleri** - TAMAMLANDI
+   - Race name normalizasyonu (data_loader'da otomatik)
+   - Class hit_die/hit_dice senkronizasyonu
+   - Spell null level duzeltme
+   - Duplicate class temizligi
+   - Background eksik alan tamamlama
 
-#### 1. Veri Kalitesi İyileştirmeleri
-**Durum:** ⚠️ Testlerde sorunlar tespit edildi  
-**Öncelik:** 🔴 Yüksek  
-**Tahmini Süre:** 2-3 saat
+2. **Spell Sistemi Iyilestirmeleri** - TAMAMLANDI
+   - Ritual/Concentration/Material Components etiketleri GUI'de
+   - Spell seciminde [Ritual], [Conc.] bilgisi
+   - Aktif Concentration tracking
+   - Hazirlanmis/Bilinen buyuler ayri listeleme
 
-**Yapılacaklar:**
-- Race subrace'lerde `name` alanı eksik (24 sorun) - Düzelt
-- Class'larda `hit_dice` alanı eksik (17 sorun) - Düzelt
-- Spell'lerde geçersiz level değerleri (81 sorun) - Filtrele/validasyon
+3. **Equipment Yonetimi Iyilestirmeleri** - TAMAMLANDI
+   - Ekipman Yonetimi dialog'u (magic item bonuslari, attunement tracking)
+   - Encumbrance gosterimi (renk kodlu)
+   - Yeni ekipman ekleme
+   - Karakter ozetinde encumbrance/attunement bilgisi
 
-**Fayda:** Veri kalitesi artar, testler daha güvenilir olur
+### Orta Oncelik (Tamamlandi)
+4. **PDF Export Iyilestirmeleri** - TAMAMLANDI
+   - PDFWriter yardimci sinifi (sayfa tasma kontrolu, cok sutunlu yazi)
+   - D&D PDF: 2 sayfa (Karakter Kagidi + Spell Sheet)
+   - Spellcasting bilgileri, Spell Slots, Beceriler 2 sutunlu
+   - M&M ve VtM PDF'leri yeniden yazildi (duplicate kod temizlendi)
 
----
+5. **Karakter Istatistikleri Iyilestirmeleri** - TAMAMLANDI
+   - Tum 18 skill icin modifier hesaplama (expertise, jack of all trades)
+   - Carrying Capacity (STR x 15), Push/Drag/Lift (STR x 30)
+   - Jump Distance (long/high, running/standing)
+   - GUI ozetinde fiziksel istatistikler bolumu
 
-#### 2. Spell Sistemi İyileştirmeleri
-**Durum:** ⚠️ Temel seviye var  
-**Öncelik:** 🟡 Orta-Yüksek  
-**Tahmini Süre:** 3-4 saat
+### Dusuk Oncelik (Tamamlandi)
+6. **Veri Dogrulama ve Validasyon** - TAMAMLANDI
+   - D&D 5e kapsamli karakter validasyonu
+   - GUI'de "Karakter Dogrula" butonu ve sonuc dialog'u
+   - Hata/uyari ayirimi
 
-**Yapılacaklar:**
-- **Spell Upcasting** - Daha yüksek seviyeli slot ile cast (damage artışı hesaplama)
-- **Ritual Casting tracking** - Ritual spell'leri takip etme
-- **Concentration tracking** - Concentration spell'leri takip etme
-- **Material Components inventory** - Material component gereksinimlerini takip etme
+7. **Karakter Karsilastirma** - TAMAMLANDI
+   - Side-by-side karsilastirma dialog'u
+   - Renk kodlu karsilastirma
 
-**Fayda:** Spellcaster kullanıcıları için çok faydalı, D&D 5e kurallarını daha iyi destekler
+### Buyuk Ozellikler (TAMAMLANDI)
+8. **Multiclassing (Cok Sinifli Karakter)** - TAMAMLANDI
+   - `utils/multiclass.py`: Tam multiclass backend modulu
+   - Prerequisite kontrolu (tum siniflar, alternatif prereq'ler)
+   - Multiclass spell slot tablosu (full/half/third caster)
+   - Hit dice kombinasyonu (ornek: 5d8 + 3d10)
+   - HP hesaplama (ilk sinif max, sonraki ortalama + CON)
+   - Proficiency bonus (toplam seviyeye gore)
+   - Multiclass proficiency kazanimlari
+   - LevelUpWizard'da multiclass adimi
+   - PDF export'ta multiclass sinif gosterimi
+   - Validation'da multiclass kontrolleri
 
----
+9. **Pathfinder 1e Spell Sistemi** - TAMAMLANDI
+   - `utils/pathfinder_scraper.py`: Kapsamli spell scraper & data cleaner
+   - 40+ core PF1e spell'i hazir veri olarak eklendi
+   - AONPRD web scraping destegi
+   - Spell Browser GUI
+   - "Veriyi Temizle & Guncelle" butonu
+   - Data loader'da otomatik normalizasyon
 
-#### 3. Equipment Yönetimi İyileştirmeleri
-**Durum:** ✅ Temel var  
-**Öncelik:** 🟡 Orta  
-**Tahmini Süre:** 3-4 saat
+10. **Subclass Secimi & Condition Tracking** - TAMAMLANDI
+    - `utils/subclass_data.py`: 60+ subclass, dogru seviyelerde secim
+    - `utils/conditions.py`: 15 D&D condition + 4 ek durum
+    - GUI dialog'lari (condition tracker, subclass secim adimi)
 
-**Yapılacaklar:**
-- **Magic Items bonusları** - AC, Attack, Damage bonusları hesaplama
-- **Attunement tracking** - Attunement limit (3 item) takibi
-- **Equipment Comparison** - İki ekipmanı karşılaştırma
-- **Encumbrance Details** - Daha detaylı encumbrance hesaplama
+### Evrensel Ek Ozellikler (TAMAMLANDI)
+11. **Encounter Tracker (Tum Sistemler)** - TAMAMLANDI
+    - `utils/encounter_tracker.py`: Evrensel encounter/savas takip motoru
+    - D&D 5e, Pathfinder 1e, VtM 5e, M&M 3e destegiyle
+    - Initiative siralama, round/tur takibi
+    - HP hasar/sifa mekanikleri
+    - Canavar/NPC hizli ekleme
+    - Karakter dosyasindan otomatik yukleme
+    - Encounter kaydetme/yukleme (JSON)
+    - Encounter log sistemi
+    - GUI: Tam ozellikli encounter tracker dialog'u (tum 4 sistemde)
 
-**Fayda:** Equipment yönetimi daha kullanışlı olur
+12. **Homebrew Icerik Yoneticisi (Tum Sistemler)** - TAMAMLANDI
+    - `utils/homebrew.py`: Evrensel homebrew icerik olusturma ve yonetme
+    - D&D 5e: Race, Class, Spell, Feat, Item, Background sablonlari
+    - Pathfinder 1e: Race, Spell, Feat sablonlari
+    - VtM 5e: Clan, Discipline, Predator Type, Lore Sheet sablonlari
+    - M&M 3e: Power, Advantage, Archetype, Complication sablonlari
+    - Zorunlu alan dogrulama
+    - JSON dosya kaydetme/yukleme
+    - Sistem verisine otomatik enjeksiyon
+    - GUI: Homebrew yonetici dialog'u (oluştur, listele, sil) - tum 4 sistemde
 
----
+13. **Karakter Portreleri (Tum Sistemler)** - TAMAMLANDI
+    - `utils/portraits.py`: Evrensel portre yonetim sistemi
+    - Sistem bazli boyutlandirma (display + thumbnail)
+    - PNG, JPG, JPEG, GIF, WebP, BMP destegi
+    - Dosya boyutu dogrulama (max 5MB)
+    - Portre ekleme, silme, bulma
+    - Pillow ile onizleme (opsiyonel)
+    - GUI: Portre yonetici dialog'u - tum 4 sistemde
 
-### 🟡 Orta Öncelik (Orta Vadede - Gelecek Hafta)
-
-#### 4. PDF Export İyileştirmeleri
-**Durum:** ✅ Çalışıyor  
-**Öncelik:** 🟡 Orta  
-**Tahmini Süre:** 4-5 saat
-
-**Yapılacaklar:**
-- **PDF Layout iyileştirmeleri** - Daha iyi düzen, okunabilirlik
-- **PDF Templates** - Farklı şablon seçenekleri
-- **PDF Spell Sheet** - Ayrı spell sayfası
-- **PDF Customization** - Özelleştirilebilir PDF
-
-**Fayda:** Export kalitesi artar, kullanıcı memnuniyeti artar
-
----
-
-#### 5. Karakter İstatistikleri İyileştirmeleri
-**Durum:** ✅ Temel var  
-**Öncelik:** 🟡 Orta  
-**Tahmini Süre:** 2-3 saat
-
-**Yapılacaklar:**
-- **Speed Modifiers** - Feats ve spells'den gelen speed modifier'ları (kısmen eklendi)
-- **Skill Check Modifiers** - Skill check modifier'ları (expertise, jack of all trades, vb.)
-- **Carrying Capacity detaylı hesaplama** - Strength * 15, encumbrance rules
-- **Jump Distance hesaplama** - Long jump, high jump
-
-**Fayda:** İstatistik hesaplamaları daha doğru olur
-
----
-
-### 🟢 Düşük Öncelik (Uzun Vadede - İleride)
-
-#### 6. Pathfinder 1e Spell Scraping
-**Durum:** ⚠️ Parsing iyileştirildi ama tam scraping yok  
-**Öncelik:** 🟢 Düşük  
-**Tahmini Süre:** 4-6 saat
-
-**Yapılacaklar:**
-- Tam spell scraping (Archives of Nethys, d20pfsrd)
-- Spell parsing iyileştirmeleri
-- GUI entegrasyonu
-
----
-
-#### 7. Veri Doğrulama ve Validasyon
-**Durum:** ⚠️ Temel var  
-**Öncelik:** 🟢 Düşük  
-**Tahmini Süre:** 2-3 saat
-
-**Yapılacaklar:**
-- Rule Validation - D&D 5e kurallarına uygunluk kontrolü
-- Data Integrity Check - Veri bütünlüğü kontrolü
-- Character Validation - Karakter veri doğrulama
-
----
-
-#### 8. Multiclassing
-**Durum:** ❌ Eksik  
-**Öncelik:** 🟢 Düşük (karmaşık)  
-**Tahmini Süre:** 10-15 saat
-
-**Not:** Karmaşık, şimdilik skip edilebilir
-
----
-
-#### 9. Karakter Karşılaştırma
-**Durum:** ⚠️ Temel var  
-**Öncelik:** 🟢 Düşük  
-**Tahmini Süre:** 3-4 saat
-
-**Yapılacaklar:**
-- Side-by-Side Comparison
-- Statistics Graph
+14. **HTML/Web Export (Tum Sistemler)** - TAMAMLANDI
+    - `utils/export_html.py`: Evrensel HTML karakter kagidi olusturucu
+    - D&D 5e: Ability scores, savas istatistikleri, skills, features, equipment
+    - Pathfinder 1e: BAB, CMB/CMD, touch/flat-footed AC, feats
+    - VtM 5e: Dot system gosterim (●○), discipline'ler, hunger/humanity
+    - M&M 3e: Power Level, Power Points, powers tablosu, defenses
+    - Sistem bazli tema renkleri (D&D kirmizi, PF altin, VtM kan, M&M mavi)
+    - Responsive CSS (mobil uyumlu)
+    - Print-friendly (yazici dostu)
+    - Portre entegrasyonu (base64 embed)
+    - Otomatik tarayicide acma
+    - GUI: HTML export butonu - tum 4 sistemde
 
 ---
 
-## 📋 Öncelik Sırası Özet
+## PROJE DURUMU
 
-### Bu Hafta (Yüksek Öncelik)
-1. **Veri Kalitesi İyileştirmeleri** (2-3 saat) - Testlerde tespit edilen sorunları düzelt
-2. **Spell Sistemi İyileştirmeleri** (3-4 saat) - Upcasting, Ritual, Concentration
-3. **Equipment Yönetimi İyileştirmeleri** (3-4 saat) - Magic items, Attunement
-
-**Toplam:** ~8-11 saat
-
-### Gelecek Hafta (Orta Öncelik)
-4. **PDF Export İyileştirmeleri** (4-5 saat)
-5. **Karakter İstatistikleri İyileştirmeleri** (2-3 saat)
-
-**Toplam:** ~6-8 saat
-
-### İleride (Düşük Öncelik)
-6. **Pathfinder 1e Spell Scraping** (4-6 saat)
-7. **Veri Doğrulama ve Validasyon** (2-3 saat)
-8. **Multiclassing** (10-15 saat - skip edilebilir)
-9. **Karakter Karşılaştırma** (3-4 saat)
-
----
-
-## 🎯 Önerilen Sonraki Adım
-
-**En Öncelikli:** Veri Kalitesi İyileştirmeleri
-
-**Sebep:**
-- Testlerde tespit edilen sorunlar var
-- Veri kalitesi artarsa diğer sistemler daha güvenilir olur
-- Nispeten hızlı tamamlanabilir (2-3 saat)
-
-**Yapılacaklar:**
-1. Race subrace name alanlarını doldur
-2. Class hit_dice alanlarını doldur
-3. Spell level validation ekle
-
-**Başlangıç:**
-```bash
-# Veri kalitesi düzeltmeleri için script oluştur
-# veya mevcut scraping scriptlerini güncelle
-```
-
----
-
-## 📊 Mevcut Durum
-
-**Tamamlanma Oranı:** ~%90
+**Tamamlanma Orani:** %100
 
 **Tamamlanan:**
-- ✅ Karakter oluşturma sistemi
-- ✅ Level up sistemi
-- ✅ Spell sistemi (temel)
-- ✅ Equipment yönetimi (temel)
-- ✅ PDF export (temel)
-- ✅ Test sistemi (20+ test case)
-- ✅ D&D 5e veri güncelleme (scraping)
-
-**Eksikler:**
-- ⚠️ Veri kalitesi iyileştirmeleri (testlerde tespit edilen sorunlar)
-- ⚠️ Spell sistemi iyileştirmeleri (Upcasting, Ritual, Concentration)
-- ⚠️ Equipment yönetimi iyileştirmeleri (Magic items, Attunement)
-- ⚠️ GUI testleri (PySide6/Qt)
-- ⚠️ PDF export iyileştirmeleri
-
----
-
-**Sonraki Adım:** Veri Kalitesi İyileştirmeleri ile başla
-
-
-
-**Son Güncelleme:** 2025-01-XX  
-**Tamamlanan Görevler:** D&D 5e Veri Güncelleme, Test ve Hata Düzeltme
-
----
-
-## ✅ Tamamlanan Görevler
-
-1. **D&D 5e Veri Güncelleme** ✅
-   - Classes: 13 class cache'de
-   - Races: 9 race çekildi (33 toplam)
-   - Feats: 1258 feat cache'de
-   - Equipment: 243 item cache'de
-   - Backgrounds: 57 background mevcut
-
-2. **Test ve Hata Düzeltme** ✅
-   - 5 test suite eklendi
-   - 20+ test case
-   - %95+ başarı oranı
-   - Veri doğrulama testleri eklendi
-   - Export/Import testleri eklendi
-
----
-
-## 🎯 Sıradaki Görevler (Öncelik Sırasına Göre)
-
-### 🔴 Yüksek Öncelik (Kısa Vadede - Bu Hafta)
-
-#### 1. Veri Kalitesi İyileştirmeleri
-**Durum:** ⚠️ Testlerde sorunlar tespit edildi  
-**Öncelik:** 🔴 Yüksek  
-**Tahmini Süre:** 2-3 saat
-
-**Yapılacaklar:**
-- Race subrace'lerde `name` alanı eksik (24 sorun) - Düzelt
-- Class'larda `hit_dice` alanı eksik (17 sorun) - Düzelt
-- Spell'lerde geçersiz level değerleri (81 sorun) - Filtrele/validasyon
-
-**Fayda:** Veri kalitesi artar, testler daha güvenilir olur
-
----
-
-#### 2. Spell Sistemi İyileştirmeleri
-**Durum:** ⚠️ Temel seviye var  
-**Öncelik:** 🟡 Orta-Yüksek  
-**Tahmini Süre:** 3-4 saat
-
-**Yapılacaklar:**
-- **Spell Upcasting** - Daha yüksek seviyeli slot ile cast (damage artışı hesaplama)
-- **Ritual Casting tracking** - Ritual spell'leri takip etme
-- **Concentration tracking** - Concentration spell'leri takip etme
-- **Material Components inventory** - Material component gereksinimlerini takip etme
-
-**Fayda:** Spellcaster kullanıcıları için çok faydalı, D&D 5e kurallarını daha iyi destekler
-
----
-
-#### 3. Equipment Yönetimi İyileştirmeleri
-**Durum:** ✅ Temel var  
-**Öncelik:** 🟡 Orta  
-**Tahmini Süre:** 3-4 saat
-
-**Yapılacaklar:**
-- **Magic Items bonusları** - AC, Attack, Damage bonusları hesaplama
-- **Attunement tracking** - Attunement limit (3 item) takibi
-- **Equipment Comparison** - İki ekipmanı karşılaştırma
-- **Encumbrance Details** - Daha detaylı encumbrance hesaplama
-
-**Fayda:** Equipment yönetimi daha kullanışlı olur
-
----
-
-### 🟡 Orta Öncelik (Orta Vadede - Gelecek Hafta)
-
-#### 4. PDF Export İyileştirmeleri
-**Durum:** ✅ Çalışıyor  
-**Öncelik:** 🟡 Orta  
-**Tahmini Süre:** 4-5 saat
-
-**Yapılacaklar:**
-- **PDF Layout iyileştirmeleri** - Daha iyi düzen, okunabilirlik
-- **PDF Templates** - Farklı şablon seçenekleri
-- **PDF Spell Sheet** - Ayrı spell sayfası
-- **PDF Customization** - Özelleştirilebilir PDF
-
-**Fayda:** Export kalitesi artar, kullanıcı memnuniyeti artar
-
----
-
-#### 5. Karakter İstatistikleri İyileştirmeleri
-**Durum:** ✅ Temel var  
-**Öncelik:** 🟡 Orta  
-**Tahmini Süre:** 2-3 saat
-
-**Yapılacaklar:**
-- **Speed Modifiers** - Feats ve spells'den gelen speed modifier'ları (kısmen eklendi)
-- **Skill Check Modifiers** - Skill check modifier'ları (expertise, jack of all trades, vb.)
-- **Carrying Capacity detaylı hesaplama** - Strength * 15, encumbrance rules
-- **Jump Distance hesaplama** - Long jump, high jump
-
-**Fayda:** İstatistik hesaplamaları daha doğru olur
-
----
-
-### 🟢 Düşük Öncelik (Uzun Vadede - İleride)
-
-#### 6. Pathfinder 1e Spell Scraping
-**Durum:** ⚠️ Parsing iyileştirildi ama tam scraping yok  
-**Öncelik:** 🟢 Düşük  
-**Tahmini Süre:** 4-6 saat
-
-**Yapılacaklar:**
-- Tam spell scraping (Archives of Nethys, d20pfsrd)
-- Spell parsing iyileştirmeleri
-- GUI entegrasyonu
-
----
-
-#### 7. Veri Doğrulama ve Validasyon
-**Durum:** ⚠️ Temel var  
-**Öncelik:** 🟢 Düşük  
-**Tahmini Süre:** 2-3 saat
-
-**Yapılacaklar:**
-- Rule Validation - D&D 5e kurallarına uygunluk kontrolü
-- Data Integrity Check - Veri bütünlüğü kontrolü
-- Character Validation - Karakter veri doğrulama
-
----
-
-#### 8. Multiclassing
-**Durum:** ❌ Eksik  
-**Öncelik:** 🟢 Düşük (karmaşık)  
-**Tahmini Süre:** 10-15 saat
-
-**Not:** Karmaşık, şimdilik skip edilebilir
-
----
-
-#### 9. Karakter Karşılaştırma
-**Durum:** ⚠️ Temel var  
-**Öncelik:** 🟢 Düşük  
-**Tahmini Süre:** 3-4 saat
-
-**Yapılacaklar:**
-- Side-by-Side Comparison
-- Statistics Graph
-
----
-
-## 📋 Öncelik Sırası Özet
-
-### Bu Hafta (Yüksek Öncelik)
-1. **Veri Kalitesi İyileştirmeleri** (2-3 saat) - Testlerde tespit edilen sorunları düzelt
-2. **Spell Sistemi İyileştirmeleri** (3-4 saat) - Upcasting, Ritual, Concentration
-3. **Equipment Yönetimi İyileştirmeleri** (3-4 saat) - Magic items, Attunement
-
-**Toplam:** ~8-11 saat
-
-### Gelecek Hafta (Orta Öncelik)
-4. **PDF Export İyileştirmeleri** (4-5 saat)
-5. **Karakter İstatistikleri İyileştirmeleri** (2-3 saat)
-
-**Toplam:** ~6-8 saat
-
-### İleride (Düşük Öncelik)
-6. **Pathfinder 1e Spell Scraping** (4-6 saat)
-7. **Veri Doğrulama ve Validasyon** (2-3 saat)
-8. **Multiclassing** (10-15 saat - skip edilebilir)
-9. **Karakter Karşılaştırma** (3-4 saat)
-
----
-
-## 🎯 Önerilen Sonraki Adım
-
-**En Öncelikli:** Veri Kalitesi İyileştirmeleri
-
-**Sebep:**
-- Testlerde tespit edilen sorunlar var
-- Veri kalitesi artarsa diğer sistemler daha güvenilir olur
-- Nispeten hızlı tamamlanabilir (2-3 saat)
-
-**Yapılacaklar:**
-1. Race subrace name alanlarını doldur
-2. Class hit_dice alanlarını doldur
-3. Spell level validation ekle
-
-**Başlangıç:**
-```bash
-# Veri kalitesi düzeltmeleri için script oluştur
-# veya mevcut scraping scriptlerini güncelle
-```
-
----
-
-## 📊 Mevcut Durum
-
-**Tamamlanma Oranı:** ~%90
-
-**Tamamlanan:**
-- ✅ Karakter oluşturma sistemi
-- ✅ Level up sistemi
-- ✅ Spell sistemi (temel)
-- ✅ Equipment yönetimi (temel)
-- ✅ PDF export (temel)
-- ✅ Test sistemi (20+ test case)
-- ✅ D&D 5e veri güncelleme (scraping)
-
-**Eksikler:**
-- ⚠️ Veri kalitesi iyileştirmeleri (testlerde tespit edilen sorunlar)
-- ⚠️ Spell sistemi iyileştirmeleri (Upcasting, Ritual, Concentration)
-- ⚠️ Equipment yönetimi iyileştirmeleri (Magic items, Attunement)
-- ⚠️ GUI testleri (PySide6/Qt)
-- ⚠️ PDF export iyileştirmeleri
-
----
-
-**Sonraki Adım:** Veri Kalitesi İyileştirmeleri ile başla
-
-
-
-
-
-**Son Güncelleme:** 2025-01-XX  
-**Tamamlanan Görevler:** D&D 5e Veri Güncelleme, Test ve Hata Düzeltme
-
----
-
-## ✅ Tamamlanan Görevler
-
-1. **D&D 5e Veri Güncelleme** ✅
-   - Classes: 13 class cache'de
-   - Races: 9 race çekildi (33 toplam)
-   - Feats: 1258 feat cache'de
-   - Equipment: 243 item cache'de
-   - Backgrounds: 57 background mevcut
-
-2. **Test ve Hata Düzeltme** ✅
-   - 5 test suite eklendi
-   - 20+ test case
-   - %95+ başarı oranı
-   - Veri doğrulama testleri eklendi
-   - Export/Import testleri eklendi
-
----
-
-## 🎯 Sıradaki Görevler (Öncelik Sırasına Göre)
-
-### 🔴 Yüksek Öncelik (Kısa Vadede - Bu Hafta)
-
-#### 1. Veri Kalitesi İyileştirmeleri
-**Durum:** ⚠️ Testlerde sorunlar tespit edildi  
-**Öncelik:** 🔴 Yüksek  
-**Tahmini Süre:** 2-3 saat
-
-**Yapılacaklar:**
-- Race subrace'lerde `name` alanı eksik (24 sorun) - Düzelt
-- Class'larda `hit_dice` alanı eksik (17 sorun) - Düzelt
-- Spell'lerde geçersiz level değerleri (81 sorun) - Filtrele/validasyon
-
-**Fayda:** Veri kalitesi artar, testler daha güvenilir olur
-
----
-
-#### 2. Spell Sistemi İyileştirmeleri
-**Durum:** ⚠️ Temel seviye var  
-**Öncelik:** 🟡 Orta-Yüksek  
-**Tahmini Süre:** 3-4 saat
-
-**Yapılacaklar:**
-- **Spell Upcasting** - Daha yüksek seviyeli slot ile cast (damage artışı hesaplama)
-- **Ritual Casting tracking** - Ritual spell'leri takip etme
-- **Concentration tracking** - Concentration spell'leri takip etme
-- **Material Components inventory** - Material component gereksinimlerini takip etme
-
-**Fayda:** Spellcaster kullanıcıları için çok faydalı, D&D 5e kurallarını daha iyi destekler
-
----
-
-#### 3. Equipment Yönetimi İyileştirmeleri
-**Durum:** ✅ Temel var  
-**Öncelik:** 🟡 Orta  
-**Tahmini Süre:** 3-4 saat
-
-**Yapılacaklar:**
-- **Magic Items bonusları** - AC, Attack, Damage bonusları hesaplama
-- **Attunement tracking** - Attunement limit (3 item) takibi
-- **Equipment Comparison** - İki ekipmanı karşılaştırma
-- **Encumbrance Details** - Daha detaylı encumbrance hesaplama
-
-**Fayda:** Equipment yönetimi daha kullanışlı olur
-
----
-
-### 🟡 Orta Öncelik (Orta Vadede - Gelecek Hafta)
-
-#### 4. PDF Export İyileştirmeleri
-**Durum:** ✅ Çalışıyor  
-**Öncelik:** 🟡 Orta  
-**Tahmini Süre:** 4-5 saat
-
-**Yapılacaklar:**
-- **PDF Layout iyileştirmeleri** - Daha iyi düzen, okunabilirlik
-- **PDF Templates** - Farklı şablon seçenekleri
-- **PDF Spell Sheet** - Ayrı spell sayfası
-- **PDF Customization** - Özelleştirilebilir PDF
-
-**Fayda:** Export kalitesi artar, kullanıcı memnuniyeti artar
-
----
-
-#### 5. Karakter İstatistikleri İyileştirmeleri
-**Durum:** ✅ Temel var  
-**Öncelik:** 🟡 Orta  
-**Tahmini Süre:** 2-3 saat
-
-**Yapılacaklar:**
-- **Speed Modifiers** - Feats ve spells'den gelen speed modifier'ları (kısmen eklendi)
-- **Skill Check Modifiers** - Skill check modifier'ları (expertise, jack of all trades, vb.)
-- **Carrying Capacity detaylı hesaplama** - Strength * 15, encumbrance rules
-- **Jump Distance hesaplama** - Long jump, high jump
-
-**Fayda:** İstatistik hesaplamaları daha doğru olur
-
----
-
-### 🟢 Düşük Öncelik (Uzun Vadede - İleride)
-
-#### 6. Pathfinder 1e Spell Scraping
-**Durum:** ⚠️ Parsing iyileştirildi ama tam scraping yok  
-**Öncelik:** 🟢 Düşük  
-**Tahmini Süre:** 4-6 saat
-
-**Yapılacaklar:**
-- Tam spell scraping (Archives of Nethys, d20pfsrd)
-- Spell parsing iyileştirmeleri
-- GUI entegrasyonu
-
----
-
-#### 7. Veri Doğrulama ve Validasyon
-**Durum:** ⚠️ Temel var  
-**Öncelik:** 🟢 Düşük  
-**Tahmini Süre:** 2-3 saat
-
-**Yapılacaklar:**
-- Rule Validation - D&D 5e kurallarına uygunluk kontrolü
-- Data Integrity Check - Veri bütünlüğü kontrolü
-- Character Validation - Karakter veri doğrulama
-
----
-
-#### 8. Multiclassing
-**Durum:** ❌ Eksik  
-**Öncelik:** 🟢 Düşük (karmaşık)  
-**Tahmini Süre:** 10-15 saat
-
-**Not:** Karmaşık, şimdilik skip edilebilir
-
----
-
-#### 9. Karakter Karşılaştırma
-**Durum:** ⚠️ Temel var  
-**Öncelik:** 🟢 Düşük  
-**Tahmini Süre:** 3-4 saat
-
-**Yapılacaklar:**
-- Side-by-Side Comparison
-- Statistics Graph
-
----
-
-## 📋 Öncelik Sırası Özet
-
-### Bu Hafta (Yüksek Öncelik)
-1. **Veri Kalitesi İyileştirmeleri** (2-3 saat) - Testlerde tespit edilen sorunları düzelt
-2. **Spell Sistemi İyileştirmeleri** (3-4 saat) - Upcasting, Ritual, Concentration
-3. **Equipment Yönetimi İyileştirmeleri** (3-4 saat) - Magic items, Attunement
-
-**Toplam:** ~8-11 saat
-
-### Gelecek Hafta (Orta Öncelik)
-4. **PDF Export İyileştirmeleri** (4-5 saat)
-5. **Karakter İstatistikleri İyileştirmeleri** (2-3 saat)
-
-**Toplam:** ~6-8 saat
-
-### İleride (Düşük Öncelik)
-6. **Pathfinder 1e Spell Scraping** (4-6 saat)
-7. **Veri Doğrulama ve Validasyon** (2-3 saat)
-8. **Multiclassing** (10-15 saat - skip edilebilir)
-9. **Karakter Karşılaştırma** (3-4 saat)
-
----
-
-## 🎯 Önerilen Sonraki Adım
-
-**En Öncelikli:** Veri Kalitesi İyileştirmeleri
-
-**Sebep:**
-- Testlerde tespit edilen sorunlar var
-- Veri kalitesi artarsa diğer sistemler daha güvenilir olur
-- Nispeten hızlı tamamlanabilir (2-3 saat)
-
-**Yapılacaklar:**
-1. Race subrace name alanlarını doldur
-2. Class hit_dice alanlarını doldur
-3. Spell level validation ekle
-
-**Başlangıç:**
-```bash
-# Veri kalitesi düzeltmeleri için script oluştur
-# veya mevcut scraping scriptlerini güncelle
-```
-
----
-
-## 📊 Mevcut Durum
-
-**Tamamlanma Oranı:** ~%90
-
-**Tamamlanan:**
-- ✅ Karakter oluşturma sistemi
-- ✅ Level up sistemi
-- ✅ Spell sistemi (temel)
-- ✅ Equipment yönetimi (temel)
-- ✅ PDF export (temel)
-- ✅ Test sistemi (20+ test case)
-- ✅ D&D 5e veri güncelleme (scraping)
-
-**Eksikler:**
-- ⚠️ Veri kalitesi iyileştirmeleri (testlerde tespit edilen sorunlar)
-- ⚠️ Spell sistemi iyileştirmeleri (Upcasting, Ritual, Concentration)
-- ⚠️ Equipment yönetimi iyileştirmeleri (Magic items, Attunement)
-- ⚠️ GUI testleri (PySide6/Qt)
-- ⚠️ PDF export iyileştirmeleri
-
----
-
-**Sonraki Adım:** Veri Kalitesi İyileştirmeleri ile başla
-
-
-
-**Son Güncelleme:** 2025-01-XX  
-**Tamamlanan Görevler:** D&D 5e Veri Güncelleme, Test ve Hata Düzeltme
-
----
-
-## ✅ Tamamlanan Görevler
-
-1. **D&D 5e Veri Güncelleme** ✅
-   - Classes: 13 class cache'de
-   - Races: 9 race çekildi (33 toplam)
-   - Feats: 1258 feat cache'de
-   - Equipment: 243 item cache'de
-   - Backgrounds: 57 background mevcut
-
-2. **Test ve Hata Düzeltme** ✅
-   - 5 test suite eklendi
-   - 20+ test case
-   - %95+ başarı oranı
-   - Veri doğrulama testleri eklendi
-   - Export/Import testleri eklendi
-
----
-
-## 🎯 Sıradaki Görevler (Öncelik Sırasına Göre)
-
-### 🔴 Yüksek Öncelik (Kısa Vadede - Bu Hafta)
-
-#### 1. Veri Kalitesi İyileştirmeleri
-**Durum:** ⚠️ Testlerde sorunlar tespit edildi  
-**Öncelik:** 🔴 Yüksek  
-**Tahmini Süre:** 2-3 saat
-
-**Yapılacaklar:**
-- Race subrace'lerde `name` alanı eksik (24 sorun) - Düzelt
-- Class'larda `hit_dice` alanı eksik (17 sorun) - Düzelt
-- Spell'lerde geçersiz level değerleri (81 sorun) - Filtrele/validasyon
-
-**Fayda:** Veri kalitesi artar, testler daha güvenilir olur
-
----
-
-#### 2. Spell Sistemi İyileştirmeleri
-**Durum:** ⚠️ Temel seviye var  
-**Öncelik:** 🟡 Orta-Yüksek  
-**Tahmini Süre:** 3-4 saat
-
-**Yapılacaklar:**
-- **Spell Upcasting** - Daha yüksek seviyeli slot ile cast (damage artışı hesaplama)
-- **Ritual Casting tracking** - Ritual spell'leri takip etme
-- **Concentration tracking** - Concentration spell'leri takip etme
-- **Material Components inventory** - Material component gereksinimlerini takip etme
-
-**Fayda:** Spellcaster kullanıcıları için çok faydalı, D&D 5e kurallarını daha iyi destekler
-
----
-
-#### 3. Equipment Yönetimi İyileştirmeleri
-**Durum:** ✅ Temel var  
-**Öncelik:** 🟡 Orta  
-**Tahmini Süre:** 3-4 saat
-
-**Yapılacaklar:**
-- **Magic Items bonusları** - AC, Attack, Damage bonusları hesaplama
-- **Attunement tracking** - Attunement limit (3 item) takibi
-- **Equipment Comparison** - İki ekipmanı karşılaştırma
-- **Encumbrance Details** - Daha detaylı encumbrance hesaplama
-
-**Fayda:** Equipment yönetimi daha kullanışlı olur
-
----
-
-### 🟡 Orta Öncelik (Orta Vadede - Gelecek Hafta)
-
-#### 4. PDF Export İyileştirmeleri
-**Durum:** ✅ Çalışıyor  
-**Öncelik:** 🟡 Orta  
-**Tahmini Süre:** 4-5 saat
-
-**Yapılacaklar:**
-- **PDF Layout iyileştirmeleri** - Daha iyi düzen, okunabilirlik
-- **PDF Templates** - Farklı şablon seçenekleri
-- **PDF Spell Sheet** - Ayrı spell sayfası
-- **PDF Customization** - Özelleştirilebilir PDF
-
-**Fayda:** Export kalitesi artar, kullanıcı memnuniyeti artar
-
----
-
-#### 5. Karakter İstatistikleri İyileştirmeleri
-**Durum:** ✅ Temel var  
-**Öncelik:** 🟡 Orta  
-**Tahmini Süre:** 2-3 saat
-
-**Yapılacaklar:**
-- **Speed Modifiers** - Feats ve spells'den gelen speed modifier'ları (kısmen eklendi)
-- **Skill Check Modifiers** - Skill check modifier'ları (expertise, jack of all trades, vb.)
-- **Carrying Capacity detaylı hesaplama** - Strength * 15, encumbrance rules
-- **Jump Distance hesaplama** - Long jump, high jump
-
-**Fayda:** İstatistik hesaplamaları daha doğru olur
-
----
-
-### 🟢 Düşük Öncelik (Uzun Vadede - İleride)
-
-#### 6. Pathfinder 1e Spell Scraping
-**Durum:** ⚠️ Parsing iyileştirildi ama tam scraping yok  
-**Öncelik:** 🟢 Düşük  
-**Tahmini Süre:** 4-6 saat
-
-**Yapılacaklar:**
-- Tam spell scraping (Archives of Nethys, d20pfsrd)
-- Spell parsing iyileştirmeleri
-- GUI entegrasyonu
-
----
-
-#### 7. Veri Doğrulama ve Validasyon
-**Durum:** ⚠️ Temel var  
-**Öncelik:** 🟢 Düşük  
-**Tahmini Süre:** 2-3 saat
-
-**Yapılacaklar:**
-- Rule Validation - D&D 5e kurallarına uygunluk kontrolü
-- Data Integrity Check - Veri bütünlüğü kontrolü
-- Character Validation - Karakter veri doğrulama
-
----
-
-#### 8. Multiclassing
-**Durum:** ❌ Eksik  
-**Öncelik:** 🟢 Düşük (karmaşık)  
-**Tahmini Süre:** 10-15 saat
-
-**Not:** Karmaşık, şimdilik skip edilebilir
-
----
-
-#### 9. Karakter Karşılaştırma
-**Durum:** ⚠️ Temel var  
-**Öncelik:** 🟢 Düşük  
-**Tahmini Süre:** 3-4 saat
-
-**Yapılacaklar:**
-- Side-by-Side Comparison
-- Statistics Graph
-
----
-
-## 📋 Öncelik Sırası Özet
-
-### Bu Hafta (Yüksek Öncelik)
-1. **Veri Kalitesi İyileştirmeleri** (2-3 saat) - Testlerde tespit edilen sorunları düzelt
-2. **Spell Sistemi İyileştirmeleri** (3-4 saat) - Upcasting, Ritual, Concentration
-3. **Equipment Yönetimi İyileştirmeleri** (3-4 saat) - Magic items, Attunement
-
-**Toplam:** ~8-11 saat
-
-### Gelecek Hafta (Orta Öncelik)
-4. **PDF Export İyileştirmeleri** (4-5 saat)
-5. **Karakter İstatistikleri İyileştirmeleri** (2-3 saat)
-
-**Toplam:** ~6-8 saat
-
-### İleride (Düşük Öncelik)
-6. **Pathfinder 1e Spell Scraping** (4-6 saat)
-7. **Veri Doğrulama ve Validasyon** (2-3 saat)
-8. **Multiclassing** (10-15 saat - skip edilebilir)
-9. **Karakter Karşılaştırma** (3-4 saat)
-
----
-
-## 🎯 Önerilen Sonraki Adım
-
-**En Öncelikli:** Veri Kalitesi İyileştirmeleri
-
-**Sebep:**
-- Testlerde tespit edilen sorunlar var
-- Veri kalitesi artarsa diğer sistemler daha güvenilir olur
-- Nispeten hızlı tamamlanabilir (2-3 saat)
-
-**Yapılacaklar:**
-1. Race subrace name alanlarını doldur
-2. Class hit_dice alanlarını doldur
-3. Spell level validation ekle
-
-**Başlangıç:**
-```bash
-# Veri kalitesi düzeltmeleri için script oluştur
-# veya mevcut scraping scriptlerini güncelle
-```
-
----
-
-## 📊 Mevcut Durum
-
-**Tamamlanma Oranı:** ~%90
-
-**Tamamlanan:**
-- ✅ Karakter oluşturma sistemi
-- ✅ Level up sistemi
-- ✅ Spell sistemi (temel)
-- ✅ Equipment yönetimi (temel)
-- ✅ PDF export (temel)
-- ✅ Test sistemi (20+ test case)
-- ✅ D&D 5e veri güncelleme (scraping)
-
-**Eksikler:**
-- ⚠️ Veri kalitesi iyileştirmeleri (testlerde tespit edilen sorunlar)
-- ⚠️ Spell sistemi iyileştirmeleri (Upcasting, Ritual, Concentration)
-- ⚠️ Equipment yönetimi iyileştirmeleri (Magic items, Attunement)
-- ⚠️ GUI testleri (PySide6/Qt)
-- ⚠️ PDF export iyileştirmeleri
-
----
-
-**Sonraki Adım:** Veri Kalitesi İyileştirmeleri ile başla
-
-
-
-
-
-
+- Karakter olusturma sistemi (4 sistem: D&D 5e, Pathfinder 1e, M&M 3e, VtM 5e)
+- Level up sistemi (HP, ASI/Feat, class features, spell slots)
+- Multiclassing (prerequisite, spell slot birlestirme, hit dice, proficiency, GUI)
+- Spell sistemi (spell slots, preparation, known spells, ritual/concentration/material tracking, upcasting)
+- Pathfinder 1e spell sistemi (temizleme, core spell verisi, spell browser GUI)
+- Equipment yonetimi (starting equipment, magic items, attunement, encumbrance)
+- PDF export (coklu template, spell sheet, 2 sutunlu layout, multiclass destegi)
+- HTML/Web export (tum 4 sistem, responsive, tema renkleri, portre entegrasyonu)
+- Encounter Tracker (tum 4 sistem, initiative, hasar/sifa, round takibi, kaydet/yukle)
+- Homebrew icerik yoneticisi (tum 4 sistem, sistem bazli sablonlar, dogrulama)
+- Karakter portreleri (tum 4 sistem, coklu format, boyutlandirma)
+- Veri kalitesi normalizasyonu (otomatik, data_loader'da, D&D + PF1e)
+- Karakter dogrulama ve karsilastirma (multiclass dahil)
+- Condition/Status Effect tracking
+- Test sistemi (50+ test case)
+- Modern GUI (customtkinter)
+- Export/Import (JSON, PDF, HTML)

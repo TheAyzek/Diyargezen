@@ -1,16 +1,140 @@
 {
   "backgrounds": {
     "Acolyte": {
+      "name": "Acolyte",
       "skill_proficiencies": ["Insight", "Religion"],
-      "feature": "Shelter of the Faithful"
+      "languages": ["Two extra languages"],
+      "equipment": ["Holy symbol", "Prayer book", "5 sticks of incense", "Vestments", "Common clothes", "15 gp"],
+      "feature": "Shelter of the Faithful",
+      "feature_description": "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle.",
+      "suggested_characteristics": {
+        "personality_traits": [
+          "I idolize a particular hero of my faith, and constantly refer to their deeds and example.",
+          "I can find common ground between the fiercest enemies, empathizing with them and always working toward peace.",
+          "I see omens in every event and action.",
+          "Nothing can shake my optimistic attitude.",
+          "I quote (or misquote) sacred texts and proverbs in almost every situation.",
+          "I am suspicious of strangers and expect the worst of them.",
+          "I am tolerant (or intolerant) of other faiths and respect (or condemn) the worship of other gods.",
+          "I've enjoyed fine food, drink, and high society among my temple's elite. Rough living grates on me."
+        ],
+        "ideals": [
+          "Change. We must help bring about the changes the gods are constantly working in the world. (Chaotic)",
+          "Tradition. The ancient ways of our faith must be preserved. (Lawful)",
+          "Charity. I always try to help those in need, no matter what the personal cost. (Good)",
+          "Power. I hope to one day rise to the top of my faith's religious hierarchy. (Lawful)",
+          "Faith. I trust that my deity will guide my actions. I have faith that if I work hard, things will go well. (Lawful)",
+          "Aspiration. I seek to prove myself worthy of my god's favor by matching my actions against his or her teachings. (Any)"
+        ],
+        "bonds": [
+          "I owe my life to the priest who took me in when my parents died.",
+          "Everything I do is for the common people.",
+          "I will someday get revenge on the corrupt temple hierarchy who branded me a heretic.",
+          "I owe a debt I can never repay to the people who helped me.",
+          "I pursue wealth to secure my family's future.",
+          "I'm convinced there's a powerful enemy after me, and their agents are everywhere I go."
+        ],
+        "flaws": [
+          "I judge others harshly, and myself even more severely.",
+          "I put too much trust in those who wield power within my temple's hierarchy.",
+          "My piety sometimes leads me to blindly trust those that profess faith in my god.",
+          "I am suspicious of strangers and expect the worst of them.",
+          "Once I pick a goal, I become obsessed with it to the detriment of everything else in my life.",
+          "I can't resist a pretty face."
+        ]
+      }
+    },
+    "Criminal": {
+      "name": "Criminal",
+      "skill_proficiencies": ["Deception", "Stealth"],
+      "tools": ["Thieves' tools", "One gaming set"],
+      "equipment": ["Crowbar", "Dark common clothes with hood", "15 gp"],
+      "feature": "Criminal Contact",
+      "feature_description": "You have a reliable and trustworthy contact who acts as your liaison to a network of criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you."
+    },
+    "Entertainer": {
+      "name": "Entertainer",
+      "skill_proficiencies": ["Acrobatics", "Performance"],
+      "tools": ["Disguise kit", "One musical instrument"],
+      "equipment": ["One musical instrument", "Favor of an admirer", "Costume", "15 gp"],
+      "feature": "By Popular Demand",
+      "feature_description": "You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble's court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you."
     },
     "Folk Hero": {
+      "name": "Folk Hero",
       "skill_proficiencies": ["Animal Handling", "Survival"],
-      "feature": "Rustic Hospitality"
+      "tools": ["Artisan's tools", "Vehicles (land)"],
+      "equipment": ["Shovel", "Iron pot", "Common clothes", "10 gp"],
+      "feature": "Rustic Hospitality",
+      "feature_description": "Since you come from the ranks of the common folk, you fit in among them with ease. You can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them. They will shield you from the law or anyone else searching for you, though they will not risk their lives for you."
+    },
+    "Guild Artisan": {
+      "name": "Guild Artisan",
+      "skill_proficiencies": ["Insight", "Persuasion"],
+      "languages": ["One extra language"],
+      "tools": ["Artisan's tools"],
+      "equipment": ["Letter of introduction from guild", "Traveler's clothes", "15 gp"],
+      "feature": "Guild Membership",
+      "feature_description": "As an established and respected member of a guild, you can rely on certain benefits that membership provides. Your fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings."
+    },
+    "Hermit": {
+      "name": "Hermit",
+      "skill_proficiencies": ["Medicine", "Religion"],
+      "tools": ["Herbalism kit"],
+      "languages": ["One extra language"],
+      "equipment": ["Scroll case of notes", "Winter blanket", "Common clothes", "5 gp"],
+      "feature": "Discovery",
+      "feature_description": "The quiet seclusion of your extended hermitage gave you access to a unique and powerful discovery. The exact nature of this revelation depends on the nature of your seclusion. It might be a great truth about the cosmos, the deities, the powerful beings of the outer planes, or the forces of nature. It could be a site that no one else has ever seen. You might have uncovered a fact that has long been forgotten, or unearthed some relic of the past that could rewrite history."
     },
     "Noble": {
+      "name": "Noble",
       "skill_proficiencies": ["History", "Persuasion"],
-      "feature": "Position of Privilege"
+      "languages": ["One extra language"],
+      "tools": ["One gaming set"],
+      "equipment": ["Fine clothes", "Signet ring", "Scroll of pedigree", "25 gp"],
+      "feature": "Position of Privilege",
+      "feature_description": "Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to."
+    },
+    "Outlander": {
+      "name": "Outlander",
+      "skill_proficiencies": ["Athletics", "Survival"],
+      "languages": ["One extra language"],
+      "tools": ["One musical instrument"],
+      "equipment": ["Staff", "Hunting trap", "Traveler's clothes", "10 gp"],
+      "feature": "Wanderer",
+      "feature_description": "You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, provided that the land offers berries, small game, water, and so forth."
+    },
+    "Sage": {
+      "name": "Sage",
+      "skill_proficiencies": ["Arcana", "History"],
+      "languages": ["Two extra languages"],
+      "equipment": ["Bottle of ink", "Quill", "Small knife", "Letter from colleague", "Common clothes", "10 gp"],
+      "feature": "Researcher",
+      "feature_description": "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign."
+    },
+    "Sailor": {
+      "name": "Sailor",
+      "skill_proficiencies": ["Athletics", "Perception"],
+      "tools": ["Navigator's tools", "Vehicles (water)"],
+      "equipment": ["Belaying pin", "50 feet of silk rope", "Lucky charm", "Common clothes", "10 gp"],
+      "feature": "Bad Reputation",
+      "feature_description": "No matter where you go, people are afraid of you due to your reputation. When you are in a civilized settlement, you can get away with minor criminal offenses, such as refusing to pay for food at a tavern or breaking down doors at a local shop, since most people will not report your activity to the authorities."
+    },
+    "Soldier": {
+      "name": "Soldier",
+      "skill_proficiencies": ["Athletics", "Intimidation"],
+      "tools": ["One gaming set", "Vehicles (land)"],
+      "equipment": ["Insignia of rank", "Trophy from fallen enemy", "Bone dice", "Common clothes", "10 gp"],
+      "feature": "Military Rank",
+      "feature_description": "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can invoke your rank to exert influence over other soldiers and requisition simple equipment or horses for temporary use. You can also usually gain access to friendly military encampments and fortresses where your rank is recognized."
+    },
+    "Urchin": {
+      "name": "Urchin",
+      "skill_proficiencies": ["Sleight of Hand", "Stealth"],
+      "tools": ["Disguise kit", "Thieves' tools"],
+      "equipment": ["Small knife", "Map of hometown", "Pet mouse", "Token to remember parents", "Common clothes", "10 gp"],
+      "feature": "City Secrets",
+      "feature_description": "You know the secret patterns and flow to cities and can find passages through the urban sprawl that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the city twice as fast as your speed would normally allow."
     }
   }
 }

@@ -20,7 +20,7 @@ def show_main_menu():
     print()
     print("Hangi sistem için karakter oluşturmak istersiniz?")
     print()
-    print("1. GUI Arayüzü (Tüm Sistemler)")
+    print("1. 🎨 Modern GUI Arayüzü (ÖNERİLEN - Tüm Sistemler)")
     print("2. Dungeons & Dragons 5e")
     print("3. Pathfinder 1e")
     print("4. Mutants & Masterminds")
@@ -43,11 +43,19 @@ def get_user_choice():
 
 def launch_gui_system():
     """GUI Arayüzünü başlat - Tüm Sistemler"""
-    print("\nGUI Arayüzü başlatılıyor... Lütfen bekleyin.")
+    print("\nModern GUI Arayüzü başlatılıyor... Lütfen bekleyin.")
     try:
-        from gui_new import main as gui_main
-        gui_main()
+        from gui.modern_gui import main as modern_gui_main
+        modern_gui_main()
     except ImportError as e:
+        print(f"Modern GUI yüklenirken hata: {e}")
+        print("Eski GUI'ye geçiliyor...")
+        try:
+            from gui.app import main as old_gui_main
+            old_gui_main()
+        except ImportError as e2:
+            print(f"Eski GUI de yüklenemedi: {e2}")
+            print("GUI sistemi kullanılamıyor. Lütfen bağımlılıkları kontrol edin.")
         print(f"GUI başlatılamadı: {e}")
         print("PySide6 kurulu olduğundan emin olun: pip install PySide6")
     except Exception as e:
@@ -89,7 +97,7 @@ def launch_dnd_gui():
 # Terminal sistemi kaldırıldı - sadece GUI kullanılıyor
 
 def launch_mm_system():
-    """M&M sistemini başlat - GUI"""
+    """M&M sistemini başlat - Factory Pattern ile"""
     print("\nMutants & Masterminds GUI sistemine hoş geldiniz!")
     print("Tüm M&M özellikleri hazır:")
     print("• Power Level sistemi")
@@ -98,10 +106,28 @@ def launch_mm_system():
     print("• PDF Export")
     print("• GUI Arayüzü")
     print()
-    launch_dnd_gui()  # Aynı GUI, farklı sekme
+    
+    try:
+        from creators import CharacterFactory
+        creator = CharacterFactory.create_creator("mm3e")
+        character = creator.create_character()
+        
+        # Karakteri kaydet
+        filename = f"{character['name'].lower().replace(' ', '_')}_mm3e"
+        if creator.save_character(character, filename):
+            print(f"\nKarakter '{character['name']}' kaydedildi: {filename}.json")
+        
+        print("\nKarakter özeti:")
+        print(f"İsim: {character['name']}")
+        print(f"Sistem: {character['system']}")
+        print(f"Power Level: {character['power_level']} (PL {character['pl_value']})")
+        print(f"Kalan PP: {character['remaining_power_points']}")
+        
+    except Exception as e:
+        print(f"M&M karakter oluşturma hatası: {e}")
 
 def launch_vtm_system():
-    """VtM sistemini başlat - GUI"""
+    """VtM sistemini başlat - Factory Pattern ile"""
     print("\nVampire: The Masquerade GUI sistemine hoş geldiniz!")
     print("Tüm VtM özellikleri hazır:")
     print("• Klan sistemi")
@@ -110,31 +136,61 @@ def launch_vtm_system():
     print("• PDF Export")
     print("• GUI Arayüzü")
     print()
-    launch_dnd_gui()  # Aynı GUI, farklı sekme
+    
+    try:
+        from creators import CharacterFactory
+        creator = CharacterFactory.create_creator("vtm5e")
+        character = creator.create_character()
+        
+        # Karakteri kaydet
+        filename = f"{character['name'].lower().replace(' ', '_')}_vtm5e"
+        if creator.save_character(character, filename):
+            print(f"\nKarakter '{character['name']}' kaydedildi: {filename}.json")
+        
+        print("\nKarakter özeti:")
+        print(f"İsim: {character['name']}")
+        print(f"Sistem: {character['system']}")
+        print(f"Klan: {character['clan']}")
+        print(f"Predator Type: {character['predator_type']}")
+        print(f"Blood Potency: {character['blood_potency']}")
+        
+    except Exception as e:
+        print(f"VtM karakter oluşturma hatası: {e}")
 
 def launch_pathfinder_system():
-    """Pathfinder 1e sistemini başlat"""
+    """Pathfinder 1e sistemini başlat - Factory Pattern ile"""
     print("\nPathfinder 1e CLI sistemine hoş geldiniz!")
     print("Tüm Pathfinder özellikleri hazır:")
     print("• 77 Irk")
     print("• 73 Sınıf")
     print("• 421 Feat")
     print("• 500+ Büyü")
-    print("• CLI Arayüzü")
+    print("• BAB/Saves hesaplamaları")
+    print("• Skill ranks sistemi")
+    print("• Feat prerequisites")
     print()
     
-    print("Pathfinder 1e CLI başlatılıyor...")
     try:
-        import subprocess
-        import sys
+        from creators import CharacterFactory
+        creator = CharacterFactory.create_creator("pathfinder1e")
+        character = creator.create_character()
         
-        cli_path = BASE_DIR / "pathfinder_cli.py"
-        if cli_path.exists():
-            subprocess.run([sys.executable, str(cli_path)])
-        else:
-            print("CLI dosyası bulunamadı!")
+        # Karakteri kaydet
+        filename = f"{character['name'].lower().replace(' ', '_')}_pf1e"
+        if creator.save_character(character, filename):
+            print(f"\nKarakter '{character['name']}' kaydedildi: {filename}.json")
+        
+        print("\nKarakter özeti:")
+        print(f"İsim: {character['name']}")
+        print(f"Sistem: {character['system']}")
+        print(f"Irk: {character['race']}")
+        print(f"Sınıf: {character['class']}")
+        print(f"Seviye: {character['level']}")
+        print(f"BAB: {character['bab']}")
+        print(f"Saves: {character['saves']}")
+        
     except Exception as e:
-        print(f"CLI başlatılamadı: {e}")
+        print(f"Pathfinder karakter oluşturma hatası: {e}")
 
 def main():
     """Ana fonksiyon"""
