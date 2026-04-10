@@ -322,3 +322,4 @@ def get_condition_summary(character: Dict[str, Any]) -> str:
         else:
             parts.append(f"{icon} {name}")
     return " | ".join(parts)
+

@@ -348,3 +348,4 @@ def apply_multiclass_level(character: Dict[str, Any], new_class: str) -> Dict[st
     character["proficiencies"] = existing_profs
 
     return character
+

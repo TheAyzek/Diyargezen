@@ -739,3 +739,4 @@ def _normalize_system(system: str) -> str:
     if s in ["mm3e", "mutantsandmasterminds3e", "mutantsandmasterminds", "m&m"]:
         return "mm3e"
     return "dnd5e"
+

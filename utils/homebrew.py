@@ -343,3 +343,4 @@ def inject_homebrew_into_data(system_data: Dict[str, Any], system: str) -> Dict[
                 section[name] = item
 
     return system_data
+

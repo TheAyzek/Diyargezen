@@ -127,3 +127,4 @@ def get_display_size(system: str = "dnd5e") -> tuple:
 def get_thumbnail_size(system: str = "dnd5e") -> tuple:
     """Sistem icin varsayilan thumbnail boyutunu dondur"""
     return SYSTEM_PORTRAIT_SIZES.get(system, {"thumbnail": THUMBNAIL_SIZE})["thumbnail"]
+

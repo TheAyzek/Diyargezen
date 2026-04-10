@@ -159,3 +159,4 @@ def needs_subclass_selection(character: dict) -> bool:
 
     required_level = get_subclass_level(char_class)
     return level >= required_level and not subclass
+
