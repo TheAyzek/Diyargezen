@@ -1,6 +1,6 @@
 {
-  "system": "VAMPIRE_THE_MASQUERADE_5E",
-  "source": "worldofdarkness.com",
+  "system": "vtm5e",
+  "source": "https://vtm.paradoxwikis.com",
   "clans": {
     "Brujah": {
       "name": "Brujah",

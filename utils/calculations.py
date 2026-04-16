@@ -3,7 +3,7 @@ Otomatik Hesaplama Modülü
 Kural kitaplarından otomatik hesaplamalar yapar.
 """
 
-from typing import Dict, Any, Optional, Tuple
+from typing import Dict, Any, List, Optional, Tuple
 
 
 # ============================================================================
@@ -1727,3 +1727,689 @@ def prepare_spells_for_casting(character: Dict[str, Any], spells_to_prepare: lis
     result["slot_usage"] = used_slots
     
     return result
+
+
+# ============================================================================
+# Evrensel Etki Motoru (Universal Effect Engine)
+# ============================================================================
+
+import re as _re
+import logging as _logging
+from typing import Union
+
+_effect_logger = _logging.getLogger(__name__ + ".effects")
+
+# ---- Sistem stat haritasi -------------------------------------------------
+# Her sistem farkli yetenek isimleri kullanir; bu haritalar target degerlerini
+# karakter dict'indeki gercel anahtarlara esler.
+
+_DND_ABILITY_ALIASES: Dict[str, str] = {
+    "str": "Strength", "strength": "Strength",
+    "dex": "Dexterity", "dexterity": "Dexterity",
+    "con": "Constitution", "constitution": "Constitution",
+    "int": "Intelligence", "intelligence": "Intelligence",
+    "wis": "Wisdom", "wisdom": "Wisdom",
+    "cha": "Charisma", "charisma": "Charisma",
+}
+
+_PF1E_ABILITY_ALIASES = _DND_ABILITY_ALIASES  # PF1e ve D&D 5e ayni isimleri kullanir
+
+_VTM_ATTRIBUTE_ALIASES: Dict[str, str] = {
+    "strength": "Strength", "dexterity": "Dexterity", "stamina": "Stamina",
+    "charisma": "Charisma", "manipulation": "Manipulation", "composure": "Composure",
+    "intelligence": "Intelligence", "wits": "Wits", "resolve": "Resolve",
+}
+
+_MM3E_ABILITY_ALIASES: Dict[str, str] = {
+    "str": "Strength", "strength": "Strength",
+    "sta": "Stamina", "stamina": "Stamina",
+    "agl": "Agility", "agility": "Agility",
+    "dex": "Dexterity", "dexterity": "Dexterity",
+    "fgt": "Fighting", "fighting": "Fighting",
+    "int": "Intellect", "intellect": "Intellect",
+    "awe": "Awareness", "awareness": "Awareness",
+    "pre": "Presence", "presence": "Presence",
+}
+
+_ALIAS_MAP: Dict[str, Dict[str, str]] = {
+    "dnd5e":        _DND_ABILITY_ALIASES,
+    "pathfinder1e": _PF1E_ABILITY_ALIASES,
+    "vtm5e":        _VTM_ATTRIBUTE_ALIASES,
+    "mm3e":         _MM3E_ABILITY_ALIASES,
+}
+
+
+def _resolve_target(target: str, system: str) -> str:
+    """target degerini sistem icin dogru anahtara cevir."""
+    aliases = _ALIAS_MAP.get(system, {})
+    return aliases.get(target.lower().replace(" ", "_"), target)
+
+
+# ---- Efekt Uygulayici (per-effect-type handlers) --------------------------
+
+def _apply_stat_bonus(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """Yetenek puanina bonus ekle."""
+    key = _resolve_target(target, system)
+    abilities = char.setdefault("abilities", {})
+    try:
+        abilities[key] = abilities.get(key, 10) + int(value)
+    except (TypeError, ValueError):
+        _effect_logger.warning("stat_bonus icin gecersiz deger: %s", value)
+
+
+def _apply_save_bonus(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """Saving throw bonusu ekle."""
+    bonuses = char.setdefault("save_bonuses", {})
+    key = _resolve_target(target, system)
+    bonuses[key] = bonuses.get(key, 0) + int(value)
+
+
+def _apply_skill_bonus(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """Beceri bonusu ekle."""
+    bonuses = char.setdefault("skill_bonuses", {})
+    bonuses[target] = bonuses.get(target, 0) + int(value)
+
+
+def _apply_speed_bonus(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """Hareket hizi bonusu ekle."""
+    speeds = char.setdefault("speed_bonuses", {})
+    key = target if target != "base" else "base"
+    speeds[key] = speeds.get(key, 0) + int(value)
+
+
+def _apply_hp_bonus(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """Can puani bonusu ekle."""
+    char["hp_bonus"] = char.get("hp_bonus", 0) + int(value)
+
+
+def _apply_ac_bonus(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """Zirh sinifi bonusu ekle."""
+    char["ac_bonus"] = char.get("ac_bonus", 0) + int(value)
+
+
+def _apply_damage_bonus(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """Hasar bonusu ekle."""
+    bonuses = char.setdefault("damage_bonuses", {})
+    bonuses[target] = bonuses.get(target, 0) + int(value)
+
+
+def _apply_add_proficiency(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """Yetkinlik ekle (armor, weapon, skill, tool, save)."""
+    profs = char.setdefault("proficiencies", [])
+    if target not in profs:
+        profs.append(target)
+
+
+def _apply_resistance(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """Hasar direnci ekle."""
+    resists = char.setdefault("resistances", [])
+    if target not in resists:
+        resists.append(target)
+
+
+def _apply_immunity(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """Hasar bagisikligi ekle."""
+    immunes = char.setdefault("immunities", [])
+    if target not in immunes:
+        immunes.append(target)
+
+
+def _apply_advantage(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """Avantaj (D&D) veya extra die (M&M) ekle."""
+    advs = char.setdefault("advantages", [])
+    if target not in advs:
+        advs.append(target)
+
+
+def _apply_disadvantage(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """Dezavantaj ekle."""
+    disadvs = char.setdefault("disadvantages", [])
+    if target not in disadvs:
+        disadvs.append(target)
+
+
+def _apply_grant_trait(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """Irksal/sinifsal ozellik ekle."""
+    traits = char.setdefault("granted_traits", [])
+    label = f"{target}: {value}" if value else target
+    if label not in traits:
+        traits.append(label)
+
+
+def _apply_set_value(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """Belirli bir alani dogrudan ayarla (override)."""
+    char[target] = value
+
+
+# ---- VtM 5e ozel handler'lar ---------------------------------------------
+
+def _apply_add_dot(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """VtM 5e nokta (dot) sistemi icin deger artir."""
+    dots = char.setdefault("dots", {})
+    dots[target] = dots.get(target, 0) + int(value)
+
+
+def _apply_discipline_access(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """VtM 5e disiplin erisimi ekle."""
+    discs = char.setdefault("discipline_access", [])
+    if target not in discs:
+        discs.append(target)
+
+
+def _apply_pool_bonus(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """VtM 5e zar havuzu bonusu."""
+    bonuses = char.setdefault("pool_bonuses", {})
+    bonuses[target] = bonuses.get(target, 0) + int(value)
+
+
+# ---- M&M 3e ozel handler'lar ---------------------------------------------
+
+def _apply_defense_bonus(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """M&M 3e savunma bonusu (dodge, parry, fortitude, toughness, will)."""
+    defenses = char.setdefault("defense_bonuses", {})
+    defenses[target] = defenses.get(target, 0) + int(value)
+
+
+def _apply_power_rank(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """M&M 3e guc rank'i ekle."""
+    powers = char.setdefault("power_ranks", {})
+    powers[target] = powers.get(target, 0) + int(value)
+
+
+def _apply_ability_rank(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """M&M 3e ability rank'i degistir."""
+    abilities = char.setdefault("abilities", {})
+    key = _resolve_target(target, system)
+    abilities[key] = abilities.get(key, 0) + int(value)
+
+
+def _apply_advantage_grant(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """M&M 3e advantage (feature) ekle."""
+    advs = char.setdefault("mm_advantages", [])
+    label = f"{target} {value}" if value and str(value) != "1" else target
+    if label not in advs:
+        advs.append(label)
+
+
+def _apply_skill_rank(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
+    """M&M 3e skill rank ekle."""
+    skills = char.setdefault("skill_ranks", {})
+    skills[target] = skills.get(target, 0) + int(value)
+
+
+# ---- Handler registry ------------------------------------------------------
+
+_EFFECT_HANDLERS = {
+    "stat_bonus":        _apply_stat_bonus,
+    "save_bonus":        _apply_save_bonus,
+    "skill_bonus":       _apply_skill_bonus,
+    "speed_bonus":       _apply_speed_bonus,
+    "hp_bonus":          _apply_hp_bonus,
+    "ac_bonus":          _apply_ac_bonus,
+    "damage_bonus":      _apply_damage_bonus,
+    "add_proficiency":   _apply_add_proficiency,
+    "resistance":        _apply_resistance,
+    "immunity":          _apply_immunity,
+    "advantage":         _apply_advantage,
+    "disadvantage":      _apply_disadvantage,
+    "grant_trait":       _apply_grant_trait,
+    "set_value":         _apply_set_value,
+    # VtM 5e
+    "add_dot":           _apply_add_dot,
+    "discipline_access": _apply_discipline_access,
+    "pool_bonus":        _apply_pool_bonus,
+    # M&M 3e
+    "defense_bonus":     _apply_defense_bonus,
+    "power_rank":        _apply_power_rank,
+    "ability_rank":      _apply_ability_rank,
+    "advantage_grant":   _apply_advantage_grant,
+    "skill_rank":        _apply_skill_rank,
+}
+
+
+def apply_effects(
+    character: Dict[str, Any],
+    effects: list,
+    system: str,
+    *,
+    ignore_conditions: bool = False,
+) -> Dict[str, Any]:
+    """
+    Etki listesini karakter dict'ine uygula.
+
+    Her EffectModel (veya uyumlu dict) icin uygun handler cagirilir.
+    Bilinmeyen effect_type'lar loglanir ama program cokmez.
+
+    Args:
+        character: Karakter dict'i (in-place degistirilir).
+        effects: EffectModel listesi veya dict listesi.
+        system: Sistem anahtari ('dnd5e', 'pathfinder1e', 'vtm5e', 'mm3e').
+        ignore_conditions: True ise kosullu efektler de uygulanir.
+
+    Returns:
+        Guncellenmis karakter dict'i.
+    """
+    applied_count = 0
+
+    for effect in effects:
+        if isinstance(effect, dict):
+            target = effect.get("target", "")
+            etype = effect.get("effect_type", "")
+            value = effect.get("value", 0)
+            condition = effect.get("condition", "")
+            source = effect.get("source", "")
+        else:
+            target = getattr(effect, "target", "")
+            etype = getattr(effect, "effect_type", "")
+            value = getattr(effect, "value", 0)
+            condition = getattr(effect, "condition", "")
+            source = getattr(effect, "source", "")
+
+        if not target or not etype:
+            continue
+
+        if condition and not ignore_conditions:
+            conds = character.setdefault("conditional_effects", [])
+            conds.append({
+                "target": target, "effect_type": etype,
+                "value": value, "condition": condition, "source": source,
+            })
+            continue
+
+        handler = _EFFECT_HANDLERS.get(etype)
+        if handler is None:
+            _effect_logger.warning("Bilinmeyen effect_type: '%s' (target=%s)", etype, target)
+            continue
+
+        try:
+            handler(character, target, value, system)
+            applied_count += 1
+        except Exception as exc:
+            _effect_logger.warning(
+                "Efekt uygulama hatasi [%s -> %s]: %s", etype, target, exc,
+            )
+
+    _effect_logger.debug("%d/%d efekt uygulandi (system=%s)", applied_count, len(effects), system)
+    return character
+
+
+def collect_effects_from_choices(
+    choices: Dict[str, Dict[str, Any]],
+    system: str,
+) -> list:
+    """
+    Karakter olusturma secimlerinden (irk, sinif, arka plan vb.) tum
+    EffectModel'leri topla.
+
+    Args:
+        choices: {'race': race_data, 'class': class_data, 'background': bg_data, ...}
+        system: Sistem anahtari.
+
+    Returns:
+        Birlesmis EffectModel (dict) listesi.
+    """
+    all_effects: list = []
+
+    for choice_key, data in choices.items():
+        if not isinstance(data, dict):
+            continue
+        effects = data.get("effects", [])
+        for eff in effects:
+            if isinstance(eff, dict):
+                eff.setdefault("source", choice_key)
+            all_effects.append(eff)
+
+    return all_effects
+
+
+# ============================================================================
+# Sisteme Ozel Metin Ayristiricilari (Smart Parsers)
+# ============================================================================
+
+def parse_dnd5e_effect(text: str, source: str = "") -> Optional[Dict[str, Any]]:
+    """
+    D&D 5e metin ifadesini EffectModel dict'ine cevir.
+
+    Desteklenen kaliplar:
+      "+2 to Strength"             -> stat_bonus, strength, 2
+      "+1 to all ability scores"   -> stat_bonus, all_abilities, 1
+      "Darkvision 60 ft."          -> grant_trait, darkvision, "60 ft."
+      "Proficiency in Perception"  -> add_proficiency, perception, True
+      "Resistance to fire damage"  -> resistance, fire, True
+      "Advantage on saving throws against poison" -> advantage, save_vs_poison, True
+      "+5 ft. speed"               -> speed_bonus, base, 5
+    """
+    if not text:
+        return None
+    t = text.strip()
+
+    m = _re.match(
+        r"[+](\d+)\s+(?:to\s+)?(?:all\s+ability\s+scores?)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": "all_abilities", "effect_type": "stat_bonus",
+                "value": int(m.group(1)), "source": source}
+
+    m = _re.match(
+        r"([+-]?\d+)\s+(?:to\s+|bonus\s+to\s+)?(Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma|STR|DEX|CON|INT|WIS|CHA)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": m.group(2).lower(), "effect_type": "stat_bonus",
+                "value": int(m.group(1)), "source": source}
+
+    m = _re.match(
+        r"[+](\d+)\s+(?:to\s+)?(?:Armor\s+Class|AC)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": "ac", "effect_type": "ac_bonus",
+                "value": int(m.group(1)), "source": source}
+
+    m = _re.match(
+        r"[+](\d+)\s*(?:ft\.?|feet)\s*(?:speed|movement)?",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": "base", "effect_type": "speed_bonus",
+                "value": int(m.group(1)), "source": source}
+
+    m = _re.match(
+        r"Darkvision\s+(\d+)\s*(?:ft\.?|feet)?",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": "darkvision", "effect_type": "grant_trait",
+                "value": f"{m.group(1)} ft.", "source": source}
+
+    m = _re.match(
+        r"(?:Proficiency|Proficient)\s+(?:in|with)\s+(.+)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": m.group(1).strip().lower(), "effect_type": "add_proficiency",
+                "value": True, "source": source}
+
+    m = _re.match(
+        r"Resistance\s+to\s+(.+?)(?:\s+damage)?$",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": m.group(1).strip().lower(), "effect_type": "resistance",
+                "value": True, "source": source}
+
+    m = _re.match(
+        r"(?:Immunity|Immune)\s+to\s+(.+?)(?:\s+damage)?$",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": m.group(1).strip().lower(), "effect_type": "immunity",
+                "value": True, "source": source}
+
+    m = _re.match(
+        r"Advantage\s+on\s+(.+?)(?:\s+saving\s+throws?\s+against\s+(.+))?$",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        target = m.group(2) or m.group(1)
+        condition = f"saving throws against {m.group(2)}" if m.group(2) else ""
+        return {"target": target.strip().lower().replace(" ", "_"),
+                "effect_type": "advantage", "value": True,
+                "condition": condition, "source": source}
+
+    m = _re.match(
+        r"[+](\d+)\s+(?:to\s+)?(\w[\w\s]*?)\s+(?:checks?|rolls?|bonus)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": m.group(2).strip().lower(), "effect_type": "skill_bonus",
+                "value": int(m.group(1)), "source": source}
+
+    return None
+
+
+def parse_pf1e_effect(text: str, source: str = "") -> Optional[Dict[str, Any]]:
+    """
+    Pathfinder 1e metin ifadesini EffectModel dict'ine cevir.
+
+    Desteklenen kaliplar:
+      "+2 to Constitution"        -> stat_bonus, constitution, 2
+      "-2 Charisma"               -> stat_bonus, charisma, -2
+      "+2 racial bonus on saves against poison" -> save_bonus, poison, 2
+      "+2 dodge bonus to AC"      -> ac_bonus, ac, 2
+      "Low-Light Vision"          -> grant_trait, low_light_vision, True
+    """
+    if not text:
+        return None
+    t = text.strip()
+
+    m = _re.match(
+        r"([+-]?\d+)\s+(?:racial\s+bonus\s+)?(?:to\s+|bonus\s+to\s+)?"
+        r"(Str|Dex|Con|Int|Wis|Cha|Strength|Dexterity|Constitution|Intelligence|Wisdom|Charisma)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        raw_name = m.group(2).lower()
+        ability_map = {
+            "str": "constitution",  # sadece kisaltma haritasi icin
+        }
+        ability_map = {
+            "str": "strength", "dex": "dexterity", "con": "constitution",
+            "int": "intelligence", "wis": "wisdom", "cha": "charisma",
+            "strength": "strength", "dexterity": "dexterity",
+            "constitution": "constitution", "intelligence": "intelligence",
+            "wisdom": "wisdom", "charisma": "charisma",
+        }
+        return {"target": ability_map.get(raw_name, raw_name),
+                "effect_type": "stat_bonus", "value": int(m.group(1)),
+                "source": source}
+
+    m = _re.match(
+        r"[+](\d+)\s+(?:racial\s+)?(?:bonus\s+)?(?:on|to)\s+(?:saving\s+throws?\s+)?(?:against\s+)?(.+)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        target_text = m.group(2).strip().lower()
+        if any(kw in target_text for kw in ("save", "poison", "fear", "enchant", "illus", "mind", "spell")):
+            return {"target": target_text.replace(" ", "_"), "effect_type": "save_bonus",
+                    "value": int(m.group(1)), "source": source}
+
+    m = _re.match(
+        r"[+](\d+)\s+(?:dodge\s+|natural\s+|armor\s+)?bonus\s+to\s+(?:Armor\s+Class|AC)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": "ac", "effect_type": "ac_bonus",
+                "value": int(m.group(1)), "source": source}
+
+    m = _re.match(
+        r"[+](\d+)\s+(?:racial\s+)?bonus\s+(?:on|to)\s+(\w[\w\s]*?)\s+(?:checks?|rolls?)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": m.group(2).strip().lower(), "effect_type": "skill_bonus",
+                "value": int(m.group(1)), "source": source}
+
+    low_t = t.lower()
+    if "darkvision" in low_t:
+        dist = _re.search(r"(\d+)", t)
+        return {"target": "darkvision", "effect_type": "grant_trait",
+                "value": f"{dist.group(1)} ft." if dist else "60 ft.", "source": source}
+    if "low-light vision" in low_t or "low light vision" in low_t:
+        return {"target": "low_light_vision", "effect_type": "grant_trait",
+                "value": True, "source": source}
+
+    return None
+
+
+def parse_vtm5e_effect(text: str, source: str = "") -> Optional[Dict[str, Any]]:
+    """
+    VtM 5e metin ifadesini EffectModel dict'ine cevir.
+
+    Desteklenen kaliplar:
+      "Gain 1 dot in Potence"      -> add_dot, potence, 1
+      "+2 dots in Celerity"        -> add_dot, celerity, 2
+      "Access to Dominate"         -> discipline_access, dominate, True
+      "+1 to Strength"             -> add_dot, strength, 1
+      "+2 dice to Intimidation"    -> pool_bonus, intimidation, 2
+      "Compulsion: Rage"           -> grant_trait, compulsion, "Rage"
+    """
+    if not text:
+        return None
+    t = text.strip()
+
+    m = _re.match(
+        r"(?:Gain\s+)?[+]?(\d+)\s+dots?\s+(?:in|of|to)\s+(\w[\w\s]*)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": m.group(2).strip().lower(), "effect_type": "add_dot",
+                "value": int(m.group(1)), "source": source}
+
+    m = _re.match(
+        r"(?:Access|Gain\s+access)\s+to\s+(\w[\w\s]*)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": m.group(1).strip().lower(), "effect_type": "discipline_access",
+                "value": True, "source": source}
+
+    m = _re.match(
+        r"[+](\d+)\s+(?:to\s+)?(Strength|Dexterity|Stamina|Charisma|Manipulation|Composure|Intelligence|Wits|Resolve)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": m.group(2).strip().lower(), "effect_type": "add_dot",
+                "value": int(m.group(1)), "source": source}
+
+    m = _re.match(
+        r"[+](\d+)\s+(?:dice?\s+)?(?:to|on|for)\s+(\w[\w\s]*?)(?:\s+(?:checks?|rolls?|pool))?$",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": m.group(2).strip().lower(), "effect_type": "pool_bonus",
+                "value": int(m.group(1)), "source": source}
+
+    m = _re.match(
+        r"Compulsion[:\s]+(.+)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": "compulsion", "effect_type": "grant_trait",
+                "value": m.group(1).strip(), "source": source}
+
+    m = _re.match(
+        r"Bane[:\s]+(.+)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": "bane", "effect_type": "grant_trait",
+                "value": m.group(1).strip(), "source": source}
+
+    return None
+
+
+def parse_mm3e_effect(text: str, source: str = "") -> Optional[Dict[str, Any]]:
+    """
+    Mutants & Masterminds 3e metin ifadesini EffectModel dict'ine cevir.
+
+    Desteklenen kaliplar:
+      "+2 to Dodge"                -> defense_bonus, dodge, 2
+      "+3 Toughness"               -> defense_bonus, toughness, 3
+      "+2 Strength"                -> ability_rank, strength, 2
+      "Rank 5 Blast"               -> power_rank, blast, 5
+      "+4 to Stealth"              -> skill_rank, stealth, 4
+      "Defensive Roll 3"           -> advantage_grant, defensive_roll, 3
+    """
+    if not text:
+        return None
+    t = text.strip()
+
+    _DEFENSES = {"dodge", "parry", "fortitude", "toughness", "will"}
+
+    m = _re.match(
+        r"[+](\d+)\s+(?:to\s+)?(Dodge|Parry|Fortitude|Toughness|Will)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": m.group(2).strip().lower(), "effect_type": "defense_bonus",
+                "value": int(m.group(1)), "source": source}
+
+    m = _re.match(
+        r"[+](\d+)\s+(?:to\s+)?(Strength|Stamina|Agility|Dexterity|Fighting|Intellect|Awareness|Presence|STR|STA|AGL|DEX|FGT|INT|AWE|PRE)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": m.group(2).strip().lower(), "effect_type": "ability_rank",
+                "value": int(m.group(1)), "source": source}
+
+    m = _re.match(
+        r"Rank\s+(\d+)\s+(\w[\w\s]*)",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        return {"target": m.group(2).strip().lower(), "effect_type": "power_rank",
+                "value": int(m.group(1)), "source": source}
+
+    m = _re.match(
+        r"(\w[\w\s]*?)\s+(\d+)$",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        name = m.group(1).strip().lower()
+        val = int(m.group(2))
+        if name in _DEFENSES:
+            return {"target": name, "effect_type": "defense_bonus",
+                    "value": val, "source": source}
+        return {"target": name.replace(" ", "_"), "effect_type": "advantage_grant",
+                "value": val, "source": source}
+
+    m = _re.match(
+        r"[+](\d+)\s+(?:to\s+)?(\w[\w\s]*?)(?:\s+(?:checks?|bonus|ranks?))?$",
+        t, _re.IGNORECASE,
+    )
+    if m:
+        target = m.group(2).strip().lower()
+        if target not in _DEFENSES and target not in {
+            a.lower() for a in _MM3E_ABILITY_ALIASES.values()
+        }:
+            return {"target": target, "effect_type": "skill_rank",
+                    "value": int(m.group(1)), "source": source}
+
+    return None
+
+
+def parse_effect(text: str, system: str, source: str = "") -> Optional[Dict[str, Any]]:
+    """
+    Sistem otomatik tespitli parser dispatch.
+    Dogru sisteme gore uygun parser'i cagirir.
+    """
+    _PARSERS = {
+        "dnd5e":        parse_dnd5e_effect,
+        "pathfinder1e": parse_pf1e_effect,
+        "vtm5e":        parse_vtm5e_effect,
+        "mm3e":         parse_mm3e_effect,
+    }
+    parser = _PARSERS.get(system)
+    if parser is None:
+        _effect_logger.warning("Bilinmeyen sistem: %s, dnd5e parser kullaniliyor", system)
+        parser = parse_dnd5e_effect
+    return parser(text, source=source)
+
+
+def parse_effects_batch(
+    texts: List[str],
+    system: str,
+    source: str = "",
+) -> List[Dict[str, Any]]:
+    """
+    Birden fazla metin ifadesini toplu parse et.
+    Parse edilemeyen satirlar atlanir.
+    """
+    results: List[Dict[str, Any]] = []
+    for text in texts:
+        parsed = parse_effect(text, system, source=source)
+        if parsed is not None:
+            results.append(parsed)
+    return results

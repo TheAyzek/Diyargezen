@@ -1,6 +1,6 @@
 {
-  "system": "MUTANTS_AND_MASTERMINDS",
-  "source": "d20herosrd.com",
+  "system": "mm3e",
+  "source": "https://www.d20herosrd.com",
   "abilities": {
     "Strength": {
       "name": "Strength",
@@ -2147,6 +2147,130 @@
       "description": "Green RoninMutants & Masterminds.comMutants & Masterminds ForumHero ConversionsHero LabCharacter SheetCharacter GeneratorCondition CardsHero Art by Storn Cook",
       "effects": [],
       "source": "https://www.d20herosrd.com/6-powers/sample-powers/super-speed/"
+    },
+    "Descriptors": {
+      "name": "Descriptors",
+      "system": "mm3e",
+      "description": "Subpages",
+      "cost_per_rank": 1,
+      "action": "",
+      "range": "",
+      "duration": "",
+      "effect_names": [],
+      "extras": [],
+      "flaws": [],
+      "effects": [],
+      "source": {
+        "url": "https://www.d20herosrd.com/6-powers/descriptors",
+        "book": "",
+        "page": ""
+      }
+    },
+    "Effects": {
+      "name": "Effects",
+      "system": "mm3e",
+      "description": "Players spend character points on various powers for their heroes, like acquiring skills or other traits. A power is made up of one or more effects, possibly with different modifiers, which increase or decrease the cost of the effects.",
+      "cost_per_rank": 1,
+      "action": "RANGE",
+      "range": "DURATION RESISTANCE",
+      "duration": "RESISTANCE",
+      "effect_names": [],
+      "extras": [],
+      "flaws": [],
+      "effects": [],
+      "source": {
+        "url": "https://www.d20herosrd.com/6-powers/effects",
+        "book": "",
+        "page": ""
+      }
+    },
+    "Effect Details": {
+      "name": "Effect Details",
+      "system": "mm3e",
+      "description": "Effect Descriptions",
+      "cost_per_rank": 1,
+      "action": "RANGE",
+      "range": "DURATION RESISTANCE",
+      "duration": "RESISTANCE",
+      "effect_names": [],
+      "extras": [
+        "AFFLICTION (ATTACK)",
+        "BURROWING (MOVEMENT)",
+        "COMMUNICATION (SENSORY)",
+        "COMPREHEND (SENSORY)",
+        "CONCEALMENT (SENSORY)",
+        "CREATE (CONTROL)",
+        "DAMAGE (ATTACK)",
+        "DEFLECT (DEFENSE)",
+        "ELONGATION (GENERAL)",
+        "ENHANCED TRAIT (GENERAL)",
+        "ENVIRONMENT (CONTROL)",
+        "EXTRA LIMBS (GENERAL)",
+        "FEATURE (GENERAL)",
+        "FLIGHT (MOVEMENT)",
+        "GROWTH (GENERAL)"
+      ],
+      "flaws": [],
+      "effects": [],
+      "source": {
+        "url": "https://www.d20herosrd.com/6-powers/effects/effect-descriptions",
+        "book": "",
+        "page": ""
+      }
+    },
+    "Modifiers": {
+      "name": "Modifiers",
+      "system": "mm3e",
+      "description": "Modifiers change how an effect works, making it more effective (an extra) or less effective (a flaw). Modifiers have ranks, just like other traits. Extras increase a powerâs cost while flaws decrease it. Unless its description specifies otherwise, a modifier is a permanent change in how the effect works. That is, you do not have the option of using the modifier or not, it always applies. Some modifiers increase an effectâs cost per rank, others apply an unchanging cost to the powerâs total",
+      "cost_per_rank": 25,
+      "action": "AL",
+      "range": "and requires a standard",
+      "duration": "",
+      "effect_names": [],
+      "extras": [],
+      "flaws": [],
+      "effects": [],
+      "source": {
+        "url": "https://www.d20herosrd.com/6-powers/modifiers",
+        "book": "",
+        "page": ""
+      }
+    },
+    "Power Extras": {
+      "name": "Power Extras",
+      "system": "mm3e",
+      "description": "Modifiers change how an effect works, making it more effective (an extra) or less effective (a flaw). Modifiers have ranks, just like other traits. Extras increase a powerâs cost while flaws decrease it. Unless its description specifies otherwise, a modifier is a permanent change in how the effect works. That is, you do not have the option of using the modifier or not, it always applies. Some modifiers increase an effectâs cost per rank, others apply an unchanging cost to the powerâs total",
+      "cost_per_rank": 25,
+      "action": "AL",
+      "range": "and requires a standard",
+      "duration": "",
+      "effect_names": [],
+      "extras": [],
+      "flaws": [],
+      "effects": [],
+      "source": {
+        "url": "https://www.d20herosrd.com/6-powers/modifiers#extras",
+        "book": "",
+        "page": ""
+      }
+    },
+    "Power Flaws": {
+      "name": "Power Flaws",
+      "system": "mm3e",
+      "description": "Modifiers change how an effect works, making it more effective (an extra) or less effective (a flaw). Modifiers have ranks, just like other traits. Extras increase a powerâs cost while flaws decrease it. Unless its description specifies otherwise, a modifier is a permanent change in how the effect works. That is, you do not have the option of using the modifier or not, it always applies. Some modifiers increase an effectâs cost per rank, others apply an unchanging cost to the powerâs total",
+      "cost_per_rank": 25,
+      "action": "AL",
+      "range": "and requires a standard",
+      "duration": "",
+      "effect_names": [],
+      "extras": [],
+      "flaws": [],
+      "effects": [],
+      "source": {
+        "url": "https://www.d20herosrd.com/6-powers/modifiers#flaws",
+        "book": "",
+        "page": ""
+      }
     }
   },
   "power_effects": {

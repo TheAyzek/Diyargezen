@@ -9,10 +9,11 @@ reportlab>=4.0.0
 # Image processing (portreler ve logo için)
 Pillow>=10.0.0
 
-# Web scraping (Pathfinder 1e için)
+# Web scraping pipeline
 requests>=2.31.0
 beautifulsoup4>=4.12.0
 lxml>=4.9.0
+pydantic>=2.0.0
 
 # CLI (opsiyonel - sadece CLI kullanımı için)
 rich>=13.0.0
