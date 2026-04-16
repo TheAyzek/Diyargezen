@@ -2584,7 +2584,7 @@ class DndPage(QWidget):
 
     def _load_logo(self) -> QPixmap:
         """Logoyu yükle - küçültülmüş boyutta"""
-        logo_path = APP_BASE_DIR / "Gemini_Generated_Image_c510m9c510m9c510.png"
+        logo_path = APP_BASE_DIR / "assets/diyargezer_logo.png"
         if logo_path.exists():
             pixmap = QPixmap(str(logo_path))
             # Logoyu küçült (maksimum 150x150, aspect ratio korunarak)
@@ -15286,7 +15286,7 @@ class MainWindow(QtWidgets.QMainWindow):
         header_layout.setContentsMargins(15, 10, 15, 10)
         
         # Logo
-        logo_path = Path(__file__).resolve().parents[1] / "Gemini_Generated_Image_c510m9c510m9c510.png"
+        logo_path = Path(__file__).resolve().parents[1] / "assets/diyargezer_logo.png"
         if logo_path.exists():
             logo_label = QLabel()
             logo_pixmap = QPixmap(str(logo_path))
@@ -15312,7 +15312,7 @@ class MainWindow(QtWidgets.QMainWindow):
     
     def _set_window_icon(self):
         """Pencere ikonunu ayarla"""
-        logo_path = Path(__file__).resolve().parents[1] / "Gemini_Generated_Image_c510m9c510m9c510.png"
+        logo_path = Path(__file__).resolve().parents[1] / "assets/diyargezer_logo.png"
         if logo_path.exists():
             icon = QIcon(str(logo_path))
             self.setWindowIcon(icon)
@@ -21124,7 +21124,7 @@ class MainWindow(QtWidgets.QMainWindow):
         header_layout.setContentsMargins(15, 10, 15, 10)
         
         # Logo
-        logo_path = Path(__file__).resolve().parents[1] / "Gemini_Generated_Image_c510m9c510m9c510.png"
+        logo_path = Path(__file__).resolve().parents[1] / "assets/diyargezer_logo.png"
         if logo_path.exists():
             logo_label = QLabel()
             logo_pixmap = QPixmap(str(logo_path))
@@ -21150,7 +21150,7 @@ class MainWindow(QtWidgets.QMainWindow):
     
     def _set_window_icon(self):
         """Pencere ikonunu ayarla"""
-        logo_path = Path(__file__).resolve().parents[1] / "Gemini_Generated_Image_c510m9c510m9c510.png"
+        logo_path = Path(__file__).resolve().parents[1] / "assets/diyargezer_logo.png"
         if logo_path.exists():
             icon = QIcon(str(logo_path))
             self.setWindowIcon(icon)
@@ -26962,7 +26962,7 @@ class MainWindow(QtWidgets.QMainWindow):
         header_layout.setContentsMargins(15, 10, 15, 10)
         
         # Logo
-        logo_path = Path(__file__).resolve().parents[1] / "Gemini_Generated_Image_c510m9c510m9c510.png"
+        logo_path = Path(__file__).resolve().parents[1] / "assets/diyargezer_logo.png"
         if logo_path.exists():
             logo_label = QLabel()
             logo_pixmap = QPixmap(str(logo_path))
@@ -26988,7 +26988,7 @@ class MainWindow(QtWidgets.QMainWindow):
     
     def _set_window_icon(self):
         """Pencere ikonunu ayarla"""
-        logo_path = Path(__file__).resolve().parents[1] / "Gemini_Generated_Image_c510m9c510m9c510.png"
+        logo_path = Path(__file__).resolve().parents[1] / "assets/diyargezer_logo.png"
         if logo_path.exists():
             icon = QIcon(str(logo_path))
             self.setWindowIcon(icon)
@@ -32800,7 +32800,7 @@ class MainWindow(QtWidgets.QMainWindow):
         header_layout.setContentsMargins(15, 10, 15, 10)
         
         # Logo
-        logo_path = Path(__file__).resolve().parents[1] / "Gemini_Generated_Image_c510m9c510m9c510.png"
+        logo_path = Path(__file__).resolve().parents[1] / "assets/diyargezer_logo.png"
         if logo_path.exists():
             logo_label = QLabel()
             logo_pixmap = QPixmap(str(logo_path))
@@ -32826,7 +32826,7 @@ class MainWindow(QtWidgets.QMainWindow):
     
     def _set_window_icon(self):
         """Pencere ikonunu ayarla"""
-        logo_path = Path(__file__).resolve().parents[1] / "Gemini_Generated_Image_c510m9c510m9c510.png"
+        logo_path = Path(__file__).resolve().parents[1] / "assets/diyargezer_logo.png"
         if logo_path.exists():
             icon = QIcon(str(logo_path))
             self.setWindowIcon(icon)

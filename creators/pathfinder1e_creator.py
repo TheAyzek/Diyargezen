@@ -1,15 +1,18 @@
 # creators/pathfinder1e_creator.py
 """
 Pathfinder 1e Character Creator
-Implements Pathfinder 1e specific rules: BAB, saves, skill ranks, feat prerequisites
+Implements Pathfinder 1st Edition (1e) specific rules: BAB, saves, skill ranks, feat prerequisites.
+Dice System: d20 (single die + modifiers). KESINLIKLE 2e kuralları dahil DEĞİLDİR.
 """
 
 from typing import Dict, Any, List
-from .base_creator import BaseCharacterCreator
+from .base_creator import BaseCharacterCreator, DICE_D20
 
 
 class Pathfinder1ECreator(BaseCharacterCreator):
     """Pathfinder 1e Character Creator implementing all core rules"""
+
+    DICE_SYSTEM = DICE_D20
 
     def __init__(self):
         super().__init__("Pathfinder 1e", "pathfinder_1e_data.json")
@@ -252,22 +255,6 @@ class Pathfinder1ECreator(BaseCharacterCreator):
         hit_die = class_data.get("hit_die", 8)
         return hit_die + con_modifier
 
-    def _prompt_selection(self, options: List[str], prompt: str) -> str:
-        """Generic selection prompt"""
-        print(f"\n{prompt}")
-        for i, option in enumerate(options, 1):
-            print(f"  {i}) {option}")
-
-        while True:
-            try:
-                choice = int(input("Seçiminiz: "))
-                if 1 <= choice <= len(options):
-                    return options[choice - 1]
-                else:
-                    print(f"1-{len(options)} arası seçin.")
-            except ValueError:
-                print("Geçerli bir sayı girin.")
-
     def validate_character(self, character: Dict[str, Any]) -> List[str]:
         """Validate Pathfinder 1e character data"""
         errors = []
@@ -294,18 +281,14 @@ class Pathfinder1ECreator(BaseCharacterCreator):
 
         return errors
 
-    def calculate_derived_stats(self, character: Dict[str, Any]) -> Dict[str, Any]:
+    def calculate_stats(self, character: Dict[str, Any]) -> Dict[str, Any]:
         """Calculate derived statistics for Pathfinder 1e"""
-        derived = {}
+        derived: Dict[str, Any] = {}
 
-        # Armor Class (base 10 + dex + armor + etc.)
         dex_mod = character.get("modifiers", {}).get("dexterity", 0)
         derived["armor_class"] = 10 + dex_mod
-
-        # Initiative
         derived["initiative"] = dex_mod
 
-        # Skill modifiers (ability mod + ranks + misc)
         derived["skill_modifiers"] = {}
         skills_data = self.data.get("skills", {})
         modifiers = character.get("modifiers", {})
@@ -315,12 +298,23 @@ class Pathfinder1ECreator(BaseCharacterCreator):
             ability = skill_info.get("ability", "dexterity")
             ability_mod = modifiers.get(ability, 0)
             ranks = skill_ranks.get(skill_name, 0)
-
-            # Class skill bonus (+3 if ranks > 0)
             class_skills = character.get("class_data", {}).get("class_skills", [])
             class_bonus = 3 if (skill_name in class_skills and ranks > 0) else 0
-
-            total_mod = ability_mod + ranks + class_bonus
-            derived["skill_modifiers"][skill_name] = total_mod
+            derived["skill_modifiers"][skill_name] = ability_mod + ranks + class_bonus
 
         return derived
+
+    def export_data(self, character: Dict[str, Any]) -> Dict[str, Any]:
+        """Pathfinder 1e karakterini JSON-serializable formata dönüştür."""
+        safe_keys = {
+            "system", "name", "race", "class", "level", "experience",
+            "abilities", "modifiers", "bab", "saves", "skill_ranks",
+            "feat", "hit_points", "initiative", "speed",
+        }
+        exported: Dict[str, Any] = {"system": "PATHFINDER_1E", "dice_system": self.DICE_SYSTEM.name}
+        for key in safe_keys:
+            if key in character:
+                exported[key] = character[key]
+        stats = self.calculate_stats(character)
+        exported.update({k: v for k, v in stats.items() if k not in exported})
+        return exported

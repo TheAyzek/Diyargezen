@@ -84,7 +84,7 @@ def _create_canvas(output_path: Path, page_size: str, background_path: Optional[
             pass
 
     # Logo
-    logo_path = Path(__file__).resolve().parents[1] / "Gemini_Generated_Image_c510m9c510m9c510.png"
+    logo_path = Path(__file__).resolve().parents[1] / "assets" / "diyargezer_logo.png"
     if logo_path.exists():
         try:
             from PIL import Image

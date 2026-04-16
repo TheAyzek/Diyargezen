@@ -1,15 +1,18 @@
 # creators/vtm5e_creator.py
 """
 Vampire: The Masquerade 5e Character Creator
-Implements VtM 5e rules: Clan-based, dot system, attributes/skills/disciplines
+Implements VtM 5e rules: Clan-based, dot system, attributes/skills/disciplines.
+Dice System: d10 dice pool (successes on 6+)
 """
 
 from typing import Dict, Any, List
-from .base_creator import BaseCharacterCreator
+from .base_creator import BaseCharacterCreator, DICE_D10_POOL
 
 
 class VTM5ECreator(BaseCharacterCreator):
     """Vampire: The Masquerade 5e Character Creator"""
+
+    DICE_SYSTEM = DICE_D10_POOL
 
     def __init__(self):
         super().__init__("Vampire: The Masquerade 5e", "vtm_data.json")
@@ -189,22 +192,6 @@ class VTM5ECreator(BaseCharacterCreator):
 
         return backgrounds
 
-    def _prompt_selection(self, options: List[str], prompt: str) -> str:
-        """Generic selection prompt"""
-        print(f"\n{prompt}")
-        for i, option in enumerate(options, 1):
-            print(f"  {i}) {option}")
-
-        while True:
-            try:
-                choice = int(input("Seçiminiz: "))
-                if 1 <= choice <= len(options):
-                    return options[choice - 1]
-                else:
-                    print(f"1-{len(options)} arası seçin.")
-            except ValueError:
-                print("Geçerli bir sayı girin.")
-
     def validate_character(self, character: Dict[str, Any]) -> List[str]:
         """Validate VtM 5e character data"""
         errors = []
@@ -235,29 +222,39 @@ class VTM5ECreator(BaseCharacterCreator):
 
         return errors
 
-    def calculate_derived_stats(self, character: Dict[str, Any]) -> Dict[str, Any]:
+    def calculate_stats(self, character: Dict[str, Any]) -> Dict[str, Any]:
         """Calculate derived statistics for VtM 5e"""
-        derived = {}
+        derived: Dict[str, Any] = {}
 
-        # Health = Stamina + 3
         stamina = character.get("attributes", {}).get("physical", {}).get("stamina", 1)
         derived["max_health"] = stamina + 3
 
-        # Willpower = Composure + Resolve
         composure = character.get("attributes", {}).get("social", {}).get("composure", 1)
         resolve = character.get("attributes", {}).get("mental", {}).get("resolve", 1)
         derived["max_willpower"] = composure + resolve
 
-        # Initiative = Dexterity + Composure
         dexterity = character.get("attributes", {}).get("physical", {}).get("dexterity", 1)
         derived["initiative"] = dexterity + composure
 
-        # Defense = Lower of Dexterity or Wits
         wits = character.get("attributes", {}).get("mental", {}).get("wits", 1)
         derived["defense"] = min(dexterity, wits)
 
-        # Speed = Strength + Dexterity + 5
         strength = character.get("attributes", {}).get("physical", {}).get("strength", 1)
         derived["speed"] = strength + dexterity + 5
 
         return derived
+
+    def export_data(self, character: Dict[str, Any]) -> Dict[str, Any]:
+        """VtM 5e karakterini JSON-serializable formata dönüştür."""
+        safe_keys = {
+            "system", "name", "clan", "predator_type", "generation",
+            "blood_potency", "hunger", "humanity", "attributes", "skills",
+            "disciplines", "backgrounds",
+        }
+        exported: Dict[str, Any] = {"system": "VTM5E", "dice_system": self.DICE_SYSTEM.name}
+        for key in safe_keys:
+            if key in character:
+                exported[key] = character[key]
+        stats = self.calculate_stats(character)
+        exported.update({k: v for k, v in stats.items() if k not in exported})
+        return exported

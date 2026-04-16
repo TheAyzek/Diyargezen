@@ -1,15 +1,18 @@
 # creators/dnd5e_creator.py
 """
 D&D 5e Character Creator
-Implements D&D 5e specific rules and calculations
+Implements D&D 5e specific rules and calculations.
+Dice System: d20 (single die + modifiers)
 """
 
 from typing import Dict, Any, List
-from .base_creator import BaseCharacterCreator
+from .base_creator import BaseCharacterCreator, DICE_D20
 
 
 class DND5ECreator(BaseCharacterCreator):
     """D&D 5e Character Creator implementing all 5e rules"""
+
+    DICE_SYSTEM = DICE_D20
 
     def __init__(self):
         super().__init__("D&D 5e", "dnd_data.json")
@@ -188,22 +191,6 @@ class DND5ECreator(BaseCharacterCreator):
         hit_die = class_data.get("hit_die", 8)
         return hit_die + con_modifier
 
-    def _prompt_selection(self, options: List[str], prompt: str) -> str:
-        """Generic selection prompt"""
-        print(f"\n{prompt}")
-        for i, option in enumerate(options, 1):
-            print(f"  {i}) {option}")
-
-        while True:
-            try:
-                choice = int(input("Seçiminiz: "))
-                if 1 <= choice <= len(options):
-                    return options[choice - 1]
-                else:
-                    print(f"1-{len(options)} arası seçin.")
-            except ValueError:
-                print("Geçerli bir sayı girin.")
-
     def validate_character(self, character: Dict[str, Any]) -> List[str]:
         """
         D&D 5e karakter validasyonu - IYILESTIRILDI
@@ -324,9 +311,23 @@ class DND5ECreator(BaseCharacterCreator):
 
         return result
 
-    def calculate_derived_stats(self, character: Dict[str, Any]) -> Dict[str, Any]:
+    def calculate_stats(self, character: Dict[str, Any]) -> Dict[str, Any]:
         """Calculate derived statistics for D&D 5e"""
         from utils.calculations import calculate_all_dnd_stats
-
-        # Use the comprehensive calculation function
         return calculate_all_dnd_stats(character, self.data)
+
+    def export_data(self, character: Dict[str, Any]) -> Dict[str, Any]:
+        """D&D 5e karakterini JSON-serializable formata dönüştür."""
+        safe_keys = {
+            "system", "name", "race", "class", "background", "level",
+            "experience", "abilities", "modifiers", "equipment",
+            "proficiency_bonus", "hit_points", "armor_class", "initiative",
+            "speed", "spell_slots", "saving_throws", "skills",
+        }
+        exported: Dict[str, Any] = {"system": "DND5E", "dice_system": self.DICE_SYSTEM.name}
+        for key in safe_keys:
+            if key in character:
+                exported[key] = character[key]
+        stats = self.calculate_stats(character)
+        exported.update({k: v for k, v in stats.items() if k not in exported})
+        return exported

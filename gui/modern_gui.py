@@ -188,11 +188,13 @@ class CharacterCreationWizard:
 
     def _next_step(self):
         """Go to next step"""
+        self._collect_current_data()
         if self.current_step < len(self.steps) - 1:
             self._show_step(self.current_step + 1)
 
     def _previous_step(self):
         """Go to previous step"""
+        self._collect_current_data()
         if self.current_step > 0:
             self._show_step(self.current_step - 1)
 
@@ -232,35 +234,103 @@ class CharacterCreationWizard:
 
         races = sorted(self.creator.data.get("races", {}).keys())
         if not races:
-            races = ["Human", "Elf", "Dwarf", "Halfling"]  # Fallback
+            races = ["Human", "Elf", "Dwarf", "Halfling"]
 
-        self.race_var = ctk.StringVar(value=races[0])
+        prev_race = self.character_data.get('race', races[0])
+        if prev_race not in races:
+            prev_race = races[0]
+        self.race_var = ctk.StringVar(value=prev_race)
         race_menu = ctk.CTkOptionMenu(
             self.content_frame,
             variable=self.race_var,
             values=races,
             width=300
         )
-        race_menu.pack(pady=(0, 20))
+        race_menu.pack(pady=(0, 10))
 
-        # Race description
+        info_frame = ctk.CTkScrollableFrame(self.content_frame, height=250)
+        info_frame.pack(fill="x", padx=20, pady=(0, 10))
+
         desc_label = ctk.CTkLabel(
-            self.content_frame,
-            text="Seçilen ırk hakkında bilgi burada görünecek.",
+            info_frame,
+            text="",
             font=ctk.CTkFont(size=12),
-            wraplength=400
+            wraplength=450,
+            justify="left"
         )
-        desc_label.pack(pady=(0, 20))
+        desc_label.pack(pady=(5, 5), anchor="w")
 
-        # Update description when race changes
+        bonus_label = ctk.CTkLabel(
+            info_frame,
+            text="",
+            font=ctk.CTkFont(size=12, weight="bold"),
+            text_color="#3498db",
+            wraplength=450,
+            justify="left"
+        )
+        bonus_label.pack(pady=(0, 5), anchor="w")
+
+        traits_label = ctk.CTkLabel(
+            info_frame,
+            text="",
+            font=ctk.CTkFont(size=11),
+            text_color="#27ae60",
+            wraplength=450,
+            justify="left"
+        )
+        traits_label.pack(pady=(0, 5), anchor="w")
+
+        extra_label = ctk.CTkLabel(
+            info_frame,
+            text="",
+            font=ctk.CTkFont(size=11),
+            text_color="#95a5a6",
+            wraplength=450,
+            justify="left"
+        )
+        extra_label.pack(pady=(0, 5), anchor="w")
+
         def update_description(*args):
             race = self.race_var.get()
             race_data = self.creator.data.get("races", {}).get(race, {})
-            description = race_data.get("description", f"{race} ırkı hakkında detaylı bilgi bulunamadı.")
-            desc_label.configure(text=description)
+
+            desc = race_data.get("description", f"{race} ırkı.")
+            desc_label.configure(text=desc)
+
+            asi = race_data.get("ability_score_increase", {})
+            if asi:
+                ability_names = {
+                    "strength": "STR", "dexterity": "DEX", "constitution": "CON",
+                    "intelligence": "INT", "wisdom": "WIS", "charisma": "CHA", "all": "Tümü"
+                }
+                parts = [f"{ability_names.get(k, k)} +{v}" for k, v in asi.items()]
+                bonus_label.configure(text=f"📊 Yetenek Bonusları: {', '.join(parts)}")
+            else:
+                bonus_label.configure(text="📊 Yetenek Bonusu: Yok")
+
+            traits = race_data.get("traits", [])
+            if traits:
+                traits_label.configure(text=f"⚔️ Özellikler: {', '.join(traits)}")
+            else:
+                traits_label.configure(text="")
+
+            extras = []
+            speed = race_data.get("speed")
+            if speed:
+                extras.append(f"Hız: {speed} ft")
+            size = race_data.get("size")
+            if size:
+                extras.append(f"Boyut: {size}")
+            langs = race_data.get("languages", [])
+            if langs:
+                extras.append(f"Diller: {', '.join(langs)}")
+            if extras:
+                extra_label.configure(text=f"ℹ️ {' | '.join(extras)}")
+            else:
+                extra_label.configure(text="")
 
         self.race_var.trace("w", update_description)
-        update_description()  # Initial update
+        update_description()
 
     def _step_class_selection(self):
         """Step 3: Class selection"""
@@ -273,35 +343,89 @@ class CharacterCreationWizard:
 
         classes = sorted(self.creator.data.get("classes", {}).keys())
         if not classes:
-            classes = ["Fighter", "Wizard", "Rogue", "Cleric"]  # Fallback
+            classes = ["Fighter", "Wizard", "Rogue", "Cleric"]
 
-        self.class_var = ctk.StringVar(value=classes[0])
+        prev_class = self.character_data.get('class', classes[0])
+        if prev_class not in classes:
+            prev_class = classes[0]
+        self.class_var = ctk.StringVar(value=prev_class)
         class_menu = ctk.CTkOptionMenu(
             self.content_frame,
             variable=self.class_var,
             values=classes,
             width=300
         )
-        class_menu.pack(pady=(0, 20))
+        class_menu.pack(pady=(0, 10))
 
-        # Class description
+        info_frame = ctk.CTkScrollableFrame(self.content_frame, height=250)
+        info_frame.pack(fill="x", padx=20, pady=(0, 10))
+
         desc_label = ctk.CTkLabel(
-            self.content_frame,
-            text="Seçilen sınıf hakkında bilgi burada görünecek.",
+            info_frame,
+            text="",
             font=ctk.CTkFont(size=12),
-            wraplength=400
+            wraplength=450,
+            justify="left"
         )
-        desc_label.pack(pady=(0, 20))
+        desc_label.pack(pady=(5, 5), anchor="w")
 
-        # Update description when class changes
+        stats_label = ctk.CTkLabel(
+            info_frame,
+            text="",
+            font=ctk.CTkFont(size=12, weight="bold"),
+            text_color="#e67e22",
+            wraplength=450,
+            justify="left"
+        )
+        stats_label.pack(pady=(0, 5), anchor="w")
+
+        features_label = ctk.CTkLabel(
+            info_frame,
+            text="",
+            font=ctk.CTkFont(size=11),
+            text_color="#27ae60",
+            wraplength=450,
+            justify="left"
+        )
+        features_label.pack(pady=(0, 5), anchor="w")
+
         def update_description(*args):
             class_name = self.class_var.get()
             class_data = self.creator.data.get("classes", {}).get(class_name, {})
-            description = class_data.get("description", f"{class_name} sınıfı hakkında detaylı bilgi bulunamadı.")
-            desc_label.configure(text=description)
+
+            desc = class_data.get("description", f"{class_name} sınıfı.")
+            desc_label.configure(text=desc)
+
+            parts = []
+            hd = class_data.get("hit_die")
+            if hd:
+                parts.append(f"Hit Die: d{hd}")
+            saves = class_data.get("saving_throws", [])
+            if saves:
+                parts.append(f"Saving Throws: {', '.join(saves)}")
+            primary = class_data.get("primary_ability", "")
+            if primary:
+                parts.append(f"Primary: {primary}")
+            if parts:
+                stats_label.configure(text=f"🎯 {' | '.join(parts)}")
+            else:
+                stats_label.configure(text="")
+
+            profs = class_data.get("proficiencies", {})
+            feat_parts = []
+            armor = profs.get("armor", [])
+            if armor:
+                feat_parts.append(f"Zırh: {', '.join(armor)}")
+            weapons = profs.get("weapons", [])
+            if weapons:
+                feat_parts.append(f"Silah: {', '.join(weapons)}")
+            if feat_parts:
+                features_label.configure(text=f"🛡️ {' | '.join(feat_parts)}")
+            else:
+                features_label.configure(text="")
 
         self.class_var.trace("w", update_description)
-        update_description()  # Initial update
+        update_description()
 
     def _step_archetype_selection(self):
         """Step 4: Archetype selection (Pathfinder only)"""
@@ -367,16 +491,77 @@ class CharacterCreationWizard:
 
         backgrounds = sorted(self.creator.data.get("backgrounds", {}).keys())
         if not backgrounds:
-            backgrounds = ["Commoner", "Soldier", "Scholar", "Criminal"]  # Fallback
+            backgrounds = ["Commoner", "Soldier", "Scholar", "Criminal"]
 
-        self.background_var = ctk.StringVar(value=backgrounds[0])
+        prev_bg = self.character_data.get('background', backgrounds[0])
+        if prev_bg not in backgrounds:
+            prev_bg = backgrounds[0]
+        self.background_var = ctk.StringVar(value=prev_bg)
         bg_menu = ctk.CTkOptionMenu(
             self.content_frame,
             variable=self.background_var,
             values=backgrounds,
             width=300
         )
-        bg_menu.pack(pady=(0, 20))
+        bg_menu.pack(pady=(0, 10))
+
+        info_frame = ctk.CTkScrollableFrame(self.content_frame, height=200)
+        info_frame.pack(fill="x", padx=20, pady=(0, 10))
+
+        feature_label = ctk.CTkLabel(
+            info_frame, text="", font=ctk.CTkFont(size=12, weight="bold"),
+            text_color="#9b59b6", wraplength=450, justify="left"
+        )
+        feature_label.pack(pady=(5, 3), anchor="w")
+
+        feat_desc_label = ctk.CTkLabel(
+            info_frame, text="", font=ctk.CTkFont(size=11),
+            wraplength=450, justify="left"
+        )
+        feat_desc_label.pack(pady=(0, 5), anchor="w")
+
+        skills_label = ctk.CTkLabel(
+            info_frame, text="", font=ctk.CTkFont(size=11),
+            text_color="#3498db", wraplength=450, justify="left"
+        )
+        skills_label.pack(pady=(0, 3), anchor="w")
+
+        equip_label = ctk.CTkLabel(
+            info_frame, text="", font=ctk.CTkFont(size=11),
+            text_color="#27ae60", wraplength=450, justify="left"
+        )
+        equip_label.pack(pady=(0, 3), anchor="w")
+
+        def update_bg_info(*args):
+            bg_name = self.background_var.get()
+            bg_data = self.creator.data.get("backgrounds", {}).get(bg_name, {})
+
+            feature = bg_data.get("feature", "")
+            if feature:
+                feature_label.configure(text=f"⭐ Özellik: {feature}")
+            else:
+                feature_label.configure(text="")
+
+            feat_desc = bg_data.get("feature_description", "")
+            feat_desc_label.configure(text=feat_desc if feat_desc else "")
+
+            skills = bg_data.get("skill_proficiencies", [])
+            tools = bg_data.get("tools", [])
+            parts = []
+            if skills:
+                parts.append(f"Beceriler: {', '.join(skills)}")
+            if tools:
+                parts.append(f"Araçlar: {', '.join(tools)}")
+            skills_label.configure(text=f"📚 {' | '.join(parts)}" if parts else "")
+
+            equip = bg_data.get("equipment", [])
+            if equip:
+                equip_label.configure(text=f"🎒 Ekipman: {', '.join(equip)}")
+            else:
+                equip_label.configure(text="")
+
+        self.background_var.trace("w", update_bg_info)
+        update_bg_info()
 
     def _step_ability_scores(self):
         """Step 5: Ability scores"""
@@ -715,7 +900,7 @@ Sınıf: {self.character_data.get('class', 'Belirlenmemiş')}
         confirm_label.pack(pady=(20, 10))
 
     def _collect_current_data(self):
-        """Collect data from current step"""
+        """Collect data from current step - only from live widgets"""
         try:
             if hasattr(self, 'name_entry') and self.name_entry.winfo_exists():
                 self.character_data['name'] = self.name_entry.get().strip()
@@ -724,66 +909,64 @@ Sınıf: {self.character_data.get('class', 'Belirlenmemiş')}
 
         try:
             if hasattr(self, 'race_var'):
-                self.character_data['race'] = self.race_var.get()
+                val = self.race_var.get()
+                if val:
+                    self.character_data['race'] = val
         except:
             pass
 
         try:
             if hasattr(self, 'class_var'):
-                self.character_data['class'] = self.class_var.get()
+                val = self.class_var.get()
+                if val:
+                    self.character_data['class'] = val
         except:
             pass
 
         try:
             if hasattr(self, 'background_var'):
-                self.character_data['background'] = self.background_var.get()
+                val = self.background_var.get()
+                if val:
+                    self.character_data['background'] = val
         except:
             pass
 
         try:
             if hasattr(self, 'archetype_var'):
-                self.character_data['archetype'] = self.archetype_var.get()
+                val = self.archetype_var.get()
+                if val:
+                    self.character_data['archetype'] = val
         except:
             pass
 
         try:
             if hasattr(self, 'ability_entries'):
-                abilities = {}
-                for ability, entry in self.ability_entries.items():
-                    try:
-                        if entry.winfo_exists():
-                            score = int(entry.get().strip())
-                            abilities[ability] = score
-                        else:
-                            abilities[ability] = 10  # Default
-                    except:
-                        abilities[ability] = 10  # Default
-                self.character_data['abilities'] = abilities
+                has_live_widget = any(
+                    e.winfo_exists() for e in self.ability_entries.values()
+                )
+                if has_live_widget:
+                    abilities = {}
+                    for ability, entry in self.ability_entries.items():
+                        try:
+                            if entry.winfo_exists():
+                                score = int(entry.get().strip())
+                                abilities[ability] = score
+                            else:
+                                abilities[ability] = self.character_data.get('abilities', {}).get(ability, 10)
+                        except:
+                            abilities[ability] = self.character_data.get('abilities', {}).get(ability, 10)
+                    self.character_data['abilities'] = abilities
         except:
             pass
 
         try:
-            # Collect starting equipment if selected - İYİLEŞTİRİLDİ
             if hasattr(self, 'equipment_vars') and self.equipment_vars:
-                for i, var in enumerate(self.equipment_vars):
-                    if var.get() == str(i):
-                        self._select_equipment_option(i)
-                        break
-            
-            # Background equipment'ı otomatik ekle
-            if self.system_name == "dnd5e":
-                background_name = self.character_data.get('background', '')
-                if background_name:
-                    background_data = self.creator.data.get("backgrounds", {}).get(background_name, {})
-                    bg_equip = background_data.get("equipment", [])
-                    if isinstance(bg_equip, list):
-                        current_equipment = self.character_data.get('starting_equipment', [])
-                        if isinstance(current_equipment, list):
-                            # Background equipment'ı ekle (duplicate kontrolü ile)
-                            for bg_item in bg_equip:
-                                if bg_item not in current_equipment:
-                                    current_equipment.append(bg_item)
-                            self.character_data['starting_equipment'] = current_equipment
+                has_live = any(True for v in self.equipment_vars if v.get())
+                if has_live:
+                    for i, var in enumerate(self.equipment_vars):
+                        if var.get() == str(i):
+                            self._select_equipment_option(i)
+                            break
         except:
             pass
 
@@ -3027,6 +3210,26 @@ class DiyargezerGUI:
         )
         pdf_btn.pack(side="left", padx=(0, 10))
 
+        # SQLite Save button
+        sqlite_save_btn = ctk.CTkButton(
+            button_frame,
+            text="💾 SQLite Kaydet",
+            command=self._sqlite_save,
+            font=ctk.CTkFont(size=14),
+            height=40
+        )
+        sqlite_save_btn.pack(side="left", padx=(0, 10))
+
+        # SQLite Load button
+        sqlite_load_btn = ctk.CTkButton(
+            button_frame,
+            text="📂 SQLite Yükle",
+            command=self._sqlite_load,
+            font=ctk.CTkFont(size=14),
+            height=40
+        )
+        sqlite_load_btn.pack(side="left", padx=(0, 10))
+
         # Clear Log button
         clear_btn = ctk.CTkButton(
             button_frame,
@@ -3591,6 +3794,141 @@ class DiyargezerGUI:
         except Exception as e:
             messagebox.showerror("Hata", f"PDF oluşturma hatası: {e}")
             self._log_message(f"⚠️ PDF oluşturma hatası: {e}")
+
+    # ==================================================================
+    # SQLite KAYDETME / YUKLEME
+    # ==================================================================
+    def _sqlite_save(self):
+        """Aktif karakteri SQLite veritabanına kaydet"""
+        current_tab = self.tabview.get()
+        name_entry = getattr(self, f"{current_tab.lower().replace(' ', '_')}_name", None)
+        character_name = name_entry.get().strip() if name_entry else ""
+
+        if not character_name:
+            character_file = filedialog.askopenfilename(
+                title="SQLite'a Kaydedilecek Karakteri Seçin",
+                filetypes=[("JSON files", "*.json")],
+                initialdir="characters"
+            )
+            if not character_file:
+                return
+            try:
+                with open(character_file, 'r', encoding='utf-8') as f:
+                    character = json.load(f)
+            except Exception as e:
+                messagebox.showerror("Hata", f"Karakter yüklenemedi: {e}")
+                return
+        else:
+            try:
+                system_key = self.creators.get(current_tab)
+                creator = CharacterFactory.create_creator(system_key)
+                filename = f"{character_name.lower().replace(' ', '_')}_{system_key}"
+                character = creator.load_character(filename)
+            except Exception:
+                messagebox.showwarning("Uyarı", "Önce bir karakter oluşturun!")
+                return
+
+        try:
+            from utils.storage import init_db, save_character as sqlite_save, CharacterRecord
+
+            db_path = Path(__file__).parent.parent / "characters" / "diyargezer.db"
+            db_path.parent.mkdir(parents=True, exist_ok=True)
+            init_db(db_path)
+
+            record = CharacterRecord(
+                id=None,
+                system=character.get("system", "unknown"),
+                name=character.get("name", "unnamed"),
+                data=character
+            )
+            record_id = sqlite_save(db_path, record)
+            messagebox.showinfo("Başarılı",
+                                f"'{character.get('name')}' SQLite veritabanına kaydedildi!\nKayıt ID: {record_id}")
+            self._log_message(f"💾 {character.get('name')} SQLite'a kaydedildi (ID: {record_id})")
+        except Exception as e:
+            messagebox.showerror("Hata", f"SQLite kayıt hatası: {e}")
+            self._log_message(f"⚠️ SQLite kayıt hatası: {e}")
+
+    def _sqlite_load(self):
+        """SQLite veritabanından karakter yükle"""
+        try:
+            from utils.storage import init_db, list_characters, load_character as sqlite_load
+
+            db_path = Path(__file__).parent.parent / "characters" / "diyargezer.db"
+            if not db_path.exists():
+                messagebox.showinfo("Bilgi", "SQLite veritabanı bulunamadı.\nÖnce bir karakter kaydedin.")
+                return
+
+            init_db(db_path)
+            records = list_characters(db_path)
+
+            if not records:
+                messagebox.showinfo("Bilgi", "Veritabanında kayıtlı karakter yok.")
+                return
+
+            # Karakter secim dialog'u
+            dialog = ctk.CTkToplevel(self.root)
+            dialog.title("SQLite - Karakter Yükle")
+            dialog.geometry("500x450")
+            dialog.resizable(True, True)
+            dialog.transient(self.root)
+            dialog.grab_set()
+
+            ctk.CTkLabel(dialog, text="💾 SQLite Veritabanından Karakter Yükle",
+                         font=ctk.CTkFont(size=16, weight="bold")).pack(pady=(15, 10))
+
+            # Karakter listesi
+            list_frame = ctk.CTkScrollableFrame(dialog)
+            list_frame.pack(fill="both", expand=True, padx=15, pady=5)
+
+            selected_id = ctk.IntVar(value=0)
+
+            for rec in records:
+                system = rec.system
+                name = rec.name
+                rb = ctk.CTkRadioButton(
+                    list_frame,
+                    text=f"[ID:{rec.id}] {name} ({system})",
+                    variable=selected_id,
+                    value=rec.id,
+                    font=ctk.CTkFont(size=12)
+                )
+                rb.pack(anchor="w", padx=10, pady=3)
+
+            def on_load():
+                rec_id = selected_id.get()
+                if rec_id == 0:
+                    messagebox.showwarning("Uyarı", "Bir karakter seçin!")
+                    return
+                record = sqlite_load(db_path, rec_id)
+                if record:
+                    character = record.data
+                    # JSON olarak da kaydet
+                    safe_name = record.name.lower().replace(' ', '_')
+                    sys_key = record.system.lower().replace(' ', '_')
+                    json_path = Path(__file__).parent.parent / "characters" / f"{safe_name}_{sys_key}.json"
+                    json_path.parent.mkdir(parents=True, exist_ok=True)
+                    with open(json_path, 'w', encoding='utf-8') as f:
+                        json.dump(character, f, ensure_ascii=False, indent=2)
+
+                    self._log_message(f"📂 {record.name} SQLite'dan yüklendi (ID: {rec_id})")
+                    messagebox.showinfo("Başarılı",
+                                        f"'{record.name}' yüklendi ve JSON olarak da kaydedildi.")
+                    dialog.destroy()
+                else:
+                    messagebox.showerror("Hata", "Karakter bulunamadı!")
+
+            btn_frame = ctk.CTkFrame(dialog, fg_color="transparent")
+            btn_frame.pack(fill="x", padx=15, pady=(5, 15))
+
+            ctk.CTkButton(btn_frame, text="📂 Yükle", command=on_load,
+                           font=ctk.CTkFont(weight="bold"), height=35).pack(side="left", padx=5)
+            ctk.CTkButton(btn_frame, text="İptal", command=dialog.destroy,
+                           height=35).pack(side="right", padx=5)
+
+        except Exception as e:
+            messagebox.showerror("Hata", f"SQLite yükleme hatası: {e}")
+            self._log_message(f"⚠️ SQLite yükleme hatası: {e}")
 
     def _clear_log(self):
         """Clear the log textbox"""

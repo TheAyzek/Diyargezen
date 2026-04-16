@@ -6,7 +6,10 @@
         "all": 1
       },
       "speed": 30,
-      "traits": [],
+      "traits": [
+        "Extra Language",
+        "Extra Skill Proficiency"
+      ],
       "languages": [
         "Common",
         "Elvish",
@@ -15,7 +18,8 @@
       ],
       "extra_languages": 0,
       "size": "Medium",
-      "source": "https://www.5esrd.com/races/human/"
+      "source": "https://www.5esrd.com/races/human/",
+      "description": "Humans are the most adaptable and ambitious people among the common races. Whatever drives them, humans are the innovators, the achievers, and the pioneers of the worlds."
     },
     "Elf (High)": {
       "ability_score_increase": {
@@ -34,7 +38,9 @@
         "Elvish"
       ],
       "extra_languages": 1,
-      "name": "Elf (High)"
+      "name": "Elf (High)",
+      "size": "Medium",
+      "description": "High elves have a keen mind and a mastery of at least the basics of magic. They are known for their grace and mastery of both sword and spell."
     },
     "Elf (Wood)": {
       "ability_score_increase": {
@@ -52,7 +58,9 @@
         "Common",
         "Elvish"
       ],
-      "name": "Elf (Wood)"
+      "name": "Elf (Wood)",
+      "size": "Medium",
+      "description": "Wood elves have keen senses and intuition, and their fleet feet carry them quickly and stealthily through their native forests."
     },
     "Elf (Dark)": {
       "ability_score_increase": {
@@ -71,7 +79,9 @@
         "Common",
         "Elvish"
       ],
-      "name": "Elf (Dark)"
+      "name": "Elf (Dark)",
+      "size": "Medium",
+      "description": "Dark elves, also known as drow, were banished from the surface world for following the goddess Lolth down the path of evil."
     },
     "Dwarf (Hill)": {
       "ability_score_increase": {
@@ -89,7 +99,9 @@
         "Common",
         "Dwarvish"
       ],
-      "name": "Dwarf (Hill)"
+      "name": "Dwarf (Hill)",
+      "size": "Medium",
+      "description": "Hill dwarves have keen senses, deep intuition, and remarkable resilience. They are found in many lands across the world."
     },
     "Dwarf (Mountain)": {
       "ability_score_increase": {
@@ -107,7 +119,9 @@
         "Common",
         "Dwarvish"
       ],
-      "name": "Dwarf (Mountain)"
+      "name": "Dwarf (Mountain)",
+      "size": "Medium",
+      "description": "Mountain dwarves are strong and hardy, accustomed to a difficult life in rugged terrain. They are taller than other dwarves."
     },
     "Halfling (Lightfoot)": {
       "ability_score_increase": {
@@ -125,7 +139,9 @@
         "Common",
         "Halfling"
       ],
-      "name": "Halfling (Lightfoot)"
+      "name": "Halfling (Lightfoot)",
+      "size": "Medium",
+      "description": "Lightfoot halflings are adept at blending in with the crowd. They are prone to wanderlust and make excellent companions."
     },
     "Halfling (Stout)": {
       "ability_score_increase": {
@@ -143,7 +159,9 @@
         "Common",
         "Halfling"
       ],
-      "name": "Halfling (Stout)"
+      "name": "Halfling (Stout)",
+      "size": "Medium",
+      "description": "Stout halflings are hardier than average and have some resistance to poison. Some say that stouts have dwarven blood."
     },
     "Dragonborn": {
       "name": "Dragonborn",
@@ -163,7 +181,8 @@
       ],
       "extra_languages": 0,
       "size": "Medium",
-      "source": "https://www.5esrd.com/races/dragonborn/"
+      "source": "https://www.5esrd.com/races/dragonborn/",
+      "description": "Born of dragons, dragonborn walk proudly through a world that greets them with fearful incomprehension. Shaped by draconic gods or the dragons themselves, dragonborn originally hatched from dragon eggs."
     },
     "Gnome (Forest)": {
       "ability_score_increase": {
@@ -181,7 +200,9 @@
         "Common",
         "Gnomish"
       ],
-      "name": "Gnome (Forest)"
+      "name": "Gnome (Forest)",
+      "size": "Medium",
+      "description": "Forest gnomes have a knack for illusion and inherent quickness and stealth. They tend to be shy and reclusive."
     },
     "Gnome (Rock)": {
       "ability_score_increase": {
@@ -199,7 +220,9 @@
         "Common",
         "Gnomish"
       ],
-      "name": "Gnome (Rock)"
+      "name": "Gnome (Rock)",
+      "size": "Medium",
+      "description": "Rock gnomes have a natural inventiveness and hardiness beyond that of other gnomes. They are well known for their tinkering."
     },
     "Half-Elf": {
       "name": "Half-Elf",
@@ -218,17 +241,27 @@
       ],
       "extra_languages": 0,
       "size": "Medium",
-      "source": "https://www.5esrd.com/races/half-elf/"
+      "source": "https://www.5esrd.com/races/half-elf/",
+      "description": "Half-elves combine what some say are the best qualities of their elf and human parents: human curiosity, inventiveness, and ambition tempered by the refined senses, love of nature, and artistic tastes of the elves."
     },
     "Half-Orc": {
       "name": "Half-Orc",
-      "ability_score_increase": {},
+      "ability_score_increase": {
+        "strength": 2,
+        "constitution": 1
+      },
       "speed": 30,
-      "traits": [],
+      "traits": [
+        "Darkvision",
+        "Menacing",
+        "Relentless Endurance",
+        "Savage Attacks"
+      ],
       "languages": [],
       "extra_languages": 0,
       "size": "Medium",
-      "source": "https://www.5esrd.com/races/half-orc/"
+      "source": "https://www.5esrd.com/races/half-orc/",
+      "description": "Half-orcs' grayish pigmentation, sloping foreheads, jutting jaws, prominent teeth, and towering builds make their orcish heritage plain for all to see. Half-orcs are not evil by nature, but evil does lurk within them."
     },
     "Tiefling": {
       "name": "Tiefling",
@@ -247,7 +280,8 @@
       ],
       "extra_languages": 0,
       "size": "Medium",
-      "source": "https://www.5esrd.com/races/tiefling/"
+      "source": "https://www.5esrd.com/races/tiefling/",
+      "description": "Tieflings are derived from human bloodlines, and in the broadest possible sense, they still look human. However, their infernal heritage has left a clear imprint on their appearance."
     },
     "Aasimar": {
       "ability_score_increase": {
@@ -264,7 +298,9 @@
         "Common",
         "Celestial"
       ],
-      "name": "Aasimar"
+      "name": "Aasimar",
+      "description": "Aasimar bear within their souls the light of the heavens. They are descended from humans with a touch of the power of Mount Celestia, the divine realm of many lawful good deities.",
+      "size": "Medium"
     },
     "Genasi (Air)": {
       "ability_score_increase": {
@@ -280,7 +316,9 @@
         "Common",
         "Primordial"
       ],
-      "name": "Genasi (Air)"
+      "name": "Genasi (Air)",
+      "size": "Medium",
+      "description": "Air genasi are descended from djinn and carry the power of elemental air. They are as free as the wind and share its temperamental nature."
     },
     "Genasi (Earth)": {
       "ability_score_increase": {
@@ -297,7 +335,9 @@
         "Common",
         "Primordial"
       ],
-      "name": "Genasi (Earth)"
+      "name": "Genasi (Earth)",
+      "size": "Medium",
+      "description": "Earth genasi are descended from dao and inherit the strength and solidity of stone. They are patient and deliberate."
     },
     "Genasi (Fire)": {
       "ability_score_increase": {
@@ -314,7 +354,9 @@
         "Common",
         "Primordial"
       ],
-      "name": "Genasi (Fire)"
+      "name": "Genasi (Fire)",
+      "size": "Medium",
+      "description": "Fire genasi are descended from efreet and carry the heat of the inner planes. They tend to be hot-tempered and quick to anger."
     },
     "Genasi (Water)": {
       "ability_score_increase": {
@@ -331,7 +373,9 @@
         "Common",
         "Primordial"
       ],
-      "name": "Genasi (Water)"
+      "name": "Genasi (Water)",
+      "size": "Medium",
+      "description": "Water genasi are descended from marids and carry the fluid grace of the elemental planes. They are independent and self-confident."
     },
     "Goliath": {
       "ability_score_increase": {
@@ -349,7 +393,9 @@
         "Common",
         "Giant"
       ],
-      "name": "Goliath"
+      "name": "Goliath",
+      "description": "At the highest mountain peaks dwell the reclusive goliaths. Few folk can claim to have seen a goliath, and fewer still can claim friendship with them. Goliaths wander a bleak realm of rock, wind, and cold.",
+      "size": "Medium"
     },
     "Tabaxi": {
       "ability_score_increase": {
@@ -366,7 +412,9 @@
         "Common",
         "One other language"
       ],
-      "name": "Tabaxi"
+      "name": "Tabaxi",
+      "description": "Hailing from a strange and distant land, wandering tabaxi are catlike humanoids driven by curiosity to collect interesting artifacts, gather tales and stories, and lay eyes on all the world's wonders.",
+      "size": "Medium"
     },
     "Triton": {
       "ability_score_increase": {
@@ -385,7 +433,9 @@
         "Common",
         "Primordial"
       ],
-      "name": "Triton"
+      "name": "Triton",
+      "description": "Tritons guard the ocean depths, building small settlements beside deep trenches, portals to the elemental planes, and other dangerous spots far from the eyes of land-bound folk.",
+      "size": "Medium"
     },
     "Yuan-ti Pureblood": {
       "ability_score_increase": {
@@ -404,7 +454,9 @@
         "Abyssal",
         "Draconic"
       ],
-      "name": "Yuan-ti Pureblood"
+      "name": "Yuan-ti Pureblood",
+      "description": "Yuan-ti purebloods are the most human-seeming of all true yuan-ti. They are the product of breeding between human and yuan-ti, and are the most commonly encountered yuan-ti.",
+      "size": "Medium"
     },
     "Aasimar (Protector)": {
       "ability_score_increase": {
@@ -423,7 +475,9 @@
         "Common",
         "Celestial"
       ],
-      "name": "Aasimar (Protector)"
+      "name": "Aasimar (Protector)",
+      "size": "Medium",
+      "description": "Protector aasimar are charged by the powers of good to guard the weak and strike at evil. A protector aasimar receives advice from an angelic entity."
     },
     "Aasimar (Scourge)": {
       "ability_score_increase": {
@@ -442,7 +496,9 @@
         "Common",
         "Celestial"
       ],
-      "name": "Aasimar (Scourge)"
+      "name": "Aasimar (Scourge)",
+      "size": "Medium",
+      "description": "Scourge aasimar are imbued with a divine energy that blazes intensely within them. It feeds a powerful desire to destroy evil."
     },
     "Aasimar (Fallen)": {
       "ability_score_increase": {
@@ -461,7 +517,9 @@
         "Common",
         "Celestial"
       ],
-      "name": "Aasimar (Fallen)"
+      "name": "Aasimar (Fallen)",
+      "size": "Medium",
+      "description": "Fallen aasimar are touched by dark powers in their youth or have turned to evil. An inner shadow threatens to consume them."
     },
     "Firbolg": {
       "ability_score_increase": {
@@ -480,7 +538,9 @@
         "Elvish",
         "Giant"
       ],
-      "name": "Firbolg"
+      "name": "Firbolg",
+      "description": "Firbolg tribes cloister in remote forest strongholds, preferring to spend their days in quiet harmony with the woods. When provoked, firbolgs demonstrate formidable skills with weapons and druidic magic.",
+      "size": "Medium"
     },
     "Kenku": {
       "ability_score_increase": {
@@ -497,7 +557,9 @@
         "Common",
         "Auran"
       ],
-      "name": "Kenku"
+      "name": "Kenku",
+      "description": "Haunted by an ancient crime that robbed them of their wings, the kenku wander the world as vagabonds and burglars who live at the edge of human society.",
+      "size": "Medium"
     },
     "Lizardfolk": {
       "ability_score_increase": {
@@ -516,7 +578,9 @@
         "Common",
         "Draconic"
       ],
-      "name": "Lizardfolk"
+      "name": "Lizardfolk",
+      "description": "Lizardfolk possess an alien and inscrutable mindset, their desires and thoughts driven by a different set of basic principles than those of warm-blooded creatures.",
+      "size": "Medium"
     },
     "Dwarf": {
       "name": "Dwarf",
@@ -535,7 +599,8 @@
       ],
       "extra_languages": 0,
       "size": "Medium",
-      "source": "https://www.5esrd.com/races/dwarf/"
+      "source": "https://www.5esrd.com/races/dwarf/",
+      "description": "Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal. Though they stand well under 5 feet tall, dwarves are so broad and compact that they can weigh as much as a human standing nearly two feet taller."
     },
     "Elf": {
       "name": "Elf",
@@ -555,7 +620,8 @@
       ],
       "extra_languages": 0,
       "size": "Medium",
-      "source": "https://www.5esrd.com/races/elf/"
+      "source": "https://www.5esrd.com/races/elf/",
+      "description": "Elves are a magical people of otherworldly grace, living in the world but not entirely part of it. They live in places of ethereal beauty, in the midst of ancient forests or in silvery spires."
     },
     "Gnome": {
       "name": "Gnome",
@@ -574,7 +640,8 @@
       ],
       "extra_languages": 0,
       "size": "Medium",
-      "source": "https://www.5esrd.com/races/gnome/"
+      "source": "https://www.5esrd.com/races/gnome/",
+      "description": "A gnome's energy and enthusiasm for living shines through every inch of his or her tiny body. Gnomes are delighted by life, enjoying every moment of invention, exploration, investigation, creation, and play."
     },
     "Halfling": {
       "name": "Halfling",
@@ -593,7 +660,8 @@
       ],
       "extra_languages": 0,
       "size": "Medium",
-      "source": "https://www.5esrd.com/races/halfling/"
+      "source": "https://www.5esrd.com/races/halfling/",
+      "description": "The comforts of home are the goals of most halflings' lives: a place to settle in peace and quiet, far from marauding monsters and clashing armies. Others form nomadic bands that travel constantly."
     }
   },
   "classes": {
@@ -2577,74 +2645,6 @@
       },
       "hit_dice": "d8",
       "name": "Blood Hunter"
-    },
-    "cleric": {
-      "name": "cleric",
-      "hit_die": "d8",
-      "primary_ability": [
-        "Wisdom"
-      ],
-      "saving_throws": [
-        "Wisdom",
-        "Charisma"
-      ],
-      "class_skills": [
-        "Acrobatics",
-        "Insight",
-        "Medicine",
-        "Athletics",
-        "Persuasion",
-        "Religion"
-      ],
-      "skill_choices": 2,
-      "proficiencies": {
-        "armor": [
-          "Light armor",
-          "medium armor",
-          "Shields"
-        ],
-        "weapons": [
-          "Simple weapons"
-        ],
-        "tools": [],
-        "languages": []
-      },
-      "starting_equipment_options": [],
-      "class_features": {
-        "5": {
-          "features": [
-            "3rd"
-          ],
-          "choices": {}
-        },
-        "2": {
-          "features": [
-            "Spellcasting",
-            "Divine Domain"
-          ],
-          "choices": {}
-        },
-        "3": {
-          "features": [
-            "Channel Divinity(1/rest)",
-            "Divine Domain feature"
-          ],
-          "choices": {}
-        },
-        "4": {
-          "features": [
-            "Divine Intervention improvement"
-          ],
-          "choices": {}
-        }
-      },
-      "spellcasting": {
-        "spellcasting_ability": "Wisdom",
-        "spell_save_dc": 8,
-        "spell_attack_bonus": 0
-      },
-      "source": "https://www.5esrd.com/database/class/cleric/",
-      "hit_dice": "d8"
     }
   },
   "abilities": [
@@ -2661,7 +2661,56 @@
         "Insight",
         "Religion"
       ],
-      "feature": "Shelter of the Faithful"
+      "feature": "Shelter of the Faithful",
+      "name": "Acolyte",
+      "languages": [
+        "Two extra languages"
+      ],
+      "equipment": [
+        "Holy symbol",
+        "Prayer book",
+        "5 sticks of incense",
+        "Vestments",
+        "Common clothes",
+        "15 gp"
+      ],
+      "feature_description": "As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle.",
+      "suggested_characteristics": {
+        "personality_traits": [
+          "I idolize a particular hero of my faith, and constantly refer to their deeds and example.",
+          "I can find common ground between the fiercest enemies, empathizing with them and always working toward peace.",
+          "I see omens in every event and action.",
+          "Nothing can shake my optimistic attitude.",
+          "I quote (or misquote) sacred texts and proverbs in almost every situation.",
+          "I am suspicious of strangers and expect the worst of them.",
+          "I am tolerant (or intolerant) of other faiths and respect (or condemn) the worship of other gods.",
+          "I've enjoyed fine food, drink, and high society among my temple's elite. Rough living grates on me."
+        ],
+        "ideals": [
+          "Change. We must help bring about the changes the gods are constantly working in the world. (Chaotic)",
+          "Tradition. The ancient ways of our faith must be preserved. (Lawful)",
+          "Charity. I always try to help those in need, no matter what the personal cost. (Good)",
+          "Power. I hope to one day rise to the top of my faith's religious hierarchy. (Lawful)",
+          "Faith. I trust that my deity will guide my actions. I have faith that if I work hard, things will go well. (Lawful)",
+          "Aspiration. I seek to prove myself worthy of my god's favor by matching my actions against his or her teachings. (Any)"
+        ],
+        "bonds": [
+          "I owe my life to the priest who took me in when my parents died.",
+          "Everything I do is for the common people.",
+          "I will someday get revenge on the corrupt temple hierarchy who branded me a heretic.",
+          "I owe a debt I can never repay to the people who helped me.",
+          "I pursue wealth to secure my family's future.",
+          "I'm convinced there's a powerful enemy after me, and their agents are everywhere I go."
+        ],
+        "flaws": [
+          "I judge others harshly, and myself even more severely.",
+          "I put too much trust in those who wield power within my temple's hierarchy.",
+          "My piety sometimes leads me to blindly trust those that profess faith in my god.",
+          "I am suspicious of strangers and expect the worst of them.",
+          "Once I pick a goal, I become obsessed with it to the detriment of everything else in my life.",
+          "I can't resist a pretty face."
+        ]
+      }
     },
     "Anthropologist": {
       "skill_proficiencies": [
@@ -2680,7 +2729,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Researcher ozelligine sahipsiniz.",
+      "name": "Anthropologist"
     },
     "Archaeologist": {
       "skill_proficiencies": [
@@ -2699,7 +2754,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Historical Knowledge ozelligine sahipsiniz.",
+      "name": "Archaeologist"
     },
     "Athlete": {
       "skill_proficiencies": [
@@ -2716,7 +2777,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Popular Athlete ozelligine sahipsiniz.",
+      "name": "Athlete"
     },
     "Charlatan": {
       "skill_proficiencies": [
@@ -2734,7 +2801,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "False Identity ozelligine sahipsiniz.",
+      "name": "Charlatan"
     },
     "City Watch": {
       "skill_proficiencies": [
@@ -2751,7 +2824,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Watcher's Eye ozelligine sahipsiniz.",
+      "name": "City Watch"
     },
     "Clan Crafter": {
       "skill_proficiencies": [
@@ -2770,7 +2849,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Respect of the Stout Folk ozelligine sahipsiniz.",
+      "name": "Clan Crafter"
     },
     "Cloistered Scholar": {
       "skill_proficiencies": [
@@ -2787,7 +2872,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Library Access ozelligine sahipsiniz.",
+      "name": "Cloistered Scholar"
     },
     "Courtier": {
       "skill_proficiencies": [
@@ -2804,7 +2895,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Court Functionary ozelligine sahipsiniz.",
+      "name": "Courtier"
     },
     "Criminal": {
       "skill_proficiencies": [
@@ -2821,7 +2918,14 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "name": "Criminal",
+      "equipment": [
+        "Crowbar",
+        "Dark common clothes with hood",
+        "15 gp"
+      ],
+      "feature_description": "You have a reliable and trustworthy contact who acts as your liaison to a network of criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you."
     },
     "Entertainer": {
       "skill_proficiencies": [
@@ -2839,7 +2943,15 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "name": "Entertainer",
+      "equipment": [
+        "One musical instrument",
+        "Favor of an admirer",
+        "Costume",
+        "15 gp"
+      ],
+      "feature_description": "You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble's court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you."
     },
     "Faceless": {
       "skill_proficiencies": [
@@ -2858,7 +2970,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "False Identity ozelligine sahipsiniz.",
+      "name": "Faceless"
     },
     "Faction Agent": {
       "skill_proficiencies": [
@@ -2875,7 +2993,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Safe Haven ozelligine sahipsiniz.",
+      "name": "Faction Agent"
     },
     "Failed Merchant": {
       "skill_proficiencies": [
@@ -2894,7 +3018,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "False Identity ozelligine sahipsiniz.",
+      "name": "Failed Merchant"
     },
     "Farmer": {
       "skill_proficiencies": [
@@ -2912,7 +3042,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Rustic Hospitality ozelligine sahipsiniz.",
+      "name": "Farmer"
     },
     "Feylost": {
       "skill_proficiencies": [
@@ -2931,7 +3067,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Feywild Connection ozelligine sahipsiniz.",
+      "name": "Feylost"
     },
     "Fisher": {
       "skill_proficiencies": [
@@ -2949,14 +3091,32 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Fisher's Trinket ozelligine sahipsiniz.",
+      "name": "Fisher"
     },
     "Folk Hero": {
       "skill_proficiencies": [
         "Animal Handling",
         "Survival"
       ],
-      "feature": "Rustic Hospitality"
+      "feature": "Rustic Hospitality",
+      "name": "Folk Hero",
+      "tools": [
+        "Artisan's tools",
+        "Vehicles (land)"
+      ],
+      "equipment": [
+        "Shovel",
+        "Iron pot",
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Since you come from the ranks of the common folk, you fit in among them with ease. You can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them. They will shield you from the law or anyone else searching for you, though they will not risk their lives for you."
     },
     "Gambler": {
       "skill_proficiencies": [
@@ -2975,7 +3135,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "False Identity ozelligine sahipsiniz.",
+      "name": "Gambler"
     },
     "Gladiator": {
       "skill_proficiencies": [
@@ -2993,7 +3159,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "By Popular Demand ozelligine sahipsiniz.",
+      "name": "Gladiator"
     },
     "Guild Artisan": {
       "skill_proficiencies": [
@@ -3012,7 +3184,14 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "name": "Guild Artisan",
+      "equipment": [
+        "Letter of introduction from guild",
+        "Traveler's clothes",
+        "15 gp"
+      ],
+      "feature_description": "As an established and respected member of a guild, you can rely on certain benefits that membership provides. Your fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings."
     },
     "Guild Merchant": {
       "skill_proficiencies": [
@@ -3031,7 +3210,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Guild Membership ozelligine sahipsiniz.",
+      "name": "Guild Merchant"
     },
     "Haunted One": {
       "skill_proficiencies": [
@@ -3048,7 +3233,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Heart of Darkness ozelligine sahipsiniz.",
+      "name": "Haunted One"
     },
     "Hermit": {
       "skill_proficiencies": [
@@ -3067,7 +3258,15 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "name": "Hermit",
+      "equipment": [
+        "Scroll case of notes",
+        "Winter blanket",
+        "Common clothes",
+        "5 gp"
+      ],
+      "feature_description": "The quiet seclusion of your extended hermitage gave you access to a unique and powerful discovery. The exact nature of this revelation depends on the nature of your seclusion. It might be a great truth about the cosmos, the deities, the powerful beings of the outer planes, or the forces of nature. It could be a site that no one else has ever seen. You might have uncovered a fact that has long been forgotten, or unearthed some relic of the past that could rewrite history."
     },
     "House Agent": {
       "skill_proficiencies": [
@@ -3084,7 +3283,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Safe Haven ozelligine sahipsiniz.",
+      "name": "House Agent"
     },
     "Inheritor": {
       "skill_proficiencies": [
@@ -3103,7 +3308,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Inheritance ozelligine sahipsiniz.",
+      "name": "Inheritor"
     },
     "Investigator": {
       "skill_proficiencies": [
@@ -3120,7 +3331,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Official Inquiry ozelligine sahipsiniz.",
+      "name": "Investigator"
     },
     "Knight": {
       "skill_proficiencies": [
@@ -3139,7 +3356,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Retainers ozelligine sahipsiniz.",
+      "name": "Knight"
     },
     "Knight of the Order": {
       "skill_proficiencies": [
@@ -3158,7 +3381,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Knightly Regard ozelligine sahipsiniz.",
+      "name": "Knight of the Order"
     },
     "Marine": {
       "skill_proficiencies": [
@@ -3175,7 +3404,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Ship's Passage ozelligine sahipsiniz.",
+      "name": "Marine"
     },
     "Mercenary Veteran": {
       "skill_proficiencies": [
@@ -3194,14 +3429,34 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Mercenary Life ozelligine sahipsiniz.",
+      "name": "Mercenary Veteran"
     },
     "Noble": {
       "skill_proficiencies": [
         "History",
         "Persuasion"
       ],
-      "feature": "Position of Privilege"
+      "feature": "Position of Privilege",
+      "name": "Noble",
+      "languages": [
+        "One extra language"
+      ],
+      "tools": [
+        "One gaming set"
+      ],
+      "equipment": [
+        "Fine clothes",
+        "Signet ring",
+        "Scroll of pedigree",
+        "25 gp"
+      ],
+      "feature_description": "Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to."
     },
     "Noble (Knight)": {
       "skill_proficiencies": [
@@ -3220,7 +3475,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Retainers ozelligine sahipsiniz.",
+      "name": "Noble (Knight)"
     },
     "Outlander": {
       "skill_proficiencies": [
@@ -3239,7 +3500,15 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "name": "Outlander",
+      "equipment": [
+        "Staff",
+        "Hunting trap",
+        "Traveler's clothes",
+        "10 gp"
+      ],
+      "feature_description": "You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, provided that the land offers berries, small game, water, and so forth."
     },
     "Pirate": {
       "skill_proficiencies": [
@@ -3257,7 +3526,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Bad Reputation ozelligine sahipsiniz.",
+      "name": "Pirate"
     },
     "Pirate (Corsair)": {
       "skill_proficiencies": [
@@ -3275,7 +3550,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Ship's Passage ozelligine sahipsiniz.",
+      "name": "Pirate (Corsair)"
     },
     "Rival Intern": {
       "skill_proficiencies": [
@@ -3294,7 +3575,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Medical Knowledge ozelligine sahipsiniz.",
+      "name": "Rival Intern"
     },
     "Sage": {
       "skill_proficiencies": [
@@ -3311,7 +3598,17 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "name": "Sage",
+      "equipment": [
+        "Bottle of ink",
+        "Quill",
+        "Small knife",
+        "Letter from colleague",
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign."
     },
     "Sailor": {
       "skill_proficiencies": [
@@ -3329,7 +3626,16 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "name": "Sailor",
+      "equipment": [
+        "Belaying pin",
+        "50 feet of silk rope",
+        "Lucky charm",
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "No matter where you go, people are afraid of you due to your reputation. When you are in a civilized settlement, you can get away with minor criminal offenses, such as refusing to pay for food at a tavern or breaking down doors at a local shop, since most people will not report your activity to the authorities."
     },
     "Sage (Alchemist)": {
       "skill_proficiencies": [
@@ -3348,7 +3654,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Researcher ozelligine sahipsiniz.",
+      "name": "Sage (Alchemist)"
     },
     "Sage (Astronomer)": {
       "skill_proficiencies": [
@@ -3367,7 +3679,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Researcher ozelligine sahipsiniz.",
+      "name": "Sage (Astronomer)"
     },
     "Sage (Cartographer)": {
       "skill_proficiencies": [
@@ -3386,7 +3704,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Researcher ozelligine sahipsiniz.",
+      "name": "Sage (Cartographer)"
     },
     "Sage (Investigator)": {
       "skill_proficiencies": [
@@ -3403,7 +3727,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Researcher ozelligine sahipsiniz.",
+      "name": "Sage (Investigator)"
     },
     "Sage (Librarian)": {
       "skill_proficiencies": [
@@ -3420,7 +3750,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Researcher ozelligine sahipsiniz.",
+      "name": "Sage (Librarian)"
     },
     "Sage (Professor)": {
       "skill_proficiencies": [
@@ -3437,7 +3773,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Researcher ozelligine sahipsiniz.",
+      "name": "Sage (Professor)"
     },
     "Sage (Researcher)": {
       "skill_proficiencies": [
@@ -3454,7 +3796,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Researcher ozelligine sahipsiniz.",
+      "name": "Sage (Researcher)"
     },
     "Sage (Wizard's Apprentice)": {
       "skill_proficiencies": [
@@ -3471,7 +3819,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Researcher ozelligine sahipsiniz.",
+      "name": "Sage (Wizard's Apprentice)"
     },
     "Sailor (Pirate)": {
       "skill_proficiencies": [
@@ -3489,7 +3843,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Bad Reputation ozelligine sahipsiniz.",
+      "name": "Sailor (Pirate)"
     },
     "Shipwright": {
       "skill_proficiencies": [
@@ -3507,7 +3867,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Ship's Passage ozelligine sahipsiniz.",
+      "name": "Shipwright"
     },
     "Smuggler": {
       "skill_proficiencies": [
@@ -3524,7 +3890,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "False Identity ozelligine sahipsiniz.",
+      "name": "Smuggler"
     },
     "Soldier": {
       "skill_proficiencies": [
@@ -3542,7 +3914,16 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "name": "Soldier",
+      "equipment": [
+        "Insignia of rank",
+        "Trophy from fallen enemy",
+        "Bone dice",
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can invoke your rank to exert influence over other soldiers and requisition simple equipment or horses for temporary use. You can also usually gain access to friendly military encampments and fortresses where your rank is recognized."
     },
     "Spy": {
       "skill_proficiencies": [
@@ -3559,7 +3940,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Criminal Contact ozelligine sahipsiniz.",
+      "name": "Spy"
     },
     "Urban Bounty Hunter": {
       "skill_proficiencies": [
@@ -3578,7 +3965,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Ear to the Ground ozelligine sahipsiniz.",
+      "name": "Urban Bounty Hunter"
     },
     "Urchin": {
       "skill_proficiencies": [
@@ -3596,7 +3989,17 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "name": "Urchin",
+      "equipment": [
+        "Small knife",
+        "Map of hometown",
+        "Pet mouse",
+        "Token to remember parents",
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "You know the secret patterns and flow to cities and can find passages through the urban sprawl that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the city twice as fast as your speed would normally allow."
     },
     "Uthgardt Tribe Member": {
       "skill_proficiencies": [
@@ -3615,7 +4018,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Uthgardt Heritage ozelligine sahipsiniz.",
+      "name": "Uthgardt Tribe Member"
     },
     "Waterdhavian Noble": {
       "skill_proficiencies": [
@@ -3634,7 +4043,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Keep ozelligine sahipsiniz.",
+      "name": "Waterdhavian Noble"
     },
     "Witchlight Hand": {
       "skill_proficiencies": [
@@ -3653,7 +4068,13 @@
         "ideal": "",
         "bond": "",
         "flaw": ""
-      }
+      },
+      "equipment": [
+        "Common clothes",
+        "10 gp"
+      ],
+      "feature_description": "Carnival Contact ozelligine sahipsiniz.",
+      "name": "Witchlight Hand"
     }
   },
   "languages": [

@@ -132,12 +132,16 @@ def clean_spell_data(spell: Dict[str, Any]) -> Dict[str, Any]:
     # casting_time
     ct = _extract_clean_field(blob, "casting_time")
     if not ct or len(ct) > 100:
-        # Direkt "1 standard action" gibi basit kaliplar ara
         ct_match = re.match(r'^(\d+\s+\w+\s+\w+)', blob)
         if ct_match:
             ct = ct_match.group(1)
         else:
             ct = blob[:50] if blob else ""
+    for marker in ["Components", "Effect", "Range", "Target", "Duration", "Saving", "Description"]:
+        idx = ct.find(marker)
+        if idx > 0:
+            ct = ct[:idx].strip()
+            break
     cleaned["casting_time"] = ct
 
     # components

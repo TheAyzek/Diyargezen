@@ -1,15 +1,18 @@
 # creators/mm3e_creator.py
 """
 Mutants & Masterminds 3e Character Creator
-Implements M&M 3e rules: Classless, point buy, PL limits, power points
+Implements M&M 3e rules: Classless, point buy, PL limits, power points.
+Dice System: d20 for checks + d6 pool for effect rolls.
 """
 
 from typing import Dict, Any, List
-from .base_creator import BaseCharacterCreator
+from .base_creator import BaseCharacterCreator, DICE_D20
 
 
 class MM3ECreator(BaseCharacterCreator):
     """Mutants & Masterminds 3e Character Creator"""
+
+    DICE_SYSTEM = DICE_D20
 
     def __init__(self):
         super().__init__("Mutants & Masterminds 3e", "mm_data.json")
@@ -367,22 +370,6 @@ class MM3ECreator(BaseCharacterCreator):
         }
         return cost_map.get(advantage, 1)
 
-    def _prompt_selection(self, options: List[str], prompt: str) -> str:
-        """Generic selection prompt"""
-        print(f"\n{prompt}")
-        for i, option in enumerate(options, 1):
-            print(f"  {i}) {option}")
-
-        while True:
-            try:
-                choice = int(input("Seçiminiz: "))
-                if 1 <= choice <= len(options):
-                    return options[choice - 1]
-                else:
-                    print(f"1-{len(options)} arası seçin.")
-            except ValueError:
-                print("Geçerli bir sayı girin.")
-
     def validate_character(self, character: Dict[str, Any]) -> List[str]:
         """Validate M&M 3e character data"""
         errors = []
@@ -421,28 +408,23 @@ class MM3ECreator(BaseCharacterCreator):
 
         return errors
 
-    def calculate_derived_stats(self, character: Dict[str, Any]) -> Dict[str, Any]:
+    def calculate_stats(self, character: Dict[str, Any]) -> Dict[str, Any]:
         """Calculate derived statistics for M&M 3e"""
-        derived = {}
+        derived: Dict[str, Any] = {}
 
         abilities = character.get("abilities", {})
-        skills = character.get("skills", {})
         defenses = character.get("defenses", {})
 
-        # Initiative = Agility + Awareness
         agility = abilities.get("agility", 0)
         awareness = abilities.get("awareness", 0)
-        derived["initiative"] = agility + awareness
-
-        # Attack bonuses
         strength = abilities.get("strength", 0)
         dexterity = abilities.get("dexterity", 0)
         fighting = abilities.get("fighting", 0)
 
+        derived["initiative"] = agility + awareness
         derived["melee_attack"] = strength + fighting
         derived["ranged_attack"] = dexterity + fighting
 
-        # Defense totals
         derived["dodge_total"] = defenses.get("dodge", 0) + agility
         derived["parry_total"] = defenses.get("parry", 0) + fighting
         derived["fortitude_total"] = defenses.get("fortitude", 0) + abilities.get("stamina", 0)
@@ -450,3 +432,18 @@ class MM3ECreator(BaseCharacterCreator):
         derived["will_total"] = defenses.get("will", 0) + awareness
 
         return derived
+
+    def export_data(self, character: Dict[str, Any]) -> Dict[str, Any]:
+        """M&M 3e karakterini JSON-serializable formata dönüştür."""
+        safe_keys = {
+            "system", "name", "power_level", "pl_value", "total_power_points",
+            "remaining_power_points", "abilities", "skills", "advantages",
+            "powers", "defenses", "archetype",
+        }
+        exported: Dict[str, Any] = {"system": "MM3E", "dice_system": self.DICE_SYSTEM.name}
+        for key in safe_keys:
+            if key in character:
+                exported[key] = character[key]
+        stats = self.calculate_stats(character)
+        exported.update({k: v for k, v in stats.items() if k not in exported})
+        return exported

@@ -1,65 +1,35 @@
+# Virtual environments
 .venv/
 venv/
 env/
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-build/
-dist/
-.idea/
-.vscode/
-characters/
-characters/*.json
-characters/*.pdf
-characters/versions/
-data/cache/
-data/logs/
 
-env/
+# Python cache
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-build/
-dist/
-.idea/
-.vscode/
-characters/
-characters/*.json
-characters/*.pdf
-characters/versions/
-data/cache/
-data/logs/
 
-env/
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
+# Build artifacts
 build/
 dist/
-.idea/
-.vscode/
-characters/
-characters/*.json
-characters/*.pdf
-characters/versions/
-data/cache/
-data/logs/
+*.spec
+*.exe
 
-env/
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-build/
-dist/
+# IDE
 .idea/
 .vscode/
+.cursor/
+
+# Caches
+.pytest_cache/
+.ruff_cache/
+
+# Character data (user generated)
 characters/
-characters/*.json
-characters/*.pdf
-characters/versions/
+exports/
+
+# Data cache/logs
 data/cache/
 data/logs/
+data/homebrew/
+data/portraits/
