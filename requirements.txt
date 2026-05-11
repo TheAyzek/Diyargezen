@@ -1,12 +1,12 @@
 # Diyargezer - TTRPG Karakter Oluşturucu - Bağımlılıklar
 
-# GUI
-customtkinter>=5.2.0
+# GUI - Ana framework
+PySide6>=6.5.0
 
 # PDF export
 reportlab>=4.0.0
 
-# Image processing (portreler ve logo için)
+# Image processing (portreler için)
 Pillow>=10.0.0
 
 # Web scraping pipeline
@@ -15,9 +15,12 @@ beautifulsoup4>=4.12.0
 lxml>=4.9.0
 pydantic>=2.0.0
 
-# CLI (opsiyonel - sadece CLI kullanımı için)
+# CLI (opsiyonel)
 rich>=13.0.0
 inquirerpy>=0.3.0
+
+# EXE packaging
+pyinstaller>=6.0.0
 
 # Development
 pytest>=7.0.0

@@ -5,9 +5,7 @@ Diyargezer — TTRPG Karakter Yöneticisi
 Ana giriş noktası.
 
 Çalıştırma:
-    python main.py              # PySide6 Dark Fantasy GUI
-    python main.py --ctk        # CustomTkinter alternatif GUI
-    python main.py --cli        # CLI modu (gelecek)
+    python main.py      # PySide6 Dark Fantasy GUI
 """
 
 import sys
@@ -26,29 +24,17 @@ logging.basicConfig(
 
 
 def main() -> None:
-    use_ctk = "--ctk" in sys.argv
-
     print("═" * 50)
     print("  Diyargezer — TTRPG Karakter Yöneticisi")
     print("  D&D 5e  •  Pathfinder 1e  •  VtM 5e  •  M&M 3e")
     print("═" * 50)
-
-    if use_ctk:
-        try:
-            from gui.app_desktop import main as ctk_main
-            ctk_main()
-            return
-        except ImportError as exc:
-            print(f"CustomTkinter yüklenemedi: {exc}")
-            print("pip install customtkinter")
-            sys.exit(1)
 
     try:
         from gui.main_window import run_app
         run_app()
     except ImportError as exc:
         print(f"PySide6 GUI yüklenemedi: {exc}")
-        print("Alternatif: python main.py --ctk")
+        print("Çözüm: pip install PySide6")
         sys.exit(1)
 
 
