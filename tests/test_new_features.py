@@ -870,6 +870,77 @@ class TestHTMLExport(unittest.TestCase):
         filepath.unlink(missing_ok=True)
 
 
+class TestPDFExportAcroForm(unittest.TestCase):
+    """Test class for verifying AcroForm PDF exports"""
+
+    def setUp(self):
+        import tempfile
+        self.dnd_char = {
+            "name": "Aragorn",
+            "system": "DND5E",
+            "class": "Ranger",
+            "level": 5,
+            "race": "Human",
+            "background": "Outlander",
+            "experience": 6500,
+            "armor_class": 16,
+            "hit_points": 45,
+            "abilities": {"Strength": 16, "Dexterity": 14, "Constitution": 15, "Intelligence": 10, "Wisdom": 13, "Charisma": 8},
+            "modifiers": {"strength": 3, "dexterity": 2, "constitution": 2, "intelligence": 0, "wisdom": 1, "charisma": -1},
+            "saving_throws": {"Strength": 5, "Dexterity": 4},
+            "skills": {"Acrobatics": 4, "Survival": 3},
+            "equipment": ["Longsword", "Scale Mail"],
+            "feats": ["Sharpshooter"]
+        }
+        self.pf_char = {
+            "name": "Valeros",
+            "system": "PATHFINDER1E",
+            "class": "Fighter",
+            "level": 1,
+            "race": "Human",
+            "abilities": {"Strength": 18, "Dexterity": 15, "Constitution": 14, "Intelligence": 12, "Wisdom": 10, "Charisma": 8},
+            "modifiers": {"strength": 4, "dexterity": 2, "constitution": 2, "intelligence": 1, "wisdom": 0, "charisma": -1},
+            "hit_points": 12,
+            "armor_class": 16,
+            "initiative": 2,
+            "bab": 1,
+            "saves": {"fortitude": 4, "reflex": 2, "will": 0}
+        }
+        self.mm_char = {
+            "name": "Sentinel",
+            "system": "MM3E",
+            "pl_value": 10,
+            "archetype": "Powerhouse",
+            "abilities": {"strength": 12, "stamina": 10}
+        }
+        self.temp_dir = Path(tempfile.mkdtemp())
+
+    def tearDown(self):
+        import shutil
+        shutil.rmtree(self.temp_dir, ignore_errors=True)
+
+    def test_export_dnd_pdf(self):
+        from utils.export_pdf import export_dnd_character_pdf
+        out_path = self.temp_dir / "aragorn.pdf"
+        export_dnd_character_pdf(self.dnd_char, out_path)
+        self.assertTrue(out_path.exists())
+        self.assertGreater(out_path.stat().st_size, 0)
+
+    def test_export_pf_pdf(self):
+        from utils.export_pdf import export_pf1e_character_pdf
+        out_path = self.temp_dir / "valeros.pdf"
+        export_pf1e_character_pdf(self.pf_char, out_path)
+        self.assertTrue(out_path.exists())
+        self.assertGreater(out_path.stat().st_size, 0)
+
+    def test_export_mm_pdf(self):
+        from utils.export_pdf import export_mm_character_pdf
+        out_path = self.temp_dir / "sentinel.pdf"
+        export_mm_character_pdf(self.mm_char, out_path)
+        self.assertTrue(out_path.exists())
+        self.assertGreater(out_path.stat().st_size, 0)
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)
 

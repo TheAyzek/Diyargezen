@@ -286,17 +286,9 @@ class CharacterSheetPage(QWidget):
         if not filepath:
             return
         try:
-            system = self._char.get("system", "").upper()
             out = Path(filepath)
-            if "DND" in system:
-                from utils.export_pdf import export_dnd_character_pdf
-                export_dnd_character_pdf(self._char, out)
-            elif "MM" in system:
-                from utils.export_pdf import export_mm_character_pdf
-                export_mm_character_pdf(self._char, out)
-            else:
-                from utils.export_pdf import export_dnd_character_pdf
-                export_dnd_character_pdf(self._char, out)
+            from utils.export_pdf import export_pdf
+            export_pdf(self._char, out)
             QMessageBox.information(self, "Başarılı", f"PDF kaydedildi:\n{filepath}")
         except Exception as exc:
             logger.exception("PDF export hatası")

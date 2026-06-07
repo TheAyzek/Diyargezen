@@ -23,12 +23,16 @@ MM_SECTIONS = {
 
 
 def parse_mm3e(data: Dict[str, Any] | None = None, base_dir: Path | None = None) -> List[DiyargezenEntity]:
-    """mm_data.json dosyasını parse et."""
+    """mm_data.json ve foundrymnm3e-main dosyalarını parse et."""
+    entities = []
     try:
         if data is None:
-            data = get_loader(base_dir).load("mm")
+            try:
+                data = get_loader(base_dir).load("mm")
+            except Exception:
+                data = {}
         data = safe_dict(data)
-        entities = parse_sections(data, "mm3e", MM_SECTIONS)
+        entities.extend(parse_sections(data, "mm3e", MM_SECTIONS))
 
         # power_effects / power_levels dict-of-lists — tek tek kayıt
         for extra_key, kategori in (("power_effects", "power_effect"), ("power_levels", "power_level")):
@@ -48,9 +52,30 @@ def parse_mm3e(data: Dict[str, Any] | None = None, base_dir: Path | None = None)
                             )
                     except Exception:
                         continue
-
-        logger.info("M&M 3e: %d entity parse edildi", len(entities))
-        return entities
     except Exception as exc:
-        logger.error("M&M 3e parser hatası: %s", exc)
-        return []
+        logger.error("M&M 3e precompiled parser hatası: %s", exc)
+
+    # 2. Recursive scan of folders in data/
+    try:
+        from parsers.base import parse_raw_file
+        base_path = base_dir or Path(__file__).resolve().parent.parent
+        mm_content_path = base_path / "data" / "foundrymnm3e-main"
+        
+        if mm_content_path.exists():
+            for child in mm_content_path.rglob("*"):
+                if child.is_file() and child.suffix.lower() in ('.json', '.yaml', '.yml'):
+                    entities.extend(parse_raw_file(child, "mm3e"))
+    except Exception as exc:
+        logger.error("M&M 3e recursive parser hatası: %s", exc)
+
+    # De-duplicate by system, category, and name (case-insensitive)
+    seen = set()
+    unique_entities = []
+    for ent in entities:
+        key = (ent.sistem, ent.kategori, ent.isim.lower())
+        if key not in seen:
+            seen.add(key)
+            unique_entities.append(ent)
+
+    logger.info("M&M 3e: %d unique entity parse edildi", len(unique_entities))
+    return unique_entities

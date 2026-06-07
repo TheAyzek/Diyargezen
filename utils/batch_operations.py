@@ -63,19 +63,9 @@ def batch_export_characters(
             output_file = output_dir / f"{safe_name}{ext}"
             
             # Export işlemi
-            system = character.get("system", "UNKNOWN")
-            
             if format_type == "PDF":
-                from utils.export_pdf import (
-                    export_dnd_character_pdf,
-                    export_mm_character_pdf,
-                )
-                if system == "DND5E":
-                    export_dnd_character_pdf(character, output_file)
-                elif system == "MUTANTS_AND_MASTERMINDS":
-                    export_mm_character_pdf(character, output_file)
-                else:
-                    raise ValueError(f"Bilinmeyen sistem: {system}")
+                from utils.export_pdf import export_pdf
+                export_pdf(character, output_file)
             
             elif format_type == "HTML":
                 from utils.export_formats import export_character_html

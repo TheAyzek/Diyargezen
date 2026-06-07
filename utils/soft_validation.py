@@ -6,8 +6,12 @@ Kural ihlallerinde çökmez; uyarı döndürür. GUI popup ile homebrew onayı a
 
 from __future__ import annotations
 
+import logging
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Any, Dict, List, Optional
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -106,20 +110,180 @@ def validate_mm3e_soft(char: Dict[str, Any], data: Optional[Dict[str, Any]] = No
     return result
 
 
+def validate_prerequisites(char: Dict[str, Any], db_path: Path) -> List[str]:
+    import sqlite3
+    import json
+    
+    warnings = []
+    
+    # Standardize system name
+    sys_key = char.get("system", "").lower().replace("_", "").replace("-", "")
+    if "pf" in sys_key or "pathfinder" in sys_key:
+        sys_db = "pathfinder1e"
+    elif "mm" in sys_key:
+        sys_db = "mm3e"
+    else:
+        sys_db = "dnd5e"
+        
+    abilities = {}
+    is_mm = "mm" in sys_key
+    default_val = 0 if is_mm else 10
+    
+    ab_list = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]
+    if is_mm:
+        ab_list = ["strength", "stamina", "agility", "dexterity", "fighting", "intellect", "awareness", "presence"]
+        
+    for ab in ab_list:
+        val = char.get("abilities", {}).get(ab)
+        if val is None:
+            for k, v in char.get("abilities", {}).items():
+                if k.lower() == ab:
+                    val = v
+                    break
+        if val is None:
+            val = default_val
+        try:
+            abilities[ab] = int(val)
+        except:
+            abilities[ab] = default_val
+
+    names_to_query = []
+    
+    def process_prereqs(entity: Any):
+        if isinstance(entity, dict):
+            sys_ver = entity.get("sistem_verisi") or entity.get("system") or entity.get("data")
+            name = entity.get("name") or entity.get("isim") or ""
+            if isinstance(sys_ver, dict):
+                prereqs = sys_ver.get("prerequisites", [])
+                for p in prereqs:
+                    prereq_name = p.get("prerequisite", "").lower()
+                    required_val = p.get("value")
+                    if prereq_name and required_val is not None:
+                        char_val = abilities.get(prereq_name, default_val)
+                        if char_val < int(required_val):
+                            warnings.append(
+                                f"'{name}' gereksinimi karşılanamadı: "
+                                f"{prereq_name.upper()} en az {required_val} olmalı (Mevcut: {char_val})"
+                            )
+                return True
+        return False
+
+    race = char.get("race")
+    race_data = char.get("race_data")
+    if not process_prereqs(race_data) and isinstance(race, str) and race:
+        names_to_query.append(race)
+        
+    cls = char.get("class")
+    class_data = char.get("class_data")
+    if not process_prereqs(class_data) and isinstance(cls, str) and cls:
+        names_to_query.append(cls)
+        
+    raw_feats = char.get("feats", [])
+    if isinstance(raw_feats, list):
+        for f in raw_feats:
+            if not process_prereqs(f):
+                if isinstance(f, str) and f:
+                    names_to_query.append(f)
+                elif isinstance(f, dict) and f.get("name"):
+                    names_to_query.append(f["name"])
+                    
+    raw_items = char.get("equipment", [])
+    if isinstance(raw_items, list):
+        for item in raw_items:
+            if not process_prereqs(item):
+                if isinstance(item, str) and item:
+                    names_to_query.append(item)
+                elif isinstance(item, dict) and item.get("name"):
+                    names_to_query.append(item["name"])
+                    
+    # Query database for remaining names
+    if names_to_query:
+        try:
+            conn = sqlite3.connect(str(db_path))
+            cursor = conn.cursor()
+            placeholders = ",".join("?" for _ in names_to_query)
+            cursor.execute(
+                f"SELECT isim, sistem_verisi FROM entities WHERE sistem = ? AND isim IN ({placeholders})",
+                [sys_db] + names_to_query
+            )
+            rows = cursor.fetchall()
+            for row in rows:
+                name, raw_json = row
+                try:
+                    payload = json.loads(raw_json) if raw_json else {}
+                    prereqs = payload.get("prerequisites", [])
+                    for p in prereqs:
+                        prereq_name = p.get("prerequisite", "").lower()
+                        required_val = p.get("value")
+                        if prereq_name and required_val is not None:
+                            char_val = abilities.get(prereq_name, default_val)
+                            if char_val < int(required_val):
+                                warnings.append(
+                                    f"'{name}' gereksinimi karşılanamadı: "
+                                    f"{prereq_name.upper()} en az {required_val} olmalı (Mevcut: {char_val})"
+                                )
+                except Exception:
+                    pass
+            conn.close()
+        except Exception:
+            pass
+            
+    return warnings
+
+
 def validate_character_soft(
     char: Dict[str, Any],
     system_key: str,
     data: Optional[Dict[str, Any]] = None,
 ) -> SoftValidationResult:
     """Sistem anahtarına göre soft validation."""
-    key = system_key.lower().replace("_", "")
+    from pathlib import Path
+    db_path = Path(__file__).resolve().parent.parent / "data" / "characters.db"
+    
+    key = system_key.lower().replace("_", "").replace("-", "")
+    result = SoftValidationResult()
+
+    # 1. Run legacy soft validation
     if key in ("dnd5e", "dnd", "dungeonsanddragons"):
-        return validate_dnd5e_soft(char, data)
-    if key in ("pathfinder1e", "pathfinder", "pf1e"):
-        return validate_pf1e_soft(char, data)
-    if key in ("mm3e", "mm", "mutantsandmasterminds"):
-        return validate_mm3e_soft(char, data)
-    return SoftValidationResult()
+        result = validate_dnd5e_soft(char, data)
+    elif key in ("pathfinder1e", "pathfinder", "pf1e"):
+        result = validate_pf1e_soft(char, data)
+    elif key in ("mm3e", "mm", "mutantsandmasterminds"):
+        result = validate_mm3e_soft(char, data)
+
+    # 2. Run prerequisites check
+    prereq_warnings = validate_prerequisites(char, db_path)
+    for pw in prereq_warnings:
+        if pw not in result.warnings:
+            result.warnings.append(pw)
+
+    # 3. Run modular validators from /rules
+    try:
+        if key in ("dnd5e", "dnd", "dungeonsanddragons"):
+            from rules.dnd5e_rules import DND5EValidator
+            validator = DND5EValidator()
+            new_warnings = validator.validate(char, data or {})
+            for w in new_warnings:
+                if w not in result.warnings:
+                    result.warnings.append(w)
+        elif key in ("pathfinder1e", "pathfinder", "pf1e"):
+            from rules.pf1e_rules import PF1EValidator
+            validator = PF1EValidator()
+            new_warnings = validator.validate(char, data or {})
+            for w in new_warnings:
+                if w not in result.warnings:
+                    result.warnings.append(w)
+        elif key in ("mm3e", "mm", "mutantsandmasterminds"):
+            from rules.mnm3e_rules import MM3EValidator
+            validator = MM3EValidator()
+            new_warnings = validator.validate(char, data or {})
+            for w in new_warnings:
+                if w not in result.warnings:
+                    result.warnings.append(w)
+    except Exception as e:
+        logger.warning(f"Error running modular rules: {e}")
+
+    return result
 
 
 def mark_homebrew(char: Dict[str, Any], warnings: List[str]) -> Dict[str, Any]:
@@ -138,7 +302,7 @@ def mark_homebrew(char: Dict[str, Any], warnings: List[str]) -> Dict[str, Any]:
 
 
 def format_warning_message(warnings: List[str]) -> str:
-    lines = ["Bu seçim kural setine tam uymuyor:", ""]
+    lines = ["Uyarı: Bu seçim kural setine tam uymuyor.", ""]
     for w in warnings:
         lines.append(f"  • {w}")
     lines.append("")

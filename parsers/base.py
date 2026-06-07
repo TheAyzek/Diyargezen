@@ -3,11 +3,17 @@
 from __future__ import annotations
 
 import logging
+import json
+import re
+import os
+from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
+import yaml
 
 from models.entity import DiyargezenEntity
 
 logger = logging.getLogger(__name__)
+
 
 # kategori → creators'ın beklediği dict anahtarı
 CATEGORY_TO_SECTION: Dict[str, str] = {
@@ -41,12 +47,601 @@ def safe_dict(value: Any) -> Dict[str, Any]:
     return value if isinstance(value, dict) else {}
 
 
-def extract_description(payload: Dict[str, Any]) -> str:
-    for key in ("description", "desc", "benefit", "text", "summary"):
-        text = safe_str(payload.get(key))
-        if text:
-            return text[:4000]
+def extract_description(payload: Any) -> str:
+    if not payload:
+        return ""
+
+    # Check for direct target keys at current level
+    if isinstance(payload, dict):
+        for key in ("description", "desc", "benefit", "text", "summary", "details", "value", "entries", "content"):
+            if key in payload:
+                val = payload[key]
+                if isinstance(val, str) and val.strip():
+                    return val.strip()[:4000]
+                elif isinstance(val, list):
+                    parts = []
+                    for item in val:
+                        if isinstance(item, str) and item.strip():
+                            parts.append(item.strip())
+                        elif isinstance(item, dict):
+                            nested = extract_description(item)
+                            if nested:
+                                parts.append(nested)
+                    if parts:
+                        return "\n".join(parts)[:4000]
+                elif isinstance(val, dict):
+                    nested = extract_description(val)
+                    if nested:
+                        return nested
+
+        # Deep search recursively in nested dictionaries/lists
+        for val in payload.values():
+            if isinstance(val, (dict, list)):
+                nested = extract_description(val)
+                if nested:
+                    return nested
+
+    elif isinstance(payload, list):
+        for item in payload:
+            if isinstance(item, (dict, list)):
+                nested = extract_description(item)
+                if nested:
+                    return nested
+            elif isinstance(item, str) and item.strip():
+                return item.strip()[:4000]
+
     return ""
+
+
+def extract_standard_mechanics(data: Dict[str, Any], system: str) -> Dict[str, Any]:
+    mechanics = []
+    prerequisites = []
+    
+    sys_key = system.lower().replace("_", "").replace("-", "")
+    
+    if "dnd" in sys_key:
+        sys_data = data.get("system") or data.get("data") or {}
+        if not isinstance(sys_data, dict):
+            sys_data = {}
+            
+        # 1. Requirements (Prerequisites)
+        req = sys_data.get("requirements") or data.get("requirements")
+        if req and isinstance(req, str):
+            match = re.search(r'\b(Strength|Str|Dexterity|Dex|Constitution|Con|Intelligence|Int|Wisdom|Wis|Charisma|Cha)\s*(\d+)\b', req, re.IGNORECASE)
+            if match:
+                ability_map = {
+                    "str": "strength", "strength": "strength",
+                    "dex": "dexterity", "dexterity": "dexterity",
+                    "con": "constitution", "constitution": "constitution",
+                    "int": "intelligence", "intelligence": "intelligence",
+                    "wis": "wisdom", "wisdom": "wisdom",
+                    "cha": "charisma", "charisma": "charisma"
+                }
+                ab = ability_map.get(match.group(1).lower())
+                val = int(match.group(2))
+                if ab:
+                    prerequisites.append({"prerequisite": ab, "value": val})
+                    
+        # 2. Modifiers
+        mods = sys_data.get("modifiers") or data.get("modifiers")
+        if isinstance(mods, list):
+            for m in mods:
+                if isinstance(m, dict):
+                    target = m.get("target", "")
+                    value = m.get("value", 0)
+                    mode = m.get("mode", "add")
+                    dex_max = m.get("dex_max")
+                    if target:
+                        mechanics.append({
+                            "target": str(target).lower(),
+                            "mode": str(mode).lower(),
+                            "value": value,
+                            "dex_max": int(dex_max) if dex_max is not None else None
+                        })
+                        
+        # 3. Bonuses
+        bonuses = sys_data.get("bonuses") or data.get("bonuses")
+        if isinstance(bonuses, dict):
+            for k, v in bonuses.items():
+                target = k.lower()
+                if target == "ac":
+                    target = "ac"
+                elif "save" in target:
+                    target = "saving_throws.all"
+                
+                try:
+                    val = int(str(v).replace("+", "").strip())
+                    mechanics.append({
+                        "target": target,
+                        "mode": "add",
+                        "value": val,
+                        "dex_max": None
+                    })
+                except ValueError:
+                    pass
+
+        # 4. Ability Score Increase (Racial Stats)
+        asi = data.get("ability_score_increase") or sys_data.get("ability_score_increase")
+        if isinstance(asi, dict):
+            for k, v in asi.items():
+                target = k.lower()
+                try:
+                    mechanics.append({
+                        "target": target,
+                        "mode": "add",
+                        "value": int(v),
+                        "dex_max": None
+                    })
+                except ValueError:
+                    pass
+
+    elif "pathfinder" in sys_key or "pf" in sys_key:
+        sys_data = data.get("system") or data.get("data") or {}
+        if not isinstance(sys_data, dict):
+            sys_data = {}
+            
+        # 1. Prerequisites
+        prereqs = sys_data.get("prerequisites") or data.get("prerequisites")
+        if isinstance(prereqs, list):
+            for p in prereqs:
+                if isinstance(p, dict):
+                    target = p.get("target") or p.get("ability")
+                    value = p.get("value") or p.get("level")
+                    if target and value:
+                        prerequisites.append({
+                            "prerequisite": str(target).lower(),
+                            "value": int(value)
+                        })
+        elif isinstance(prereqs, str):
+            matches = re.findall(r'\b(Str|Strength|Dex|Dexterity|Con|Constitution|Int|Intelligence|Wis|Wisdom|Cha|Charisma)\s*(\d+)\b', prereqs, re.IGNORECASE)
+            ability_map = {
+                "str": "strength", "strength": "strength",
+                "dex": "dexterity", "dexterity": "dexterity",
+                "con": "constitution", "constitution": "constitution",
+                "int": "intelligence", "intelligence": "intelligence",
+                "wis": "wisdom", "wisdom": "wisdom",
+                "cha": "charisma", "charisma": "charisma"
+            }
+            for ab_name, val in matches:
+                ab = ability_map.get(ab_name.lower())
+                if ab:
+                    prerequisites.append({"prerequisite": ab, "value": int(val)})
+
+        # 2. Changes
+        changes = sys_data.get("changes") or data.get("changes")
+        if isinstance(changes, list):
+            for c in changes:
+                if isinstance(c, dict):
+                    target = c.get("target") or c.get("subTarget") or ""
+                    value = c.get("value") or c.get("formula") or 0
+                    operator = c.get("operator") or c.get("mode") or "add"
+                    
+                    target_str = str(target).lower()
+                    mode_str = str(operator).lower()
+                    dex_max = c.get("dex_max")
+                    
+                    if "ability.str" in target_str or target_str == "str":
+                        target_norm = "strength"
+                    elif "ability.dex" in target_str or target_str == "dex":
+                        target_norm = "dexterity"
+                    elif "ability.con" in target_str or target_str == "con":
+                        target_norm = "constitution"
+                    elif "ability.int" in target_str or target_str == "int":
+                        target_norm = "intelligence"
+                    elif "ability.wis" in target_str or target_str == "wis":
+                        target_norm = "wisdom"
+                    elif "ability.cha" in target_str or target_str == "cha":
+                        target_norm = "charisma"
+                    elif "ac" in target_str or target_str == "ac.armor" or target_str == "ac.shield" or target_str == "ac.natural" or target_str == "ac.deflection":
+                        target_norm = "ac"
+                        if "armor" in target_str:
+                            mode_str = "armor"
+                        elif "shield" in target_str:
+                            mode_str = "shield"
+                        elif "natural" in target_str:
+                            mode_str = "natural_armor"
+                        elif "deflection" in target_str:
+                            mode_str = "deflection"
+                    elif "saves.fort" in target_str or target_str == "fort":
+                        target_norm = "saving_throws.Fortitude"
+                    elif "saves.ref" in target_str or target_str == "ref" or target_str == "reflex":
+                        target_norm = "saving_throws.Reflex"
+                    elif "saves.will" in target_str or target_str == "will":
+                        target_norm = "saving_throws.Will"
+                    elif "skills" in target_str:
+                        parts = target_str.split('.')
+                        skill_ab = parts[1] if len(parts) > 1 else ""
+                        skill_map = {
+                            "acr": "Acrobatics", "app": "Appraise", "blf": "Bluff", "cli": "Climb", "cra": "Craft",
+                            "dip": "Diplomacy", "dev": "Disable Device", "dsg": "Disguise", "esc": "Escape Artist",
+                            "fly": "Fly", "han": "Handle Animal", "hea": "Heal", "itm": "Intimidate", "lin": "Linguistics",
+                            "per": "Perception", "prf": "Perform", "pro": "Profession", "rid": "Ride", "sen": "Sense Motive",
+                            "slt": "Sleight of Hand", "spl": "Spellcraft", "ste": "Stealth", "sur": "Survival", "swm": "Swim",
+                            "umd": "Use Magic Device"
+                        }
+                        skill_name = skill_map.get(skill_ab, skill_ab.capitalize())
+                        target_norm = f"skills.{skill_name}"
+                    elif target_str in ("bab", "cmb", "cmd", "speed", "hp", "initiative"):
+                        target_norm = target_str
+                    else:
+                        target_norm = target_str
+                        
+                    try:
+                        val_resolved = int(float(value))
+                    except ValueError:
+                        val_resolved = value
+                        
+                    mechanics.append({
+                        "target": target_norm,
+                        "mode": mode_str,
+                        "value": val_resolved,
+                        "dex_max": int(dex_max) if dex_max is not None else None
+                    })
+                    
+        # 3. Active effects
+        effects = data.get("effects") or sys_data.get("effects")
+        if isinstance(effects, list):
+            for eff in effects:
+                if isinstance(eff, dict) and eff.get("changes"):
+                    for c in eff["changes"]:
+                        if isinstance(c, dict):
+                            target = c.get("key") or ""
+                            value = c.get("value") or 0
+                            operator = c.get("mode") or "add"
+                            
+                            target_str = str(target).lower()
+                            try:
+                                val_resolved = int(float(value))
+                            except ValueError:
+                                val_resolved = value
+                                
+                            mechanics.append({
+                                "target": target_str,
+                                "mode": "add" if str(operator) == "2" else "set",
+                                "value": val_resolved,
+                                "dex_max": None
+                            })
+
+        # 4. Text-based ability modifier extraction for subraces/traits if changes/mechanics are empty
+        if not mechanics:
+            desc = data.get("description", {}).get("value", "") or data.get("description", "") or ""
+            desc_clean = re.sub(r'<[^>]+>', ' ', desc)
+            desc_clean = desc_clean.replace("–", "-").replace("—", "-").replace("&ndash;", "-").replace("&mdash;", "-").replace("−", "-").replace("&minus;", "-")
+            match = re.search(r'ability\s+modifiers\s*[:\s]*([+-]?\d+\s+[a-zA-Z]+(?:,\s*[+-]?\d+\s+[a-zA-Z]+)*)', desc_clean, re.IGNORECASE)
+            if match:
+                mods_str = match.group(1)
+                ab_matches = re.findall(r'([+-]?\d+)\s+([a-zA-Z]+)', mods_str)
+                ability_map = {
+                    "str": "strength", "strength": "strength",
+                    "dex": "dexterity", "dexterity": "dexterity",
+                    "con": "constitution", "constitution": "constitution",
+                    "int": "intelligence", "intelligence": "intelligence",
+                    "wis": "wisdom", "wisdom": "wisdom",
+                    "cha": "charisma", "charisma": "charisma"
+                }
+                for val_str, ab_name in ab_matches:
+                    ab = ability_map.get(ab_name.lower())
+                    if ab:
+                        try:
+                            val = int(val_str)
+                            mechanics.append({
+                                "target": ab,
+                                "mode": "add",
+                                "value": val,
+                                "dex_max": None
+                            })
+                        except ValueError:
+                            pass
+
+    elif "mm" in sys_key:
+        effs = data.get("effects") or data.get("system", {}).get("effects", [])
+        if isinstance(effs, list):
+            for e in effs:
+                if isinstance(e, dict):
+                    target = e.get("target") or e.get("defense") or e.get("stat")
+                    value = e.get("value") or e.get("ranks") or e.get("mod") or 0
+                    if target:
+                        try:
+                            val_resolved = int(float(value))
+                        except ValueError:
+                            val_resolved = value
+                        mechanics.append({
+                            "target": str(target).lower(),
+                            "mode": "add",
+                            "value": val_resolved,
+                            "dex_max": None
+                        })
+                        
+        mods = data.get("modifiers") or data.get("system", {}).get("modifiers", [])
+        if isinstance(mods, list):
+            for m in mods:
+                if isinstance(m, dict):
+                    target = m.get("target") or m.get("defense")
+                    value = m.get("value") or m.get("ranks") or m.get("mod") or 0
+                    if target:
+                        try:
+                            val_resolved = int(float(value))
+                        except ValueError:
+                            val_resolved = value
+                        mechanics.append({
+                            "target": str(target).lower(),
+                            "mode": "add",
+                            "value": val_resolved,
+                            "dex_max": None
+                        })
+                        
+        desc = data.get("description", "") or data.get("aciklama", "")
+        name = data.get("name", "") or data.get("isim", "")
+        text_to_scan = f"{name} {desc}"
+        pattern = r'\+?(-?\d+)\s*(Dodge|Parry|Toughness|Fortitude|Will|Initiative|Speed|Strength|Stamina|Agility|Dexterity|Fighting|Intellect|Awareness|Presence)'
+        matches = re.findall(pattern, text_to_scan, re.IGNORECASE)
+        for val, stat in matches:
+            mechanics.append({
+                "target": stat.lower(),
+                "mode": "add",
+                "value": int(val),
+                "dex_max": None
+            })
+            
+    return {
+        "standard_mechanics": mechanics,
+        "prerequisites": prerequisites
+    }
+
+
+def load_any_file(path: Path) -> List[Dict[str, Any]]:
+    entities = []
+    suffix = path.suffix.lower()
+    
+    if suffix == '.db':
+        try:
+            with path.open('r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if not line:
+                        continue
+                    try:
+                        obj = json.loads(line)
+                        if isinstance(obj, dict):
+                            entities.append(obj)
+                    except Exception:
+                        pass
+            if entities:
+                return entities
+        except Exception:
+            pass
+
+    if suffix in ('.json', '.db'):
+        try:
+            with path.open('r', encoding='utf-8') as f:
+                content = f.read().strip()
+                if content.startswith('{') or content.startswith('['):
+                    raw = json.loads(content)
+                    if isinstance(raw, list):
+                        return raw
+                    elif isinstance(raw, dict):
+                        return [raw]
+        except Exception:
+            try:
+                with path.open('r', encoding='utf-8') as f:
+                    for line in f:
+                        line = line.strip()
+                        if not line:
+                            continue
+                        try:
+                            obj = json.loads(line)
+                            if isinstance(obj, dict):
+                                entities.append(obj)
+                        except Exception:
+                            pass
+                if entities:
+                    return entities
+            except Exception:
+                pass
+
+    if suffix in ('.yaml', '.yml'):
+        try:
+            with path.open('r', encoding='utf-8') as f:
+                raw = yaml.safe_load(f)
+                if isinstance(raw, list):
+                    return raw
+                elif isinstance(raw, dict):
+                    return [raw]
+        except Exception:
+            pass
+            
+    return entities
+
+
+def should_skip_path(path: Path) -> bool:
+    path_str = str(path.resolve()).lower()
+    
+    # 1. Filter out pure text files (journal/rules without system mechanics)
+    suffix = path.suffix.lower()
+    if suffix in ('.json', '.yaml', '.yml'):
+        try:
+            with path.open('r', encoding='utf-8') as f:
+                chunk = f.read(2000)
+                if '"content"' in chunk and not any(x in chunk for x in ['"system"', '"changes"', '"ability_score_increase"', '"modifiers"']):
+                    return True
+        except Exception:
+            pass
+
+    # 2. Blacklist directories only (excluding the filename to avoid skipping valid feats/traits)
+    blacklist = {
+        "tables", "scenes", "kingdom", "encounter", "buffs", 
+        "merchant", "maladi", "trap", "reference", "legal", "combat", 
+        "running", "npc", "creature", "monster", "plane", "deities", 
+        "harrow", "deck", "mechanic", "rules"
+    }
+    
+    for part in path.parent.parts:
+        part_lower = part.lower()
+        if ":" in part_lower:
+            continue
+        for word in blacklist:
+            if word in part_lower:
+                return True
+    return False
+
+
+def parse_raw_file(path: Path, system: str) -> List[DiyargezenEntity]:
+    if should_skip_path(path):
+        return []
+        
+    entities = []
+    suffix = path.suffix.lower()
+    if suffix not in ('.json', '.yaml', '.yml', '.db'):
+        return []
+
+    try:
+        if suffix in ('.json', '.yaml', '.yml'):
+            with path.open('r', encoding='utf-8') as f:
+                content = f.read().strip()
+                if content:
+                    if suffix == '.json':
+                        raw = json.loads(content)
+                    else:
+                        raw = yaml.safe_load(content)
+                    
+                    if isinstance(raw, dict):
+                        sect_keys = {"races", "classes", "spells", "feats", "backgrounds", "skills", "items", "equipment", "powers", "advantages", "abilities", "archetypes", "complications", "languages"}
+                        found_sections = sect_keys.intersection(raw.keys())
+                        if found_sections:
+                            mapping = {val: key for key, val in CATEGORY_TO_SECTION.items() if val in raw}
+                            return parse_sections(raw, system, mapping)
+    except Exception:
+        pass
+
+    raw_list = load_any_file(path)
+    for item in raw_list:
+        if not isinstance(item, dict):
+            continue
+        
+        name = safe_str(item.get("name") or item.get("id") or item.get("key"))
+        if not name:
+            continue
+            
+        kategori = None
+        item_type = safe_str(item.get("type")).lower()
+
+        # STRICT TYPE RESOLUTION — FoundryVTT inner 'type' field is the
+        # ground truth.  CRITICAL: 'race_trait', 'racial', 'feat' are NOT races.
+        TYPE_MAP = {
+            "race":       "race",
+            "feat":       "feat",
+            "race_trait": "feat",   # PF1e racial trait stored as type=feat
+            "racial":     "feat",   # generic racial ability, NOT a race
+            "trait":      "feat",
+            "spell":      "spell",
+            "class":      "class",
+            "advantage":  "advantage",
+            "power":      "power",
+            "weapon":     "equipment",
+            "armor":      "equipment",
+            "shield":     "equipment",
+            "equipment":  "equipment",
+            "loot":       "equipment",
+            "consumable": "equipment",
+            "container":  "equipment",
+            "backpack":   "equipment",
+            "item":       "equipment",
+        }
+        if item_type:
+            kategori = TYPE_MAP.get(item_type)
+
+            
+        if not kategori:
+            name_and_parent = (path.parent.name + "_" + path.name).lower()
+
+            # 'racial-traits', 'pf-racial-traits' etc. are FEATS not races
+            if "racial-trait" in name_and_parent or "pf-racial" in name_and_parent:
+                kategori = "feat"
+            elif "race" in name_and_parent or "racial" in name_and_parent:
+                kategori = "race"
+            elif "class" in name_and_parent or "archetype" in name_and_parent:
+                kategori = "class"
+            elif "feat" in name_and_parent:
+                kategori = "feat"
+            elif "spell" in name_and_parent or "magic" in name_and_parent:
+                kategori = "spell"
+            elif "item" in name_and_parent or "equipment" in name_and_parent or "wondrous" in name_and_parent or "goods" in name_and_parent or "technology" in name_and_parent:
+                kategori = "equipment"
+            elif "power" in name_and_parent:
+                kategori = "power"
+            elif "advantage" in name_and_parent:
+                kategori = "advantage"
+            elif "skill" in name_and_parent:
+                kategori = "skill"
+            else:
+                kategori = "item"
+                
+        ent = make_entity(name, system, kategori, item)
+        if ent:
+            entities.append(ent)
+            
+    return entities
+
+
+def detect_parent_race(name: str, system: str) -> Optional[str]:
+    name_clean = name.strip()
+    sys_key = system.lower().replace("_", "").replace("-", "")
+    
+    if "dnd" in sys_key:
+        main_races = {"Dwarf", "Elf", "Halfling", "Human", "Dragonborn", "Gnome", "Half-Elf", "Half-Orc", "Tiefling", "Aasimar", "Genasi", "Goliath", "Tabaxi", "Triton", "Firbolg", "Kenku", "Lizardfolk"}
+        if name_clean in main_races:
+            return None
+            
+        for p in main_races:
+            if f"{p} (" in name_clean or name_clean.endswith(f" {p}"):
+                return p
+                
+        # Fallback keyword checks
+        name_lower = name_clean.lower()
+        if "dwarf" in name_lower: return "Dwarf"
+        if "elf" in name_lower and "half-elf" not in name_lower: return "Elf"
+        if "gnome" in name_lower: return "Gnome"
+        if "halfling" in name_lower: return "Halfling"
+        if "aasimar" in name_lower: return "Aasimar"
+        if "genasi" in name_lower: return "Genasi"
+        if "goliath" in name_lower: return "Goliath"
+        if "tabaxi" in name_lower: return "Tabaxi"
+        if "triton" in name_lower: return "Triton"
+        if "firbolg" in name_lower: return "Firbolg"
+        if "kenku" in name_lower: return "Kenku"
+        if "lizardfolk" in name_lower: return "Lizardfolk"
+        
+    elif "pf" in sys_key or "pathfinder" in sys_key:
+        main_races = {
+            "Aasimar", "Tiefling", "Elf", "Dwarf", "Halfling", "Gnome", 
+            "Human", "Half-Elf", "Half-Orc", "Changeling", "Dhampir",
+            "Ganzi", "Goblin", "Ifrit", "Merfolk", "Oread", "Skinwalker",
+            "Sylph", "Undine", "Gillman"
+        }
+        if name_clean in main_races:
+            return None
+            
+        name_lower = name_clean.lower()
+        
+        # Aasimar heritages
+        aasimar_heritages = ["idyllkin", "angelkin", "lawbringers", "musetouched", "plumekith", "emberkin", "agathion-blooded", "angel-blooded", "archon-blooded", "azata-blooded", "garuda-blooded", "peri-blooded"]
+        if any(h in name_lower for h in aasimar_heritages):
+            return "Aasimar"
+            
+        # Tiefling heritages
+        tiefling_heritages = ["hellspawn", "grimspawn", "pitborn", "faultspawn", "spitespawn", "shackleborn", "beastbrood", "hungerseed", "motherless", "plagueborn", "daemon-spawn", "demon-spawn", "devil-spawn", "div-spawn", "kyton-spawn", "oni-spawn", "rakshasa-spawn", "qlippoth-spawn"]
+        if any(h in name_lower for h in tiefling_heritages):
+            return "Tiefling"
+            
+        for p in main_races:
+            if p.lower() in name_lower:
+                if p == "Elf" and "half-elf" in name_lower:
+                    return "Half-Elf"
+                if p == "Orc" and "half-orc" in name_lower:
+                    return "Half-Orc"
+                return p
+                
+    return None
 
 
 def make_entity(
@@ -55,7 +650,15 @@ def make_entity(
     kategori: str,
     payload: Any,
 ) -> Optional[DiyargezenEntity]:
-    """Tek bir kaydı güvenli şekilde DiyargezenEntity'ye dönüştür."""
+    """Tek bir kaydı güvenli şekilde DiyargezenEntity'ye dönüştür.
+
+    Kategori çözümleme önceliği (azalan sırayla):
+    1. FoundryVTT dosyasındaki 'type' alanı  (parse_raw_file tarafından zaten
+       type_map'e göre çözülüp buraya verilir)
+    2. detect_parent_race — sadece parent_race METADATA ekler;
+       kategori değiştirmez (feat bir feat kalır!)
+    3. Gerçek 'type=="race"' ise zaten 'race' olarak gelmiştir.
+    """
     try:
         name = safe_str(isim)
         if not name:
@@ -63,6 +666,66 @@ def make_entity(
         data = safe_dict(payload)
         if not data.get("name"):
             data = {**data, "name": name}
+
+        # ----------------------------------------------------------------
+        # STRICT TYPE CHECK — if the raw data explicitly declares a type
+        # that contradicts the folder-inferred category, honour the raw type.
+        # ----------------------------------------------------------------
+        inner_type = safe_str(data.get("type")).lower()
+        if inner_type:
+            strict_type_map = {
+                "race":       "race",
+                "feat":       "feat",
+                "race_trait": "feat",
+                "racial":     "feat",
+                "trait":      "trait",   # <-- proper trait category
+                "spell":      "spell",
+                "class":      "class",
+                "weapon":     "equipment",
+                "armor":      "equipment",
+                "shield":     "equipment",
+                "equipment":  "equipment",
+                "loot":       "equipment",
+                "consumable": "equipment",
+                "container":  "equipment",
+                "backpack":   "equipment",
+                "item":       "equipment",
+            }
+            resolved = strict_type_map.get(inner_type)
+            if resolved:
+                kategori = resolved   # inner type always wins
+
+        # ----------------------------------------------------------------
+        # PF1e featType sub-classification:
+        # FoundryVTT PF1e stores feats with type='feat' AND a 'featType'
+        # sub-field that distinguishes actual feats from character traits.
+        # Values like 'trait', 'social', 'combat', 'regional', 'religion',
+        # 'magic', 'racial' in featType → store as kategori='trait'.
+        # ----------------------------------------------------------------
+        sys_key = safe_str(data.get("system", {}).get("featType") if isinstance(data.get("system"), dict) else "").lower()
+        if not sys_key:
+            # Also check top-level featType
+            sys_key = safe_str(data.get("featType", "")).lower()
+        if sys_key:
+            TRAIT_FEAT_TYPES = {
+                "trait", "social", "regional", "religion",
+                "combat", "magic", "racial", "drawback",
+            }
+            if sys_key in TRAIT_FEAT_TYPES and kategori == "feat":
+                kategori = "trait"
+
+        mechanics = extract_standard_mechanics(data, sistem)
+        data["standard_mechanics"] = mechanics.get("standard_mechanics", [])
+        data["prerequisites"] = mechanics.get("prerequisites", [])
+
+        # Detect parent race and attach as metadata.
+        # IMPORTANT: this does NOT change the category — a racial feat/trait
+        # stays a 'feat'/'trait'.  Only genuine race entities (type='race') are 'race'.
+        parent = detect_parent_race(name, sistem)
+        if parent:
+            data["parent_race"] = parent
+            # Do NOT override kategori here; feats/traits stay feats/traits.
+
         return DiyargezenEntity(
             isim=name,
             sistem=sistem,
