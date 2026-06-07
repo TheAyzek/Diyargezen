@@ -1,4 +1,2 @@
 # Auto detect text files and perform LF normalization
 * text=auto
-data/pf1e-content-main/packs/*.db filter=lfs diff=lfs merge=lfs -text
-data/*.json filter=lfs diff=lfs merge=lfs -text

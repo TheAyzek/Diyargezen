@@ -40,6 +40,11 @@ data/portraits/
 # Do NOT commit — it is auto-generated from source .db / .json files.
 data/characters.db
 
+# ─── 3rd-party FoundryVTT source data ───────────────────────────────────
+# Not committed — users download pf1e-content-main from FoundryVTT packages.
+# See README for download instructions.
+data/pf1e-content-main/
+
 # OS / editor junk
 .DS_Store
 Thumbs.db
