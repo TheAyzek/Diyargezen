@@ -1,0 +1,30 @@
+_id: k6IPDDEDEt3YvRlj
+_key: '!items!k6IPDDEDEt3YvRlj'
+_stats:
+  coreVersion: '12.343'
+folder: AqjqWFWInPuTJU1V
+img: icons/skills/melee/strike-polearm-light-orange.webp
+name: Sacred
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> strong transmutation <strong>CL</strong>
+      16th</p><p><strong>Slot</strong> none; <strong>Price</strong> +1
+      bonus;</p><p>A <em>sacred </em>weapon is filled with divine energy, and
+      acts as a holy symbol. When wielded by a creature that can cast divine
+      spells, the weapon automatically displays an image of that creature's holy
+      symbol, often as a glowing rune on the weapon's blade or along its
+      haft.<p> Additionally, if the wielder has the blessings class feature,
+      whenever he channels energy, he can choose one ally or ally's weapon
+      within the area of the channeled energy and bestow upon that creature or
+      weapon the benefits of one of his minor blessings at a cost of one use of
+      that blessing.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, <em>imbue with spell ability</em>;
+      <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1129
+      pages: '215'
+  subType: misc
+  tags:
+    - Universal Weapon Qualities
+type: feat

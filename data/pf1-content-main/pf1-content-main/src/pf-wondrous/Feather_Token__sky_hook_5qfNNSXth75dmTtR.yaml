@@ -1,0 +1,25 @@
+_id: 5qfNNSXth75dmTtR
+_key: '!items!5qfNNSXth75dmTtR'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Feather Token, sky hook
+system:
+  aura:
+    school: con
+  cl: 12
+  description:
+    value: >-
+      <p>Several varieties of these enchanted feathers are popular in Andoran.
+      Full rules for feather tokens can be found in the Core Rulebook. Sky Hook:
+      This token transforms into a huge disembodied eagle's talon (hardness 5,
+      hp 25) anchored wherever you activate it. The talon can support up to
+      1,000 pounds and persists for 1 day. The talon can be moved up to 10 feet
+      with a DC 20 Strength check.</p><h3>Requirements</h3><p>Craft Wondrous
+      Item, major creation</p>
+  price: 200
+  sources:
+    - id: PZO9409
+  subType: wondrous
+type: equipment

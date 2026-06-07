@@ -1,0 +1,31 @@
+_id: 4Px6Af2L5EgYaw4i
+_key: '!items!4Px6Af2L5EgYaw4i'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/bowl-powder-grey.webp
+name: Necrosalt
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>The powder in this
+      minute glass vial is made of caustic soda treated with consecrated ashes,
+      and is harmless to living flesh but dangerous to the deceased. Necrosalt
+      can be thrown as a splash weapon with a range increment of 5 feet. On a
+      successful ranged touch attack, 1 dose of necrosalt deals 1d4 points of
+      damage to a struck corporeal undead creature. For 3 rounds afterward, it
+      deals an additional 1d4 points of damage to its victim at the beginning of
+      the victim's turn. Intelligent undead creatures can brush necrosalt off
+      their bodies and end its effect as a move action. Crafting this item
+      requires a successful DC 30 Craft (alchemy)
+      check.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      30</p>
+  price: 150
+  sources:
+    - id: PZO9444
+      pages: '15'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 0.5
+type: consumable

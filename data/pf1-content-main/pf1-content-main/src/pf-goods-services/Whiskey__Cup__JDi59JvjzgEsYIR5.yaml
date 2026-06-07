@@ -1,0 +1,20 @@
+_id: JDi59JvjzgEsYIR5
+_key: '!items!JDi59JvjzgEsYIR5'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/kitchenware/goblet-wood-engraved-brown.webp
+name: Whiskey (Cup)
+system:
+  description:
+    value: >-
+      <p>Whiskey is a distilled beverage made from fermented grain mash
+      (typically barley, corn, malt, rye, or wheat) aged in a wooden cask. The
+      longer the drink ages in the cask, the smoother the final product.</p>
+  price: 0.1
+  sources:
+    - id: PZO1123
+      pages: '95'
+  subType: food
+  weight:
+    value: 0.5
+type: consumable

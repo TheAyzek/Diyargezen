@@ -1,0 +1,26 @@
+_id: f5U4LcNeJJi10pxq
+_key: '!items!f5U4LcNeJJi10pxq'
+_stats:
+  coreVersion: '12.331'
+img: icons/skills/melee/strike-blade-hooked-orange-blue.webp
+name: Nearfiring Bow
+system:
+  aura:
+    school: div
+  cl: 6
+  cursed: true
+  description:
+    value: >-
+      <p>This bow appears to be a +2 distance shortbow, but its curse is that it
+      suffers a -4 cumulative penalty for each range increment beyond the first.
+      Furthermore, it takes an additional -4 penalty on critical confirmation
+      rolls when firing beyond the first range increment. This bow must be used
+      as its wielder's primary ranged weapon and can only be discarded after the
+      owner is subject to a remove curse spell or similar
+      effect.</p><p><strong>Base Item</strong>: -4 shortbow</p>
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 2
+type: weapon

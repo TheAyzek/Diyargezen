@@ -1,0 +1,24 @@
+_id: KaeCbMLogV2zyKyw
+_key: '!items!KaeCbMLogV2zyKyw'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Trap Shot
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>At 3rd level, the commando can
+      spend 1 point of grit and target a 5-foot square with her firearm. If she
+      succeeds at an attack against an AC of 10, she triggers a single trap
+      within that 5-foot square, even if she is unaware of the trap. If there
+      are multiple traps within the same 5-foot square, the commando must
+      declare which trap she is triggering; otherwise it is determined randomly.
+      If a creature is occupying the same square as the triggered trap, the trap
+      affects the creature as if it had triggered the trap.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

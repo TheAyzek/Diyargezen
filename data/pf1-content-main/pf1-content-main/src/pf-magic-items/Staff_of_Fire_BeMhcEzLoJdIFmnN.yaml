@@ -1,0 +1,24 @@
+_id: BeMhcEzLoJdIFmnN
+_key: '!items!BeMhcEzLoJdIFmnN'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Fire
+system:
+  aura:
+    school: evo
+  cl: 8
+  description:
+    value: >-
+      <p>Crafted from bronzewood with brass bindings, this staff allows use of
+      the following spells: • Burning hands (1 charge)   • Fireball (2
+      charges)   • Wall of fire (3
+      charges.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, burning hands, fireball, wall of fire</p>
+  price: 18950
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

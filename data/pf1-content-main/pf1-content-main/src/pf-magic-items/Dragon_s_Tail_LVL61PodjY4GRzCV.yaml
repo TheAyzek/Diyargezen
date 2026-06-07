@@ -1,0 +1,63 @@
+_id: LVL61PodjY4GRzCV
+_key: '!items!LVL61PodjY4GRzCV'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/guisarme.PNG
+name: Dragon's Tail
+system:
+  actions:
+    - _id: u3bxscn6xov1rq92
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: dragonsTail
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  baseTypes:
+    - Guisarme
+  cl: 13
+  description:
+    value: >-
+      <p>This +2 dragonbane guisarme seems to vibrate with a low hum. On a
+      successful hit, the target must succeed at a DC 20 Fortitude save or
+      become staggered for 1 round. If the target is of the dragon type and the
+      dragon fails its save, the creature is stunned for 1 round and staggered
+      for 2 rounds thereafter. It is staggered for 1 round even on a successful
+      save.</p><p><strong>Base Item</strong>: dragonbane
+      guisarme</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, resonating word, summon monster I</p>
+  enh: 2
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 32310
+  properties:
+    rch: true
+    trp: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9434
+  weaponGroups:
+    - polearms
+  weight:
+    value: 12
+type: weapon

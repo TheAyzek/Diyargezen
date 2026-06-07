@@ -1,0 +1,25 @@
+_id: PqOMilhw18OmT8ee
+_key: '!items!PqOMilhw18OmT8ee'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/tech/transmission.webp
+name: Leg stabilizers (pair)
+system:
+  description:
+    value: >-
+      <p>These devices strap onto a character's legs in order to allow for
+      easier movement in low- or high-gravity environments. A character wearing
+      leg stabilizers can move and attempt Acrobatics checks in gravity between
+      ×1 and ×3 as if in gravity ×1. A character wearing them in gravity
+      stronger than ×1/3 but weaker than ×1 gains a +10-foot circumstance bonus
+      to his land speed. This device has no effect on other actions. Attaching
+      or removing leg stabilizers is a full-round action.</p>
+  equipped: false
+  price: 1000
+  sources:
+    - id: PZO9449
+      pages: '19'
+  subType: tool
+  weight:
+    value: 2
+type: loot

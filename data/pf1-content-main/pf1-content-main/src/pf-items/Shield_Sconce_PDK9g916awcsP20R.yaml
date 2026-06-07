@@ -1,0 +1,21 @@
+_id: PDK9g916awcsP20R
+_key: '!items!PDK9g916awcsP20R'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/lights/lantern-steel.webp
+name: Shield Sconce
+system:
+  description:
+    value: >-
+      <p>This metal frame holds a torch and is designed to be strapped to the
+      front of a light, heavy, or tower shield, allowing you to carry a torch
+      without giving up your shield or occupying your weapon hand.</p>
+  equipped: false
+  price: 1
+  sources:
+    - id: PZO1123
+      pages: '57'
+  subType: adventuring
+  weight:
+    value: 0.5
+type: loot

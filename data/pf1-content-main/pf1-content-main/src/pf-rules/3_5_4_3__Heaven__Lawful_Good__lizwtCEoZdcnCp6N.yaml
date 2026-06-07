@@ -1,0 +1,60 @@
+_id: lizwtCEoZdcnCp6N
+_key: '!journal!lizwtCEoZdcnCp6N'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: B3pncms1TJP9sIoG
+name: 3.5.4.3. Heaven (Lawful Good)
+pages:
+  - _id: zTHGDw56qpBOScEw
+    _key: '!journal.pages!lizwtCEoZdcnCp6N.zTHGDw56qpBOScEw'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.5.4.3. Heaven (Lawful Good)
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.ryIRK7CjUk9fI8TT]{3.5.
+        The
+        Planes}</p><ul><li><p>@Compendium[pf-content.pf-rules.VNXqsTp4czvUWZn3]{3.5.4.
+        Outer
+        Planes}</p><ul><li>@Compendium[pf-content.pf-rules.Vkaqhnw3JuB93M2b]{3.5.4.1.
+        Abaddon (Neutral
+        Evil)}</li><li>@Compendium[pf-content.pf-rules.Tv4XhzHyicyshnoI]{3.5.4.2.
+        The Abyss (Chaotic
+        Evil)}</li><li>@Compendium[pf-content.pf-rules.UgAswpClLHYhjrDU]{3.5.4.3.
+        Elysium (Chaotic
+        Good)}</li><li><strong>@Compendium[pf-content.pf-rules.lizwtCEoZdcnCp6N]{3.5.4.3.
+        Heaven (Lawful
+        Good)}</strong></li><li>@Compendium[pf-content.pf-rules.4S1CB7EY6OPMr6XE]{3.5.4.4.
+        Hell (Lawful
+        Evil)}</li><li>@Compendium[pf-content.pf-rules.B4QMP2x1LoDZ5vrg]{3.5.4.5.
+        Limbo (Chaotic
+        Neutral)}</li><li>@Compendium[pf-content.pf-rules.sUGoUviDZ2NdI4Qs]{3.5.4.6.
+        Nirvana (Neutral
+        Good)}</li><li>@Compendium[pf-content.pf-rules.Mwwxo5zMhkxYyYOE]{3.5.4.7.
+        Purgatory
+        (Neutral)}</li><li>@Compendium[pf-content.pf-rules.aJbeIdmrc5AY2dby]{3.5.4.8.
+        Utopia (Lawful Neutral)}</li></ul></li></ul><hr
+        /><p>@Source[PZO1114;pages=192]</p><p>The soaring mountain of Heaven
+        towers high above the Outer Sphere. This ordered realm of honor and
+        compassion is divided into seven layers. Heaven’s slopes are filled with
+        planned, orderly cities and tidy, cultivated gardens and orchards.
+        Though they began their existences as mortals, Heaven’s native archons
+        see law and good as indivisible halves of the same exalted concept, and
+        array themselves against the cosmic perversions of chaos and
+        evil.</p><h2>Planar Traits</h2><p>Heaven has the following
+        traits:</p><ul><li><strong>Divinely Morphic</strong>: Deities with
+        domains in Heaven can alter the plane at will.</li><li><strong>Strongly
+        Law-Aligned and Strongly Good-Aligned</strong></li><li><strong>Enhanced
+        Magic</strong>: Spells and spell-like abilities with the lawful or good
+        descriptor are enhanced.</li><li><strong>Impeded Magic</strong>: Spells
+        and spell-like abilities with the chaotic or evil descriptor are
+        impeded.</li></ul>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,184 @@
+_id: Iw9hl7VMqiOF8lrk
+_key: '!actors!Iw9hl7VMqiOF8lrk'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: systems/pf1/icons/skills/emerald_06.jpg
+items:
+  - _id: YOBbXyMY6yLEjNJW
+    _key: '!actors.items!Iw9hl7VMqiOF8lrk.YOBbXyMY6yLEjNJW'
+    _stats:
+      compendiumSource: Actor.tZ8B3E5o5vVl1PKp.Item.AtJo5bI89CJzRsIP
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/emerald_06.jpg
+    name: Stunning Wail
+    system:
+      actions:
+        - _id: frxg1ifhsknymi8q
+          actionType: save
+          activation:
+            type: special
+            unchained:
+              type: special
+          attackBonus: '12'
+          img: systems/pf1/icons/skills/emerald_06.jpg
+          name: Attack
+          notes:
+            footer:
+              - >-
+                The maidens wail, stunning and deafening all targets for [[1d4]]
+                round(s) (fortitude save negates).
+              - >-
+                [[1d6]] spike(s) pierce target (use this amount for above
+                attacks).
+              - >-
+                1d6 spikes are directed at each character flanked by the
+                maidens. See text.
+          range:
+            units: melee
+          save:
+            dc: '15'
+            description: Fortitude negates stun and deafened
+            type: fort
+          target:
+            value: multiple targets (all targets flanked by iron maidens)
+      description:
+        value: >-
+          <p><strong>Effect&nbsp;</strong>stunning wail (stun and deafened for
+          1d4 rounds, Fortitude DC 15 negates); spike barrage (Atk +12 melee,
+          1d6 spikes per target for 1d6+5 damage each); multiple targets (all
+          targets flanked by iron maidens)</p>
+      proficient: true
+      subType: misc
+    type: attack
+  - _id: uIPG3N5jo5KucQBJ
+    _key: '!actors.items!Iw9hl7VMqiOF8lrk.uIPG3N5jo5KucQBJ'
+    _stats:
+      compendiumSource: Actor.tZ8B3E5o5vVl1PKp.Item.AtJo5bI89CJzRsIP
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/weapon_24.jpg
+    name: Spike Barrage
+    system:
+      actions:
+        - _id: hpjTQEXhwVtAXN6N
+          actionType: mwak
+          activation:
+            type: nonaction
+            unchained:
+              type: nonaction
+          attackBonus: '12'
+          damage:
+            parts:
+              - formula: 1d6+5
+                types:
+                  - piercing
+          img: systems/pf1/icons/skills/weapon_24.jpg
+          name: Attack
+          notes:
+            footer:
+              - Use this separately for each target.
+          range:
+            units: melee
+          target:
+            value: multiple targets (all targets flanked by iron maidens)
+      description:
+        value: >-
+          <p><strong>Type</strong>&nbsp;mechanical and
+          magical;&nbsp;<strong>Perception</strong>&nbsp;DC
+          25;&nbsp;<strong>Disable Device</strong>&nbsp;DC
+          25;&nbsp;<strong>Bypass</strong>&nbsp;hidden switch (Perception DC
+          30)</p>
+
+          <hr />
+
+          <p><strong>EFFECTS</strong></p>
+
+          <hr />
+
+          <p><strong>Trigger&nbsp;</strong>location;&nbsp;<strong>Onset</strong>
+          Delay&nbsp;3 rounds;&nbsp;<strong>Reset&nbsp;</strong>automatic (after
+          5 rounds)</p>
+
+          <p><strong>Effect&nbsp;</strong>stunning wail (stun and deafened for
+          1d4 rounds, Fortitude DC 15 negates); spike barrage (Atk +12 melee,
+          1d6 spikes per target for 1d6+5 damage each); multiple targets (all
+          targets flanked by iron maidens)</p>
+      proficient: true
+      subType: misc
+    type: attack
+name: Wailing Maidens
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 7
+    disarm: 25
+    duration: ''
+    effect: |-
+      Bypass: hidden switch (Perception DC 30)
+      Onset Delay: 3 rounds
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 25
+    reset: Automatic (after 5 rounds)
+    trigger: Location
+    type: Mechanical and Magical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

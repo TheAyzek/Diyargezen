@@ -1,0 +1,23 @@
+_id: IykW05eysY98vZ3u
+_key: '!items!IykW05eysY98vZ3u'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/misc/bird-house.webp
+name: Privacy Shelter
+system:
+  description:
+    value: >-
+      <p>Through a 15-minute assembly period, the components of this kit fit
+      together into a tentlike structure. Able to fit a single Medium-sized
+      creature, this tent doesn't allow space for sleeping. Instead, a privacy
+      shelter offers standing or sitting room only. The shelter is mostly used
+      as either a meditation space or a latrine shelter.</p>
+  equipped: false
+  price: 5
+  sources:
+    - id: PZO1140
+      pages: '244'
+  subType: adventuring
+  weight:
+    value: 10
+type: loot

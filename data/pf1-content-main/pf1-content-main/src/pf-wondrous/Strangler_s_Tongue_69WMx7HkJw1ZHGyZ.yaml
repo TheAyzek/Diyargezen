@@ -1,0 +1,29 @@
+_id: 69WMx7HkJw1ZHGyZ
+_key: '!items!69WMx7HkJw1ZHGyZ'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Strangler's Tongue
+system:
+  aura:
+    custom: true
+    school: enchantment and necromancy
+  cl: 5
+  description:
+    value: >-
+      <p>Extracted from a mohrg, this ropy, claw-tipped tongue is implanted into
+      a recipient's mouth or throat. A strangler's tongue lacks the strength to
+      grasp or hold items, but the host can lash out with the tongue as a
+      standard action as a melee touch attack. A humanoid hit by the strangler's
+      tongue is paralyzed for 1d4 minutes (Will DC 15
+      negates).</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, create undead, hold person, creator must have 5 ranks in
+      Heal</p>
+  price: 36000
+  sources:
+    - id: PZO9462
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

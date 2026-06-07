@@ -1,0 +1,118 @@
+_id: 58jQgPxtzcWfAFul
+_key: '!actors!58jQgPxtzcWfAFul'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: systems/pf1/icons/spells/fireball-red-3.jpg
+items:
+  - _id: AgAGfKK9CwIjtzFD
+    _key: '!actors.items!58jQgPxtzcWfAFul.AgAGfKK9CwIjtzFD'
+    _stats:
+      compendiumSource: Actor.vNAsTB2Px1pR0AVD.Item.Ezq35FkVtnVl2531
+      coreVersion: '12.331'
+    img: systems/pf1/icons/spells/fireball-red-3.jpg
+    name: Fireball (Maximized)
+    system:
+      actions:
+        - _id: q5ngehone6j0hlwf
+          actionType: spellsave
+          activation:
+            type: special
+            unchained:
+              type: special
+          damage:
+            parts:
+              - formula: '60'
+                types:
+                  - fire
+          img: systems/pf1/icons/spells/fireball-red-3.jpg
+          measureTemplate:
+            size: '20'
+            type: circle
+          name: Attack
+          range:
+            units: ft
+            value: '55'
+          save:
+            dc: '14'
+            description: Reflex half
+            type: ref
+          target:
+            value: multiple targets (all targets in a 20-ft.-radius burst)
+      proficient: true
+      subType: misc
+    type: attack
+name: Fireball Trap, Maximized
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 13
+    disarm: 31
+    duration: Instantaneous
+    effect: ''
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 31
+    reset: None
+    trigger: Proximity (alarm)
+    type: Magical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

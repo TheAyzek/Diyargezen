@@ -1,0 +1,30 @@
+_id: RXvHrdEUt9f2sO9Z
+_key: '!items!RXvHrdEUt9f2sO9Z'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Rampaging
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint conjuration and transmutation
+      <strong>CL</strong> 3rd</p><p><strong>Slot</strong> armor quality;
+      <strong>Price</strong> +2 bonus;</p><p>When the wearer of a suit of
+      <em>rampaging</em> armor charges or attempts a bull rush combat maneuver
+      check, he can ignore difficult terrain. Once per day as a swift action,
+      when the wearer of a suit of <em>rampaging</em> armor charges or performs
+      a bull rush combat maneuver, he can turn each square he moves through into
+      difficult terrain as he demolishes everything in his path. This change of
+      terrain remains for 1 minute. The <em>rampaging</em> special ability can
+      be applied only to heavy
+      armor.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>feather step</em><sup>UC</sup>, <em>stone
+      call</em><sup>APG</sup>; <strong>Price</strong> +2 bonus</p>
+  sources:
+    - id: PZO9467
+      pages: '28'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

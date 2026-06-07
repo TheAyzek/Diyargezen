@@ -1,0 +1,23 @@
+_id: Lo8RQiELxrCz4Puj
+_key: '!items!Lo8RQiELxrCz4Puj'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/tankard-full.jpg
+name: Wasp Metheglin
+system:
+  description:
+    value: >-
+      <p>A rare breed of wasp produces the honey used to make this spiced,
+      mead-like drink. For 1 hour after consuming a glass of wasp metheglin
+      (this takes 1 round), the drinker is quick to respond to harm, gaining a
+      +1 alchemical bonus on attack rolls against any creature that has damaged
+      her with an attack within the previous round. This bonus does not stack
+      with itself. A typical bottle holds four glasses' worth of metheglin.</p>
+  price: 400
+  sources:
+    - id: PZO9489
+      pages: '4'
+  subType: food
+  weight:
+    value: 2
+type: consumable

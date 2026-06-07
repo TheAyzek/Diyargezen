@@ -1,0 +1,29 @@
+_id: MocNvkFgnDDPmicP
+_key: '!items!MocNvkFgnDDPmicP'
+_stats:
+  coreVersion: '12.331'
+img: icons/equipment/chest/shirt-simple-white.webp
+name: Practice straitjacket
+system:
+  description:
+    value: >-
+      <p>This straitjacket (<em>Pathfinder RPG Occult Adventures</em> 250) is
+      designed for use by a single person. The leather straps and arm restraints
+      are accessible in such a way as to be tightened by the wearer. Restraining
+      or releasing oneself through these mechanisms requires 1 minute of work.
+      Once restrained, the wearer can attempt to escape from the straitjacket as
+      normal (that is, without using the built-in releases). Using a practice
+      straitjacket to train for escape requires 1 hour of practice and a DC 20
+      Escape Artist check. If you succeed at the check, you gain a +2
+      circumstance bonus on Escape Artist checks to escape from bindings, a
+      grapple, a net, rope, or similar restraints. This bonus lasts for 24
+      hours.</p>
+  equipped: false
+  price: 100
+  sources:
+    - id: PZO9481
+      pages: '14'
+  subType: tool
+  weight:
+    value: 2
+type: loot

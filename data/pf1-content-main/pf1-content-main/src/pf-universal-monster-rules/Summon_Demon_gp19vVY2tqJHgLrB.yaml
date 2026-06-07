@@ -1,0 +1,37 @@
+_id: gp19vVY2tqJHgLrB
+_key: '!items!gp19vVY2tqJHgLrB'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_25.jpg
+name: Summon Demon
+system:
+  abilityType: sp
+  actions:
+    - _id: w3kc044b73so0q00
+      activation:
+        type: swift
+        unchained:
+          type: action
+      img: systems/pf1/icons/skills/yellow_25.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            DC 10 + 1/2 the qlippoth’s Hit Dice+ the qlippoth’s Charisma
+            modifier
+      save:
+        dc: '15'
+        description: Reduces or Negates (see text)
+        type: will
+      tag: summonDemonSp
+  description:
+    value: >-
+      <p>Three times per day as a swift action, a demon lord can summon any
+      demon or combination of demons whose total combined CR is 20 or lower.
+      This otherwise works like the <a>summon</a>&nbsp;universal monster rule
+      with a 100% chance of success, and counts as a 9th-level spell effect.</p>
+  subType: misc
+  uses:
+    per: day
+    value: 3
+type: feat

@@ -1,0 +1,35 @@
+_id: Z4tt13MYk2JkUIMp
+_key: '!items!Z4tt13MYk2JkUIMp'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of the Ecclesiarch
+system:
+  aura:
+    school: enc
+  cl: 5
+  description:
+    value: >-
+      <p>This ornate ring of sanctified silver is engraved with a golden signet
+      that incorporates the holy symbol of the wearer's deity after being worn
+      for 24 hours. The ring can be used to seal parchments or to mark any
+      surface as the arcane mark spell at will. The wearer is marked as a
+      scholarly leader of the faith and gains a +5 competence bonus on Diplomacy
+      and Knowledge (religion) checks. If the wearer has the Leadership feat,
+      she may attract double the normal number of followers, and her followers'
+      zealous devotion grants them a +4 morale bonus on Will saves against
+      enchantment spells and effects.   Once per day, the wearer of the ring can
+      use prayer and enter image (Advanced Player's Guide), often using the
+      latter power to speak and observe through portraits, statues, and even
+      minted coinage bearing their
+      likeness.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, arcane mark, enter image, enthrall, prayer, creator must have 5
+      ranks of Diplomacy and Knowledge (religion) and the ability to cast divine
+      spells</p>
+  price: 28500
+  slot: ring
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

@@ -1,0 +1,25 @@
+_id: 74Qh3BX8XWn1wPYQ
+_key: '!items!74Qh3BX8XWn1wPYQ'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/cloth/cloth-rolls-cmy.webp
+name: Service, Laundry
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 1 sp, 1 gp (magic); <strong>Weight</strong> -, -
+      (magic)</p><h2>Description</h2><p>The listed price is for up to four items
+      (such as trousers, an undergarment, shirt, and jacket or vest). Additional
+      items may be washed for 3 cp each. Laundry is finished the next day unless
+      you bring it to the washer early. Magical laundry service is a mage
+      (typically an apprentice wizard) magically and instantly cleaning your
+      clothes with <em>prestidigitation</em>.</p>
+  equipped: false
+  price: 0.1
+  sources:
+    - id: PZO1123
+      pages: '99'
+  subType: tradeGoods
+  tags:
+    - Lodging/Services
+type: loot

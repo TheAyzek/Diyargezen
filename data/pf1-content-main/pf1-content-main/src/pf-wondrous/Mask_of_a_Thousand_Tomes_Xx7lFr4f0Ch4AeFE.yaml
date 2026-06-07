@@ -1,0 +1,28 @@
+_id: Xx7lFr4f0Ch4AeFE
+_key: '!items!Xx7lFr4f0Ch4AeFE'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Mask of a Thousand Tomes
+system:
+  aura:
+    school: div
+  cl: 5
+  description:
+    value: >-
+      <p>The random snippets of script that write across the surface of this
+      parchment-colored eyeless mask hint at the knowledge of the many tomes
+      stored within. The mask grants its wearer a +10 competence bonus on all
+      Knowledge skill checks, but the wearer is blinded while wearing the mask.
+      The mask must be worn for 10 minutes before the wearer gains its
+      bonus.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, clairaudience/clairvoyance</p>
+  price: 10000
+  slot: head
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

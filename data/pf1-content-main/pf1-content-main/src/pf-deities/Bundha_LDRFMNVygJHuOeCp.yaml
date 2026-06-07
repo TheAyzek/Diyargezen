@@ -1,0 +1,51 @@
+_id: LDRFMNVygJHuOeCp
+_key: '!journal!LDRFMNVygJHuOeCp'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Bundha
+pages:
+  - _id: MvOH0UOWOd1id3XN
+    _key: '!journal.pages!LDRFMNVygJHuOeCp.MvOH0UOWOd1id3XN'
+    _stats:
+      coreVersion: '12.331'
+    name: Bundha
+    sort: 0
+    text:
+      content: >-
+        <h1>Bundha</h1><h2>Singing Butcher</h2>@Source[PZO1139;pages=130] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Bundha">Bundha</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Rakshasa Immortals<br /><strong>Areas
+        of Concern</strong> N/a<br /><strong>Domains</strong> Animal, Evil, Law,
+        Trickery<br /><strong>Subdomains</strong> Deception, Fear, Fur,
+        Tyranny<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong>
+        Kukri</p><h3>Obedience</h3><p>Filet a slab of raw meat and then eat the
+        slices one by one, being sure to sing while your mouth is full. Gain a
+        +4 profane bonus on saving throws against disease.</p><h2>Boons -
+        Rakshasa Immortals</h2><p>@Source[PZO1139;pages=130]</p><p>Once in a
+        great while, a rakshasa achieves a purity of evil that allows it to
+        break free from the cycle of death and reincarnation and transcend its
+        own mortality. The power of such rakshasas approaches that of the gods
+        they think they are.</p><p> Unlike the other pantheons described in this
+        book, the rakshasa immortals do not present themselves as having
+        traditional areas of concern, for each of these immortals is concerned
+        primarily with its own glory and power. And while each rakshasa immortal
+        has its own unique appearance and personality, they have little interest
+        in diversification among their faithful. All rakshasa immortals grant
+        access to the same domains (Animal, Evil, Law, and Trickery), the same
+        subdomains (Deception, Fear [see page 180], Fur, and Tyranny [see page
+        182]), and the same favored weapon (kukri).</p><p> All rakshasa
+        immortals are lawful evil and range in power from CR 21 to CR 25. The
+        boons they grant are less complex than those granted by other fiendish
+        demigods, manifesting as spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>bull's strength</em><br
+        /><strong>2</strong>: <em>inflict critical wounds</em><br
+        /><strong>3</strong>:  <em>blade barrier</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,25 @@
+_id: FhXTZ52CI1kKWGNO
+_key: '!items!FhXTZ52CI1kKWGNO'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/skills/mech_10.jpg
+name: Runeward Tattoo
+system:
+  aura:
+    school: div
+  cl: 1
+  description:
+    value: >-
+      <p>Each of these tattoos is keyed to a single school of magic. The bearer
+      can use detect magic at will, but only to sense auras of that school. The
+      bearer gains a +1 insight bonus on saving throws against spells and
+      spell-like abilities of the keyed school and knows when such a spell or
+      spell-like ability has been cast within 60
+      feet.</p><h3>Construction</h3><p><strong>Requirements</strong> Inscribe
+      Magical Tattoo, detect magic, guidance</p>
+  price: 1000
+  sources:
+    - id: PZO9440
+  subType: other
+type: equipment

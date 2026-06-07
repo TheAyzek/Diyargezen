@@ -1,0 +1,39 @@
+_id: nGaakIoHv4m36u5S
+_key: '!items!nGaakIoHv4m36u5S'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Sinner's Wage
+system:
+  aura:
+    school: enc
+  cl: 7
+  description:
+    value: >-
+      <p>A sinner's wage is a round golden coin with two blank faces. When
+      placed among nonmagical currency, it adopts the size, shape, and any
+      embellishments (such as an engraving or stamp) of the majority of the
+      other coins.  When included as payment for any service that compromises
+      the recipient's morals (such as a bribe for a lawful city guard to look
+      the other way, or a contribution to a good politician to pass dubious
+      legislation), a sinner's wage makes the offered payment more tempting. The
+      giver of the sinner's wage gains a +2 profane bonus on Charisma checks and
+      Bluff, Diplomacy, and Intimidate checks to convince the recipient to
+      perform the service in question. Thus, the item can be used to pay off a
+      guard as well as convince an outsider to perform a service with a planar
+      binding spell (in the latter case, the +2 profane bonus stacks with the
+      bonus normally granted for offering a reward to the outsider).  In
+      addition, a sinner's wage can be used as an optional focus component when
+      the owner casts any charm or compulsion spell of 5th level or lower. When
+      a creature is subject to a spell incorporating this focus, it takes a -2
+      penalty on all rolls to resist acting against its nature (whether a Will
+      saving throw or a Charisma check). Using the sinner's wage in this fashion
+      temporarily drains the magic from the coin, rendering it unusable for any
+      purpose for a period of 1 week.</p><h3>Requirements</h3><p>Craft Wondrous
+      Item, charm monster</p>
+  price: 500
+  sources:
+    - id: PZO9450
+  subType: wondrous
+type: equipment

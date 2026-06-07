@@ -1,0 +1,50 @@
+_id: 4ix06bti2snB1YrE
+_key: '!items!4ix06bti2snB1YrE'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/pearl-fire-swirl.webp
+name: Crimson Sphere Ioun Stone, Cracked
+system:
+  aura:
+    school: trs
+  changes:
+    - _id: rRNxMRZD
+      formula: '0'
+      target: int
+      type: enh
+  cl: 12
+  description:
+    instructions: >-
+      <p>if you have one or more pairs of these stones, update the change on the
+      changes tab of one item to reflect the total enhancement
+      amount.</p><p>Only 25% of cracked or flawed ioun stones grant resonant
+      powers when placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: <p>This spherical stone is a deep, rich red. A crack mars its surface.</p>
+    value: >-
+      <h3>Effect</h3><p>Individually these have no effect; when used in pairs,
+      each pair grants a +2 enhancement bonus to Intelligence. The bonuses from
+      multiple crimson spheres (cracked or otherwise) stack, up to a maximum of
+      a +6 enhancement bonus.</p><h3>Resonance</h3><p><strong>Method 1, Fixed:
+      </strong>+1 competence bonus on single Knowledge skill (chosen by the
+      stone’s creator).</p><p><strong>Method 2, Variable:
+      </strong>@UUID[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]{Ioun
+      Stone Resonance Powers Method
+      2}</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Wondrous
+      Item, <em>fox's cunning</em>, creator must be 12th level
+      <strong>Cost</strong> 6,000 gp</p><hr /><p><strong>Editor's note</strong>:
+      the sourcebook indicates a moderate strength aura despite the item's
+      Caster Level of 12</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 12000
+  sources:
+    - id: PZO9211
+      pages: 46, 52
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

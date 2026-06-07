@@ -1,0 +1,37 @@
+_id: iTHuLrjNneeh9M6E
+_key: '!items!iTHuLrjNneeh9M6E'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/chest/chest-reinforced-stone.webp
+name: Kit, Holy warrior package
+system:
+  description:
+    value: >-
+      <p>The holy warrior is prepared to use her might and zeal to take the
+      fight to the enemy, but she understands the importance of having the right
+      equipment to overcome the resistances of her monstrous foes. This
+      equipment package is well-suited to a cleric, inquisitor, paladin,
+      warpriest, or even a fighter with a religious background. It's especially
+      suited to characters who focus on supporting their party members and
+      making them more effective in a fight. Even more than with other equipment
+      packages, the GM should consider substituting the masterwork longsword in
+      this package with a masterwork melee weapon appropriate to the PC's faith.
+      If the PC can cast spells, add a spell component
+      pouch.</p><p><strong>Armor</strong>: Heavy steel shield, masterwork
+      breastplate.</p><p><strong>Weapons</strong>: Cold iron morningstar, heavy
+      crossbow with 10 bolts, masterwork longsword.</p><p><strong>Combat
+      Gear</strong>: Alchemist's fire (3), holy water (4), <em>oil of bless
+      weapon</em>, <em>potions of cure light wounds (2), potion of protection
+      from evil, sunrods (3).</em></p><p><strong>Other Gear</strong>: Backpack,
+      bedroll, belt pouch, candles (5), chalk (5 pieces), crowbar, flint and
+      steel, holy symbol (silver), mess kit, sack, silk rope (50 ft.), trail
+      rations (5 days), waterskin, 7 gp.</p><p><strong>Total Weight</strong>:
+      102 lbs. (57-1/4 lbs. for a Small character).</p>
+  sources:
+    - id: PZO9481
+      pages: '4'
+  tags:
+    - Kits
+  weight:
+    value: 102
+type: container

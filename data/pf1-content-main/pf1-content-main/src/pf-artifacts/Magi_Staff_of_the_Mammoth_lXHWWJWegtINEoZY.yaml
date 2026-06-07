@@ -1,0 +1,40 @@
+_id: lXHWWJWegtINEoZY
+_key: '!items!lXHWWJWegtINEoZY'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/quarterstaff.png
+name: Magi Staff of the Mammoth
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: all schools
+  baseTypes:
+    - Quarterstaff
+  cl: 20
+  description:
+    value: >-
+      <p>Seven feet of twisted, gnarled spruce carved with primitive runes and
+      icons depicting mammoths, tigers, and hunters form this regal staff. The
+      staff has all the powers of a staff of the magi with the following
+      changes: • sleet storm (instead of fireball) • fog cloud (instead of
+      pyrotechnics) • wall of ice (instead of wall of fire) The staff can also
+      cast cone of cold (15d6 damage, Reflex DC 19 half ) for a cost of 2
+      charges. When casting summon monster IX, the staff of the mammoth always
+      summons 1d4+1 celestial or fiendish mastodons.</p><p><strong>Base
+      Item</strong>: quarterstaff</p>
+  held: 2h
+  material:
+    base:
+      value: wood
+  properties:
+    dbl: true
+    mnk: true
+  sources:
+    - id: PZO9220
+  weaponGroups:
+    - double
+    - monk
+  weight:
+    value: 5
+type: weapon

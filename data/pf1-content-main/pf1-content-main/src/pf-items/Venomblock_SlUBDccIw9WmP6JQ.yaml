@@ -1,0 +1,49 @@
+_id: SlUBDccIw9WmP6JQ
+_key: '!items!SlUBDccIw9WmP6JQ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-5.jpg
+name: Venomblock
+system:
+  actions:
+    - _id: 715c47dky8br00mf
+      ability:
+        critMult: 1
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - {}
+          - {}
+      img: systems/pf1/icons/items/potions/unique-5.jpg
+      name: Use
+      range:
+        units: ft
+        value: '0'
+      save:
+        dc: '14'
+        type: fort
+      tag: venomblock
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Weapons</p><p>This light-blue
+      liquid is rich with antibodies and other chemicals that block poison and
+      disease and is usually contained in a tempered glass vial. Venomblock can
+      be applied to a weapon like a injury poison (<em>save Fort DC 14;
+      <em>frequency 1/round for 6 rounds; <em>cure </em>2 saves), but every time
+      the affected creature fails its Fortitude save, instead of dealing damage,
+      venomblock suppresses the target's ability to transmit one randomly
+      selected poison or disease through its natural attacks until the end of
+      its next turn. This is a poison effect.</em></p>
+  price: 60
+  sources:
+    - id: PZO9478
+      pages: '27'
+  subType: misc
+  tags:
+    - Alchemical Weapons
+type: consumable

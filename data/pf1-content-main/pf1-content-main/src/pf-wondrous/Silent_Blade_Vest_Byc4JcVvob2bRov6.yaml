@@ -1,0 +1,30 @@
+_id: Byc4JcVvob2bRov6
+_key: '!items!Byc4JcVvob2bRov6'
+_stats:
+  coreVersion: '12.331'
+folder: KOT1geWrUrAU083b
+img: icons/equipment/chest/vest-leather-pink.webp
+name: Silent Blade Vest
+system:
+  aura:
+    school: ill
+  cl: 3
+  description:
+    value: >-
+      <p>This dapper, halfling-sized gray vest has dull black buttons and
+      several hidden pockets. Concealed under the vest's lapel is a symbol of a
+      black dagger with a white circle on the blade near the hilt. Followers of
+      Thamir Gixx use this kind of vest or similar garments to discreetly
+      indicate their allegiance to other members of the Silent Blade's church.
+      The wearer gains a +5 competence bonus on Sleight of Hand checks. When
+      adjacent to an ally using Stealth, the wearer gains a +5 competence bonus
+      on Stealth
+      checks.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, invisibility, creator must have 5 ranks in Sleight of
+      Hand</p>
+  price: 4300
+  slot: chest
+  sources:
+    - id: PZO9267
+  subType: wondrous
+type: equipment

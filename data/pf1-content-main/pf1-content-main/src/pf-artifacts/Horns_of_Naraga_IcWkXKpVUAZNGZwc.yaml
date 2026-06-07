@@ -1,0 +1,34 @@
+_id: IcWkXKpVUAZNGZwc
+_key: '!items!IcWkXKpVUAZNGZwc'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Horns of Naraga
+system:
+  artifact: true
+  aura:
+    school: nec
+  cl: 22
+  description:
+    value: >-
+      <p>The crown of an infamous undead tyrant, the Horns of Naraga are a
+      symbol of dominance over death. When worn by an undead creature, the Horns
+      of Naraga reduce all damage taken from positive energy by half. In
+      addition, whenever the wearer touches a living creature while wearing this
+      helm (even if the touch is part of casting a spell or another touch
+      attack), the touch deals an additional 5d6 points of negative energy
+      damage and the wearer gains these hit points, just as if he had cast
+      vampiric touch. The wearer of the helm is immune to acid and can see
+      perfectly in darkness of any kind, even that created by magic. Once per
+      day on command, the helm can be ordered to transform into an ancient black
+      dragon that unquestioningly obeys the creature that summoned it for 1 hour
+      before reverting to a helm. Slaying the dragon does not destroy the helm,
+      but it does prevent this ability from being used for 1 week. While the
+      helm is in dragon form, the helm's owner does not receive any of the
+      helm's other benefits.</p>
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 8
+type: equipment

@@ -1,0 +1,71 @@
+_id: vgWO2DCgWu9rVSQD
+_key: '!items!vgWO2DCgWu9rVSQD'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/spear.png
+name: Spear of the Watchful Guardian
+system:
+  actions:
+    - _id: xwjpyccmfu6s1irr
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: spearOfTheWatchfulGuardian
+  aura:
+    school: trs
+  baseTypes:
+    - Spear
+  cl: 5
+  description:
+    value: >-
+      <p>This magically strengthened bronze-tipped +1 spear enables its wielder
+      to better face a variety of foes. Originally created by priests of Nethys
+      for use by their temple guards, a spear of the watchful guardian also
+      grants its wielder arcane aid to strike true. Once per day as a standard
+      action, the wielder of a spear of the watchful guardian can alter the
+      physical properties of the weapon, allowing it to bypass damage reduction
+      of one of the following types: bludgeoning, cold iron, silver, or
+      slashing. This change lasts for 5 minutes.  In addition, if the wielder of
+      a spear of the watchful guardian fails an attack roll, as an immediate
+      action once per day, she can retroactively add a +1 competence bonus on
+      that roll. If this bonus is enough to make the failure a success, the
+      attack roll succeeds.  Finally, a spear of the watchful guardian sharpens
+      the senses of its wielder, granting her a +2 insight bonus on Perception
+      checks.</p><p><strong>Base Item</strong>: +1
+      spear</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, timely inspiration, versatile weapon</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 8462
+  properties:
+    brc: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9079
+  weaponGroups:
+    - spears
+    - thrown
+    - tribal
+  weight:
+    value: 6
+type: weapon

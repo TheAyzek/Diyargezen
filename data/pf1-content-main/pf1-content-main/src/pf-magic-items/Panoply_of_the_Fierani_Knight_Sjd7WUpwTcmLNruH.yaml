@@ -1,0 +1,44 @@
+_id: Sjd7WUpwTcmLNruH
+_key: '!items!Sjd7WUpwTcmLNruH'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/fullplate.PNG
+name: Panoply of the Fierani Knight
+system:
+  armor:
+    acp: 6
+    dex: 1
+    material:
+      base:
+        value: steel
+      normal:
+        value: mithral
+    value: 9
+  aura:
+    school: abj
+  baseTypes:
+    - Full Plate
+  cl: 7
+  description:
+    value: >-
+      <p>The sigils etched into this +2 mithral full plate ward against the
+      manipulations of chaos. Its wearer receives a +2 sacred bonus on saves
+      against the spells and abilities of outsiders with the chaotic subtype and
+      against chaotic spells and spell-like abilities. The armor provides the
+      same protection against environmental effects caused by the taint of
+      chaos, such as the taints found in Tanglebriar and the Worldwound, or even
+      in the Abyss and the Maelstrom.</p><p><strong>Base Item</strong>: mithral
+      full plate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, dismissal, magic circle against chaos, creator must
+      be an elf</p>
+  enh: 2
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 26500
+  sources:
+    - id: PZO9280
+  spellFailure: 35
+  weight:
+    value: 25
+type: equipment

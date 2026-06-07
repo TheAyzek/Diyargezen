@@ -1,0 +1,41 @@
+_id: MvYs75ebDZcPQo4e
+_key: '!items!MvYs75ebDZcPQo4e'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Hearth Mantle
+system:
+  aura:
+    custom: true
+    school: abjuration and evocation
+  cl: 5
+  description:
+    value: >-
+      <p>The inside of this long, thick shawl is cool muslin, while the outside
+      is decorated with a flame-like rune. Hearth mantles are favored by the
+      faithful of Erastil, particularly those among his worshipers who rely upon
+      the hunt for their livelihood. With a hearth mantle, one never has to
+      worry about building a campfire in the wild.</p><p>A hearth mantle's
+      wearer gains a +2 competence bonus on saving throws against fire-based
+      effects; the mantle itself is immune to fire damage. Once per day, the
+      wearer can cause the leather exterior of the mantle to smolder for 1
+      minute. While smoldering, the hearth mantle sheds light as a
+      torch.</p><p>If the user takes a full-round action to carefully spread a
+      hearth mantle on the ground with its exterior facing up, a campfire
+      ignites on the mantle's fire rune. This campfire burns for 8 hours and
+      requires no fuel. Any creature that sleeps within 20 feet of the mantle
+      for the full duration of the campfire recovers a number of hit points
+      equal to twice its character level, as if it had undergone complete bed
+      rest for a full 24 hours. The campfire is automatically extinguished if
+      the hearth mantle is picked up, but can also be extinguished through
+      normal means.<h3>Requirements</h3><p>Craft Wondrous Item, nap stack,
+      produce flame</p>
+  price: 3600
+  slot: neck
+  sources:
+    - id: PZO9087
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

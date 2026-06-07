@@ -1,0 +1,124 @@
+_id: r9QhZzod9bWLKyRa
+_key: '!actors!r9QhZzod9bWLKyRa'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: systems/pf1/icons/races/creature-types/dragon.png
+items:
+  - _id: huhGKlkSWvxmM6Vx
+    _key: '!actors.items!r9QhZzod9bWLKyRa.huhGKlkSWvxmM6Vx'
+    _stats:
+      compendiumSource: Actor.B59bgIQPCvLvG67m.Item.QdGRbOBc1RcE4pYa
+      coreVersion: '12.331'
+    img: systems/pf1/icons/races/creature-types/dragon.png
+    name: Wyvern Arrow
+    system:
+      actions:
+        - _id: 4gvekbvzlycch851
+          ability:
+            critMult: 3
+          actionType: rwak
+          activation:
+            type: nonaction
+            unchained:
+              type: nonaction
+          attackBonus: '15'
+          damage:
+            parts:
+              - formula: 1d6
+                types:
+                  - piercing
+          img: systems/pf1/icons/races/creature-types/dragon.png
+          name: Attack
+          notes:
+            effect:
+              - >-
+                plus
+                @UUID[Compendium.pf-content.pf-items.Item.I2aUkvmWp9Rv8lkZ]{wyvern
+                poison}
+              - <strong>Type</strong> injury
+              - <strong>Save</strong> DC 17 Fortitude
+              - <strong>Frequency</strong> 1/round for 6 rounds
+              - <strong>Effect</strong> 1d4 Con
+              - <strong>Cure</strong> 2 saves
+          save:
+            dc: '17'
+            description: Fortitude Negates
+            type: fort
+      proficient: true
+      subType: weapon
+    type: attack
+name: Wyvern Arrow Trap
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 6
+    disarm: 20
+    duration: Instantaneous
+    effect: ''
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 20
+    reset: None
+    trigger: Touch
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

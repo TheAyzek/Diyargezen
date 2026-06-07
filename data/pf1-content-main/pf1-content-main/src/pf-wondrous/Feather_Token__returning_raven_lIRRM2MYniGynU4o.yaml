@@ -1,0 +1,29 @@
+_id: lIRRM2MYniGynU4o
+_key: '!items!lIRRM2MYniGynU4o'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Feather Token, returning raven
+system:
+  aura:
+    school: con
+  cl: 12
+  description:
+    value: >-
+      <p>Several varieties of these enchanted feathers are popular in Andoran.
+      Full rules for feather tokens can be found in the Core Rulebook. Returning
+      Raven: A token that transforms into a spectral bird and flies to a
+      designated location within 10 miles and speaks a message in the user's
+      voice of up to 25 words. The returning raven will hover in midair for 1
+      minute, and if touched during this time it will accept a single new
+      message of up to 25 words and then return to its point of origin and
+      deliver it in the voice of the creature that touched it. The returning
+      raven vanishes after delivering the second message or if no new message is
+      imparted within 1 minute.</p><h3>Requirements</h3><p>Craft Wondrous Item,
+      major creation</p>
+  price: 800
+  sources:
+    - id: PZO9409
+  subType: wondrous
+type: equipment

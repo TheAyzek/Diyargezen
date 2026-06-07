@@ -1,0 +1,31 @@
+_id: k5ev7F9fymmGEcdn
+_key: '!items!k5ev7F9fymmGEcdn'
+_stats:
+  coreVersion: '12.343'
+folder: AqjqWFWInPuTJU1V
+img: icons/skills/melee/strike-polearm-light-orange.webp
+name: Glamered
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong>&nbsp;moderate
+      illusion&nbsp;<strong>CL</strong>&nbsp;10th</p><p><strong>Slot</strong>&nbsp;weapon
+      quality;&nbsp;<strong>Price</strong>&nbsp;+4,000
+      gp;&nbsp;<strong>Weight</strong>&nbsp;-</p><h3>Description</h3><p>A&nbsp;<em>glamered&nbsp;</em>weapon
+      can be commanded to change its shape and appearance to assume the form of
+      another object of similar size. The weapon retains all its properties
+      (including weight) when so disguised but does not radiate magic.
+      Only<em>&nbsp;true seeing&nbsp;</em>or similar magic reveals the true
+      nature of a&nbsp;<em>glamered</em>&nbsp;weapon while it is disguised.
+      After a&nbsp;<em>glamered&nbsp;</em>weapon is used to attack, this special
+      ability is suppressed for 1
+      minute.</p><h3>Construction</h3><p><strong>Requirements</strong>&nbsp;Craft
+      Magic Arms and Armor,&nbsp;<em>disguise self</em>,&nbsp;<em>magic
+      aura</em>;&nbsp;<strong>Price</strong>&nbsp;+2,000 gp</p>
+  sources:
+    - id: PZO1123
+      pages: '142'
+  subType: misc
+  tags:
+    - Universal Weapon Qualities
+type: feat

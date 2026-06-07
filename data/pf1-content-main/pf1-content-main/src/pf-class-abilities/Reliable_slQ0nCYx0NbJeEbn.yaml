@@ -1,0 +1,19 @@
+_id: slQ0nCYx0NbJeEbn
+_key: '!items!slQ0nCYx0NbJeEbn'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Reliable
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>At 1st level, a techslinger can
+      spend 1 grit point as a free action to prevent a timeworn firearm from
+      glitching. This deed replaces quick clear.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

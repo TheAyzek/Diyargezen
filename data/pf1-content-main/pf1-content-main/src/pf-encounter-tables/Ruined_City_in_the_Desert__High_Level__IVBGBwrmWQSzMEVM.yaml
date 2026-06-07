@@ -1,0 +1,66 @@
+_id: IVBGBwrmWQSzMEVM
+_key: '!tables!IVBGBwrmWQSzMEVM'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/mine-interior-dungeon-door.webp
+name: Ruined City in the Desert (High Level)
+replacement: true
+results:
+  - _id: SXxVRwF5RUqXPwX6
+    _key: '!tables.results!IVBGBwrmWQSzMEVM.SXxVRwF5RUqXPwX6'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 17
+    text: 1d6 ([[1d6]]) Panthereons [AVG CR 11]
+    type: text
+    weight: 1
+  - _id: YGTC2HxghbS9o7kr
+    _key: '!tables.results!IVBGBwrmWQSzMEVM.YGTC2HxghbS9o7kr'
+    img: icons/svg/d20-black.svg
+    range:
+      - 18
+      - 34
+    text: The Enumerator* [CR 13]
+    type: text
+    weight: 1
+  - _id: jkoNYcowAeQ1xaAd
+    _key: '!tables.results!IVBGBwrmWQSzMEVM.jkoNYcowAeQ1xaAd'
+    img: icons/svg/d20-black.svg
+    range:
+      - 35
+      - 51
+    text: 1 Phoenix [CR 15]
+    type: text
+    weight: 1
+  - _id: R6gLGWsJ7Ojok0BC
+    _key: '!tables.results!IVBGBwrmWQSzMEVM.R6gLGWsJ7Ojok0BC'
+    img: icons/svg/d20-black.svg
+    range:
+      - 52
+      - 68
+    text: 1 Xacarba [CR 15]
+    type: text
+    weight: 1
+  - _id: BPoKmOOp6QH4oWaj
+    _key: '!tables.results!IVBGBwrmWQSzMEVM.BPoKmOOp6QH4oWaj'
+    img: icons/svg/d20-black.svg
+    range:
+      - 69
+      - 84
+    text: 2 Black Scorpions [CR 17]
+    type: text
+    weight: 1
+  - _id: 3n03cXBsEGzUlmnL
+    _key: '!tables.results!IVBGBwrmWQSzMEVM.3n03cXBsEGzUlmnL'
+    img: icons/svg/d20-black.svg
+    range:
+      - 85
+      - 100
+    text: 1 Ancient Blue Dragon [CR 18]
+    type: text
+    weight: 1
+sort: 3400000

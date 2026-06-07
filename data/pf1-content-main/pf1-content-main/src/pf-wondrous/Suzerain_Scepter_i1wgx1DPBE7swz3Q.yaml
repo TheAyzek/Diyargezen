@@ -1,0 +1,37 @@
+_id: i1wgx1DPBE7swz3Q
+_key: '!items!i1wgx1DPBE7swz3Q'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Suzerain Scepter
+system:
+  aura:
+    school: enc
+  cl: 7
+  description:
+    value: >-
+      <p>This ornately bejeweled baton confers the mark of rightful rulership on
+      its bearer. The wielder of this scepter gains a +5 competence bonus on
+      Knowledge (nobility) and Diplomacy checks. Furthermore, once per day, and
+      on command, the wielder can affect up to seven living creatures with good
+      hope, as the spell. If the wielder of a suzerain scepter has the
+      Leadership feat, she may attract double the normal number of followers for
+      her Leadership score; however, if the rod is out of the wielder's
+      possession for more than 1 week these extra followers leave. In addition,
+      a suzerain scepter radiates a continuous bless effect that affects any
+      cohort, follower, animal companion, familiar, special mount, or creature
+      charmed or summoned by the wielder (but not called creatures or those
+      under dominate or other compulsion effects). Whenever the wielder creates
+      an effect that provides a morale bonus to such creatures (not including
+      the scepter's bless effect), that bonus increases by
+      1.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Rod,
+      Leadership, bless, good hope, greater command, the creator must have the
+      Leadership feat</p>
+  price: 20000
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 5
+type: equipment

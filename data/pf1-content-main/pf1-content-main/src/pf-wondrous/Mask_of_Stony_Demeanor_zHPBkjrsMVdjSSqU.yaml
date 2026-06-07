@@ -1,0 +1,29 @@
+_id: zHPBkjrsMVdjSSqU
+_key: '!items!zHPBkjrsMVdjSSqU'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Mask of Stony Demeanor
+system:
+  aura:
+    school: trs
+  cl: 6
+  description:
+    value: >-
+      <p>When worn, this mask transforms the wearer's face into a stone statue
+      and its voice into an emotionless monotone. Though it allows the wearer to
+      speak, its facial expressions and voice betray little emotion, granting a
+      +10 competence bonus on Bluff checks made to lie and a +5 competence bonus
+      on Bluff checks made to feint, but also imposing a -5 penalty on Bluff
+      checks made to pass a hidden
+      message.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, innocence (Advanced Player's Guide), stone shape</p>
+  price: 8000
+  slot: head
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 4
+type: equipment

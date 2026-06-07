@@ -1,0 +1,27 @@
+_id: MgSf5BjAIlKrrLds
+_key: '!items!MgSf5BjAIlKrrLds'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Sea Tyrant's Patch
+system:
+  aura:
+    school: enc
+  cl: 15
+  description:
+    value: >-
+      <p>This ornate silk eye patch is embroidered with gold thread and studded
+      with pearls in a pattern representing a whirlpool. The wearer of this
+      item, which is a favorite patch of ruthless or particularly driven pirate
+      captains, is constantly affected as if subject to the touch of the sea
+      (Advanced Player's Guide) and water breathing spells. Furthermore, once
+      per day on command, the wearer can use mass charm monster, as per the
+      spell.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, mass charm monster, touch of the sea, water breathing</p>
+  price: 70000
+  slot: eyes
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

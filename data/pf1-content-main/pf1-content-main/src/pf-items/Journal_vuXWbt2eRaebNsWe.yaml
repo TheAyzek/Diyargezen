@@ -1,0 +1,20 @@
+_id: vuXWbt2eRaebNsWe
+_key: '!items!vuXWbt2eRaebNsWe'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/books/book-open-brown.webp
+name: Journal
+system:
+  description:
+    value: >-
+      <p>This is a blank, lightweight book with an oilskin cover. It has 50
+      paper pages.</p>
+  equipped: false
+  price: 10
+  sources:
+    - id: PZO1123
+      pages: '57'
+  subType: adventuring
+  weight:
+    value: 1
+type: loot

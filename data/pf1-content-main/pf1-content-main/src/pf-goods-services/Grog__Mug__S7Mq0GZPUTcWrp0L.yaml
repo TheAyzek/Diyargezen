@@ -1,0 +1,21 @@
+_id: S7Mq0GZPUTcWrp0L
+_key: '!items!S7Mq0GZPUTcWrp0L'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/tankard-full.jpg
+name: Grog (Mug)
+system:
+  description:
+    value: >-
+      <p>A foul mix of different alcohols and whatever's handy, grog was
+      invented by pirates and sailors and never managed to crawl far onto land.
+      Grog is no one's first choice of drink, but anyone who's spent enough time
+      on a ship has had at least a taste.</p>
+  price: 0.02
+  sources:
+    - id: PZO1123
+      pages: '95'
+  subType: food
+  weight:
+    value: 0.5
+type: consumable

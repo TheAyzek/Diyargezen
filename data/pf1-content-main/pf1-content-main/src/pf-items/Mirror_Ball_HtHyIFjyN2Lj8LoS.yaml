@@ -1,0 +1,24 @@
+_id: HtHyIFjyN2Lj8LoS
+_key: '!items!HtHyIFjyN2Lj8LoS'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/gems/pearl-swirl-blue.webp
+name: Mirror Ball
+system:
+  description:
+    value: >-
+      <p>This intensely polished steel sphere can be rolled in a manner similar
+      to a thrown splash weapon. Anyone who can clearly see the sphere within 30
+      feet can notice the presence or absence of movement reflected on its
+      surface, making it useful for checking around corners for guards. A gently
+      rolled ball on a smooth floor requires a DC 10 Perception check to
+      hear.</p>
+  equipped: false
+  price: 100
+  sources:
+    - id: PZO9481
+      pages: '13'
+  subType: adventuring
+  weight:
+    value: 1
+type: loot

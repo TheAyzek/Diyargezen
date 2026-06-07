@@ -1,0 +1,66 @@
+_id: y4svenKeEZoF4Yum
+_key: '!items!y4svenKeEZoF4Yum'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/crossbow-light.PNG
+name: Cornerstone Crossbow
+system:
+  actions:
+    - _id: irggmqvq0ef03raz
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: cornerstoneCrossbow
+  aura:
+    school: div
+  baseTypes:
+    - Light crossbow
+  cl: 12
+  description:
+    value: >-
+      <p>As a standard action, this +1 seeking light crossbow can generate bolts
+      of force that briefly harden to anchor on corners and walls of structures,
+      trailing a line of force that connects the bolt to the crossbow. As a move
+      action, the wielder of the weapon can pull the crossbow to the anchor,
+      swiftly carrying the wielder to the anchor point. The bolt of force has a
+      maximum range of 80 feet, and can anchor only to a structure study enough
+      to support the wielder's weight. If there is not a platform appropriate
+      for the wielder to land on next to the anchor, the wielder must succeed at
+      a Climb check (DC appropriate to climbing the surface the bolt of force is
+      anchored to) or immediately fall. The bolt of force disappears in 1d4
+      rounds, just after the crossbow is drawn to it (the wielder has time to
+      land), or when the next bolt of force is fired, whichever comes first. The
+      bolts of force deal no damage, and creatures other than the wielder are
+      unaffected by them.</p><p><strong>Base Item</strong>:
+      seeking</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, levitate, true seeing</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: wood
+  price: 21335
+  showInQuickbar: false
+  sources:
+    - id: PZO9460
+  weaponGroups:
+    - crossbows
+  weight:
+    value: 9
+type: weapon

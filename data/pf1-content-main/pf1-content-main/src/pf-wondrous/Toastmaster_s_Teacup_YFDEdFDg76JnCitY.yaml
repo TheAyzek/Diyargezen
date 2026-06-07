@@ -1,0 +1,28 @@
+_id: YFDEdFDg76JnCitY
+_key: '!items!YFDEdFDg76JnCitY'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Toastmaster's Teacup
+system:
+  aura:
+    school: abj
+  cl: 5
+  description:
+    value: >-
+      <p>This porcelain teacup is used by poisoners to administer lethal doses
+      to even the most suspicious of victims. When a dose of ingested poison is
+      placed in the toastmaster's teacup and a command word is spoken, the cup
+      absorbs the poison so it cannot be detected. When the teacup's user speaks
+      a second command word (it need not be the same user), the poison reappears
+      and taints any liquid within the
+      cup.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, nondetection, poison</p>
+  price: 5000
+  sources:
+    - id: PZO9292
+  subType: wondrous
+  weight:
+    value: 0.3
+type: equipment

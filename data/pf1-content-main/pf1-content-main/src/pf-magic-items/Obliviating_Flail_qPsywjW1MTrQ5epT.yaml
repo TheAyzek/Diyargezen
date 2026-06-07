@@ -1,0 +1,66 @@
+_id: qPsywjW1MTrQ5epT
+_key: '!items!qPsywjW1MTrQ5epT'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/flail-heavy.png
+name: Obliviating Flail
+system:
+  actions:
+    - _id: f4n1zwg6pzfo2iml
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: obliviatingFlail
+  aura:
+    custom: true
+    school: enchantment and evocation
+  baseTypes:
+    - Heavy Flail
+  cl: 3
+  description:
+    value: >-
+      <p>The head of this +1 heavy flail looks like a human skull with wicked
+      spikes growing out of it. At will, the wielder can affect a creature
+      struck by the obliviating flail with lesser confusion as a free action (a
+      successful DC 11 Will saving throw negates this effect). If the struck
+      opponent fails its save against the lesser confusion effect, the wielder
+      of the obliviating flail is automatically affected by this effect as well
+      (no saving throw). If the wielder uses the flail to perform a coup de
+      grace and successfully kills her target, she gains 1d4 temporary hit
+      points, which last for 1 minute per HD of the target
+      slain.</p><p><strong>Base Item</strong>:
+      +1</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, death knell, lesser confusion</p>
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 4815
+  properties:
+    dis: true
+    trp: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9267
+  weaponGroups:
+    - flails
+  weight:
+    value: 10
+type: weapon

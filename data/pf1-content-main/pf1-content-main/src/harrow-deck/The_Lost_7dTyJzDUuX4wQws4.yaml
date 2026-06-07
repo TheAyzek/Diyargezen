@@ -1,0 +1,30 @@
+_id: 7dTyJzDUuX4wQws4
+_key: '!journal!7dTyJzDUuX4wQws4'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: B8yeiGCU6nhcjOzu
+name: The Lost
+pages:
+  - _id: zVWkoKLL7jxhJ5Kz
+    _key: '!journal.pages!7dTyJzDUuX4wQws4.zVWkoKLL7jxhJ5Kz'
+    _stats:
+      coreVersion: '12.331'
+    name: The Lost
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Lost</strong> (chaotic evil, Wisdom) is the card of
+        emptiness and loss of identity. The bodak shown is forever mad, lost in
+        a world of lunatics, insane asylums, and mass killers. For those under
+        its influence, the world makes no sense. It evokes times where all is
+        babble, as when meeting someone who speaks only in another tongue.
+        Misaligned, The Lost can indicate clarity of mind under duress.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Lost.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

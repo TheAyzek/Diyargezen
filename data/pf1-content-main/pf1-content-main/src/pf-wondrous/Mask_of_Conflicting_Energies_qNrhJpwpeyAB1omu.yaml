@@ -1,0 +1,30 @@
+_id: qNrhJpwpeyAB1omu
+_key: '!items!qNrhJpwpeyAB1omu'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Mask of Conflicting Energies
+system:
+  aura:
+    school: trs
+  cl: 7
+  description:
+    value: >-
+      <p>This mask is white on one side and black on the other, with glittering
+      gem lenses covering the eyes. Up to three times per day, the wearer can
+      change the energy damage of a fire spell she casts to cold, a cold spell
+      to fire, an acid spell to electricity, or an electricity spell to acid. 
+      All other effects of the spell are unchanged (for example, an ice storm
+      changed to fire damage still deals bludgeoning damage and bestows a
+      penalty on Perception checks). The mask affects only spells up to 3rd
+      level.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Elemental Spell</p>
+  price: 4000
+  slot: head
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

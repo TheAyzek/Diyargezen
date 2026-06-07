@@ -1,0 +1,30 @@
+_id: 99Qlvbp7r6VUcahy
+_key: '!items!99Qlvbp7r6VUcahy'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/biological/organ-intestines-red.webp
+name: Athrakitis
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong>&nbsp;disease (contact, inhaled or
+      ingested);&nbsp;<strong>Save</strong>&nbsp;Fortitude DC
+      20;</p><p><strong>Onset</strong>&nbsp;1d6
+      days;&nbsp;<strong>Frequency</strong>&nbsp;1/day</p><p><strong>Effect</strong>&nbsp;1d8
+      Str damage</p><p><strong>Cure</strong>&nbsp;&ndash;</p><hr /><p>This
+      disease spreads through particles exuded from the decomposing corpses of
+      infected animals. Infective particles can survive in the soil for decades
+      or even centuries. The disease typically occurs when grazing mammals
+      ingest or breathe the spores while eating ground vegetation. Anthrakitis
+      causes a wide variety of symptoms as it attacks the skin, digestive
+      system, or respiratory system; symptoms include fatigue, difficulty
+      breathing, ulcers, loss of appetite, and nausea. Any victim infected with
+      anthrakitis can also spread the disease. Those who come into contact with
+      a victim must save versus the disease or become infected themselves. The
+      bodies of those killed by anthrakitis are also infectious and remain so
+      until destroyed.</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

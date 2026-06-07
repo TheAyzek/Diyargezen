@@ -1,0 +1,21 @@
+_id: W4TwTLNuBcmAqFzl
+_key: '!items!W4TwTLNuBcmAqFzl'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/beast_04.jpg
+name: Kinetic Enhancement
+system:
+  associations:
+    classes:
+      - Psychic
+  description:
+    value: >-
+      <p><strong>Psychic Psi-Tech Discovery</strong></p><p>You can generate
+      kinetic energy to aid yourself in close-quarters scrapes. You can add your
+      Intelligence modifier as a bonus on combat maneuver checks and to your
+      CMD. You can also add your Intelligence modifier as a bonus on Strength
+      checks to break or lift objects.</p>
+  subType: classFeat
+  tags:
+    - Psychic Psi-Tech Discovery
+type: feat

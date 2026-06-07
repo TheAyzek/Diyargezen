@@ -1,0 +1,49 @@
+_id: hfVZkjspFrxjjNWZ
+_key: '!items!hfVZkjspFrxjjNWZ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_20.jpg
+name: Archdevil Traits
+system:
+  description:
+    value: >-
+      <p>An archdevil rules a domain in Hell. Archdevils are lawful evil
+      outsiders with a minimum CR of 26. Archdevils share the following traits
+      and have the devil subtype (unless otherwise noted in a creature&rsquo;s
+      entry).</p><ul><li>An archdevil can grant spells as if it were a deity.
+      Each archdevil has a favored weapon and grants the Evil and Law domains,
+      plus two other domains and four subdomains.</li><li>An archdevil&rsquo;s
+      natural weapons, as well as any weapons it wields, are treated as epic,
+      evil, and lawful for the purpose of overcoming damage
+      reduction.</li><li><a>Frightful Presence (Su)</a>: An archdevil can
+      activate its frightful presence as a free action as part of any attack,
+      special attack, or spell-like ability, or by speaking
+      aloud.</li><li><a>Infernal Resurrection (Ex)</a>: If an archdevil is
+      killed, its body crumbles into ashes, leaving behind any gear it held or
+      carried, while it is immediately restored to life (as per <a>true
+      resurrection</a>) in a location of its choosing in its domain. An
+      archdevil can&rsquo;t use this ability again for 1 year, and it avoids
+      direct combat if possible until that year has passed. If slain again or
+      killed by unusual methods (such as by a true deity or an artifact created
+      for this purpose), an archdevil is slain forever. An archdevil who does
+      not control a domain does not gain this ability (and is technically an
+      infernal duke rather than a true archdevil).</li><li><a>Immunity</a> to
+      ability damage, ability drain, charm, compulsion, death effects, <a>energy
+      drain</a>, and <a>petrification</a>.</li><li><a>Language Mastery (Ex)</a>:
+      An archdevil knows all languages, as though using a <a>tongues</a> spell,
+      although this ability is not supernatural and cannot be dispelled.
+      <a>Linguistics</a> is always a class skill for an
+      archdevil.</li><li><a>Regeneration (Ex)</a>: Only mythic damage or damage
+      from a creature of equal or greater standing (such as another archdevil,
+      deity, empyreal lord, Great Old One, Horseman, or qlippoth lord)
+      interrupts an archdevil&rsquo;s regeneration.</li><li><a>Resistance
+      (Ex)</a> to acid 30 and cold 30.</li><li><a>Summon Devils (Sp)</a>: Three
+      times per day as a swift action, an archdevil can summon any devil or
+      combination of devils whose total combined CR is 20 or lower. This
+      otherwise works like the <a>summon</a> universal monster rule with a 100%
+      chance of success, and it counts as a 9th-level spell
+      effect.</li><li><a>Telepathy</a>&nbsp;300 feet.</li></ul>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

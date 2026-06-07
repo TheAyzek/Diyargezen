@@ -1,0 +1,31 @@
+_id: YBWnwgLX6iJGpF2n
+_key: '!items!YBWnwgLX6iJGpF2n'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Mask of the Cursed Eye
+system:
+  aura:
+    school: nec
+  cl: 3
+  description:
+    value: >-
+      <p>This mask is decorated with a staring, bloodshot eye. Anyone other than
+      an ally who observes the wearer using a scrying spell or pierces any of
+      his magical disguise (including invisibility and polymorph effects) with a
+      divination spell is blinded for 1d4 minutes (Fortitude DC 16 negates) and
+      the wearer receives a brief mental glimpse of the perpetrator. This is
+      enough to enable scrying or teleportation to investigate the perpetrator,
+      but the wearer is considered to have no familiarity with the subject. The
+      mask can trigger only once per day, after which it falls dormant until the
+      next midnight.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, blindness/deafness</p>
+  price: 2500
+  slot: eyes
+  sources:
+    - id: PZO9292
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,53 @@
+_id: MP5LI86Ej1Nfitcs
+_key: '!journal!MP5LI86Ej1Nfitcs'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Valani
+pages:
+  - _id: 36ysp3ulJX72dwVX
+    _key: '!journal.pages!MP5LI86Ej1Nfitcs.36ysp3ulJX72dwVX'
+    _stats:
+      coreVersion: '12.331'
+    name: Valani
+    sort: 0
+    text:
+      content: >-
+        <h1> Valani</h1><h2>Fireshaker</h2>@Source[PZO9267;pages=324] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Valani">Valani</a><h3>Details</h3><p><strong>Alignment</strong>
+        CG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Change, growth, primal forces<br
+        /><strong>Domains</strong> Chaos, Earth, Good, Weather<br
+        /><strong>Subdomains</strong> Azata (Chaos), Azata (Good), Growth,
+        Seasons, Storms<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Club<br
+        /><strong>Symbol</strong> Volcano with gold lava<br /><strong>Sacred
+        Animal(s)</strong> Dinosaur<br /><strong>Sacred Color(s)</strong> Brown,
+        gold</p><h3>Obedience</h3><p>Build a fire and burn an item or set of
+        items worth at least 50 gp. When the flames have died down, roll among
+        the cinders to extinguish the last bits of fire and grind the ashes into
+        the ground. Each time you perform this obedience, choose either acid,
+        cold, electricity, or fire. Gain a +2 sacred bonus on saving throws
+        against the chosen energy type.</p><h2>Boons - Celestial
+        Obedience</h2><h3>Mystery Cultist</h3><p>@Source[PZO9255;pages=26]<br
+        /><strong>1: Elemental Arcana (Sp)</strong> <em>produce flame</em>
+        3/day, <em>soften earth and stone</em> 2/day, or <em>call lightning</em>
+        1/day<br /><strong>2: Quake (Sp)</strong> You can cast <em>earthquake
+        </em>once per day.<br /><strong>3: Wrath of Nature (Su)</strong> Once
+        per day, you can assume the form of a Gargantuan earth or fire elemental
+        for up to 1 hour. If you choose the form of an earth elemental, you gain
+        a +10 size bonus to your Strength, a -4 penalty to your Dexterity, a +6
+        size bonus to your Constitution, and a +8 natural armor bonus. If you
+        choose the form of a fire elemental, you gain a +8 size bonus to your
+        Dexterity, a +6 size bonus to your Constitution, and a +6 natural armor
+        bonus. This ability is otherwise identical to <em>elemental body
+        IV</em>.</em></p><h2>For Followers of
+        Valani</h2><h3>Feats</h3><p><em>Heroic
+        Interposition</em></p><h3>Traits</h3><p><em>Empyreal Focus</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

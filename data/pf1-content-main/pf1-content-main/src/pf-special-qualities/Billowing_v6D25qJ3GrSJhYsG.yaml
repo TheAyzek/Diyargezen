@@ -1,0 +1,27 @@
+_id: v6D25qJ3GrSJhYsG
+_key: '!items!v6D25qJ3GrSJhYsG'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Billowing
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint conjuration <strong>CL</strong>
+      3rd</p><p><strong>Slot</strong> none; <strong>Price</strong> +1 bonus;
+      <p><em>Billowing</em> armor constantly creates a cushion of elemental air
+      around the wearer. The wearer is immune to additional damage from
+      constriction and damage from being buried, although he gains no protection
+      from suffocation. When the wearer falls more than 20 feet, he can attempt
+      a DC 15 Fly skill check as an immediate action to reduce his falling
+      damage by half.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, <em>cushioning bands</em>, <em>feather
+      fall</em>; <strong>Price</strong> +1 bonus</p>
+  sources:
+    - id: PZO1141
+      pages: '46'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

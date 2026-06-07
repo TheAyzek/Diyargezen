@@ -1,0 +1,24 @@
+_id: JyjfSUJPBDU8V6dD
+_key: '!items!JyjfSUJPBDU8V6dD'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_05.jpg
+name: Rock Throwing
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>This creature has a +1 racial bonus on attack rolls with thrown rocks.
+      It can hurl rocks up to two categories smaller than its size. A
+      &ldquo;rock&rdquo; is any large, bulky, and relatively regularly shaped
+      object made of any material with a hardness of at least 5. The creature
+      can hurl the rock up to five range increments. The size of the range
+      increment varies with the creature. Damage from a thrown rock is generally
+      twice the creature&rsquo;s base slam damage plus 1-1/2 times its Strength
+      bonus.</p><p><em>Format</em>: rock throwing (120
+      ft.)</p><p><em>Location</em>: Special Attacks (damage is listed in Ranged
+      attack entry).</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

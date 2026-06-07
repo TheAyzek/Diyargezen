@@ -1,0 +1,58 @@
+_id: Q8vJfOFojro5BrWO
+_key: '!journal!Q8vJfOFojro5BrWO'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 9jEP8eS9NhzOdLJb
+name: 2.06. Combat Modifiers
+pages:
+  - _id: L0IW5xZDqbdtM5vY
+    _key: '!journal.pages!Q8vJfOFojro5BrWO.L0IW5xZDqbdtM5vY'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.06. Combat Modifiers
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p><strong>@Compendium[pf-content.pf-rules.Q8vJfOFojro5BrWO]{2.06.
+        Combat
+        Modifiers}</strong></p><ul><li>@Compendium[pf-content.pf-rules.b7fUAk2heKMPWXZU]{2.06.1.
+        Cover}</li><li>@Compendium[pf-content.pf-rules.5k8dng1qeuExFjmw]{2.06.2.
+        Concealment}</li><li>@Compendium[pf-content.pf-rules.L68tjh194oVBMmVL]{2.06.3.
+        Flanking}</li><li>@Compendium[pf-content.pf-rules.iC0zWabI6bgxBYg1]{2.06.4.
+        Helpless Defenders}</li></ul><hr /><p>@Source[PZO1110;pages=195]</p><p>A
+        number of factors and conditions can influence an attack roll. Many of
+        these situations grant a bonus or penalty on attack rolls or to a
+        defender’s Armor Class.</p><h2>Table 8-5: Attack Roll
+        Modifiers</h2><table><thead><tr><td>Attacker
+        is...</td><td>Melee</td><td>Ranged</td></tr></thead><tbody><tr><td>Dazzled</td><td>-1</td><td>-1</td></tr><tr><td>Entangled</td><td>-2<sup>1</sup></td><td>-2<sup>1</sup></td></tr><tr><td>Flanking
+        defender</td><td>+2</td><td>—</td></tr><tr><td>Invisible</td><td>+2<sup>2</sup></td><td>+2<sup>2</sup></td></tr><tr><td>On
+        higher
+        ground</td><td>+1</td><td>+0</td></tr><tr><td>Prone</td><td>-4</td><td>—3</td></tr><tr><td>Shaken
+        or frightened</td><td>-2</td><td>-2</td></tr><tr><td>Squeezing through a
+        space</td><td>-4</td><td>-4</td></tr></tbody></table><p>1 An entangled
+        character also takes a –4 penalty to Dexterity, which may affect his
+        attack roll.<br />2 The defender loses any Dexterity bonus to AC.<br />3
+        Most ranged weapons can’t be used while the attacker is prone, but you
+        can use a crossbow or shuriken while prone at no penalty.</p><h2>Table
+        8-6: Armor Class Modifiers</h2><table><thead><tr><td>Defender
+        is...</td><td>Melee</td><td>Ranged</td></tr></thead><tbody><tr><td>Behind
+        cover</td><td>+4</td><td>+4</td></tr><tr><td>Blinded</td><td>-2<sup>1</sup></td><td>-2<sup>1</sup></td></tr><tr><td>Concealed
+        or invisible</td><td>See
+        Concealment</td></tr><tr><td>Cowering</td><td>-2<sup>1</sup></td><td>-2<sup>1</sup></td></tr><tr><td>Entangled</td><td>+0<sup>2</sup></td><td>+0<sup>2</sup></td></tr><tr><td>Flat-footed</td><td>+0<sup>1</sup></td><td>+0<sup>1</sup></td></tr><tr><td>Grappling
+        (but the attacker is
+        not)</td><td>+0</td><td>+0</td></tr><tr><td>Helpless</td><td>-4<sup>3</sup></td><td>+0<sup>3</sup></td></tr><tr><td>Kneeling
+        or
+        sitting</td><td>-2</td><td>+2</td></tr><tr><td>Pinned</td><td>-4<sup>3</sup></td><td>+0<sup>3</sup></td></tr><tr><td>Prone</td><td>-4</td><td>+4</td></tr><tr><td>Squeezing
+        through a
+        space</td><td>-4</td><td>-4</td></tr><tr><td>Stunned</td><td>-2<sup>1</sup></td><td>-2<sup>1</sup></td></tr></tbody></table><p>1
+        The defender loses any Dexterity bonus to AC.<br />2 An entangled
+        character takes a –4 penalty to Dexterity.<br />3 The defender is denied
+        his Dexterity bonus to his Armor Class.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

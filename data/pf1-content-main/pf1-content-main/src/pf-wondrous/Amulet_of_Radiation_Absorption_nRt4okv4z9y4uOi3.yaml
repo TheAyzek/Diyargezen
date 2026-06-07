@@ -1,0 +1,40 @@
+_id: nRt4okv4z9y4uOi3
+_key: '!items!nRt4okv4z9y4uOi3'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Amulet of Radiation Absorption
+system:
+  aura:
+    custom: true
+    school: abjuration and conjuration
+  cl: 10
+  description:
+    value: >-
+      <p>This amulet features a large, ragged stone that was harvested from
+      highly radioactive regions of the Darklands and that glows with a faint
+      green light. The wearer is rendered immune to the effects of all forms of
+      radiation. Additionally, for each minute the wearer is exposed to
+      radiation, the amulet absorbs 1 charge of radioactive energy. The amulet
+      can hold up to 5 charges. Charges naturally dissipate at a rate of 1
+      charge per 24 hours. As a standard action, the wearer can expend 1 charge
+      in order to fire a ray of concentrated radiation from the amulet. Treat
+      this as a ranged touch attack with a range of 60 feet. The wearer can
+      choose any one of the following effects, as outlined below.  Blightburn:
+      The target takes 6d6 points of fire damage.  Caphorite: The target must
+      succeed at a DC 14 Fortitude save or be blinded for 1d4 rounds.  Lazurite:
+      The target takes 2d6 points of negative energy damage, and if it dies in
+      the next hour, there is a 50% chance it rises as a ghoul 1d4 rounds
+      later.  Surface: The target takes 1d2 points of Strength and Constitution
+      damage.</p><h3>Requirements</h3><p>Craft Wondrous Item, radiation ward
+      (see page 15), remove radioactivity (Pathfinder Campaign Setting:
+      Technology Guide 11)</p>
+  price: 45000
+  slot: neck
+  sources:
+    - id: PZO9479
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

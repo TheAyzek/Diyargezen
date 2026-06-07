@@ -1,0 +1,501 @@
+_id: 15gp2Xd82o66dGQo
+_key: '!actors!15gp2Xd82o66dGQo'
+_stats:
+  coreVersion: '12.343'
+img: icons/svg/mystery-man.svg
+items:
+  - _id: JkH8IJqpNBXBspcq
+    _key: '!actors.items!15gp2Xd82o66dGQo.JkH8IJqpNBXBspcq'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/green_10.jpg
+    name: 'Race: Fey'
+    system:
+      creatureSubtypes:
+        - ''
+      creatureTypes:
+        - fey
+      description:
+        value: >-
+          sbc | As the statblock did not include a race, a custom one was
+          generated.
+    type: race
+  - _id: thm1PfgxU6gWFY5K
+    _key: '!actors.items!15gp2Xd82o66dGQo.thm1PfgxU6gWFY5K'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/shadow_11.jpg
+    name: 'Sense: Low-light Vision'
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          A creature with low-light vision can see twice as far as a human in
+          starlight, moonlight, torchlight, and similar conditions of dim light.
+          It retains the ability to distinguish color and detail under these
+          conditions.
+      subType: racial
+    type: feat
+  - _id: mOlKMhYkGYQESnF4
+    _key: '!actors.items!15gp2Xd82o66dGQo.mOlKMhYkGYQESnF4'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Special Quality: Versatile Performance'
+    system:
+      description:
+        value: >-
+          sbc | Placeholder for Special Qualities, which in most statblocks are
+          listed under SQ in the statistics block, but described in the Special
+          Abilities. Remove duplicates as needed!
+      subType: misc
+    type: feat
+  - _id: Tf9tlJhmNtGoVRYC
+    _key: '!actors.items!15gp2Xd82o66dGQo.Tf9tlJhmNtGoVRYC'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/svg/mystery-man.svg
+    name: Rapier
+    system:
+      actions:
+        - _id: zsryxby11ucvd432
+          ability:
+            attack: _default
+            critRange: 18
+            damage: str
+          actionType: mwak
+          activation:
+            type: attack
+            unchained:
+              type: attack
+          attackBonus: '4'
+          attackName: Rapier
+          damage:
+            parts:
+              - formula: 1d3+0
+                types:
+                  - piercing
+          duration:
+            units: inst
+          img: icons/svg/mystery-man.svg
+          name: Attack
+          notes:
+            footer:
+              - rapier +6 (1d3-1/18-20)
+              - 'Weapon Qualities: [finesse]'
+          range:
+            units: melee
+          tag: rapier
+      subType: weapon
+    type: attack
+  - _id: XyKzTgQw8RF9oaqW
+    _key: '!actors.items!15gp2Xd82o66dGQo.XyKzTgQw8RF9oaqW'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Environment: Any Urban'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: rS2njTCTYfHtLeMK
+    _key: '!actors.items!15gp2Xd82o66dGQo.rS2njTCTYfHtLeMK'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Organization: Solitary, Pair, Or Court (3-6)'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: HF1NV6CnNkaIT8om
+    _key: '!actors.items!15gp2Xd82o66dGQo.HF1NV6CnNkaIT8om'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Treasure: Standard (rapier, Other Treasure)'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: mxay0RQMJAWg5ejr
+    _key: '!actors.items!15gp2Xd82o66dGQo.mxay0RQMJAWg5ejr'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: Repartee
+    system:
+      abilityType: su
+      description:
+        value: >-
+          Three times per day, when a liminal sprite successfully aids another
+          creature's Charisma-based skill check, the creature gains a +2d4 bonus
+          on the skill check instead of the normal +2 bonus. A creature can
+          receive this bonus from only one liminal sprite per skill check.
+      subType: classFeat
+    type: feat
+  - _id: dMKMQtfdlKpgKYh9
+    _key: '!actors.items!15gp2Xd82o66dGQo.dMKMQtfdlKpgKYh9'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: Versatile Performance
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          A liminal sprite can use its bonus for Perform (comedy) in place of
+          its bonus for Bluff and Intimidate. When substituting in this way, the
+          liminal sprite uses its total bonus for Perform (comedy), including
+          any class skill bonus, in place of the associated skill's total bonus,
+          whether or not it has ranks in Perform (comedy) or Perform (comedy) is
+          a class skill for the sprite.
+      subType: classFeat
+    type: feat
+  - _id: R2KPHE8BNKdBL65m
+    _key: '!actors.items!15gp2Xd82o66dGQo.R2KPHE8BNKdBL65m'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: sbc | Conversion Buff
+    system:
+      active: true
+      changes:
+        - _id: iqplsnox
+          formula: '2'
+          target: cmb
+          type: untypedPerm
+        - _id: zl8v96kj
+          formula: '-6'
+          target: mhp
+          type: untypedPerm
+        - _id: wpk7tw1h
+          formula: '-4'
+          target: skill.fly
+          type: untypedPerm
+      description:
+        value: >-
+          <h2>sbc | Conversion Buff</h2><p>This Buff was created by
+          <strong>sbc</strong> to compensate for differences between the input
+          and the values FoundryVTT calculates automatically.</p><p>Especially
+          when the pathfinder system gets upgraded, entries in compendiums get
+          updated or foundry changes in some way, this buff may become
+          outdated.</p><p>For most mooks the conversion should more or less
+          work, but for important NPCs or creatures it is adviced to double
+          check the conversion manually.</p>
+      hideFromToken: true
+      subType: perm
+      tag: sbcConversionBuff
+    type: buff
+name: Liminal Sprite
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    cha:
+      value: 15
+    con:
+      value: 14
+    dex:
+      value: 17
+    int:
+      value: 15
+    str:
+      value: 8
+    wis:
+      value: 12
+  attributes:
+    naturalAC: null
+    speed:
+      fly:
+        base: 60
+        maneuverability: good
+      land:
+        base: 20
+    spells:
+      spellbooks:
+        primary:
+          name: Primary
+        secondary:
+          name: Secondary
+        spelllike:
+          name: Spell-likes
+        tertiary:
+          name: Tertiary
+    sr:
+      formula: '13'
+  details:
+    alignment: cn
+    cr:
+      base: 2
+    notes:
+      value: >2-
+
+                <div class="statblockContainer" style="margin-top:15px"><div style="width:100%;background-color:#ffe9c7;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);columns:2 150px">
+            <hr style="margin-left:0;margin-top:-2px;width:100%;height:4px;background-color:#e0a100;border:1px solid #000;column-span:all" />
+            <div style="padding:5px">
+                <h1>Liminal Sprite CR 2 </h1>
+                
+                
+                <div style="break-inside:avoid">
+                    <strong>Source</strong>: Bestiary 5 pg. 158<br />
+                    <strong>XP 600</strong><br />
+                    
+                    
+                    
+                    
+                    
+                    CN 
+                    Tiny 
+                    Fey <br />
+                    <strong>Init</strong> 7;
+                    <strong>Senses</strong> low-light vision; Perception +7; 
+                    
+                </div>
+                <div style="break-inside:avoid">
+                    <h3>Defense</h3>
+                        <strong>AC</strong> 16, <strong>Touch</strong> 15, <strong>Flat-Footed</strong> 13 (+3 Dex, +1 natural, +2 size)<br />
+                    <strong>Hit Points</strong> 16 (3 HD; 3d6+6)<br />
+                    <strong>Fort</strong> 3, <strong>Ref</strong> 6, <strong>Will</strong> 4
+                    
+                    <strong>DR</strong> 5/cold iron
+                    <strong>Immune</strong> sleep; 
+                    
+                    <strong>SR</strong> 13
+                    
+                    
+                </div>
+                <div>
+                    <div style="break-inside:avoid">
+                        <h3>Offense</h3>
+                                <strong>Speed</strong> 60 ft. (good)<br />
+                        <strong>Melee</strong> rapier +6 (1d3-1/18-20)<br />
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+                        
+                
+                        
+                        
+                        
+                        
+                
+                <div style="break-inside:avoid">
+                    <h3>Statistics</h3>
+                        <strong>Str</strong> 8, <strong>Dex</strong> 17, <strong>Con</strong> 14, <strong>Int</strong> 15, <strong>Wis</strong> 12, <strong>Cha</strong> 15<br />
+                    <strong>Base Atk</strong> +1; <strong>CMB</strong> +0; <strong>CMD</strong> 11<br />
+                    <strong>Feats</strong> Improved Initiative, Weapon Finesse<br />
+                    <strong>Skills</strong> Diplomacy +8, Escape Artist +9, Fly +17, Knowledge (local) +8, Perception +7, Perform (comedy) +8, Sense Motive +7, Stealth +17<br />
+                    <strong>Languages</strong> Elven, Common, Sylvan<br />
+                    
+                    
+                    
+                    
+                </div>
+                
+                    <div style="break-inside:avoid">
+                        <h3>Ecology</h3>                <strong>Environment</strong>: any urban<br />
+                        <strong>Organization</strong>: solitary, pair, or court (3-6)<br />
+                        <strong>Treasure</strong>: standard (rapier, other treasure)<br />
+                    </div>
+                
+                    <div style="break-inside:avoid">
+                        <h3>Special Abilities</h3>                <div style="white-space:pre-wrap">Repartee (su): Three times per day, when a liminal sprite successfully aids another creature's Charisma-based skill check, the creature gains a +2d4 bonus on the skill check instead of the normal +2 bonus. A creature can receive this bonus from only one liminal sprite per skill check.
+
+        Versatile Performance (ex): A liminal sprite can use its bonus for
+        Perform (comedy) in place of its bonus for Bluff and Intimidate. When
+        substituting in this way, the liminal sprite uses its total bonus for
+        Perform (comedy), including any class skill bonus, in place of the
+        associated skill's total bonus, whether or not it has ranks in Perform
+        (comedy) or Perform (comedy) is a class skill for the sprite.</div>
+                    </div>
+                
+                
+                    <div style="break-inside:avoid">
+                        <h3>Description</h3>        <div style="white-space:pre-wrap">An ancestral curse hangs over liminal sprites that prevents them from sleeping either inside a building or outside in the open. Fortunately for these sprites, a loophole exists that allows them to find rest within the external features of a building. As a result, liminal sprites make their homes under eaves, porches, and staircases.
+
+        Liminal sprites are fascinated by the arts, philosophy, and social
+        intrigues of humanoids, which they experience vicariously from their
+        hiding places, and with which they are often moved to interfere. They
+        use their magic to bind the tongues of the witty and steal thoughts from
+        the wise, returning them only after the moment in which they would have
+        been useful has passed, thus adding insult to injury.
+
+
+        The sprites must be subtle, however, lest their unwitting hosts turn
+        against them. They especially fear domestic animals turned loose near
+        their hideaways. On the other hand, a homeowner who appeases the sprite
+        with f lattery and gifts finds his own eloquence improved. A 7th-level
+        chaotic spellcaster can gain a liminal sprite as a familiar with the
+        Improved Familiar feat, though she must take pains to find her familiar
+        a suitable place to rest each night.
+
+
+        Liminal sprites stand 1 to 1-1/2 feet tall, and their mothlike wings
+        stretch to a similar distance. Liminal sprites follow the local fashions
+        of their city, modeling their clothes after those worn by nobles and
+        celebrities.
+
+        </div>
+                            
+            </div>
+            <hr style="margin-left:0;margin-bottom:-3px;width:100%;height:4px;background-color:#e0a100;border:1px solid #000;column-span:all" />
+        </div></div>
+            
+                <br />
+                <hr />
+                <div class="rawInputContainer" style="margin-top:15px">
+                    <h2>RAW INPUT</h2>
+                    <hr />
+                    <pre style="white-space:pre-wrap;font-size:10px">Liminal Sprite CR 2
+        Source Bestiary 5 pg. 158
+
+        XP 600
+
+        CN Tiny fey
+
+        Init +7; Senses low-light vision; Perception +7
+
+        Defense
+
+        AC 16, touch 15, flat-footed 13 (+3 Dex, +1 natural, +2 size)
+
+        hp 16 (3d6+6)
+
+        Fort +3, Ref +6, Will +4
+
+        DR 5/cold iron; Immune sleep; SR 13
+
+        Offense
+
+        Speed 20 ft., fly 60 ft. (good)
+
+        Melee rapier +6 (1d3-1/18-20)
+
+        Space 2-1/2 ft., Reach 0 ft.
+
+        Special Attacks repartee
+
+        Spell-Like Abilities (CL 6th; concentration +8)
+
+        At will-daze (DC 12), prestidigitation
+
+        3/day-fumbletongue (DC 13), invisibility (self only), memory lapse (DC
+        13)
+
+        Statistics
+
+        Str 8, Dex 17, Con 14, Int 15, Wis 12, Cha 15
+
+        Base Atk +1; CMB +0; CMD 11
+
+        Feats Improved Initiative, Weapon Finesse
+
+        Skills Diplomacy +8, Escape Artist +9, Fly +17, Knowledge (local) +8,
+        Perception +7, Perform (comedy) +8, Sense Motive +7, Stealth +17
+
+        Languages Elven, Common, Sylvan
+
+        SQ versatile performance
+
+        Ecology
+
+        Environment any urban
+
+        Organization solitary, pair, or court (3-6)
+
+        Treasure standard (rapier, other treasure)
+
+        Special Abilities
+
+        Repartee (Su) Three times per day, when a liminal sprite successfully
+        aids another creature's Charisma-based skill check, the creature gains a
+        +2d4 bonus on the skill check instead of the normal +2 bonus. A creature
+        can receive this bonus from only one liminal sprite per skill check.
+
+        Versatile Performance (Ex) A liminal sprite can use its bonus for
+        Perform (comedy) in place of its bonus for Bluff and Intimidate. When
+        substituting in this way, the liminal sprite uses its total bonus for
+        Perform (comedy), including any class skill bonus, in place of the
+        associated skill's total bonus, whether or not it has ranks in Perform
+        (comedy) or Perform (comedy) is a class skill for the sprite.
+
+        Description
+
+        An ancestral curse hangs over liminal sprites that prevents them from
+        sleeping either inside a building or outside in the open. Fortunately
+        for these sprites, a loophole exists that allows them to find rest
+        within the external features of a building. As a result, liminal sprites
+        make their homes under eaves, porches, and staircases.
+
+
+        Liminal sprites are fascinated by the arts, philosophy, and social
+        intrigues of humanoids, which they experience vicariously from their
+        hiding places, and with which they are often moved to interfere. They
+        use their magic to bind the tongues of the witty and steal thoughts from
+        the wise, returning them only after the moment in which they would have
+        been useful has passed, thus adding insult to injury.
+
+
+        The sprites must be subtle, however, lest their unwitting hosts turn
+        against them. They especially fear domestic animals turned loose near
+        their hideaways. On the other hand, a homeowner who appeases the sprite
+        with f lattery and gifts finds his own eloquence improved. A 7th-level
+        chaotic spellcaster can gain a liminal sprite as a familiar with the
+        Improved Familiar feat, though she must take pains to find her familiar
+        a suitable place to rest each night.
+
+
+        Liminal sprites stand 1 to 1-1/2 feet tall, and their mothlike wings
+        stretch to a similar distance. Liminal sprites follow the local fashions
+        of their city, modeling their clothes after those worn by nobles and
+        celebrities.</pre>
+                </div>
+            </div>
+  skills:
+    dip:
+      rank: 3
+    esc:
+      rank: 3
+    fly:
+      rank: 7
+    klo:
+      rank: 3
+    per:
+      rank: 3
+    sen:
+      rank: 3
+    ste:
+      rank: 3
+  traits:
+    ci:
+      - sleep
+    dr:
+      custom: 5/cold iron
+    languages:
+      - elven
+      - null
+    senses:
+      custom: low-light vision; Perception +7
+    size: tiny
+type: npc

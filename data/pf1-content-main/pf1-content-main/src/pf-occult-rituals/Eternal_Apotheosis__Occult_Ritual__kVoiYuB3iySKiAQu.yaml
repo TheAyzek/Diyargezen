@@ -1,0 +1,77 @@
+_id: kVoiYuB3iySKiAQu
+_key: '!items!kVoiYuB3iySKiAQu'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Eternal Apotheosis (Occult Ritual)
+system:
+  actions:
+    - _id: y18f8xenw4hvmz6p
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        type: 'null'
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    focus: true
+    material: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> necromancy [evil]; <strong>Level</strong>
+      9</p><p><strong>Casting Time</strong> 9
+      hours</p><p><strong>Components</strong> V, S, M (incense made from
+      ground-up bits of undead creatures), F (phylactery worth at least 120,000
+      gp), SC (at least 1, up to 21; see text)</p><p><strong>Skill
+      Checks</strong> Knowledge (arcana) DC 34, 3 successes; Knowledge
+      (religion) DC 34, 3 successes; Spellcraft DC 34, 3
+      successes</p><p><strong>Range</strong> primary
+      caster</p><p><strong>Duration</strong> instantaneous; see
+      text</p><p><strong>Saving Throw</strong> none; <strong>SR</strong>
+      no</p><p><strong>Backlash</strong> All secondary casters take 20d6 points
+      of damage. Those slain are reduced to dust.</p><p><strong>Failure</strong>
+      The primary caster becomes a forsaken lich, doomed to inevitable
+      destruction in 1d10 days.</p><h3>Effect</h3><p>The primary caster must
+      begin this incantation at dusk. The ritual must be performed in a place of
+      significance to the caster and is typically the site where she began her
+      descent into evil, or a site where she committed a great atrocity. Unlike
+      other occult rituals, the secondary casters are simply fodder for the
+      necromantic energies unleashed by the aspiring lich; they do not
+      contribute to the ritual beyond taking the damage of the ritual's
+      backlash. Unlike with normal occult rituals, these secondary casters do
+      not need to be willing participants, but they do need to be within close
+      range (25 feet + 2 feet per character level of the primary caster) of the
+      primary caster for the duration of the ritual. For every seven secondary
+      casters, the ritual's level is reduced by 1 (to a minimum of 6th level),
+      the casting time is reduced by 1 hour, and the number of skill checks
+      required decreases by one. When reducing the ritual's level in this
+      manner, the primary caster can choose which check or checks are
+      eliminated. The primary caster also receives a +1 bonus on the required
+      skill checks for every four secondary casters, as normal.</p><p>Casting
+      this ritual funnels raw and very painful necromantic energy through the
+      primary caster, possibly eviscerating all of the secondary casters in the
+      process. Successful completion of the ritual allows the primary caster to
+      transfer her soul into the phylactery, forever sealing it within the
+      magical receptacle and turning her into a full-fledged lich.</p>
+  flags:
+    dictionary:
+      summary: One possible way of completeing the process of becoming a lich
+  level: 9
+  materials:
+    focus: phylactery worth at least 120,000 gp
+    value: incense made from ground-up bits of undead creatures
+  school: nec
+  sources:
+    - id: PZO9286
+      pages: '55'
+  sr: false
+type: spell

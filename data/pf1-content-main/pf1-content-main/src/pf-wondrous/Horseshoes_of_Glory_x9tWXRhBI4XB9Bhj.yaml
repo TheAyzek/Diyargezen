@@ -1,0 +1,32 @@
+_id: x9tWXRhBI4XB9Bhj
+_key: '!items!x9tWXRhBI4XB9Bhj'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Horseshoes of Glory
+system:
+  aura:
+    custom: true
+    school: abjuration and transmutation
+  cl: 11
+  description:
+    value: >-
+      <p>These massive horseshoes sport deadly spikes that jut from their front.
+      Once per day on command, the rider of a mount wearing these shoes may
+      choose to either increase the mount's size by one size increment (maximum
+      Huge), or change its type to magical beast, as beast shape IV. In
+      addition, while the mount is augmented in either of these two ways, it
+      gains DR/5 chaos, evil, good, or law (selected by the rider). These
+      horseshoes are part of a set and require all four to be worn by the same
+      animal to properly
+      function.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, beastshape IV, protection from chaos/evil/ good/law</p>
+  price: 39600
+  slot: feet
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 12
+type: equipment

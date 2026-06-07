@@ -1,0 +1,21 @@
+_id: Yyakcgf0XdO3p1rZ
+_key: '!items!Yyakcgf0XdO3p1rZ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/magic-yellow.jpg
+name: Wild-Blood Concoction
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Concoctions</p><p>This coppery-tasting
+      substance causes your adrenaline production to spike, granting you a +2
+      alchemical bonus on melee damage rolls with natural and manufactured
+      weapons. The concoction weakens your self-preservation urges and imparts a
+      -2 penalty to your AC.</p>
+  price: 100
+  sources:
+    - id: PZO9481
+      pages: '27'
+  tags:
+    - Concoctions
+type: consumable

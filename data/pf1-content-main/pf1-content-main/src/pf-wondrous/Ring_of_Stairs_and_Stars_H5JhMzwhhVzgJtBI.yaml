@@ -1,0 +1,28 @@
+_id: H5JhMzwhhVzgJtBI
+_key: '!items!H5JhMzwhhVzgJtBI'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Stairs and Stars
+system:
+  aura:
+    custom: true
+    school: evocation illusion and transmutation
+  cl: 3
+  description:
+    value: >-
+      <p>A stair-step pattern of stars wraps around the outside of this dark
+      blue ring. In addition to the powers of a ring of feather falling, a ring
+      of stairs and stars allows the wearer to use magic missile once per day,
+      with the missiles taking the shape of shooting stars. As a standard
+      action, the wearer may create an illusory butterfly that flits about
+      within the wearer's square for 1 minute before fading
+      away.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge Ring,
+      feather fall, magic missile, silent image</p>
+  price: 3820
+  slot: ring
+  sources:
+    - id: PZO9267
+  subType: wondrous
+type: equipment

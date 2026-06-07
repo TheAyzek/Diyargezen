@@ -1,0 +1,35 @@
+_id: gt229jiwu5dXR0J3
+_key: '!items!gt229jiwu5dXR0J3'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Censer of Sanctuary
+system:
+  aura:
+    school: abj
+  cl: 3
+  description:
+    value: >-
+      <p>When a block of incense is placed inside this censer and ignited, the
+      bearer gains the benefits of a heightened 2nd-level sanctuary spell for as
+      long as the incense burns (1 hour per stick of incense) or until the
+      bearer breaks the effect by attacking. Placing the incense is a move
+      action, and igniting it is a standard action. If incense of meditation is
+      burned instead of normal incense, the sanctuary effect is heightened to
+      7th level.   While lighting the censer, the bearer can expend one use of
+      mythic power to grant the benefits of the censer's sanctuary to all allies
+      within a 20-foot-radius emanation of the censer for 10 minutes. Allies who
+      attack break the sanctuary effect only for themselves. The incense
+      extinguishes 1 round after the bearer ceases to use. If incense of
+      meditation is extinguished before 8 hours of burning, the remainder
+      becomes normal
+      incense.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Heighten Spell, Mythic Crafter, sanctuary</p>
+  price: 18000
+  sources:
+    - id: PZO1126
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

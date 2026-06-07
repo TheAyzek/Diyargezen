@@ -1,0 +1,57 @@
+_id: HfHYbleSpRiYyq5o
+_key: '!journal!HfHYbleSpRiYyq5o'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: GvRXJrNElDk9KwJW
+name: 3.1.3.3. Magic Device Trap Cost
+pages:
+  - _id: HQSG0dheMIIX8bnS
+    _key: '!journal.pages!HfHYbleSpRiYyq5o.HQSG0dheMIIX8bnS'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.1.3.3. Magic Device Trap Cost
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.mmx5KJLX4vsGZ7vz]{3.1.
+        Traps}</p><p>@Compendium[pf-content.pf-rules.IYnf1w2TjcHO2ExM]{3.1.3.
+        Designing a
+        Trap}</p><ul><li>@Compendium[pf-content.pf-rules.6cDhoB5fNw8e7LF3]{3.1.3.1.
+        Challenge Rating of a
+        Trap}</li><li>@Compendium[pf-content.pf-rules.CRcJbYvgkm6DXdQl]{3.1.3.2.
+        Mechanical Trap
+        Cost}</li><li><strong>@Compendium[pf-content.pf-rules.HfHYbleSpRiYyq5o]{3.1.3.3.
+        Magic Device Trap
+        Cost}</strong></li><li>@Compendium[pf-content.pf-rules.2YFLAgOtyleYCQxe]{3.1.3.4.
+        Spell Trap
+        Cost}</li><li>@Compendium[pf-content.pf-rules.47DJOElNsrdRkBxn]{3.1.3.5.
+        Craft DCs for Mechanical Traps}</li></ul><hr
+        /><p>@Source[PZO1110;pages=423]</p><p>Building a magic device trap
+        involves the expenditure of gp and requires the services of a
+        spellcaster. Table 13–5 summarizes the cost information for magic device
+        traps. If the trap uses more than one spell (for instance, a sound or
+        visual trigger spell in addition to the main spell effect), the builder
+        must pay for them all (except alarm, which is free unless it must be
+        cast by an NPC).</p><p>The costs derived from Table 13–5 assume that the
+        builder is casting the necessary spells himself (or perhaps some other
+        PC is providing the spells for free). If an NPC spellcaster must be
+        hired to cast them, those costs must be factored in as well (see Chapter
+        6).</p><p>A magic device trap takes 1 day to construct per 500 gp of its
+        cost.</p><h2>Table 13-5: Cost Modifiers for Magic Device
+        Traps</h2><table><thead><tr><td>Feature</td><td>Cost
+        Modifier</td></tr></thead><tbody><tr><td>Alarm spell used in
+        trigger</td><td>—</td></tr><tr><td>One-Shot Trap</td><td>
+        </td></tr><tr><td> Each spell used</td><td>+50 gp × caster level × spell
+        level</td></tr><tr><td> Material components</td><td>+ material component
+        costs</td></tr><tr><td>Automatic Reset Trap</td><td>
+        </td></tr><tr><td> Each spell used</td><td>+500 gp × caster level ×
+        spell level</td></tr><tr><td> Material components</td><td>+material
+        component costs × 100</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

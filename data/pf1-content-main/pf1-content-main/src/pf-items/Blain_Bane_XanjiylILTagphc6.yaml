@@ -1,0 +1,22 @@
+_id: XanjiylILTagphc6
+_key: '!items!XanjiylILTagphc6'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/bowl-powder-blue.webp
+name: Blain Bane
+system:
+  description:
+    value: >-
+      <p>This alchemically infused wax is spread over exposed skin to protect it
+      from chapping, cold, dry winds, heat, and the loss of moisture. Applying
+      it takes 5 minutes; once applied, it reduces any nonlethal damage taken
+      from cold or hot environments by 1 point for 6 hours. Crafting blain bane
+      requires a successful DC 19 Craft (alchemy)
+      check.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      19</p>
+  price: 10
+  sources:
+    - id: PZO9456
+      pages: '9'
+  subType: misc
+type: consumable

@@ -1,0 +1,38 @@
+_id: BWJEfDFu7kGjvR96
+_key: '!items!BWJEfDFu7kGjvR96'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/chain-shirt.png
+name: Veiled Chain
+system:
+  armor:
+    acp: 2
+    dex: 4
+    material:
+      base:
+        value: steel
+    value: 4
+  aura:
+    school: ill
+  baseTypes:
+    - Chain Shirt
+  cl: 3
+  description:
+    value: >-
+      <p>Narrow strips of brilliant silk cloth are woven through the rings of
+      this +1 chain shirt that cause the armor's colors to shift and shimmer as
+      its wearer moves. The wearer can use disguise self and vanish each once
+      per day.</p><p><strong>Base Item</strong>: chain
+      shirt</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, disguise self, vanish</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 4490
+  sources:
+    - id: PZO9267
+  spellFailure: 20
+  weight:
+    value: 25
+type: equipment

@@ -1,0 +1,33 @@
+_id: mROgwsacALjhllx7
+_key: '!items!mROgwsacALjhllx7'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Cloudburst
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint abjuration and evocation
+      <strong>CL</strong> 5th</p><p><strong>Slot</strong> armor quality;
+      <strong>Price</strong> +5,000 gp;</p><p>This armor is usually decorated
+      with engravings of storm clouds and lightning bolts. If an attack strikes
+      the wearer and deals at least 10 points of electricity damage, the armor
+      becomes visibly charged with electricity for 1 round. As a swift action on
+      the wearer's next turn that does not provoke an attack of opportunity, she
+      may use <em>shocking grasp </em>as a spell-like ability, dealing 1d6
+      points of electricity damage for every 10 points of damage dealt to the
+      wearer since her last turn (maximum 5d6 for 50 or more points of
+      electrical damage taken). Determine the effect of the <em>shocking grasp
+      </em>based on how much damage the triggering electrical attack would have
+      dealt the wearer before any applicable resistances or
+      immunities.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>resist energy</em>, <em>shocking grasp</em>;
+      <strong>Price</strong> +5,000 gp</p>
+  sources:
+    - id: PZO1121
+      pages: '160'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

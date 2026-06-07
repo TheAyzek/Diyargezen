@@ -1,0 +1,48 @@
+_id: HiBSndm53EIsfcs3
+_key: '!items!HiBSndm53EIsfcs3'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Halo mushroom toxin
+system:
+  actions:
+    - _id: uxczrd0q0bd5qvmg
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: distraction (see above)
+            <strong>Secondary Effect</strong>: [[1d4]] Wisdom damage
+      save:
+        dc: '18'
+        type: fort
+      tag: haloMushroomToxin
+  description:
+    value: >-
+      <p><strong>Type</strong> ingested; <strong>Save</strong> Fortitude DC
+      18</p><p><strong>Onset</strong> 10 minutes; <strong>Frequency</strong>
+      1/minute for 6 minutes</p><p><strong>Initial Effect</strong> distraction
+      (see above); <strong>Secondary Effect</strong> 1d4 Wisdom
+      damage</p><p><strong>Cure</strong> 2 consectutive saves</p><p>Extracted
+      from mushrooms that grow commonly in caves and forests, this toxin is
+      occasionally used as a recreational drug despite its dangerous side
+      effects. A creature that fails its initial saving throws sees displaced
+      auras of color and light around other creatures and objects. The creature
+      treats all targets as if they had concealment, suffering a 20% miss chance
+      on all attack rolls until the creature is cured or the poison has run its
+      course.</p>
+  price: 500
+  sources:
+    - id: PZO9481
+      pages: '18'
+  subType: poison
+  uses:
+    per: single
+type: consumable

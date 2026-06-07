@@ -1,0 +1,45 @@
+_id: BNXCH6kb85dTfIXt
+_key: '!items!BNXCH6kb85dTfIXt'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/field-plate.png
+name: War Commander's Field Plate
+system:
+  armor:
+    acp: 5
+    dex: 1
+    material:
+      base:
+        value: steel
+    value: 7
+  aura:
+    custom: true
+    school: abjuration and enchantment
+  baseTypes:
+    - Field Plate
+  cl: 6
+  description:
+    value: >-
+      <p>This immaculate +2 champion field plate is commonly used by military
+      commanders in Lastwall, Mendev, and Taldor. A sturdy metal bracket is
+      built onto the back of the armor, located just under the shoulder blades;
+      if the wielder has personal heraldry, this slot can hold a banner or flag
+      bearing that heraldry (such as a cavalier's banner). If the wearer of the
+      war commander's field plate takes to the battlefield as an army commander
+      (Pathfinder RPG Ultimate Campaign 234), he gains the Hold the Line boon if
+      he prominently displays his heraldry. If the wearer already possesses this
+      boon, he instead gains an additional +1 bonus on Morale checks as army
+      commander.</p><p><strong>Base Item</strong>: champion field
+      plate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, heroism, protection from evil</p>
+  enh: 2
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 21600
+  sources:
+    - id: PZO9268
+  spellFailure: 35
+  weight:
+    value: 50
+type: equipment

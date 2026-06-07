@@ -1,0 +1,29 @@
+_id: kyqVR7i1WVXkJ7eT
+_key: '!items!kyqVR7i1WVXkJ7eT'
+_stats:
+  coreVersion: '12.331'
+folder: CAxOlglJyXdUOHF9
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Child of Zolurket (Dwarf)
+system:
+  contextNotes:
+    - target: attack
+      text: +[[1]] Trait bonus to weapon damage against undead.
+  description:
+    value: >-
+      <p><em>You come from a family whose ancestors worked in the platinum mines
+      near Tar Urkatka, now known as Zolurket. Your parents never explained why
+      they’ve never returned to Zolurket, but they did make sure that you knew
+      your way around a fight against undead
+      foes.</em></p><p><strong>Requirements</strong>:
+      Dwarf</p><p><strong>Benefits</strong>: You gain a +1 trait bonus to weapon
+      damage against undead.</p>
+  sources:
+    - id: PZO9404
+      pages: '7'
+  subType: trait
+  tags:
+    - '3.5'
+    - Dwarf
+  traitType: race
+type: feat

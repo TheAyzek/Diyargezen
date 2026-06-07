@@ -1,0 +1,43 @@
+_id: UNAlu1bwGK2Q9pzJ
+_key: '!items!UNAlu1bwGK2Q9pzJ'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/mace-heavy.PNG
+name: Nightmare Rod
+system:
+  aura:
+    school: ill
+  baseTypes:
+    - Heavy Mace
+  cl: 13
+  description:
+    value: >-
+      <p>A nightmare rod is a wooden rod with a smooth, purple, crystalline
+      octopus clutching one end, its tentacles wrapped around the length of the
+      rod and its bulbous body serving as a sort of mace head. Indeed, a
+      nightmare rod can be wielded as a +2 heavy mace. On a critical hit, a
+      nightmare rod floods the target's mind with horrific visions of
+      nightmarish dooms that stagger the victim for 1 round if it fails a DC 15
+      Will save. This is a mind-affecting fear effect.  In addition, a nightmare
+      rod has the following powers.  • Once per day as a free action when the
+      rod hits a living creature, the user can affect the creature struck with a
+      phantasmal killer spell (Will/Fort DC 16).  • Once per day, the user can
+      cast nightmare. If the recipient is awake when the spell begins, the
+      wielder need not enter a trance (as he would if he had cast the spell)-
+      the nightmare rod maintains its own sort of trance on the spell and
+      automatically finishes casting the spell as soon as the recipient falls
+      asleep. If the recipient does not fall asleep within 24 hours, the
+      nightmare rod ceases attempting to cast the spell automatically.  • As
+      long as the wielder carries the nightmare rod in his hand, he is immune to
+      fear effects.<p><strong>Base Item</strong>: heavy
+      mace</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Rod,
+      fear, nightmare, phantasmal killer, remove fear</p>
+  enh: 2
+  price: 80000
+  sources:
+    - id: PZO9065
+  subType: other
+  weight:
+    value: 5
+type: equipment

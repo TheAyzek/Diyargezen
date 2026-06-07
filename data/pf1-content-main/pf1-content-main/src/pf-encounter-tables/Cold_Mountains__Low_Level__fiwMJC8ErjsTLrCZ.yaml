@@ -1,0 +1,174 @@
+_id: fiwMJC8ErjsTLrCZ
+_key: '!tables!fiwMJC8ErjsTLrCZ'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/terrain-river-road-gray.webp
+name: Cold Mountains (Low Level)
+replacement: true
+results:
+  - _id: WQkuDUubXiCelHPK
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.WQkuDUubXiCelHPK'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 7
+    text: 1 Ghoul [CR 1]
+    type: text
+    weight: 1
+  - _id: IdpusNmUcV7JgpQ9
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.IdpusNmUcV7JgpQ9'
+    img: icons/svg/d20-black.svg
+    range:
+      - 8
+      - 13
+    text: 1 Skulk [CR 1]
+    type: text
+    weight: 1
+  - _id: 6Fi7Kjzt3aJkjeZN
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.6Fi7Kjzt3aJkjeZN'
+    img: icons/svg/d20-black.svg
+    range:
+      - 14
+      - 18
+    text: 1 Cave Fisher [CR 2]
+    type: text
+    weight: 1
+  - _id: 5UzcFksHJQGRwnuY
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.5UzcFksHJQGRwnuY'
+    img: icons/svg/d20-black.svg
+    range:
+      - 19
+      - 23
+    text: 1 Rat Swam [CR 2]
+    type: text
+    weight: 1
+  - _id: qPlwvPlMS60vamxM
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.qPlwvPlMS60vamxM'
+    img: icons/svg/d20-black.svg
+    range:
+      - 24
+      - 29
+    text: '[[1d4]] Yellow Musk Zombies [AVG CR 2]'
+    type: text
+    weight: 1
+  - _id: jwYpii9rsXsHhwtH
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.jwYpii9rsXsHhwtH'
+    img: icons/svg/d20-black.svg
+    range:
+      - 30
+      - 34
+    text: '[[2d3]] Dire Rats [AVG CR 3]'
+    type: text
+    weight: 1
+  - _id: v0AIzLn2bC3LkbpP
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.v0AIzLn2bC3LkbpP'
+    img: icons/svg/d20-black.svg
+    range:
+      - 35
+      - 40
+    text: 1 Ice Mephit [CR 3]
+    type: text
+    weight: 1
+  - _id: GwGy4lo6Sz0K8bG1
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.GwGy4lo6Sz0K8bG1'
+    img: icons/svg/d20-black.svg
+    range:
+      - 41
+      - 46
+    text: '[[2d4]] Raiders (human rogue 2) [AVG CR 3]'
+    type: text
+    weight: 1
+  - _id: oxX98XTsQRHQhd2B
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.oxX98XTsQRHQhd2B'
+    img: icons/svg/d20-black.svg
+    range:
+      - 47
+      - 51
+    text: '[[2d3]] Stirges [AVG CR 3]'
+    type: text
+    weight: 1
+  - _id: 4OG4rE9aJGvGus5r
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.4OG4rE9aJGvGus5r'
+    img: icons/svg/d20-black.svg
+    range:
+      - 52
+      - 57
+    text: 1 Yeth Hound [CR 3]
+    type: text
+    weight: 1
+  - _id: QUGpRFcUeHnXR5bH
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.QUGpRFcUeHnXR5bH'
+    img: icons/svg/d20-black.svg
+    range:
+      - 58
+      - 62
+    text: 1 Decapus [CR 4]
+    type: text
+    weight: 1
+  - _id: Knqfe1llyC1x06vn
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.Knqfe1llyC1x06vn'
+    img: icons/svg/d20-black.svg
+    range:
+      - 63
+      - 67
+    text: '[[1d4]] Giant Spiders [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: YI88xkdWuVgQ1cnt
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.YI88xkdWuVgQ1cnt'
+    img: icons/svg/d20-black.svg
+    range:
+      - 68
+      - 72
+    text: 1 Ogre [CR 4]
+    type: text
+    weight: 1
+  - _id: lg1Po9o5SqG3tjkc
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.lg1Po9o5SqG3tjkc'
+    img: icons/svg/d20-black.svg
+    range:
+      - 73
+      - 77
+    text: 1 Yeti [CR 4]
+    type: text
+    weight: 1
+  - _id: Kv1MYNYaAorKSBNQ
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.Kv1MYNYaAorKSBNQ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 78
+      - 81
+    text: 1 Huge Plague Zombie [CR 5]
+    type: text
+    weight: 1
+  - _id: Zc5RIqapJJvwPEKY
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.Zc5RIqapJJvwPEKY'
+    img: icons/svg/d20-black.svg
+    range:
+      - 82
+      - 87
+    text: Miners [AVG CR 5]
+    type: text
+    weight: 1
+  - _id: Od1DrsPZbL74DbZt
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.Od1DrsPZbL74DbZt'
+    img: icons/svg/d20-black.svg
+    range:
+      - 88
+      - 93
+    text: Colonists or pilgrims [AVG CR 5]
+    type: text
+    weight: 1
+  - _id: KO4OCEwfgwPqmQef
+    _key: '!tables.results!fiwMJC8ErjsTLrCZ.KO4OCEwfgwPqmQef'
+    img: icons/svg/d20-black.svg
+    range:
+      - 94
+      - 100
+    text: 1 Polar Bear [CR 5]
+    type: text
+    weight: 1
+sort: 3700000

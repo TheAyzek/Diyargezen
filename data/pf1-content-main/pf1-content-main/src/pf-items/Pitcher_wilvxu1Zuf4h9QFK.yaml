@@ -1,0 +1,22 @@
+_id: wilvxu1Zuf4h9QFK
+_key: '!items!wilvxu1Zuf4h9QFK'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/kitchenware/jug-terracotta-orange.webp
+name: Pitcher
+system:
+  description:
+    value: >-
+      <p>This basic clay pitcher has a handle and an open top with a groove for
+      easy pouring. It holds 1/2 gallon of liquid. The listed weight is for a
+      pitcher filled with water, wine, or ale; empty, it weighs about 1/2
+      pound.</p>
+  equipped: false
+  price: 0.02
+  sources:
+    - id: PZO1123
+      pages: '57'
+  subType: adventuring
+  weight:
+    value: 5
+type: loot

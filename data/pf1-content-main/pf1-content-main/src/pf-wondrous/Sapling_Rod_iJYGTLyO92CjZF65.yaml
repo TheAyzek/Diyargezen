@@ -1,0 +1,40 @@
+_id: iJYGTLyO92CjZF65
+_key: '!items!iJYGTLyO92CjZF65'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Sapling Rod
+system:
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  cl: 9
+  description:
+    value: >-
+      <p>This rod appears to be the limbless trunk and branching roots of a
+      miniature tree. It grants its wielder a +5 competence bonus on Survival
+      checks to get along in the wild and to keep from getting lost.
+      Additionally the wielder and any allies within a 20-foot radius of the
+      wielder gain the benefits of the ranger's woodland stride class feature.  
+      If thrust into any natural ground or earth and allowed to stand for 1
+      hour, the rod grows and blooms into a large tree bearing edible fruit. A
+      sapling rod produces 2d4 pieces of fruit. A creature that consumes an
+      entire piece of fruit gains the benefits of either a cure moderate wounds
+      or lesser restoration spell (recipient's choice). Consuming a piece of
+      fruit from a sapling rod is a full-round action that provokes attacks of
+      opportunity, and no single creature can benefit from more than two piece
+      of fruit from a single blooming. A sapling rod can bloom once per week and
+      after doing so reverts to its original state after all the fruit is
+      picked, or after 24 hours, whichever comes first. Fruit harvested from the
+      tree lasts for 24 hours before shriveling into useless
+      husks.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Rod,
+      cure moderate wounds, grove of respite (Advanced Player's Guide), lesser
+      restoration</p>
+  price: 16650
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 5
+type: equipment

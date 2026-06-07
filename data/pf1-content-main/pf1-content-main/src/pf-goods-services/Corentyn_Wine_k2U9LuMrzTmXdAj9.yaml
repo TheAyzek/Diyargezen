@@ -1,0 +1,21 @@
+_id: k2U9LuMrzTmXdAj9
+_key: '!items!k2U9LuMrzTmXdAj9'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/tankard-full.jpg
+name: Corentyn Wine
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 15 gp/bottle; <strong>Weight</strong> 1/2 lb.<br
+      /><strong>Category</strong> Food/Drink</p><h2>Description</h2><p>Red and
+      white wines grown in the salt spray of Corentyn have a sweet-tart flavor
+      valued by nobles throughout Cheliax.</p>
+  price: 15
+  sources:
+    - id: PZO9410
+      pages: '19'
+  subType: food
+  weight:
+    value: 0.5
+type: consumable

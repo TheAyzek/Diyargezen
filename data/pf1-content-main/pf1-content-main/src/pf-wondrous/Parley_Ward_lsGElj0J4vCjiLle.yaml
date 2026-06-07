@@ -1,0 +1,40 @@
+_id: lsGElj0J4vCjiLle
+_key: '!items!lsGElj0J4vCjiLle'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Parley Ward
+system:
+  aura:
+    school: abj
+  cl: 11
+  description:
+    value: >-
+      <p>This hemispherical dome of jet-black crystal has no discernible
+      markings on its curved surface, but faint runes (including the command
+      word) are visible on the flat side. Three times per week, whenever it is
+      placed flat side down and the command word is spoken, the parley ward hums
+      and projects a black dome-shaped field that slowly expands for 1 minute
+      and then finally snaps into place, covering up to a 30-foot-radius area,
+      though the area can be reduced and shaped to encompass the interior of a
+      room or structure (such as a meeting hall or pavilion) in order to make it
+      less obvious to those on the outside. The affected area becomes a
+      protected zone that provides complete privacy, preventing sound, light,
+      and divination and scrying spells from penetrating, as per the mage's
+      private sanctum spell. Additionally, the protected zone discourages any
+      creatures within from committing deliberate hostile acts, as though they
+      were affected by the serenity spell (with no save allowed). Each use of
+      the magic of the parley ward can function for up to 24 hours, or until the
+      user deactivates it. Once the parley ward is activated, neither the item
+      nor its zone can be moved; attempting to do so deactivates it, consuming
+      one of its 3 weekly
+      charges.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, mage's private sanctum, serenity</p>
+  price: 52000
+  sources:
+    - id: PZO1134
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

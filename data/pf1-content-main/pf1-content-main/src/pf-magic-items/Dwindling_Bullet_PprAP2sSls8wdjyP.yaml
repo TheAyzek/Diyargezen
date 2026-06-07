@@ -1,0 +1,27 @@
+_id: PprAP2sSls8wdjyP
+_key: '!items!PprAP2sSls8wdjyP'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/bolt.PNG
+name: Dwindling Bullet
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>This +1 sling bullet is slightly smaller than an average steel bullet,
+      but incredibly dense. It's usually used by kobolds to shrink down foes or
+      prey, weakening them and making them more vulnerable to combat maneuvers.
+      The target must succeed at a DC 11 Fortitude save or decrease in size by
+      one size category for 1d4 rounds, as the spell reduce
+      person.</p><p><strong>Base Item</strong>: sling
+      bullet</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, reduce person</p>
+  equipped: false
+  extraType: slingBullet
+  price: 166
+  sources:
+    - id: PZO9432
+  subType: ammo
+type: loot

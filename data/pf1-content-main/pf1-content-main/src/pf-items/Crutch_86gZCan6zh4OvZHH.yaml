@@ -1,0 +1,23 @@
+_id: 86gZCan6zh4OvZHH
+_key: '!items!86gZCan6zh4OvZHH'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/torch.jpg
+name: Crutch
+system:
+  description:
+    value: >-
+      <p>A crutch is a simple device composed of wood or metal and held under
+      the arm to assist the injured or impaired with walking. Using a crutch
+      requires a free hand, but does not impede movement speed for an
+      experienced user. A Medium crutch can be wielded as a simple one-handed
+      melee weapon that deals 1d4 points of bludgeoning damage.</p>
+  equipped: false
+  price: 0.5
+  sources:
+    - id: PZO9481
+      pages: '12'
+  subType: adventuring
+  weight:
+    value: 2
+type: loot

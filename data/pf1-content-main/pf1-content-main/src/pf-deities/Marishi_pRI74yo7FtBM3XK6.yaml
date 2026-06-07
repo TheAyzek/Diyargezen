@@ -1,0 +1,35 @@
+_id: pRI74yo7FtBM3XK6
+_key: '!journal!pRI74yo7FtBM3XK6'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Marishi
+pages:
+  - _id: ssYIq0Ux18Pstz2H
+    _key: '!journal.pages!pRI74yo7FtBM3XK6.ssYIq0Ux18Pstz2H'
+    _stats:
+      coreVersion: '12.331'
+    name: Marishi
+    sort: 0
+    text:
+      content: >-
+        <h1>Marishi</h1><h2>The Festival Queen</h2>@Source[PZO9267;pages=322]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Marishi">Marishi</a><h3>Details</h3><p><strong>Alignment</strong>
+        CG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Athletics, contests, sports<br
+        /><strong>Domains</strong> Chaos, Good, Healing, Strength<br
+        /><strong>Subdomains</strong> Azata (Chaos), Azata (Good), Competition,
+        Resolve, Restoration, Revelry<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Spiked
+        gauntlet<br /><strong>Symbol</strong> Maypole with 7 streamers<br
+        /><strong>Sacred Animal(s)</strong> Horse<br /><strong>Sacred
+        Color(s)</strong> Gold, silver</p><h2>For Followers of
+        Marishi</h2><h3>Feats</h3><p>Heroic
+        Interposition</p><h3>Traits</h3><p>Empyreal Focus</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

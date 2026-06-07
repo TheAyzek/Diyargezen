@@ -1,0 +1,39 @@
+_id: xOrHojgSk4ypeoW3
+_key: '!items!xOrHojgSk4ypeoW3'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/chain-mail.png
+name: Lucky Drunk's Mail
+system:
+  armor:
+    acp: 5
+    dex: 2
+    material:
+      base:
+        value: steel
+    value: 6
+  aura:
+    custom: true
+    school: enchantment and evocation
+  baseTypes:
+    - Chainmail
+  cl: 3
+  description:
+    value: >-
+      <p>This +1 chainmail is decorated with a row of small metal disks, each
+      stamped with a tankard symbol. The wearer gains a +1 luck bonus on all
+      saving throws and can use moment of greatness once per
+      day.</p><p><strong>Base Item</strong>: 
+      chainmail</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, divine favor, moment of greatness</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 4840
+  sources:
+    - id: PZO9267
+  spellFailure: 30
+  weight:
+    value: 40
+type: equipment

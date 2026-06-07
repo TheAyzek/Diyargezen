@@ -1,0 +1,34 @@
+_id: wr75Ep9OkdyzRILZ
+_key: '!items!wr75Ep9OkdyzRILZ'
+_stats:
+  coreVersion: '13.347'
+folder: mvNReufva6GBmOKS
+img: icons/svg/item-bag.svg
+name: Stone of Sending
+system:
+  aura:
+    school: evo
+  cl: 8
+  description:
+    value: >-
+      <p>This paired item is created from a single geode divided into two
+      halves. Any individual who concentrates upon one of the halves can use it
+      to send a mental message to the individual possessing the other half as
+      though she had cast a sending spell. The sender must spend a full round
+      concentrating upon his half of the stone to deliver the message. The
+      message can be longer than for a sending spell, but no longer than 100
+      words. If the receiving stone is unattended when a message comes through,
+      the gems on its inner surface glow faintly until the geode is touched,
+      releasing the message to its new possessor. If a message comes to an
+      unattended stone that already holds a message, the new message erases and
+      replaces the first message. A stored message lasts for 24 hours before
+      dissipating naturally.  Each half of a stone of sending can be used once
+      per day to initiate contact with the
+      other.</p><h3>Requirements</h3><p>Craft Wondrous Item, sending</p>
+  price: 16000
+  sources:
+    - id: PZOPSS0222E
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

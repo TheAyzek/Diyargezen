@@ -1,0 +1,26 @@
+_id: k0iw5WxYZJv1d99K
+_key: '!items!k0iw5WxYZJv1d99K'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/fasteners/pin-round.webp
+name: Skis and poles
+system:
+  description:
+    value: >-
+      <p>These polished wooden slats enable the wearer to glide across level
+      snowy surfaces at his full speed. His speed is halved when moving up a
+      snowy slope, but he may run or charge downhill on gentle or steep snowy
+      slopes at quadruple speed. Any skill check penalties for traversing rough
+      snowy terrain while wearing skis are doubled, and the wearer takes a -4
+      penalty on combat maneuver checks to bull rush, drag, or trip, and to CMD
+      against these maneuvers. Characters cannot climb while wearing skis.
+      Donning or removing skis takes 1 minute.</p>
+  equipped: false
+  price: 15
+  sources:
+    - id: PZO9051
+      pages: '67'
+  subType: tool
+  weight:
+    value: 6
+type: loot

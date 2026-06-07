@@ -1,0 +1,37 @@
+_id: b7ZiC9lSgUeSY9Xz
+_key: '!items!b7ZiC9lSgUeSY9Xz'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Moribund Key
+system:
+  aura:
+    school: nec
+  cl: 12
+  description:
+    value: >-
+      <p>Greater agents of the Whispering Way use these silver medallions as
+      keys to their sanctuaries. Each moribund key bears an engraved skull with
+      two gray, burned-out ioun stones for eyes. Small openings line the coin's
+      outer edge. By turning the skull's head, an inner plate marked with runic
+      symbols lines up with these openings to establish different combinations. 
+      Each setting matches symbols inscribed on objects of great importance to
+      the cult, such as statues, paintings, and doors. The proper arrangement of
+      these runes activates stored spell effects in such objects, including
+      powerful wards, programmed images, or the release of arcane locks. The
+      bearer of a moribund key can cast message at will, and spectral hand and
+      vampiric touch 3 times per day. In addition, the skull's eyes glow when
+      undead approach within 60 feet. A moribund key bestows one negative level
+      on any good creature carrying it. The negative level remains as long as
+      the medallion is carried and cannot be overcome in any way while the
+      medallion is in that creature's possession.<h3>Requirements</h3><p>Craft
+      Wondrous Item, detect undead, knock, message, spectral hand, vampiric
+      touch</p>
+  price: 40000
+  sources:
+    - id: PZO9047
+  subType: wondrous
+  weight:
+    value: 0.5
+type: equipment

@@ -1,0 +1,68 @@
+_id: 5RvhKs8PxO8ZJIn1
+_key: '!items!5RvhKs8PxO8ZJIn1'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/wooden-stake.png
+name: Stake of the Righteous
+system:
+  actions:
+    - _id: 466a4dn5zohu37p1
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: stakeOfTheRighteous
+  aura:
+    custom: true
+    school: evocation [good]
+  baseTypes:
+    - Wooden Stake
+  cl: 9
+  description:
+    value: >-
+      <p>Cooled in baths of holy water after its forging, this +1 silver stake
+      (see the Advanced Player's Guide) is often used by devout warriors to slay
+      vampires. When driven through a helpless vampire's heart, the stake emits
+      a constant hallow effect centered on the slain vampire (whoever placed the
+      stake can choose to fix a spell effect to the stake as a full-round
+      action; otherwise follow the rules in the hallow spell description in the
+      Core Rulebook).  Once a stake of the righteous has been driven into a
+      vampire's heart, only creatures that share the original slayer's alignment
+      can easily remove it. Other creatures may attempt to remove the stake by
+      making a DC 14 Charisma check; a creature that fails this check takes 2d6
+      points of damage as holy energy courses through the weapon, and it cannot
+      attempt to remove the stake again for 24 hours.</p><p><strong>Base
+      Item</strong>: silver
+      stake</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, hallow</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: wood
+  price: 3520
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9427
+  weaponGroups:
+    - close
+  weight:
+    value: 2
+type: weapon

@@ -1,0 +1,14 @@
+node_modules
+
+# Potential Foundry files
+foundry.js
+foundry/
+common/
+client/
+
+# Random modules
+module/semver.js
+
+# Built files
+dist/
+docs/

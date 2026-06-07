@@ -1,0 +1,30 @@
+_id: EhCiiMHkOqfjOtoj
+_key: '!items!EhCiiMHkOqfjOtoj'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Cape of Daring Deeds
+system:
+  aura:
+    school: abj
+  cl: 5
+  description:
+    value: >-
+      <p>The wearer can spend a full-round action concentrating to change the
+      color of this short, silken cape to match any attire or mood. When using
+      the derring-do 1st-level swashbuckler deed, the wearer adds an additional
+      die when rolling either a natural 5 or 6 rather than just a natural 6.
+      Additionally, the cape grants a +2 resistance bonus on saving throws. This
+      bonus increases to +4 for 1 round each time the wearer uses the charmed
+      life swashbuckler class
+      feature.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, guidance, prestidigitation, resistance</p>
+  price: 9000
+  slot: shoulders
+  sources:
+    - id: PZO1129
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

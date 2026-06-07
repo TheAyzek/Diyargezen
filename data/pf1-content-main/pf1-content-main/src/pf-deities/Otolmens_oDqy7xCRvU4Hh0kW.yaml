@@ -1,0 +1,46 @@
+_id: oDqy7xCRvU4Hh0kW
+_key: '!journal!oDqy7xCRvU4Hh0kW'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Otolmens
+pages:
+  - _id: nTiaZ4ghMgda0nxx
+    _key: '!journal.pages!oDqy7xCRvU4Hh0kW.nTiaZ4ghMgda0nxx'
+    _stats:
+      coreVersion: '12.331'
+    name: Otolmens
+    sort: 0
+    text:
+      content: >-
+        <h1>Otolmens</h1><h2>The Universal</h2>@Source[PZO92114;pages=14] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Otolmens">Otolmens</a><h3>Details</h3><p><strong>Alignment</strong>
+        LN<br /><strong>Pantheon</strong> Primal Inevitable<br /><strong>Areas
+        of Concern</strong> Machinery, math, and physics<br
+        /><strong>Domains</strong> Artifice, Fire, Knowledge, Law<br
+        /><strong>Subdomains</strong> N/A<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Mace<br
+        /><strong>Symbol</strong> Planet held within a geometrical
+        compass</p><h3>Obedience</h3><p>Spend 1 hour systematically diagraming
+        one of your everyday tasks or upcoming projects in painstaking detail
+        and technical language. Gain a +4 sacred or profane bonus on attack
+        rolls to confirm critical hits and on Knowledge (engineering)
+        checks.</p><h2>Boons - Monitor
+        Obedience</h2><h3>None</h3><p>@Source[PZO92114;pages=14]<br /><strong>1:
+        Discerning Mind (Sp)</strong> <em>identify</em> 3/day, <em>investigative
+        mind</em> 2/day, or <em>blink</em> 1/day<br /><strong>2: Combat Calculus
+        (Ex)</strong> Three times per day as a move action, you can trace a
+        series of mathematical calculations in the air. The next attack you make
+        before the beginning of your next turn gains the benefits of <em>true
+        strike</em>, ignores an amount of hardness and damage reduction equal to
+        your Hit Dice, and deals additional damage as though it the weapon had
+        the <em>axiomatic weapon special ability.</em><br /><strong>3: Revise
+        Reality (Sp)</strong> You can cast <em>limited wish</em> once per day.
+        This ability is equivalent to a 9th-level spell.</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

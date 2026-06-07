@@ -1,0 +1,45 @@
+_id: Eco6bl5RksubMT72
+_key: '!items!Eco6bl5RksubMT72'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Blue lily extract
+system:
+  actions:
+    - _id: 7rqi3pf6c1vt3e71
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1d4]] Wisdom damage plus [[-4]]
+            penalty on Sense Motive checks and saving throws versus sleep
+            effects for [[1]] hour;
+      save:
+        dc: '14'
+        type: fort
+      tag: blueLilyExtract
+  description:
+    value: >-
+      <p><strong>Price</strong> N/A; <strong>Weight</strong>
+      0</p><p><strong>Type</strong> contact or injested; <strong>Save</strong>
+      Fortitude DC 14 (18 if injested)</p><p><strong>Onset</strong> 1 minute;
+      <strong>Frequency</strong> 1/hour for 6
+      hours</p><p><strong>Effect</strong> 1d4 Wisdom damage plus –4 penalty on
+      Sense Motive checks and saving throws versus sleep effects for 1
+      hour;</p><p><strong>Cure</strong> 2 saves</p><p>The people of Farnvale
+      make use of the following rare toxin to help mask their condition and
+      prepare visitors for transport to the bodythief.</p>
+  sources:
+    - id: PZO9297
+      pages: '29'
+  subType: poison
+  uses:
+    per: single
+type: consumable

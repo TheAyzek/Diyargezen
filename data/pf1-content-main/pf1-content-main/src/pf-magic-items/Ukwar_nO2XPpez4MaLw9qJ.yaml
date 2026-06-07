@@ -1,0 +1,78 @@
+_id: nO2XPpez4MaLw9qJ
+_key: '!items!nO2XPpez4MaLw9qJ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/battleaxe.PNG
+name: Ukwar
+system:
+  actions:
+    - _id: ud9qn1pmymqvpq50
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: ukwar
+  aura:
+    school: nec
+  baseTypes:
+    - Battleaxe
+  cl: 8
+  description:
+    value: >-
+      <p>Ukwar is a +1 conductive battleaxe infused with the angry spirit of a
+      Deadwatcher orc leader named Ukwar. After perishing in Scarwall and rising
+      soon thereafter as a fext, Ukwar spent decades longing to be free of her
+      curse. When she is permanently slain, her spirit enters her axe. As long
+      as the PCs continue to adventure in Scarwall, she doesn't attempt to exert
+      influence over her wielder-she wants to see each and every one of
+      Scarwall's denizens suffer. If her wielder spends more than 1 day outside
+      of Scarwall (and the castle remains cursed), she attempts to take control
+      and force her wielder to return and finish this job.  As long as Ukwar
+      remains intelligent, the blade grants weapon proficiency with the
+      battleaxe to her wielder. If the wielder is already proficient with
+      battleaxes, he instead gains a +1 bonus on all attack rolls and damage
+      rolls made with Ukwar. She imposes negative levels on nonchaotic evil
+      wielders only when they are outside of Scarwall. She can cast rage once
+      per day, and does so on her wielder the first time each day he attacks one
+      of the spirit anchors or the chained spirit-she can be convinced to cast
+      rage on her wielder at another time with a successful DC 20 Diplomacy or
+      Intelligenceimidate check (a standard action).  Ukwar's special purpose is
+      to lift Scarwall's curse, and as long as her wielder is engaged in this
+      quest and is within Scarwall, the weapon functions as a +1 conductive
+      undead-bane battleaxe. If Scarwall's curse is lifted, Ukwar's spirit
+      leaves the axe behind, and this weapon returns to being an unintelligent
+      +1 conductive battleaxe.  Ukwar is a unique weapon created through a
+      nonstandard method, but a character who wishes to create an identical
+      weapon can do so using the guidelines below.</p><p><strong>Base
+      Item</strong>: conductive
+      battleaxe</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, rage, spectral hand, summon monster I</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 23335
+  showInQuickbar: false
+  sources:
+    - id: PZO1021
+  weaponGroups:
+    - axes
+  weight:
+    value: 6
+type: weapon

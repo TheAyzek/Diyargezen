@@ -1,0 +1,76 @@
+_id: wtkl6UbvZjJKe1hM
+_key: '!journal!wtkl6UbvZjJKe1hM'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: tfgLGI205b9dxEjx
+name: 6.2.1. Vehicle Basics
+pages:
+  - _id: dAlItAqZAJEPWgpp
+    _key: '!journal.pages!wtkl6UbvZjJKe1hM.dAlItAqZAJEPWgpp'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.2.1. Vehicle Basics
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.F9hzOnUh5c0Ls2p6]{6.2.
+        Vehicles}</p><ul><li><strong>@Compendium[pf-content.pf-rules.wtkl6UbvZjJKe1hM]{6.2.1.
+        Vehicle
+        Basics}</strong></li><li>@Compendium[pf-content.pf-rules.sjmHLtUHjp10PRNg]{6.2.2.
+        Full Vehicle
+        Rules}</li><li>@Compendium[pf-content.pf-rules.539C4TSxha1IlXOT]{6.2.3.
+        Vehicle
+        Statistics}</li><li>@Compendium[pf-content.pf-rules.x0eiNjbEPSWvRSDc]{6.2.4.
+        Land
+        Vehicles}</li><li>@Compendium[pf-content.pf-rules.k1QL1hPoOfe1Or6X]{6.2.5.
+        Water
+        Vehicles}</li><li>@Compendium[pf-content.pf-rules.KhRRl87tEDU65YG5]{6.2.6.
+        Air Vehicles}</li></ul><hr /><p>@Source[PZO1118;pages=170]</p><p>What
+        follow are the basic rules for using vehicles in the Pathfinder
+        Roleplaying Game. They give an overview of the rules that all vehicles
+        use.</p><h2>Drivers</h2><p>Drivers control vehicles. A driver is a
+        creature with an Intelligence score of at least 3 who is physically able
+        to manipulate a vehicle’s driving device and who is both within the
+        driving spaces of a vehicle and actively manipulating the driving
+        device.</p><h2>Occupants</h2><p>Any creature riding, driving, serving as
+        crew on, or providing propulsion for a vehicle is considered its
+        occupant.</p><h2>Facing</h2><p>Unlike characters, vehicles have a
+        forward facing. A vehicle moves best when it moves in the direction of
+        its forward facing.</p><h2>Acceleration/Deceleration</h2><p>Vehicles
+        must accelerate to reach their maximum speed. Each round, with the
+        proper driving action and a successful check, the driver can increase
+        the vehicle’s movement by its rate of acceleration, as long that value
+        is no greater than the vehicle’s maximum speed. Vehicles must decelerate
+        to slow down and are hard to stop at an exact
+        point.</p><h2>Initiative</h2><p>A vehicle moves at the start of its
+        driver’s turn. If a vehicle has no driver, it moves on the turn of the
+        last creature that was its driver, or on a turn determined by the
+        GM.</p><h2>Controlling a Vehicle</h2><p>If a vehicle has a driver,
+        before the driver does anything else on her turn, she must determine
+        what drive action she is taking, and take that action. If the driver
+        takes no action, takes some other action instead of driving the vehicle,
+        or delays or readies an action—or if there is no driver—the vehicle
+        takes the “uncontrolled” action. A driver can only take one action each
+        turn to control a vehicle. Once the driver has selected the action, or
+        takes some other action forcing the vehicle to become uncontrolled, the
+        vehicle moves.</p><h2>Driving Check</h2><p>When a driver takes a driving
+        action, she must make a driving check to determine the maneuverability
+        and speed of the vehicle that round. The vehicle’s propulsion determines
+        what skill is used for the driving check. A driver can always make a
+        Wisdom check in place of a driving check. The base DCs for all driving
+        checks are DC 5 and DC 20. Use the lower DC when the driver is not in
+        combat and the higher DC when the driver is in combat.</p><h2>In
+        Combat</h2><p>Vehicles, creatures used as propulsion, and crew members
+        do not threaten any area around them, but their drivers and their
+        non-crew occupants do. Vehicles can enter the spaces of objects and
+        creatures smaller than themselves. Vehicles do not have attacks, but
+        they can—and may be required to— make vehicular bull rush, vehicular
+        overrun, and ramming combat maneuvers.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

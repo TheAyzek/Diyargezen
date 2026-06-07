@@ -1,0 +1,38 @@
+_id: 6kG7v4gwT8e5cZCY
+_key: '!items!6kG7v4gwT8e5cZCY'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Lenses of Situational Sight
+system:
+  aura:
+    custom: true
+    school: divination and transmutation
+  cl: 10
+  description:
+    value: >-
+      <p>These wire spectacles are fitted with several groundcrystal filters on
+      hinged arms, any combination of which can be moved in front of or away
+      from the lenses as a standard action (one, two, or all three lenses may be
+      positioned at the same time with one action). Each filter grants a
+      specific sense to the wearer when it is placed before one of the lenses.
+      Each set of filters can be used for 10 minutes in 1-minute increments
+      before losing its magical properties. The three sets of lenses are as
+      follows.   Green Lenses: Grant the wearer the benefits of detect magic.
+      The wearer doesn't need to concentrate to gain the benefits of the spell
+      as long as a source of magic remains in her line of sight for the
+      appropriate number of rounds.  Pink Lenses: Grant the wearer the benefits
+      of see invisibility.   Purple Lenses: Grant the wearer darkvision out to a
+      distance of 60 feet. If the wearer already has darkvision, the range of
+      her darkvision increases by 60 feet while she uses these
+      filters.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, arcane sight, darkvision, see invisibility</p>
+  price: 5000
+  slot: eyes
+  sources:
+    - id: PZO9435
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

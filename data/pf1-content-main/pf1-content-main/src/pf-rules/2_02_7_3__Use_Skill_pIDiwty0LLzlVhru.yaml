@@ -1,0 +1,38 @@
+_id: pIDiwty0LLzlVhru
+_key: '!journal!pIDiwty0LLzlVhru'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 6xAF0VmbLWU6dblG
+name: 2.02.7.3. Use Skill
+pages:
+  - _id: 4rYthtKsT3icy0uF
+    _key: '!journal.pages!pIDiwty0LLzlVhru.4rYthtKsT3icy0uF'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.02.7.3. Use Skill
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.VZCpOrg3jCyNaYeg]{2.02.
+        Actions in
+        Combat}</p><ul><li><p>@Compendium[pf-content.pf-rules.n3ejDpqIKzKy97TU]{2.02.7.
+        Miscellaneous
+        Actions}</p><ul><li>@Compendium[pf-content.pf-rules.3GeZw8nK6Zjs2qvC]{2.02.7.1.
+        Take 5-Foot
+        Step}</li><li>@Compendium[pf-content.pf-rules.PHjZollV2EfO7rAa]{2.02.7.2.
+        Use
+        Feat}</li><li><strong>@Compendium[pf-content.pf-rules.pIDiwty0LLzlVhru]{2.02.7.3.
+        Use Skill}</strong></li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=189]</p><p>Most skill uses are standard
+        actions, but some might be move actions, full-round actions, free
+        actions, or something else entirely.</p><p>The individual skill
+        descriptions in Chapter 4 tell you what sorts of actions are required to
+        perform skills.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

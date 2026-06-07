@@ -1,0 +1,32 @@
+_id: Orf6AdQtI8KP85VC
+_key: '!journal!Orf6AdQtI8KP85VC'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Sekhmet
+pages:
+  - _id: 90cxsOqRZWE9Hf7h
+    _key: '!journal.pages!Orf6AdQtI8KP85VC.90cxsOqRZWE9Hf7h'
+    _stats:
+      coreVersion: '12.331'
+    name: Sekhmet
+    sort: 0
+    text:
+      content: >-
+        <h1>Sekhmet</h1><h2>Lady of Slaughter</h2>@Source[PZO9080;pages=65] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Sekhmet">Sekhmet</a><h3>Details</h3><p><strong>Alignment</strong>
+        CN<br /><strong>Pantheon</strong> Deities of Ancient Osirion<br
+        /><strong>Areas of Concern</strong> Fire, healing, vengeance, war<br
+        /><strong>Domains</strong> Chaos, Destruction, Fire, Healing, War<br
+        /><strong>Subdomains</strong> Ash, Blood, Protean, Rage, Restoration,
+        Revelry<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Battleaxe<br
+        /><strong>Symbol</strong> Seven arrows<br /><strong>Sacred
+        Animal(s)</strong> Lion</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

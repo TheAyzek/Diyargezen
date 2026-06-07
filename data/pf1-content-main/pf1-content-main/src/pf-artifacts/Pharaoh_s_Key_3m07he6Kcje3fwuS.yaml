@@ -1,0 +1,28 @@
+_id: 3m07he6Kcje3fwuS
+_key: '!items!3m07he6Kcje3fwuS'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Pharaoh's Key
+system:
+  artifact: true
+  aura:
+    school: abj
+  cl: 17
+  description:
+    value: >-
+      <p>The Pharaoh's Key is a strange-looking device, possibly of Shory
+      origin, about 1 foot in diameter. The device's primary use is as an
+      activation item to trigger the firing of the Slave Trenches, yet it also
+      grants protection against elemental creatures as long as it is carried in
+      one hand. The bearer gains a +5 deflection bonus to AC and a +5 resistance
+      bonus on all saving throws against attacks made by creatures with the
+      elemental subtype. In addition, while the Pharaoh's Key is held in one
+      hand, the bearer's attacks ignore any damage reduction possessed by a
+      creature with the elemental subtype.</p>
+  sources:
+    - id: PZO9083
+  subType: other
+  weight:
+    value: 3
+type: equipment

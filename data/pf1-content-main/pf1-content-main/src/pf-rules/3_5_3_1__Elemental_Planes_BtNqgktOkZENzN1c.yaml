@@ -1,0 +1,45 @@
+_id: BtNqgktOkZENzN1c
+_key: '!journal!BtNqgktOkZENzN1c'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: B3pncms1TJP9sIoG
+name: 3.5.3.1. Elemental Planes
+pages:
+  - _id: j13GCNTT6YC7ww6w
+    _key: '!journal.pages!BtNqgktOkZENzN1c.j13GCNTT6YC7ww6w'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.5.3.1. Elemental Planes
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.ryIRK7CjUk9fI8TT]{3.5.
+        The
+        Planes}</p><ul><li><p>@Compendium[pf-content.pf-rules.9ZxtJSapPINNjxbT]{3.5.3.
+        Inner
+        Planes}</p><ul><li><strong>@Compendium[pf-content.pf-rules.BtNqgktOkZENzN1c]{3.5.3.1.
+        Elemental
+        Planes}</strong></li><li>@Compendium[pf-content.pf-rules.EQFsfwmMHxeX34rq]{3.5.3.2.
+        Energy Planes}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=440]</p><p>The four classic Inner Planes are
+        the Plane of Air, the Plane of Earth, the Plane of Fire, and the Plane
+        of Water—it is from these planes that the creatures known as elementals
+        hail, yet they house many other strange denizens as well, such as the
+        genie races, strange metal-eating xorns, unseen invisible stalkers, and
+        mischievous
+        mephits.</p><ul><li><p>@UUID[Compendium.pf-content.pf-rules.JournalEntry.mDgGgG7B4Ox86IEq]{3.5.3.1.1.
+        Plane of
+        Air}</p></li><li><p>@UUID[Compendium.pf-content.pf-rules.JournalEntry.9Lhm9foOPJ0V7BKp]{3.5.3.1.2.
+        Plane of
+        Earth}</p></li><li><p>@UUID[Compendium.pf-content.pf-rules.JournalEntry.dd3XFS6cZ47Y1Zut]{3.5.3.1.3.
+        Plane of
+        Fire}</p></li><li><p>@UUID[Compendium.pf-content.pf-rules.JournalEntry.qjK0wOAyu9X5wWUC]{3.5.3.1.4.
+        Plane of Water}</p></li></ul>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

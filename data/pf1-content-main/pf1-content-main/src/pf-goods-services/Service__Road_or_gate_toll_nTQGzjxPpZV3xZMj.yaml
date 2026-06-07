@@ -1,0 +1,25 @@
+_id: nTQGzjxPpZV3xZMj
+_key: '!items!nTQGzjxPpZV3xZMj'
+_stats:
+  coreVersion: '12.331'
+img: icons/environment/settlement/city-gate.webp
+name: Service, Road or gate toll
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong>
+      Lodging/Services</p><h2>Description</h2><p>Cities and towns often use gate
+      tolls to generate additional income, to favor local sellers over visiting
+      merchants, to discourage heavy traffic in congested areas, or to recoup
+      the cost of constructing and maintaining the road or gate. Bridge tolls
+      are also popular, as most travelers have no easy way to circumvent
+      them.</p>
+  equipped: false
+  price: 0.01
+  sources:
+    - id: PZO1123
+      pages: '99'
+  subType: tradeGoods
+  tags:
+    - Lodging/Services
+type: loot

@@ -1,0 +1,36 @@
+_id: rYFO5juNlDIPTrQN
+_key: '!journal!rYFO5juNlDIPTrQN'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Shub-Niggurath
+pages:
+  - _id: rIxLCIY5jbo0iWQ0
+    _key: '!journal.pages!rYFO5juNlDIPTrQN.rIxLCIY5jbo0iWQ0'
+    _stats:
+      coreVersion: '12.331'
+    name: Shub-Niggurath
+    sort: 0
+    text:
+      content: >-
+        <h1>Shub-Niggurath</h1><h2>Black Goat of the
+        Woods</h2>@Source[PZO90109;pages=71] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Shub-Niggurath">Shub-Niggurath</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Outer Gods<br /><strong>Areas of
+        Concern</strong> Fertility, forests, monsters<br
+        /><strong>Domains</strong> Animal, Chaos, Evil, Plant, Void<br
+        /><strong>Subdomains</strong> Dark Tapestry, Decay, Feather, Fur,
+        Growth, Stars, Thorns*<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Dagger<br
+        /><strong>Symbol</strong> Radially arrayed goat heads<br
+        /><strong>Sacred Animal(s)</strong> None<br /><strong>Sacred
+        Color(s)</strong> Green, white</p><h2>For Followers of
+        Shub-Niggurath</h2><h3>Feats</h3><p>Dreamed
+        Secrets</p><h3>Traits</h3><p>Unspeakable Bond</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,22 @@
+_id: FzF7xjHI6LsmYf0V
+_key: '!items!FzF7xjHI6LsmYf0V'
+_stats:
+  coreVersion: '12.331'
+img: icons/environment/creatures/cephalopod-octopus-red.webp
+name: Octopus
+system:
+  description:
+    value: >-
+      <p>These cunning animals can be employed as familiars by aquatic
+      spellcasters. If they are kept is pets, they must be kept in water, as
+      they cannot survive out of it. More information on blue ringed octopuses
+      can be found in <em>Ultimate Magic</em>.</p>
+  equipped: false
+  price: 25
+  sources:
+    - id: PZO1123
+      pages: '80'
+  subType: animal
+  weight:
+    value: 2
+type: loot

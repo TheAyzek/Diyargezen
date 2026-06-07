@@ -1,0 +1,27 @@
+_id: el5xpJ0yLfRiShsm
+_key: '!items!el5xpJ0yLfRiShsm'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Rime Metamagic Rod
+system:
+  aura:
+    custom: true
+    school: none
+  cl: 17
+  description:
+    value: >-
+      <p>The wielder can cast up to three spells with the cold descriptor per
+      day that entangle creatures that take cold damage from that spell for a
+      number of rounds equal to the spell's actual level as though using the
+      Rime Spell feat (Ultimate
+      Magic).</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Rod, Rime Spell</p>
+  price: 11000
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 5
+type: equipment

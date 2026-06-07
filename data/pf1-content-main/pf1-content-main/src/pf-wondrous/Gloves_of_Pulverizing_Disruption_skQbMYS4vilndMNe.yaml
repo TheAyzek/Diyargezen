@@ -1,0 +1,30 @@
+_id: skQbMYS4vilndMNe
+_key: '!items!skQbMYS4vilndMNe'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Gloves of Pulverizing Disruption
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>Three times per day, the wearer can use these thick leather gloves to
+      make a melee touch attack against an undead creature, a construct, or a
+      nonmagical object and deal 3d4 points of damage to it. When the wearer
+      deals damage in this way, the gloves absorb part of the matter that makes
+      up the target. This creates dust that is stored within the gloves for 24
+      hours. The next time the wearer attempts a dirty trick combat maneuver,
+      the dust flies from the gloves, providing a +2 bonus on that attempt. If
+      the wearer does not attempt a dirty trick combat maneuver before 24 hours
+      elapses, the dust
+      disappears.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, corrosive touch</p>
+  price: 9400
+  slot: hands
+  sources:
+    - id: PZO9459
+  subType: wondrous
+type: equipment

@@ -1,0 +1,25 @@
+_id: etFxQe3cCLCLogxh
+_key: '!items!etFxQe3cCLCLogxh'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Blatherskite's Initiative
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>At 3rd level, the blatherskite
+      gains benefits as long as he has at least 1 grit point. The blatherskite
+      gains a +2 bonus on initiative checks. Furthermore, if he is trained in
+      Stealth (and as long as he is not paralyzed, prone, or otherwise
+      immobilized), he can take a 5-foot step and attempt a Stealth check to
+      hide as part of the initiative check, provided there is an object or a
+      larger creature to hide behind; if he spends 1 grit point, he can move up
+      to half his speed instead of taking only a 5-foot step as part of the
+      initiative check.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

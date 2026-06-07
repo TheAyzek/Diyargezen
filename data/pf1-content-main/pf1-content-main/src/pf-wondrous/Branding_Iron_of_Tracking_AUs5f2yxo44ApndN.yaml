@@ -1,0 +1,29 @@
+_id: AUs5f2yxo44ApndN
+_key: '!items!AUs5f2yxo44ApndN'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Branding Iron of Tracking
+system:
+  aura:
+    school: div
+  cl: 3
+  description:
+    value: >-
+      <p>This 2-foot-long metal rod has a unique sigil on the end. When the
+      sigil is heated in a fire, it can be used to brand a creature or object.
+      Anytime after the branding, a creature can hold the branding iron of 
+      tracking and know the direction to the nearest brand, as if using locate
+      object for branded objects or locate creature for branded creatures. The
+      branding iron of tracking only tracks the brand itself, so cutting or
+      scraping off the brand can fool the
+      item.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, brand, locate creature, locate object</p>
+  price: 9000
+  sources:
+    - id: PZO1136
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

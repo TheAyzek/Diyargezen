@@ -1,0 +1,45 @@
+_id: MgPati0XYUli8q2G
+_key: '!journal!MgPati0XYUli8q2G'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: JGDhAq9vDimAEQj3
+name: 2.03.3. Dying (Negative Hit Points)
+pages:
+  - _id: FD0eJ98rBckGuSnq
+    _key: '!journal.pages!MgPati0XYUli8q2G.FD0eJ98rBckGuSnq'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.03.3. Dying (Negative Hit Points)
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.UEmSoktVjUEI46C2]{2.03.
+        Injury and
+        Death}</p><ul><li>@Compendium[pf-content.pf-rules.Z0gVQW6Hx4Hb4zps]{2.03.1.
+        Loss of Hit
+        Points}</li><li>@Compendium[pf-content.pf-rules.PN9yC36RUizvrAUk]{2.03.2.
+        Disabled (0 Hit
+        Points)}</li><li><strong>@Compendium[pf-content.pf-rules.MgPati0XYUli8q2G]{2.03.3.
+        Dying (Negative Hit
+        Points)}</strong></li><li>@Compendium[pf-content.pf-rules.ZKXUIJptoysFa5JI]{2.03.4.
+        Dead}</li><li>@Compendium[pf-content.pf-rules.nEPpg39gAOwIxDki]{2.03.5.
+        Stable Characters and
+        Recovery}</li><li>@Compendium[pf-content.pf-rules.JWPzEMuF9fPOLqCF]{2.03.6.
+        Healing}</li><li>@Compendium[pf-content.pf-rules.oyi4ByFG6yVswC0m]{2.03.7.
+        Temporary Hit
+        Points}</li><li>@Compendium[pf-content.pf-rules.Hzi8GbT19bP7mdSP]{2.03.8.
+        Nonlethal Damage}</li></ul><hr /><p>@Source[PZO1110;pages=189]</p><p>If
+        your hit point total is negative, but not equal to or greater than your
+        Constitution score, you’re
+        @Compendium[pf1.conditions.BKxrsHSBNATa0e3D]{Dying}.</p><p>A dying
+        character immediately falls unconscious and can take no actions.</p><p>A
+        dying character loses 1 hit point every round. This continues until the
+        character dies or becomes stable.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

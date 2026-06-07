@@ -1,0 +1,17 @@
+_id: mkekjiyluuEvz0EP
+_key: '!items!mkekjiyluuEvz0EP'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/red_25.jpg
+name: Extra Feat (2 EP)
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>The eidolon gains an extra feat. It must meet the prerequisites of the
+      feat.<em> </em></p><p><strong>Requirements</strong></p><p>Twinned
+      eidolon.</p>
+  subType: misc
+  tags:
+    - Eidolon Evolution
+type: feat

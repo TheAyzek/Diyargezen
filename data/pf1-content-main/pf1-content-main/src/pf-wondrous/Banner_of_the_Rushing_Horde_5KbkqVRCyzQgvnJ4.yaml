@@ -1,0 +1,30 @@
+_id: 5KbkqVRCyzQgvnJ4
+_key: '!items!5KbkqVRCyzQgvnJ4'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Banner of the Rushing Horde
+system:
+  aura:
+    school: trs
+  cl: 10
+  description:
+    value: >-
+      <p>The banner of the rushing horde is a tattered cloth flag, typically 3
+      feet wide and 6 feet long, depicting the device or insignia of an orc
+      tribe or unit. It can be carried on a staff, affixed to a pole that's
+      planted in the ground, or hung from the harness of a great beast. Allies
+      within 60 feet of the banner gain the benefits of the Improved Bull Rush
+      and Improved Overrun feats. If planted, the flag does not need a bearer,
+      but if it is toppled or touched by an enemy, it loses its effectiveness
+      until reclaimed and replanted by allies of its
+      owner.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, bull's strength</p>
+  price: 60000
+  sources:
+    - id: PZO1130
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

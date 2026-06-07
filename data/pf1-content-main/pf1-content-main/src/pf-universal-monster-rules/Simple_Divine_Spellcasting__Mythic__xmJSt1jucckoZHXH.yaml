@@ -1,0 +1,22 @@
+_id: xmJSt1jucckoZHXH
+_key: '!items!xmJSt1jucckoZHXH'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/light_04.jpg
+name: Simple Divine Spellcasting [Mythic]
+system:
+  description:
+    value: >-
+      <p>The creature gains the ability to cast spells from the <a>cleric</a>
+      or<a>druid</a>&nbsp;spell list. Select a number of spells with total spell
+      levels equal to twice the creature&rsquo;s CR. No spell for this ability
+      should have a level higher than 1 + 1/2 the creature&rsquo;s CR. A 0-level
+      spell counts as 1/2 spell level toward this total. The creature can cast
+      each of these spells once per day. Its caster level is equal to its Hit
+      Dice. It uses its Wisdom or Charisma (whichever is higher) to determine
+      its spell DCs.</p><p><em>Format</em>: simple divine
+      spellcasting</p><p><em>Location</em>: Special Attacks.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

@@ -1,0 +1,58 @@
+_id: eLunMrqifsJQo9d8
+_key: '!journal!eLunMrqifsJQo9d8'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: Ypd53xl4FUpDXVTo
+name: 1.5.2. Changing Alignment
+pages:
+  - _id: LPWbQ9jUCrSFVY3Z
+    _key: '!journal.pages!eLunMrqifsJQo9d8.LPWbQ9jUCrSFVY3Z'
+    _stats:
+      coreVersion: '12.331'
+    name: 1.5.2. Changing Alignment
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.8scSEgBEtJZj0suf]{(Index) Basic
+        Rules}</p><p>@Compendium[pf-content.pf-rules.AjFnUP0k5aUzySH8]{1.5.
+        Alignment}</p><ul><li>@Compendium[pf-content.pf-rules.ojEKZZWsMZOo6US7]{1.5.1.
+        The Nine
+        Alignments}</li><li><strong>@Compendium[pf-content.pf-rules.eLunMrqifsJQo9d8]{1.5.2.
+        Changing Alignment}</strong></li></ul><hr
+        /><p>@Source[PZO1110;pages=168]</p><p>Alignment is a tool, a convenient
+        shorthand you can use to summarize the general attitude of an NPC,
+        region, religion, organization, monster, or even magic
+        item.</p><p>Certain character classes list repercussions for those who
+        don’t adhere to a specific alignment, and some spells and magic items
+        have different effects on targets depending on alignment, but beyond
+        that it’s generally not necessary to worry too much about whether
+        someone is behaving differently from his stated alignment. In the end,
+        the Game Master is the one who gets to decide if something’s in
+        accordance with its indicated alignment, based on the descriptions given
+        previously and his own opinion and interpretation—the only thing the GM
+        needs to strive for is to be consistent as to what constitutes the
+        difference between alignments like chaotic neutral and chaotic evil.
+        There’s no hard and fast mechanic by which you can measure alignment—
+        unlike hit points or skill ranks or Armor Class, alignment is solely a
+        label the GM controls.</p><p>It’s best to let players play their
+        characters as they want. If a player is roleplaying in a way that you,
+        as the GM, think doesn’t fit his alignment, let him know that he’s
+        acting out of alignment and tell him why—but do so in a friendly manner.
+        If a character wants to change his alignment, let him—in most cases,
+        this should amount to little more than a change of personality, or in
+        some cases, no change at all if the alignment change was more of an
+        adjustment to more accurately summarize how a player, in your opinion,
+        is portraying his character. In some cases, changing alignments can
+        impact a character’s abilities—see the class write-ups in Chapter 3 for
+        details. An atonement spell may be necessary to repair damage done by
+        alignment changes arising from involuntary sources or momentary lapses
+        in personality.</p><p>Players who frequently have their characters
+        change alignment should in all likelihood be playing chaotic neutral
+        characters.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

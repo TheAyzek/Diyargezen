@@ -1,0 +1,25 @@
+_id: gNZjYpDFtMOgyql9
+_key: '!items!gNZjYpDFtMOgyql9'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/chest/chest-simple-box-red.webp
+name: Kit, Half-orc disguise
+system:
+  description:
+    value: >-
+      <p>This specifically designed kit was put together by half-orcs to help
+      them appear more human. It includes skin cream to disguise green-gray skin
+      color and other items designed to conceal or draw attention away from
+      typical half-orc physical characteristics. Using this kit on a half-orc
+      grants a +3 bonus on Disguise checks to appear human. Used on an orc, it
+      only grants a +1 bonus on these checks. A half-orc disguise kit is
+      exhausted after 10 uses.</p>
+  equipped: false
+  price: 75
+  sources:
+    - id: PZO1121
+      pages: '56'
+  subType: tool
+  weight:
+    value: 1
+type: loot

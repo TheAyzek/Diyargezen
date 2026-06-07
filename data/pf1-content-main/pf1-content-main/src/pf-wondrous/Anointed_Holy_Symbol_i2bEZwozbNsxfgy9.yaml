@@ -1,0 +1,35 @@
+_id: i2bEZwozbNsxfgy9
+_key: '!items!i2bEZwozbNsxfgy9'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Anointed Holy Symbol
+system:
+  aura:
+    school: evo
+  cl: 7
+  description:
+    value: >-
+      <p>This hollow holy symbol includes a reservoir meant to contain a dose of
+      holy water. When the reservoir is filled on the home plane of its
+      corresponding deity with a dose of holy water as a full-round action, the
+      symbol becomes charged with additional power. Each time a filled anointed
+      holy symbol is used to channel energy, the user can use the standard form
+      of channel energy or use variant channeling (Pathfinder RPG Ultimate Magic
+      29) based on one aspect of her deity's portfolio, selected each time the
+      anointed holy symbol is used. The user cannot apply more than one variant
+      channeling ability to her channeled energy at one time. An anointed holy
+      symbol remains charged for 3 days, after which time the holy water within
+      is consumed and the reservoir is empty again.  Anointed unholy symbols
+      also exist for evil deities; they must be filled with unholy water to
+      function but otherwise operate just as an anointed holy
+      symbol.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, consecrate</p>
+  price: 10000
+  sources:
+    - id: PZO1141
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

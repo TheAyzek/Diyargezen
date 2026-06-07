@@ -1,0 +1,31 @@
+_id: vXW6NATgj38xX8ve
+_key: '!items!vXW6NATgj38xX8ve'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Gloves of Spell Snaring
+system:
+  aura:
+    school: abj
+  cl: 13
+  description:
+    value: >-
+      <p>These thin gloves are covered in reflective glyphs and sigils, and the
+      palms are slightly tacky. Like gloves of arrow snaring, twice per day the
+      wearer can act as if she had the Snatch Arrow feat, even if she doesn't
+      meet the prerequisites for that feat. In addition, the wearer can expend
+      one of this item's uses per day to use the Snatch Arrows feat on a
+      projectile targeting an ally in a space adjacent to her.   As an immediate
+      action, the wearer can expend one use of mythic power and one of this
+      item's uses per day to block a spell targeting her or an adjacent ally, as
+      the parry spell guardian path ability (see page
+      30).</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Mythic Crafter, shield, spell turning, creator must have
+      the parry spell path ability</p>
+  price: 9000
+  slot: hands
+  sources:
+    - id: PZO1126
+  subType: wondrous
+type: equipment

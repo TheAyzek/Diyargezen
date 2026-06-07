@@ -1,0 +1,25 @@
+_id: SBPN3ClpvqgUVyLN
+_key: '!items!SBPN3ClpvqgUVyLN'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/kitchenware/jug-clay-brown-sealed.webp
+name: Bufo (Jug)
+system:
+  description:
+    value: >-
+      <p>This drink is a favorite of goblins, boggards, and other primitive
+      humanoids. It is made by soaking a poisonous toad or frog (or its eggs) in
+      weak beer, or by 'milking' these animals for their poison and mixing it
+      with the beer (which allows the animal to be used over and over again).
+      Some tribes use wide-mouthed jugs and leave the dead animal inside as a
+      crunchy treat for eating once the drink is gone. A creature drunk on bufo
+      has the dazzled condition in addition to the normal intoxication
+      effect.</p>
+  price: 1
+  sources:
+    - id: PZO1123
+      pages: '95'
+  subType: food
+  weight:
+    value: 2
+type: consumable

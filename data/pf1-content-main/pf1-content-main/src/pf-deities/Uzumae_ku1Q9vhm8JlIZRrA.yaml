@@ -1,0 +1,47 @@
+_id: ku1Q9vhm8JlIZRrA
+_key: '!journal!ku1Q9vhm8JlIZRrA'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Uzumae
+pages:
+  - _id: zTTUQNsQS3PjxTGW
+    _key: '!journal.pages!ku1Q9vhm8JlIZRrA.zTTUQNsQS3PjxTGW'
+    _stats:
+      coreVersion: '12.331'
+    name: Uzumae
+    sort: 0
+    text:
+      content: >-
+        <h1>Uzumae</h1><h2>Daimyo of the North</h2>@Source[PZO1139;pages=126]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Uzumae">Uzumae</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Oni Daimyo<br /><strong>Areas of
+        Concern</strong> Blizzards, frozen ghosts, starvation<br
+        /><strong>Domains</strong> Death, Evil, Law, Water<br
+        /><strong>Subdomains</strong> Fear, Ice, Murder, Undead<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Urumi</p><h3>Obedience</h3><p>Meditate
+        on the sensations of starving to death in the snow; you need not
+        actually be starving or in the snow to do so, but for each of these
+        conditions you lack, you must deal 1d4 points of damage to yourself via
+        self-flagellation. Gain a +4 profane bonus on saving throws against
+        cold-based effects.</p><h2>Boons - Oni
+        Daimyo</h2><p>@Source[PZO1139;pages=127]</p><p>The most powerful oni,
+        the oni daimyo, hold their domains in isolated regions of the Material
+        Plane. While they have transcended their lesser incarnations to become
+        something close to demigods in stature, they do not flaunt their power
+        and prefer to dwell in remote corners of the massive land of Tian
+        Xia.</p><p> Oni daimyo are always evil in alignment but can be chaotic,
+        lawful, or neutral. They range in power from CR 21 to CR 25. The boons
+        they grant are less complex than those granted by fiendish demigods,
+        manifesting as spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>chill metal</em><br
+        /><strong>2</strong>: <em>ice storm</em><br /><strong>3</strong>: 
+        <em>freezing sphere</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

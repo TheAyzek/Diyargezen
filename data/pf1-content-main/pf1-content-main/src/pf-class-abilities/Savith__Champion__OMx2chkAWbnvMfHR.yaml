@@ -1,0 +1,43 @@
+_id: OMx2chkAWbnvMfHR
+_key: '!items!OMx2chkAWbnvMfHR'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_37.jpg
+name: Savith (Champion)
+system:
+  associations:
+    classes:
+      - Medium
+  description:
+    value: >-
+      <p><strong>Medium Legendary Spirit</strong></p><p>Savith was the Azlanti
+      hero who, during the Age of Legend, descended into the serpentfolk city of
+      Ilmurea and beheaded the evil creatures' god,
+      Ydersius.</p><p><strong>Gaining Favor</strong>: To gain Savith's favor,
+      you must defeat an evil serpentfolk who is at least 1 level higher than
+      yourself. Using a magic weapon, you must decapitate the creature (which
+      requires a successful Strength check) and toss its head into lava or a
+      massive fire while vowing to never retreat from a battle involving evil
+      serpentfolk or worshipers of Ydersius. Savith then answers your
+      call.</p><p><strong>Taboos</strong>: If you accept a taboo while
+      channeling Savith, you must never coat any of your natural or manufactured
+      weapons in poison, nor can you ever dose an enemy with any type of
+      poison.</p><p><strong>Azlanti Heroics (Lesser, Su)</strong>: Savith grants
+      a +1 bonus on all attack rolls when you are wielding a greatsword in melee
+      combat against evil monstrous humanoids instead of granting proficiency in
+      an exotic weapon with champion's prowess. For the legendary champion
+      ability, Savith grants any two of the following feats: Disruptive, Greater
+      Weapon Focus (greatsword), Greater Weapon Specialization (greatsword),
+      Weapon Focus (greatsword), Weapon Specialization (greatsword), and
+      Spellbreaker. This ability alters champion's prowess and legendary
+      champion.</p><p><strong>Toe to Toe (Intermediate, Sp)</strong>: When you
+      are in melee combat with a creature that is at least one size category
+      larger than you, if none of your allies are flanking it, you can spend a
+      swift action to increase your own size as if through enlarge person,
+      gaining all the effects of that spell. This does not provoke attacks of
+      opportunity, and the effect lasts as long as you are in melee with that
+      creature or until it is dead.</p>
+  subType: classFeat
+  tags:
+    - Medium Legendary Spirit
+type: feat

@@ -1,0 +1,23 @@
+_id: wFqfhmg2vl4EhASC
+_key: '!items!wFqfhmg2vl4EhASC'
+_stats:
+  coreVersion: '12.331'
+folder: CQNw1H2zi4NilpKP
+img: systems/pf1/icons/feats/deadly-aim.jpg
+name: Deadly Aim (WiS)
+system:
+  description:
+    value: |2-
+
+                      <em>You can make exceptionally deadly ranged attacks by pinpointing a foe's weak spot, at the expense of making the attack less likely to succeed.</em>
+                      <p><strong>Prerequisites</strong></p>
+                      <p>Dex 13, base attack bonus +1.</p>
+                      <p><strong>Benefits</strong></p>
+                      <p>You can choose to take a &ndash;1 penalty on all ranged attack rolls to gain a +2 bonus on all ranged damage rolls. When your base attack bonus reaches +4, and every +4 thereafter, the penalty increases by &ndash;1 and the bonus to damage increases by +2. You must choose to use this feat before making an attack roll and its effects last until your next turn. The bonus damage does not apply to touch attacks or effects that do not deal hit point damage.</p>
+  sources:
+    - publisher: https://meliogeny.net/square-world/
+      title: World is Square
+  tags:
+    - Combat
+    - World is Square
+type: feat

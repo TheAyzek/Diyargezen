@@ -1,0 +1,50 @@
+_id: 47DJOElNsrdRkBxn
+_key: '!journal!47DJOElNsrdRkBxn'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: GvRXJrNElDk9KwJW
+name: 3.1.3.5. Craft DCs for Mechanical Traps
+pages:
+  - _id: tRlzstIVJls9ObCo
+    _key: '!journal.pages!47DJOElNsrdRkBxn.tRlzstIVJls9ObCo'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.1.3.5. Craft DCs for Mechanical Traps
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.mmx5KJLX4vsGZ7vz]{3.1.
+        Traps}</p><p>@Compendium[pf-content.pf-rules.IYnf1w2TjcHO2ExM]{3.1.3.
+        Designing a
+        Trap}</p><ul><li>@Compendium[pf-content.pf-rules.6cDhoB5fNw8e7LF3]{3.1.3.1.
+        Challenge Rating of a
+        Trap}</li><li>@Compendium[pf-content.pf-rules.CRcJbYvgkm6DXdQl]{3.1.3.2.
+        Mechanical Trap
+        Cost}</li><li>@Compendium[pf-content.pf-rules.HfHYbleSpRiYyq5o]{3.1.3.3.
+        Magic Device Trap
+        Cost}</li><li>@Compendium[pf-content.pf-rules.2YFLAgOtyleYCQxe]{3.1.3.4.
+        Spell Trap
+        Cost}</li><li><strong>@Compendium[pf-content.pf-rules.47DJOElNsrdRkBxn]{3.1.3.5.
+        Craft DCs for Mechanical Traps}</strong></li></ul><hr
+        /><p>@Source[PZO1110;pages=423]</p><p>Once you know the Challenge Rating
+        of a trap, determine the Craft (traps) DC by referring to the values and
+        modifiers given on Table 13–6.</p><h2>Making the Checks</h2><p>To
+        determine how much progress a character makes on building a trap each
+        week, that character makes a Craft (traps) check. See the Craft skill
+        description for details on Craft checks and the circumstances that can
+        affect them.</p><h2>Table 13-6: Craft (Traps)
+        DCs</h2><table><thead><tr><td>Trap CR</td><td>Base Craft (Traps)
+        DC</td></tr></thead><tbody><tr><td>1-5</td><td>20</td></tr><tr><td>6-10</td><td>25</td></tr><tr><td>11-15</td><td>30</td></tr><tr><td>16+</td><td>35</td></tr><tr><td>
+        </td><td> </td></tr><tr><td><strong>Additional
+        Components</strong></td><td><strong>Modifier to Craft (Traps)
+        DC</strong></td></tr><tr><td>Proximity
+        trigger</td><td>+5</td></tr><tr><td>Automatic
+        reset</td><td>+5</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,45 @@
+_id: Hl3CcI1hz5l8xK4m
+_key: '!items!Hl3CcI1hz5l8xK4m'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Caber Twig
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>Exquisitely carved from the very finest dark mahogany and polished to a
+      smooth sheen, this 4-inch-long stick feels surprisingly heavy for its size
+      when hefted in the palm. Three notches divide the twig into four 1-inch
+      segments. Snapping the twig at any notch is a swift action that creates
+      smaller twigs of appropriate sizes.  The first caber twigs were created
+      not for combat applications but for performances at tournaments or other
+      festivities. When thrown, a length of caber twig releases a thunderous
+      crack and transforms into a massive log. For every segment of twig used,
+      this log measures 5 feet long and weighs 300 pounds. No matter the length,
+      the log created is always 2 feet in diameter. Only one length can be
+      thrown at a time. The dramatic expansion of a caber twig segment proved a
+      popular element of festivals throughout the Abendego coast before the
+      advent of the storm, in much the same way fireworks help accentuate
+      celebrations elsewhere in the world.  The thrower can toss a caber twig at
+      a creature, object, or space within 30 feet. The resulting log always
+      lands upright upon the target. A targeted creature must succeed at a DC 16
+      Reflex saving throw or be forced into an adjacent space while taking an
+      amount of bludgeoning damage equal to 2d6 points per caber twig length
+      used.  Immediately after striking its primary target, the log tilts and
+      crashes down in a direction of the thrower's choosing. All creatures
+      within a straight line that is the length of the log extending from the
+      space of impact must succeed at a DC 13 Reflex saving throw or take 2d6
+      points of bludgeoning damage.  Once created, a caber twig log is
+      permanent.</p><h3>Requirements</h3><p>Craft Wondrous Item, plant
+      growth</p>
+  price: 300
+  sources:
+    - id: PZO9553
+  subType: wondrous
+  weight:
+    value: 4
+type: equipment

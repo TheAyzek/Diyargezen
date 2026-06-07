@@ -1,0 +1,38 @@
+_id: 4QNM0ebwWO04lKGg
+_key: '!items!4QNM0ebwWO04lKGg'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/quarterstaff.png
+name: Rod of the Python
+system:
+  aura:
+    school: trs
+  baseTypes:
+    - Quarterstaff
+  cl: 10
+  description:
+    value: >-
+      <p>Unlike with most rods, one end of this rod curls and twists back on
+      itself in a crook-the tip of this crook sometimes looks like the head of a
+      snake. The rod itself is about 4 feet long and weighs 10 pounds. It
+      strikes as a +1/+1 quarterstaff. If the user throws the rod to the ground
+      (a standard action), it grows to become a constrictor snake by the end of
+      the round. The python obeys all commands of the owner. (In animal form, it
+      retains the +1 enhancement bonus on attack and damage rolls possessed by
+      the rod form.) The serpent returns to rod form (a full-round action)
+      whenever the wielder desires, or whenever it moves farther than 100 feet
+      from the owner. If the snake form is slain, it returns to rod form and
+      cannot be activated again for 3 days. A rod of the python only functions
+      if the possessor is good.</p><p><strong>Base Item</strong>: /+1
+      quarterstaff</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, Craft Rod, baleful polymorph, creator must be
+      good</p>
+  enh: 1
+  price: 13000
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 10
+type: equipment

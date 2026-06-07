@@ -1,0 +1,60 @@
+_id: IAlP4W6PTN0Pc9m4
+_key: '!items!IAlP4W6PTN0Pc9m4'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/guns/gun-pistol-wood.webp
+name: Firedrake Pistol
+system:
+  actions:
+    - _id: byw32rsteonkxzt6
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: firedrakePistol
+  aura:
+    school: evo
+  baseTypes:
+    - Pistol
+  cl: 5
+  description:
+    value: >-
+      <p>This hefty +1 flaming pistol is elaborately carved with its barrel in
+      the semblance of a roaring dragon and its grip wrapped in polished red
+      dragonhide. When firing ordinary ammunition, the wielder may choose to
+      have the firedrake pistol deal all of its damage as fire damage instead of
+      normal damage. In addition, as a standard action the wielder may expend 1
+      unit of ammunition and create a cone of fire equivalent to burning hands
+      rather than resolving that shot as a normal attack.</p><p><strong>Base
+      Item</strong>: +1 flaming
+      pistol</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, burning hands, fireball</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 20300
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - firearms
+  weight:
+    value: 4
+type: weapon

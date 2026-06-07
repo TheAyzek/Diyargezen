@@ -1,0 +1,43 @@
+_id: V6sN4AhIyA14MGlT
+_key: '!items!V6sN4AhIyA14MGlT'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/leather.PNG
+name: Morlock Hide
+system:
+  armor:
+    dex: 6
+    material:
+      base:
+        value: leather
+    value: 2
+  aura:
+    custom: true
+    school: illusion and transmutation
+  baseTypes:
+    - Leather Armor
+  cl: 10
+  description:
+    value: >-
+      <p>This +1 shadow leather armor causes the wearer's skin to warp and
+      distort into a welter of horrid scarification. The armor itself disappears
+      from view under this coat of scars and the wearer's face appears as a
+      loathsome, eyeless veil of flesh. This change is illusory, similar to
+      glamered armor; however, morlock hide does cause the wearer's arms and
+      legs to extend and her posture to become hunched. She gains a +2
+      circumstance bonus on Acrobatics, Climb, and Escape Artist checks, and she
+      can move through narrow spaces while squeezing at normal speed and with no
+      penalty to AC or on attack rolls.</p><p><strong>Base Item</strong>:
+      shadow</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, alter self, invisibility</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 8910
+  sources:
+    - id: PZO1123
+  spellFailure: 10
+  weight:
+    value: 15
+type: equipment

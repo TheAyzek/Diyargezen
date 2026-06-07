@@ -1,0 +1,19 @@
+_id: Juek2SEnBa2iILUe
+_key: '!items!Juek2SEnBa2iILUe'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/nautical/steering-wheel.webp
+name: Vehicle, Ship's boat
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 500 gp; <strong>Price of Passage (per
+      mile)</strong> 2 cp</p><p>Ship's boats are usually carried on the decks of
+      larger ships to ferry passengers and cargo.</p>
+  equipped: false
+  price: 500
+  sources:
+    - id: PZO1123
+      pages: '87'
+  subType: vehicle
+type: loot

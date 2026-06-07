@@ -1,0 +1,48 @@
+_id: RaNddYWLyImjDBH1
+_key: '!items!RaNddYWLyImjDBH1'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/yellow_17.jpg
+name: Paralysis
+system:
+  actions:
+    - _id: u4p1rvu4ynpix9jb
+      actionType: save
+      activation:
+        type: passive
+        unchained:
+          type: passive
+      duration:
+        units: round
+        value: 1d4 + 1
+      img: systems/pf1/icons/skills/yellow_17.jpg
+      name: Use
+      notes:
+        effect:
+          - '@Compendium[pf1.conditions.8zG4yDD2zGVSAJFH]{Paralyzed}'
+          - Elves are immune to this effect
+      save:
+        dc: 10 + floor( @attributes.hd.total / 2) + @abilities.cha.mod
+        description: Fortitude negates
+        type: fort
+      tag: paralysis
+  description:
+    instructions: <p>adjust duration.</p>
+    value: >-
+      <p>Paralysis renders the victim immobile. <a>Paralyzed</a> creatures
+      cannot move, speak, or take any physical actions. The creature is rooted
+      to the spot, frozen and helpless. Paralysis works on the body, and a
+      character can usually attempt to resist it with a Fortitude saving throw
+      (DC = 10 + 1/2 the paralyzing creature&rsquo;s racial HD + that
+      creature&rsquo;s Constitution modifier; the DC is given in the
+      creature&rsquo;s description). Unlike <a>hold person</a> and similar
+      effects, a paralysis effect does not allow a new save each round. A winged
+      creature flying in the air at the time that it is paralyzed cannot flap
+      its wings and falls. A swimmer can&rsquo;t swim and may drown. The
+      duration of the paralysis varies and is included in the creature&rsquo;s
+      description.</p><p><em>Format</em>: paralysis (1d4 rounds, DC
+      18)</p><p><em>Location</em>: Special Attacks and individual attacks.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

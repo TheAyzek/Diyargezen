@@ -1,0 +1,321 @@
+_id: NNfpvJm41C0QtKeW
+_key: '!tables!NNfpvJm41C0QtKeW'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+folder: WRIhxGMO1MKw7Mne
+formula: 1d100
+img: icons/sundries/gaming/playing-cards-black.webp
+name: Deck of Illusions
+replacement: true
+results:
+  - _id: SzD3TBzqRNvzbKsf
+    _key: '!tables.results!NNfpvJm41C0QtKeW.SzD3TBzqRNvzbKsf'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 1
+    text: Ace of hearts (IV. The Emperor) - Red dragon
+    type: text
+    weight: 1
+  - _id: uMYhDZqbhqMQ9r7A
+    _key: '!tables.results!NNfpvJm41C0QtKeW.uMYhDZqbhqMQ9r7A'
+    img: icons/svg/d20-black.svg
+    range:
+      - 2
+      - 2
+    text: King of hearts (Knight of swords) - Male human fighter and four guards
+    type: text
+    weight: 1
+  - _id: 5p48HKf9ZAWsUrzu
+    _key: '!tables.results!NNfpvJm41C0QtKeW.5p48HKf9ZAWsUrzu'
+    img: icons/svg/d20-black.svg
+    range:
+      - 3
+      - 3
+    text: Queen of hearts (Queen of staves) - Female human wizard
+    type: text
+    weight: 1
+  - _id: HCSGVWgdng23tj54
+    _key: '!tables.results!NNfpvJm41C0QtKeW.HCSGVWgdng23tj54'
+    img: icons/svg/d20-black.svg
+    range:
+      - 4
+      - 4
+    text: Jack of hearts (King of staves) - Male human druid
+    type: text
+    weight: 1
+  - _id: pLgPIlsVKhth8TiK
+    _key: '!tables.results!NNfpvJm41C0QtKeW.pLgPIlsVKhth8TiK'
+    img: icons/svg/d20-black.svg
+    range:
+      - 5
+      - 5
+    text: Ten of hearts (VII. The Chariot) - Cloud giant
+    type: text
+    weight: 1
+  - _id: nJrkBLy7zNJKnfig
+    _key: '!tables.results!NNfpvJm41C0QtKeW.nJrkBLy7zNJKnfig'
+    img: icons/svg/d20-black.svg
+    range:
+      - 6
+      - 6
+    text: Nine of hearts (Page of staves) - Ettin
+    type: text
+    weight: 1
+  - _id: ruOLydko1mnXop9E
+    _key: '!tables.results!NNfpvJm41C0QtKeW.ruOLydko1mnXop9E'
+    img: icons/svg/d20-black.svg
+    range:
+      - 7
+      - 7
+    text: Eight of hearts (Ace of cups) - Bugbear
+    type: text
+    weight: 1
+  - _id: wkGu8jB9XLiRhIn9
+    _key: '!tables.results!NNfpvJm41C0QtKeW.wkGu8jB9XLiRhIn9'
+    img: icons/svg/d20-black.svg
+    range:
+      - 8
+      - 8
+    text: Two of hearts (Five of staves) - Goblin
+    type: text
+    weight: 1
+  - _id: L0twUUUgSA2q2tkI
+    _key: '!tables.results!NNfpvJm41C0QtKeW.L0twUUUgSA2q2tkI'
+    img: icons/svg/d20-black.svg
+    range:
+      - 9
+      - 9
+    text: Ace of diamonds (III. The Empress) - Glabrezu (demon)
+    type: text
+    weight: 1
+  - _id: qpzF8Kl1IY2cPbfK
+    _key: '!tables.results!NNfpvJm41C0QtKeW.qpzF8Kl1IY2cPbfK'
+    img: icons/svg/d20-black.svg
+    range:
+      - 10
+      - 10
+    text: King of diamonds (Two of cups) - Male elf wizard and female apprentice
+    type: text
+    weight: 1
+  - _id: Ah9whOKsfcWcCnmv
+    _key: '!tables.results!NNfpvJm41C0QtKeW.Ah9whOKsfcWcCnmv'
+    img: icons/svg/d20-black.svg
+    range:
+      - 11
+      - 11
+    text: Queen of diamonds (Queen of swords) - Half-elf ranger
+    type: text
+    weight: 1
+  - _id: RWebA1HVVZnV3ycr
+    _key: '!tables.results!NNfpvJm41C0QtKeW.RWebA1HVVZnV3ycr'
+    img: icons/svg/d20-black.svg
+    range:
+      - 12
+      - 12
+    text: Jack of diamonds (XIV. Temperance) - Harpy
+    type: text
+    weight: 1
+  - _id: IXeTA8N0P5E4uzlo
+    _key: '!tables.results!NNfpvJm41C0QtKeW.IXeTA8N0P5E4uzlo'
+    img: icons/svg/d20-black.svg
+    range:
+      - 13
+      - 13
+    text: Ten of diamonds (Seven of staves) - Male half-orc barbarian
+    type: text
+    weight: 1
+  - _id: Cy55vLn8D1YdCrgv
+    _key: '!tables.results!NNfpvJm41C0QtKeW.Cy55vLn8D1YdCrgv'
+    img: icons/svg/d20-black.svg
+    range:
+      - 14
+      - 14
+    text: Nine of diamonds (Four of pentacles) - Ogre mage
+    type: text
+    weight: 1
+  - _id: 42JZhuiT9o6j3htL
+    _key: '!tables.results!NNfpvJm41C0QtKeW.42JZhuiT9o6j3htL'
+    img: icons/svg/d20-black.svg
+    range:
+      - 15
+      - 15
+    text: Eight of diamonds (Ace of pentacles) - Gnoll
+    type: text
+    weight: 1
+  - _id: lbDmj2QWkYhNeDDG
+    _key: '!tables.results!NNfpvJm41C0QtKeW.lbDmj2QWkYhNeDDG'
+    img: icons/svg/d20-black.svg
+    range:
+      - 16
+      - 16
+    text: Two of diamonds (Six of pentacles) - Kobold
+    type: text
+    weight: 1
+  - _id: 3bC7LMVKujtwwFoS
+    _key: '!tables.results!NNfpvJm41C0QtKeW.3bC7LMVKujtwwFoS'
+    img: icons/svg/d20-black.svg
+    range:
+      - 17
+      - 17
+    text: Ace of spades (II. The High Priestess) - Lich
+    type: text
+    weight: 1
+  - _id: lSxTDGGVrcH08Mx4
+    _key: '!tables.results!NNfpvJm41C0QtKeW.lSxTDGGVrcH08Mx4'
+    img: icons/svg/d20-black.svg
+    range:
+      - 18
+      - 18
+    text: King of spades (Three of staves) - Three human clerics
+    type: text
+    weight: 1
+  - _id: HPMfxy6Bz9EAJS6G
+    _key: '!tables.results!NNfpvJm41C0QtKeW.HPMfxy6Bz9EAJS6G'
+    img: icons/svg/d20-black.svg
+    range:
+      - 19
+      - 19
+    text: Queen of spades (Four of cups) - Medusa
+    type: text
+    weight: 1
+  - _id: ZHlHDEuNdzM9AJId
+    _key: '!tables.results!NNfpvJm41C0QtKeW.ZHlHDEuNdzM9AJId'
+    img: icons/svg/d20-black.svg
+    range:
+      - 20
+      - 20
+    text: Jack of spades (Knight of pentacles) - Male dwarf paladin
+    type: text
+    weight: 1
+  - _id: wtuVi5rh3mFDm1i1
+    _key: '!tables.results!NNfpvJm41C0QtKeW.wtuVi5rh3mFDm1i1'
+    img: icons/svg/d20-black.svg
+    range:
+      - 21
+      - 21
+    text: Ten of spades (Seven of swords) - Frost giant
+    type: text
+    weight: 1
+  - _id: gIwynPRsuAO2U4EI
+    _key: '!tables.results!NNfpvJm41C0QtKeW.gIwynPRsuAO2U4EI'
+    img: icons/svg/d20-black.svg
+    range:
+      - 22
+      - 22
+    text: Nine of spades (Three of swords) - Troll
+    type: text
+    weight: 1
+  - _id: LAN12p182ZTdNL2Y
+    _key: '!tables.results!NNfpvJm41C0QtKeW.LAN12p182ZTdNL2Y'
+    img: icons/svg/d20-black.svg
+    range:
+      - 23
+      - 23
+    text: Eight of spades (Ace of swords) - Hobgoblin
+    type: text
+    weight: 1
+  - _id: vZ7Kqb8UtEd9MC2I
+    _key: '!tables.results!NNfpvJm41C0QtKeW.vZ7Kqb8UtEd9MC2I'
+    img: icons/svg/d20-black.svg
+    range:
+      - 24
+      - 24
+    text: Two of spades (Five of cups) - Goblin
+    type: text
+    weight: 1
+  - _id: rJBexzLs2DsvQMSU
+    _key: '!tables.results!NNfpvJm41C0QtKeW.rJBexzLs2DsvQMSU'
+    img: icons/svg/d20-black.svg
+    range:
+      - 25
+      - 25
+    text: Ace of clubs (VIII. Strength) - Iron golem
+    type: text
+    weight: 1
+  - _id: rCH1Vx56J9MHXVn9
+    _key: '!tables.results!NNfpvJm41C0QtKeW.rCH1Vx56J9MHXVn9'
+    img: icons/svg/d20-black.svg
+    range:
+      - 26
+      - 26
+    text: King of clubs (Page of pentacles) - Three halfling rogues
+    type: text
+    weight: 1
+  - _id: 5dUhfUO50GDzPfyk
+    _key: '!tables.results!NNfpvJm41C0QtKeW.5dUhfUO50GDzPfyk'
+    img: icons/svg/d20-black.svg
+    range:
+      - 27
+      - 27
+    text: Queen of clubs (Ten of cups) - Pixies
+    type: text
+    weight: 1
+  - _id: 8MSmXbE5pbX8JEWM
+    _key: '!tables.results!NNfpvJm41C0QtKeW.8MSmXbE5pbX8JEWM'
+    img: icons/svg/d20-black.svg
+    range:
+      - 28
+      - 28
+    text: Jack of clubs (Nine of pentacles) - Half-elf bard
+    type: text
+    weight: 1
+  - _id: QMuDLIUoqbyXVDAe
+    _key: '!tables.results!NNfpvJm41C0QtKeW.QMuDLIUoqbyXVDAe'
+    img: icons/svg/d20-black.svg
+    range:
+      - 29
+      - 29
+    text: Ten of clubs (Nine of staves) - Hill giant
+    type: text
+    weight: 1
+  - _id: 9PFENO7H55n2GZbl
+    _key: '!tables.results!NNfpvJm41C0QtKeW.9PFENO7H55n2GZbl'
+    img: icons/svg/d20-black.svg
+    range:
+      - 30
+      - 30
+    text: Nine of clubs (King of swords) - Ogre
+    type: text
+    weight: 1
+  - _id: XJRXttuGzED4KEnI
+    _key: '!tables.results!NNfpvJm41C0QtKeW.XJRXttuGzED4KEnI'
+    img: icons/svg/d20-black.svg
+    range:
+      - 31
+      - 31
+    text: Eight of clubs (Ace of staves) - Orc
+    type: text
+    weight: 1
+  - _id: 5dLPrXyR7NYoCEbE
+    _key: '!tables.results!NNfpvJm41C0QtKeW.5dLPrXyR7NYoCEbE'
+    img: icons/svg/d20-black.svg
+    range:
+      - 32
+      - 32
+    text: Two of clubs (Five of cups) - Kobold
+    type: text
+    weight: 1
+  - _id: zFuiyLj9VtCI9jkH
+    _key: '!tables.results!NNfpvJm41C0QtKeW.zFuiyLj9VtCI9jkH'
+    img: icons/svg/d20-black.svg
+    range:
+      - 33
+      - 33
+    text: Joker (Two of pentacles) - Illusion of deck’s owner
+    type: text
+    weight: 1
+  - _id: 0Pr9IsaaoPdEUl2G
+    _key: '!tables.results!NNfpvJm41C0QtKeW.0Pr9IsaaoPdEUl2G'
+    img: icons/svg/d20-black.svg
+    range:
+      - 34
+      - 34
+    text: >-
+      Joker (with trademark) (Two of staves) - Illusion of deck’s owner (sex
+      reversed)
+    type: text
+    weight: 1
+sort: 300000

@@ -1,0 +1,48 @@
+_id: KRwIQCBgFDKQeEbX
+_key: '!items!KRwIQCBgFDKQeEbX'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Lethe water
+system:
+  actions:
+    - _id: u31vgzrtvhs7v7vg
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1d4]] Int and [[1d4]] Cha damage
+            (cannot reduce a creature's Int or Cha below 1)
+      save:
+        dc: '16'
+        type: will
+      tag: letheWater
+  description:
+    value: >-
+      <p><strong>Price</strong> N/A; <strong>Weight</strong>
+      0</p><p><strong>Type</strong> ingested; <strong>Save</strong> Willpower DC
+      16</p><p><strong>Frequency</strong> 1/round for 6
+      rounds</p><p><strong>Effect</strong> 1d4 Int and Cha damage (cannot reduce
+      a creature's Int or Cha below 1)</p><p><strong>Cure</strong> 2
+      saves</p><p>Creatures reduced below 3 Intelligence gain the fiendish
+      creature simple template (<em>Pathfinder RPG Bestiary</em> 294) and a +4
+      enhancement bonus to Strength and Constitution; these effects vanish if a
+      creature’s Intelligence score rises above 3.</p><p>Lethe water loses its
+      magical potency 24 hours after being removed from the hot springs, but
+      remains mildly poisonous thanks to its mineral content (treat as
+      bloodroot, but ingested rather than injury; <em>Pathfinder RPG Core
+      Rulebook</em> 558).</p>
+  sources:
+    - id: PZO9548
+      pages: '42'
+  subType: poison
+  uses:
+    per: single
+type: consumable

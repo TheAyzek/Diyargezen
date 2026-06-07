@@ -159,8 +159,6 @@ def export_character_html(character: dict, output_path: Path) -> None:
         html_content += _generate_dnd_html(character)
     elif system == "MUTANTS_AND_MASTERMINDS":
         html_content += _generate_mm_html(character)
-    elif system == "VTM5E":
-        html_content += _generate_vtm_html(character)
     else:
         html_content += _generate_generic_html(character)
     
@@ -346,113 +344,6 @@ def _generate_mm_html(character: dict) -> str:
     return html
 
 
-def _generate_vtm_html(character: dict) -> str:
-    """VtM karakteri için HTML içeriği"""
-    html = ""
-    
-    # Temel Bilgiler
-    html += """            <div class="section">
-                <h2>📋 Temel Bilgiler</h2>
-                <div class="info-grid">
-"""
-    basic_fields = [
-        ("clan", "Clan"),
-        ("chronicle", "Chronicle"),
-        ("concept", "Concept"),
-        ("player", "Player"),
-    ]
-    for field, label in basic_fields:
-        value = character.get(field, "")
-        if value:
-            html += f"""                    <div class="info-item">
-                        <strong>{label}</strong>
-                        <span>{value}</span>
-                    </div>
-"""
-    html += """                </div>
-            </div>
-"""
-    
-    # Attributes
-    attributes = character.get("attributes", {})
-    if attributes:
-        html += """            <div class="section">
-                <h2>💪 Attributes</h2>
-"""
-        for category, attrs in attributes.items():
-            html += f"""                <h3>{category}</h3>
-                <div class="info-grid">
-"""
-            for attr, score in attrs.items():
-                html += f"""                    <div class="info-item">
-                        <strong>{attr}</strong>
-                        <span>{score}</span>
-                    </div>
-"""
-            html += """                </div>
-"""
-        html += """            </div>
-"""
-    
-    # Skills
-    skills = character.get("skills", {})
-    if skills:
-        html += """            <div class="section">
-                <h2>🎯 Skills</h2>
-"""
-        for category, skill_dict in skills.items():
-            html += f"""                <h3>{category}</h3>
-                <div class="info-grid">
-"""
-            for skill, score in skill_dict.items():
-                if score:
-                    html += f"""                    <div class="info-item">
-                        <strong>{skill}</strong>
-                        <span>{score}</span>
-                    </div>
-"""
-            html += """                </div>
-"""
-        html += """            </div>
-"""
-    
-    # Disciplines
-    disciplines = character.get("disciplines", [])
-    if disciplines:
-        html += """            <div class="section">
-                <h2>🧛 Disciplines</h2>
-"""
-        for disc in disciplines:
-            html += f"""                <div class="list-item">{disc}</div>
-"""
-        html += """            </div>
-"""
-    
-    # Stats
-    html += """            <div class="section">
-                <h2>📊 İstatistikler</h2>
-                <div class="info-grid">
-"""
-    html += f"""                    <div class="info-item">
-                        <strong>Humanity</strong>
-                        <span>{character.get('humanity', 0)}</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Health</strong>
-                        <span>{character.get('health', 0)}</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Willpower</strong>
-                        <span>{character.get('willpower', 0)}</span>
-                    </div>
-"""
-    html += """                </div>
-            </div>
-"""
-    
-    return html
-
-
 def _generate_generic_html(character: dict) -> str:
     """Genel karakter için HTML içeriği"""
     html = """            <div class="section">
@@ -572,35 +463,3 @@ def export_character_csv(character: dict, output_path: Path) -> None:
             for power in powers:
                 writer.writerow(["Power", power])
         
-        elif system == "VTM5E":
-            writer.writerow(["Clan", character.get("clan", "")])
-            writer.writerow(["Chronicle", character.get("chronicle", "")])
-            writer.writerow(["Concept", character.get("concept", "")])
-            
-            writer.writerow([])
-            writer.writerow(["=== ATTRIBUTES ==="])
-            attributes = character.get("attributes", {})
-            for category, attrs in attributes.items():
-                for attr, score in attrs.items():
-                    writer.writerow([f"{category} - {attr}", score])
-            
-            writer.writerow([])
-            writer.writerow(["=== SKILLS ==="])
-            skills = character.get("skills", {})
-            for category, skill_dict in skills.items():
-                for skill, score in skill_dict.items():
-                    if score:
-                        writer.writerow([f"{category} - {skill}", score])
-            
-            writer.writerow([])
-            writer.writerow(["=== DISCIPLINES ==="])
-            disciplines = character.get("disciplines", [])
-            for disc in disciplines:
-                writer.writerow(["Discipline", disc])
-            
-            writer.writerow([])
-            writer.writerow(["=== İSTATİSTİKLER ==="])
-            writer.writerow(["Humanity", character.get("humanity", 0)])
-            writer.writerow(["Health", character.get("health", 0)])
-            writer.writerow(["Willpower", character.get("willpower", 0)])
-

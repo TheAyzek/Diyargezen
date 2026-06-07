@@ -1,0 +1,20 @@
+_id: FQGSHT8DivByBt4m
+_key: '!items!FQGSHT8DivByBt4m'
+_stats:
+  coreVersion: '12.331'
+img: icons/environment/settlement/stable.webp
+name: Animal Stabling
+system:
+  description:
+    value: >-
+      <p></p><h2>Description</h2><p>This is the amount it costs to stable a
+      single creature that is Large or smaller for one day, at a typical stable
+      or hostler. Particularly fancy stables may cost more, and larger or more
+      exotic creatures cost double.</p>
+  equipped: false
+  price: 0.5
+  sources:
+    - id: PZO1123
+      pages: '81'
+  subType: animalGear
+type: loot

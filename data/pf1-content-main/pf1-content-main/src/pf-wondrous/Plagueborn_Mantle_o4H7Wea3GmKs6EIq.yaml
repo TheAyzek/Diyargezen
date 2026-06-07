@@ -1,0 +1,30 @@
+_id: o4H7Wea3GmKs6EIq
+_key: '!items!o4H7Wea3GmKs6EIq'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Plagueborn Mantle
+system:
+  aura:
+    school: nec
+  cl: 6
+  description:
+    value: >-
+      <p>Made from the preserved skins of plague victims, this cloak functions
+      as a +1 cloak of resistance. If the wearer is infected with a disease, he
+      can also command the mantle to cast virulent miasma once per day.
+      Additionally, as a standard action, a diseased wearer can make a touch
+      attack. If it hits, the target must succeed at a DC 15 Fortitude save or
+      contract one disease the wearer currently has (wearer's choice in the case
+      of multiple
+      diseases).</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, contagion, resistance, virulent miasma*</p>
+  price: 7200
+  slot: shoulders
+  sources:
+    - id: PZO1136
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,25 @@
+_id: JVAr0kH7tCgd3vuX
+_key: '!items!JVAr0kH7tCgd3vuX'
+_stats:
+  coreVersion: '12.331'
+folder: KOT1geWrUrAU083b
+img: icons/equipment/chest/vest-leather-pink.webp
+name: Corset of Delicate Moves
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>This tight-fitting garment of fine silk has thin bone ribbing sewn into
+      it. Once per day as a move action, the wearer can take an additional swift
+      action. This swift action can't be used to cast a spell or spell-like
+      ability. The shirt must be worn for 24 hours before this ability can be
+      used.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, cat's grace, haste</p>
+  price: 2000
+  slot: chest
+  sources:
+    - id: PZO9455
+  subType: wondrous
+type: equipment

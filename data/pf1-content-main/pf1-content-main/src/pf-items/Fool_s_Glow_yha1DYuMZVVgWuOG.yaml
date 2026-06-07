@@ -1,0 +1,31 @@
+_id: yha1DYuMZVVgWuOG
+_key: '!items!yha1DYuMZVVgWuOG'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/slime-thick-orange.webp
+name: Fool's Glow
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>A greasy paste of
+      beeswax, pyrite, and various monster fluids, fool's glow reacts with light
+      to confuse magical senses. For 12 hours after being smeared over an object
+      or creature (a process requiring 1 minute), the fool's glow detects as
+      faintly magical if examined with a <em>detect magic</em> or <em>arcane
+      sight</em> spell, though no school or specific spell can be identified.
+      With a successful DC 21 Craft (alchemy) or Spellcraft check, a character
+      identifies the coating for what it is. A single jar of fool's glow can
+      coat one Medium, two Small, or four Tiny or smaller objects. Crafting a
+      jar of fool's glow requires a successful DC 20 Craft (alchemy)
+      check.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      20</p>
+  price: 45
+  sources:
+    - id: PZO90106
+      pages: '75'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 1
+type: consumable

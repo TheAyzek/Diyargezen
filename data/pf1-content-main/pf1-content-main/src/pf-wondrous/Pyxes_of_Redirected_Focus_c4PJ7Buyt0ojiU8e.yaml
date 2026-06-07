@@ -1,0 +1,28 @@
+_id: c4PJ7Buyt0ojiU8e
+_key: '!items!c4PJ7Buyt0ojiU8e'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Pyxes of Redirected Focus
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>This round metal container is just large enough to contain the wooden,
+      coin-sized token inside. Each side of the token is inscribed with a
+      different prayer. Once per day, a cleric (or other class with cleric
+      domains) may activate the pyxes and may select any one of her prepared
+      domain spells and replace it with the domain spell of that level from her
+      other domain. For example, a cleric with the Fire and Luck domains could
+      switch her 1st-level prepared burning hands domain spell to true strike.
+      The pyxes has no effect on creatures with no domain spells or only one
+      domain.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, prayer</p>
+  price: 1000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

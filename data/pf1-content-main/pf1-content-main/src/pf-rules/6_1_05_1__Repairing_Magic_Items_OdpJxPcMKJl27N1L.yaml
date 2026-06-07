@@ -1,0 +1,35 @@
+_id: OdpJxPcMKJl27N1L
+_key: '!journal!OdpJxPcMKJl27N1L'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.05.1. Repairing Magic Items
+pages:
+  - _id: aXv9xDrV8XcbsVjY
+    _key: '!journal.pages!OdpJxPcMKJl27N1L.aXv9xDrV8XcbsVjY'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.05.1. Repairing Magic Items
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.s3ene84nkQAyhCrW]{6.1.
+        Magic
+        Items}</p><ul><li><p>@Compendium[pf-content.pf-rules.oXM5hPY9YSNGCEpU]{6.1.05.
+        Damaging Magic
+        Items}</p><ul><li><strong>@Compendium[pf-content.pf-rules.OdpJxPcMKJl27N1L]{6.1.05.1.
+        Repairing Magic
+        Items}</strong></li><li>@Compendium[pf-content.pf-rules.W8owkgowcVnLD30m]{6.1.05.2.
+        Charges, Doses, and Multiple Uses}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=459]</p><p>Repairing a magic item requires
+        material components equal to half the cost to create the item, and
+        requires half the time. The make whole spell can also repair a damaged
+        (or even a destroyed) magic item—if the caster is high enough level.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

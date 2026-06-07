@@ -1,0 +1,55 @@
+_id: puFgBYeib04CIkRS
+_key: '!items!puFgBYeib04CIkRS'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/equipment/waist/belt-coiled-leather-steel.webp
+name: Sash of Flowing Water
+system:
+  actions:
+    - _id: 98GaYuqiXPzGVxly
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      description: >-
+        <p>To do so, roll an unarmed strike against the opponent, including any
+        applicable modifiers such as a favored enemy bonus or the penalty for
+        Power Attack. If your attack roll is greater than the opponent's attack
+        roll, the attack is negated without effect. The unarmed strike itself
+        causes no damage and does not count as a successful attack against the
+        opponent. The opponent does not need to be within your reach to use this
+        ability. Whether the attack succeeds or not, you take a -4 penalty on
+        attack rolls until the end of your next turn.</p>
+      name: Deflect a Successful melee attack
+  aura:
+    school: abj
+  cl: 10
+  description:
+    unidentified: <p>This belt is unremarkable.</p>
+    value: >-
+      <h3>Effect</h3><p>If this belt's wearer has at least one hand free
+      (holding nothing), he can attempt to deflect a successful melee attack
+      with an immediate action. To do so, he rolls an unarmed strike against the
+      opponent, including any applicable modifiers such as a favored enemy bonus
+      or the penalty for Power Attack. If his attack roll is greater than the
+      opponent's attack roll, the attack is negated without effect. The unarmed
+      strike itself causes no damage and does not count as a successful attack
+      against the opponent. The opponent does not need to be within the wearer's
+      reach to use this ability. Whether the attack succeeds or not, the wearer
+      takes a -4 penalty on attack rolls until the end of his next
+      turn.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      @UUID[Compendium.pf1.feats.Item.NFxHebU1XhEs5WJh]{Combat Expertise},
+      @UUID[Compendium.pf1.feats.Item.2aTFNMs3pW6nUBlr]{Improved Unarmed Strike}
+      <strong>Cost</strong> 12,500 gp</p>
+  price: 25000
+  showInQuickbar: true
+  slot: belt
+  sources:
+    - id: PZO1123
+      pages: '213'
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,29 @@
+_id: FSCKKV90jJ73o5J5
+_key: '!items!FSCKKV90jJ73o5J5'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Altar of Calistria
+system:
+  aura:
+    custom: true
+    school: abjuration and evocation [chaotic]
+  cl: 10
+  description:
+    value: >-
+      <p>This altar is a silver or brass platform built around a mirror and
+      decorated with elegant filigree. Praying at the altar grants a +3 luck
+      bonus on attack rolls, weapon damage rolls, saving throws, and skill
+      checks against one creature the worshiper names. The named creature must
+      have harmed the worshiper in the past 24
+      hours.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, divine favor, magic circle against law, creator must
+      worship Calistria</p>
+  price: 16000
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 500
+type: equipment

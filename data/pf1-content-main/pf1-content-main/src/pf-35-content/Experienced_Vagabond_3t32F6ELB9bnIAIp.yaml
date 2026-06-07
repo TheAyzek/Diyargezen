@@ -1,0 +1,23 @@
+_id: 3t32F6ELB9bnIAIp
+_key: '!items!3t32F6ELB9bnIAIp'
+_stats:
+  coreVersion: '12.331'
+folder: 35gUR2g8lMd073yK
+img: icons/environment/people/commoner.webp
+name: Experienced Vagabond
+system:
+  description:
+    value: >-
+      <p><em>You spent significant time as a vagabond and know your way around
+      their society.</em></p><p><strong>Prerequisites</strong>: Bluff 2 ranks,
+      Knowledge (local) 2 ranks, member of an
+      underclass.</p><p><strong>Benefits</strong>: When dealing with criminals,
+      vagabonds, unsavory characters, or other members of a country's
+      underclass, you gain a +1 bonus on Bluff, Gather Information, Knowledge
+      (local), and Sense Motive checks. When traveling with at least one other
+      person who has this feat, you gain a +2 circumstance bonus on Listen and
+      Spot checks to avoid being surprised at the start of combat.</p>
+  tags:
+    - General
+    - '3.5'
+type: feat

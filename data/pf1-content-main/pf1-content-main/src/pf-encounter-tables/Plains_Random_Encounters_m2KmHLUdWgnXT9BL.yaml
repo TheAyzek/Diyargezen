@@ -1,0 +1,210 @@
+_id: m2KmHLUdWgnXT9BL
+_key: '!tables!m2KmHLUdWgnXT9BL'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/tree-oak.webp
+name: Plains Random Encounters
+replacement: true
+results:
+  - _id: 13vfT1iov5lnjRz6
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.13vfT1iov5lnjRz6'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 5
+    text: 1 Cheetah (Or Other Large Cat ) [CR 2]
+    type: text
+    weight: 1
+  - _id: YHic3WRxKTaIeu5Y
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.YHic3WRxKTaIeu5Y'
+    img: icons/svg/d20-black.svg
+    range:
+      - 6
+      - 9
+    text: 1 Cockatrice [CR 3]
+    type: text
+    weight: 1
+  - _id: ofUPf7r0yoO4Arj6
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.ofUPf7r0yoO4Arj6'
+    img: icons/svg/d20-black.svg
+    range:
+      - 10
+      - 13
+    text: 1 Giant Scorpion [CR 3]
+    type: text
+    weight: 1
+  - _id: nS4DNyDy3K3Y868a
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.nS4DNyDy3K3Y868a'
+    img: icons/svg/d20-black.svg
+    range:
+      - 14
+      - 18
+    text: 1d4 ([[1d4]]) Bat Swarms [AVG CR 4]
+    type: text
+    weight: 1
+  - _id: P1dLJL24EA38Cif3
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.P1dLJL24EA38Cif3'
+    img: icons/svg/d20-black.svg
+    range:
+      - 19
+      - 24
+    text: 1 Botfly Swarm [CR 4]
+    type: text
+    weight: 1
+  - _id: fdinss5v4Am0jJHs
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.fdinss5v4Am0jJHs'
+    img: icons/svg/d20-black.svg
+    range:
+      - 25
+      - 28
+    text: 1d4 ([[1d4]]) Monitor Lizards [AVG CR 4]
+    type: text
+    weight: 1
+  - _id: zOH0t8xVzzv3lxcY
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.zOH0t8xVzzv3lxcY'
+    img: icons/svg/d20-black.svg
+    range:
+      - 29
+      - 32
+    text: 1 Rhinoceros [CR 4]
+    type: text
+    weight: 1
+  - _id: pVt5VeFLe13NBNpN
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.pVt5VeFLe13NBNpN'
+    img: icons/svg/d20-black.svg
+    range:
+      - 33
+      - 38
+    text: 1d6 ([[1d6]]) Venomous Snakes [AVG CR 4]
+    type: text
+    weight: 1
+  - _id: 5GCT4Wf85zXIIR9e
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.5GCT4Wf85zXIIR9e'
+    img: icons/svg/d20-black.svg
+    range:
+      - 39
+      - 43
+    text: 1d4 ([[1d4]]) Ankhegs [AVG CR 5]
+    type: text
+    weight: 1
+  - _id: GfWVbgD6wyx7flwy
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.GfWVbgD6wyx7flwy'
+    img: icons/svg/d20-black.svg
+    range:
+      - 44
+      - 47
+    text: 1 Dire Lion [CR 5]
+    type: text
+    weight: 1
+  - _id: ralJcHyCVmGeR4Lk
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.ralJcHyCVmGeR4Lk'
+    img: icons/svg/d20-black.svg
+    range:
+      - 48
+      - 53
+    text: 1d8 ([[1d8]]) Hyenas [AVG CR 5]
+    type: text
+    weight: 1
+  - _id: 9lDa5RbwV5zjJLVx
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.9lDa5RbwV5zjJLVx'
+    img: icons/svg/d20-black.svg
+    range:
+      - 54
+      - 59
+    text: 1d8 ([[1d8]]) Tribesfolk [AVG CR 5]
+    type: text
+    weight: 1
+  - _id: ioyMVXREZesGRioF
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.ioyMVXREZesGRioF'
+    img: icons/svg/d20-black.svg
+    range:
+      - 60
+      - 64
+    text: 1d6 ([[1d6]]) Lions [AVG CR 6]
+    type: text
+    weight: 1
+  - _id: pqQbhOJLw0wIY8vM
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.pqQbhOJLw0wIY8vM'
+    img: icons/svg/d20-black.svg
+    range:
+      - 65
+      - 68
+    text: 1d6 ([[1d6]]) Pteranodons [AVG CR 6]
+    type: text
+    weight: 1
+  - _id: zNBZsocsp5VGhLSY
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.zNBZsocsp5VGhLSY'
+    img: icons/svg/d20-black.svg
+    range:
+      - 69
+      - 73
+    text: 1d6 ([[1d6]]) Rival Adventurers [AVG CR 6]
+    type: text
+    weight: 1
+  - _id: tiKkOP41Puj9O0I1
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.tiKkOP41Puj9O0I1'
+    img: icons/svg/d20-black.svg
+    range:
+      - 74
+      - 78
+    text: 1d6 ([[1d6]]) Vultures [AVG CR 6]
+    type: text
+    weight: 1
+  - _id: A0u4FWULe81FYPzV
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.A0u4FWULe81FYPzV'
+    img: icons/svg/d20-black.svg
+    range:
+      - 79
+      - 82
+    text: 2d4 ([[2d4]]) Ankhegs [AVG CR 7]
+    type: text
+    weight: 1
+  - _id: nTCxiltvNCoEKTd0
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.nTCxiltvNCoEKTd0'
+    img: icons/svg/d20-black.svg
+    range:
+      - 83
+      - 87
+    text: 1 Elephant [CR 7]
+    type: text
+    weight: 1
+  - _id: 8RdY04Eg5qIaqW5Q
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.8RdY04Eg5qIaqW5Q'
+    img: icons/svg/d20-black.svg
+    range:
+      - 88
+      - 90
+    text: 2d6 ([[2d6]]) Giant Ants [AVG CR 7]
+    type: text
+    weight: 1
+  - _id: GxiFhW2FLb7jdygm
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.GxiFhW2FLb7jdygm'
+    img: icons/svg/d20-black.svg
+    range:
+      - 91
+      - 93
+    text: 1 Stegosaurus [CR 7]
+    type: text
+    weight: 1
+  - _id: HU2KMdsxfBb1EM57
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.HU2KMdsxfBb1EM57'
+    img: icons/svg/d20-black.svg
+    range:
+      - 94
+      - 97
+    text: 1 Dire Tiger [CR 8]
+    type: text
+    weight: 1
+  - _id: xG6ucb6EZDDkYTv6
+    _key: '!tables.results!m2KmHLUdWgnXT9BL.xG6ucb6EZDDkYTv6'
+    img: icons/svg/d20-black.svg
+    range:
+      - 98
+      - 100
+    text: 1 Triceratops [CR 8]
+    type: text
+    weight: 1
+sort: 3100000

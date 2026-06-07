@@ -1,0 +1,100 @@
+_id: seyXQZKq3dBHntln
+_key: '!tables!seyXQZKq3dBHntln'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d8
+img: icons/environment/settlement/ship.webp
+name: Ships
+replacement: true
+results:
+  - _id: ehOTZXFKr3IEVtWG
+    _key: '!tables.results!seyXQZKq3dBHntln.ehOTZXFKr3IEVtWG'
+    documentCollection: pf-content.pf-goods-services
+    documentId: tSdhnDSVZr22u4nn
+    img: icons/tools/nautical/steering-wheel.webp
+    range:
+      - 1
+      - 1
+    text: Vehicle, Galley
+    type: pack
+    weight: 1
+  - _id: vMcpwsPmugrRWd5J
+    _key: '!tables.results!seyXQZKq3dBHntln.vMcpwsPmugrRWd5J'
+    documentCollection: pf-content.pf-goods-services
+    documentId: o6EnrpvxrINQC9u3
+    img: icons/tools/nautical/steering-wheel.webp
+    range:
+      - 2
+      - 2
+    text: Vehicle, Junk
+    type: pack
+    weight: 1
+  - _id: IFSadANTlftNcSPj
+    _key: '!tables.results!seyXQZKq3dBHntln.IFSadANTlftNcSPj'
+    documentCollection: pf-content.pf-goods-services
+    documentId: tNctnSKymuOQqVz9
+    img: icons/tools/nautical/steering-wheel.webp
+    range:
+      - 3
+      - 3
+    text: Vehicle, Keelboat
+    type: pack
+    weight: 1
+  - _id: eauQxo5gXmfciFRe
+    _key: '!tables.results!seyXQZKq3dBHntln.eauQxo5gXmfciFRe'
+    documentCollection: pf-content.pf-goods-services
+    documentId: aqewvywuVxAwUTxn
+    img: icons/tools/nautical/steering-wheel.webp
+    range:
+      - 4
+      - 4
+    text: Vehicle, Longship
+    type: pack
+    weight: 1
+  - _id: tPo3zIViMTO8QpmC
+    _key: '!tables.results!seyXQZKq3dBHntln.tPo3zIViMTO8QpmC'
+    documentCollection: pf-content.pf-goods-services
+    documentId: bvYG2igk9Rut5fLy
+    img: icons/tools/nautical/steering-wheel.webp
+    range:
+      - 5
+      - 5
+    text: Vehicle, Rowboat
+    type: pack
+    weight: 1
+  - _id: f1TvRXL4ZlYnJj8Q
+    _key: '!tables.results!seyXQZKq3dBHntln.f1TvRXL4ZlYnJj8Q'
+    documentCollection: pf-content.pf-goods-services
+    documentId: pfZFefKOlEzte1yR
+    img: icons/tools/nautical/steering-wheel.webp
+    range:
+      - 6
+      - 6
+    text: Vehicle, Sailing ship
+    type: pack
+    weight: 1
+  - _id: tNBqOBjV9fuWROy2
+    _key: '!tables.results!seyXQZKq3dBHntln.tNBqOBjV9fuWROy2'
+    documentCollection: pf-content.pf-goods-services
+    documentId: Juek2SEnBa2iILUe
+    img: icons/tools/nautical/steering-wheel.webp
+    range:
+      - 7
+      - 7
+    text: Vehicle, Ship's boat
+    type: pack
+    weight: 1
+  - _id: xAEyzHqt3RFBEvjD
+    _key: '!tables.results!seyXQZKq3dBHntln.xAEyzHqt3RFBEvjD'
+    documentCollection: pf-content.pf-goods-services
+    documentId: KxCc9YygZ7gjRlQV
+    img: icons/tools/nautical/steering-wheel.webp
+    range:
+      - 8
+      - 8
+    text: Vehicle, Warship
+    type: pack
+    weight: 1
+sort: 1400000

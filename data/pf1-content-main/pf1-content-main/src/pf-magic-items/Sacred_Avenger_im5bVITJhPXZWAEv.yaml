@@ -1,0 +1,67 @@
+_id: im5bVITJhPXZWAEv
+_key: '!items!im5bVITJhPXZWAEv'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/longsword.png
+name: Sacred Avenger
+system:
+  actions:
+    - _id: c0is9arby6cnhfml
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: sacredAvenger
+  aura:
+    custom: true
+    school: abjuration [good]
+  baseTypes:
+    - Longsword
+  cl: 6
+  description:
+    value: >-
+      <p>This masterwork cold iron longsword becomes a +1 cold iron longsword in
+      the hands of a paladin.   8th Level: The sacred avenger is a +1 cold iron
+      longsword that becomes a +2 cold iron longsword in the hands of a
+      paladin.  10th Level: The sacred avenger becomes a +3 cold iron longsword
+      in the hands of a paladin.  12th Level: The sacred avenger is a +2 cold
+      iron longsword that becomes a +4 cold iron longsword in the hands of a
+      paladin.  14th Level: The sacred avenger becomes a +5 cold iron longsword
+      in the hands of a paladin.  17th Level: The sacred avenger allows a
+      paladin to use the area dispel version of greater dispel magic at will as
+      a standard action and grants the paladin and adjacent allies spell
+      resistance equal to 5 + her paladin level.</p><p><strong>Base
+      Item</strong>: cold iron
+      longsword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, holy aura, creator must be good</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+    normal:
+      value: coldIron
+  price: 4800
+  showInQuickbar: false
+  sources:
+    - id: PZO1131
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 4
+type: weapon

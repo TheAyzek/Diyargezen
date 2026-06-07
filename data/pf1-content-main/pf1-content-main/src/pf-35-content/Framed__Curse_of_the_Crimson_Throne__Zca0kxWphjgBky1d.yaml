@@ -1,0 +1,56 @@
+_id: Zca0kxWphjgBky1d
+_key: '!items!Zca0kxWphjgBky1d'
+_stats:
+  coreVersion: '12.343'
+folder: CAxOlglJyXdUOHF9
+img: icons/tools/navigation/map-chart-tan.webp
+name: Framed (Curse of the Crimson Throne)
+system:
+  changes:
+    - _id: HkynUh9B
+      formula: '2'
+      type: trait
+  description:
+    instructions: >-
+      <p>Select <strong>Family Honor</strong> or <strong>Dropout</strong> when
+      you take this trait.</p><ol><li><p>if you select <strong>Family
+      Honor</strong>:&nbsp;Update the target of the untargeted change on the
+      changes tab of this trait to reflect Specific Skills&gt; Bluff</p></li><li
+      ><p>if you select <strong>Dropout</strong>: Update the target of the
+      untargeted change on the changes tab of this trait to reflect Specific
+      Skills&gt; Spellcraft</p></li></ol><hr /><p><strong>Special Note</strong>:
+      This is the 3.5 Ruleset version of this trait. To view the updated version
+      for the Pathfinder rules click the link
+      below:</p><p>@UUID[Compendium.pf-content.pf-traits.Item.VUOfSY91afNk3jP3]{Framed
+      (Curse of the Crimson Throne)}</p>
+    value: >-
+      <p><em>Someone you know and love was accused of murder. A supposed
+      eyewitness account from a local fisherman seemed to be enough to seal the
+      case, but the accused had enough alibis that sentencing wasn't immediate.
+      Someone confronted the fisherman and discovered he was intimidated into
+      providing false witness and forced into planting the murder weapon by the
+      actual murderer,a local crimelord named Gaedren Lamm. Lamm's thugs killed
+      the fisherman before he could recant his testimony. Although this removed
+      the key witness and resulted in the accused being set free, the stigma was
+      enough to badly damage his reputation. If you can find Gaedren, you're
+      sure you can find evidence that ties him to the murder and can clear the
+      accused's name.</em></p><p><strong>Benefits</strong>: Choose one of the
+      following benefits:</p><p><strong>Family Honor</strong>: The person framed
+      was a family member, perhaps a father or brother. You managed to trick the
+      fisherman into revealing the truth with your skilled tongue, and thus gain
+      a +2 bonus on Bluff checks.</p><p><strong>Dropout</strong>: You were the
+      one accused. Although you were eventually freed when a friend confronted
+      the fisherman and got the truth, the damage had been done. You were forced
+      to leave your school (perhaps the Acadamae) or church. As a result, you
+      were forced to self-train and promised yourself you would become better at
+      your chosen profession despite the spurning of your peers. You gain a +2
+      bonus on Spellcraft checks.</p>
+  sources:
+    - id: PZO9000-2S
+      pages: '15'
+  subType: trait
+  tags:
+    - '3.5'
+    - Curse of the Crimson Throne
+  traitType: campaign
+type: feat

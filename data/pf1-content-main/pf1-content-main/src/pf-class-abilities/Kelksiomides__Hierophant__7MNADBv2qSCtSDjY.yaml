@@ -1,0 +1,45 @@
+_id: 7MNADBv2qSCtSDjY
+_key: '!items!7MNADBv2qSCtSDjY'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_37.jpg
+name: Kelksiomides (Hierophant)
+system:
+  associations:
+    classes:
+      - Medium
+  description:
+    value: >-
+      <p><strong>Medium Legendary Spirit</strong></p><p>Kelksiomides spent his
+      early years working in his family's vineyard. He was selected by his
+      village to be blessed by the cyclopes of the isle, who told the young
+      vintner that tragedy would precede his mythic ascension. Sure enough,
+      Kelksiomides returned home to find his whole village slaughtered. The
+      culprits were captured, but Kelksiomides forgave them, an act that was
+      rewarded by the gods. Kelksiomides stands for hope in the face of despair,
+      for new growth, and for redemption.</p><p><strong>Gaining Favor</strong>:
+      To gain Kelksiomides's favor, you must travel to the hills of
+      Pol-Ptirmeios, where the hero-god was born. There you must swear to never
+      bear a grudge against another, even if you have been grievously wronged.
+      You must then succeed at a Wisdom check, and if you do, Kelksiomides will
+      answer your call.</p><p><strong>Spirit Bonus</strong>: When you channel
+      Kelksiomides, your spirit bonus applies on Wisdom checks, Wisdom-based
+      skill checks, and saving throws against spells with the evil
+      descriptor.</p><p><strong>Favored Locations</strong>: Farms, gardens,
+      orchards, and wooded areas.</p><p><strong>Taboos</strong>: If you accept a
+      taboo while channeling Kelksiomides, you may not deal lethal
+      damage.</p><p><strong>Student of the Earth (Lesser, Su)</strong>: This
+      power functions as the archmage arcana spirit power, except that you add
+      spells from the druid spell list instead of the sorcerer/wizard spell
+      list. When you cast these spells, they count as
+      divine.</p><p><strong>Divine Overseer (Greater, Su)</strong>: You can
+      allow Kelksiomides to gain 1 point of influence over you as a swift action
+      to enable you to channel positive energy as a cleric of your level and
+      automatically restore or deal the maximum amount your channel permits (for
+      example, 6 points if you roll 1d6 when you channel). You can use this
+      channel energy ability a number of times per day equal to your Charisma
+      modifier (minimum 1).</p>
+  subType: classFeat
+  tags:
+    - Medium Legendary Spirit
+type: feat

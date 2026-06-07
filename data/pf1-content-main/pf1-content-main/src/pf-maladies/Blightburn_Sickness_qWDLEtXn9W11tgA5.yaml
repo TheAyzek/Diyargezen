@@ -1,0 +1,22 @@
+_id: qWDLEtXn9W11tgA5
+_key: '!items!qWDLEtXn9W11tgA5'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/stone/ore-pile-green.webp
+name: Blightburn Sickness
+system:
+  description:
+    value: >-
+      <p><strong>Cause</strong>&nbsp;Blightburn
+      radiation</p><p><strong>Type</strong> disease (contact (see text));
+      <strong>Save</strong>&nbsp;Fortitude DC
+      22;</p><p><strong>Onset</strong>&nbsp;1/day;&nbsp;<strong>Frequency</strong>&nbsp;1/day</p><p><strong>Effect</strong>&nbsp;1d6
+      Con damage and 1d6 Cha damage; contact is automatic when a creature comes
+      within a 60-foot radius, and can be blocked only by lead sheeting, 1 foot
+      of stone, or a force effect;</p><p><strong>Cure</strong>&nbsp;2
+      consecutive saves</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

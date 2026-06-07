@@ -1,0 +1,25 @@
+_id: Bc6rKXL5A03VAzxc
+_key: '!items!Bc6rKXL5A03VAzxc'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/chest/chest-simple-box-red.webp
+name: Kit, Animal disguise
+system:
+  description:
+    value: >-
+      <p>This leather pouch contains dyes, odorous balsams, colorchanging eye
+      drops, reversible collars, and a host of other tools to disguise one
+      animal as another. The kit grants a +4 circumstance bonus on Disguise
+      checks to disguise an animal as another specific animal of the same
+      species, and a +2 circumstance bonus on Disguise checks to disguise an
+      animal as an animal of a different species. An animal disguise kit is
+      exhausted after 10 uses.</p>
+  equipped: false
+  price: 100
+  sources:
+    - id: PZO9439
+      pages: '30'
+  subType: tool
+  weight:
+    value: 8
+type: loot

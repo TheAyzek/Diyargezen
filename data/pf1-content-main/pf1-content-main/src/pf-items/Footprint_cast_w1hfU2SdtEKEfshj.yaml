@@ -1,0 +1,23 @@
+_id: w1hfU2SdtEKEfshj
+_key: '!items!w1hfU2SdtEKEfshj'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/smithing/crucible.webp
+name: Footprint cast
+system:
+  description:
+    value: >-
+      <p>This quick-drying cast is perfect for preserving a set of footprints in
+      order to examine them later. By spending 1 minute setting the cast and
+      waiting for it to dry, you can copy footprints, allowing others to examine
+      them without traveling to the scene, and preventing the DC of the Survival
+      check to analyze them from increasing because of time or weather.</p>
+  equipped: false
+  price: 2
+  sources:
+    - id: PZO1129
+      pages: '204'
+  subType: tool
+  weight:
+    value: 1
+type: loot

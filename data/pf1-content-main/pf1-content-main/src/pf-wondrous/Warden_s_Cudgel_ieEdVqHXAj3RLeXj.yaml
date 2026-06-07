@@ -1,0 +1,38 @@
+_id: ieEdVqHXAj3RLeXj
+_key: '!items!ieEdVqHXAj3RLeXj'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/club.PNG
+name: Warden's Cudgel
+system:
+  armor:
+    material:
+      base:
+        value: wood
+  aura:
+    school: trs
+  baseTypes:
+    - Club
+  cl: 5
+  description:
+    value: >-
+      <p>Commonly created by members of the Green Faith, this type of +1
+      greenwood club is made from knotted wood, is covered in thorns and vines,
+      and looks as though it is still alive. Twice per day when the wielder hits
+      a target with a warden's cudgel, vines, leaves, and roots instantly grow
+      from the target's square in a 15-foot radius. These plants remain for 1
+      minute and are treated as difficult terrain and natural plant growth for
+      the purposes of the woodland stride class feature. If the area already has
+      brush and trees in it, the plants in the affected area instead grow as the
+      overgrowth version of plant growth.</p><p><strong>Base Item</strong>:
+      greenwood club</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, plant growth</p>
+  enh: 1
+  price: 12150
+  sources:
+    - id: PZO9436
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

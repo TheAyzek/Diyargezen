@@ -1,0 +1,33 @@
+_id: Wt64Jjle03fQqX0N
+_key: '!items!Wt64Jjle03fQqX0N'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Altar of Nethys
+system:
+  aura:
+    custom: true
+    school: abjuration and transmutation
+  cl: 10
+  description:
+    value: >-
+      <p>This altar is a deceptively complex, many-chambered scroll rack or
+      bookshelf capable of securing dozens of documents. Unlike most altars, its
+      magic circle effects a re a ligned against one o r two alignment
+      components (such as only good or both evil and law) appropriate to the
+      interests of the temple. Praying at the altar grants a +2 circumstance
+      bonus on Knowledge (arcana), Perception, Spellcraft, and Use Magic Device
+      checks; in addition, the worshiper selects one spell or spell-like ability
+      it can cast and treats its caster level as 1 higher than normal when
+      casting that
+      spell.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Heighten Spell, guidance, magic circle against
+      chaos/evil/good/law (as appropriate), creator must worship Nethys</p>
+  price: 8000
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 500
+type: equipment

@@ -1,0 +1,32 @@
+_id: qvuR5A0DMym5KkRD
+_key: '!items!qvuR5A0DMym5KkRD'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Cape of Bravado
+system:
+  aura:
+    school: enc
+  cl: 2
+  description:
+    value: >-
+      <p>This bright red garment bestows no benefit when worn on the shoulders,
+      but when held in one hand while draped over the arm, the cape obscures its
+      user's movements in combat. Used this way, the cape bestows a +1 insight
+      bonus to AC and a +5 competence bonus on Bluff checks to feint in combat.
+      Readying the cape in combat is a move action; if the wielder has a base
+      attack bonus of +1 or higher, the wielder can ready the cape as a free
+      action as part of movement.   Once per day as an immediate action, a
+      creature brandishing a cape of bravado may attempt to compel an opponent
+      within 30 feet to attack him on its next turn (Will negates DC
+      11).</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, compel hostility (Ultimate Combat), creator must have 5
+      ranks in the Bluff skill</p>
+  price: 7000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

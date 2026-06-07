@@ -1,0 +1,27 @@
+_id: CX9IjUIFlW6q30pd
+_key: '!items!CX9IjUIFlW6q30pd'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Spark Staff
+system:
+  aura:
+    school: evo
+  cl: 8
+  description:
+    value: >-
+      <p>Thin golden strands snake through this transparent shaft, seeming to
+      flow from one brass end-cap to the other. Once per day when the wielder is
+      damaged by an effect that deals at least 10 points of electricity damage,
+      the staff regains 1 charge. This does not reduce the amount of damage the
+      wielder takes from the effect.  • Shocking grasp (1 charge)  • Intensified
+      shocking grasp (2 charges)  • Lightning bolt (5
+      charges.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, Intensify Spell, lightning bolt, shocking grasp</p>
+  price: 12650
+  sources:
+    - id: PZO1129
+  subType: staff
+  weight:
+    value: 2
+type: consumable

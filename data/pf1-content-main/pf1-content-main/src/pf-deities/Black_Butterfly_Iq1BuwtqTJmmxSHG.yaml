@@ -1,0 +1,56 @@
+_id: Iq1BuwtqTJmmxSHG
+_key: '!journal!Iq1BuwtqTJmmxSHG'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Black Butterfly
+pages:
+  - _id: xtGQudyC6vBWX4da
+    _key: '!journal.pages!Iq1BuwtqTJmmxSHG.xtGQudyC6vBWX4da'
+    _stats:
+      coreVersion: '12.331'
+    name: Black Butterfly
+    sort: 0
+    text:
+      content: >-
+        <h1>Black Butterfly</h1><h2>The Silence
+        Between</h2>@Source[PZO9267;pages=322] <br /><strong>Pathfinder
+        Wiki</strong> <a href="http://www.pathfinderwiki.com/wiki/Black
+        Butterfly">Black
+        Butterfly</a><h3>Details</h3><p><strong>Alignment</strong> CG<br
+        /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Distance, silence, space<br /><strong>Domains</strong>
+        Chaos, Good, Liberation, Void<br /><strong>Subdomains</strong> Azata
+        (Chaos), Azata (Good), Freedom, Revolution, Stars<br /><em>* Requires
+        the <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Starknife<br /><strong>Symbol</strong> Black butterfly
+        with star<br /><strong>Sacred Animal(s)</strong> Butterfly<br
+        /><strong>Sacred Color(s)</strong> Black,
+        silver</p><h3>Obedience</h3><p>Perform an anonymous act of charity
+        without speaking to or gazing upon whoever will benefit from your act.
+        If you accidentally see or speak to the person you help, spend an hour
+        blindfolded and praying in silence, then tithe to a temple of the Black
+        Butterfly (or another good god, giving preference to Desna). Gain a +4
+        sacred bonus on saving throws against gaze and sonic
+        attacks.</p><h2>Boons - Celestial Obedience</h2><h3>Mystery
+        Cultist</h3><p>@Source[PZO9255;pages=9]<br /><strong>1: Nullity
+        (Sp)</strong> <em>obscuring mist</em> 3/day, <em>silence</em> 2/day, or
+        <em>deeper darkness</em> 1/day<br /><strong>2: Silent Darkness
+        (Sp)</strong> You can cast quickened <em>blindness/deafness </em>once
+        per day, and only a <em>break enchantment, <em>limited wish</em>,
+        <em>miracle</em>, or <em>wish </em>spell can restore the subject's sight
+        or hearing.<br /><strong>3: Purblind (Su)</strong> Your form grows
+        shadowed and indistinct. You gain a +6 sacred bonus on Stealth checks.
+        In any condition of illumination other than full daylight, physical
+        attacks against you have a 20% miss chance. If an attacker can see
+        ethereal or invisible creatures, the miss chance is negated. At will,
+        you can manifest a pair of shadowy butterfly wings that allow you to fly
+        with a speed of 60 feet (normal maneuverability).</em></p><h2>For
+        Followers of Black Butterfly</h2><h3>Feats</h3><p><em>Heroic
+        Interposition</em></p><h3>Traits</h3><p><em>Empyreal Focus</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

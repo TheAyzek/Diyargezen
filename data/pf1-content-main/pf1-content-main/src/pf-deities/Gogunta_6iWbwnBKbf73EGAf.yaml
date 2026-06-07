@@ -1,0 +1,107 @@
+_id: 6iWbwnBKbf73EGAf
+_key: '!journal!6iWbwnBKbf73EGAf'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Gogunta
+pages:
+  - _id: RKbSO4Vl2Ewe9dIF
+    _key: '!journal.pages!6iWbwnBKbf73EGAf.RKbSO4Vl2Ewe9dIF'
+    _stats:
+      coreVersion: '12.331'
+    name: Gogunta
+    sort: 0
+    text:
+      content: >-
+        <h1>Gogunta</h1><h2>Song of the Swamp</h2>@Source[PZO9267;pages=320] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Gogunta">Gogunta</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Demon Lords<br /><strong>Areas of
+        Concern</strong> Amphibians, boggards, swamps<br
+        /><strong>Domains</strong> Chaos, Death, Evil, Water<br
+        /><strong>Subdomains</strong> Demon (Chaos), Demon (Evil), Murder,
+        Rivers, Undead<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Whip<br
+        /><strong>Symbol</strong> Twig fetish of a boggard<br /><strong>Sacred
+        Animal(s)</strong> Frog<br /><strong>Sacred Color(s)</strong> Blue,
+        green</p><h3>Obedience</h3><p>Drown a living creature in swamp water (or
+        at the very least, in muddy water), then impale the dead body on a sharp
+        branch so wild creatures can feast on it. After impaling the creature,
+        you must spend the rest of your obedience meditating on the sound of
+        fluid dripping from its sodden body. Gain a +4 profane bonus on saves
+        against disease and poison caused by exposure to the jungle or creatures
+        native to swamps.</p><h2>Boons - Demonic
+        Obedience</h2><h3>Demoniac</h3><p>@Source[PZO9225;pages=16]<br
+        /><strong>1: Swamper's Boon (Sp)</strong> <em>jump</em> 3/day,
+        <em>summon swarm</em> 2/day, or <em>water walk</em> 1/day<br
+        /><strong>2: Warty Skin (Ex)</strong> Your skin grows thick and warty,
+        increasing your base natural armor bonus by +3.<br /><strong>3: Summon
+        Froghemoth (Sp)</strong> Once per day, you may summon a fiendish
+        froghemoth as if using <em>summon monster IX</em>.</em></p><h2>Boons -
+        Fiendish
+        Obedience</h2><h3>Evangelist</h3><p>@Source[PZO1139;pages=54]<br
+        /><strong>1: Swamp Secrets (Sp)</strong> <em>obscuring mist </em> 3/day,
+        <em>tree shape</em> 2/day, or <em>lily pad stride</em> 1/day<br
+        /><strong>2: Murky Gaze (Sp and Su)</strong> Gogunta has many eyes, and
+        nothing escapes her glare. Your eyes take on a pale green-blue hue as
+        you are granted a fraction of the power of her murky gaze. You gain a +2
+        bonus on Perception checks and can see through fog and mist as though
+        they weren't there. While in swamp terrain, you ignore concealment and
+        cover (including total cover) from vegetation and water. In addition,
+        once per day when in swamp terrain, you can cast <em>true seeing</em> as
+        a spell-like ability.<br /><strong>3: Fen Witchcraft (Sp or Su)</strong>
+        As one of Gogunta's most powerful worshipers, you have been granted
+        access to some of the most sinister powers of her faith. You are
+        constantly under the effects of <em>freedom of movement</em>. In
+        addition, once per day as a standard action, you can activate a drowning
+        aura. Creatures within 30 feet of you must succeed at a Will save each
+        round (DC = 10 + half your Hit Dice + your Constitution modifier) or be
+        unable to speak or breathe. A creature can still hold its breath, but
+        the aura saps held breath as well-a creature in the aura can hold its
+        breath only for a number of rounds equal to its Constitution modifier
+        before running out of air. Worshipers of Gogunta and creatures that
+        don't breathe air are unaffected by this aura. Once activated, your
+        drowning aura persists for 1 round per Hit
+        Die.</em></p><h3>Exalted</h3><p>@Source[PZO1139;pages=54]<br
+        /><strong>1: Swamper's Boon (Sp)</strong> <em>jump</em> 3/day,
+        <em>summon swarm</em> 2/day, or <em>water walk</em> 1/day<br
+        /><strong>2: Warty Skin (Ex)</strong> Just as the flesh of her favored
+        minions, your skin grows thick and warty (or more warty than normal, in
+        the case of a worshiper such as a boggard), increasing your base natural
+        armor bonus by 3.<br /><strong>3: Summon Froghemoth (Sp)</strong> Once
+        per day, you can summon a fiendish froghemoth as if using <em>summon
+        monster
+        IX</em>.</em></p><h3>Sentinel</h3><p>@Source[PZO1139;pages=54]<br
+        /><strong>1: Plague of Frogs (Sp)</strong> <em>summon monster I</em> (1
+        fiendish poisonous frog) 3/day, <em>summon monster II</em> (1 fiendish
+        giant frog or 1d3 fiendish poisonous frogs) 2/day, or <em>rain of
+        frogs</em> 1/day<br /><strong>2: Boggard's Blessing (Ex)</strong> Your
+        form becomes batrachian in aspect, like the frogfolk of the marshes. You
+        gain the boggard's hold breath, sticky tongue, and terrifying croak
+        abilities. In addition, you count as a boggard for the purpose of
+        effects, including prerequisites (although you lose access to related
+        options if you haven't performed your obedience). If you are a boggard,
+        you instead gain a permanent +2 profane bonus to Strength, Dexterity,
+        Constitution, and the DC of your terrifying croak ability, and you can
+        use your terrifying croak ability at will.<br /><strong>3: Kiss of
+        Gogunta (Sp)</strong> Calling out to the Song of the Swamp, you
+        transform those who oppose you into frogs and toads. Any number of
+        creatures of your choice within 30 feet must succeed at a Fortitude save
+        or be transformed into Diminutive frogs or toads, as per <em>baleful
+        polymorph but heightened to a 9th-level spell. As with <em>baleful
+        polymorph, any creature that fails its Fortitude save must then succeed
+        at a Will save to retain its mental faculties. Any creature that
+        intentionally touches a creature transformed this way must succeed at
+        the same saving throws or be transformed as well; a creature that kisses
+        a transformed creature automatically fails its Fortitude save against
+        this effect but automatically succeeds at its Will save. This ability
+        can be used once per day.</em></p><h2><em>For Followers of
+        Gogunta</em></h2><h3>Feats</h3><p><em>Channel Discord</em></p><h3>Magic
+        Items - Wondrous Items</h3><p><em>Dagon's
+        Eye</em></p><h3>Traits</h3><p><em>Demonic Persuasion</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

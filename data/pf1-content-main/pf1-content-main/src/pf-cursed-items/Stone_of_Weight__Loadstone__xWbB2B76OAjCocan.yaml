@@ -1,0 +1,24 @@
+_id: xWbB2B76OAjCocan
+_key: '!items!xWbB2B76OAjCocan'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Stone of Weight (Loadstone)
+system:
+  aura:
+    school: trs
+  cl: 5
+  cursed: true
+  description:
+    value: >-
+      <p>This dark, polished stone reduces the possessor's base land speed by
+      half. Once picked up, the stone cannot be disposed of by any nonmagical
+      means-if it is thrown away or smashed, it reappears somewhere on the
+      possessor's person. If a remove curse spell is cast upon a loadstone, the
+      item may be discarded normally and no longer haunts the individual.</p>
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 1
+type: equipment

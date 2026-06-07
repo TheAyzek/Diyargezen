@@ -46,7 +46,6 @@ class DiceSystem:
     description: str = ""
 
 DICE_D20 = DiceSystem("d20", 20, False, "Single d20 roll + modifiers (D&D, Pathfinder)")
-DICE_D10_POOL = DiceSystem("d10_pool", 10, True, "d10 dice pool, successes on 6+ (VtM)")
 DICE_D6_POOL = DiceSystem("d6_pool", 6, True, "d6 dice pool (M&M effect rolls)")
 
 
@@ -82,8 +81,25 @@ class BaseCharacterCreator(ABC):
     # ------------------------------------------------------------------
 
     def _load_data(self) -> Dict[str, Any]:
-        """Sisteme özel JSON veri dosyasını güvenli biçimde yükle."""
-        data_path = Path(__file__).parent.parent / "data" / self.data_file
+        """
+        Veriyi SQLite entity deposundan yükle; yoksa JSON'a düş (fallback).
+        ETL pipeline çalıştırıldıysa creators mevcut dict formatını korur.
+        """
+        base_dir = Path(__file__).parent.parent
+        try:
+            from db.repository import EntityRepository, DATA_FILE_TO_SYSTEM
+
+            sistem = DATA_FILE_TO_SYSTEM.get(self.data_file)
+            if sistem:
+                repo = EntityRepository(base_dir / "data" / "characters.db")
+                if repo.has_data(sistem):
+                    data = repo.to_legacy_dict(sistem)
+                    logger.debug("%s verisi SQLite'tan yüklendi", sistem)
+                    return data
+        except Exception as exc:
+            logger.warning("SQLite yükleme başarısız, JSON fallback: %s", exc)
+
+        data_path = base_dir / "data" / self.data_file
         try:
             with data_path.open("r", encoding="utf-8") as fh:
                 return json.load(fh)

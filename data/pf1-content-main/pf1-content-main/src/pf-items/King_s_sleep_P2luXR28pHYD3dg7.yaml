@@ -1,0 +1,38 @@
+_id: P2luXR28pHYD3dg7
+_key: '!items!P2luXR28pHYD3dg7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: King's sleep
+system:
+  actions:
+    - _id: wxet810vuslqt1ow
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - '<strong>Primary Effect</strong: [[1]] Con drain'
+      save:
+        dc: '19'
+        type: fort
+      tag: kingsSleep
+  description:
+    value: >-
+      <p><strong>Type</strong> ingested; <strong>Save</strong> Fortitude DC
+      19</p><p><strong>Onset</strong> 1 day; <strong>Frequency</strong>
+      1/day</p><p><strong>Effect</strong> 1 Con
+      drain</p><p><strong>Cure</strong> 2 saves</p>
+  price: 5000
+  sources:
+    - id: PZO1123
+      pages: '111'
+  subType: poison
+  uses:
+    per: single
+type: consumable

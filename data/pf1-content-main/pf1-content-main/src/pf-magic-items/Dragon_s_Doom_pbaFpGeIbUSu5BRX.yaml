@@ -1,0 +1,64 @@
+_id: pbaFpGeIbUSu5BRX
+_key: '!items!pbaFpGeIbUSu5BRX'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/halberd.PNG
+name: Dragon's Doom
+system:
+  actions:
+    - _id: mmyenw1irtlukodg
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: dragonsDoom
+  aura:
+    custom: true
+    school: divination and evocation
+  baseTypes:
+    - Halberd
+  cl: 8
+  description:
+    value: >-
+      <p>This polearm's axe blade is shaped like a snarling dragon, its maw
+      stretched wide as it closes for the killing blow. The haft is engraved
+      with the circling image of a dragon in flight. The head of this +2 dragon
+      bane halberd glows when a creature of the dragon type is within 100 feet
+      of the weapon. Three times per day, when the halberd hits a dragon, the
+      wielder can have that attack ignore the dragon's DR as a free
+      action.</p><p><strong>Base Item</strong>: dragon bane
+      halberd</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, discern location, light, summon monster I</p>
+  enh: 2
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 40310
+  properties:
+    brc: true
+    trp: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - polearms
+  weight:
+    value: 12
+type: weapon

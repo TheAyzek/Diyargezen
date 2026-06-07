@@ -1,0 +1,30 @@
+_id: IsXNZorL9KYFkER0
+_key: '!items!IsXNZorL9KYFkER0'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Reaper's Mask
+system:
+  aura:
+    custom: true
+    school: enchantment [evil]
+  cl: 7
+  description:
+    value: >-
+      <p>The wearer of a reaper's mask gains a +2 competence bonus on Perception
+      checks made against creatures that aren't immune to fear and a +1 profane
+      bonus on damage with slashing weapons made against living creatures. The
+      wearer can cast confusion twice per day (DC 16). When a reaper's mask is
+      donned, the wearer takes 1 point of Charisma damage-most Skinsaw cultists
+      don their masks well in advance of a mission so they have time to
+      recover.<h3>Requirements</h3><p>Craft Wondrous Item, confusion,
+      deathwatch</p>
+  price: 12000
+  slot: head
+  sources:
+    - id: PZO90102
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

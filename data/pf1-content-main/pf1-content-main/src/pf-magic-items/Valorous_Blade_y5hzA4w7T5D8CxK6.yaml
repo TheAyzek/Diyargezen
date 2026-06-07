@@ -1,0 +1,57 @@
+_id: y5hzA4w7T5D8CxK6
+_key: '!items!y5hzA4w7T5D8CxK6'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/scimitar.PNG
+name: Valorous Blade
+system:
+  actions:
+    - _id: odjojj99jiaf7xkk
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: valorousBlade
+  aura:
+    school: enc
+  baseTypes:
+    - Scimitar
+  cl: 9
+  description:
+    value: >-
+      <p>Once per day within 1 minute of using this +1 valiant scimitar to kill
+      or knock unconscious a foe, as a standard action, the wielder can inspire
+      all allies within 60 feet who can see her. Those allies gain a +2 morale
+      bonus on attack rolls, skill checks, and saving throws for 10
+      minutes.</p><p><strong>Base Item</strong>: valiant
+      scimitar</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, good hope, true strike</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 20315
+  showInQuickbar: false
+  sources:
+    - id: PZO9463
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 5
+type: weapon

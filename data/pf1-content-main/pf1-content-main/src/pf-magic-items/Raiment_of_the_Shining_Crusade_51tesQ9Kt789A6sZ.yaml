@@ -1,0 +1,46 @@
+_id: 51tesQ9Kt789A6sZ
+_key: '!items!51tesQ9Kt789A6sZ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/half-plate.png
+name: Raiment of the Shining Crusade
+system:
+  armor:
+    acp: 7
+    material:
+      base:
+        value: steel
+    value: 8
+  aura:
+    custom: true
+    school: abjuration and evocation
+  baseTypes:
+    - Half-plate
+  cl: 7
+  description:
+    value: >-
+      <p>This +1 half-plate is emblazoned with holy script and religious
+      iconography. Raiment of the shining crusade was first crafted by the holy
+      warriors serving under General Arnisant. The wearer of raiment of the
+      shining crusade gains a +2 sacred bonus on saving throws against channeled
+      negative energy and to resist negative levels. When worn by a character
+      with the smite evil class feature, the armor sheds light like a torch at
+      all times.  A wearer with the smite evil class feature can expend one use
+      of this ability as an immediate action to create a defensive ward around
+      an adjacent creature, granting the target a deflection bonus to AC and a
+      resistance bonus on saves equal to the wearer's Charisma bonus against
+      attacks and effects originating from creatures with an evil alignment.
+      This effect lasts for 1 round.</p><p><strong>Base Item</strong>: 
+      half-plate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, holy smite, protection from evil</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 20750
+  sources:
+    - id: PZO9467
+  spellFailure: 40
+  weight:
+    value: 50
+type: equipment

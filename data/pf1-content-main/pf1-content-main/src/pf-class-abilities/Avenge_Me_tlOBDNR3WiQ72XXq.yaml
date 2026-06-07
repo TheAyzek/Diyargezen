@@ -1,0 +1,22 @@
+_id: tlOBDNR3WiQ72XXq
+_key: '!items!tlOBDNR3WiQ72XXq'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_15.jpg
+name: Avenge Me
+system:
+  associations:
+    classes:
+      - Mesmerist
+  description:
+    value: >-
+      <p><strong>Mesmerist Masterful Trick</strong></p><p>The cult master
+      creates a compulsion for one of his followers to avenge him. Whenever the
+      cult master takes hit point damage from an attack, he can trigger this
+      trick as long as he is within 60 feet of the subject. The subject is
+      immediately affected as if by the rage spell for 1 round per mesmerist
+      level.</p>
+  subType: classFeat
+  tags:
+    - Mesmerist Masterful Trick
+type: feat

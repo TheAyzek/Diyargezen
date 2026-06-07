@@ -1,0 +1,62 @@
+_id: OY9p7GSfog1D4QCt
+_key: '!items!OY9p7GSfog1D4QCt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/longsword.png
+name: Pale Maiden, 1 Wishes
+system:
+  actions:
+    - _id: vxbdyjqpu1oh0pls
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: paleMaiden1Wishes
+  aura:
+    school: evo
+  baseTypes:
+    - Longsword
+  cl: 17
+  description:
+    value: >-
+      <p>This +3 longsword is a variant luck blade (Pathfinder RPG Ultimate
+      Equipment 157). It grants its wielder a +1 luck bonus on all saving
+      throws. Once per day, its possessor can reroll one d20 roll that he just
+      made, before the results of the original roll are revealed. He must take
+      the results of the reroll, even if they are worse. This reroll power is an
+      extraordinary ability. Finally, Pale Maiden can hold up to three wishes,
+      as a luck blade. When the last wish is used, Pale Maiden remains a +3
+      longsword, still grants the +1 luck bonus on saving throws, and still
+      grants the daily use of its reroll power.</p><p><strong>Base
+      Item</strong>: 
+      longsword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, miracle or wish</p>
+  enh: 3
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 72365
+  showInQuickbar: false
+  sources:
+    - id: PZO9275
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 4
+type: weapon

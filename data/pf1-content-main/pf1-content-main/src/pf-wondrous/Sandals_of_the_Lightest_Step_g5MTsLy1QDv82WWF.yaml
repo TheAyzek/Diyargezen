@@ -1,0 +1,33 @@
+_id: g5MTsLy1QDv82WWF
+_key: '!items!g5MTsLy1QDv82WWF'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Sandals of the Lightest Step
+system:
+  aura:
+    school: trs
+  cl: 7
+  description:
+    value: >-
+      <p>These soft leather sandals have soles that consist of a layer of purple
+      velvet decorated with intricate gold stitching. When slipped onto the
+      feet, they feel as weightless as air. In any round when the wearer has
+      already moved at least 10 feet along the ground or another surface (not
+      counting travel on a mount or vehicle), these boots can be activated as a
+      swift action to give the wearer the ability to walk on air (as the air
+      walk spell) until the end of the round. If the wearer hasn't reached a
+      solid surface by the end of the round, she immediately falls back to the
+      ground, taking any applicable falling damage. These sandals can be used up
+      to 5 times per day, but no more often than once per
+      minute.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, air walk</p>
+  price: 5000
+  slot: feet
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 0.5
+type: equipment

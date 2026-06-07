@@ -1,0 +1,43 @@
+_id: a144NIroeMFIGPqN
+_key: '!items!a144NIroeMFIGPqN'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/sword-bastard.PNG
+name: Bound Blade
+system:
+  artifact: true
+  aura:
+    school: nec
+  baseTypes:
+    - Bastard Sword
+  cl: 20
+  description:
+    value: >-
+      <p>The Bound Blade is a +3 unholy adamantine bastard sword, forged from
+      the claws of Kazavon. For worshipers of Abadar, the Bound Blade is heresy
+      made manifest. The sword grants the user a +6 enhancement bonus to
+      Strength. As a free action, upon using the sword to reduce a sentient
+      living creature to 0 or fewer hit points, the wielder can cast soul bind,
+      forcing that creature to make a successful DC 25 Will save or have its
+      soul trapped within the sword. While there is a soul trapped within the
+      sword, the Bound Blade emanates the effects of the spell desecrate in a
+      50-foot-radius aura. This aura lasts for a number of days equal to the
+      number of Hit Dice the slain creature possessed. After that period passes,
+      the soul within the sword is destroyed and cannot be restored by any
+      method short of divine intervention. The sword wielder can release a
+      trapped soul by using the blade's soul bind ability on another
+      creature.</p><p><strong>Base Item</strong>: unholy adamantine bastard
+      sword</p>
+  enh: 3
+  material:
+    base:
+      value: steel
+    normal:
+      value: adamantine
+  sources:
+    - id: PZO9250
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 6
+type: weapon

@@ -1,0 +1,71 @@
+_id: gGGKd0tOkXUqLZya
+_key: '!journal!gGGKd0tOkXUqLZya'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: GvRXJrNElDk9KwJW
+name: 3.1.4. Wilderness Traps
+pages:
+  - _id: YFUvpIAYd6A44oq4
+    _key: '!journal.pages!gGGKd0tOkXUqLZya.YFUvpIAYd6A44oq4'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.1.4. Wilderness Traps
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.mmx5KJLX4vsGZ7vz]{3.1.
+        Traps}</p><ul><li>@Compendium[pf-content.pf-rules.3f7JZIvocYHSXzvd]{3.1.1.
+        Elements of a
+        Trap}</li><li>@Compendium[pf-content.pf-rules.XIjPXv3Qe62dFI3Z]{3.1.2.
+        List of
+        Traps}</li><li>@Compendium[pf-content.pf-rules.IYnf1w2TjcHO2ExM]{3.1.3.
+        Designing a
+        Trap}</li><li><strong>@Compendium[pf-content.pf-rules.gGGKd0tOkXUqLZya]{3.1.4.
+        Wilderness Traps}</strong></li></ul><hr
+        /><p>@Source[PZO1140;pages=172]</p><p>Skilled survivalists and trappers
+        are adept at fashioning effective, if simple, traps from humble
+        materials. A wilderness trap has an associated terrain wherein the raw
+        materials for the trap are commonplace. Within these associated
+        terrains, the base cost of each trap is calculated in sp rather than gp.
+        Wilderness traps always have a CR of 5 or lower.</p><p>When in a trap’s
+        associated terrain, instead of paying one-third the item’s price in raw
+        materials, the trap maker can attempt a Survival check against the
+        normal Craft DC of the trap + 2 × the trap’s CR. If successful, the trap
+        maker finds the necessary materials in the wild after 1d4 hours of
+        foraging + 1 hour per CR of the trap. She can then attempt a Craft
+        (traps) check, also at the normal Craft DC + 2 × the trap’s CR, to build
+        the trap, which takes another 1d4 hours + 1 hour per CR of the
+        trap.</p><p>Traps built with such crude materials don’t last long
+        without maintenance; they have a cumulative 20% chance to break for
+        every day they go without being tightened and reset (which requires 10
+        minutes of work but no additional skill checks).</p><p>At the GM’s
+        discretion, other nonmagical mechanical traps may be considered to have
+        associated terrains and use the wilderness trap construction
+        rules.</p><p>@Compendium[pf-content.pf-traps-and-haunts.gOYTKgLSSriihzMn]{Breakaway
+        Vine (CR
+        1)}</p><p>@Compendium[pf-content.pf-traps-and-haunts.A3huBLtNg7XnZX6b]{Musk
+        Shower (CR
+        1)}</p><p>@Compendium[pf-content.pf-traps-and-haunts.hjkyv1pG4N9LA8Ui]{Spring
+        Snare (CR
+        1)}</p><p>@Compendium[pf-content.pf-traps-and-haunts.mNXAilDDXTZPd9jD]{Swinging
+        Log Trap (CR
+        1)}</p><p>@Compendium[pf-content.pf-traps-and-haunts.f6FQF8HF8LZ1389J]{Tar
+        Snare (CR
+        1)}</p><p>@Compendium[pf-content.pf-traps-and-haunts.RMQpq5bP2OBm80EA]{Clam
+        Clamp (CR
+        2)}</p><p>@Compendium[pf-content.pf-traps-and-haunts.pN0bgO0SPqtomnJT]{Razor
+        Grass (CR
+        3)}</p><p>@Compendium[pf-content.pf-traps-and-haunts.iiXB40R5zhc8OR3r]{Breakaway
+        Log (CR
+        4)}</p><p>@Compendium[pf-content.pf-traps-and-haunts.Z0Va5RBYGcPs7ruj]{Spring-Arm
+        Spike (CR
+        1)}</p><p>@Compendium[pf-content.pf-traps-and-haunts.t99rAqZDgqNuwl1C]{Deadfall
+        (CR 5)}</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,30 @@
+_id: KtbAeXD4lhzEr6fS
+_key: '!items!KtbAeXD4lhzEr6fS'
+_stats:
+  coreVersion: '12.331'
+folder: 4DXOvYyjpcciEjGL
+img: icons/skills/ranged/arrow-strike-glowing-teal.webp
+name: Interfering
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> strong transmutation <strong>CL</strong>
+      18th</p><p><strong>Slot</strong> none; <strong>Price</strong> +5 bonus;
+      This special ability can be placed only on ranged weapons. The wielder can
+      make attacks of opportunity with an <em>interfering</em> weapon as if he
+      threatened all spaces within the weapon's first range increment or 30
+      feet, whichever is closer. However, the wielder cannot make multiple
+      ranged attacks of opportunity with an interfering weapon against a
+      creature that moves out of multiple threatened spaces within range using a
+      single move action, even if the wielder has Combat Reflexes or other
+      effects that allow multiple attacks of
+      opportunity.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, <em>litany of warding</em><sup>UC</sup>;
+      <strong>Price</strong> -</p>
+  sources:
+    - id: PZO9452
+      pages: '26'
+  subType: misc
+  tags:
+    - Ranged Qualities
+type: feat

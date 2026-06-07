@@ -1,0 +1,38 @@
+_id: laCQOJyHzWhDtLjk
+_key: '!items!laCQOJyHzWhDtLjk'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/mace-light.png
+name: Rod of Nettles
+system:
+  aura:
+    school: trs
+  baseTypes:
+    - Light Mace
+  cl: 8
+  description:
+    value: >-
+      <p>This wooden rod is engraved with serrated-edged leaves of stinging
+      nettles. This rod acts as a +1 light mace that deals no damage. Instead,
+      the rod's venomous touch (melee touch attack) deals 1d3 points of
+      Dexterity damage and causes the target to become sickened for 1d6 rounds
+      (DC 14 Fortitude negates the sickened effect and halves the Dexterity
+      damage); on a critical hit, no saving throw is allowed.  Once per day on
+      command, the wielder may touch the rod of nettles to ordinary vegetation,
+      causing a 20-foot cube to become tangled with nettle-choked overgrowth as
+      the overgrowth ability of the plant growth spell. Furthermore, creatures
+      entering or within this area are affected as if touched by the rod, though
+      creatures with a natural armor bonus of +3 or greater are immune to this
+      effect. A creature that saves is unaffected by the area's poison for 24
+      hours.</p><p><strong>Base Item</strong>: light
+      mace</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Rod,
+      plant growth, poison</p>
+  enh: 1
+  price: 18000
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 5
+type: equipment

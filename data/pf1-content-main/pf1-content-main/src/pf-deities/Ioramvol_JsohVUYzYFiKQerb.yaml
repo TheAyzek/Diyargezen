@@ -1,0 +1,44 @@
+_id: JsohVUYzYFiKQerb
+_key: '!journal!JsohVUYzYFiKQerb'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Ioramvol
+pages:
+  - _id: tq7iiey6JmAaC6sk
+    _key: '!journal.pages!JsohVUYzYFiKQerb.tq7iiey6JmAaC6sk'
+    _stats:
+      coreVersion: '12.331'
+    name: Ioramvol
+    sort: 0
+    text:
+      content: >-
+        <h1>Ioramvol</h1><h2>With the Mouth Full of
+        Boulders</h2>@Source[PZO1139;pages=110] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Ioramvol">Ioramvol</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Asura Ranas<br /><strong>Areas of
+        Concern</strong> Caverns, Cliffs, Premature Burials<br
+        /><strong>Domains</strong> Death, Earth, Evil, Law<br
+        /><strong>Subdomains</strong> Caves, Fear, Murder, Undead<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Heavy
+        pick</p><h3>Obedience</h3><p>Partially bury yourself in dirt or gravel
+        while meditating. Gain a +4 profane bonus on saving throws against earth
+        effects and petrification.</p><h2>Boons - Asura
+        Ranas</h2>@Source[PZO1139;pages=110]<br />Over time, the mightiest of
+        the asuras complete enough cycles of reincarnation and build upon the
+        atrocities committed over multiple lives to incarnate into the most
+        powerful of their kind: the asura ranas.<p> Asura ranas are lawful evil
+        demigods that range in power from CR 26 to CR 30. Each asura rana
+        detailed below is given an obedience, but the boons they grant are less
+        complex than those granted by archdevils, manifesting as spell-like
+        abilities usable once per day each.</p><p><strong>1</strong>: 
+        <em>spiked pit</em><br /><strong>2</strong>: <em>statue</em><br
+        /><strong>3</strong>: <em>clashing rocks</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,20 @@
+_id: OJAkLYBPeEWzOloB
+_key: '!items!OJAkLYBPeEWzOloB'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_11.jpg
+name: Baleful Polymorph Spell
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> curse, spell; <strong>Save</strong> Fortitude DC
+      17</p><p><strong>Effect</strong> transforms target into a lizard; see
+      <em>baleful polymorph</em> description</p>
+  sources:
+    - id: PZO1110
+      pages: '556'
+  subType: misc
+  tags:
+    - Maladies
+    - Curse
+type: feat

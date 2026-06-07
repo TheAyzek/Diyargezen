@@ -1,0 +1,30 @@
+_id: JMS00MfMBA3wJtbp
+_key: '!items!JMS00MfMBA3wJtbp'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Laubo Powder
+system:
+  aura:
+    school: enc
+  cl: 10
+  description:
+    value: >-
+      <p>Salt, chalk, and powdered bone goes into the creation of this thick
+      powder. When it is smeared over the face of a willing or helpless
+      humanoid, the victim is affected as per the spell dominate person. The
+      victim receives a save against the powder's effect, but makes it at a -2
+      penalty. Those who fail the save are affected by the spell and are under
+      the control of the powder's creator (not necessarily the powder's user). 
+      In addition, the victim cannot articulate beyond making a low moaning, and
+      takes on a death-like pallor, appearing to be a zombie. Spells like detect
+      undead or a minute of uninterrupted examination followed by a DC 20 Heal
+      check reveal that the victim is not actually undead.  Creating a batch of
+      laubo powder provides enough for 3 uses.<h3>Requirements</h3><p>Craft
+      Wondrous Item, dominate person, disguise self</p>
+  price: 2800
+  sources:
+    - id: PZO9039
+  subType: wondrous
+type: equipment

@@ -1,0 +1,45 @@
+_id: ypXACeIIN0Twrc7H
+_key: '!actors!ypXACeIIN0Twrc7H'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Dimensional Tear (CR 8)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    hp:
+      max: 27
+  details:
+    alignment: 'N'
+    area: 30-ft. radius
+    aura: moderate conjuration (calling)
+    biography: {}
+    cl: 3
+    cr:
+      base: 8
+    destruction: >-
+      A character with plane shift prepared can attempt to counterspell the
+      echo's effect. Successfully doing so destroys the dimensional tear.
+    effect: >-
+      As soon as a Small or larger creature enters the area of a dimensional
+      tear, it is affected as if by <em>plane shift</em> and must succeed at a
+      Will save (DC 21) or be immediately transported to the First World. When
+      this occurs, a creature from the First World (determined randomly from the
+      <em>summon nature's ally VI</em> list) is teleported to a space adjacent
+      to the echo, determined by the GM. The creature has a starting attitude of
+      hostile.
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Ultimate Wilderness pg. 133</p>
+        <p><strong>Haunt Templates</strong>: persistent variant</p>
+        <p><strong>Benefit</strong>: Determine the First World creature called
+        using the <em>summon nature's ally VII</em> list instead, and then add
+        the fey creature template.</p>
+    notice: Perception DC 18 (to see rippling, rainbow-hued distortions in the air)
+    trigger: proximity
+    weakness: negative energy (see echoes of the first world)
+type: haunt

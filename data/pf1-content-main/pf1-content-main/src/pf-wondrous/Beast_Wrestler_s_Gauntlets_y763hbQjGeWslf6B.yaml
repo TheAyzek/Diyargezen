@@ -1,0 +1,30 @@
+_id: y763hbQjGeWslf6B
+_key: '!items!y763hbQjGeWslf6B'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Beast Wrestler's Gauntlets
+system:
+  aura:
+    school: con
+  cl: 5
+  description:
+    value: >-
+      <p>These gauntlets grant a +1 enhancement bonus on grapple checks. Each
+      pair of gauntlets is created to fight a specific type or subtype of
+      creature from the list of creature types in the bane weapon special
+      ability. While the wearer is grappling a creature of the designated type,
+      the gauntlets' enhancement bonus increases by 2 and the wearer deals an
+      additional 2d6 points of nonlethal damage when dealing damage as part of a
+      successful grapple
+      check.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, summon monster I</p>
+  price: 7500
+  slot: hands
+  sources:
+    - id: PZO9451
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

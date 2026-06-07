@@ -1,0 +1,62 @@
+_id: Srcn6aoBk9xCSh9b
+_key: '!items!Srcn6aoBk9xCSh9b'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/longsword.png
+name: Talmandor Blade
+system:
+  actions:
+    - _id: 6cfrfjatl4somsfo
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: talmandorBlade
+  aura:
+    custom: true
+    school: abjuration conjuration and evocation
+  baseTypes:
+    - Longsword
+  cl: 7
+  description:
+    value: >-
+      <p>This +2 holy mithral longsword continually sheds light as the spell.
+      While wielded, the Talmandor Blade grants the wielder low-light vision (or
+      darkvision 60 feet, if the wielder already has low-light vision) and a +4
+      bonus on Perception checks. Additionally, the sword grants a +4 sacred
+      bonus on saving throws against paralysis and petrification spells and
+      effects.</p><p><strong>Base Item</strong>: holy mithral
+      longsword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Arms and Armor, darkvision, holy smite, stone to flesh, creator must be
+      good</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+    normal:
+      value: mithral
+  price: 58615
+  showInQuickbar: false
+  sources:
+    - id: PZO9275
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 2
+type: weapon

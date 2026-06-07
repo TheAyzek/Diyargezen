@@ -1,0 +1,89 @@
+_id: E4Vf93SwPkRoJG2W
+_key: '!tables!E4Vf93SwPkRoJG2W'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+folder: 7ZeWJj7eKXb88Mo9
+formula: 1d100
+img: icons/svg/d20-grey.svg
+name: Lesser Madness
+replacement: true
+results:
+  - _id: uv6ge0FWgLiuObgc
+    _key: '!tables.results!E4Vf93SwPkRoJG2W.uv6ge0FWgLiuObgc'
+    range:
+      - 1
+      - 10
+    text: '@UUID[Compendium.pf-content.pf-maladies.Item.pZozqnACracibASw]{Delirium}'
+    type: text
+    weight: 1
+  - _id: Xhzfz0xhEXrR4zWj
+    _key: '!tables.results!E4Vf93SwPkRoJG2W.Xhzfz0xhEXrR4zWj'
+    range:
+      - 11
+      - 22
+    text: '@UUID[Compendium.pf-content.pf-maladies.Item.IsBlazcUupiurGMl]{Delusion}'
+    type: text
+    weight: 1
+  - _id: hmYzN2woUQTE0HSN
+    _key: '!tables.results!E4Vf93SwPkRoJG2W.hmYzN2woUQTE0HSN'
+    range:
+      - 23
+      - 32
+    text: '@UUID[Compendium.pf-content.pf-maladies.Item.LPdoKMedqWtsdkow]{Fugue}'
+    type: text
+    weight: 1
+  - _id: owBzF3f80kzoEnpB
+    _key: '!tables.results!E4Vf93SwPkRoJG2W.owBzF3f80kzoEnpB'
+    range:
+      - 33
+      - 42
+    text: >-
+      @UUID[Compendium.pf-content.pf-maladies.Item.0EnpDBgxJ4wBHWCi]{Hallucination}
+    type: text
+    weight: 1
+  - _id: xjZmFUK3rbBebYdV
+    _key: '!tables.results!E4Vf93SwPkRoJG2W.xjZmFUK3rbBebYdV'
+    range:
+      - 43
+      - 54
+    text: '@UUID[Compendium.pf-content.pf-maladies.Item.pzUjLA5NXyeNCEkF]{Mania}'
+    type: text
+    weight: 1
+  - _id: kB9nWAMU4grWHUuf
+    _key: '!tables.results!E4Vf93SwPkRoJG2W.kB9nWAMU4grWHUuf'
+    range:
+      - 55
+      - 66
+    text: >-
+      @UUID[Compendium.pf-content.pf-maladies.Item.pqWFuMZYmxceDdcq]{Melancholia}
+    type: text
+    weight: 1
+  - _id: R95o5VFgYOFF0HRn
+    _key: '!tables.results!E4Vf93SwPkRoJG2W.R95o5VFgYOFF0HRn'
+    range:
+      - 67
+      - 76
+    text: >-
+      @UUID[Compendium.pf-content.pf-maladies.Item.C36SvXBoCCAajvYd]{Night
+      Terrors}
+    type: text
+    weight: 1
+  - _id: 85hY2WQlMDswMePe
+    _key: '!tables.results!E4Vf93SwPkRoJG2W.85hY2WQlMDswMePe'
+    range:
+      - 77
+      - 86
+    text: '@UUID[Compendium.pf-content.pf-maladies.Item.8PGpGctntOLjXrvT]{Paranoid}'
+    type: text
+    weight: 1
+  - _id: 7Je0degSzgoCR0zQ
+    _key: '!tables.results!E4Vf93SwPkRoJG2W.7Je0degSzgoCR0zQ'
+    range:
+      - 87
+      - 100
+    text: '@UUID[Compendium.pf-content.pf-maladies.Item.TUvX2gRAiH1Xx3sW]{Phobia}'
+    type: text
+    weight: 1
+sort: 1000000

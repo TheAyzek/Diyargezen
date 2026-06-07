@@ -1,0 +1,36 @@
+_id: 4Ql0Eml3vnsd0ult
+_key: '!items!4Ql0Eml3vnsd0ult'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Angel's Clarion
+system:
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  cl: 5
+  description:
+    value: >-
+      <p>An angel's clarion is a graceful trumpet whose bell unfolds like the
+      petals of a flower. These trumpets are usually platinum or silver near the
+      mouthpiece, transforming to a rose gold at the bell.   Three times per day
+      when an angel's clarion is sounded, it releases a blast that sounds like
+      the chiming, resonant voices of an angelic choir. Any good-aligned
+      creatures in a 30-foot cone emanating from the trumpet are washed in
+      positive energy and healed for 3d8+5 points of damage. This energy only
+      affects good-aligned creatures; neutral and evil creatures receive no
+      benefit and undead creatures are not harmed. A carpet of flowers springs
+      up beneath the 30-foot cone, growing and blooming in seconds. Any
+      evil-aligned creatures within the area of effect must succeed at a DC 13
+      Reflex save or be treated as if in the area of an entangle spell. The
+      entangling flowers persist for 5 minutes.</p><h3>Requirements</h3><p>Craft
+      Wondrous Item, cure serious wounds, entangle, creator must worship an
+      empyreal lord</p>
+  price: 23400
+  sources:
+    - id: PZO9255
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,45 @@
+_id: fuCybYlJSPE7lZuV
+_key: '!items!fuCybYlJSPE7lZuV'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/stone-plate.png
+name: Stone-Eater Armor
+system:
+  armor:
+    acp: 6
+    dex: 1
+    material:
+      base:
+        value: stone
+    value: 9
+  aura:
+    custom: true
+    school: abjuration and evocation
+  baseTypes:
+    - Stoneplate
+  cl: 10
+  description:
+    value: >-
+      <p>This suit of +1 stoneplate bears a horned gorgon's head on each
+      shoulder and the screaming face of a medusa on its breastplate. The first
+      suits of stone-eater armor found in the Inner Sea region were brought by
+      explorers from faraway Casmaron, along with wild tales of a lost city
+      destroyed by a powerful medusa.  Whenever the wearer of stone-eater armor
+      is subject to a petrifying effect, such as that caused by a flesh to stone
+      spell, the effect is negated and the stone-eater armor's enhancement bonus
+      increases by 1 for 1 minute as the armor grows thicker and bulkier,
+      covering more of the wearer's body without hindering her
+      movement.</p><p><strong>Base Item</strong>: 
+      stoneplate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, stone to flesh</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 8950
+  sources:
+    - id: PZO9467
+  spellFailure: 35
+  weight:
+    value: 75
+type: equipment

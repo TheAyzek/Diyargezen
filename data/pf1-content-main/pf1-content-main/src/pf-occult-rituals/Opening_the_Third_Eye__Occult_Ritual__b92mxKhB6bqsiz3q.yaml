@@ -1,0 +1,66 @@
+_id: b92mxKhB6bqsiz3q
+_key: '!items!b92mxKhB6bqsiz3q'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Opening the Third Eye (Occult Ritual)
+system:
+  actions:
+    - _id: qzlckbu3h733sxwi
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        description: negates
+        harmless: true
+        type: Fortitude
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    material: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> transmutation; <strong>Level</strong>
+      5</p><p><strong>Casting Time</strong> 50
+      minutes</p><p><strong>Components</strong> V, S, M (incense), SC (up to
+      12)</p><p><strong>Skill Checks</strong> Knowledge (arcana) DC 34, 3
+      successes; Knowledge (planes) DC 34, 1 success; Perception DC 34, 1
+      success</p><p><strong>Range</strong> touch</p><p><strong>Target</strong>
+      primary and secondary casters</p><p><strong>Duration</strong> 1 day
+      (D)</p><p><strong>Saving Throw</strong> Fortitude negates (harmless);
+      <strong>SR</strong> yes (harmless)</p><p><strong>Backlash</strong> All
+      casters take 2d6 points of damage.</p><p><strong>Failure</strong> All
+      casters gain a temporary negative level (DC = 16 + primary caster's
+      Charisma bonus to remove after the first day), and the primary caster is
+      afflicted with a more potent version of the mindfire disease (DC 17; 2
+      saves; 1d4 Int; 1/day).</p><h3>Effect</h3><p>Through a ceremony of
+      meditation and recitation, the casters of this ritual become psychically
+      attuned. Casters who don't have levels in an occult class gain the
+      following benefits. </p><ul><li>Each caster can choose one knack from the
+      psychic class's spell list and an additional knack for every 5 character
+      levels that caster possesses (to a maximum of 5 knacks at 20th level). The
+      casters can cast these knacks at will. </li><li>If a caster is trained in
+      a skill with an occult skill unlock, she can use that skill's occult
+      unlock.<p> Casters who do have levels in an occult base class gain the
+      following benefits. </p></li><li>If a caster is trained in a skill with an
+      occult skill unlock, she gains a +4 insight bonus on checks with that
+      skill when using its occult skill unlock. </li><li>If a caster is
+      untrained in a skill with an occult skill unlock, she can still use that
+      skill's occult unlock.</li></ul> Each of the ritual's casters can choose
+      to dismiss this ritual's effects for themselves individually.  flags:
+  level: 5
+  materials:
+    value: incense
+  school: trs
+  sources:
+    - id: PZO1132
+      pages: '212'
+type: spell

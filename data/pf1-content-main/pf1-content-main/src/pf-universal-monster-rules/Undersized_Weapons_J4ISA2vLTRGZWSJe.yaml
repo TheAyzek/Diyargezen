@@ -1,0 +1,17 @@
+_id: J4ISA2vLTRGZWSJe
+_key: '!items!J4ISA2vLTRGZWSJe'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/sword-short.PNG
+name: Undersized Weapons
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>The creature uses manufactured weapons as if it were one size category
+      smaller it is.</p>&nbsp;<p><em>Format</em>: undersized
+      weapons</p><p><em>Location</em>: SQ.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

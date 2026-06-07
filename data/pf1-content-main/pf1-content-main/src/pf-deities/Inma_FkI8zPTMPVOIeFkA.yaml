@@ -1,0 +1,45 @@
+_id: FkI8zPTMPVOIeFkA
+_key: '!journal!FkI8zPTMPVOIeFkA'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Inma
+pages:
+  - _id: FZXOXJRq0EkuZCxJ
+    _key: '!journal.pages!FkI8zPTMPVOIeFkA.FZXOXJRq0EkuZCxJ'
+    _stats:
+      coreVersion: '12.331'
+    name: Inma
+    sort: 0
+    text:
+      content: >-
+        <h1>Inma</h1><h2>The Empress of the World</h2>@Source[PZO1139;pages=126]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Inma">Inma</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Oni Daimyo<br /><strong>Areas of
+        Concern</strong> Lavish wealth, origami, servitude<br
+        /><strong>Domains</strong> Community, Evil, Law, Nobility<br
+        /><strong>Subdomains</strong> Family, Home, Leadership, Tyranny<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Katana</p><h3>Obedience</h3><p>Craft
+        delicate origami representing those you seek to rule over. Gain a +4
+        profane bonus on saving throws against mind-affecting
+        effects.</p><h2>Boons - Oni
+        Daimyo</h2><p>@Source[PZO1139;pages=126]</p><p>The most powerful oni,
+        the oni daimyo, hold their domains in isolated regions of the Material
+        Plane. While they have transcended their lesser incarnations to become
+        something close to demigods in stature, they do not flaunt their power
+        and prefer to dwell in remote corners of the massive land of Tian
+        Xia.</p><p> Oni daimyo are always evil in alignment but can be chaotic,
+        lawful, or neutral. They range in power from CR 21 to CR 25. The boons
+        they grant are less complex than those granted by fiendish demigods,
+        manifesting as spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>create treasure map</em><br
+        /><strong>2</strong>: <em>charm monster</em><br /><strong>3</strong>: 
+        extended <em>dominate person</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

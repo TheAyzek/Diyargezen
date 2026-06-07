@@ -1,0 +1,28 @@
+_id: 1cnjrDoSRfb8dobQ
+_key: '!items!1cnjrDoSRfb8dobQ'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Clandestine Horseshoes
+system:
+  aura:
+    school: ill
+  cl: 3
+  description:
+    value: >-
+      <p>If a creature wearing these dull gray horseshoes remains stationary for
+      1 round, the creature and its rider, if any, gain a +10 bonus on Stealth
+      checks for 1 round. In addition, once per day, the rider of a mount
+      wearing clandestine horseshoes can turn both herself and her mount
+      invisible, as invisibility. All four shoes must be worn by the same
+      creature for the magic to be effective.</p><h3>Requirements</h3><p>Craft
+      Wondrous Item, invisibility</p>
+  price: 6000
+  slot: feet
+  sources:
+    - id: PZO9480
+  subType: wondrous
+  weight:
+    value: 12
+type: equipment

@@ -1,0 +1,28 @@
+_id: CwTOg9WGzSd5hcIJ
+_key: '!items!CwTOg9WGzSd5hcIJ'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Hexing Runes
+system:
+  aura:
+    school: abj
+  cl: 8
+  description:
+    value: >-
+      <p>These runes may be carved from wood or cast in silver and are worn on a
+      leather cord. When a witch prepares her spells, she may also choose to use
+      the hexing runes to augment one hex she can use. The save DC of this hex
+      increases by 1 for 24 hours. Additionally, once per day when she speaks
+      the command word, the wearer gains the benefits of the ward hex as if cast
+      by an 8th level
+      witch.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Spell Focus (abjuration), resistance, creator must be able
+      to use the ward hex</p>
+  price: 10000
+  slot: neck
+  sources:
+    - id: PZO9434
+  subType: wondrous
+type: equipment

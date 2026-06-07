@@ -1,0 +1,28 @@
+_id: 4dyQhbSmHbqBWxO7
+_key: '!items!4dyQhbSmHbqBWxO7'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/chest/chest-reinforced-stone.webp
+name: Kit, Elemental explorer's
+system:
+  description:
+    value: >-
+      <p>This waterproof and flame-resistant case contains items useful to a
+      spellcaster traveling the Elemental Planes, either intentionally or due to
+      some mishap. The kit includes durable guides to each of the four Elemental
+      Planes, describing a few common creatures and hazards found on each plane
+      and pointing out major landmarks. Each guide grants a +2 circumstance
+      bonus on Knowledge (planes) checks and Survival checks for its plane. This
+      kit also contains 3 <em>scrolls of comprehend languages, </em>2
+      <em>scrolls of planar adaptation, </em>and a <em>scroll of plane shift
+      </em>attuned to the Material Plane so the kit's owner can return home. The
+      price reflects a kit with divine scrolls; a kit containing arcane scrolls
+      instead costs an additional 2,000 gp</p>
+  sources:
+    - id: PZO9481
+      pages: '17'
+  tags:
+    - Kits
+  weight:
+    value: 8
+type: container

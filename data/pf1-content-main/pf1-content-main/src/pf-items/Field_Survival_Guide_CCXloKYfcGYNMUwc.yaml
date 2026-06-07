@@ -1,0 +1,28 @@
+_id: CCXloKYfcGYNMUwc
+_key: '!items!CCXloKYfcGYNMUwc'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/books/book-embossed-gold-red.webp
+name: Field Survival Guide
+system:
+  description:
+    value: >-
+      <p>Notations on surviving in the wilderness (and accompanying
+      illustrations) fill this manual. If you have no skill ranks in Survival,
+      you can consult this manual as part of attempting a Survival check to
+      perform one of the following tasks: avoid natural hazards, follow tracks,
+      gain a save bonus against severe weather, predict the weather, or provide
+      food and water. Doing so grants you a +4 circumstance bonus on the check,
+      but it takes twice as long to perform the action (for example, providing
+      food and water takes 48 hours instead of 24 hours). If you fail the check,
+      you cannot consult the manual for another check until you move to a new
+      area.</p>
+  equipped: false
+  price: 20
+  sources:
+    - id: PZO1140
+      pages: '243'
+  subType: adventuring
+  weight:
+    value: 1
+type: loot

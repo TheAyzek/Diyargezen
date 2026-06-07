@@ -1,0 +1,54 @@
+_id: 0kENHYAecx1RIRKI
+_key: '!journal!0kENHYAecx1RIRKI'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Ydajisk
+pages:
+  - _id: 1FB4jI4R2xZeSxBM
+    _key: '!journal.pages!0kENHYAecx1RIRKI.1FB4jI4R2xZeSxBM'
+    _stats:
+      coreVersion: '12.331'
+    name: Ydajisk
+    sort: 0
+    text:
+      content: >-
+        <h1>Ydajisk</h1><h2>The Mother of Tongues</h2>@Source[PZO92114;pages=21]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Ydajisk">Ydajisk</a><h3>Details</h3><p><strong>Alignment</strong>
+        CN<br /><strong>Pantheon</strong> Protean Lord<br /><strong>Areas of
+        Concern</strong> Language evolution, lost words, and slang<br
+        /><strong>Domains</strong> Chaos, Knowledge, Rune, Trickery<br
+        /><strong>Subdomains</strong> N/A<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Bite or
+        greatclub<br /><strong>Symbol</strong> Yawning maw drawn in lines of
+        protean poetry</p><h3>Obedience</h3><p>Recite, copy, or graffiti a text
+        in a dead or self-created language in a public place, regardless of
+        whether any others understand the meaning, and provide no translation.
+        Gain a +4 sacred bonus on saving throws against language-based
+        effects.</p><h2>Boons - Monitor
+        Obedience</h2><h3>None</h3><p>@Source[PZO92114;pages=21]<br /><strong>1:
+        Sibilant (Sp)</strong> <em>aphasia</em> 3/day, <em>sonic scream</em>
+        2/day, or <em>tongues</em> 1/day<br /><strong>2: Burning Tongue
+        (Ex)</strong> As a standard action three times per day, you can
+        transform your mouth into a serpentine maw with a tongue of roiling
+        sonic energy. This grants you a ranged touch attack that targets a
+        single creature within 30 feet. The attack deals 8d6 points of sonic
+        damage and renders the target confused for 1d4 rounds. In addition, a
+        creature hit by this attack must succeed at a Will save (DC = 10 + half
+        your Hit Dice + your Charisma modifier) or it is unable to communicate
+        by any spoken or written language for a number of hours equal to your
+        Wisdom modifier.<br /><strong>3: Screams of the Deep (Sp)</strong> As a
+        standard action, you can cast either <em>power word blind, <em>power
+        word kill</em>, <em>power word stun</em>, or <em>word of chaos as a
+        spell-like ability, treating your character level as your caster level.
+        You can cast these spell-like abilities a number of times per day equal
+        to your Charisma modifier (minimum 1), but you cannot repeat the spell
+        you most recently cast. The saving throw DC, when applicable, is equal
+        to 10 + half your Hit Dice + your Charisma modifier.</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

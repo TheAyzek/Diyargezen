@@ -1,0 +1,17 @@
+_id: bft6q7rQMg2kNM7w
+_key: '!items!bft6q7rQMg2kNM7w'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/feats/persuasive.jpg
+name: Language Mastery
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>An archdevil knows all languages, as though using a <a>tongues</a>
+      spell, although this ability is not supernatural and cannot be dispelled.
+      <a>Linguistics</a> is always a class skill for an archdevil.</p>
+  subType: misc
+  uses:
+    value: 5
+type: feat

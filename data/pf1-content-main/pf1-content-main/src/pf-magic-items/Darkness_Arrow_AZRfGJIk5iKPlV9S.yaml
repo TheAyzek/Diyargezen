@@ -1,0 +1,27 @@
+_id: AZRfGJIk5iKPlV9S
+_key: '!items!AZRfGJIk5iKPlV9S'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/bolt.PNG
+name: Darkness Arrow
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>This +1 arrow is as black as the darkest night and is fletched with
+      sleek raven feathers. If the arrow strikes a foe, magical darkness infuses
+      the creature's sight. The creature counts the light level as darkness for
+      1 round, regardless of the actual light level, and if the creature has
+      darkvision, it must succeed at a DC 13 Fortitude saving throw or lose its
+      darkvision for 1 round.</p><p><strong>Enhancement Bonus</strong>: +1
+      </p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic Arms
+      and Armor, darkness</p>
+  equipped: false
+  extraType: arrow
+  price: 80
+  sources:
+    - id: PZO1136
+  subType: ammo
+type: loot

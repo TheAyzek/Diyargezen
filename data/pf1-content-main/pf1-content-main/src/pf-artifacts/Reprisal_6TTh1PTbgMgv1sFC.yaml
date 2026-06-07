@@ -1,0 +1,72 @@
+_id: 6TTh1PTbgMgv1sFC
+_key: '!items!6TTh1PTbgMgv1sFC'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/rapier.PNG
+name: Reprisal
+system:
+  actions:
+    - _id: o51e6dfs8emn3ohb
+      ability:
+        attack: _default
+        critRange: 18
+        damage: dex
+      actionType: mwak
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - piercing
+      enh:
+        value: 2
+      img: systems/pf1/assets/icons/items/weapons/rapier.png
+      name: Attack
+      powerAttack:
+        damageBonus: 1
+      tag: reprisalArtifact
+  artifact: true
+  aura:
+    school: trs
+  baseTypes:
+    - Rapier
+  cl: 15
+  description:
+    value: >-
+      <p>Reprisal is a beautiful and startlingly well-balanced mithral-bladed
+      rapier. Originally, Reprisal bore greater enhancements against evil
+      outsiders, but it&rsquo;s magic has faded. Still, when the blade strikes
+      deep into the flesh of such a foe, it momentarily wakens once
+      again.</p><p>Reprisal is an unusually well-balanced and responsive +2
+      rapier. Reprisal&rsquo;s wielder can apply her Dexterity modifier to
+      damage rolls with the weapon in place of her Strength modifier&mdash;this
+      bonus is not increased if Reprisal is wielded two-handed, but is halved if
+      the rapier is wielded in an off-hand.</p><p>If Reprisal confirms a
+      critical hit against an evil outsider, the rapier gains the evil-outsider
+      bane special ability and is treated as silver, cold iron, and good for the
+      purposes of overcoming damage reduction for the next minute. Subsequent
+      critical hits extend this duration by 1 minute per blow. As long as this
+      effect persists, Reprisal&rsquo;s wielder gains a +2 sacred bonus on all
+      saving throws against attacks from evil outsiders.</p><p>These effects end
+      prematurely if Reprisal is sheathed, disarmed, or is otherwise no longer
+      wielded.</p.<p><strong>Base Item</strong>: rapier</p>
+  enh: 2
+  masterwork: true
+  material:
+    base:
+      value: steel
+  properties:
+    fin: true
+  sources:
+    - id: PZO9099
+  subType: martial
+  tag: reprisalArtifact
+  weaponGroups:
+    - bladesLight
+  weaponSubtype: 1h
+  weight:
+    value: 1
+type: weapon

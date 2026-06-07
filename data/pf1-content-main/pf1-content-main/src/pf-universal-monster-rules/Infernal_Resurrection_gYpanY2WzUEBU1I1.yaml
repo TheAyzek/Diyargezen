@@ -1,0 +1,21 @@
+_id: gYpanY2WzUEBU1I1
+_key: '!items!gYpanY2WzUEBU1I1'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/red_06.jpg
+name: Infernal Resurrection
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>If an archdevil is killed, its body crumbles into ashes, leaving behind
+      any gear it held or carried, while it is immediately restored to life (as
+      per <a>true resurrection</a>) in a location of its choosing in its domain.
+      An archdevil can&rsquo;t use this ability again for 1 year, and it avoids
+      direct combat if possible until that year has passed. If slain again or
+      killed by unusual methods (such as by a true deity or an artifact created
+      for this purpose), an archdevil is slain forever. An archdevil who does
+      not control a domain does not gain this ability (and is technically an
+      infernal duke rather than a true archdevil).</p>
+  subType: misc
+type: feat

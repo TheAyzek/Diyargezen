@@ -1,0 +1,44 @@
+_id: a1y1YH2NjtyUJE2I
+_key: '!items!a1y1YH2NjtyUJE2I'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/armor/breastplate.PNG
+name: Emissary's Breastplate
+system:
+  armor:
+    acp: 4
+    dex: 3
+    material:
+      base:
+        value: steel
+    value: 6
+  aura:
+    school: trs
+  baseTypes:
+    - Breastplate
+  cl: 5
+  description:
+    value: >-
+      <p>When not being worn, this simple steel +1 breastplate appears to be
+      typical magic armor. When worn by a cavalier with the banner class
+      feature, an emissary's breastplate automatically displays the cavalier's
+      heraldry and counts as his banner. As long as the cavalier is not in
+      disguise, he is considered to be displaying his banner while wearing the
+      armor. Additionally, the wearer can expend a use of his challenge ability
+      to speak on behalf of himself, his lord, or other agent who has given him
+      the authority to do so. This allows him to use tongues (as per the spell)
+      and issue a single command (as per the spell).</p><p><strong>Base
+      Item</strong>: 
+      breastplate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, arcane mark, command, tongues, creator must have 5
+      ranks in Knowledge (nobility)</p>
+  enh: 1
+  price: 11350
+  sources:
+    - id: PZO9460
+  spellFailure: 25
+  subType: wondrous
+  weight:
+    value: 30
+type: equipment

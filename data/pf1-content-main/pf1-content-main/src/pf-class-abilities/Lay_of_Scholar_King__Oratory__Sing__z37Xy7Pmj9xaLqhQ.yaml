@@ -1,0 +1,30 @@
+_id: z37Xy7Pmj9xaLqhQ
+_key: '!items!z37Xy7Pmj9xaLqhQ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/drum.jpg
+name: Lay of Scholar-King (Oratory, Sing)
+system:
+  associations:
+    classes:
+      - Skald
+  description:
+    value: >-
+      <p><strong>Skald Saga</strong></p><p>Your tale of a scholarly king
+      sharpens your intellect, but makes others treat you with
+      contempt.</p><p><strong>Prerequisite</strong>: Knowledge (history) 2
+      ranks, Perform (oratory) or Perform (sing) 4
+      ranks.</p><p><strong>Cost</strong>: Feat or 2nd-level skald spell
+      known.</p><p><strong>Effect</strong>: You tell the sad tale of studious
+      and introspective King Jarguut, son of Ethered. King Jarguut ruled the
+      Linnorm Kingdom of Raemerrund, but his kingdom fractured when the thanes
+      would not respect his intellect. While you maintain the performance, you
+      can add your Charisma modifier (minimum +1) to Intelligence-based skill
+      checks in addition to your Intelligence modifier, but you take your
+      Intelligence bonus as a penalty on all Charisma-based skill checks
+      (minimum -1).</p><p><strong>Use</strong>: 1 raging song round per
+      round.</p><p><strong>Action</strong>: 1 minute.</p>
+  subType: classFeat
+  tags:
+    - Skald Saga
+type: feat

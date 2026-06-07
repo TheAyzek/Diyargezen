@@ -1,0 +1,33 @@
+_id: 9qvo8X6w6c2m6xGf
+_key: '!items!9qvo8X6w6c2m6xGf'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Maiden's Promise
+system:
+  aura:
+    school: div
+  cl: 3
+  description:
+    value: >-
+      <p>Each pair of these lockets is made from a piece of jewelry from Castle
+      Korvosa's treasury that was split into two parts, each of which was
+      fashioned into a necklace. When worn by two individuals, the lockets'
+      magic enhances their devotion to each other. Many former Gray Maidens
+      cling to these lockets, distributed among Queen Ileosa's forces during the
+      final days of her reign, as a symbol of their sisterhood. When the wearers
+      of linked maiden's promise lockets are within 30 feet of each other, each
+      gains a +1 morale bonus on Will saves against any effect that would
+      compromise her loyalty to the other. If one wearer becomes helpless, the
+      other gains a +1 morale bonus on attack rolls against any creature
+      threatening the helpless wearer. If one wearer dies, the other must
+      succeed at a DC 16 Will save or suffer the effects of crushing despair for
+      1 minute.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, resistance, status</p>
+  price: 500
+  slot: neck
+  sources:
+    - id: PZO1138
+  subType: wondrous
+type: equipment

@@ -1,0 +1,28 @@
+_id: HRVk1G014rxe8Rjp
+_key: '!items!HRVk1G014rxe8Rjp'
+_stats:
+  coreVersion: '12.331'
+folder: 5HPDAAtypP5m41CK
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Bracers of the Ape
+system:
+  aura:
+    school: trs
+  cl: 7
+  description:
+    value: >-
+      <p>The fur-lined bracers of ape grant the wearer a climb speed of 20 feet
+      in forest or jungle areas. The wearer gains a +4 racial bonus on all Climb
+      checks, and it can always choose to take 10, while climbing, even if
+      rushed or threatened.</p><h3>Requirements</h3><p>Craft Wondrous Item,
+      spider climb</p>
+  price: 10600
+  slot: wrists
+  sources:
+    - date: '2012'
+      publisher: Necromancer Games & Frog God Games
+      title: Rappan Athuk
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

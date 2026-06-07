@@ -1,0 +1,18 @@
+_id: CXQXdyuEpopPBoeB
+_key: '!items!CXQXdyuEpopPBoeB'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_20.jpg
+name: Devil Chills
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> disease (injury); <strong>Save</strong> Fortitude
+      DC 14;</p><p><strong>Onset</strong> 1d4
+      days;&nbsp;<strong>Frequency</strong> 1/day</p><p><strong>Effect</strong>
+      1d4 Str damage</p><p><strong>Cure</strong>&nbsp;3 consecutive saves</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

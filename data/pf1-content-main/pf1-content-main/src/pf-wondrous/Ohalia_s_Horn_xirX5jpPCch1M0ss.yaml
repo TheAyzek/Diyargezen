@@ -1,0 +1,28 @@
+_id: xirX5jpPCch1M0ss
+_key: '!items!xirX5jpPCch1M0ss'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Ohalia's Horn
+system:
+  aura:
+    school: con
+  cl: 15
+  description:
+    value: >-
+      <p>The bell of this slightly curved horn resembles the head of a roaring
+      lioness. The horn functions in many ways like a horn of valhalla, but
+      while held in one hand, the wielder gains the benefits of deathwatch. Once
+      per year when the wielder sounds the horn, she can summon one sleipnir
+      (Pathfinder RPG Bestiary 3 248) with a saddle for 1 hour in place of
+      summoning the barbarians. The sleipnir willingly serves as a mount or
+      combatant.<h3>Requirements</h3><p>Craft Wondrous Item, deathwatch, summon
+      monster VIII</p>
+  price: 55000
+  sources:
+    - id: PZO90131
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

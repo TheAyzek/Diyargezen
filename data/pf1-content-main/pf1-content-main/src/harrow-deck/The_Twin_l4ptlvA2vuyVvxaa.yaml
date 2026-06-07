@@ -1,0 +1,29 @@
+_id: l4ptlvA2vuyVvxaa
+_key: '!journal!l4ptlvA2vuyVvxaa'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: slmqizDyyiaJyP1N
+name: The Twin
+pages:
+  - _id: vHuwuBoOr1KL7SHk
+    _key: '!journal.pages!l4ptlvA2vuyVvxaa.vHuwuBoOr1KL7SHk'
+    _stats:
+      coreVersion: '12.331'
+    name: The Twin
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Twin</strong> (neutral, Charisma) signals duality of
+        purpose or identity. This doppelganger can also mean indecision, as a
+        person or group wavers between very different options. It can also mean
+        divided loyalties abound. The card makes a harrower wary, as it can also
+        mean the entire spread has a hidden or reversed meaning.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Twin.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

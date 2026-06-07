@@ -1,0 +1,72 @@
+_id: 6SozifIXf5zbpCGr
+_key: '!items!6SozifIXf5zbpCGr'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/spiked-chain.png
+name: Shadowbound Chains
+system:
+  actions:
+    - _id: z2hkkmgfz39ko0cc
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: shadowboundChains
+  aura:
+    school: con
+  baseTypes:
+    - Spiked Chain
+  cl: 9
+  description:
+    value: >-
+      <p>Jagged and spiked, this +1 vicious viridium spiked chain shifts between
+      hues of muted green and deep violet. Wielders who are devout followers of
+      Zon-Kuthon are immune to the disease imparted by the viridium. When the
+      wielder reduces a creature's hit points below 0 using the chain but
+      doesn't kill it, she can call a shadowy duplicate of the target as a free
+      action. This duplicate is treated as a shadow (Bestiary 245) without the
+      create spawn ability. The duplicate is friendly to the wielder and attacks
+      her enemies, but ignores its host body. The host can't benefit from any
+      healing that would bring it above -1 hit points until the shadow is
+      destroyed or disappears. The shadow fades away when the host body dies or
+      after 10 rounds, whichever comes first. The wielder of the shadowbound
+      chains can summon forth only one shadow at a time.</p><p><strong>Base
+      Item</strong>: vicious viridium spiked
+      chain</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, shadow conjuration</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+    normal:
+      value: viridium
+  price: 19725
+  properties:
+    dis: true
+    fin: true
+    trp: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9268
+  weaponGroups:
+    - flails
+  weight:
+    value: 10
+type: weapon

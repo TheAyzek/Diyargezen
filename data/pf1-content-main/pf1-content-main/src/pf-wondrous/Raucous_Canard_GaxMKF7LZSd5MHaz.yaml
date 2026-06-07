@@ -1,0 +1,30 @@
+_id: GaxMKF7LZSd5MHaz
+_key: '!items!GaxMKF7LZSd5MHaz'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Raucous Canard
+system:
+  aura:
+    school: trs
+  cl: 1
+  description:
+    value: >-
+      <p>Scheming nobles like to use raucous canards to spread gossip about
+      their enemies. An inactive raucous canard appears to be a small,
+      nondescript piece of rolled-up parchment. Unrolling the parchment allows
+      you to record a messages up to 25 words long. Once you record a message,
+      you can throw the parchment into the air, causing it to animate, sprout
+      small feathery wings, and circle overhead for 10 minutes while loudly
+      repeating the message over and over in a booming voice. Alternatively, you
+      can close the scroll, causing the animation to be triggered the next time
+      someone opens the scroll. After 10 minutes, the raucous canard disappears
+      in a small shower of sparks and is
+      destroyed.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, animate objects, magic mouth</p>
+  price: 100
+  sources:
+    - id: PZO1134
+  subType: wondrous
+type: equipment

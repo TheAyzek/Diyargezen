@@ -1,0 +1,26 @@
+_id: RwTItHCSqEW7p51E
+_key: '!items!RwTItHCSqEW7p51E'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/mace-heavy.PNG
+name: Mace of Blood
+system:
+  aura:
+    school: abj
+  baseTypes:
+    - Heavy Mace
+  cl: 8
+  cursed: true
+  description:
+    value: >-
+      <p>This +3 heavy mace must be coated in blood every day, or else its bonus
+      fades away until the mace is coated again. The character using this mace
+      must make a DC 13 Will save every day it is within her possession or
+      become chaotic evil.</p><p><strong>Base Item</strong>: heavy mace</p>
+  enh: 3
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 8
+type: equipment

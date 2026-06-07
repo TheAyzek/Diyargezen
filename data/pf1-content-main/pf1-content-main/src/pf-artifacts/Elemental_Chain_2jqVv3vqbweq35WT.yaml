@@ -1,0 +1,40 @@
+_id: 2jqVv3vqbweq35WT
+_key: '!items!2jqVv3vqbweq35WT'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/spiked-chain.png
+name: Elemental Chain
+system:
+  artifact: true
+  aura:
+    school: evo
+  baseTypes:
+    - Spiked Chain
+  cl: 20
+  description:
+    value: >-
+      <p>This looks to be just two plain steel rings. But when a mythic creature
+      grasping them expends one use of mythic power as a swift action, they
+      explode into a 10-foot-long spiked fighting chain formed from of the
+      wielder's choice of acid, cold, fire, or electricity. The wielder can
+      dismiss this effect as a free action. The chain is a +6 spiked chain that
+      deals 4d6 points of damage of the chosen type instead of the normal damage
+      typically done by a spiked chain. Once activated, the chain retains it
+      shape for 1 hour or until the wielder dismisses the weapon, whichever
+      comes first.</p><p><strong>Base Item</strong>: spiked chain</p>
+  enh: 6
+  held: 2h
+  material:
+    base:
+      value: steel
+  properties:
+    dis: true
+    fin: true
+    trp: true
+  sources:
+    - id: PZO1126
+  weaponGroups:
+    - flails
+  weight:
+    value: 3
+type: weapon

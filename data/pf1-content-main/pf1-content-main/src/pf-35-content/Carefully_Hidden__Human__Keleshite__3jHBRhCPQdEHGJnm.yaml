@@ -1,0 +1,34 @@
+_id: 3jHBRhCPQdEHGJnm
+_key: '!items!3jHBRhCPQdEHGJnm'
+_stats:
+  coreVersion: '12.343'
+folder: CAxOlglJyXdUOHF9
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Carefully Hidden (Human; Keleshite)
+system:
+  changes:
+    - _id: JKorMCnL
+      formula: '1'
+      target: will
+      type: trait
+  contextNotes:
+    - target: allSavingThrows
+      text: +[[2]] Trait bonus versus divination effects.
+  description:
+    value: >-
+      <p><em>Modern Taldor is not kind to Keleshites. Your life as a member of
+      an unpopular ethnic group has given you an uncanny knack for avoiding
+      detection.</em></p><p><strong>Requirements</strong>: Keleshite Human
+      Heritage</p><p><strong>Benefits</strong>: You gain a +1 trait bonus to
+      Will saves and a +2 trait bonus to saving throws versus divination
+      effects.</p>
+  sources:
+    - id: PZO9405
+      pages: '14'
+  subType: trait
+  tags:
+    - '3.5'
+    - Human
+    - Keleshite
+  traitType: race
+type: feat

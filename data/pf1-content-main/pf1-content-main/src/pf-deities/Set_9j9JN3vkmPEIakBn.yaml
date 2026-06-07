@@ -1,0 +1,32 @@
+_id: 9j9JN3vkmPEIakBn
+_key: '!journal!9j9JN3vkmPEIakBn'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Set
+pages:
+  - _id: 4IoX3N44F5Fqa642
+    _key: '!journal.pages!9j9JN3vkmPEIakBn.4IoX3N44F5Fqa642'
+    _stats:
+      coreVersion: '12.331'
+    name: Set
+    sort: 0
+    text:
+      content: >-
+        <h1>Set</h1><h2>Lord of the Dark Desert</h2>@Source[PZO9080;pages=65]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Set">Set</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Deities of Ancient Osirion<br
+        /><strong>Areas of Concern</strong> Darkness, deserts, murder, storms<br
+        /><strong>Domains</strong> Darkness, Death, Evil, Madness, Weather<br
+        /><strong>Subdomains</strong> Daemon, Loss, Murder, Nightmare, Storms,
+        Undead<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Spear<br
+        /><strong>Symbol</strong> Sha head<br /><strong>Sacred
+        Animal(s)</strong> Sha</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

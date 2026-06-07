@@ -1,0 +1,108 @@
+_id: gh6sxSeK1RNLLFoN
+_key: '!journal!gh6sxSeK1RNLLFoN'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: CMTuXqZ6Ywxqk9Ar
+name: 7.1.5.17. Description
+pages:
+  - _id: dAOaIh2M0GRD8vKh
+    _key: '!journal.pages!gh6sxSeK1RNLLFoN.dAOaIh2M0GRD8vKh'
+    _stats:
+      coreVersion: '12.331'
+    name: 7.1.5.17. Description
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.dS0UkKOINqI2iTDX]{(Index)
+        Magic}</p><p>@Compendium[pf-content.pf-rules.zCeqoMSKdZ8r4EPd]{7.1.
+        Mastering
+        Magic}</p><ul><li><p>@Compendium[pf-content.pf-rules.xdyGkidQGN7vYL1E]{7.1.5.
+        Designing
+        Spells}</p><ul><li>@Compendium[pf-content.pf-rules.7Lc81tg2g1Q6TMPo]{7.1.5.01.
+        The Golden
+        Rule}</li><li>@Compendium[pf-content.pf-rules.DZBAa9axA5Gv4el0]{7.1.5.02.
+        Spell
+        Terminology}</li><li>@Compendium[pf-content.pf-rules.dbb5pwAitIa3cqqj]{7.1.5.03.
+        Intended
+        Level}</li><li>@Compendium[pf-content.pf-rules.1DkXvcE3KMmBww9Z]{7.1.5.04.
+        Function}</li><li>@Compendium[pf-content.pf-rules.Xu1jyIRMERPFh8X6]{7.1.5.05.
+        Spell
+        Research}</li><li>@Compendium[pf-content.pf-rules.fF9HpImlhp8oNX5Q]{7.1.5.06.
+        Spell
+        Damage}</li><li>@Compendium[pf-content.pf-rules.zrMFTIHfzbQTTwZ1]{7.1.5.07.
+        Target}</li><li>@Compendium[pf-content.pf-rules.wsF1rdV2ACkYU3Su]{7.1.5.08.
+        Damage
+        Caps}</li><li>@Compendium[pf-content.pf-rules.9TyMr3XedNUcWVzB]{7.1.5.09.
+        Range}</li><li>@Compendium[pf-content.pf-rules.KlR2PDab6uknvopJ]{7.1.5.10.
+        Duration}</li><li>@Compendium[pf-content.pf-rules.x0E7IZ5imhQ5srrf]{7.1.5.11.
+        Saving
+        Throw}</li><li>@Compendium[pf-content.pf-rules.RRG1A0rBL44Qeskg]{7.1.5.12.
+        Spell
+        Resistance}</li><li>@Compendium[pf-content.pf-rules.kvl8JOILza5HEj7N]{7.1.5.13.
+        Casting
+        Time}</li><li>@Compendium[pf-content.pf-rules.wb9tYgBlWX8peqFl]{7.1.5.14.
+        Components}</li><li>@Compendium[pf-content.pf-rules.PCvwd6PaQH7mD7o6]{7.1.5.15.
+        School}</li><li>@Compendium[pf-content.pf-rules.dmUzb6b2BspbBdDp]{7.1.5.16.
+        Bonus
+        Type}</li><li><strong>@Compendium[pf-content.pf-rules.gh6sxSeK1RNLLFoN]{7.1.5.17.
+        Description}</strong></li><li>@Compendium[pf-content.pf-rules.q6Xva2npOy7fVL42]{7.1.5.18.
+        Hierarchy of Attack
+        Effects}</li><li>@Compendium[pf-content.pf-rules.s6CWKZDo0zQeRXMJ]{7.1.5.19.
+        Depletable
+        Statistics}</li><li>@Compendium[pf-content.pf-rules.r8zYCFuq59NEtjkz]{7.1.5.20.
+        Core is
+        King}</li><li>@Compendium[pf-content.pf-rules.aVUL2wrJszAUzNMK]{7.1.5.21.
+        Multipurpose
+        Spells}</li><li>@Compendium[pf-content.pf-rules.Ak9Ws3Z16GY6QSoH]{7.1.5.22.
+        Choosing
+        Descriptors}</li><li>@Compendium[pf-content.pf-rules.baSlaM24kwB68nuf]{7.1.5.23.
+        Benchmarks}</li></ul></li></ul><hr
+        /><p>@Source[PZO1117;pages=134]</p><p>The description is the meat of the
+        spell, and what you put here is the most important information of
+        all.</p><p>Make sure the spell description is clear and concise.
+        Remember that players are going to refer to the spell description in a
+        hurry during their turn of combat, and if they have to fight their way
+        through flowery language to figure out the details, the resulting delay
+        will annoy other players and the GM. If the spell has several complex
+        effects, put each effect into its own paragraph. If the spell allows the
+        caster to choose from several options, put each option on its own line
+        with an italicized name (see binding for an example).</p><p>Anything
+        that appears in the spell stat block doesn’t need to appear again in the
+        spell description—it’s redundant. For example, the fireball description
+        doesn’t say, “The spell can reach up to 400 feet plus 40 feet per caster
+        level.” Extraneous text like that is just more clutter for the player to
+        sift through when looking up the spell’s effects in the middle of
+        combat.</p><p>Avoid using language that implies something that the game
+        mechanics of the spell don’t back up. For example, a spell’s description
+        shouldn’t say “using the foul powers of necromancy” if the spell doesn’t
+        actually have some sort of evil effect or the evil descriptor. This sort
+        of mistake is most common with necromancy spells, which include not only
+        many obviously evil spells, but also a fair share of helpful ones as
+        well (such as astral projection, gentle repose, and undeath to death).
+        People who read your spell description may not know your intent, and
+        using flavorful language can trick readers into thinking a spell should
+        have additional effects not explicitly spelled out in the
+        description.</p><p>Remember that while you may be designing a spell with
+        a particular character or class in mind, most spells are going to have a
+        broader availability. You have to think of the spell in the hands of the
+        biggest power gamer, and in use by a character who is very different
+        than the one for whom it is designed. Even a simple sorcerer/wizard
+        spell has to deal with two different types of casters: a wizard, who can
+        learn many spells but can only cast a few per day, and a sorcerer, who
+        knows few spells but can cast many per day. A spell that is good for a
+        wizard may be too good when used by a sorcerer because the sorcerer can
+        use it more times per day. Likewise, think of what happens if the PCs
+        can access the spell in potion or scroll form—you may intend for the
+        spell to be rare and for the PCs to not have it most of the time, but a
+        wizard can create scrolls of rarely used spells and save them for just
+        the right opportunity.</p><p>When you finish writing a spell
+        description, have others look it over. They’ll notice things you missed,
+        come up with questions your spell needs to address, and find ways your
+        spell can be abused. Use that feedback to revise the spell.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

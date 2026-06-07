@@ -8,7 +8,7 @@
 
 ## Proje
 - **Ad**: Diyargezer FRP Karakter Yaratıcısı
-- **Konu**: Dört farklı FRP sistemi için detaylı karakter oluşturma, düzenleme ve kaydetme
+- **Konu**: Üç farklı FRP sistemi için detaylı karakter oluşturma, düzenleme ve kaydetme
 - **Platform**: Masaüstü (Windows/macOS/Linux)
 - **Teknolojiler**: Python, CustomTkinter, JSON, ReportLab
 
@@ -18,7 +18,6 @@
 |--------|-----------|
 | **D&D 5e** | 23 ırk, 14 sınıf, 60+ subclass, multiclassing, 4000+ büyü, equipment, level up |
 | **Pathfinder 1e** | 77 ırk, 73 sınıf, 421 feat, 500+ büyü, BAB/saves, skill ranks |
-| **Vampire: The Masquerade 5e** | Klan sistemi, dot system, discipline'ler, hunger/blood potency |
 | **Mutants & Masterminds 3e** | Power Level sistemi, PL limit validasyonu, power points economy |
 
 ## Özellikler
@@ -29,9 +28,9 @@
 - Multiclassing (prerequisite kontrolü, spell slot birleştirme, hit dice)
 - Condition/Status Effect takibi (15 standart D&D condition + ekstra)
 
-### Araçlar (Tüm 4 Sistemde)
+### Araçlar (Tüm 3 Sistemde)
 - **Encounter Tracker**: Savaş sırası, initiative, HP takibi, tur sayacı, hasar/şifa
-- **Homebrew İçerik Yöneticisi**: Özel sınıf/ırk/büyü/güç/klan/disiplin ekleme
+- **Homebrew İçerik Yöneticisi**: Özel sınıf/ırk/büyü/güç ekleme
 - **Karakter Portreleri**: Resim ekleme/görüntüleme, çoklu format desteği
 - **HTML/Web Export**: Responsive karakter kağıdı, sistem bazlı temalar
 
@@ -74,7 +73,6 @@ Diyargezer/
 │   ├── base_creator.py        # Abstract base class
 │   ├── dnd5e_creator.py       # D&D 5e
 │   ├── pathfinder1e_creator.py # Pathfinder 1e
-│   ├── vtm5e_creator.py       # VtM 5e
 │   └── mm3e_creator.py        # M&M 3e
 ├── utils/
 │   ├── calculations.py        # D&D hesaplamalar
@@ -91,8 +89,7 @@ Diyargezer/
 ├── data/
 │   ├── dnd_data.json          # D&D 5e verileri
 │   ├── pathfinder_1e_data.json # Pathfinder verileri
-│   ├── mm_data.json           # M&M verileri
-│   └── vtm_data.json          # VtM verileri
+│   └── mm_data.json           # M&M verileri
 ├── tests/
 │   ├── test_creators.py       # Creator testleri
 │   └── test_new_features.py   # Özellik testleri (50+)

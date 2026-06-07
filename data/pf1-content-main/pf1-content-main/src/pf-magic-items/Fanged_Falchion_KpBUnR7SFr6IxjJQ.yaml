@@ -1,0 +1,66 @@
+_id: KpBUnR7SFr6IxjJQ
+_key: '!items!KpBUnR7SFr6IxjJQ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/falchion.PNG
+name: Fanged Falchion
+system:
+  actions:
+    - _id: crdzctub2pch5wyv
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: fangedFalchion
+  aura:
+    custom: true
+    school: transmutation [evil]
+  baseTypes:
+    - Falchion
+  cl: 11
+  description:
+    value: >-
+      <p>The blade of this brutal-looking falchion is serrated, forming the
+      fangs of the stylized etching of a jackal's profile on the shimmering
+      metal. Such weapons are fashioned in honor of Lamashtu and are favored by
+      her most powerful cultists as weapons not only for battle, but also for
+      sacrifice.  A fanged falchion is a +1 unholy falchion and wounds caused by
+      the weapon's serrated edge are horrifically ragged and bleed profusely.
+      Whenever a fanged falchion's wielder scores a successful critical hit with
+      it, the sword's blade animates and chews at its victim In addition to
+      doing damage for the critical hit, this horrific chewing deals 2 points of
+      Constitution damage and stuns the victim for 1 round (Fort DC 15 negates).
+      Creatures immune to critical hits are immune to this Constitution damage
+      and the stun effect.<p><strong>Base Item</strong>: unholy
+      falchion</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, harm, unholy blight, creator must be evil</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 22375
+  showInQuickbar: false
+  sources:
+    - id: PZO1002
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 8
+type: weapon

@@ -1,0 +1,20 @@
+_id: XzBgL47JTY0GFD0b
+_key: '!items!XzBgL47JTY0GFD0b'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Frantically Nimble
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Dares</strong></p><p>While this dare is active, you
+      gain a +2 dodge bonus to AC. You regain 1 grit or panache point when any
+      enemy making a ranged or melee attack against you misses you three
+      consecutive times. The attacks need not come from the same enemy.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Dares
+type: feat

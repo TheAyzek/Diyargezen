@@ -1,0 +1,23 @@
+_id: P5mYw7Gvwqy58w2w
+_key: '!items!P5mYw7Gvwqy58w2w'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Warning Shot
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>At 7th level as a standard
+      action, a thronewarden with at least 1 grit point can purposely miss a
+      creature that she could normally target with a firearm attack and make it
+      second-guess its actions. The creature is staggered on its next turn. If a
+      thronewarden uses this ability in a surprise round on a creature that has
+      not yet acted, that creature instead loses its surprise-round action if it
+      has one.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

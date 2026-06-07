@@ -1,0 +1,47 @@
+_id: cJwRnoPfL5fHbRWO
+_key: '!items!cJwRnoPfL5fHbRWO'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-heavy-metal.png
+name: Belligerent Shield
+system:
+  armor:
+    acp: 2
+    material:
+      base:
+        value: steel
+    value: 2
+  aura:
+    school: trs
+  baseTypes:
+    - Heavy Steel Shield
+  cl: 12
+  description:
+    value: >-
+      <p>This +1 animated bashing heavy steel shield rattles in anticipation
+      during battle. When loosed into the air to defend its wearer, the
+      belligerent shield attacks as well as defends. Each round starting the
+      round after animation, the shield makes a single shield bash attack
+      against a foe of its wearer's choice within the wearer's reach. This works
+      as a standard shield bash attack using the wearer's normal attack bonus
+      with the shield, except that the wearer retains the shield bonus to AC,
+      and while the shield's attack is treated as an off-hand attack, the wearer
+      does not take off-hand penalties on her own attacks unless she is fighting
+      with two weapons herself. If the wearer has any feats or abilities that
+      benefit shield bashing attacks, they apply to attacks made by the
+      belligerent shield.</p><p><strong>Base Item</strong>: animated
+      bashing</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, bull's strength, animate objects</p>
+  enh: 1
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 36170
+  slot: shield
+  sources:
+    - id: PZO1123
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 15
+type: equipment

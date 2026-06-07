@@ -1,0 +1,21 @@
+_id: 1NYRKfJpdb3u3BLI
+_key: '!items!1NYRKfJpdb3u3BLI'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_15.jpg
+name: Devilbane Withering
+system:
+  associations:
+    classes:
+      - Mesmerist
+  description:
+    value: >-
+      <p><strong>Mesmerist Devilbane Gaze</strong></p><p>The hypnotic stare
+      penalty also applies to attack rolls and damage rolls, but only if the
+      target is an outsider. Unlike most devilbane gazes, this gaze has no
+      effect on creatures not of the outsider type, and effect's penalty isn't
+      doubled when it targets outsiders.</p>
+  subType: classFeat
+  tags:
+    - Mesmerist Devilbane Gaze
+type: feat

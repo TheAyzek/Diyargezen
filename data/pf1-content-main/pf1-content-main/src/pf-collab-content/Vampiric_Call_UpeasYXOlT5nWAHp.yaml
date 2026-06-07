@@ -1,0 +1,38 @@
+_id: UpeasYXOlT5nWAHp
+_key: '!items!UpeasYXOlT5nWAHp'
+_stats:
+  coreVersion: '12.331'
+folder: 95XArHh4WxRbxYHQ
+img: systems/pf1/icons/skills/beast_02.jpg
+name: Vampiric Call
+system:
+  abilityType: su
+  actions:
+    - _id: xfjrh6i14dgczv4p
+      activation:
+        type: passive
+        unchained:
+          type: passive
+      name: Use
+  associations:
+    classes:
+      - Vampire Hunter
+  changes:
+    - _id: ltdmlj0m
+      formula: >-
+        ifelse(gte(@class.level, 16), 4, (if((and(lt(@class.level, 16),
+        gt(@class.level, 7))), 2)))
+      target: ac
+      type: deflection
+  description:
+    value: >-
+      <p>The vampire hunter summons base creatures of the night—bats, rats,
+      insects, and the like—to swarm around him. These creatures provide a
+      measure of defense against damage, granting the vampire hunter a number of
+      <em>temporary hit points</em> equal to his level. At 8th level, he also
+      gains a +2 <em>deflection bonus</em> to AC. At 16th level, the
+      <em>deflection bonus</em> increases to +4.</p>
+  sources:
+    - title: Pathfinder - The World of Vampire Hunter D
+  subType: classFeat
+type: feat

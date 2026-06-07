@@ -1,0 +1,62 @@
+_id: vUSMfnFRaRsOlkfi
+_key: '!items!vUSMfnFRaRsOlkfi'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/thrown/bomb-fuse-black.webp
+name: Dimensional Grenade
+system:
+  actions:
+    - _id: v7r7ump2hat9d6hh
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: dimensionalGrenade
+  aura:
+    school: con
+  baseTypes:
+    - M1914 Concussion Grenade
+  cl: 7
+  description:
+    value: >-
+      <p>This M1914 concussion grenade (see page 66) can be thrown up to 680
+      feet away, as it teleports itself directly to the target location when
+      thrown. This allows a dimensional grenade to be thrown even at targets
+      behind cover, including total cover. The wielder does not need to attempt
+      an attack roll; the dimensional grenade simply appears in the target
+      location and detonates at the beginning the wielder's next turn. A
+      dimensional grenade deals 3d6 points of force damage in a 15-foot radius
+      (Reflex DC 15 for half). In addition, any creature damaged by the
+      grenade's blast must succeed at a DC 16 Will save or be dazed for 1 round.
+      The grenade is consumed in the attack.</p><p><strong>Base Item</strong>:
+      M1914 concussion
+      grenade</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, dimension door, mass daze</p>
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 1450
+  properties:
+    spc: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9071
+  weight:
+    value: 1
+type: weapon

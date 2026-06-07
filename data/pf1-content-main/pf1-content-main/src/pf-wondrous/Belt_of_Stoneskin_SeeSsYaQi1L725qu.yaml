@@ -1,0 +1,45 @@
+_id: SeeSsYaQi1L725qu
+_key: '!items!SeeSsYaQi1L725qu'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/equipment/waist/belt-coiled-leather-steel.webp
+name: Belt of Stoneskin
+system:
+  actions:
+    - _id: w4V8GiCyJG4kSO6q
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Absorb HP damage
+  aura:
+    school: abj
+  cl: 10
+  description:
+    unidentified: <p>This belt is unremarkable.</p>
+    value: >-
+      <h3>Effect</h3><p>Every 24 hours, this belt's wearer gains DR
+      10/adamantine until the belt absorbs 100 points of damage, at which point
+      the belt becomes useless for the remainder of the 24-hour period. When
+      first worn, or after each time this belt is taken off, it must worn for 24
+      consecutive hours in order for its magic to take effect
+      again.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      @UUID[Compendium.pf1.spells.Item.knyako6zopc1chrv]{Stoneskin}, creator
+      must be an oread or a creature with the earth subtype
+      <strong>Cost</strong> 30,000 gp</p>
+  price: 60000
+  slot: belt
+  sources:
+    - id: PZO1123
+    - id: PZO1121
+      pages: '148'
+  subType: wondrous
+  uses:
+    maxFormula: '100'
+    per: day
+    value: 100
+  weight:
+    value: 10
+type: equipment

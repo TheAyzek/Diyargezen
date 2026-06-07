@@ -1,0 +1,44 @@
+_id: U3LpU9SkzX7ZZcsd
+_key: '!journal!U3LpU9SkzX7ZZcsd'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Kalma
+pages:
+  - _id: awtBBpUj8cvfHlam
+    _key: '!journal.pages!U3LpU9SkzX7ZZcsd.awtBBpUj8cvfHlam'
+    _stats:
+      coreVersion: '12.331'
+    name: Kalma
+    sort: 0
+    text:
+      content: >-
+        <h1>Kalma</h1><h2>The Rasping Count</h2>@Source[PZO9267;pages=326] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Kalma">Kalma</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Infernal Dukes<br /><strong>Areas of
+        Concern</strong> Burial rites, death, insects<br
+        /><strong>Domains</strong> Animal, Death, Evil, Law<br
+        /><strong>Subdomains</strong> Devil (Evil), Devil (Law), Murder,
+        Slavery, Undead<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Heavy pick<br
+        /><strong>Symbol</strong> Cricket on tombstone<br /><strong>Sacred
+        Animal(s)</strong> Cricket<br /><strong>Sacred Color(s)</strong> Black,
+        brown</p><h3>Obedience</h3><p>Pray over an unburied corpse. Gain a +4
+        profane bonus on saving throws against death effects.</p><h2>Boons -
+        Infernal Dukes</h2>@Source[PZO1139;pages=117]<br />The Lords of Hell,
+        the Dukes of Perdition, and the Princes of Damnation are all names for
+        the infamous nobility of the Pit- the elite caste of devilkind known as
+        the infernal dukes.<p> All infernal dukes are lawful evil and range in
+        power from CR 26 to CR 27. The boons they grant are less complex than
+        those granted by archdevils, manifesting as spell-like abilities usable
+        once per day each.</p><p><strong>1</strong>: <em>stinking cloud</em><br
+        /><strong>2</strong>: <em>finger of death</em><br /><strong>3</strong>:
+        <em>crushing hand</em></p><h2>For Followers of
+        Kalma</h2><h3>Feats</h3><p><em>Hellish Shackles</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

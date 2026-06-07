@@ -1,0 +1,60 @@
+_id: YiMRoaDLnVWCEY0h
+_key: '!items!YiMRoaDLnVWCEY0h'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/earthbreaker.PNG
+name: Storval's Thunder
+system:
+  actions:
+    - _id: it0n40h2efeslg1y
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: storvalsThunder
+  aura:
+    school: trs
+  baseTypes:
+    - Earth Breaker
+  cl: 8
+  description:
+    value: >-
+      <p>The hematite head of this +1 earth breaker crackles with electricity,
+      dealing an additional 1d6 points of electricity and 1d6 points of sonic
+      damage on each hit. Three times per day, after a confirmed critical hit,
+      the wielder can trigger a great thunderclap as an immediate action,
+      stunning the target of the critical hit for 1 round unless that target
+      succeeds at a DC 16 Fortitude save.</p><p><strong>Base Item</strong>:
+      earth breaker</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, lightning bolt, sound burst, creator must be a
+      Shoanti</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 50340
+  showInQuickbar: false
+  sources:
+    - id: PZO9280
+  weaponGroups:
+    - hammers
+  weight:
+    value: 14
+type: weapon

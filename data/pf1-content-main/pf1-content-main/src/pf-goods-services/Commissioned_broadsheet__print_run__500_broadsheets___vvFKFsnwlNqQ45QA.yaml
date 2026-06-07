@@ -1,0 +1,34 @@
+_id: vvFKFsnwlNqQ45QA
+_key: '!items!vvFKFsnwlNqQ45QA'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/documents/document-official-capital.webp
+name: Commissioned broadsheet (print run (500 broadsheets))
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 150 gp (print run (500 broadsheets)), 50 gp
+      (setup and proof print); <strong>Weight</strong> - (print run (500
+      broadsheets)), - (setup and proof print)</p><h2>Description</h2><p>It
+      takes 2 to 4 weeks for printers reproducing large images or those who have
+      only engraved-plate printing presses to prepare the plate for a
+      commissioned broadsheet. Printers with movable-type printing presses can
+      prepare a text-only broadsheet in as little as 4 hours. Once the setup is
+      complete (which includes a proof print), the printer can produce up to 500
+      copies of the broadsheet daily (about 60 per hour). A commissioned
+      broadsheet can be used to spread a rumor requiring the author to attempt
+      any necessary skill checks. The author takes a -8 penalty on these checks
+      because the broadsheet cannot provide vocal or nonverbal cues, but if he's
+      successful, spreading the rumor takes only 1d4 days (or 1 day, if smaller
+      than a small town). If the broadsheets are delivered by trained criers or
+      others attempting to spread the rumor, use the propaganda check result of
+      either the author or the crier (whichever is higher) with a +2 bonus.</p>
+  equipped: false
+  price: 150
+  sources:
+    - id: PZO9489
+      pages: '5'
+  subType: tradeGoods
+  tags:
+    - Lodging/Services
+type: loot

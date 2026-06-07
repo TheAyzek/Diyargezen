@@ -1,0 +1,41 @@
+_id: 6nKEeuxT1x4fnYka
+_key: '!items!6nKEeuxT1x4fnYka'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/chain-shirt.png
+name: Mail of Sly Steps
+system:
+  armor:
+    acp: 2
+    dex: 4
+    material:
+      base:
+        value: steel
+    value: 4
+  aura:
+    school: trs
+  baseTypes:
+    - Chain Shirt
+  cl: 6
+  description:
+    value: >-
+      <p>Thanks to the unusually light and fine links of this halfling-made +2
+      chain shirt, it imposes no armor check penalty and the wearer's maximum
+      Dexterity bonus is +5. After a melee attack hits the wearer, he can take a
+      5-foot step as an immediate action, even if he already took a 5-foot step
+      during his turn. Taking such a step does not interfere with the wearer's
+      movement during his next turn. A suit of mail of sly steps is usually
+      sized for Small creatures.</p><p><strong>Base Item</strong>: chain
+      shirt</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, expeditious retreat, creator must be a halfling</p>
+  enh: 2
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 25900
+  sources:
+    - id: PZO9280
+  spellFailure: 20
+  weight:
+    value: 5
+type: equipment

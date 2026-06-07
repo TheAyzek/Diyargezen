@@ -1,0 +1,39 @@
+_id: LupXfAeIpCX7kSsy
+_key: '!items!LupXfAeIpCX7kSsy'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/hide-armor.PNG
+name: Pelt of the Demon Mother
+system:
+  armor:
+    acp: 3
+    dex: 4
+    material:
+      base:
+        value: leather
+    value: 4
+  aura:
+    school: nec
+  baseTypes:
+    - Hide Armor
+  cl: 3
+  description:
+    value: >-
+      <p>This +1 hide armor appears to be made from a horrific amalgam of rotted
+      animal pelts and animal bones, and is usually decorated with the skulls of
+      tiny rodents or vermin and trimmed with the fur of a black wolf. The
+      wearer can use disguise self and unnatural lust each once per
+      day.</p><p><strong>Base Item</strong>: hide
+      armor</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, disguise self, unnatural lust</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 3325
+  sources:
+    - id: PZO9267
+  spellFailure: 20
+  weight:
+    value: 25
+type: equipment

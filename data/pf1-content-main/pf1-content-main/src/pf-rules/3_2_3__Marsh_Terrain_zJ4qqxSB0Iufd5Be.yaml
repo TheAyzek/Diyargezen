@@ -1,0 +1,113 @@
+_id: zJ4qqxSB0Iufd5Be
+_key: '!journal!zJ4qqxSB0Iufd5Be'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: br8fwJFrbgshQXJz
+name: 3.2.3. Marsh Terrain
+pages:
+  - _id: fXisSLVEFgdeCncg
+    _key: '!journal.pages!zJ4qqxSB0Iufd5Be.fXisSLVEFgdeCncg'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.2.3. Marsh Terrain
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.CPUpraqn1jz9vhMh]{3.2.
+        Wilderness}</p><ul><li>@Compendium[pf-content.pf-rules.QrderWyxAp6RUvtz]{3.2.1.
+        Getting
+        Lost}</li><li>@Compendium[pf-content.pf-rules.pcu8vDTPaIYw82SU]{3.2.2.
+        Forest
+        Terrain}</li><li><strong>@Compendium[pf-content.pf-rules.zJ4qqxSB0Iufd5Be]{3.2.3.
+        Marsh
+        Terrain}</strong></li><li>@Compendium[pf-content.pf-rules.RVKULXygOAXTZ1WC]{3.2.4.
+        Hills
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.B5qjfHf1pFgEA7bg]{3.2.5.
+        Mountain
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.tuZEOzPezZUbz4Fj]{3.2.5.2.
+        Mountain
+        Travel}</li><li>@Compendium[pf-content.pf-rules.3YyU7Yg6wbShgOKM]{3.2.6.
+        Desert
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.QOCypcVHE6zpYlyD]{3.2.7.
+        Plains
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.xiRC5p84P3tFW9mo]{3.2.8.
+        Aquatic Terrain}</li></ul><hr /><p>@Source[PZO1110;pages=427]</p><p>Two
+        categories of marsh exist: relatively dry moors and watery swamps. Both
+        are often bordered by lakes (described in
+        @Compendium[pf-content.pf-rules.xiRC5p84P3tFW9mo]{3.2.8. Aquatic
+        Terrain}), which are effectively a third category of terrain found in
+        marshes.</p><hr /><table><thead><tr><td>Marsh Category</td></tr><tr><td>
+        </td><td>Moor</td><td>Swamp</td></tr></thead><tbody><tr><td>Shallow
+        bog</td><td>20%</td><td>40%</td></tr><tr><td>Deep
+        bog</td><td>5%</td><td>20%</td></tr><tr><td>Light
+        undergrowth</td><td>30%</td><td>20%</td></tr><tr><td>Heavy
+        undergrowth</td><td>10%</td><td>20%</td></tr></tbody></table><hr
+        /><h2>Bogs</h2><p>If a square is part of a shallow bog, it has deep mud
+        or standing water of about 1 foot in depth. It costs 2 squares of
+        movement to move into a square with a shallow bog, and the DC of
+        Acrobatics checks in such a square increases by 2.</p><p>A square that
+        is part of a deep bog has roughly 4 feet of standing water. It costs
+        Medium or larger creatures 4 squares of movement to move into a square
+        with a deep bog, or characters can swim if they wish. Small or smaller
+        creatures must swim to move through a deep bog. Tumbling is impossible
+        in a deep bog.</p><p>The water in a deep bog provides cover for Medium
+        or larger creatures. Smaller creatures gain improved cover (+8 bonus to
+        AC, +4 bonus on Reflex saves). Medium or larger creatures can crouch as
+        a move action to gain this improved cover. Creatures with this improved
+        cover take a –10 penalty on attacks against creatures that aren’t
+        underwater.</p><p>Deep bog squares are usually clustered together and
+        surrounded by an irregular ring of shallow bog squares. Both shallow and
+        deep bogs increase the DC of Stealth checks by
+        2.</p><h2>Undergrowth</h2><p>The bushes, rushes, and other tall grasses
+        in marshes function as undergrowth does in a forest. A square that is
+        part of a bog does not also have
+        undergrowth.</p><h2>Quicksand</h2><p>Patches of quicksand present a
+        deceptively solid appearance (appearing as undergrowth or open land)
+        that might trap careless characters. A character approaching a patch of
+        quicksand at a normal pace is entitled to a DC 15 Survival check to spot
+        the danger before stepping in, but charging or running characters don’t
+        have a chance to detect a hidden patch before blundering into it. A
+        typical patch of quicksand is 20 feet in diameter; the momentum of a
+        charging or running character carries him 1d2 × 5 feet into the
+        quicksand.</p><h2>Effects of Quicksand</h2><p>Characters in quicksand
+        must make a DC 10 Swim check every round to simply tread water in place,
+        or a DC 15 Swim check to move 5 feet in whatever direction is desired.
+        If a trapped character fails this check by 5 or more, he sinks below the
+        surface and begins to drown whenever he can no longer hold his breath
+        (see the
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.xhmDhOXuBbfVcD0Q]{Swim}
+        skill ).</p><p>Characters below the surface of quicksand may swim back
+        to the surface with a successful Swim check (DC 15, +1 per consecutive
+        round of being under the surface).</p><h2>Rescue</h2><p>Pulling out a
+        character trapped in quicksand can be difficult. A rescuer needs a
+        branch, spear haft, rope, or similar tool that enables him to reach the
+        victim with one end of it. Then he must make a DC 15 Strength check to
+        successfully pull the victim, and the victim must make a DC 10 Strength
+        check to hold onto the branch, pole, or rope. If both checks succeed,
+        the victim is pulled 5 feet closer to safety. If the victim fails to
+        hold on, he must make a DC 15 Swim check immediately to stay above the
+        surface.</p><h2>Hedgerows</h2><p>Common in moors, hedgerows are tangles
+        of stones, soil, and thorny bushes. Narrow hedgerows function as low
+        walls, and it takes 3 squares of movement to cross them. Wide hedgerows
+        are more than 5 feet tall and take up entire squares. They provide total
+        cover, just as a wall does. It takes 4 squares of movement to move
+        through a square with a wide hedgerow; creatures that succeed on a DC 10
+        Climb check need only 2 squares of movement to move through the
+        square.</p><h2>Other Marsh Terrain Elements</h2><p>Some marshes,
+        particularly swamps, have trees just as forests do, usually clustered in
+        small stands. Paths lead across many marshes, winding to avoid bog
+        areas. As in forests, paths allow normal movement and don’t provide the
+        concealment that undergrowth does.</p><h2>Stealth and Detection in a
+        Marsh</h2><p>In a marsh, the maximum distance at which a Perception
+        check for detecting the nearby presence of others can succeed is 6d6 ×
+        10 feet. In a swamp, this distance is 2d8 × 10 feet. Undergrowth and
+        deep bogs provide plentiful concealment, so it’s easy to use Stealth in
+        a marsh.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

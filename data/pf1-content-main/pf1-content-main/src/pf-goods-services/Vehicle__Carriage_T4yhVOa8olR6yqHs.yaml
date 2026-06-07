@@ -1,0 +1,21 @@
+_id: T4yhVOa8olR6yqHs
+_key: '!items!T4yhVOa8olR6yqHs'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/wood/wood-wheel-brown.webp
+name: Vehicle, Carriage
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 100 gp; <strong>Price of Passage (per
+      mile)</strong> 3 cp</p><p>This four-wheeled vehicle can transport as many
+      as four people within an enclosed cab, plus two drivers. In general, two
+      horses (or other beasts of burden) draw it. A carriage comes with the
+      harness needed to pull it.</p>
+  equipped: false
+  price: 100
+  sources:
+    - id: PZO1123
+      pages: '87'
+  subType: vehicle
+type: loot

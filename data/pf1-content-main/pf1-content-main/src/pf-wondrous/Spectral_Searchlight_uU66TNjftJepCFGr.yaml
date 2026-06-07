@@ -1,0 +1,30 @@
+_id: uU66TNjftJepCFGr
+_key: '!items!uU66TNjftJepCFGr'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Spectral Searchlight
+system:
+  aura:
+    custom: true
+    school: divination and evocation [light]
+  cl: 3
+  description:
+    value: >-
+      <p>Created by Rasputin and the Russian inventor Viktor Miloslav, this
+      carbon-arc spotlight provides normal light in a 360- foot line and
+      increases the light level by one step in the area beyond that, out to a
+      720-foot line (darkness becomes dim light and dim light becomes normal
+      light). A spectral searchlight also reveals ethereal or invisible
+      creatures or objects in its area of effect. Spectral searchlights are
+      normally mounted in watchtowers or atop two-wheeled carts for easier
+      transport.<h3>Requirements</h3><p>Craft Wondrous Item, continual flame,
+      see invisibility</p>
+  price: 24050
+  sources:
+    - id: PZO9071
+  subType: wondrous
+  weight:
+    value: 200
+type: equipment

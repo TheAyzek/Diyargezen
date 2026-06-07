@@ -1,0 +1,65 @@
+_id: oHWtvIA4JmcIPlvi
+_key: '!items!oHWtvIA4JmcIPlvi'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/explosion-sky-2.jpg
+name: Firework (sparking pinwheel)
+system:
+  actions:
+    - _id: km6mqxmsr3um7kq4
+      ability:
+        critMult: 1
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - {}
+          - {}
+      img: systems/pf1/icons/spells/explosion-sky-2.jpg
+      name: Use
+      notes:
+        effect:
+          - see text
+      range:
+        units: ft
+        value: '0'
+      save:
+        dc: '14'
+        type: ref
+      tag: fireworkSparkingPinwheel
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Weapons</p><p>This disk of paper
+      or light cloth is stretched over a frame of thin wooden supports, with
+      tubes of paper or cured hide spaced evenly around the rim. The whole
+      firework is mounted on a spike or peg and placed on the ground. At the end
+      of the round when it's lit, it spins rapidly and sheds a curtain of
+      dazzling sparks 15 feet wide. The curtain of sparks obscures vision,
+      granting concealment against creatures on the opposite side. A sparking
+      pinwheel burns for 1d4+1 rounds, and any creature that begins its turn
+      adjacent to the curtain of sparks takes 1 point of fire damage and is
+      dazzled for 1d4 rounds (Reflex DC 14 negates). Creatures that pass through
+      the curtain of sparks take 1d4 points of fire damage and are blinded for 1
+      round (a successful save halves the damage and negates the blindness). If
+      not mounted on a solid, immobile object, a sparking pinwheel cannot spin
+      smoothly and instead fills a single 5-foot square with a shower of sparks;
+      its effects are otherwise unchanged for creatures adjacent to or passing
+      through that square.</p><h2>Alchemical
+      Recipe</h2><p><strong>Recipe</strong> (5 black powder + 15 magnesium + 30
+      phosphorus)/calcination; <strong>Craft</strong>
+      25</p><p><strong>Time</strong> 1 hour; <strong>Tools</strong> crucible;
+      <strong>Type</strong> alchemical weapon</p>
+  price: 60
+  sources:
+    - id: PZO9445
+      pages: '29'
+  subType: misc
+  tags:
+    - Alchemical Weapons
+  weight:
+    value: 1
+type: consumable

@@ -1,0 +1,30 @@
+_id: krWtCECOw9HkGXsE
+_key: '!items!krWtCECOw9HkGXsE'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Cloak of the Crusader
+system:
+  aura:
+    school: enc
+  cl: 1
+  description:
+    value: >-
+      <p>This brilliant red cloak bears a golden symbol of an upright winged
+      sword. The wearer can use bless once per day.  If Iomedae is the wearer's
+      patron, the wearer gains a +1 enhancement bonus to natural armor. As a
+      standard action, the wearer can create an illusory image of Iomedae's
+      banner, which floats 2 to 5 feet above the wearer's head and remains in
+      place as long as the wearer is conscious. If the wearer has the banner
+      class feature, she can use this battle standard as her
+      banner.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, barkskin, bless, silent image</p>
+  price: 2700
+  slot: shoulders
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

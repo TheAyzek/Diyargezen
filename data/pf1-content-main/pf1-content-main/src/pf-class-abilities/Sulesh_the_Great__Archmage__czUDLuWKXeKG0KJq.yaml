@@ -1,0 +1,39 @@
+_id: czUDLuWKXeKG0KJq
+_key: '!items!czUDLuWKXeKG0KJq'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_37.jpg
+name: Sulesh the Great (Archmage)
+system:
+  associations:
+    classes:
+      - Medium
+  description:
+    value: >-
+      <p><strong>Medium Legendary Spirit</strong></p><p>A powerful genie binder
+      from the Padishah Empire of Kelesh, Sulesh the Great created many famed
+      genie seals, including the artifact known as the Bottle of the Bound,
+      which houses 666 fiends.</p><p><strong>Gaining Favor</strong>: To gain
+      Sulesh's favor, you must travel to the Padishah Empire of Kelesh, or to
+      any place where genie binders exist, and prove your knowledge about all
+      manner of genies. This requires a successful Intelligence check. You must
+      then vow to never release a genie from its bonds, even if you did not bind
+      it. Sulesh the Great then answers your
+      call.</p><p><strong>Taboos</strong>: If you accept a taboo while
+      channeling Sulesh, you must not suffer the presence of a rival's summoned
+      creatures and must target them if possible during combat, even if doing so
+      would be disadvantageous to your allies.</p><p><strong>Sulesh's Spells
+      (Lesser, Su)</strong>: Sulesh always grants summon monster I-VI, plus the
+      cantrip detect magic. This ability alters archmage
+      arcana.</p><p><strong>Master Summoner (Intermediate, Su)</strong>: A
+      number of times per day equal to 1/2 your medium level (minimum 1), you
+      can cast any summon monster spell as a standard action instead of a
+      full-round action. Additionally, you can allow Sulesh to gain 1 point of
+      influence over you and expend one of your highest-level spell slots to
+      summon a monster that can be summoned with a summon monster spell 1 level
+      higher than the highest one you can cast. This ability replaces arcane
+      surge.</p>
+  subType: classFeat
+  tags:
+    - Medium Legendary Spirit
+type: feat

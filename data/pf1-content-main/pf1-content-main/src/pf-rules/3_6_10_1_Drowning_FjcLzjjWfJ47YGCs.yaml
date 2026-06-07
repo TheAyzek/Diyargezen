@@ -1,0 +1,29 @@
+_id: FjcLzjjWfJ47YGCs
+_key: '!journal!FjcLzjjWfJ47YGCs'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: dNglrJwmVUUfnonT
+name: 3.6.10.1 Drowning
+pages:
+  - _id: uFz20PrTo5F3U07M
+    _key: '!journal.pages!FjcLzjjWfJ47YGCs.uFz20PrTo5F3U07M'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.6.10.1 Drowning
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.cWT946eZ614UBXMT]{3.6.
+        Environmental
+        Rules}</p><ul><li><p>@Compendium[pf-content.pf-rules.dErmNWeOdWiEyQVB]{3.6.10.
+        Water
+        Dangers}</p><ul><li><strong>@Compendium[pf-content.pf-rules.FjcLzjjWfJ47YGCs]{3.6.10.1
+        Drowning}</strong></li></ul></li></ul><hr />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

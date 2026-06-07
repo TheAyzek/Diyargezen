@@ -1,0 +1,29 @@
+_id: mgzVjN7rxGdG5cOf
+_key: '!items!mgzVjN7rxGdG5cOf'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Dreamwing Cape
+system:
+  aura:
+    school: con
+  cl: 7
+  description:
+    value: >-
+      <p>This knee-length cape is decorated with images of butterflies, moths,
+      and stars. Once per day, the wearer can speak a command word to cause the
+      cape to transform into a cloud of butterflies or moths. This functions as
+      cape of wasps, except the swarm doesn't deal poison damage and deals full
+      damage to incorporeal creatures.  In addition, the wearer can use
+      glitterdust once per
+      day.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, cape of wasps, glitterdust</p>
+  price: 17500
+  slot: shoulders
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

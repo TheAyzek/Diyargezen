@@ -1,0 +1,24 @@
+_id: Rln5iFNVKvK4YBRe
+_key: '!items!Rln5iFNVKvK4YBRe'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Rechargeable Cube of Force
+system:
+  aura:
+    school: evo
+  cl: 10
+  description:
+    value: >-
+      <p>This cube functions like a cube of force except that it can be
+      recharged by casting a wall of force spell into it. Each spell cast in
+      this manner adds 2 charges to the cube. The cube cannot hold more than 36
+      charges.</p><h3>Requirements</h3><p>Craft Wondrous Item, wall of force</p>
+  price: 70000
+  sources:
+    - id: PZO9220
+  subType: wondrous
+  weight:
+    value: 0.5
+type: equipment

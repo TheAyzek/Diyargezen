@@ -1,0 +1,35 @@
+_id: q1oQZAgSO0YSt6RW
+_key: '!journal!q1oQZAgSO0YSt6RW'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Rhan-Tegoth
+pages:
+  - _id: iXIsVZY3xOMGJ3rX
+    _key: '!journal.pages!q1oQZAgSO0YSt6RW.iXIsVZY3xOMGJ3rX'
+    _stats:
+      coreVersion: '12.331'
+    name: Rhan-Tegoth
+    sort: 0
+    text:
+      content: >-
+        <h1>Rhan-Tegoth</h1><h2>Herald of the End
+        Times</h2>@Source[PZO90109;pages=71] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Rhan-Tegoth">Rhan-Tegoth</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Great Old Ones<br /><strong>Areas of
+        Concern</strong> Hibernation, immortality, ruin<br
+        /><strong>Domains</strong> Chaos, Evil, Repose, Void<br
+        /><strong>Subdomains</strong> Ancestors, Dark Tapestry, Entropy,
+        Stars<br /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Sickle<br /><strong>Symbol</strong>
+        Three black stars</p><h2>For Followers of
+        Rhan-Tegoth</h2><h3>Feats</h3><p>Dreamed Secrets</p><h3>Magic Items -
+        Wondrous Items</h3><p>Preklikin's Book of
+        Cults</p><h3>Traits</h3><p>Unspeakable Bond</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

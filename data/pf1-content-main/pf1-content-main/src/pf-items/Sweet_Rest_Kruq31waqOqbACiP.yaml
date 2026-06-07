@@ -1,0 +1,25 @@
+_id: Kruq31waqOqbACiP
+_key: '!items!Kruq31waqOqbACiP'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/unique-1.jpg
+name: Sweet Rest
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Remedies</p><p>When imbibed, this
+      effervescent solution causes a heavy warmth to spread from your stomach
+      outward to your limbs, resulting in feelings of security and well-being.
+      If you sleep for at least 1 hour after consuming the solution, the next
+      time within the next 24 hours that you attempt a saving throw to remove a
+      temporary negative level, you can roll the save twice and use the better
+      result. Crafting this item requires a successful DC 20 Craft (alchemy)
+      check.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      20</p>
+  price: 75
+  sources:
+    - id: PZO90139
+      pages: '63'
+  tags:
+    - Alchemical Remedies
+type: consumable

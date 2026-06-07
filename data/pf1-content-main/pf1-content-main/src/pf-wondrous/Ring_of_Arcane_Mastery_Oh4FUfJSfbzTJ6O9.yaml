@@ -1,0 +1,36 @@
+_id: Oh4FUfJSfbzTJ6O9
+_key: '!items!Oh4FUfJSfbzTJ6O9'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Arcane Mastery
+system:
+  aura:
+    custom: true
+    school: abjuration and evocation
+  cl: 11
+  description:
+    value: >-
+      <p>This ring is a thin but sturdy piece of forged steel crafted to
+      resemble a serpent swallowing its tail, and is magically imbued to reveal
+      the secrets of arcane mastery to its wearer. The ring allows a wearer with
+      an arcane pool to store up to 4 points from his arcane pool in the ring as
+      a swift action. These points remain in the ring until used. A wearer can
+      spend arcane pool points stored in the ring as if they were his own, or
+      can spend them in each of the following ways.  • As a free action, the
+      wearer can expend 1 arcane pool point stored in the ring to gain a +2
+      bonus on Concentration checks for 1 round.  • As a standard action, the
+      wearer can expend 1 arcane pool point stored in the ring to use the pool
+      strike magus arcana (Ultimate Magic 12) using his own magus level to
+      determine the effect.  As an immediate action, the wearer can expend up to
+      4 arcane pool points stored in the ring to use the reflection magus arcana
+      (Ultimate Magic
+      12).</p><h3>Construction</h3><p><strong>Requirements</strong> Forge Ring,
+      imbue with spell ability, spell turning</p>
+  price: 20000
+  slot: ring
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

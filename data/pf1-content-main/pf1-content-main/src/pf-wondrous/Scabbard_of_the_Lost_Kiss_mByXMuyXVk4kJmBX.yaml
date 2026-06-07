@@ -1,0 +1,31 @@
+_id: mByXMuyXVk4kJmBX
+_key: '!items!mByXMuyXVk4kJmBX'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Scabbard of the Lost Kiss
+system:
+  aura:
+    school: evo
+  cl: 4
+  description:
+    value: >-
+      <p>This aged and worn scabbard is believed to have once held one of a
+      dozen legendary scimitar relics named Dawnflower's Kiss. From its
+      prolonged proximity to such a divine blade, the scabbard has acquired its
+      own unique magical abilities. Twice per day on command, the wearer can
+      draw forth a blazing beam of red-hot fire from the scabbard that can be
+      wielded as if it were a scimitar, as per flame blade.  If Sarenrae is the
+      wearer's patron, half of the flame blade's damage is fire damage, but the
+      other half results directly from divine power and is therefore not subject
+      to being reduced by resistance to
+      fire.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, flame blade, flame strike</p>
+  price: 8600
+  sources:
+    - id: PZO9296
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

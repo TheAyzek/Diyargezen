@@ -1,0 +1,35 @@
+_id: exqayNydl3eXe5yv
+_key: '!items!exqayNydl3eXe5yv'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Eyes of the Damned
+system:
+  aura:
+    school: ill
+  cl: 5
+  description:
+    value: >-
+      <p>These two clear crystal lenses fit directly over the wearer's eyes.
+      When the wearer activates the lenses by speaking a prayer to Asmodeus as a
+      standard action, her eyes appear to be replaced by orbs of impenetrable
+      blackness. She gains a gaze attack until the beginning of her next turn.
+      The wearer can choose a creature within 30 feet on which to gaze as part
+      of the action of activating the lenses. The target creature must succeed
+      at a DC 14 Will save or be affected as per vision of Hell for 5 minutes,
+      except that the effect is a phantasm, rather than glamer, and it follows
+      the affected creature rather than affecting an area. An affected creature
+      continues to see the terrifying hellscape for the duration, regardless of
+      the creature's location.  As with vision of Hell, devils and all lawful
+      evil creatures are immune to the effect caused by this item. The eyes of
+      the damned can be activated up to three times per day. Both lenses must be
+      worn by the same wearer for the magic item to take
+      effect.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, vision of Hell</p>
+  price: 15000
+  slot: eyes
+  sources:
+    - id: PZO1136
+  subType: wondrous
+type: equipment

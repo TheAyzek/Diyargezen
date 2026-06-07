@@ -1,0 +1,75 @@
+_id: RQx3RwhdQds2znsh
+_key: '!journal!RQx3RwhdQds2znsh'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: tfgLGI205b9dxEjx
+name: 6.2.2.09. Propulsion Devies
+pages:
+  - _id: XQ2y8kuIFQlsV7fG
+    _key: '!journal.pages!RQx3RwhdQds2znsh.XQ2y8kuIFQlsV7fG'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.2.2.09. Propulsion Devies
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.F9hzOnUh5c0Ls2p6]{6.2.
+        Vehicles}</p><ul><li><p>@Compendium[pf-content.pf-rules.sjmHLtUHjp10PRNg]{6.2.2.
+        Full Vehicle
+        Rules}</p><ul><li>@Compendium[pf-content.pf-rules.CQgsuMCjnSXQT5tK]{6.2.2.01.
+        Drivers}</li><li>@Compendium[pf-content.pf-rules.n20ux7F2Gua3Henu]{6.2.2.02.
+        Occupants}</li><li>@Compendium[pf-content.pf-rules.WNrj8ktGtzmJ2idV]{6.2.2.03.
+        Propulsion and Driving
+        Checks}</li><li>@Compendium[pf-content.pf-rules.bqobhetOALHmOywu]{6.2.2.04.
+        Vehicle Size and
+        Space}</li><li>@Compendium[pf-content.pf-rules.xPL69LmsvZhMQXkI]{6.2.2.05.
+        Vehicle Facing and
+        Movement}</li><li>@Compendium[pf-content.pf-rules.wYDD2ws3dIeQaHKV]{6.2.2.06.
+        Driving
+        Vehicles}</li><li>@Compendium[pf-content.pf-rules.AoRyhHSyrQd2YNsf]{6.2.2.07.
+        Optional Rule: Wide
+        Turns}</li><li>@Compendium[pf-content.pf-rules.uCzllyIwfv6C8w51]{6.2.2.08.
+        Vehicles in
+        Combat}</li><li><strong>@Compendium[pf-content.pf-rules.RQx3RwhdQds2znsh]{6.2.2.09.
+        Propulsion
+        Devies}</strong></li><li>@Compendium[pf-content.pf-rules.UkducnpdR3NCcjdK]{6.2.2.10.
+        Driving Devices}</li></ul></li></ul><hr
+        /><p>@Source[PZO1118;pages=176]</p><p>Squares of propulsion devices have
+        their own statistics, separate from the vehicle’s. Use the following
+        rules to determine those statistics.</p><h2>Alchemical
+        Engine</h2><p>Harvesting the power of steam or some other alchemical
+        reaction, these engines are typically reinforced and difficult to
+        destroy. They can be disabled, and are considered either difficult or
+        extreme devices based on the complexity of the
+        device.</p><h2>Creature</h2><p>A creature used as propulsion uses its
+        own statistics. During movement and the effects of any combat maneuver,
+        pulling creatures’ spaces are considered vehicle spaces to determine the
+        effects of vehicle maneuvers. Creatures pulling a vehicle can be
+        arranged in teams. This means two creatures of the same type and same
+        size can occupy the same space to pull a
+        vehicle.</p><h2>Dirigible</h2><p>Lighter-than-air alchemical gases can
+        be harnessed to give a vehicle flight. Dirigibles are often easier to
+        destroy than the vehicle they convey. Dirigibles have 5 hit points per
+        square and no hardness. They take double the normal damage from acid,
+        electricity, and fire attacks (multiply the damage roll by
+        2).</p><h2>Magic Item</h2><p>Like a creature, a magic item uses its own
+        item statistics.</p><h2>Sails</h2><p>Used on magically or alchemically
+        powered airships and on any fast-moving water vehicle, sails are often
+        weaker than the vessels they propel, though they are relatively easy to
+        repair. Taking out the sails is a good way to capture a vessel. Sails
+        have 5 hit points per square and no hardness. They take double the
+        normal damage from acid and fire attacks (multiply the damage roll by
+        2). While the sails have rigging, such rigging manipulated by the crew,
+        and as such are not considered driving
+        devices.</p><table><thead><tr><td>Material</td><td>Hit Points per
+        Square</td><td>Hardness</td></tr></thead><tbody><tr><td>Sails</td><td>5</td><td>0</td></tr><tr><td>Dirigible</td><td>5</td><td>0</td></tr><tr><td>Alchemical
+        Engine</td><td>20</td><td>8</td></tr><tr><td>Magically
+        Treated</td><td>x2</td><td>x2</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

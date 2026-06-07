@@ -1,0 +1,35 @@
+_id: 3UvLb67163LEeL52
+_key: '!items!3UvLb67163LEeL52'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Talons of Leng
+system:
+  aura:
+    school: trs
+  cl: 15
+  description:
+    value: >-
+      <p>Finely laid gold filigree lines these ornately worked talons. Once
+      donned, the talons of Leng grant the wearer a natural claw attack with
+      each hand that deal 1d4 points of damage for a Medium wearer, or 1d3
+      points of damage for a Small wearer. These claw attacks have a +3
+      enhancement bonus on attack and damage rolls. On a critical hit, the
+      target must succeed at a DC 20 Will save or become permanently confused as
+      per the insanity spell. This is a mind-affecting effect. The wearer of the
+      talons of Leng is immune to effects that grant the confused condition. For
+      as long as she wears the talons, however, her Wisdom is reduced by 2, as
+      alien voices constantly whisper through her head. The talons of Leng do
+      not interfere with spellcasting, the use of handheld items, or wielding
+      weapons.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, Craft Wondrous Item, greater magic fang,
+      insanity</p>
+  price: 67000
+  slot: hands
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

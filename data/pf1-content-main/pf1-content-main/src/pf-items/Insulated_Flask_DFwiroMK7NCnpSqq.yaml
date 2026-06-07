@@ -1,0 +1,22 @@
+_id: DFwiroMK7NCnpSqq
+_key: '!items!DFwiroMK7NCnpSqq'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/kitchenware/mug-stein-grey.webp
+name: Insulated Flask
+system:
+  description:
+    value: >-
+      <p>An insulated metal cup with a resealable top, this container can hold
+      any sort of potable liquid. Liquids stored within the flask maintain their
+      temperature for three times as long as those in a cup or any other
+      unsealed container.</p>
+  equipped: false
+  price: 0.2
+  sources:
+    - id: PZO1140
+      pages: '243'
+  subType: adventuring
+  weight:
+    value: 1
+type: loot

@@ -1,0 +1,25 @@
+_id: 5khc8oVSqVnlOlY6
+_key: '!items!5khc8oVSqVnlOlY6'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Stygian Metamagic Rod, Greater
+system:
+  aura:
+    custom: true
+    school: none
+  cl: 17
+  description:
+    value: >-
+      <p>The wielder of this metamagic rod can cast up to three spells per day
+      that suppress memories as though using the Stygian Spell
+      feat.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Rod,
+      Stygian Spell</p>
+  price: 73000
+  sources:
+    - id: PZO1141
+  subType: other
+  weight:
+    value: 1
+type: equipment

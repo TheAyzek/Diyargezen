@@ -1,0 +1,29 @@
+_id: Vs2xyfoXAQx62rkW
+_key: '!items!Vs2xyfoXAQx62rkW'
+_stats:
+  coreVersion: '12.331'
+folder: YaC0PDBdquBGbbsG
+img: systems/pf1/icons/skills/violet_04.jpg
+name: Disjoining
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate necromancy <strong>CL</strong>
+      7th</p><p><strong>Slot</strong> none; <strong>Price</strong> +1 bonus;
+      These weapons were first created by deities and given to mortals so that
+      they could combat mythic foes. When the wielder confirms a critical hit
+      against a mythic creature with a <em>disjoining</em> weapon, the target
+      loses the ability to expend its mythic power for 1d4 rounds. A mythic
+      creature wielding a <em>disjoining</em> weapon loses the ability to expend
+      uses of mythic power for as long as he wields the weapon. Only melee
+      weapons can have this
+      ability.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, Mythic Crafter, <em>mythic severance</em>;
+      <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1126
+      pages: '143'
+  subType: misc
+  tags:
+    - Melee Qualities
+type: feat

@@ -1,0 +1,37 @@
+_id: CA5ehYUv55GBSizW
+_key: '!items!CA5ehYUv55GBSizW'
+_stats:
+  coreVersion: '12.331'
+folder: KOT1geWrUrAU083b
+img: icons/equipment/chest/vest-leather-pink.webp
+name: Saddle of the Sky-River
+system:
+  aura:
+    custom: true
+    school: evocation [water] and transmutation [air water]
+  cl: 7
+  description:
+    value: >-
+      <p>This nacreous saddle is carved from giant mollusk shells, lashed with
+      braided kelp, and designed to be worn by aquatic mounts. On command, an
+      arcing torrent of water rises up from an existing body of water, allowing
+      the mount to use its swim speed to move through the air. This functions as
+      air walk and can be used a total of 7 minutes per day, usable in 1-minute
+      increments. The arc of water trails behind the mount and rider and can be
+      used by other swimming creatures to move through the air (Swim DC 15).
+      When the effect ends, the suspended water disappears with a negligible
+      amount of water falling on creatures underneath the path of the arc.   The
+      sky-river created by the saddle does not harm creatures, though it does
+      extinguish nonmagical fires in areas it overlaps with them. As a standard
+      action, the rider can expend 2 minutes of the sky-river's duration to
+      produce a hydraulic torrent with a CMB of
+      +9.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, air walk, hydraulic torrent, water walk</p>
+  price: 16000
+  slot: chest
+  sources:
+    - id: PZO9429
+  subType: wondrous
+  weight:
+    value: 15
+type: equipment

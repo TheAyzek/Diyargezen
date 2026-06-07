@@ -1,0 +1,69 @@
+_id: UMJsEdszmSw6xC1C
+_key: '!items!UMJsEdszmSw6xC1C'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/dagger-swordbreaker.PNG
+name: Shrivelblade
+system:
+  actions:
+    - _id: magjs7xx0q94qqbv
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: shrivelblade
+  aura:
+    school: trs
+  baseTypes:
+    - Swordbreaker Dagger
+  cl: 5
+  description:
+    value: >-
+      <p>This +1 adamantine swordbreaker dagger (Pathfinder RPG Ultimate
+      Equipment 38) has a jagged ebon blade inscribed with ancient Thassilonian
+      runes that translate to cut down to size. Three times per day, when the
+      wielder successfully sunders a weapon using a shrivelblade, he can
+      permanently reduce the size of the sundered weapon by one size category,
+      thus reducing its damage and its intended wielder size by one size
+      category and its weight by half. Using this ability is a swift action. If
+      the sundered weapon is magical, it can attempt a DC 14 Will save to negate
+      this effect. Multiple uses of this ability don't stack. A make whole spell
+      can return a weapon shrunken by a shrivelblade to its proper
+      size.</p><p><strong>Base Item</strong>: +1 adamantine swordbreaker
+      dagger</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, shrink item</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+    normal:
+      value: adamantine
+  price: 9810
+  properties:
+    dis: true
+    fin: true
+    spc: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9453
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 3
+type: weapon

@@ -1,0 +1,30 @@
+_id: mXBK3ahONuXn4mom
+_key: '!items!mXBK3ahONuXn4mom'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Brimstone Barbazu
+system:
+  aura:
+    school: con
+  cl: 11
+  description:
+    value: >-
+      <p>Shaped in the form of a leering bearded devil clutching a glaive, this
+      dusty yellowish figurine stands just under a foot tall. When broken or
+      shattered, a brimstone barbazu steadily heats up over the course of 1
+      round, belching thick sulfuric smoke before bursting into flames. At the
+      start of the following round, a bearded devil (Pathfinder RPG Bestiary 73)
+      appears in the square where the figurine was broken. This summoned devil
+      is under the command of the creature that broke the figurine, as per
+      summon monster. The devil disappears when slain or after 20 rounds. Once
+      used, a brimstone barbazu is destroyed.<h3>Requirements</h3><p>Craft
+      Wondrous Item, Extend Spell, summon monster V</p>
+  price: 3300
+  sources:
+    - id: PZO90104
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

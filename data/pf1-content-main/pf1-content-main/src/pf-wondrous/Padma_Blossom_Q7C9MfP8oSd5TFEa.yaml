@@ -1,0 +1,26 @@
+_id: Q7C9MfP8oSd5TFEa
+_key: '!items!Q7C9MfP8oSd5TFEa'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Padma Blossom
+system:
+  aura:
+    custom: true
+    school: abjuration and enchantment
+  cl: 3
+  description:
+    value: >-
+      <p>This perfect lotus flower formed from pink jade offers purity of mind
+      and spiritual calm. While grasped, the blossom grants its holder a +3
+      competence bonus on concentration checks and suppresses the following on
+      its holder: morale bonuses, fear effects, and the confused, dazed, or
+      stunned conditions. Twice per day, the bearer can cast calm
+      emotions.</p><h3>Requirements</h3><p>Craft Wondrous Item, calm emotions,
+      remove fear</p>
+  price: 8000
+  sources:
+    - id: PZO9529
+  subType: wondrous
+type: equipment

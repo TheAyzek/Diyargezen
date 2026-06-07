@@ -1,0 +1,39 @@
+_id: Tzmw4oqumArkh1oD
+_key: '!items!Tzmw4oqumArkh1oD'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/leather.PNG
+name: Lupine Rageskin
+system:
+  armor:
+    dex: 6
+    material:
+      base:
+        value: leather
+    value: 2
+  aura:
+    school: trs
+  baseTypes:
+    - Leather Armor
+  cl: 5
+  description:
+    value: >-
+      <p>This +1 leather armor consists of wolf skins sewn together with sinew.
+      When the wearer rages, he automatically turns into a Medium wolf, as if
+      using change shape (beast shape I). The armor melds with his new form as
+      normal, but the armor's enhancement bonus changes into a +1 enhancement
+      bonus to her natural armor. When the rage ends, the wearer reverts to his
+      own form.</p><p><strong>Base Item</strong>: leather
+      armor</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, beast shape I</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 12160
+  sources:
+    - id: PZO1135
+  spellFailure: 10
+  weight:
+    value: 15
+type: equipment

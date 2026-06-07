@@ -15,7 +15,7 @@ from unittest.mock import MagicMock, patch
 
 from scraping.models import (
     RaceModel, ClassModel, SpellModel, FeatModel,
-    PowerModel, AdvantageModel, ClanModel, DisciplineModel,
+    PowerModel, AdvantageModel,
     SystemDataBundle, AbilityScoreBonus, SourceReference,
 )
 from scraping.base_scraper import sanitize_html, BaseScraper
@@ -163,42 +163,6 @@ class TestAdvantageModel(unittest.TestCase):
 
 
 # ======================================================================
-# Pydantic Model Testleri — VtM 5e Modelleri
-# ======================================================================
-
-class TestClanModel(unittest.TestCase):
-
-    def test_valid_clan(self):
-        clan = ClanModel(
-            name="Brujah", system="vtm5e",
-            disciplines=["Celerity", "Potence", "Presence"],
-            bane="Quick to anger", compulsion="Rage",
-            favored_attributes=["Strength", "Charisma"],
-        )
-        self.assertEqual(clan.name, "Brujah")
-        self.assertEqual(len(clan.disciplines), 3)
-        self.assertIn("Celerity", clan.disciplines)
-
-    def test_default_system(self):
-        self.assertEqual(ClanModel(name="Nosferatu").system, "vtm5e")
-
-
-class TestDisciplineModel(unittest.TestCase):
-
-    def test_valid_discipline(self):
-        disc = DisciplineModel(
-            name="Animalism",
-            powers={"1": "Bond Famulus", "2": "Sense the Beast", "3": "Feral Whispers"},
-        )
-        self.assertEqual(disc.name, "Animalism")
-        self.assertEqual(disc.powers["1"], "Bond Famulus")
-
-    def test_empty_powers(self):
-        disc = DisciplineModel(name="Auspex")
-        self.assertEqual(disc.powers, {})
-
-
-# ======================================================================
 # SystemDataBundle Testleri
 # ======================================================================
 
@@ -226,14 +190,13 @@ class TestSystemDataBundle(unittest.TestCase):
 
     def test_extra_merge(self):
         bundle = SystemDataBundle(
-            system="vtm5e",
-            extra={"clans": {"Brujah": {"bane": "Rage"}}, "disciplines": {"Celerity": {}}},
+            system="mm3e",
+            extra={"archetypes": {"Crime Fighter": {"description": "Hero"}}},
         )
-        existing = {"clans": {"Nosferatu": {}}}
+        existing = {"archetypes": {"Paragon": {}}}
         merged = bundle.merge_into(existing)
-        self.assertIn("Brujah", merged["clans"])
-        self.assertIn("Nosferatu", merged["clans"])
-        self.assertIn("Celerity", merged["disciplines"])
+        self.assertIn("Crime Fighter", merged["archetypes"])
+        self.assertIn("Paragon", merged["archetypes"])
 
 
 # ======================================================================
@@ -420,39 +383,6 @@ class TestMM3eSpider(unittest.TestCase):
 
 
 # ======================================================================
-# VtM 5e Spider Testleri
-# ======================================================================
-
-class TestVtM5eSpider(unittest.TestCase):
-
-    def test_spider_instantiation(self):
-        from scraping.spiders.vtm5e_spider import VtM5eSpider
-        spider = VtM5eSpider.__new__(VtM5eSpider)
-        self.assertEqual(spider.SYSTEM_KEY, "vtm5e")
-        self.assertEqual(spider.OUTPUT_FILE, "vtm_data.json")
-
-    def test_known_clans_populated(self):
-        from scraping.spiders.vtm5e_spider import _KNOWN_CLANS
-        self.assertGreaterEqual(len(_KNOWN_CLANS), 8)
-        self.assertIn("Brujah", _KNOWN_CLANS)
-        self.assertIn("Nosferatu", _KNOWN_CLANS)
-        self.assertIn("Ventrue", _KNOWN_CLANS)
-
-    def test_known_disciplines_populated(self):
-        from scraping.spiders.vtm5e_spider import _KNOWN_DISCIPLINES
-        self.assertGreaterEqual(len(_KNOWN_DISCIPLINES), 10)
-        self.assertIn("Animalism", _KNOWN_DISCIPLINES)
-        self.assertIn("Dominate", _KNOWN_DISCIPLINES)
-        self.assertIn("Potence", _KNOWN_DISCIPLINES)
-
-    def test_scrape_classes_returns_empty(self):
-        """VtM 5e'de geleneksel 'class' yok."""
-        from scraping.spiders.vtm5e_spider import VtM5eSpider
-        spider = VtM5eSpider.__new__(VtM5eSpider)
-        self.assertEqual(spider.scrape_classes(), {})
-
-
-# ======================================================================
 # Pipeline Runner Testleri
 # ======================================================================
 
@@ -469,8 +399,7 @@ class TestPipelineRunner(unittest.TestCase):
         self.assertIn("pathfinder1e", SPIDER_REGISTRY)
         self.assertIn("dnd5e", SPIDER_REGISTRY)
         self.assertIn("mm3e", SPIDER_REGISTRY)
-        self.assertIn("vtm5e", SPIDER_REGISTRY)
-        self.assertEqual(len(SPIDER_REGISTRY), 4)
+        self.assertEqual(len(SPIDER_REGISTRY), 3)
 
     def test_system_labels_match_registry(self):
         from scraping.run_scraper import SPIDER_REGISTRY, SYSTEM_LABELS

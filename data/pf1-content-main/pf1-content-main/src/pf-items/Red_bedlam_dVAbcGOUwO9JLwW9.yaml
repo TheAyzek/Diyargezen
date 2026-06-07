@@ -1,0 +1,46 @@
+_id: dVAbcGOUwO9JLwW9
+_key: '!items!dVAbcGOUwO9JLwW9'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Red bedlam
+system:
+  actions:
+    - _id: xjukombbgndzekpp
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - '[object Object]'
+      save:
+        dc: '15'
+        type: fort
+      tag: redBedlam
+  description:
+    value: >-
+      <p><em><strong>Price</strong> 1,200 gp; <strong>Weight</strong>
+      0</em></p><p><em><strong>Type</strong> ingested; <strong>Save</strong>
+      Fortitude DC 15</em></p><p><em><strong>Onset</strong> 10 minutes;
+      <strong>Frequency</strong> 1/minute for 10
+      minutes</em></p><p><em><strong>Effect</strong>
+      confusion</em></p><p><em><strong>Cure</strong> 2 consecutive
+      saves</em></p><p>Named for the scab-red mushrooms from which it is made,
+      this potent hallucinogen is brewed by evil druids and witches in remote
+      regions in order to enhance the savagery of their seasonal revels. Some
+      use this poison to debilitate their victims for ritual sacrifice.</p>
+  price: 1200
+  sources:
+    - id: PZO1140
+      pages: '145'
+    - id: PZO9456
+      pages: '20'
+  subType: poison
+  uses:
+    per: single
+type: consumable

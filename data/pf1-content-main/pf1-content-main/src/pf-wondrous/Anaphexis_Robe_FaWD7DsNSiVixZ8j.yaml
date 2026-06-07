@@ -1,0 +1,59 @@
+_id: FaWD7DsNSiVixZ8j
+_key: '!items!FaWD7DsNSiVixZ8j'
+_stats:
+  coreVersion: '12.331'
+folder: tt1hnzL5ZdLfPdp0
+img: icons/equipment/chest/robe-layered-purple.webp
+name: Anaphexis Robe
+system:
+  actions:
+    - _id: bZLGuYQleOh0V2LJ
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Reduce study time for Death attack
+  aura:
+    custom: true
+    school: divination and necromancy
+  cl: 10
+  contextNotes:
+    - target: skill.dis
+      text: +[[10]] Circumstance bonus to appear as a monk of Pharasma.
+    - target: skill.slt
+      text: +[[10]] Circumstance bonus to conceal weapons.
+  description:
+    unidentified: <p>This plain robe is  made of a deep purple fabric.</p>
+    value: >-
+      <p>Sewn from deep purple fabric, an Anaphexis robe appears to be a plain
+      version of Pharasmin holy vestments.</p><h3>Effect</h3><p>A creature
+      wearing this robe can speak directly into the minds of other creatures
+      wearing Anaphexis robes or carrying an unholy symbol of Norgorber within
+      100 feet, as long as they share a common language. The robes grant a +10
+      circumstance bonus on Disguise checks to appear as a monk of Pharasma and
+      a +10 circumstance bonus on Sleight of Hand checks to conceal weapons.
+      Once per day, a wearer with the
+      @UUID[Compendium.pf1e-archetypes.pf-prestige-features.Item.yVLNW4ghAvLSyhCT]{death
+      attack} class ability can reduce the number of rounds required to study a
+      target for a death attack by
+      1.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.msaqovkgfxi6q8s8]{message},
+      @UUID[Compendium.pf1.spells.Item.dg3mrasygkm83c3e]{slay living}
+      </em><strong>Cost</strong> 8,000 gp</p>
+  price: 16000
+  showInQuickbar: true
+  slot: body
+  sources:
+    - id: PZO9464
+      pages: '28'
+  subType: wondrous
+  tags:
+    - Norgorber
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+  weight:
+    value: 1
+type: equipment

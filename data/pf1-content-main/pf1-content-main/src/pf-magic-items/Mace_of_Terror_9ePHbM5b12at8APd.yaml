@@ -1,0 +1,60 @@
+_id: 9ePHbM5b12at8APd
+_key: '!items!9ePHbM5b12at8APd'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/mace-heavy.PNG
+name: Mace of Terror
+system:
+  actions:
+    - _id: 9a9a2oecafv3yewx
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: maceOfTerror
+  aura:
+    school: nec
+  baseTypes:
+    - Heavy Mace
+  cl: 13
+  description:
+    value: >-
+      <p>This weapon usually appears to be a particularly frightening-looking
+      iron or steel mace. On command, this +2 heavy mace causes the wielder's
+      clothes and appearance to transform into an illusion of darkest horror,
+      such that living creatures in a 30- foot cone become panicked as if by a
+      fear spell (Will DC 16 partial). Those who fail this save take a -2 morale
+      penalty on saving throws, and they flee from the wielder. The wielder may
+      use this ability up to three times per day.</p><p><strong>Base
+      Item</strong>: heavy
+      mace</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, fear</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 38552
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - hammers
+  weight:
+    value: 8
+type: weapon

@@ -1,0 +1,34 @@
+_id: UrMB3YNMUBBDQkPE
+_key: '!items!UrMB3YNMUBBDQkPE'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Stoneweaving
+system:
+  aura:
+    custom: true
+    school: abjuration and transmutation
+  cl: 13
+  description:
+    value: >-
+      <p>A staff of stoneweaving is a staff of rough-hewn obsidian with a
+      glowing ruby floating between the forked branches of its top end. It
+      allows the use of the following spells: • Spike stones (1 charge) • Statue
+      (2 charges) • Stone shape (1 charge) • Stone to flesh (2 charges) •
+      Stoneskin (2 charges) Additionally, the staff of stoneweaving acts as a +1
+      halfling slingstaff. The staff creates its own ammunition-ruby sling
+      bullets which disappear after striking or missing their target. These
+      bullets are created by tapping the head of the staff against the ground (a
+      move action). The user cannot pick up bullets after firing them or
+      otherwise harvest them; at the end of the round after a bullet is created,
+      it disappears from existence.<p><strong>Base Item</strong>:
+      quarterstaff</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, Craft Staff, minor creation, spike stones,
+      statue, stone shape, stone to flesh, stoneskin</p>
+  price: 63180
+  sources:
+    - id: PZO9034
+  subType: staff
+  weight:
+    value: 5
+type: consumable

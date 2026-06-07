@@ -1,0 +1,38 @@
+_id: HZSjBjXDShNwlYJq
+_key: '!items!HZSjBjXDShNwlYJq'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Sun Falcon Pectoral
+system:
+  aura:
+    custom: true
+    school: evocation [light]
+  cl: 5
+  description:
+    value: >-
+      <p>This ornate pectoral necklace is crafted out of articulated gold plates
+      arranged in the shape of a falcon-the sacred animal of Horus, the Ancient
+      Osirion god of the sun and the sky.  When outdoors and in an area with
+      direct, natural sunlight, the wearer of a sun falcon pectoral can call
+      down dazzling beams of sunlight from the sky once per day. As a standard
+      action each round for 5 rounds, the wearer can call down a 5-foot-wide,
+      30-foot-long vertical sunbeam anywhere within 100 feet. A creature struck
+      by a beam takes 3d6 points of damage and is blinded (a successful DC 14
+      Reflex save halves the damage and negates the blindness). The wearer does
+      not need to call down a sunbeam each round, but once 5 rounds have passed,
+      no more beams can be called down.  Indoors, underground, or in areas of
+      darkness, the wearer can instead create a daylight effect from the
+      necklace once per day. The daylight effect lasts up to 2 hours. Whether
+      used to create daylight or sunbeams, a sun falcon pectoral can only be
+      used once per day.<h3>Requirements</h3><p>Craft Wondrous Item,
+      daylight</p>
+  price: 5400
+  slot: neck
+  sources:
+    - id: PZO9081
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

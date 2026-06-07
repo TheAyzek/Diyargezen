@@ -1,0 +1,32 @@
+_id: TkNEa7xtWixVu4aZ
+_key: '!items!TkNEa7xtWixVu4aZ'
+_stats:
+  coreVersion: '12.331'
+folder: qfmWWFueuXXt4NRD
+img: icons/magic/fire/flame-burning-eye.webp
+name: Weapon Familiarity (Sin-Galemren)
+system:
+  description:
+    value: >-
+      <p><strong>Race</strong>: Sin-Galemren</p><hr /><p>Sin-Galemren are
+      proficient with longbows (including composite longbows), longswords,
+      rapiers, and shortbows (including composite shortbows), and they treat any
+      weapon with the word "elven" in its name as a martial weapon.</p>
+  sources:
+    - date: '2019'
+      pages: '9'
+      publisher: Paizo / Stranger Comics
+      title: Niobe
+  subType: racial
+  tags:
+    - Sin-Galemren
+    - Niobe
+  traitCategory: offense
+  weaponProf:
+    - Longbow
+    - Composite Longbow
+    - Shortbow
+    - Composite Shortbow
+    - Longsword
+    - Rapier
+type: feat

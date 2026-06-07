@@ -1,0 +1,31 @@
+_id: TCEUzWQz6XBjfjp5
+_key: '!items!TCEUzWQz6XBjfjp5'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Martyr's Tear
+system:
+  aura:
+    school: nec
+  cl: 6
+  description:
+    value: >-
+      <p>This imperfect, rose-tinted gemstone resembles a teardrop or a broken
+      heart depending on its orientation. Its pale facets are typically marred
+      by a single crack or chip near the gem's middle.   Once per day, the
+      bearer may spend a standard action to transfer 3d6 hit points from himself
+      into the gem. This deepens the gem's color, with a stronger color
+      indicating more life energy stored in it. The gem can store a maximum of
+      18 hit points. If any hit points are stored in the gem, the bearer may
+      touch it himself or another creature as a standard action, transferring
+      all the stored life energy from the gem to the target creature, healing it
+      a number of hit points equal to the amount stored in the gem. This returns
+      the gem to its normal
+      color.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, vampiric touch</p>
+  price: 6000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

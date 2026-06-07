@@ -1,0 +1,37 @@
+_id: neum55YytJQIMXZB
+_key: '!journal!neum55YytJQIMXZB'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Qi Zhong
+pages:
+  - _id: iyTOQIWdlqPWxYI4
+    _key: '!journal.pages!neum55YytJQIMXZB.iyTOQIWdlqPWxYI4'
+    _stats:
+      coreVersion: '12.331'
+    name: Qi Zhong
+    sort: 0
+    text:
+      content: >-
+        <h1>Qi Zhong</h1><h2>Master of Medicine</h2>@Source[PZO9240;pages=58]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Qi Zhong">Qi
+        Zhong</a><h3>Details</h3><p><strong>Alignment</strong> NG<br
+        /><strong>Pantheon</strong> Deities of Tian Xia<br /><strong>Areas of
+        Concern</strong> Healing, magic, medicine<br /><strong>Domains</strong>
+        Good, Healing, Knowledge, Magic, Protection<br
+        /><strong>Subdomains</strong> Agathion, Alchemy (Magic)*, Divine,
+        Medicine*, Memory, Purity, Restoration, Resurrection<br /><em>* Requires
+        the <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Heavy mace<br /><strong>Symbol</strong> Wagon wheel with
+        spokes made of fire, earth, metal, water, and wood<br /><strong>Sacred
+        Animal(s)</strong> Crane</p><h3>On Golarion</h3><p><strong>Centers of
+        Worship</strong> Jinin, Quain, Tianjing, Xidao, Zi Ha<br
+        /><strong>Nationality</strong> Tian-Shu</p><h2>For Followers of Qi
+        Zhong</h2><h3>Archetypes</h3><p>Arcane Physician (Wizard)</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

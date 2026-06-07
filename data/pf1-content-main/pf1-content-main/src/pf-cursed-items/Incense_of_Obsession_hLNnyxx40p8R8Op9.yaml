@@ -1,0 +1,23 @@
+_id: hLNnyxx40p8R8Op9
+_key: '!items!hLNnyxx40p8R8Op9'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Incense of Obsession
+system:
+  aura:
+    school: enc
+  cl: 6
+  cursed: true
+  description:
+    value: >-
+      <p>These blocks of incense appear to be incense of meditation. If
+      meditation is conducted while the incense of obsession are burning, the
+      user becomes totally confident that her spell ability is superior due to
+      the magic incense. She uses her spells at every opportunity, even when not
+      needed or useless. The user remains obsessed with her abilities and spells
+      until all have been used or cast, or until 24 hours have elapsed.</p>
+  sources:
+    - id: PZO1123
+  subType: other
+type: equipment

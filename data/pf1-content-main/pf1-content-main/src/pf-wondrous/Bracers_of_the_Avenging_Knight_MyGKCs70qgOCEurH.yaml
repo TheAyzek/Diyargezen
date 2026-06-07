@@ -1,0 +1,31 @@
+_id: MyGKCs70qgOCEurH
+_key: '!items!MyGKCs70qgOCEurH'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Bracers of the Avenging Knight
+system:
+  aura:
+    school: trs
+  cl: 8
+  description:
+    value: >-
+      <p>These silver bracers are polished to a mirrored sheen, but otherwise
+      shift their appearance to match whatever suit of armor they are worn
+      with.   If the wearer has levels in a class that grants a smite ability
+      (such as a paladin, or a cleric with the destruction domain), her smite
+      damage is treated as though she were a member of that class four levels
+      higher. If the wearer is not a member of such a class, once per day she
+      may make one smite attack, gaining a bonus on the attack roll equal to her
+      Charisma bonus, and a +5 bonus to the damage roll on a
+      hit.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, bless weapon</p>
+  price: 11500
+  slot: wrists
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

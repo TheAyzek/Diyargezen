@@ -1,0 +1,30 @@
+_id: l91ciXHKEt7i2G86
+_key: '!journal!l91ciXHKEt7i2G86'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: B8yeiGCU6nhcjOzu
+name: The Queen Mother
+pages:
+  - _id: GOeJd72k80cWOWZw
+    _key: '!journal.pages!l91ciXHKEt7i2G86.GOeJd72k80cWOWZw'
+    _stats:
+      coreVersion: '12.331'
+    name: The Queen Mother
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Queen Mother</strong> (lawful neutral, Wisdom) is
+        knowledge personified. The formian knows all but does not reveal
+        anything to anyone who does not show her proper worship. She is fond of
+        the powerless and the underclasses, for they serve her when the more
+        powerful refuse. She represents the need to become part of a society, or
+        to bow before those who know more than you.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Queen%20Mother.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

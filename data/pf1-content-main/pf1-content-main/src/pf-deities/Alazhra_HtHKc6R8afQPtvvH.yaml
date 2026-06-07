@@ -1,0 +1,32 @@
+_id: HtHKc6R8afQPtvvH
+_key: '!journal!HtHKc6R8afQPtvvH'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Alazhra
+pages:
+  - _id: 3HSb6Evy7469znXM
+    _key: '!journal.pages!HtHKc6R8afQPtvvH.3HSb6Evy7469znXM'
+    _stats:
+      coreVersion: '12.331'
+    name: Alazhra
+    sort: 0
+    text:
+      content: >-
+        <h1>Alazhra</h1><h2>The Dream Eater</h2>@Source[PZO9267;pages=316] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Alazhra">Alazhra</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Other Deities<br /><strong>Areas of
+        Concern</strong> Dreams, night hags, planar travel<br
+        /><strong>Domains</strong> Darkness, Evil, Repose, Travel<br
+        /><strong>Subdomains</strong> Daemon, Loss, Night, Souls<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Dagger<br /><strong>Symbol</strong>
+        Jar containing a ghost<br /><strong>Sacred Animal(s)</strong> Black
+        stallion<br /><strong>Sacred Color(s)</strong> Black, blue</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

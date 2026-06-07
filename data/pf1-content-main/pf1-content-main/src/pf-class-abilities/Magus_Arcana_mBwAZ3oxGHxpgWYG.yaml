@@ -1,0 +1,24 @@
+_id: mBwAZ3oxGHxpgWYG
+_key: '!items!mBwAZ3oxGHxpgWYG'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/spells/runes-blue-2.jpg
+name: Magus Arcana
+system:
+  associations:
+    classes:
+      - Arcanist
+  description:
+    value: >-
+      <p><strong>Arcanist Exploit - Adept</strong></p><p>A blade adept can
+      select any of the following magus arcana, using her arcane reservoir in
+      place of the magus's arcane pool: arcane accuracy, close range, critical
+      strike, dispelling strike, and hasted assault. The blade adept treats her
+      arcanist level as her magus level when determining the effects of magus
+      arcana and when specific arcana are available. A blade adept can take this
+      exploit multiple times. Each time it is taken, it applies to a different
+      magus arcana.</p>
+  subType: classFeat
+  tags:
+    - Arcanist Exploit - Adept
+type: feat

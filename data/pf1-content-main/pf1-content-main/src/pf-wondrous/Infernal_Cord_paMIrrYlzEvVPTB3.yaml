@@ -1,0 +1,65 @@
+_id: paMIrrYlzEvVPTB3
+_key: '!items!paMIrrYlzEvVPTB3'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/equipment/waist/belt-buckle-skull.webp
+name: Infernal Cord
+system:
+  aura:
+    school: trs
+  changes:
+    - _id: mZG8eXGu
+      formula: '2'
+      target: con
+      type: enh
+  cl: 8
+  contextNotes:
+    - target: ac
+      text: >-
+        Whenever you are critically hit you gain fast healing 1 for 1 minute.
+        This ability doesn't trigger if the critical hit deals only nonlethal
+        damage. Damage caused by silver weapons, good-aligned weapons, or spells
+        or effects with the good descriptor doesn't trigger the fast healing and
+        suppresses the fast healing for 1 round if it's already active.
+    - target: allSavingThrows
+      text: >-
+        You can be detected as though she were an evil creature and this belt
+        imparts 1 negative level to any nonevil creature that wears it until the
+        belt is removed.
+  description:
+    unidentified: >-
+      <p>This thick hide belt is scarred with impressions of fiendish visages,
+      some of these show a scowl and some a smile.</p>
+    value: >-
+      <p>The entirety of this thick hide belt is scarred with impressions of
+      fiendish visages, each shifting between a scowl and a
+      smile.</p><h3>Effect</h3><p>Commonly used by the servants of Asmodeus in
+      Cheliax, this belt grants its wearer a +2 enhancement bonus to
+      Constitution. Treat this Constitution bonus as a temporary ability bonus
+      for the first 24 hours the belt is worn.</p><p>Whenever an enemy scores a
+      critical hit against the wearer, the wearer gains fast healing 1 for 1
+      minute. This ability doesn't trigger if the critical hit deals only
+      nonlethal damage. Damage caused by silver weapons, good-aligned weapons,
+      or spells or effects with the good descriptor doesn't trigger the fast
+      healing, and suppresses the fast healing for 1 round if it's already
+      active.</p><p>The wearer of an infernal cord can be detected as though she
+      were an evil creature, and can sense the item's evil while wearing it.
+      This belt imparts 1 negative level to any nonevil creature that wears it
+      until the belt is
+      removed.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.usdv1eqvibmxun6x]{bear's endurance},
+      @UUID[Compendium.pf1.spells.Item.r6mfw5nrc2ndkacy]{infernal healing}</em>
+      <strong>Cost</strong> 2,500 gp</p>
+  price: 5000
+  slot: belt
+  sources:
+    - id: PZO9268
+      pages: '60'
+  subType: wondrous
+  tags:
+    - Evil
+  weight:
+    value: 1
+type: equipment

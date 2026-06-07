@@ -1,0 +1,55 @@
+_id: 4I0I84xTOMt09AKy
+_key: '!items!4I0I84xTOMt09AKy'
+_stats:
+  coreVersion: '12.343'
+img: icons/tools/laboratory/bowl-mixing.webp
+name: Somnigrip
+system:
+  actions:
+    - _id: zjkq05sxgejige1t
+      ability:
+        critMult: 1
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - {}
+          - {}
+      img: icons/tools/laboratory/bowl-mixing.webp
+      name: Use
+      notes:
+        effect:
+          - see text
+      range:
+        units: ft
+        value: '10'
+      tag: somnigrip
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Weapons</p><p>This tacky paste is
+      peppered with flakes of glass created using materials from the Elemental
+      Planes, and this glass effectively limits underground movement. When you
+      throw somnigrip at a creature (this requires a ranged touch attack with a
+      range increment of 10 feet) and strike your target, the creature must
+      succeed at a DC 20 Strength check each round. If the creature succeeds, it
+      can burrow or use earth glide (if it has that ability) at half its burrow
+      speed that round. If it fails, the creature cannot burrow or use earth
+      glide at all that round, although it can still move using its other speeds
+      as normal. Somnigrip dissolves and stops affecting a creature's movement
+      after 1 minute. Crafting this item requires a successful DC 20 Craft
+      (alchemy) check.</p><h2>Construction</h2><p><strong>Craft
+      (Alchemy)</strong> DC 20</p>
+  price: 45
+  sources:
+    - id: PZO9483
+      pages: '31'
+  subType: misc
+  tags:
+    - Alchemical Weapons
+  weight:
+    value: 3
+type: consumable

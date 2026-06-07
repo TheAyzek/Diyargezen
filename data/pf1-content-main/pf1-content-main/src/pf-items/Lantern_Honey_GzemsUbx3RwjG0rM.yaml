@@ -1,0 +1,19 @@
+_id: GzemsUbx3RwjG0rM
+_key: '!items!GzemsUbx3RwjG0rM'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/unique-6.jpg
+name: Lantern Honey
+system:
+  description:
+    value: >-
+      <p>This alchemically enhanced honey is typically transported in small,
+      lantern-shaped containers capable of holding up to 3 doses of honey. A
+      single dose of lantern honey functions as normal antitoxin, except that it
+      also provides immunity to drow poison for 1 hour after consumption.</p>
+  price: 150
+  sources:
+    - id: PZO1138
+      pages: '114'
+  subType: misc
+type: consumable

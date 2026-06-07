@@ -1,0 +1,27 @@
+_id: 92v3p9Sn7uxeEWxQ
+_key: '!items!92v3p9Sn7uxeEWxQ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/herb.jpg
+name: Camouflage blanket
+system:
+  description:
+    value: >-
+      <p>This large, coarse blanket covers a single square and has a
+      multi-colored design that blends in with a specific environment type, such
+      as underground, forests, or plains (see the ranger's Favored Terrains
+      table on page 65 of the <em>Pathfinder RPG Core Rulebook</em> for a full
+      list of environment types). A character covered by a camouflage blanket in
+      that blanket's matching terrain has concealment. Such characters who are
+      also prone gain a +2 circumstance bonus on Stealth checks. The bonus
+      applies even when the covered character attempts a Stealth check to remain
+      hidden after sniping with a projectile weapon.</p>
+  equipped: false
+  price: 12
+  sources:
+    - id: PZO9452
+      pages: '20'
+  subType: adventuring
+  weight:
+    value: 2
+type: loot

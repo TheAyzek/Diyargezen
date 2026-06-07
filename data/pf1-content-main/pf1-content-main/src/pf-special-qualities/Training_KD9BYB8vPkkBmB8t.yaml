@@ -1,0 +1,28 @@
+_id: KD9BYB8vPkkBmB8t
+_key: '!items!KD9BYB8vPkkBmB8t'
+_stats:
+  coreVersion: '12.343'
+folder: AqjqWFWInPuTJU1V
+img: icons/skills/melee/strike-polearm-light-orange.webp
+name: Training
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint transmutation <strong>CL</strong>
+      3rd</p><p><strong>Slot</strong> none; <strong>Price</strong> +1
+      bonus;</p><p>Popular among those who seek to impersonate skilled warriors,
+      a <em>training</em> weapon grants one combat feat to the wielder as long
+      as the weapon is drawn and in hand. The feat is chosen when this special
+      ability is placed on the weapon. That feat cannot be used as a
+      prerequisite for any other feats and functions for the wielder only if she
+      meets its prerequisites. Once chosen, the feat stored in the weapon cannot
+      be changed.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>magic weapon</em>, creator must have the chosen
+      combat feat and its prerequisites; <strong>Price</strong> -</p>
+  sources:
+    - id: PZO9292
+      pages: '52'
+  subType: misc
+  tags:
+    - Universal Weapon Qualities
+type: feat

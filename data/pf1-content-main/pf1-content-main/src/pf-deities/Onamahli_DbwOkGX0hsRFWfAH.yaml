@@ -1,0 +1,43 @@
+_id: DbwOkGX0hsRFWfAH
+_key: '!journal!DbwOkGX0hsRFWfAH'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Onamahli
+pages:
+  - _id: nv63VXYHwa1jerSt
+    _key: '!journal.pages!DbwOkGX0hsRFWfAH.nv63VXYHwa1jerSt'
+    _stats:
+      coreVersion: '12.331'
+    name: Onamahli
+    sort: 0
+    text:
+      content: >-
+        <h1>Onamahli</h1><h2>The Twice Pure</h2>@Source[PZO1139;pages=110] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Onamahli">Onamahli</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Asura Ranas<br /><strong>Areas of
+        Concern</strong> Beauty, double standards, self-mutalation<br
+        /><strong>Domains</strong> Charm, Evil, Law, Madness<br
+        /><strong>Subdomains</strong> Fear, Insanity, Lust, Nightmare<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Urumi</p><h3>Obedience</h3><p>Spend 1
+        hour using cosmetics, scarification, or other means to decorate the left
+        side of your body differently from your right side. Gain a +4 profane
+        bonus on saving throws against charm effects.</p><h2>Boons - Asura
+        Ranas</h2>@Source[PZO1139;pages=111]<br />Over time, the mightiest of
+        the asuras complete enough cycles of reincarnation and build upon the
+        atrocities committed over multiple lives to incarnate into the most
+        powerful of their kind: the asura ranas.<p> Asura ranas are lawful evil
+        demigods that range in power from CR 26 to CR 30. Each asura rana
+        detailed below is given an obedience, but the boons they grant are less
+        complex than those granted by archdevils, manifesting as spell-like
+        abilities usable once per day each.</p><p><strong>1</strong>: extended
+        <em>mirror image</em><br /><strong>2</strong>: <em>insanity</em><br
+        /><strong>3</strong>: <em>divide mind</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

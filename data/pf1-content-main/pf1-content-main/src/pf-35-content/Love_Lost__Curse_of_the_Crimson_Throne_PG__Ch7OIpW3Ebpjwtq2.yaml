@@ -1,0 +1,55 @@
+_id: Ch7OIpW3Ebpjwtq2
+_key: '!items!Ch7OIpW3Ebpjwtq2'
+_stats:
+  coreVersion: '12.343'
+folder: CAxOlglJyXdUOHF9
+img: icons/tools/navigation/map-chart-tan.webp
+name: Love Lost (Curse of the Crimson Throne PG)
+system:
+  changes:
+    - _id: BhlTSGK4
+      formula: '2'
+      type: trait
+  description:
+    instructions: >-
+      <ol><li><p>Select <strong>Orphaned</strong> or <strong>Widowed
+      </strong>when you take this trait.</p></li><li><p>if you select
+      <strong>Orphaned</strong>:&nbsp;</p><p>a) Select one of the following
+      skills: Craft, Perform, or Profession</p><p>b) Update the target of the
+      untargeted change on the changes tab of this trait to reflect your chosen
+      skill.</p></li><li><p>if you select <strong>Widowed</strong>: Update the
+      target of the untargeted change on the changes tab of this trait to
+      reflect Specific Skills&gt; Intimidate</p></li></ol><p><strong>Special
+      Note</strong>: This is the 3.5 Ruleset version of this trait. To view the
+      updated version for the Pathfinder rules click the link
+      below:</p><p>@UUID[Compendium.pf-content.pf-traits.Item.YraEYEO6Uk4631AF]{Love
+      Lost (Curse of the Crimson Throne)}</p>
+    value: >-
+      <p><em>Someone you loved was knifed to death in a dark alley one night.
+      You were called to the scene by the Korvosan Guard to identify the body,
+      and as rough as that was for you, you also noticed a ring was missing from
+      the body. Whoever murdered your loved one stole that ring,you're convinced
+      of it. You've done some investigation on your own and recently found the
+      ring for sale at a local merchant. Although, to your great frustration,
+      you can't afford yet to buy it back, the merchant did tell you from whom
+      he purchased the ring: a man named Gaedren Lamm. It seems likely this
+      criminal is the one who killed your loved one, or at the very least knows
+      who did. The only problem is finding
+      him.</em></p><p><strong>Benefits</strong>: Choose one of the following
+      benefits:</p><p><strong>Orphaned</strong>: The murder victim was your only
+      surviving parent. You had to grow up fast to take care of your siblings or
+      to handle your family's matters and were forced from an early age to
+      support yourself. You gain a +2 bonus on one of the following skills:
+      Craft, Perform, or Profession.</p><p><strong>Widowed</strong>: The murder
+      victim was a lover. With your lover's death, a part of you died as well,
+      leaving you haunted, grim, and prone to dark musings. You gain a +2 bonus
+      on Intimidate checks.</p><hr />
+  sources:
+    - id: PZO9000-2S
+      pages: '15'
+  subType: trait
+  tags:
+    - '3.5'
+    - Curse of the Crimson Throne
+  traitType: campaign
+type: feat

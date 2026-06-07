@@ -1,0 +1,34 @@
+_id: ja2YH69h4bQM3AsB
+_key: '!items!ja2YH69h4bQM3AsB'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/blood_07.jpg
+name: Curse of Lycanthropy
+system:
+  abilityType: su
+  actions:
+    - _id: ygau17jpkdev5omn
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      img: systems/pf1/icons/skills/blood_07.jpg
+      name: Use
+      save:
+        dc: '15'
+        description: Fort Negates
+        type: fort
+      tag: curseOfLycanthropySu
+  description:
+    value: >-
+      <p>A natural lycanthrope&rsquo;s bite attack in animal or hybrid form
+      infects a humanoid target with lycanthropy (Fortitude DC 15 negates). If
+      the victim&rsquo;s size is not within one size category of the
+      lycanthrope&rsquo;s size, this ability has no
+      effect.</p><p><em>Format</em>: curse of
+      lycanthropy</p><p><em>Location</em>: individual attacks.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

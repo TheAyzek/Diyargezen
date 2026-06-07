@@ -1,0 +1,60 @@
+_id: 597UelCFxMtdYmeW
+_key: '!items!597UelCFxMtdYmeW'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/longsword.png
+name: Sword of the Planes
+system:
+  actions:
+    - _id: 0xj5b3aqg1ac18eu
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: swordOfThePlanes
+  aura:
+    school: evo
+  baseTypes:
+    - Longsword
+  cl: 15
+  description:
+    value: >-
+      <p>This longsword has an enhancement bonus of +1 on the Material Plane,
+      but on any elemental planes its enhancement bonus increases to +2. The +2
+      enhancement bonus also applies whenever the weapon is used against
+      creatures native to the elemental planes. It operates as a +3 longsword on
+      the Astral Plane and the Ethereal Plane, or when used against opponents
+      native to either of those planes. On any other plane, or against any
+      outsider, it functions as a +4 longsword.</p><p><strong>Base
+      Item</strong>: longsword|+2 longsword|+3 longsword|+4
+      longsword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, plane shift</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 22315
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 4
+type: weapon

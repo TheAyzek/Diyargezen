@@ -1,0 +1,27 @@
+_id: tbyu15LTjYbqrmhl
+_key: '!items!tbyu15LTjYbqrmhl'
+_stats:
+  coreVersion: '12.331'
+folder: 5HPDAAtypP5m41CK
+img: icons/svg/item-bag.svg
+name: Unholy Oilskin
+system:
+  aura:
+    custom: true
+    school: transmutation; CL 9th
+  cl: 9
+  description:
+    value: >-
+      <p>This piece of cloth has been impregnated with unholy oils and
+      sanctified with dark blessings. It allows the handling of holy (or cursed)
+      items without a risk to an evil
+      character.</p><h3>Requirements</h3><p>Craft Wondrous Item, unhallow</p>
+  price: 20000
+  sources:
+    - date: '2012'
+      publisher: Necromancer Games & Frog God Games
+      title: Rappan Athuk
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

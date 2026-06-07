@@ -1,0 +1,34 @@
+_id: usUmt0F2gYxtkBH4
+_key: '!items!usUmt0F2gYxtkBH4'
+_stats:
+  coreVersion: '12.343'
+folder: AqjqWFWInPuTJU1V
+img: icons/skills/melee/strike-polearm-light-orange.webp
+name: Patriotic
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate conjuration <strong>CL</strong>
+      10th</p><p><strong>Slot</strong> none; <strong>Price</strong> +1
+      bonus;</p><p>A <em>patriotic </em>weapon radiates with the collective
+      power and strength of a particular nation of people. If the wielder is a
+      member of that nationality, he gains several benefits. First, the wielder
+      gains a +4 insight bonus on Bluff, Disguise, and Sleight of Hand checks to
+      conceal the weapon from members of other nationalities. On a successful
+      hit against a flat-footed target of a different nationality, the target
+      must succeed at DC 13 Will save or be shaken for 1 minute. Finally, the
+      wielder receives a +2 bonus to confirm critical hits against members of 
+      other nationalities.<p> The nationality affected must be determined at the
+      <em>patriotic</em>  weapon's creation and cannot be altered. At the GM's
+      discretion, the nationality named may be a specified human ethnicity, such
+      as Chelaxian or
+      Shoanti.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>summon monster I</em>; <strong>Price</strong>
+      -</p>
+  sources:
+    - id: PZO9433
+      pages: '30'
+  subType: misc
+  tags:
+    - Universal Weapon Qualities
+type: feat

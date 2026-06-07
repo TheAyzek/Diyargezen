@@ -1,0 +1,68 @@
+_id: 6OszBTf4oKXfmXax
+_key: '!items!6OszBTf4oKXfmXax'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/artillery/cannon-simple.webp
+name: Sirocco Cannon
+system:
+  actions:
+    - _id: fhzw9reg4buasf65
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: siroccoCannon
+  aura:
+    school: evo
+  baseTypes:
+    - Cannon
+  cl: 10
+  description:
+    value: >-
+      <p>This +1 shocking burst cannon (Ultimate Combat 162) is mounted on a
+      brass carriage decorated with carvings of winds and storms. Three times
+      per day, a sirocco cannon can be commanded to create a special type of
+      ammunition. This ammunition functions as a normal cannonball, but on a
+      successful hit, a gust of furnace-hot wind blasts downward in a
+      20-foot-radius, 60-foot-high cylinder around the target or target square
+      for 10 rounds. This hot wind deals 4d6+10 points of fire damage to all
+      creatures in the area and knocks them prone. A successful DC 19 Fortitude
+      save halves the fire damage and avoids being knocked prone. Flying
+      creatures forced into the ground by the powerful downdraft take damage as
+      if they fell unless they make a DC 15 Fly check, in which case they remain
+      at their original altitude. Any creature that takes damage from the hot
+      air becomes fatigued (or exhausted, if already fatigued, such as from a
+      previous round of exposure). Creatures with the water subtype take a -4
+      penalty on all saving throws against this effect and take double normal
+      damage. This special ammunition deals no additional damage to ships or
+      structures.<p><strong>Base Item</strong>: shocking burst
+      cannon</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, call lightning or lightning bolt, sirocco (Advanced
+      Player's Guide 244)</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 184500
+  showInQuickbar: false
+  sources:
+    - id: PZO9060
+  weight:
+    value: 100
+type: weapon

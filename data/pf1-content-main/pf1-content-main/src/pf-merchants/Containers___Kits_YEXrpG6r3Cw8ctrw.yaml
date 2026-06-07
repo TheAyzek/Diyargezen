@@ -1,0 +1,26 @@
+_id: YEXrpG6r3Cw8ctrw
+_key: '!actors!YEXrpG6r3Cw8ctrw'
+_stats:
+  coreVersion: '12.343'
+flags:
+  core:
+    sheetClass: PF1.ActorSheetPFNPCLoot
+img: icons/containers/bags/pack-engraved-leather-leaf-tan.webp
+items: []
+name: Containers & Kits
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    spells:
+      spellbooks:
+        primary:
+          name: Primary
+        secondary:
+          name: Secondary
+        spelllike:
+          name: Spell-likes
+        tertiary:
+          name: Tertiary
+type: npc

@@ -1,0 +1,25 @@
+_id: TuYIr4fnTQsJPzcI
+_key: '!items!TuYIr4fnTQsJPzcI'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Saint's Protection Charm
+system:
+  aura:
+    school: con
+  cl: 3
+  description:
+    value: >-
+      <p>A copper disc attached to this bracelet bears the image of a figure in
+      religious garb. The wearer gains a +1 deflection bonus to AC and a +1
+      resistance bonus on saves. These bonuses apply only against attacks made
+      or effects created by extraplanar
+      creatures.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item; protection from chaos, evil, good, or law</p>
+  price: 1500
+  slot: wrists
+  sources:
+    - id: PZO9440
+  subType: wondrous
+type: equipment

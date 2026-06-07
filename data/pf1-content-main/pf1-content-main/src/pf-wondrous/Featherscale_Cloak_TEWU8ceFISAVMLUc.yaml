@@ -1,0 +1,30 @@
+_id: TEWU8ceFISAVMLUc
+_key: '!items!TEWU8ceFISAVMLUc'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Featherscale Cloak
+system:
+  aura:
+    custom: true
+    school: abjuration and transmutation
+  cl: 5
+  description:
+    value: >-
+      <p>This heavy linen cloak has a fish-scale pattern that darkens toward the
+      bottom and white feathers on the shoulders. Once per day, the wearer can
+      use beast shape I, but only to transform into a bird or fish. In addition,
+      the wearer can use hide from animals (affecting only the wearer) once per
+      day. The wearer gains a +5 competence bonus on Swim checks.  Once per day,
+      the wearer can use feather
+      fall.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, beast shape I, feather fall, hide from animals</p>
+  price: 4000
+  slot: shoulders
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

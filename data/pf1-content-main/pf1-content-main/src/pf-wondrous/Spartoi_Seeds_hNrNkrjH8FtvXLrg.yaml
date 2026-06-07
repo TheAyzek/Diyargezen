@@ -1,0 +1,27 @@
+_id: hNrNkrjH8FtvXLrg
+_key: '!items!hNrNkrjH8FtvXLrg'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Spartoi Seeds
+system:
+  aura:
+    school: con
+  cl: 10
+  description:
+    value: >-
+      <p>Spartoi seeds appear as teeth stained by ash. The teeth themselves
+      typically take the form of tiny dragon teeth, though some appear to come
+      from a serpent, wolf, or human. When a tooth is cast upon the earth as a
+      standard action, a spartolos under the user's command erupts on the
+      following round. The spartolos lasts for 1 hour or until destroyed. A
+      spartolos's equipment vanishes if its owner is destroyed or after an hour.
+      These seeds are typically found in simple pouches of leather or velvet
+      containing 2d4 teeth. Up to six seeds can be sown by a single standard
+      action.<h3>Requirements</h3><p>Craft Wondrous Item, create undead</p>
+  price: 3300
+  sources:
+    - id: PZO9028
+  subType: wondrous
+type: equipment

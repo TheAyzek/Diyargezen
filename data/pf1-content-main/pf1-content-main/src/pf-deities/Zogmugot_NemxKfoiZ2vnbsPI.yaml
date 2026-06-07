@@ -1,0 +1,35 @@
+_id: NemxKfoiZ2vnbsPI
+_key: '!journal!NemxKfoiZ2vnbsPI'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Zogmugot
+pages:
+  - _id: K8PGnohRoTyQFHEU
+    _key: '!journal.pages!NemxKfoiZ2vnbsPI.K8PGnohRoTyQFHEU'
+    _stats:
+      coreVersion: '12.331'
+    name: Zogmugot
+    sort: 0
+    text:
+      content: >-
+        <h1>Zogmugot</h1><h2>Lady Lastbreath</h2>@Source[PZO9267;pages=324] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Zogmugot">Zogmugot</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Goblin Hero-Gods<br /><strong>Areas of
+        Concern</strong> Drowning, flotsam, scavenging<br
+        /><strong>Domains</strong> Chaos, Evil, Trickery, Water<br
+        /><strong>Subdomains</strong> Demon (Chaos), Demon (Evil), Flotsam,
+        Oceans, Thievery<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Sickle<br
+        /><strong>Symbol</strong> Seaweed draped chest<br /><strong>Sacred
+        Animal(s)</strong> Crab<br /><strong>Sacred Color(s)</strong> Blue,
+        brown</p><h2>For Followers of Zogmugot</h2><h3>Magic Items - Wondrous
+        Items</h3><p>Great Barghest Hero
+        Cloak</p><h3>Traits</h3><p>Flounderer</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

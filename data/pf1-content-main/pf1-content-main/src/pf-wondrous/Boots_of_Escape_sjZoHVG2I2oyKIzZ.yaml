@@ -1,0 +1,29 @@
+_id: sjZoHVG2I2oyKIzZ
+_key: '!items!sjZoHVG2I2oyKIzZ'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Boots of Escape
+system:
+  aura:
+    school: con
+  cl: 5
+  description:
+    value: >-
+      <p>These sturdy leather-soled cloth boots have straps at the ankles and
+      calves to ensure a snug fit. Once per day, when the wearer of the boots is
+      grappled, pinned, or entangled, she may transfer herself to any spot
+      within 30 feet as if using a dimension door spell. A gnome wearing these
+      boots may instead transfer herself up to 400 feet
+      away.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, dimension door, creator must be a gnome or a wizard
+      specialized in the school of conjuration</p>
+  price: 8000
+  slot: feet
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

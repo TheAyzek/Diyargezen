@@ -1,0 +1,50 @@
+_id: TnZC7V6LYhRBG3Hy
+_key: '!items!TnZC7V6LYhRBG3Hy'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/equipment/waist/belt-leaves-green.webp
+name: Belt of Spirit Vines
+system:
+  aura:
+    school: trs
+  cl: 5
+  contextNotes:
+    - target: spellEffect
+      text: >-
+        While connected via the belt of spirit vines, if you cast a druid,
+        ranger, shaman, or witch spell with a range of touch on yourself, both
+        you and the connected creature gain the benefits of the spell for half
+        the spell’s duration (rounded down); this has no effect on instantaneous
+        or permanent spells. The spell’s effects on the connected creature end
+        if the vine’s range of @Distance[30;dual] is exceeded.
+  description:
+    unidentified: <p>This belt is constructed from woven vines.</p>
+    value: >-
+      <p>This belt is constructed from woven vines.</p><h3>Effect</h3><p>Its
+      wearer can touch a willing creature and cause a ghostly vine to grow from
+      the belt, connecting the wearer to the target creature. While connected to
+      another creature, when the wearer casts a druid, ranger, shaman, or witch
+      spell with a range of touch on herself, both the wearer and the connected
+      creature gain the benefits of the spell for half the spell’s duration
+      (rounded down); this has no effect on instantaneous or permanent spells.
+      The spell’s effects on the connected creature end if the vine’s range is
+      exceeded.</p><p>The vine can grow up to a length of @Distance[30;dual],
+      and it vanishes if the wearer or connected creature moves beyond its
+      maximum range. The vine can remain connected indefinitely, but the
+      connection is broken if the wearer dismisses it or connects the vine to
+      another creature.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.tvhm9lzgnjlcucsn]{plant growth}</em>
+      <strong>Cost</strong> 7,500 gp</p>
+  hp:
+    base: 10
+  price: 15000
+  slot: belt
+  sources:
+    - id: PZO1140
+      pages: '250'
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

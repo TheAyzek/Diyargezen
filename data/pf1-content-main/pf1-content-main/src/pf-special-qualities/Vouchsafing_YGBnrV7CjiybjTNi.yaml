@@ -1,0 +1,26 @@
+_id: YGBnrV7CjiybjTNi
+_key: '!items!YGBnrV7CjiybjTNi'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Vouchsafing
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate abjuration <strong>CL</strong>
+      9th</p><p><strong>Slot</strong> none; <strong>Price</strong> +1 bonus;
+      <em>Vouchsafing</em> armor grants its wearer DR 5/- while she is
+      unconscious, nauseated, stunned, or pinned. This DR stacks with any other
+      DR the wearer already has. If the wearer is somehow able to take standard
+      actions while unconscious, nauseated, or stunned, or is able to make
+      attacks while pinned, the armor does not grant its
+      DR.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, <em>stoneskin</em>; <strong>Price</strong> +1 bonus</p>
+  sources:
+    - id: PZO1129
+      pages: '210'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

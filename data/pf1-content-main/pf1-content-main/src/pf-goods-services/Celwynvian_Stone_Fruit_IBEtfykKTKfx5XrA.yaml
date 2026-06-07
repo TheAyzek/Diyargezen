@@ -1,0 +1,26 @@
+_id: IBEtfykKTKfx5XrA
+_key: '!items!IBEtfykKTKfx5XrA'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/plant-sprout-teal.webp
+name: Celwynvian Stone Fruit
+system:
+  description:
+    value: >-
+      <p>This bizarre fruit appears to be carved from stone, though it has a
+      lovely aroma and is easily consumed. Stone fruits occasionally sprout from
+      the strange treelike monument known as the Celwynvian Charge
+      (<em>Pathfinder Campaign Setting: Magnimar, City of Monuments</em> 29),
+      where they are gathered by licensed vendors and sold to travelers. Eating
+      a stone fruit hardens flesh and restores vitality. When a creature eats
+      the fruit as a fullround action that provokes attacks of opportunity, it
+      immediately recovers 2d6 hit points and gains a +2 enhancement bonus to
+      its natural armor for 1 minute.</p>
+  price: 500
+  sources:
+    - id: PZO9489
+      pages: '21'
+  subType: food
+  weight:
+    value: 1
+type: consumable

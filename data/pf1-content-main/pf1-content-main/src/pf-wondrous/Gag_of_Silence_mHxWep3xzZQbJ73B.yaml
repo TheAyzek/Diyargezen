@@ -1,0 +1,29 @@
+_id: mHxWep3xzZQbJ73B
+_key: '!items!mHxWep3xzZQbJ73B'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Gag of Silence
+system:
+  aura:
+    school: ill
+  cl: 3
+  description:
+    value: >-
+      <p>This black leather cord has a red wooden ball attached at its center.
+      When the cord is tied around a creature's head and the wooden ball is
+      placed in the creature's mouth, the creature cannot speak or make any
+      vocal sounds, including verbal components of spells. When removed from the
+      creature, the ball breaks off from the leather cord, ending the effect. A
+      creature that is not otherwise restrained can easily untie the gag and
+      remove it.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, silence</p>
+  price: 500
+  slot: head
+  sources:
+    - id: PZO1136
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

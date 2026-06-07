@@ -1,0 +1,31 @@
+_id: mvvV25tNDHYiIwA5
+_key: '!items!mvvV25tNDHYiIwA5'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Howling Bracers
+system:
+  aura:
+    school: enc
+  cl: 7
+  description:
+    value: >-
+      <p>These bracers are made of heavy iron and have a pattern of howling
+      wolves engraved upon them. Once per day on command, the wearer can clash
+      the bracers together rhythmically. This causes the wolves etched into the
+      bracers to come to life and let out a chorus of howls, with the effect of
+      crushing despair (DC 16). Additionally, for every two creatures under the
+      effect of the wearer's raging song when this ability is used, the DC
+      increases by 1, up to a maximum increase of
+      5.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Wondrous
+      Item, crushing despair, creator must have the raging song class
+      feature</p>
+  price: 7000
+  slot: wrists
+  sources:
+    - id: PZO1129
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

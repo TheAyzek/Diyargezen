@@ -1,0 +1,29 @@
+_id: nGlygt19fzL7TETp
+_key: '!items!nGlygt19fzL7TETp'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Boots of the Vengeful Behir
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>These heavy boots are made of blue leather. Three times per day, when
+      the wearer speaks the command word, he can attempt a bull rush the
+      following round as if one size category larger than normal. If the target
+      of the bull rush is a dragon, the wearer is treated as if two size
+      categories larger than normal. This bull rush attempt does not provoke
+      attacks of
+      opportunity.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, enlarge person</p>
+  price: 5400
+  slot: feet
+  sources:
+    - id: PZO9434
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

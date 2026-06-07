@@ -1,0 +1,26 @@
+_id: cDfOxsyHEr7hyWaw
+_key: '!items!cDfOxsyHEr7hyWaw'
+_stats:
+  coreVersion: '12.331'
+folder: KOT1geWrUrAU083b
+img: icons/equipment/chest/vest-leather-pink.webp
+name: Blouse of the Boastful Bastard
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>This stylish, purple silk shirt trimmed with designs embroidered in
+      golden thread brings out reckless behavior in even the most conservative
+      swashbucklers. If the wearer has the panache class feature, when she takes
+      damage from a successful critical hit, she regains 1 panache point. This
+      shirt has no effect on someone who is not a panache
+      user.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, guidance, prestidigitation, resistance</p>
+  price: 8000
+  slot: chest
+  sources:
+    - id: PZO1129
+  subType: wondrous
+type: equipment

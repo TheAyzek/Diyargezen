@@ -1,0 +1,65 @@
+_id: A9MzLZ9Eu2NRiQfp
+_key: '!journal!A9MzLZ9Eu2NRiQfp'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: jcYNlOHnTVoxPbLH
+name: 3.3.2.5. Above and Beneath the Streets
+pages:
+  - _id: ejoaqyAzlDr0zC9m
+    _key: '!journal.pages!A9MzLZ9Eu2NRiQfp.ejoaqyAzlDr0zC9m'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.3.2.5. Above and Beneath the Streets
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.qx3PVEeLsKOdiESK]{3.3.
+        Urban
+        Adventures}</p><ul><li><p>@Compendium[pf-content.pf-rules.a0xDSVGQRE2pVzkA]{3.3.2.
+        Urban
+        Features}</p><ul><li>@Compendium[pf-content.pf-rules.kMiP5IZwDvMssIBY]{3.3.2.1.
+        Walls and
+        Gates}</li><li>@Compendium[pf-content.pf-rules.DBgMSNFxDzkCxJ7g]{3.3.2.2.
+        Guards and
+        Soldiers}</li><li>@Compendium[pf-content.pf-rules.MI0493ERUqLM2bT9]{3.3.2.3.
+        Siege
+        Engines}</li><li>@Compendium[pf-content.pf-rules.FmRlm273yvFj0UMs]{3.3.2.4.
+        City
+        Streets}</li><li><strong>@Compendium[pf-content.pf-rules.A9MzLZ9Eu2NRiQfp]{3.3.2.5.
+        Above and Beneath the
+        Streets}</strong></li><li>@Compendium[pf-content.pf-rules.ggcyCNuPo8NdzmjI]{3.3.2.6.
+        City
+        Buildings}</li><li>@Compendium[pf-content.pf-rules.deJ36cJDbvFpa2fr]{3.3.2.7.
+        City Lights}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=437]</p><h2>Rooftops</h2><p>Getting to a roof
+        usually requires climbing a wall (see the
+        @Compendium[pf-content.pf-rules.kMiP5IZwDvMssIBY]{3.3.2.1. Walls and
+        Gates} section), unless the character can reach a roof by jumping down
+        from a higher window, balcony, or bridge. Flat roofs, common only in
+        warm climates (as accumulated snow can cause a flat roof to collapse),
+        are easy to run across. Moving along the peak of a pitched roof requires
+        a DC 20 Acrobatics check. Moving on an angled roof surface without
+        changing altitude (moving parallel to the peak, in other words) requires
+        a DC 15 Acrobatics check. Moving up and down across the peak of a roof
+        requires a DC 10 Acrobatics check.</p><p>Eventually a character runs out
+        of roof, requiring a long jump across to the next roof or down to the
+        ground. The distance to the closest roof is usually 1d3 × 5 feet
+        horizontally, but the next roof is equally likely to be 5 feet higher, 5
+        feet lower, or the same height. Use the guidelines in the Acrobatics
+        skill (a horizontal jump’s peak height is one-fourth of the horizontal
+        distance) to determine whether a character can make a
+        jump.</p><h2>Sewers</h2><p>To get into the sewers, most characters open
+        a grate (a full-round action) and jump down 10 feet. Sewers are built
+        exactly like dungeons, except that they’re much more likely to have
+        floors that are slippery or covered with water. Sewers are also similar
+        to dungeons in terms of creatures liable to be encountered therein. Some
+        cities were built atop the ruins of older civilizations, so their sewers
+        sometimes lead to treasures and dangers from a bygone age.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

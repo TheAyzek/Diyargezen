@@ -1,0 +1,23 @@
+_id: bmtixpHNUUc6aoJD
+_key: '!items!bmtixpHNUUc6aoJD'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/scribal/pen-steel-grey-brown.webp
+name: Shadow stencil set
+system:
+  description:
+    value: >-
+      <p>This set of 10 elaborate metal stencils are used in shadow puppetry to
+      cast shadows of highly stylized figures and objects. If used to aid in the
+      creation of any type of shadow spell or effect (including shadow puppet
+      bardic performances), a wayang adds a +1 competence bonus to her saving
+      throw DC. Using a shadow stencil requires one hand.</p>
+  equipped: false
+  price: 30
+  sources:
+    - id: PZO1121
+      pages: '211'
+  subType: tool
+  weight:
+    value: 2
+type: loot

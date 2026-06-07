@@ -1,0 +1,26 @@
+_id: qcaK7he6D22MdVDc
+_key: '!items!qcaK7he6D22MdVDc'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/book-purple.jpg
+name: Brooch
+system:
+  associations:
+    classes:
+      - Occultist
+  description:
+    value: >-
+      <p><strong>Occultist Sacred Implement</strong></p><p><strong>Deity
+      </strong>Pharasma; <strong>Implement </strong>brooch; <strong>Opposition
+      School </strong>abjuration</p><p><em>Grandmother's Ward (Su): </em>As a
+      standard action, you can expend 3 points of psychic focus to create a
+      5-foot-radius ward centered on you for 1 round per occultist level. This
+      ward burns undead creatures, dealing an amount of damage equal to 1d4 +
+      1d4 per 2 occultist levels you have when the undead enter the ward and
+      each round they begin their turns within this area of effect. The warded
+      area moves with you and can be used only defensively. Any attempt to force
+      the ward against an undead creature immediately ends the effect.</p>
+  subType: classFeat
+  tags:
+    - Occultist Sacred Implement
+type: feat

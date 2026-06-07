@@ -1,0 +1,73 @@
+_id: chumk1NFJEui6Gna
+_key: '!items!chumk1NFJEui6Gna'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/battle-aspergillum.png
+name: Channeler's Aspergillum
+system:
+  actions:
+    - _id: 4g5gfl76mdw729lq
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: channelersAspergillum
+  aura:
+    custom: true
+    school: conjuration and necromancy
+  baseTypes:
+    - Battle Aspergillum
+  cl: 9
+  description:
+    value: >-
+      <p>This +1 battle aspergillum has additional powers when filled with holy
+      water or unholy water (filling it requires a move action). By swinging a
+      filled channeler's aspergillum in an arc, the wielder affects up to nine
+      creatures in a 30-foot cone as with mass cure light wounds (if the
+      aspergillum is filled with holy water) or mass inflict light wounds (if
+      the aspergillum is filled with unholy water). This action expends the holy
+      or unholy water within. If the wielder has the channel energy ability, she
+      can also use a channeler's aspergillum to increase her effective cleric
+      level by 2 for the purpose of channeling energy. Each time the wielder
+      uses the channeler's aspergillum in this way, the holy water (for
+      channeled positive energy) or unholy water (for channeled negative energy)
+      stored in the aspergillum is expended. Regardless of which of these ways
+      the channeler's aspergillum is used, it can only be filled with holy or
+      unholy water up to three times per day. A channeler's aspergillum can hold
+      only one flask's worth of holy or unholy water at a
+      time.</p><p><strong>Base Item</strong>: battle
+      aspergillum</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, mass cure light wounds, mass inflict light wounds,
+      creator must be able to channel energy</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 36305
+  properties:
+    fin: true
+    spc: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9440
+  weaponGroups:
+    - hammers
+  weight:
+    value: 4
+type: weapon

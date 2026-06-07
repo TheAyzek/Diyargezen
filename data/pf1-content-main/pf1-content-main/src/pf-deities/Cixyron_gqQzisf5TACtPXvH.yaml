@@ -1,0 +1,48 @@
+_id: gqQzisf5TACtPXvH
+_key: '!journal!gqQzisf5TACtPXvH'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Cixyron
+pages:
+  - _id: gZReiRdEltpBG0mG
+    _key: '!journal.pages!gqQzisf5TACtPXvH.gZReiRdEltpBG0mG'
+    _stats:
+      coreVersion: '12.331'
+    name: Cixyron
+    sort: 0
+    text:
+      content: >-
+        <h1>Cixyron</h1><h2>The Furious Thunder</h2>@Source[PZO9267;pages=318]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Cixyron">Cixyron</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Daemon Harbingers<br /><strong>Areas
+        of Concern</strong> Electricity, gunpowder, poisonous metals<br
+        /><strong>Domains</strong> Artifice, Earth, Evil, Knowledge<br
+        /><strong>Subdomains</strong> Construct, Daemon, Metal, Toil<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Musket<br /><strong>Symbol</strong>
+        Explosion of electricity<br /><strong>Sacred Animal(s)</strong> Ant<br
+        /><strong>Sacred Color(s)</strong> Red,
+        yellow</p><h3>Obedience</h3><p>Pray atop a hill at night, preferably
+        during a thunderstorm. Gain a +4 profane bonus on saving throws against
+        lightning effects.</p><h2>Boons - Daemon
+        Harbingers</h2><p>@Source[PZO1139;pages=112]</p><p>Abaddon's unique
+        daemons take on a host of titles, customized to their methods and
+        vanity. These harbingers enjoy sweeping influence among daemons as
+        favored advisors, and they work to cultivate their own cults on Abaddon
+        and beyond.</p><p> Daemon harbingers are neutral evil demigods that
+        range in power from CR 21 to CR 25. The boons they grant are less
+        complex than those granted by the Horsemen themselves, manifesting as
+        spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>thunder fire</em><br
+        /><strong>2</strong>: <em>ball lightning<br /><strong>3</strong>:
+        <em>chain lightning</em></p><h2>For Followers of
+        Cixyron</h2><h3>Archetypes</h3><p><em>Planar Rifter
+        (Gunslinger)</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

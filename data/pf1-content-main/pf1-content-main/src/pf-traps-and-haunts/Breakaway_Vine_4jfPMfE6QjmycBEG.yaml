@@ -1,0 +1,121 @@
+_id: 4jfPMfE6QjmycBEG
+_key: '!actors!4jfPMfE6QjmycBEG'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: systems/pf1/icons/skills/green_31.jpg
+items:
+  - _id: 6sn58YeLVVvvyn2C
+    _key: '!actors.items!4jfPMfE6QjmycBEG.6sn58YeLVVvvyn2C'
+    _stats:
+      compendiumSource: Actor.rvPPWvEhzBOxU1QM.Item.PRQ4QA6zDPNAQY8M
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/green_31.jpg
+    name: Breakaway Vine
+    system:
+      actions:
+        - _id: ky6yl0qlhffflxt3
+          actionType: save
+          activation:
+            type: nonaction
+            unchained:
+              type: nonaction
+          attackBonus: '15'
+          damage:
+            parts:
+              - formula: 2d6
+                types:
+                  - Falling
+          img: systems/pf1/icons/skills/green_31.jpg
+          name: Attack
+          save:
+            dc: '20'
+            description: Reflex Negates
+            type: ref
+      proficient: true
+      subType: weapon
+    type: attack
+name: Breakaway Vine
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 1
+    disarm: 20
+    duration: ''
+    effect: >-
+      Associated Terrain: any forests, jungles, or swamps
+
+
+      A breakaway vine has been sabotaged so that it snaps not long after
+      someone begins using it to climb. A breakaway vine trap can be crafted
+      from a length of rope as well, but this ruins the rope for other uses.
+      When a Small or larger creature climbs a breakaway vine, the vine snaps
+      just before the creature reaches the top of the climb. A creature can grab
+      a handhold and avoid the resulting fall with a successful DC 20 Reflex
+      save. This breakaway vine assumes a 20-foot fall for 2d6 points of damage;
+      longer falls increase the CR of the breakaway vine by 1 per additional 20
+      feet.
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 20
+    reset: repair
+    trigger: Touch (timed)
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

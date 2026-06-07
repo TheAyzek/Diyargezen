@@ -1,0 +1,26 @@
+_id: bsGQ8ls69UkHcgkO
+_key: '!items!bsGQ8ls69UkHcgkO'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Liar's Well
+system:
+  aura:
+    school: con
+  cl: 17
+  description:
+    value: >-
+      <p>When opened, this cursed well of many worlds has a 50% chance of
+      displaying a false image of its destination. For example, the well may
+      appear to open onto the plane of Axis while in reality opening onto a
+      layer of the Abyss, though the difference is not always to the user's
+      detriment. Any creatures emerging from the other side are not subject to
+      the illusion. The false image is defeated by a true seeing
+      spell.</p><h3>Requirements</h3><p>Craft Wondrous Item, gate, mirage
+      arcana</p>
+  price: 84250
+  sources:
+    - id: PZO9220
+  subType: wondrous
+type: equipment

@@ -1,0 +1,34 @@
+_id: 9z2STqZDDrPBP6ja
+_key: '!items!9z2STqZDDrPBP6ja'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Chime of Storm Calling
+system:
+  aura:
+    custom: true
+    school: conjuration and evocation
+  cl: 5
+  description:
+    value: >-
+      <p>This copper chime can be struck as a standard action, producing a cloud
+      of mist around the user equivalent to an obscuring mist spell. If struck
+      again before the mist disperses, the user can call down the fury of a
+      storm on a single target within the clouded area, either striking it with
+      a bolt of lightning (3d6 electricity damage, Reflex DC 15 half) or
+      buffeting it with a gust of wind for 1 round, equivalent to the spell gust
+      of wind. Either use immediately disperses the cloud of mist and renders
+      the chime of storm calling inert for 24 hours. If the chime of storm
+      calling is not struck again, the mist disperses after 5 minutes, after
+      which it may be used again to create new banks of mist.  A chime of storm
+      calling cannot summon lightning or wind while underground, indoors, or in
+      an arid climate.</p><h3>Requirements</h3><p>Craft Wondrous Item, call
+      lightning, gust of wind, obscuring mist</p>
+  price: 6750
+  sources:
+    - id: PZO9551
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

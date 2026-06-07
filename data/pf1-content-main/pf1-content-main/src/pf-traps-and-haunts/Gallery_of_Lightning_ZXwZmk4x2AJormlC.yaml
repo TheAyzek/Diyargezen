@@ -1,0 +1,126 @@
+_id: ZXwZmk4x2AJormlC
+_key: '!actors!ZXwZmk4x2AJormlC'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: systems/pf1/icons/spells/lightning-blue-2.jpg
+items:
+  - _id: QpWd14SH8RAl5HQc
+    _key: '!actors.items!ZXwZmk4x2AJormlC.QpWd14SH8RAl5HQc'
+    _stats:
+      compendiumSource: Actor.70yzx8Y6LGfpoASo.Item.WJP3Pz73xgx4rjNK
+      coreVersion: '12.331'
+    img: systems/pf1/icons/spells/lightning-blue-2.jpg
+    name: Chain Lightning (Empowered)
+    system:
+      actions:
+        - _id: a8aegdzmng2j4z6h
+          actionType: spellsave
+          activation:
+            type: special
+            unchained:
+              type: special
+          damage:
+            parts:
+              - formula: 18d6
+                types:
+                  - electric
+          img: systems/pf1/icons/spells/lightning-blue-2.jpg
+          measureTemplate:
+            size: '30'
+            type: circle
+          name: Attack
+          notes:
+            effect:
+              - >-
+                plus 50% electricity damage to each target, half damage to up to
+                18 secondary targets
+              - Reflex DC 20 for secondary targets
+          range:
+            units: touch
+            value: '30'
+          save:
+            dc: '22'
+            description: Reflex half
+            type: ref
+          target:
+            value: >-
+              multiple targets (each of which must be within 30 ft. of the
+              primary target)
+      proficient: true
+      subType: misc
+    type: attack
+name: Gallery of Lightning
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 9
+    disarm: 31
+    duration: Instaneous
+    effect: ''
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 31
+    reset: Automatic (1d6 rounds)
+    trigger: Touch
+    type: Magic
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

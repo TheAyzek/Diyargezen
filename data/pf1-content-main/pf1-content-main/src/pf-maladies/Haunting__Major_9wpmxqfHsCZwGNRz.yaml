@@ -1,0 +1,23 @@
+_id: 9wpmxqfHsCZwGNRz
+_key: '!items!9wpmxqfHsCZwGNRz'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_11.jpg
+name: Haunting, Major
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> curse; <strong>Save</strong> Will DC
+      17</p><p><strong>Effect</strong> The victim is haunted by a Ghost as
+      described in minor haunting.</p><p><strong>Cure</strong> Unlike a minor
+      haunting, a major haunting can be ended only by putting the ghost to rest,
+      though casting <em>remove curse</em> directly after the ghost is destroyed
+      prevents it from reviving for 2d4 days.</p>
+  sources:
+    - id: PZO1135
+      pages: '138'
+  subType: misc
+  tags:
+    - Maladies
+    - Curse
+type: feat

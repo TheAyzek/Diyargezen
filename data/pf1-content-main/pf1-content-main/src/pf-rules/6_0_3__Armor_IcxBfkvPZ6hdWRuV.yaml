@@ -1,0 +1,94 @@
+_id: IcxBfkvPZ6hdWRuV
+_key: '!journal!IcxBfkvPZ6hdWRuV'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.3. Armor
+pages:
+  - _id: qcGUAC0MhBX783Kc
+    _key: '!journal.pages!IcxBfkvPZ6hdWRuV.qcGUAC0MhBX783Kc'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.3. Armor
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li>@Compendium[pf-content.pf-rules.yeIb3PW3M1QmlVNG]{6.0.1.
+        Wealth and
+        Money}</li><li>@Compendium[pf-content.pf-rules.VOAlGu4isvHXBLjm]{6.0.2.
+        Weapons}</li><li><strong>@Compendium[pf-content.pf-rules.IcxBfkvPZ6hdWRuV]{6.0.3.
+        Armor}</strong></li><li>@Compendium[pf-content.pf-rules.TROqcNjEw3b2q2Dk]{6.0.4.
+        Special Materials}</li></ul><hr
+        /><p>@Source[PZO1110;pages=149]</p><p>For most, armor is the simplest
+        way to protect oneself in a world of rampant threats and dangers. Many
+        characters can wear only the simplest of armors, and only some can use
+        shields. To wear heavier armor effectively, a character can select the
+        Armor Proficiency feats, but most classes are automatically proficient
+        with the armors that work best for them.</p><p>Here is the format for
+        armor entries (given as column headings on Table
+        6–6).</p><h2>Cost</h2><p>The cost in gold pieces of the armor for Small
+        or Medium humanoid creatures. See Table 6–8 for armor prices for other
+        creatures.</p><h2>Armor/Shield Bonus</h2><p>Each type of armor grants an
+        armor bonus to AC, while shields grant a shield bonus to AC. The armor
+        bonus from a suit of armor doesn’t stack with other effects or items
+        that grant an armor bonus. Similarly, the shield bonus from a shield
+        doesn’t stack with other effects that grant a shield
+        bonus.</p><h2>Maximum Dex Bonus</h2><p>This number is the maximum
+        Dexterity bonus to AC that this type of armor allows. Dexterity bonuses
+        in excess of this number are reduced to this number for the purposes of
+        determining the wearer’s AC. Heavier armors limit mobility, reducing the
+        wearer’s ability to dodge blows. This restriction doesn’t affect any
+        other Dexterity-related abilities.</p><p>Even if a character’s Dexterity
+        bonus to AC drops to 0 because of armor, this situation does not count
+        as losing his Dexterity bonus to AC.</p><p>A character’s encumbrance
+        (the amount of gear carried, including armor) may also restrict the
+        maximum Dexterity bonus that can be applied to his Armor
+        Class.</p><h2>Shields</h2><p>Shields do not affect a character’s maximum
+        Dexterity bonus, except for tower shields.</p><h2>Armor Check
+        Penalty</h2><p>Any armor heavier than leather, as well as any shield,
+        hurts a character’s ability to use Dexterity- and Strength-based skills.
+        An armor check penalty applies to all Dexterity- and Strength-based
+        skill checks. A character’s encumbrance may also incur an armor check
+        penalty.</p><h2>Shields</h2><p>If a character is wearing armor and using
+        a shield, both armor check penalties apply.</p><h2>Nonproficient with
+        Armor Worn</h2><p>A character who wears armor and/or uses a shield with
+        which he is not proficient takes the armor’s (and/or shield’s) armor
+        check penalty on attack rolls as well as on all Dexterity- and
+        Strength-based ability and skill checks. The penalty for nonproficiency
+        with armor stacks with the penalty for shields.</p><h2>Sleeping in
+        Armor</h2><p>A character who sleeps in medium or heavy armor is
+        automatically fatigued the next day. He takes a –2 penalty on Strength
+        and Dexterity and can’t charge or run. Sleeping in light armor does not
+        cause fatigue.</p><h2>Arcane Spell Failure Chance</h2><p>Armor
+        interferes with the gestures that a spellcaster must make to cast an
+        arcane spell that has a somatic component. Arcane spellcasters face the
+        possibility of arcane spell failure if they’re wearing armor. Bards can
+        wear light armor and use shields without incurring any arcane spell
+        failure chance for their bard spells.</p><h2>Casting an Arcane Spell in
+        Armor</h2><p>A character who casts an arcane spell while wearing armor
+        must usually make an arcane spell failure check. The number in the
+        Arcane Spell Failure Chance column on Table 6–6 is the percentage chance
+        that the spell fails and is ruined. If the spell lacks a somatic
+        component, however, it can be cast with no chance of arcane spell
+        failure.</p><h2>Shields</h2><p>If a character is wearing armor and using
+        a shield, add the two numbers together to get a single arcane spell
+        failure chance.</p><h2>Speed</h2><p>Medium or heavy armor slows the
+        wearer down. The number on Table 6–6 is the character’s speed while
+        wearing the armor. Humans, elves, half-elves, and halforcs have an
+        unencumbered speed of 30 feet. They use the first column. Dwarves,
+        gnomes, and half lings have an unencumbered speed of 20 feet. They use
+        the second column. Remember, however, that a dwarf ’s land speed remains
+        20 feet even in medium or heavy armor or when carrying a medium or heavy
+        load.</p><h2>Shields</h2><p>Shields do not affect a character’s
+        speed.</p><h2>Weight</h2><p>This column gives the weight of the armor
+        sized for a Medium wearer. Armor fitted for Small characters weighs half
+        as much, and armor for Large characters weighs twice as much.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

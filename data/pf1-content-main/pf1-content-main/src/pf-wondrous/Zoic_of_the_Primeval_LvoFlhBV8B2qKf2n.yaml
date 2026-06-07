@@ -1,0 +1,31 @@
+_id: LvoFlhBV8B2qKf2n
+_key: '!items!LvoFlhBV8B2qKf2n'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Zoic of the Primeval
+system:
+  aura:
+    custom: true
+    school: enchantment compulsion
+  cl: 17
+  description:
+    value: >-
+      <p>This collection of twigs and dinosaur teeth can be strung through with
+      a length of sinew to create a necklace that offers limited protection
+      against dangerous animals. The bearer of the Zoic of the Primeval gains a
+      +1 insight bonus to AC against all non-humanoids. Against animals and
+      outsiders, this AC bonus increases to +2.  Additionally, once per day the
+      wearer can use the Zoic of the Primeval to dominate any creature of the
+      animal or outsider type as by dominate monster (Will DC 23
+      negates).</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, dominate monster</p>
+  price: 50000
+  slot: neck
+  sources:
+    - id: PZO9275
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,23 @@
+_id: 3O5Ul11JELh6VmEa
+_key: '!items!3O5Ul11JELh6VmEa'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/leather/fur-white-tan.webp
+name: Fox
+system:
+  description:
+    value: >-
+      <p>These quick and wily carnivores can be difficult to train, but often
+      make excellent familiars. Many humanoid communities see these canines as a
+      menace to their farming fowl, and some use dogs to track them during
+      recreational hunts. More information on foxes can be found in <em>Bestiary
+      3</em>.</p>
+  equipped: false
+  price: 8
+  sources:
+    - id: PZO1123
+      pages: '80'
+  subType: animal
+  weight:
+    value: 12
+type: loot

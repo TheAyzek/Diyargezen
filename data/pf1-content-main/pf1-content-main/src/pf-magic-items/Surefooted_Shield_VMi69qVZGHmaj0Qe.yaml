@@ -1,0 +1,45 @@
+_id: VMi69qVZGHmaj0Qe
+_key: '!items!VMi69qVZGHmaj0Qe'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-heavy-metal.png
+name: Surefooted Shield
+system:
+  armor:
+    acp: 2
+    material:
+      base:
+        value: steel
+    value: 2
+  aura:
+    school: abj
+  baseTypes:
+    - Heavy Steel Shield
+  cl: 6
+  description:
+    value: >-
+      <p>The face of this +2 heavy steel shield is lined with sheets of riveted
+      steel to absorb more impact. A surefooted shield grants its wielder a +2
+      bonus on his CMD versus awesome blow, bull rush, and overrun combat
+      maneuvers and on Reflex saves against trample attacks.  Additionally, up
+      to three times per day, whenever an enemy's melee attack misses the
+      wielder, an enemy fails a combat maneuver against the wielder, or the
+      wielder succeeds at a Reflex save against a trample attack, the wielder
+      can move 5 feet as an immediate action; this movement does not provoke
+      attacks of opportunity and does not count as a 5-foot
+      step.</p><p><strong>Base Item</strong>: heavy steel
+      shield</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, abjuring step</p>
+  enh: 2
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 14200
+  slot: shield
+  sources:
+    - id: PZO9094
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 15
+type: equipment

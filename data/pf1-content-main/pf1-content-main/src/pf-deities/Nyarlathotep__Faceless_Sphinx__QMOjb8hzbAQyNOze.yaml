@@ -1,0 +1,41 @@
+_id: QMOjb8hzbAQyNOze
+_key: '!journal!QMOjb8hzbAQyNOze'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Nyarlathotep (Faceless Sphinx)
+pages:
+  - _id: K4v6IA8Avz7Q3Klm
+    _key: '!journal.pages!QMOjb8hzbAQyNOze.K4v6IA8Avz7Q3Klm'
+    _stats:
+      coreVersion: '12.331'
+    name: Nyarlathotep (Faceless Sphinx)
+    sort: 0
+    text:
+      content: >-
+        <h1>Nyarlathotep</h1><h2>Black Pharaoh, Faceless Sphinx, and Haunter of
+        the Dark</h2>@Source[PZO9065;pages=41] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Nyarlathotep">Nyarlathotep</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Outer Gods<br /><strong>Areas of
+        Concern</strong> Conspiracies, dangerous secrets, forbidden magic<br
+        /><strong>Domains (Black Pharaoh)</strong> Chaos, Evil, Knowledge,
+        Magic, Trickery<br /><strong>Domains (Haunter of the Dark)</strong>
+        Chaos, Darkness, Evil, Knowledge, Magic<br /><strong>Domains (Faceless
+        Sphinx)</strong> Air, Chaos, Evil, Knowledge, Magic<br /><strong>Favored
+        Weapon</strong> Quarterstaff (Black Pharaoh), Dagger (Haunter of the
+        Dark), Punching dagger (Faceless Sphinx)<br /><strong>Symbol</strong>
+        Inverted ankh (Black Pharaoh), Circle with winglike arms (Haunter of the
+        Dark), Image of a featureless face (Faceless Sphinx)<br /><strong>Sacred
+        Animal(s)</strong> Panther (Black Pharaoh), Bat (Haunter of the Dark),
+        N/A (Faceless Sphinx)<br /><strong>Sacred Color(s)</strong> Black, red
+        (Black Pharaoh), Black, gold (Haunter of the Dark), N/A (Faceless
+        Sphinx)</p><h2>For Followers of
+        Nyarlathotep</h2><h3>Feats</h3><p>Dreamed
+        Secrets</p><h3>Traits</h3><p>Unspeakable Bond</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

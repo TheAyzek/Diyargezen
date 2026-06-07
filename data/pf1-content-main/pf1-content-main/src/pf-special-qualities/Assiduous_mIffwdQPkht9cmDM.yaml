@@ -1,0 +1,31 @@
+_id: mIffwdQPkht9cmDM
+_key: '!items!mIffwdQPkht9cmDM'
+_stats:
+  coreVersion: '12.331'
+folder: mlc1L2Rz3WgZW7BG
+img: icons/equipment/shield/heater-steel-boss-red.webp
+name: Assiduous
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint enchantment and conjuration
+      <strong>CL</strong> 1st</p><p><strong>Slot</strong> shield quality;
+      <strong>Price</strong> +1 bonus;</p><p>When the wielder of an
+      <em>assiduous</em> shield fights defensively or uses the total defense
+      action, the shield's mirrored surface provides protection against gaze
+      attacks, rendering the wielder immune to their effects. During any round
+      in which the wielder is directly targeted with a gaze attack and is forced
+      to attempt a saving throw, if she succeeds at the save by 5 or more, she
+      can reflect the gaze back on the attacker. The attacker must attempt a
+      saving throw against its own gaze even if it is normally immune, though
+      the attacker receives a +5 bonus if it is normally immune to its own
+      gaze.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, <em>lock gaze</em><sup>UC</sup>, <em>mirror
+      polish</em><sup>ACG</sup>; <strong>Price</strong> +1 bonus</p>
+  sources:
+    - id: PZO9467
+      pages: '30'
+  subType: misc
+  tags:
+    - Shield Qualities
+type: feat

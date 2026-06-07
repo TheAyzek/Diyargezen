@@ -1,0 +1,27 @@
+_id: TadXnkcjpLH8xY3B
+_key: '!items!TadXnkcjpLH8xY3B'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/warhammer.png
+name: Heavy Hammer
+system:
+  aura:
+    school: trs
+  baseTypes:
+    - Warhammer
+  cl: 8
+  cursed: true
+  description:
+    value: >-
+      <p>This massive warhammer is even heavier than its size would normally
+      warrant. A creature wielding the hammer takes a -2 penalty on attack rolls
+      and a +4 bonus on damage rolls, as well as a -10 penalty to speed. Once
+      picked up, this weapon must be used as the creature's primary weapon until
+      subject to a successful remove curse spell.</p><p><strong>Base
+      Item</strong>: warhammer</p>
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 20
+type: equipment

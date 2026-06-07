@@ -1,0 +1,27 @@
+_id: 4JyErFYT03FwLr8t
+_key: '!items!4JyErFYT03FwLr8t'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Purification Talisman
+system:
+  aura:
+    school: abj
+  cl: 5
+  description:
+    value: >-
+      <p>A hand-sized clay rebus of the Master of Masters (see the sidebar on
+      page 86 for more information on Irori's rebus), sometimes inlaid with
+      copper or tiny gemstones, hangs from this braided hair necklace. It is
+      normally worn under clothing against the skin, and grants the wearer a +2
+      resistance bonus on saving throws against disease and poison. Once per
+      day, the wearer can use purify food and drink, cleansing 1 cubic foot of
+      food and water.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, purify food and drink, resistance</p>
+  price: 1800
+  slot: neck
+  sources:
+    - id: PZO9267
+  subType: wondrous
+type: equipment

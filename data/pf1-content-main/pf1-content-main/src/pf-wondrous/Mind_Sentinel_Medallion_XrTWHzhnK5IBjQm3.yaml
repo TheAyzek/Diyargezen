@@ -1,0 +1,29 @@
+_id: XrTWHzhnK5IBjQm3
+_key: '!items!XrTWHzhnK5IBjQm3'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Mind Sentinel Medallion
+system:
+  aura:
+    school: abj
+  cl: 1
+  description:
+    value: >-
+      <p>The surface of this silver medallion is covered in angular geometric
+      shapes that refract light randomly. The medallion grants a continuous +2
+      resistance bonus on saves versus mind-affecting spells, spell-like
+      abilities, and supernatural abilities. If the wearer fails a save to avoid
+      becoming dominated or confused, the amulet immediately grants the wearer a
+      second saving throw to resist the effect. If this second save is
+      successful, the medallion's power fades away entirely and it becomes a
+      simple piece of silver
+      jewelry.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, protection from evil</p>
+  price: 3500
+  slot: neck
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

@@ -1,0 +1,19 @@
+_id: mPy6MBwEvP7cnOGS
+_key: '!items!mPy6MBwEvP7cnOGS'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/emerald_09.jpg
+name: Psychic Resilience
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>Creatures with this ability are resistant to the effects of many
+      psychic spells. They gain a +4 bonus on saving throws against all psychic
+      spells.</p>&nbsp;<p><em>Format</em>: +4 vs. psychic
+      spells</p><p><em>Location</em>: After saves and in Defensive
+      Abilities.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

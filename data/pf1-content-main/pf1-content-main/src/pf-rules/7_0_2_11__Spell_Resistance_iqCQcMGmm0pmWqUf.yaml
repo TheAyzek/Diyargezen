@@ -1,0 +1,61 @@
+_id: iqCQcMGmm0pmWqUf
+_key: '!journal!iqCQcMGmm0pmWqUf'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: zcCMo97bY7HQ8cns
+name: 7.0.2.11. Spell Resistance
+pages:
+  - _id: TDmEoklr9gU6RFr0
+    _key: '!journal.pages!iqCQcMGmm0pmWqUf.TDmEoklr9gU6RFr0'
+    _stats:
+      coreVersion: '12.331'
+    name: 7.0.2.11. Spell Resistance
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.dS0UkKOINqI2iTDX]{(Index)
+        Magic}</p><p>@Compendium[pf-content.pf-rules.VqmfepmRULVzQGwS]{7.0.
+        Magic
+        Basics}</p><ul><li><p>@Compendium[pf-content.pf-rules.JrvOGuTDYfoiaCZf]{7.0.2.
+        Spell
+        Descriptions}</p><ul><li>@Compendium[pf-content.pf-rules.pPk4zIniRiNT8bkZ]{7.0.2.01.
+        Name}</li><li>@Compendium[pf-content.pf-rules.elUkRwtMDJnpBUbt]{7.0.2.02.
+        School
+        (Subschool)}</li><li>@Compendium[pf-content.pf-rules.uHFbrzKIeTHMBW89]{7.0.2.03.
+        Descriptor}</li><li>@Compendium[pf-content.pf-rules.BK6acSa2umnwCvYo]{7.0.2.04.
+        Level}</li><li>@Compendium[pf-content.pf-rules.85G4EAPyKRDKdp4F]{7.0.2.05.
+        Components}</li><li>@Compendium[pf-content.pf-rules.kJ9Y6R0EmdWvWAYS]{7.0.2.06.
+        Casting
+        Time}</li><li>@Compendium[pf-content.pf-rules.eoicSkLMiuBmRsJG]{7.0.2.07.
+        Range}</li><li>@Compendium[pf-content.pf-rules.CObmMzf1HCwePOdv]{7.0.2.08.
+        Aiming a
+        Spell}</li><li>@Compendium[pf-content.pf-rules.IoLudXWL9DLU1p9l]{7.0.2.09.
+        Duration}</li><li>@Compendium[pf-content.pf-rules.osoMkDti3clgURz9]{7.0.2.10.
+        Saving
+        Throw}</li><li><strong>@Compendium[pf-content.pf-rules.iqCQcMGmm0pmWqUf]{7.0.2.11.
+        Spell
+        Resistance}</strong></li><li>@Compendium[pf-content.pf-rules.PybdVd7VGR9riGuX]{7.0.2.12.
+        Descriptive Text}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=217]</p><p>Spell resistance is a special
+        defensive ability. If your spell is being resisted by a creature with
+        spell resistance, you must make a caster level check (1d20 + caster
+        level) at least equal to the creature’s spell resistance for the spell
+        to affect that creature. The defender’s spell resistance is like an
+        Armor Class against magical attacks. Include any adjustments to your
+        caster level to this caster level check.</p><p>The Spell Resistance
+        entry and the descriptive text of a spell description tell you whether
+        spell resistance protects creatures from the spell. In many cases, spell
+        resistance applies only when a resistant creature is targeted by the
+        spell, not when a resistant creature encounters a spell that is already
+        in place.</p><p>The terms “object” and “harmless” mean the same thing
+        for spell resistance as they do for saving throws. A creature with spell
+        resistance must voluntarily lower the resistance (a standard action) in
+        order to be affected by such spells without forcing the caster to make a
+        caster level check.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

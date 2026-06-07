@@ -1,0 +1,55 @@
+_id: ZRJyiohIPHnmvwlD
+_key: '!items!ZRJyiohIPHnmvwlD'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/wrist-launcher.PNG
+name: Biting Bracelet
+system:
+  actions:
+    - _id: 4jitgvtjgkr6h5da
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: bitingBracelet
+  aura:
+    school: ill
+  baseTypes:
+    - Heavy Wrist Launcher
+  cl: 10
+  description:
+    value: >-
+      <p>This +1 heavy wrist launcher appears to be a lavish, gold bracelet.
+      This functions like the glamered weapon special ability (Pathfinder RPG
+      Ultimate Equipment 142), except a biting bracelet is able to only assume
+      this one specific form, and can revert to its innocuous appearance 1 round
+      after being used as a weapon.</p><p><strong>Base Item</strong>: heavy
+      wrist launcher</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, disguise, magic aura</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 5000
+  showInQuickbar: false
+  sources:
+    - id: PZO9469
+  weight:
+    value: 2
+type: weapon

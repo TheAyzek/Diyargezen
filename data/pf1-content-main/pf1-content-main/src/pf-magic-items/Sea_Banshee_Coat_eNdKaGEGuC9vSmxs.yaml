@@ -1,0 +1,40 @@
+_id: eNdKaGEGuC9vSmxs
+_key: '!items!eNdKaGEGuC9vSmxs'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/studded-leather.PNG
+name: Sea Banshee Coat
+system:
+  armor:
+    acp: 1
+    dex: 5
+    material:
+      base:
+        value: leather
+    value: 3
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  baseTypes:
+    - Studded Leather Armor
+  cl: 3
+  description:
+    value: >-
+      <p>This +1 studded leather is styled like a captain's jacket with long,
+      sturdy leather tails that cover the wearer's thighs, and it is festooned
+      with steel studs crafted to look like gold coins. The wearer can use
+      abundant ammunition and purify food and drink each once per
+      day.</p><p><strong>Base Item</strong>: studded
+      leather</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, abundant ammunition, purify food and drink</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 3605
+  sources:
+    - id: PZO9267
+  spellFailure: 15
+  weight:
+    value: 20
+type: equipment

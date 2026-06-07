@@ -1,0 +1,31 @@
+_id: oq71hVbJQuxt156Y
+_key: '!items!oq71hVbJQuxt156Y'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Manual of War
+system:
+  aura:
+    school: enc
+  cl: 10
+  description:
+    value: >-
+      <p>Bound in bloodstained leather, this heavy tome is scarred like the
+      flesh of a seasoned warrior and contains many generations of martial
+      knowledge. Once per day, after studying the manual for 1 hour, a fighter
+      may exchange one of her fighter bonus feats for another combat feat. She
+      must meet the prerequisites for this new feat and she cannot alter a feat
+      she is using as a prerequisite for another feat, prestige class, or other
+      ability. This change persists for 24 hours, after which time the fighter's
+      feats return to normal. The fighter may spend 10 minutes studying the
+      manual to end its effects
+      early.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, modify memory, creator must be a fighter</p>
+  price: 7500
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

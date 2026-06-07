@@ -1,0 +1,27 @@
+_id: oGVtVuVbAmz8aamJ
+_key: '!items!oGVtVuVbAmz8aamJ'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/bowl-powder-blue.webp
+name: Glowing Ink
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>Often extracted from
+      phosphorescent insects, tiny marine plants, or subterranean fungi, glowing
+      ink emits a faint but steady light (typically red or green) that allows
+      you to read it in normal darkness-this includes darkness created by spells
+      like <em>darkness</em>, but not the supernatural darkness created by
+      <em>deeper darkness</em>. If there is glowing ink on an object, you have a
+      +2 bonus on Perception checks to locate it. Mixing glowing ink with marker
+      dye makes the dye glow in the dark until it
+      fades.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      15</p>
+  price: 5
+  sources:
+    - id: PZO1123
+      pages: '103'
+  subType: misc
+  tags:
+    - Alchemical Tools
+type: consumable

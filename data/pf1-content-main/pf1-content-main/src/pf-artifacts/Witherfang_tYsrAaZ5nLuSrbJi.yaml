@@ -1,0 +1,46 @@
+_id: tYsrAaZ5nLuSrbJi
+_key: '!items!tYsrAaZ5nLuSrbJi'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/kukri.PNG
+name: Witherfang
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: necromancy and transmutation
+  baseTypes:
+    - Kukri
+  cl: 20
+  description:
+    value: >-
+      <p>While in the hands of a non-mythic creature, a witherfang functions as
+      a +3 kukri. However, over time it begins to consume the life essence of
+      its wielder. If the wielder is non-mythic, each week he must succeed at a
+      DC 20 Fortitude save or take 1d4 points of Constitution drain that can't
+      be healed until 1 week after he stops wielding the weapon. The witherfang
+      then converts the stolen life essence into mythic power. A witherfang can
+      hold a maximum of 20 uses of mythic power.  A mythic character can use a
+      witherfang's stolen mythic power to activate her own mythic abilities or
+      to enhance the blade with the following abilities: bane, dancing, speed,
+      and wounding. Each ability lasts for 24 hours, and only one can be applied
+      to the blade within each 24-hour period. The wielder can increase the
+      witherfang's enhancement bonus by 1 for each use of mythic power she
+      expends. Alternately, the wielder can expend one use of mythic power to
+      imbue the blade with the bane special ability, two uses to imbue it with
+      the wounding special ability, three uses to imbue it with the speed
+      special ability, or four uses to imbue it with the dancing special
+      ability.</p><p><strong>Base Item</strong>: kukri</p>
+  enh: 3
+  material:
+    base:
+      value: steel
+  properties:
+    fin: true
+  sources:
+    - id: PZO1126
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 2
+type: weapon

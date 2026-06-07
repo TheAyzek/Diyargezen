@@ -1,0 +1,44 @@
+_id: L68tjh194oVBMmVL
+_key: '!journal!L68tjh194oVBMmVL'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 9jEP8eS9NhzOdLJb
+name: 2.06.3. Flanking
+pages:
+  - _id: 7W6MtRYTkKEySYJ4
+    _key: '!journal.pages!L68tjh194oVBMmVL.7W6MtRYTkKEySYJ4'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.06.3. Flanking
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.Q8vJfOFojro5BrWO]{2.06.
+        Combat
+        Modifiers}</p><ul><li>@Compendium[pf-content.pf-rules.b7fUAk2heKMPWXZU]{2.06.1.
+        Cover}</li><li>@Compendium[pf-content.pf-rules.5k8dng1qeuExFjmw]{2.06.2.
+        Concealment}</li><li><strong>@Compendium[pf-content.pf-rules.L68tjh194oVBMmVL]{2.06.3.
+        Flanking}</strong></li><li>@Compendium[pf-content.pf-rules.iC0zWabI6bgxBYg1]{2.06.4.
+        Helpless Defenders}</li></ul><hr
+        /><p>@Source[PZO1110;pages=197]</p><p>When making a melee attack, you
+        get a +2 flanking bonus if your opponent is threatened by another enemy
+        character or creature on its opposite border or opposite
+        corner.</p><p>When in doubt about whether two characters flank an
+        opponent in the middle, trace an imaginary line between the two
+        attackers’ centers. If the line passes through opposite borders of the
+        opponent’s space (including corners of those borders), then the opponent
+        is
+        flanked.</p><p>@Compendium[pf-content.pf-buffs.gipXe2qnQKwV1HDi]{Buff:
+        Flanking}</p><h2>Exception</h2><p>If a flanker takes up more than 1
+        square, it gets the flanking bonus if any square it occupies counts for
+        flanking.</p><p>Only a creature or character that threatens the defender
+        can help an attacker get a flanking bonus.</p><p>Creatures with a reach
+        of 0 feet can’t flank an opponent.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

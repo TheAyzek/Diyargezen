@@ -1,0 +1,21 @@
+_id: eqntZGJuUT5U4A7s
+_key: '!items!eqntZGJuUT5U4A7s'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/documents/paper-plain-white.webp
+name: Glue Paper
+system:
+  description:
+    value: >-
+      <p>This 1-foot-square piece of paper is coated on one side with a weak
+      glue or sticky material such as tree sap or even honey. It is stored
+      folded in half. If you apply glue paper to a window before you break it,
+      the broken pieces stick to the glue rather than noisily falling to the
+      ground. Glue paper is good for a single use.</p>
+  equipped: false
+  price: 0.1
+  sources:
+    - id: PZO1123
+      pages: '56'
+  subType: adventuring
+type: loot

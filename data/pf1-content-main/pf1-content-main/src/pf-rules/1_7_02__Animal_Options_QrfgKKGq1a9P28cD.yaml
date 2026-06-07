@@ -1,0 +1,143 @@
+_id: QrfgKKGq1a9P28cD
+_key: '!journal!QrfgKKGq1a9P28cD'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: sWur0vXI68cZozsg
+name: 1.7.02. Animal Options
+pages:
+  - _id: 3qHtg440JxL6LBSf
+    _key: '!journal.pages!QrfgKKGq1a9P28cD.3qHtg440JxL6LBSf'
+    _stats:
+      coreVersion: '12.331'
+    name: 1.7.02. Animal Options
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.Ic1tlF3EE1QNW3kE]{(Index)}</p><p>@Compendium[pf-content.pf-rules.8scSEgBEtJZj0suf]{(Index)
+        Basic
+        Rules}</p><ul><li><p>@Compendium[pf-content.pf-rules.sjhxRhOgV3ynmqf9]{1.7.
+        Animal
+        Companions}</p><ul><li>@Compendium[pf-content.pf-rules.bLW7my2JM1AWHcPt]{1.7.01.
+        Controlling Companions, Familiars, and
+        Followers}</li><li><strong>@Compendium[pf-content.pf-rules.QrfgKKGq1a9P28cD]{1.7.02.
+        Animal
+        Options}</strong></li><li>@Compendium[pf-content.pf-rules.751RCqF5c5cRGCVG]{1.7.03.
+        Monstrous
+        Options}</li><li>@Compendium[pf-content.pf-rules.A2INBQqsGOHfeN36]{1.7.04.
+        Plant
+        Options}</li><li>@Compendium[pf-content.pf-rules.3nO5z2V4Y5WdTxqp]{1.7.05.
+        Vermin
+        Options}</li><li>@Compendium[pf-content.pf-rules.fzg18IfdQWR57QpN]{1.7.06.
+        Advancing
+        Companions}</li><li>@Compendium[pf-content.pf-rules.EBgdBlDozsMHFm1r]{1.7.07.
+        Intelligent
+        Animals}</li><li>@Compendium[pf-content.pf-rules.MaMACE7dH6mGN9yB]{1.7.08.
+        Awakened
+        Animals}</li><li>@Compendium[pf-content.pf-rules.gxSnEAS4Jn1zHrAS]{1.7.09.
+        Tips for Remembering
+        Companions}</li><li>@Compendium[pf-content.pf-rules.S1ITgv2XUahBeROc]{1.7.10.
+        Companion Plot
+        Hooks}</li><li>@Compendium[pf-content.pf-rules.6zNHWvDTzqgtPPTd]{1.7.11.
+        Reviving and Replacing Companions}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110]</p><p>Each animal companion has different starting
+        sizes, speed, attacks, ability scores, and special qualities. All animal
+        attacks are made using the creature's full base attack bonus unless
+        otherwise noted. Animal attacks add the animal's Strength modifier to
+        the damage roll, unless it is its only attack, in which case it adds
+        1-1/2 its Strength modifier. Some have special abilities, such as
+        scent.</p><p>See Special Abilities for more information on these
+        abilities.</p><p>As you gain levels, your animal companion improves as
+        well, usually at 4th or 7th level, in addition to the standard bonuses
+        noted on @Compendium[pf-content.pf-rules.sjhxRhOgV3ynmqf9]{1.7. Animal
+        Companions}. Instead of taking the listed benefit at 4th or 7th level,
+        you can instead choose to increase the companion's Dexterity and
+        Constitution by 2.</p><hr
+        /><p>@Compendium[pf-content.pf-companions.CZZ7FCQJBdv4sFpJ]{Allosaurus}</p><p>@Compendium[pf-content.pf-companions.ZGrMZUFkuuNQPgOA]{Amargasaurus
+        (Dinosaur)}</p><p>@Compendium[pf-content.pf-companions.lUtqjnlGtfY7jwnp]{Anglerfish}</p><p>@Compendium[pf-content.pf-companions.lhbGvDjoq88q4wwX]{Ankylosaurus}</p><p>@Compendium[pf-content.pf-companions.BFRZBcOQNN3hLe11]{Antelope}</p><p>@Compendium[pf-content.pf-companions.soD9AHlgoUn6AcvL]{Archaeopteryx}</p><p>@Compendium[pf-content.pf-companions.xRo1c0l3DTgBA0U2]{Archelon}</p><p>@Compendium[pf-content.pf-companions.1RjcNzVhEXnqX49a]{Armorfish}</p><p>@Compendium[pf-content.pf-companions.onfFmQQfqK66XjnE]{Arsinoitherium}</p><p>@Compendium[pf-content.pf-companions.NpQHNTIaJCIVyoPD]{Aurochs}</p><p>@Compendium[pf-content.pf-companions.luyY9FefqTRoZNvW]{Axe
+        Beak}</p><p>@Compendium[pf-content.pf-companions.rKSfr0kFMVYbsNTx]{Baboon}</p><p>@Compendium[pf-content.pf-companions.icBNXhxAsmSNjv06]{Bacallia}</p><p>@Compendium[pf-content.pf-companions.R410WuiWcnxbqEGQ]{Baluchitherium}</p><p>@Compendium[pf-content.pf-companions.nlryfY28DgFDEK7Y]{Basilosaurus}</p><p>@Compendium[pf-content.pf-companions.xvTUaNU1RXmGQPpg]{Blackwisp
+        Egret}</p><p>@Compendium[pf-content.pf-companions.qFDJNLq72PH19hYw]{Blue
+        Whale}</p><p>@Compendium[pf-content.pf-companions.LJouU7rai472j5UQ]{Boar}</p><p>@Compendium[pf-content.pf-companions.TIpkHepscgu9gvgV]{Brachiosaurus}</p><p>@Compendium[pf-content.pf-companions.ZhPF4ggvagX0BDHS]{Bristle
+        Boar}</p><p>@Compendium[pf-content.pf-companions.hs1qK9IHZu6KcFSb]{Brontotherium
+        (Megafauna)}</p><p>@Compendium[pf-content.pf-companions.vmrcPjbiPYye7Wah]{Bull
+        of
+        Zagresh}</p><p>@Compendium[pf-content.pf-companions.ZI6eSrnoU7nVouZB]{Bustard}</p><p>@Compendium[pf-content.pf-companions.VphZbZQe7hks2x1J]{Camel}</p><p>@Compendium[pf-content.pf-companions.RbcTQsGSqeTxQDTm]{Cameroceras}</p><p>@Compendium[pf-content.pf-companions.2s3csaWdDryve4qI]{Capybara}</p><p>@Compendium[pf-content.pf-companions.yxn8dR1g3QOW5yCF]{Ceratosaurus
+        (Dinosaur)}</p><p>@Compendium[pf-content.pf-companions.iWoOsIuNGf9Pjads]{Chalicotherium
+        (Megafauna)}</p><p>@Compendium[pf-content.pf-companions.hJF1WkvruN5u79S5]{Cheetah}</p><p>@Compendium[pf-content.pf-companions.6FOxz8ngNQMwWrNl]{Chimpanzee}</p><p>@Compendium[pf-content.pf-companions.3vvtBw96moHqfzSF]{Constrictor
+        Snake}</p><p>@Compendium[pf-content.pf-companions.uHaYm020Z5IirsIR]{Cow}</p><p>@Compendium[pf-content.pf-companions.FWt7EW1Dop66HVTZ]{Crocodile}</p><p>@Compendium[pf-content.pf-companions.beYcNfFbtSdzV1o3]{Dallo}</p><p>@Compendium[pf-content.pf-companions.PttyY458QWaxiKSx]{Deinonychus}</p><p>@Compendium[pf-content.pf-companions.AdiU8J4kWvWz7OA7]{Deinotherium}</p><p>@Compendium[pf-content.pf-companions.3gWiIT6wfp48VKQA]{Deinotherium
+        (Megafauna)}</p><p>@Compendium[pf-content.pf-companions.w5FUg8sBdukJlLzR]{Devil
+        Monkey}</p><p>@Compendium[pf-content.pf-companions.tuDi95OCuE92VMI0]{Digmaul}</p><p>@Compendium[pf-content.pf-companions.0HYMCNjMV5vWgMXP]{Dimetrodon}</p><p>@Compendium[pf-content.pf-companions.UEk45MdPdqnp514r]{Dimorphodon}</p><p>@Compendium[pf-content.pf-companions.wQzP3hLoGlqnoIRD]{Dimorphodon}</p><p>@Compendium[pf-content.pf-companions.e2QrQnlDkXXIeskA]{Diplodocus}</p><p>@Compendium[pf-content.pf-companions.Ehk4a9KDNxdLbYbL]{Dire
+        Bat}</p><p>@Compendium[pf-content.pf-companions.SEy7YIN6ZDBIPfGt]{Dire
+        Polar
+        Bear}</p><p>@Compendium[pf-content.pf-companions.nBiMhJVaRzvUO1a5]{Dire
+        Rat}</p><p>@Compendium[pf-content.pf-companions.K9EmqXKPBAo7WNxz]{Dog}</p><p>@Compendium[pf-content.pf-companions.Yomd2AXxhVDCA7Gt]{Dolphin}</p><p>@Compendium[pf-content.pf-companions.3QD7b8CvfD8u4Ekr]{Dolphin,
+        Orca}</p><p>@Compendium[pf-content.pf-companions.uIrr3OdXOYTJsTRT]{Dunkleosteus}</p><p>@Compendium[pf-content.pf-companions.LRClXkfV5fMK92gl]{Eagle}</p><p>@Compendium[pf-content.pf-companions.bQi20ksMuDEmBTJw]{Elasmosaurus}</p><p>@Compendium[pf-content.pf-companions.oyEGeLdBryjTycFK]{Elasmotherium
+        (Megafauna)}</p><p>@Compendium[pf-content.pf-companions.44iselcQOq2m9fSw]{Electric
+        Eel}</p><p>@Compendium[pf-content.pf-companions.Gtbb8GMqOg1vXSVT]{Elephant}</p><p>@Compendium[pf-content.pf-companions.G7RkYsCbqR9MSUsE]{Elk}</p><p>@Compendium[pf-content.pf-companions.2J0JEqZ5SpamzaMF]{Embolotherium}</p><p>@Compendium[pf-content.pf-companions.dWqIEAbswaIrPegI]{Enchanter
+        Heron}</p><p>@Compendium[pf-content.pf-companions.yVXRMPN5frhyHbfl]{Eohippus}</p><p>@Compendium[pf-content.pf-companions.P0cf6hPXFis6JZLv]{Faerie
+        Mount}</p><p>@Compendium[pf-content.pf-companions.HzFvBqDs4PgBcqpx]{Falcon}</p><p>@Compendium[pf-content.pf-companions.oJaNeSuFnSa6Q1bM]{Frog
+        Father}</p><p>@Compendium[pf-content.pf-companions.CMS1vnJdbhgPgUgv]{Gallerok}</p><p>@Compendium[pf-content.pf-companions.a9B0UR4myZmrtlSb]{Gar}</p><p>@Compendium[pf-content.pf-companions.lJYIIp8219SUX9l7]{Giant
+        Chameleon}</p><p>@Compendium[pf-content.pf-companions.CUtM5zW0uGUF5mpP]{Giant
+        Frilled
+        Lizard}</p><p>@Compendium[pf-content.pf-companions.bNIiEyV8Gcd06vwN]{Giant
+        Frog}</p><p>@Compendium[pf-content.pf-companions.aHfP56crgkaC3Q4v]{Giant
+        Gecko}</p><p>@Compendium[pf-content.pf-companions.hiBCYMUjqWpKizC7]{Giant
+        Mole}</p><p>@Compendium[pf-content.pf-companions.oL1ZWwYDLs8Hv4HH]{Giant
+        Moray
+        Eel}</p><p>@Compendium[pf-content.pf-companions.qo6K1ccCGU8RTAsu]{Giant
+        Owl}</p><p>@Compendium[pf-content.pf-companions.EkjLSPKMmKXDEHaD]{Giant
+        Porcupine}</p><p>@Compendium[pf-content.pf-companions.cCkP6ky7x4DGLG44]{Giant
+        Raven}</p><p>@Compendium[pf-content.pf-companions.j7AR8P1hIQvc4izu]{Giant
+        Salamander}</p><p>@Compendium[pf-content.pf-companions.s2aaPTnAX8NYGavL]{Giant
+        Seahorse}</p><p>@Compendium[pf-content.pf-companions.pjwkVGlZWFztvRxa]{Giant
+        Skunk}</p><p>@Compendium[pf-content.pf-companions.lhvMSDTSSqbRmZX8]{Giant
+        Snapping
+        Turtle}</p><p>@Compendium[pf-content.pf-companions.yXJGsDHKPE6TqE8F]{Giant
+        Squid}</p><p>@Compendium[pf-content.pf-companions.WWvyAQegGOEpuCPR]{Giant
+        Tortoise}</p><p>@Compendium[pf-content.pf-companions.ElJkjjFsejLqqNtN]{Giant
+        Vulture}</p><p>@Compendium[pf-content.pf-companions.teGappWm9bdCVPJj]{Giant
+        Weasel}</p><p>@Compendium[pf-content.pf-companions.wSOwWpr6Y9X4lCg4]{Giganotosaurus
+        (Dinosaur)}</p><p>@Compendium[pf-content.pf-companions.EB6K8b6pSRQATVeT]{Giraffe}</p><p>@Compendium[pf-content.pf-companions.2LtTEZAsntNmWmG8]{Gliding
+        Turtle}</p><p>@Compendium[pf-content.pf-companions.POpc1a3pxVLn3IBJ]{Goblin
+        Dog}</p><p>@Compendium[pf-content.pf-companions.OKLgB7hF67dP6d91]{Goliath
+        Grog}</p><p>@Compendium[pf-content.pf-companions.cksC1kyymTUe6X0j]{Gorilla}</p><p>@Compendium[pf-content.pf-companions.zAPMvp5skkmQga2n]{Gorthek}</p><p>@Compendium[pf-content.pf-companions.Tlj7Lrd0R5ZpQfre]{Grizzly
+        Bear}</p><p>@Compendium[pf-content.pf-companions.cFH0N5Id0s4HqlN7]{Grizzly
+        Bear}</p><p>@Compendium[pf-content.pf-companions.k6u3cEUix5QmjBQ5]{Gylptodon}</p><p>@Compendium[pf-content.pf-companions.xCg1RAkpKOzQIxIJ]{Hammerhead
+        Shark}</p><p>@Compendium[pf-content.pf-companions.0dheEWrsMf3PmJx7]{Hippopotamus}</p><p>@Compendium[pf-content.pf-companions.uAywpYGAs02zJrDg]{Hippopotamus}</p><p>@Compendium[pf-content.pf-companions.QyxfAqvDZyMeLER9]{Hobbe
+        Hound}</p><p>@Compendium[pf-content.pf-companions.069F47e2x4CbT6s9]{Horse}</p><p>@Compendium[pf-content.pf-companions.yvZ9UP38wbB069W2]{Hyenas}</p><p>@Compendium[pf-content.pf-companions.t2XspzVEmiuqdcrD]{Iguanodon}</p><p>@Compendium[pf-content.pf-companions.41GwMgim7Z5dwik3]{Impaler
+        Shrike}</p><p>@Compendium[pf-content.pf-companions.8ibKUci3hXAncNDy]{Kangaroo}</p><p>@Compendium[pf-content.pf-companions.IWkgUDqf5E2RD6Tj]{Kaprosuchus
+        (Megafauna)}</p><p>@Compendium[pf-content.pf-companions.ZASRnNi2e5NkCIVI]{Kentrosaurus
+        (Dinosaur)}</p><p>@Compendium[pf-content.pf-companions.c6I0beEzthQEejcu]{Lion}</p><p>@Compendium[pf-content.pf-companions.TvmWFfRnfjb9PMv7]{Llama}</p><p>@Compendium[pf-content.pf-companions.cIqnkDfz4AQAuWmf]{Manta
+        Ray}</p><p>@Compendium[pf-content.pf-companions.7gLtm4v0aBs1WRnz]{Marax}</p><p>@Compendium[pf-content.pf-companions.G32pvYtsCGQAtt8C]{Marsupial
+        Devil}</p><p>@Compendium[pf-content.pf-companions.ZCXR2WXwSx8TobXp]{Marsupial
+        Lion}</p><p>@Compendium[pf-content.pf-companions.GQyHeK5JOBalwUq5]{Megalania}</p><p>@Compendium[pf-content.pf-companions.LtCGEyj5KljAlws8]{Megaloceros}</p><p>@Compendium[pf-content.pf-companions.8FdYkAhWuCcKGlvm]{Megaprimatus
+        (Ape)}</p><p>@Compendium[pf-content.pf-companions.6DXrq6NtqFWgvEyS]{Megatherium}</p><p>@Compendium[pf-content.pf-companions.ZeZLz42D8X7TGav5]{Mindspin
+        Ram}</p><p>@Compendium[pf-content.pf-companions.jMcXMvSE3JrzSGWw]{Moa
+        (Megafauna)}</p><p>@Compendium[pf-content.pf-companions.bW2RwgmZi8zFWKzV]{Mokele-Mbembe}</p><p>@Compendium[pf-content.pf-companions.3lDv7SOQ7qlh6QYc]{Mome
+        Rath}</p><p>@Compendium[pf-content.pf-companions.WKECLp79ZX9qJBfj]{Monitor
+        Lizard}</p><p>@Compendium[pf-content.pf-companions.lSF2IDEVKckv0k5k]{Moose}</p><p>@Compendium[pf-content.pf-companions.MCTkRQkQsVtHJjVB]{Narwhal}</p><p>@Compendium[pf-content.pf-companions.TWSLrJMZ0zECT4Zc]{Octopus}</p><p>@Compendium[pf-content.pf-companions.eYdd9hkG8pt7XJ50]{Ornithomimosaur}</p><p>@Compendium[pf-content.pf-companions.neFecH81xZyRXMx5]{Ostrich}</p><p>@Compendium[pf-content.pf-companions.GnpWIV4XttCn4qJn]{Pachycephalosaurus}</p><p>@Compendium[pf-content.pf-companions.1TKzaADXfegSnjhK]{Panda}</p><p>@Compendium[pf-content.pf-companions.BDBP9wCceNN8XZv2]{Parasaurolophus}</p><p>@Compendium[pf-content.pf-companions.UEsdui4Y2hb0oALq]{Pilo}</p><p>@Compendium[pf-content.pf-companions.d8phrf4bXnbGLiDL]{Plesiosaurus
+        (Dinosaur)}</p><p>@Compendium[pf-content.pf-companions.tNKsTYfXhn1oESYa]{Polar
+        Bear}</p><p>@Compendium[pf-content.pf-companions.8PqE9d5Ex8r409TY]{Pony}</p><p>@Compendium[pf-content.pf-companions.eAbyC9pXkhPDTHxb]{Prionosuchus}</p><p>@Compendium[pf-content.pf-companions.jbEoURBF6zxVkXv0]{Pteranodon}</p><p>@Compendium[pf-content.pf-companions.AEX2YcCfyaCtFR6u]{Quetzalcoatlus
+        (Dinosaur)}</p><p>@Compendium[pf-content.pf-companions.LVceriwBjsnf9nUZ]{Ram}</p><p>@Compendium[pf-content.pf-companions.xqveiBwYhXcKENEB]{Reef
+        Snake}</p><p>@Compendium[pf-content.pf-companions.stKQDPk0I2aCQvSP]{Reindeer}</p><p>@Compendium[pf-content.pf-companions.dhYdOq9WWPQ70USH]{Rhinoceros}</p><p>@Compendium[pf-content.pf-companions.MU1xJ8o2XLMl7NVw]{Ringhorn}</p><p>@Compendium[pf-content.pf-companions.DEb1vX2JY5bX8yvK]{Roc}</p><p>@Compendium[pf-content.pf-companions.NsnNWoj6lQ1LGlmt]{Saber-Toothed
+        Cat}</p><p>@Compendium[pf-content.pf-companions.f4fztfnIGUc15gzt]{Sea
+        Crawler}</p><p>@Compendium[pf-content.pf-companions.ZcKjmX4xmDfX8a6y]{Shark}</p><p>@Compendium[pf-content.pf-companions.gSu5DcFtP8yKNetX]{Shissah}</p><p>@Compendium[pf-content.pf-companions.frf2Y7uJKBlnl5Nw]{Skittergoat}</p><p>@Compendium[pf-content.pf-companions.IsmkeLEi17ScWiXz]{Sorico}</p><p>@Compendium[pf-content.pf-companions.AW3VITgDDJPu69xQ]{Spinosaurus}</p><p>@Compendium[pf-content.pf-companions.8k8IHdEIaFAHMdoN]{Spitting
+        Cobra}</p><p>@Compendium[pf-content.pf-companions.zaFpoLCMgMkE88ET]{Squid}</p><p>@Compendium[pf-content.pf-companions.E5MCzjrco6oeRp53]{Stag}</p><p>@Compendium[pf-content.pf-companions.L4MjkZqFkJK2tBr4]{Stegosaurus}</p><p>@Compendium[pf-content.pf-companions.4kZeyWjKaREF00Nl]{Stingray}</p><p>@Compendium[pf-content.pf-companions.AV2WOjlRix1lcC0l]{Styracosaurus}</p><p>@Compendium[pf-content.pf-companions.IV1vycYRSNG5wvzY]{Switchback
+        Jackal}</p><p>@Compendium[pf-content.pf-companions.eZwXv5jCBcSasY3q]{Therizinosaurus
+        (Dinosaur)}</p><p>@Compendium[pf-content.pf-companions.u4z9bnLC9hRaOHeE]{Thylacine}</p><p>@Compendium[pf-content.pf-companions.adhh9DRTrnHVuIJN]{Titanoboa
+        (Megafauna)}</p><p>@Compendium[pf-content.pf-companions.fKTdYDAtl7NY631P]{Triceratops}</p><p>@Compendium[pf-content.pf-companions.byKGK3jX24fGISOs]{Troodon
+        (Dinosaur)}</p><p>@Compendium[pf-content.pf-companions.1sb1K1yZf4pRqmXd]{Trumpeter
+        Swan}</p><p>@Compendium[pf-content.pf-companions.3YP27rnin2SOm66N]{Tylosaurus}</p><p>@Compendium[pf-content.pf-companions.TINRItIJpQteBvWH]{Tyrannosaurus}</p><p>@Compendium[pf-content.pf-companions.jMZ4xyIVbxHfCJO7]{Uintatherium
+        (Megafauna)}</p><p>@Compendium[pf-content.pf-companions.mHKqdOJWIn6WNi9H]{Velociraptor}</p><p>@Compendium[pf-content.pf-companions.cJMq4zdUor2Or6US]{Walrus}</p><p>@Compendium[pf-content.pf-companions.TNMDxKWHItC9Qx90]{Warcat
+        of
+        Rull}</p><p>@Compendium[pf-content.pf-companions.zTovsCQzmIf5EgED]{Whisperfall
+        Vulture}</p><p>@Compendium[pf-content.pf-companions.9gMnOdTPE6GA1DGi]{Wolf}</p><p>@Compendium[pf-content.pf-companions.Qbxc6ZZWJqEjJ0wd]{Wolfdog}</p><p>@Compendium[pf-content.pf-companions.NHhcLda2sprgVtfR]{Wolliped}</p><p>@Compendium[pf-content.pf-companions.GfqFXxHpQeKWsbit]{Wolliped
+        (Combat
+        Trained)}</p><p>@Compendium[pf-content.pf-companions.g96f24HWtUOxZTUA]{Wolverine}</p><p>@Compendium[pf-content.pf-companions.lcFDUyu832CP1iQh]{Worg}</p><p>@Compendium[pf-content.pf-companions.WaVqKqg2LZmx4E4j]{Yak}</p><p>@Compendium[pf-content.pf-companions.1VW3mG5GKwwKbg3J]{Yolubilis
+        Heron}</p><p>@Compendium[pf-content.pf-companions.XNjSU29XWrE5zilV]{Yzobu}</p><p>@Compendium[pf-content.pf-companions.fwR0ByPCQMIAhgE6]{Zebra}</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,36 @@
+_id: TiWAOw9rjbDhJyjH
+_key: '!items!TiWAOw9rjbDhJyjH'
+_stats:
+  coreVersion: '12.343'
+folder: CAxOlglJyXdUOHF9
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Historian (Human; Garundi)
+system:
+  changes:
+    - _id: SNtRBRcv
+      formula: '1'
+      target: skill.khi
+      type: trait
+  classSkills:
+    khi: true
+  description:
+    value: >-
+      <p><em>Your parents were scholars of history, whether genealogists of your
+      own family tree, sages on the subject of ancient empires, or simply
+      hobbyists with a deep and abiding love for the
+      past.</em></p><p><strong>Requirements</strong>: Garundi Human
+      Heritage</p><p><strong>Benefits</strong>: You gain a +1 trait bonus on
+      Knowledge (history) checks and bardic knowledge checks, and Knowledge
+      (history) is always a class skill for you.</p><p><strong>Special
+      Note</strong>: Bardic Knowledge bonus has not been included as this
+      ability works differently in the 3.5 and Pathfinder rulesets.</p>
+  sources:
+    - id: PZO9404
+      pages: '10'
+  subType: trait
+  tags:
+    - '3.5'
+    - Human
+    - Garundi
+  traitType: race
+type: feat

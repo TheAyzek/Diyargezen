@@ -1,0 +1,47 @@
+_id: jBBYZQsfUvAiEmWV
+_key: '!journal!jBBYZQsfUvAiEmWV'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: zcCMo97bY7HQ8cns
+name: 7.0.3.4. Arcane Spells and Armor
+pages:
+  - _id: JIddpInPQ2oMS7tC
+    _key: '!journal.pages!jBBYZQsfUvAiEmWV.JIddpInPQ2oMS7tC'
+    _stats:
+      coreVersion: '12.331'
+    name: 7.0.3.4. Arcane Spells and Armor
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.dS0UkKOINqI2iTDX]{(Index)
+        Magic}</p><p>@Compendium[pf-content.pf-rules.VqmfepmRULVzQGwS]{7.0.
+        Magic
+        Basics}</p><ul><li><p>@Compendium[pf-content.pf-rules.7sbu7PG3Re7FkQos]{7.0.3.
+        Arcane
+        Spells}</p><ul><li>@Compendium[pf-content.pf-rules.BIHfeYxy4vvZ5mjt]{7.0.3.1.
+        Preparing Wizard
+        Spells}</li><li>@Compendium[pf-content.pf-rules.UBqamMQYN3ZGFyMh]{7.0.3.2.
+        Arcane Magical
+        Writing}</li><li>@Compendium[pf-content.pf-rules.xsjTbJPM05oYhCik]{7.0.3.3.
+        Sorcerers and
+        Bards}</li><li><strong>@Compendium[pf-content.pf-rules.jBBYZQsfUvAiEmWV]{7.0.3.4.
+        Arcane Spells and Armor}</strong></li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=83]</p><p>Armor restricts the complicated
+        gestures required while casting any spell that has a somatic component.
+        The armor and shield descriptions list the arcane spell failure chance
+        for different armors and shields.</p><p>If a spell doesn’t have a
+        somatic component, an arcane spellcaster can cast it with no arcane
+        spell failure chance while wearing armor. Such spells can also be cast
+        even if the caster’s hands are bound or he is grappling (although
+        concentration checks still apply normally). The metamagic feat Still
+        Spell allows a spellcaster to prepare or cast a spell without the
+        somatic component at one spell level higher than normal. This also
+        provides a way to cast a spell while wearing armor without risking
+        arcane spell failure.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

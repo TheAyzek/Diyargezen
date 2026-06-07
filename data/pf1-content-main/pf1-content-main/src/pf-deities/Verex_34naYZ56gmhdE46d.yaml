@@ -1,0 +1,32 @@
+_id: 34naYZ56gmhdE46d
+_key: '!journal!34naYZ56gmhdE46d'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Verex
+pages:
+  - _id: 3i5dPNvYjgDkXTgR
+    _key: '!journal.pages!34naYZ56gmhdE46d.3i5dPNvYjgDkXTgR'
+    _stats:
+      coreVersion: '12.331'
+    name: Verex
+    sort: 0
+    text:
+      content: >-
+        <h1>Verex</h1><h2>The Despoiler</h2>@Source[PZO9267;pages=328] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Verex">Verex</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Orc Deities<br /><strong>Areas of
+        Concern</strong> Lust, pillage, plunder<br /><strong>Domains</strong>
+        Chaos, Charm, Evil, Trickery<br /><strong>Subdomains</strong> Deception,
+        Lust, Thievery<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Battleaxe<br
+        /><strong>Symbol</strong> Rat with gold coin<br /><strong>Sacred
+        Animal(s)</strong> Dire rat<br /><strong>Sacred Color(s)</strong> Gold,
+        green</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

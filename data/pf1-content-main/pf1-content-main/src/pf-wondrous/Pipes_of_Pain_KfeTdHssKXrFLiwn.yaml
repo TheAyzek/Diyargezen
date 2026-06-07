@@ -1,0 +1,34 @@
+_id: KfeTdHssKXrFLiwn
+_key: '!items!KfeTdHssKXrFLiwn'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Pipes of Pain
+system:
+  aura:
+    school: enc
+  cl: 6
+  description:
+    value: >-
+      <p>By making a DC 15 Perform (wind instruments) check, the bearer can use
+      these pipes to create a wondrous melody which fascinates creatures within
+      30 feet for as long as the bearer continues to play (Will DC 14 negates).
+      This is a mind-affecting sonic compulsion effect. The bearer is immune to
+      the sound of the pipes. When the bearer stops playing, for the next 2d4
+      rounds all creatures who were fascinated by the music are stricken by
+      intense pain at even the slightest noise. Unless a creature is in a
+      totally silent area, it takes 1d4 points of damage per round on its turn,
+      and it has sonic vulnerability until this time expires. Thereafter, the
+      creature is shaken unless it is in a totally silent area; this
+      hypersensitivity to noise is a curse
+      effect.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, sound burst, creator must have the bardic performance class
+      ability</p>
+  price: 12000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

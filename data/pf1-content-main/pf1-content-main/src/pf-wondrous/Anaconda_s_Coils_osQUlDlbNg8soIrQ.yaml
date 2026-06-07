@@ -1,0 +1,49 @@
+_id: osQUlDlbNg8soIrQ
+_key: '!items!osQUlDlbNg8soIrQ'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/equipment/finger/ring-stone-snake-gold.webp
+name: Anaconda's Coils
+system:
+  aura:
+    school: trs
+  changes:
+    - _id: iFrbcJnI
+      formula: '2'
+      target: str
+      type: enh
+    - _id: TMfHwlmX
+      formula: '2'
+      type: competence
+  cl: 8
+  contextNotes:
+    - target: cmb
+      text: +[[2]] Competence bonus on grapple combat maneuver checks.
+  description:
+    unidentified: <p>This snakeskin belt's buckle is shaped like a serpent's head.</p>
+    value: >-
+      <h3>Effect</h3><p>The wearer gains a +2 enhancement bonus to Strength and
+      a +2 competence bonus on grapple combat maneuver checks. Treat the
+      enhancement bonus to Strength as temporary ability bonus for the first 24
+      hours the belt is worn. In addition, the belt grants the wearer the
+      @UUID[Compendium.pf-content.pf-universal-monster-rules.Item.uiMteAicpAgqnmVr]{Constrict}
+      ability (Bestiary 298) for 1d6 points of damage plus the wearer's Strength
+      modifier.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.tjdfluulncmqacc3]{Beast Shape I},
+      @UUID[Compendium.pf1.spells.Item.05i5rxwim12hwktu]{Bull's Strength};
+      </em><strong>Cost</strong> 9,250 gp</p>
+  links:
+    supplements:
+      - name: Constrict
+        uuid: Compendium.pf-content.pf-universal-monster-rules.Item.uiMteAicpAgqnmVr
+  price: 18500
+  slot: belt
+  sources:
+    - id: PZO1123
+      pages: '208'
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

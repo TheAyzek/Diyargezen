@@ -1,0 +1,22 @@
+_id: Sam2fOzFuCjJ1kIj
+_key: '!items!Sam2fOzFuCjJ1kIj'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/powder-black.webp
+name: Travel Cake Mix
+system:
+  description:
+    value: >-
+      <p>This mixture of flour, powdered milk, natron, sugar, and salt lasts for
+      months in a sealed container. When mixed with water (eggs are optional),
+      it creates a batter you can use to make biscuits (or other quickbreads
+      such as pancakes, waffles, scones, or muffins) or a cake. One pound of
+      travel cake mix makes a dozen biscuits.</p>
+  price: 0.1
+  sources:
+    - id: PZO1123
+      pages: '95'
+  subType: food
+  weight:
+    value: 1
+type: consumable

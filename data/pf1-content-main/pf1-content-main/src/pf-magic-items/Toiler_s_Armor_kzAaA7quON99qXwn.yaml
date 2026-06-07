@@ -1,0 +1,42 @@
+_id: kzAaA7quON99qXwn
+_key: '!items!kzAaA7quON99qXwn'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/chain-mail.png
+name: Toiler's Armor
+system:
+  armor:
+    acp: 5
+    dex: 2
+    material:
+      base:
+        value: steel
+    value: 6
+  aura:
+    school: trs
+  baseTypes:
+    - Chainmail
+  cl: 3
+  description:
+    value: >-
+      <p>This +1 chainmail looks like something a talentless dwarven apprentice
+      would make-ugly, asymmetrical, and finished quickly rather than with care.
+      The wearer gains a luck bonus or penalty equal to 1d6-3 on Craft checks to
+      make armor or weapons while wearing it. This bonus or penalty is
+      determined the first time the wearer attempts such a Craft check to
+      determine a day's progress. If the wearer removes the armor, this bonus or
+      penalty persists for an additional 24 hours. Once per day, the wearer can
+      use magic weapon.</p><p><strong>Base Item</strong>: 
+      chainmail</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, crafter's curse, crafter's fortune, magic weapon</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 3920
+  sources:
+    - id: PZO9267
+  spellFailure: 30
+  weight:
+    value: 40
+type: equipment

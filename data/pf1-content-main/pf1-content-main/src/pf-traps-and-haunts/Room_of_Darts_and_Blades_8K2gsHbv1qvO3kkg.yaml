@@ -1,0 +1,211 @@
+_id: 8K2gsHbv1qvO3kkg
+_key: '!actors!8K2gsHbv1qvO3kkg'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: icons/weapons/thrown/dart-feathered.webp
+items:
+  - _id: KO0pSrp5ZJX1A35g
+    _key: '!actors.items!8K2gsHbv1qvO3kkg.KO0pSrp5ZJX1A35g'
+    _stats:
+      compendiumSource: Actor.IiKtWK8xY7xJOsLs.Item.j7qkXVyob3QLHfmc
+      coreVersion: '12.331'
+    img: icons/weapons/thrown/dart-feathered.webp
+    name: Darts
+    system:
+      actions:
+        - _id: a9em28692ucwwdfs
+          actionType: rwak
+          activation:
+            type: special
+            unchained:
+              type: special
+          attackBonus: '18'
+          damage:
+            parts:
+              - formula: 1d4+1
+                types:
+                  - piercing
+          duration:
+            units: round
+            value: 1d4
+          img: icons/weapons/thrown/dart-feathered.webp
+          name: Attack
+          notes:
+            footer:
+              - Targets each character in the room separately.
+          target:
+            value: multiple targets (all targets within room)
+      description:
+        value: >-
+          <p><strong>Type</strong>&nbsp;mechanical;<strong>&nbsp;Perception</strong>&nbsp;DC
+          25;&nbsp;<strong>Disable Device</strong>&nbsp;DC 20</p>
+
+          <hr />
+
+          <p><strong>EFFECTS</strong></p>
+
+          <hr />
+
+          <p><strong>Trigger</strong>&nbsp;location;&nbsp;<strong>Duration</strong>&nbsp;1d4
+          rounds;&nbsp;<strong>Reset</strong>&nbsp;automatic (1d6 rounds after
+          trap stops)</p>
+
+          <p>This trap is triggered when a character reaches the center of the
+          room, at which point razor-sharp pendulum blades swing down from the
+          ceiling accompanied by a fusillade of darts from the walls, targeting
+          every creature in the room for 1d4 rounds. The trap resets itself 1d6
+          rounds after it stops.</p>
+
+          <p><strong>Effect</strong>&nbsp;(Atk +18 ranged, 1d4 darts per target
+          for 1d4+1 damage each); pendulum blades (Atk +18 melee [1d12+1/×3]);
+          multiple targets (all targets within room)</p>
+      proficient: true
+      subType: weapon
+    type: attack
+  - _id: BkvJaduSpkXgCMQJ
+    _key: '!actors.items!8K2gsHbv1qvO3kkg.BkvJaduSpkXgCMQJ'
+    _stats:
+      compendiumSource: Actor.IiKtWK8xY7xJOsLs.Item.0lsMIf2adKDan6AP
+      coreVersion: '12.331'
+    img: icons/weapons/swords/swords-sharp-worn.webp
+    name: Pendulum Blades
+    system:
+      actions:
+        - _id: a5n9qt3qkaju1shs
+          ability:
+            critMult: 3
+          actionType: mwak
+          activation:
+            type: special
+            unchained:
+              type: special
+          attackBonus: '18'
+          damage:
+            parts:
+              - formula: 1d12+1
+                types:
+                  - slashing
+          img: icons/weapons/swords/swords-sharp-worn.webp
+          name: Attack
+          notes:
+            footer:
+              - Targets each character in the room separately.
+          range:
+            units: melee
+          target:
+            value: multiple targets (all targets within room)
+      description:
+        value: >-
+          <p><strong>Type</strong>&nbsp;mechanical;<strong
+           >&nbsp;Perception</strong>&nbsp;DC 25;&nbsp;<strong>Disable
+          Device</strong>&nbsp;DC 20</p>
+
+          <hr
+
+          />
+
+          <p><strong>EFFECTS</strong></p>
+
+          <hr
+
+          />
+
+          <p><strong>Trigger</strong>&nbsp;location;&nbsp;<strong
+           >Duration</strong>&nbsp;1d4 rounds;&nbsp;<strong
+           >Reset</strong>&nbsp;automatic (1d6 rounds after trap stops)</p>
+
+          <p>This trap is triggered when a character reaches the center of the
+          room, at which point razor-sharp pendulum blades swing down from the
+          ceiling accompanied by a fusillade of darts from the walls, targeting
+          every creature in the room for 1d4 rounds. The trap resets itself 1d6
+          rounds after it stops.</p>
+
+          <p><strong>Effect</strong> (Atk +18 ranged, 1d4 darts per target for
+          1d4+1 damage each); pendulum blades (Atk +18 melee [1d12+1/×3]);
+          multiple targets (all targets within room)</p>
+      proficient: true
+      subType: weapon
+    type: attack
+name: Room of Darts and Blades
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 11
+    disarm: 20
+    duration: 1d4 rounds
+    effect: >-
+      This trap is triggered when a character reaches the center of the room, at
+      which point razor-sharp pendulum blades swing down from the ceiling
+      accompanied by a fusillade of darts from the walls, targeting every
+      creature in the room for 1d4 rounds. The trap resets itself 1d6 rounds
+      after it stops.
+
+
+      Targets each character in the room separately.
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 25
+    reset: Automatic (1d6 rounds after trap stops)
+    trigger: Location
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

@@ -1,0 +1,34 @@
+_id: qQSg3XkJLpYXKYhl
+_key: '!items!qQSg3XkJLpYXKYhl'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Circlet of Spell-Eating, Type II
+system:
+  aura:
+    custom: true
+    school: none
+  cl: 7
+  description:
+    value: >-
+      <p>Iridescent whorls and runes in a flowing eldritch script adorn this
+      golden circlet. The circlet functions as a ring of spell knowledge,
+      allowing a spontaneous caster to learn and store an additional arcane
+      spell. However, once the circlet has been worn for 1d6 days, the wearer
+      must succeed at a DC 16 Will save each day when meditating to renew her
+      spell slots. Failure indicates that she loses knowledge of a random spell,
+      whose level cannot exceed the maximum level of the circlet of
+      spell-eating. Knowledge of this spell is lost until the circlet is
+      removed, returning at a rate of one spell per day, beginning with the
+      lowest-level spell forgotten.  So long as the circlet of spell-eating has
+      caused its wearer to forget at least one spell, its creator can cast the
+      first spell lost to the item once per day as a spell-like
+      ability.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, bestow curse, imbue with spell ability</p>
+  price: 6000
+  slot: head
+  sources:
+    - id: PZO9462
+  subType: wondrous
+type: equipment

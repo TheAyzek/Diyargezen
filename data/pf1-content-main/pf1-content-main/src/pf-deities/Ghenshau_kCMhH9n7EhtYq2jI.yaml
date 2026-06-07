@@ -1,0 +1,55 @@
+_id: kCMhH9n7EhtYq2jI
+_key: '!journal!kCMhH9n7EhtYq2jI'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Ghenshau
+pages:
+  - _id: hCjStKjC8f8ddlxO
+    _key: '!journal.pages!kCMhH9n7EhtYq2jI.hCjStKjC8f8ddlxO'
+    _stats:
+      coreVersion: '12.331'
+    name: Ghenshau
+    sort: 0
+    text:
+      content: >-
+        <h1>
+        Ghenshau</h1><h2>Breezes-Still-and-Ripples-Cease</h2>@Source[PZO9267;pages=322]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Ghenshau">Ghenshau</a><h3>Details</h3><p><strong>Alignment</strong>
+        LG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Ignorance, placidity, simplicity<br
+        /><strong>Domains</strong> Community, Good, Law, Repose<br
+        /><strong>Subdomains</strong> Ancestors, Archon (Good), Archon (Law),
+        Home, Loyalty<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Handaxe<br
+        /><strong>Symbol</strong> Plant-covered rock in pond<br /><strong>Sacred
+        Animal(s)</strong> Turtle<br /><strong>Sacred Color(s)</strong> Blue,
+        green</p><h3>Obedience</h3><p>Bury a book or scroll that you have never
+        read in fertile soil. Plant a seed above the buried knowledge and pray
+        over the site that good and growth can come from the decaying parchment.
+        Gain a +4 sacred bonus on saving throws against transmutation
+        effects.</p><h2>Boons - Celestial Obedience</h2><h3>Mystery
+        Cultist</h3><p>@Source[PZO9255;pages=13]<br /><strong>1: Peacefulness
+        (Sp)</strong> <em>erase</em> 3/day, <em>calm emotions</em> 2/day, or
+        <em>deep slumber</em> 1/day<br /><strong>2: Ignorance (Su)</strong>
+        Three times per day, you can attempt a melee touch attack to obliterate
+        the cares of the wicked. On a successful hit, the target takes a penalty
+        to Wisdom equal to 1d6 + 1 per 2 HD you possess (maximum 1d6+5, to a
+        minimum Wisdom score of 1). This penalty lasts for 1 round per HD. If
+        the target succeeds at a Fortitude save (DC 10 + 1/2 your HD + your Wis
+        modifier), the penalty is halved.<br /><strong>3: Still Mind
+        (Su)</strong> You are continually shielded as if by a <em>mind blank
+        spell. If anyone attempts to divine information about you through
+        <em>scry </em>or similar spells and is foiled by the <em>mind
+        blank</em>, the scrier must succeed at a Will save (DC 10 + 1/2 your HD
+        + your Wis modifier) or take 1d6 points of Intelligence
+        damage.</em></p><h2>For Followers of
+        Ghenshau</h2><h3>Feats</h3><p><em>Heroic
+        Interposition</em></p><h3>Traits</h3><p><em>Empyreal Focus</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,27 @@
+_id: MJAAeL1vj8lskgtf
+_key: '!items!MJAAeL1vj8lskgtf'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_11.jpg
+name: Perilous Demesne, Grand
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> regional curse; <strong>Save</strong> Will DC
+      22</p><p><strong>Effect</strong> As per major perilous demesne, except up
+      to seven hazards, each of CR 14 or less, imperil creatures in the area.
+      The hazards are arranged so that if any are encountered together, the
+      encounter's effective CR from hazards must be no more than 15 (for
+      instance, two CR 13 hazards could be encountered
+      together).</p><p><strong>Cure</strong> <em>Remove curse</em> removes a
+      grand perilous demesne only if followed by a casting of <em>hallow</em> at
+      the effect's center, and then casting <em>disintegrate</em> on each of the
+      hazards before the next nightfall or midnight.</p>
+  sources:
+    - id: PZO1135
+      pages: '144'
+  subType: misc
+  tags:
+    - Maladies
+    - Curse
+type: feat

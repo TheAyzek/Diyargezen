@@ -1,0 +1,28 @@
+_id: PQT8QT8PqmfrWSnS
+_key: '!items!PQT8QT8PqmfrWSnS'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Red Feather Fan
+system:
+  aura:
+    school: evo
+  cl: 6
+  description:
+    value: >-
+      <p>This fan is made of copper fashioned into a dozen small feathers
+      mounted on a ring-shaped bone handle. Once per day, the bearer can hold it
+      and speak a command word to counterspell a darkness effect (as if using
+      daylight) or counterspell a light effect (as if using deeper darkness). If
+      activated in an area of overlapping light and darkness effects, the fan
+      randomly counterspells one of them, leaving the other
+      intact.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, daylight, deeper darkness</p>
+  price: 5000
+  sources:
+    - id: PZO1121
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

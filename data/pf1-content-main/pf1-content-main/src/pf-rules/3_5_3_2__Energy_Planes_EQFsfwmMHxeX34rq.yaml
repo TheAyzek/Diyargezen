@@ -1,0 +1,38 @@
+_id: EQFsfwmMHxeX34rq
+_key: '!journal!EQFsfwmMHxeX34rq'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: B3pncms1TJP9sIoG
+name: 3.5.3.2. Energy Planes
+pages:
+  - _id: 7iP8tpiTCWWLFydH
+    _key: '!journal.pages!EQFsfwmMHxeX34rq.7iP8tpiTCWWLFydH'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.5.3.2. Energy Planes
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.ryIRK7CjUk9fI8TT]{3.5.
+        The
+        Planes}</p><ul><li><p>@Compendium[pf-content.pf-rules.9ZxtJSapPINNjxbT]{3.5.3.
+        Inner
+        Planes}</p><ul><li>@Compendium[pf-content.pf-rules.BtNqgktOkZENzN1c]{3.5.3.1.
+        Elemental
+        Planes}</li><li><strong>@Compendium[pf-content.pf-rules.EQFsfwmMHxeX34rq]{3.5.3.2.
+        Energy Planes}</strong></li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=440]</p><p>Two energy planes exist—the
+        Positive Energy Plane (from which the animating spark of life hails) and
+        the Negative Energy Plane (from which the sinister taint of undeath
+        hails). Energy from both planes infuses reality, the ebb and flow of
+        this energy running through all creatures to bear them along the journey
+        from birth to death. Clerics utilize power from these planes when they
+        channel energy.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

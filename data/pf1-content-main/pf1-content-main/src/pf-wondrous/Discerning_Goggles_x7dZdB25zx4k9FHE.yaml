@@ -1,0 +1,29 @@
+_id: x7dZdB25zx4k9FHE
+_key: '!items!x7dZdB25zx4k9FHE'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Discerning Goggles
+system:
+  aura:
+    school: div
+  cl: 3
+  description:
+    value: >-
+      <p>This eyewear consists of two thick, gold-rimmed glass lenses encased in
+      a leather band. When worn over the eyes, a pair of discerning goggles
+      allows you to determine creatures' alignments with a single look. Good
+      creatures appear to faintly glow blue and evil creatures to faintly glow
+      red. Neutral-aligned creatures appear normal, as do creatures under the
+      effect of an undetectable alignment spell or similar effect. These goggles
+      function only during times when you normally would possess sight; for
+      example, they do not work in darkness unless you possess
+      darkvision.</p><h3>Requirements</h3><p>Craft Wondrous Item, detect good,
+      detect evil</p>
+  price: 13500
+  slot: eyes
+  sources:
+    - id: PZO9430
+  subType: wondrous
+type: equipment

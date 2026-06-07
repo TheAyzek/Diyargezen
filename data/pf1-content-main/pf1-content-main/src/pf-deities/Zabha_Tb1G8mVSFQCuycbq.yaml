@@ -1,0 +1,51 @@
+_id: Tb1G8mVSFQCuycbq
+_key: '!journal!Tb1G8mVSFQCuycbq'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Zabha
+pages:
+  - _id: mZpi93FYsQZLu0Ok
+    _key: '!journal.pages!Tb1G8mVSFQCuycbq.mZpi93FYsQZLu0Ok'
+    _stats:
+      coreVersion: '12.331'
+    name: Zabha
+    sort: 0
+    text:
+      content: >-
+        <h1>Zabha</h1><h2>Desecrator</h2>@Source[PZO1139;pages=130] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Zabha">Zabha</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Rakshasa Immortals<br /><strong>Areas
+        of Concern</strong> N/a<br /><strong>Domains</strong> Animal, Evil, Law,
+        Trickery<br /><strong>Subdomains</strong> Deception, Fear, Fur,
+        Tyranny<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong>
+        Kukri</p><h3>Obedience</h3><p>Spew blasphemies against a random
+        goodaligned god and curse the names of all those you know who worship
+        that deity. Gain a +4 profane bonus on saving throws against
+        language-dependent effects.</p><h2>Boons - Rakshasa
+        Immortals</h2>@Source[PZO1139;pages=131]<br />Once in a great while, a
+        rakshasa achieves a purity of evil that allows it to break free from the
+        cycle of death and reincarnation and transcend its own mortality. The
+        power of such rakshasas approaches that of the gods they think they are.
+        Unlike the other pantheons described in this book, the rakshasa
+        immortals do not present themselves as having traditional areas of
+        concern, for each of these immortals is concerned primarily with its own
+        glory and power. And while each rakshasa immortal has its own unique
+        appearance and personality, they have little interest in diversification
+        among their faithful. All rakshasa immortals grant access to the same
+        domains (Animal, Evil, Law, and Trickery), the same subdomains
+        (Deception, Fear [see page 180], Fur, and Tyranny [see page 182]), and
+        the same favored weapon (kukri). All rakshasa immortals are lawful evil
+        and range in power from CR 21 to CR 25. The boons they grant are less
+        complex than those granted by other fiendish demigods, manifesting as
+        spell-like abilities usable twice per day each.<p><strong>1</strong>:
+        <em>hideous laughter</em><br /><strong>2</strong>: <em>unholy
+        blight</em><br /><strong>3</strong>: <em>foster hatred</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

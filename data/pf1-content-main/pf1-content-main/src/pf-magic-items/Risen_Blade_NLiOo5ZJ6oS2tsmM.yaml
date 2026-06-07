@@ -1,0 +1,72 @@
+_id: NLiOo5ZJ6oS2tsmM
+_key: '!items!NLiOo5ZJ6oS2tsmM'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/khopesh.png
+name: Risen Blade
+system:
+  actions:
+    - _id: 0ajaunzjktgtmxaw
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: risenBlade
+  aura:
+    custom: true
+    school: evocation and necromancy
+  baseTypes:
+    - Khopesh
+  cl: 10
+  description:
+    value: >-
+      <p>As servants of the rightful ruler of Osirion, the Ruby Prince Khemet
+      III, members of the organization known as the Risen Guard often wield
+      these specially ordained blades. Each +2 flaming khopesh was crafted by
+      one of the predominant Osirian churches, such as the church of Abadar,
+      Nethys, or Pharasma. Anytime its wielder is healed by channeled positive
+      energy, a risen blade gains a charge. Whenever the wielder confirms a
+      critical hit, she can release the stored energy in the blade as a free
+      action. The wielder channels positive energy (as the class feature) and
+      must choose to damage undead or heal the living. This action expends all
+      the blade's charges. Each charge is worth 1d6 points of damage or healing,
+      and for each charge spent, the wielder can choose to exclude one creature
+      in the area from being affected. The DC to save against this positive
+      energy is equal to 15 + 1 per stored charge expended. A risen blade can't
+      gain a charge from healing caused by the release of charges from itself or
+      another risen blade. A risen blade can store up to 5 charges. Each charge
+      dissipates if not used within 24 hours.</p><p><strong>Base Item</strong>:
+      flaming khopesh</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, flame strike, creator must be a 9th-level
+      cleric capable of channeling positive energy</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 23320
+  properties:
+    trp: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9268
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 8
+type: weapon

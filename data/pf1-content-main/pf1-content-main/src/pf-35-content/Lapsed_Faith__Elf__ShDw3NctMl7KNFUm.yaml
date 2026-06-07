@@ -1,0 +1,46 @@
+_id: ShDw3NctMl7KNFUm
+_key: '!items!ShDw3NctMl7KNFUm'
+_stats:
+  coreVersion: '12.343'
+folder: CAxOlglJyXdUOHF9
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Lapsed Faith (Elf)
+system:
+  actions:
+    - _id: z8dgdSJWOxrdRSwM
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>Once per day you may cast cure minor wounds as a spell-like ability
+        at caster level 1. The save DC is Wisdom-based.</p><p>Note: this is a
+        3.5 ruleset spell that is referenced.</p><p>Those rules indicated that
+        this spell worked like cure light wounds but only cured 1 hp per
+        casting.</p>
+      img: systems/pf1/icons/skills/blue_35.jpg
+      name: Use
+  description:
+    value: >-
+      <p><em>You still remember a few prayers from your past experience serving
+      in a temple.</em></p><p><strong>Requirements</strong>:
+      Elf</p><p><strong>Benefits</strong>: Once per day you may cast <em>cure
+      minor wounds</em> as a spell-like ability at caster level 1. The save DC
+      is Wisdom-based.</p><p><strong>Special Note</strong>: <em>cure minor
+      wounds</em> is a 3.5 ruleset spell.</p><p>Those rules indicated that this
+      spell worked like <em>cure light wounds</em> but only cured 1 hp per
+      casting.</p>
+  sources:
+    - id: PZO9402
+      pages: '15'
+  subType: trait
+  tags:
+    - '3.5'
+    - Elf
+  traitType: race
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

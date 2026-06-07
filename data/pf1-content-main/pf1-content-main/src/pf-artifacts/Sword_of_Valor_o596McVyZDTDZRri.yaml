@@ -1,0 +1,33 @@
+_id: o596McVyZDTDZRri
+_key: '!items!o596McVyZDTDZRri'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Sword of Valor
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: abjuration and evocation [good]
+  cl: 20
+  description:
+    value: >-
+      <p>The Inheritor herself carried this crimson banner into battle during
+      the Shining Crusade. An army commander who carries the Sword of Valor
+      increases the DV and OM of her army by 4 against armies of undead or evil
+      outsiders. Yet the Sword of Valor's greatest power lies not in offense but
+      in defense. Mounted firmly upon an interior wall in a visible, public
+      place, the Sword of Valor creates a 10-mile-radius area that bars demons
+      and those who worship demons from using teleportation spells and effects
+      and imparts on such creatures a -4 penalty to Armor Class and on all
+      saving throws. Once per month while the banner is mounted on a wall, a
+      worshiper of Iomedae within 30 feet of the banner can use it to summon a
+      planetar to protect the banner and its surroundings for 1 day. Any nonevil
+      creature that sleeps within a 1-mile radius becomes immune to fear effects
+      from demons and demon worshipers for 24 hours.</p>
+  sources:
+    - id: PZO9074
+  subType: other
+  weight:
+    value: 3
+type: equipment

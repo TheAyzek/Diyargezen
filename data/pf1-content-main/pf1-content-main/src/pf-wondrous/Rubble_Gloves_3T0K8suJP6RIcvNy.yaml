@@ -1,0 +1,28 @@
+_id: 3T0K8suJP6RIcvNy
+_key: '!items!3T0K8suJP6RIcvNy'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Rubble Gloves
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>These gloves are made of a fine metal mesh. If a creature wearing
+      rubble gloves touches a 5-foot square of stone or earth floor, rubble
+      roils to the surface, making the square difficult terrain. Using the
+      gloves is a standard action that does not provoke attacks of opportunity.
+      The wearer can use the gloves to create up to 20 squares of difficult
+      terrain per day.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, expeditious excavation</p>
+  price: 8000
+  slot: hands
+  sources:
+    - id: PZO1121
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

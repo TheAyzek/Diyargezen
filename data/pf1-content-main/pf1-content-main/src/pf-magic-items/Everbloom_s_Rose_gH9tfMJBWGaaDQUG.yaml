@@ -1,0 +1,60 @@
+_id: gH9tfMJBWGaaDQUG
+_key: '!items!gH9tfMJBWGaaDQUG'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/morningstar.PNG
+name: Everbloom's Rose
+system:
+  actions:
+    - _id: obpx9up7cj31vpd7
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: everbloomsRose
+  aura:
+    school: abj
+  baseTypes:
+    - Morningstar
+  cl: 3
+  description:
+    value: >-
+      <p>Often created by evangelistic clerics of Milani, an Everbloom's rose is
+      a +1 morningstar. Once per day, the wielder of an Everbloom's rose can
+      cast remove fear on a creature touched by the weapon. If the subject
+      succeeds at a saving throw against a fear effect while under effects of
+      this spell, the subject gains a +1 morale bonus on attack and damage rolls
+      against the source of the fear effect for 1 round. If the subject is
+      immune to fear effects, she gains no bonuses from this
+      effect.<p><strong>Base Item</strong>: 
+      morningstar</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Arms and Armor, bless, remove fear</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 3000
+  showInQuickbar: false
+  sources:
+    - id: PZO9068
+  weaponGroups:
+    - flails
+  weight:
+    value: 6
+type: weapon

@@ -1,0 +1,33 @@
+_id: v5dHsJ6gCghRXQnL
+_key: '!journal!v5dHsJ6gCghRXQnL'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: UW4tzDX1A62qPAzr
+name: 3.0. Dungeons
+pages:
+  - _id: a5d4CcY7loDTm8n1
+    _key: '!journal.pages!v5dHsJ6gCghRXQnL.a5d4CcY7loDTm8n1'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.0. Dungeons
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p><strong>@Compendium[pf-content.pf-rules.v5dHsJ6gCghRXQnL]{3.0.
+        Dungeons}</strong></p><ul><li>@Compendium[pf-content.pf-rules.JaOBWaX6MgURoLHP]{3.0.1.
+        Types of
+        Dungeons}</li><li>@Compendium[pf-content.pf-rules.jgVKZvuXGPxfGXKQ]{3.0.2.
+        Dungeon Terrain}</li></ul><hr /><p>@Source[PZO1110;pages=410]</p><p>Of
+        all the strange places that an adventurer might explore, none is
+        deadlier than the dungeon. These labyrinths, full of deadly traps,
+        hungry monsters, and priceless treasure, test every skill a character
+        possesses. These rules can apply to dungeons of any type, from the wreck
+        of a sunken ship to a vast cave complex.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,54 @@
+_id: UBqamMQYN3ZGFyMh
+_key: '!journal!UBqamMQYN3ZGFyMh'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: zcCMo97bY7HQ8cns
+name: 7.0.3.2. Arcane Magical Writing
+pages:
+  - _id: cJBzlkhIJ4bIrXhh
+    _key: '!journal.pages!UBqamMQYN3ZGFyMh.cJBzlkhIJ4bIrXhh'
+    _stats:
+      coreVersion: '12.331'
+    name: 7.0.3.2. Arcane Magical Writing
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.dS0UkKOINqI2iTDX]{(Index)
+        Magic}</p><p>@Compendium[pf-content.pf-rules.VqmfepmRULVzQGwS]{7.0.
+        Magic
+        Basics}</p><ul><li><p>@Compendium[pf-content.pf-rules.7sbu7PG3Re7FkQos]{7.0.3.
+        Arcane
+        Spells}</p><ul><li>@Compendium[pf-content.pf-rules.BIHfeYxy4vvZ5mjt]{7.0.3.1.
+        Preparing Wizard
+        Spells}</li><li><strong>@Compendium[pf-content.pf-rules.UBqamMQYN3ZGFyMh]{7.0.3.2.
+        Arcane Magical
+        Writing}</strong></li><li>@Compendium[pf-content.pf-rules.xsjTbJPM05oYhCik]{7.0.3.3.
+        Sorcerers and
+        Bards}</li><li>@Compendium[pf-content.pf-rules.jBBYZQsfUvAiEmWV]{7.0.3.4.
+        Arcane Spells and Armor}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=218]</p><p>To record an arcane spell in
+        written form, a character uses complex notation that describes the
+        magical forces involved in the spell. The writer uses the same system no
+        matter what her native language or culture. However, each character uses
+        the system in his own way. Another person’s magical writing remains
+        incomprehensible to even the most powerful wizard until he takes time to
+        study and decipher it.</p><p>To decipher an arcane magical writing (such
+        as a single spell in another’s spellbook or on a scroll), a character
+        must make a Spellcraft check (DC 20 + the spell’s level). If the skill
+        check fails, the character cannot attempt to read that particular spell
+        again until the next day. A read magic spell automatically deciphers
+        magical writing without a skill check. If the person who created the
+        magical writing is on hand to help the reader, success is also
+        automatic.</p><p>Once a character deciphers a particular piece of
+        magical writing, he does not need to decipher it again. Deciphering
+        magical writing allows the reader to identify the spell and gives some
+        idea of its effects (as explained in the spell description). If the
+        magical writing is a scroll and the reader can cast arcane spells, he
+        can attempt to use the scroll.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

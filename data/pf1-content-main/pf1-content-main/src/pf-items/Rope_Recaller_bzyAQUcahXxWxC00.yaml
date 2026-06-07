@@ -1,0 +1,29 @@
+_id: bzyAQUcahXxWxC00
+_key: '!items!bzyAQUcahXxWxC00'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/fishing/reel-simple-brown.webp
+name: Rope Recaller
+system:
+  description:
+    value: >-
+      <p>This large, portable spool of rope or cord contains a clockwork
+      mechanism to reel the rope back in. You can unspool the rope from the
+      mechanism at a rate of 30 feet per round. Activating the mechanism as a
+      move action causes the rope to retract at a rate of 100 feet per round,
+      pulling up to 200 pounds of attached weight. The mechanism works more
+      slowly with increased weight, retracting the rope at a rate of 50 feet per
+      round with more than 200 pounds but up to 300 pounds of attached weight.
+      Weight in excess of 300 pounds prevents the mechanism from functioning. A
+      rope recaller is sold with 100 feet of hemp rope already attached, but can
+      hold up to 1,000 feet of rope. Replacing or adding rope to the device
+      requires 1 minute of work for every 100 feet of rope.</p>
+  equipped: false
+  price: 250
+  sources:
+    - id: PZO9481
+      pages: '13'
+  subType: adventuring
+  weight:
+    value: 30
+type: loot

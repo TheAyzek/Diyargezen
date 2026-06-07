@@ -1,0 +1,55 @@
+_id: QeCrfwhCbfQa1O3C
+_key: '!items!QeCrfwhCbfQa1O3C'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: systems/pf1/icons/feats/ride-by-attack.jpg
+name: War Saddle
+system:
+  aura:
+    school: div
+  changes:
+    - _id: 2nOaSWiJ
+      formula: '+5'
+      target: skill.rid
+      type: competence
+  cl: 5
+  description:
+    instructions: >-
+      <p>An animal trained to bear a rider into combat knows the tricks: attack,
+      come, defend, down, guard, and heel.</p>
+    unidentified: >-
+      <p>This military saddle is made of cured hide, with numerous straps and
+      hooks to allow it to be easily configured to fit different sizes of
+      animals and saddlebags.</p>
+    value: >-
+      <p>This military saddle is made of cured hide, with numerous straps and
+      hooks to allow it to be easily configured to fit different sizes of
+      animals and saddlebags.</p><h3>Effect</h3><p>Any creature of the animal or
+      magical beast type of an appropriate shape to wear a saddle (creatures
+      with unusual anatomies may be affected with GM discretion) can wear the
+      war saddle, which magically changes size and shape as necessary. The
+      saddle allows the creature wearing it to act as if it were combat trained
+      (see the
+      @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.IrVgSeMcAM8rAh2B]{Handle
+      Animal}  description on page 97 of the Core Rulebook for more information
+      on combat training), and gives the rider a +5 competence bonus on Ride
+      checks made while mounted upon the
+      creature.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.ct9fhh8uawn8e4md]{speak with
+      animals}, </em>creator must have 5 ranks in the Ride skill
+      <strong>Cost</strong> 2,500 gp</p>
+  price: 5000
+  slot: belt
+  sources:
+    - id: PZO9426
+      pages: '31'
+  subType: wondrous
+  tags:
+    - Animal
+    - Magical Beast
+    - Mount
+  weight:
+    value: 20
+type: equipment

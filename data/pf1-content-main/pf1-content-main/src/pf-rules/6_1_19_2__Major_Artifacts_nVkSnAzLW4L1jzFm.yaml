@@ -1,0 +1,21 @@
+_id: nVkSnAzLW4L1jzFm
+_key: '!journal!nVkSnAzLW4L1jzFm'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.19.2. Major Artifacts
+pages:
+  - _id: 8R88JY0WHJ7e6V10
+    _key: '!journal.pages!nVkSnAzLW4L1jzFm.8R88JY0WHJ7e6V10'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.19.2. Major Artifacts
+    sort: 0
+    text:
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

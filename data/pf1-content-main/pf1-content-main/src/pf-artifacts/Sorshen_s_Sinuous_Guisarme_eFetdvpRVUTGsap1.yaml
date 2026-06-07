@@ -1,0 +1,43 @@
+_id: eFetdvpRVUTGsap1
+_key: '!items!eFetdvpRVUTGsap1'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/guisarme.PNG
+name: Sorshen's Sinuous Guisarme
+system:
+  armor:
+    material:
+      normal:
+        value: mithral
+  artifact: true
+  aura:
+    custom: true
+    school: evocation [evil]
+  baseTypes:
+    - Guisarme
+  cl: 20
+  description:
+    value: >-
+      <p>Sorshen's Sinuous Guisarme is a +5 keen speed spell-storing mithral
+      guisarme. Although it has a blade at each end, it is not technically a
+      double weapon-when its speed special ability is used to make an extra
+      attack, that extra attack is made with the alternate blade. As a swift
+      action, the guisarme can transform itself into a staff of enchantment. If
+      it uses up all of its charges, it automatically reverts to guisarme form.
+      Created to defeat non-spellcasters, the glaive grants its wielder a +2
+      luck bonus on attacks, saves, and ability and skill checks. It can cast
+      charm monster once per day, mirror image upon its wielder three times per
+      day, and suggestion three times per day.  With Sorshen's recent shift in
+      alignment, her Sinuous Guisarme finds itself increasingly in conflict with
+      the runelord. Whether this will eventually result in the guisarme's
+      alignment adjusting to match its owner or whether the glaive's fell
+      influence might cause Sorshen to backslide to evil, only time (and GM
+      whim) can tell.<p><strong>Base Item</strong>: keen speed spell-storing
+      mithral guisarme</p>
+  enh: 5
+  sources:
+    - id: PZO90138
+  subType: other
+  weight:
+    value: 10
+type: equipment

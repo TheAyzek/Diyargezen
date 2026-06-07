@@ -1,0 +1,39 @@
+_id: wrx7dbmwvmtBboGL
+_key: '!items!wrx7dbmwvmtBboGL'
+_stats:
+  coreVersion: '12.331'
+folder: CAxOlglJyXdUOHF9
+img: icons/magic/life/ankh-shadow-green.webp
+name: The City Protects (Abadar)
+system:
+  contextNotes:
+    - target: allSavingThrows
+      text: >-
+        +[[2]] Trait bonus against fear effects in any settlement. If you fail a
+        save against a fear effect, you may make a new save each round you
+        remain in the city to overcome the fear effect as long as the fear
+        effect persists. If you are a paladin, this ability to make additional
+        saves to overcome fear extends to all allies within your aura of
+        courage.
+  description:
+    value: >-
+      <p><em>You feel safe and secure in urban environments, even in cities
+      whose laws you find unjust—it is the physical fact of the city that you
+      take solace in.</em></p><p><strong>Requirements</strong>:
+      Abadar</p><p><strong>Benefits</strong>: In any settlement, you gain a +2
+      trait bonus against fear effects. If you fail a save against a fear
+      effect, you may make a new save each round you remain in the city to
+      overcome the fear effect as long as the fear effect persists. If you are a
+      paladin, this ability to make additional saves to overcome fear extends to
+      all allies within your aura of courage.</p>
+  sources:
+    - id: PZO9404
+      pages: '9'
+  subType: trait
+  tags:
+    - '3.5'
+    - Abadar
+    - Paladin
+    - Aura of Courage
+  traitType: religion
+type: feat

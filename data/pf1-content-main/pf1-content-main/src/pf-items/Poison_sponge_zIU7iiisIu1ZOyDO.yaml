@@ -1,0 +1,27 @@
+_id: zIU7iiisIu1ZOyDO
+_key: '!items!zIU7iiisIu1ZOyDO'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/biological/fin-red-green.webp
+name: Poison sponge
+system:
+  description:
+    value: >-
+      <p>This spongy sac has a permeable membrane that can absorb, distill, and
+      store toxins. When harvesting parts (see the Harvest Parts feat) from a
+      poisonous creature, you can use a poison sponge to harvest and store one
+      dose of the creature's poison instead. The DC to harvest poison is equal
+      to 20 + the creature's CR, and the poison retains its potency for 3 days.
+      A successful check stores a single dose of the creature's poison in the
+      sponge, which you can then apply like any poison. Poison sponges become
+      saturated over time, imposing a cumulative -2 penalty on checks to harvest
+      poison each subsequent time they are used.</p>
+  equipped: false
+  price: 150
+  sources:
+    - id: PZO9478
+      pages: '27'
+  subType: tool
+  weight:
+    value: 1
+type: loot

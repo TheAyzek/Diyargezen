@@ -1,0 +1,41 @@
+_id: P6XoNhfPYdGk9EmW
+_key: '!items!P6XoNhfPYdGk9EmW'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: 'Haunted Faith: Pharasma'
+system:
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p><strong>Associated Deity</strong>: Pharasma</p><p><strong>Associated
+      Domain</strong>:
+      @UUID[Compendium.pf1.class-abilities.Item.eROVW8PzBztdcMd6]{Repose}</p><p><em>The
+      Lady of Graves seeks the destruction of undead, be they corporeal or
+      manifested spirits. Inquisitors of Pharasma scour the world for signs of
+      the undead, destroying such abominations on sight by means both
+      traditional and esoteric in nature. As a result, most people come first to
+      the church of Pharasma when seeking assistance against foul spirits. One
+      unusual facet of Pharasma's faithful is their reluctance to excise
+      non-undead spirits, such as demons or devils. Only the most altruistic of
+      Pharasmin priests offer their services against possessing outsiders, as
+      most faithful see battling such foes as being beyond their true
+      calling.</em></p><p><strong>Replacement Powers</strong>: A cleric (or any
+      other character capable of selecting a domain) who worships Pharasma can
+      choose to gain the variant domain power upon first gaining the domain in
+      question, but the choice to replace the domain power must be made
+      immediately upon gaining access to that domain and cannot be changed
+      thereafter.</p><table><thead><tr><th>Replaced Power</th><th>Replacement
+      Power</th></tr></thead><tbody><tr><td>@UUID[Compendium.pf1.class-abilities.Item.KF3SgIKeBACJhSZ1]{Ward
+      Against Death
+      (Su)}</td><td>@UUID[Compendium.pf-content.pf-class-abilities.Item.4tRdC2tc23eDwN6m]{Exorcism
+      of Undeath (Sp)}</td></tr></tbody></table>
+  sources:
+    - id: PZO9471
+      pages: '8'
+  subType: classFeat
+  tags:
+    - Pharasma
+type: feat

@@ -1,0 +1,39 @@
+_id: RPHd7cfcBLmENKFN
+_key: '!items!RPHd7cfcBLmENKFN'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Greathelm of the Mammoth Lord
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>This hide helm is a powerful variant of the more common helm of the
+      Mammoth Lord. Like its lesser incarnation, a greathelm of the Mammoth Lord
+      is set with plates of ivory carved with runes, with a pair of tusks
+      curving down either side of the wearer's face for cheek guards. The helm's
+      tusks provide a gore attack dealing 1d8 points of damage for a Medium
+      wearer (or 1d6 points of damage for a Small wearer) and count as magic and
+      cold for the purpose of overcoming damage reduction. The greathelm of the
+      Mammoth Lord also protects the wearer from cold environments as per endure
+      elements. Furthermore, it provides a +5 competence bonus on Handle Animal,
+      Ride, and wild empathy checks with elephants, mammoths, mastodons, and
+      other elephant-like creatures. On command, the wearer can use detect
+      animals or plants or speak with animals, but only to detect or communicate
+      with elephant-like creatures. Once per day, the wearer can transform into
+      a mammoth (treat as an mastodon) as beast shape
+      III.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, beast shape III, charm animal, detect animals or plants,
+      endure elements, speak with animals, creator must have 5 ranks in Handle
+      Animal and Ride</p>
+  price: 24700
+  slot: head
+  sources:
+    - id: PZO1138
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

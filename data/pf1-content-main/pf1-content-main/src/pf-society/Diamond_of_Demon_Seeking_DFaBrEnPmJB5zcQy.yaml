@@ -1,0 +1,28 @@
+_id: DFaBrEnPmJB5zcQy
+_key: '!items!DFaBrEnPmJB5zcQy'
+_stats:
+  coreVersion: '13.347'
+folder: mvNReufva6GBmOKS
+img: icons/svg/item-bag.svg
+name: Diamond of Demon Seeking
+system:
+  aura:
+    school: div
+  cl: 1
+  description:
+    value: >-
+      <p>This flawless crimson diamond is indistinguishable from an ordinary
+      jewel in appearance. When any creature of the demon subtype comes within
+      30 feet of the diamond of demon seeking, it glows with a blood-red
+      radiance. The glow from the diamond functions as the light spell. The
+      diamond does not reveal invisible or otherwise hidden demons, but rather
+      simply alerts the wielder to their presence. Spells or effects that
+      protect a demon from divination or alter a demon's alignment prevent a
+      diamond of demon seeking from detecting a demon under such an
+      effect.</p><h3>Requirements</h3><p>Craft Wondrous Item, detect chaos,
+      detect evil, light</p>
+  price: 6000
+  sources:
+    - id: PZOPSS0325
+  subType: wondrous
+type: equipment

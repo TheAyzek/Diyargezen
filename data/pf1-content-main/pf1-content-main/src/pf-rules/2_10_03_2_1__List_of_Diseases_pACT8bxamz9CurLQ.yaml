@@ -1,0 +1,78 @@
+_id: pACT8bxamz9CurLQ
+_key: '!journal!pACT8bxamz9CurLQ'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: Xs7WZeDzdO8Jg0jZ
+name: 2.10.03.2.1. List of Diseases
+pages:
+  - _id: b4Ajw2L08yb7VbTb
+    _key: '!journal.pages!pACT8bxamz9CurLQ.b4Ajw2L08yb7VbTb'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.10.03.2.1. List of Diseases
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.gzu4LYBcxAEzhEnd]{2.10. Special
+        Abilities}</p><p>@Compendium[pf-content.pf-rules.eMDcLEOn4gft6C5s]{2.10.03.2.
+        Diseases}</p><hr
+        /><p>@Compendium[pf-content.pf-maladies.99Qlvbp7r6VUcahy]{Athrakitis}</p><p>@Compendium[pf-content.pf-maladies.ovsc9iD1lwbtQL79]{Basidirond
+        Spores}</p><p>@Compendium[pf-content.pf-maladies.qWDLEtXn9W11tgA5]{Blightburn
+        Sickness}</p><p>@Compendium[pf-content.pf-maladies.b8tatXkCkLt3ubBU]{Blinding
+        Sickness}</p><p>@Compendium[pf-content.pf-maladies.mh0137k391vRajqg]{Blister
+        Phage}</p><p>@Compendium[pf-content.pf-maladies.IBXkxTo62AHQyySg]{Blood
+        Veil}</p><p>@Compendium[pf-content.pf-maladies.6FLA7zA14rA6WpG5]{Bloody
+        End
+        (Horrific)}</p><p>@Compendium[pf-content.pf-maladies.cy7wEc5TsozQEXlz]{Bluespit}</p><p>@Compendium[pf-content.pf-maladies.lAxyQ2HB1ji9ZyRq]{Bog
+        Rot}</p><p>@Compendium[pf-content.pf-maladies.94osu7eckXvhYNbZ]{Bonechill}</p><p>@Compendium[pf-content.pf-maladies.vRPjY9jdyh1FxQJJ]{Bonecrusher
+        (Dengue)
+        Fever}</p><p>@Compendium[pf-content.pf-maladies.enC3KC5qw9CFM67t]{Boot
+        Soup}</p><p>@Compendium[pf-content.pf-maladies.jTbG3MEUawUHXDtf]{Brain
+        Moss
+        (Horrific)}</p><p>@Compendium[pf-content.pf-maladies.9GfUF7ooAQHTjyUz]{Brainworms}</p><p>@Compendium[pf-content.pf-maladies.DFIi3JMe6eZrZuhe]{Bubonic
+        Plague}</p><p>@Compendium[pf-content.pf-maladies.vyX4fUWtp7XpD3XY]{Cackle
+        Fever}</p><p>@Compendium[pf-content.pf-maladies.CRvjsxFvhSB35RkY]{Chillbane
+        Fever}</p><p>@Compendium[pf-content.pf-maladies.xCk4sLr365zRFS9x]{Cholera}</p><p>@Compendium[pf-content.pf-maladies.ukTJHpl6BQZIgZdR]{Coward's
+        Mark}</p><p>@Compendium[pf-content.pf-maladies.KNMGIPchEGo7VjxH]{Crypt
+        Fever}</p><p>@Compendium[pf-content.pf-maladies.sE8pNmcBwR6CXI7H]{Daemonic
+        Wasting}</p><p>@Compendium[pf-content.pf-maladies.e17LSqxAyki6Rhg5]{Demon
+        Fever}</p><p>@Compendium[pf-content.pf-maladies.Lno75KvnrT4Ked5O]{Demonplague}</p><p>@Compendium[pf-content.pf-maladies.CXQXdyuEpopPBoeB]{Devil
+        Chills}</p><p>@Compendium[pf-content.pf-maladies.seGEx0gymT7zJ755]{Dvezda
+        Plague}</p><p>@Compendium[pf-content.pf-maladies.FIKghixfP8jUKkNx]{Dysentery}</p><p>@Compendium[pf-content.pf-maladies.ce6BPD0ZolEAjyZT]{Enteric
+        Fever}</p><p>@Compendium[pf-content.pf-maladies.jEHylQsGGjbQXRt2]{Ergia}</p><p>@Compendium[pf-content.pf-maladies.HdH7elHEyir9ckZ4]{Filth
+        Fever}</p><p>@Compendium[pf-content.pf-maladies.qEtdAsgPezYwz2fJ]{Final
+        Rest}</p><p>@Compendium[pf-content.pf-maladies.KEBeNYO3Tz7IYMhA]{Firegut}</p><p>@Compendium[pf-content.pf-maladies.xOyJzYLJOMHh4140]{Fungal
+        Flu}</p><p>@Compendium[pf-content.pf-maladies.69lzgZKyWbd1oDpH]{Ghoul
+        Distemper
+        (Horrific)}</p><p>@Compendium[pf-content.pf-maladies.KgnVoEaY5ft7lfZ2]{Ghoul
+        Fever}</p><p>@Compendium[pf-content.pf-maladies.fE6mDRHdIH1a5SWG]{Glacier
+        Plague}</p><p>@Compendium[pf-content.pf-maladies.2sVsKBze0qXl0LQ5]{Gore
+        Worms
+        (Horrific)}</p><p>@Compendium[pf-content.pf-maladies.kZcU0aRWIzP19ZIQ]{Green
+        Haze}</p><p>@Compendium[pf-content.pf-maladies.Gn4sYgrI6e63OVrx]{Greenscale}</p><p>@Compendium[pf-content.pf-maladies.HUqSnso0kdSoRryI]{Leprosy}</p><p>@Compendium[pf-content.pf-maladies.105mZ5GngYwG2WjJ]{Malaria
+        (Jungle
+        Fever)}</p><p>@Compendium[pf-content.pf-maladies.zw1id0psmxL1zBpK]{Mindfire}</p><p>@Compendium[pf-content.pf-maladies.o7TuBE2zVD3nMF8W]{Moxix's
+        Delectation}</p><p>@Compendium[pf-content.pf-maladies.XISyG4G83uL0lzVD]{Pulsing
+        Puffs}</p><p>@Compendium[pf-content.pf-maladies.DLbOk2kVRdsra9on]{Rabies}</p><p>@Compendium[pf-content.pf-maladies.S33nE6AMcjAlEE3a]{Rapture
+        Pox}</p><p>@Compendium[pf-content.pf-maladies.H1w9JvUPoZKNfxd7]{Red
+        Ache}</p><p>@Compendium[pf-content.pf-maladies.GRkEN6nEhwZTW8pk]{Red
+        Drip}</p><p>@Compendium[pf-content.pf-maladies.Ojb0pR3nLGfJVbj1]{Scarlet
+        Leprosy}</p><p>@Compendium[pf-content.pf-maladies.vH6gESSv7zuT86AQ]{Seasickness}</p><p>@Compendium[pf-content.pf-maladies.Nx798UF6uHLnMdnR]{Shakes}</p><p>@Compendium[pf-content.pf-maladies.6P62VZcA2Q2Vk1Lo]{Shattermind}</p><p>@Compendium[pf-content.pf-maladies.4i11yYXOHoOUj6ux]{Skin
+        Wastes
+        (Horrific)}</p><p>@Compendium[pf-content.pf-maladies.b5LwxVAqswhMknZc]{Sleeping
+        Sickness}</p><p>@Compendium[pf-content.pf-maladies.mmijPqbro33qoVXV]{Slimy
+        Doom}</p><p>@Compendium[pf-content.pf-maladies.BPBJRXHJAAH8cpEt]{Spellscar
+        Fever}</p><p>@Compendium[pf-content.pf-maladies.K1iWaoeYPh6CwgCm]{Tetanus}</p><p>@Compendium[pf-content.pf-maladies.UqTUdFCIwyrXZeAg]{The
+        Scales}</p><p>@Compendium[pf-content.pf-maladies.WEADlIXa6BNkcJ6a]{The
+        Tainted
+        Plague}</p><p>@Compendium[pf-content.pf-maladies.iW4XMifERDUGbR5W]{Tuberculosis}</p><p>@Compendium[pf-content.pf-maladies.cfkFCfwnjHktvwS8]{Typhoid
+        Fever}</p><p>@Compendium[pf-content.pf-maladies.PLheQNd8P8bHQb6a]{Vorel's
+        Phage}</p><p>@Compendium[pf-content.pf-maladies.nyKZ6XfskikDjyxk]{Zombie
+        Rot}</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

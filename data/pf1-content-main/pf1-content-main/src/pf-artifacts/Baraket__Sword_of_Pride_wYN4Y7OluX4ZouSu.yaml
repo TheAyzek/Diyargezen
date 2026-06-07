@@ -1,0 +1,37 @@
+_id: wYN4Y7OluX4ZouSu
+_key: '!items!wYN4Y7OluX4ZouSu'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/rapier.PNG
+name: Baraket, Sword of Pride
+system:
+  artifact: true
+  aura:
+    school: ill
+  baseTypes:
+    - Rapier
+  cl: 16
+  description:
+    value: >-
+      <p>Although known as the Sword of Pride, in appearances, Baraket is
+      nothing more than an elegant basket hilt seemingly made of glass or highly
+      polished crystal with no blade, as the deadly length of this +5 spell
+      storing speed rapier is invisible. Baraket grants its wielder a +5 bonus
+      on Bluff checks made to feint, so long as his opponent cannot see through
+      invisibility. Additionally, on a critical hit, the sword casts weird upon
+      the target and all of that creature's allies within 30
+      feet.</p><p><strong>Base Item</strong>: +5 spell storing speed rapier</p>
+  enh: 5
+  material:
+    base:
+      value: steel
+  properties:
+    fin: true
+  sources:
+    - id: PZO9250
+  subType: other
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 2
+type: weapon

@@ -1,0 +1,22 @@
+_id: t4E27yddRv0Ub3k6
+_key: '!items!t4E27yddRv0Ub3k6'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/biological/organ-brain-pink-purple.webp
+name: Thoughtsense
+system:
+  abilityType: su
+  description:
+    value: >-
+      <p>Creatures with this ability automatically detect and locate conscious
+      creatures within the specified range (usually 60 feet). This ability
+      functions similarly to blindsight. <a>Nondetection</a>, <a>mind blank</a>,
+      and similar effects can block thoughtsense. Thoughtsense can distinguish
+      between sentient (Intelligence 3 or greater) and nonsentient (Intelligence
+      1&ndash;2) creatures, but otherwise provides no information about the
+      creatures it detects.</p><p><em>Format</em>: thoughtsense 60
+      ft.</p><p><em>Location</em>: Senses.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

@@ -1,0 +1,22 @@
+_id: e8zYqnBsNLn1DMkw
+_key: '!items!e8zYqnBsNLn1DMkw'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/boxes/crate-wooden-yellow.webp
+name: Windup Music Box
+system:
+  description:
+    value: >-
+      <p>A tiny crank protrudes from this small wooden box. After its crank is
+      turned for 1 round, the box produces a pleasing melody for 4 rounds, as
+      the pins on a revolving cylinder inside the box pluck the tuned teeth of a
+      steel comb.</p>
+  equipped: false
+  price: 25
+  sources:
+    - id: PZO1140
+      pages: '245'
+  subType: adventuring
+  weight:
+    value: 0.5
+type: loot

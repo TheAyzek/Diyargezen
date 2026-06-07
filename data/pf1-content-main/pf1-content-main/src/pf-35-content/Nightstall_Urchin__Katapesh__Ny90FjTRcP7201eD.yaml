@@ -1,0 +1,35 @@
+_id: Ny90FjTRcP7201eD
+_key: '!items!Ny90FjTRcP7201eD'
+_stats:
+  coreVersion: '12.331'
+folder: CAxOlglJyXdUOHF9
+img: icons/environment/wilderness/cave-entrance-rocky.webp
+name: Nightstall Urchin (Katapesh)
+system:
+  contextNotes:
+    - target: allSavingThrows
+      text: >-
+        +[[2]] Trait bonus on saves against fear effects. If you do make a
+        successful save against a fear effect, the resulting rush of bravado
+        grants you a +[[1]] Trait bonus on attack rolls and all skill checks for
+        the next minute.
+  description:
+    value: >-
+      <p><em>You grew up an orphan on the streets of Katapesh, and spent many
+      years of childhood in the Nightstalls, Katapesh’s most infamous market.
+      The strange and often horrific sights you saw there forced you to grow up
+      fast—there’s little that can shock or unsettle
+      you.</em></p><p><strong>Requirements</strong>:
+      Katapesh</p><p><strong>Benefits</strong>: You gain a +2 trait bonus on
+      saves against fear effects, and when you do make a successful save against
+      a fear effect, the resulting rush of bravado grants you a +1 trait bonus
+      on attack rolls and all skill checks for the next minute.</p>
+  sources:
+    - id: PZO9404
+      pages: '7'
+  subType: trait
+  tags:
+    - '3.5'
+    - Katapesh
+  traitType: region
+type: feat

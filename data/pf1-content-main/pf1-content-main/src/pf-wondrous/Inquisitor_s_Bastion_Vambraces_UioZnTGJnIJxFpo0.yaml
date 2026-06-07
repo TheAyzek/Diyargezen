@@ -1,0 +1,29 @@
+_id: UioZnTGJnIJxFpo0
+_key: '!items!UioZnTGJnIJxFpo0'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Inquisitor's Bastion Vambraces
+system:
+  aura:
+    school: abj
+  cl: 5
+  description:
+    value: >-
+      <p>Constructed of blackened steel, these vambraces augment the protection
+      granted to the inquisitor by the protection judgment. While under that
+      judgment's effects, the inquisitor gains a sacred bonus both to CMD and on
+      checks made to cast spells defensively. This bonus is equal to the sacred
+      bonus the judgement grants to
+      AC.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, shield of faith, creator must be an inquisitor with access
+      to the protection judgment</p>
+  price: 4000
+  slot: wrists
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

@@ -1,0 +1,33 @@
+_id: DZ2zMjf5JRXaFcdd
+_key: '!journal!DZ2zMjf5JRXaFcdd'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Nhimbaloth
+pages:
+  - _id: wsphsKGJOjh8RTnY
+    _key: '!journal.pages!DZ2zMjf5JRXaFcdd.wsphsKGJOjh8RTnY'
+    _stats:
+      coreVersion: '12.331'
+    name: Nhimbaloth
+    sort: 0
+    text:
+      content: >-
+        <h1>Nhimbaloth</h1><h2>The Empty Death</h2>@Source[PZO90109;pages=69]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Nhimbaloth">Nhimbaloth</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Outer Gods<br /><strong>Areas of
+        Concern</strong> Despair, ghosts, swamps<br /><strong>Domains</strong>
+        Chaos, Death, Evil, Plant, Void<br /><strong>Subdomains</strong> Dark
+        Tapestry, Decay, Entropy, Fear, Isolation, Undead<br /><em>* Requires
+        the <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Flail<br /><strong>Symbol</strong> Dripping skull with
+        jaw stuffed with wet moss</p><h2>For Followers of
+        Nhimbaloth</h2><h3>Feats</h3><p>Dreamed
+        Secrets</p><h3>Traits</h3><p>Unspeakable Bond</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

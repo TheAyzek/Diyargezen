@@ -1,0 +1,40 @@
+_id: 88q7Ofbw9aw0zvyY
+_key: '!items!88q7Ofbw9aw0zvyY'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Briar Bomb
+system:
+  aura:
+    school: con
+  cl: 3
+  description:
+    value: >-
+      <p>Often crafted by denizens of the First World, this pinecone shaped knot
+      of briars can be thrown as a splash weapon with a range increment of 10
+      feet. The area within a 20-foot radius of where the briar bomb lands
+      erupts with thick, thorny brambles (hardness 5, hp 15) that hinder
+      creatures in the area. The briars extend to 20 feet high, so long as there
+      is vertical space for this growth. The briars do not block vision, but
+      they provide cover against attacks made through them.  A creature moving
+      through the briars takes 1d4 points of piercing damage for every 5 feet of
+      movement through the area. In addition, each creature trying to move
+      through the briars must succeed at a DC 20 Reflex save or become entangled
+      in place. Entangled creatures can break free of the briars as a full-round
+      action with a successful DC 20 Strength check or Escape Artist check. A
+      creature trapped in the briars can opt to remain motionless in order to
+      avoid taking any more damage. A creature can try to pick its way slowly
+      through a field of briars without taking damage or risking entanglement by
+      attempting a Dexterity check as a full-round action. For every 5 points by
+      which the result exceeds 10, the creature can move 5 feet (up to its
+      normal speed).  Once a briar bomb is thrown, it is
+      destroyed.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, entangle, plant growth</p>
+  price: 1250
+  sources:
+    - id: PZO1141
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

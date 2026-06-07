@@ -1,0 +1,66 @@
+_id: NiXiJljA7jiziRw7
+_key: '!items!NiXiJljA7jiziRw7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/sword-short.PNG
+name: Cutthroat's Apprentice
+system:
+  actions:
+    - _id: njpj82qunrpkdvon
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: cutthroatsApprentice
+  aura:
+    school: trs
+  baseTypes:
+    - Shortsword
+  cl: 15
+  description:
+    value: >-
+      <p>This simply made +1 dancing shortsword leaps to hand at the slightest
+      touch. It can be drawn as a free action as though using the Quick Draw
+      feat. The cutthroat's apprentice dances for 8 rounds instead of 4 when
+      activated, but can only dance twice per day. When dancing and attacking a
+      creature, it moves into the target's space and provides the person who
+      activated it (but no other creatures) with flanking during his turn if he
+      attacks the same target in melee. Once the sword's activator completes his
+      turn, the sword moves back to her space. If directed to attack multiple
+      creatures in the same turn, the cutthroat's apprentice provides a flank
+      against only the last creature attacked.</p><p><strong>Base Item</strong>:
+      dancing
+      shortsword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, animate objects, unwitting ally (Advanced Player's
+      Guide)</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 33910
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 2
+type: weapon

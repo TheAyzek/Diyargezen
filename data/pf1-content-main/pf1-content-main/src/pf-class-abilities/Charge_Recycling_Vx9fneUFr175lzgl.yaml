@@ -1,0 +1,25 @@
+_id: Vx9fneUFr175lzgl
+_key: '!items!Vx9fneUFr175lzgl'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Charge Recycling
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>At 11th level, by spending 1
+      grit point, a techslinger can grant 1 temporary charge to a technological
+      firearm, even if the firearm normally can no longer be recharged. This
+      charge must be used within 1 hour or it fades. The techslinger can grant
+      temporary charges to multiple firearms as long as she has enough grit, but
+      temporary charges do not stack with themselves in the same firearm. At
+      15th level, the techslinger can grant 2 temporary charges when she uses
+      this deed, and at 19th level, she can grant 3 temporary charges. This deed
+      replaces expert loading.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

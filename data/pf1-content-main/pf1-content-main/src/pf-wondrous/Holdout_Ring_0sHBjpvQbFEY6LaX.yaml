@@ -1,0 +1,39 @@
+_id: 0sHBjpvQbFEY6LaX
+_key: '!items!0sHBjpvQbFEY6LaX'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Holdout Ring
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>Made of aged bronze and steel, this ring looks like it should have a
+      gem set in it, but instead has an empty circular hole.  The hole in the
+      ring holds a single firearm bullet; if one is placed inside (as a
+      full-round action), it merges seamlessly into the ring. While a bullet is
+      merged into the ring, the wielder can fire the bullet as though she were
+      using a +1 pistol that can't misfire. Once the bullet has been fired from
+      the ring, a new bullet can't be placed inside for 24 hours.  Each holdout
+      ring is created with two +1 ammunition special abilities and one +2
+      ammunition special ability.  If the wearer has the grit class feature, she
+      can expend grit (maximum 4 grit points) to imbue bullets merged with the
+      gun with one or more of these abilities. Imbuing a bullet with a +1
+      special ability costs 1 grit point; imbuing one with a +2 special ability
+      costs 2 grit points. Each ring's special abilities are established upon
+      the item's creation and can't be changed. If a special ability has
+      multiple versions, as does bane, the specific version must be set at that
+      time (e.g., dragon bane). A typical holdout ring has the flaming, seeking,
+      and shocking burst special
+      abilities.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, magic weapon, telekinesis, creator must meet the requirements for
+      the ammunition special abilities that can be imbued by the ring</p>
+  price: 11000
+  slot: ring
+  sources:
+    - id: PZO9268
+  subType: wondrous
+type: equipment

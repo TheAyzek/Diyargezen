@@ -1,0 +1,22 @@
+_id: PAxRj5b4yzTBSqGU
+_key: '!items!PAxRj5b4yzTBSqGU'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Steady Aim
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>At 1st level, as long as a
+      musket master has at least 1 grit point, she can take a move-equivalent
+      action to increase the accuracy of a two-handed firearm. When she does,
+      she increases the range increment of the firearm she is firing by 10 feet.
+      This stacks with other abilities that increase her range increment. This
+      deed replaces the gunslinger's dodge deed.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

@@ -1,0 +1,23 @@
+_id: Zizp7KzHsNV3RulM
+_key: '!items!Zizp7KzHsNV3RulM'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/treasure/doll-voodoo.webp
+name: Fetish, tribal
+system:
+  description:
+    value: >-
+      <p>Tribal fetishes vary from tribe to tribe, but are generally small,
+      carved wooden or stone religious symbols, luck tokens, or curious
+      naturally occurring objects specially carved to resemble something of
+      significance (such as an acorn with a wolf fangs, a dried mushroom with
+      skull-shaped blotches, or a stone with a lizard carved on it). A goblin
+      divine spellcaster can use a tribal fetish as a divine focus for
+      spellcasting.</p>
+  equipped: false
+  price: 5
+  sources:
+    - id: PZO9419
+      pages: '12'
+  subType: tool
+type: loot

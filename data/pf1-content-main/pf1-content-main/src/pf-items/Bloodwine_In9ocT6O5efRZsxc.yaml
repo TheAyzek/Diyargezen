@@ -1,0 +1,41 @@
+_id: In9ocT6O5efRZsxc
+_key: '!items!In9ocT6O5efRZsxc'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Bloodwine
+system:
+  actions:
+    - _id: ta2192jjxhwh2b50
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: sickened for [[1d4]] hours
+            <strong>Secondary Effect</strong>: [[1d3]] Wis damage
+      save:
+        dc: '25'
+        type: fort
+      tag: bloodwine
+  description:
+    value: >-
+      <p><strong>Type</strong> ingested; <strong>Save</strong> Fortitude DC
+      25</p><p><strong>Frequency</strong> 1/minute for 6
+      minutes</p><p><strong>Initial Effect</strong> sickened for 1d4 hours;
+      <strong>Secondary Effect</strong> 1d3 Wis
+      damage</p><p><strong>Cure</strong> 2 consecutive saves</p>
+  price: 100
+  sources:
+    - id: PZO9041
+      pages: '42'
+  subType: poison
+  uses:
+    per: single
+type: consumable

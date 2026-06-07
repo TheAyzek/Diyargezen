@@ -1,0 +1,31 @@
+_id: D8gI1dNA4A03gsZL
+_key: '!items!D8gI1dNA4A03gsZL'
+_stats:
+  coreVersion: '12.331'
+folder: vGMb3ybhaLvSHJJy
+img: icons/magic/death/mouth-bite-fangs-vampire.webp
+name: 'Alternate Weakness (Dhampir: Sacred Ancestry)'
+system:
+  contextNotes:
+    - target: allSavingThrows
+      text: '-1 penalty on saving throws against spells of the illusion school.'
+  description:
+    value: >-
+      <p><strong>Race</strong>: Dhampir<br /><strong>Replaced Trait(s)</strong>:
+      @UUID[Compendium.pf-content.pf-racial-traits.Item.eJIBuryG68v4PJLk]{Light
+      Sensitivity (Dhampir)}</p><hr /><p>Alternate Weakness: Sacred ancestry
+      dhampirs take a -1 penalty on saving throws against spells of the illusion
+      school.</p>
+  racePoints: -1
+  sources:
+    - date: '2016'
+      pages: '5'
+      publisher: Paizo - Hideyuki Kikuchi
+      title: Pathfinder - The World of Vampire Hunter D
+  subType: racial
+  tags:
+    - Dhampir
+    - Sacred Ancestry
+    - The World of Vampire Hunter D
+  traitCategory: weakness
+type: feat

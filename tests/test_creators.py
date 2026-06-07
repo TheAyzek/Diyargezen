@@ -7,7 +7,7 @@ Unit Tests
   - DiceSystem: d20 vs d10 pool farklılıkları
   - DataLoader: cache mekanizması, singleton, mtime invalidation
   - SQLite Storage: tam CRUD (Create, Read, Update, Delete) + search + count
-  - Her 4 TTRPG Creator: calculate_stats(), export_data(), validate_character()
+  - Her 3 TTRPG Creator: calculate_stats(), export_data(), validate_character()
 """
 
 import json
@@ -25,7 +25,6 @@ from creators.base_creator import (
     BaseCharacterCreator,
     DiceSystem,
     DICE_D20,
-    DICE_D10_POOL,
     DICE_D6_POOL,
 )
 
@@ -40,8 +39,7 @@ class TestBaseCreatorAndFactory(unittest.TestCase):
 
     def test_factory_all_aliases_registered(self):
         available = CreatorFactory.get_available_systems()
-        for key in ['dnd5e', 'd&d', 'pathfinder1e', 'pf1e',
-                     'vtm5e', 'vampire', 'mm3e', 'm&m']:
+        for key in ['dnd5e', 'd&d', 'pathfinder1e', 'pf1e', 'mm3e', 'm&m']:
             self.assertIn(key, available)
 
     def test_factory_unknown_system_raises(self):
@@ -55,12 +53,12 @@ class TestBaseCreatorAndFactory(unittest.TestCase):
             self.assertIn("Mevcut:", str(e))
 
     def test_creators_are_subclasses(self):
-        for key in ['dnd5e', 'pathfinder1e', 'vtm5e', 'mm3e']:
+        for key in ['dnd5e', 'pathfinder1e', 'mm3e']:
             creator = CreatorFactory.create(key)
             self.assertIsInstance(creator, BaseCharacterCreator)
 
     def test_get_system_name_non_empty(self):
-        for key in ['dnd5e', 'pathfinder1e', 'vtm5e', 'mm3e']:
+        for key in ['dnd5e', 'pathfinder1e', 'mm3e']:
             creator = CreatorFactory.create(key)
             self.assertTrue(len(creator.get_system_name()) > 0)
 
@@ -77,11 +75,11 @@ class TestBaseCreatorAndFactory(unittest.TestCase):
         self.assertEqual(creator.DICE_SYSTEM.base_die, 20)
         self.assertFalse(creator.DICE_SYSTEM.pool_based)
 
-    def test_dice_system_d10_pool(self):
-        creator = CreatorFactory.create("vtm5e")
-        self.assertEqual(creator.DICE_SYSTEM.name, "d10_pool")
-        self.assertEqual(creator.DICE_SYSTEM.base_die, 10)
-        self.assertTrue(creator.DICE_SYSTEM.pool_based)
+    def test_dice_system_mm3e_uses_d20(self):
+        creator = CreatorFactory.create("mm3e")
+        self.assertEqual(creator.DICE_SYSTEM.name, "d20")
+        self.assertEqual(creator.DICE_SYSTEM.base_die, 20)
+        self.assertFalse(creator.DICE_SYSTEM.pool_based)
 
     def test_get_dice_system_via_factory(self):
         ds = CreatorFactory.get_dice_system("pathfinder1e")
@@ -193,7 +191,7 @@ class TestDataLoader(unittest.TestCase):
     def test_loads_all_systems(self):
         from utils.data_loader import DataLoader
         loader = DataLoader(base_dir=BASE_DIR)
-        for sys_key in ("dnd", "pathfinder_1e", "vtm", "mm"):
+        for sys_key in ("dnd", "pathfinder_1e", "mm"):
             with self.subTest(system=sys_key):
                 data = loader.load(sys_key)
                 self.assertIsInstance(data, dict)
@@ -235,10 +233,9 @@ class TestDataLoader(unittest.TestCase):
         self.assertIs(a, b)
 
     def test_convenience_functions_return_data(self):
-        from utils.data_loader import load_dnd_data, load_mm_data, load_vtm_data, load_pathfinder_1e_data
+        from utils.data_loader import load_dnd_data, load_mm_data, load_pathfinder_1e_data
         self.assertIn("races", load_dnd_data(BASE_DIR))
         self.assertIsInstance(load_mm_data(BASE_DIR), dict)
-        self.assertIsInstance(load_vtm_data(BASE_DIR), dict)
         self.assertIsInstance(load_pathfinder_1e_data(BASE_DIR), dict)
 
 
@@ -282,12 +279,12 @@ class TestStorage(unittest.TestCase):
     def test_list_all_and_filter(self):
         from utils.storage import save_character, list_characters, CharacterRecord
         save_character(self.db_path, CharacterRecord(id=None, system="DND5E", name="A", data={}))
-        save_character(self.db_path, CharacterRecord(id=None, system="VTM5E", name="B", data={}))
+        save_character(self.db_path, CharacterRecord(id=None, system="MM3E", name="B", data={}))
         save_character(self.db_path, CharacterRecord(id=None, system="DND5E", name="C", data={}))
 
         self.assertEqual(len(list_characters(self.db_path)), 3)
         self.assertEqual(len(list_characters(self.db_path, system="DND5E")), 2)
-        self.assertEqual(len(list_characters(self.db_path, system="VTM5E")), 1)
+        self.assertEqual(len(list_characters(self.db_path, system="MM3E")), 1)
 
     # ---- Search ----
 
@@ -295,7 +292,7 @@ class TestStorage(unittest.TestCase):
         from utils.storage import save_character, search_characters, CharacterRecord
         save_character(self.db_path, CharacterRecord(id=None, system="DND5E", name="Gandalf the Grey", data={}))
         save_character(self.db_path, CharacterRecord(id=None, system="DND5E", name="Aragorn", data={}))
-        save_character(self.db_path, CharacterRecord(id=None, system="VTM5E", name="Gandalf the White", data={}))
+        save_character(self.db_path, CharacterRecord(id=None, system="MM3E", name="Gandalf the White", data={}))
 
         results = search_characters(self.db_path, "Gandalf")
         self.assertEqual(len(results), 2)
@@ -309,7 +306,7 @@ class TestStorage(unittest.TestCase):
         from utils.storage import save_character, count_characters, CharacterRecord
         self.assertEqual(count_characters(self.db_path), 0)
         save_character(self.db_path, CharacterRecord(id=None, system="DND5E", name="X", data={}))
-        save_character(self.db_path, CharacterRecord(id=None, system="VTM5E", name="Y", data={}))
+        save_character(self.db_path, CharacterRecord(id=None, system="MM3E", name="Y", data={}))
         self.assertEqual(count_characters(self.db_path), 2)
         self.assertEqual(count_characters(self.db_path, system="DND5E"), 1)
 
@@ -436,53 +433,6 @@ class TestPathfinder1ECreator(unittest.TestCase):
 
     def test_dice_system_is_d20(self):
         self.assertEqual(self.creator.DICE_SYSTEM, DICE_D20)
-
-
-class TestVTM5ECreator(unittest.TestCase):
-
-    def setUp(self):
-        self.creator = CreatorFactory.create('vtm5e')
-
-    def test_data_loaded(self):
-        self.assertGreater(len(self.creator.data), 0)
-
-    def test_validate_and_derived(self):
-        char = {
-            'clan': 'Brujah',
-            'attributes': {
-                'physical': {'strength': 3, 'dexterity': 2, 'stamina': 2},
-                'social': {'charisma': 2, 'manipulation': 1, 'composure': 2},
-                'mental': {'intelligence': 2, 'wits': 1, 'resolve': 1},
-            },
-            'skills': {
-                'physical': {'Brawl': 2},
-                'social': {'Intimidation': 1},
-                'mental': {'Awareness': 1},
-            },
-            'disciplines': {'Potence': 1},
-        }
-        self.assertEqual(len(self.creator.validate_character(char)), 0)
-        derived = self.creator.calculate_stats(char)
-        self.assertEqual(derived['max_health'], 2 + 3)
-        self.assertEqual(derived['max_willpower'], 2 + 1)
-
-    def test_dice_system_is_d10_pool(self):
-        self.assertEqual(self.creator.DICE_SYSTEM, DICE_D10_POOL)
-
-    def test_export_data_vtm(self):
-        char = {
-            'name': 'Test Vamp', 'clan': 'Brujah',
-            'attributes': {
-                'physical': {'strength': 3, 'dexterity': 2, 'stamina': 2},
-                'social': {'charisma': 2, 'manipulation': 1, 'composure': 2},
-                'mental': {'intelligence': 2, 'wits': 1, 'resolve': 1},
-            },
-            'skills': {'physical': {}, 'social': {}, 'mental': {}},
-            'disciplines': {'Potence': 1},
-        }
-        exported = self.creator.export_data(char)
-        self.assertEqual(exported['system'], 'VTM5E')
-        self.assertEqual(exported['dice_system'], 'd10_pool')
 
 
 class TestMM3ECreator(unittest.TestCase):

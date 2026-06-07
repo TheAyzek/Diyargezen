@@ -1,0 +1,31 @@
+_id: q4uIZ2A6a0hlRcBj
+_key: '!items!q4uIZ2A6a0hlRcBj'
+_stats:
+  coreVersion: '12.331'
+folder: 6LCLnfOaXbVFz2J3
+img: systems/pf1/icons/skills/blue_35.jpg
+name: Change Shape (Skinwalker, CHA)
+system:
+  changes:
+    - _id: g6KKrQZx
+      formula: '2'
+      target: cha
+      type: racial
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf-content.pf-racial-traits.Item.z3qXw7vttJrJ0mfu]</p><p>In
+      the skinwalker's bestial form, they gain a +2 Racial bonus to
+      Charisma.</p>
+  duration:
+    end: turnStart
+  level: null
+  sources:
+    - id: PZO9280
+      pages: '249'
+    - id: PZO9439
+      pages: '22'
+  subType: feat
+  tags:
+    - Skinwalker
+    - Fanglord
+type: buff

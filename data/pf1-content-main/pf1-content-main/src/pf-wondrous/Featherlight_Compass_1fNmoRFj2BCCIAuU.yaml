@@ -1,0 +1,25 @@
+_id: 1fNmoRFj2BCCIAuU
+_key: '!items!1fNmoRFj2BCCIAuU'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Featherlight Compass
+system:
+  aura:
+    school: div
+  cl: 3
+  description:
+    value: >-
+      <p>This compass's components are so fine that it is practically
+      weightless. When held in the hand in an area of subjective directional
+      gravity, the bearer automatically succeeds at Wisdom checks to change
+      direction and can increase or decrease his falling speed by 30 feet during
+      the first round after he changes his subjective gravitational
+      direction.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, know direction</p>
+  price: 1500
+  sources:
+    - id: PZO1141
+  subType: wondrous
+type: equipment

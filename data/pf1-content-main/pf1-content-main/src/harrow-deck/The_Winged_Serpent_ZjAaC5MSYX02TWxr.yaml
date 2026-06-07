@@ -1,0 +1,29 @@
+_id: ZjAaC5MSYX02TWxr
+_key: '!journal!ZjAaC5MSYX02TWxr'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: B8yeiGCU6nhcjOzu
+name: The Winged Serpent
+pages:
+  - _id: oBm5TLmVQoPGUrs4
+    _key: '!journal.pages!ZjAaC5MSYX02TWxr.oBm5TLmVQoPGUrs4'
+    _stats:
+      coreVersion: '12.331'
+    name: The Winged Serpent
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Winged Serpent</strong> (lawful good, Wisdom) is a
+        powerful being. Knowledge and prudence are separate keeps bridged by
+        understanding. The couatl represents this bridge, knowing whether now is
+        the time to strike. Misaligned, this card means either not seizing a
+        moment or doing so ill-advisedly.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Winged%20Serpent.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

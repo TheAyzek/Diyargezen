@@ -1,0 +1,33 @@
+_id: VXVIuyfKAj3QArbY
+_key: '!items!VXVIuyfKAj3QArbY'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Burdenstone
+system:
+  aura:
+    school: enc
+  cl: 5
+  description:
+    value: >-
+      <p>This smooth lodestone is gray and streaked with veins of glossy
+      obsidian. As a ranged touch attack, the bearer can throw it at an opponent
+      within 30 feet. If it strikes a target in metal armor, the burdenstone
+      attaches itself to the target for 2d6 rounds.   An attached burdenstone
+      increases the target's load by one step. If a target's load is already
+      heavy, the target is knocked prone, its movement is reduced to 10 feet,
+      and it cannot run. An attached burdenstone also prevents the target from
+      flying. A target may not be affected by more than one burdenstone at a
+      time.  A successful DC 20 Strength check made as a full-round action can
+      remove the stone from a target before the duration elapses. Once a
+      burdenstone has been removed or the duration expires, it becomes an
+      ordinary magnetic
+      stone.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, burdened thoughts (Pathfinder Player Companion: Giant
+      Hunter's Handbook 26)</p>
+  price: 1000
+  sources:
+    - id: PZO9459
+  subType: wondrous
+type: equipment

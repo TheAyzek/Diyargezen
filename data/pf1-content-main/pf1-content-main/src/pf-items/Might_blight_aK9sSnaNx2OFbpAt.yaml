@@ -1,0 +1,43 @@
+_id: aK9sSnaNx2OFbpAt
+_key: '!items!aK9sSnaNx2OFbpAt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Might blight
+system:
+  actions:
+    - _id: gr6qc3a92ofjf08u
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - '<strong>Primary Effect</strong: [[1]] Str damage'
+      save:
+        dc: '13'
+        type: fort
+      tag: mightBlight
+  description:
+    value: >-
+      <p><strong>Type</strong> injury; <strong>Save</strong> Fortitude DC
+      13</p><p><strong>Onset</strong> 1 round; <strong>Frequency</strong>
+      1/round for 4 rounds</p><p><strong>Effect</strong> 1 Str
+      damage</p><p><strong>Cure</strong> 2 consecutive saves</p><p>The ratfolk
+      of Diguo-Dashu, the “Empire of the Rats,” developed this poison to help
+      their soldiers in overtaking foes. The poison produces lactic acids that
+      slowly degrade the target’s muscles, though for full efficacy, an
+      exceptionally high dosage, repeated application, or a particularly feeble
+      opponent is required.</p>
+  price: 60
+  sources:
+    - id: PZO9489
+      pages: '11'
+  subType: poison
+  uses:
+    per: single
+type: consumable

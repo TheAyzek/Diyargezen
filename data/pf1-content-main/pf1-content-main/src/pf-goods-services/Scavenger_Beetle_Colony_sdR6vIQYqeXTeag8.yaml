@@ -1,0 +1,24 @@
+_id: sdR6vIQYqeXTeag8
+_key: '!items!sdR6vIQYqeXTeag8'
+_stats:
+  coreVersion: '12.331'
+img: icons/environment/creatures/bug-beetle-gold-green.webp
+name: Scavenger Beetle Colony
+system:
+  description:
+    value: >-
+      <p>This glass jar contains a colony of carnivorous scavenger beetles. The
+      beetles must be fed at least a quarter pound of meat per day or they die.
+      When released on a dead organism, they break it down and devour its flesh
+      in 1d4 days, leaving only bones. Scavenger beetles eat only dead flesh,
+      and can't harm living creatures. Once released, the beetles can't be
+      returned to the jar.</p>
+  equipped: false
+  price: 3
+  sources:
+    - id: PZO1129
+      pages: '205'
+  subType: animal
+  weight:
+    value: 1
+type: loot

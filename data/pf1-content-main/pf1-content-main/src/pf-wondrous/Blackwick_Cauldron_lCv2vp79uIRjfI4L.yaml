@@ -1,0 +1,36 @@
+_id: lCv2vp79uIRjfI4L
+_key: '!items!lCv2vp79uIRjfI4L'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Blackwick Cauldron
+system:
+  aura:
+    custom: true
+    school: divination and transmutation
+  cl: 7
+  description:
+    value: >-
+      <p>Crafted from cattail wicker, rendered magically immune to fire, and
+      blackened by years of use, blackwick cauldrons are but one variety of a
+      number of similar items. Designed to aid in the crafting of potions and
+      admixtures, a blackwick cauldron grants a +5 competence bonus on Craft
+      (alchemy) checks and a +5 bonus on Spellcraft checks to create magic
+      potions with the Brew Potion feat. Additionally, a cauldron allows a user
+      to craft multiple potions at a faster rate than normal. The user can craft
+      a single potion with a value of 300 gp or less in 2 hours and can make any
+      combination of potions totaling 1,200 gp or less in value in a single day.
+      In addition to its crafting uses, a blackwick cauldron can cast identify
+      once per day on an item placed inside of it. A blackwick cauldron can also
+      be used as a focus or inexpensive material component for spells of the
+      divination school, such as clairaudience/clairvoyance or prying eyes, as
+      long as such focus or material component has a cost of 5 gp or
+      less.<h3>Requirements</h3><p>Craft Wondrous Item, identify, scrying</p>
+  price: 8850
+  sources:
+    - id: PZO9034
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

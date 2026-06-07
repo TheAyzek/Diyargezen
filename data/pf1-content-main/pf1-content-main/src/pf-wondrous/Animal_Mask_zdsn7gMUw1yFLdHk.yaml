@@ -1,0 +1,36 @@
+_id: zdsn7gMUw1yFLdHk
+_key: '!items!zdsn7gMUw1yFLdHk'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Animal Mask
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>This finely constructed mask of colored cloth and carved bone
+      incorporates parts of the animal it represents, such as its hair, hide,
+      horn, fur, and teeth. Depicting the head of an ape, bear, boar, cat, fox,
+      horse, pig, rat, or wolf, the mask completely covers the wearer's face,
+      but the wearer can see through the mask's eyes as though they were her
+      own.  As a swift action, the wearer can transform her head into the form
+      of the animal depicted by the mask for up to 5 minutes per day, absorbing
+      the mask into her body in the process but leaving in place any other item
+      she wears on her head. While so transformed, the wearer retains the
+      ability to speak normally and can complete verbal spell components, utter
+      command words, and activate spell-completion and spell-trigger items. She
+      also gains low-light vision, scent, and either a bite or gore attack (as
+      appropriate to the animal) that deals 1d4 points of damage for a Medium
+      wearer (1d3 if Small).  This duration does not need to be consecutive, but
+      it must be used in 1-minute
+      increments.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, beast shape I</p>
+  price: 2700
+  slot: head
+  sources:
+    - id: PZO1136
+  subType: wondrous
+type: equipment

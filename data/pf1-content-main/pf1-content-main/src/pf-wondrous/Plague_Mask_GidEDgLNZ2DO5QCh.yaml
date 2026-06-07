@@ -1,0 +1,28 @@
+_id: GidEDgLNZ2DO5QCh
+_key: '!items!GidEDgLNZ2DO5QCh'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Plague Mask
+system:
+  aura:
+    school: nec
+  cl: 5
+  description:
+    value: >-
+      <p>This stylized bird mask consists of a pair of goggles attached to a
+      ceramic beak that covers the nose and mouth. The goggles are not magic and
+      can be replaced with other goggles or eye slot items. It grants the wearer
+      a +4 resistance bonus on saving throws against disease. Once per day on
+      command, the user can remove disease (as the spell) on a single creature
+      touched.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, remove disease</p>
+  price: 7500
+  slot: head
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

@@ -6,7 +6,6 @@ from typing import Dict, Any, Optional
 from utils.calculations import (
     calculate_all_dnd_stats,
     calculate_all_mm_stats,
-    calculate_all_vtm_stats,
 )
 
 
@@ -27,8 +26,6 @@ def analyze_character(character: dict, class_data: Optional[dict] = None) -> Dic
         return _analyze_dnd(character, class_data)
     elif system == "MUTANTS_AND_MASTERMINDS":
         return _analyze_mm(character)
-    elif system == "VTM5E":
-        return _analyze_vtm(character)
     else:
         return {
             "error": f"Bilinmeyen sistem: {system}",
@@ -166,65 +163,6 @@ def _analyze_mm(character: dict) -> Dict[str, Any]:
     }
 
 
-def _analyze_vtm(character: dict) -> Dict[str, Any]:
-    """VtM karakteri analizi"""
-    stats = calculate_all_vtm_stats(character)
-    
-    attributes = character.get("attributes", {})
-    skills = character.get("skills", {})
-    
-    # Attribute toplamları
-    total_attributes = 0
-    for category, attrs in attributes.items():
-        total_attributes += sum(attrs.values())
-    
-    # Skill toplamları
-    total_skills = 0
-    for category, skill_dict in skills.items():
-        total_skills += sum(skill_dict.values())
-    
-    # Güç seviyesi skoru
-    power_score = (
-        total_attributes * 2 +  # Attribute katkısı
-        total_skills * 1.5 +  # Skill katkısı
-        character.get("humanity", 0) * 0.5 +  # Humanity katkısı
-        character.get("health", 0) * 1 +  # Health katkısı
-        character.get("willpower", 0) * 1 +  # Willpower katkısı
-        len(character.get("disciplines", [])) * 5  # Discipline sayısı
-    )
-    
-    # Güç seviyesi kategorisi
-    power_category = _categorize_power_level(power_score, 1)
-    
-    return {
-        "system": "VTM5E",
-        "character_name": character.get("name", "İsimsiz"),
-        "stats": stats,
-        "attributes": {
-            "total": total_attributes,
-            "by_category": {cat: sum(attrs.values()) for cat, attrs in attributes.items()}
-        },
-        "skills": {
-            "total": total_skills,
-            "by_category": {cat: sum(skills.values()) for cat, skills in skills.items()}
-        },
-        "disciplines": {
-            "total": len(character.get("disciplines", [])),
-            "list": character.get("disciplines", [])
-        },
-        "resources": {
-            "humanity": character.get("humanity", 0),
-            "health": character.get("health", 0),
-            "willpower": character.get("willpower", 0),
-        },
-        "power_analysis": {
-            "power_score": round(power_score, 1),
-            "power_category": power_category,
-            "recommendations": _get_vtm_recommendations(character)
-        }
-    }
-
-
 def _get_dnd_level_tier(level: int) -> str:
     """D&D seviye katmanını döndür"""
     if level <= 4:
@@ -309,31 +247,6 @@ def _get_mm_recommendations(character: dict, power_level: int) -> list:
     
     if len(character.get("powers", [])) == 0:
         recommendations.append("Hiç power yok. Karakterinize güçler ekleyin.")
-    
-    return recommendations
-
-
-def _get_vtm_recommendations(character: dict) -> list:
-    """VtM karakteri için öneriler"""
-    recommendations = []
-    
-    attributes = character.get("attributes", {})
-    skills = character.get("skills", {})
-    
-    # Attribute kontrolü
-    for category, attrs in attributes.items():
-        total = sum(attrs.values())
-        if total < 5:
-            recommendations.append(f"{category} attribute'ları düşük. Artırmayı düşünün.")
-    
-    # Skill kontrolü
-    total_skills = sum(sum(skills.values()) for skills in skills.values())
-    if total_skills < 10:
-        recommendations.append("Skill puanları az. Daha fazla skill öğrenmeyi düşünün.")
-    
-    # Discipline kontrolü
-    if len(character.get("disciplines", [])) == 0:
-        recommendations.append("Hiç discipline yok. Clan disiplinlerini ekleyin.")
     
     return recommendations
 

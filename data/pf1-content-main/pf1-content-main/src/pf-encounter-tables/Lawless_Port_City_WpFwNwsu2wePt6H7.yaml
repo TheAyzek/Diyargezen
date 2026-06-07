@@ -1,0 +1,210 @@
+_id: WpFwNwsu2wePt6H7
+_key: '!tables!WpFwNwsu2wePt6H7'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/settlement/lighthouse-rock-red.webp
+name: Lawless Port City
+replacement: true
+results:
+  - _id: Pvln6h9iDf8Eet3l
+    _key: '!tables.results!WpFwNwsu2wePt6H7.Pvln6h9iDf8Eet3l'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 3
+    text: 1 Monkey [CR 1/6]
+    type: text
+    weight: 1
+  - _id: pKUT02npMYzKyUVJ
+    _key: '!tables.results!WpFwNwsu2wePt6H7.pKUT02npMYzKyUVJ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 4
+      - 7
+    text: 1 Con Artist [CR 1/2]
+    type: text
+    weight: 1
+  - _id: K9nghsiS6IY28dJu
+    _key: '!tables.results!WpFwNwsu2wePt6H7.K9nghsiS6IY28dJu'
+    img: icons/svg/d20-black.svg
+    range:
+      - 8
+      - 9
+    text: 1 Leper [CR 1/2]
+    type: text
+    weight: 1
+  - _id: Y7SR2c4H6pmx0Crn
+    _key: '!tables.results!WpFwNwsu2wePt6H7.Y7SR2c4H6pmx0Crn'
+    img: icons/svg/d20-black.svg
+    range:
+      - 10
+      - 15
+    text: 1 Pickpocket [CR 1/2]
+    type: text
+    weight: 1
+  - _id: ujVt4t2RqKdMqXe6
+    _key: '!tables.results!WpFwNwsu2wePt6H7.ujVt4t2RqKdMqXe6'
+    img: icons/svg/d20-black.svg
+    range:
+      - 16
+      - 22
+    text: 1 Prostitute [CR 1/2]
+    type: text
+    weight: 1
+  - _id: 1nnizwRmcHaudlS7
+    _key: '!tables.results!WpFwNwsu2wePt6H7.1nnizwRmcHaudlS7'
+    img: icons/svg/d20-black.svg
+    range:
+      - 23
+      - 27
+    text: 1 Zealous Merchant [CR 1/2]
+    type: text
+    weight: 1
+  - _id: mvTkIlKqd1jn4dUV
+    _key: '!tables.results!WpFwNwsu2wePt6H7.mvTkIlKqd1jn4dUV'
+    img: icons/svg/d20-black.svg
+    range:
+      - 28
+      - 35
+    text: 1d4 ([[1d4]]) Drunkards [AVG CR 1]
+    type: text
+    weight: 1
+  - _id: z5Il6QLOXuPEBkXh
+    _key: '!tables.results!WpFwNwsu2wePt6H7.z5Il6QLOXuPEBkXh'
+    img: icons/svg/d20-black.svg
+    range:
+      - 36
+      - 37
+    text: 1 Goblin Snake [CR 1]
+    type: text
+    weight: 1
+  - _id: FUSaMEqxISCP6BOv
+    _key: '!tables.results!WpFwNwsu2wePt6H7.FUSaMEqxISCP6BOv'
+    img: icons/svg/d20-black.svg
+    range:
+      - 38
+      - 39
+    text: 1 Reefclaw [CR 1]
+    type: text
+    weight: 1
+  - _id: oRHFPTklq0kxTkEX
+    _key: '!tables.results!WpFwNwsu2wePt6H7.oRHFPTklq0kxTkEX'
+    img: icons/svg/d20-black.svg
+    range:
+      - 40
+      - 44
+    text: 1 Small Viper [CR 1]
+    type: text
+    weight: 1
+  - _id: b3Md4PCxmxD8Y97I
+    _key: '!tables.results!WpFwNwsu2wePt6H7.b3Md4PCxmxD8Y97I'
+    img: icons/svg/d20-black.svg
+    range:
+      - 45
+      - 50
+    text: 1d4 ([[1d4]]) Small Monstrous ??? [AVG CR 1]
+    type: text
+    weight: 1
+  - _id: avCZNJGXEJMSoyVf
+    _key: '!tables.results!WpFwNwsu2wePt6H7.avCZNJGXEJMSoyVf'
+    img: icons/svg/d20-black.svg
+    range:
+      - 51
+      - 56
+    text: 1d4 ([[1d4]]) Stirges [AVG CR 1]
+    type: text
+    weight: 1
+  - _id: leEJZCH0wzzcic2K
+    _key: '!tables.results!WpFwNwsu2wePt6H7.leEJZCH0wzzcic2K'
+    img: icons/svg/d20-black.svg
+    range:
+      - 57
+      - 64
+    text: 1d6 ([[1d6]]) Stray Dogs [AVG CR 1]
+    type: text
+    weight: 1
+  - _id: HqqYO3CGaCtfY30u
+    _key: '!tables.results!WpFwNwsu2wePt6H7.HqqYO3CGaCtfY30u'
+    img: icons/svg/d20-black.svg
+    range:
+      - 65
+      - 72
+    text: 1d4 ([[1d4]]) Thugs [AVG CR 1]
+    type: text
+    weight: 1
+  - _id: lBbw8FliTlCvrZNJ
+    _key: '!tables.results!WpFwNwsu2wePt6H7.lBbw8FliTlCvrZNJ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 73
+      - 74
+    text: 1d4 ([[1d4]]) Goblin Dogs [AVG CR 2]
+    type: text
+    weight: 1
+  - _id: 3r37rgi65MrE9Y7F
+    _key: '!tables.results!WpFwNwsu2wePt6H7.3r37rgi65MrE9Y7F'
+    img: icons/svg/d20-black.svg
+    range:
+      - 75
+      - 78
+    text: 1d6 ([[1d6]]) Giant Cockroaches [AVG CR 2]
+    type: text
+    weight: 1
+  - _id: abtpJMmYoXCkRwdY
+    _key: '!tables.results!WpFwNwsu2wePt6H7.abtpJMmYoXCkRwdY'
+    img: icons/svg/d20-black.svg
+    range:
+      - 79
+      - 84
+    text: 1d8 ([[1d8]]) Pirates [AVG CR 2]
+    type: text
+    weight: 1
+  - _id: 6ecrOrIlOyI6I9yr
+    _key: '!tables.results!WpFwNwsu2wePt6H7.6ecrOrIlOyI6I9yr'
+    img: icons/svg/d20-black.svg
+    range:
+      - 85
+      - 88
+    text: 1d8 ([[1d8]]) Press Gangers [AVG CR 2]
+    type: text
+    weight: 1
+  - _id: T2wx029VcxhrbQLr
+    _key: '!tables.results!WpFwNwsu2wePt6H7.T2wx029VcxhrbQLr'
+    img: icons/svg/d20-black.svg
+    range:
+      - 89
+      - 91
+    text: 1 Rat Swarm [CR 2]
+    type: text
+    weight: 1
+  - _id: TAx4sKevAMBV7Klr
+    _key: '!tables.results!WpFwNwsu2wePt6H7.TAx4sKevAMBV7Klr'
+    img: icons/svg/d20-black.svg
+    range:
+      - 92
+      - 94
+    text: 1 Barracuda [CR 2]
+    type: text
+    weight: 1
+  - _id: bPOIbP3bqHkk39Al
+    _key: '!tables.results!WpFwNwsu2wePt6H7.bPOIbP3bqHkk39Al'
+    img: icons/svg/d20-black.svg
+    range:
+      - 95
+      - 96
+    text: 1 Wererat [CR 2]
+    type: text
+    weight: 1
+  - _id: LaGOn6TRbrDa0XAy
+    _key: '!tables.results!WpFwNwsu2wePt6H7.LaGOn6TRbrDa0XAy'
+    img: icons/svg/d20-black.svg
+    range:
+      - 97
+      - 100
+    text: 1d4 ([[1d4]]) Cockroach Swarms [AVG CR 3]
+    type: text
+    weight: 1
+sort: 4600000

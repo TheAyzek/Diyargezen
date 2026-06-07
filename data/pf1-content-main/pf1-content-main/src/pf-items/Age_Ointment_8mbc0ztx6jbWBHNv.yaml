@@ -1,0 +1,29 @@
+_id: 8mbc0ztx6jbWBHNv
+_key: '!items!8mbc0ztx6jbWBHNv'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/bowl-liquid-white.webp
+name: Age Ointment
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>This white, waxy
+      ointment allows you to appear older or younger, and is useful for both
+      people who need disguises and the vain. When mixed with an equal amount of
+      sealing wax, it forms a gray paste that discolors and relaxes your skin,
+      reducing the penalty on Disguise checks to appear older than you are by 2.
+      When mixed with an equal amount of soap, it forms a rosy paste that
+      clarifies and tightens your skin, reducing the penalty on Disguise checks
+      to appear younger than you are by 2. An application of age ointment lasts
+      for 1d4+1 days. Age ointment can be used once, and the price includes the
+      required amounts of sealing wax and
+      soap.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      15</p>
+  price: 80
+  sources:
+    - id: PZO1134
+      pages: '235'
+  subType: misc
+  tags:
+    - Alchemical Tools
+type: consumable

@@ -1,0 +1,34 @@
+_id: cLDht5Skl576rkHE
+_key: '!journal!cLDht5Skl576rkHE'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Daikitsu
+pages:
+  - _id: A2AiovDciLSZ4uBp
+    _key: '!journal.pages!cLDht5Skl576rkHE.A2AiovDciLSZ4uBp'
+    _stats:
+      coreVersion: '12.331'
+    name: Daikitsu
+    sort: 0
+    text:
+      content: >-
+        <h1>Daikitsu</h1><h2>Lady of Foxes</h2>@Source[PZO9240;pages=58] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Daikitsu">Daikitsu</a><h3>Details</h3><p><strong>Alignment</strong>
+        N<br /><strong>Pantheon</strong> Deities of Tian Xia<br /><strong>Areas
+        of Concern</strong> Agriculture, craftsmanship, kitsune, rice<br
+        /><strong>Domains</strong> Animal, Artifice, Community, Plant,
+        Weather<br /><strong>Subdomains</strong> Construct, Family, Fur, Growth,
+        Home, Industry, Monsoon*, Seasons<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Flail<br
+        /><strong>Symbol</strong> Nine-tailed fox<br /><strong>Sacred
+        Animal(s)</strong> Fox</p><h3>On Golarion</h3><p><strong>Centers of
+        Worship</strong> Forest of Spirits, Minkai, Shokuro<br
+        /><strong>Nationality</strong> Kitsune</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

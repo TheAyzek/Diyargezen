@@ -1,0 +1,20 @@
+_id: 2BgoCIcdjug2IvIp
+_key: '!items!2BgoCIcdjug2IvIp'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Brambles
+system:
+  associations:
+    classes:
+      - Hunter
+  description:
+    value: >-
+      <p><strong>Hunter Animal Focus</strong></p><p>When the creature is hit by
+      an unarmed strike or natural attack, the attacker takes 1 point of
+      piercing damage. This increases to 2 points at 8th level and 3 points at
+      15th level.</p>
+  subType: classFeat
+  tags:
+    - Hunter Animal Focus
+type: feat

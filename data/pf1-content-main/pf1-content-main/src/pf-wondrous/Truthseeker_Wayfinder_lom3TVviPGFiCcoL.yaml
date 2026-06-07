@@ -1,0 +1,34 @@
+_id: lom3TVviPGFiCcoL
+_key: '!items!lom3TVviPGFiCcoL'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Truthseeker Wayfinder
+system:
+  aura:
+    school: div
+  cl: 7
+  description:
+    value: >-
+      <p>This wayfinder is crafted from polished gold and when viewed in bright
+      light is highly reflective-resembling a mirror more than it does simple
+      metal. A truthseeker wayfinder allows the wielder to cast zone of truth
+      for up to 7 minutes per day (Will DC 14 negates). This duration doesn't
+      need to be continuous, but must be used in 1-minute increments. If a
+      creature saves against this effect once, it is immune to the effect for 24
+      hours. Creatures that fail their saves are granted a new save each time
+      the effect is activated anew. Once per day, the wielder of a truthseeker
+      wayfinder can gain the benefits of discern lies for up to 7 rounds (Will
+      DC 16 negates). When the truthseeker wayfinder senses the target creature
+      issue an intentional falsehood, it vibrates just enough to be perceptible
+      to the wielder but no one
+      else.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, discern lies, light, zone of truth</p>
+  price: 39000
+  sources:
+    - id: PZO9435
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

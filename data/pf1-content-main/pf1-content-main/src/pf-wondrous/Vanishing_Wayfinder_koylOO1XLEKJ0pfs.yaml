@@ -1,0 +1,30 @@
+_id: koylOO1XLEKJ0pfs
+_key: '!items!koylOO1XLEKJ0pfs'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Vanishing Wayfinder
+system:
+  aura:
+    school: ill
+  cl: 5
+  description:
+    value: >-
+      <p>Vanishing wayfinders are crafted of ivory chased with gold and silver.
+      In addition to the usual functions of a wayfinder (including the ability
+      to create light), as a standard action the holder of a vanishing wayfinder
+      can press a hidden catch to become invisible (as the spell invisibility)
+      for as long as she concentrates, up to a maximum duration of 5 minutes per
+      day. These minutes need not be consecutive, but each activation counts as
+      a minimum use of 1 minute, even if the user becomes visible because of an
+      attack action or some other event before that minute is
+      up.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, invisibility, light</p>
+  price: 8000
+  sources:
+    - id: PZO9235
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

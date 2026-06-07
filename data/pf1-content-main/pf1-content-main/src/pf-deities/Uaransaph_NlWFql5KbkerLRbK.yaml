@@ -1,0 +1,46 @@
+_id: NlWFql5KbkerLRbK
+_key: '!journal!NlWFql5KbkerLRbK'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Uaransaph
+pages:
+  - _id: KdawygAJdygAHCAI
+    _key: '!journal.pages!NlWFql5KbkerLRbK.KdawygAJdygAHCAI'
+    _stats:
+      coreVersion: '12.331'
+    name: Uaransaph
+    sort: 0
+    text:
+      content: >-
+        <h1>Uaransaph</h1><h2>The Creeping Pit</h2>@Source[PZO9267;pages=318]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Uaransaph">Uaransaph</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Daemon Harbingers<br /><strong>Areas
+        of Concern</strong> Falling, nonmagical flight, projectiles<br
+        /><strong>Domains</strong> Air, Evil, Luck, Void<br
+        /><strong>Subdomains</strong> Daemon, Fate, Isolation, Wind<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Repeating crossbow<br
+        /><strong>Symbol</strong> Smoke rising from a pit<br /><strong>Sacred
+        Animal(s)</strong> Trap-door spider<br /><strong>Sacred
+        Color(s)</strong> Black, brown</p><h3>Obedience</h3><p>Shoot a creature
+        from the sky, or push one to its death from a great height. Gain a +4
+        profane bonus on attack rolls against flying creatures.</p><h2>Boons -
+        Daemon Harbingers</h2><p>@Source[PZO1139;pages=115]</p><p>Abaddon's
+        unique daemons take on a host of titles, customized to their methods and
+        vanity. These harbingers enjoy sweeping influence among daemons as
+        favored advisors, and they work to cultivate their own cults on Abaddon
+        and beyond.</p><p> Daemon harbingers are neutral evil demigods that
+        range in power from CR 21 to CR 25. The boons they grant are less
+        complex than those granted by the Horsemen themselves, manifesting as
+        spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>create pit</em><br
+        /><strong>2</strong>: <em>extended fly</em><br /><strong>3</strong>:
+        <em>hungry pit</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

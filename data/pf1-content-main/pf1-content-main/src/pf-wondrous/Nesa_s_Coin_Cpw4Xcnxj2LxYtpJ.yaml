@@ -1,0 +1,24 @@
+_id: Cpw4Xcnxj2LxYtpJ
+_key: '!items!Cpw4Xcnxj2LxYtpJ'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Nesa's Coin
+system:
+  aura:
+    school: div
+  cl: 1
+  description:
+    value: >-
+      <p>This simple copper coin establishes a connection with the most recent
+      person to keep it under her tongue for 24 hours. Once established, this
+      connection allows its owner to determine its current direction and
+      distance each time she casts detect magic. The connection instantly breaks
+      if the coin travels to another plane or enters an antimagic
+      field.</p><h3>Requirements</h3><p>Craft Wondrous Item, detect magic</p>
+  price: 450
+  sources:
+    - id: PZO9411
+  subType: wondrous
+type: equipment

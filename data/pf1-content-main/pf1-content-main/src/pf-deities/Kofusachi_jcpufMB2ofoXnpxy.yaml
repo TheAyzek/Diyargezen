@@ -1,0 +1,34 @@
+_id: jcpufMB2ofoXnpxy
+_key: '!journal!jcpufMB2ofoXnpxy'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Kofusachi
+pages:
+  - _id: LhNuWN7dJP8mVpyi
+    _key: '!journal.pages!jcpufMB2ofoXnpxy.LhNuWN7dJP8mVpyi'
+    _stats:
+      coreVersion: '12.331'
+    name: Kofusachi
+    sort: 0
+    text:
+      content: >-
+        <h1>Kofusachi</h1><h2>The Laughing God</h2>@Source[PZO9240;pages=58] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Kofusachi">Kofusachi</a><h3>Details</h3><p><strong>Alignment</strong>
+        CG<br /><strong>Pantheon</strong> Deities of Tian Xia<br /><strong>Areas
+        of Concern</strong> Abundance, discovery, happiness, prosperity<br
+        /><strong>Domains</strong> Chaos, Charm, Good, Luck, Travel<br
+        /><strong>Subdomains</strong> Azata (Chaos), Azata (Good), Captivation*,
+        Exploration, Fate, Love, Lust, Trade<br /><em>* Requires the <u>Acolyte
+        of Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Bo
+        staff<br /><strong>Symbol</strong> String of seven coins<br
+        /><strong>Sacred Animal(s)</strong> Dog</p><h3>On
+        Golarion</h3><p><strong>Centers of Worship</strong> Hongal, Hwanggot,
+        Tianjing<br /><strong>Nationality</strong> Tian-Hwan</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

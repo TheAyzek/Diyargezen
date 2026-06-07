@@ -1,0 +1,83 @@
+_id: nU09EOJ4mekR8T0W
+_key: '!items!nU09EOJ4mekR8T0W'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Veil Structure (Occult Ritual)
+system:
+  actions:
+    - _id: nkwez1w88x108uzf
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        description: disbelief (if interacted with)
+        type: will
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    focus: true
+    material: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> illusion (glamer); <strong>Level</strong>
+      8</p><p><strong>Casting Time</strong> 80
+      minutes</p><p><strong>Components</strong> V, S, M (a half-gallon of water
+      from a fresh spring and a <em>potion of invisibility</em>), F (a pair of
+      mithral pitchers and two golden aspergillums, worth 25,000 gp total), SC
+      (at least 4 and up to 12)</p><p><strong>Skill Checks</strong> Knowledge
+      (nature or local; see below) DC 32, 4 successes; Spellcraft DC 32, 2
+      successes; Sleight of Hand DC 32, 2 successes</p><p><strong>Range</strong>
+      close</p><p><strong>Area</strong> one 20-ft. cube/character level of the
+      primary caster</p><p><strong>Duration</strong> permanent
+      (D)</p><p><strong>Saving Throw</strong> Will disbelief (if interacted
+      with); <strong>SR</strong> no</p><p><strong>Backlash</strong> The primary
+      caster takes 1 permanent negative level.</p><p><strong>Failure</strong>
+      All casters cannot be targeted by any beneficial glamer effects (such as
+      <em>invisibility</em>) for 1 year (this is a curse effect, and can be
+      removed with <em>remove curse</em> and similar
+      effects).</p><h3>Effect</h3><p>The primary caster starts this ritual by
+      placing the fresh spring water in one of the mithral pitchers and the
+      <em>potion of invisibility</em> within the other. The caster then mixes
+      the components of the two pitchers by pouring the water into the pitcher
+      that holds the potion and then transferring the mixed contents back into
+      the pitcher that initially held the water. She then repeats this
+      transference between pitchers six more times, before handing one of the
+      pitchers to one of the secondary casters. In complete silence, the primary
+      caster and the chosen secondary caster use the aspergillums to splash the
+      mixture on a building or structure they wish to veil, which must be no
+      larger than the ritual's area. If the building or structure is in a
+      natural environment, the casters must attempt Knowledge (nature) checks
+      for the ritual. If the building or structure is in an urban environment,
+      they must attempt Knowledge (local) checks.</p><p>Upon the successful
+      completion of the ritual, the building is veiled, and it appears as if the
+      area were devoid of anything but its natural or urban setting. All of the
+      ritual casters are still able to see the faintest outline of the building
+      and interact with it normally. The primary caster also gains the ability
+      to grant up to 10 creatures per day that she touches the ability to see
+      the faintest outline of the building for a 24-hour period.</p>
+  flags:
+    dictionary:
+      summary: >-
+        Turn an area invisibile, which can only be seen by the casters and those
+        they allow
+  level: 8
+  materials:
+    focus: >-
+      a pair of mithral pitchers and two golden aspergillums worth 25,000 gp
+      total
+    value: a half-gallon of water froma fresh spring and a potion of invisibility
+  school: ill
+  sources:
+    - id: PZO1132
+      pages: '214'
+  sr: false
+type: spell

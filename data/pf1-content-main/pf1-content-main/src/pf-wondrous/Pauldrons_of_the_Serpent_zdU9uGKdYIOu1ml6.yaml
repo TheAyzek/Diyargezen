@@ -1,0 +1,27 @@
+_id: zdU9uGKdYIOu1ml6
+_key: '!items!zdU9uGKdYIOu1ml6'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Pauldrons of the Serpent
+system:
+  aura:
+    school: abj
+  cl: 3
+  description:
+    value: >-
+      <p>Constructed of mithral, each of these pauldrons bears an embossed
+      device of a viper coiled defensively. These pauldrons grant their wearer a
+      +2 dodge bonus to AC against attacks of opportunity, and increase the
+      wearer's CMD by 2 against bull rush, grapple, reposition, and trip combat
+      maneuvers.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, cat's grace</p>
+  price: 3000
+  slot: shoulders
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

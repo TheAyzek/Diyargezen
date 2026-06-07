@@ -1,0 +1,33 @@
+_id: t6iAB75smr5ZT0YP
+_key: '!items!t6iAB75smr5ZT0YP'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Backbiter's Focus
+system:
+  aura:
+    school: evo
+  cl: 7
+  description:
+    value: >-
+      <p>This small darkwood rod is adorned with a carving of a figure whose own
+      weapon is curled backward as if to strike the figure.  Three times per
+      day, the user can speak the rod's command word to curse a single
+      manufactured weapon within 30 feet.  If the weapon is magical, it can
+      attempt a DC 16 Will save to avoid the curse. Whenever the cursed weapon
+      damages a creature, it deals half as much damage to its wielder as well;
+      only the weapon's base damage and the wielder's Strength bonus are
+      factored into this damage-bonus damage from a magic weapon's special
+      abilities, from its wielder's class features and feats, or from other
+      effects are not factored into the damage dealt to the wielder. This is a
+      curse effect that lasts for 7
+      rounds.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Rod, bestow curse</p>
+  price: 7800
+  sources:
+    - id: PZO9446
+  subType: other
+  weight:
+    value: 1
+type: equipment

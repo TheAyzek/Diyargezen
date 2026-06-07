@@ -1,0 +1,55 @@
+_id: LOnY5syLjAT6YdbA
+_key: '!journal!LOnY5syLjAT6YdbA'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: '- Tips and Tricks'
+pages:
+  - _id: nOHVGPUolcJ1Anpd
+    _key: '!journal.pages!LOnY5syLjAT6YdbA.nOHVGPUolcJ1Anpd'
+    _stats:
+      coreVersion: '12.331'
+    name: '- Tips and Tricks'
+    sort: 100000
+    text:
+      content: >-
+        <h1>Rolling Dice</h1><p><strong>In-line Rolls</strong></p><ul><li>Using
+        double bracket [[  ]] allows you to do in-line rolls like so:
+        [[1d20]].</li><li><p>You can do an immediate roll using just 1d20:
+        [[1d20]]</p><ul><li>Or a deferred roll (rolls in chat when clicked) by
+        using /r 1d20: [[/r
+        1d20]]</li></ul></li></ul><p><strong>Rerolling/Exploding</strong></p><ul><li>Using
+        3d6r1 or [[/r 3d6r1]] will allow you to do reroll dice (reroll on
+        1's).</li><li>Using 3d6x6 or [[/r 3d6x6]] will allow for continuous
+        exploding dice (on 6's). </li><li>Using 3d6xo6 or [[/r 3d6xo6]] will
+        explode once.</li></ul><p><strong>Keeping/Dropping
+        Results</strong></p><ul><li><p>kh, or k - keep highest:</p><ul><li>/r
+        4d6k3 [[/r 4d6k3]] will keep the highest 3 rolls</li></ul></li><li><p>kl
+        will keep the lowest:</p><ul><li>/r 2d20kl [[/r 2d20kl]] will basically
+        roll disadvantage/misfortune</li></ul></li><li><p>dl, or d will drop the
+        lowest:</p><ul><li>/r 4d6d [[/r 4d6d]] would be Standard for rolling
+        ability scores</li></ul></li><li>dh will drop the
+        highest</li></ul><p><strong>Math and
+        Descriptions</strong></p><ul><li><p>Math functions can be included in
+        in-line rolls.</p><ul><li>Max(5, 20): [[max(5,
+        20)]]</li></ul></li><li><p>You can describe rolls using #</p><ul><li>/r
+        1d20 #Perception Check [[/r 1d20 #Perception
+        Check]]</li></ul></li><li><p>You can also split rolls using
+        descriptions. Click on the text in the chat card to
+        expand.</p><ul><li>/r 2d6[slashing]+1d8[fire] [[/r 2d6[slashing] +
+        1d8[fire]]]</li></ul></li></ul><p>There are a lot more things you can do
+        with dice, see <a href="https://foundryvtt.com/article/dice/">here</a>
+        for more documention.</p><hr /><h1>Changes</h1><ul><li>Most values are
+        listed via hovering over the appropriate value in the character
+        sheet</li><li>Ability modifier: @abilities.con.mod</li><li>Ability
+        modifier without temporary buffs (i.e. Rage):
+        @abilities.con.baseMod</li><li>Changes can be set to Add to the value
+        (+) or replace (=)</li><li>Scripts using js can also be used for
+        changes, for more complicated things.</li><li>Not everything available
+        in Pathfinder can currently be accomplished through changes</li></ul>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

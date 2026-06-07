@@ -1,0 +1,46 @@
+_id: tzb8Q2PSWQBXoHZV
+_key: '!items!tzb8Q2PSWQBXoHZV'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-light-wood.png
+name: Shield of Hags
+system:
+  armor:
+    acp: 1
+    material:
+      base:
+        value: wood
+    value: 1
+  aura:
+    school: nec
+  baseTypes:
+    - Light Wooden Shield
+  cl: 7
+  description:
+    value: >-
+      <p>Found with disturbing frequency amid treasure caches in the wilderness
+      of Loric Fells, this +1 light wooden shield has what appears to be a human
+      face stretched across its front, with the weathered skin held in place by
+      thick iron studs. Three times per day on command, the open mouth of the
+      face can emit one of the two following effects: • A burst of terrified
+      screams that causes creatures in a 30-foot cone to become panicked as if
+      by the fear spell. A successful DC 16 Will save causes a creature to
+      become shaken for 1 round instead. • A tortured voice pleading for help.
+      Anyone within 60 feet of the shield hears the voice in her own language,
+      spoken as if by a member of her own race.</p><p><strong>Base
+      Item</strong>: light wooden
+      shield</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, fear, tongues</p>
+  enh: 1
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 20273
+  slot: shield
+  sources:
+    - id: PZO9448
+  spellFailure: 5
+  subType: shield
+  weight:
+    value: 5
+type: equipment

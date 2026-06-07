@@ -1,0 +1,26 @@
+_id: 4bdiplj4yx6bZOK5
+_key: '!items!4bdiplj4yx6bZOK5'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_11.jpg
+name: Perilous Demesne, Greater
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> regional curse; <strong>Save</strong> Will DC
+      19</p><p><strong>Effect</strong> As per major perilous demesne, except up
+      to six hazards, each of CR 10 or less, imperil creatures in the area. The
+      hazards are arranged so that if any are encountered together, the
+      encounter's effective CR from hazards must be no more than 11 (for
+      instance, two CR 9 hazards could be encountered
+      together).</p><p><strong>Cure</strong> <em>Remove curse</em> removes a
+      greater perilous demesne only if followed by a casting of <em>hallow</em>
+      at the effect's center.</p>
+  sources:
+    - id: PZO1135
+      pages: '145'
+  subType: misc
+  tags:
+    - Maladies
+    - Curse
+type: feat

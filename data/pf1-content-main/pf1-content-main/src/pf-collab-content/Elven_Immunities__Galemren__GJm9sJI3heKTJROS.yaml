@@ -1,0 +1,29 @@
+_id: GJm9sJI3heKTJROS
+_key: '!items!GJm9sJI3heKTJROS'
+_stats:
+  coreVersion: '12.331'
+folder: Ah9aHaDhwaQBVNcg
+img: icons/magic/fire/flame-burning-eye.webp
+name: Elven Immunities (Galemren)
+system:
+  contextNotes:
+    - target: allSavingThrows
+      text: >-
+        +[[2]] Racial bonus against enchantment spells and effects and immunity
+        to magic sleep effects.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Galemren</p><hr /><p>Galemren are immune to
+      magic sleep effects and get a +2 racial bonus on saving throws against
+      enchantment spells and effects.</p>
+  sources:
+    - date: '2019'
+      pages: '8'
+      publisher: Paizo / Stranger Comics
+      title: Niobe
+  subType: racial
+  tags:
+    - Galemren
+    - Niobe
+  traitCategory: defense
+type: feat

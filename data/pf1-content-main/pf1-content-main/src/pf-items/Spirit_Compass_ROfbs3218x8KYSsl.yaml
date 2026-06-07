@@ -1,0 +1,27 @@
+_id: ROfbs3218x8KYSsl
+_key: '!items!ROfbs3218x8KYSsl'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/navigation/compass-plain-blue.webp
+name: Spirit Compass
+system:
+  description:
+    value: >-
+      <p>This device resembles an ordinary compass, save that it is filled with
+      alcohol and water, in which bob two pieces of alchemically treated metal
+      (one silver and one iron). A spirit compass can be operated by a creature
+      so as to allow the user to employ Survival in place of Perception to
+      notice haunts (it provides no benefit toward detecting those unusual
+      haunts that are not noticed by Perception checks). A creature that is
+      untrained in Survival takes a -4 penalty on any Survival checks when
+      attempting to use a spirit compass in this manner, representing the action
+      of focusing on the compass rather than one's surroundings.</p>
+  equipped: false
+  price: 20
+  sources:
+    - id: PZO9471
+      pages: '13'
+  subType: adventuring
+  weight:
+    value: 1
+type: loot

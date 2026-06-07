@@ -1,0 +1,34 @@
+_id: a6tMmPzYMAvZVaxk
+_key: '!journal!a6tMmPzYMAvZVaxk'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Cihua Couatl
+pages:
+  - _id: off0VlCqWUSnltm5
+    _key: '!journal.pages!a6tMmPzYMAvZVaxk.off0VlCqWUSnltm5'
+    _stats:
+      coreVersion: '12.331'
+    name: Cihua Couatl
+    sort: 0
+    text:
+      content: >-
+        <h1>Cihua Couatl</h1><h2>The War Children</h2>@Source[PZO90143;pages=66]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Cihua Couatl">Cihua
+        Couatl</a><h3>Details</h3><p><strong>Alignment</strong> NG<br
+        /><strong>Pantheon</strong> Other Deities<br /><strong>Areas of
+        Concern</strong> Childbirth, protection, and warfare<br
+        /><strong>Domains</strong> Good, Healing, Protection, Strength, War<br
+        /><strong>Subdomains</strong> Agathion, Defense, Ferocity, Resolve,
+        Restoration, Tactics<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Shortspear<br
+        /><strong>Symbol</strong> two couatls consuming each other's tails with
+        their wings overlapping in the center<br /><strong>Sacred
+        Animal(s)</strong> hawk</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

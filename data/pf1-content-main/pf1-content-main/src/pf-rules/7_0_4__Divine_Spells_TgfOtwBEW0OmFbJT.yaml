@@ -1,0 +1,50 @@
+_id: TgfOtwBEW0OmFbJT
+_key: '!journal!TgfOtwBEW0OmFbJT'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: zcCMo97bY7HQ8cns
+name: 7.0.4. Divine Spells
+pages:
+  - _id: XQdIryKoHToO8kyJ
+    _key: '!journal.pages!TgfOtwBEW0OmFbJT.XQdIryKoHToO8kyJ'
+    _stats:
+      coreVersion: '12.331'
+    name: 7.0.4. Divine Spells
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.dS0UkKOINqI2iTDX]{(Index)
+        Magic}</p><p>@Compendium[pf-content.pf-rules.VqmfepmRULVzQGwS]{7.0.
+        Magic
+        Basics}</p><ul><li>@Compendium[pf-content.pf-rules.QsXwV60ztDqlXSwM]{7.0.1.
+        Casting
+        Spells}</li><li>@Compendium[pf-content.pf-rules.JrvOGuTDYfoiaCZf]{7.0.2.
+        Spell
+        Descriptions}</li><li>@Compendium[pf-content.pf-rules.7sbu7PG3Re7FkQos]{7.0.3.
+        Arcane
+        Spells}</li><li><strong>@Compendium[pf-content.pf-rules.TgfOtwBEW0OmFbJT]{7.0.4.
+        Divine
+        Spells}</strong></li><li>@Compendium[pf-content.pf-rules.dk6hyT5yIVDVTlU5]{7.0.5.
+        Psychic
+        Magic}</li><li>@Compendium[pf-content.pf-rules.aZIvW09CvYzzWDmy]{7.0.6.
+        Special Abilities}</li></ul><hr
+        /><p>@Source[PZO1110;pages=220]</p><p>Clerics, druids, experienced
+        paladins, and experienced rangers can cast divine spells. Unlike arcane
+        spells, divine spells draw power from a divine source. Clerics gain
+        spell power from deities or from divine forces. The divine force of
+        nature powers druid and ranger spells, and the divine forces of law and
+        good power paladin spells. Divine spells tend to focus on healing and
+        protection and are less f lashy, destructive, and disruptive than arcane
+        spells.</p><p>@Compendium[pf-content.pf-rules.i7TqrtEEGX6SwnaJ]{7.0.4.1.
+        Preparing Divine
+        Spells}</p><p>@Compendium[pf-content.pf-rules.ISmWmvL7xj6jzWuc]{7.0.4.2.
+        Divine Magical
+        Writing}</p><p>@Compendium[pf-content.pf-rules.NUiA6qsVNN3mnSYY]{7.0.4.3.
+        New Divine Spells}</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

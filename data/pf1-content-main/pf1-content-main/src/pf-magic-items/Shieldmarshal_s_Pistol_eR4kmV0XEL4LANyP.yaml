@@ -1,0 +1,60 @@
+_id: eR4kmV0XEL4LANyP
+_key: '!items!eR4kmV0XEL4LANyP'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/guns/gun-double-barrel.webp
+name: Shieldmarshal's Pistol
+system:
+  actions:
+    - _id: nj6nteedalc1fbgt
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: shieldmarshalsPistol
+  aura:
+    school: div
+  baseTypes:
+    - Double-barreled Pistol
+  cl: 9
+  description:
+    value: >-
+      <p>This +1 double-barreled pistol contains a single grit feat from the
+      following list: Deft Shootist Deed, Fabulist (Pathfinder Player Companion:
+      Champions of Balance 19), Gun Twirling (Champions of Balance 19), Leaping
+      Shot Deed, No Name, and Ricochet Shot Deed. Anyone who wields or carries
+      the shieldmarshal's pistol and meets the feat's prerequisites gains the
+      feat's benefit. The wielder can't use the pistol's feat to meet
+      prerequisites.</p><p><strong>Base Item</strong>: double-barreled
+      pistol</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, chosen grit feat, share memory (Pathfinder RPG
+      Ultimate Magic 238)</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 20050
+  showInQuickbar: false
+  sources:
+    - id: PZO9463
+  weaponGroups:
+    - firearms
+  weight:
+    value: 5
+type: weapon

@@ -1,0 +1,28 @@
+_id: RIshYGkBQsQK7ds9
+_key: '!items!RIshYGkBQsQK7ds9'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: The Enthroned King
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: evocation and necromancy
+  cl: 13
+  description:
+    value: >-
+      <p>Roiling blue smoke fills this small glass bottle, occasionally forming
+      an aged face that vanishes just as quickly. So long as the bottle is worn
+      openly on a creature's body, the Enthroned King's inspiring presence
+      grants its carrier a +1 luck bonus on all ability checks, saving throws,
+      and skill checks. The spirit trapped within is utterly devoted to
+      protecting dwarves, and especially the Sky Citadel of Kraggodan. Three
+      times per day, the Enthroned King may invest his wielder with some of his
+      own immortal life force, granting her 1d10+10 temporary hit points.</p>
+  sources:
+    - id: PZO90118
+  subType: other
+  weight:
+    value: 2
+type: equipment

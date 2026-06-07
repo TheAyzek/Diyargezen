@@ -1,0 +1,40 @@
+_id: 6m3qdzea3XVdPPYB
+_key: '!items!6m3qdzea3XVdPPYB'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/chain-shirt.png
+name: All-Seeing Armor
+system:
+  armor:
+    acp: 2
+    dex: 4
+    enh: 1
+    material:
+      base:
+        value: steel
+    value: 4
+  aura:
+    school: div
+  baseTypes:
+    - Chain Shirt
+  cl: 3
+  description:
+    value: >-
+      <p>This +1 chain shirt is made of shiny, bright rings on the left side and
+      dull, dark rings on the right. The church of Nethys uses suits of
+      all-seeing armor to help Nethysians explore and catalog ancient libraries.
+      At will, the wearer can use detect magic and read magic. Once per day, the
+      wearer can use comprehend languages.</p><p><strong>Base Item</strong>:
+      chain shirt</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, comprehend languages, detect magic, read magic</p>
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 5570
+  slot: armor
+  sources:
+    - id: PZO9267
+  spellFailure: 20
+  weight:
+    value: 25
+type: equipment

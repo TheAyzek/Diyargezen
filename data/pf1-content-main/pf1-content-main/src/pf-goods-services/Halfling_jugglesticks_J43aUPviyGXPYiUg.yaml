@@ -1,0 +1,22 @@
+_id: J43aUPviyGXPYiUg
+_key: '!items!J43aUPviyGXPYiUg'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/wood/kindling-sticks-brown.webp
+name: Halfling jugglesticks
+system:
+  description:
+    value: >-
+      <p>This group of four brightly colored sticks is adorned with colorful
+      streamers that can be juggled and manipulated to create displays and
+      patterns. Halflings use them to even greater effect, gaining a +2
+      circumstance bonus on Perform (comedy) checks.</p>
+  equipped: false
+  price: 25
+  sources:
+    - id: PZO1121
+      pages: '66'
+  subType: entertainment
+  weight:
+    value: 1
+type: loot

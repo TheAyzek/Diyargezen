@@ -1,0 +1,60 @@
+_id: cEPxJzLTSI6s6pgb
+_key: '!items!cEPxJzLTSI6s6pgb'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/warhammer.png
+name: Hearthhammer
+system:
+  actions:
+    - _id: xzwv2l7i3i9rpd2y
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: hearthhammer
+  aura:
+    custom: true
+    school: moderate,
+  baseTypes:
+    - Warhammer
+  cl: 9
+  description:
+    value: >-
+      <p>The stone handle of this +3 adamantine warhammer is carved in the form
+      of a stately dwarven woman. The wielder of Hearthhammer gains a +5
+      competence bonus on Craft (armor, jewelry, stonemasonry, traps, and
+      weapon) checks. If the wielder is a humanoid with the dwarf subtype, this
+      bonus increases to +10.</p><p><strong>Base Item</strong>: adamantine
+      warhammer</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magical Arms and Armor, fabricate</p>
+  enh: 3
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+    normal:
+      value: adamantine
+  price: 30000
+  showInQuickbar: false
+  sources:
+    - id: PZO9278
+  weaponGroups:
+    - hammers
+  weight:
+    value: 10
+type: weapon

@@ -1,0 +1,38 @@
+_id: 5Bk4Bmy20lYTxmFK
+_key: '!items!5Bk4Bmy20lYTxmFK'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/mace-light.png
+name: Rod of the Aboleth
+system:
+  aura:
+    school: trs
+  baseTypes:
+    - Light Mace
+  cl: 7
+  description:
+    value: >-
+      <p>The rod of the aboleth acts as a +1 corrosive light mace. One end of
+      the rod has three eye-shaped rubies imbedded in it, while the other end
+      comes to a sharp point. When exposed to moisture, the surface of the rod
+      takes on a slimy sheen that doesn't affect the wielder's grip. This rod
+      has the following powers.  • Once per day as a free action, when the rod
+      hits a living creature, the target must succeed at a DC 18 Fortitude
+      saving throw or take 1d4 points of Constitution damage.  • Once per day as
+      a free action, when the rod hits a living creature, the creature must
+      succeed at a DC 13 Will saving throw or be affected as though targeted
+      with a aboleth's lung spell (Advanced Race Guide).  • On command for 1
+      minute per day, the wielder may gain a swim speed of 60 feet for 1 minute.
+      This time need not be continuous, and can be spent in 1-round
+      increments.</p><p><strong>Base Item</strong>: corrosive light
+      mace</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Rod,
+      aboleth's lung, acid arrow, touch of the sea (Advanced Player's Guide)</p>
+  enh: 1
+  price: 29000
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 5
+type: equipment

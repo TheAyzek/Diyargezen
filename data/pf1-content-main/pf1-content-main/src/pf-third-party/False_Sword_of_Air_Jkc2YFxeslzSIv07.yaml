@@ -1,0 +1,28 @@
+_id: Jkc2YFxeslzSIv07
+_key: '!items!Jkc2YFxeslzSIv07'
+_stats:
+  coreVersion: '12.331'
+folder: SkDgvmo2eCJs4yKY
+img: icons/skills/melee/strike-blade-hooked-orange-blue.webp
+name: False Sword of Air
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: conjuration and evocation
+  cl: 16
+  description:
+    value: >-
+      <p>While still a powerful weapon, the false sword pales in comparison to
+      the true blade. The false sword is a +3 greatsword that may summon a djinn
+      1/day, cast fly on its wielder 3/day, cast gust of wind 3/day, and
+      protects its wielder with a permanent feather fall
+      effect.</p><p><strong>Base Item</strong>: greatsword</p>
+  enh: 3
+  hp:
+    base: 10
+  sources:
+    - id: FGG17316
+  weight:
+    value: 8
+type: weapon

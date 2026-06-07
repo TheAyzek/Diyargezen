@@ -1,0 +1,61 @@
+_id: jnNDd7DLGCgmmE0Z
+_key: '!items!jnNDd7DLGCgmmE0Z'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/longsword.png
+name: Scalerazor
+system:
+  actions:
+    - _id: mqxa689xb8tt9den
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: scalerazor
+  aura:
+    school: trs
+  baseTypes:
+    - Longsword
+  cl: 8
+  description:
+    value: >-
+      <p>The Azlanti devised this +2 longsword during their ancient wars with
+      the serpentfolk. It has the bane property against reptilian humanoids, but
+      this power also manifests against lizardlike or snake-like monstrous
+      humanoids (at the GM's discretion), such as serpentfolk. Once per day,
+      when the wielder fails a saving throw against an effect that would
+      exercise mental control over her, she can immediately reroll that saving
+      throw. She must use the new result, even if it is
+      worse.</p><p><strong>Base Item</strong>: +2
+      longsword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, protection from evil, summon monster I, creator must
+      be an Azlanti</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 35315
+  showInQuickbar: false
+  sources:
+    - id: PZO9280
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 4
+type: weapon

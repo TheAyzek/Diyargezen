@@ -1,0 +1,68 @@
+_id: 5fVSaeKyb8IGF5Ip
+_key: '!items!5fVSaeKyb8IGF5Ip'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Second Sight (Occult Ritual)
+system:
+  actions:
+    - _id: wggr907nesdzfr2s
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        description: negates
+        harmless: true
+        type: will
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    material: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> divination; <strong>Level</strong>
+      4</p><p><strong>Casting Time</strong> 40
+      minutes</p><p><strong>Components</strong> V, S, M (an eyedropper filled
+      with water from the Elemental Plane of Water), SC (at least 2, up to
+      6)</p><p><strong>Skill Checks</strong> Heal DC 32, 1 success; Knowledge
+      (arcana) DC 32, 1 success; Perception DC 32, 2
+      successes</p><p><strong>Range</strong> long</p><p><strong>Target</strong>
+      one living humanoid of the same size as the primary
+      caster</p><p><strong>Duration</strong> 10 minutes/character level of the
+      primary caster; see text</p><p><strong>Saving Throw</strong> Will negates
+      (harmless); <strong>SR</strong> no</p><p><strong>Backlash</strong> The
+      primary caster's movement speeds are all reduced by 15 feet, to a minimum
+      of 5 feet, for the next 24 hours.</p><p><strong>Failure</strong> The
+      target and primary caster have their vision permanently reversed, so the
+      primary caster sees only what the target sees and vice versa. This effect
+      can be removed only by <em>greater restoration</em>, <em>limited
+      wish</em>, <em>miracle</em>, or <em>wish</em>.</p><h3>Effect</h3><p>The
+      primary caster carefully applies specially prepared water to the target's
+      eyes. Following this application, one or more secondary casters paint the
+      primary caster's closed eyes, creating lifelike eyes overtop of the closed
+      eyelids.</p><p>When the primary caster's eyes are closed, she sees through
+      the eyes of the target. This vision only works while the target is within
+      range of the primary caster, and only if the ritual is successful. While
+      seeing through the target's eyes, the primary caster is susceptible to
+      gaze attacks, patterns, and other sight-based and visual attacks as if she
+      were the target.</p>
+  flags:
+    dictionary:
+      summary: Gain the ability to see through the eyes of the target
+  level: 4
+  materials:
+    value: an eyedropper filled with water from the Elemental Plane of Water
+  school: div
+  sources:
+    - id: PZO1135
+      pages: '133'
+  sr: false
+type: spell

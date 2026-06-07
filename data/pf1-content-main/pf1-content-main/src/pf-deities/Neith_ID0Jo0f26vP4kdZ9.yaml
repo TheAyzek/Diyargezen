@@ -1,0 +1,32 @@
+_id: ID0Jo0f26vP4kdZ9
+_key: '!journal!ID0Jo0f26vP4kdZ9'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Neith
+pages:
+  - _id: KIkN6QSp4RjwWAgF
+    _key: '!journal.pages!ID0Jo0f26vP4kdZ9.KIkN6QSp4RjwWAgF'
+    _stats:
+      coreVersion: '12.331'
+    name: Neith
+    sort: 0
+    text:
+      content: >-
+        <h1>Neith</h1><h2>Ruler of Arrows</h2>@Source[PZO9080;pages=65] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Neith">Neith</a><h3>Details</h3><p><strong>Alignment</strong>
+        NG<br /><strong>Pantheon</strong> Deities of Ancient Osirion<br
+        /><strong>Areas of Concern</strong> Hunting, war, weaving<br
+        /><strong>Domains</strong> Animal, Artifice, Good, War, Water<br
+        /><strong>Subdomains</strong> Agathion, Construct, Feather, Fur, Oceans,
+        Tactics<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Shortbow<br
+        /><strong>Symbol</strong> A shield and two crossed arrows<br
+        /><strong>Sacred Animal(s)</strong> Bee</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

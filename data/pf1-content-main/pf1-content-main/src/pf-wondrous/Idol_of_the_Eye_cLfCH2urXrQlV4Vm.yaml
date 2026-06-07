@@ -1,0 +1,30 @@
+_id: cLfCH2urXrQlV4Vm
+_key: '!items!cLfCH2urXrQlV4Vm'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Idol of the Eye
+system:
+  aura:
+    school: div
+  cl: 9
+  description:
+    value: >-
+      <p>This squat, golden idol looks like a bald, obese wise man with an extra
+      eye in his forehead. It can be used once per day to gain information as
+      with an augury spell, and once per day as a divination spell. Once per
+      week, a single yes-or-no question can be asked of it (as with a commune
+      spell). The answers do not come from a deity, but instead from insights
+      granted by celestial movements and conjunctions; a sample insight might
+      be, Because Aballon and Eox are in conjunction in the House of the Eagle,
+      the answer is
+      yes.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, augury, commune, divination</p>
+  price: 19000
+  sources:
+    - id: PZO9526
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

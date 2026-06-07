@@ -1,0 +1,32 @@
+_id: cPrA8r0xm8a0efYR
+_key: '!items!cPrA8r0xm8a0efYR'
+_stats:
+  coreVersion: '12.331'
+folder: YaC0PDBdquBGbbsG
+img: systems/pf1/icons/skills/violet_04.jpg
+name: Slithering
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate transmutation <strong>CL</strong>
+      11th</p><p><strong>Slot</strong> none; <strong>Price</strong> +1 bonus;
+      This special ability can be placed only on a melee weapon. A
+      <em>slithering </em>weapon can bend and flex when swung at a target,
+      allowing it to fit through narrow gaps and around difficult angles with
+      greater ease and making the weapon difficult to strike. When a
+      <em>slithering </em>weapon is used to attack a creature with cover, the
+      target's cover bonus to Armor Class is halved. In addition, the wielder
+      adds the weapon's enhancement bonus to her CMD against attempts to disarm
+      or sunder her <em>slithering</em> weapon. If the wielder is squeezing in a
+      narrow space, she takes only half the normal penalty on attack rolls with
+      her <em>slithering
+      </em>weapon.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, <em>fluid form<sup>APG</sup></em>;
+      <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1134
+      pages: '238'
+  subType: misc
+  tags:
+    - Melee Qualities
+type: feat

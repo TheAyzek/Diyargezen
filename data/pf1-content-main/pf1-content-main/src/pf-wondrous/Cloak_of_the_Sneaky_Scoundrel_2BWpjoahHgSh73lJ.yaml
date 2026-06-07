@@ -1,0 +1,31 @@
+_id: 2BWpjoahHgSh73lJ
+_key: '!items!2BWpjoahHgSh73lJ'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Cloak of the Sneaky Scoundrel
+system:
+  aura:
+    school: ill
+  cl: 5
+  description:
+    value: >-
+      <p>This dark burgundy cloak shifts its hue and pattern to blend in against
+      its surroundings, granting the wearer a +5 competence bonus on Stealth
+      checks. The cloak holds a concealed scabbard in which a light blade (as
+      defined in the fighter weapon group) can be hidden. The wearer can draw
+      the blade as if from a normal scabbard, but anyone searching the wearer
+      for the item must succeed at a DC 20 Perception check, as if he were
+      looking for a secret door.  If a swashbuckler is wearing the cloak, she
+      can spend 1 panache point to vanish, as the
+      spell.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, shrink item, vanish</p>
+  price: 6400
+  slot: shoulders
+  sources:
+    - id: PZO1129
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

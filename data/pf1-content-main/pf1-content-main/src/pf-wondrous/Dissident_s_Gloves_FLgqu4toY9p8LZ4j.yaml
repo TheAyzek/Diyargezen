@@ -1,0 +1,32 @@
+_id: FLgqu4toY9p8LZ4j
+_key: '!items!FLgqu4toY9p8LZ4j'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Dissident's Gloves
+system:
+  aura:
+    school: evo
+  cl: 1
+  description:
+    value: >-
+      <p>The inside of these fingerless leather gloves contains minute stitching
+      forming the holy symbol of a specific deity or religion. As a standard
+      action, the wearer can imprint a palm-sized image of the holy symbol onto
+      any object (as if using arcane mark) simply by pressing the palm of one of
+      a pair of dissident's gloves against it. The icon is invisible for 1d4
+      rounds after the imprinting; it then appears and glows with light
+      equivalent to a candle. While the image is visible, any worshiper of the
+      appropriate faith can use it as a holy symbol by touching it. The image
+      fades after 1 day, but can be prematurely removed by dispel magic or
+      erase.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, arcane mark, light</p>
+  price: 1200
+  slot: hands
+  sources:
+    - id: PZO9462
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

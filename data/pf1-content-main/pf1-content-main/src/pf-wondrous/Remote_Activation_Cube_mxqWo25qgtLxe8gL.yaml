@@ -1,0 +1,25 @@
+_id: mxqWo25qgtLxe8gL
+_key: '!items!mxqWo25qgtLxe8gL'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Remote Activation Cube
+system:
+  aura:
+    school: evo
+  cl: 10
+  description:
+    value: >-
+      <p>This cube can be activated or deactivated from a distance via use of
+      the spell mage hand or the hand of the apprentice ability. The antimagic
+      wall and the wall that keeps out all things prevent remote deactivation in
+      this manner.</p><h3>Requirements</h3><p>Craft Wondrous Item, mage hand,
+      wall of force</p>
+  price: 70000
+  sources:
+    - id: PZO9220
+  subType: wondrous
+  weight:
+    value: 0.5
+type: equipment

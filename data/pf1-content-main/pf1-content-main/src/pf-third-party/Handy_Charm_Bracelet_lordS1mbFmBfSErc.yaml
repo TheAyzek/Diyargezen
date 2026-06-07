@@ -1,0 +1,39 @@
+_id: lordS1mbFmBfSErc
+_key: '!items!lordS1mbFmBfSErc'
+_stats:
+  coreVersion: '12.331'
+folder: 5HPDAAtypP5m41CK
+img: icons/svg/item-bag.svg
+name: Handy Charm Bracelet
+system:
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  cl: 8
+  description:
+    value: >-
+      <p>This piece of jewelry is a platinum or gold chain festooned with tiny
+      charms, objects that bear a resemblance to mundane items. When a charm is
+      pulled from the bracelet, it transforms into a permanent, non-magical
+      object. As long as at least one charm remains on the bracelet, it
+      regenerates one charm per day. Removing a random charm is a swift action;
+      removing a specific one is a move action that does not provoke an attack
+      of opportunity. Either action requires a free hand to pluck loose the
+      charm.  Bracelets come with six charms maximum, and always regenerate the
+      same charms they had when they were first created. Possible charms
+      include: a tiny mug (produces a frosty mug of decent quality ale), a
+      scroll (produces a blank parchment scroll, a vial of ink, and a quill
+      pen), a lantern (produces a lit standard lantern filled with lamp oil), a
+      ladder (produces a 15 foot long wooden ladder), a coil of rope (produces a
+      50 foot length of rope with a grappling hook attached to one end), and a
+      dagger (produces a steel dagger). The GM is free to improvise items, but
+      they should have a market value of less than 25 gp, should not be
+      masterwork, and should not be magical.</p><h3>Requirements</h3><p>Craft
+      Wondrous Item, fabricate, shrink item</p>
+  price: 10000
+  sources:
+    - date: '2012'
+      publisher: Necromancer Games & Frog God Games
+      title: Rappan Athuk
+  subType: wondrous
+type: equipment

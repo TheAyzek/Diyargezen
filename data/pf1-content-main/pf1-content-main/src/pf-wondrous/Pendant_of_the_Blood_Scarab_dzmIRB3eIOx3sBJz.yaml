@@ -1,0 +1,31 @@
+_id: dzmIRB3eIOx3sBJz
+_key: '!items!dzmIRB3eIOx3sBJz'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Pendant of the Blood Scarab
+system:
+  aura:
+    school: div
+  cl: 3
+  description:
+    value: >-
+      <p>A carved ruby in the shape of a scarab set in gold, this magic amulet
+      grants its wearer insight on where to strike a creature so as to maximize
+      pain and distress. This pendant must be worn against bare flesh in order
+      to function. Once per day, as an immediate action, when the wearer of a
+      pendant of the blood scarab threatens a critical hit with any attack, he
+      may automatically confirm the critical hit. When the user activates this
+      ability, the pendant's spiky little legs momentarily animate and clutch
+      against the wearer's skin, dealing 1d6 points of damage as the amulet
+      burrows and digs into the wearer's body in apparent delight at the
+      devastating blow inflicted on the
+      enemy.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, true strike</p>
+  price: 1000
+  slot: neck
+  sources:
+    - id: PZO9232
+  subType: wondrous
+type: equipment

@@ -1,0 +1,28 @@
+_id: Ob5aKUVimsCiLG1i
+_key: '!items!Ob5aKUVimsCiLG1i'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Far-reaching Sight
+system:
+  aura:
+    school: div
+  cl: 3
+  description:
+    value: >-
+      <p>This sight can be attached to a single two-handed firearm. When this is
+      done, the sight becomes part of the weapon, but can be removed from that
+      weapon with a full-round action. A firearm wielder can choose to spend a
+      full-round action to make a single shot with a firearm that has this
+      sight. When she does, she can resolve the attack against the touch AC of
+      her target regardless of the range
+      increment.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, true strike</p>
+  price: 4000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

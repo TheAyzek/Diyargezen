@@ -1,0 +1,44 @@
+_id: WBlPGc2OEYvgGMLP
+_key: '!items!WBlPGc2OEYvgGMLP'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Kiss of Noctura
+system:
+  aura:
+    custom: true
+    school: conjuration [evil]
+  cl: 15
+  description:
+    value: >-
+      <p>This flap of leathery skin was flayed from the face of the succubus
+      Noctura. In order to attach the skin graft, the new user must make several
+      lacerations around his own mouth, cheeks, and chin, dealing 1d6 points of
+      Constitution damage to himself. Once the skin scrap is placed over this
+      area, the user's blood revivifies the flesh, causing it to fuse with his
+      face. Once the scrap is attached, the user's face looks identical to how
+      it did before the graft, except that his lips constantly appear plump and
+      lush.  The wearer of the Kiss of Noctura inherits a measure of Noctura's
+      succubus abilities. Whenever the wearer kisses another creature, he
+      imposes 1 negative level on that creature. If the victim is unwilling, it
+      must be grappled first. Negative levels imposed by the Kiss of Noctura can
+      be removed with a successful DC 16 Fortitude saving throw after 24 hours.
+      Any creature that already has 1 negative level from the Kiss of Noctura d
+      oes n ot t ake additional negative levels from subsequent kisses. 
+      Additionally, the wearer can communicate telepathically with any creature
+      he's kissed within the past 24 hours. This telepathic link isn't limited
+      by distance or planes, and can be terminated by the wearer at any time.
+      Unwilling creatures can prevent this link from forming by succeeding at a
+      Will save (DC = 10 + the wearer's Charisma modifier).  The Kiss of Noctura
+      can be removed by cutting the flap of skin away, which deals a further 1d6
+      points of Constitution damage to the wearer and leaves the wearer's face
+      permanently
+      scarred.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, enervation, regenerate, creator must have a Charisma score
+      of at least 18</p>
+  price: 56000
+  sources:
+    - id: PZO9275
+  subType: wondrous
+type: equipment

@@ -1,0 +1,80 @@
+_id: 87rVetLgCkc8cm5d
+_key: '!journal!87rVetLgCkc8cm5d'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.19. Artifacts
+pages:
+  - _id: Ox5SZ4jHXfsfILPA
+    _key: '!journal.pages!87rVetLgCkc8cm5d.Ox5SZ4jHXfsfILPA'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.19. Artifacts
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.s3ene84nkQAyhCrW]{6.1.
+        Magic
+        Items}</p><ul><li>@Compendium[pf-content.pf-rules.sP6qrGJREE0X596I]{6.1.01.
+        Magic Items and Detect
+        Magic}</li><li>@Compendium[pf-content.pf-rules.N3qNOnemt2nuACdl]{6.1.02.
+        Using
+        Items}</li><li>@Compendium[pf-content.pf-rules.VOtMqlqVoaZs7zu3]{6.1.03.
+        Magic Items on the
+        Body}</li><li>@Compendium[pf-content.pf-rules.EyKVuz8Ae2Bh5Z32]{6.1.04.
+        Saving Throws Against Magic Item
+        Powers}</li><li>@Compendium[pf-content.pf-rules.oXM5hPY9YSNGCEpU]{6.1.05.
+        Damaging Magic
+        Items}</li><li>@Compendium[pf-content.pf-rules.M3XyBvOcp11YAnAL]{6.1.06.
+        Purchasing Magic
+        Items}</li><li>@Compendium[pf-content.pf-rules.iZ6tZ7PFna0TiXkW]{6.1.07.
+        Magic Item
+        Descriptions}</li><li>@Compendium[pf-content.pf-rules.b91t5OrtW3axrmKd]{6.1.08.
+        Magic
+        Armor}</li><li>@Compendium[pf-content.pf-rules.TT91XHZCetT5yyVc]{6.1.09.
+        Magic
+        Weapons}</li><li>@Compendium[pf-content.pf-rules.itDodwwkCVnIf0jU]{6.1.10.
+        Potions}</li><li>@Compendium[pf-content.pf-rules.LFs1l4pTdQgqrkjx]{6.1.11.
+        Rings}</li><li>@Compendium[pf-content.pf-rules.LxBkrhoOTfPeNQ7Z]{6.1.12.
+        Rods}</li><li>@Compendium[pf-content.pf-rules.2QvAhr3WucxaQNeN]{6.1.13.
+        Scrolls}</li><li>@Compendium[pf-content.pf-rules.3mXUlZodNKkPDj0D]{6.1.14.
+        Staves}</li><li>@Compendium[pf-content.pf-rules.wi435P7HqEEOQwFA]{6.1.15.
+        Wands}</li><li>@Compendium[pf-content.pf-rules.HYNbOvjpMu4OZlfs]{6.1.16.
+        Wondrous
+        Items}</li><li>@Compendium[pf-content.pf-rules.muHuo2GwcCKyy4tP]{6.1.17.
+        Intelligent
+        Items}</li><li>@Compendium[pf-content.pf-rules.LaZ4cSkdCxMwDnXD]{6.1.18.
+        Cursed
+        Items}</li><li><strong>@Compendium[pf-content.pf-rules.87rVetLgCkc8cm5d]{6.1.19.
+        Artifacts}</strong></li><li>@Compendium[pf-content.pf-rules.X6hkpqXjE3T3jRy2]{6.1.20.
+        Magic Item Creation}</li></ul><hr
+        /><p>@Source[PZO1110;pages=543]</p><p>Artifacts are extremely powerful.
+        Rather than merely another form of magical equipment, they are the sorts
+        of legendary relics that whole campaigns can be based on. Each could be
+        the center of a whole set of adventures—a quest to recover it, a fight
+        against an opponent wielding it, a mission to cause its destruction, and
+        so on.</p><p>Unlike normal magic items, artifacts are not easily
+        destroyed. Instead of construction information, each artifact includes
+        one possible means by which it might be destroyed.</p><p>Artifacts can
+        never be purchased, nor are they found as part of a random treasure
+        hoard. When placing an artifact in your game, be sure to consider its
+        impact and role. Remember that artifacts are fickle objects, and if they
+        become too much of a nuisance, they can easily disappear or become lost
+        once again.</p><p><em>See PF-Artifacts compendium for many Artifacts
+        (incomplete).</em></p><h2>Minor
+        Artifacts</h2><p>@Source[PZO1110;pages=543]</p><p>Minor artifacts are
+        not necessarily unique items. Even so, they are magic items that no
+        longer can be created, at least by common mortal means.</p><h2>Major
+        Artifacts</h2><p>@Source[PZO1110;pages=547]</p><p>Major artifacts are
+        unique items—only one of each such item exists. These are the most
+        potent of magic items, capable of altering the balance of a campaign.
+        Unlike all other magic items, major artifacts are not easily destroyed.
+        Each should have only a single, specific means of destruction.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

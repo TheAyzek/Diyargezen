@@ -1,0 +1,31 @@
+_id: yuv7SRPMJKyOxRFG
+_key: '!items!yuv7SRPMJKyOxRFG'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Scavenger's Ring
+system:
+  aura:
+    school: abj
+  cl: 7
+  description:
+    value: >-
+      <p>This polished iron band allows the wearer to walk along the ocean floor
+      as easily as on dry land. The wearer of a scavenger's ring sinks to the
+      bottom of any large body of water at a rate of 30 feet per round. Once on
+      the body of water's floor, the wearer can move and act as though she were
+      on land, allowing her to jump, roll, attack, and run as normal, although
+      she cannot swim (nor can she control her ascent or descent underwater) as
+      long as she wears the ring. As soon as the wearer removes the ring, she
+      may swim as normal and is subject to all the normal penalties associated
+      with underwater action. A scavenger's ring does not confer the ability to
+      breathe while
+      underwater.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, freedom of movement</p>
+  price: 15000
+  slot: ring
+  sources:
+    - id: PZO9440
+  subType: wondrous
+type: equipment

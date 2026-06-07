@@ -1,0 +1,26 @@
+_id: RxATsvXZE7xITW6p
+_key: '!items!RxATsvXZE7xITW6p'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Shoes of the Firewalker
+system:
+  aura:
+    school: evo
+  cl: 6
+  description:
+    value: >-
+      <p>These low-cut shoes of polished red leather feature golden eyelets and
+      stitching in a fiery pattern. They grant the wearer fire resistance 10 and
+      allow the wearer to walk atop lava and magma as if subject to the water
+      walk spell.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, resist energy, water walk</p>
+  price: 21000
+  slot: feet
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

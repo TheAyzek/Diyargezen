@@ -1,0 +1,26 @@
+_id: uWUr5QHMhbMWEVX9
+_key: '!items!uWUr5QHMhbMWEVX9'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/slime-red.webp
+name: Surgical Jelly
+system:
+  description:
+    value: >-
+      <p>When ingested, this thick red gelatinous substance seeks out and
+      surgically eliminates invasive threats to the body. Consuming surgical
+      jelly immediately ends any infestations (such as rot grubs; <em>Pathfinder
+      RPG GameMastery Guide</em> 245), implanted eggs (such as those implanted
+      by xills), or other non-disease effects that can be cured by <em>remove
+      disease</em>, so long as such a cure does not require a caster level
+      check. Consuming a pot of surgical jelly is a full-round
+      action.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      25</p>
+  price: 300
+  sources:
+    - id: PZO9481
+      pages: '24'
+  subType: misc
+  weight:
+    value: 1
+type: consumable

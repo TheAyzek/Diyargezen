@@ -1,0 +1,29 @@
+_id: wyst4408whFegStN
+_key: '!items!wyst4408whFegStN'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Laurel of Command
+system:
+  aura:
+    school: enc
+  cl: 3
+  description:
+    value: >-
+      <p>Laurel leaves crafted from fine gold decorate this circlet that imparts
+      powers of persuasion and leadership. The wearer's voice carries great
+      authority and can inspire others to victory. As a swift action, the wearer
+      can speak words of encouragement or advice to an ally within 30 feet. That
+      ally gains a +2 morale bonus on attack rolls, saving throws, skill checks,
+      and ability checks until the start of the wearer's next turn. The wearer
+      can use the laurel to grant this bonus to himself. A creature cannot gain
+      this bonus more than once per
+      day.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, heroism</p>
+  price: 30000
+  slot: head
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

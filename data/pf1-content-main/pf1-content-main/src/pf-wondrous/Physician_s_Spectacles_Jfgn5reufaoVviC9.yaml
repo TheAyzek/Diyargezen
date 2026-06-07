@@ -1,0 +1,27 @@
+_id: Jfgn5reufaoVviC9
+_key: '!items!Jfgn5reufaoVviC9'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Physician's Spectacles
+system:
+  aura:
+    custom: true
+    school: conjuration and divination
+  cl: 3
+  description:
+    value: >-
+      <p>These nondescript, brass-rimmed spectacles have green-tinted lenses and
+      are favored by practicing doctors and adventurers alike. When worn, they
+      grant the wearer a constant awareness of poisons and diseases as the
+      detect poison and diagnose disease spells. Also, once per day on command
+      the wearer can touch a single creature to use delay poison on that
+      creature.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, delay poison, detect poison, diagnose disease</p>
+  price: 4900
+  slot: eyes
+  sources:
+    - id: PZO1129
+  subType: wondrous
+type: equipment

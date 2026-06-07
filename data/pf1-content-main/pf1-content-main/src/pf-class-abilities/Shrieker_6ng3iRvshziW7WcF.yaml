@@ -1,0 +1,20 @@
+_id: 6ng3iRvshziW7WcF
+_key: '!items!6ng3iRvshziW7WcF'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Shrieker
+system:
+  associations:
+    classes:
+      - Hunter
+  description:
+    value: >-
+      <p><strong>Hunter Animal Focus</strong></p><p>The creature gains
+      darkvision with a range of 60 feet. At 8th level, the range increases by
+      30 feet. At 15th level, the creature also gains blindsense with a range of
+      10 feet.</p>
+  subType: classFeat
+  tags:
+    - Hunter Animal Focus
+type: feat

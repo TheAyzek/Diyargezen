@@ -1,0 +1,21 @@
+_id: ZZZiNaZ8bewbJIRe
+_key: '!items!ZZZiNaZ8bewbJIRe'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/green_29.jpg
+name: Poisonous Blood [Mythic]
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>Any creature that confirms a critical hit against the monster with a
+      piercing or slashing melee weapon is sprayed with poison. (Melee weapons
+      with reach don&rsquo;t endanger their users in this way.) The type of
+      poison depends on the monster. Unless otherwise stated, this poison uses
+      the poison&rsquo;s normal DC, though some monsters might have a poison DC
+      that is not Constitution-based.</p><p><em>Format</em>: poisonous blood
+      (dragon bile)</p><p><em>Location</em>: Defensive Abilities.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

@@ -1,0 +1,36 @@
+_id: jZA4iMuhlvDfx94g
+_key: '!journal!jZA4iMuhlvDfx94g'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Chaugnar Faugn
+pages:
+  - _id: llNvUqFQFfekc83R
+    _key: '!journal.pages!jZA4iMuhlvDfx94g.llNvUqFQFfekc83R'
+    _stats:
+      coreVersion: '12.331'
+    name: Chaugnar Faugn
+    sort: 0
+    text:
+      content: >-
+        <h1>Chaugnar Faugn</h1><h2>The Horror from the
+        Hills</h2>@Source[PZO90109;pages=66] <br /><strong>Pathfinder
+        Wiki</strong> <a href="http://www.pathfinderwiki.com/wiki/Chaugnar
+        Faugn">Chaugnar Faugn</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Great Old Ones<br /><strong>Areas of
+        Concern</strong> Blood, patience, remote hill country<br
+        /><strong>Domains</strong> Chaos, Death, Evil, War<br
+        /><strong>Subdomains</strong> Blood, Entropy, Murder, Tactics<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Light pick<br
+        /><strong>Symbol</strong> Elephantine visage with a bloody
+        trunk</p><h2>For Followers of Chaugnar
+        Faugn</h2><h3>Feats</h3><p>Dreamed Secrets</p><h3>Magic Items - Wondrous
+        Items</h3><p>Preklikin's Book of Cults</p><h3>Traits</h3><p>Unspeakable
+        Bond</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,50 @@
+_id: s3ZL9OrA77VdtdSX
+_key: '!items!s3ZL9OrA77VdtdSX'
+_stats:
+  coreVersion: '12.331'
+folder: 5HPDAAtypP5m41CK
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Cauldron of Blood
+system:
+  artifact: true
+  aura:
+    school: div
+  cl: 20
+  description:
+    value: >-
+      <p>The cauldron of blood appears to be a normal cauldron forged of
+      blackish-red iron. The true origins of this artifact have been lost over
+      time. The cauldron of blood allows the user to view past or future events
+      (similar to a divination or legend lore spell) by donating blood from his
+      body to the boiling waters of the cauldron. To use this device, the user
+      must bring water in the cauldron to a boil, and then bleed himself;
+      allowing his fresh blood to drip into the boiling water. (This deals
+      normal damage and temporary Constitution damage to the user based on how
+      far in the past or future he wishes to look.) At this time, the user
+      decides whether to view past or future events. The events can concern a
+      person, place, or thing; they can be current or forgotten, or even
+      information that is not yet known (see the divination spell). The cauldron
+      functions for a maximum of 10 minutes before the visions disappear.
+      Viewable Time Damage* Future/Past Fee** 2 30 minutes/6 months 50 gp 4 1
+      hour/1 year 100 gp 6 12 hours/20 years 500 gp 8 1 day/50 years 2000 gp 12
+      1 week/100 years 5000 gp in magic items 16 1 month/300 years 10,000 gp in
+      magic items 20 1 year/500 years 20,000 gp in magic items *Damage is
+      applied to both current hit points and Constitution. Both heal at the
+      normal rate. Note that a user cannot bring his Constitution below 1 using
+      the cauldron. The damage lost also represents the effective caster level
+      of the cauldron to penetrate any magical wards against such scrying.
+      **This base price excludes the blood/Con loss required to fuel the
+      cauldron; the value listed is suggested as a starting point for
+      bargaining. They go as low as 75% of this value if the negotiation is
+      sufficiently skillful. Alternately, they may require in lieu of this fee
+      that the PC fetch them a particular item, such as a lock of hair from a
+      king's daughter, an enchanted lyre in the keeping of an ogre mage, or the
+      skull of the Oracle of Rappan Athuk (see Level 3, Area 3-7).</p>
+  hp:
+    base: 10
+  sources:
+    - id: FGG32698
+  subType: other
+  weight:
+    value: 100
+type: equipment

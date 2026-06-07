@@ -1,0 +1,34 @@
+_id: x8g4D1x5fRfG5AFa
+_key: '!items!x8g4D1x5fRfG5AFa'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Generic Poison
+system:
+  actions:
+    - _id: 76f1wewwb8p990rr
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - '<strong>Primary Effect</strong>: [[1d4]] Dex damage'
+      save:
+        dc: '10'
+        type: fort
+      tag: aconiteRoot
+  description:
+    value: >-
+      <p><strong>Type</strong> injury; <strong>Save</strong> Fortitude DC
+      10</p><p><strong>Onset</strong> Immediate; <strong>Frequency</strong>
+      1/round for X rounds</p><p><strong>Effect</strong> 1d4 Dex
+      damage</p><p><strong>Cure</strong> 1 saves</p>
+  subType: poison
+  uses:
+    per: single
+type: consumable

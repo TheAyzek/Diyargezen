@@ -1,0 +1,42 @@
+_id: ur9YJ7sv5fHRTQ4x
+_key: '!items!ur9YJ7sv5fHRTQ4x'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-heavy-metal.png
+name: Lion's Shield
+system:
+  armor:
+    acp: 2
+    material:
+      base:
+        value: steel
+    value: 2
+  aura:
+    school: con
+  baseTypes:
+    - Heavy Steel Shield
+  cl: 10
+  description:
+    value: >-
+      <p>This +2 heavy steel shield is fashioned to appear to be a roaring
+      lion's head. Three times per day as a free action, the lion's head can be
+      commanded to attack (independently of the shield wearer), biting with the
+      wielder's base attack bonus (including multiple attacks, if the wielder
+      has them) and dealing 2d6 points of damage. This attack is in addition to
+      any actions performed by the wielder.</p><p><strong>Base Item</strong>:
+      heavy steel
+      shield</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, summon nature's ally IV</p>
+  enh: 2
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 9170
+  slot: shield
+  sources:
+    - id: PZO1123
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 15
+type: equipment

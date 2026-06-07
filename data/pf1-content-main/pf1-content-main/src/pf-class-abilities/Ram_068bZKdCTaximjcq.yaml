@@ -1,0 +1,19 @@
+_id: 068bZKdCTaximjcq
+_key: '!items!068bZKdCTaximjcq'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Ram
+system:
+  associations:
+    classes:
+      - Hunter
+  description:
+    value: >-
+      <p><strong>Hunter Animal Focus</strong></p><p>The creature gains a +1
+      bonus on damage rolls when making charge attacks. This bonus increases to
+      +2 at 8th level and +3 at 15th level.</p>
+  subType: classFeat
+  tags:
+    - Hunter Animal Focus
+type: feat

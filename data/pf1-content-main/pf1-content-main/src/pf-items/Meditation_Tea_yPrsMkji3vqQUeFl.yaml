@@ -1,0 +1,22 @@
+_id: yPrsMkji3vqQUeFl
+_key: '!items!yPrsMkji3vqQUeFl'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/kitchenware/goblet-wood-engraved-brown.webp
+name: Meditation Tea
+system:
+  description:
+    value: >-
+      <p>Drinking this cloudy tea has a soothing effect that clarifies your
+      thoughts. For 10 minutes after drinking the tea, you gain a +2 alchemical
+      bonus against mind-affecting effects. If you drink meditation tea while
+      suffering from a mind-affecting affect, you may immediately roll another
+      saving throw (with the +2 bonus) against the effect; you may gain this
+      particular benefit only once per
+      day.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC 20</p>
+  price: 30
+  sources:
+    - id: PZO1123
+      pages: '101'
+  subType: misc
+type: consumable

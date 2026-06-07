@@ -1,0 +1,31 @@
+_id: VQBldiv4lHYziDtb
+_key: '!items!VQBldiv4lHYziDtb'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/bolt.PNG
+name: Alchemist's Bullet
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>This +1 sling bullet contains a magical reservoir that can store a
+      single vial of any alchemical substance capable of being used as a splash
+      weapon. If the alchemist bullet hits, the splash weapon also strikes the
+      target and causes splash damage as normal. If the alchemist's bullet
+      misses but is not destroyed, the alchemical substance remains stored
+      within, and the bullet does not explode and can be reused. If it misses
+      and is destroyed, the bullet is destroyed as well without
+      effect.</p><p><strong>Base Item</strong>: sling
+      bullet</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, shrink item</p>
+  equipped: false
+  extraType: slingBullet
+  price: 330
+  sources:
+    - id: PZO1123
+  subType: ammo
+  weight:
+    value: 0.5
+type: loot

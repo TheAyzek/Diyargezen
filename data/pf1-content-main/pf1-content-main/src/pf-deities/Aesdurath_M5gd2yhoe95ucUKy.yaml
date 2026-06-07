@@ -1,0 +1,46 @@
+_id: M5gd2yhoe95ucUKy
+_key: '!journal!M5gd2yhoe95ucUKy'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Aesdurath
+pages:
+  - _id: Oss7Gc6VZPRkK2w3
+    _key: '!journal.pages!M5gd2yhoe95ucUKy.Oss7Gc6VZPRkK2w3'
+    _stats:
+      coreVersion: '12.331'
+    name: Aesdurath
+    sort: 0
+    text:
+      content: >-
+        <h1>Aesdurath</h1><h2>The Pale Dowager</h2>@Source[PZO9267;pages=318]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Aesdurath">Aesdurath</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Daemon Harbingers<br /><strong>Areas
+        of Concern</strong> Immortality, liches, magical catastrophes<br
+        /><strong>Domains</strong> Death, Evil, Magic, Trickery<br
+        /><strong>Subdomains</strong> Arcane, Daemon, Divine, Undead<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Dagger<br /><strong>Symbol</strong>
+        Crystal skull<br /><strong>Sacred Animal(s)</strong> Crow<br
+        /><strong>Sacred Color(s)</strong> Crystal,
+        white</p><h3>Obedience</h3><p>Eat a portion of a being killed by magic.
+        Gain a +4 profane bonus on saving throws against death
+        effects.</p><h2>Boons - Daemon
+        Harbingers</h2><p>@Source[PZO1139;pages=112]</p><p>Abaddon's unique
+        daemons take on a host of titles, customized to their methods and
+        vanity. These harbingers enjoy sweeping influence among daemons as
+        favored advisors, and they work to cultivate their own cults on Abaddon
+        and beyond.</p><p> Daemon harbingers are neutral evil demigods that
+        range in power from CR 21 to CR 25. The boons they grant are less
+        complex than those granted by the Horsemen themselves, manifesting as
+        spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>death knell</em><br
+        /><strong>2</strong>: <em>animate dead</em><br /><strong>3</strong>:
+        <em>circle of death</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

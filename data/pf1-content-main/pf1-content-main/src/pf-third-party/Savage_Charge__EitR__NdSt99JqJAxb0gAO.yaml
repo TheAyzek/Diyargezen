@@ -1,0 +1,23 @@
+_id: NdSt99JqJAxb0gAO
+_key: '!items!NdSt99JqJAxb0gAO'
+_stats:
+  coreVersion: '12.331'
+folder: 8BDX6ut8OIZ2xbb0
+img: systems/pf1/icons/feats/improved-vital-strike.jpg
+name: Savage Charge (EitR)
+system:
+  description:
+    value: >-
+      <p><em>You fearlessly dive into battle, bringing the full weight of your
+      weapon down on your opponent.</em></p><p>Str 15, Spring Attack, Vital
+      Strike, base attack bonus +8.</p><p><strong>Benefit</strong>: You can
+      Vital Strike as part of a charge action or Spring Attack.</p>
+  sources:
+    - date: 04-2021
+      publisher: https://mammothisland.itch.io/elephant
+      title: The Elephant in the Room
+  tags:
+    - Combat
+    - Offensive
+    - Charge
+type: feat

@@ -1,0 +1,22 @@
+_id: xabzQTK79nMiJIE0
+_key: '!items!xabzQTK79nMiJIE0'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Long Range Shifty Shot
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>At 7th level, a bushwhacker can
+      double the range at which she deals extra damage from a sneak attack or
+      shifty shot (from 30 feet to 60 feet) with a firearm by spending 1 grit
+      point. When she spends this grit point, she must still have at least 1
+      grit point left to deal extra damage from shifty shot if she is using this
+      deed. This deed replaces the targeting deed.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

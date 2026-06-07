@@ -291,9 +291,6 @@ class CharacterSheetPage(QWidget):
             if "DND" in system:
                 from utils.export_pdf import export_dnd_character_pdf
                 export_dnd_character_pdf(self._char, out)
-            elif "VTM" in system:
-                from utils.export_pdf import export_vtm_character_pdf
-                export_vtm_character_pdf(self._char, out)
             elif "MM" in system:
                 from utils.export_pdf import export_mm_character_pdf
                 export_mm_character_pdf(self._char, out)

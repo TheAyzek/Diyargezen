@@ -1,0 +1,266 @@
+_id: s5Uknh2Kz8QcTZvX
+_key: '!tables!s5Uknh2Kz8QcTZvX'
+_stats:
+  coreVersion: '12.331'
+description: Contains Tool, Crafting, Entertainment, and Class kits
+displayRoll: true
+folder: WRIhxGMO1MKw7Mne
+formula: 1d23
+img: icons/containers/chest/chest-simple-box-steel-brown.webp
+name: Kits
+replacement: true
+results:
+  - _id: zCWCXqm99SqjowX1
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.zCWCXqm99SqjowX1'
+    documentCollection: pf-content.pf-items
+    documentId: mmWMOcvP5w9UrcTc
+    img: icons/tools/laboratory/bowl-liquid-pink-yellow-green.webp
+    range:
+      - 1
+      - 1
+    text: Kit, Alchemical Dye
+    type: pack
+    weight: 1
+  - _id: dDVzNu9dTpAwsRcn
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.dDVzNu9dTpAwsRcn'
+    documentCollection: pf-content.pf-items
+    documentId: PFdPGnjrKGViend1
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 2
+      - 2
+    text: Kit, Alchemy crafting
+    type: pack
+    weight: 1
+  - _id: cFIT2lraNXtjCznu
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.cFIT2lraNXtjCznu'
+    documentCollection: pf-content.pf-items
+    documentId: Bc6rKXL5A03VAzxc
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 3
+      - 3
+    text: Kit, Animal disguise
+    type: pack
+    weight: 1
+  - _id: XOPTjCJM2uu5GB1N
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.XOPTjCJM2uu5GB1N'
+    documentCollection: pf-content.pf-items
+    documentId: uNoTgsC8WKo3vtIy
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 4
+      - 4
+    text: Kit, Antidote
+    type: pack
+    weight: 1
+  - _id: VCLabRhzedqjYHJG
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.VCLabRhzedqjYHJG'
+    documentCollection: pf-content.pf-items
+    documentId: w1FFEpRPkcUEn4d3
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 5
+      - 5
+    text: Kit, Brewer's
+    type: pack
+    weight: 1
+  - _id: 3tMPgQBKZHnZKhF0
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.3tMPgQBKZHnZKhF0'
+    documentCollection: pf-content.pf-items
+    documentId: OowVYmO8RLCXRExK
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 6
+      - 6
+    text: Kit, Brewer's Masterwork
+    type: pack
+    weight: 1
+  - _id: PUtj19fiBbuSwZrS
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.PUtj19fiBbuSwZrS'
+    documentCollection: pf-content.pf-items
+    documentId: 9PgQBiZTJbNvN1uc
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 7
+      - 7
+    text: Kit, Climber's
+    type: pack
+    weight: 1
+  - _id: YfPRTPfm0V1mtnqW
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.YfPRTPfm0V1mtnqW'
+    documentCollection: pf-content.pf-items
+    documentId: NnaTK8FbSUEvhvTE
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 8
+      - 8
+    text: Kit, Disguise
+    type: pack
+    weight: 1
+  - _id: Q7muutEq1WH7WWmR
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.Q7muutEq1WH7WWmR'
+    documentCollection: pf-content.pf-items
+    documentId: J19GiteiJLofXhzv
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 9
+      - 9
+    text: Kit, Dragoncrafting
+    type: pack
+    weight: 1
+  - _id: F7jwfKziE065bTrx
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.F7jwfKziE065bTrx'
+    documentCollection: pf-content.pf-items
+    documentId: 8m2qddvh3qB5z9tz
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 10
+      - 10
+    text: Kit, Forger's
+    type: pack
+    weight: 1
+  - _id: j8gWpI4sReIJfegD
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.j8gWpI4sReIJfegD'
+    documentCollection: pf-content.pf-items
+    documentId: gNZjYpDFtMOgyql9
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 11
+      - 11
+    text: Kit, Half-orc disguise
+    type: pack
+    weight: 1
+  - _id: EIlXL30IrRwC3kmV
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.EIlXL30IrRwC3kmV'
+    documentCollection: pf-content.pf-items
+    documentId: YkN4YFhh6Eurwe35
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 12
+      - 12
+    text: Kit, Healer's
+    type: pack
+    weight: 1
+  - _id: 6A5IW8Bvr7WvBedL
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.6A5IW8Bvr7WvBedL'
+    documentCollection: pf-content.pf-items
+    documentId: JdceiIO9R9D7TwOd
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 13
+      - 13
+    text: Kit, Juggler's
+    type: pack
+    weight: 1
+  - _id: lsYSMT070fhc1qzj
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.lsYSMT070fhc1qzj'
+    documentCollection: pf-content.pf-items
+    documentId: aIJCfHdjRonT6WMV
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 14
+      - 14
+    text: Kit, Leeching
+    type: pack
+    weight: 1
+  - _id: 0dgXBzZDRk8dqH8B
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.0dgXBzZDRk8dqH8B'
+    documentCollection: pf-content.pf-items
+    documentId: 6ELFRsPhsGu6mkmS
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 15
+      - 15
+    text: Kit, Mending
+    type: pack
+    weight: 1
+  - _id: j3g49t3HQ8EJB66s
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.j3g49t3HQ8EJB66s'
+    documentCollection: pf-content.pf-items
+    documentId: n3dYy51M7kfQJldW
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 16
+      - 16
+    text: Kit, Midwife's
+    type: pack
+    weight: 1
+  - _id: XGiJ5lsWEbK2L7yL
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.XGiJ5lsWEbK2L7yL'
+    documentCollection: pf-content.pf-items
+    documentId: Fg8oeG3ia5RVU1zb
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 17
+      - 17
+    text: Kit, Statue disguise
+    type: pack
+    weight: 1
+  - _id: d7nGQgbXJ5EGmabs
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.d7nGQgbXJ5EGmabs'
+    documentCollection: pf-content.pf-items
+    documentId: Tx739KqvZi9it56p
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 18
+      - 18
+    text: Kit, Symptom
+    type: pack
+    weight: 1
+  - _id: E7mLAeBdaIkQJykq
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.E7mLAeBdaIkQJykq'
+    documentCollection: pf-content.pf-items
+    documentId: o1MEjpiN9nuqh5B7
+    img: icons/containers/chest/chest-simple-box-red.webp
+    range:
+      - 19
+      - 19
+    text: Kit, Veterinarian's
+    type: pack
+    weight: 1
+  - _id: ZXccPw6k2VQ9Rfwq
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.ZXccPw6k2VQ9Rfwq'
+    documentCollection: pf-content.pf-items
+    documentId: 1OmGgxbi0mAvPifC
+    img: systems/pf1/icons/items/potions/magic-red.jpg
+    range:
+      - 20
+      - 20
+    text: Kitumu's ire
+    type: pack
+    weight: 1
+  - _id: cxrXbN7D7DbJ82D5
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.cxrXbN7D7DbJ82D5'
+    documentCollection: pf-content.pf-items
+    documentId: 8zj25wuucDmoNqEo
+    img: icons/containers/chest/chest-reinforced-stone.webp
+    range:
+      - 21
+      - 21
+    text: Trapped item (trapped disguise kit)
+    type: pack
+    weight: 1
+  - _id: jOL3REGxTv5cEW2C
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.jOL3REGxTv5cEW2C'
+    documentCollection: pf-content.pf-goods-services
+    documentId: WQXPQV4b1HqDvf5t
+    img: systems/pf1/icons/items/inventory/chest-light.jpg
+    range:
+      - 22
+      - 22
+    text: Kit, Beast-training
+    type: pack
+    weight: 1
+  - _id: EdtBxLuh22Ja4GOF
+    _key: '!tables.results!s5Uknh2Kz8QcTZvX.EdtBxLuh22Ja4GOF'
+    documentCollection: pf-content.pf-goods-services
+    documentId: botXzT1bqBuclVPS
+    img: systems/pf1/icons/items/inventory/chest-light.jpg
+    range:
+      - 23
+      - 23
+    text: Kit, Bird-training
+    type: pack
+    weight: 1
+sort: 600000

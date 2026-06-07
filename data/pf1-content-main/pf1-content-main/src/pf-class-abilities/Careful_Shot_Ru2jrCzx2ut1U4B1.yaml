@@ -1,0 +1,21 @@
+_id: Ru2jrCzx2ut1U4B1
+_key: '!items!Ru2jrCzx2ut1U4B1'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Careful Shot
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>As long as a scatter gunner has
+      at least 1 grit point when making a scattering shot, he takes a penalty
+      equal to his Wisdom modifier on his attack rolls against any allies in the
+      area. He can spend 1 grit point when making a scattering shot to
+      automatically miss a number of creatures equal to his Wisdom modifier.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

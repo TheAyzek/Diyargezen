@@ -1,0 +1,34 @@
+_id: t4dfs2hV9O7J929F
+_key: '!items!t4dfs2hV9O7J929F'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Altar of Erastil
+system:
+  aura:
+    custom: true
+    school: abjuration conjuration and divination [good lawful]
+  cl: 10
+  description:
+    value: >-
+      <p>This altar is a large stone hearth that is normally kept blazing and
+      features a prominent image of Erastil wielding his sacred bow, using the
+      holy weapon either in defense of a home or to hunt game for food. Praying
+      at the altar grants a +2 circumstance bonus on Handle Animal and Heal
+      checks, or one of the following magic weapon special abilities
+      (worshiper's choice) to one magic weapon carried or wielded by the
+      worshiper: animal-bane, conserving, huntsman, or merciful. This effect is
+      suppressed if the weapon leaves the worshiper's grasp, but resumes if the
+      weapon is returned to the
+      worshiper.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, abundant ammunition, cure light wounds, detect animals or
+      plants, magic circle against chaos, magic circle against evil, summon
+      monster I, creator must worship Erastil</p>
+  price: 10000
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 1000
+type: equipment

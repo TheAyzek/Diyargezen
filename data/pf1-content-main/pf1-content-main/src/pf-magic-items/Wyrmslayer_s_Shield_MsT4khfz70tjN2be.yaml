@@ -1,0 +1,39 @@
+_id: MsT4khfz70tjN2be
+_key: '!items!MsT4khfz70tjN2be'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-heavy-metal.png
+name: Wyrmslayer's Shield
+system:
+  armor:
+    acp: 2
+    material:
+      base:
+        value: steel
+    value: 2
+  aura:
+    school: abj
+  baseTypes:
+    - Heavy Steel Shield
+  cl: 9
+  description:
+    value: >-
+      <p>This +4 heavy steel shield acts in all ways as a dragonslayer's shield,
+      except it grants a +6 morale bonus on Will saves against the frightful
+      presence ability instead of a +2 morale bonus.</p><p><strong>Base
+      Item</strong>: heavy steel
+      shield</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, remove fear, shield of faith</p>
+  enh: 4
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 20170
+  slot: shield
+  sources:
+    - id: PZO1123
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 15
+type: equipment

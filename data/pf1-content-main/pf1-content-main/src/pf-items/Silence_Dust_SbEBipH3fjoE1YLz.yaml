@@ -1,0 +1,30 @@
+_id: SbEBipH3fjoE1YLz
+_key: '!items!SbEBipH3fjoE1YLz'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/bowl-powder-teal.webp
+name: Silence Dust
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>This ashen powder can
+      be thrown as a splash weapon, muffling all sound within a 15-foot-radius
+      sphere centered on the point of impact. Perception checks to notice sound
+      emanating from or passing through the cloud take a -10 penalty.
+      Alternatively, applying a dose of silence dust to your feet as a standard
+      action grants you a +5 circumstance bonus on Stealth checks to avoid being
+      heard while walking. The dust is effective for 1 minute before it
+      disperses.</p><h2>Alchemical Recipe</h2><p><strong>Recipe</strong> (12 dew
+      of lunary + 40 myrrh)/calcination; <strong>Craft</strong>
+      20</p><p><strong>Time</strong> 1 hour; <strong>Tools</strong> crucible;
+      <strong>Type</strong> alchemical tool</p>
+  price: 60
+  sources:
+    - id: PZO9445
+      pages: '15'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 1
+type: consumable

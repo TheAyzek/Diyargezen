@@ -1,0 +1,27 @@
+_id: zROnzZRSI6tid2Cs
+_key: '!items!zROnzZRSI6tid2Cs'
+_stats:
+  coreVersion: '12.331'
+folder: 35gUR2g8lMd073yK
+img: icons/commodities/currency/coins-plain-pouch-gold.webp
+name: Black Marketeer
+system:
+  description:
+    value: >-
+      <p><em>You have many contacts and a keen eye for hidden opportunities in
+      the marketplace.</em></p><p><strong>Prerequisites</strong>: Appraise 4
+      ranks, Gather Information 4 ranks, Knowledge (local) 4
+      ranks.</p><p><strong>Benefits</strong>: By utilizing your black market
+      connections, you acquire a resource pool worth 100 gp. This functions like
+      the resource pool gained by the Profits of Kalistrade feat (see Pathfinder
+      Chronicles Campaign Setting page 73) except it can only be used on illegal
+      or illicit items or services (note that something may be illegal or
+      illicit in one area but perfectly acceptable in another) and is centered
+      on Osirion rather than Druma. Typical illegal or illicit items are drugs,
+      poisons, evil magic items, slaves, or dead bodies, though intangibles such
+      as secret information may also qualify (and for these items, a secret of
+      equal value--at the GM's discretion--must be contributed to the pool).</p>
+  tags:
+    - General
+    - '3.5'
+type: feat

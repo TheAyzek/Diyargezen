@@ -1,0 +1,27 @@
+_id: pmOCY11JrJLIg0hs
+_key: '!items!pmOCY11JrJLIg0hs'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Resonating
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate abjuration <strong>CL</strong>
+      7th</p><p><strong>Slot</strong> armor; <strong>Price</strong> +1 bonus;
+      Three times per day, when the wearer expends at least one use of mythic
+      power on his turn, this armor surges with sympathetic power. Its
+      enhancement bonus increases by 2, and any damage reduction the wearer has
+      increases by 5. This lasts for a number of rounds equal to the wearer's
+      tier, and doesn't stack with
+      itself.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, Mythic Crafter, <em>lend power</em>;
+      <strong>Price</strong> +1 bonus</p>
+  sources:
+    - id: PZO1126
+      pages: '142'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

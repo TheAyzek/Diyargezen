@@ -1,0 +1,21 @@
+_id: S31a6mRIWXb138ee
+_key: '!items!S31a6mRIWXb138ee'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: The Elder Decks
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: all schools
+  cl: 20
+  description:
+    value: >-
+      <p>These ancient artifacts function as decks of many things, save that
+      they have only 13 cards: Euryale, Flames, Jester, Key, Knight, Moon,
+      Rogue, Ruin, Skull, Star, Sun, Throne, and The Void.</p>
+  sources:
+    - id: PZO9220
+  subType: other
+type: equipment

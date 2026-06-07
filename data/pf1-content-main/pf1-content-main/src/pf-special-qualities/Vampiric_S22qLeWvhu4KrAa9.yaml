@@ -1,0 +1,38 @@
+_id: S22qLeWvhu4KrAa9
+_key: '!items!S22qLeWvhu4KrAa9'
+_stats:
+  coreVersion: '12.331'
+folder: YaC0PDBdquBGbbsG
+img: systems/pf1/icons/skills/violet_04.jpg
+name: Vampiric
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint necromancy <strong>CL</strong>
+      5th</p><p><strong>Price</strong> +1 bonus;</p><p>This special ability can
+      be placed only on piercing or slashing melee weapons. The first time each
+      round that the wielder hits a living target with a <em>vampiric</em>
+      weapon, the weapon restores an amount of hit points to the wielder equal
+      to 1/2 the damage dealt to the target, to a maximum equal to the wielder's
+      number of Hit Dice. If the damage was more than enough to kill the target,
+      any excess damage doesn't count toward the amount healed. A creature can
+      regain no more than 2 hit points per Hit Die from a <em>vampiric</em>
+      weapon each day. A new owner gains no healing from a <em>vampiric</em>
+      weapon until she owns it for 24 consecutive hours, and a wielder can be
+      attuned to only one <em>vampiric</em> or <em>greater vampiric</em> weapon
+      at a time. Finally, a wielder healed by a <em>vampiric</em> weapon can't
+      exceed her maximum hit point total, though excess healing also doesn't
+      count toward the daily limit of hit points she can regain.</p><p>Both
+      living and undead creatures can benefit from the healing. A
+      <em>vampiric</em> weapon automatically converts the stolen energy into
+      positive or negative energy, as appropriate for the
+      wielder.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>cure moderate wounds</em>, <em>inflict moderate
+      wounds</em>, <em>vampiric touch</em>; <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1135
+      pages: '214'
+  subType: misc
+  tags:
+    - Melee Qualities
+type: feat

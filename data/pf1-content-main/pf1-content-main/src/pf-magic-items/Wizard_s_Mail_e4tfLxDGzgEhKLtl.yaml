@@ -1,0 +1,37 @@
+_id: e4tfLxDGzgEhKLtl
+_key: '!items!e4tfLxDGzgEhKLtl'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/leather.PNG
+name: Wizard's Mail
+system:
+  armor:
+    dex: 6
+    material:
+      base:
+        value: leather
+    value: 2
+  aura:
+    school: con
+  baseTypes:
+    - Leather Armor
+  cl: 15
+  description:
+    value: >-
+      <p>This chain armor is so fine it offers protection only because it's
+      enchanted and made of mithral. It acts as a suit of +4 greater slick
+      leather armor. It has a maximum Dexterity bonus to AC of +8 and imposes no
+      chance of arcane spell failure.</p><p><strong>Base Item</strong>: greater
+      slick</p><h3>Construction</h3><p><strong>Requirements</strong> Armor
+      Proficiency (light), Craft Magic Arms and Armor, grease, iron body</p>
+  enh: 4
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 52100
+  sources:
+    - id: PZO9455
+  spellFailure: 10
+  weight:
+    value: 5
+type: equipment

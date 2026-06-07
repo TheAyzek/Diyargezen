@@ -1,0 +1,46 @@
+_id: ytUgX3hT0FARrwgL
+_key: '!journal!ytUgX3hT0FARrwgL'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Uruskreil
+pages:
+  - _id: LJZfi5A9sfuZzrFt
+    _key: '!journal.pages!ytUgX3hT0FARrwgL.LJZfi5A9sfuZzrFt'
+    _stats:
+      coreVersion: '12.331'
+    name: Uruskreil
+    sort: 0
+    text:
+      content: >-
+        <h1>Uruskreil</h1><h2>The Metal Wing</h2>@Source[PZO9267;pages=326] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Uruskreil">Uruskreil</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Infernal Dukes<br /><strong>Areas of
+        Concern</strong> Armor, mercilessness, revelation<br
+        /><strong>Domains</strong> Evil, Glory, Law, Strength<br
+        /><strong>Subdomains</strong> Devil (Evil), Devil (Law), Honor, Resolve,
+        Tyranny<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Falchion<br
+        /><strong>Symbol</strong> Metallic wings and flame<br /><strong>Sacred
+        Animal(s)</strong> Stag beetle<br /><strong>Sacred Color(s)</strong>
+        Brown, iron gray</p><h3>Obedience</h3><p>Use your weapon to utterly
+        destroy something fragile. Gain a +4 profane bonus on saving throws
+        against spells and abilities that deal ability damage or
+        drain.</p><h2>Boons - Infernal Dukes</h2>@Source[PZO1139;pages=119]<br
+        />The Lords of Hell, the Dukes of Perdition, and the Princes of
+        Damnation are all names for the infamous nobility of the Pit- the elite
+        caste of devilkind known as the infernal dukes.<p> All infernal dukes
+        are lawful evil and range in power from CR 26 to CR 27. The boons they
+        grant are less complex than those granted by archdevils, manifesting as
+        spell-like abilities usable once per day each.</p><p><strong>1</strong>:
+        <em>magic vestment</em><br /><strong>2</strong>: <em>finger of
+        death</em><br /><strong>3</strong>: <em>fiery body</em></p><h2>For
+        Followers of Uruskreil</h2><h3>Feats</h3><p><em>Hellish
+        Shackles</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

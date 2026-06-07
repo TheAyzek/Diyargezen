@@ -1,0 +1,21 @@
+_id: xCk4sLr365zRFS9x
+_key: '!items!xCk4sLr365zRFS9x'
+_stats:
+  coreVersion: '12.331'
+img: icons/environment/creatures/golem-stone-purple.webp
+name: Cholera
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong>&nbsp;disease
+      (injury);&nbsp;<strong>Save</strong>&nbsp;Fortitude DC
+      13;</p><p><strong>Onset</strong>&nbsp;1d3
+      days;&nbsp;<strong>Frequency</strong>&nbsp;1/day</p><p><strong>Effect</strong>
+      1d2 Con damage; as long as a character suffers Con damage from Cholera,
+      they are <a>fatigued</a>.</p><p><strong>Cure</strong>&nbsp;&ndash;</p><hr
+      /><p>A carrion golem transmits cholera on a successful slam attack.</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

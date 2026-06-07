@@ -1,0 +1,59 @@
+_id: n0CTVawc4vtW1nUl
+_key: '!items!n0CTVawc4vtW1nUl'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/gem-rough-navette-purple-pink.webp
+name: Amethyst Pyramid Ioun Stone, Flawed
+system:
+  aura:
+    school: abj
+  cl: 12
+  contextNotes:
+    - target: skill.ste
+      text: >-
+        Undead cannot see, hear, or smell you.  This includes even extraordinary
+        or supernatural sensory capabilities, such as blindsense, blindsight,
+        scent, and tremorsense.  Nonintelligent undead creatures (such as
+        skeletons or zombies) are automatically affected and act as though you
+        are not there. An intelligent undead creature gets a single DC 12 Will
+        saving throw. If it fails, the subject can't see you. If it has reason
+        to believe unseen opponents are present, however, it can attempt to find
+        or strike them. If you attempt to channel positive energy, turn or
+        command undead, touch an undead creature, or attack any creature (even
+        with a spell), the effect is suppressed for 1 hour.
+    - target: ac
+      text: '-[[1]] penalty against undead.'
+    - target: allSavingThrows
+      text: '-[[1]] penalty against undead.'
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>A purple stone in cone shape with a flat base. In addition to the base,
+      there are typically three or four sides but some have a dozen or more. It
+      may have irregular facets or internal flaws.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone functions as a normal
+      @UUID[Compendium.pf-content.pf-wondrous.Item.LUdspGzxLSUIyXBX]{amethyst
+      pyramid ioun stone}, but against undead you take a –1 penalty to AC and on
+      saves.</p><h3>Resonance</h3><p><strong>Method 1, Fixed: </strong>+2
+      circumstance bonus on Stealth checks against undead.</p><p><strong>Method
+      2, Variable:
+      </strong>@Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, <em>hide from undead,</em> creator must be 12th level
+      <strong>Cost</strong> 3,000 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 6000
+  sources:
+    - id: PZO9435
+      pages: '23'
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

@@ -1,0 +1,60 @@
+_id: XfhIWsnZhnic8v3E
+_key: '!items!XfhIWsnZhnic8v3E'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/scorpion-whip.png
+name: Nimble Whip
+system:
+  actions:
+    - _id: gho08b73arvb483i
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: nimbleWhip
+  aura:
+    school: trs
+  baseTypes:
+    - Scorpion Whip
+  cl: 3
+  description:
+    value: >-
+      <p>On a successful critical hit with this +1 scorpion whip (Pathfinder RPG
+      Ultimate Combat 145), the wielder can attempt a steal combat maneuver
+      (Pathfinder RPG Advanced Player's Guide 322) against the target as a swift
+      action as if she had the Improved Steal (Advanced Player's Guide 163)
+      feat.</p><p><strong>Base Item</strong>: scorpion
+      whip</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, mage hand</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 5005
+  properties:
+    fin: true
+    prf: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9459
+  weaponGroups:
+    - flails
+  weight:
+    value: 2
+type: weapon

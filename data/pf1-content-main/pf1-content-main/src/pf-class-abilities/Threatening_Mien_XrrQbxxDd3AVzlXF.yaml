@@ -1,0 +1,21 @@
+_id: XrrQbxxDd3AVzlXF
+_key: '!items!XrrQbxxDd3AVzlXF'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_15.jpg
+name: Threatening Mien
+system:
+  associations:
+    classes:
+      - Mesmerist
+  description:
+    value: >-
+      <p><strong>Mesmerist Trick</strong></p><p>The subject's actions appear to
+      be lethal in the extreme. A mindwyrm mesmer can trigger this trick when
+      the subject moves adjacent to an enemy. Enemies adjacent to the subject
+      take a -4 penalty on attacks against targets other than the subject. This
+      trick lasts for 1 round per mindwyrm mesmer's mesmerist level.</p>
+  subType: classFeat
+  tags:
+    - Mesmerist Trick
+type: feat

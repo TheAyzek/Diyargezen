@@ -1,0 +1,96 @@
+_id: 5159TaE8dGKZ2S3F
+_key: '!journal!5159TaE8dGKZ2S3F'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Common Conditions
+pages:
+  - _id: tDwwB1TRv75VSS5L
+    _key: '!journal.pages!5159TaE8dGKZ2S3F.tDwwB1TRv75VSS5L'
+    _stats:
+      coreVersion: '12.331'
+    name: Common Conditions
+    sort: 0
+    text:
+      content: >-
+        <p>See @Compendium[pf-content.pf-rules.FH4DP3oqkBwhLFNS]{2.09.
+        Conditions}</p><h2>Condition
+        Links</h2><p>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.L6DTocj1PbOtuspU]{Bleed}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.A9KUpd2bsdZZsQqj]{Blinded}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.4SQa4AxDiAmOAtCn]{Broken}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.J2yma0xciBKRUh9t]{Confused}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.eNW5geiJqrnAjjNu]{Cowering}</p><p>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.2A6Gk60pLDKR2zT0]{Dazed}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.xHUnCadQ2qYsfvV0]{Dazzled}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.YvycF7bsU1hPm4pX]{Dead}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.3uIamlB0L1UZUwoF]{Deafened}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.dtHHibCiKZzdjyvp]{Disabled}</p><p>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.zG6xEGMIerpbnND0]{Dying}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.onMPh2re6fIeNgNr]{Energy
+        Drained}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.oxmugd8SoxVjvRRl]{Entangled}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.ITxxh53qgl74wWcE]{Exhausted}</p><p>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.Hy0MHwpRRr5QxVj5]{Fascinated}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.AVaxTNildXRzYnQm]{Fatigued}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.eSvkrrl3US7RJTai]{Flat-Footed}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.uqpJ7ZMnWF5qjOTl]{Frightened}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.i4gHNAVajJWs4cFI]{Grappled}</p><p>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.6dtCytJsNkO8Hwq4]{Helpless}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.acqGBiMxTbXZ47zU]{Incorporeal}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.Wr2ZWUZcyVWQ4GtX]{Invisible}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.ySiyyK1BMAyKPY4I]{Nauseated}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.nGTsTfpWcJTTU3rk]{Panicked}</p><p>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.24p2Koq4FFCLDKnj]{Paralyzed}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.ayGQWwbrhAc99pkH]{Petrified}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.poCq8gXdDi5leaMT]{Pinned}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.VbagnIPQS523dwxa]{Prone}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.XxLUswkCuXnXmA5T]{Shaken}</p><p>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.7LwCMwrX3tchvrjW]{Sickened}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.krgVb43Vd62dqpYr]{Stable}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.TTp8q9Vb2PNAujWu]{Staggered}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.ZgsBPY0uVCVl6SGh]{Stunned}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.NSqfXaj4MevUR2uJ.JournalEntryPage.kHwbZ38VHCa1wkUF]{Unconscious}</p><hr
+        /><p><strong>Blinded</strong>: Creature takes a –2 penalty to AC, loses
+        Dex bonus to AC, and takes a –4 penalty on most Str- and Dex-based skill
+        checks and on opposed Perception skill checks. All opponents are
+        considered to have total concealment (50% miss chance) against the
+        blinded character. Creatures must make a DC 10 Acrobatics skill check to
+        move faster than half speed or fall prone.
+        </p><p><strong>Broken</strong>: Weapons suffer a –2 penalty on attack
+        and damage rolls and only score a critical hit on a natural 20 and only
+        deal ×2 damage. Armor and shields grant half AC bonus and double armor
+        check penalty. Broken wands or staves use twice as many charges.
+        </p><p><strong>Confused</strong>:</p><table><thead><tr><td>Result</td><td>Action</td></tr></thead><tbody><tr><td>01–25</td><td>Act
+        normally</td></tr><tr><td>26–50</td><td>Babble for one
+        round</td></tr><tr><td>51–75</td><td>Deal 1d8 + Str damage to
+        self</td></tr><tr><td>76–100</td><td>Attack nearest
+        creature</td></tr></tbody></table><p><strong>Entangled</strong>: No
+        movement if bonds are anchored, otherwise move at half speed. Creature
+        takes a –2 penalty on all attack rolls and a –4 penalty to Dex. Must
+        make concentration check to cast spells.
+        </p><p><strong>Exhausted</strong>: Creature moves at half speed. –6
+        penalty to Str and Dex. Rest 1 hour to become fatigued.
+        </p><p><strong>Fatigued</strong>: Creature cannot run or charge. –2
+        penalty to Str and Dex. Rest 8 hours to remove.
+        </p><p><strong>Frightened</strong>: As shaken, except creature must flee
+        from source.</p><p><strong>Grappled</strong>: Creature cannot move or
+        take action that requires 2 hands. –4 penalty to Dex. –2 penalty to
+        attacks and combat maneuvers (except checks made to escape). Must make
+        concentration check to cast spells. Cannot take attacks of opportunity.
+        </p><p><strong>Nauseated</strong>: Creature can only take a move action
+        and cannot attack, cast spells, or concentrate.
+        </p><p><strong>Panicked</strong>: As frightened, except creature drops
+        held items.</p><p><strong>Paralyzed</strong>: Creature's Str and Dex
+        reduced to 0. Fliers using wings fall. Creature is helpless.
+        </p><p><strong>Pinned</strong>: As grappled, except creature is f
+        lat-footed, takes a –4 penalty to AC, and can only take verbal or mental
+        actions (except checks made to escape).</p><p><strong>Shaken</strong>:
+        Creature takes a –2 penalty on all attack rolls, saving throws, skill
+        checks, and ability checks.</p><p><strong>Sickened</strong>: Creature
+        takes a –2 penalty on all attack rolls, weapon damage rolls, saving
+        throws, skill checks, and ability checks.
+        </p><p><strong>Staggered</strong>: Creature can only take a move action
+        or standard action (plus swift and immediate).
+        </p><p><strong>Stunned</strong>: Creature cannot take actions, drops
+        everything held, takes a –2 penalty to AC, and loses its Dex bonus to AC
+        (if any).</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

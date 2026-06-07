@@ -1,0 +1,35 @@
+_id: LVvWNLNrbr2jOuxw
+_key: '!items!LVvWNLNrbr2jOuxw'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Sallowflesh
+system:
+  aura:
+    custom: true
+    school: abjuration and necromancy
+  cl: 5
+  description:
+    value: >-
+      <p>This necrograft weaves strips of rotted skin across the bearer's body
+      in a grisly process of scarification. The dense, undead hide provides a +2
+      enhancement bonus to its host's natural armor bonus, and causes undead
+      creatures to perceive the host as one of their own- skeletons, zombies,
+      and other mindless undead ignore a character implanted with sallowflesh
+      unless attacked first. Intelligent undead may also be fooled by this
+      effect, but can recognize the host as a living creature with a successful
+      DC 11 Will save; on a failed save, the undead assumes the host to be
+      another intelligent undead. Undead attacked by the host, or that witness
+      the host channel positive energy, can immediately see through this effect.
+      Sallowflesh has no effect on living creatures'
+      perceptions.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, animate dead, hide from undead, creator must have 5
+      ranks in Heal</p>
+  price: 20000
+  sources:
+    - id: PZO9462
+  subType: wondrous
+  weight:
+    value: 4
+type: equipment

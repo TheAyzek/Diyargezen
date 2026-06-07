@@ -1,0 +1,28 @@
+_id: nZdiaNt7TtkK0wco
+_key: '!items!nZdiaNt7TtkK0wco'
+_stats:
+  coreVersion: '12.343'
+folder: AqjqWFWInPuTJU1V
+img: icons/skills/melee/strike-polearm-light-orange.webp
+name: Liberating (WMH)
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate abjuration <strong>CL</strong>
+      10th</p><p><strong>Price</strong> +7,000 gp;</p><p>As a standard action,
+      the wielder of a <em>liberating</em> weapon can free herself or an
+      adjacent creature from spells and abilities that inhibit movement, such as
+      paralysis, <em>solid fog</em>, <em>slow</em>, and <em>web</em>. The
+      wielder attempts a combat maneuver check while holding the weapon (DC = 15
+      + either the spell's caster level or the creature's HD); success dispels
+      the effect. Only a single attempt can be made against each spell or
+      effect.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>dispel magic</em>, <em>freedom of movement</em>;
+      <strong>Price</strong> +3,500 gp</p>
+  sources:
+    - id: PZO9463
+      pages: '30'
+  subType: misc
+  tags:
+    - Universal Weapon Qualities
+type: feat

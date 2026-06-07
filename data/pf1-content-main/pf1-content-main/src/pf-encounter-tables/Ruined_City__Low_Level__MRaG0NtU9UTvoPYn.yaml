@@ -1,0 +1,149 @@
+_id: MRaG0NtU9UTvoPYn
+_key: '!tables!MRaG0NtU9UTvoPYn'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/altar-hidden.webp
+name: Ruined City (Low Level)
+replacement: true
+results:
+  - _id: TmQci7IYdgEfr5DX
+    _key: '!tables.results!MRaG0NtU9UTvoPYn.TmQci7IYdgEfr5DX'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 7
+    text: 1 Venomous Snake [CR 1]
+    type: text
+    weight: 1
+  - _id: DNsiqAxP7LZqf6kj
+    _key: '!tables.results!MRaG0NtU9UTvoPYn.DNsiqAxP7LZqf6kj'
+    img: icons/svg/d20-black.svg
+    range:
+      - 8
+      - 14
+    text: 1d4 ([[1d4]]) Hadi* [AVG CR 1]
+    type: text
+    weight: 1
+  - _id: Gir7oVUtIMmyomDl
+    _key: '!tables.results!MRaG0NtU9UTvoPYn.Gir7oVUtIMmyomDl'
+    img: icons/svg/d20-black.svg
+    range:
+      - 15
+      - 21
+    text: 1 Bat Swarm [CR 2]
+    type: text
+    weight: 1
+  - _id: xfV0CAz83mqnB26o
+    _key: '!tables.results!MRaG0NtU9UTvoPYn.xfV0CAz83mqnB26o'
+    img: icons/svg/d20-black.svg
+    range:
+      - 22
+      - 28
+    text: 1 Constrictor Snake [CR 2]
+    type: text
+    weight: 1
+  - _id: HxqeDkq3ERpc60Du
+    _key: '!tables.results!MRaG0NtU9UTvoPYn.HxqeDkq3ERpc60Du'
+    img: icons/svg/d20-black.svg
+    range:
+      - 29
+      - 34
+    text: 1 Small Animated Object [CR 2]
+    type: text
+    weight: 1
+  - _id: 6uxKjhndAOHO4RZU
+    _key: '!tables.results!MRaG0NtU9UTvoPYn.6uxKjhndAOHO4RZU'
+    img: icons/svg/d20-black.svg
+    range:
+      - 35
+      - 40
+    text: 1 Hadi Tafen* [CR 2]
+    type: text
+    weight: 1
+  - _id: IOWQ3xOKRKNhjWjZ
+    _key: '!tables.results!MRaG0NtU9UTvoPYn.IOWQ3xOKRKNhjWjZ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 41
+      - 46
+    text: 1 Shadow [CR 3]
+    type: text
+    weight: 1
+  - _id: RXFVxZFTYImYoxGH
+    _key: '!tables.results!MRaG0NtU9UTvoPYn.RXFVxZFTYImYoxGH'
+    img: icons/svg/d20-black.svg
+    range:
+      - 47
+      - 58
+    text: 1d4 ([[1d4]]) Boars [AVG CR 4]
+    type: text
+    weight: 1
+  - _id: H6cU71Kc0UX5EFKA
+    _key: '!tables.results!MRaG0NtU9UTvoPYn.H6cU71Kc0UX5EFKA'
+    img: icons/svg/d20-black.svg
+    range:
+      - 59
+      - 64
+    text: 1 Army Ant Swarm [CR 5]
+    type: text
+    weight: 1
+  - _id: DJcus6c8VDZnB9H4
+    _key: '!tables.results!MRaG0NtU9UTvoPYn.DJcus6c8VDZnB9H4'
+    img: icons/svg/d20-black.svg
+    range:
+      - 65
+      - 70
+    text: 1 Derhii [CR 5]
+    type: text
+    weight: 1
+  - _id: 9Nzv9VRrIAcG2kmx
+    _key: '!tables.results!MRaG0NtU9UTvoPYn.9Nzv9VRrIAcG2kmx'
+    img: icons/svg/d20-black.svg
+    range:
+      - 71
+      - 76
+    text: 1d4 ([[1d4]]) Dire Apes [AVG CR 5]
+    type: text
+    weight: 1
+  - _id: NQV7e5aez2rWI3HI
+    _key: '!tables.results!MRaG0NtU9UTvoPYn.NQV7e5aez2rWI3HI'
+    img: icons/svg/d20-black.svg
+    range:
+      - 77
+      - 82
+    text: >-
+      1 Frothing Ooze (Use Some Other CR 5 Ooze That Can Be In A Ruined City)
+      [CR 5]
+    type: text
+    weight: 1
+  - _id: g2dK9HWQN7vupRt6
+    _key: '!tables.results!MRaG0NtU9UTvoPYn.g2dK9HWQN7vupRt6'
+    img: icons/svg/d20-black.svg
+    range:
+      - 83
+      - 88
+    text: 1d4 ([[1d4]]) Water Mephits [AVG CR 5]
+    type: text
+    weight: 1
+  - _id: OnJKwlzOwNtdrvdQ
+    _key: '!tables.results!MRaG0NtU9UTvoPYn.OnJKwlzOwNtdrvdQ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 89
+      - 94
+    text: 1 Girallon [CR 6]
+    type: text
+    weight: 1
+  - _id: kP0rksoT0bVR3aYJ
+    _key: '!tables.results!MRaG0NtU9UTvoPYn.kP0rksoT0bVR3aYJ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 95
+      - 100
+    text: 1 Wyvern [CR 6]
+    type: text
+    weight: 1
+sort: 3500000

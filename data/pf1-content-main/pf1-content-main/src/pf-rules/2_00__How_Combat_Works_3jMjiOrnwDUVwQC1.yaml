@@ -1,0 +1,41 @@
+_id: 3jMjiOrnwDUVwQC1
+_key: '!journal!3jMjiOrnwDUVwQC1'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 14fCSA9bLjhQW28d
+name: 2.00. How Combat Works
+pages:
+  - _id: WLBB2DDNW1YRt3N0
+    _key: '!journal.pages!3jMjiOrnwDUVwQC1.WLBB2DDNW1YRt3N0'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.00. How Combat Works
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p><strong>@Compendium[pf-content.pf-rules.3jMjiOrnwDUVwQC1]{2.00.
+        How Combat
+        Works}</strong></p><ul><li>@Compendium[pf-content.pf-rules.jJuwcncpWb9HfnDp]{2.00.1.
+        The Combat
+        Round}</li><li>@Compendium[pf-content.pf-rules.vex8pJWcXVRYA44O]{2.00.2.
+        Initiative}</li><li>@Compendium[pf-content.pf-rules.rtzCVah2jmfFInBL]{2.00.3.
+        Surprise}</li></ul><hr /><p>@Source[PZO1110;pages=178]</p><p>Combat is
+        cyclical; everybody acts in turn in a regular cycle of rounds. Combat
+        follows this sequence:</p><ol><li>When combat begins, all combatants
+        roll initiative.</li><li>Determine which characters are aware of their
+        opponents. These characters can act during a surprise round. If all the
+        characters are aware of their opponents, proceed with normal rounds. See
+        the surprise section for more information.</li><li>After the surprise
+        round (if any), all combatants are ready to being the first normal round
+        of combat.</li><li>Combatants act in initiative order (highest to
+        lowest).</li><li>When everyone has had a turn, the next round begins
+        with the combatant with the highest initiative, and steps 4 and 5 repeat
+        until combat ends.</li></ol>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

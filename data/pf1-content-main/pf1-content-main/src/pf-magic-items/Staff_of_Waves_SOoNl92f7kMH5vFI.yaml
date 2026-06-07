@@ -1,0 +1,30 @@
+_id: SOoNl92f7kMH5vFI
+_key: '!items!SOoNl92f7kMH5vFI'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Waves
+system:
+  aura:
+    school: nec
+  cl: 13
+  description:
+    value: >-
+      <p>This staff is made of entwined coral and topped with a brilliant
+      sapphire. The staff functions as a +1 quenching quarterstaff above the
+      waves and a +1 impact quarterstaff below, and attacks with the staff of
+      waves take no penalties for being bludgeoning melee attacks underwater. It
+      allows use of the following spells: • Hydraulic torrent (1 charge)  •
+      Slipstream (1 charge)  • Wave form (2 charges)  • Ride the waves (2
+      charges)  • Vortex (3 charges.</p><p><strong>Base Item</strong>: quenching
+      quarterstaff|+1 impact
+      quarterstaff</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Staff, hydraulic torrent, ride the waves, slipstream, vortex, wave
+      form</p>
+  price: 90300
+  sources:
+    - id: PZO92102
+  subType: staff
+  weight:
+    value: 5
+type: consumable

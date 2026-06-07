@@ -1,0 +1,35 @@
+_id: 6CQ2apWFcAOYMtId
+_key: '!items!6CQ2apWFcAOYMtId'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Sihedron Ring
+system:
+  aura:
+    custom: true
+    school: abjuration and illusion
+  cl: 9
+  description:
+    value: >-
+      <p>This otherwise plain ring is adorned with a tiny Sihedron rune. These
+      rings were given to agents and allies of the runelords as badges of office
+      and tokens of appreciation for their work-sometimes, they were given as
+      bribes to those a runelord was attempting to win to his cause. Like the
+      more common Sihedron medallion, runelords have special links to Sihedron
+      rings that aid in scrying and observation of the world around the wearer
+      of the ring.  A Sihedron ring grants a +3 deflection bonus to AC, a +3
+      resistance bonus on all saving throws, and protects the wearer with a
+      constant endure elements effect. At will, as a standard action, the wearer
+      can use the Sihedron ring to change the appearance of his clothing or
+      armor into any other kind of clothing or armor. The actual clothing and
+      armor worn retain all their properties (including weight) when glamered.
+      Only true seeing or similar magic reveals the true nature of the
+      adornments.<h3>Requirements</h3><p>Forge Ring, endure elements,
+      resistance, shield</p>
+  price: 35000
+  slot: ring
+  sources:
+    - id: PZO1002
+  subType: wondrous
+type: equipment

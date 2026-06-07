@@ -1,0 +1,30 @@
+_id: 83B2A5JOmvVRMcEh
+_key: '!items!83B2A5JOmvVRMcEh'
+_stats:
+  coreVersion: '12.331'
+folder: 52jofiLqjkyFLxLL
+img: icons/equipment/finger/ring-crown-teal-gold.webp
+name: Headband of Deathless Devotion
+system:
+  aura:
+    school: enc
+  cl: 1
+  description:
+    value: >-
+      <p>This white headband, often painted or embroidered with calligraphy or a
+      stylized pictogram such as a sunburst, helps focus the wearer's resolve
+      and absolute determination to survive and succeed. The wearer gains a +2
+      morale bonus on stabilization checks and on saving throws against ongoing
+      effects with recurring saves, such as diseases, poisons, or compulsions
+      such as dominate person or hold person.   If the wearer is a samurai, he
+      treats his resolve ability as if he were two class levels
+      higher.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, heroism, stabilize</p>
+  price: 6400
+  slot: headband
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

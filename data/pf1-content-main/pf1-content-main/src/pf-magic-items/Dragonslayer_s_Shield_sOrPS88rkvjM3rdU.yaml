@@ -1,0 +1,42 @@
+_id: sOrPS88rkvjM3rdU
+_key: '!items!sOrPS88rkvjM3rdU'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-heavy-metal.png
+name: Dragonslayer's Shield
+system:
+  armor:
+    acp: 2
+    material:
+      base:
+        value: steel
+    value: 2
+  aura:
+    school: abj
+  baseTypes:
+    - Heavy Steel Shield
+  cl: 5
+  description:
+    value: >-
+      <p>This +2 heavy steel shield has a distinct curve to its shape and often
+      bears the device of a valiant knight. The wearer of this shield gains a +2
+      bonus on Reflex saves against effects that originate or burst from a point
+      outside his own square, as though he had cover. It does not protect
+      against spread effects. This bonus does not stack with that granted by
+      actual cover or give cover to any creature other than the wearer. In
+      addition, the dragonslayer's shield grants its wielder a +2 morale bonus
+      on Will saves against the frightful presence ability.</p><p><strong>Base
+      Item</strong>: +2</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, remove fear, shield of faith</p>
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 7170
+  slot: shield
+  sources:
+    - id: PZO1123
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 15
+type: equipment

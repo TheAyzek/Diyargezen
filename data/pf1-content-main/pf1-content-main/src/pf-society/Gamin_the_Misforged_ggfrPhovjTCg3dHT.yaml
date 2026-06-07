@@ -1,0 +1,62 @@
+_id: ggfrPhovjTCg3dHT
+_key: '!items!ggfrPhovjTCg3dHT'
+_stats:
+  coreVersion: '13.347'
+folder: emOjSHDDYqnECHEU
+img: systems/pf1/icons/items/weapons/longsword.png
+name: Gamin the Misforged
+system:
+  actions:
+    - _id: ud2pxz8skk4960w0
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: gaminTheMisforged
+  aura:
+    school: trs
+  baseTypes:
+    - Longsword
+  cl: 5
+  description:
+    value: >-
+      <p>This glittering blade is clearly defective, and a rippling break runs
+      from its tip to its hilt like a crack in a broken window. Gamin is a +1
+      allying mithral longsword with the permanent broken condition, and when
+      held he can cast guidance on his wielder at will. Only a master swordsmith
+      might repair Gamin's imperfections, and the Pathfinder Society does not
+      have access to such a resource at this time.</p><p><strong>Base
+      Item</strong>: allying mithral
+      longsword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magical Arms and Armor, guidance, magic weapon</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+    normal:
+      value: mithral
+  price: 7015
+  showInQuickbar: false
+  sources:
+    - id: PZOPSS0419E
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 2
+type: weapon

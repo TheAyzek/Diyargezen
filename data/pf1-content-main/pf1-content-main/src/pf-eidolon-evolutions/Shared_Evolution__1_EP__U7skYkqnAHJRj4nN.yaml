@@ -1,0 +1,32 @@
+_id: U7skYkqnAHJRj4nN
+_key: '!items!U7skYkqnAHJRj4nN'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_03.jpg
+name: Shared Evolution (1 EP)
+system:
+  abilityType: su
+  actions:
+    - _id: d64nnjifqeo8qxjr
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/violet_03.jpg
+      name: Use
+      tag: sharedEvolution1Ep
+  description:
+    value: >-
+      <p>Select a 1-point or 2-point evolution the eidolon has. As a standard
+      action, the eidolon can touch the summoner and transfer the selected
+      evolution to him.</p><p>This functions as the summoner's aspect ability,
+      and the same limitations apply. The summoner can touch the eidolon as a
+      standard action to return the evolution. The evolution returns to the
+      eidolon automatically if the eidolon is dismissed by the summoner or sent
+      back to its home plane.</p><p><strong>Requirements</strong></p><p>Twinned
+      eidolon.</p>
+  subType: misc
+  tags:
+    - Eidolon Evolution
+type: feat

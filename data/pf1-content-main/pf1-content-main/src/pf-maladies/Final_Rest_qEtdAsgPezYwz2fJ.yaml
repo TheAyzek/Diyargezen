@@ -1,0 +1,24 @@
+_id: qEtdAsgPezYwz2fJ
+_key: '!items!qEtdAsgPezYwz2fJ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_08.jpg
+name: Final Rest
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> disease (inhaled); <strong>Save</strong>
+      Fortitude DC 16;</p><p><strong>Onset</strong> 1
+      week;&nbsp;<strong>Frequency</strong>
+      1/day</p><p><strong>Effect</strong>&nbsp;1d2 Charisma damage; while any
+      Charisma damage remains, the victim cannot gain morale bonuses, receives a
+      +2 bonus on saves against mind-affecting effects, and must attempt a
+      saving throw even against harmless mind-affecting
+      effects.</p><p><strong>Cure</strong> 2 consecutive saves</p><hr /><p>A
+      disease brought from a ruined starship, final rest saps emotion until the
+      victim simply gives up living.</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

@@ -1,0 +1,45 @@
+_id: sq4ySWOS3qFDWMPZ
+_key: '!items!sq4ySWOS3qFDWMPZ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/fullplate.PNG
+name: Gelugon Armor
+system:
+  armor:
+    acp: 6
+    dex: 1
+    material:
+      base:
+        value: steel
+    value: 9
+  aura:
+    custom: true
+    school: abjuration and evocation
+  baseTypes:
+    - Full Plate
+  cl: 13
+  description:
+    value: >-
+      <p>This +4 full plate is fashioned to make the wearer appear to be an ice
+      devil, complete with insectile eyes. Frosty blue energy emanates from the
+      armor's joints, and the helm's eyes intermittently surge with diabolical
+      power. The armor has a long, spearlike tail that can be used to make a
+      single primary natural attack per round as a standard action if the wearer
+      makes no other attacks. This tail attack deals 1d10 points of damage plus
+      2d6 points of cold damage for a Medium wearer. The tail can also be used
+      to make attacks of opportunity that count against the wearer's maximum
+      number of attacks of opportunity per round.</p><p><strong>Base
+      Item</strong>: full
+      plate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, resist energy, creator must be lawful evil</p>
+  enh: 4
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 117650
+  sources:
+    - id: PZO9455
+  spellFailure: 35
+  weight:
+    value: 50
+type: equipment

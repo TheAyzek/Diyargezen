@@ -1,0 +1,47 @@
+_id: KhRRl87tEDU65YG5
+_key: '!journal!KhRRl87tEDU65YG5'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: tfgLGI205b9dxEjx
+name: 6.2.6. Air Vehicles
+pages:
+  - _id: C6KvDv7li7V8CouS
+    _key: '!journal.pages!KhRRl87tEDU65YG5.C6KvDv7li7V8CouS'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.2.6. Air Vehicles
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.F9hzOnUh5c0Ls2p6]{6.2.
+        Vehicles}</p><ul><li>@Compendium[pf-content.pf-rules.wtkl6UbvZjJKe1hM]{6.2.1.
+        Vehicle
+        Basics}</li><li>@Compendium[pf-content.pf-rules.sjmHLtUHjp10PRNg]{6.2.2.
+        Full Vehicle
+        Rules}</li><li>@Compendium[pf-content.pf-rules.539C4TSxha1IlXOT]{6.2.3.
+        Vehicle
+        Statistics}</li><li>@Compendium[pf-content.pf-rules.x0eiNjbEPSWvRSDc]{6.2.4.
+        Land
+        Vehicles}</li><li>@Compendium[pf-content.pf-rules.k1QL1hPoOfe1Or6X]{6.2.5.
+        Water
+        Vehicles}</li><li><strong>@Compendium[pf-content.pf-rules.KhRRl87tEDU65YG5]{6.2.6.
+        Air Vehicles}</strong></li></ul><hr
+        /><p>@Source[PZO1118;pages=186]</p><p>Air vehicles fly through the air.
+        They are usually propelled by air currents, alchemical engines, magic,
+        or in the case of larger air vehicles, a mix of air currents and
+        alchemical engines or magic. Airships, because of their nature, travel
+        though all three dimensions instead of two. When they ascend, they must
+        do so at half their current speed. When air vehicles descend, they can
+        (but do not have to) move at double their current speed. After the
+        ascent or descent, treat the vehicle’s current speed as it was before
+        making the ascent or
+        descent.</p><p>@Compendium[pf-content.pf-goods-services.H6oBzgPPWwMW8xHy]{Vehicle,
+        Wind platform}</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

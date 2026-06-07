@@ -1,0 +1,104 @@
+_id: OpMYuHvrSRCPPfOg
+_key: '!tables!OpMYuHvrSRCPPfOg'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/wall-ruins.webp
+name: Underground City (High Level)
+replacement: true
+results:
+  - _id: 6Ijfah02ijx5XziI
+    _key: '!tables.results!OpMYuHvrSRCPPfOg.6Ijfah02ijx5XziI'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 12
+    text: 1 Purple Worm [CR 12]
+    type: text
+    weight: 1
+  - _id: 7DQ1xlFlM6fjgo8q
+    _key: '!tables.results!OpMYuHvrSRCPPfOg.7DQ1xlFlM6fjgo8q'
+    img: icons/svg/d20-black.svg
+    range:
+      - 13
+      - 20
+    text: 1d4 ([[1d4]]) Elder Earth Elementals [AVG CR 13]
+    type: text
+    weight: 1
+  - _id: W9aivBYCCAKKnpAe
+    _key: '!tables.results!OpMYuHvrSRCPPfOg.W9aivBYCCAKKnpAe'
+    img: icons/svg/d20-black.svg
+    range:
+      - 21
+      - 28
+    text: 2d4 ([[2d4]]) Vrocks [AVG CR 13]
+    type: text
+    weight: 1
+  - _id: GFDs85j0KifJr1PV
+    _key: '!tables.results!OpMYuHvrSRCPPfOg.GFDs85j0KifJr1PV'
+    img: icons/svg/d20-black.svg
+    range:
+      - 29
+      - 38
+    text: 1 Adult Umbral Dragon [CR 14]
+    type: text
+    weight: 1
+  - _id: Lvmpjxj0ezkUrfid
+    _key: '!tables.results!OpMYuHvrSRCPPfOg.Lvmpjxj0ezkUrfid'
+    img: icons/svg/d20-black.svg
+    range:
+      - 39
+      - 53
+    text: >-
+      2d6 ([[2d6]]) Intellect Devourers (in host bodies Of CR 2-8, 25% chance
+      leader is an 8th-Level Sorcerer) [AVG CR 14+]
+    type: text
+    weight: 1
+  - _id: 0sxuqSsoBArh3cig
+    _key: '!tables.results!OpMYuHvrSRCPPfOg.0sxuqSsoBArh3cig'
+    img: icons/svg/d20-black.svg
+    range:
+      - 54
+      - 63
+    text: 1 Worm That Walks [CR 14]
+    type: text
+    weight: 1
+  - _id: jbBmglyeFuuTJfiI
+    _key: '!tables.results!OpMYuHvrSRCPPfOg.jbBmglyeFuuTJfiI'
+    img: icons/svg/d20-black.svg
+    range:
+      - 64
+      - 73
+    text: 1d10 ([[1d10]]) Gugs [AVG CR 15]
+    type: text
+    weight: 1
+  - _id: 6K1fiKRyr1NOYS8d
+    _key: '!tables.results!OpMYuHvrSRCPPfOg.6K1fiKRyr1NOYS8d'
+    img: icons/svg/d20-black.svg
+    range:
+      - 74
+      - 83
+    text: 1d6 ([[1d6]]) Ropers [AVG CR 15]
+    type: text
+    weight: 1
+  - _id: X5kKad5OF5dEQRXr
+    _key: '!tables.results!OpMYuHvrSRCPPfOg.X5kKad5OF5dEQRXr'
+    img: icons/svg/d20-black.svg
+    range:
+      - 84
+      - 95
+    text: 4d3 ([[4d3]]) Advanced Seugathi Led By 1 Neothelid [AVG CR 16]
+    type: text
+    weight: 1
+  - _id: 3HhYK3ebjqafBfkS
+    _key: '!tables.results!OpMYuHvrSRCPPfOg.3HhYK3ebjqafBfkS'
+    img: icons/svg/d20-black.svg
+    range:
+      - 96
+      - 100
+    text: 1 Shoggoth [CR 19]
+    type: text
+    weight: 1
+sort: 0

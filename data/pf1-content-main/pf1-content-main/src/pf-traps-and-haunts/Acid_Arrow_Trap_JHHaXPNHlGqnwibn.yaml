@@ -1,0 +1,110 @@
+_id: JHHaXPNHlGqnwibn
+_key: '!actors!JHHaXPNHlGqnwibn'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: systems/pf1/icons/skills/arrow_08.jpg
+items:
+  - _id: JDzZk0Oc6jEDPikw
+    _key: '!actors.items!JHHaXPNHlGqnwibn.JDzZk0Oc6jEDPikw'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/arrow_08.jpg
+    name: Attack
+    system:
+      actions:
+        - _id: X25oF9FimoOIXESq
+          ability:
+            attack: _default
+          actionType: rsak
+          activation:
+            type: nonaction
+            unchained:
+              type: nonaction
+          attackBonus: '2'
+          damage:
+            parts:
+              - formula: 2d4
+                types:
+                  - acid
+          img: systems/pf1/icons/skills/arrow_08.jpg
+          name: Attack
+      description:
+        value: <p>@UUID[Compendium.pf1.spells.Item.wh9zc2reqneafxro]{Acid Arrow}</p>
+      proficient: true
+      subType: weapon
+    type: attack
+name: Acid Arrow Trap
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 3
+    disarm: 27
+    duration: None
+    effect: ''
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 27
+    reset: None
+    trigger: proximity (alarm)
+    type: Magic
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

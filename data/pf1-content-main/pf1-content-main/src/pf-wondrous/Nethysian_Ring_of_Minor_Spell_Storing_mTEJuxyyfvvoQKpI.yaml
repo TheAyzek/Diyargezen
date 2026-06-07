@@ -1,0 +1,27 @@
+_id: mTEJuxyyfvvoQKpI
+_key: '!items!mTEJuxyyfvvoQKpI'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Nethysian Ring of Minor Spell Storing
+system:
+  aura:
+    custom: true
+    school: abjuration and transmutation [chaotic evil good lawful]
+  cl: 5
+  description:
+    value: >-
+      <p>This ring is made of several metals hammered together into a mottled
+      pattern, with Nethys's holy symbol stamped on one end. It functions as a
+      ring of minor spell storing, except domain spells from Nethys's domains
+      (see page 100) count as 1 spell level lower (minimum 1st level) for the
+      purpose of storing them in the
+      ring.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge Ring,
+      imbue with spell ability</p>
+  price: 20000
+  slot: ring
+  sources:
+    - id: PZO9267
+  subType: wondrous
+type: equipment

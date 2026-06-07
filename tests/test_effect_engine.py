@@ -12,14 +12,13 @@ from copy import deepcopy
 
 from scraping.models import (
     EffectModel, RaceModel, ClassModel, FeatModel,
-    ClanModel, PowerModel, AdvantageModel, DisciplineModel,
+    PowerModel, AdvantageModel,
 )
 from utils.calculations import (
     apply_effects,
     collect_effects_from_choices,
     parse_dnd5e_effect,
     parse_pf1e_effect,
-    parse_vtm5e_effect,
     parse_mm3e_effect,
     parse_effect,
     parse_effects_batch,
@@ -122,17 +121,6 @@ class TestModelsHaveEffects(unittest.TestCase):
             ],
         )
         self.assertEqual(feat.effects[0].effect_type, "hp_bonus")
-
-    def test_clan_model_has_effects(self):
-        clan = ClanModel(
-            name="Brujah",
-            effects=[
-                EffectModel(target="celerity", effect_type="discipline_access", value=True),
-                EffectModel(target="potence", effect_type="discipline_access", value=True),
-                EffectModel(target="presence", effect_type="discipline_access", value=True),
-            ],
-        )
-        self.assertEqual(len(clan.effects), 3)
 
     def test_power_model_has_effects(self):
         power = PowerModel(
@@ -285,30 +273,6 @@ class TestApplyEffects(unittest.TestCase):
         ]
         apply_effects(char, effects, "dnd5e")
         self.assertEqual(char["abilities"]["Dexterity"], 13)
-
-    # ---- VtM 5e efektleri --------------------------------------------------
-
-    def test_vtm_add_dot(self):
-        char = {"dots": {"potence": 0}}
-        effects = [{"target": "potence", "effect_type": "add_dot", "value": 1}]
-        apply_effects(char, effects, "vtm5e")
-        self.assertEqual(char["dots"]["potence"], 1)
-
-    def test_vtm_discipline_access(self):
-        char = {}
-        effects = [
-            {"target": "celerity", "effect_type": "discipline_access", "value": True},
-            {"target": "potence", "effect_type": "discipline_access", "value": True},
-        ]
-        apply_effects(char, effects, "vtm5e")
-        self.assertIn("celerity", char["discipline_access"])
-        self.assertIn("potence", char["discipline_access"])
-
-    def test_vtm_pool_bonus(self):
-        char = {}
-        effects = [{"target": "intimidation", "effect_type": "pool_bonus", "value": 2}]
-        apply_effects(char, effects, "vtm5e")
-        self.assertEqual(char["pool_bonuses"]["intimidation"], 2)
 
     # ---- M&M 3e efektleri --------------------------------------------------
 
@@ -538,59 +502,6 @@ class TestPF1eParser(unittest.TestCase):
 
 
 # ======================================================================
-# VtM 5e Parser Testleri
-# ======================================================================
-
-class TestVtM5eParser(unittest.TestCase):
-
-    def test_gain_dot(self):
-        result = parse_vtm5e_effect("Gain 1 dot in Potence")
-        self.assertIsNotNone(result)
-        self.assertEqual(result["target"], "potence")
-        self.assertEqual(result["effect_type"], "add_dot")
-        self.assertEqual(result["value"], 1)
-
-    def test_plus_dots(self):
-        result = parse_vtm5e_effect("+2 dots in Celerity")
-        self.assertIsNotNone(result)
-        self.assertEqual(result["target"], "celerity")
-        self.assertEqual(result["value"], 2)
-
-    def test_discipline_access(self):
-        result = parse_vtm5e_effect("Access to Dominate")
-        self.assertIsNotNone(result)
-        self.assertEqual(result["target"], "dominate")
-        self.assertEqual(result["effect_type"], "discipline_access")
-
-    def test_attribute_bonus(self):
-        result = parse_vtm5e_effect("+1 to Strength")
-        self.assertIsNotNone(result)
-        self.assertEqual(result["target"], "strength")
-        self.assertEqual(result["effect_type"], "add_dot")
-
-    def test_pool_bonus(self):
-        result = parse_vtm5e_effect("+2 dice to Intimidation")
-        self.assertIsNotNone(result)
-        self.assertEqual(result["target"], "intimidation")
-        self.assertEqual(result["effect_type"], "pool_bonus")
-
-    def test_compulsion(self):
-        result = parse_vtm5e_effect("Compulsion: Rage")
-        self.assertIsNotNone(result)
-        self.assertEqual(result["target"], "compulsion")
-        self.assertEqual(result["value"], "Rage")
-
-    def test_bane(self):
-        result = parse_vtm5e_effect("Bane: The Beast is always close")
-        self.assertIsNotNone(result)
-        self.assertEqual(result["target"], "bane")
-        self.assertEqual(result["effect_type"], "grant_trait")
-
-    def test_empty_text(self):
-        self.assertIsNone(parse_vtm5e_effect(""))
-
-
-# ======================================================================
 # M&M 3e Parser Testleri
 # ======================================================================
 
@@ -655,11 +566,6 @@ class TestParseEffect(unittest.TestCase):
         self.assertIsNotNone(result)
         self.assertEqual(result["target"], "constitution")
 
-    def test_dispatch_vtm5e(self):
-        result = parse_effect("Gain 1 dot in Potence", "vtm5e")
-        self.assertIsNotNone(result)
-        self.assertEqual(result["effect_type"], "add_dot")
-
     def test_dispatch_mm3e(self):
         result = parse_effect("+2 to Dodge", "mm3e")
         self.assertIsNotNone(result)
@@ -723,22 +629,6 @@ class TestEndToEndScenarios(unittest.TestCase):
         self.assertIn("heavy_armor", char["proficiencies"])
         self.assertIn("martial_weapons", char["proficiencies"])
         self.assertEqual(len(char["conditional_effects"]), 1)
-
-    def test_vtm5e_brujah_creation(self):
-        """VtM 5e Brujah clan secimi senaryosu."""
-        char = {"dots": {}}
-        clan_effects = [
-            {"target": "celerity", "effect_type": "discipline_access", "value": True},
-            {"target": "potence", "effect_type": "discipline_access", "value": True},
-            {"target": "presence", "effect_type": "discipline_access", "value": True},
-            {"target": "potence", "effect_type": "add_dot", "value": 1},
-            {"target": "compulsion", "effect_type": "grant_trait", "value": "Rage"},
-        ]
-        apply_effects(char, clan_effects, "vtm5e")
-
-        self.assertEqual(len(char["discipline_access"]), 3)
-        self.assertEqual(char["dots"]["potence"], 1)
-        self.assertIn("compulsion: Rage", char["granted_traits"])
 
     def test_mm3e_hero_build(self):
         """M&M 3e PL10 hero build senaryosu."""

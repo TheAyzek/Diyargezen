@@ -1,0 +1,59 @@
+_id: 1Bz4MpTAHsvri28P
+_key: '!items!1Bz4MpTAHsvri28P'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/longbow.PNG
+name: Windreader's Bow
+system:
+  actions:
+    - _id: 4mf09ki45bar3qvc
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: windreadersBow
+  aura:
+    school: div
+  baseTypes:
+    - Longbow
+  cl: 8
+  description:
+    value: >-
+      <p>Whenever an arrow fired from this +1 adaptive seeking composite longbow
+      damages the wielder's favored enemy or studied target (as per the ranger
+      and slayer class features, respectively), in addition to its normal
+      effects, it also deals 2 points of bleed damage. As long as the bleed
+      effect continues, the wielder can sense that foe's approximate direction
+      and distance twice per day by smelling the wind as a standard
+      action.</p><p><strong>Base Item</strong>: adaptive seeking composite
+      longbow</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, bleed, locate creature, warp wood</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: wood
+  price: 54400
+  showInQuickbar: false
+  sources:
+    - id: PZO9463
+  weaponGroups:
+    - bows
+  weight:
+    value: 3
+type: weapon

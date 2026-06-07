@@ -1,0 +1,49 @@
+_id: vuTQH6gykORoSCUE
+_key: '!journal!vuTQH6gykORoSCUE'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: mJGgfLDxjMpNAoek
+name: 2.07.1. Aid Another
+pages:
+  - _id: i1eCfw02kphLoAhX
+    _key: '!journal.pages!vuTQH6gykORoSCUE.i1eCfw02kphLoAhX'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.07.1. Aid Another
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.u7ymeeQewjTXVrlW]{2.07.
+        Special
+        Attacks}</p><ul><li><strong>@Compendium[pf-content.pf-rules.vuTQH6gykORoSCUE]{2.07.1.
+        Aid
+        Another}</strong></li><li>@Compendium[pf-content.pf-rules.o0Ufwyu65bmusBhM]{2.07.2.
+        Charge}</li><li>@Compendium[pf-content.pf-rules.CK4ZYweM6IifrrV0]{2.07.3.
+        Combat
+        Maneuvers}</li><li>@Compendium[pf-content.pf-rules.QrPAIYOFsZBHKHvt]{2.07.4.
+        Feint}</li><li>@Compendium[pf-content.pf-rules.uR2lQHLIAn5HhlfT]{2.07.5.
+        Mounted
+        Combat}</li><li>@Compendium[pf-content.pf-rules.KrSwE6n4UyxJfYPB]{2.07.6.
+        Throw Splash
+        Weapon}</li><li>@Compendium[pf-content.pf-rules.jLQbe8GmyB470OIJ]{2.07.7.
+        Two-Weapon Fighting}</li></ul><hr
+        /><p>@Source[PZO1110;pages=197]</p><p>In melee combat, you can help a
+        friend attack or defend by distracting or interfering with an opponent.
+        If you’re in position to make a melee attack on an opponent that is
+        engaging a friend in melee combat, you can attempt to aid your friend as
+        a standard action. You make an attack roll against AC 10. If you
+        succeed, your friend gains either a +2 bonus on his next attack roll
+        against that opponent or a +2 bonus to AC against that opponent’s next
+        attack (your choice), as long as that attack comes before the beginning
+        of your next turn. Multiple characters can aid the same friend, and
+        similar bonuses stack.</p><p>You can also use this standard action to
+        help a friend in other ways, such as when he is affected by a spell, or
+        to assist another character’s skill check.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,55 @@
+_id: m1VM7GczAnrB12RQ
+_key: '!items!m1VM7GczAnrB12RQ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/splint-mail.png
+name: Warden of the Woods
+system:
+  armor:
+    acp: 7
+    enh: 3
+    material:
+      base:
+        value: wood
+    value: 7
+  aura:
+    school: trs
+  baseTypes:
+    - Splint Mail
+  cl: 11
+  description:
+    value: >-
+      <p>The warden of the woods is a suit of +3 greenwood splint mail made of
+      strips of laminated greenwood that flex with the wearer's movement but
+      stiffen when struck in battle. (The greenwood special material is
+      described on page 50.) This armor is treated in all ways like medium
+      armor, including when determining proficiency. The armor has an arcane
+      spell failure chance of 25%, a maximum Dexterity bonus of +2, and an armor
+      check penalty of -4.  As a move action, the wearer can snap a strip of
+      wood loose from the armor. The strip lengthens into a weapon of a type
+      chosen by the armor's wearer. It can become a +1 greenwood club, a +1/+1
+      greenwood quarterstaff, or a +1 keen greenwood wooden stake. If the wearer
+      creates a club or quarterstaff in this way, it gains the benefits of the
+      shillelagh spell with a duration of 1 minute. Each weapon removed from the
+      warden of the woods reduces the armor's enhancement bonus by 1.
+      Consequently, a maximum of three such weapons can be separated from the
+      armor at any given time. The greenwood weapons keep their enhancement
+      bonuses only while they're in the wearer's hands, though they remain
+      masterwork weapons for other wielders.  The wearer can reintegrate a
+      weapon back into the warden of the woods as a move action and restore the
+      lost enhancement bonus. Each day at dawn, the armor regenerates any
+      missing strips (regaining its full enhancement bonus), and any weapons
+      still detached from the armor crumble into dust.</p><p><strong>Base
+      Item</strong>: +3 greenwood splint
+      mail</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, ironwood, shillelagh, wood shape</p>
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 29350
+  sources:
+    - id: PZO1123
+  spellFailure: 40
+  weight:
+    value: 25
+type: equipment

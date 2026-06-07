@@ -1,0 +1,35 @@
+_id: KLcNoqR1vikQdw6b
+_key: '!items!KLcNoqR1vikQdw6b'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Lightning Trap Spheres
+system:
+  aura:
+    custom: true
+    school: evocation [electricity]
+  cl: 13
+  description:
+    value: >-
+      <p>These tiny spheres, crafted from a dull gray material and studded with
+      tiny copper protuberances, come in sets of four. As a standard action, a
+      user can throw four or more spheres at a single target as a ranged touch
+      attack with a 30-foot range increment. On a hit, the spheres explode
+      outward, forming an immobile cage of semisolid lightning around the
+      target. Any creature attempting to pass through the cage wall
+      automatically takes 10d6 points of electricity damage. Four lightning trap
+      spheres thrown simultaneously can capture a Medium target, eight spheres
+      can capture a Large target, 12 spheres can capture a Huge target, and 16
+      spheres can capture a Gargantuan target. The trap persists for 1 minute
+      for each set of spheres used, then dissipates, consuming the spheres in
+      the process. The price above is for a set of four lightning trap
+      spheres.<h3>Requirements</h3><p>Craft Wondrous Item, forcecage, lightning
+      bolt</p>
+  price: 2000
+  sources:
+    - id: PZO90112
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

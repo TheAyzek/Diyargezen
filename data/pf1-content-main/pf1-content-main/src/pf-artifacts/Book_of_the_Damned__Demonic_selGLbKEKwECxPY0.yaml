@@ -1,0 +1,58 @@
+_id: selGLbKEKwECxPY0
+_key: '!items!selGLbKEKwECxPY0'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: 'Book of the Damned: Demonic'
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: all schools [chaotic evil]
+  cl: 25
+  description:
+    value: >-
+      <p>The original Book of the Damned was collected from the scattered
+      records of the exiled angel Tabris, who was ordered to record the lore of
+      all the multiverse but was cast out of Heaven for his findings. The
+      demonic chapters of the Book of the Damned are bound between razor-edged
+      covers of cold iron.  Care must be taken when opening this book, lest the
+      covers cut the fingers. Blood spattered on the pages of the book quickly
+      fades away, as if the damp sheets of pale parchment within possessed a
+      thirsty, vampiric nature. A DC 12 Reflex save is enough to avoid being cut
+      when opening this book-on a failed save, the user takes 2 points of
+      Constitution damage.  This section of the Book of the Damned serves as a
+      catalogue of the Abyssal realms and their lords-yet just as the rulers of
+      the Abyss wax and wane, the contents of this book shift and change as
+      well, revealing dark secrets.  Any good-aligned creature who touches this
+      section of the Book of the Damned gains one negative level.  This level
+      cannot be restored until the character has remained more than 10 feet away
+      from the book for 24 hours. Creatures attempting to read the book that are
+      not chaotic evil must make a DC 15 Will save or have their alignment
+      permanently take one step toward chaotic evil.  These pages of the Book of
+      the Damned are written in Abyssal. A reader who spends 30 days (not
+      necessarily consecutively) reading the book receives several benefits. The
+      book contains copies of every spell with the evil descriptor, as well as
+      all of the arcane spells listed below. The user gains a +4 bonus on all
+      Knowledge (planes) checks if she uses the book as a resource (consulting
+      it for at least an hour regarding a question), and its descriptions of the
+      Abyss are so accurate that any teleportation travel to or within the Abyss
+      always brings the caster to the exact location desired.  The demonic
+      section of the Book of the Damned serves as the focal point for a
+      permanent unhallow effect and sympathy tuned to attract chaotic evil
+      creatures. As long as the book is carried, its owner casts all evil spells
+      as if she were 2 caster levels higher and gains a +2 bonus on all
+      Charisma-based skills and checks when interacting with chaotic evil
+      creatures.  Three times per day, the tome can be used to cast one of the
+      following spells: blasphemy, desecrate, greater planar binding, insanity,
+      rift of ruin (see page 48), summon monster VII, or unholy blight. Once per
+      day as a standard action, the bearer can use the book to gain any one of
+      the boons granted by any demon lord-the boon lasts as long as the owner
+      retains possession of the book, or until she chooses a new boon. This does
+      not require an obedience.</p>
+  sources:
+    - id: PZO9225
+  subType: other
+  weight:
+    value: 12
+type: equipment

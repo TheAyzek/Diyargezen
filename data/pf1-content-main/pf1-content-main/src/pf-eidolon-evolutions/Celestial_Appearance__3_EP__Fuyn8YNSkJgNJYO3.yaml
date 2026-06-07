@@ -1,0 +1,36 @@
+_id: Fuyn8YNSkJgNJYO3
+_key: '!items!Fuyn8YNSkJgNJYO3'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_13.jpg
+name: Celestial Appearance (3 EP)
+system:
+  abilityType: ex
+  contextNotes:
+    - target: allSavingThrows
+      text: >-
+        <strong>Celestial Appearance</strong>: +2 bonus on saves against
+        disease, petrification, poison, and electricity spells and effects.
+        </p><p> Spell resistance equal to [[5 + @attributes.hd.total]] against
+        spells with the evil descriptor.
+  description:
+    value: >-
+      <p>The eidolon appears as a celestial creature and manifests some of the
+      abilities of a celestial. Spells and effects that target creatures with
+      the good subtype or have specific effects against such creatures affect
+      the eidolon as if it were a celestial. The eidolon gains a +2 bonus on
+      saves against disease, petrification, poison, and electricity spells and
+      effects. It also gains spell resistance equal to 5 + its HD against spells
+      with the evil descriptor.</p><p>At 7th level, by spending 2 additional
+      evolution points, this bonus on saves is increased to +4 and the spell
+      resistance is extended to affect any spells and effects from evil
+      creatures.</p><p>At 12th level, by spending 2 additional evolution points,
+      this protection is increased to immunity against these attacks and the
+      spell resistance is increased to 11 + its HD (the summoner must pay for
+      the 7th-level upgrade before paying for this 12th-level
+      upgrade).</p><p><strong>Requirements</strong></p><p>The summoner must be
+      good-aligned to select this evolution.</p>
+  subType: misc
+  tags:
+    - Eidolon Evolution
+type: feat

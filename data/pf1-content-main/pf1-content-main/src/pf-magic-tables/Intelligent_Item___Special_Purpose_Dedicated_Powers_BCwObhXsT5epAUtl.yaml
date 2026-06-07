@@ -1,0 +1,88 @@
+_id: BCwObhXsT5epAUtl
+_key: '!tables!BCwObhXsT5epAUtl'
+_stats:
+  coreVersion: '12.331'
+description: >-
+  <p>A dedicated power operates only when an intelligent item is in pursuit of
+  its special purpose. This determination is always made by the item. Unlike its
+  other powers, an intelligent item can refuse to use its dedicated powers even
+  if the owner is dominant. The caster level for these effects is equal to the
+  item’s caster level.</p><p>Save DCs are based on the item’s highest mental
+  ability score.</p>
+displayRoll: true
+folder: gdjI5M6P4HDragbS
+formula: 1d100
+img: icons/svg/d20-grey.svg
+name: Intelligent Item - Special Purpose Dedicated Powers
+replacement: true
+results:
+  - _id: VatQ00iDwN7sLjzs
+    _key: '!tables.results!BCwObhXsT5epAUtl.VatQ00iDwN7sLjzs'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 20
+    text: >-
+      Item can detect any special purpose foes within 60 feet (+10,000 gp) [+1
+      Ego]
+    type: text
+    weight: 1
+  - _id: VftfQcw8tr7Thm3O
+    _key: '!tables.results!BCwObhXsT5epAUtl.VftfQcw8tr7Thm3O'
+    img: icons/svg/d20-black.svg
+    range:
+      - 21
+      - 35
+    text: Item can use a 4th-level spell at will (+56,000 gp) [+2 Ego]
+    type: text
+    weight: 1
+  - _id: tq7OAKaTbuZTMWHg
+    _key: '!tables.results!BCwObhXsT5epAUtl.tq7OAKaTbuZTMWHg'
+    img: icons/svg/d20-black.svg
+    range:
+      - 36
+      - 50
+    text: >-
+      Wielder gets +2 luck bonus on attacks, saves, and checks (+80,000 gp) [+2
+      Ego]
+    type: text
+    weight: 1
+  - _id: CgV86r4GzrQ9I6kH
+    _key: '!tables.results!BCwObhXsT5epAUtl.CgV86r4GzrQ9I6kH'
+    img: icons/svg/d20-black.svg
+    range:
+      - 51
+      - 65
+    text: Item can use a 5th-level spell at will (+90,000 gp) [+2 Ego]
+    type: text
+    weight: 1
+  - _id: puWSYiU0VIq3phMF
+    _key: '!tables.results!BCwObhXsT5epAUtl.puWSYiU0VIq3phMF'
+    img: icons/svg/d20-black.svg
+    range:
+      - 66
+      - 80
+    text: Item can use a 6th-level spell at will (+132,000 gp) [+2 Ego]
+    type: text
+    weight: 1
+  - _id: XKVgS7ZIX5xC0N9A
+    _key: '!tables.results!BCwObhXsT5epAUtl.XKVgS7ZIX5xC0N9A'
+    img: icons/svg/d20-black.svg
+    range:
+      - 81
+      - 95
+    text: Item can use a 7th-level spell at will (+182,000 gp) [+2 Ego]
+    type: text
+    weight: 1
+  - _id: Q0AxXR2pIVz6dAtl
+    _key: '!tables.results!BCwObhXsT5epAUtl.Q0AxXR2pIVz6dAtl'
+    img: icons/svg/d20-black.svg
+    range:
+      - 96
+      - 100
+    text: >-
+      Item can use true resurrection on wielder, once per month (+200,000 gp)
+      [+2 Ego]
+    type: text
+    weight: 1
+sort: 500000

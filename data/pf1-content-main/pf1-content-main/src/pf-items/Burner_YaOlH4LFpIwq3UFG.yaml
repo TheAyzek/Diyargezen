@@ -1,0 +1,28 @@
+_id: YaOlH4LFpIwq3UFG
+_key: '!items!YaOlH4LFpIwq3UFG'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/laboratory/burner-steel-grey.webp
+name: Burner
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>A burner is a metal or
+      ceramic cylinder, open at the top and perforated with air holes along the
+      sides, often with sliding vents to open or close these apertures as the
+      fire inside requires. A burner is used to burn fuel pellets at night
+      without giving off light that would reveal the user's position to
+      unfriendly eyes in the wide, empty desert lands. In places where charcoal
+      is a popular fuel, burners are made of heavier-gauge metal. Lit coals can
+      be banked with ashes and kept hot, either for later ignition or simply so
+      the burner can serve as an improvised radiant heater.</p>
+  price: 3
+  sources:
+    - id: PZO9441
+      pages: '28'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 1
+type: consumable

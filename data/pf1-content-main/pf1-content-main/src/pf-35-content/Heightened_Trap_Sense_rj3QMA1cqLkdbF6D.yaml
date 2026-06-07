@@ -1,0 +1,22 @@
+_id: rj3QMA1cqLkdbF6D
+_key: '!items!rj3QMA1cqLkdbF6D'
+_stats:
+  coreVersion: '12.331'
+folder: 35gUR2g8lMd073yK
+img: icons/environment/traps/trap-jaw-green.webp
+name: Heightened Trap Sense
+system:
+  description:
+    value: >-
+      <p><em>You are acutely attentive to the subtleties of traps and how they
+      are hidden.</em></p><p><strong>Prerequisites</strong>: Search 6 ranks,
+      trap sense +1.</p><p><strong>Benefits</strong>: When you pass within 5
+      feet of a trap, you are entitled to an automatic Search check to notice
+      the trap. This check is made at a -10 penalty, or -5 if you are moving at
+      half speed and taking no actions other than
+      moving.</p><p><strong>Normal</strong>: You must take an action to actively
+      search.</p>
+  tags:
+    - General
+    - '3.5'
+type: feat

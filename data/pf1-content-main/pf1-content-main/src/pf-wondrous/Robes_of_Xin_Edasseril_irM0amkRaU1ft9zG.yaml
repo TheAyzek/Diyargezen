@@ -1,0 +1,30 @@
+_id: irM0amkRaU1ft9zG
+_key: '!items!irM0amkRaU1ft9zG'
+_stats:
+  coreVersion: '12.331'
+folder: tt1hnzL5ZdLfPdp0
+img: icons/equipment/chest/coat-collared-red-gold.webp
+name: Robes of Xin-Edasseril
+system:
+  aura:
+    custom: true
+    school: abjuration and conjuration
+  cl: 16
+  description:
+    value: >-
+      <p>The robes of Xin-Edasseril grant a +5 armor bonus to AC and spell
+      resistance 20, and they cause the wearer to cast all abjuration spells at
+      +1 caster level. Two of the robe's pockets function as handy haversacks.
+      In addition, the robes protect the wearer with energy resistance 10 for an
+      energy type of the wearer's choice-this energy resistance can be changed
+      once per day as a standard action (currently, Belimarius uses it to resist
+      cold).<h3>Requirements</h3><p>Craft Wondrous Item, mage armor, protection
+      from spells, resist energy, secret chest</p>
+  price: 164000
+  slot: body
+  sources:
+    - id: PZO90137
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

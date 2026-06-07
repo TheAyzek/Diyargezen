@@ -38,7 +38,6 @@ from scraping.base_scraper import BaseScraper
 from scraping.spiders.pf1e_d20pfsrd_spider import PF1eD20pfsrdSpider
 from scraping.spiders.dnd5e_spider import DnD5eSpider
 from scraping.spiders.mm3e_spider import MM3eSpider
-from scraping.spiders.vtm5e_spider import VtM5eSpider
 
 logger = logging.getLogger("scraping")
 
@@ -50,14 +49,12 @@ SPIDER_REGISTRY: Dict[str, Type[BaseScraper]] = {
     "pathfinder1e": PF1eD20pfsrdSpider,
     "dnd5e":        DnD5eSpider,
     "mm3e":         MM3eSpider,
-    "vtm5e":        VtM5eSpider,
 }
 
 SYSTEM_LABELS: Dict[str, str] = {
     "pathfinder1e": "Pathfinder 1e",
     "dnd5e":        "D&D 5e",
     "mm3e":         "M&M 3e",
-    "vtm5e":        "VtM 5e",
 }
 
 
@@ -271,7 +268,7 @@ def main() -> None:
 Ornekler:
   python -m scraping.run_scraper                     # Tum sistemler
   python -m scraping.run_scraper -s dnd5e mm3e       # Secili sistemler
-  python -m scraping.run_scraper -s vtm5e --only races
+  python -m scraping.run_scraper -s mm3e --only powers
   python -m scraping.run_scraper -p                  # Paralel
   python -m scraping.run_scraper --dry-run           # Baglanti testi
 """,

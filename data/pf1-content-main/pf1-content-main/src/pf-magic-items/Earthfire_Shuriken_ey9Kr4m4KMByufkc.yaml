@@ -1,0 +1,62 @@
+_id: ey9Kr4m4KMByufkc
+_key: '!items!ey9Kr4m4KMByufkc'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/shuriken.png
+name: Earthfire Shuriken
+system:
+  actions:
+    - _id: ld1l3y4b52ljmyrc
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: earthfireShuriken
+  aura:
+    custom: true
+    school: evocation [fire]
+  baseTypes:
+    - Shuriken
+  cl: 12
+  description:
+    value: >-
+      <p>This +1 flaming burst shuriken is etched with the image of an erupting
+      volcano. Any creature damaged by an earthfire shuriken must make a DC 15
+      Reflex save or catch fire. Each round, burning creatures may attempt a
+      Reflex save to quench the flames; failure results in another 1d6 points of
+      fire damage.<p><strong>Base Item</strong>: +1 flaming burst
+      shuriken</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, burning gaze (see page 208 of the Advanced Player's
+      Guide), flame blade, flame strike, or fireball</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 400
+  properties:
+    mnk: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9050
+  weaponGroups:
+    - monk
+    - thrown
+  weight:
+    value: 0.5
+type: weapon

@@ -1,0 +1,26 @@
+_id: jR62F3zQNiG4eFmo
+_key: '!items!jR62F3zQNiG4eFmo'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/books/book-embossed-gold-red.webp
+name: Liron Treye's Journal
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 4,600 gp; <strong>Accuracy</strong> +6<br
+      /><strong>Category</strong> Dungeon Guides</p><p><strong>Associated
+      Skill</strong> Knowledge (religion) (DC 25)</p><h2>Description</h2><p>This
+      long-lost tome contains all of Liron Treye's accounts of the mysterious
+      and terrible things found in Kalexcourt of Ustalav when he explored the
+      haunted burial ground centuries ago.</p><h2>Skill Bonuses</h2><ul><li>See
+      through a vampire or dhampir's disguise (Perception +4)</li><li>Recite
+      Ustalavic apologue or adage (Diplomacy +2)</li></ul>
+  equipped: false
+  price: 4600
+  sources:
+    - id: PZO9430
+      pages: '15'
+  subType: tradeGoods
+  tags:
+    - Dungeon Guides
+type: loot

@@ -1,0 +1,28 @@
+_id: BKLelGIsPPIv7GYW
+_key: '!items!BKLelGIsPPIv7GYW'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/laboratory/bowl-liquid-orange.webp
+name: Sparkle Smoke
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>When inhaled, this
+      incense causes creatures to see dazzling auras around light sources,
+      drawing their attention to such illumination as the moon or stars and away
+      from other nearby creatures. Any creature inhaling sparkle smoke that
+      fails a DC 15 Fortitude saving throw takes a -4 penalty on Perception
+      checks to notice creatures smaller than itself in areas of at least dim
+      light for 1 hour. Crafting a dose of sparkle smoke requires a successful
+      DC 15 Craft (alchemy) check.</p><h2>Construction</h2><p><strong>Craft
+      (Alchemy)</strong> DC 15</p>
+  price: 25
+  sources:
+    - id: PZO1138
+      pages: '45'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 1
+type: consumable

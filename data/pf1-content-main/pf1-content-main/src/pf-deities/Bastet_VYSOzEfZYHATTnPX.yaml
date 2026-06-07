@@ -1,0 +1,32 @@
+_id: VYSOzEfZYHATTnPX
+_key: '!journal!VYSOzEfZYHATTnPX'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Bastet
+pages:
+  - _id: xAr6p2LtHIA6XddZ
+    _key: '!journal.pages!VYSOzEfZYHATTnPX.xAr6p2LtHIA6XddZ'
+    _stats:
+      coreVersion: '12.331'
+    name: Bastet
+    sort: 0
+    text:
+      content: >-
+        <h1>Bastet</h1><h2>The Sly Enchantress</h2>@Source[PZO9080;pages=65] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Bastet">Bastet</a><h3>Details</h3><p><strong>Alignment</strong>
+        CN<br /><strong>Pantheon</strong> Deities of Ancient Osirion<br
+        /><strong>Areas of Concern</strong> Cats, pleasure, secrets<br
+        /><strong>Domains</strong> Animal, Chaos, Charm, Protection, Trickery<br
+        /><strong>Subdomains</strong> Deception, Defense, Fur, Lust, Protean,
+        Thievery<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Cat's claws
+        (tekko-kagi)<br /><strong>Symbol</strong> Golden cat<br /><strong>Sacred
+        Animal(s)</strong> Cat</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

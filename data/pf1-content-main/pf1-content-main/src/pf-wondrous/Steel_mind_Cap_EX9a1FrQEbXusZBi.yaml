@@ -1,0 +1,34 @@
+_id: EX9a1FrQEbXusZBi
+_key: '!items!EX9a1FrQEbXusZBi'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Steel-mind Cap
+system:
+  aura:
+    school: abj
+  cl: 9
+  description:
+    value: >-
+      <p>Ruined scraps of various constructs were repurposed and combined to
+      form this ornate iron helmet. Though the helmet is not intelligent, it has
+      a brute mechanical cunning that allows it to assert control whenever the
+      wearer's mind is overwhelmed. The helmet takes control of the wearer's
+      body anytime he is dazed or stunned. Whenever the wearer would be dazed,
+      he is instead confused. Whenever the wearer would be stunned, he is
+      instead confused and staggered.   Time spent under the cap's influence
+      counts against the duration of the daze or stun effect. The cap functions
+      for up to 5 rounds per day. These rounds do not need to be consecutive.
+      The cap stops asserting control over its wearer when the duration of the
+      daze or stun effect ends, or when the cap's 5 rounds of duration are
+      expended.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, surmount affliction (Ultimate Magic)</p>
+  price: 33600
+  slot: head
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

@@ -1,0 +1,34 @@
+_id: KzvkgZrN2E4H7sKC
+_key: '!items!KzvkgZrN2E4H7sKC'
+_stats:
+  coreVersion: '12.331'
+folder: 5HPDAAtypP5m41CK
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Jug of Alchemy
+system:
+  aura:
+    custom: true
+    school: transmutation;
+  cl: 10
+  description:
+    value: >-
+      <p>This magical jug can pour forth various liquids on command. The
+      quantity depends on the liquid summoned. The jug can pour only one kind of
+      liquid, with up to seven decantations of that liquid, on any given day.
+      Possible liquids and their respective daily maximum quantities are as
+      follows: • Ammonia, 1 quart • Aqua regia, 8 ounces (a powerful acid
+      causing 2d6 acid damage per ounce on a direct hit) • Beer, 4 gallons •
+      Chlorine, 1 ounce • Cyanide, 0.5 ounces • Fresh water, 8 gallons • Oil, 1
+      pint • Pure alcohol, 4 ounces • Salt water, 16 gallons • Vinegar, 2
+      gallons • Wine, 1 gallo.</p><h3>Requirements</h3><p>Craft Wondrous Item,
+      minor creation,creator must have at 10 ranks in Craft (alchemy)</p>
+  price: 33000
+  slot: wrists
+  sources:
+    - date: '2012'
+      publisher: Necromancer Games & Frog God Games
+      title: Rappan Athuk
+  subType: wondrous
+  weight:
+    value: 4
+type: equipment

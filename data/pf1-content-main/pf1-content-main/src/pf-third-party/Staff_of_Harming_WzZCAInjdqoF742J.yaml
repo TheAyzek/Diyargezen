@@ -1,0 +1,27 @@
+_id: WzZCAInjdqoF742J
+_key: '!items!WzZCAInjdqoF742J'
+_stats:
+  coreVersion: '12.331'
+folder: 5HPDAAtypP5m41CK
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Harming
+system:
+  aura:
+    school: nec
+  cl: 8
+  description:
+    value: >-
+      <p>This black, iron staff, the antithesis of a staff of healing, allows
+      the user the following spells: • contagion (1 charge) • inflict serious
+      wounds (1 charge) • blindness/deafness (1
+      charge.</p><h3>Requirements</h3><p>Craft Staff, blindness/deafness,
+      contagion, inflict serious wounds</p>
+  hp:
+    base: 10
+  price: 21600
+  sources:
+    - id: FGG32698
+  subType: staff
+  weight:
+    value: 5
+type: consumable

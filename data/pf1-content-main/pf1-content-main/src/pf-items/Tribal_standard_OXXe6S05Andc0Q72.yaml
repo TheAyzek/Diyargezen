@@ -1,0 +1,28 @@
+_id: OXXe6S05Andc0Q72
+_key: '!items!OXXe6S05Andc0Q72'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/flags/banner-symbol-claw.webp
+name: Tribal standard
+system:
+  description:
+    value: >-
+      <p>Mounted on a sturdy 15-foot pole, this flag inspires all orcs belonging
+      to the tribe it represents. As long as they are within 60 feet and can see
+      the standard, they gain a +1 morale bonus on saving throws against fear
+      effects. The standard must be carried in one hand by a member of the tribe
+      to have any effect (it provides no bonus if hung on a wall, draped over a
+      throne, and so on). If the standard is brought low (such as by its bearer
+      dropping it in the mud), defiled, destroyed, or captured, the tribe's
+      members take a -1 penalty on attack rolls and saving throws versus fear
+      effects for the next hour. If the orcs reclaim a captured standard, the
+      penalties end and the bonus is restored.</p>
+  equipped: false
+  price: 50
+  sources:
+    - id: PZO1121
+      pages: '141'
+  subType: tool
+  weight:
+    value: 20
+type: loot

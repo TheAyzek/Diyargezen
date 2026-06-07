@@ -1,0 +1,92 @@
+_id: q098VV23Tc9b7Prm
+_key: '!items!q098VV23Tc9b7Prm'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/equipment/waist/belt-armored-buckle-steel.webp
+name: Mirroring Belt
+system:
+  actions:
+    - _id: cn07lDvBGrB5rpJX
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.4jsss37x0pplib8f]{Mirror
+        Image}</p><p>This spell creates a number of illusory doubles of you that
+        inhabit your square. These doubles make it difficult for enemies to
+        precisely locate and attack you.</p><p>When <em>mirror image</em> is
+        cast, 1d4 images plus one image per three caster levels (maximum eight
+        images total) are created.</p><p>These images remain in your space and
+        move with you, mimicking your movements, sounds, and actions exactly.
+        Whenever you are attacked or are the target of a spell that requires an
+        attack roll, there is a possibility that the attack targets one of your
+        images instead. If the attack is a hit, roll randomly to see whether the
+        selected target is real or a figment. If it is a figment, the figment is
+        destroyed. If the attack misses by 5 or less, one of your figments is
+        destroyed by the near miss. Area spells affect you normally and do not
+        destroy any of your figments. Spells and effects that do not require an
+        attack roll affect you normally and do not destroy any of your figments.
+        Spells that require a touch attack are harmlessly discharged if used to
+        destroy a figment.</p><p>An attacker must be able to see the figments to
+        be fooled. If you are invisible or the attacker is blind, the spell has
+        no effect (although the normal miss chances still apply).</p>
+      name: Mirror Image
+      notes:
+        effect:
+          - '[[1D4 +2]] Images'
+      range:
+        units: personal
+  aura:
+    school: ill
+  changes:
+    - _id: P82T2xOD
+      formula: '2'
+      target: dex
+      type: enh
+  cl: 6
+  description:
+    instructions: <p>Mythic Power uses must be tracked independently if used.</p>
+    unidentified: >-
+      <p>This broad belt is constructed of steel plates polished to a gleaming
+      finish. </p>
+    value: >-
+      <p>This broad belt is constructed of steel plates polished to a gleaming
+      finish.</p><h3>Effect</h3><p>The belt grants its wearer a +2 enhancement
+      bonus to Dexterity. Treat this as a temporary ability bonus for the first
+      24 hours the belt is worn.</p><p>Three times per day, the wearer can use
+      mirror image to bring forth illusory duplicates that persist for 6 minutes
+      or until destroyed. These function as normal images from that spell,
+      except any ranged attack (including ranged touch spells) that strikes and
+      destroys an image rebounds onto the attacker, using the attacker's
+      original result to determine whether the attack hits.</p><p>If the wearer
+      expends one use of mythic power to activate the belt, the mirror images
+      replenish when the wearer is hit. This functions as above, except each
+      time an attack hits the wearer instead of an image, the belt creates a new
+      image, up to the spell's limit of eight images. Unlike mirror image, the
+      effect doesn't end when the images are gone. If there are no more images,
+      the belt continues to create new images for the effect's full
+      duration.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      Mythic Crafter,
+      <em>@UUID[Compendium.pf1.spells.Item.ns8jbp0ilbvbvuif]{cat's grace},
+      @UUID[Compendium.pf1.spells.Item.4jsss37x0pplib8f]{mirror image}</em>
+      <strong>Cost</strong> 18,000 gp</p>
+  price: 36000
+  slot: belt
+  sources:
+    - id: PZO1126
+      pages: '154'
+  subType: wondrous
+  tags:
+    - Mythic Crafter
+    - mythic power
+  uses:
+    maxFormula: '3'
+    per: day
+    value: 3
+  weight:
+    value: 2
+type: equipment

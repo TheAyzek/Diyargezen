@@ -1,0 +1,33 @@
+_id: AjkiW6RI3joXEGla
+_key: '!items!AjkiW6RI3joXEGla'
+_stats:
+  coreVersion: '12.331'
+folder: CQNw1H2zi4NilpKP
+img: systems/pf1/icons/feats/weapon-finesse.jpg
+name: Weapon Finesse (WiS)
+system:
+  changes:
+    - _id: 5p58pans
+      formula: '@abilities.dex.mod'
+      target: mattack
+      type: untyped
+    - _id: brkq0aea
+      formula: '-(@abilities.str.mod)'
+      target: mattack
+      type: untyped
+  description:
+    value: >-
+      <p><em>You are trained in using your agility in melee combat, as opposed
+      to brute strength.</em></p><p><strong>Benefits</strong>: With a light
+      weapon made for a creature of your size category, you may use your
+      Dexterity modifier instead of your Strength modifier on attack rolls. If
+      you carry a shield, its armor check penalty applies to your attack
+      rolls.</p><p><strong>Special</strong>: Natural weapons are considered
+      light weapons.</p>
+  sources:
+    - publisher: https://meliogeny.net/square-world/
+      title: World is Square
+  tags:
+    - Combat
+    - World is Square
+type: feat

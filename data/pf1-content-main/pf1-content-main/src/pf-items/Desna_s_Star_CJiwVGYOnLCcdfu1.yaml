@@ -1,0 +1,23 @@
+_id: CJiwVGYOnLCcdfu1
+_key: '!items!CJiwVGYOnLCcdfu1'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/flowers/daisy-white.webp
+name: Desna's Star
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Herbs</p><p><strong>Gather</strong> DC 13<br
+      /><strong>Terrain</strong> forests or plains</p><p>Clerics of Desna claim
+      that the Great Dreamer planted the first seed of this flower with her own
+      hand. When the orange petals are cured and left to steep in hot water, the
+      leaves of Desna's star make a mild, aromatic tea that facilitates restful
+      sleep. When taken before sleeping, this tea grants the drinker the
+      benefits of a full 8 hours of uninterrupted sleep in only 6 hours. One
+      dose of Desna's star makes enough tea to serve six.</p>
+  price: 5
+  sources:
+    - id: PZO9456
+      pages: '10'
+  subType: herb
+type: loot

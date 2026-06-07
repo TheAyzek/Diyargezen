@@ -1,0 +1,20 @@
+_id: IZbg3QuLWKinf8ai
+_key: '!items!IZbg3QuLWKinf8ai'
+_stats:
+  coreVersion: '12.331'
+img: icons/equipment/back/cloak-collared-teal.webp
+name: Filter scarf
+system:
+  description:
+    value: >-
+      <p>Made of heavy material, this scarf filters out dust, sand, smoke, and
+      other airborne contaminants. When worn over your nose and mouth, this
+      scarf grants you a +1 resistance bonus on saving throws against inhaled
+      poisons and other airborne effects that require breathing.</p>
+  price: 5
+  slot: clothing
+  sources:
+    - id: PZO1140
+      pages: '243'
+  subType: clothing
+type: equipment

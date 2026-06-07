@@ -1,0 +1,462 @@
+_id: vV2rZh2Lhn22bK7t
+_key: '!actors!vV2rZh2Lhn22bK7t'
+_stats:
+  coreVersion: '12.343'
+flags:
+  core:
+    sheetClass: PF1.ActorSheetPFNPCLoot
+img: icons/environment/people/cleric-grey.webp
+items:
+  - _id: d72dExECaPv6ullh
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.d72dExECaPv6ullh'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/settlement/stable.webp
+    name: Hireling (trained)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 99</em>, <em>PRPG
+          Core Rulebook pg. 159</em></p><p><strong>Price</strong> caster level ×
+          spell level × 10 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong> Lodging/Services</p><h2>Bath
+          (public)</h2><strong>Source</strong> <em>Ultimate Equipment pg.
+          99</p><p><strong>Price</strong> 2 sp-1 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong> Lodging/Services<h2>Description</h2>
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      subType: tradeGoods
+    type: loot
+  - _id: j4J7Ze0vXmKRu7Oj
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.j4J7Ze0vXmKRu7Oj'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/feats/persuasive.jpg
+    name: Service, Companion
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          99</p><p><strong>Price</strong> 5 cp-10 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Lodging/Services</p><h2>Description</h2>Whether a brazen strumpet,
+          gigolo, saucy tart, escort, or expensive doxy, this person is
+          available for an adventurer who needs intimacy. An hour's diversion
+          typically costs a few silver pieces plus the price of a room.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      subType: tradeGoods
+    type: loot
+  - _id: H2L566SJHUmlNxyY
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.H2L566SJHUmlNxyY'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/blood_04.jpg
+    name: Service, Doctor
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          99</p><p><strong>Price</strong> 1 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Lodging/Services</p><h2>Description</h2>A doctor is a person skilled
+          in nonmagical healing and medicine. A typical doctor is a 3rd-level
+          expert with 3 ranks in Heal, the Skill Focus (Heal) feat, and ranks in
+          other valuable skills such as Knowledge (nature) and Knowledge
+          (religion). An experienced doctor is up to 5th level, has additional
+          ranks in appropriate skills, and is paid five to 10 times as much;
+          however, these doctors are in high demand and are usually employed
+          full-time by royalty. A doctor generally knows a little bit about what
+          local magical healing can do and where to find it. The listed price is
+          per day.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      price: 1
+      subType: tradeGoods
+    type: loot
+  - _id: bkH2XhxKFUbhvc4q
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.bkH2XhxKFUbhvc4q'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/people/commoner.webp
+    name: Service, Footman
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          99</p><p><strong>Price</strong> 5 sp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Lodging/Services</p><h2>Description</h2>A footman is a house servant
+          in good physical shape, who is dressed in his employer's livery and
+          capable of running ahead of his employer to make arrangements at a
+          destination (such as an inn or a noble's mansion). This is a position
+          of lesser rank than a valet, and is often a status symbol for the
+          employer, with taller or better-looking employees earning higher wages
+          as footmen. A skilled and personable footman can hope to eventually
+          become a valet. The listed price is per day.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      price: 0.5
+      subType: tradeGoods
+    type: loot
+  - _id: FVxGOB1ipzb8S8qb
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.FVxGOB1ipzb8S8qb'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/cloth/cloth-rolls-cmy.webp
+    name: Service, Laundry
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          99</p><p><strong>Price</strong> 1 sp, 1 gp (magic);
+          <strong>Weight</strong> -, - (magic)</p><h2>Description</h2>The listed
+          price is for up to four items (such as trousers, an undergarment,
+          shirt, and jacket or vest). Additional items may be washed for 3 cp
+          each. Laundry is finished the next day unless you bring it to the
+          washer early. Magical laundry service is a mage (typically an
+          apprentice wizard) magically and instantly cleaning your clothes with
+          <em>prestidigitation</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      price: 0.1
+      subType: tradeGoods
+    type: loot
+  - _id: ZtKL1ZekEAeclpuf
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.ZtKL1ZekEAeclpuf'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/cloth/cloth-rolls-cmy.webp
+    name: Service, Laundry (magic)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          99</p><p><strong>Price</strong> 1 sp, 1 gp (magic);
+          <strong>Weight</strong> -, - (magic)</p><h2>Description</h2>The listed
+          price is for up to four items (such as trousers, an undergarment,
+          shirt, and jacket or vest). Additional items may be washed for 3 cp
+          each. Laundry is finished the next day unless you bring it to the
+          washer early. Magical laundry service is a mage (typically an
+          apprentice wizard) magically and instantly cleaning your clothes with
+          <em>prestidigitation</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      price: 1
+      subType: tradeGoods
+    type: loot
+  - _id: OPhvETYwe6W0C2qb
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.OPhvETYwe6W0C2qb'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/sundries/documents/document-sealed-red-white.webp
+    name: Service, Lawyer (competent)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          99</p><p><strong>Price</strong> 3 gp (competent),
+           10 gp
+          (experienced), 5 sp (novice); <strong>Weight</strong> - (competent), -
+          (experienced), - (novice)</p><h2>Description</h2>A lawyer is a person
+          who knows and practices law. A lawyer writes and interprets contracts,
+          represents clients or the government in civil and criminal trials,
+          gives legal advice, or presides over cases as a judge. An experienced
+          lawyer with a successful history can charge higher fees than a novice
+          or competent but unremarkable one. The listed price is per day.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      price: 3
+      subType: tradeGoods
+    type: loot
+  - _id: s09RzSkLq7LcrFuo
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.s09RzSkLq7LcrFuo'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/sundries/documents/document-sealed-red-white.webp
+    name: Service, Lawyer (experienced)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          99</p><p><strong>Price</strong> 3 gp (competent),
+           10 gp
+          (experienced), 5 sp (novice); <strong>Weight</strong> - (competent), -
+          (experienced), - (novice)</p><h2>Description</h2>A lawyer is a person
+          who knows and practices law. A lawyer writes and interprets contracts,
+          represents clients or the government in civil and criminal trials,
+          gives legal advice, or presides over cases as a judge. An experienced
+          lawyer with a successful history can charge higher fees than a novice
+          or competent but unremarkable one. The listed price is per day.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      price: 10
+      subType: tradeGoods
+    type: loot
+  - _id: ipE17Dx0FAmwqQtO
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.ipE17Dx0FAmwqQtO'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/sundries/documents/document-sealed-red-white.webp
+    name: Service, Lawyer (novice)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          99</p><p><strong>Price</strong> 3 gp (competent),
+           10 gp
+          (experienced), 5 sp (novice); <strong>Weight</strong> - (competent), -
+          (experienced), - (novice)</p><h2>Description</h2>A lawyer is a person
+          who knows and practices law. A lawyer writes and interprets contracts,
+          represents clients or the government in civil and criminal trials,
+          gives legal advice, or presides over cases as a judge. An experienced
+          lawyer with a successful history can charge higher fees than a novice
+          or competent but unremarkable one. The listed price is per day.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      price: 0.5
+      subType: tradeGoods
+    type: loot
+  - _id: EmK9262Mstmf6ycz
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.EmK9262Mstmf6ycz'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/sundries/documents/document-bound-white.webp
+    name: Service, Messenger
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 99</em>, <em>PRPG
+          Core Rulebook pg. 159</p><p><strong>Price</strong> 2 cp per mile;
+          <strong>Weight</strong> -</p><p><strong>Category</strong>
+          Lodging/Services</p><h2>Description</h2>A messenger carries a written
+          or verbal message to its intended target. Verbal messages must be
+          short enough for the messenger to memorize (typically about 25 words).
+          A few messengers have exceptional memories and charge 5 sp to relay a
+          verbal message of up to 300 words. Most messengers are only willing to
+          travel to locations within the current city or outlying areas. You can
+          pay a messenger the return fee if you want her to wait for the message
+          recipient to reply, just in case the recipient is too miserly or poor
+          to pay for a return message. Depending on the location and the overall
+          wealth in a settlement, a messenger may be a runner or ride a horse.
+          If you can find someone already traveling to a place, she may only
+          charge you half as much to carry your message.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      price: 0.02
+      subType: tradeGoods
+    type: loot
+  - _id: s1enG7MiKT1I0Inq
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.s1enG7MiKT1I0Inq'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/cloth/cloth-roll-gold-green.webp
+    name: Service, Nurse
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          99</p><p><strong>Price</strong> 7 sp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Lodging/Services</p><h2>Description</h2>A nurse is a person familiar
+          with healing and medicine. A typical nurse is a 1st-level expert with
+          1 rank in Heal and the Skill Focus (Heal) feat. An experienced nurse
+          is 3rd or 4th level, has additional ranks in Heal, and is paid two to
+          three times as much; however, these nurses are in high demand and are
+          normally employed full-time by wealthy merchants or nobles to look
+          after children and elderly family members. A nurse generally knows a
+          little bit about what local magical healing can do and where to find
+          it. The listed price is per day.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      price: 0.7
+      subType: tradeGoods
+    type: loot
+  - _id: DE60Zt5YMvaI9gba
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.DE60Zt5YMvaI9gba'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/tools/navigation/map-chart-tan.webp
+    name: Service, Scribe (map)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          99</p><p><strong>Price</strong> 10 gp (map), 1 gp (text);
+          <strong>Weight</strong> - (map), - (text)</p><h2>Description</h2>A
+          scribe is a literate person with clear handwriting who can take
+          dictation or transcribe text documents. You must provide ink and
+          writing materials, though the scribe can acquire these for you at half
+          price. Scribes cannot copy magical writing. A scribe who can
+          accurately copy a map is rare and demands a higher wage. The listed
+          price is per day.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      price: 10
+      subType: tradeGoods
+    type: loot
+  - _id: 5fi6q4VPUFWXyBHx
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.5fi6q4VPUFWXyBHx'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/sundries/documents/document-official-brownl.webp
+    name: Service, Scribe (text)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          99</p><p><strong>Price</strong> 10 gp (map), 1 gp (text);
+          <strong>Weight</strong> - (map), - (text)</p><h2>Description</h2>A
+          scribe is a literate person with clear handwriting who can take
+          dictation or transcribe text documents. You must provide ink and
+          writing materials, though the scribe can acquire these for you at half
+          price. Scribes cannot copy magical writing. A scribe who can
+          accurately copy a map is rare and demands a higher wage. The listed
+          price is per day.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      price: 1
+      subType: tradeGoods
+    type: loot
+  - _id: 3bxfNQcqIHHeBwQ6
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.3bxfNQcqIHHeBwQ6'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/settlement/city-gate.webp
+    name: Service, Road or gate toll
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 99</em>, <em>PRPG
+          Core Rulebook pg. 159</p><p><strong>Price</strong> 1 cp;
+          <strong>Weight</strong> -</p><p><strong>Category</strong>
+          Lodging/Services</p><h2>Description</h2>Cities and towns often use
+          gate tolls to generate additional income, to favor local sellers over
+          visiting merchants, to discourage heavy traffic in congested areas, or
+          to recoup the cost of constructing and maintaining the road or gate.
+          Bridge tolls are also popular, as most travelers have no easy way to
+          circumvent them.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      price: 0.01
+      subType: tradeGoods
+    type: loot
+  - _id: V8hyN4tsHnNsuSxI
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.V8hyN4tsHnNsuSxI'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/people/cleric-orange.webp
+    name: Service, Spellcasting
+    system:
+      description:
+        value: >-
+          <h1>Description</h2>The indicated amount is how much it costs to get a
+          spellcaster to cast a spell for you. This price assumes that you can
+          go to the spellcaster and have the spell cast at her convenience
+          (generally at least 24 hours later, so that the spellcaster has time
+          to prepare the spell in question, though you may be lucky enough to
+          find someone who has it prepared that day or a spontaneous caster who
+          knows it). If you want to bring the spellcaster somewhere to cast a
+          spell (for example, to cast <em>dispel magic </em>on a magical seal in
+          a dungeon) you need to negotiate with her; the default answer to such
+          requests is typically no, since most people don't actually like to go
+          on unexpected life-threatening adventures.</p><p>The price given is
+          for any spell that does not require a costly material component. If
+          the spell includes a material component, add the cost of that
+          component to the cost of the spell. If the spell has a focus component
+          (other than a divine focus), add 1/10 the cost of that focus to the
+          cost of the spell.</p><p>If a spell has dangerous consequences (such
+          as <em>contact other plane</em>, which has a risk of decreasing the
+          caster's Intelligence and Charisma), the spellcaster will certainly
+          require proof that you can and will pay for dealing with any such
+          consequences (that is, assuming that the spellcaster even agrees to
+          cast such a spell, which isn't certain). If these additional costs put
+          the total spellcasting price above 3,000 gp, the spell is not
+          generally available.</p><p>In the case of spells that transport the
+          caster and characters over a distance, you will likely have to pay for
+          two castings of the spell (one for the caster to take you there and
+          one for the caster to return), even if you aren't returning with the
+          caster.</p><p>Not every town or village has a spellcaster of
+          sufficient level to cast any spell. In general, you must travel to a
+          small town (or larger settlement) to be reasonably assured of finding
+          a spellcaster capable of casting 1st-level spells, a large town for
+          2nd-level spells, a small city for 3rd- or 4thlevel spells, a large
+          city for 5th- or 6th-level spells, and a metropolis for 7th- or
+          8th-level spells. Even a metropolis isn't guaranteed to have a local
+          spellcaster able to cast 9th-level spells.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      subType: tradeGoods
+    type: loot
+  - _id: dmvRvlO4CbqsxgbR
+    _key: '!actors.items!vV2rZh2Lhn22bK7t.dmvRvlO4CbqsxgbR'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/equipment/chest/shirt-collared-grey.webp
+    name: Service, Valet
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          99</p><p><strong>Price</strong> 1 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Lodging/Services</p><h2>Description</h2>This title includes valets,
+          butlers, lady's maids, ladies-inwaiting, secretaries, stewards,
+          concierges, majordomos, manservants, bodyservants, and other skilled,
+          trusted servants and employees who work closely with an employer or
+          run a household or business, sometimes without direct supervision. The
+          listed price is per day.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Lodging/Services
+      price: 1
+      subType: tradeGoods
+    type: loot
+name: Services
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    spells:
+      spellbooks:
+        primary:
+          name: Primary
+        secondary:
+          name: Secondary
+        spelllike:
+          name: Spell-likes
+        tertiary:
+          name: Tertiary
+type: npc

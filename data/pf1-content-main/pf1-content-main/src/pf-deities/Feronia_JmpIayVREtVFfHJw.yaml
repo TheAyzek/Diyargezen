@@ -1,0 +1,33 @@
+_id: JmpIayVREtVFfHJw
+_key: '!journal!JmpIayVREtVFfHJw'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Feronia
+pages:
+  - _id: yxJTGO6uWSTx1ZH1
+    _key: '!journal.pages!JmpIayVREtVFfHJw.yxJTGO6uWSTx1ZH1'
+    _stats:
+      coreVersion: '12.331'
+    name: Feronia
+    sort: 0
+    text:
+      content: >-
+        <h1>Feronia</h1><h2>The Fertile Flame</h2>@Source[PZO9267;pages=316] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Feronia">Feronia</a><h3>Details</h3><p><strong>Alignment</strong>
+        N<br /><strong>Pantheon</strong> Other Deities<br /><strong>Areas of
+        Concern</strong> Fertility, sacred fires, wildlife<br
+        /><strong>Domains</strong> Destruction, Fire, Liberation, Protection<br
+        /><strong>Subdomains</strong> Ash, Catastrophe, Freedom, Smoke<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Bastard sword<br
+        /><strong>Symbol</strong> Bonfire under stars<br /><strong>Sacred
+        Animal(s)</strong> Rabbit<br /><strong>Sacred Color(s)</strong> Blue,
+        yellow</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

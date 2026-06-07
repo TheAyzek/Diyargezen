@@ -1,0 +1,114 @@
+_id: EJm2yrd5A7qI7AI0
+_key: '!actors!EJm2yrd5A7qI7AI0'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: icons/commodities/stone/boulder-black.webp
+items:
+  - _id: 4j0VqopyOPmUoTHh
+    _key: '!actors.items!EJm2yrd5A7qI7AI0.4j0VqopyOPmUoTHh'
+    _stats:
+      compendiumSource: Actor.EK76R7pMG4LTdTuj.Item.MrkrWy4U7k98BuOG
+      coreVersion: '12.331'
+    img: icons/commodities/stone/boulder-black.webp
+    name: Crushing Stone
+    system:
+      actions:
+        - _id: fd217yexvgjrn6qg
+          actionType: mwak
+          activation:
+            type: special
+            unchained:
+              type: special
+          attackBonus: '15'
+          damage:
+            parts:
+              - formula: 16d6
+                types:
+                  - bludgeoning
+          img: icons/commodities/stone/boulder-black.webp
+          measureTemplate:
+            size: '10'
+            type: rect
+          name: Attack
+          range:
+            units: melee
+          target:
+            value: multiple targets (all targets in a 10-ft. square)
+      proficient: true
+      subType: misc
+    type: attack
+name: Crushing Stone Trap
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 15
+    disarm: 20
+    duration: Instantaneous
+    effect: ''
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 30
+    reset: Manual
+    trigger: Location
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

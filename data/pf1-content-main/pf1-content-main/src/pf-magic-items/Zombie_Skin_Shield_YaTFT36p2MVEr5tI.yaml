@@ -1,0 +1,42 @@
+_id: YaTFT36p2MVEr5tI
+_key: '!items!YaTFT36p2MVEr5tI'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-light-metal.png
+name: Zombie Skin Shield
+system:
+  armor:
+    acp: 1
+    material:
+      base:
+        value: steel
+    value: 1
+  aura:
+    school: abj
+  baseTypes:
+    - Light Steel Shield
+  cl: 5
+  description:
+    value: >-
+      <p>This +1 light steel shield is wrapped in a layer of gray skin. Once per
+      day, the wearer can animate the skin as a human zombie under her control,
+      as if she had created it with animate dead, for a period of 5 minutes.
+      When the time expires, the zombie returns to the shield. If the zombie is
+      destroyed or cannot reach the shield by the time it expires, placing the
+      shield on a Medium humanoid corpse for 1 hour recreates the shield's
+      skin.</p><p><strong>Base Item</strong>: light steel
+      shield</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, animate dead</p>
+  enh: 1
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 2159
+  slot: shield
+  sources:
+    - id: PZO1123
+  spellFailure: 5
+  subType: shield
+  weight:
+    value: 15
+type: equipment

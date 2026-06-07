@@ -1,0 +1,30 @@
+_id: ksSV89CMKzQW8uCm
+_key: '!items!ksSV89CMKzQW8uCm'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Altar of Sarenrae
+system:
+  aura:
+    custom: true
+    school: abjuration and conjuration [good healing]
+  cl: 10
+  description:
+    value: >-
+      <p>This altar consists of a large, 6-foot-tall golden statue of Sarenrae
+      as she is represented in her holy symbol. The altar is typically
+      illuminated by a sacred brazier lit beneath the towering statue, causing
+      it to cast a looming, solemn shadow on the ceiling overhead. Praying at
+      the altar grants a +1 bonus on Fortitude saves and increases the benefits
+      of any healing effects that target the worshiper by +1 caster
+      level.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, cure light wounds, magic circle against evil, resistance,
+      creator must worship Sarenrae</p>
+  price: 8000
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 750
+type: equipment

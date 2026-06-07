@@ -1,0 +1,20 @@
+_id: RFMgWM8nVkixcxH2
+_key: '!items!RFMgWM8nVkixcxH2'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/misc/pet-collar-blue.webp
+name: Badger
+system:
+  description:
+    value: >-
+      <p>These fierce, burrowing creatures are only rarely kept as pets. More
+      information on badgers can be found in <em>Bestiary 2</em>.</p>
+  equipped: false
+  price: 15
+  sources:
+    - id: PZO1123
+      pages: '80'
+  subType: animal
+  weight:
+    value: 20
+type: loot

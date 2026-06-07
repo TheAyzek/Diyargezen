@@ -1,0 +1,33 @@
+_id: rzumL2NJzf6jZuzT
+_key: '!items!rzumL2NJzf6jZuzT'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Boots of the Mire
+system:
+  aura:
+    custom: true
+    school: abjuration and transmutation
+  cl: 5
+  description:
+    value: >-
+      <p>These soft leather boots confer several powers upon the wearer. First,
+      he is granted the power to walk on water in swampy environments, provided
+      the water is no deeper than 5 feet-this effectively lets him move through
+      swampy terrain and mud at no cost to his speed. He leaves no tracks or
+      other signs of his passage as long as he's in swampy terrain, and never
+      becomes uncomfortable or wet from rain, fog, or other forms of
+      non-freezing precipitation. Finally, the boots grant him a +2 resistance
+      bonus on all Fortitude saves made against poison and
+      disease.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, endure elements, pass without trace, resistance, water
+      walk</p>
+  price: 3500
+  slot: feet
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

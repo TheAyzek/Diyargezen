@@ -1,0 +1,62 @@
+_id: ghg8xIVxdwAbKaMV
+_key: '!items!ghg8xIVxdwAbKaMV'
+_stats:
+  coreVersion: '13.347'
+folder: ai3usaEWB5q4rR7H
+img: icons/commodities/gems/gem-rough-round-orange.webp
+name: Ocher Rhomboid Ioun Stone
+system:
+  aura:
+    custom: true
+    school: universal [evil]
+  changes:
+    - _id: ZJ1eI5bp
+      formula: '1'
+      target: bonusFeats
+      type: untyped
+  cl: 12
+  cursed: true
+  description:
+    instructions: >-
+      <p>Only 75% of normal ioun stones grant resonant powers when placed in a
+      wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>This orange-colored, translucent, faceted stone has unequal sides and a
+      flattened cross section.</p>
+    value: >-
+      <h3>Effect</h3><p>This orange-colored, translucent, faceted item is an
+      ioun stone and has the same properties. While it orbits its owner's head,
+      that owner gains a bonus feat. This can be any feat she meets the
+      prerequisites for. The ocher rhomboid ioun stone radiates an evil aura at
+      all times, and anyone who wears it (that is, causes it to orbit her head)
+      is considered to have committed an evil act. The alignment of the one
+      wearing the stone shifts one step toward evil. Players who wear the stone
+      should be given the opportunity to atone for this action before the
+      scenario's conclusion if such an alignment shift would result in their
+      removal from the Pathfinder Society Organized Play campaign. This ioun
+      stone is cursed, and can't be removed by its owner or anyone else except
+      by the methods outlined on page 536 of the Core Rulebook. As with other
+      ioun stones, the ocher rhomboid has a resonant power when placed inside a
+      wayfinder. First, it turns the wayfinder into a cursed item that can only
+      be removed in the way the stone itself can. Second, the wearer gains
+      Knowledge (arcana) as a class skill for as long as she wears the
+      wayfinder.</p><h3>Resonance</h3><p><strong>Method 1, Fixed: </strong>Gain
+      Knowledge (arcana) as a class skill (also curses wayfinder, see
+      above)</p><p><strong>Method 2, Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, creator must be 12th level <strong>Cost</strong>
+      15,000 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  masterwork: true
+  price: 30000
+  sources:
+    - id: PZOPSS0412
+      pages: '14'
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

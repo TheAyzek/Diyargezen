@@ -1,0 +1,56 @@
+_id: 7tteNStE4vrkMdMz
+_key: '!items!7tteNStE4vrkMdMz'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Deceptive Reprieve
+system:
+  abilityType: sp
+  actions:
+    - _id: 9XjgNbkajfBr9y9i
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      duration:
+        units: round
+        value: floor(@class.level / 2)
+      img: systems/pf1/icons/items/inventory/badge-cross.jpg
+      name: Use
+      range:
+        units: touch
+      touch: true
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p><strong>Associated Faith</strong>:
+      @UUID[Compendium.pf-content.pf-class-abilities.Item.4UoUCAr1AlRZ8jxJ]{Haunted
+      Faith: Asmodeus}</p><p>When you touch a creature under direct mental
+      control (such as that granted via dominate person, but not via charm
+      person) or the victim of possession, that creature can attempt a new Will
+      save against the control or possession effect with a +2 bonus. If the
+      creature succeeds, the effect or possession is temporarily halted, as per
+      protection from evil, for a number of rounds equal to 1/2 your character
+      level. While this ability is active, the target takes a -2 penalty on
+      saves against new mind-affecting effects and new attempts at possession.
+      You can use this ability a number of times per day equal to 3 + your
+      Wisdom modifier.</p><p>This replaces the
+      @UUID[Compendium.pf1.class-abilities.Item.hVrmBvlqeeLbwVxn]{copycat}
+      domain power of the
+      @UUID[Compendium.pf1.class-abilities.Item.T1zx6IZMFgUOTKuC]{Trickery}
+      domain.</p>
+  links:
+    supplements: []
+  sources:
+    - id: PZO9471
+      pages: '8'
+  subType: classFeat
+  tags:
+    - Variant Domain Power
+    - Asmodeus
+  uses:
+    maxFormula: 3 + @abilities.wis.mod
+    per: day
+type: feat

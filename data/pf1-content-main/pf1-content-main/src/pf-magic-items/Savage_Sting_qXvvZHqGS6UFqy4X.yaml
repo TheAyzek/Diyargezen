@@ -1,0 +1,57 @@
+_id: qXvvZHqGS6UFqy4X
+_key: '!items!qXvvZHqGS6UFqy4X'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/blowgun.PNG
+name: Savage Sting
+system:
+  actions:
+    - _id: gudw3zmakqgdlgt5
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: savageSting
+  aura:
+    school: div
+  baseTypes:
+    - Blowgun
+  cl: 12
+  description:
+    value: >-
+      <p>This +1 seeking blowgun is made of a hollowed piece of reed lacquered
+      in vibrant orange hues and decorated with a fetish of brilliantly colored
+      feathers. Up to three times per day, the wielder may envenom a dart fired
+      from the blowgun with a virulent toxin, which functions as the poison
+      spell.<p><strong>Base Item</strong>: seeking
+      blowgun</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, poison, true seeing</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 38302
+  showInQuickbar: false
+  sources:
+    - id: PZO9039
+  weaponGroups:
+    - thrown
+  weight:
+    value: 1
+type: weapon

@@ -1,0 +1,26 @@
+_id: 2Q8vwXA7Ku6Za5sl
+_key: '!items!2Q8vwXA7Ku6Za5sl'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/treasure/statuette-gargoyle-green-gold.webp
+name: Monkey Statue
+system:
+  description:
+    value: >-
+      <p>For some unknown reason, this finely crafted but mundane monkey statue
+      repulses oni. Any creature with the oni subtype (<em>Pathfinder RPG
+      Bestiary 3</em> 307) that is within 30 feet of a monkey statue takes a -1
+      penalty on all d20 rolls. The monkey statue can be unattended or presented
+      by its wielder as a swift action to cause this effect; the statue has no
+      effect on oni if it is simply stored on a wielder's person. A wielder must
+      have a free hand available to present the statue and gain its effect. This
+      penalty does not stack with that from other monkey statues.</p>
+  equipped: false
+  price: 150
+  sources:
+    - id: PZO9489
+      pages: '23'
+  subType: adventuring
+  weight:
+    value: 0.5
+type: loot

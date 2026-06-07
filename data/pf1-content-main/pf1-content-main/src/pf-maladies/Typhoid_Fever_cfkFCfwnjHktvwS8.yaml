@@ -1,0 +1,19 @@
+_id: cfkFCfwnjHktvwS8
+_key: '!items!cfkFCfwnjHktvwS8'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_24.jpg
+name: Typhoid Fever
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> disease (injury); <strong>Save</strong> Fortitude
+      DC 15;</p><p><strong>Onset</strong> 1d4
+      days;&nbsp;<strong>Frequency</strong> 1/day</p><p><strong>Effect</strong>
+      1d6 Str damage</p><p><strong>Cure</strong>&nbsp;&ndash;</p><hr /><p>A
+      carrion golem transmits typhoid fever on a successful slam attack.</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

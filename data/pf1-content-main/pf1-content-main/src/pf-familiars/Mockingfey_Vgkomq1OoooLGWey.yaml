@@ -1,0 +1,337 @@
+_id: Vgkomq1OoooLGWey
+_key: '!actors!Vgkomq1OoooLGWey'
+_stats:
+  coreVersion: '12.343'
+img: icons/svg/mystery-man.svg
+items:
+  - _id: 0jjH2XJVd6dzlaSm
+    _key: '!actors.items!Vgkomq1OoooLGWey.0jjH2XJVd6dzlaSm'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/green_10.jpg
+    name: Fey
+    system:
+      classSkills:
+        acr: true
+        blf: true
+        clm: true
+        crf: true
+        dip: true
+        dis: true
+        esc: true
+        fly: true
+        kge: true
+        klo: true
+        kna: true
+        per: true
+        prf: true
+        sen: true
+        slt: true
+        ste: true
+        swm: true
+        umd: true
+      description:
+        value: >-
+          <p>A fey is a creature with supernatural abilities and connections to
+          nature or to some other force or place. Fey are usually
+          human-shaped.</p><h2>Features</h2><p>A fey has the following
+          features.</p><ul><li>d6 Hit Die.</li><li>Base attack bonus equal to
+          1/2 total Hit Dice (slow progression).</li><li>Good&nbsp;<a
+          href="https://www.d20pfsrd.com/gamemastering/combat#TOC-Reflex">Reflex</a>&nbsp;and&nbsp;<a
+          href="https://www.d20pfsrd.com/gamemastering/combat#TOC-Will">Will</a>&nbsp;Saves.</li><li>Skill
+          points equal to 6 + Int modifier (minimum 1) per Hit Die. The
+          following are class skills for fey: <a
+          href="https://www.d20pfsrd.com/skills/acrobatics">Acrobatics</a>, <a
+          href="https://www.d20pfsrd.com/skills/bluff">Bluff</a>, <a
+          href="https://www.d20pfsrd.com/skills/climb">Climb</a>, <a
+          href="https://www.d20pfsrd.com/skills/craft">Craft</a>, <a
+          href="https://www.d20pfsrd.com/skills/diplomacy">Diplomacy</a>, <a
+          href="https://www.d20pfsrd.com/skills/disguise">Disguise</a>, <a
+          href="https://www.d20pfsrd.com/skills/escape-artist">Escape
+          Artist</a>, <a href="https://www.d20pfsrd.com/skills/fly">Fly</a>, <a
+          href="https://www.d20pfsrd.com/skills/knowledge">Knowledge</a>&nbsp;(geography),
+          <a
+          href="https://www.d20pfsrd.com/skills/knowledge">Knowledge</a>&nbsp;(local),
+          <a
+          href="https://www.d20pfsrd.com/skills/knowledge">Knowledge</a>&nbsp;(nature),
+          <a href="https://www.d20pfsrd.com/skills/perception">Perception</a>,
+          <a href="https://www.d20pfsrd.com/skills/perform">Perform</a>, <a
+          href="https://www.d20pfsrd.com/skills/sense-motive">Sense Motive</a>,
+          <a href="https://www.d20pfsrd.com/skills/sleight-of-hand">Sleight of
+          Hand</a>, <a
+          href="https://www.d20pfsrd.com/skills/stealth">Stealth</a>, <a
+          href="https://www.d20pfsrd.com/skills/swim">Swim</a>, <a
+          href="https://www.d20pfsrd.com/skills/use-magic-device">Use Magic
+          Device</a>.</li></ul><h2>Traits</h2><p>A fey possesses the following
+          traits (unless otherwise noted in a creature’s entry).</p><ul><li><a
+          href="https://www.d20pfsrd.com/gamemastering/special-abilities#TOC-Low-Light-Vision">Low-light
+          vision</a>.</li><li>Proficient with all simple weapons and any weapons
+          mentioned in its entry.</li><li>Proficient with whatever type of armor
+          (light, medium, or heavy) it is described as wearing, as well as all
+          lighter types. Fey not indicated as wearing armor are not proficient
+          with armor. Fey are proficient with shields if they are proficient
+          with any form of armor.</li><li>Fey breathe, eat, and sleep.</li></ul>
+      hd: 6
+      hp: 16
+      level: 3
+      savingThrows:
+        ref:
+          value: high
+        will:
+          value: high
+      skillsPerLevel: 6
+      tag: fey
+    type: class
+  - _id: u0CSctGWeUPLKP8N
+    _key: '!actors.items!Vgkomq1OoooLGWey.u0CSctGWeUPLKP8N'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/green_10.jpg
+    name: 'Race: Fey'
+    system:
+      creatureSubtypes:
+        - ''
+      creatureTypes:
+        - fey
+      description:
+        value: >-
+          sbc | As the statblock did not include a race, a custom one was
+          generated.
+    type: race
+  - _id: DsWE7GjIE9afOObB
+    _key: '!actors.items!Vgkomq1OoooLGWey.DsWE7GjIE9afOObB'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/shadow_11.jpg
+    name: 'Sense: Low-light Vision'
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          A creature with low-light vision can see twice as far as a human in
+          starlight, moonlight, torchlight, and similar conditions of dim light.
+          It retains the ability to distinguish color and detail under these
+          conditions.
+      subType: racial
+    type: feat
+  - _id: BRXGaVhrQToLLyml
+    _key: '!actors.items!Vgkomq1OoooLGWey.BRXGaVhrQToLLyml'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: Flyby Attack
+    system:
+      description:
+        value: >-
+          sbc | As Flyby Attack could not be found in any compendium, a
+          placeholder was generated.
+    type: feat
+  - _id: SgzSoTVciperg7et
+    _key: '!actors.items!Vgkomq1OoooLGWey.SgzSoTVciperg7et'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Special Quality: Mock'
+    system:
+      description:
+        value: >-
+          sbc | Placeholder for Special Qualities, which in most statblocks are
+          listed under SQ in the statistics block, but described in the Special
+          Abilities. Remove duplicates as needed!
+      subType: misc
+    type: feat
+  - _id: buiZcOXJJvLDNftc
+    _key: '!actors.items!Vgkomq1OoooLGWey.buiZcOXJJvLDNftc'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/monster-talon-green.jpg
+    name: Talons
+    system:
+      actions:
+        - _id: ddl54vza90jb7yio
+          ability:
+            attack: _default
+            damage: str
+          actionType: mwak
+          activation:
+            type: attack
+            unchained:
+              type: attack
+          attackBonus: '4'
+          attackName: Talons
+          damage:
+            parts:
+              - formula: 1d4+0
+                types:
+                  - slashing
+          duration:
+            units: inst
+          img: systems/pf1/icons/items/inventory/monster-talon-green.jpg
+          name: Attack
+          notes:
+            footer:
+              - 2 talons +6 (1d4-1)
+          range:
+            units: melee
+          tag: talons
+      subType: natural
+    type: attack
+  - _id: gkB6wR8gIhrDxQja
+    _key: '!actors.items!Vgkomq1OoooLGWey.gkB6wR8gIhrDxQja'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Environment: Any Forests'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: u2xfkwxNY5IyusDe
+    _key: '!actors.items!Vgkomq1OoooLGWey.u2xfkwxNY5IyusDe'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Organization: Solitary, Pair, Or Jape (3-20)'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: kybLdSsyiMABeb8a
+    _key: '!actors.items!Vgkomq1OoooLGWey.kybLdSsyiMABeb8a'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Treasure: Standard'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: pttjPv3zrlzvmaTG
+    _key: '!actors.items!Vgkomq1OoooLGWey.pttjPv3zrlzvmaTG'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: Mock
+    system:
+      abilityType: su
+      description:
+        value: >-
+          As a standard action, a mockingfey can take on the appearance of any
+          creature it can see. This functions like veil, but affects only the
+          mockingfey. The mockingfey does not change size, and if the creature
+          it's mimicking is larger than itself, the mockingfey simply appears to
+          be a miniature version of it. Anyone interacting with this effect can
+          attempt a DC 12 Will save to see through the ruse. A mockingfey can
+          maintain a guise indefinitely, but can't change to a form other than
+          its own without a visual reference-once a given disguise has ended,
+          the fey must see the subject again to resume that form. The save DC is
+          Charisma-based.
+      subType: classFeat
+    type: feat
+  - _id: 0YejErr1nJayhv9q
+    _key: '!actors.items!Vgkomq1OoooLGWey.0YejErr1nJayhv9q'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: sbc | Conversion Buff
+    system:
+      active: true
+      changes:
+        - _id: ruy0y41r
+          formula: '4'
+          target: cmb
+          type: untypedPerm
+        - _id: ethz13ax
+          formula: '-6'
+          target: mhp
+          type: untypedPerm
+        - _id: o41yx9my
+          formula: '-4'
+          target: skill.fly
+          type: untypedPerm
+      description:
+        value: >-
+          <h2>sbc | Conversion Buff</h2><p>This Buff was created by
+          <strong>sbc</strong> to compensate for differences between the input
+          and the values FoundryVTT calculates automatically.</p><p>Especially
+          when the pathfinder system gets upgraded, entries in compendiums get
+          updated or foundry changes in some way, this buff may become
+          outdated.</p><p>For most mooks the conversion should more or less
+          work, but for important NPCs or creatures it is adviced to double
+          check the conversion manually.</p>
+      hideFromToken: true
+      subType: perm
+      tag: sbcConversionBuff
+    type: buff
+name: Mockingfey
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    cha:
+      value: 13
+    con:
+      value: 13
+    dex:
+      value: 16
+    int:
+      value: 7
+    str:
+      value: 8
+    wis:
+      value: 12
+  attributes:
+    speed:
+      fly:
+        base: 60
+        maneuverability: good
+      land:
+        base: 20
+    spells:
+      spellbooks:
+        primary:
+          name: Primary
+        secondary:
+          name: Secondary
+        spelllike:
+          name: Spell-likes
+        tertiary:
+          name: Tertiary
+  details:
+    alignment: cn
+    notes:
+      value: "\n        <div class=\"statblockContainer\" style=\"margin-top: 15px\"><div style=\"width: 100%; background-color: #ffe9c7; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); columns: 2 150px\">\r\n    <hr style=\"margin-left: 0; margin-top:-2px; width: 100%; height: 4px; background-color: #e0a100; border: 1px solid #000; column-span: all;\" />\r\n    <div style=\"padding: 5px;\">\r\n        <h1>Mockingfey CR 1 </h1>\r\n        \r\n        <!-- BASE -->\r\n        <div style=\"break-inside: avoid;\">\r\n            <strong>Source</strong>: Bestiary 6 pg. 189, Inner Sea Bestiary pg. 31<br/>\r\n            <strong>XP 400</strong><br/>\r\n            \r\n            \r\n            \r\n            \r\n            \r\n            CN \r\n            Tiny \r\n            Fey <br/>\r\n            <strong>Init</strong> 3;\r\n            <strong>Senses</strong> low-light vision; Perception +7; \r\n            \r\n        </div>\r\n        <div style=\"break-inside: avoid;\">\r\n            <h3>Defense</h3>\r\n                <strong>AC</strong> 15, <strong>Touch</strong> 15, <strong>Flat-Footed</strong> 12 (+3 Dex, +2 size)<br/>\r\n            <strong>Hit Points</strong> 13 (3 HD; 3d6+3)<br/>\r\n            <strong>Fort</strong> 2, <strong>Ref</strong> 6, <strong>Will</strong> 4\r\n            \r\n            \r\n            \r\n            \r\n            \r\n            \r\n            \r\n        </div>\r\n        <div>\r\n            <div style=\"break-inside: avoid;\">\r\n                <h3>Offense</h3>\r\n                        <strong>Speed</strong> 60 ft. (good)<br/>\r\n                <strong>Melee</strong> 2 talons +6 (1d4-1)<br/>\r\n                \r\n                \r\n                \r\n                \r\n            </div>\r\n        </div>\r\n        <!-- SPELLCASTING -->\r\n                \r\n        <!-- TACTICS -->\r\n                \r\n                \r\n                \r\n                \r\n        <!-- STATISTICS -->\r\n        <div style=\"break-inside: avoid;\">\r\n            <h3>Statistics</h3>\r\n                <strong>Str</strong> 8, <strong>Dex</strong> 16, <strong>Con</strong> 13, <strong>Int</strong> 7, <strong>Wis</strong> 12, <strong>Cha</strong> 13<br/>\r\n            <strong>Base Atk</strong> +1; <strong>CMB</strong> +2; <strong>CMD</strong> 11<br/>\r\n            <strong>Feats</strong> Flyby Attack, Weapon Finesse<br/>\r\n            <strong>Skills</strong> Acrobatics +9, Disguise +7, Fly +15, Perception +7, Stealth +16<br/>\r\n            <strong>Languages</strong> Sylvan (prefers to speak gibberish)<br/>\r\n            \r\n            \r\n            \r\n            \r\n        </div>\r\n        <!-- ECOLOGY -->\r\n            <div style='break-inside: avoid;'>\r\n                <h3>Ecology</h3>                <strong>Environment</strong>: any forests<br/>\r\n                <strong>Organization</strong>: solitary, pair, or jape (3-20)<br/>\r\n                <strong>Treasure</strong>: standard<br/>\r\n            </div>\r\n        <!-- SPECIAL ABILITIES -->\r\n            <div style='break-inside: avoid;'>\r\n                <h3>Special Abilities</h3>                <div style='white-space: pre-wrap;'>Mock (su): As a standard action, a mockingfey can take on the appearance of any creature it can see. This functions like veil, but affects only the mockingfey. The mockingfey does not change size, and if the creature it&#x27;s mimicking is larger than itself, the mockingfey simply appears to be a miniature version of it. Anyone interacting with this effect can attempt a DC 12 Will save to see through the ruse. A mockingfey can maintain a guise indefinitely, but can&#x27;t change to a form other than its own without a visual reference-once a given disguise has ended, the fey must see the subject again to resume that form. The save DC is Charisma-based.</div>\r\n            </div>\r\n        \r\n        <!-- DESCRIPTION -->\r\n            <div style='break-inside: avoid;'>\r\n                <h3>Description</h3>        <div style=\"white-space: pre-wrap\">Mockingfey originally stem from the otherworldly realm of the fey, where they&#x27;re regarded as entertainment by locals and nuisances by visitors, who are the usual butt of the creatures&#x27; pranks. The pint-sized fey often congregate in large colonies called japes or &#x27;mockingdells,&#x27; inhabiting the trees near a commonly traversed path or meadow. When an intelligent creature enters the grove, one of the bird-sprites flies down to perch on the traveler&#x27;s shoulder or some nearby vantage. It then promptly uses its mock ability to appear as a perfect, miniature version of the creature in question, proceeding to cavort and imitate the newcomer in a most convincing and unflattering manner, mimicking the creature&#x27;s tone but chattering only gibberish.\n\nThis gibberish is not solely for comic effect. While mockingfey are eager (if distractible) students in most matters and can speak and understand Sylvan when necessary, they generally refuse to use verbal language of any sort, believing that words unnecessarily constrain whatever they wish to describe. Instead, they communicate through gestures, pantomime, and elaborate dances.\n\nWhile many people find mockingfey&#x27;s antics irritating, the little creatures can make surprisingly useful allies, with a loyal, friendly nature toward those who treat them well and an insatiable curiosity that makes them surprisingly informed about their surroundings. This same curiosity extends to things most folks would leave alone, such as portal-like breach scars between the Material Plane and other realities. When such planar rifts occur between this world and the realm of the fey, mockingfey are often some of the first creatures through, and their presence in a region can be a reliable indication that such a breach between worlds exists somewhere nearby. In such situations, mockingfey often seek out more powerful fey creature to dwell near, as a source of both protection and entertainment. Of course, even fey can grow frustrated with the constant attention afforded by a jape of mockingfey!\n\nMockingfey can serve spellcasters as familiars, and often enjoy the opportunity such servitude affords to travel and see the world with the safety and protection provided by an allied spellcaster. Illusionists and other spellcasters who seek such puckish familiars often find them worth the resulting hassle-if just barely. A spellcaster must have the Improved Familiar feat, be chaotic neutral, and have a caster level of 4th or higher to gain a mockingfey familiar.\n\nA mockingfey is 8 inches tall and weighs 2 pounds.\n</div>\r\n                    \r\n    </div>\r\n    <hr style=\"margin-left: 0; margin-bottom: -3px; width: 100%; height: 4px; background-color: #e0a100; border: 1px solid #000; column-span: all;\" />\r\n</div></div>\n    \n        <br>\n        <hr>\n        <div class=\"rawInputContainer\" style=\"margin-top: 15px;\">\n            <h2>RAW INPUT</h2>\n            <hr>\n            <pre style=\"white-space: pre-wrap; font-size: 10px;\">Mockingfey CR 1\nSource Bestiary 6 pg. 189, Inner Sea Bestiary pg. 31\nXP 400\nCN Tiny fey\nInit +3; Senses low-light vision; Perception +7\nDefense\nAC 15, touch 15, flat-footed 12 (+3 Dex, +2 size)\nhp 13 (3d6+3)\nFort +2, Ref +6, Will +4\nOffense\nSpeed 20 ft., fly 60 ft. (good)\nMelee 2 talons +6 (1d4-1)\nSpace 2-1/2 ft., Reach 0 ft.\nSpell-Like Abilities (CL 3rd; concentration +4)\nAt will-daze (DC 11)\nStatistics\nStr 8, Dex 16, Con 13, Int 7, Wis 12, Cha 13\nBase Atk +1; CMB +2; CMD 11\nFeats Flyby Attack, Weapon Finesse\nSkills Acrobatics +9, Disguise +7, Fly +15, Perception +7, Stealth +16\nLanguages Sylvan (prefers to speak gibberish)\nSQ mock\nEcology\nEnvironment any forests\nOrganization solitary, pair, or jape (3-20)\nTreasure standard\nSpecial Abilities\nMock (Su) As a standard action, a mockingfey can take on the appearance of any creature it can see. This functions like veil, but affects only the mockingfey. The mockingfey does not change size, and if the creature it's mimicking is larger than itself, the mockingfey simply appears to be a miniature version of it. Anyone interacting with this effect can attempt a DC 12 Will save to see through the ruse. A mockingfey can maintain a guise indefinitely, but can't change to a form other than its own without a visual reference-once a given disguise has ended, the fey must see the subject again to resume that form. The save DC is Charisma-based.\nDescription\nMockingfey originally stem from the otherworldly realm of the fey, where they're regarded as entertainment by locals and nuisances by visitors, who are the usual butt of the creatures' pranks. The pint-sized fey often congregate in large colonies called japes or 'mockingdells,' inhabiting the trees near a commonly traversed path or meadow. When an intelligent creature enters the grove, one of the bird-sprites flies down to perch on the traveler's shoulder or some nearby vantage. It then promptly uses its mock ability to appear as a perfect, miniature version of the creature in question, proceeding to cavort and imitate the newcomer in a most convincing and unflattering manner, mimicking the creature's tone but chattering only gibberish.\n\nThis gibberish is not solely for comic effect. While mockingfey are eager (if distractible) students in most matters and can speak and understand Sylvan when necessary, they generally refuse to use verbal language of any sort, believing that words unnecessarily constrain whatever they wish to describe. Instead, they communicate through gestures, pantomime, and elaborate dances.\n\nWhile many people find mockingfey's antics irritating, the little creatures can make surprisingly useful allies, with a loyal, friendly nature toward those who treat them well and an insatiable curiosity that makes them surprisingly informed about their surroundings. This same curiosity extends to things most folks would leave alone, such as portal-like breach scars between the Material Plane and other realities. When such planar rifts occur between this world and the realm of the fey, mockingfey are often some of the first creatures through, and their presence in a region can be a reliable indication that such a breach between worlds exists somewhere nearby. In such situations, mockingfey often seek out more powerful fey creature to dwell near, as a source of both protection and entertainment. Of course, even fey can grow frustrated with the constant attention afforded by a jape of mockingfey!\n\nMockingfey can serve spellcasters as familiars, and often enjoy the opportunity such servitude affords to travel and see the world with the safety and protection provided by an allied spellcaster. Illusionists and other spellcasters who seek such puckish familiars often find them worth the resulting hassle-if just barely. A spellcaster must have the Improved Familiar feat, be chaotic neutral, and have a caster level of 4th or higher to gain a mockingfey familiar.\n\nA mockingfey is 8 inches tall and weighs 2 pounds.</pre>\n        </div>\n    "
+  skills:
+    acr:
+      rank: 3
+    dis:
+      rank: 3
+    fly:
+      rank: 5
+    per:
+      rank: 3
+    ste:
+      rank: 2
+  traits:
+    languages:
+      - null
+    senses:
+      custom: low-light vision; Perception +7
+    size: tiny
+type: npc

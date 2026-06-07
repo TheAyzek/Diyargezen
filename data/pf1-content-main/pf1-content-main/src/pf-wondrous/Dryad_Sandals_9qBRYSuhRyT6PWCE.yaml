@@ -1,0 +1,32 @@
+_id: 9qBRYSuhRyT6PWCE
+_key: '!items!9qBRYSuhRyT6PWCE'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Dryad Sandals
+system:
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  cl: 9
+  description:
+    value: >-
+      <p>These sandals are woven from grass, lengths of pliant vine, living
+      leaves, and supple bark. In forest terrain, the wearer leaves no tracks or
+      scent and gains a +2 competence bonus on Stealth checks. The wearer can
+      move through natural undergrowth without impediment or harm as a druid
+      using woodland stride (Core Rulebook 51), and once per day she may step
+      inside a tree and remain there for up to 9 hours, or teleport to a similar
+      tree within range, as tree stride but allowing only a single
+      teleport.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, pass without trace, tree stride, creator must be a
+      druid</p>
+  price: 24000
+  slot: feet
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

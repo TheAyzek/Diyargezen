@@ -1,0 +1,27 @@
+_id: OMfCipVG2FhG2Hrp
+_key: '!items!OMfCipVG2FhG2Hrp'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Rat Fangs
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>This bone ring is the shape of an elongated rat biting its own tail.
+      The wearer gains a bite attack as a primary natural attack. This attack
+      deals 1d4 points of piercing damage for a Medium wearer or 1d3 points of
+      damage for a Small wearer. After about a week of wearing the ring, the
+      wearer's appearance becomes more ratlike, though she still looks like a
+      member of her original race (for example, a human might gain prominent
+      teeth).</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, magic fang, polymorph</p>
+  price: 5000
+  slot: ring
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

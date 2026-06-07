@@ -1,0 +1,35 @@
+_id: wyhQlqgoXdwXejLn
+_key: '!journal!wyhQlqgoXdwXejLn'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Azathoth
+pages:
+  - _id: 7XO0AoZ31EZ4EVcq
+    _key: '!journal.pages!wyhQlqgoXdwXejLn.7XO0AoZ31EZ4EVcq'
+    _stats:
+      coreVersion: '12.331'
+    name: Azathoth
+    sort: 0
+    text:
+      content: >-
+        <h1>Azathoth</h1><h2>The Daemon Sultan</h2>@Source[PZO90109;pages=65]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Azathoth">Azathoth</a><h3>Details</h3><p><strong>Alignment</strong>
+        CN<br /><strong>Pantheon</strong> Outer Gods<br /><strong>Areas of
+        Concern</strong> Entropy, madness, mindless destruction<br
+        /><strong>Domains</strong> Chaos, Destruction, Madness, Sun, Void<br
+        /><strong>Subdomains</strong> Catastrophe, Dark Tapestry, Entropy,
+        Insanity, Nightmare, Stars<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Warhammer<br /><strong>Symbol</strong> Eight-pointed star<br
+        /><strong>Sacred Animal(s)</strong> None<br /><strong>Sacred
+        Color(s)</strong> Black, white</p><h2>For Followers of
+        Azathoth</h2><h3>Feats</h3><p>Dreamed
+        Secrets</p><h3>Traits</h3><p>Unspeakable Bond</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

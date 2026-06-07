@@ -1,0 +1,114 @@
+_id: ma38Ja6wPUECCjP5
+_key: '!actors!ma38Ja6wPUECCjP5'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: systems/pf1/icons/skills/arrow_05.jpg
+items:
+  - _id: j0Bhe5jfq7s4kJFA
+    _key: '!actors.items!ma38Ja6wPUECCjP5.j0Bhe5jfq7s4kJFA'
+    _stats:
+      compendiumSource: Actor.Gkze2rCzpVvyEnqe.Item.patLX07NLmDeUTT3
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/arrow_05.jpg
+    name: Hail of Bolts
+    system:
+      actions:
+        - _id: myk6rdumpt6ytmj9
+          actionType: rwak
+          activation:
+            type: special
+            unchained:
+              type: special
+          attackBonus: '15'
+          damage:
+            parts:
+              - formula: 5d8
+                types:
+                  - piercing
+          img: systems/pf1/icons/skills/arrow_05.jpg
+          measureTemplate:
+            size: '10'
+            type: rect
+          name: Attack
+          range:
+            units: spec
+          target:
+            value: multiple targets (all targets in a 10-ft.-square area)
+      proficient: true
+      subType: weapon
+    type: attack
+name: Hail of Bolts Trap
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 6
+    disarm: 25
+    duration: Instantaneous
+    effect: ''
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 25
+    reset: Manual
+    trigger: Location
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

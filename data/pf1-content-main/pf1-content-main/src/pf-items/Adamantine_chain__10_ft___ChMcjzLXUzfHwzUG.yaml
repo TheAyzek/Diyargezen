@@ -1,0 +1,21 @@
+_id: ChMcjzLXUzfHwzUG
+_key: '!items!ChMcjzLXUzfHwzUG'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/chain-silver.jpg
+name: Adamantine chain (10 ft.)
+system:
+  description:
+    value: >-
+      <p>This 10-foot-long chain has hardness 20 and 6 hit points. A successful
+      DC 30 Strength check is required to burst it, making it strong enough to
+      hold many types of giants.</p>
+  equipped: false
+  price: 3030
+  sources:
+    - id: PZO9453
+      pages: '25'
+  subType: adventuring
+  weight:
+    value: 2
+type: loot

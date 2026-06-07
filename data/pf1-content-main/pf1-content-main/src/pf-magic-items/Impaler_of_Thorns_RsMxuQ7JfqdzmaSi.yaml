@@ -1,0 +1,71 @@
+_id: RsMxuQ7JfqdzmaSi
+_key: '!items!RsMxuQ7JfqdzmaSi'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/longspear.PNG
+name: Impaler of Thorns
+system:
+  actions:
+    - _id: 8ils9fwtx1nl86ix
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: impalerOfThorns
+  aura:
+    school: enc
+  baseTypes:
+    - Longspear
+  cl: 7
+  description:
+    value: >-
+      <p>The impaler of thorns is an ancient weapon dating back to Thassilonian
+      times, when it was often used by city guards to aid in breaking up civil
+      unrest. An impaler's shaft is made of darkwood, and its head is a
+      thornlike, wide-bladed barb. When an impaler of thorns is used in combat,
+      its successful critical hits are accompanied by an unsettling screech, as
+      of some wild beast in anger.  An impaler of thorns is a +1 longspear. Once
+      per day as it strikes a foe, the wielder can cause it (as a free action)
+      to unleash a 30-foot-radius burst of despair that affects all creatures
+      not wielding an impaler of thorns. Creatures affected must succeed at DC
+      16 Will saves or become overwhelmed with sadness and despair, taking -2
+      penalties on attack rolls, saving throws, ability checks, skill checks,
+      and weapon damage rolls for 6 minutes. The target struck when this effect
+      is triggered must also succeed at a second DC 16 Will save to resist
+      becoming nauseated with despair for 1 round.<p><strong>Base
+      Item</strong>: 
+      longspear</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, cat's grace, crushing despair, delay poison</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 9000
+  properties:
+    brc: true
+    rch: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1002
+  weaponGroups:
+    - spears
+  weight:
+    value: 9
+type: weapon

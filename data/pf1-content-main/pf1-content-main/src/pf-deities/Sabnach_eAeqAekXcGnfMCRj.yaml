@@ -1,0 +1,46 @@
+_id: eAeqAekXcGnfMCRj
+_key: '!journal!eAeqAekXcGnfMCRj'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Sabnach
+pages:
+  - _id: telCgRPpFhg3OUko
+    _key: '!journal.pages!eAeqAekXcGnfMCRj.telCgRPpFhg3OUko'
+    _stats:
+      coreVersion: '12.331'
+    name: Sabnach
+    sort: 0
+    text:
+      content: >-
+        <h1>Sabnach</h1><h2>Forgemaster of the
+        Living</h2>@Source[PZO9267;pages=326] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Sabnach">Sabnach</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Infernal Dukes<br /><strong>Areas of
+        Concern</strong> Construction, parasites, toil<br
+        /><strong>Domains</strong> Artifice, Evil, Law, Strength<br
+        /><strong>Subdomains</strong> Construct, Devil (Evil), Devil (Law),
+        Ferocity, Toil<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Heavy crossbow<br
+        /><strong>Symbol</strong> Slave building a tower<br /><strong>Sacred
+        Animal(s)</strong> Leech<br /><strong>Sacred Color(s)</strong> Gray,
+        red</p><h3>Obedience</h3><p>Toss random handfuls of nails, caltrops, or
+        other destructive materials onto ground behind you where you expect
+        others to tread. Gain a +4 profane bonus on Heal checks to provide first
+        aid.</p><h2>Boons - Infernal Dukes</h2>@Source[PZO1139;pages=118]<br
+        />The Lords of Hell, the Dukes of Perdition, and the Princes of
+        Damnation are all names for the infamous nobility of the Pit- the elite
+        caste of devilkind known as the infernal dukes.<p> All infernal dukes
+        are lawful evil and range in power from CR 26 to CR 27. The boons they
+        grant are less complex than those granted by archdevils, manifesting as
+        spell-like abilities usable once per day each.</p><p><strong>1</strong>:
+        <em>ray of exhaustion</em><br /><strong>2</strong>: <em>arcane
+        cannon</em><br /><strong>3</strong>: <em>clashing rocks</em></p><h2>For
+        Followers of Sabnach</h2><h3>Feats</h3><p><em>Hellish Shackles</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

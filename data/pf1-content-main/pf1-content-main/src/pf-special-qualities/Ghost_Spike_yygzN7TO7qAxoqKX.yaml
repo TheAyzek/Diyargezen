@@ -1,0 +1,30 @@
+_id: yygzN7TO7qAxoqKX
+_key: '!items!yygzN7TO7qAxoqKX'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Ghost Spike
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate evocation <strong>CL</strong>
+      10th</p><p><strong>Price</strong> +2 bonus;</p><p>Once per day as a
+      standard action, the wearer of <em>ghost spike</em> armor can command
+      armor spikes made of shimmering force to erupt from the armor for up to 10
+      rounds. Treat these spikes as <em>+1 ghost touch armor spikes</em> with
+      which the wearer is proficient. While the spikes are active, the wearer
+      can attempt to grapple incorporeal creatures with a -4 penalty on his
+      combat maneuver checks to grapple. The wearer can dismiss the spikes as a
+      free action. The <em>ghost spike</em> ability cannot be placed on spiked
+      armor or on a
+      shield.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>spiritual weapon</em>; <strong>Price</strong> +2
+      bonus</p>
+  sources:
+    - id: PZO9459
+      pages: '24'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

@@ -1,0 +1,25 @@
+_id: mNcccmmJtV69JIh9
+_key: '!items!mNcccmmJtV69JIh9'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/red_20.jpg
+name: Lizard
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong>  5 cp (common),  12 gp (Nex gecko);
+      <strong>Weight</strong> 2 oz. (common), 4 oz. (Nex
+      gecko)</p><h2>Description</h2><p>These Tiny cold-blooded animals can be
+      found in all warm regions and are often quite colorful. They eat insects
+      and have the ability to walk up walls and hang upside down. Varieties of
+      more intelligent lizards are often selected by wizards as familiars. More
+      information on lizards can be found in the <em>Bestiary</em>.</p>
+  equipped: false
+  price: 0.05
+  sources:
+    - id: PZO1123
+      pages: '80'
+  subType: animal
+  weight:
+    value: 0.1
+type: loot

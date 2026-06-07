@@ -1,0 +1,33 @@
+_id: jMaZBC3x27C8gvos
+_key: '!items!jMaZBC3x27C8gvos'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Talisman of Soul-Eating
+system:
+  aura:
+    custom: true
+    school: necromancy [evil]
+  cl: 5
+  description:
+    value: >-
+      <p>This carved cacodaemon skull bears dozens of sharp teeth and is strung
+      on a thin iron chain adorned with vertebrae. Once per day as a full-round
+      action, the wearer can use the skull to draw forth the life essence of a
+      dying or recently dead creature to cast create soul gem. The wearer can
+      ingest this soul gem as a standard action. This frees the soul within the
+      gem, which can be raised from the dead normally. The wearer then gains
+      fast healing 2 for a number of rounds equal to the consumed soul's Hit
+      Dice when it was still living. Draining a soul with the necklace or
+      consuming a soul gem is an evil
+      act.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, create soul gem</p>
+  price: 5400
+  slot: neck
+  sources:
+    - id: PZO1139
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

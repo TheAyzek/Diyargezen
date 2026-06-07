@@ -1,0 +1,49 @@
+_id: Q7bGySE0FsySgAhM
+_key: '!items!Q7bGySE0FsySgAhM'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Scholarblight
+system:
+  actions:
+    - _id: jqzo768whx8f4e6k
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - '<strong>Primary Effect</strong: [[1d3]] Int, see text'
+      save:
+        dc: '15'
+        type: fort
+      tag: scholarblight
+  description:
+    value: >-
+      <p><strong>Type</strong> inhaled; <strong>Save</strong> Fortitude DC
+      15</p><p><strong>Frequency</strong> 1/minute for 6
+      minutes</p><p><strong>Effect</strong> 1d3 Int, see
+      text</p><p><strong>Cure</strong> 1 save</p><p>Created by the Whispering
+      Way to simultaneously protect and bind newcomers and servants who have
+      handled dangerous writings, scholarblight has long since become a
+      preferred poison for those who target arcane spellcasters for
+      assassination. Scholarblight causes headaches and impairs a victim’s
+      ability to form or recall memories through mild confusion and dysphoria.
+      More drastically, victims who fail a saving throw against scholarblight
+      lose their ability to read or write for 24 hours, as letters and symbols
+      seem to twist, move, and reorient themselves. This prevents victims from
+      using scrolls and spellbooks, but also protects an afflicted creature from
+      any effect dependent on reading text, such as <em>explosive
+      runes</em>.</p>
+  price: 1500
+  sources:
+    - id: PZO9464
+      pages: '22'
+  subType: poison
+  uses:
+    per: single
+type: consumable

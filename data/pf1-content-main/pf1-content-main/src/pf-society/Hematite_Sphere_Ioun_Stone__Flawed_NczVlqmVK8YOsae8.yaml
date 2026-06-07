@@ -1,0 +1,76 @@
+_id: NczVlqmVK8YOsae8
+_key: '!items!NczVlqmVK8YOsae8'
+_stats:
+  coreVersion: '13.347'
+folder: mvNReufva6GBmOKS
+img: icons/commodities/gems/pearl-brown-red.webp
+name: Hematite Sphere Ioun Stone, Flawed
+system:
+  actions:
+    - _id: p1bINxQTAYIXgRO8
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.yssjgukwe3dgjhf3]{know
+        direction}</p><p>When you cast this spell, you instantly know the
+        direction of north from your current position. The spell is effective in
+        any environment in which "north" exists, but it may not work in
+        extraplanar settings. Your knowledge of north is correct at the moment
+        of casting, but you can get lost again within moments if you don't find
+        some external reference point to help you keep track of direction.</p>
+      duration:
+        units: inst
+      name: Know Direction
+      range:
+        units: personal
+  aura:
+    custom: true
+    school: divination and evocation
+  cl: 12
+  contextNotes:
+    - target: skill.sur
+      text: +[[2]] Enhancement bonus to avoid becoming lost.
+  description:
+    instructions: >-
+      <p>Only 75% of normal ioun stones grant resonant powers when placed in a
+      wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>This spherical stone may be of a range of colors from black to gray to
+      reddish-brown.   Flaws, such as irregular facets or internal impurities,
+      mar its appearance.</p>
+    value: >-
+      <h3>Effect</h3><p>While orbiting a creature's head, this ioun stone
+      provides its bearer a +2 enhancement bonus on Survival checks to avoid
+      becoming lost. Once per day, its user can use it to cast
+      @UUID[Compendium.pf1.spells.Item.yssjgukwe3dgjhf3]{know
+      direction}.</p><h3>Resonance</h3><p><strong>Method 1, Fixed: </strong>When
+      slotted into a wayfinder, the stone causes the wayfinder's needle to point
+      toward the nearest hematite sphere ioun stone, no matter the distance,
+      enabling bearers to locate one another across a city or even across a
+      continent. When an ioun stone of this type comes in contact with another
+      hematite sphere ioun stone, one of the two stones fades into a dull gray
+      ioun stone, while the other stone begins to home in on the next nearest
+      stone.</p><p><strong>Method 2, Variable:
+      </strong>@UUID[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]{Ioun
+      Stone Resonance Powers Method
+      2}</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Wondrous
+      Item, <em>know direction, sending</em>, creator must be 12th level
+      <strong>Cost</strong> 250 gp</p>
+  hardness: 5
+  price: 500
+  sources:
+    - id: PZOPSS0609
+      pages: '17'
+  subType: wondrous
+  tags:
+    - Ioun Stone
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: equipment

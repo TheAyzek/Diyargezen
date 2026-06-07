@@ -1,0 +1,34 @@
+_id: VugtJqnAXt8PrX9C
+_key: '!items!VugtJqnAXt8PrX9C'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Coldwarp Key
+system:
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  cl: 9
+  description:
+    value: >-
+      <p>This flanged iron rod is much heavier than it looks, and grants the
+      wielder a portion of the skill of a master coldwarper. The wielder gains a
+      +5 competence bonus on Craft checks involving metal. A coldwarp key has
+      three charges, which are renewed at midnight every night and can be
+      expended to create a variety of effects. Expending one charge from a
+      coldwarp key allows the wielder to use fabricate (as the spell) to affect
+      metal only. If the wielder is in a natural underground environment, she
+      can expend two charges from a coldwarp key to draw raw metal ore from the
+      surrounding stone and shape it to her liking. This ability acts as the
+      major creation spell, except the wielder can create only base metals and
+      the duration is
+      instantaneous.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Rod, fabricate, major creation</p>
+  price: 45700
+  sources:
+    - id: PZO9440
+  subType: other
+  weight:
+    value: 5
+type: equipment

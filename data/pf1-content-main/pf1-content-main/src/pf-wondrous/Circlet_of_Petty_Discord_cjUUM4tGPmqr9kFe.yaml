@@ -1,0 +1,31 @@
+_id: cjUUM4tGPmqr9kFe
+_key: '!items!cjUUM4tGPmqr9kFe'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Circlet of Petty Discord
+system:
+  aura:
+    school: enc
+  cl: 10
+  description:
+    value: >-
+      <p>Once per day, when the wearer of this delicate silver crown casts a
+      spell from the charm subschool, he can add a subtle compulsion to the
+      effect. All targets affected by the spell must succeed at a DC 20 Will
+      saving throw or become incredibly frustrated with their allies. For the
+      next 10 rounds, affected targets still recognize their allies (and do not
+      attack them), but they cannot treat them as allies when determining
+      movement or flanking, nor can they use any feats (including teamwork
+      feats), spells, abilities, or effects that allow them to target allies or
+      use allies to gain beneficial effects, nor can they be the targets of such
+      friendly effects. Affected targets also cannot aid
+      another.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, confusion, suggestion</p>
+  price: 84000
+  slot: head
+  sources:
+    - id: PZO9459
+  subType: wondrous
+type: equipment

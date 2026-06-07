@@ -1,0 +1,40 @@
+_id: SS5P4cj73cIwVf7Z
+_key: '!items!SS5P4cj73cIwVf7Z'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Orb of Dragonkin
+system:
+  artifact: true
+  aura:
+    school: enc
+  cl: 19
+  description:
+    value: >-
+      <p>Each of the Orbs of Dragonkin holds power over a specific race of
+      lesser draconic creatures with the dragon type (except for true dragons).
+      The bearer of an Orb of Dragonkin can, as a standard action, dominate a
+      creature of the orb's particular variety within 200 feet (as dominate
+      monster), with the targeted creature being forced to make a DC 23 Will
+      save to resist. Spell resistance is not useful against this effect. Each
+      Orb of Dragonkin grants the wielder the AC and saving throw bonuses of the
+      draconic creature the orb is associated with. These values replace
+      whatever values the character would otherwise have, whether better or
+      worse. These values cannot be modified by any means short of ridding the
+      character of the orb. The owner of an orb knows if there are draconic
+      creatures of the type the orb is related to within 10 miles at all times.
+      Each Orb of Dragonkin also has an individual power that can be invoked
+      once per round at caster level 10th.  • KongamatoB3 Orb: Sound burst
+      (Fortitude DC 13 partial)  • Dragon Turtle Orb: Control water • Drake Orb:
+      Expeditious retreat • Faerie DragonB3 Orb: Stinking cloud (Fortitude DC 14
+      negates)  • GorynychB3 Orb: Scorching ray • JabberwockB2 Orb: Confusion
+      (Will DC 16 negates)  • Linnorm Orb: Bestow curse (Will DC 16 negates)  •
+      Pseudodragon Orb: Deep slumber (Will DC 14 negates)  • Spine Dragon Orb:
+      Telekinesis • TatzlwyrmB3 Orb: Ray of exhaustion (Fortitude DC 14
+      partial)  • Wyvern Orb: Poison (Fortitude DC 16 negates.</p>
+  sources:
+    - id: PZO9250
+  subType: other
+  weight:
+    value: 4
+type: equipment

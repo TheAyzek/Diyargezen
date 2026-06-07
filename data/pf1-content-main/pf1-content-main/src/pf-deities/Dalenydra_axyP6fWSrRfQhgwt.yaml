@@ -1,0 +1,35 @@
+_id: axyP6fWSrRfQhgwt
+_key: '!journal!axyP6fWSrRfQhgwt'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Dalenydra
+pages:
+  - _id: fHqWbX0LkjJXx0lj
+    _key: '!journal.pages!axyP6fWSrRfQhgwt.fHqWbX0LkjJXx0lj'
+    _stats:
+      coreVersion: '12.331'
+    name: Dalenydra
+    sort: 0
+    text:
+      content: >-
+        <h1>Dalenydra</h1><h2>The Blessed
+        Attendant</h2>@Source[PZO9267;pages=322] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Dalenydra">Dalenydra</a><h3>Details</h3><p><strong>Alignment</strong>
+        NG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Battlefield healing, caregiving, sanctuaries<br
+        /><strong>Domains</strong> Good, Healing, Protection, Repose<br
+        /><strong>Subdomains</strong> Agathion, Defense, Medicine*, Restoration,
+        Resurrection<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Light mace<br
+        /><strong>Symbol</strong> Bandage-wrapped fist<br /><strong>Sacred
+        Animal(s)</strong> Silkworm<br /><strong>Sacred Color(s)</strong> Red,
+        white</p><h2>For Followers of Dalenydra</h2><h3>Feats</h3><p>Heroic
+        Interposition</p><h3>Traits</h3><p>Empyreal Focus, Scarred by War</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

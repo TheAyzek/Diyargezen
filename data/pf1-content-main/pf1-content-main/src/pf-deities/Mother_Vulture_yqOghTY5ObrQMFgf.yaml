@@ -1,0 +1,49 @@
+_id: yqOghTY5ObrQMFgf
+_key: '!journal!yqOghTY5ObrQMFgf'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Mother Vulture
+pages:
+  - _id: CLVi5t8baNeaHP1c
+    _key: '!journal.pages!yqOghTY5ObrQMFgf.CLVi5t8baNeaHP1c'
+    _stats:
+      coreVersion: '12.331'
+    name: Mother Vulture
+    sort: 0
+    text:
+      content: >-
+        <h1>Mother Vulture</h1><h2>The Flesheater</h2>@Source[PZO92114;pages=12]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Mother Vulture">Mother
+        Vulture</a><h3>Details</h3><p><strong>Alignment</strong> N<br
+        /><strong>Pantheon</strong> Psychopomp Usher<br /><strong>Areas of
+        Concern</strong> Consumption, renewal, and transformation<br
+        /><strong>Domains</strong> Animal, Destruction, Healing, Repose<br
+        /><strong>Subdomains</strong> N/A<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Sickle<br
+        /><strong>Symbol</strong> Two crossed diagonal lines with an empty
+        circle above and a filled circle below</p><h3>Obedience</h3><p>Consume
+        the flesh or blood of your own people and reflect on the pain and death
+        required to grant strength and life; if this is your own flesh or blood,
+        the process deals 1d6 points of damage. Gain a +4 insight bonus against
+        effects that would cause you to become sickened or nauseated. You can
+        survive by eating rotting and diseased food with no ill
+        effect.</p><h2>Boons - Monitor
+        Obedience</h2><h3>None</h3><p>@Source[PZO92114;pages=12]<br /><strong>1:
+        Carrion Eater (Sp)</strong> <em>decompose corpse</em> 3/day, <em>animal
+        aspect</em> 2/day, or <em>cure serious wounds</em> 1/day<br /><strong>2:
+        Devourer (Ex)</strong> You gain a bite attack that deals 1d4 points of
+        damage (1d3 for small creatures) plus your Strength modifier. If you
+        confirm a critical hit with this attack, it also deals 1 point of bleed
+        damage. If you already have a bite attack, your bite deals 2 points of
+        bleed damage on a critical hit. You are considered proficient with this
+        attack.<br /><strong>3: New from Old (Sp)</strong> You can cast extended
+        <em>polymorph any object</em> once per day.</em></p><h2>For Followers of
+        Mother Vulture</h2><h3>Prestige Classes</h3><p><em>Mortal Usher</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

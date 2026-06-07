@@ -1,0 +1,24 @@
+_id: ApOHjY88U01PuK8i
+_key: '!items!ApOHjY88U01PuK8i'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/leather/fur-white-tan.webp
+name: Weasel
+system:
+  description:
+    value: >-
+      <p>These Tiny animals eat smaller animals and can be found in nearly any
+      environment. They are clever and curious, traits that are magnified when
+      they are kept as familiars. Many varieties of weasel exude a strong musky
+      odor. This description also applies to similar animals, such as ferrets,
+      minks, polecats, and stoats. More information on weasels can be found in
+      the <em>Bestiary</em>.</p>
+  equipped: false
+  price: 2
+  sources:
+    - id: PZO1123
+      pages: '80'
+  subType: animal
+  weight:
+    value: 5
+type: loot

@@ -1,0 +1,38 @@
+_id: teiim71my9I2e27o
+_key: '!journal!teiim71my9I2e27o'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Iggeret
+pages:
+  - _id: LneZyPoufIY3SEeF
+    _key: '!journal.pages!teiim71my9I2e27o.LneZyPoufIY3SEeF'
+    _stats:
+      coreVersion: '12.331'
+    name: Iggeret
+    sort: 0
+    text:
+      content: >-
+        <h1>Iggeret</h1><h2>She Who Was Lost</h2>@Source[PZO1139;pages=132] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Iggeret">Iggeret</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Sahkil Tormentors<br /><strong>Areas
+        of Concern</strong> Darkness, empty places, pits<br
+        /><strong>Domains</strong> Darkness, Evil, Protection, Void<br
+        /><strong>Subdomains</strong> Fear, Isolation, Loss, Night<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Shortbow</p><h3>Obedience</h3><p>Hide
+        an item valuable or sentimental to someone you know. Gain a +4 profane
+        bonus on saving throws against divination effects.</p><h2>Boons - Sahkil
+        Tormentors</h2>@Source[PZO1139;pages=133]<br />Sahkil tormentors hold
+        dominion over mortal fears and suffering. All are chaotic evil and range
+        in power from CR 21 to CR 25. Their boons are less complex than those of
+        other demigods, manifesting as spell-like abilities usable twice per day
+        each.<strong>1</strong>: <em>darkness</em><br /><strong>2</strong>:
+        <em>acid pit</em><br /><strong>3</strong>: <em>phobia</em>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

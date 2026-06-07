@@ -1,0 +1,19 @@
+_id: q6ZSy2FUVhSnBaW2
+_key: '!items!q6ZSy2FUVhSnBaW2'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/violet_07.jpg
+name: Unexpected Strike
+system:
+  associations:
+    classes:
+      - Vigilante
+  description:
+    value: >-
+      <p><strong>Vigilante Talent</strong></p><p>The vigilante gains Quick Draw
+      as a bonus feat. At 8th level, he can draw hidden weapons as a swift
+      action (instead of a move action).</p>
+  subType: classFeat
+  tags:
+    - Vigilante Talent
+type: feat

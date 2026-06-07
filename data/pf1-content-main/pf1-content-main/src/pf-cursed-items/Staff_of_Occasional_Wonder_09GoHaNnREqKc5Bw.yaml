@@ -1,0 +1,24 @@
+_id: 09GoHaNnREqKc5Bw
+_key: '!items!09GoHaNnREqKc5Bw'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Staff of Occasional Wonder
+system:
+  aura:
+    custom: true
+    school: varies
+  description:
+    value: >-
+      <p>A staff of occasional wonder can appear to be any magical staff, and in
+      fact such items are usually the result of accidents during an attempted
+      crafting of the staff it appears to be. It usually functions as intended,
+      but each time someone uses the staff, they must roll d%. On a roll of
+      1-10, instead of the desired effect, the staff acts like a rod of wonder
+      (see page 185).</p>
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 4
+type: equipment

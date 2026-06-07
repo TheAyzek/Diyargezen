@@ -1,0 +1,30 @@
+_id: s6zE4zbiBW6lOvdz
+_key: '!items!s6zE4zbiBW6lOvdz'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Demonspike Pauldrons
+system:
+  aura:
+    school: nec
+  cl: 7
+  description:
+    value: >-
+      <p>These black iron pauldrons are studded with jagged spikes of various
+      lengths. Demonspike pauldrons act as +2 armor spikes and also deal 1d2
+      bleed damage on a successful grapple attack or melee attack made with the
+      pauldrons. If these pauldrons are worn with normal armor spikes, increase
+      the damage done by the armor spikes to 1d6 (Small) or 1d8 (Medium), and
+      use the greater of the two enhancement bonuses to attack and damage-either
+      from the armor spikes (if any) or the demonspike
+      pauldrons.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Craft Magic Arms and Armor, bleed</p>
+  price: 14350
+  slot: shoulders
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 8
+type: equipment

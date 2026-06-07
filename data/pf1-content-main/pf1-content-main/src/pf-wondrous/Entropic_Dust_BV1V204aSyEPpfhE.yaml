@@ -1,0 +1,25 @@
+_id: BV1V204aSyEPpfhE
+_key: '!items!BV1V204aSyEPpfhE'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Entropic Dust
+system:
+  aura:
+    school: nec
+  cl: 3
+  description:
+    value: >-
+      <p>This white grit hinders a victim's divine power.  Type poison, inhaled;
+      Save Fortitude DC 18  Frequency 1/round for 6 rounds Effect 1d2 Cha
+      damage, and for the duration of the poison, victim must succeed at a
+      concentration check vs. the poison's save DC to channel positive energy or
+      lay on hands; Cure 1
+      sav.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, desecrate</p>
+  price: 1500
+  sources:
+    - id: PZO9462
+  subType: wondrous
+type: equipment

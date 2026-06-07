@@ -1,0 +1,37 @@
+_id: sbOjmjyTT6Sa71LU
+_key: '!items!sbOjmjyTT6Sa71LU'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/greatsword.PNG
+name: Ovinrbaane, Enemy of All Enemies
+system:
+  artifact: true
+  aura:
+    school: evo
+  baseTypes:
+    - Greatsword
+  cl: 20
+  description:
+    value: >-
+      <p>Ovinrbaane (literally translated as enemy of all enemies) is a cursed,
+      intelligent +3 wounding greatsword. When Ovinrbaane succeeds at a contest
+      of will (Core Rulebook 535), it uses modify memory to mislead its wielder
+      into believing he's the barbarian warlord Armag and that anyone around him
+      who isn't obviously a member of his tribe is a mortal enemy. The cursed
+      greatsword also slowly changes the features of the wielder over the course
+      of several days or even weeks to appear as those of the original Armag. If
+      left unchecked, these powers seemingly bring the warlord back to life,
+      recreating the savage warrior it deems to be its own true
+      wielder.</p><p><strong>Base Item</strong>: wounding greatsword</p>
+  enh: 3
+  held: 2h
+  material:
+    base:
+      value: steel
+  sources:
+    - id: PZO9250
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 12
+type: weapon

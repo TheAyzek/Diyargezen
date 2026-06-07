@@ -1,0 +1,47 @@
+_id: xswEdcUqAFHq1dyO
+_key: '!journal!xswEdcUqAFHq1dyO'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.4.08. Blightburn
+pages:
+  - _id: 4Od7Zc2M1O8tP8PM
+    _key: '!journal.pages!xswEdcUqAFHq1dyO.4Od7Zc2M1O8tP8PM'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.4.08. Blightburn
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li>@Compendium[pf-content.pf-rules.TROqcNjEw3b2q2Dk]{6.0.4.
+        Special Materials}</li></ul><hr /><p><strong>PFS
+        Legal</strong></p><p>@Source[PZO9479;pages=24]</p><p>Blightburn is a
+        highly radioactive crystalline mineral that grows in isolated pockets
+        throughout the Darklands, from Nar-Voth all the way down to Orv. When
+        exposed to air, blightburn crystals give off a deep green glow as bright
+        as a candle. Any creature coming into physical contact with a blightburn
+        crystal takes 2d6 points of fire damage per round, and creatures within
+        60 feet of blightburn crystals are exposed to blightburn radiation.
+        Blightburn radiation interferes with spells of the teleportation
+        subschool.</p><p>A character attempting to teleport into or out of an
+        area of blightburn radiation must succeed at a caster level check (DC =
+        the Fortitude save DC for the radiation) to successfully cast the
+        spell.</p><table><thead><tr><td>Radiation Level</td><td>Fort
+        DC</td><td>Initial Effect</td><td>Secondary
+        Effect</td></tr></thead><tbody><tr><td>Low</td><td>13</td><td>1 Con
+        drain</td><td>1 Cha
+        damage/day</td></tr><tr><td>Medium</td><td>17</td><td>1d4 Con
+        drain</td><td>1d4 Cha
+        damage/day</td></tr><tr><td>High</td><td>22</td><td>2d4 Con
+        drain</td><td>1d6 Cha
+        damage/day</td></tr><tr><td>Severe</td><td>30</td><td>4d6 Con
+        drain</td><td>2d6 Cha damage/day</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

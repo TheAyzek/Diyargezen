@@ -1,0 +1,59 @@
+_id: j1litRvUgnxhXq8p
+_key: '!items!j1litRvUgnxhXq8p'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/greatsword.PNG
+name: True Warrior's Blade
+system:
+  actions:
+    - _id: 8iee0uynd5wq2ezc
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: trueWarriorsBlade
+  aura:
+    school: enc
+  baseTypes:
+    - Greatsword
+  cl: 9
+  description:
+    value: >-
+      <p>This +3 greatsword appears to be roughly forged and has scrawls of
+      Hallit engraved about the hilt. The wielder gains extra power against
+      arcane spellcasters, such as witches. The blade counts as a bane weapon
+      against any creature that has the ability to cast arcane spells
+      (spell-like abilities don't count, but a dragon's ability to cast as a
+      sorcerer does, for example).</p><p><strong>Base Item</strong>: 
+      greatsword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, antimagic field, creator must be a Kellid</p>
+  enh: 3
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 50350
+  showInQuickbar: false
+  sources:
+    - id: PZO9280
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 8
+type: weapon

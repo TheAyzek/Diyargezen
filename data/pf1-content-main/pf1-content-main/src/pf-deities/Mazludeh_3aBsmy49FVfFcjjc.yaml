@@ -1,0 +1,33 @@
+_id: 3aBsmy49FVfFcjjc
+_key: '!journal!3aBsmy49FVfFcjjc'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Mazludeh
+pages:
+  - _id: peaMXdfGlnRIdP60
+    _key: '!journal.pages!3aBsmy49FVfFcjjc.peaMXdfGlnRIdP60'
+    _stats:
+      coreVersion: '12.331'
+    name: Mazludeh
+    sort: 0
+    text:
+      content: >-
+        <h1>Mazludeh</h1><h2>Mother of Hearth and
+        Wall</h2>@Source[PZO9285;pages=23] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Mazludeh">Mazludeh</a><h3>Details</h3><p><strong>Alignment</strong>
+        NG<br /><strong>Pantheon</strong> Other Deities<br /><strong>Areas of
+        Concern</strong> Balance, community, negotiation, and twilight<br
+        /><strong>Domains</strong> Artifice, Community, Good, Knowledge<br
+        /><strong>Subdomains</strong> Agathion, Archon (Good), Azata (Good),
+        Cooperation, Family, Memory<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Heavy
+        shield<br /><strong>Symbol</strong> Seven eggs encircled by a snake
+        eating its own tail<br /><strong>Sacred Animal(s)</strong> Anaconda</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

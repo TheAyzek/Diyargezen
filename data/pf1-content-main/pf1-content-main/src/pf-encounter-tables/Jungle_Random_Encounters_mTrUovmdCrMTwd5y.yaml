@@ -1,0 +1,210 @@
+_id: mTrUovmdCrMTwd5y
+_key: '!tables!mTrUovmdCrMTwd5y'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/altar-hidden.webp
+name: Jungle Random Encounters
+replacement: true
+results:
+  - _id: fPE1s8gna09Gn6xu
+    _key: '!tables.results!mTrUovmdCrMTwd5y.fPE1s8gna09Gn6xu'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 6
+    text: '[[2d6]] Monkeys [AVG CR 2]'
+    type: text
+    weight: 1
+  - _id: 9LTwEFSGRg69hNgB
+    _key: '!tables.results!mTrUovmdCrMTwd5y.9LTwEFSGRg69hNgB'
+    img: icons/svg/d20-black.svg
+    range:
+      - 7
+      - 11
+    text: 1 Leopard [CR 2]
+    type: text
+    weight: 1
+  - _id: Zf1m4nar6I1QFK5f
+    _key: '!tables.results!mTrUovmdCrMTwd5y.Zf1m4nar6I1QFK5f'
+    img: icons/svg/d20-black.svg
+    range:
+      - 12
+      - 16
+    text: '[[1d4]] Giant Spiders [AVG CR 3]'
+    type: text
+    weight: 1
+  - _id: RmAKmkg1WPvnIvQQ
+    _key: '!tables.results!mTrUovmdCrMTwd5y.RmAKmkg1WPvnIvQQ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 17
+      - 20
+    text: '[[2d6]] Biloko [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: xH6a92zj417jfyIG
+    _key: '!tables.results!mTrUovmdCrMTwd5y.xH6a92zj417jfyIG'
+    img: icons/svg/d20-black.svg
+    range:
+      - 21
+      - 25
+    text: 1 Botfly Swarm [CR 4]
+    type: text
+    weight: 1
+  - _id: p9drRZu6tglQFGQu
+    _key: '!tables.results!mTrUovmdCrMTwd5y.p9drRZu6tglQFGQu'
+    img: icons/svg/d20-black.svg
+    range:
+      - 26
+      - 27
+    text: 1 Chemosit [CR 4]
+    type: text
+    weight: 1
+  - _id: mvtt0w312M1XXQYK
+    _key: '!tables.results!mTrUovmdCrMTwd5y.mvtt0w312M1XXQYK'
+    img: icons/svg/d20-black.svg
+    range:
+      - 28
+      - 32
+    text: '[[1d4]] Gorillas [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: 9FsM6AnGsFoNDU2u
+    _key: '!tables.results!mTrUovmdCrMTwd5y.9FsM6AnGsFoNDU2u'
+    img: icons/svg/d20-black.svg
+    range:
+      - 33
+      - 36
+    text: '[[1d6]] Rangers [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: FQzb8o6MDrH5gRyT
+    _key: '!tables.results!mTrUovmdCrMTwd5y.FQzb8o6MDrH5gRyT'
+    img: icons/svg/d20-black.svg
+    range:
+      - 37
+      - 43
+    text: '[[1d6]] Venomous Snakes [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: G9I2vyNZQTUMAX52
+    _key: '!tables.results!mTrUovmdCrMTwd5y.G9I2vyNZQTUMAX52'
+    img: icons/svg/d20-black.svg
+    range:
+      - 44
+      - 48
+    text: 1 Army Ant Swarm [CR 5]
+    type: text
+    weight: 1
+  - _id: yZAWZd8gdCJJO7ok
+    _key: '!tables.results!mTrUovmdCrMTwd5y.yZAWZd8gdCJJO7ok'
+    img: icons/svg/d20-black.svg
+    range:
+      - 49
+      - 52
+    text: '[[1d6]] Charau-ka [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: ggiZuXtMPn58lvNg
+    _key: '!tables.results!mTrUovmdCrMTwd5y.ggiZuXtMPn58lvNg'
+    img: icons/svg/d20-black.svg
+    range:
+      - 53
+      - 57
+    text: '[[1d4]] Deinonychuses [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: h0GwCAYbMBAGcVQG
+    _key: '!tables.results!mTrUovmdCrMTwd5y.h0GwCAYbMBAGcVQG'
+    img: icons/svg/d20-black.svg
+    range:
+      - 58
+      - 62
+    text: 1 Giant Frilled Lizard [CR 5]
+    type: text
+    weight: 1
+  - _id: 66p0M68eth9qPYei
+    _key: '!tables.results!mTrUovmdCrMTwd5y.66p0M68eth9qPYei'
+    img: icons/svg/d20-black.svg
+    range:
+      - 63
+      - 67
+    text: 1 Hippopotamus [CR 5]
+    type: text
+    weight: 1
+  - _id: cNtfdgRRKlON12q1
+    _key: '!tables.results!mTrUovmdCrMTwd5y.cNtfdgRRKlON12q1'
+    img: icons/svg/d20-black.svg
+    range:
+      - 68
+      - 74
+    text: '[[1d8]] Tribesfolk [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: yvX64Mu0IOz037DU
+    _key: '!tables.results!mTrUovmdCrMTwd5y.yvX64Mu0IOz037DU'
+    img: icons/svg/d20-black.svg
+    range:
+      - 75
+      - 79
+    text: '[[1d4]] Rival Adventurers [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: 3lggGOQS7yFVUFAx
+    _key: '!tables.results!mTrUovmdCrMTwd5y.3lggGOQS7yFVUFAx'
+    img: icons/svg/d20-black.svg
+    range:
+      - 80
+      - 83
+    text: 1 Ankylosaurus [CR 6]
+    type: text
+    weight: 1
+  - _id: kO7PBr4rAi6fJpkf
+    _key: '!tables.results!mTrUovmdCrMTwd5y.kO7PBr4rAi6fJpkf'
+    img: icons/svg/d20-black.svg
+    range:
+      - 84
+      - 88
+    text: 1 Bloodhaze Mosquito Swarm [CR 6]
+    type: text
+    weight: 1
+  - _id: 0TnwrpeJZ7z5OYtu
+    _key: '!tables.results!mTrUovmdCrMTwd5y.0TnwrpeJZ7z5OYtu'
+    img: icons/svg/d20-black.svg
+    range:
+      - 89
+      - 92
+    text: '[[1d6]] Eloko [AVG CR 6]'
+    type: text
+    weight: 1
+  - _id: VHCQu4W2xYFRD9Il
+    _key: '!tables.results!mTrUovmdCrMTwd5y.VHCQu4W2xYFRD9Il'
+    img: icons/svg/d20-black.svg
+    range:
+      - 93
+      - 95
+    text: 1 Girallon [CR 6]
+    type: text
+    weight: 1
+  - _id: FLVmLolm7vDEnynU
+    _key: '!tables.results!mTrUovmdCrMTwd5y.FLVmLolm7vDEnynU'
+    img: icons/svg/d20-black.svg
+    range:
+      - 96
+      - 98
+    text: 1 Dire Tiger [CR 8]
+    type: text
+    weight: 1
+  - _id: mScN1RY5kQZz2lMU
+    _key: '!tables.results!mTrUovmdCrMTwd5y.mScN1RY5kQZz2lMU'
+    img: icons/svg/d20-black.svg
+    range:
+      - 99
+      - 100
+    text: 1 Tyrannosaurus [CR 9]
+    type: text
+    weight: 1
+sort: 4000000

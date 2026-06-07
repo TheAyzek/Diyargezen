@@ -1,0 +1,29 @@
+_id: egbV0cjPL7sQ7tWo
+_key: '!items!egbV0cjPL7sQ7tWo'
+_stats:
+  coreVersion: '12.331'
+folder: 4DXOvYyjpcciEjGL
+img: icons/skills/ranged/arrow-strike-glowing-teal.webp
+name: Reliable (greater)
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> strong enchantment <strong>CL</strong>
+      12th</p><p><strong>Slot</strong> weapon quality; <strong>Price</strong> +3
+      bonus;</p><p>This special ability can only be placed on firearms. A
+      <em>greater reliable </em>firearm is enchanted so as to be less likely to
+      jam than other firearms. The <em>greater reliable </em>special ability
+      reduces the misfire value of the affected firearm by 4 (minimum 0). This
+      reduction occurs after any increases are calculated for firing with the
+      broken condition, or for any other effect that might increase the misfire
+      value of a firearm. A firearm with the <em>greater reliable </em>special
+      ability cannot have the <em>reliable</em> special
+      ability.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>make whole</em>; <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1123
+      pages: '147'
+  subType: misc
+  tags:
+    - Ranged Qualities
+type: feat

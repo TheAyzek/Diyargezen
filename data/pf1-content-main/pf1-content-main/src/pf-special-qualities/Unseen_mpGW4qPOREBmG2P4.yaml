@@ -1,0 +1,36 @@
+_id: mpGW4qPOREBmG2P4
+_key: '!items!mpGW4qPOREBmG2P4'
+_stats:
+  coreVersion: '12.331'
+folder: YaC0PDBdquBGbbsG
+img: systems/pf1/icons/skills/violet_04.jpg
+name: Unseen
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate illusion <strong>CL</strong>
+      7th</p><p><strong>Slot</strong> none; <strong>Price</strong> +2 bonus;
+      <p>This special ability can be placed only on a melee weapon. Upon
+      command, an <em>unseen</em> weapon can be made invisible, including any
+      scabbard, sheath, or similar accessory used to hold the weapon. A careful
+      search will still reveal its presence, but purely visual examination will
+      not. While invisible, an <em>unseen </em>weapon causes its wielder to take
+      a -1 penalty on attack rolls unless she has the Blind-Fight feat or is
+      able to see invisible objects. On the first attack made with an
+      <em>unseen</em> weapon during a combat, the defender is denied its
+      Dexterity bonus to Armor Class unless it has the Blind-Fight feat, is able
+      to see invisible objects, or is specifically aware that the wielder is
+      using an <em>unseen </em>weapon. An <em>unseen </em>weapon is considered
+      to have total concealment for attacks or effects directed at it, such as
+      combat maneuver checks made to disarm, steal<sup>APG</sup>, or sunder it
+      and <em>disintegrate </em>or <em>rusting
+      grasp</em>.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>greater invisibility</em>;
+      <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1134
+      pages: '239'
+  subType: misc
+  tags:
+    - Melee Qualities
+type: feat

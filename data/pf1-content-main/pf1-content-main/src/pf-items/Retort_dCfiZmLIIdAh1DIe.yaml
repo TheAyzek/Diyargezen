@@ -1,0 +1,23 @@
+_id: dCfiZmLIIdAh1DIe
+_key: '!items!dCfiZmLIIdAh1DIe'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/glass-orb-marble-green.webp
+name: Retort
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>A retort is a pair of
+      flasks attached to one another by a bent connector called an alembic. When
+      one flask is heated, gaseous products pass through the alembic and
+      condense in the other flask.</p>
+  price: 2
+  sources:
+    - id: PZO9445
+      pages: '5'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 0.5
+type: consumable

@@ -1,0 +1,32 @@
+_id: Fb5G6M5mQBWKNUUC
+_key: '!journal!Fb5G6M5mQBWKNUUC'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Scal
+pages:
+  - _id: DYhtHfWSX2wBOYbL
+    _key: '!journal.pages!Fb5G6M5mQBWKNUUC.DYhtHfWSX2wBOYbL'
+    _stats:
+      coreVersion: '12.331'
+    name: Scal
+    sort: 0
+    text:
+      content: >-
+        <h1>Scal</h1><h2>Calm after the Storm</h2>@Source[PZO90123;pages=73] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Scal">Scal</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Azlanti Pantheon<br /><strong>Areas of
+        Concern</strong> Annihilation, catharsis, and purity<br
+        /><strong>Domains</strong> Destruction, Earth, Evil, Liberation, Void<br
+        /><strong>Subdomains</strong> Catastrophe, Daemon, Entropy, Freedom,
+        Rage, Self-Realization (Liberation)*<br /><em>* Requires the <u>Acolyte
+        of Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Meteor
+        hammer<br /><strong>Symbol</strong> Burning meteor impacting the
+        ground</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

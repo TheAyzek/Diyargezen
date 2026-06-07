@@ -1,0 +1,26 @@
+_id: idmkk6uzaOCtbnFf
+_key: '!items!idmkk6uzaOCtbnFf'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/instruments/megaphone.webp
+name: Ear Trumpet (Masterwork)
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 25 gp (common), 100 gp (masterwork);
+      <strong>Weight</strong> 2 lbs. (common), 2 lbs. (masterwork)</p><p>This
+      foot-long brass funnel amplifies sounds entering through the broad end for
+      anyone listening at the narrow end. The listener gains a +2 circumstance
+      bonus on sound-based Perception checks but must use one hand to hold the
+      trumpet to the ear in order to gain the benefit. A masterwork ear
+      trumpet's exquisite acoustic properties grant the listener a +4
+      circumstance bonus instead.</p>
+  equipped: false
+  price: 100
+  sources:
+    - id: PZO9452
+      pages: '20'
+  subType: adventuring
+  weight:
+    value: 2
+type: loot

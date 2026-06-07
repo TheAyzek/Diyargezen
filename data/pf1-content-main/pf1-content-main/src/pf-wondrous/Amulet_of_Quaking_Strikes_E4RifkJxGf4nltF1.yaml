@@ -1,0 +1,31 @@
+_id: E4RifkJxGf4nltF1
+_key: '!items!E4RifkJxGf4nltF1'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Amulet of Quaking Strikes
+system:
+  aura:
+    school: evo
+  cl: 15
+  description:
+    value: >-
+      <p>This simple bronze amulet depicts a mountaintop being shattered by a
+      sword blow. Twice per day, the amulet's wearer can make a single melee
+      attack against the ground as a standard action. The wearer can choose a
+      point of origin within 100 feet of himself and apply his attack roll
+      against all creatures within a 20-foot radius of that point. The amulet's
+      wearer rolls his attack's damage once and applies it to all creatures in
+      the affected area. The damage includes the weapon's base damage dice, the
+      wearer's Strength modifier, and damage from feats such as Power Attack and
+      Vital Strike; it doesn't include damage from other magical sources, such
+      as enhancement bonuses, spells, and magic weapon special
+      abilities.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, earthquake</p>
+  price: 28000
+  slot: neck
+  sources:
+    - id: PZO9455
+  subType: wondrous
+type: equipment

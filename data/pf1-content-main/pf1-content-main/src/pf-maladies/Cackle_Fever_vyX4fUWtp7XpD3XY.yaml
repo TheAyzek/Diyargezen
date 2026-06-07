@@ -1,0 +1,19 @@
+_id: vyX4fUWtp7XpD3XY
+_key: '!items!vyX4fUWtp7XpD3XY'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/shadow_20.jpg
+name: Cackle Fever
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> disease (inhaled);
+      <strong>Save</strong>&nbsp;Fortitude DC
+      16;</p><p><strong>Onset</strong>&nbsp;1
+      day;&nbsp;<strong>Frequency</strong>&nbsp;1/day</p><p><strong>Effect</strong>&nbsp;1d6
+      Wis damage</p><p><strong>Cure</strong>&nbsp;2 consecutive saves</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

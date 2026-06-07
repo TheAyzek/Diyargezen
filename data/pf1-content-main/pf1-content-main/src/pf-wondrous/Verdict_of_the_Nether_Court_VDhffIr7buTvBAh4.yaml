@@ -1,0 +1,31 @@
+_id: VDhffIr7buTvBAh4
+_key: '!items!VDhffIr7buTvBAh4'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Verdict of the Nether Court
+system:
+  aura:
+    school: nec
+  cl: 13
+  description:
+    value: >-
+      <p>Infused with the power of Hell's courts, this blood-quenched steel
+      gavel emits an ear-splitting din when struck against a hard surface. Once
+      per day, as a standard action, you can use it to judge a single foe within
+      30 feet, who then suffers the effect of a dictum spell.  The gavel bestows
+      one negative level on any chaotic or good creature attempting to wield it.
+      The negative level remains as long as the weapon is in hand and disappears
+      when the weapon is no longer wielded. This negative level never results in
+      actual level loss, but it cannot be overcome in any way (including
+      restoration spells) while the weapon is wielded. If the creature is
+      chaotic good, these negative levels
+      stack.</p><h3>Requirements</h3><p>Craft Wondrous Item, dictum</p>
+  price: 32000
+  sources:
+    - id: PZO9407
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

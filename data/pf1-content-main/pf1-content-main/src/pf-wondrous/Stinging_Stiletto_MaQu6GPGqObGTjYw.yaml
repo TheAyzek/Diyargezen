@@ -1,0 +1,33 @@
+_id: MaQu6GPGqObGTjYw
+_key: '!items!MaQu6GPGqObGTjYw'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Stinging Stiletto
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>This tiny dagger has a black leather hilt and a gold-inlaid pattern of
+      stripes and sharp angles on its steel blade. It can transform into a
+      delicate necklace or ornate finger-ring at the wearer's command. The
+      wearer gains a +3 competence bonus on Perception checks while the item is
+      carried or worn. The wearer can also use it to cast ghost sound once per
+      day.  If Calistria is the wearer's patron, once per day the wearer may
+      speak a command word to use fox's cunning. As a standard action, the
+      wearer can prick her finger with the dagger and swear an oath on her own
+      blood to avenge herself against a particular named creature; the wearer
+      gains a +1 competence bonus on her next attack roll within 1 minute
+      against that creature. Speaking a new vengeance-oath removes the old one,
+      whether or not the wearer has achieved her
+      vengeance.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, fox's cunning, ghost sound, guidance, creator must have 5
+      ranks in Perception</p>
+  price: 4500
+  sources:
+    - id: PZO9267
+  subType: wondrous
+type: equipment

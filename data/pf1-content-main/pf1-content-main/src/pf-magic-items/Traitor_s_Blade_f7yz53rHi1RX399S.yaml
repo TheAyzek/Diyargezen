@@ -1,0 +1,65 @@
+_id: f7yz53rHi1RX399S
+_key: '!items!f7yz53rHi1RX399S'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/dagger.PNG
+name: Traitor's Blade
+system:
+  actions:
+    - _id: gxamzrrqtlryx0cq
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: traitorsBlade
+  aura:
+    custom: true
+    school: necromancy and enchantment
+  baseTypes:
+    - Dagger
+  cl: 14
+  description:
+    value: >-
+      <p>This +2 wounding (Ultimate Equipment 149) dagger allows the wielder to
+      use charm monster (DC 18) three times per day. When the wielder hits a
+      creature affected by the dagger's charm effect, the dagger deals an
+      additional 2d6 points of damage to that creature, even if the creature is
+      no longer charmed because of the hostile action. All other creatures
+      charmed by the blade that see this act of betrayal become sickened for 1d4
+      rounds, but are immediately freed from the charm
+      effect.</p><p><strong>Base Item</strong>: +2 wounding
+      dagger</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, bleed, charm monster, inflict moderate wound</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 50302
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9459
+  weaponGroups:
+    - bladesLight
+    - thrown
+    - tribal
+  weight:
+    value: 1
+type: weapon

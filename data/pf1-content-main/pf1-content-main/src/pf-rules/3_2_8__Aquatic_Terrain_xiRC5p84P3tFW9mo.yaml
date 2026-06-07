@@ -1,0 +1,89 @@
+_id: xiRC5p84P3tFW9mo
+_key: '!journal!xiRC5p84P3tFW9mo'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: br8fwJFrbgshQXJz
+name: 3.2.8. Aquatic Terrain
+pages:
+  - _id: YPr3k0O0jJe2URIU
+    _key: '!journal.pages!xiRC5p84P3tFW9mo.YPr3k0O0jJe2URIU'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.2.8. Aquatic Terrain
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.CPUpraqn1jz9vhMh]{3.2.
+        Wilderness}</p><ul><li>@Compendium[pf-content.pf-rules.QrderWyxAp6RUvtz]{3.2.1.
+        Getting
+        Lost}</li><li>@Compendium[pf-content.pf-rules.pcu8vDTPaIYw82SU]{3.2.2.
+        Forest
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.zJ4qqxSB0Iufd5Be]{3.2.3.
+        Marsh
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.RVKULXygOAXTZ1WC]{3.2.4.
+        Hills
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.B5qjfHf1pFgEA7bg]{3.2.5.
+        Mountain
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.tuZEOzPezZUbz4Fj]{3.2.5.2.
+        Mountain
+        Travel}</li><li>@Compendium[pf-content.pf-rules.3YyU7Yg6wbShgOKM]{3.2.6.
+        Desert
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.QOCypcVHE6zpYlyD]{3.2.7.
+        Plains
+        Terrain}</li><li><strong>@Compendium[pf-content.pf-rules.xiRC5p84P3tFW9mo]{3.2.8.
+        Aquatic Terrain}</strong></li></ul><hr
+        /><p>@Source[PZO1110;pages=432]</p><p>Aquatic terrain is the least
+        hospitable to most PCs, because they can’t breathe there. Aquatic
+        terrain doesn’t offer the variety that land terrain does. The ocean
+        floor holds many marvels, including undersea analogues of any of the
+        terrain elements described earlier in this section, but if characters
+        find themselves in the water because they were bull rushed off the deck
+        of a pirate ship, the tall kelp beds hundreds of feet below them don’t
+        matter. Accordingly, these rules simply divide aquatic terrain into two
+        categories: flowing water (such as streams and rivers) and non-flowing
+        water (such as lakes and
+        oceans).</p><p>@Compendium[pf-content.pf-rules.r4t1MHGGd6myKln7]{3.2.8.1.
+        Underwater
+        Combat}</p><p>@Compendium[pf-content.pf-rules.AlMWpchX9rOkfomx]{3.2.8.2.
+        Floods}</p><h2>Flowing Water</h2><p>Large, placid rivers move at only a
+        few miles per hour, so they function as still water for most purposes.
+        But some rivers and streams are swifter; anything floating in them moves
+        downstream at a speed of 10 to 40 feet per round. The fastest rapids
+        send swimmers bobbing downstream at 60 to 90 feet per round. Fast rivers
+        are always at least rough water (Swim DC 15), and whitewater rapids are
+        stormy water (Swim DC 20). If a character is in moving water, move her
+        downstream the indicated distance at the end of her turn. A character
+        trying to maintain her position relative to the riverbank can spend some
+        or all of her turn swimming upstream.</p><h2>Swept
+        Away</h2><p>Characters swept away by a river moving 60 feet per round or
+        faster must make DC 20 Swim checks every round to avoid going under. If
+        a character gets a check result of 5 or more over the minimum necessary,
+        she arrests her motion by catching a rock, tree limb, or bottom snag—she
+        is no longer being carried along by the flow of the water. Escaping the
+        rapids by reaching the bank requires three DC 20 Swim checks in a row.
+        Characters arrested by a rock, limb, or snag can’t escape under their
+        own power unless they strike out into the water and attempt to swim
+        their way clear. Other characters can rescue them as if they were
+        trapped in quicksand (described in Marsh Terrain).</p><h2>Non-Flowing
+        Water</h2><p>Lakes and oceans simply require a swim speed or successful
+        Swim checks to move through (DC 10 in calm water, DC 15 in rough water,
+        DC 20 in stormy water). Characters need a way to breathe if they’re
+        underwater; failing that, they risk drowning. When underwater,
+        characters can move in any direction.</p><h2>Stealth and Detection
+        Underwater</h2><p>How far you can see underwater depends on the water’s
+        clarity. As a guideline, creatures can see 4d8 × 10 feet if the water is
+        clear, and 1d8 × 10 feet if it’s murky. Moving water is always murky,
+        unless it’s in a particularly large, slow-moving river.</p><p>It’s hard
+        to find cover or concealment to hide underwater (except along the sea
+        floor).</p><h2>Invisibility</h2><p>An invisible creature displaces water
+        and leaves a visible, body-shaped “bubble” where the water was
+        displaced. The creature still has concealment (20% miss chance), but not
+        total concealment (50% miss chance).</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,23 @@
+_id: tccVVdaZWm3B8DFY
+_key: '!items!tccVVdaZWm3B8DFY'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Mammoth goad
+system:
+  description:
+    value: >-
+      <p></p><h2>Description</h2><p>Used in the Realm of the Mammoth Lords to
+      train and direct domesticated megafauna, this goad is a sturdy wooden pole
+      10 to 15 feet long with a prod of polished bone, ivory, or soapstone on
+      one end. The goad grants a +2 bonus on all Handle Animal checks made
+      against mammoths and other megafauna.</p>
+  equipped: false
+  price: 5
+  sources:
+    - id: PZO9428
+      pages: '28'
+  subType: animalGear
+  weight:
+    value: 10
+type: loot

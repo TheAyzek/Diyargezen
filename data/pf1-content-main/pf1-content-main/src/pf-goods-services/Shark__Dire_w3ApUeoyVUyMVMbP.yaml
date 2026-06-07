@@ -1,0 +1,25 @@
+_id: w3ApUeoyVUyMVMbP
+_key: '!items!w3ApUeoyVUyMVMbP'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/bones/bone-jaw-teeth-brown.webp
+name: Shark, Dire
+system:
+  description:
+    value: >-
+      <p><em>Description from "Dire Animals" section of Animal Archive, page
+      15.</em></p><p>These feral beasts are all but untamable, and are typically
+      only sought out by violent brawlers or cruel lords, either for brutish
+      protection or to pit against equally vicious creatures in violent animal
+      fights. At the GM's discretion, PCs who acquire dire animals may be
+      required to attempt wild empathy or Handle Animal checks every day to keep
+      their pets from running away or attacking them and their allies. Dire
+      animals are not generally suitable as mounts, though the GM may make
+      exceptions at her discretion.</p>
+  equipped: false
+  price: 3375
+  sources:
+    - id: PZO9429
+      pages: '15'
+  subType: animal
+type: loot

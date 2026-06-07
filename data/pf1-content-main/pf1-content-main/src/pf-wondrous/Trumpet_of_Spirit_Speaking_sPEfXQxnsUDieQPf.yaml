@@ -1,0 +1,31 @@
+_id: sPEfXQxnsUDieQPf
+_key: '!items!sPEfXQxnsUDieQPf'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Trumpet of Spirit Speaking
+system:
+  aura:
+    school: nec
+  cl: 6
+  description:
+    value: >-
+      <p>This long, segmented cone is made of a lightweight metal and collapses
+      into three sections.  Although nonmagical spirit trumpets are most often
+      used by fraudulent mediums and manipulated with sleight of hand and
+      ventriloquism, a trumpet of spirit speaking allows actual communication
+      with the spirits of the deceased. Once per day, when its mouthpiece is
+      placed to the lips of a mostly intact corpse, the user can ask up to three
+      questions of the dead creature, as if the corpse were subject to a speak
+      with dead spell.  The corpse's replies to the questions issue forth from
+      the horn in quiet, ghostly
+      whispers.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, speak with dead</p>
+  price: 6500
+  sources:
+    - id: PZO9269
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

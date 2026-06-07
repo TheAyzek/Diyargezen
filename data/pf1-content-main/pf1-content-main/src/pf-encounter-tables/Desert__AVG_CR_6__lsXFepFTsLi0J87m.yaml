@@ -1,0 +1,192 @@
+_id: lsXFepFTsLi0J87m
+_key: '!tables!lsXFepFTsLi0J87m'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/statue-hound-horned.webp
+name: Desert (AVG CR 6)
+replacement: true
+results:
+  - _id: QjgiYMjeewwcR52O
+    _key: '!tables.results!lsXFepFTsLi0J87m.QjgiYMjeewwcR52O'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 8
+    text: 1 Giant Spider [CR 1]
+    type: text
+    weight: 1
+  - _id: Tq1PHFE3B67sadsL
+    _key: '!tables.results!lsXFepFTsLi0J87m.Tq1PHFE3B67sadsL'
+    img: icons/svg/d20-black.svg
+    range:
+      - 9
+      - 12
+    text: 1 Skeletal Champion [CR 2]
+    type: text
+    weight: 1
+  - _id: w6dYA1IgdtvPKXe0
+    _key: '!tables.results!lsXFepFTsLi0J87m.w6dYA1IgdtvPKXe0'
+    img: icons/svg/d20-black.svg
+    range:
+      - 13
+      - 18
+    text: '[[1d8]] Skeletons [AVG CR 2]'
+    type: text
+    weight: 1
+  - _id: 2npm5r0ztan25UX1
+    _key: '!tables.results!lsXFepFTsLi0J87m.2npm5r0ztan25UX1'
+    img: icons/svg/d20-black.svg
+    range:
+      - 19
+      - 22
+    text: 1 Bat Swarm [CR 2]
+    type: text
+    weight: 1
+  - _id: 1101zSWNKP62XULa
+    _key: '!tables.results!lsXFepFTsLi0J87m.1101zSWNKP62XULa'
+    img: icons/svg/d20-black.svg
+    range:
+      - 23
+      - 30
+    text: 1 Giant Scorpion [CR 3]
+    type: text
+    weight: 1
+  - _id: kCKM2mAvD6UOGC9g
+    _key: '!tables.results!lsXFepFTsLi0J87m.kCKM2mAvD6UOGC9g'
+    img: icons/svg/d20-black.svg
+    range:
+      - 31
+      - 34
+    text: '[[1d3]] Dire Bats [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: uG2or0MHjqmNoZpS
+    _key: '!tables.results!lsXFepFTsLi0J87m.uG2or0MHjqmNoZpS'
+    img: icons/svg/d20-black.svg
+    range:
+      - 35
+      - 42
+    text: '[[1d6]] Venomous Snakes [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: kNMnMkLwQRERShxG
+    _key: '!tables.results!lsXFepFTsLi0J87m.kNMnMkLwQRERShxG'
+    img: icons/svg/d20-black.svg
+    range:
+      - 43
+      - 46
+    text: 1 Basilisk [CR 5]
+    type: text
+    weight: 1
+  - _id: OkKiIhHQLeyyFWO0
+    _key: '!tables.results!lsXFepFTsLi0J87m.OkKiIhHQLeyyFWO0'
+    img: icons/svg/d20-black.svg
+    range:
+      - 47
+      - 52
+    text: 1 Mummy [CR 5]
+    type: text
+    weight: 1
+  - _id: fwM35ZVOjBZyoGis
+    _key: '!tables.results!lsXFepFTsLi0J87m.fwM35ZVOjBZyoGis'
+    img: icons/svg/d20-black.svg
+    range:
+      - 53
+      - 56
+    text: '[[1d4]] Jann [AVG CR 7]'
+    type: text
+    weight: 1
+  - _id: rJSKuUiMDygXZo6K
+    _key: '!tables.results!lsXFepFTsLi0J87m.rJSKuUiMDygXZo6K'
+    img: icons/svg/d20-black.svg
+    range:
+      - 57
+      - 60
+    text: 1 Lamia [CR 6]
+    type: text
+    weight: 1
+  - _id: vx2rFOhQ33zyQ9LB
+    _key: '!tables.results!lsXFepFTsLi0J87m.vx2rFOhQ33zyQ9LB'
+    img: icons/svg/d20-black.svg
+    range:
+      - 61
+      - 68
+    text: '[[2d6]] Giant Ants [AVG CR 8]'
+    type: text
+    weight: 1
+  - _id: nrDB6zREZ1vHSRXl
+    _key: '!tables.results!lsXFepFTsLi0J87m.nrDB6zREZ1vHSRXl'
+    img: icons/svg/d20-black.svg
+    range:
+      - 69
+      - 72
+    text: 1 Young Brass Dragon [CR 7]
+    type: text
+    weight: 1
+  - _id: 2lJBUA3zHjBEtryR
+    _key: '!tables.results!lsXFepFTsLi0J87m.2lJBUA3zHjBEtryR'
+    img: icons/svg/d20-black.svg
+    range:
+      - 73
+      - 80
+    text: '[[2d6]] Gnolls and [[1d4]] Hyenas [AVG CR 7]'
+    type: text
+    weight: 1
+  - _id: wZHiO9qAZyw0pZgI
+    _key: '!tables.results!lsXFepFTsLi0J87m.wZHiO9qAZyw0pZgI'
+    img: icons/svg/d20-black.svg
+    range:
+      - 81
+      - 84
+    text: 1 Remorhaz (cold desert only) [CR 7]
+    type: text
+    weight: 1
+  - _id: ZneyFY365V1G46Ak
+    _key: '!tables.results!lsXFepFTsLi0J87m.ZneyFY365V1G46Ak'
+    img: icons/svg/d20-black.svg
+    range:
+      - 85
+      - 88
+    text: 1 Behir [CR 8]
+    type: text
+    weight: 1
+  - _id: ucIYJQKu5kNzOByT
+    _key: '!tables.results!lsXFepFTsLi0J87m.ucIYJQKu5kNzOByT'
+    img: icons/svg/d20-black.svg
+    range:
+      - 89
+      - 92
+    text: 1 Sphinx
+    type: text
+    weight: 1
+  - _id: 2GJQkE34GQUEv7JP
+    _key: '!tables.results!lsXFepFTsLi0J87m.2GJQkE34GQUEv7JP'
+    img: icons/svg/d20-black.svg
+    range:
+      - 93
+      - 96
+    text: 1 Young Blue Dragon [CR 9]
+    type: text
+    weight: 1
+  - _id: GeolAW3tqKHikU18
+    _key: '!tables.results!lsXFepFTsLi0J87m.GeolAW3tqKHikU18'
+    img: icons/svg/d20-black.svg
+    range:
+      - 97
+      - 98
+    text: 1 Adult Brass Dragon [CR 11]
+    type: text
+    weight: 1
+  - _id: gHvGY8ho2mY0W4Ud
+    _key: '!tables.results!lsXFepFTsLi0J87m.gHvGY8ho2mY0W4Ud'
+    img: icons/svg/d20-black.svg
+    range:
+      - 99
+      - 100
+    text: 1 Adult Blue Dragon [CR 13]
+    type: text
+    weight: 1
+sort: 3800000

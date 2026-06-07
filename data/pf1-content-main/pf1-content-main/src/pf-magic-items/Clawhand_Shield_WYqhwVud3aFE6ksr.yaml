@@ -1,0 +1,48 @@
+_id: WYqhwVud3aFE6ksr
+_key: '!items!WYqhwVud3aFE6ksr'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-heavy-metal.png
+name: Clawhand Shield
+system:
+  armor:
+    acp: 2
+    material:
+      base:
+        value: steel
+    value: 2
+  aura:
+    school: nec
+  baseTypes:
+    - Heavy Steel Shield
+  cl: 9
+  description:
+    value: >-
+      <p>This shield is made of bone and ivory, but has been imbued with magic
+      to function as a +2 mithral heavy steel shield (though it is not
+      considered to be made of metal). The shield has stylized animal claws
+      encircling its outer rim. If the wearer is grappled, pinned, or swallowed
+      whole, as a standard action he can cause the claws to animate and make a
+      single melee attack dealing 1d8 points of damage + the wielder's Strength
+      modifier (1d6 + his Strength modifier for a Small wielder) without
+      requiring a successful combat maneuver check to do so. This is considered
+      a weapon attack with a one-handed weapon the wielder is proficient with,
+      not a shield bash.  Additionally, the claws can animate to perform the
+      somatic components of a spell as long as the arm holding the shield would
+      be able to provide these components if it weren't carrying a shield. As a
+      result, the shield has no arcane spell failure chance.</p><p><strong>Base
+      Item</strong>: +2
+      mithral</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, summon nature's ally I</p>
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 8158
+  slot: shield
+  sources:
+    - id: PZO1129
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 8
+type: equipment

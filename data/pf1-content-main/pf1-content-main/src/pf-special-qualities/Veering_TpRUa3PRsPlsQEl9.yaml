@@ -1,0 +1,27 @@
+_id: TpRUa3PRsPlsQEl9
+_key: '!items!TpRUa3PRsPlsQEl9'
+_stats:
+  coreVersion: '12.331'
+folder: 4DXOvYyjpcciEjGL
+img: icons/skills/ranged/arrow-strike-glowing-teal.webp
+name: Veering
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint evocation <strong>CL</strong>
+      5th</p><p><strong>Slot</strong> none; <strong>Price</strong> +1 bonus;
+      <p>This special ability can be placed only on ranged weapons.
+      <em>Veering</em> weapons feature feathers or carved images of wings or
+      winged creatures in their construction. Attacks with a <em>veering</em>
+      weapon ignore a target's bonus to AC from partial cover and reduce the
+      target's bonus to AC from cover and soft cover by 2. A <em>veering</em>
+      weapon bestows no benefit against targets with total
+      cover.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>magic missile</em>; <strong>Price</strong> -</p>
+  sources:
+    - id: PZO9452
+      pages: '27'
+  subType: misc
+  tags:
+    - Ranged Qualities
+type: feat

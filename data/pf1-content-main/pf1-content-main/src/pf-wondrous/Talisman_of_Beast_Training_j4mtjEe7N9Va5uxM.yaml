@@ -1,0 +1,28 @@
+_id: j4mtjEe7N9Va5uxM
+_key: '!items!j4mtjEe7N9Va5uxM'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Talisman of Beast Training
+system:
+  aura:
+    school: enc
+  cl: 1
+  description:
+    value: >-
+      <p>This talisman is worn lashed around the neck and is made of flexible
+      bark woven into a mesmerizing pattern. While wearing a talisman of beast
+      training, a wearer finds that animals become much more patient with her
+      and amenable to training. As such, failed Handle Animal checks made during
+      downtime periods- including those made to rear animals and teach them new
+      tricks-may be treated as if they were successful. The talisman can turn 10
+      failed checks into successes this way. Once the tenth failed check has
+      been converted to a success, the talisman falls apart and becomes
+      useless.</p><h3>Requirements</h3><p>Craft Wondrous Item, charm animal</p>
+  price: 4000
+  slot: neck
+  sources:
+    - id: PZO9433
+  subType: wondrous
+type: equipment

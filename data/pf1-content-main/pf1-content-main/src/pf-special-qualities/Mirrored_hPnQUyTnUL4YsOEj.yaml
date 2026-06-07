@@ -1,0 +1,32 @@
+_id: hPnQUyTnUL4YsOEj
+_key: '!items!hPnQUyTnUL4YsOEj'
+_stats:
+  coreVersion: '12.343'
+folder: d9cuvREi0qdcYFZ0
+img: icons/magic/defensive/armor-shield-barrier-steel.webp
+name: Mirrored
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate abjuration <strong>CL</strong>
+      8th</p><p><strong>Slot</strong> armor/shield quality;
+      <strong>Price</strong> +1 bonus;</p><p>The polished surface of a
+      <em>mirrored </em>shield or armor gleams and shines, and can be used as an
+      ordinary mirror. Furthermore, it aids in battling creatures with gaze
+      attacks. If the wearer averts his eyes, he can roll the miss chance twice,
+      selecting the better result. The wearer can deal sneak attack or other
+      precision-based damage to the target even though it has concealment
+      against him. This provides no benefit if the wearer closes his eyes, wears
+      a blindfold, or otherwise can't see the target at all. The <em>mirrored
+      </em>armor or shield also adds its enhancement bonus to the wearer's touch
+      AC against rays. it. This special ability may only be added to metallic
+      armor or shields.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, <em>spell turning</em>; <strong>Price</strong>
+      +1 bonus</p>
+  sources:
+    - id: PZO1123
+      pages: '120'
+  subType: misc
+  tags:
+    - Universal Armor & Shield Qualities
+type: feat

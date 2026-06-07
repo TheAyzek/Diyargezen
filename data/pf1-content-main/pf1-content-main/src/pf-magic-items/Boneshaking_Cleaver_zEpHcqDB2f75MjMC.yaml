@@ -1,0 +1,62 @@
+_id: zEpHcqDB2f75MjMC
+_key: '!items!zEpHcqDB2f75MjMC'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/greataxe.png
+name: Boneshaking Cleaver
+system:
+  actions:
+    - _id: 5z8yb67x7jn180fs
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: boneshakingCleaver
+  aura:
+    custom: true
+    school: necromancy [evil]
+  baseTypes:
+    - Greataxe
+  cl: 15
+  description:
+    value: >-
+      <p>This well-balanced, two-handed cleaver is nearly 6 feet in length. Its
+      blade protrudes from a hilt that appears to be the spine of an animal,
+      capped with a skull at its end. A boneshaking cleaver functions as a +3
+      unholy greataxe. On a critical hit, it also rattles the target's bones,
+      rending flesh and separating joints. This deals 1 point of Constitution
+      damage and allows the wielder to apply one of the following conditions to
+      the target for 1 round: deafened, shaken, or sickened.</p><p><strong>Base
+      Item</strong>: +3 unholy
+      greataxe</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, bestow curse, unholy blight</p>
+  enh: 3
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 90320
+  showInQuickbar: false
+  sources:
+    - id: PZO1135
+  weaponGroups:
+    - axes
+  weight:
+    value: 12
+type: weapon

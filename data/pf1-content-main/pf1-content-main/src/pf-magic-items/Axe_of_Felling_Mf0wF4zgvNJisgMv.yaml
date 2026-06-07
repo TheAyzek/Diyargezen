@@ -1,0 +1,61 @@
+_id: Mf0wF4zgvNJisgMv
+_key: '!items!Mf0wF4zgvNJisgMv'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/waraxe-dwarven.PNG
+name: Axe of Felling
+system:
+  actions:
+    - _id: 4uumbk082b6dzyfa
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: axeOfFelling
+  aura:
+    school: trs
+  baseTypes:
+    - Dwarven Waraxe
+  cl: 10
+  description:
+    value: >-
+      <p>Born from dwarven forges, these +1 giant-bane dwarven waraxes are
+      crafted in the likeness of the favored weapon of King Harral, the last
+      king of the Pious Kingdom of Saggorak. According to legend, before he and
+      his comrades starved to death during the orc siege of Saggorak, King
+      Harral challenged and defeated an ettin in single combat by hacking its
+      legs from beneath its body with his axe. An axe of felling possesses the
+      trip weapon feature and can be used to trip opponents up to two size
+      categories larger than its wielder.</p><p><strong>Base Item</strong>:
+      giant-bane dwarven
+      waraxe</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, bull's strength, summon monster I</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 11330
+  showInQuickbar: false
+  sources:
+    - id: PZO9453
+  weaponGroups:
+    - axes
+  weight:
+    value: 8
+type: weapon

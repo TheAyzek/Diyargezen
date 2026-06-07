@@ -1,0 +1,27 @@
+_id: lFIcfYNLzgRxOkCs
+_key: '!items!lFIcfYNLzgRxOkCs'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/ribbon-yellow.jpg
+name: Flying straps
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong>  80 gp (masterwork),  10 gp (standard);
+      <strong>Weight</strong> 10 lbs. (masterwork), 10 lbs.
+      (standard)</p><h2>Description</h2><p>These crude straps are used to secure
+      a goblin or other small creature to the underside of a dire bat
+      (<em>Pathfinder RPG Bestiary</em> 30) or giant vulture (<em>Pathfinder RPG
+      Bestiary 3</em> 284). These straps count as an exotic riding saddle. If
+      the mount fails a Fly check, there's a 50% chance the straps break and the
+      rider falls. Masterwork flying straps count as an exotic military saddle,
+      and don't have a chance to break if the mount fails a Fly check.</p>
+  equipped: false
+  price: 80
+  sources:
+    - id: PZO1130
+      pages: '105'
+  subType: animalGear
+  weight:
+    value: 10
+type: loot

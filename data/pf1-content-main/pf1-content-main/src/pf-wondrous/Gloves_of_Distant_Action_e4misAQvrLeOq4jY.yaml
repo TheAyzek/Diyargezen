@@ -1,0 +1,34 @@
+_id: e4misAQvrLeOq4jY
+_key: '!items!e4misAQvrLeOq4jY'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Gloves of Distant Action
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>As a move action, the wearer of these fine leather gloves can pick up
+      an unattended object (weighing no more than 20 pounds) that is up to 30
+      feet away, and move it up to 30 feet. The object falls to the ground at
+      the end of the movement unless the wearer of the gloves moves it into his
+      hand. This action doesn't provoke attacks of opportunity.   By expending
+      one use of mythic power as a free action on his turn, the wearer can focus
+      the power of the gloves, allowing him to make unarmed strikes and combat
+      maneuvers to bull rush, disarm, or trip against foes up to 30 feet away
+      until the end of his turn. Treat these attacks as though the wearer had 30
+      feet of reach. When attacking a non-adjacent target in this manner, the
+      wearer can't be affected by feats and abilities like Strike Back or fire
+      shield that require touching or coming near the target. The gloves don't
+      increase the wearer's threatened
+      area.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Mythic Crafter, mage hand, telekinesis</p>
+  price: 20000
+  slot: hands
+  sources:
+    - id: PZO1126
+  subType: wondrous
+type: equipment

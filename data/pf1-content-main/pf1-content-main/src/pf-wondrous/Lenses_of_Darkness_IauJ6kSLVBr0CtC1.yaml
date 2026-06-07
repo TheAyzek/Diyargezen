@@ -1,0 +1,26 @@
+_id: IauJ6kSLVBr0CtC1
+_key: '!items!IauJ6kSLVBr0CtC1'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Lenses of Darkness
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>Crafted from a dark-colored crystalline material and infused with
+      magical darkness, these lenses fit over the wearer's eyes. When worn by a
+      creature with light sensitivity or light blindness, these lenses protect
+      the wearer against the effect of sunlight, the daylight spell, or similar
+      light effects. Both lenses must be worn for the magic to be
+      effective.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, darkness</p>
+  price: 12000
+  slot: eyes
+  sources:
+    - id: PZO1121
+  subType: wondrous
+type: equipment

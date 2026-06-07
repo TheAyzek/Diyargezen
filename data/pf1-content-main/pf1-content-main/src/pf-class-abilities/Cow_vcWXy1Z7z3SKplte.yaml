@@ -1,0 +1,19 @@
+_id: vcWXy1Z7z3SKplte
+_key: '!items!vcWXy1Z7z3SKplte'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Cow
+system:
+  associations:
+    classes:
+      - Hunter
+  description:
+    value: >-
+      <p><strong>Hunter Animal Focus</strong></p><p>The creature gains a +1
+      resistance bonus on Fortitude saving throws. This bonus increases to +2 at
+      8th level and +3 at 15th level.</p>
+  subType: classFeat
+  tags:
+    - Hunter Animal Focus
+type: feat

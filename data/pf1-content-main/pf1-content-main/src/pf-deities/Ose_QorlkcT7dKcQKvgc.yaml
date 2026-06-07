@@ -1,0 +1,45 @@
+_id: QorlkcT7dKcQKvgc
+_key: '!journal!QorlkcT7dKcQKvgc'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Ose
+pages:
+  - _id: RctKs5rfxXmphDyh
+    _key: '!journal.pages!QorlkcT7dKcQKvgc.RctKs5rfxXmphDyh'
+    _stats:
+      coreVersion: '12.331'
+    name: Ose
+    sort: 0
+    text:
+      content: >-
+        <h1>Ose</h1><h2>Duke of Claws</h2>@Source[PZO9267;pages=326] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Ose">Ose</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Infernal Dukes<br /><strong>Areas of
+        Concern</strong> Betrayal, doom, obsession<br /><strong>Domains</strong>
+        Artifice, Evil, Law, Madness<br /><strong>Subdomains</strong> Devil
+        (Evil), Devil (Law), Insanity, Nightmare, Toil<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Spiked gauntlet<br /><strong>Symbol</strong> Claws and
+        tiger face<br /><strong>Sacred Animal(s)</strong> Tiger<br
+        /><strong>Sacred Color(s)</strong> Black,
+        orange</p><h3>Obedience</h3><p>Replace the internal mechanisms of a
+        clockwork or other mechanical device with tiger claws. Gain a +4 profane
+        bonus on saving throws against mind-affecting effects.</p><h2>Boons -
+        Infernal Dukes</h2>@Source[PZO1139;pages=118]<br />The Lords of Hell,
+        the Dukes of Perdition, and the Princes of Damnation are all names for
+        the infamous nobility of the Pit- the elite caste of devilkind known as
+        the infernal dukes.<p> All infernal dukes are lawful evil and range in
+        power from CR 26 to CR 27. The boons they grant are less complex than
+        those granted by archdevils, manifesting as spell-like abilities usable
+        once per day each.</p><p><strong>1</strong>: <em>bestow curse</em><br
+        /><strong>2</strong>: <em>insanity</em><br /><strong>3</strong>:
+        <em>overwhelming presence</em></p><h2>For Followers of
+        Ose</h2><h3>Feats</h3><p><em>Hellish Shackles</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

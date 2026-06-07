@@ -1,0 +1,22 @@
+_id: 8SSkRaoVNxguqsED
+_key: '!items!8SSkRaoVNxguqsED'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/chest/chest-reinforced-stone.webp
+name: Kit, Emergency interrogation
+system:
+  description:
+    value: >-
+      <p>This wooden box contains the tools to interrogate a captive with ease.
+      The kit includes masterwork manacles with an average lock, a vial of
+      gravelly tonic, 2 <em>elixirs of truth, </em>and a <em>scroll of detect
+      thoughts</em>. In case other methods fail, the kit also includes a
+      <em>scroll of speak with dead</em>.</p>
+  sources:
+    - id: PZO9481
+      pages: '17'
+  tags:
+    - Kits
+  weight:
+    value: 3
+type: container

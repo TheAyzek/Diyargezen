@@ -1,0 +1,59 @@
+_id: WfNcP2fqXo97oCgo
+_key: '!items!WfNcP2fqXo97oCgo'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/pick-heavy.png
+name: Pick of Stonecleaving
+system:
+  actions:
+    - _id: 629pxhtno95jrwkz
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: pickOfStonecleaving
+  aura:
+    school: evo
+  baseTypes:
+    - Heavy Pick
+  cl: 5
+  description:
+    value: >-
+      <p>When this +1 adamantine heavy pick is used to damage unattended
+      objects, it deals an additional 2d6 points of damage. If the wielder
+      expends one use of mythic power when making such an attack, the pick
+      bypasses the object's hardness and deals 4d6 additional damage instead of
+      2d6.</p><p><strong>Base Item</strong>: adamantine heavy
+      pick</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Mythic Crafter, shatter</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+    normal:
+      value: adamantine
+  price: 11308
+  showInQuickbar: false
+  sources:
+    - id: PZO1126
+  weaponGroups:
+    - axes
+  weight:
+    value: 6
+type: weapon

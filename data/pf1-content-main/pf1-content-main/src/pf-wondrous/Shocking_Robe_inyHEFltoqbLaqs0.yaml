@@ -1,0 +1,31 @@
+_id: inyHEFltoqbLaqs0
+_key: '!items!inyHEFltoqbLaqs0'
+_stats:
+  coreVersion: '12.331'
+folder: tt1hnzL5ZdLfPdp0
+img: icons/equipment/chest/coat-collared-red-gold.webp
+name: Shocking Robe
+system:
+  aura:
+    custom: true
+    school: abjuration and evocation
+  cl: 10
+  description:
+    value: >-
+      <p>This violet and yellow silk robe gives the impression of electricity
+      crackling over its surface. The robe grants the wearer electricity
+      resistance 5 and increases the wearer's caster level for all spells with
+      the electricity descriptor by +1. Once per day on command, the wearer of
+      the robe can emit a 20-foot-radius burst of electricity. Creatures other
+      than the wearer within the area take 2d6 points of electricity damage
+      (Reflex DC 16
+      half).</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Heighten Spell, resist energy, lightning bolt</p>
+  price: 11000
+  slot: body
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

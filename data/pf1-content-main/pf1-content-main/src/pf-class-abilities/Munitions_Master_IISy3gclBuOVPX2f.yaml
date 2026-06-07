@@ -1,0 +1,21 @@
+_id: IISy3gclBuOVPX2f
+_key: '!items!IISy3gclBuOVPX2f'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Munitions Master
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>At 7th level, a wyrm sniper can
+      spend 1 grit point to reduce the number of full-round actions (or move
+      actions, if the sniper has the Master Siege Engineer feat) required to
+      load a light siege engine by 1. This deed replaces the gunslinger's
+      startling shot deed.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

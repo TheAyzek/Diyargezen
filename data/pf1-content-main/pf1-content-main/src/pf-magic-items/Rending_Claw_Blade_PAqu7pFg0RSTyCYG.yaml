@@ -1,0 +1,61 @@
+_id: PAqu7pFg0RSTyCYG
+_key: '!items!PAqu7pFg0RSTyCYG'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/claw-blades.PNG
+name: Rending Claw Blade
+system:
+  actions:
+    - _id: oqsshsvtsfbizc1s
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: rendingClawBlade
+  aura:
+    school: trs
+  baseTypes:
+    - Claw Blades
+  cl: 11
+  description:
+    value: >-
+      <p>This set of +1 keen claw blades is most effective when the wearer has
+      multiple claw attacks per round. When making a full attack with claws, if
+      the wielder hits the same target with this weapon and a different claw
+      attack or set of claw blades, he deals an extra 1d4 damage plus 1-1/2
+      times his Strength bonus. The wearer can deal this extra damage no more
+      than once per round. This counts as a rend attack and does not stack with
+      other abilities that grant rend attacks.</p><p><strong>Base Item</strong>:
+      keen claw blades</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, bull's strength, keen edge</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 10305
+  properties:
+    spc: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1121
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 1
+type: weapon

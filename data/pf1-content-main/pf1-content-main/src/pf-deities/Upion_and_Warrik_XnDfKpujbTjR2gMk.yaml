@@ -1,0 +1,33 @@
+_id: XnDfKpujbTjR2gMk
+_key: '!journal!XnDfKpujbTjR2gMk'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Upion and Warrik
+pages:
+  - _id: yPkuPgc7IXY9aYLc
+    _key: '!journal.pages!XnDfKpujbTjR2gMk.yPkuPgc7IXY9aYLc'
+    _stats:
+      coreVersion: '12.331'
+    name: Upion and Warrik
+    sort: 0
+    text:
+      content: >-
+        <h1>Upion and Warrik</h1>@Source[PZO90144;pages=74] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Upion and Warrik">Upion and
+        Warrik</a><h3>Details</h3><p><strong>Alignment</strong> NG<br
+        /><strong>Pantheon</strong> Iblydan Hero-Gods<br /><strong>Areas of
+        Concern</strong> Promises, shield-bearers<br /><strong>Domains</strong>
+        Charm, Good, Protection<br /><strong>Subdomains</strong> Friendship,
+        Love<br /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> <em>none</em></p><h3>On
+        Golarion</h3><p><strong>Nationality</strong> Iblydan</p><h2>Other
+        Rules</h2>@Source[PZO90144;pages=74]<br />Upion and Warrik can grant up
+        to 4th-level spells.
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

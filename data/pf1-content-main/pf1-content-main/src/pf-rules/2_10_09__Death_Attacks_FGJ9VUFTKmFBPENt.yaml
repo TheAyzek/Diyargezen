@@ -1,0 +1,61 @@
+_id: FGJ9VUFTKmFBPENt
+_key: '!journal!FGJ9VUFTKmFBPENt'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: Xs7WZeDzdO8Jg0jZ
+name: 2.10.09. Death Attacks
+pages:
+  - _id: BGKIczQiDzbrdB4x
+    _key: '!journal.pages!FGJ9VUFTKmFBPENt.BGKIczQiDzbrdB4x'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.10.09. Death Attacks
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><ul><li>@Compendium[pf-content.pf-rules.ArJtyc6VMS8w5R1V]{2.10.01.
+        Ability Score
+        Bonuses}</li><li>@Compendium[pf-content.pf-rules.njiOxWkkqHk5F5wX]{2.10.02.
+        Ability Score Damage, Penalty, and
+        Drain}</li><li>@Compendium[pf-content.pf-rules.xpY9oe1ZnDpzXtEK]{2.10.03.
+        Afflictions}</li><li>@Compendium[pf-content.pf-rules.8q1lwFFEyleNp24c]{2.10.04.
+        Blindsight and
+        Blindsense}</li><li>@Compendium[pf-content.pf-rules.Zo8P2hcDTfEW8ful]{2.10.05.
+        Channel
+        Resistance}</li><li>@Compendium[pf-content.pf-rules.c2QYDs9lJzqZBbaS]{2.10.06.
+        Charm and
+        Compulsion}</li><li>@Compendium[pf-content.pf-rules.PByXvAfEu30oCY6w]{2.10.07.
+        Damage
+        Reduction}</li><li>@Compendium[pf-content.pf-rules.sM4GfGeQvrDfIWsI]{2.10.08.
+        Darkvision}</li><li><strong>@Compendium[pf-content.pf-rules.FGJ9VUFTKmFBPENt]{2.10.09.
+        Death
+        Attacks}</strong></li><li>@Compendium[pf-content.pf-rules.PRLXtDrJ7WKN6YzH]{2.10.10.
+        Energy Drain and Negative
+        Levels}</li><li>@Compendium[pf-content.pf-rules.pJcmOtjOQLzgp5Fr]{2.10.11.
+        Energy Immunity and
+        Vulnerability}</li><li>@Compendium[pf-content.pf-rules.QD4WRJrKCaJh8Ez3]{2.10.12.
+        Energy
+        Resistance}</li><li>@Compendium[pf-content.pf-rules.RPid0ZvH9nAN4IgC]{2.10.13.
+        Fear}</li><li>@Compendium[pf-content.pf-rules.teI2mSg16BCYCEDS]{2.10.14.
+        Invisibility}</li><li>@Compendium[pf-content.pf-rules.FfJv4ZrvXW5kxKb9]{2.10.15.
+        Low-Light
+        Vision}</li><li>@Compendium[pf-content.pf-rules.F3gWgLEiEIgTpXmd]{2.10.16.
+        Paralysis}</li><li>@Compendium[pf-content.pf-rules.ev7xA6qT02JglaS0]{2.10.17.
+        Scent}</li><li>@Compendium[pf-content.pf-rules.BGRuRu4kSA0KlT3S]{2.10.18.
+        Spell Resistance}</li></ul><hr /><p>@Source[PZO1110;pages=562]</p><p>In
+        most cases, a death attack allows the victim a Fortitude save to avoid
+        the effect, but if the save fails, the creature takes a large amount of
+        damage, which might cause it to die instantly.</p><p>Raise dead doesn’t
+        work on someone killed by a death attack or effect.</p><p>Death attacks
+        slay instantly. A victim cannot be made stable and thereby kept
+        alive.</p><p>In case it matters, a dead character, no matter how he
+        died, has hit points equal to or less than his negative Constitution
+        score.</p><p>The spell death ward protects against these attacks.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

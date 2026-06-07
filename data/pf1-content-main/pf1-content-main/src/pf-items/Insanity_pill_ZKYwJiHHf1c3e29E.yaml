@@ -1,0 +1,38 @@
+_id: ZKYwJiHHf1c3e29E
+_key: '!items!ZKYwJiHHf1c3e29E'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Insanity pill
+system:
+  actions:
+    - _id: uc3c5fy8s7wk7gfy
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: creature affected as if by a
+            confusion spell for [[1]] minute
+      save:
+        dc: '14'
+        type: fort
+      tag: insanityPill
+  description:
+    value: >-
+      <h3><img src="modules/pf-content/assets/ThreeFiveSymbol.gif" title="3.5
+      Material">Insanity pill</h3><p><strong>Source</strong>: Dark Markets - A
+      Guide to Katapesh pg. 40</p><p><strong>Type</strong> ingested;
+      <strong>Save</strong> Fortitude DC 14</p><p><strong>Effect</strong>
+      creature affected as if by a <em>confusion</em> spell for 1 minute</p>
+  price: 1500
+  subType: poison
+  uses:
+    per: single
+type: consumable

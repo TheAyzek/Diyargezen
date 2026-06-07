@@ -1,0 +1,28 @@
+_id: RJ47iH678FbmNCB2
+_key: '!journal!RJ47iH678FbmNCB2'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: oEUKlY7s7aPkyznu
+name: The Inquisitor
+pages:
+  - _id: 4nsLqe3LwTFqJZvs
+    _key: '!journal.pages!RJ47iH678FbmNCB2.4nsLqe3LwTFqJZvs'
+    _stats:
+      coreVersion: '12.331'
+    name: The Inquisitor
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Inquisitor</strong> (lawful neutral, Intelligence)
+        accepts nothing save the truth. He represents immutable reality, that
+        which cannot be fooled or swayed in any way. To attempt to go against
+        this unchangeable object, person, or idea is to court disaster.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Inquisitor.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

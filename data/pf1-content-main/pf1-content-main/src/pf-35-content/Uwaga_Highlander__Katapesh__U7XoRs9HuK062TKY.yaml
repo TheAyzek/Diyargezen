@@ -1,0 +1,30 @@
+_id: U7XoRs9HuK062TKY
+_key: '!items!U7XoRs9HuK062TKY'
+_stats:
+  coreVersion: '12.331'
+folder: CAxOlglJyXdUOHF9
+img: icons/environment/wilderness/cave-entrance-rocky.webp
+name: Uwaga Highlander (Katapesh)
+system:
+  description:
+    value: >-
+      <p><em>You were born and raised in western Katapesh, in the rugged
+      badlands and hills of the Uwaga Highlands. Even if you were born in a city
+      like Solku, you often had to travel the dangerous trails with your family.
+      Predators, gnolls, and worse haunt the Uwaga Highlands, and you’ve become
+      something of an expert at evading
+      them.</em></p><p><strong>Requirements</strong>:
+      Katapesh</p><p><strong>Benefits</strong>: You gain a +1 trait bonus on
+      Hide and Move Silently checks. This trait bonus increases to +2 in hilly
+      or rocky areas.</p><p><strong>Special Note</strong>:: Hide and Move
+      Silently from the 3.5 Ruleset were combined into Stealth in the Pathfinder
+      ruleset.</p>
+  sources:
+    - id: PZO9404
+      pages: '7'
+  subType: trait
+  tags:
+    - '3.5'
+    - Katapesh
+  traitType: region
+type: feat

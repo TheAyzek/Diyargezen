@@ -1,0 +1,85 @@
+_id: cXlRSAUALLeCWiJz
+_key: '!items!cXlRSAUALLeCWiJz'
+_stats:
+  coreVersion: '12.331'
+folder: tt1hnzL5ZdLfPdp0
+img: icons/commodities/cloth/cloth-roll-gold-green.webp
+name: Coldfire Wrappings
+system:
+  actions:
+    - _id: ebnhSkVv7PYQdjHT
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6 + 10
+            types:
+              - cold
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.nfm6i9z9r3n2fku7]{Fire
+        Shield}</p><p>This spell wreathes you in flame and causes damage to each
+        creature that attacks you in melee. The flames also protect you from
+        either cold-based or fire-based attacks, depending on if you choose cool
+        or warm flames for your fire shield.</p><p>Any creature striking you
+        with its body or a handheld weapon deals normal damage, but at the same
+        time the attacker takes 1d6 points of damage + 1 point per caster level
+        (maximum +15).</p><p>This damage is either cold damage (if you choose a
+        chill shield) or fire damage (if you choose a warm shield). If the
+        attacker has spell resistance, it applies to this effect. Creatures
+        wielding melee weapons with reach are not subject to this damage if they
+        attack you.</p><p>When casting this spell, you appear to immolate
+        yourself, but the flames are thin and wispy, increasing the light level
+        within 10 feet by one step, up to normal light. The color of the flames
+        is blue or green if the chill shield is cast, violet or red if the warm
+        shield is employed. The special powers of each version are as
+        follows.</p><p>Chill Shield: The flames are cool to the touch. You take
+        only half damage from fire-based attacks. If such an attack allows a
+        Reflex save for half damage, you take no damage on a successful saving
+        throw.</p><p>Warm Shield: The flames are warm to the touch. You take
+        only half damage from cold-based attacks. If such an attack allows a
+        Reflex save for half damage, you take no damage on a successful saving
+        throw.</p>
+      duration:
+        units: round
+        value: '10'
+      name: 'Fire Shield : Chill Shield'
+      notes:
+        effect:
+          - You take 1/2 damage from fire.
+          - >-
+            Melee attackers (without reach) take @Damage[1d6+10] cold damage
+            when they strike you.
+      range:
+        units: personal
+  aura:
+    custom: true
+    school: evocation [cold]
+  cl: 10
+  description:
+    unidentified: <p>These are linen wrappings.</p>
+    value: >-
+      <p>When carefully wrapped around the body of a Medium-sized creature (a
+      process that takes 10 minutes), these magical linen wrappings protect the
+      wearer from fire and provide defense against physical
+      attacks.</p><h3>Effect</h3><p>As an immediate action, the wearer can
+      immolate herself in wispy blue flames that protect the wearer as the chill
+      shield version of fire shield and deal 1d6+10 points of cold damage to
+      attackers. This protection lasts for 10 rounds before the wrappings
+      crumble away into fine
+      ash.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.nfm6i9z9r3n2fku7]{fire shield}
+      </em><strong>Cost</strong> 1,000 gp</p>
+  price: 2000
+  slot: body
+  sources:
+    - id: PZO9048
+      pages: '29'
+  subType: wondrous
+  uses:
+    per: single
+  weight:
+    value: 1
+type: equipment

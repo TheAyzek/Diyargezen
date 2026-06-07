@@ -1,0 +1,46 @@
+_id: eQ0d6JLmUkGMkxBS
+_key: '!journal!eQ0d6JLmUkGMkxBS'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Anogetz
+pages:
+  - _id: 9NCBgtlmREGohD2x
+    _key: '!journal.pages!eQ0d6JLmUkGMkxBS.9NCBgtlmREGohD2x'
+    _stats:
+      coreVersion: '12.331'
+    name: Anogetz
+    sort: 0
+    text:
+      content: >-
+        <h1>Anogetz</h1><h2>The Fated Fangs</h2>@Source[PZO9267;pages=318] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Anogetz">Anogetz</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Daemon Harbingers<br /><strong>Areas
+        of Concern</strong> Animal attacks, coups, revolution<br
+        /><strong>Domains</strong> Animal, Destruction, Evil, Liberation<br
+        /><strong>Subdomains</strong> Daemon, Fur, Rage, Revolution<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Spiked gauntlet<br
+        /><strong>Symbol</strong> Animal fangs on a crown<br /><strong>Sacred
+        Animal(s)</strong> All<br /><strong>Sacred Color(s)</strong> Gold,
+        red</p><h3>Obedience</h3><p>Plot a revolution against a peaceful ruler.
+        Gain a +4 profane bonus on checks associated with
+        grappling.</p><h2>Boons - Daemon
+        Harbingers</h2><p>@Source[PZO1139;pages=112]</p><p>Abaddon's unique
+        daemons take on a host of titles, customized to their methods and
+        vanity. These harbingers enjoy sweeping influence among daemons as
+        favored advisors, and they work to cultivate their own cults on Abaddon
+        and beyond.</p><p> Daemon harbingers are neutral evil demigods that
+        range in power from CR 21 to CR 25. The boons they grant are less
+        complex than those granted by the Horsemen themselves, manifesting as
+        spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>animal messenger</em><br
+        /><strong>2</strong>: <em>scrying</em><br /><strong>3</strong>:
+        <em>beast shape IV</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

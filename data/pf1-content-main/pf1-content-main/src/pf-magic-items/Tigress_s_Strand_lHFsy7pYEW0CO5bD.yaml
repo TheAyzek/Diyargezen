@@ -1,0 +1,61 @@
+_id: lHFsy7pYEW0CO5bD
+_key: '!items!lHFsy7pYEW0CO5bD'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/scorpion-whip.png
+name: Tigress's Strand
+system:
+  actions:
+    - _id: 4ub9gw2xbdkknt2l
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: tigresssStrand
+  aura:
+    school: trs
+  baseTypes:
+    - Scorpion Whip
+  cl: 5
+  description:
+    value: >-
+      <p>This unusual whip is made of spider silk hardened to the consistency of
+      cartilage and studded with bear claws. Tigress's Strand acts as +1 dueling
+      scorpion whip. Tigress's Strand also provides a +4 bonus on saving throws
+      against the effects of web and similar spells as well as against web
+      special attacks (such as from spiders or aranea).</p><p><strong>Base
+      Item</strong>: 
+      dueling</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Arms and Armor, cat's grace, web</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 18305
+  properties:
+    fin: true
+    prf: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9275
+  weaponGroups:
+    - flails
+  weight:
+    value: 3
+type: weapon

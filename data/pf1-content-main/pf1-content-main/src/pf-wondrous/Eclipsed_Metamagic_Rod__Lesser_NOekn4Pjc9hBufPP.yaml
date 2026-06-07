@@ -1,0 +1,25 @@
+_id: NOekn4Pjc9hBufPP
+_key: '!items!NOekn4Pjc9hBufPP'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Eclipsed Metamagic Rod, Lesser
+system:
+  aura:
+    custom: true
+    school: none
+  cl: 17
+  description:
+    value: >-
+      <p>The wielder can cast up to three spells per day that alter how the
+      spell raises or lowers the illumination level in their affected areas as
+      though using the Eclipsed Spell feat (see page
+      25).</p><h3>Requirements</h3><p>Craft Rod, Eclipsed Spell</p>
+  price: 1500
+  sources:
+    - id: PZO9466
+  subType: other
+  weight:
+    value: 5
+type: equipment

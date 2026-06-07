@@ -1,0 +1,129 @@
+_id: iO98MfTiAuGYTEYV
+_key: '!journal!iO98MfTiAuGYTEYV'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: p0mBpSImsQVg3MX0
+name: 1.6.04. Improved Familiar List
+pages:
+  - _id: PfFEAy5arwlchl2z
+    _key: '!journal.pages!iO98MfTiAuGYTEYV.PfFEAy5arwlchl2z'
+    _stats:
+      coreVersion: '12.331'
+    name: 1.6.04. Improved Familiar List
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.Ic1tlF3EE1QNW3kE]{(Index)}</p><p>@Compendium[pf-content.pf-rules.8scSEgBEtJZj0suf]{(Index)
+        Basic
+        Rules}</p><ul><li><p>@Compendium[pf-content.pf-rules.KTAUEzhZCUioQdqK]{1.6.
+        Familiars}</p><ul><li>@Compendium[pf-content.pf-rules.veGCPC3JzsxR5MnQ]{1.6.01.
+        Familiar
+        Basics}</li><li>@Compendium[pf-content.pf-rules.aja8EOSAA4RagQT3]{1.6.02.
+        Familiar Ability
+        Descriptions}</li><li>@Compendium[pf-content.pf-rules.ObzGkbjtwZP7ZJtr]{1.6.03.
+        Familiar
+        List}</li><li><strong>@Compendium[pf-content.pf-rules.iO98MfTiAuGYTEYV]{1.6.04.
+        Improved Familiar
+        List}</strong></li><li>@Compendium[pf-content.pf-rules.1M5KD9yy2yLQ9RVo]{1.6.05.
+        Small and Vermin
+        Familiars}</li><li>@Compendium[pf-content.pf-rules.ORtPnTEJdt3O9xHf]{1.6.06.
+        Approximating Familiars}</li></ul></li></ul><hr
+        /><table><thead><tr><th>Familiar</th><th>Alignment</th><th>Arcane
+        Spellcaster
+        Level</th></tr></thead><tbody><tr><td>@Compendium[pf-content.pf-familiars.u5TajQuOMVZgk1mT]{Aeon,
+        Paracletus}</td><td>Neutral</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.HrqwccbgE9ZqzrGq]{Agathion,
+        Silvanshee}</td><td>Neutral
+        good</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.ugi2jH8ZLVmDO785]{Almiraj}</td><td>Any</td><td>5th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.Av9QAMRRLnqxGY2L]{Angel,
+        Cassisian}</td><td>Lawful
+        good</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.8GzctfaXpliRmYM8]{Archon,
+        Harbinger}</td><td>Lawful
+        good</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.8GQ96W3sXEZO017o]{Asura,
+        Tripurasura}</td><td>Lawful
+        evil</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.9p6QP7WVvRiQ7bgz]{Azata,
+        Lyrakien}</td><td>Chaotic
+        good</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.14ziFcrp6SfJctWJ]{Beheaded}</td><td>Neutral
+        evil</td><td>3rd</td></tr><tr><td>@Compendium[pf-content.pf-familiars.9LdCM92EVUZvIBcJ]{Brain
+        Mole}</td><td>Neutral</td><td>5th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.TSBL07ilaLV10VIp]{Brownie}</td><td>Neutral</td><td>5th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.f6mF9s9GaUh7lZOg]{Caligraphy
+        Wyrm}</td><td>Any</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.FFWh9dZ3ucFHon1t]{Carbuncle}</td><td>Neutral</td><td>5th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.yWJdyMUC5IXLp0Sw]{Cat
+        Sith}</td><td>Chaotic
+        neutral</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.gTwPgLnzzvrpmDxc]{Caypup}</td><td>Chaotic
+        good</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.3N4HhQnBgy54Avmy]{Ceru}</td><td>Any</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.cfheGDU5aDWv9VGc]{Chuspiki}</td><td>Chaotic</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.SxrVrD0fP4rWnTef]{Clockwork
+        Familiar}</td><td>Any</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.ncQrF6QMfd2ijN8g]{Coral
+        Capuchin}</td><td>Within one step of
+        Neutral</td><td>3rd</td></tr><tr><td>@Compendium[pf-content.pf-familiars.9hzTnLck8fUK9jyw]{Cyphergull}</td><td>Within
+        one step of
+        Neutral</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.gmmmQDaXGfTejZlL]{Daemon,
+        Cacodaemon}</td><td>Neutral
+        evil</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.dWBa7YP7vSmBDDkA]{Quasit}</td><td>Chaotic
+        evil</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.u6VZRmy9UvbXd7rs]{Devil,
+        Imp}</td><td>Lawful
+        evil</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.FKtSTJgE0dJkR4RG]{Dire
+        Rat}</td><td>Neutral</td><td>3rd</td></tr><tr><td>@Compendium[pf-content.pf-familiars.mZi1lDtyWxoaX06Y]{Div,
+        Doru}</td><td>Neutral
+        evil</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.wps3hEr8dqFac0ej]{Faerie
+        Dragon}</td><td>Within one step of Chaotic
+        good</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.UZ2GoutibWkvFFTW]{Tidepool
+        Dragon}</td><td>Within one step of Chaotic
+        neutral</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.yOJLdXnmw3brhBvx]{Shadow
+        Drake}</td><td>Evil</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.tFg4TBKkrBrzjGDn]{Dweomercat
+        Cub}</td><td>Chaotic
+        Neutral</td><td>7th</td></tr><tr><td><p>@Compendium[pf-content.pf-familiars.XMkHU4xSZQyebb6J]{Small
+        Aether
+        Elemental}</p><p>@Compendium[pf-content.pf-familiars.U0qTjFhRT93FHyYp]{Small
+        Air
+        Elemental}</p><p>@Compendium[pf-content.pf-familiars.LAfGLYQLaqVbUbt9]{Small
+        Earth
+        Elemental}</p><p>@Compendium[pf-content.pf-familiars.JpM4dHnmQaaL5QZO]{Small
+        Fire
+        Elemental}</p><p>@Compendium[pf-content.pf-familiars.Hcu0GCa34hZ5gCli]{Small
+        Lightning
+        Elemental}</p><p>@Compendium[pf-content.pf-familiars.lAAr1DgdsEINgXos]{Small
+        Magma
+        Elemental}</p><p>@Compendium[pf-content.pf-familiars.h4IrE86Ad2km96ta]{Small
+        Water
+        Elemental}</p></td><td>Neutral</td><td>5th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.uXRGQHirOx3U3wjf]{Familiar
+        Automaton}</td><td>Lawful
+        neutral</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.SxrVrD0fP4rWnTef]{Clockwork
+        Familiar}</td><td>Any</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.lR3lZFZztJEBoXAf]{Galluvix}</td><td>–</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.Aievay6a9LBhlbD6]{Gremlin,
+        Nuglub}</td><td>Chaotic
+        evil</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.EYKUs8Wlg8TVUmkM]{Hellfire
+        Ignis}</td><td>Any</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.5Sp99yWEydCCieRi]{Homunculus}</td><td>Any</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.3ajF7gjo5N8peMv1]{Impundulu}</td><td>Neutral
+        evil</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.kyWg24EHhvL6kVpJ]{Inevitable,
+        Arbiter}</td><td>Lawful
+        neutral</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.4TI4UECygEx8uJ9L]{Isitoq}</td><td>Evil</td><td>5th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.iSYlCwT2NLour1G4]{Kami,
+        Shikigami}</td><td>Lawful
+        neutral</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.HVhVphay56oZ3heg]{Kyton,
+        Augur}</td><td>Lawful
+        evil</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.RTzxYaQCt338SWyH]{Mephit}</td><td>Neutral</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.Vgkomq1OoooLGWey]{Mockingfey}</td><td>Chaotic
+        neutral</td><td>5th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.kgIMgSTHo4JM18zG]{Nycar}</td><td>Chaotic
+        neutral</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.OK8irhKaMVve6V45]{Spirit
+        Oni}</td><td>Lawful
+        evil</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.ahL2Mbf2cnELGlMU]{Pipefox}</td><td>Neutral</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.RfZ4IRF7z8sIR21s]{Pooka}</td><td>Neutral</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.IHhXVCAOAnwkmNWU]{Voidworm}</td><td>Chaotic
+        neutral</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.xrvwqb9Jg9wkfGiF]{Pseudodragon}</td><td>Neutral
+        good</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.g1fj6L92xHcG8DgT]{Pseudosphinx}</td><td>Neutral</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.2bHmwMuLmrNHIwm2]{Psychopomp,
+        Nosoi}</td><td>Neutral</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.Et69cPlDDy3G8oIa]{Pyrausta}</td><td>Chaotic
+        neutral</td><td>3rd</td></tr><tr><td>@Compendium[pf-content.pf-familiars.QZs17krkK2NHyIDW]{Cythnigot,
+        Qlippoth}</td><td>Chaotic
+        evil</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.TuYJILh48RimcJjf]{Raktavarna}</td><td>Lawful
+        evil</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.1wwg4KJuby0CB1vI]{Ratling}</td><td>Chaotic
+        evil</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.iBnYqMjKwrAAn1WR]{Esipil,
+        Sahkil}</td><td>Neutral
+        evil</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.ZOdVXWV4SvytEJ1k]{Sin
+        Seeker}</td><td>Any</td><td>5th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.FEeG27DtYxA1N6VF]{Skvader}</td><td>Neutral</td><td>3rd</td></tr><tr><td>@Compendium[pf-content.pf-familiars.6wgMmsFS3r8NLNKm]{Smokeshade}</td><td>Within
+        one step of neutral
+        evil</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.IkhZvC7RO8qjpIXM]{Sprite}</td><td>Chaotic
+        neutral</td><td>5th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.15gp2Xd82o66dGQo]{Liminal
+        Sprite}</td><td>Chaotic</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.OFb52JpaZpr0LwoA]{Stirge}</td><td>Neutral</td><td>5th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.PfxrR4m4zOBZNEsH]{Wolpertinger}</td><td>Neutral</td><td>5th</td></tr><tr><td><p>@Compendium[pf-content.pf-familiars.X2yQ0FE1CDjqOBpw]{Wysp,
+        Aether}</p><p>@Compendium[pf-content.pf-familiars.J66lqvvdzfkWEB0g]{Wysp,
+        Air}</p><p>@Compendium[pf-content.pf-familiars.V0iZzhN2Rw1g8314]{Wysp,
+        Earth}</p><p>@Compendium[pf-content.pf-familiars.xvKY7HSPrB0p7v9j]{Wysp,
+        Fire}</p><p>@Compendium[pf-content.pf-familiars.D64BPRUxB81GYMy7]{Wysp,
+        Water}</p></td><td>Any</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.YKrLzjkWXvEzkPNX]{Xiao}</td><td>Any</td><td>7th</td></tr><tr><td>@Compendium[pf-content.pf-familiars.ZefKwPFt4HlFkJZx]{Zoog}</td><td>Chaotic
+        neutral</td><td>5th</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

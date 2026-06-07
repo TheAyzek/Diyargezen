@@ -1,0 +1,62 @@
+_id: CFt1m4daSN9JYDs7
+_key: '!items!CFt1m4daSN9JYDs7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/harpoon.PNG
+name: Vindictive Harpoon
+system:
+  actions:
+    - _id: eyubbmxm72jeoret
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: vindictiveHarpoon
+  aura:
+    school: trs
+  baseTypes:
+    - Harpoon
+  cl: 9
+  description:
+    value: >-
+      <p>This +1 returning harpoon (Pirates of the Inner Sea 18) is made from
+      the jagged, scrimshaw-carved tusk of a narwhal attached to a 50-foot
+      length of woven sinew. Unlike most thrown weapons, a vindictive harpoon
+      functions as well underwater as on land, and its wielder takes no
+      penalties on attack rolls underwater.<p><strong>Base Item</strong>: +1
+      returning harpoon</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, freedom of movement, telekinesis</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 10305
+  properties:
+    grp: true
+    spc: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9055
+  weaponGroups:
+    - spears
+    - thrown
+  weight:
+    value: 16
+type: weapon

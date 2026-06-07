@@ -1,0 +1,49 @@
+_id: MwF5Ty3kS2QTrYku
+_key: '!journal!MwF5Ty3kS2QTrYku'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Tanagaar
+pages:
+  - _id: 33NaBLHaImYjrMpr
+    _key: '!journal.pages!MwF5Ty3kS2QTrYku.33NaBLHaImYjrMpr'
+    _stats:
+      coreVersion: '12.331'
+    name: Tanagaar
+    sort: 0
+    text:
+      content: >-
+        <h1>Tanagaar</h1><h2>The Aurulent Eye</h2>@Source[PZO9267;pages=324] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Tanagaar">Tanagaar</a><h3>Details</h3><p><strong>Alignment</strong>
+        LG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Night, owls, watchfulness<br /><strong>Domains</strong>
+        Animal, Darkness, Good, Law<br /><strong>Subdomains</strong> Archon
+        (Good), Archon (Law), Feather, Moon, Night<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Kukri<br /><strong>Symbol</strong> Shadowed golden
+        eye<br /><strong>Sacred Animal(s)</strong> Owl<br /><strong>Sacred
+        Color(s)</strong> Black, gold</p><h3>Obedience</h3><p>Find and observe a
+        mouse or rat from no more than 30 feet away. Continue watching the
+        mouse, unseen, for 100 breaths. Catch the mouse and release it in an
+        area where owls hunt. Gain a +4 sacred bonus on saving throws against
+        effects that would hinder your sight or hearing.</p><h2>Boons -
+        Celestial Obedience</h2><h3>Mystery
+        Cultist</h3><p>@Source[PZO9255;pages=25]<br /><strong>1: Forest Dweller
+        (Sp)</strong> <em>calm animals</em> 3/day, <em>eagle
+        eye</em><sup>APG</sup> 2/day, or <em>deeper darkness</em> 1/day<br
+        /><strong>2: Owl's Eye (Su)</strong> You gain darkvision out to a range
+        of 60 feet. If you already have darkvision, increase its range by an
+        additional 60 feet.<br /><strong>3: Hunter's Edge (Su)</strong> You gain
+        sneak attack +3d6. This increase to sneak attack damage stacks with
+        sneak attack damage you may have from other sources. Whenever you deal
+        sneak attack damage with a piercing weapon, you deal +2 points of damage
+        per sneak attack die.</em></p><h2>For Followers of
+        Tanagaar</h2><h3>Feats</h3><p><em>Heroic
+        Interposition</em></p><h3>Traits</h3><p><em>Empyreal Focus</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

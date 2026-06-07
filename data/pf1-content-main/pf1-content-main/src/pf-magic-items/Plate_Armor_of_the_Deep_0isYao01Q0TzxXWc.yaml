@@ -1,0 +1,40 @@
+_id: 0isYao01Q0TzxXWc
+_key: '!items!0isYao01Q0TzxXWc'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/fullplate.PNG
+name: Plate Armor of the Deep
+system:
+  armor:
+    acp: 6
+    dex: 1
+    material:
+      base:
+        value: steel
+    value: 9
+  aura:
+    school: abj
+  baseTypes:
+    - Full Plate
+  cl: 11
+  description:
+    value: >-
+      <p>This +1 full plate is decorated with a wave and fish motif and often
+      has tiny fins and scales worked into the design. Although the armor
+      remains as heavy and bulky as normal full plate, the wearer of plate armor
+      of the deep is treated as unarmored for purposes of Swim checks. The
+      wearer can breathe underwater and can converse with any water-breathing
+      creature with a language.</p><p><strong>Base Item</strong>: full
+      plate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, freedom of movement, tongues, water breathing</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 24650
+  sources:
+    - id: PZO1123
+  spellFailure: 35
+  weight:
+    value: 50
+type: equipment

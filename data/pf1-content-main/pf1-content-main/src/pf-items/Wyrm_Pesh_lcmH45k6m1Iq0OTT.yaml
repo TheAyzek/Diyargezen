@@ -1,0 +1,31 @@
+_id: lcmH45k6m1Iq0OTT
+_key: '!items!lcmH45k6m1Iq0OTT'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/magic-purple.jpg
+name: Wyrm Pesh
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Dragoncraft</p><p>This rare and expensive
+      variant of standard Garundi pesh is produced by introducing a vial of
+      dragon's blood into a dose of pesh during the refining process, and has a
+      noticeable reddish tint. While the drug provides a more potent high and
+      fewer immediate penalties, it is highly addictive, and unless a user has a
+      steady supply of dragon's blood, the cost to her wellbeing can be severe.
+      For more information on drugs and addictions, see page 236 of the
+      <em>Pathfinder RPG GameMastery Guide</em>. </p><h2>Wyrm
+      Pesh</h2><p><strong>Type </strong>ingested or inhaled; <strong>Addiction
+      </strong>severe, Fortitude DC 24</p><p> <strong>Price </strong>500
+      gp</p><p><strong>Effect </strong>1 hour; 25 temporary hit
+      points</p><p><strong>Effect </strong>1 day; +2 alchemical bonus on saves
+      against sleep and paralysis effects</p><p> <strong>Damage </strong>1d2
+      Wis</p>
+  price: 500
+  sources:
+    - id: PZO9434
+      pages: '19'
+  subType: drug
+  tags:
+    - Dragoncraft
+type: consumable

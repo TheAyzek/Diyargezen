@@ -1,0 +1,27 @@
+_id: hZz9ADs6TJgAeEQg
+_key: '!items!hZz9ADs6TJgAeEQg'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Elixir of True Form
+system:
+  aura:
+    school: abj
+  cl: 8
+  description:
+    value: >-
+      <p>This elixir removes all curses and transmutation effects from the
+      imbiber, including the unnatural mutations resulting from the arcane
+      warping of the island of Nal-Kashel or gained through an ancestor's
+      unspeakable interbreeding with ulat-kini. The elixir stops gillmen from
+      transforming into skum but cannot reverse the transformation if a gillman
+      has already become a skum. Only doses of the elixir manufactured on the
+      island of Nal-Kashel can remove the warping effects of the island's
+      influence.</p><h3>Requirements</h3><p>Craft Wondrous Item, remove
+      curse</p>
+  price: 1600
+  sources:
+    - id: PZO9525
+  subType: wondrous
+type: equipment

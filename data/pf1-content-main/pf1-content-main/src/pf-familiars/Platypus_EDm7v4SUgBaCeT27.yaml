@@ -1,0 +1,265 @@
+_id: EDm7v4SUgBaCeT27
+_key: '!actors!EDm7v4SUgBaCeT27'
+_stats:
+  coreVersion: '12.343'
+img: icons/svg/mystery-man.svg
+items:
+  - _id: 4e5HTlTbBAtbRh45
+    _key: '!actors.items!EDm7v4SUgBaCeT27.4e5HTlTbBAtbRh45'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/blue_29.jpg
+    name: 'Race: Animal'
+    system:
+      creatureSubtypes:
+        - ''
+      creatureTypes:
+        - animal
+      description:
+        value: >-
+          sbc | As the statblock did not include a race, a custom one was
+          generated.
+    type: race
+  - _id: nxOjw7gMKGaXTprn
+    _key: '!actors.items!EDm7v4SUgBaCeT27.nxOjw7gMKGaXTprn'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/shadow_11.jpg
+    name: 'Sense: Low-light Vision'
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          A creature with low-light vision can see twice as far as a human in
+          starlight, moonlight, torchlight, and similar conditions of dim light.
+          It retains the ability to distinguish color and detail under these
+          conditions.
+      subType: racial
+    type: feat
+  - _id: tbU4f7fY2dmisAoF
+    _key: '!actors.items!EDm7v4SUgBaCeT27.tbU4f7fY2dmisAoF'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Special Quality: Hold Breath'
+    system:
+      description:
+        value: >-
+          sbc | Placeholder for Special Qualities, which in most statblocks are
+          listed under SQ in the statistics block, but described in the Special
+          Abilities. Remove duplicates as needed!
+      subType: misc
+    type: feat
+  - _id: VyPcmzpLh9W3QhVP
+    _key: '!actors.items!EDm7v4SUgBaCeT27.VyPcmzpLh9W3QhVP'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/svg/mystery-man.svg
+    name: Spur
+    system:
+      actions:
+        - _id: khmq74e0lipqaiqv
+          ability:
+            attack: _default
+            damage: str
+          actionType: mwak
+          activation:
+            type: attack
+            unchained:
+              type: attack
+          attackBonus: '6'
+          attackName: Spur
+          damage:
+            parts:
+              - formula: 1d3+0
+          duration:
+            units: inst
+          img: icons/svg/mystery-man.svg
+          name: Attack
+          notes:
+            footer:
+              - spur +4 (1d3-4)
+          range:
+            units: melee
+          tag: spur
+      subType: weapon
+    type: attack
+  - _id: ZhRFm0Ts4sKvFwU7
+    _key: '!actors.items!EDm7v4SUgBaCeT27.ZhRFm0Ts4sKvFwU7'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Environment: Temperate Or Tropical Rivers'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: CoRwbTzJwVeFeJVa
+    _key: '!actors.items!EDm7v4SUgBaCeT27.CoRwbTzJwVeFeJVa'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Organization: Solitary'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: JvU6yZWPlkbEc3TD
+    _key: '!actors.items!EDm7v4SUgBaCeT27.JvU6yZWPlkbEc3TD'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Treasure: None'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: XpXmUh6jp6NPtJIZ
+    _key: '!actors.items!EDm7v4SUgBaCeT27.XpXmUh6jp6NPtJIZ'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: Electrolocation
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          While underwater, platypuses can sense the tiny electrical currents
+          that trigger muscle movement. This allows them to locate living prey
+          and distinguish it from inanimate objects. Treat electrolocation as
+          blindsight 30 feet, but platypuses can sense only living creatures,
+          and it functions only underwater.
+      subType: classFeat
+    type: feat
+  - _id: JEqyy6gIQwTBoQGu
+    _key: '!actors.items!EDm7v4SUgBaCeT27.JEqyy6gIQwTBoQGu'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: Poison
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          Spur-injury; save Fort DC 9; frequency 1/round for 4 rounds; effect 1
+          nonlethal damage; cure 1 save.
+      subType: classFeat
+    type: feat
+  - _id: XYi54BupvyCFnoMY
+    _key: '!actors.items!EDm7v4SUgBaCeT27.XYi54BupvyCFnoMY'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: Spur
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          A platypus's spur attack is a primary natural attack that deals
+          piercing damage.
+      subType: classFeat
+    type: feat
+  - _id: DqZ2kBSgKRA7p8ZD
+    _key: '!actors.items!EDm7v4SUgBaCeT27.DqZ2kBSgKRA7p8ZD'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: sbc | Conversion Buff
+    system:
+      active: true
+      changes:
+        - _id: 7di4p6s0
+          formula: '6'
+          target: cmb
+          type: untypedPerm
+        - _id: om78uxa3
+          formula: '-8'
+          target: mhp
+          type: untypedPerm
+        - _id: hq4wlr59
+          formula: '3'
+          target: skill.per
+          type: untypedPerm
+        - _id: 604uxdqh
+          formula: '-8'
+          target: skill.swm
+          type: untypedPerm
+      description:
+        value: >-
+          <h2>sbc | Conversion Buff</h2><p>This Buff was created by
+          <strong>sbc</strong> to compensate for differences between the input
+          and the values FoundryVTT calculates automatically.</p><p>Especially
+          when the pathfinder system gets upgraded, entries in compendiums get
+          updated or foundry changes in some way, this buff may become
+          outdated.</p><p>For most mooks the conversion should more or less
+          work, but for important NPCs or creatures it is adviced to double
+          check the conversion manually.</p>
+      hideFromToken: true
+      subType: perm
+      tag: sbcConversionBuff
+    type: buff
+name: Platypus
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    cha:
+      value: 11
+    con:
+      value: 8
+    dex:
+      value: 14
+    int:
+      value: 2
+    str:
+      value: 2
+    wis:
+      value: 13
+  attributes:
+    cmdNotes: 10 vs. trip
+    speed:
+      land:
+        base: 10
+      swim:
+        base: 40
+    spells:
+      spellbooks:
+        primary:
+          name: Primary
+        secondary:
+          name: Secondary
+        spelllike:
+          name: Spell-likes
+        tertiary:
+          name: Tertiary
+  details:
+    cr:
+      base: 0.1625
+    notes:
+      value: "\n        <div class=\"statblockContainer\" style=\"margin-top: 15px\"><div style=\"width: 100%; background-color: #ffe9c7; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); columns: 2 150px\">\r\n    <hr style=\"margin-left: 0; margin-top:-2px; width: 100%; height: 4px; background-color: #e0a100; border: 1px solid #000; column-span: all;\" />\r\n    <div style=\"padding: 5px;\">\r\n        <h1>Platypus CR 1/6 </h1>\r\n        \r\n        <!-- BASE -->\r\n        <div style=\"break-inside: avoid;\">\r\n            <strong>Source</strong>: Ultimate Wilderness pg. 203, Animal Archive pg. 30, Bestiary 4 pg. 96<br/>\r\n            <strong>XP 65</strong><br/>\r\n            \r\n            \r\n            \r\n            \r\n            \r\n            N \r\n            Tiny \r\n            Animal <br/>\r\n            <strong>Init</strong> 2;\r\n            <strong>Senses</strong> low-light vision, electrolocation 30 ft.; Perception +1; \r\n            \r\n        </div>\r\n        <div style=\"break-inside: avoid;\">\r\n            <h3>Defense</h3>\r\n                <strong>AC</strong> 14, <strong>Touch</strong> 14, <strong>Flat-Footed</strong> 12 (+2 Dex, +2 size)<br/>\r\n            <strong>Hit Points</strong> 3 (1 HD; 1d8-1)<br/>\r\n            <strong>Fort</strong> 1, <strong>Ref</strong> 4, <strong>Will</strong> 1\r\n            \r\n            \r\n            \r\n            \r\n            \r\n            \r\n            \r\n        </div>\r\n        <div>\r\n            <div style=\"break-inside: avoid;\">\r\n                <h3>Offense</h3>\r\n                        <strong>Speed</strong> 40 ft.<br/>\r\n                <strong>Melee</strong> spur +4 (1d3-4 plus poison)<br/>\r\n                \r\n                \r\n                \r\n                \r\n            </div>\r\n        </div>\r\n        <!-- SPELLCASTING -->\r\n                \r\n        <!-- TACTICS -->\r\n                \r\n                \r\n                \r\n                \r\n        <!-- STATISTICS -->\r\n        <div style=\"break-inside: avoid;\">\r\n            <h3>Statistics</h3>\r\n                <strong>Str</strong> 2, <strong>Dex</strong> 14, <strong>Con</strong> 8, <strong>Int</strong> 2, <strong>Wis</strong> 13, <strong>Cha</strong> 11<br/>\r\n            <strong>Base Atk</strong> +0; <strong>CMB</strong> +0; <strong>CMD</strong> 6<br/>\r\n            <strong>Feats</strong> Weapon Finesse<br/>\r\n            <strong>Skills</strong> Perception +0 (+4 underwater), Swim +14, Racial Modifiers +4 Perception underwater<br/>\r\n            <strong>Languages</strong> <br/>\r\n            \r\n            \r\n            \r\n            \r\n        </div>\r\n        <!-- ECOLOGY -->\r\n            <div style='break-inside: avoid;'>\r\n                <h3>Ecology</h3>                <strong>Environment</strong>: temperate or tropical rivers<br/>\r\n                <strong>Organization</strong>: solitary<br/>\r\n                <strong>Treasure</strong>: none<br/>\r\n            </div>\r\n        <!-- SPECIAL ABILITIES -->\r\n            <div style='break-inside: avoid;'>\r\n                <h3>Special Abilities</h3>                <div style='white-space: pre-wrap;'>Electrolocation (ex): While underwater, platypuses can sense the tiny electrical currents that trigger muscle movement. This allows them to locate living prey and distinguish it from inanimate objects. Treat electrolocation as blindsight 30 feet, but platypuses can sense only living creatures, and it functions only underwater.\n\nPoison (ex): Spur-injury; save Fort DC 9; frequency 1/round for 4 rounds; effect 1 nonlethal damage; cure 1 save.\n\nSpur (ex): A platypus&#x27;s spur attack is a primary natural attack that deals piercing damage.</div>\r\n            </div>\r\n        \r\n        <!-- DESCRIPTION -->\r\n            <div style='break-inside: avoid;'>\r\n                <h3>Description</h3>        <div style=\"white-space: pre-wrap\">Platypuses are members of an extremely unusual order of egg-laying mammals that live in riverside burrows where they hunt for larvae, shellfish, and worms. Platypuses also have a remarkable electrical sense they use in place of hearing, scent, and sight while hunting underwater.\n\nThe average platypus is roughly 1-1/2 feet long and weighs 3-1/2 pounds.\n</div>\r\n                    \r\n    </div>\r\n    <hr style=\"margin-left: 0; margin-bottom: -3px; width: 100%; height: 4px; background-color: #e0a100; border: 1px solid #000; column-span: all;\" />\r\n</div></div>\n    \n        <br>\n        <hr>\n        <div class=\"rawInputContainer\" style=\"margin-top: 15px;\">\n            <h2>RAW INPUT</h2>\n            <hr>\n            <pre style=\"white-space: pre-wrap; font-size: 10px;\">Platypus CR 1/6\nSource Ultimate Wilderness pg. 203, Animal Archive pg. 30, Bestiary 4 pg. 96\nXP 65\nN Tiny animal\nInit +2; Senses low-light vision, electrolocation 30 ft.; Perception +1\nDefense\nAC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)\nhp 3 (1d8-1)\nFort +1, Ref +4, Will +1\nOffense\nSpeed 10 ft., swim 40 ft.\nMelee spur +4 (1d3-4 plus poison)\nSpace 2-1/2 ft., Reach 0 ft.\nStatistics\nStr 2, Dex 14, Con 8, Int 2, Wis 13, Cha 11\nBase Atk +0; CMB +0; CMD 6 (10 vs. trip)\nFeats Weapon Finesse\nSkills Perception +0 (+4 underwater), Swim +14; Racial Modifiers +4 Perception underwater\nSQ hold breath\nEcology\nEnvironment temperate or tropical rivers\nOrganization solitary\nTreasure none\nSpecial Abilities\nElectrolocation (Ex) While underwater, platypuses can sense the tiny electrical currents that trigger muscle movement. This allows them to locate living prey and distinguish it from inanimate objects. Treat electrolocation as blindsight 30 feet, but platypuses can sense only living creatures, and it functions only underwater.\n\nPoison (Ex) Spur-injury; save Fort DC 9; frequency 1/round for 4 rounds; effect 1 nonlethal damage; cure 1 save.\n\nSpur (Ex) A platypus's spur attack is a primary natural attack that deals piercing damage.\nDescription\nPlatypuses are members of an extremely unusual order of egg-laying mammals that live in riverside burrows where they hunt for larvae, shellfish, and worms. Platypuses also have a remarkable electrical sense they use in place of hearing, scent, and sight while hunting underwater.\n\nThe average platypus is roughly 1-1/2 feet long and weighs 3-1/2 pounds.</pre>\n        </div>\n    "
+  skills:
+    per:
+      rank: -4
+    swm:
+      rank: 15
+  traits:
+    senses:
+      custom: low-light vision, electrolocation 30 ft.; Perception +1
+    size: tiny
+type: npc

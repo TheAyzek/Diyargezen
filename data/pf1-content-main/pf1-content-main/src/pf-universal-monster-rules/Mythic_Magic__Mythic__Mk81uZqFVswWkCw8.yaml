@@ -1,0 +1,19 @@
+_id: Mk81uZqFVswWkCw8
+_key: '!items!Mk81uZqFVswWkCw8'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/spells/enchant-magenta-3.jpg
+name: Mythic Magic (Mythic)
+system:
+  abilityType: su
+  description:
+    value: >-
+      <p>Up to three times per day, when the creature casts a spell, it can cast
+      the mythic version instead (as with all mythic spells, the creature must
+      expend <a>mythic power</a> to cast a mythic spell in this
+      way).</p><p><em>Format</em>: mythic magic 3/day</p><p><em>Location</em>:
+      Special Attacks.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

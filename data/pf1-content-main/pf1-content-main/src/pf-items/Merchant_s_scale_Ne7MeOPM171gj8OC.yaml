@@ -1,0 +1,21 @@
+_id: Ne7MeOPM171gj8OC
+_key: '!items!Ne7MeOPM171gj8OC'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/hand/scale-balances-merchant-brown.webp
+name: Merchant's scale
+system:
+  description:
+    value: >-
+      <p>A merchant's scale is a simple lever on a fulcrum, from which two trays
+      hang. It grants a +2 circumstance bonus on Appraise checks involving items
+      that are valued by weight, including anything made of precious metals.</p>
+  equipped: false
+  price: 2
+  sources:
+    - id: PZO1123
+      pages: '77'
+  subType: tool
+  weight:
+    value: 1
+type: loot

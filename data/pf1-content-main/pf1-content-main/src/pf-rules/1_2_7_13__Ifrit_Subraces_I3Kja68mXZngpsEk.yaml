@@ -1,0 +1,63 @@
+_id: I3Kja68mXZngpsEk
+_key: '!journal!I3Kja68mXZngpsEk'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 3GAmKByTM8rM7ryv
+name: 1.2.7.13. Ifrit Subraces
+pages:
+  - _id: Y2tILZiPyn7hLOCY
+    _key: '!journal.pages!I3Kja68mXZngpsEk.Y2tILZiPyn7hLOCY'
+    _stats:
+      coreVersion: '12.331'
+    name: 1.2.7.13. Ifrit Subraces
+    sort: 0
+    text:
+      content: >-
+        <h2> Lavasoul (Magma Ifrit)</h2><p>@Source[PZO9492;pages=20]</p><p>Like
+        the primal fires of creation, lavasoul ifrits are both fluid and fixed,
+        alternating between stability and violent
+        alteration.</p><p><strong>Typical Alignment</strong> CN<br
+        /><strong>Ability Modifiers</strong> +2 Con, +2 Int, –2 Dex<br
+        /><strong>Alternate Spell-Like Ability</strong> Lavasouls gain
+        <em>burning sands</em> as a spell-like ability.<br /><strong>Magma
+        Affinity</strong> This racial trait functions as and can be replaced as
+        the base ifrit’s fire affinity, except it benefits sorcerers with the
+        efreeti bloodline and spellcasters with the Ash subdomain.</p><p>Mutable
+        and intense, lavasouls evoke the cycle of creation and destruction in
+        their colorful lives, unafraid to pursue new paradigms when the old ones
+        no longer suit them. Many are dark-skinned but riven with blazing lines,
+        which are sometimes also reflected in bright hair or eye colors. They
+        tend to embrace body modification, acquiring and discarding tattoos and
+        piercings as they feel appropriate.</p><p>Lavasouls can be found in
+        places where seismic change is commonplace and destructive creation is
+        not seen as a contradiction; they excel in the fast-paced markets of
+        Katapesh and the constant flux of Galt.</p><h2> Sunsoul (Solar
+        Ifrit)</h2><p>@Source[PZO9492;pages=22]</p><p>Strong in character and in
+        body, sunsoul ifrits are incurably optimistic agents of positive
+        change.</p><p><strong>Typical Alignment</strong> LG<br /><strong>Ability
+        Modifiers</strong> +2 Str, +2 Cha, –2 Wis<br /><strong>Alternate
+        Spell-Like Ability</strong> Sunsouls gain <em>sun metal</em> as a
+        spell-like ability.<br /><strong>Solar Affinity</strong> This racial
+        trait functions as and can be replaced as the base ifrit’s fire
+        affinity, except it benefits sorcerers with the celestial bloodline and
+        spellcasters with the Sun domain.</p><p>With fire comes light, and the
+        brightness of the sunsouls comes both from their affinity for positive
+        energy and their own luminous attitudes. Where others despair, they
+        labor on, striving to lead by example. Strong leaders and passionate
+        ethos attract sunsouls, drawing them toward powerful religions or
+        crusading nations such as Mendev. They can also be found in places where
+        darkness is settling in; both Taldor and Ustalav have their share of
+        sunsouls working to return these nations to the light.</p><p>Sunsouls
+        cannot easily hide their presence, and most would never try. Most
+        sunsouls tend to have fair hair, often nearly white, and eyes that glow
+        with a twinkle all their own. Some seem to glow from within, as if lit
+        from inside by an inner sunlight. Unafraid to be seen, they dress in
+        whatever styles please them, even when it means they stand out among
+        populations either more daring or more conservative.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

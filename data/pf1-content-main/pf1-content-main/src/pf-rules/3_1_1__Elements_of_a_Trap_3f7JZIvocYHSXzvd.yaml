@@ -1,0 +1,47 @@
+_id: 3f7JZIvocYHSXzvd
+_key: '!journal!3f7JZIvocYHSXzvd'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: GvRXJrNElDk9KwJW
+name: 3.1.1. Elements of a Trap
+pages:
+  - _id: 5GGOqEPHQIlxAYy5
+    _key: '!journal.pages!3f7JZIvocYHSXzvd.5GGOqEPHQIlxAYy5'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.1.1. Elements of a Trap
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.mmx5KJLX4vsGZ7vz]{3.1.
+        Traps}</p><ul><li><strong>@Compendium[pf-content.pf-rules.3f7JZIvocYHSXzvd]{3.1.1.
+        Elements of a
+        Trap}</strong></li><li>@Compendium[pf-content.pf-rules.XIjPXv3Qe62dFI3Z]{3.1.2.
+        List of
+        Traps}</li><li>@Compendium[pf-content.pf-rules.IYnf1w2TjcHO2ExM]{3.1.3.
+        Designing a
+        Trap}</li><li>@Compendium[pf-content.pf-rules.gGGKd0tOkXUqLZya]{3.1.4.
+        Wilderness Traps}</li></ul><hr /><p>@Source[PZO1110;pages=416]</p><p>All
+        traps—mechanical or magical—have the following elements: CR, type,
+        Perception DC, Disable Device DC, trigger, reset, and effect. Some traps
+        might also include optional elements, such as poison or a bypass. These
+        characteristics are described
+        below.</p><ul><li>@Compendium[pf-content.pf-rules.NCntK4F0WJ0fxRKN]{3.1.1.1.
+        Type}</li><li>@Compendium[pf-content.pf-rules.7JjjQNXWzDZkRXba]{3.1.1.2.
+        Perception and Disable Device
+        DCs}</li><li>@Compendium[pf-content.pf-rules.CP118HxlOiIRbggm]{3.1.1.3.
+        Trigger}</li><li>@Compendium[pf-content.pf-rules.fwkTc0ZhsRtbcaSj]{3.1.1.4.
+        Duration}</li><li>@Compendium[pf-content.pf-rules.iYDeV3slpPALRRGC]{3.1.1.5.
+        Reset}</li><li>@Compendium[pf-content.pf-rules.KSmSTYX5p3S6Gc63]{3.1.1.6.
+        Bypass (Optional
+        Element)}</li><li>@Compendium[pf-content.pf-rules.IBBymgXvfGa0vOW8]{3.1.1.7.
+        Effect}</li><li>@Compendium[pf-content.pf-rules.MtjTOLIqTJtVOZtw]{3.1.1.8.
+        Miscellaneous Trap Features}</li></ul>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

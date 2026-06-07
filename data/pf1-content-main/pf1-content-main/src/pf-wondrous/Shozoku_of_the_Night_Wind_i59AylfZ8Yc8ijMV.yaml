@@ -1,0 +1,29 @@
+_id: i59AylfZ8Yc8ijMV
+_key: '!items!i59AylfZ8Yc8ijMV'
+_stats:
+  coreVersion: '12.331'
+folder: tt1hnzL5ZdLfPdp0
+img: icons/equipment/chest/coat-collared-red-gold.webp
+name: Shozoku of the Night Wind
+system:
+  aura:
+    school: ill
+  cl: 4
+  description:
+    value: >-
+      <p>This black bodysuit is of the type typically worn by ninjas and
+      assassins, but it grants its wearer a +2 armor bonus and a +5 competence
+      bonus on Stealth checks. In addition, if the wearer is in illumination of
+      less than normal light, she can use invisibility, as the spell, once per
+      day. If the wearer is a ninja with the vanishing trick ninja trick, then
+      the wearer can use that ability twice per day without the expenditure of
+      any ki points and regardless of the surrounding light
+      level.<h3>Requirements</h3><p>Craft Wondrous Item, invisibility</p>
+  price: 12000
+  slot: body
+  sources:
+    - id: PZO9050
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

@@ -1,0 +1,30 @@
+_id: RlpETtht0BWDR9TY
+_key: '!items!RlpETtht0BWDR9TY'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Boots of the Enduring March
+system:
+  aura:
+    school: con
+  cl: 2
+  description:
+    value: >-
+      <p>These travel-stained boots of stout brown leather enable the wearer to
+      traverse great distances without tiring. When making a forced march (Core
+      Rulebook 171), for each hour of marching beyond 8 hours, the wearer needs
+      only to make a Constitution check (DC 10, +1 per extra hour) instead of
+      the normal check. Furthermore, if the wearer fails the check, she only
+      takes 1d4 points of nonlethal damage and does not becomes fatigued the
+      first time she takes nonlethal damage in this
+      way.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Endurance</p>
+  price: 1500
+  slot: feet
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

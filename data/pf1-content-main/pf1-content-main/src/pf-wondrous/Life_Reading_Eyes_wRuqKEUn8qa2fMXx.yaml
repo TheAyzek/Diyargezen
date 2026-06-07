@@ -1,0 +1,25 @@
+_id: wRuqKEUn8qa2fMXx
+_key: '!items!wRuqKEUn8qa2fMXx'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Life-Reading Eyes
+system:
+  aura:
+    school: div
+  cl: 7
+  description:
+    value: >-
+      <p>Favored by doctors and torturers alike-especially the paincrafters of
+      Nidal-these jet-black spectacles fully obscure the eyes of the wearer
+      while granting her the ability to peer at the auras of other creatures.
+      The wearer can read the emotion and health auras of any creature as per
+      analyze aura while the spectacles are worn, but can perceive only those
+      auras.</p><h3>Requirements</h3><p>Craft Wondrous Item, analyze aura</p>
+  price: 15000
+  slot: eyes
+  sources:
+    - id: PZO9464
+  subType: wondrous
+type: equipment

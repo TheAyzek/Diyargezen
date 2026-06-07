@@ -1,0 +1,29 @@
+_id: zdultva0ctsKrZX0
+_key: '!items!zdultva0ctsKrZX0'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of One Hundred Hands
+system:
+  aura:
+    school: evo
+  cl: 17
+  description:
+    value: >-
+      <p>Sculpted into the shape of dozens of grasping, distorted hands, this
+      staff appears to be carved entirely from one piece of clear crystal. When
+      held, the hands that form the staff distort to resemble the gloves or
+      hands of the person holding it. It allows the use of the following spells:
+      • Forceful hand (1 charge)  • Interposing hand (1 charge)  • Clenched fist
+      (2 charges)  • Grasping hand (2 charges)  • Crushing hand (3 charges) 
+      This staff also allows the wielder to use mage hand at
+      will.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, clenched fist, crushing hand, forceful hand, grasping hand,
+      interposing hand, mage hand</p>
+  price: 180200
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

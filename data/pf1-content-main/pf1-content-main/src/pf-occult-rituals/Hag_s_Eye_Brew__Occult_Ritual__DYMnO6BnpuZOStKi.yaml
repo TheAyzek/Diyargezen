@@ -1,0 +1,60 @@
+_id: DYMnO6BnpuZOStKi
+_key: '!items!DYMnO6BnpuZOStKi'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Hag's Eye Brew (Occult Ritual)
+system:
+  actions:
+    - _id: 26la8m2z1en9ropv
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        type: 'null'
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    material: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> transmutation (creation);
+      <strong>Level</strong> 4</p><p><strong>Casting Time</strong> 2 weeks, plus
+      4 hours; see text</p><p><strong>Components</strong> V, S, M (a hag or
+      witch eye), SC (up to 6)</p><p><strong>Skill Checks</strong> Knowledge
+      (dungeoneering) DC 30, 2 successes; Craft (alchemy) or Profession (cook)
+      DC 30, 2 successes</p><p><strong>Range</strong>
+      touch</p><p><strong>Duration</strong>
+      instantaneous</p><p><strong>Backlash</strong> All casters are sickened
+      from the fumes for 24 hours.</p><p><strong>Failure</strong> The primary
+      caster is permanently blinded.</p><h3>Effect</h3><p>This ritual is used to
+      create a loyal servant and spy for the coven: a hag eye ooze. Before the
+      ritual can begin, the primary caster must spend 2 weeks carefully
+      preparing an alchemical stew of animal organs, poisonous plants, and
+      potent liquors.</p><p>Once the brew is prepared, the casters begin a
+      4-hour ritual of chanting around the bubbling cauldron. At the ritual's
+      end, the eye of a hag or witch-ideally the primary caster-is added to the
+      cauldron (using an eye from anyone not participating in the ritual
+      increases all skill check DCs by 5). If the ritual is successful, the
+      noxious fluid in the cauldron animates into a hag eye ooze loyal to the
+      ritual's primary caster.</p>
+  flags:
+    dictionary:
+      summary: Create a hag eye ooze loyal to the caster
+  level: 4
+  materials:
+    value: a hag or witch eye
+  school: trs
+  sources:
+    - id: PZO9485
+      pages: '25'
+  sr: false
+type: spell

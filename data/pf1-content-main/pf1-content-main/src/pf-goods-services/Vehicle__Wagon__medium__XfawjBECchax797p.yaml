@@ -1,0 +1,34 @@
+_id: XfawjBECchax797p
+_key: '!items!XfawjBECchax797p'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/wood/wood-wheel-brown.webp
+name: Vehicle, Wagon (medium)
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 100 gp (heavy), 50 gp (light), 75 gp (medium);
+      <strong>Weight</strong> 3 cp (heavy), 2 cp (light), 2 cp
+      (medium)</p><h2>Description</h2><p>This four-wheeled open vehicle is used
+      for transporting heavy loads. It includes the harness needed to pull it.
+      There are three common varieties of wagon.</p><p><em>Light Wagon</em>:
+      Wagons of this type are most commonly employed by farmers and craftsmen
+      transporting their goods short distances or by venders in and around
+      cities. A light wagon carries up to 1,000 pounds of cargo and requires two
+      Medium creatures or one Large creature to pull it.</p><p><em>Medium
+      Wagon</em>: Wagons of this type are typically employed for heavy duty
+      work, often in agricultural, mining, or construction settings. A medium
+      wagon can carry up to 2,000 pounds of cargo and requires four Medium or
+      two Large creatures to pull it.</p><p><em>Heavy Wagon</em>: Wagons of this
+      type are large, fourwheeled vehicles primarily used in caravans to
+      transport goods over long stretches of territory. A heavy wagon carries up
+      to 4,000 pounds of cargo, and is pulled by either eight Medium creatures
+      or four Large creatures.</p>
+  equipped: false
+  price: 75
+  sources:
+    - id: PZO1123
+      pages: '87'
+  tags:
+    - Transport, Land
+type: loot

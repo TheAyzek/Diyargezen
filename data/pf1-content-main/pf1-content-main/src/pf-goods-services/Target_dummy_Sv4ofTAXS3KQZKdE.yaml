@@ -1,0 +1,20 @@
+_id: Sv4ofTAXS3KQZKdE
+_key: '!items!Sv4ofTAXS3KQZKdE'
+_stats:
+  coreVersion: '12.331'
+img: icons/environment/settlement/target.webp
+name: Target dummy
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 2-20 gp; <strong>Weight</strong> -<br
+      /></p><h2><img
+      src="modules/pf-content/assets/ThreeFiveSymbol.gif">Description</h2><p>Dummies
+      come in various shapes and sizes depending on what creature or race the
+      prospective owner of the owlbear wants them to hate most.</p>
+  equipped: false
+  sources:
+    - id: PZO9210
+      pages: '36'
+  subType: animalGear
+type: loot

@@ -1,0 +1,35 @@
+_id: G2d9IwmoA3VWOddS
+_key: '!items!G2d9IwmoA3VWOddS'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/books/book-worn-brown.webp
+name: Galtan Cookbook (Formula Book, Level 8 Alchemist)
+system:
+  description:
+    value: >-
+      <p><em>This book's cover is illegibly scorched and the pages are wrinkled
+      from water damage.</em></p><p><strong>Value</strong> 670 gp (1,270 gp with
+      the preparation ritual)</p><h2>Spells</h2><p>3rd-<em>absorbing
+      touch</em><sup>APG</sup>, <em>arcane sight</em>, <em>draconic
+      reservoir</em><sup>APG</sup>, <em>seek thoughts</em><sup>APG</sup></p><p>
+      2nd-<em>cat's grace</em>, <em>invisibility</em>, <em>perceive
+      cues</em><sup>APG</sup>, <em>resist energy</em>, <em>see
+      invisibility</em>, <em>undetectable alignment</em></p><p> 1st-<em>ant
+      haul</em><sup>APG</sup>, <em>bomber's eye</em><sup>APG</sup>,
+      <em>comprehend languages</em>, <em>detect secret doors</em>, <em>disguise
+      self</em>, <em>expeditious retreat</em>, <em>true
+      strike</em></p><h2>Ritual</h2><p><strong>Blast Finesse (Su)</strong> As an
+      immediate action when you throw a bomb, you can spend this boon to shape
+      the blast by adding up to three 5-foot squares to the area, as long as
+      these spaces are adjacent to the bomb's normal area of effect.</p>
+  equipped: false
+  price: 1270
+  sources:
+    - id: PZO9465
+      pages: '5'
+  subType: gear
+  tags:
+    - Spellbooks
+  weight:
+    value: 5
+type: loot

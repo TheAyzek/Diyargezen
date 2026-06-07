@@ -1,0 +1,35 @@
+_id: ekymIwJqj8eOF15T
+_key: '!journal!ekymIwJqj8eOF15T'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Benorus
+pages:
+  - _id: 4vlebE8F9sCwttGT
+    _key: '!journal.pages!ekymIwJqj8eOF15T.4vlebE8F9sCwttGT'
+    _stats:
+      coreVersion: '12.331'
+    name: Benorus
+    sort: 0
+    text:
+      content: >-
+        <h1>Benorus</h1><h2>Angel of Lightless
+        Chambers</h2>@Source[PZO9267;pages=322] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Benorus">Benorus</a><h3>Details</h3><p><strong>Alignment</strong>
+        NG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Hidden wonders, mines, subterranean creatures<br
+        /><strong>Domains</strong> Darkness, Earth, Good, Rune<br
+        /><strong>Subdomains</strong> Agathion, Caves, Metal, Wards<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Heavy mace<br
+        /><strong>Symbol</strong> Gold spark in cave mouth<br /><strong>Sacred
+        Animal(s)</strong> Gopher<br /><strong>Sacred Color(s)</strong> Black,
+        gold</p><h2>For Followers of Benorus</h2><h3>Feats</h3><p>Heroic
+        Interposition</p><h3>Traits</h3><p>Empyreal Focus</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

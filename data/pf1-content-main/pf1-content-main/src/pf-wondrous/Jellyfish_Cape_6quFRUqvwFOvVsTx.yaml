@@ -1,0 +1,31 @@
+_id: 6quFRUqvwFOvVsTx
+_key: '!items!6quFRUqvwFOvVsTx'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Jellyfish Cape
+system:
+  aura:
+    school: trs
+  cl: 7
+  description:
+    value: >-
+      <p>This billowing white cape renders the wearer almost invisible the
+      moment she is submerged in salt water, granting her concealment (20% miss
+      chance) so long as she remains entirely submerged. The wearer can breathe
+      underwater and gains a swim speed of 20 ft. While the wearer is submerged,
+      the cape surrounds her with tiny stinging tentacles. Any creature that
+      ends its turn adjacent to the wearer takes 1 point of electricity damage
+      and must succeed at a DC 16 Fortitude saving throw or be sickened for 1
+      round. The sickened effect is a poison
+      effect.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, beast shape II, water breathing</p>
+  price: 19200
+  slot: shoulders
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

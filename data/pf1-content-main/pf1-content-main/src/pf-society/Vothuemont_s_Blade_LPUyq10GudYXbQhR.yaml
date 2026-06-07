@@ -1,0 +1,59 @@
+_id: LPUyq10GudYXbQhR
+_key: '!items!LPUyq10GudYXbQhR'
+_stats:
+  coreVersion: '13.347'
+folder: emOjSHDDYqnECHEU
+img: systems/pf1/icons/items/weapons/greatsword.PNG
+name: Vothuemont's Blade
+system:
+  actions:
+    - _id: z3u2nwaeuwpdu1gt
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: vothuemontsBlade
+  aura:
+    school: trs
+  baseTypes:
+    - Greatsword
+  cl: 20
+  description:
+    value: >-
+      <p>This +2 dancing greatsword is staunchly dedicated to the protection of
+      its owner's honor, though it still believes its master to be the long dead
+      swordsman Vothuemont. It challenges any who attempt to wield it to a duel
+      to become its new master, surrendering when reduced to 10 or fewer hit
+      points. The weapon has an attack bonus of +20, AC 10, hardness 22, hp
+      70.</p><p><strong>Base Item</strong>: dancing
+      greatsword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor</p>
+  enh: 2
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  showInQuickbar: false
+  sources:
+    - id: PZOPSS0222E
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 8
+type: weapon

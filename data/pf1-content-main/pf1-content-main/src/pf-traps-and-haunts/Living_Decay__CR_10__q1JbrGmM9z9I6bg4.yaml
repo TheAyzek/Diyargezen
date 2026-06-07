@@ -1,0 +1,62 @@
+_id: q1JbrGmM9z9I6bg4
+_key: '!actors!q1JbrGmM9z9I6bg4'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Living Decay (CR 10)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    hp:
+      max: 45
+  details:
+    alignment: NE
+    area: 50-ft. radius
+    biography: {}
+    cl: 9
+    cr:
+      base: 10
+    destruction: >-
+      Casting <em>heal</em> on each remaining body in the original victims' mass
+      grave (or a single casting of <em>mass heal</em>) prevents this haunt from
+      returning.
+    effect: >-
+      The area fills with a potent miasma that reeks of decaying flesh. Everyone
+      within the radius must succeed at a DC 20 Fortitude save or contract the
+      disease living rot, as detailed below, except they bypass the
+      latent/carrier state. Within the haunt's area, the disease's frequency
+      increases to 1 round and its save DC increases to 20. Characters who
+      succeed at this saving throw are not immune; they must attempt a new
+      saving throw each round they remain in the haunt's area. Reducing the
+      haunt to 0 hit points does not remove the disease. A character who casts
+      <em>remove disease</em> on the living decay haunt deals it an amount of
+      damage equal to her caster level.
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Horror Adventures pg. 177</p>
+        <p><strong>Haunt Templates</strong>: persistent</p>
+        <h3>Description</h3><p>Among the most frightening diseases are those
+        that cause their victims' bodies to rot away. A living decay haunt
+        arises when an epidemic of such a disease devastates a population. This
+        haunt uses the optional disease rules presented on pages 138-139 of
+        <em>Pathfinder RPG Pathfinder Unchained</em>.</p><p><h3>Living Rot</h3>
+        <strong>Type</strong> disease, contact, inhaled, or injury;
+        <strong>Save</strong> Fortitude DC 17</p><p><strong>Track</strong>
+        physical; <strong>Frequency</strong> 1/day</p><p><strong>Effect</strong>
+        In the weakened state, the target also takes a -2 penalty on Strength-
+        and Dexterity-based skill checks and ability checks. In the impaired
+        state, the target takes a 50% miss chance on attack rolls and the
+        target's speed is reduced by half (minimum 5 feet). All objects touched
+        at the impaired state and beyond can transfer the disease; <em>Cure</em>
+        2 consecutive saves, penalties from the weakened state and worse are
+        permanent until the victim is the target of <em>heal</em> or
+        <em>regenerate</em></p>
+    notice: Perception DC 20 (to smell decaying flesh)
+    reset: 1 day
+    trigger: proximity
+    weakness: remove disease
+type: haunt

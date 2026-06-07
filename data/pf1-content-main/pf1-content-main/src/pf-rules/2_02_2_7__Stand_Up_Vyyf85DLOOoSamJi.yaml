@@ -1,0 +1,42 @@
+_id: Vyyf85DLOOoSamJi
+_key: '!journal!Vyyf85DLOOoSamJi'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 6xAF0VmbLWU6dblG
+name: 2.02.2.7. Stand Up
+pages:
+  - _id: Oj83HFLQOiwpXaqg
+    _key: '!journal.pages!Vyyf85DLOOoSamJi.Oj83HFLQOiwpXaqg'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.02.2.7. Stand Up
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.VZCpOrg3jCyNaYeg]{2.02.
+        Actions in
+        Combat}</p><ul><li><p>@Compendium[pf-content.pf-rules.m0W4ZfFwuk8VvtqJ]{2.02.2.
+        Move
+        Actions}</p><ul><li>@Compendium[pf-content.pf-rules.ahHTC0eIvgjCD1q8]{2.02.2.1.
+        Move}</li><li>@Compendium[pf-content.pf-rules.f5kr6Bqqyk9xOtIl]{2.02.2.2.
+        Direct or Redirect a
+        Spell}</li><li>@Compendium[pf-content.pf-rules.ar43eQpnTlVaxpaC]{2.02.2.3.
+        Draw or Sheathe a
+        Weapon}</li><li>@Compendium[pf-content.pf-rules.FWu3x1nvAMNuRNPO]{2.02.2.4.
+        Manipulate an
+        Item}</li><li>@Compendium[pf-content.pf-rules.To6uGP2YaopKfb40]{2.02.2.5.
+        Mount/Dismount a
+        Steed}</li><li>@Compendium[pf-content.pf-rules.VmngEZLYaGfe2NoY]{2.02.2.6.
+        Ready or Drop a
+        Shield}</li><li><strong>@Compendium[pf-content.pf-rules.Vyyf85DLOOoSamJi]{2.02.2.7.
+        Stand Up}</strong></li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=187]</p><p>Standing up from a prone position
+        requires a move action and provokes attacks of opportunity.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

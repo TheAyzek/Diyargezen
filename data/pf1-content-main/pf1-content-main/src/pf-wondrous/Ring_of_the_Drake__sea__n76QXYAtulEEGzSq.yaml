@@ -1,0 +1,37 @@
+_id: n76QXYAtulEEGzSq
+_key: '!items!n76QXYAtulEEGzSq'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of the Drake (sea)
+system:
+  aura:
+    school: abj
+  cl: 9
+  description:
+    value: >-
+      <p>Carved from a blue-green stone in the shape of a swimming dragon, this
+      ring grants its wearer electricity resistance 5. The ring exudes a smell
+      of the sea that lingers when it protects its wearer.  11th Level: The ring
+      grants electricity resistance 10.  14th Level: The ring grants electricity
+      resistance 20.  17th Level: The ring grants electricity resistance 30. The
+      wearer gains the ability to breathe underwater. Once per day, the ring's
+      wearer can make a primary bite attack as a swift action. If she does not
+      already possess a bite attack, her teeth elongate into draconic fangs as
+      part of the swift action, granting a bite attack that deals 1d6 points of
+      damage for a Medium wearer (1d4 for a Small wearer).  20th Level: The
+      ring's wearer can transform into a sea drake once per day. This functions
+      as transforming into a blue dragon via form of the dragon II, except that
+      the wearer's electricity breath weapon targets one creature within 100
+      feet of her, then arcs to up to seven secondary targets within 20 feet of
+      the primary target. The secondary bolts each strike one target and deal as
+      much damage as the primary
+      bolt.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge Ring,
+      form of the dragon II, haste, resist energy</p>
+  price: 6000
+  slot: ring
+  sources:
+    - id: PZO1131
+  subType: wondrous
+type: equipment

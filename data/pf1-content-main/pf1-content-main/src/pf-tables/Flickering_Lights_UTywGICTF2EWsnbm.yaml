@@ -1,0 +1,61 @@
+_id: UTywGICTF2EWsnbm
+_key: '!tables!UTywGICTF2EWsnbm'
+_stats:
+  coreVersion: '12.331'
+description: >-
+  <p>The level of light in the area changes at the start of each creature’s
+  turn, as determined by rolling a percentile die and consulting the following
+  table.</p>
+displayRoll: true
+folder: 7ZeWJj7eKXb88Mo9
+formula: 1d100
+img: icons/svg/d20-grey.svg
+name: Flickering Lights
+replacement: true
+results:
+  - _id: myVVBWYouNQp1nkF
+    _key: '!tables.results!UTywGICTF2EWsnbm.myVVBWYouNQp1nkF'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 10
+    text: Supernatural darkness
+    type: text
+    weight: 1
+  - _id: T8bJacDyh88ovsus
+    _key: '!tables.results!UTywGICTF2EWsnbm.T8bJacDyh88ovsus'
+    img: icons/svg/d20-black.svg
+    range:
+      - 11
+      - 25
+    text: Darkness
+    type: text
+    weight: 1
+  - _id: bSDJB3x0sQD5b47F
+    _key: '!tables.results!UTywGICTF2EWsnbm.bSDJB3x0sQD5b47F'
+    img: icons/svg/d20-black.svg
+    range:
+      - 26
+      - 50
+    text: Dim light
+    type: text
+    weight: 1
+  - _id: CuRM7z4ACDwdnWkS
+    _key: '!tables.results!UTywGICTF2EWsnbm.CuRM7z4ACDwdnWkS'
+    img: icons/svg/d20-black.svg
+    range:
+      - 51
+      - 90
+    text: Normal light
+    type: text
+    weight: 1
+  - _id: 8MNTwxpKvwXzVZNK
+    _key: '!tables.results!UTywGICTF2EWsnbm.8MNTwxpKvwXzVZNK'
+    img: icons/svg/d20-black.svg
+    range:
+      - 91
+      - 100
+    text: Bright light
+    type: text
+    weight: 1
+sort: 1100000

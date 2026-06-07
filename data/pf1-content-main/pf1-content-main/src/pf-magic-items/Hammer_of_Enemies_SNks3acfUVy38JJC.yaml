@@ -1,0 +1,62 @@
+_id: SNks3acfUVy38JJC
+_key: '!items!SNks3acfUVy38JJC'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/warhammer.png
+name: Hammer of Enemies
+system:
+  actions:
+    - _id: k0rride2angw8ys4
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: hammerOfEnemies
+  aura:
+    school: con
+  baseTypes:
+    - Warhammer
+  cl: 10
+  description:
+    value: >-
+      <p>This special +3 bane warhammer seeks only to crush the enemy of its
+      wielder in battle. The hammer can speak Common, constantly mutters, curses
+      when it is not engaged in battle, and sings deeply of its love of carnage
+      when it is being used in a fight. The hammer of enemies is always eager to
+      point out potential enemies within its vision. Because of its bloodlust it
+      does not bestow negative levels on creatures that do not share its
+      alignment-it is willing to fight for anyone. Additionally, three times per
+      day, the hammer of enemies can change the creature type of its bane
+      ability. A creature type remains until a new one is
+      chosen.</p><p><strong>Base Item</strong>: +3 bane
+      warhammer</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor; monster summoning IV</p>
+  enh: 3
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 54212
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - hammers
+  weight:
+    value: 5
+type: weapon

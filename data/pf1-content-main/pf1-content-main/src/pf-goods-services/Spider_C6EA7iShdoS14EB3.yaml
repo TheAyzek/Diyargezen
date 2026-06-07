@@ -1,0 +1,21 @@
+_id: C6EA7iShdoS14EB3
+_key: '!items!C6EA7iShdoS14EB3'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/green_23.jpg
+name: Spider
+system:
+  description:
+    value: >-
+      <p>These Tiny spiders have red bodies and black legs. They are hunting
+      spiders, so they do not cast webs, though they are poisonous. For more
+      information, see <em>Ultimate Magic</em>.</p>
+  equipped: false
+  price: 25
+  sources:
+    - id: PZO1123
+      pages: '80'
+  subType: animal
+  weight:
+    value: 0.5
+type: loot

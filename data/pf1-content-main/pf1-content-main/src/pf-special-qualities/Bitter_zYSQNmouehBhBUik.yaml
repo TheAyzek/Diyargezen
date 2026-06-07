@@ -1,0 +1,31 @@
+_id: zYSQNmouehBhBUik
+_key: '!items!zYSQNmouehBhBUik'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Bitter
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint transmutation <strong>CL</strong>
+      5th</p><p><strong>Slot</strong> armor quality; <strong>Price</strong> +1
+      bonus;</p><p>This armor exudes an exceptionally vile and bitter taste
+      whenever something bites or swallows a creature that is wearing it. Any
+      creature that grapples the wearer with a bite attack (or any other attack
+      using the mouth) must succeed at a DC 14 Fortitude save to avoid
+      immediately ending the grapple.</p><p>If the wearer is swallowed whole,
+      the swallowing creature must succeed at a DC 14 Fortitude save at the
+      start of each turn that the armored victim remains alive inside of the
+      creature or become nauseated for 1 round. The creature may vomit up the
+      victim as a standard action. This is a poison
+      effect.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>stinking cloud</em>; <strong>Price</strong> +1
+      bonus</p>
+  sources:
+    - id: PZO1123
+      pages: '115'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

@@ -1,0 +1,31 @@
+_id: zodWtrfhny36R9A2
+_key: '!items!zodWtrfhny36R9A2'
+_stats:
+  coreVersion: '13.347'
+folder: 860OGQmrUTgXsUHT
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: The Untouchable Opal
+system:
+  artifact: true
+  aura:
+    school: trs
+  cl: 20
+  description:
+    value: >-
+      <p>Three times per day as a full-round action, the bearer of the
+      Untouchable Opal can call upon its power to create a violent thunderstorm,
+      creating a 60-foot-radius column of swirling air that increases the area's
+      wind strength by two steps (maximum severe winds) and allowing the bearer
+      to direct bolts of lightning as call lightning storm. These bolts deal
+      5d10 electricity damage each, as though they were created outdoors in a
+      stormy area.  Once per day as a standard action, the Untouchable Opal can
+      also summon an elder air elemental with maximum hit points. This creature
+      serves the bearer until slain; only one such elemental can be summoned at
+      a time.  For each Air Affinity boon the gem's wielder has, she can use the
+      artifact to cast chain lightning (CL 20th, DC 24) once per day.</p>
+  sources:
+    - id: PZOPSS0825E
+  subType: other
+  weight:
+    value: 4
+type: equipment

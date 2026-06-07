@@ -1,0 +1,27 @@
+_id: s9aDjJGuuTu0gfQd
+_key: '!items!s9aDjJGuuTu0gfQd'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Chaotic Staff
+system:
+  aura:
+    school: evo
+  cl: 8
+  description:
+    value: >-
+      <p>Made up from a number of different materials, including wood, metal,
+      and possibly pieces of flesh, this staff seems to shift in shape and form
+      over time. The staff allows use of the following spells: • Align weapon
+      (chaos only, 1 charge)   • Detect law (1 charge)   • Chaos hammer (2
+      charges)   • Magic circle against law (2
+      charges.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, align weapon, chaos hammer, detect evil, magic circle against
+      law</p>
+  price: 29600
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

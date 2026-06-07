@@ -1,0 +1,52 @@
+_id: k1QL1hPoOfe1Or6X
+_key: '!journal!k1QL1hPoOfe1Or6X'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: tfgLGI205b9dxEjx
+name: 6.2.5. Water Vehicles
+pages:
+  - _id: t9GAZl7DkqnozBVp
+    _key: '!journal.pages!k1QL1hPoOfe1Or6X.t9GAZl7DkqnozBVp'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.2.5. Water Vehicles
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.F9hzOnUh5c0Ls2p6]{6.2.
+        Vehicles}</p><ul><li>@Compendium[pf-content.pf-rules.wtkl6UbvZjJKe1hM]{6.2.1.
+        Vehicle
+        Basics}</li><li>@Compendium[pf-content.pf-rules.sjmHLtUHjp10PRNg]{6.2.2.
+        Full Vehicle
+        Rules}</li><li>@Compendium[pf-content.pf-rules.539C4TSxha1IlXOT]{6.2.3.
+        Vehicle
+        Statistics}</li><li>@Compendium[pf-content.pf-rules.x0eiNjbEPSWvRSDc]{6.2.4.
+        Land
+        Vehicles}</li><li><strong>@Compendium[pf-content.pf-rules.k1QL1hPoOfe1Or6X]{6.2.5.
+        Water
+        Vehicles}</strong></li><li>@Compendium[pf-content.pf-rules.KhRRl87tEDU65YG5]{6.2.6.
+        Air Vehicles}</li></ul><hr /><p>@Source[PZO1118;pages=184]</p><p>Water
+        vehicles move across bodies of water, whether as small as a river or as
+        large as an ocean. They are typically propelled by muscle or sail, but
+        can be moved by a variety of propulsion methods. The following are the
+        most common types of water vehicles, including all water vehicles that
+        characters can purchase in the Core
+        Rulebook.</p><p>@Compendium[pf-content.pf-goods-services.tSdhnDSVZr22u4nn]{Vehicle,
+        Galley}</p><p>@Compendium[pf-content.pf-goods-services.o6EnrpvxrINQC9u3]{Vehicle,
+        Junk}</p><p>@Compendium[pf-content.pf-goods-services.tNctnSKymuOQqVz9]{Vehicle,
+        Keelboat}</p><p>@Compendium[pf-content.pf-goods-services.aqewvywuVxAwUTxn]{Vehicle,
+        Longship}</p><p>@Compendium[pf-content.pf-goods-services.bvYG2igk9Rut5fLy]{Vehicle,
+        Rowboat}</p><p>@Compendium[pf-content.pf-goods-services.pfZFefKOlEzte1yR]{Vehicle,
+        Sailing
+        ship}</p><p>@Compendium[pf-content.pf-goods-services.Juek2SEnBa2iILUe]{Vehicle,
+        Ship's
+        boat}</p><p>@Compendium[pf-content.pf-goods-services.KxCc9YygZ7gjRlQV]{Vehicle,
+        Warship}</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

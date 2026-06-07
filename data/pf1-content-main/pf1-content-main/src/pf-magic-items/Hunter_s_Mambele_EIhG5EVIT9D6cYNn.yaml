@@ -1,0 +1,60 @@
+_id: EIhG5EVIT9D6cYNn
+_key: '!items!EIhG5EVIT9D6cYNn'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/hunga-munga.PNG
+name: Hunter's Mambele
+system:
+  actions:
+    - _id: vzqks1ec071zj8gd
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: huntersMambele
+  aura:
+    school: evo
+  baseTypes:
+    - Hunga Munga
+  cl: 10
+  description:
+    value: >-
+      <p>On a successful ranged attack with this +1 returning huntsman hunga
+      munga, the target falls prone unless it succeeds at a DC 16 Fortitude
+      save. Creatures that cannot be tripped are immune to this effect. Mwangi
+      hunters use these weapons to prevent their prey from escaping into the
+      enveloping trees of the dense jungle.</p><p><strong>Base Item</strong>:
+      returning huntsman hunga
+      munga</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, locate creature, returning weapon, creator must be a
+      Mwangi</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 35304
+  showInQuickbar: false
+  sources:
+    - id: PZO9280
+  weaponGroups:
+    - bladesLight
+    - thrown
+  weight:
+    value: 3
+type: weapon

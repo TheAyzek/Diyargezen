@@ -1,0 +1,29 @@
+_id: pBKJA1oxzMpmqMQN
+_key: '!items!pBKJA1oxzMpmqMQN'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Spiral Tiles
+system:
+  aura:
+    school: div
+  cl: 5
+  description:
+    value: >-
+      <p>These 10 ebony, pearl, and ivory tiles, when arranged in a spiral
+      pattern on the ground, provide you with the effects of a guidance spell
+      once per day. The spell's effect lasts until discharged.  If your patron
+      is Pharasma, you can toss the spiral tiles upon the ground once per day as
+      a standard action and interpret the patterns they lie in as if you had
+      cast augury. If Pharasma is not your patron and you attempt to use spiral
+      tiles in this manner, the result is either random or purposefully
+      misleading.</p><h3>Requirements</h3><p>Craft Wondrous Item, augury,
+      guidance</p>
+  price: 6000
+  sources:
+    - id: PZO9418
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

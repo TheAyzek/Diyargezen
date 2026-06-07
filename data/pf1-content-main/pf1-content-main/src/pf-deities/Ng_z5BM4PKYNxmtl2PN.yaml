@@ -1,0 +1,52 @@
+_id: z5BM4PKYNxmtl2PN
+_key: '!journal!z5BM4PKYNxmtl2PN'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Ng
+pages:
+  - _id: oZxKCsauNg1oVxmt
+    _key: '!journal.pages!z5BM4PKYNxmtl2PN.oZxKCsauNg1oVxmt'
+    _stats:
+      coreVersion: '12.331'
+    name: Ng
+    sort: 0
+    text:
+      content: >-
+        <h1>Ng</h1><h2>The Hooded</h2>@Source[PZO9298;pages=30] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Ng">Ng</a><h3>Details</h3><p><strong>Alignment</strong>
+        N<br /><strong>Pantheon</strong> Eldest<br /><strong>Areas of
+        Concern</strong> Seasons, secrets, wanderers<br
+        /><strong>Domains</strong> Knowledge, Magic, Travel, Weather<br
+        /><strong>Subdomains</strong> Exploration, Seasons, Thought, Trade<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Gauntlet<br /><strong>Symbol</strong>
+        Silver hood containing stars and a comet<br /><strong>Sacred
+        Animal(s)</strong> Migratory animals<br /><strong>Sacred
+        Color(s)</strong> Silver</p><h3>Obedience</h3><p>Wear gloves or a veil
+        at all times. As long as you have followed this stricture for the last
+        24 hours, you gain a +4 sacred bonus on saving throws against effects
+        that damage, drain, or penalize ability scores.</p><h2>Boons - Fey
+        Obedience</h2><h3>Feysworn</h3><p>@Source[PZO9298;pages=30]<br
+        /><strong>1: Pass Freely (Sp)</strong> <em>expeditious retreat</em>
+        3/day, <em>invisibility</em> 2/day, or <em>blink</em> 1/day<br
+        /><strong>2: Planeswalker (Sp)</strong> You gain the ability to cast
+        <em>plane shift once per day.</em><br /><strong>3: Home at the
+        Crossroads (Sp)</strong> Once per day, you can cast <em>maze</em>-the
+        resulting extradimensional labyrinth takes the form of an endless
+        network of empty roads running through a lonely forest. Conversely, you
+        can also choose to target yourself with this ability, in which case you
+        travel to the same extradimensional crossroads yourself, along with any
+        willing targets within 100 feet, and can stay there indefinitely without
+        needing food or drink. Anyone brought there by this second method can
+        leave the crossroads at any time by willing it, but cannot return
+        without another use of this ability.</em></p><h2>For Followers of
+        Ng</h2><h3>Feats</h3><p><em>Fey
+        Friend</em></p><h3>Traits</h3><p><em>Shaper of Reality</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

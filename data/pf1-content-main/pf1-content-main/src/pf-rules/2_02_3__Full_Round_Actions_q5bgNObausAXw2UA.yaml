@@ -1,0 +1,42 @@
+_id: q5bgNObausAXw2UA
+_key: '!journal!q5bgNObausAXw2UA'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 6xAF0VmbLWU6dblG
+name: 2.02.3. Full-Round Actions
+pages:
+  - _id: WfWgNsaKu6edXiZP
+    _key: '!journal.pages!q5bgNObausAXw2UA.WfWgNsaKu6edXiZP'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.02.3. Full-Round Actions
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.VZCpOrg3jCyNaYeg]{2.02.
+        Actions in
+        Combat}</p><ul><li><strong>@Compendium[pf-content.pf-rules.q5bgNObausAXw2UA]{2.02.3.
+        Full-Round Actions}</strong></li></ul><hr
+        /><p>@Source[PZO1110;pages=187]</p><p>A full-round action requires an
+        entire round to complete. Thus, it can’t be coupled with a standard or a
+        move action, though if it does not involve moving any distance, you can
+        take a 5-foot
+        step.</p><p>@Compendium[pf-content.pf-rules.8cm2RntAmLLlg7nz]{2.02.3.1.
+        Full
+        Attack}</p><p>@Compendium[pf-content.pf-rules.EQdgZgwMQkFK2adC]{2.02.3.2.
+        Cast a
+        Spell}</p><p>@Compendium[pf-content.pf-rules.pHyKz8UQhg8FImjY]{2.02.3.3.
+        Move 5 Feet through Difficult
+        Terrain}</p><p>@Compendium[pf-content.pf-rules.adrsWQRvBNEI4q1M]{2.02.3.4.
+        Run}</p><p>@Compendium[pf-content.pf-rules.sDdDsMio3YkKR36L]{2.02.3.5.
+        Use Special
+        Ability}</p><p>@Compendium[pf-content.pf-rules.A0PE1jTg1M6hXYax]{2.02.3.6.
+        Withdraw}</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

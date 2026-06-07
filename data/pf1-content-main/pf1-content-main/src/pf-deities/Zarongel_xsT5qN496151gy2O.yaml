@@ -1,0 +1,34 @@
+_id: xsT5qN496151gy2O
+_key: '!journal!xsT5qN496151gy2O'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Zarongel
+pages:
+  - _id: dIveIXLwOyC3IbsW
+    _key: '!journal.pages!xsT5qN496151gy2O.dIveIXLwOyC3IbsW'
+    _stats:
+      coreVersion: '12.331'
+    name: Zarongel
+    sort: 0
+    text:
+      content: >-
+        <h1>Zarongel</h1><h2>Bark Breaker</h2>@Source[PZO9267;pages=324] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Zarongel">Zarongel</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Goblin Hero-Gods<br /><strong>Areas of
+        Concern</strong> Dog killing, fire, mounted combat<br
+        /><strong>Domains</strong> Animal, Evil, Fire, Travel<br
+        /><strong>Subdomains</strong> Arson, Daemon, Fur, Smoke<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Dogslicer<br /><strong>Symbol</strong>
+        Severed dog's paw<br /><strong>Sacred Animal(s)</strong> Goblin dog<br
+        /><strong>Sacred Color(s)</strong> Orange, yellow</p><h2>For Followers
+        of Zarongel</h2><h3>Magic Items - Wondrous Items</h3><p>Great Barghest
+        Hero Cloak</p><h3>Traits</h3><p>Wolf Cub</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

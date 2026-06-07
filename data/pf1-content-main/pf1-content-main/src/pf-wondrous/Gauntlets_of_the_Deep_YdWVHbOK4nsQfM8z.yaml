@@ -1,0 +1,29 @@
+_id: YdWVHbOK4nsQfM8z
+_key: '!items!YdWVHbOK4nsQfM8z'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Gauntlets of the Deep
+system:
+  aura:
+    school: abj
+  cl: 7
+  description:
+    value: >-
+      <p>These gloves are covered in fish scales and always feel cold and wet to
+      the touch. While wearing these gauntlets, after a 24-hour attunement
+      period, the wearer can throw a weapon that deals piercing damage
+      underwater without penalty, using the weapon's normal range increment.
+      When the wielder attacks a target in water from land, regardless of the
+      weapon the wielder is using, the target doesn't benefit from cover or
+      total cover for being in water.<h3>Requirements</h3><p>Craft Wondrous
+      Item, freedom of movement</p>
+  price: 5000
+  slot: hands
+  sources:
+    - id: PZO90124
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

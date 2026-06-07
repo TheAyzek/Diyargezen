@@ -1,0 +1,47 @@
+_id: oSsJes7s4K1SMEWf
+_key: '!journal!oSsJes7s4K1SMEWf'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.1.2. Other Wealth
+pages:
+  - _id: dNfAyjvKnzvBU1WF
+    _key: '!journal.pages!oSsJes7s4K1SMEWf.dNfAyjvKnzvBU1WF'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.1.2. Other Wealth
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li><p>@Compendium[pf-content.pf-rules.yeIb3PW3M1QmlVNG]{6.0.1.
+        Wealth and
+        Money}</p><ul><li>@Compendium[pf-content.pf-rules.nYX664DCRfLLEAvT]{6.0.1.1.
+        Coins}</li><li><strong>@Compendium[pf-content.pf-rules.oSsJes7s4K1SMEWf]{6.0.1.2.
+        Other
+        Wealth}</strong></li><li>@Compendium[pf-content.pf-rules.Whv7hnccchEOzRaA]{6.0.1.3.
+        Selling Treasure}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=140]</p><p>Merchants commonly exchange trade
+        goods without using currency. As a means of comparison, some trade goods
+        are detailed on Table 6–3.</p><h2>Table 6-3: Trade
+        Goods</h2><table><thead><tr><td>Cost</td><td>Item</td></tr></thead><tbody><tr><td>1
+        cp</td><td>One pound of wheat</td></tr><tr><td>2 cp</td><td>One pound of
+        flour, or one chicken</td></tr><tr><td>1 sp</td><td>One pound of
+        iron</td></tr><tr><td>5 sp</td><td>One pound of tobacco or
+        copper</td></tr><tr><td>1 gp</td><td>One pound of cinnamon, or one
+        goat</td></tr><tr><td>2 gp</td><td>One pound of ginger or pepper, or one
+        sheep</td></tr><tr><td>3 gp</td><td>One pig</td></tr><tr><td>4
+        gp</td><td>One square yard of linen</td></tr><tr><td>5 gp</td><td>One
+        pound of salt or silver</td></tr><tr><td>10 gp</td><td>One square yard
+        of silk, or one cow</td></tr><tr><td>15 gp</td><td>One pound of saffron
+        or cloves, or one ox</td></tr><tr><td>50 gp</td><td>One pound of
+        gold</td></tr><tr><td>500 gp</td><td>One pound of
+        platinum</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

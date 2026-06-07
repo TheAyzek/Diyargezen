@@ -1,0 +1,21 @@
+_id: 8jNPDoVWNG2D7REZ
+_key: '!journal!8jNPDoVWNG2D7REZ'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 7ku3eApCDmKZnRtL
+name: 6.3. Infernal Contracts
+pages:
+  - _id: x4JI916ZkvbpdzfO
+    _key: '!journal.pages!8jNPDoVWNG2D7REZ.x4JI916ZkvbpdzfO'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.3. Infernal Contracts
+    sort: 0
+    text:
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

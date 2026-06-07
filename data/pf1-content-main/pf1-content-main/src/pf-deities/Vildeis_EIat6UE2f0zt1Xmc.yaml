@@ -1,0 +1,65 @@
+_id: EIat6UE2f0zt1Xmc
+_key: '!journal!EIat6UE2f0zt1Xmc'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Vildeis
+pages:
+  - _id: TM99Gx6UTsvepLWv
+    _key: '!journal.pages!EIat6UE2f0zt1Xmc.TM99Gx6UTsvepLWv'
+    _stats:
+      coreVersion: '12.331'
+    name: Vildeis
+    sort: 0
+    text:
+      content: >-
+        <h1>Vildeis</h1><h2>The Cardinal Martyr</h2>@Source[PZO9267;pages=324]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Vildeis">Vildeis</a><h3>Details</h3><p><strong>Alignment</strong>
+        LG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Devotion, sacrifice, scars<br
+        /><strong>Domains</strong> Destruction, Good, Healing, Law<br
+        /><strong>Subdomains</strong> Archon (Good), Archon (Law), Martyr, Rage,
+        Resurrection<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Dagger<br
+        /><strong>Symbol</strong> Scarred gold breastplate<br /><strong>Sacred
+        Animal(s)</strong> Eagle<br /><strong>Sacred Color(s)</strong> Red,
+        white</p><h3>Obedience</h3><p>Cut a holy design into your flesh or the
+        flesh of a willing participant. Rub ashes into the wound while praying
+        aloud to Vildeis. Bind the wound in red cloth but show the scar to
+        anyone who asks. Gain a +4 sacred bonus on saving throws against effects
+        that damage, drain, or penalize ability scores.</p><h2>Boons - Celestial
+        Obedience</h2><h3>Mystery Cultist</h3><p>@Source[PZO9255;pages=27]<br
+        /><strong>1: Devotion (Sp)</strong> <em>command</em> 3/day,
+        <em>paladin's sacrifice</em><sup>APG</sup> 2/day, or <em>pain
+        strike</em><sup>APG</sup> 1/day<br /><strong>2: Imperative (Sp)</strong>
+        Once per day, you can command a creature to carry out some particular
+        task or service. This ability acts as <em>geas/quest, except it has a
+        casting time of 1 minute and the penalty to ability scores for
+        disobeying the <em>geas/quest </em>is -4 for every 24 hours the target
+        so disobeys, up to a total of -16 (though none of the creature's ability
+        scores can be reduced to less than 1 by this effect).<br /><strong>3:
+        Martyr's Blood (Su)</strong> You are immune to bleed effects. Whenever
+        you would be affected by a bleed effect, all enemies within 30 feet gain
+        the bleeding condition instead as though they were the effect's original
+        targets (no save; creatures immune to bleeding are immune to this
+        affect). The Heal DC to stop this supernatural bleeding is 20 rather
+        than 15.</em></p><h2>Paladin Code</h2><em>The paladins of Vildeis are
+        eager and self-denying martyrs in search of a good cause. Their tenets
+        include the following affirmations.<ul><li> Sacrifice defies the
+        selfishness of evil. I will not shy from a sacrifice that would help the
+        greater good.</li><li> Evil does not rest, so good cannot either. I will
+        not be complacent, but rather seek out evil to oppose.</li><li> Family
+        is a rare refuge from the evils of the world, but it cannot keep me from
+        my cause. I will not favor my own family over other
+        innocents.</li></ul><h2>For Followers of
+        Vildeis</h2><h3>Feats</h3><p>Heroic Interposition, Smite Evil
+        Magic</p><h3>Prestige Classes</h3><p>Scar
+        Seeker</p><h3>Traits</h3><p>Blind Zeal, Bloody Vengeance, Empyreal
+        Focus, Resilient Martyr</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

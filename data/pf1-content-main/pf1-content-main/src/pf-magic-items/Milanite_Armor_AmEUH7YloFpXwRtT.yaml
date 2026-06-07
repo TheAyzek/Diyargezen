@@ -1,0 +1,30 @@
+_id: AmEUH7YloFpXwRtT
+_key: '!items!AmEUH7YloFpXwRtT'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/hellknight-leather.PNG
+name: Milanite Armor
+system:
+  aura:
+    school: con
+  cl: 3
+  description:
+    value: >-
+      <p>This +1 leather armor usually looks like heavy protective work
+      clothing, such as the garb of a professional blacksmith, butcher, or
+      woodcutter. Once per day when an adjacent ally falls unconscious, the
+      wearer can use cure light wounds on that ally as a swift action; if the
+      wearer falls unconscious and this ability has not already been expended
+      for the day, it automatically triggers on the wearer.</p><p><strong>Base
+      Item</strong>: +1
+      leather</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, cure light wounds</p>
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 2780
+  sources:
+    - id: PZO9267
+  weight:
+    value: 15
+type: equipment

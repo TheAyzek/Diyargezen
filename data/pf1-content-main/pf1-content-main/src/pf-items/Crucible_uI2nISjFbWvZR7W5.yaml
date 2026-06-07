@@ -1,0 +1,25 @@
+_id: uI2nISjFbWvZR7W5
+_key: '!items!uI2nISjFbWvZR7W5'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/laboratory/bowl-liquid-orange.webp
+name: Crucible
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>A crucible is a type
+      of vessel that can be heated to extreme temperatures for the purpose of
+      inducing special alchemical reactions. A portable crucible is a cylinder
+      12 inches tall and 18 inches in diameter that weighs 3 pounds; it has the
+      same price as a full-sized crucible. Use of a crucible requires a heat
+      source.</p>
+  price: 20
+  sources:
+    - id: PZO9445
+      pages: '5'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 30
+type: consumable

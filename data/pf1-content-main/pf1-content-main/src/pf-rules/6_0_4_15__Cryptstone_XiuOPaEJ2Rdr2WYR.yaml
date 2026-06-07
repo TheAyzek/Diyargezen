@@ -1,0 +1,45 @@
+_id: XiuOPaEJ2Rdr2WYR
+_key: '!journal!XiuOPaEJ2Rdr2WYR'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.4.15. Cryptstone
+pages:
+  - _id: y47bSI1smC0ge3Tj
+    _key: '!journal.pages!XiuOPaEJ2Rdr2WYR.y47bSI1smC0ge3Tj'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.4.15. Cryptstone
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li>@Compendium[pf-content.pf-rules.TROqcNjEw3b2q2Dk]{6.0.4.
+        Special Materials}</li></ul><hr
+        /><p>@Source[PZO90139;pages=63]</p><p>Cryptstone is a dense gray stone
+        scavenged from the mausoleums of the Graveyard of Souls in the Boneyard.
+        While cryptstone may appear ancient and pitted, the supernatural essence
+        of the Boneyard has infused it with power over the eons. A weapon made
+        of cryptstone grants a +1 bonus on weapon damage rolls against undead
+        creatures; this damage is multiplied on a critical hit. Additionally,
+        any nonmagical weapon made of cryptstone affects incorporeal undead as
+        if it were a magic weapon, and weapons made of cryptstone that have the
+        disruption special ability increase the DC of that ability by
+        +1.</p><p>Cryptstone can be used to craft bludgeoning melee weapons and
+        ammunition that deals bludgeoning damage. Weapons made of cryptstone are
+        always considered masterwork, and the masterwork costs are included in
+        the listed prices. Items not primarily made from stone are not
+        meaningfully affected by being partially made from
+        cryptstone.</p><p>Cryptstone has the same hit points and hardness as
+        steel.</p><table><thead><tr><td>Type of Cryptstone Item</td><td>Item
+        Price Modifier</td></tr></thead><tbody><tr><td>Ammunition</td><td>+10 gp
+        per item</td></tr><tr><td>Weapon</td><td>+500
+        gp</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,29 @@
+_id: gQ6ZWZesRHAlpwfD
+_key: '!journal!gQ6ZWZesRHAlpwfD'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: ywdNAUiVSklAOMDs
+name: The Brass Dwarf
+pages:
+  - _id: 2yw9VOHEKG3iRHcN
+    _key: '!journal.pages!gQ6ZWZesRHAlpwfD.2yw9VOHEKG3iRHcN'
+    _stats:
+      coreVersion: '12.331'
+    name: The Brass Dwarf
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Brass Dwarf</strong> (lawful neutral, Constitution) shows
+        an azer who represents invulnerability to a current danger. Although
+        others might fall, he remains hale and strong. The Brass Dwarf can also
+        mean a failure or dark fate for one, which in turn might save all others
+        around him from a greater danger.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Brass%20Dwarf.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

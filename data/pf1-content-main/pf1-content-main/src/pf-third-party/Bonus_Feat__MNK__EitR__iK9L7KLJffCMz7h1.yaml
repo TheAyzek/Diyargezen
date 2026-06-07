@@ -1,0 +1,39 @@
+_id: iK9L7KLJffCMz7h1
+_key: '!items!iK9L7KLJffCMz7h1'
+_stats:
+  coreVersion: '12.331'
+folder: 8BDX6ut8OIZ2xbb0
+img: systems/pf1/icons/skills/blue_10.jpg
+name: Bonus Feat (MNK, EitR)
+system:
+  associations:
+    classes:
+      - Monk
+  changes:
+    - _id: fjkapxbj
+      formula: 1 + floor((@class.level + 2) / 4)
+      target: bonusFeats
+      type: untyped
+  description:
+    value: >-
+      <p>At 1st level, 2nd level, and every 4 levels thereafter, a monk may
+      select a bonus feat. These feats must be taken from the following
+      list:</p><p>@Compendium[pf-content.pf-third-party.yZLJ85c9AuUWNNSs]{Catch
+      Off-Guard (EitR)}, @Compendium[pf1.feats.h9nHYLxXvIXBTmup]{Combat
+      Reflexes}, @Compendium[pf1.feats.ACEQfonKVqh0fwkK]{Deflect Arrows},
+      @Compendium[pf-content.pf-third-party.z7YX1uI4MrNyv0PF]{Dodge (EitR)}, and
+      @Compendium[pf-content.pf-third-party.Tm6l01PPM6xYWgmO]{Scorpion Stance
+      (EitR)}.</p><p>At 6th level, the following feats are added to the
+      list:</p><p>@Compendium[pf-content.pf-third-party.vOy4Ey89I5sipW8r]{Deft
+      Maneuvers (EitR)}, @Compendium[pf1.feats.nhUawPP4jfED3CYV]{Gorgon's Fist},
+      @Compendium[pf1.feats.hc7CRKHvhmKRzNKb]{Greater Grapple}, and
+      @Compendium[pf-content.pf-third-party.NBAxOZmGdCKAWYZL]{Powerful Maneuvers
+      (EitR)}.</p><p>At 10th level, the following feats are added to the
+      list:</p><p>@Compendium[pf1.feats.TbOPtIL8Fv8obXtP]{Improved Critical},
+      @Compendium[pf1.feats.sOCyCmNxe2MBbEaI]{Medusa's Wrath},
+      @Compendium[pf1.feats.bHcqTC4Lf3aVl3VO]{Snatch Arrows}, and
+      @Compendium[pf1.feats.ugQyUpqPBDsqLyra]{Spring Attack}.</p><p>A monk need
+      not have any of the prerequisites normally required for these feats to
+      select them.</p>
+  subType: classFeat
+type: feat

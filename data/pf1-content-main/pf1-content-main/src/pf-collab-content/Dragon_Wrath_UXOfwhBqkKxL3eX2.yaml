@@ -1,0 +1,26 @@
+_id: UXOfwhBqkKxL3eX2
+_key: '!items!UXOfwhBqkKxL3eX2'
+_stats:
+  coreVersion: '12.331'
+folder: wMzAd2s1DJy271wt
+img: icons/magic/fire/flame-burning-eye.webp
+name: Dragon Wrath
+system:
+  contextNotes:
+    - target: spellEffect
+      text: >-
+        Your spells that deal energy damage of the type corresponding to your
+        selected element, deal an additional 1 point of damage per die rolled.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Esufey</p><hr /><p>Whenever an esufey casts a
+      spell that deals damage corresponding to its selected element, that spell
+      deals an additional 1 point of damage per die rolled.</p>
+  sources:
+    - date: '2019'
+      pages: '7'
+      publisher: Paizo / Stranger Comics
+      title: Niobe
+  subType: racial
+  traitCategory: offense
+type: feat

@@ -1,0 +1,28 @@
+_id: fkcPkFnub8uvnd7u
+_key: '!items!fkcPkFnub8uvnd7u'
+_stats:
+  coreVersion: '12.331'
+folder: CAxOlglJyXdUOHF9
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Militant Merchant (Dwarf)
+system:
+  description:
+    value: >-
+      <p><em>You know what it takes to get your goods to market and will stop at
+      nothing to protect your products. Years of fending off thieves,
+      cutthroats, and brigands have given you a sixth sense when it comes to
+      danger.</em></p><p><strong>Requirements</strong>:
+      Dwarf</p><p><strong>Benefits</strong>: You gain a +1 trait bonus to Spot
+      and Listen checks made to determine surprise, and Spot is always a class
+      skill for you.</p><p><strong>Special Note</strong>:: Spot and Listen from
+      the 3.5 Ruleset were combined into Perception in the Pathfinder
+      ruleset.</p>
+  sources:
+    - id: PZO9405
+      pages: '14'
+  subType: trait
+  tags:
+    - '3.5'
+    - Dwarf
+  traitType: race
+type: feat

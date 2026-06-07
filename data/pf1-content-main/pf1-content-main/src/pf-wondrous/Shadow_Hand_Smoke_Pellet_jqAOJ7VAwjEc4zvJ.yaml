@@ -1,0 +1,28 @@
+_id: jqAOJ7VAwjEc4zvJ
+_key: '!items!jqAOJ7VAwjEc4zvJ'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Shadow Hand Smoke Pellet
+system:
+  aura:
+    school: con
+  cl: 7
+  description:
+    value: >-
+      <p>This delicate metallic shell contains two sets of volatile alchemical
+      substances, similar to those used in smoke pellets. When the sphere is
+      broken, the substances mingle and fill a 10-foot cube with a cloud of dark
+      gray smoke that lasts for 1 minute. The user can throw the pellet as a
+      ranged touch attack with an increment of 10 feet. Partially tangible hands
+      of smoke accost creatures in the cloud. These hands attempt to grapple
+      anyone moving through the smoke (CMB +7). Upon successfully grappling an
+      opponent, the hands attempt to maintain the grapple every round until the
+      smoke dissipates.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, black tentacles, obscuring mist</p>
+  price: 800
+  sources:
+    - id: PZO1134
+  subType: wondrous
+type: equipment

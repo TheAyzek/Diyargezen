@@ -1,0 +1,59 @@
+_id: vBo5OnuoTYSy7iP4
+_key: '!items!vBo5OnuoTYSy7iP4'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/dagger.PNG
+name: Assassin's Dagger
+system:
+  actions:
+    - _id: jyepf1u4dgixfbeq
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: assassinsDagger
+  aura:
+    school: nec
+  baseTypes:
+    - Dagger
+  cl: 9
+  description:
+    value: >-
+      <p>This wicked-looking, curved +2 dagger provides a +1 bonus to the DC of
+      a Fortitude save forced by the death attack of an
+      assassin.</p><p><strong>Base Item</strong>: +2
+      dagger</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, slay living</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 10302
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - bladesLight
+    - thrown
+    - tribal
+  weight:
+    value: 1
+type: weapon

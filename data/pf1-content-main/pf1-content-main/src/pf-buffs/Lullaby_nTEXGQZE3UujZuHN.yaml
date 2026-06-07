@@ -1,0 +1,26 @@
+_id: nTEXGQZE3UujZuHN
+_key: '!items!nTEXGQZE3UujZuHN'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: icons/tools/instruments/harp-lap-brown.webp
+name: Lullaby
+system:
+  changes:
+    - _id: vf4thyw5
+      formula: '-5'
+      target: skill.per
+      type: untyped
+  contextNotes:
+    - target: will
+      text: '-[[2] Penalty vs Sleep effects.'
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.99xovzg8h1nh9o9a]{Lullaby}</p><p>You
+      take a -5 penalty on Perception checks and a -2 penalty on Will saves
+      against sleep effects while the lullaby is in effect. Lullaby lasts for as
+      long as the caster concentrates, plus up to 1 round per caster level
+      thereafter.</p>
+  level: null
+  subType: spell
+type: buff

@@ -1,0 +1,34 @@
+_id: jDS2mceuB0siTCU0
+_key: '!journal!jDS2mceuB0siTCU0'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Dranngvit
+pages:
+  - _id: U5VKpPvG8cGPnArh
+    _key: '!journal.pages!jDS2mceuB0siTCU0.U5VKpPvG8cGPnArh'
+    _stats:
+      coreVersion: '12.331'
+    name: Dranngvit
+    sort: 0
+    text:
+      content: >-
+        <h1>Dranngvit</h1><h2>The Debt Minder</h2>@Source[PZO9267;pages=320] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Dranngvit">Dranngvit</a><h3>Details</h3><p><strong>Alignment</strong>
+        LN<br /><strong>Pantheon</strong> Dwarven Deities<br /><strong>Areas of
+        Concern</strong> Debt, pursuit, vengeance<br /><strong>Domains</strong>
+        Knowledge, Law, Strength, Travel<br /><strong>Subdomains</strong>
+        Exploration, Inevitable, Memory, Resolve<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Light pick<br /><strong>Symbol</strong> Crossed picks<br
+        /><strong>Sacred Animal(s)</strong> Hound<br /><strong>Sacred
+        Color(s)</strong> Gold, red</p><h2>For Followers of
+        Dranngvit</h2><h3>Spells</h3><p>Bloodsworn
+        Retribution</p><h3>Traits</h3><p>Furious Vengeance</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

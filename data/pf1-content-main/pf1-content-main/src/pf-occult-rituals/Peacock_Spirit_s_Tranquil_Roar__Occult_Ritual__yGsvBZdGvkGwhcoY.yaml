@@ -1,0 +1,75 @@
+_id: yGsvBZdGvkGwhcoY
+_key: '!items!yGsvBZdGvkGwhcoY'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Peacock Spirit's Tranquil Roar (Occult Ritual)
+system:
+  actions:
+    - _id: 9MN9KeA3hoMHOOAi
+      activation:
+        cost: 80
+        type: minute
+        unchained:
+          cost: 80
+          type: minute
+      duration:
+        units: day
+        value: '8'
+      name: Use
+      range:
+        units: touch
+      save:
+        dc: >-
+          10 + 8 + max(@abilities.int.mod, @abilities.cha.mod,
+          @abilities.wis.mod)
+        description: negates
+        type: will
+      target:
+        value: a single structure, or an area with a 30-foot radius
+  components:
+    focus: true
+    material: true
+    somatic: true
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> abjuration; Level
+      8</p><p><strong>Casting</strong> <strong>Time</strong> 80
+      minutes</p><p><strong>Components</strong> V, S, M (a peacock feather and
+      powdered malachite worth 500 gp), F (a copper and mithral gong worth 5,000
+      gp), SC (up to 8)</p><p><strong>Skill Checks</strong> Knowledge (arcane)
+      DC 32, 2 successes; Knowledge (religion) DC 32, 2 successes; Perform (sing
+      or percussion) DC 32, 4 successes</p><p><strong>Range</strong>
+      touch</p><p><strong>Target</strong> a single structure, or an area with a
+      30-foot radius</p><p><strong>Duration</strong> 8 days</p><p><strong>Saving
+      Throw</strong> Will negates; SR yes</p><p><strong>Backlash</strong> All
+      casters take 2d6 points of damage and become
+      exhausted.</p><p><strong>Failure</strong> All casters gain a negative
+      level and cannot use psychic magic or occult skill unlocks for 1
+      week.</p><h3>Effect</h3><p>The primary caster begins by using a peacock
+      feather to dust a circle of crushed malachite around a building or sacred
+      site and calls forth hushed whispers—the murmuring chastisement of the
+      secretive Peacock Spirit—to blot out invasive magics that overhear or
+      reveal secrets. Anyone attempting to cast a divination or enchantment
+      spell or spell-like ability that detects thoughts or compels the truth
+      within the area of effect, or that targets the area of effect with a
+      remote sensing spell such as scrying, must first make a successful Will
+      save. Failure indicates the spell is lost and the effect's caster takes
+      1d6+8 points of damage as the Peacock Spirit turns the invasive magic back
+      upon her. Success indicates the effect occurs normally. A caster who
+      successfully saves is unaffected further by the Peacock Spirit's Tranquil
+      Roar ritual for 24 hours or until she leaves and reenter the area of
+      effect.</p>
+  level: 8
+  materials:
+    focus: a copper and mithral gong worth 5,000 gp
+    gpValue: 500
+    value: a peacock feather and powdered malachite worth 500 gp
+  school: abj
+  sources:
+    - id: PZO9461
+      pages: '27'
+  tags:
+    - Occult Ritual
+type: spell

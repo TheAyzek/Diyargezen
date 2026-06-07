@@ -1,0 +1,21 @@
+node_modules/
+
+# Potential foundry files
+foundry.js
+common/
+client/
+
+# Random modules
+module/utils/semver.mjs
+
+# Uncheckable files
+*.hbs
+packs/
+
+# Built files
+dist/
+docs/
+*.css
+public/lang/
+public/packs/
+stats.html

@@ -1,0 +1,67 @@
+_id: APLBmmjZNVZqFtFU
+_key: '!items!APLBmmjZNVZqFtFU'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/mace-light.png
+name: Signifer's Fist
+system:
+  actions:
+    - _id: errwcj651hkxl2tu
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: signifersFist
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  baseTypes:
+    - Light Mace
+  cl: 5
+  description:
+    value: >-
+      <p>This +1 light mace is forged of black iron and topped with what appears
+      to be a clenched fist with spikes protruding from between the fingers. As
+      a move action, the wielder can expend 1 point from his arcane pool (as per
+      a magus), 1 point from his arcane reservoir (as per an arcanist), or one
+      use of fervor (as per a warpriest) to make a single melee attack with the
+      signifer's fist. Characters without any of these options can instead
+      activate a signifer's fist in this way as a standard action once per day.
+      If the attack deals damage to a creature, the signifer's fist gains the
+      bane weapon special ability against that creature's type (or subtype if
+      the creature is a humanoid or outsider) for 1 minute. This benefit doesn't
+      apply if the target is immune to bleed, though the attack still deals
+      damage normally.</p><p><strong>Base Item</strong>: light
+      mace</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, haste, summon monster I</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 10305
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1138
+  weaponGroups:
+    - hammers
+  weight:
+    value: 2
+type: weapon

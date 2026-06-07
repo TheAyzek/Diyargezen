@@ -1,0 +1,23 @@
+_id: ofZ51Q4c3t3Awg4w
+_key: '!items!ofZ51Q4c3t3Awg4w'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/mech_12.jpg
+name: Second Save (Mythic)
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>Whenever the creature fails a saving throw against an effect with a
+      duration greater than 1 round, it can keep trying to shake off the effect.
+      At the start of its turn, if it&rsquo;s still affected, it can attempt the
+      save one more time as a free action. If this save succeeds, the effect
+      affects the creature as if it had succeeded at its initial saving throw.
+      If the effect already allows another saving throw on a later turn to break
+      the effect (such as for <a>hold monster</a>), this ability is in addition
+      to the extra saving throw from the effect.</p><p><em>Format</em>: second
+      save</p><p><em>Location</em>: After saving throws.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

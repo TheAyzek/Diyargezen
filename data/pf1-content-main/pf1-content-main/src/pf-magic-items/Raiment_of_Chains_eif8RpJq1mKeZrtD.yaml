@@ -1,0 +1,46 @@
+_id: eif8RpJq1mKeZrtD
+_key: '!items!eif8RpJq1mKeZrtD'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/chain-shirt.png
+name: Raiment of Chains
+system:
+  armor:
+    acp: 2
+    dex: 4
+    material:
+      base:
+        value: steel
+    value: 4
+  aura:
+    school: trs
+  baseTypes:
+    - Chain Shirt
+  cl: 5
+  description:
+    value: >-
+      <p>While unattended, this +1 chain shirt takes the shape of a heap of
+      rusty chains, but when a creature picks up the armor, the shirt
+      immediately starts to assume its true form. The chains eagerly wrap or
+      willingly loosen around the wearer's body, allowing the wearer to don or
+      remove the armor as a move action. A raiment of chains can't be donned
+      hastily.  Three times per day as a standard action, the wearer can command
+      chains to shoot out from the raiment of chains and attempt a reposition or
+      trip combat maneuver check against a single target within 20 feet. The
+      wearer is considered proficient with the chains and uses her own CMB with
+      a +1 enhancement bonus on the check. The combat maneuver provokes attacks
+      of opportunity as normal. The chains immediately retract back into the
+      armor once the combat maneuver check has been
+      attempted.</p><p><strong>Base Item</strong>:
+      +1</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, animate objects, chain of perdition</p>
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 6250
+  sources:
+    - id: PZO9296
+  spellFailure: 20
+  weight:
+    value: 25
+type: equipment

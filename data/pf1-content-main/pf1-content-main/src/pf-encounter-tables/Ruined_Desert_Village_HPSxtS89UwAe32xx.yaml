@@ -1,0 +1,318 @@
+_id: HPSxtS89UwAe32xx
+_key: '!tables!HPSxtS89UwAe32xx'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/settlement/tent.webp
+name: Ruined Desert Village
+replacement: true
+results:
+  - _id: B3yJvMfXMC1tnzla
+    _key: '!tables.results!HPSxtS89UwAe32xx.B3yJvMfXMC1tnzla'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 3
+    text: 1 Giant Fire Beetle [CR 1/3]
+    type: text
+    weight: 1
+  - _id: Z77gMfM3sprSAoce
+    _key: '!tables.results!HPSxtS89UwAe32xx.Z77gMfM3sprSAoce'
+    img: icons/svg/d20-black.svg
+    range:
+      - 4
+      - 5
+    text: 1 Human Skeleton [CR 1/3]
+    type: text
+    weight: 1
+  - _id: wu7OuvQIfyIFzXu7
+    _key: '!tables.results!HPSxtS89UwAe32xx.wu7OuvQIfyIFzXu7'
+    img: icons/svg/d20-black.svg
+    range:
+      - 6
+      - 9
+    text: 1 Pugwampi [CR 1/2]
+    type: text
+    weight: 1
+  - _id: f6prJGttjyw1ZzuA
+    _key: '!tables.results!HPSxtS89UwAe32xx.f6prJGttjyw1ZzuA'
+    img: icons/svg/d20-black.svg
+    range:
+      - 10
+      - 13
+    text: 1d4 ([[1d4]]) Baboons [AVG CR 1]
+    type: text
+    weight: 1
+  - _id: Q6Cwc8bNwDEEW3Dh
+    _key: '!tables.results!HPSxtS89UwAe32xx.Q6Cwc8bNwDEEW3Dh'
+    img: icons/svg/d20-black.svg
+    range:
+      - 14
+      - 15
+    text: 1 Camel [CR 1]
+    type: text
+    weight: 1
+  - _id: a6Y0zOU0TgpNpqSn
+    _key: '!tables.results!HPSxtS89UwAe32xx.a6Y0zOU0TgpNpqSn'
+    img: icons/svg/d20-black.svg
+    range:
+      - 16
+      - 17
+    text: 1d2 ([[1d2]]) Eagles [AVG CR 1]
+    type: text
+    weight: 1
+  - _id: lsaN6iZofwGfCAWg
+    _key: '!tables.results!HPSxtS89UwAe32xx.lsaN6iZofwGfCAWg'
+    img: icons/svg/d20-black.svg
+    range:
+      - 18
+      - 20
+    text: 1 Medium Viper [CR 1]
+    type: text
+    weight: 1
+  - _id: aP9Zm30JhvioI9zW
+    _key: '!tables.results!HPSxtS89UwAe32xx.aP9Zm30JhvioI9zW'
+    img: icons/svg/d20-black.svg
+    range:
+      - 21
+      - 23
+    text: 1 Choker [CR 1]
+    type: text
+    weight: 1
+  - _id: z2nmA3aanGrhDt3Q
+    _key: '!tables.results!HPSxtS89UwAe32xx.z2nmA3aanGrhDt3Q'
+    img: icons/svg/d20-black.svg
+    range:
+      - 24
+      - 26
+    text: 1 Dire Bat [CR 2]
+    type: text
+    weight: 1
+  - _id: 67kxkyzjsWz8TQO5
+    _key: '!tables.results!HPSxtS89UwAe32xx.67kxkyzjsWz8TQO5'
+    img: icons/svg/d20-black.svg
+    range:
+      - 27
+      - 30
+    text: 1 Doru [CR 2]
+    type: text
+    weight: 1
+  - _id: FHNrwsX6vb4lTFbI
+    _key: '!tables.results!HPSxtS89UwAe32xx.FHNrwsX6vb4lTFbI'
+    img: icons/svg/d20-black.svg
+    range:
+      - 31
+      - 34
+    text: 2d4 ([[2d4]]) Goblins [AVG CR 2]
+    type: text
+    weight: 1
+  - _id: CwzUKEC9kfGayAe8
+    _key: '!tables.results!HPSxtS89UwAe32xx.CwzUKEC9kfGayAe8'
+    img: icons/svg/d20-black.svg
+    range:
+      - 35
+      - 37
+    text: 1 Jackalwere [CR 2]
+    type: text
+    weight: 1
+  - _id: A890CvFBzlnjF9Q5
+    _key: '!tables.results!HPSxtS89UwAe32xx.A890CvFBzlnjF9Q5'
+    img: icons/svg/d20-black.svg
+    range:
+      - 38
+      - 42
+    text: 1d4 ([[1d4]]) Krenshar [AVG CR 2]
+    type: text
+    weight: 1
+  - _id: RrmmjM97IHB38QDw
+    _key: '!tables.results!HPSxtS89UwAe32xx.RrmmjM97IHB38QDw'
+    img: icons/svg/d20-black.svg
+    range:
+      - 43
+      - 45
+    text: 1 Ankheg [CR 3]
+    type: text
+    weight: 1
+  - _id: K64U8gc0gRFxCDR9
+    _key: '!tables.results!HPSxtS89UwAe32xx.K64U8gc0gRFxCDR9'
+    img: icons/svg/d20-black.svg
+    range:
+      - 46
+      - 47
+    text: 1d4 ([[1d4]]) Blink Dogs [AVG CR 3]
+    type: text
+    weight: 1
+  - _id: oHcY0RxT3CZmIhCU
+    _key: '!tables.results!HPSxtS89UwAe32xx.oHcY0RxT3CZmIhCU'
+    img: icons/svg/d20-black.svg
+    range:
+      - 48
+      - 51
+    text: 1 Chupacabra [CR 3]
+    type: text
+    weight: 1
+  - _id: C9nPlkrePiT1aeM8
+    _key: '!tables.results!HPSxtS89UwAe32xx.C9nPlkrePiT1aeM8'
+    img: icons/svg/d20-black.svg
+    range:
+      - 52
+      - 54
+    text: 1 Giant Eagle [CR 3]
+    type: text
+    weight: 1
+  - _id: e3uM7cOKyR0Q5IA6
+    _key: '!tables.results!HPSxtS89UwAe32xx.e3uM7cOKyR0Q5IA6'
+    img: icons/svg/d20-black.svg
+    range:
+      - 55
+      - 58
+    text: 1d2 ([[1d2]]) Hippogriffs [AVG CR 3]
+    type: text
+    weight: 1
+  - _id: GnsntP3rPOfZwdqF
+    _key: '!tables.results!HPSxtS89UwAe32xx.GnsntP3rPOfZwdqF'
+    img: icons/svg/d20-black.svg
+    range:
+      - 59
+      - 61
+    text: 1 Giant Scorpion [CR 3]
+    type: text
+    weight: 1
+  - _id: PeDDZvImj6KRxyha
+    _key: '!tables.results!HPSxtS89UwAe32xx.PeDDZvImj6KRxyha'
+    img: icons/svg/d20-black.svg
+    range:
+      - 62
+      - 64
+    text: 1d2 ([[1d2]]) Lions [AVG CR 3]
+    type: text
+    weight: 1
+  - _id: yjqPgrSrTlhEkyil
+    _key: '!tables.results!HPSxtS89UwAe32xx.yjqPgrSrTlhEkyil'
+    img: icons/svg/d20-black.svg
+    range:
+      - 65
+      - 66
+    text: 1d4 ([[1d4]]) Large Vipers [AVG CR 3]
+    type: text
+    weight: 1
+  - _id: cdNWs7in8D55iYj1
+    _key: '!tables.results!HPSxtS89UwAe32xx.cdNWs7in8D55iYj1'
+    img: icons/svg/d20-black.svg
+    range:
+      - 67
+      - 68
+    text: 1 Centipede Swarm [CR 4]
+    type: text
+    weight: 1
+  - _id: Ot60P4KJU7U1ekJK
+    _key: '!tables.results!HPSxtS89UwAe32xx.Ot60P4KJU7U1ekJK'
+    img: icons/svg/d20-black.svg
+    range:
+      - 69
+      - 71
+    text: 2d6 ([[2d6]]) Stirges [AVG CR 4]
+    type: text
+    weight: 1
+  - _id: BJmivcTkszjUchkg
+    _key: '!tables.results!HPSxtS89UwAe32xx.BJmivcTkszjUchkg'
+    img: icons/svg/d20-black.svg
+    range:
+      - 72
+      - 74
+    text: 1d2 ([[1d2]]) Griffons [AVG CR 4]
+    type: text
+    weight: 1
+  - _id: kTXwiBObgEbhKtBj
+    _key: '!tables.results!HPSxtS89UwAe32xx.kTXwiBObgEbhKtBj'
+    img: icons/svg/d20-black.svg
+    range:
+      - 75
+      - 77
+    text: 1d4 ([[1d4]]) Giant Eagles [AVG CR 5]
+    type: text
+    weight: 1
+  - _id: DQv1GO9h91e52cQf
+    _key: '!tables.results!HPSxtS89UwAe32xx.DQv1GO9h91e52cQf'
+    img: icons/svg/d20-black.svg
+    range:
+      - 78
+      - 80
+    text: 1 Dire Lion [CR 5]
+    type: text
+    weight: 1
+  - _id: JN8ncfzDjMdCAaP7
+    _key: '!tables.results!HPSxtS89UwAe32xx.JN8ncfzDjMdCAaP7'
+    img: icons/svg/d20-black.svg
+    range:
+      - 81
+      - 85
+    text: 2d6 ([[2d6]]) Gnolls [AVG CR 6]
+    type: text
+    weight: 1
+  - _id: WGMVEHWwY846UuT1
+    _key: '!tables.results!HPSxtS89UwAe32xx.WGMVEHWwY846UuT1'
+    img: icons/svg/d20-black.svg
+    range:
+      - 86
+      - 87
+    text: 1d4 ([[1d4]]) Harpies [AVG CR 6]
+    type: text
+    weight: 1
+  - _id: vWaN0su1m5mxu5Jp
+    _key: '!tables.results!HPSxtS89UwAe32xx.vWaN0su1m5mxu5Jp'
+    img: icons/svg/d20-black.svg
+    range:
+      - 88
+      - 91
+    text: 2d8 ([[2d8]]) Hyenas [AVG CR 6]
+    type: text
+    weight: 1
+  - _id: MVSmJUcBT4TE5VhG
+    _key: '!tables.results!HPSxtS89UwAe32xx.MVSmJUcBT4TE5VhG'
+    img: icons/svg/d20-black.svg
+    range:
+      - 92
+      - 93
+    text: 1 Lamia [CR 6]
+    type: text
+    weight: 1
+  - _id: VkyOp1Yb6Q4hxuyc
+    _key: '!tables.results!HPSxtS89UwAe32xx.VkyOp1Yb6Q4hxuyc'
+    img: icons/svg/d20-black.svg
+    range:
+      - 94
+      - 95
+    text: 1 Dragonne [CR 7]
+    type: text
+    weight: 1
+  - _id: tpdUScF2myV0Oe0j
+    _key: '!tables.results!HPSxtS89UwAe32xx.tpdUScF2myV0Oe0j'
+    img: icons/svg/d20-black.svg
+    range:
+      - 96
+      - 97
+    text: 1d6 ([[1d6]]) Gargoyles [AVG CR 7]
+    type: text
+    weight: 1
+  - _id: Oj0ARy7QD6Jb7pHv
+    _key: '!tables.results!HPSxtS89UwAe32xx.Oj0ARy7QD6Jb7pHv'
+    img: icons/svg/d20-black.svg
+    range:
+      - 98
+      - 99
+    text: 1 Shedu [CR 7]
+    type: text
+    weight: 1
+  - _id: aJi9IyJPSQFJ7342
+    _key: '!tables.results!HPSxtS89UwAe32xx.aJi9IyJPSQFJ7342'
+    img: icons/svg/d20-black.svg
+    range:
+      - 100
+      - 100
+    text: 1 Juvenile Blue Dragon [CR 8]
+    type: text
+    weight: 1
+sort: 2300000

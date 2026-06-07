@@ -1,0 +1,20 @@
+_id: wjEbGxOqudyatDqQ
+_key: '!items!wjEbGxOqudyatDqQ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Tree
+system:
+  associations:
+    classes:
+      - Hunter
+  description:
+    value: >-
+      <p><strong>Ward Aspect</strong></p><p>The creature gains a +4 competence
+      bonus on saving throws against death effects and effects that deal
+      negative energy damage. This bonus increases to +6 at 8th level and +8 at
+      15th level.</p>
+  subType: classFeat
+  tags:
+    - Ward Aspect
+type: feat

@@ -1,0 +1,29 @@
+_id: noqiCUJnGHxajxJW
+_key: '!journal!noqiCUJnGHxajxJW'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: RoV1YSN6te1rRTAK
+name: The Paladin
+pages:
+  - _id: 4QnFDcVBArEJlbY2
+    _key: '!journal.pages!noqiCUJnGHxajxJW.4QnFDcVBArEJlbY2'
+    _stats:
+      coreVersion: '12.331'
+    name: The Paladin
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Paladin</strong> (lawful good, Strength) symbolizes
+        standing strong in the face of adversity. The Paladin does not back down
+        under any circumstances. This card usually indicates the need to stay
+        the course or do what one knows is right, even if it takes a heavy toll.
+        If the card is misaligned, such a course might be foolhardy.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Paladin.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,37 @@
+_id: m9c0fhMWRyyzHcLl
+_key: '!actors!m9c0fhMWRyyzHcLl'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Flytrap (CR 4)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    hp:
+      max: 36
+  details:
+    alignment: 'N'
+    area: up to 20-foot radius
+    biography: {}
+    cl: 4
+    cr:
+      base: 4
+    destruction: The nest of accuser devils making their home nearby must be eradicated.
+    effect: >-
+      This patch of sentient flytraps sprouts sharp hairs around its mouths and
+      uses a highly concentrated acid to digest its prey. Each round, the
+      flytrap haunt makes melee attacks with a +4 bonus against each creature in
+      the affected area, dealing 2d6 points of acid damage and 1d6 points of
+      piercing damage on a successful hit.
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Pathfinder #144: Midwives to Death pg.
+        65</p> <p><strong>Haunt Templates</strong>: persistent botanical</p>
+    notice: Perception DC 20 (to spot flytrap heads opening and closing erratically)
+    reset: 1 day
+    trigger: proximity
+type: haunt

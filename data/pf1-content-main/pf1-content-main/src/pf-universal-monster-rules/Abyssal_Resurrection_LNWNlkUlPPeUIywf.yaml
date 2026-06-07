@@ -1,0 +1,27 @@
+_id: LNWNlkUlPPeUIywf
+_key: '!items!LNWNlkUlPPeUIywf'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/shadow_04.jpg
+name: Abyssal Resurrection
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>A demon lord rules an Abyssal realm, a vast world that not only serves
+      as its home but provides it with power. If a demon lord is slain, its body
+      rapidly melts into corruption (leaving behind any gear it held or
+      carried), its soul returns to a hidden location within its realm, and it
+      is immediately restored to life (as <a>true resurrection</a>) at that
+      location. Once this occurs, a demon lord can&rsquo;t use this ability
+      again until a full year has passed.</p><p>A demon lord realizes it is
+      vulnerable during this time and usually doesn&rsquo;t risk further battles
+      for the remainder of that year, relying on the defenses of its realm and
+      its legions of minions to protect it.</p><p>A demon lord that is slain
+      again during this year or is killed by unusual methods (such as by a true
+      deity or an artifact created for this purpose) is slain forever&mdash;its
+      remains appearing somewhere deep in the Abyss among other dead demon lords
+      from the ages. A demon lord who does not control a domain does not gain
+      this ability.</p>
+  subType: misc
+type: feat

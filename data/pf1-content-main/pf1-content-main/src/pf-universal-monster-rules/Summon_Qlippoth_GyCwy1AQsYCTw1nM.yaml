@@ -1,0 +1,31 @@
+_id: GyCwy1AQsYCTw1nM
+_key: '!items!GyCwy1AQsYCTw1nM'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/violet_22.jpg
+name: Summon Qlippoth
+system:
+  actions:
+    - _id: f616rmezzni8ffxp
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/violet_22.jpg
+      name: Use
+      save:
+        type: will
+      tag: summonQlippothSp
+  description:
+    value: >-
+      <p>Once per day as a standard action, a qlippoth lord can summon any
+      combination of qlippoth whose total combined CR is 20 or lower. This
+      otherwise works like the&nbsp;<a>summon</a>&nbsp;universal monster rule
+      with a 100% chance of success, and it counts as a 9th-level spell
+      effect.</p>
+  subType: misc
+  uses:
+    per: day
+    value: 1
+type: feat

@@ -1,0 +1,27 @@
+_id: rOUyEw1VYLAHaSuc
+_key: '!items!rOUyEw1VYLAHaSuc'
+_stats:
+  coreVersion: '12.331'
+folder: YaC0PDBdquBGbbsG
+img: systems/pf1/icons/skills/violet_04.jpg
+name: Quenching
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint transmutation <strong>CL</strong>
+      5th</p><p><strong>Slot</strong> weapon quality; <strong>Price</strong> +1
+      bonus;</p><p>This special ability can only be placed on melee weapons. A
+      <em>quenching </em>weapon thrust into a nonmagical fire of Medium size or
+      smaller extinguishes it. When used against a creature of the fire subtype,
+      it deals an extra 1d6 points of damage. The wielder of a <em>quenching
+      </em>weapon receives a +2 competence bonus on saving throws against
+      fire-based effects, and the weapon itself is immune to fire
+      damage.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>chill metal</em>; <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1123
+      pages: '146'
+  subType: misc
+  tags:
+    - Melee Qualities
+type: feat

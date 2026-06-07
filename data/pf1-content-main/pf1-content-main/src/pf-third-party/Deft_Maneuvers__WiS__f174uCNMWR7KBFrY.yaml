@@ -1,0 +1,31 @@
+_id: f174uCNMWR7KBFrY
+_key: '!items!f174uCNMWR7KBFrY'
+_stats:
+  coreVersion: '12.331'
+folder: CQNw1H2zi4NilpKP
+img: systems/pf1/icons/feats/improved-disarm.png
+name: Deft Maneuvers (WiS)
+system:
+  changes:
+    - _id: cr9ocpds
+      formula: '2'
+      target: cmb
+      type: untyped
+  description:
+    value: >-
+      <p><em>You are skilled at quick, sly
+      maneuvers.</em></p><p><strong>Prerequisties</strong>: Int
+      13</p><p><strong>Benefits</strong>: You do not provoke an attack of
+      opportunity when performing a trip, disarm, dirty trick, feint,
+      reposition, or steal combat maneuver. In addition, you receive a +2 bonus
+      on checks with these combat maneuvers. Now a prerequisite for the relevant
+      greater combat maneuver feats.</p><p>In addition, you may feint in combat
+      as a move action, rather than a standard action.</p>
+  sources:
+    - publisher: https://meliogeny.net/square-world/
+      title: World is Square
+  tags:
+    - World is Square
+    - Combat
+    - Combat Maneuvers
+type: feat

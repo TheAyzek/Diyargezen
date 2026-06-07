@@ -1,0 +1,39 @@
+_id: 9ifBtxbi81HYneul
+_key: '!items!9ifBtxbi81HYneul'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Purple pesh
+system:
+  actions:
+    - _id: 5q9ukfkgxzd8z21z
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1d2]] Con and [[1d2]] Str
+            <strong>Secondary Effect</strong>: unconscious for [[1]] hour
+      save:
+        dc: '18'
+        type: fort
+      tag: purplePesh
+  description:
+    value: >-
+      <h3><img src="modules/pf-content/assets/ThreeFiveSymbol.gif" title="3.5
+      Material">Purple pesh</h3><p><strong>Source</strong>: Dark Markets - A
+      Guide to Katapesh pg. 40</p><p><strong>Type</strong> ingested;
+      <strong>Save</strong> Fortitude DC 18</p><p><strong>Initial
+      Effect</strong> 1d2 Con and Str; <strong>Secondary Effect</strong>
+      unconscious for 1 hour</p>
+  price: 200
+  subType: poison
+  uses:
+    per: single
+type: consumable

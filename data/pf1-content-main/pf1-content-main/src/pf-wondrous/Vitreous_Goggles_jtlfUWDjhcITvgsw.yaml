@@ -1,0 +1,31 @@
+_id: jtlfUWDjhcITvgsw
+_key: '!items!jtlfUWDjhcITvgsw'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Vitreous Goggles
+system:
+  aura:
+    custom: true
+    school: divination and evocation
+  cl: 7
+  description:
+    value: >-
+      <p>This pair of clear crystal lenses allows the wearer to see the
+      indistinct shapes of living creatures moving below the surface of the
+      earth. The wearer can see any Medium or larger creatures within 60 feet as
+      long as they are moving underground. The wearer must have seen the
+      creature aboveground within the past minute while wearing the goggles to
+      gain this benefit. Each subsequent round after the first that the goggles
+      are worn, the wearer has a cumulative 5% chance of immediately going blind
+      for 1d4 rounds. Once the goggles are removed, the wearer's eyes need 1
+      hour to adjust before he or she can wear the goggles
+      again.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, faerie fire, locate creature</p>
+  price: 11200
+  slot: eyes
+  sources:
+    - id: PZO9252
+  subType: wondrous
+type: equipment

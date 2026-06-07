@@ -1,0 +1,27 @@
+_id: fRzVb1XEhdik9jTs
+_key: '!items!fRzVb1XEhdik9jTs'
+_stats:
+  coreVersion: '12.343'
+folder: d9cuvREi0qdcYFZ0
+img: icons/magic/defensive/armor-shield-barrier-steel.webp
+name: Frosted
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint transmutation <strong>CL</strong>
+      3rd</p><p><strong>Slot</strong> none; <strong>Price</strong> +2 bonus;
+      Armor and shields with the <em>frosted</em> ability are coated in a thin
+      layer of frost, making the armor or shield shimmer faintly and take on a
+      bluish-white hue. The wearer gains a +4 bonus to CMD against grapple
+      combat maneuvers. Additionally, the armor deals 1d8 points of cold damage
+      every round to opponents that constrict or pin the wearer or swallow the
+      wearer whole.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, <em>chill metal</em>; <strong>Price</strong>
+      +2 bonus</p>
+  sources:
+    - id: PZO9455
+      pages: '26'
+  subType: misc
+  tags:
+    - Universal Armor & Shield Qualities
+type: feat

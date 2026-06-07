@@ -32,7 +32,7 @@
    - PDFWriter yardimci sinifi (sayfa tasma kontrolu, cok sutunlu yazi)
    - D&D PDF: 2 sayfa (Karakter Kagidi + Spell Sheet)
    - Spellcasting bilgileri, Spell Slots, Beceriler 2 sutunlu
-   - M&M ve VtM PDF'leri yeniden yazildi (duplicate kod temizlendi)
+   - M&M PDF export yeniden yazildi (duplicate kod temizlendi)
 
 5. **Karakter Istatistikleri Iyilestirmeleri** - TAMAMLANDI
    - Tum 18 skill icin modifier hesaplama (expertise, jack of all trades)
@@ -79,7 +79,7 @@
 ### Evrensel Ek Ozellikler (TAMAMLANDI)
 11. **Encounter Tracker (Tum Sistemler)** - TAMAMLANDI
     - `utils/encounter_tracker.py`: Evrensel encounter/savas takip motoru
-    - D&D 5e, Pathfinder 1e, VtM 5e, M&M 3e destegiyle
+    - D&D 5e, Pathfinder 1e, M&M 3e destegiyle
     - Initiative siralama, round/tur takibi
     - HP hasar/sifa mekanikleri
     - Canavar/NPC hizli ekleme
@@ -92,7 +92,6 @@
     - `utils/homebrew.py`: Evrensel homebrew icerik olusturma ve yonetme
     - D&D 5e: Race, Class, Spell, Feat, Item, Background sablonlari
     - Pathfinder 1e: Race, Spell, Feat sablonlari
-    - VtM 5e: Clan, Discipline, Predator Type, Lore Sheet sablonlari
     - M&M 3e: Power, Advantage, Archetype, Complication sablonlari
     - Zorunlu alan dogrulama
     - JSON dosya kaydetme/yukleme
@@ -112,9 +111,8 @@
     - `utils/export_html.py`: Evrensel HTML karakter kagidi olusturucu
     - D&D 5e: Ability scores, savas istatistikleri, skills, features, equipment
     - Pathfinder 1e: BAB, CMB/CMD, touch/flat-footed AC, feats
-    - VtM 5e: Dot system gosterim (●○), discipline'ler, hunger/humanity
     - M&M 3e: Power Level, Power Points, powers tablosu, defenses
-    - Sistem bazli tema renkleri (D&D kirmizi, PF altin, VtM kan, M&M mavi)
+    - Sistem bazli tema renkleri (D&D kirmizi, PF altin, M&M mavi)
     - Responsive CSS (mobil uyumlu)
     - Print-friendly (yazici dostu)
     - Portre entegrasyonu (base64 embed)
@@ -128,7 +126,7 @@
 **Tamamlanma Orani:** %100
 
 **Tamamlanan:**
-- Karakter olusturma sistemi (4 sistem: D&D 5e, Pathfinder 1e, M&M 3e, VtM 5e)
+- Karakter olusturma sistemi (3 sistem: D&D 5e, Pathfinder 1e, M&M 3e)
 - Level up sistemi (HP, ASI/Feat, class features, spell slots)
 - Multiclassing (prerequisite, spell slot birlestirme, hit dice, proficiency, GUI)
 - Spell sistemi (spell slots, preparation, known spells, ritual/concentration/material tracking, upcasting)

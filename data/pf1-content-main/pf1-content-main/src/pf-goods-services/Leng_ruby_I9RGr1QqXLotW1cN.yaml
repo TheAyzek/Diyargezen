@@ -1,0 +1,35 @@
+_id: I9RGr1QqXLotW1cN
+_key: '!items!I9RGr1QqXLotW1cN'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/gems/gem-rough-cushion-red-pink.webp
+name: Leng ruby
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Black Market</p><h2>Description</h2><p>Leng
+      rubies are red gemstones all identical in size and appearance,
+      distinguishable from ordinary rubies by their complete lack of
+      imperfections or inclusions. Mined on the desolate Plateau of Leng-an
+      outer plane connected to the ever-shifting Dimension of Dreams-these
+      rubies are used as currency by the sinister denizens of Leng
+      (<em>Pathfinder RPG Bestiary 2</em> 82). These denizens travel the planes,
+      bartering Leng rubies for goods, slaves, and assistance in their
+      inscrutable schemes. Possession of these rubies is seen as suspicious and
+      shameful by scholars who understand their origin, as the rubies mark the
+      owner as someone willing to deal with enigmatic foes of light and
+      life.</p><p>A small number of Leng rubies (10%) can be used as the focus
+      of a <em>plane shift</em> spell, though it is impossible to determine what
+      location a particular ruby is attuned to before the spell is cast. Some
+      Leng rubies are substantially larger than the common size, and can fetch
+      prices of 50,000 gp or more. The denizens of Leng trade these larger
+      rubies for armies of slaves or as part of nation-ending plots.</p>
+  equipped: false
+  price: 500
+  sources:
+    - id: PZO9275
+      pages: '39'
+  subType: tradeGoods
+  tags:
+    - Black Market
+type: loot

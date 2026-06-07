@@ -1,0 +1,45 @@
+_id: F0iGcszouJAQTWwb
+_key: '!items!F0iGcszouJAQTWwb'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/fullplate.PNG
+name: Invincible Armor
+system:
+  armor:
+    acp: 6
+    dex: 1
+    material:
+      base:
+        value: steel
+    value: 9
+  aura:
+    school: abj
+  baseTypes:
+    - Full Plate
+  cl: 13
+  description:
+    value: >-
+      <p>Invincible armor shifts between three different appearances, but always
+      weighs the same and protects as +2 impervious moderate fortification full
+      plate. As an immediate action, the wearer can change the armor into heavy
+      plate that blocks slashing attacks (DR 10/bludgeoning or piercing),
+      thickly layered chainmail that blocks piercing attacks (DR 10/ bludgeoning
+      or slashing), or overlapping metal scales that block bludgeoning attacks
+      (DR 10/piercing or slashing). In addition, invincible armor provides the
+      wearer with 5 points of resistance to acid, cold, electricity, fire, and
+      sonic, and is itself unharmed by damage from any of these energy
+      types.</p><p><strong>Base Item</strong>: impervious moderate fortification
+      full plate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, fabricate, make whole, resist energy, and limited
+      wish or miracle</p>
+  enh: 2
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 137650
+  sources:
+    - id: PZO1123
+  spellFailure: 35
+  weight:
+    value: 50
+type: equipment

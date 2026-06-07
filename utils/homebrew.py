@@ -1,7 +1,7 @@
 """
 Universal Homebrew Content Manager
 Tum TTRPG sistemleri icin ozel icerik olusturma ve yonetme
-D&D 5e, Pathfinder 1e, VtM 5e, M&M 3e destegi
+D&D 5e, Pathfinder 1e, M&M 3e destegi
 """
 
 import json
@@ -113,50 +113,6 @@ HOMEBREW_TEMPLATES: Dict[str, Dict[str, Any]] = {
             },
             "required": ["name"],
             "display_name": "Feat"
-        },
-    },
-    "vtm5e": {
-        "clan": {
-            "template": {
-                "name": "", "source": "Homebrew",
-                "disciplines": [], "bane": "",
-                "compulsion": "", "description": ""
-            },
-            "required": ["name", "disciplines"],
-            "display_name": "Klan (Clan)"
-        },
-        "discipline": {
-            "template": {
-                "name": "", "source": "Homebrew",
-                "type": "Physical",
-                "levels": {
-                    "1": {"name": "", "cost": "", "description": ""},
-                    "2": {"name": "", "cost": "", "description": ""},
-                    "3": {"name": "", "cost": "", "description": ""},
-                },
-                "description": ""
-            },
-            "required": ["name"],
-            "display_name": "Disiplin (Discipline)"
-        },
-        "predator_type": {
-            "template": {
-                "name": "", "source": "Homebrew",
-                "description": "",
-                "bonus_discipline": "",
-                "specialty": ""
-            },
-            "required": ["name"],
-            "display_name": "Avcı Tipi (Predator Type)"
-        },
-        "loresheet": {
-            "template": {
-                "name": "", "source": "Homebrew",
-                "levels": {},
-                "description": ""
-            },
-            "required": ["name"],
-            "display_name": "Lore Sheet"
         },
     },
     "mm3e": {

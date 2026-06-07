@@ -1,7 +1,7 @@
 """
 Universal Encounter Tracker
 Tum TTRPG sistemleri icin savas/encounter takip sistemi
-D&D 5e, Pathfinder 1e, VtM 5e, M&M 3e destegi
+D&D 5e, Pathfinder 1e, M&M 3e destegi
 """
 
 import json
@@ -34,20 +34,6 @@ SYSTEM_RULES = {
         "turn_actions": ["Full-Round Action", "Standard Action", "Move Action", "Swift Action", "Free Action", "Immediate Action"],
         "death_saves": False,  # PF1e'de dying farklı çalışır
         "concentration": True,
-    },
-    "vtm5e": {
-        "name": "Vampire: The Masquerade 5e",
-        "initiative_stat": "Composure + Awareness",
-        "initiative_formula": "Composure + Awareness + d10",
-        "round_phases": ["Initiative", "Tur (1 major + 1 minor aksiyon)"],
-        "hp_based": True,
-        "turn_actions": ["Major Action", "Minor Action", "Discipline"],
-        "death_saves": False,
-        "concentration": False,
-        "special": {
-            "hunger_dice": True,
-            "willpower_reroll": True,
-        }
     },
     "mm3e": {
         "name": "Mutants & Masterminds 3e",
@@ -167,17 +153,6 @@ class Combatant:
             init = (dex - 10) // 2
             return cls(name=name, initiative=init, system="pathfinder1e",
                        max_hp=hp, current_hp=hp, ac=ac, is_player=True)
-
-        elif system in ["vtm5e", "vampire", "vtm"]:
-            attrs = character.get("attributes", {})
-            hp = character.get("health", 7)
-            composure = attrs.get("Composure", 1)
-            awareness = character.get("skills", {}).get("Awareness", 0)
-            init = composure + awareness
-            return cls(name=name, initiative=init, system="vtm5e",
-                       max_hp=hp, current_hp=hp, ac=0, is_player=True,
-                       hunger=character.get("hunger", 1),
-                       willpower=character.get("willpower", 0))
 
         elif system in ["mm3e", "mutantsandmasterminds", "m&m"]:
             abilities = character.get("abilities", {})

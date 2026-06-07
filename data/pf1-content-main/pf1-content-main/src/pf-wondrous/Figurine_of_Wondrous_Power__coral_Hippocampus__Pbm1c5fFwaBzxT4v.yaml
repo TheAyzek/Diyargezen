@@ -1,0 +1,28 @@
+_id: Pbm1c5fFwaBzxT4v
+_key: '!items!Pbm1c5fFwaBzxT4v'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Figurine of Wondrous Power (coral Hippocampus)
+system:
+  aura:
+    custom: true
+    school: evocation and transmutation
+  cl: 19
+  description:
+    value: >-
+      <p>When animated, this figurine of wondrous power ( Core Rulebook 513)
+      acts in all ways like a normal combat-trained hippocampus (Bestiary 2
+      155). The item can be used three times per week for up to 12 hours per
+      use. When 12 hours have passed or when the command word is spoken, the
+      coral hippocampus again becomes a tiny
+      statuette.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, animate objects</p>
+  price: 6000
+  sources:
+    - id: PZO92102
+  subType: wondrous
+  weight:
+    value: 400
+type: equipment

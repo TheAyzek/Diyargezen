@@ -1,0 +1,89 @@
+_id: mm8iM0l3RwWSkXSf
+_key: '!items!mm8iM0l3RwWSkXSf'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Invoke the Nemisis (Occult Ritual)
+system:
+  actions:
+    - _id: l2ugg520wt2pfz1d
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        description: partial; see text
+        type: will
+      target:
+        value: one creature; see text
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    focus: true
+    material: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> conjuration (calling) [curse];
+      <strong>Level</strong> 7</p><p><strong>Casting Time</strong> 7
+      hours</p><p><strong>Components</strong> V, S, M (a treasured possession of
+      the target), F (a depiction of the nemesis creature worth at least 5,000
+      gp)</p><p><strong>Skill Checks</strong> Bluff DC 30, 2 successes;
+      Diplomacy DC 30, 2 successes; Knowledge (planes) DC 30, 3
+      successes</p><p><strong>Range</strong> touch; see
+      text</p><p><strong>Target</strong> one creature; see
+      text</p><p><strong>Duration</strong> a year and a day; see
+      text</p><p><strong>Saving Throw</strong> Will partial; see text;
+      <strong>SR</strong> yes; see text</p><p><strong>Backlash</strong> The
+      nemesis creature feeds on a portion of the primary caster's life force,
+      inflicting a permanent negative level that cannot be healed until the
+      nemesis creature is dismissed.</p><p><strong>Failure</strong> The nemesis
+      creature is offended and harries the primary caster for a year and a
+      day.</p><h3>Effect</h3><p>This ritual conjures forth a restless spirit or
+      otherworldly entity to harass and sabotage a target of the caster's
+      choice. The ritual must take place in an environment pleasing to the
+      nemesis creature (an allip must be called in an asylum, a gremlin must be
+      called in a clocktower or site of misfortune, etc.). The caster
+      supplicates before a representation- usually a statue or tapestry-of the
+      nemesis creature, reciting a long litany of the target's real or imagined
+      sins and how deeply the target deserves to suffer.</p><p>Success conjures
+      up the nemesis creature chosen from the list below, which goes forth to
+      harass the victim to the best of its abilities. A pugwampi will hide and
+      subject its victim to bad luck, while a lovelorn will stalk the victim and
+      undermine his relationships.</p><p>Nemesis creatures do not kill their
+      victims, and they avoid doing anything that might result in their victims'
+      deaths (though they have no rules against killing others).</p><p>Beyond
+      defining the nemesis creature's target, the ritual casters have no special
+      control over or connection to the conjured beast.</p><p>A nemesis creature
+      always knows its victim's location, but it must travel to the victim under
+      its own power (or its creator's power). A victim can conceal itself from
+      the nemesis creature's senses for 24 hours by succeeding at a Will saving
+      throw each day at dawn. Should the nemesis creature be discovered and
+      slain, its spirit returns to the depiction used to conjure it, where it
+      re-forms after 1d4 days per Hit Die. Once re-formed, the nemesis creature
+      emerges from its depiction to resume its campaign of subterfuge. The curse
+      bestowed by this spell cannot be dispelled, but it can be removed with a
+      miracle or wish spell. If the depiction of the nemesis creature is
+      destroyed or if it is targeted with a remove curse or break enchantment
+      spell, the nemesis creature is immediately destroyed and the curse
+      ends.</p><p>The following creatures can be summoned as nemesis creatures:
+      allip, gremlin (any), hellhound, imp, lovelorn, poltergeist, quasit, or
+      tooth fairy.</p>
+  flags:
+    dictionary:
+      summary: Call forth a creature to harrass the target
+  level: 7
+  materials:
+    focus: a depiction of the nemesis creature worth at least 5,000 gp
+    value: a treasured possession of the target
+  school: con
+  sources:
+    - id: PZO9485
+      pages: '25'
+type: spell

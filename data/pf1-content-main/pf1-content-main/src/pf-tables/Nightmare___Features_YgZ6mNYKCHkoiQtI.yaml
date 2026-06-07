@@ -1,0 +1,99 @@
+_id: YgZ6mNYKCHkoiQtI
+_key: '!tables!YgZ6mNYKCHkoiQtI'
+_stats:
+  coreVersion: '12.331'
+description: >-
+  <p>Each nightmare has one or more nightmare features, which complicate the
+  nightmare in some fashion. For naturally occurring nightmares, roll twice on
+  the table below or simply select which nightmare features to use.</p>
+displayRoll: true
+folder: 7ZeWJj7eKXb88Mo9
+formula: 1d100
+img: icons/svg/d20-grey.svg
+name: Nightmare - Features
+replacement: true
+results:
+  - _id: PNGANGzSbnE6ksyA
+    _key: '!tables.results!YgZ6mNYKCHkoiQtI.PNGANGzSbnE6ksyA'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 20
+    text: >-
+      <strong>Being Chased</strong>: The dreamer is being stalked or chased by
+      something. The thing should be difficult (or impossible) to defeat in
+      combat, but possible to escape. Either employ the chase rules or
+      adjudicate the stalking creature’s threat in some other way.
+    type: text
+    weight: 1
+  - _id: AbLoPO5BQViIdQem
+    _key: '!tables.results!YgZ6mNYKCHkoiQtI.AbLoPO5BQViIdQem'
+    img: icons/svg/d20-black.svg
+    range:
+      - 21
+      - 30
+    text: >-
+      <strong>False Awakening</strong>: When the nightmare ends, the dreamer
+      believes it is awake, but actually enters another nightmare dreamscape.
+      Roll one nightmare feature fewer when determining the nature of this
+      dreamscape.
+    type: text
+    weight: 1
+  - _id: MTbVqm7mtrzasTWt
+    _key: '!tables.results!YgZ6mNYKCHkoiQtI.MTbVqm7mtrzasTWt'
+    img: icons/svg/d20-black.svg
+    range:
+      - 31
+      - 50
+    text: >-
+      <strong>Incompetent</strong>: The dreamer is suddenly unable to do
+      something that it is normally good at. It might lose ranks in an important
+      skill, have its base attack bonus reduced by half, or lose a key class
+      feature or ability for the duration of the dream.
+    type: text
+    weight: 1
+  - _id: ar54LRcfqIzpQijC
+    _key: '!tables.results!YgZ6mNYKCHkoiQtI.ar54LRcfqIzpQijC'
+    img: icons/svg/d20-black.svg
+    range:
+      - 51
+      - 65
+    text: >-
+      <strong>No Gear</strong>: The dreamer arrives in the dream naked, without
+      any gear or equipment.
+    type: text
+    weight: 1
+  - _id: yX54xCCaBdNWoyPz
+    _key: '!tables.results!YgZ6mNYKCHkoiQtI.yX54xCCaBdNWoyPz'
+    img: icons/svg/d20-black.svg
+    range:
+      - 66
+      - 80
+    text: >-
+      <strong>Unable to Move</strong>: The dreamer has difficulty traveling. The
+      dreamer could literally be paralyzed, or it might find that no matter
+      where it goes, it always winds up in the same spot. Either way, the
+      inability to move shouldn’t render the nightmare’s goal impossible.
+    type: text
+    weight: 1
+  - _id: QhRa0lPIr6dSd7at
+    _key: '!tables.results!YgZ6mNYKCHkoiQtI.QhRa0lPIr6dSd7at'
+    img: icons/svg/d20-black.svg
+    range:
+      - 81
+      - 95
+    text: >-
+      <strong>Unable to Speak</strong>: The dreamer either can’t speak or can’t
+      understand anything said in the dream.
+    type: text
+    weight: 1
+  - _id: of4cgEcCfNIrG8mS
+    _key: '!tables.results!YgZ6mNYKCHkoiQtI.of4cgEcCfNIrG8mS'
+    img: icons/svg/d20-black.svg
+    range:
+      - 96
+      - 100
+    text: Other disadvantage, or roll again twice
+    type: text
+    weight: 1
+sort: 300000

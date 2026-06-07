@@ -1,0 +1,33 @@
+_id: Q52vuKIhdwafKMM1
+_key: '!items!Q52vuKIhdwafKMM1'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_03.jpg
+name: Moral Insanity
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> greater madness; <strong>Save</strong> DC
+      22</p><p><strong>Onset</strong> 3d6 days</p><p><strong>Effect</strong> The
+      afflicted character's alignment shifts to evil, and he gains a +10
+      competence bonus on Bluff checks to hide this madness. Once per day, the
+      afflicted character can attempt a Will saving throw to suppress this
+      effect for 24 hours.</p><p><strong>Dormancy Effect</strong> None</p>This
+      complex madness fills the afflicted character with hatred for the world
+      and a detached feeling about others, as if they were nothing more than
+      pawns for the afflicted character's own uses. A character afflicted by
+      moral insanity might plot the demise of friends and enemies alike, but
+      always with the goal of avoiding blame or consequences and enabling him to
+      continue to feed his dark desires. The impact of moral insanity must be
+      roleplayed, although not all players may find it fun or interesting to
+      play such a character. In such cases, the GM should assume control of the
+      character whenever the madness is dominant. Evil characters can't gain
+      this madness.
+  sources:
+    - id: PZO1135
+      pages: '187'
+  subType: misc
+  tags:
+    - Maladies
+    - Madness
+type: feat

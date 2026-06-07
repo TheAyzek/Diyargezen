@@ -1,0 +1,25 @@
+_id: 8Cwgbwy85vrBQrTR
+_key: '!items!8Cwgbwy85vrBQrTR'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/bowl-powder-yellow.webp
+name: Sun Cream
+system:
+  description:
+    value: >-
+      <p>Each application of this alchemical solution, typically compounded from
+      substances found in desert flowers, fruits, and roots, heals 1d4 points of
+      nonlethal damage that the target has taken from heat exposure. If you
+      succeed at a DC 20 Heal check while applying sun cream, you may add your
+      Wisdom modifier to the nonlethal damage healed. A creature cannot benefit
+      from more than one application of sun cream in a 24-hour
+      period.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      20</p>
+  price: 10
+  sources:
+    - id: PZO9441
+      pages: '28'
+  subType: misc
+  weight:
+    value: 0.5
+type: consumable

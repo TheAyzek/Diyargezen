@@ -1,0 +1,19 @@
+_id: m2sRs58uZhwd3xZS
+_key: '!items!m2sRs58uZhwd3xZS'
+_stats:
+  coreVersion: '12.331'
+img: icons/weapons/swords/greatsword-sheathed.webp
+name: Hollowed Pommel
+system:
+  description:
+    value: >-
+      <p>Depending on the weapon, a hollow pommel may hold something as large as
+      a flask or as small as a rolled piece of paper. Detecting a hollow pommel
+      requires a DC 15 Perception check.</p>
+  equipped: false
+  price: 5
+  sources:
+    - id: PZO1123
+      pages: '57'
+  subType: adventuring
+type: loot

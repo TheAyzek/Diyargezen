@@ -1,0 +1,19 @@
+_id: qNE25o2uzyBLIMOM
+_key: '!items!qNE25o2uzyBLIMOM'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Vigilant Loading
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>At 1st level, as long as a bolt
+      ace has at least 1 grit point, she does not provoke attacks of opportunity
+      when loading a crossbow. This deed replaces quick clear.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

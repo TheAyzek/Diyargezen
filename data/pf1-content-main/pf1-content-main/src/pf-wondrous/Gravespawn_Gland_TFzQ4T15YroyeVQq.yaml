@@ -1,0 +1,35 @@
+_id: TFzQ4T15YroyeVQq
+_key: '!items!TFzQ4T15YroyeVQq'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Gravespawn Gland
+system:
+  aura:
+    school: nec
+  cl: 11
+  description:
+    value: >-
+      <p>A gravespawn gland is a piece of zombie brain implanted in the host's
+      skull. When the command word (which is often kept secret by its creator)
+      is spoken within 60 feet of the host, the gravespawn gland releases a
+      surge of necromantic power, dealing 4d6 points of negative energy damage
+      to the host. The host must succeed at a Fortitude saving throw (DC = 10 +
+      the damage dealt) or be instantly slain. Creatures killed in this manner
+      cannot be revived by breath of life or raise dead. A creature killed by a
+      gravespawn gland rises 1 round later as a mindless zombie.  A gravespawn
+      gland is rarely implanted willingly. Unlike with most necrografts,
+      implanting this organ requires a successful DC 25 Heal check by the
+      necrograft surgeon, not a successful Fortitude save by the recipient.
+      Removing an implanted gravespawn gland requires a successful DC 25 Heal
+      check; if this check is failed by more than 5, the gravespawn gland
+      detonates inside the
+      host.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, animate dead, inflict critical wounds, creator must have 11
+      ranks in Heal</p>
+  price: 6200
+  sources:
+    - id: PZO9462
+  subType: wondrous
+type: equipment

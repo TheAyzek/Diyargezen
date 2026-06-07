@@ -1,0 +1,39 @@
+_id: Hnt2WXGgskuQgGe5
+_key: '!items!Hnt2WXGgskuQgGe5'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/gems/pearl-swirl-blue.webp
+name: Radiant Blue Sphere Ioun Stone
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: varied
+  changes:
+    - _id: d9KxWinv
+      formula: '4'
+      target: wis
+      type: enh
+  cl: 12
+  description:
+    instructions: >-
+      <p>@UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: <p>This luminous blue stone is spherical. </p>
+    value: >-
+      <h3>Background Details</h3><p>A personal artifact used by Lurisian of the
+      Spindle Solution, this unique ioun stone is an enhanced version of an
+      incandescent blue sphere ioun stone.</p><h3>Effect</h3><p>A radiant blue
+      sphere ioun stone grants a +4 enhancement bonus to Wisdom while
+      active.</p><h3>Destruction</h3><p>This stone can be destroyed like any
+      other ioun stone, except it has AC 26, 50 hit points, and hardness 10.</p>
+  hardness: 10
+  hp:
+    base: 50
+  sources:
+    - id: PZO90126
+      pages: '36'
+  subType: other
+  tags:
+    - Ioun Stone
+type: equipment

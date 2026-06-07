@@ -1,0 +1,23 @@
+_id: l7L0QDRkGmsYi5ZY
+_key: '!items!l7L0QDRkGmsYi5ZY'
+_stats:
+  coreVersion: '12.331'
+folder: 35gUR2g8lMd073yK
+img: icons/environment/settlement/tent.webp
+name: Osiriontologist
+system:
+  description:
+    value: >-
+      <em>You are well schooled in the traditions, culture, and history of
+      Osirion, especially the broad expanse of its long history and ancient
+      relics.</em></p><p><strong>Prerequisites</strong><br/>Knowledge (history)
+      4 ranks, Knowledge (local) 4 ranks, Speak Language (Osiriani, Ancient
+      Osiriani).</p><p><strong>Benefits</strong><br/>When in Osirion, you gain a
+      +1 circumstance bonus to Bluff, Diplomacy, Disguise, Gather Information,
+      Intimidate, and Perform checks. You gain a +5 bonus when using Appraise,
+      Decipher Script, Knowledge (all skills), and Search to learn about a
+      person, place, or item of ancient Osirion.
+  tags:
+    - General
+    - '3.5'
+type: feat

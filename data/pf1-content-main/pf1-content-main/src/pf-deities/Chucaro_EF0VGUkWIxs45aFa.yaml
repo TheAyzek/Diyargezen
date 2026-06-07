@@ -1,0 +1,46 @@
+_id: EF0VGUkWIxs45aFa
+_key: '!journal!EF0VGUkWIxs45aFa'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Chucaro
+pages:
+  - _id: lboZjv8mSRjTUW3N
+    _key: '!journal.pages!EF0VGUkWIxs45aFa.lboZjv8mSRjTUW3N'
+    _stats:
+      coreVersion: '12.331'
+    name: Chucaro
+    sort: 0
+    text:
+      content: >-
+        <h1>Chucaro</h1><h2>Maiden of Haze and
+        Whimsy</h2>@Source[PZO9267;pages=322] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Chucaro">Chucaro</a><h3>Details</h3><p><strong>Alignment</strong>
+        CG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Dreams, hallucinations, mists<br
+        /><strong>Domains</strong> Chaos, Good, Madness, Magic<br
+        /><strong>Subdomains</strong> Azata (Chaos), Azata (Good), Insanity,
+        Revelry, Whimsy<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Morningstar<br
+        /><strong>Symbol</strong> Eye with rainbow iris<br /><strong>Sacred
+        Animal(s)</strong> Bird of paradise<br /><strong>Sacred
+        Color(s)</strong> White</p><h3>Obedience</h3><p>Drape yourself in gauze
+        and eat hallucinogenic mushrooms or fungi while meditating on the
+        teachings of Chucaro. Gain a +4 sacred bonus on saving throws against
+        poison.</p><h2>Boons - Celestial Obedience</h2><h3>Mystery
+        Cultist</h3><p>@Source[PZO9255;pages=10]<br /><strong>1: Kaleidoscopic
+        Images (Sp)</strong> <em>color spray</em> 3/day, <em>hypnotic pattern
+        </em> 2/day, or <em>gaseous form</em> 1/day<br /><strong>2: Wispy Form
+        (Su)</strong> Your body becomes misty when you are under attack,
+        diluting the damage of edged weapons. Though outwardly you appear the
+        same, you gain DR 5/bludgeoning.<br /><strong>3: Terrible Reverie
+        (Sp)</strong> You can cast <em>weird </em>once per day.</em></p><h2>For
+        Followers of Chucaro</h2><h3>Feats</h3><p><em>Heroic
+        Interposition</em></p><h3>Traits</h3><p><em>Empyreal Focus</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

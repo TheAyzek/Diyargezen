@@ -1,0 +1,32 @@
+_id: fG5WIHrLmj5YYDDW
+_key: '!items!fG5WIHrLmj5YYDDW'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Hollow Mask
+system:
+  aura:
+    school: con
+  cl: 5
+  description:
+    value: >-
+      <p>This porous wooden mask fits against the wearer's face much more
+      tightly than its bulky, abstract design suggests. The mask is capable of
+      storing air; the wearer can breathe normally underwater for 5 minutes
+      before he has to hold his breath. While underwater, so long as there is
+      still air left in the mask, it converts speech into vibrations in the
+      water and vice versa, allowing the wearer to speak normally and hear the
+      speech of other creatures wearing hollow masks within 60 feet as though
+      they were not underwater. After a wearer has used the mask underwater, the
+      mask needs an equal amount of time (maximum 5 minutes) to replenish its
+      air supply.</p><h3>Requirements</h3><p>Craft Wondrous Item, air bubble,
+      message</p>
+  price: 3000
+  slot: head
+  sources:
+    - id: PZO90124
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

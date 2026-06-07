@@ -1,0 +1,60 @@
+_id: aJbeIdmrc5AY2dby
+_key: '!journal!aJbeIdmrc5AY2dby'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: B3pncms1TJP9sIoG
+name: 3.5.4.8. Utopia (Lawful Neutral)
+pages:
+  - _id: eRkzyCgxFKI1OamA
+    _key: '!journal.pages!aJbeIdmrc5AY2dby.eRkzyCgxFKI1OamA'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.5.4.8. Utopia (Lawful Neutral)
+    sort: 0
+    text:
+      content: >-
+        <p>"content":
+        "</p><p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.ryIRK7CjUk9fI8TT]{3.5.
+        The
+        Planes}</p><ul><li><p>@Compendium[pf-content.pf-rules.VNXqsTp4czvUWZn3]{3.5.4.
+        Outer
+        Planes}</p><ul><li>@Compendium[pf-content.pf-rules.Vkaqhnw3JuB93M2b]{3.5.4.1.
+        Abaddon (Neutral
+        Evil)}</li><li>@Compendium[pf-content.pf-rules.Tv4XhzHyicyshnoI]{3.5.4.2.
+        The Abyss (Chaotic
+        Evil)}</li><li>@Compendium[pf-content.pf-rules.UgAswpClLHYhjrDU]{3.5.4.3.
+        Elysium (Chaotic
+        Good)}</li><li>@Compendium[pf-content.pf-rules.lizwtCEoZdcnCp6N]{3.5.4.3.
+        Heaven (Lawful
+        Good)}</li><li>@Compendium[pf-content.pf-rules.4S1CB7EY6OPMr6XE]{3.5.4.4.
+        Hell (Lawful
+        Evil)}</li><li>@Compendium[pf-content.pf-rules.B4QMP2x1LoDZ5vrg]{3.5.4.5.
+        Limbo (Chaotic
+        Neutral)}</li><li>@Compendium[pf-content.pf-rules.sUGoUviDZ2NdI4Qs]{3.5.4.6.
+        Nirvana (Neutral
+        Good)}</li><li>@Compendium[pf-content.pf-rules.Mwwxo5zMhkxYyYOE]{3.5.4.7.
+        Purgatory
+        (Neutral)}</li><li><strong>@Compendium[pf-content.pf-rules.aJbeIdmrc5AY2dby]{3.5.4.8.
+        Utopia (Lawful Neutral)}</strong></li></ul></li></ul><hr
+        /><p>@Source[PZO1114;pages=193]</p><p>Utopia is a bastion of order
+        against the chaos of Limbo and the countless demonic hordes of the
+        Abyss. A great city of eternal perfection, Utopia’s streets and
+        buildings are paragons of architecture and aesthetics; everything is
+        ordered and nothing happens by chance. While no one race rules Utopia,
+        axiomites and inevitables make their homes here, forever striving to
+        expand their perfect city.</p><h2>Planar Traits</h2><p>Utopia has the
+        following traits:</p><ul><li><strong>Finite
+        Shape</strong></li><li><strong>Divinely Morphic</strong>: Deities with
+        domains in Utopia can alter the plane at will.</li><li><strong>Strongly
+        Law-Aligned</strong></li><li><strong>Enhanced Magic</strong>: Spells and
+        spell-like abilities with the lawful descriptor are
+        enhanced.</li><li><strong>Impeded Magic</strong>: Spells and spell-like
+        abilities with the chaotic descriptor are impeded.</li></ul>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

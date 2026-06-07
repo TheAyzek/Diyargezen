@@ -1,0 +1,34 @@
+_id: QULLLqBRZ4PnG8zC
+_key: '!items!QULLLqBRZ4PnG8zC'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Forked Rod
+system:
+  aura:
+    school: div
+  cl: 9
+  description:
+    value: >-
+      <p>This bifurcated mithral rod resembles an oversized tuning fork. The
+      forked rod acts as a focus for plane shift, but the plane to which it is
+      attuned to can be adjusted as a standard action-a forked rod can be
+      attuned to any plane that a common tuning fork (see page 85) can be
+      attuned to. Once per day, a forked rod can be used to cast plane shift to
+      the plane it is currently attuned to. Three times per day as a standard
+      action, the user can attack a creature or object with a forked rod as if
+      it were a +1 light mace. On a hit, the forked rod deals no damage, but
+      affects the target with dimensional anchor for 9 minutes. As long as a
+      target is affected in this way, the forked rod is inert and cannot be used
+      to cast plane shift, as a focus for plane shift, or to affect another
+      target with dimensional
+      anchor.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Rod, dimensional anchor, plane shift</p>
+  price: 50000
+  sources:
+    - id: PZO1141
+  subType: other
+  weight:
+    value: 3
+type: equipment

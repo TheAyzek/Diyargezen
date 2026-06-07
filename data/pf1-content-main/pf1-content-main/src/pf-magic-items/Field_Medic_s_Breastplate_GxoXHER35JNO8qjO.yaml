@@ -1,0 +1,45 @@
+_id: GxoXHER35JNO8qjO
+_key: '!items!GxoXHER35JNO8qjO'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/breastplate.PNG
+name: Field Medic's Breastplate
+system:
+  armor:
+    acp: 4
+    dex: 3
+    material:
+      base:
+        value: steel
+    value: 6
+  aura:
+    custom: true
+    school: abjuration faint conjuration
+  baseTypes:
+    - Breastplate
+  cl: 7
+  description:
+    value: >-
+      <p>This battered yet lovingly polished +1 breastplate is marked by three
+      chipped glass circles set over the heart, each of a different color. Three
+      times per day, the wearer may tap a circle to activate it, enveloping her
+      in a shimmering aura that protects her from harm. The wearer gains DR 10/-
+      and is protected if she were under the effects of a globe of
+      invulnerability spell. The effect ends as soon as the wearer makes an
+      offensive action or casts an offensive spell, or after 1 minute. In
+      addition, whenever the wearer casts a cure spell or administers a cure
+      potion while under this effect, she may add one additional die to the
+      total amount of damage healed.</p><p><strong>Base Item</strong>: 
+      breastplate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, cure light wounds, sanctuary</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 52900
+  sources:
+    - id: PZO9431
+  spellFailure: 25
+  weight:
+    value: 30
+type: equipment

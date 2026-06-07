@@ -1,0 +1,52 @@
+_id: UBRIn2PNyxVgoqn1
+_key: '!actors!UBRIn2PNyxVgoqn1'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Buried Alive (CR 4)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    hp:
+      max: 18
+  details:
+    alignment: NE
+    area: 15-ft. radius
+    biography: {}
+    cl: 5
+    cr:
+      base: 4
+    destruction: >-
+      The haunt can be permanently destroyed if a character finds the bones of
+      the person who was buried alive, exhumes them, coats them in holy water,
+      and reburies them in a temple of their patron deity.
+    effect: >-
+      On the first round, spectral gravediggers create a single 15-foot-deep pit
+      covering the haunt's entire radius. Creatures in the area must succeed at
+      a DC 15 Reflex saving throw or fall to the bottom of the pit, taking 2d6
+      points of damage. Creatures who succeed leap to a square at the edge of
+      the pit. The walls of the pit are uneven (Climb DC 20). On the second
+      round, the spectral gravediggers fill the pit with loose, spectral dirt,
+      burying everyone still inside. Buried creatures are pinned, but they can
+      reduce their condition to grappled with a successful DC 15 Strength check.
+      They take 1d6 points of nonlethal damage each minute, and begin to
+      suffocate after 10 minutes. Creatures outside of the pit can dig out the
+      buried creatures. Each 5-foot cube of spectral dirt weighs 1,000 pounds; a
+      creature can move 5 times her maximum load worth of dirt per minute, or 10
+      times her maximum load if she has a shovel. If the haunt is dispersed,
+      buried creatures automatically rise to the surface.
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Horror Adventures pg. 175</p>
+        <p><strong>Haunt Templates</strong>:
+        persistent</p><h3>Description</h3><p>The spirits of those unfortunate
+        souls who are buried alive sometimes clamber to force others to share
+        their fate.</p>
+    notice: Perception DC 20 (to hear a shovel cleaving through dirt)
+    reset: 1 day
+    trigger: proximity
+type: haunt

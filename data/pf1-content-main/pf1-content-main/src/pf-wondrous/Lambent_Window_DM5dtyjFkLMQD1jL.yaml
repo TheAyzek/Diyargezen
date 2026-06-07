@@ -1,0 +1,38 @@
+_id: DM5dtyjFkLMQD1jL
+_key: '!items!DM5dtyjFkLMQD1jL'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Lambent Window
+system:
+  aura:
+    school: div
+  cl: 7
+  description:
+    value: >-
+      <p>This small pane of glass in a frame made of black metal looks like a
+      small hand mirror at first glance, but when a creature spends at least 1
+      minute staring into its reflection, the image shifts and changes, showing
+      the landscape of another plane. If the lambent window is activated on the
+      Material Plane, it shows the corresponding location on the Shadow Plane,
+      along with any creatures at that location. Likewise, when used on the
+      Shadow Plane, it shows the corresponding location on the Material Plane.
+      This item only allows those staring into it to see the corresponding
+      location on the other plane; they cannot hear through or gain other
+      sensual information about the other side by way of the window. This effect
+      can be used for up to 10 minutes per day. Those minutes need not be
+      consecutive, and the 1 minute it takes to activate the lambent window does
+      not count against this limit.  A person holding an active lambent window
+      can use it as a special focus when casting plane shift or using plane
+      shift as a spell-like ability to reach the specific location shown in the
+      mirror, rather than 5-500 miles from the bearer's intended
+      destination.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, plane shift, scrying</p>
+  price: 20000
+  sources:
+    - id: PZO1121
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

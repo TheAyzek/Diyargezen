@@ -1,0 +1,39 @@
+_id: xEEvHFg7Z1zBfgcu
+_key: '!items!xEEvHFg7Z1zBfgcu'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Revelation, Greater
+system:
+  aura:
+    custom: true
+    school: varies, varies
+  cl: 11
+  description:
+    value: >-
+      <p>A ring of revelation is a divine item attuned to a particular oracular
+      mystery and containing a revelation associated with that mystery (see the
+      oracle class description). While wearing the ring, an oracle has access to
+      that revelation and may use it as if she had it as a normal class feature.
+      The oracle must have the appropriate mystery to use the ring, and must
+      meet the level requirements (if any) of the revelation itself; for
+      example, a ring of revelation (combat healer) is only usable by an oracle
+      of at least 7th level with the battle mystery. If the oracle already has
+      that revelation and the revelation gives an ability with a limited number
+      of uses per day, the oracle can use that ability one additional time per
+      day. The ring has no effect if worn by a non-oracle, and Use Magic Device
+      doesn't allow a character to gain a revelation from this ring. A lesser
+      ring of revelation contains a revelation that has no level prerequisite or
+      a prerequisite that is less than 6th level. A greater ring of revelation
+      contains a revelation that requires the oracle to be 7th level or higher.
+      A superior ring of revelation contains a revelation that requires the
+      oracle to be 11th level or
+      higher.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, creator must be an oracle with the desired revelation</p>
+  price: 16000
+  slot: ring
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

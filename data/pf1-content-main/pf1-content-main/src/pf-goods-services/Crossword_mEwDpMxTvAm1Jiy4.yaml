@@ -1,0 +1,20 @@
+_id: mEwDpMxTvAm1Jiy4
+_key: '!items!mEwDpMxTvAm1Jiy4'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/documents/document-writing-brown.webp
+name: Crossword
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 1 cp-1 sp; <strong>Weight</strong> -<br
+      /><strong>Category</strong> Entertainment</p><h2>Description</h2><p>These
+      word puzzles can be found in many languages. A typical one is drawn on
+      leather or wood in a 15-by-15 square grid. Larger grids allow longer words
+      and tend to be more difficult.</p>
+  equipped: false
+  sources:
+    - id: PZO1123
+      pages: '92'
+  subType: entertainment
+type: loot

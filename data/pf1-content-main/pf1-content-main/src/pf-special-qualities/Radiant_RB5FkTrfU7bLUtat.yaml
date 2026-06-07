@@ -1,0 +1,27 @@
+_id: RB5FkTrfU7bLUtat
+_key: '!items!RB5FkTrfU7bLUtat'
+_stats:
+  coreVersion: '12.343'
+folder: d9cuvREi0qdcYFZ0
+img: icons/magic/defensive/armor-shield-barrier-steel.webp
+name: Radiant
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate evocation <strong>CL</strong>
+      6th</p><p><strong>Slot</strong> armor/shield quality;
+      <strong>Price</strong> +7,500 gp;</p><p>Armor and shields with the
+      <em>radiant </em>special ability shine as brightly as a torch when worn.
+      This radiance can be suppressed or resumed on command. Designs usually
+      feature bright colors and a brilliant sheen even when not illuminated.
+      Once per day, the wearer can command the armor or shield to brighten to
+      the strength of a <em>daylight </em>spell for 1 hour or until commanded to
+      dim.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, <em>daylight</em>; <strong>Price</strong> +3,750 gp</p>
+  sources:
+    - id: PZO1123
+      pages: '121'
+  subType: misc
+  tags:
+    - Universal Armor & Shield Qualities
+type: feat

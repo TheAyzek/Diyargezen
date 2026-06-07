@@ -1,0 +1,36 @@
+_id: P25kRIjqeFsCaEXa
+_key: '!items!P25kRIjqeFsCaEXa'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Nightmare Boots
+system:
+  aura:
+    custom: true
+    school: evocation and transmutation
+  cl: 6
+  description:
+    value: >-
+      <p>Prized by evil warriors, these boots are made of inky black leather
+      trimmed with a crimson mane of fiendish horsehair. Some bear the hair of
+      actual nightmares along their rims, causing them to occasionally flare and
+      crackle with flames reminiscent of the foul equines. When the wearer runs
+      or charges, smoke issues up from the boots, acting as concealment (20%
+      miss chance) when the wearer provokes attacks of opportunity while making
+      those actions. Secondly, three times per day, as a swift action, the
+      wearer can make the boots smoke, which grants her concealment until the
+      end of her turn. Lastly, once per day, when the wearer hits a creature
+      with a melee attack, she can command the boots to ignite. When the boots
+      ignite, all creatures within a 5-foot radius take 2d6 points of fire
+      damage. A DC 13 Reflex saving throw halves the
+      damage.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, burning hands, pyrotechnics</p>
+  price: 8500
+  slot: feet
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

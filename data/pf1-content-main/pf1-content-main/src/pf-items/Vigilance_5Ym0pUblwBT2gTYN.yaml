@@ -1,0 +1,47 @@
+_id: 5Ym0pUblwBT2gTYN
+_key: '!items!5Ym0pUblwBT2gTYN'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-8.jpg
+name: Vigilance
+system:
+  actions:
+    - _id: c2d2t0g77w8p6q0u
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-8.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Effect</strong> 1d3 hours; +10 alchemical bonus on
+            Perception checks
+          - >-
+            <strong>Effect</strong> 4 hours; user is denied his Dexterity bonus
+            to AC
+          - <strong>Damage</strong> 1d4 Con damage
+      save:
+        dc: '20'
+        type: fort
+      tag: vigilance
+  description:
+    value: >-
+      <p><strong>Type</strong> ingested;<strong> Addiction </strong>moderate,
+      Fortitude DC 20</p><p><strong>Effect </strong>1d3 hours; +10 alchemical
+      bonus on Perception checks</p><p><strong>Effect</strong> 4 hours; user is
+      denied his Dexterity bonus to AC</p><p><strong>Damage </strong>1d4 Con
+      damage</p><p>Scholars and students are often willing to accept the
+      clumsiness and slow reactions in exchange for the benefits gained in
+      research and study from this bitter white powder.</p>
+  price: 15
+  sources:
+    - id: PZO9487
+      pages: '27'
+  subType: drug
+  uses:
+    per: single
+type: consumable

@@ -1,0 +1,33 @@
+_id: QWi3qMRojG8AFGIy
+_key: '!items!QWi3qMRojG8AFGIy'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Harp of Slumber
+system:
+  aura:
+    school: enc
+  cl: 5
+  description:
+    value: >-
+      <p>Despite having the strength and texture of unhewn stone, this pale
+      white harp is sculpted from solid glass. A harp of slumber has several
+      effects when played. At will, the user can produce a lullaby effect by
+      plucking a single string. Up to three times per day, the user can strum
+      the harp to produce a sleep effect. If the performer succeeds at a DC 13
+      Perform (string instrument) skill check, this use of the harp functions as
+      deep slumber instead. The DC for these effects increases by 2 against
+      creatures with the giant subtype.  Mythic: A mythic performer can expend
+      one use of mythic power when strumming a harp of slumber in order to
+      augment the effect it creates to mythic sleep, or mythic deep slumber if
+      the performer also succeeds at a DC 13 Perform (string instrument)
+      check.</p><h3>Requirements</h3><p>Craft Wondrous Item, Mythic Crafter,
+      deep slumber, lullaby, sleep</p>
+  price: 37500
+  sources:
+    - id: PZO9453
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

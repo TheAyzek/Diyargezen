@@ -1,0 +1,71 @@
+_id: yKqq2RRyyPNOS65R
+_key: '!items!yKqq2RRyyPNOS65R'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/sundries/flags/banner-worn-red.webp
+name: War-Kilt of Sarenrae
+system:
+  actions:
+    - _id: WFdx05iIFq0MR3T7
+      activation:
+        type: immediate
+        unchained:
+          type: reaction
+      description: >-
+        <p>Once per day, when an adjacent foe attempts to take a 5-foot step
+        away from you, you may make a 5-foot step as an immediate action so long
+        as you end up adjacent to that foe. If you take this step, you cannot
+        take a 5-foot step during your next turn. If you take an action to move
+        during your next turn, subtract 5 feet from your total movement.</p>
+      name: Step-up
+  aura:
+    school: trs
+  changes:
+    - _id: GAjXqhOH
+      formula: '2'
+      target: nac
+      type: untyped
+    - _id: Aua6C9hf
+      formula: '2'
+      target: skill.acr
+      type: competence
+    - _id: TjzojLu5
+      formula: '2'
+      type: competence
+  cl: 9
+  description:
+    instructions: >-
+      <p>Add perform (dance) to your actor if you have not previously done so. 
+      Update the untargeted change on the changes tab of this item to reflect
+      Perform (dance)</p>
+    unidentified: <p>This is a skirt of overlapping, brightly colored silk.</p>
+    value: >-
+      <p>A favored item among the dervishes of Sarenrae, this skirt of
+      overlapping, brightly colored silk is magically reinforced, granting you
+      increased durability and mobility.</p><h3>Effect</h3><p>You gain a +2
+      natural armor bonus to AC and a +2 competence bonus on Acrobatics and
+      Perform (dance) checks.</p><p>Once per day, when an adjacent foe attempts
+      to take a @Distance[5;dual] step away from you, you may make a
+      @Distance[5;dual] step as an immediate action so long as you end up
+      adjacent to that foe. If you take this step, you cannot take a
+      @Distance[5;dual] step during your next turn. If you take an action to
+      move during your next turn, subtract @Distance[5;dual] from your total
+      movement.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.pysrx5kxfjvsjjsi]{expeditious
+      retreat}, @UUID[Compendium.pf1.spells.Item.la7kuehewu85ybnt]{barkskin} or
+      @UUID[Compendium.pf1.spells.Item.knyako6zopc1chrv]{stoneskin};
+      </em><strong>Cost</strong> 6,500 gp</p>
+  hp:
+    base: 10
+  price: 13000
+  showInQuickbar: true
+  slot: belt
+  sources:
+    - id: PZO9406
+      pages: '23'
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

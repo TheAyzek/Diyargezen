@@ -1,0 +1,55 @@
+_id: ILimEf6FcUo2bfuw
+_key: '!items!ILimEf6FcUo2bfuw'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/books/book-worn-brown.webp
+name: Library of the Dancer of Skins (Spellbook, Level 19 Universalist)
+system:
+  description:
+    value: >-
+      <p><em>This quartet of books is held together by a shining silver strand
+      wound around the four tomes and tied in an intricate knot. Inside, the
+      writing is expansive and sloppy, filled with marginalia; the author's
+      notes indicate clear excitement about her discoveries, and while the
+      thinker is obviously brilliant, she is also apparently
+      undisciplined.</em></p><p><strong>Value</strong> 16,435 gp (20,710 gp with
+      the preparation ritual)</p><h2>Spells</h2><p>9th-<em>shapechange</em>,
+      <em>weird</em>, <em>wish</em>, <em>world wave</em></p><p>8th-<em>giant
+      form II</em>, <em>polar ray</em>, <em>scintillating pattern</em>,
+      <em>seamantle</em>, <em>trap the soul</em><br />7th-<em>control
+      weather</em>, <em>elemental body IV</em>, <em>phantasmal revenge</em>,
+      <em>power word blind</em>, <em>rampart</em>, <em>spell
+      turning</em></p><p>6th-<em>beast shape IV</em>, <em>cloak of dreams</em>,
+      <em>control water</em>, <em>fluid form</em>, <em>getaway</em>,
+      <em>lightning field</em>, <em>plant shape II</em><br />5th-<em>comet</em>,
+      <em>fabricate</em>, <em>fire snake</em>, <em>geyser</em>, <em>hold
+      monster</em>, <em>overland flight</em>, <em>planar adaptation</em>,
+      <em>telekinesis</em></p><p>4th-<em>dragon's breath</em>, <em>dimension
+      door</em>, <em>firefall</em>, <em>greater invisibility</em>,
+      <em>moonstruck</em>, <em>resilient sphere</em>, <em>true form</em>,
+      <em>wandering star motes</em><br />3rd-<em>blink</em>, <em>cloak of
+      winds</em>, <em>elemental aura</em>, <em>fly</em>, <em>lightwall</em>,
+      <em>shifting sands</em>, <em>twilight knife</em>, <em>versatile
+      weapon</em></p><p>2nd-<em>accelerate poison</em>, <em>arrow eruption</em>,
+      <em>dust of twilight</em>, <em>elemental speech</em>, <em>alter self</em>,
+      <em>fire breath</em>, <em>share language</em>,
+      <em>slipstream</em></p><p>1st-<em>alter winds</em>, <em>ant haul</em>,
+      <em>endure elements</em>, <em>feather fall</em>, <em>flare burst</em>,
+      <em>identify</em>, <em>stone fist</em>, <em>touch of the sea</em>,
+      <em>true strike</em>,
+      <em>vanish</em></p><h2>Ritual</h2><p><em><strong>Defensive Boon
+      (Su)</strong> You throw up a quick burst of arcane energy that deflects an
+      incoming spell attack. As an immediate action when targeted with a touch
+      spell or spell-like ability, you can spend this boon's effect to gain a +4
+      deflection bonus to AC against the triggering attack.</em></p>
+  equipped: false
+  price: 20710
+  sources:
+    - id: PZO1117
+      pages: '126'
+  subType: gear
+  tags:
+    - Spellbooks
+  weight:
+    value: 5
+type: loot

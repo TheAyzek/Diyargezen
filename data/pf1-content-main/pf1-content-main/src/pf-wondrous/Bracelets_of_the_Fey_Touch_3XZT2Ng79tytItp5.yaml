@@ -1,0 +1,28 @@
+_id: 3XZT2Ng79tytItp5
+_key: '!items!3XZT2Ng79tytItp5'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Bracelets of the Fey Touch
+system:
+  aura:
+    school: enc
+  cl: 4
+  description:
+    value: >-
+      <p>These bracelets are crafted from thin yet surprisingly durable silver,
+      and they glitter and sparkle faintly in moonlight or shadow. The wearer
+      can activate the bracelets once per day as a free action to gain a +4
+      competence bonus on a Bluff or Stealth check.  6th Level: The wearer can
+      activate the bracelets to increase the DC of the next enchantment spell
+      she casts by 1 instead of gaining a bonus on a skill check.  8th Level:
+      The bracelets can be used twice per day, but no more than once per
+      hour.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, charm person, invisibility, creator must be fey</p>
+  price: 480
+  slot: wrists
+  sources:
+    - id: PZO1131
+  subType: wondrous
+type: equipment

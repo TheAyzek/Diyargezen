@@ -1,0 +1,55 @@
+_id: yeIb3PW3M1QmlVNG
+_key: '!journal!yeIb3PW3M1QmlVNG'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.1. Wealth and Money
+pages:
+  - _id: cPvUp2YJs4fMa65J
+    _key: '!journal.pages!yeIb3PW3M1QmlVNG.cPvUp2YJs4fMa65J'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.1. Wealth and Money
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li><strong>@Compendium[pf-content.pf-rules.yeIb3PW3M1QmlVNG]{6.0.1.
+        Wealth and
+        Money}</strong></li><li>@Compendium[pf-content.pf-rules.VOAlGu4isvHXBLjm]{6.0.2.
+        Weapons}</li><li>@Compendium[pf-content.pf-rules.IcxBfkvPZ6hdWRuV]{6.0.3.
+        Armor}</li><li>@Compendium[pf-content.pf-rules.TROqcNjEw3b2q2Dk]{6.0.4.
+        Special Materials}</li></ul><hr
+        /><p>@Source[PZO1110;pages=140]</p><p>Each character begins play with a
+        number of gold pieces that he can spend on weapons, armor, and other
+        equipment. As a character adventures, he accumulates more wealth that
+        can be spent on better gear and magic items. Table 6–1 lists the
+        starting gold piece values by class. In addition, each character begins
+        play with an outfit worth 10 gp or less. For characters above 1st level,
+        see Table 12–4
+        (Gamemastery).</p><p>@Compendium[pf-content.pf-rules.nYX664DCRfLLEAvT]{6.0.1.1.
+        Coins}</p><p>@Compendium[pf-content.pf-rules.oSsJes7s4K1SMEWf]{6.0.1.2.
+        Other
+        Wealth}</p><p>@Compendium[pf-content.pf-rules.Whv7hnccchEOzRaA]{6.0.1.3.
+        Selling Treasure}</p><h2>Table 6-1: Starting Character
+        Wealth</h2><table><thead><tr><td>Class</td><td>Starting
+        Wealth</td><td>Average</td></tr></thead><tbody><tr><td>Barbarian</td><td>3d6
+        x 10 gp</td><td>105 gp</td></tr><tr><td>Bard</td><td>3d6 x 10
+        gp</td><td>105 gp</td></tr><tr><td>Cleric</td><td>4d6 x 10
+        gp</td><td>140 gp</td></tr><tr><td>Druid</td><td>2d6 x 10 gp</td><td>70
+        gp</td></tr><tr><td>Fighter</td><td>5d6 x 10 gp</td><td>175
+        gp</td></tr><tr><td>Monk</td><td>3d6 x 10 gp</td><td>35
+        gp</td></tr><tr><td>Paladin</td><td>5d6 x 10 gp</td><td>175
+        gp</td></tr><tr><td>Ranger</td><td>5d6 x 10 gp</td><td>175
+        gp</td></tr><tr><td>Rouge</td><td>4d6 x 10 gp</td><td>140
+        gp</td></tr><tr><td>Sorcerer</td><td>2d6 x 10 gp</td><td>70
+        gp</td></tr><tr><td>Wizard</td><td>2d6 x 10 gp</td><td>70
+        gp</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

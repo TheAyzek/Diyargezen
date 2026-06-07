@@ -1,0 +1,20 @@
+_id: s2lJoa0bpf5vQkxa
+_key: '!items!s2lJoa0bpf5vQkxa'
+_stats:
+  coreVersion: '12.331'
+img: icons/environment/creatures/bug-worm-teeth-green.webp
+name: Attach
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>The creature latches on when it hits with the listed attack. The
+      creature is <a>grappled</a>, but the target is not. The target can attack
+      or grapple the creature as normal, or it can break the attachment with a
+      successful grapple or <a>Escape
+      Artist</a>&nbsp;check.</p><p><em>Format</em>:
+      attach</p><p><em>Location</em>: individual attacks.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

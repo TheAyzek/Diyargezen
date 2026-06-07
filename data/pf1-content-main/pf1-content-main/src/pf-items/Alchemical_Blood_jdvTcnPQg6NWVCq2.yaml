@@ -1,0 +1,26 @@
+_id: jdvTcnPQg6NWVCq2
+_key: '!items!jdvTcnPQg6NWVCq2'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/minor-red.jpg
+name: Alchemical Blood
+system:
+  description:
+    value: >-
+      <p>This flask of red liquid is enough to for 1 day stave off a vampire's
+      hunger for blood. Few vampires enjoy it; most describe it as tasting stale
+      and artificial. Some, particularly weaker or newer ones, feel that it
+      interferes with the unholy magic keeping their bodies animated. However,
+      it's an option utilized by vampires that are running for their unlives and
+      attempting to stay hidden from vampire hunters. Crafting this item
+      requires a successful DC 40 Craft (alchemy)
+      check.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      40</p>
+  price: 40
+  sources:
+    - id: PZO1130
+      pages: '237'
+  subType: misc
+  weight:
+    value: 1
+type: consumable

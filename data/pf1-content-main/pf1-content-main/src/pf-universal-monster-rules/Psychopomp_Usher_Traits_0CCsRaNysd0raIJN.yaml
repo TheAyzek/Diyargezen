@@ -1,0 +1,55 @@
+_id: 0CCsRaNysd0raIJN
+_key: '!items!0CCsRaNysd0raIJN'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/bones/skull-bird-white.webp
+name: Psychopomp Usher Traits
+system:
+  description:
+    value: >-
+      <p><div><p>An usher rules a domain in the Boneyard. Ushers are neutral
+      outsiders with a minimum CR of 25. Ushers share the following traits and
+      have the <a>psychopomp</a> subtype unless otherwise noted.</p><ul><li>An
+      usher&rsquo;s natural weapons, as well as any weapon it wields, are
+      treated as epic and as though they have the <a><em>ghost touch</em></a>
+      special ability for the purpose of overcoming damage resistance and
+      immunities.</li><li>Immunity to ability damage, ability drain, charm,
+      compulsion, death effects, <a>energy drain</a>, and
+      <a>petrification</a>.</li><li><a>Frightful Presence</a>: An usher can
+      activate its frightful presence as a free action as part of any attack,
+      special attack, spell-like ability, or by speaking
+      aloud.</li><li><a>Summon Psychopomps (Sp)</a>: Three times per day as a
+      swift action, an usher can summon a psychopomp or combination of
+      psychopomps whose total combined CR is 20 or lower. This otherwise
+      functions like the <a>summon</a> universal monster rule with 100% chance
+      of success, and it counts as a 9th-level spell effect.</li><li><a>Walk
+      with Death (Su)</a>: Ushers share an intimate bond with Pharasma, goddess
+      of death, and they cannot be reduced below 0 hit points while in the
+      Boneyard. Any usher killed beyond the Boneyard dissolves into mist and
+      feathers, leaving behind any gear it carried, and it is immediately
+      restored to life (as <a>true resurrection</a>) in a location of its choice
+      within its domain. An usher can&rsquo;t use this ability again for 1
+      year.</li><li><a>Telepathy</a> 300 feet.</li><li>An usher can grant spells
+      as if it were a deity. Each usher has a favored weapon and grants the
+      <a>repose</a> domain, plus three other domains and four
+      subdomains.</li></ul><p>In addition, a psychopomp usher gains the
+      following powers while in its realm (their statistics do not include these
+      abilities):</p><ul><li>Heightened Awareness (Ex): An usher gains a +10
+      insight bonus on Sense Motive checks and initiative
+      checks.</li><li>Mythic: An usher functions as a 10th-rank mythic creature,
+      including having the mythic power ability (10/day, surge +1d12). It can
+      expend uses of <a>mythic power</a> to use the mythic versions of any
+      spell-like ability denoted with a superscript &ldquo;M,&rdquo; as if the
+      ability were a mythic spell.</li><li>Spell-Like Abilities: At
+      will&mdash;<a>discern location</a>, <a>fabricate</a>, <a>polymorph any
+      object</a> (when used on objects or creatures that are native to the
+      realm, the polymorph duration factor increases by 6), and <a>rest
+      eternal</a>; 1/day&mdash;<a>miracle</a> (limited to physical effects that
+      manipulate the realm or to effects that are relevant to the usher&rsquo;s
+      area of concern), <a>true resurrection</a> (the usher can use <a>true
+      resurrection</a>&nbsp;to restore slain outsiders to
+      life).</li></ul></div></p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

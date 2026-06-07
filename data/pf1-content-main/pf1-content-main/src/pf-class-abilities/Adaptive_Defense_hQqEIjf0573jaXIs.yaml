@@ -1,0 +1,19 @@
+_id: hQqEIjf0573jaXIs
+_key: '!items!hQqEIjf0573jaXIs'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_34.jpg
+name: Adaptive Defense
+system:
+  associations:
+    classes:
+      - Shifter
+  description:
+    value: >-
+      <p><strong>Shifter Reactive Form</strong></p><p>When assuming this form,
+      the adaptive shifter chooses one saving throw and gains a competence bonus
+      on the selected save equal to her Wisdom modifier.</p>
+  subType: classFeat
+  tags:
+    - Shifter Reactive Form
+type: feat

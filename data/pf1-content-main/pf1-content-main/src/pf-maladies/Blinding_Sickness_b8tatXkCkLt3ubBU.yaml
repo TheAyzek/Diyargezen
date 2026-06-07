@@ -1,0 +1,22 @@
+_id: b8tatXkCkLt3ubBU
+_key: '!items!b8tatXkCkLt3ubBU'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/feats/blinding-critical.jpg
+name: Blinding Sickness
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> disease (ingested);
+      <strong>Save</strong>&nbsp;Fortitude DC
+      16;</p><p><strong>Onset</strong>&nbsp;1d3
+      days;&nbsp;<strong>Frequency</strong>&nbsp;1/day</p><p><strong>Effect</strong>
+      1d4 Str damage, if more than 2 Str damage, target must make an additional
+      Fort save or be
+      permanently&nbsp;<a>blinded</a></p><p><strong>Cure</strong>&nbsp;2
+      consecutive saves</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

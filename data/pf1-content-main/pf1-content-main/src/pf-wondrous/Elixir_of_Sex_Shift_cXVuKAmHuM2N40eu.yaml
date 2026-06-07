@@ -1,0 +1,35 @@
+_id: cXVuKAmHuM2N40eu
+_key: '!items!cXVuKAmHuM2N40eu'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Elixir of Sex Shift
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>Upon drinking this elixir, a character permanently transforms their
+      biology to take on a different set of sexual characteristics of their
+      choice. While the imbiber's physiology changes dramatically and their
+      features adjust slightly to take on the new qualities, the imbiber is
+      still recognizable as the same person. The character has only minor
+      control over the specific details of this new appearance, and the elixir
+      grants no benefit on Disguise checks or similar checks.  This elixir
+      functions instantaneously and can't be dispelled, though drinking a second
+      elixir of sex shift either reverts the imbiber to a former form or allows
+      them to adopt alternate sexual characteristics, as they choose. The elixir
+      has no effect on imbibers who are pregnant or are of races with no sexual
+      differentiation. Most races, however, have a wide spectrum of sexual
+      differentiation, some common, others more rare. Therefore, most imbibers
+      can decide how this elixir transforms them. An unwilling imbiber can
+      choose not to change at
+      all.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Items, polymorph</p>
+  price: 2250
+  sources:
+    - id: PZO1129
+  subType: wondrous
+type: equipment

@@ -1,0 +1,28 @@
+_id: sLBb633t8htIOi1x
+_key: '!items!sLBb633t8htIOi1x'
+_stats:
+  coreVersion: '12.331'
+folder: 52jofiLqjkyFLxLL
+img: icons/equipment/finger/ring-crown-teal-gold.webp
+name: Hollywreath Band
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>This headband is woven of magically preserved holly, its deep green
+      leaves and bright red berries perpetually lustrous. The wearer may create
+      goodberries once per day as the spell, and any effect she creates that
+      affects plants, including the domain powers of the Plant domain, take
+      effect at +1 caster level and gain a +1 bonus to the save
+      DC.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, goodberry, plant growth</p>
+  price: 5700
+  slot: headband
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

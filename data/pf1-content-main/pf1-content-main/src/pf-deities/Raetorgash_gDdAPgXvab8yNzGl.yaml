@@ -1,0 +1,48 @@
+_id: gDdAPgXvab8yNzGl
+_key: '!journal!gDdAPgXvab8yNzGl'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Raetorgash
+pages:
+  - _id: O6dPseQlVHhKv2Cp
+    _key: '!journal.pages!gDdAPgXvab8yNzGl.O6dPseQlVHhKv2Cp'
+    _stats:
+      coreVersion: '12.331'
+    name: Raetorgash
+    sort: 0
+    text:
+      content: >-
+        <h1>Raetorgash</h1><h2>The Skull-Hoarder</h2>@Source[PZO1139;pages=120]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Raetorgash">Raetorgash</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Kyton Demagogues<br /><strong>Areas of
+        Concern</strong> Evolution, mutation, skulls<br
+        /><strong>Domains</strong> Evil, Healing, Law, Luck<br
+        /><strong>Subdomains</strong> Curse, Fate, Fear, Restoration<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Halberd</p><h3>Obedience</h3><p>Spend
+        an hour cleaning and considering your collection of skulls. Gain a +4
+        profane bonus on saving throws to resist energy drain and negative
+        energy effects.</p><h2>Boons - Kyton
+        Demagogues</h2>@Source[PZO1139;pages=121]<br />The principals of the
+        kyton race number among the planes' most audacious explorers, artistes,
+        and scientists. Constrained by neither morals nor taboos, kyton
+        demagogues pursue perfection in myriad profane fields. Lost limbs and
+        lives mean little to the kyton demagogue-only the next boundary to
+        shatter and the promise of what could be. The kyton demagogues are
+        legion, but nine of those best known to Golarion's cultic scholars are
+        presented here.<p> Kyton demagogues are far less likely than other
+        fiendish demigods to flaunt their power. All kyton demagogues are lawful
+        evil and range in power from CR 26 to CR 30. The boons they grant are
+        less complex than those granted by other fiendish demigods, manifesting
+        as spell-like abilities each usable once per
+        day.</p><p><strong>1</strong>: <em>vampiric touch</em><br
+        /><strong>2</strong>: <em>destruction</em><br /><strong>3</strong>: 
+        <em>energy drain</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

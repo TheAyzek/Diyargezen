@@ -28,6 +28,7 @@ from gui.screens.tavern import TavernPage
 from gui.screens.forge import ForgePage
 from gui.screens.character_sheet import CharacterSheetPage
 from utils.storage import init_db
+from etl.pipeline import run_etl_if_needed
 
 logger = logging.getLogger(__name__)
 
@@ -49,6 +50,11 @@ class MainWindow(QMainWindow):
             self.setWindowIcon(QIcon(str(LOGO_PATH)))
 
         init_db(DB_PATH)
+        try:
+            totals = run_etl_if_needed(DB_PATH)
+            logger.info("Oyun verisi hazır: %s", totals)
+        except Exception as exc:
+            logger.warning("ETL başlatılamadı (JSON fallback aktif): %s", exc)
         self._build_ui()
         self._navigate(0)
 

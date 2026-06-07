@@ -1,0 +1,25 @@
+_id: lqITOu92q9ZF2TMt
+_key: '!items!lqITOu92q9ZF2TMt'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/magic-yellow.jpg
+name: Surge Syrup
+system:
+  description:
+    value: >-
+      <p><strong>Mythic</strong>: Consuming a vial of surge syrup grants you a
+      +1d4 alchemical bonus on your next mythic surge roll. Every round after
+      you consume surge syrup that you don't use your surge ability, the bonus
+      provided by this item decreases by 1 (minimum 0).</p><h2>Alchemical
+      Recipe</h2><p><strong>Recipe</strong> (12 dew of lunary + 40 spirit of
+      wine + 40 urea)/congelation; <strong>Craft</strong>
+      25</p><p><strong>Time</strong> 10 minutes; <strong>Tools</strong>
+      alchemist's lab; <strong>Type</strong> alchemical remedy</p>
+  price: 80
+  sources:
+    - id: PZO9445
+      pages: '27'
+  subType: misc
+  weight:
+    value: 1
+type: consumable

@@ -1,0 +1,44 @@
+_id: 8aY5I1SR7xC3sKXt
+_key: '!items!8aY5I1SR7xC3sKXt'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Everwake serum
+system:
+  actions:
+    - _id: ia3iqu9yjhkw0z9l
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: cannot voluntarily rest or sleep
+            (spells such as sleep still function as normal), preventing
+            spellcasters who need to rest to regain or prepare spells from doing
+            so
+      save:
+        dc: '16'
+        type: fort
+      tag: everwakeSerum
+  description:
+    value: >-
+      <p><strong>Type</strong> ingested; <strong>Save</strong> Fortitude DC
+      16</p><p><strong>Frequency</strong> 1/day for 5
+      days</p><p><strong>Effect</strong> cannot voluntarily rest or sleep
+      (spells such as <em>sleep</em> still function as normal), preventing
+      spellcasters who need to rest to regain or prepare spells from doing
+      so</p><p><strong>Cure</strong> 2 saves</p>
+  price: 2500
+  sources:
+    - id: PZO9450
+      pages: '27'
+  subType: poison
+  uses:
+    per: single
+type: consumable

@@ -1,0 +1,86 @@
+_id: J1usfOZh1XTatBPh
+_key: '!journal!J1usfOZh1XTatBPh'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Eiseth
+pages:
+  - _id: mTyytZZHI7sBaoKn
+    _key: '!journal.pages!J1usfOZh1XTatBPh.mTyytZZHI7sBaoKn'
+    _stats:
+      coreVersion: '12.331'
+    name: Eiseth
+    sort: 0
+    text:
+      content: >-
+        <h1>Eiseth</h1><h2>The Erinyes Queen</h2>@Source[PZO9267;pages=328] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Eiseth">Eiseth</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Queens of the Night<br /><strong>Areas
+        of Concern</strong> Battle, revenge, wrath<br /><strong>Domains</strong>
+        Destruction, Evil, Law, War<br /><strong>Subdomains</strong> Blood,
+        Catastrophe, Devil (Evil), Devil (Law), Rage<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Longbow<br /><strong>Symbol</strong> Horned longbow<br
+        /><strong>Sacred Animal(s)</strong> Raven<br /><strong>Sacred
+        Color(s)</strong> Black, orange</p><h3>Obedience</h3><p>Sharpen a blade
+        with 603 strokes-one for each year the Erinyes Queen wandered existence,
+        building glorious hatred in her heart-repeating prayers to Eiseth for
+        the duration. Gain a +1 profane bonus to attacks against a single type
+        of creature, chosen each time you perform this obedience. If you choose
+        humanoids or outsiders, you must choose an associated
+        subtype.</p><h2>Boons - Fiendish
+        Obedience</h2><h3>Evangelist</h3><p>@Source[PZO1139;pages=48]<br
+        /><strong>1: Dark Wings of Vengeance (Sp)</strong> <em>murderous command
+         </em> 3/day, <em>death knell</em> 2/day, or <em>excruciating deformation</em>
+        1/day<br /><strong>2: Erinyes Legion (Su)</strong> Once per day as a
+        standard action, you can call down a shower of erinyes' flaming arrows
+        in a 40-foot-radius area centered anywhere within 400 feet of your
+        position. Each creature in the area takes 3d6 points of fire damage and
+        3d6 points of evil-aligned damage and is then staggered for 1d4 rounds.
+        A creature that succeeds at a Reflex saving throw (DC = 10 + half your
+        Hit Dice + your Charisma modifier) takes half damage and negates the
+        staggered condition.<br /><strong>3: Fallen Angel's Return (Sp)</strong>
+        The might and fury of a vengeful Eiseth standing against her foes is a
+        terrible sight to behold. Once per day, you can create an overwhelming
+        image of Hell's Valkyrie storming the gates of Heaven to annex her
+        long-deserved dark queendom. This ability functions as per
+        <em>weird</em>.</em></p><h3>Exalted</h3><p>@Source[PZO1139;pages=48]<br
+        /><strong>1: 603 Years of Wrath (Sp)</strong> <em>ear-piercing
+        scream</em> 3/day, <em>badger's ferocity 2/day, or <em>fireball</em>
+        1/day<br /><strong>2: Descent of Hell's Valkyrie (Sp)</strong> When
+        Eiseth beats her mighty wings in unholy wrath, all take notice-and you
+        know how to harness this power to aid you in battle. Once per day, you
+        can cast <em>scouring winds</em> as a spell-like ability. Instead of
+        sand, the storm conjures clouds of fiery ash, and it deals fire damage
+        instead of piercing damage.<br /><strong>3: The Furies Unleashed
+        (Sp)</strong> Once per day, you can summon five erinyes to your side to
+        fight on your behalf. This functions as <em>summon monster IX</em>. When
+        an erinyes is defeated or the effect's duration has expired, a cloak of
+        the blackest night heralds the erinyes's return to Dis, creating a
+        10-foot-radius sphere of darkness (as per <em>deeper darkness</em>) for
+        1 round, centered on the erinyes's last
+        position.</em></p><h3>Sentinel</h3><p>@Source[PZO1139;pages=48]<br
+        /><strong>1: Dark Battle Rising (Sp)</strong> <em>true strike </em>
+        3/day, <em>flame blade</em> 2/day, or <em>force hook charge</em>
+        1/day<br /><strong>2: Swords of the Ash Wings (Su)</strong> Three times
+        per day when you successfully strike an enemy, you can infuse your blow
+        with the weight of Eiseth's dark fury as a swift action. When you do,
+        your attack deals an additional 4d6 points of fire damage and 4d6 points
+        of slashing damage as flaming swords from the depths of Hell bite into
+        your opponent's body. This damage is considered evil-aligned for the
+        purpose of overcoming damage reduction. This additional damage is never
+        doubled upon a critical hit.<br /><strong>3: The Dark Queen Marches
+        (Sp)</strong> When she focuses her terrible wrath on a single goal, the
+        Erinyes Queen is a force of unbelievable power. You have studied
+        Eiseth's tactics carefully and can imitate them to advance your
+        goddess's dark glory. Once per day, you can cast <em>ride the
+        lightning</em> as a spell-like ability. Instead of a lightning bolt,
+        though, you transform into a streak of lava, so this ability deals fire
+        damage instead of electricity damage.</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

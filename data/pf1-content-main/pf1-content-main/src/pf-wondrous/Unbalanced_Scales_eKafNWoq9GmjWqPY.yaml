@@ -1,0 +1,28 @@
+_id: eKafNWoq9GmjWqPY
+_key: '!items!eKafNWoq9GmjWqPY'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Unbalanced Scales
+system:
+  aura:
+    school: ill
+  cl: 3
+  description:
+    value: >-
+      <p>A set of unbalanced scales permits an unscrupulous merchant to conduct
+      transactions with inaccurate weight results, but still pass inspections by
+      commerce officials when necessary. The unbalanced scales normally provide
+      an accurate measurement of weight, but by means of a command word, the
+      user can cause the set of scales to provide a reading that is off (either
+      lighter or heavier, as desired) by as much as
+      25%.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, prestidigitation</p>
+  price: 1000
+  sources:
+    - id: PZO1136
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

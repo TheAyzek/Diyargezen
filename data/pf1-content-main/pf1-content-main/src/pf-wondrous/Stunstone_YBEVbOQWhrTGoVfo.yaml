@@ -1,0 +1,27 @@
+_id: YBEVbOQWhrTGoVfo
+_key: '!items!YBEVbOQWhrTGoVfo'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Stunstone
+system:
+  aura:
+    school: evo
+  cl: 5
+  description:
+    value: >-
+      <p>This naturally occurring, glowing purple crystal can be thrown as a
+      ranged attack with a range increment of 20 feet. When it strikes a target
+      or hard surface (or is struck hard), the crystal shatters in a burst of
+      sound and light. Every creature in a 10-foot-radius spread is outlined in
+      faerie fire, takes 1d8 points of sonic damage, and must make a DC 13
+      Fortitude save or be stunned for 1 round.<h3>Requirements</h3><p>Craft
+      Wondrous Item, Craft (alchemy) 5 ranks, faerie fire, sound burst</p>
+  price: 350
+  sources:
+    - id: PZO9039
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

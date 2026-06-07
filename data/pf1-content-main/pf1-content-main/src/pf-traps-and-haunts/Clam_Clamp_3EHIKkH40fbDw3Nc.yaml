@@ -1,0 +1,124 @@
+_id: 3EHIKkH40fbDw3Nc
+_key: '!actors!3EHIKkH40fbDw3Nc'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: icons/environment/creatures/crustacean-clam-grey.webp
+items:
+  - _id: 9fOhr0uzKzm07vIL
+    _key: '!actors.items!3EHIKkH40fbDw3Nc.9fOhr0uzKzm07vIL'
+    _stats:
+      compendiumSource: Actor.Y8e3Kxb9RFl5mfsQ.Item.PRQ4QA6zDPNAQY8M
+      coreVersion: '12.331'
+    img: icons/environment/creatures/crustacean-clam-grey.webp
+    name: Clam Clamp
+    system:
+      actions:
+        - _id: rmzcjaevauewqlc3
+          ability:
+            critMult: 3
+          actionType: mcman
+          activation:
+            type: nonaction
+            unchained:
+              type: nonaction
+          attackBonus: '15'
+          img: icons/environment/creatures/crustacean-clam-grey.webp
+          name: Grapple
+          range:
+            units: touch
+          target:
+            value: 1 creature
+      proficient: true
+      subType: weapon
+    type: attack
+name: Clam Clamp
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 2
+    disarm: 17
+    duration: Instantaneous
+    effect: >-
+      Associated Terrain: any oceans
+
+
+      The classic “clam clamp” trap utilizes the heavy shell of a giant clam,
+      but any similarly large bivalve mollusk or even flotsam can work. A clam
+      clamp is typically set with a lure, such as a piece of shiny treasure.
+      When a creature walks over a clam clamp or attempts to take the treasure,
+      the clamp snaps shut and attempts a grapple with a +15 bonus on the combat
+      maneuver check. The weight of the clam clamp is enough to hold a creature
+      in place until the grappled creature can escape.
+
+
+      A clam clamp located in an underwater area is more difficult to craft but
+      also more dangerous to air-breathing creatures due to the fact that it can
+      hold a creature underwater until it drowns; an underwater clam clamp’s CR
+      is 5.
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 20
+    reset: Automatic
+    trigger: location
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

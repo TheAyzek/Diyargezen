@@ -1,0 +1,119 @@
+_id: 7eSZhvFHVuWzNRom
+_key: '!actors!7eSZhvFHVuWzNRom'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: systems/pf1/icons/skills/green_20.jpg
+items:
+  - _id: OKwfsoJ8ptHzWRt3
+    _key: '!actors.items!7eSZhvFHVuWzNRom.OKwfsoJ8ptHzWRt3'
+    _stats:
+      compendiumSource: Actor.u962oPG1Yase3BD4.Item.PRQ4QA6zDPNAQY8M
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/green_20.jpg
+    name: Razor Grass
+    system:
+      actions:
+        - _id: cet9u1xyoyoc8t4k
+          activation:
+            type: nonaction
+            unchained:
+              type: nonaction
+          damage:
+            parts:
+              - formula: 1d6
+                types:
+                  - untyped
+          img: systems/pf1/icons/skills/green_20.jpg
+          name: Attack
+          notes:
+            effect:
+              - >-
+                Whenever a creature moves into a square that contains razor
+                grass, it takes 1d6 points of damage and must succeed at a DC 20
+                Reflex save or its speed is halved for 24 hours or until it
+                receives magical healing or benefits from a successful DC 15
+                Heal check.
+          save:
+            dc: '20'
+            description: Reflex partial
+            type: ref
+      proficient: true
+      subType: weapon
+    type: attack
+name: Razor Grass
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 3
+    disarm: 20
+    duration: Instantaneous
+    effect: |+
+      Associated Terrain: any with undergrowth
+
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 25
+    reset: Automatic
+    trigger: Location
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

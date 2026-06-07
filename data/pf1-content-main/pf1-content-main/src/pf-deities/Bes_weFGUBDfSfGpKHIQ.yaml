@@ -1,0 +1,32 @@
+_id: weFGUBDfSfGpKHIQ
+_key: '!journal!weFGUBDfSfGpKHIQ'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Bes
+pages:
+  - _id: v0aG54r0ZuaaMsmG
+    _key: '!journal.pages!weFGUBDfSfGpKHIQ.v0aG54r0ZuaaMsmG'
+    _stats:
+      coreVersion: '12.331'
+    name: Bes
+    sort: 0
+    text:
+      content: >-
+        <h1>Bes</h1><h2>The Guardian Fool</h2>@Source[PZO9080;pages=65] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Bes">Bes</a><h3>Details</h3><p><strong>Alignment</strong>
+        NG<br /><strong>Pantheon</strong> Deities of Ancient Osirion<br
+        /><strong>Areas of Concern</strong> Households, luck, marriage,
+        protection<br /><strong>Domains</strong> Community, Earth, Good, Luck,
+        Protection<br /><strong>Subdomains</strong> Agathion, Caves, Defense,
+        Family, Home, Imagination<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Hunga
+        munga<br /><strong>Symbol</strong> Bearded dwarf face<br
+        /><strong>Sacred Animal(s)</strong> Lion</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

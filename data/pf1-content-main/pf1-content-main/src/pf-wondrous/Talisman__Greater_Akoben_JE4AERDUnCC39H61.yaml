@@ -1,0 +1,25 @@
+_id: JE4AERDUnCC39H61
+_key: '!items!JE4AERDUnCC39H61'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Talisman, Greater Akoben
+system:
+  aura:
+    school: abj
+  cl: 3
+  description:
+    value: >-
+      <p>A greater talisman functions as a lesser talisman of the same type, but
+      has much greater longevity. It can provide its benefits once per
+      day.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, alarm, ear-piercing scream</p>
+  price: 4500
+  slot: neck
+  sources:
+    - id: PZO1135
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

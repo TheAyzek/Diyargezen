@@ -1,0 +1,45 @@
+_id: o8RIItUOYDM4cot8
+_key: '!items!o8RIItUOYDM4cot8'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/shadow_01.jpg
+name: Curse
+system:
+  abilityType: su
+  actions:
+    - _id: jha78lmvqpjyu5u9
+      actionType: save
+      activation:
+        type: passive
+        unchained:
+          type: passive
+      img: systems/pf1/icons/skills/shadow_01.jpg
+      name: Use
+      notes:
+        effect:
+          - '[[1d4]] Str Drain'
+          - >-
+            Will save (DC = 10 + 1/2 the cursing creature’s racial HD + that
+            creature’s Charisma modifier; the exact DC is given in the
+            creature’s descriptive text)
+      save:
+        dc: '15'
+        type: will
+      tag: curseSu
+  description:
+    value: >-
+      <p>The creature can inflict a curse upon its enemies. The effects,
+      including its save, frequency, and cure, are included in the
+      creature&rsquo;s description. If a curse allows a saving throw, it is
+      usually a Will save (DC = 10 + 1/2 the cursing creature&rsquo;s racial HD
+      + that creature&rsquo;s Charisma modifier; the exact DC is given in the
+      creature&rsquo;s descriptive text). Curses can be removed through
+      <a>remove curse</a> and similar effects.</p><p><em>Format</em>:
+      <strong>Curse Name (Su)</strong> Slam&mdash;contact; <em>save</em> Will DC
+      14, <em>frequency</em> 1/day, <em>effect</em> 1d4 Str
+      drain</p><p><em>Location</em>: Special Attacks and individual
+      attacks.</p><p><em>Usage:</em> Replace DC and Context notes</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

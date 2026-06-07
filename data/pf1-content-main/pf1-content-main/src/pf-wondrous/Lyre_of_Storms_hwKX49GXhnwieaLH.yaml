@@ -1,0 +1,40 @@
+_id: hwKX49GXhnwieaLH
+_key: '!items!hwKX49GXhnwieaLH'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Lyre of Storms
+system:
+  aura:
+    school: trs
+  cl: 7
+  description:
+    value: >-
+      <p>This finely made instrument is crafted of lovingly polished wood inlaid
+      with mystic runes. When the lyre is played, sparks dance along its
+      strings.  By succeeding at a DC 15 Perform (string instruments) check, the
+      bearer can produce the following spells.  • Gust of wind (3/day)  • Call
+      lightning (1/day)  By succeeding at a DC 25 Perform (string instruments)
+      check and then expending one use of mythic power, the bearer can produce
+      the mythic version of the spell instead. If the bearer fails her Perform
+      check, her action is wasted, but she doesn't expend one of the item's uses
+      per day or any mythic power.  If bearer has the appropriate mythic tier
+      and the bardic performance ability, she can bring forth one of the
+      following magical effects for as long as she uses the instrument as part
+      of a bardic performance; she also gains the usual benefits of that
+      performance. She must end the performance and start a new one to choose a
+      new effect.  • 3rd tier or higher: water walk, shared with all the
+      player's allies within 20 feet • 4th tier or higher: control winds
+      centered on the player, used only to decrease wind strength • 5th tier or
+      higher: fickle winds, affecting the player
+      onl.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Mythic Crafter, call lightning, control weather, water
+      walk</p>
+  price: 65000
+  sources:
+    - id: PZO1126
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

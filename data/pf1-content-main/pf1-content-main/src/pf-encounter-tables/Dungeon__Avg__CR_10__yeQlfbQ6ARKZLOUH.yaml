@@ -1,0 +1,228 @@
+_id: yeQlfbQ6ARKZLOUH
+_key: '!tables!yeQlfbQ6ARKZLOUH'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/tomb-entrance.webp
+name: Dungeon (Avg. CR 10)
+replacement: true
+results:
+  - _id: zyw1NlKXzJXrN2yR
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.zyw1NlKXzJXrN2yR'
+    img: systems/pf1/icons/races/creature-types/ooze.jpg
+    range:
+      - 1
+      - 4
+    text: '@Compendium[pf1.bestiary_2.NFemGs7hMfwkMYQ5]{Black Pudding}'
+    type: text
+    weight: 4
+  - _id: mdgWnb5NNJRebXF4
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.mdgWnb5NNJRebXF4'
+    img: systems/pf1/icons/races/creature-types/abberation.png
+    range:
+      - 5
+      - 8
+    text: '@Compendium[pf1.bestiary_3.W93pq6Kbp4RitgFU]{Dark Naga}'
+    type: text
+    weight: 4
+  - _id: BnFhhpIew3HgEB8o
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.BnFhhpIew3HgEB8o'
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 9
+      - 14
+    text: '@Compendium[pf1.bestiary_3.bz0pQiaUtSdrw1As]{Mohrg}'
+    type: text
+    weight: 6
+  - _id: Hju2klPn0LIKtf5V
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.Hju2klPn0LIKtf5V'
+    img: systems/pf1/icons/races/creature-types/outsider.png
+    range:
+      - 15
+      - 18
+    text: '@Compendium[pf1.bestiary_3.VgOb7jcxzK0bli3A]{Nabasu}'
+    type: text
+    weight: 4
+  - _id: yAalJ05zBnMtJJrb
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.yAalJ05zBnMtJJrb'
+    img: systems/pf1/icons/races/creature-types/abberation.png
+    range:
+      - 19
+      - 22
+    text: '[[1d6]] @Compendium[pf1.bestiary_3.ZPFoFppIQQhaqOzL]{Cloaker}'
+    type: text
+    weight: 4
+  - _id: R6UJCr4pbVgy1LYE
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.R6UJCr4pbVgy1LYE'
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 23
+      - 28
+    text: '[[1d6]] @Compendium[pf1.bestiary_1.A66QI6OuAvrqRsvU]{Wraith}'
+    type: text
+    weight: 6
+  - _id: SmE90hr9glNdD4z8
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.SmE90hr9glNdD4z8'
+    img: systems/pf1/icons/races/human.jpg
+    range:
+      - 29
+      - 36
+    text: '[[1d4]] @Compendium[pf1.bestiary_5.wRa2JBFvsjE1N8u8]{Ettin}'
+    type: text
+    weight: 8
+  - _id: dzktfQk0t8HngzGx
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.dzktfQk0t8HngzGx'
+    img: systems/pf1/icons/races/creature-types/outsider.png
+    range:
+      - 37
+      - 40
+    text: '@Compendium[pf1.bestiary_2.IU3YSNgR4L1II8wC]{Bone Devil}'
+    type: text
+    weight: 4
+  - _id: Q43ibJWpVv0DKkZr
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.Q43ibJWpVv0DKkZr'
+    img: systems/pf1/icons/races/creature-types/outsider.png
+    range:
+      - 41
+      - 44
+    text: '@Compendium[pf1.bestiary_4.pPxwQIF3CDGQXBZ2]{Night Hag}'
+    type: text
+    weight: 4
+  - _id: 6wCve3OjJiyAnXUF
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.6wCve3OjJiyAnXUF'
+    img: systems/pf1/icons/races/creature-types/abberation.png
+    range:
+      - 45
+      - 48
+    text: '@Compendium[pf1.bestiary_2.GQ0rdoROPDfkLLX7]{Spirit Naga}'
+    type: text
+    weight: 4
+  - _id: 1iGyZJopdSJhblgj
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.1iGyZJopdSJhblgj'
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 49
+      - 54
+    text: '@Compendium[pf1.bestiary_2.GZlc86f3hC6SFh7j]{Vampire}'
+    type: text
+    weight: 6
+  - _id: EB2sbWwOIYYMImqO
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.EB2sbWwOIYYMImqO'
+    img: systems/pf1/icons/races/creature-types/outsider.png
+    range:
+      - 55
+      - 58
+    text: '@Compendium[pf1.bestiary_3.X0RzuHEymKmvZKqH]{Vrock}'
+    type: text
+    weight: 4
+  - _id: dxxMSbBm8KhQcdk4
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.dxxMSbBm8KhQcdk4'
+    img: systems/pf1/icons/races/creature-types/monstrous-humanoid.png
+    range:
+      - 59
+      - 66
+    text: '[[1d6]] @Compendium[pf1.bestiary_3.Vu5wUy3KEm1R2zfu]{Minotaur}'
+    type: text
+    weight: 8
+  - _id: 8ZcTezxZKJMDGqHz
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.8ZcTezxZKJMDGqHz'
+    img: systems/pf1/icons/races/human.jpg
+    range:
+      - 67
+      - 72
+    text: '[[2d4]] @Compendium[pf1.bestiary_3.dP065wY3ivnI9uBa]{Troll}'
+    type: text
+    weight: 6
+  - _id: aCTDHa5f6qvlilpW
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.aCTDHa5f6qvlilpW'
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 73
+      - 76
+    text: '[[1d4]] @Compendium[pf1.bestiary_4.eQmak5LpIJ7jdW4G]{Greater Shadow}'
+    type: text
+    weight: 4
+  - _id: pWGRcck3mEMq77Ak
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.pWGRcck3mEMq77Ak'
+    img: systems/pf1/icons/races/creature-types/outsider.png
+    range:
+      - 77
+      - 78
+    text: '@Compendium[pf1.bestiary_1.3I1nAZBOJLPNrKZ1]{Bebilith}'
+    type: text
+    weight: 2
+  - _id: mFoQui46ITNY0UlR
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.mFoQui46ITNY0UlR'
+    img: systems/pf1/icons/races/creature-types/outsider.png
+    range:
+      - 79
+      - 82
+    text: '@Compendium[pf1.bestiary_2.IyLKYOWqc55zwhwG]{Barbed Devil}'
+    type: text
+    weight: 4
+  - _id: ds8q2nGKuJ5LXh24
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.ds8q2nGKuJ5LXh24'
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 83
+      - 86
+    text: '@Compendium[pf1.bestiary_2.Q6DZ1t4ZURuQTt7c]{Devourer}'
+    type: text
+    weight: 4
+  - _id: FyaUZNXtlJzPkK0l
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.FyaUZNXtlJzPkK0l'
+    img: systems/pf1/icons/races/creature-types/outsider.png
+    range:
+      - 87
+      - 88
+    text: '@Compendium[pf1.bestiary_4.ifb1dCmqJEMcTVg6]{Hezrou}'
+    type: text
+    weight: 2
+  - _id: gDRQJUifdyVg3mmf
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.gDRQJUifdyVg3mmf'
+    img: systems/pf1/icons/races/creature-types/outsider.png
+    range:
+      - 89
+      - 92
+    text: '[[1d4]] @Compendium[pf1.bestiary_2.FrieS1JijeTwysTi]{Rakshasa}'
+    type: text
+    weight: 4
+  - _id: rAYjC58CNyXcQrRL
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.rAYjC58CNyXcQrRL'
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 93
+      - 94
+    text: '@Compendium[pf1.bestiary_3.ZEkSHRdklxqtUMfV]{Lich}'
+    type: text
+    weight: 2
+  - _id: Z7JhIj4EyPfHh8c0
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.Z7JhIj4EyPfHh8c0'
+    img: systems/pf1/icons/races/creature-types/outsider.png
+    range:
+      - 95
+      - 96
+    text: '@Compendium[pf1.bestiary_5.sxlHRwyJtPbENewJ]{Glabrezu}'
+    type: text
+    weight: 2
+  - _id: wP2KUz7iNwWTCEs4
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.wP2KUz7iNwWTCEs4'
+    img: systems/pf1/icons/races/creature-types/outsider.png
+    range:
+      - 97
+      - 98
+    text: '@Compendium[pf1.bestiary_2.H6F13KFO8H3qklgt]{Ice Devil}'
+    type: text
+    weight: 2
+  - _id: Gy7U9aEcu0wRsT95
+    _key: '!tables.results!yeQlfbQ6ARKZLOUH.Gy7U9aEcu0wRsT95'
+    img: systems/pf1/icons/races/creature-types/outsider.png
+    range:
+      - 99
+      - 100
+    text: '@Compendium[pf1.bestiary_5.tcHmdKL6pRKcndut]{Nalfeshnee}'
+    type: text
+    weight: 2
+sort: 4500000

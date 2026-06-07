@@ -1,0 +1,26 @@
+_id: HCd1a6q90vJduzWq
+_key: '!items!HCd1a6q90vJduzWq'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Tricks
+system:
+  aura:
+    school: ill
+  cl: 8
+  description:
+    value: >-
+      <p>This thin staff is made of stiff wood that has been wrapped in colorful
+      bands of cloth and topped with a number of feathers, bells, and other
+      decorative baubles. The staff allows use of the following spells: • Ghost
+      sound (1 charge)   • Mage hand (1 charge)   • Prestidigitation (1
+      charge)   • Silent image (2
+      charges.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, ghost sound, mage hand, prestidigitation, silent image</p>
+  price: 8800
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 3
+type: consumable

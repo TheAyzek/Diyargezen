@@ -1,0 +1,47 @@
+_id: gSr5d4W13Cf2pQUm
+_key: '!items!gSr5d4W13Cf2pQUm'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/buckler.PNG
+name: Burglar's Buckler
+system:
+  armor:
+    acp: 1
+    material:
+      base:
+        value: steel
+    value: 1
+  aura:
+    school: trs
+  baseTypes:
+    - Buckler
+  cl: 5
+  description:
+    value: >-
+      <p>This unassuming +1 buckler has an array of small tools and implements
+      embedded into the backside of its rim, able to be folded and snapped out
+      for use at a moment's notice to attack, defend, or accomplish roguish
+      tasks. A burglar's buckler grants the wielder a +2 competence bonus on
+      Disable Device and Sleight of Hand checks, combat maneuver checks made to
+      perform dirty tricks, and to CMD against dirty tricks.  Once per day on
+      command, the wielder may transform a burglar's buckler into any mundane
+      tool weighing 1 to 5 pounds, such as a crowbar, hammer, saw, small shovel,
+      grappling hook, artisan's tools, or thieves' tools. The burglar's buckler
+      retains its normal hardness and hit points in this form and can be
+      converted back into shield form on command.</p><p><strong>Base
+      Item</strong>: 
+      buckler</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, major creation</p>
+  enh: 1
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 4655
+  slot: shield
+  sources:
+    - id: PZO1123
+  spellFailure: 5
+  subType: shield
+  weight:
+    value: 5
+type: equipment

@@ -1,0 +1,76 @@
+_id: fvNvFu39SnEi69Gl
+_key: '!items!fvNvFu39SnEi69Gl'
+_stats:
+  coreVersion: '12.331'
+folder: VhWzpOwzBqWyvaa5
+img: icons/magic/fire/flame-burning-eye.webp
+name: Galemren
+system:
+  changes:
+    - _id: cuo5rpmg
+      formula: '2'
+      target: str
+      type: racial
+    - _id: kqohwqce
+      formula: '2'
+      target: dex
+      type: racial
+    - _id: o6wiwhpk
+      formula: '-2'
+      target: cha
+      type: racial
+  creatureSubtypes:
+    - Galemren
+  creatureTypes:
+    - humanoid
+  description:
+    value: >-
+      <h2>Standard Racial Traits</h2><ul><li><strong>+2 Str, +2 Dex, -2
+      Cha</strong>: Galemren are gifted with great agility and might, but are
+      somewhat abrasive.</li><li><strong>Medium</strong>: Galemren are Medium
+      creatures and have no bonuses or penalties due to their
+      size.</li><li><strong>Normal Speed</strong>: Galemren have a base speed of
+      30 feet.</li><li><strong>Languages</strong>: Galemren begin play speaking
+      Common and Elven. Galemren with high Intelligence scores can choose from
+      the following: Celestial, Draconic, Gnoll, Gnome, Goblin, Ore, and
+      Sylvan.</li></ul><h3>Defense Racial Traits</h3><ul><li><strong>Elven
+      Immunities</strong>: Galemren are immune to magic sleep effects and gain a
+      +2 racial bonus to saving throws against enchantment spells and
+      effects.</li></ul><h3>Feat and Skill Racial
+      Traits</h3><ul><li><strong>Children of Powisienne</strong>: Galemren
+      select two skills from the following list: Handle Animal, Knowledge
+      (geography), Knowledge (nature), Stealth, and Survival. Galemren receive a
+      +2 racial bonus on checks with the chosen skills.</li><li><strong>Keen
+      Senses</strong>: Galemren receive a +2 racial bonus on Perception
+      checks.</li></ul><h3>Senses Racial Traits</h3><ul><li><strong>Low-Light
+      Vision</strong>: Galemren can see twice as far as humans in conditions of
+      dim light.</li></ul><h3>Offensive Racial Traits</h3><ul><li><strong>Weapon
+      Familiarity</strong>: Galemren are proficient with longbows (including
+      composite longbows), longswords, longspears, rapiers, shortbows (including
+      composite shortbows), shortspears, spears, and throwing axes, and they
+      treat any weapon with the word "elven" in its name as a martial
+      weapon.</li></ul>
+  links:
+    supplements:
+      - name: Elven Immunities (Galemren)
+        uuid: Compendium.pf-content.pf-collab-content.Item.GJm9sJI3heKTJROS
+      - name: Keen Senses (Galemren)
+        uuid: Compendium.pf-content.pf-collab-content.Item.FuEPR9gszDGgVgZb
+      - name: Languages (Galemren)
+        uuid: Compendium.pf-content.pf-collab-content.Item.W0y4bL2Ys3j0VEwX
+      - name: Low-Light Vision (Galemren)
+        uuid: Compendium.pf-content.pf-collab-content.Item.2IbkiF5qFGh83rPD
+      - name: Weapon Familiarity (Galemren)
+        uuid: Compendium.pf-content.pf-collab-content.Item.gvjtIHr7RwxS4p7u
+      - name: Children of Powisienne
+        uuid: Compendium.pf-content.pf-collab-content.Item.bxvqRibp3PLHkMa8
+  sources:
+    - pages: '8'
+      publisher: Paizo / Stranger Comics
+      title: Niobe
+  speeds:
+    land: 30
+  tags:
+    - Niobe
+    - Galemren
+type: race

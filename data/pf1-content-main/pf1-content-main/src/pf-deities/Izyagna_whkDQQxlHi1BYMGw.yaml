@@ -1,0 +1,54 @@
+_id: whkDQQxlHi1BYMGw
+_key: '!journal!whkDQQxlHi1BYMGw'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Izyagna
+pages:
+  - _id: MmLDdiWZZgM6CfKg
+    _key: '!journal.pages!whkDQQxlHi1BYMGw.MmLDdiWZZgM6CfKg'
+    _stats:
+      coreVersion: '12.331'
+    name: Izyagna
+    sort: 0
+    text:
+      content: >-
+        <h1>Izyagna</h1><h2>She of the Sevenfold
+        Swarm</h2>@Source[PZO9267;pages=328] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Izyagna">Izyagna</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Nascent Demon Lords<br /><strong>Areas
+        of Concern</strong> Angry mobs, ants<br /><strong>Domains</strong>
+        Chaos, Evil, Fire, War<br /><strong>Subdomains</strong> Ash, Blood,
+        Demon (Chaos), Demon (Evil), Tactics<br /><em>* Requires the <u>Acolyte
+        of Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Trident<br /><strong>Symbol</strong> Ouroboros of seven ants<br
+        /><strong>Sacred Animal(s)</strong> Ant<br /><strong>Sacred
+        Color(s)</strong> Black, red</p><h3>Obedience</h3><p>Meditate while
+        within a swarm of ants. Gain a +4 profane bonus on saves against charm
+        effects.</p><h2>Boons - Demonic
+        Obedience</h2><h3>Demoniac</h3><p>@Source[PZO9225;pages=38]<br
+        /><strong>1: First Boon (Sp)</strong> <em>enthrall</em> 1/day<br
+        /><strong>2: Second Boon (Sp)</strong> <em>giant vermin</em> 1/day<br
+        /><strong>3: Third Boon (Sp)</strong> <em>mass suggestion</em>
+        1/day</em></p><h2>Boons - Nascent Demon
+        Lords</h2><em><p>@Source[PZO1139;pages=124]</p><p>With very few
+        exceptions, a demon lord is never born fully formed. Instead, each must
+        build power and resources during an extended period of transformation.
+        Demons in this transitional stage are known as nascent demon
+        lords.</p><p> At any one time, there exist hundreds-if not thousands- of
+        nascent demon lords in the Abyss. Those who have been associated with
+        the Inner Sea region are summarized here. All nascent demon lords are
+        chaotic evil and range in power from CR 21 to CR 25. The boons they
+        grant are less complex than those granted by demon lords, manifesting as
+        spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>enthrall</em><br
+        /><strong>2</strong>: <em>giant vermin</em><br /><strong>3</strong>:
+        <em>mass suggestion</em></p><h2>For Followers of
+        Izyagna</h2><h3>Archetypes</h3><p><em>Iron Tyrant (Antipaladin)</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,24 @@
+_id: aBLA4AEstwHfOGG3
+_key: '!items!aBLA4AEstwHfOGG3'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Token of Gallantry
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>This favor is a lace handkerchief or scrap of silken clothing that is
+      tied around the pommel or haft of a melee weapon. For 24 hours, that
+      weapon becomes good-aligned for the purpose of bypassing damage reduction.
+      As long as the favor is active, the token does not become soiled or
+      bloody.</p><h3>Requirements</h3><p>Craft Wondrous Item, align weapon,
+      status</p>
+  price: 2400
+  sources:
+    - id: PZO9476
+  subType: wondrous
+type: equipment

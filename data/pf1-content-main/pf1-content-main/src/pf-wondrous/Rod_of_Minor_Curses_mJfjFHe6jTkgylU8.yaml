@@ -1,0 +1,39 @@
+_id: mJfjFHe6jTkgylU8
+_key: '!items!mJfjFHe6jTkgylU8'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/mace-light.png
+name: Rod of Minor Curses
+system:
+  aura:
+    school: nec
+  baseTypes:
+    - Light Mace
+  cl: 5
+  description:
+    value: >-
+      <p>This rod functions as a +1 light mace and resembles the distorted femur
+      of some monstrous creature. Up to three times per day when the wielder
+      damages a creature with the rod, as a free action, the wielder can force
+      the target to attempt a DC 14 Will save. On a failure, the creature
+      suffers a minor curse. The wielder selects which of the following curses
+      affects the target: -2 penalty to Strength (target's Strength cannot be
+      reduced below 1); -1 penalty on attack rolls, saves, ability checks, and
+      skill checks; or target has a 20% chance to begin each round with the
+      staggered condition. On a successful critical hit, the wielder can inflict
+      two distinct curses if the target fails its save. Otherwise, a target can
+      be subject to only one curse at a time.  Curses inflicted from the rod of
+      minor curses last for 5 minutes. They can also be removed with any spell
+      that can remove the effects of bestow curse.</p><p><strong>Base
+      Item</strong>:   light
+      mace</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, Craft Rod, bestow curse</p>
+  enh: 1
+  price: 20000
+  sources:
+    - id: PZO9468
+  subType: other
+  weight:
+    value: 4
+type: equipment

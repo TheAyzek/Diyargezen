@@ -1,0 +1,29 @@
+_id: gO6nZ6FBJGQEFhyj
+_key: '!items!gO6nZ6FBJGQEFhyj'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Poison Vial of Distance
+system:
+  aura:
+    school: nec
+  cl: 3
+  description:
+    value: >-
+      <p>Favored by assassins, this magical vial allows the application of
+      poisons at a range of up to 30 feet. The poison must be supplied, and must
+      be a contact or ingested poison. The user adds the poison to the vial and
+      then shakes it in the direction of the item or creature she wishes to
+      affect, making a ranged touch attack (a poison vial of distance provides a
+      +4 circumstance bonus on this roll). If the attack is successful, the
+      poison is successfully delivered to the object or creature
+      intended.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, mage hand</p>
+  price: 3000
+  sources:
+    - id: PZO9440
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

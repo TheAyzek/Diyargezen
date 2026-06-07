@@ -1,0 +1,45 @@
+_id: 2lAZERrf80Joyih8
+_key: '!items!2lAZERrf80Joyih8'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/mace-light.png
+name: Rod of Alertness
+system:
+  aura:
+    custom: true
+    school: varies
+  baseTypes:
+    - Light Mace
+  cl: 11
+  description:
+    value: >-
+      <p>This rod is indistinguishable from a +1 light mace. The rod bestows a
+      +1 insight bonus on initiative checks. If grasped firmly, it enables the
+      wielder to use detect chaos, detect evil, detect good, detect law, detect
+      magic, discern lies, light, or see invisibility. Each different use is a
+      standard action.  If the head of a rod of alertness is planted in the
+      ground and the possessor wills it to alertness (a standard action), the
+      rod senses any creatures within 120 feet that intend to harm the
+      possessor. At the same time, the rod creates the effect of a prayer spell
+      upon all creatures friendly to the possessor in a 20-foot radius.
+      Immediately thereafter, the rod sends forth a mental alert to these
+      friendly creatures, warning them of any unfriendly creatures within the
+      120-foot radius. These effects last for 10 minutes, and the rod can
+      perform this function once per day. Last, the rod can be used to simulate
+      the casting of an animate objects spell, utilizing any 11 (or fewer) Small
+      objects located roughly around the perimeter of a 5-foot-radius circle
+      centered on the rod when planted in the ground. Objects remain animated
+      for 11 rounds. The rod can perform this function once per
+      day.</p><p><strong>Base Item</strong>: light
+      mace</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Rod,
+      alarm, animate objects, detect chaos, detect evil, detect good, detect
+      law, detect magic, discern lies, light, prayer, see invisibility</p>
+  enh: 1
+  price: 85000
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 4
+type: equipment

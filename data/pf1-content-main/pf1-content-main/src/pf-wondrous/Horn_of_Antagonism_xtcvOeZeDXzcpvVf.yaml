@@ -1,0 +1,30 @@
+_id: xtcvOeZeDXzcpvVf
+_key: '!items!xtcvOeZeDXzcpvVf'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Horn of Antagonism
+system:
+  aura:
+    school: enc
+  cl: 3
+  description:
+    value: >-
+      <p>Carved from the bone of some giant beast, this large horn emits an
+      eerie, heart-lurching moan when sounded. A creature with the favored enemy
+      class feature may blow the horn as a standard action to daze one type of
+      favored enemy within 90 feet for 1d4 rounds (DC 13 Will save negates).
+      Creatures suffer a penalty on this save equal to the ranger's favored
+      enemy bonus against that type of creature. This is a sonic, mind-affecting
+      effect; creatures that cannot hear the horn are immune to its magic. The
+      horn's magic works once per
+      day.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, daze monster</p>
+  price: 20000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 4
+type: equipment

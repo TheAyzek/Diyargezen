@@ -1,0 +1,35 @@
+_id: V0J9KEU3i5DYvSeg
+_key: '!items!V0J9KEU3i5DYvSeg'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/kukri.PNG
+name: Balgorrah
+system:
+  artifact: true
+  aura:
+    school: nec
+  baseTypes:
+    - Kukri
+  cl: 17
+  description:
+    value: >-
+      <p>On a successful critical hit, this +5 unholy kukri deals 2 points of
+      bleed damage, which stack with any bleed damage already caused by the
+      attack. Each time the wielder strikes a blow that deals bleed damage with
+      this weapon, she gains a number of temporary hit points equal to the
+      amount of bleed damage dealt. No temporary hit points are gained if the
+      target was already bleeding, even for a lesser amount. Temporary hit
+      points bestowed by Balgorrah last for 1 minute.  Balgorrah can cast bleed
+      at will (and does so automatically if there are any dying creatures within
+      30 feet), can cast death knell three times per day, and can cast fear once
+      per day. The kukri's special purpose is to defend servants of Norgorber,
+      and when wielded by a devout worshiper of Norgorber, it grants a +2 luck
+      bonus on attacks, saves, and checks.<p><strong>Base Item</strong>: unholy
+      kukri</p>
+  enh: 5
+  sources:
+    - id: PZO90102
+  subType: other
+  weight:
+    value: 2
+type: equipment

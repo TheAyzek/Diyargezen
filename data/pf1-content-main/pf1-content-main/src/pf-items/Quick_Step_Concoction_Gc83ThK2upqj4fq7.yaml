@@ -1,0 +1,20 @@
+_id: Gc83ThK2upqj4fq7
+_key: '!items!Gc83ThK2upqj4fq7'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/magic-yellow.jpg
+name: Quick-Step Concoction
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Concoctions</p><p>This minty fluid quickens
+      your feet and improves your balance, granting a +2 alchemical bonus on
+      Acrobatics checks and to your CMD against trip attempts. However, you
+      become easily distracted and take a -2 penalty on Perception checks.</p>
+  price: 75
+  sources:
+    - id: PZO9481
+      pages: '27'
+  tags:
+    - Concoctions
+type: consumable

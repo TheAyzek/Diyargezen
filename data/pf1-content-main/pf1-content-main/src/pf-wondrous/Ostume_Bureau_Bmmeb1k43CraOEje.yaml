@@ -1,0 +1,36 @@
+_id: Bmmeb1k43CraOEje
+_key: '!items!Bmmeb1k43CraOEje'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Ostume Bureau
+system:
+  aura:
+    school: con
+  cl: 9
+  description:
+    value: >-
+      <p>This large, oaken bureau has a double-door cabinet that sits atop three
+      horizontal drawers. A user can concentrate on a set of clothing he would
+      like to wear, then open the cabinet or one of the drawers to retrieve a
+      set of magically fabricated clothing matching what he imagined. Clothing
+      created in this way can't have any magical properties other than those
+      listed here, but does provide all benefits based on the type of clothing
+      it is (a cold-weather outfit would grant a +2 bonus on Fortitude saves
+      against exposure to cold weather, for instance). The bureau can't create
+      armor.  The clothes fade to worthless scraps after 24 hours, as do any
+      pieces separated from the whole (such as buttons, buckles, gem adornments,
+      or strips torn off as bandages). The costume bureau can generate a total
+      of four sets of clothing per day-one from the wardrobe and one from each
+      of the three
+      drawers.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, fabricate, minor creation, creator must have at least 5
+      ranks in Craft (clothing) or Profession (tailor)</p>
+  price: 7000
+  sources:
+    - id: PZO1134
+  subType: wondrous
+  weight:
+    value: 175
+type: equipment

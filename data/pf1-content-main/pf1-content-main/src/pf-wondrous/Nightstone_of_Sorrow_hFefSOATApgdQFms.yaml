@@ -1,0 +1,34 @@
+_id: hFefSOATApgdQFms
+_key: '!items!hFefSOATApgdQFms'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Nightstone of Sorrow
+system:
+  aura:
+    custom: true
+    school: abjuration [evil]
+  cl: 3
+  description:
+    value: >-
+      <p>This black rock, usually worn on a heavy chain, looks pitted and
+      partially charred and melted.  It gives the impression of reckless
+      evil-more a dangerous scent than any other kind of feeling. The wearer
+      gains fire resistance 1 and a +1 resistance bonus on Will saves against
+      fear. If the wearer takes 10 or more points of fire damage in a single
+      round, a claw-shaped pattern glows faintly on the surface of the stone,
+      similar to an arcane mark.  If the dragon god Dahak is the wearer's
+      patron, the wearer can use shatter once per day. At will, the wearer can
+      cause the claw-symbol on the rock to glow; true dragons immediately
+      recognize the symbol as an icon of
+      Dahak.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, arcane mark, remove fear, resist energy, shatter</p>
+  price: 3300
+  slot: neck
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

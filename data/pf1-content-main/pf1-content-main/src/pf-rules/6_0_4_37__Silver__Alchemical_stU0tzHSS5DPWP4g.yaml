@@ -1,0 +1,42 @@
+_id: stU0tzHSS5DPWP4g
+_key: '!journal!stU0tzHSS5DPWP4g'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.4.37. Silver, Alchemical
+pages:
+  - _id: GfJzUyWWjNzH9JfY
+    _key: '!journal.pages!stU0tzHSS5DPWP4g.GfJzUyWWjNzH9JfY'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.4.37. Silver, Alchemical
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li>@Compendium[pf-content.pf-rules.TROqcNjEw3b2q2Dk]{6.0.4.
+        Special Materials}</li></ul><hr /><p><strong>PFS
+        Legal</strong></p><p>@Source[PZO1123;pages=48],
+        @Source[PZO1110;pages=155]</p><p>A complex process involving metallurgy
+        and alchemy can bond silver to a weapon made of steel so that it
+        bypasses the damage reduction of creatures such as
+        lycanthropes.</p><p>On a successful attack with a silvered slashing or
+        piercing weapon, the wielder takes a –1 penalty on the damage roll (with
+        a minimum of 1 point of damage). The alchemical silvering process can’t
+        be applied to nonmetal items, and it doesn’t work on rare metals such as
+        adamantine, cold iron, and mithral.</p><p>Alchemical silver has 10 hit
+        points per inch of thickness and hardness
+        8.</p><table><thead><tr><td>Type of Alchemical Silver Item</td><td>Item
+        Price Modifier</td></tr></thead><tbody><tr><td>Ammunition</td><td>+2 gp
+        per item</td></tr><tr><td>Light weapon</td><td>+20
+        gp</td></tr><tr><td>One-handed weapon, or one head of a double
+        weapon</td><td>+90 gp</td></tr><tr><td>Two-handed weapon, or both heads
+        of a double weapon</td><td>+180 gp</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

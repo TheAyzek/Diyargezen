@@ -1,0 +1,61 @@
+_id: dcaHcWgCis43XaK7
+_key: '!journal!dcaHcWgCis43XaK7'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Shyka
+pages:
+  - _id: AENUQG44kSutNM9r
+    _key: '!journal.pages!dcaHcWgCis43XaK7.AENUQG44kSutNM9r'
+    _stats:
+      coreVersion: '12.331'
+    name: Shyka
+    sort: 0
+    text:
+      content: >-
+        <h1>Shyka</h1><h2>The Many</h2>@Source[PZO9298;pages=34] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Shyka">Shyka</a><h3>Details</h3><p><strong>Alignment</strong>
+        N<br /><strong>Pantheon</strong> Eldest<br /><strong>Areas of
+        Concern</strong> Entropy, reincarnation, time<br
+        /><strong>Domains</strong> Death, Destruction, Madness, Magic<br
+        /><strong>Subdomains</strong> Arcane, Catastrophe, Divine, Insanity<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Light mace<br
+        /><strong>Symbol</strong> Broken hourglass<br /><strong>Sacred
+        Animal(s)</strong> Hive animals<br /><strong>Sacred Color(s)</strong>
+        White</p><h3>Obedience</h3><p>Build something small and fragile-such as
+        a house of cards, an ice sculpture, or a sand castle-while contemplating
+        the fleeting nature of existence and the inevitability of entropy. Leave
+        your creation to decay at its own pace. You gain a +2 sacred bonus on
+        initiative checks.</p><h2>Boons - Fey
+        Obedience</h2><h3>Feysworn</h3><p>@Source[PZO9298;pages=34]<br
+        /><strong>1: Twist Time (Sp)</strong> <em>entropic shield</em> 3/ day,
+        <em>augury</em> 2/day, or <em>haste</em> 1/day<br /><strong>2: Borrowed
+        Memories (Su)</strong> Once per day as a standard action, you can gain
+        the effects of legend lore, save that the legends are recalled
+        immediately and you gain the most complete level of knowledge (as if the
+        person, place, or thing were at hand, regardless of its actual
+        position). Your recollection of the legend takes the form of a memory
+        borrowed from someone familiar with the subject matter.<br /><strong>3:
+        Pause (Sp)</strong> You gain the ability to pause time for yourself or
+        one creature you designate within 30 feet once per day. This functions
+        as per <em>time stop</em> but with a duration of 1
+        round.</em></p><h2>For Followers of
+        Shyka</h2><h3>Archetypes</h3><p><em>Chronomancer
+        (Wizard)</em></p><h3>Feats</h3><p><em>Fey
+        Friend</em></p><h3>Spells</h3><p><em>Ally Across Time, Army Across Time,
+        Temporal Divergence, Temporal
+        Regression</em></p><h3>Traits</h3><p><em>Shaper of
+        Reality</em></p><h2>Unique Spell
+        Rules</h2><em>@Source[PZO9480;pages=30]</em><br
+        /><h3>Cleric/Warpriest</h3><p><em>Threefold Aspect can be prepared as a
+        4th-level spell<br /><em>Temporal Divergence</em> can be prepared as a
+        8th-level spell<br /><em>Temporal Regression</em> can be prepared as a
+        8th-level spell</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

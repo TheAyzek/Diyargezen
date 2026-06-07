@@ -1,0 +1,32 @@
+_id: eTIzoYxmeSuY3jHT
+_key: '!journal!eTIzoYxmeSuY3jHT'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Tjasse
+pages:
+  - _id: vYnj0aKQv9fz3bmb
+    _key: '!journal.pages!eTIzoYxmeSuY3jHT.vYnj0aKQv9fz3bmb'
+    _stats:
+      coreVersion: '12.331'
+    name: Tjasse
+    sort: 0
+    text:
+      content: >-
+        <h1>Tjasse</h1><h2>Lord of Talons</h2>@Source[PZO9267;pages=324] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Tjasse">Tjasse</a><h3>Details</h3><p><strong>Alignment</strong>
+        CN<br /><strong>Pantheon</strong> Giant Deities<br /><strong>Areas of
+        Concern</strong> Giant birds, mountain peaks, pride<br
+        /><strong>Domains</strong> Air, Animal, Chaos, Destruction<br
+        /><strong>Subdomains</strong> Cloud, Feather, Rage, Wind<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Spear<br /><strong>Symbol</strong>
+        Mountain gripped by talon<br /><strong>Sacred Animal(s)</strong> Roc<br
+        /><strong>Sacred Color(s)</strong> Gray, red</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

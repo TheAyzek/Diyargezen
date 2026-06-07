@@ -1,0 +1,37 @@
+_id: 8bQAYlPyfKKcXWeG
+_key: '!items!8bQAYlPyfKKcXWeG'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Righteous Medal of Spirit
+system:
+  aura:
+    custom: true
+    school: abjuration and transmutation
+  cl: 11
+  description:
+    value: >-
+      <p>These ornate military medals are awarded to crusaders and adventurers
+      who excel and deserve commendation in the war against the Worldwound. A
+      medal must be affixed to a worn article of clothing to function, but
+      doesn't have to be worn visibly. Any number of righteous medals can be
+      worn, but the effects of multiple medals of a single type don't stack. A
+      righteous medal functions only if the wearer has legitimately achieved the
+      feat for which she received the medal. As a swift action, the wearer can
+      gain a +2 sacred bonus to the medal's associated ability score for 1
+      minute. In addition, each righteous medal grants a constant sacred bonus
+      on one type of roll, as detailed below.   Righteous Medal of Spirit: This
+      rectangular medal depicts the symbol of Iomedae on a field of red. It is
+      awarded to a hero who becomes possessed or mentally controlled by a demon
+      but escapes from that control before he is forced to do evil. This medal
+      is associated with Wisdom and grants a +2 sacred bonus on saves against
+      charm and possession effects (including dominate effects).   A mythic
+      character who wears all six righteous medals gains one additional use of
+      mythic power per day.<h3>Requirements</h3><p>Craft Wondrous Item; bless, 
+      owl's wisdom</p>
+  price: 6000
+  sources:
+    - id: PZO9074
+  subType: wondrous
+type: equipment

@@ -1,0 +1,34 @@
+_id: pbqcYtOE1JDtsGpE
+_key: '!items!pbqcYtOE1JDtsGpE'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Scabbard of Pain
+system:
+  aura:
+    school: nec
+  cl: 5
+  description:
+    value: >-
+      <p>This rugged black leather scabbard is wrapped in jet black chains that
+      allow it to easily be hung from one's belt. A scabbard of pain grants it
+      bearer knowledge of advanced torturing techniques used by depraved
+      cultists of the Midnight Lord. It grows or shrinks to fit any bladed
+      weapon sized for a Medium or Small creature. Three times per day, the
+      bearer can declare that he is attempting to deliver a painful strike with
+      a melee attack. If the attack hits, the opponent must succeed at a DC 11
+      Fortitude save or be affected by ray of sickening. The bearer can expend
+      one use of the scabbard's painful strike as an immediate action to affect
+      himself with the ray of sickening effect and voluntarily fail the saving
+      throw. Doing so allows the bearer to reroll a failed saving throw against
+      a mind-affecting
+      effect.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, ray of sickening</p>
+  price: 2500
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

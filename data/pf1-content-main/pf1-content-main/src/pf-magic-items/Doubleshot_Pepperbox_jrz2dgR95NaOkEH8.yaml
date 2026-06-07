@@ -1,0 +1,59 @@
+_id: jrz2dgR95NaOkEH8
+_key: '!items!jrz2dgR95NaOkEH8'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/guns/gun-pistol-wood.webp
+name: Doubleshot Pepperbox
+system:
+  actions:
+    - _id: q47lvl0z9fmtoheg
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: doubleshotPepperbox
+  aura:
+    school: trs
+  baseTypes:
+    - Pepperbox
+  cl: 7
+  description:
+    value: >-
+      <p>This +1 thundering pepperbox (Pathfinder RPG Ultimate Combat 138) bears
+      a fire-breathing dragon motif, and its wooden grip is ornately carved.
+      Unlike a normal pepperbox, each of the six barrels of a doubleshot
+      pepperbox can be fired either independently in tandem, firing two barrels
+      with the same action like a double-barreled pistol. If two barrels are
+      shot at once, they must both be fired at the same target, and the wielder
+      takes a -4 penalty on each shot.<p><strong>Base Item</strong>: thundering
+      pepperbox</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, Rapid Shot, blindness/deafness, haste</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 20300
+  showInQuickbar: false
+  sources:
+    - id: PZO9060
+  weaponGroups:
+    - firearms
+  weight:
+    value: 5
+type: weapon

@@ -1,0 +1,22 @@
+_id: CFkHvO2YUZL6WQqH
+_key: '!items!CFkHvO2YUZL6WQqH'
+_stats:
+  coreVersion: '12.331'
+folder: CQNw1H2zi4NilpKP
+img: systems/pf1/icons/skills/fire_07.jpg
+name: Martial Mastery (WiS)
+system:
+  description:
+    value: >-
+      <p><em>You further broaden your study of weapons to encompass multiple
+      similar weapons.</em></p><p>Martial Versatility, fighter level 16th,
+      human.</p><p><strong>Benefit</strong>: Each combat feat you have that
+      applies to a specific weapon (e.g., Weapon Focus) can be used with all
+      weapons in the same weapon group.</p>
+  sources:
+    - publisher: https://meliogeny.net/square-world/
+      title: World is Square
+  tags:
+    - Combat
+    - World is Square
+type: feat

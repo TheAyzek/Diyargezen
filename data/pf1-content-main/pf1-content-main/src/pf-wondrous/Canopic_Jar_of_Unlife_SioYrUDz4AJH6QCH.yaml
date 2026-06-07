@@ -1,0 +1,44 @@
+_id: SioYrUDz4AJH6QCH
+_key: '!items!SioYrUDz4AJH6QCH'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Canopic Jar of Unlife
+system:
+  aura:
+    custom: true
+    school: conjuration and necromancy
+  cl: 13
+  description:
+    value: >-
+      <p>This stone jar, capped with the head of an animal or human, resembles
+      one of the traditional carved limestone or pottery canopic jars commonly
+      used to hold the intestines, liver, lungs, and stomach of the deceased in
+      Osirian mummification rites. Unlike normal canopic jars, a canopic jar of
+      unlife is used to preserve the existence of a powerful undead creature.
+      When a corporeal undead creature is first created, one of its organs must
+      be placed inside the canopic jar of unlife as part of the ritual that
+      transforms the creature into an undead being. Thereafter, the undead
+      creature's existence is linked to the canopic jar of unlife.  If the
+      undead creature is destroyed, the canopic jar of unlife disintegrates 2
+      hours later, and the viscera within the jar start to regenerate into a new
+      undead body for the subject at a rate of 10 hit points per hour. The
+      subject is helpless until restored to full hit points. Once used to
+      regenerate an undead creature, a canopic jar of unlife is destroyed. If
+      the jar is opened manually after viscera are secured in it, the contents
+      disintegrate with an ear-piercing scream and the jar loses all magical
+      power. Smashing the jar (hardness 8, hp 20) also destroys the vessel and
+      the viscera within.  A canopic jar of unlife only functions if linked to
+      an undead creature during its creation; existing undead creatures or
+      creatures with phylacteries (such as liches) or with the rejuvenation
+      ability (such as mummy lords) cannot make use of a canopic jar of
+      unlife.<h3>Requirements</h3><p>Craft Wondrous Item, gentle repose,
+      regenerate</p>
+  price: 60000
+  sources:
+    - id: PZO9084
+  subType: wondrous
+  weight:
+    value: 7
+type: equipment

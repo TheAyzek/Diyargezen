@@ -1,0 +1,34 @@
+_id: Ci4d3viK7ZNMa1Du
+_key: '!items!Ci4d3viK7ZNMa1Du'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Poisoner's Gloves
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>These black, rubbery gloves have sharpened digits. Fine channels lead
+      to the tip of each finger, which are often stained with foul chemicals.
+      The gloves are used primarily by assassins. Each glove may be filled with
+      a single dose of poison, a potion, alchemist infusion, holy water, or
+      similar liquid as long as the liquid would not harm the gloves (for
+      example, alchemist's fire and acid cannot be used). The wearer can deliver
+      the dose to a target as a melee touch attack or as part of an unarmed
+      strike or natural attack with the hands (such as a claw or slam attack).
+      In the case of a personal infused extract, the opponent receives both a
+      Fortitude save and spell resistance. The wearer can use both gloves in the
+      same round using two-weapon fighting or multiple natural attacks (such as
+      2 slams or 2 claws). Each glove can be used once per day. Filling a glove
+      is a full-round action that provokes attacks of
+      opportunity.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, touch injection</p>
+  price: 5000
+  slot: hands
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

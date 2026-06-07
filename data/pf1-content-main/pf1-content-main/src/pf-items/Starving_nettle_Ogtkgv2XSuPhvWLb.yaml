@@ -1,0 +1,53 @@
+_id: Ogtkgv2XSuPhvWLb
+_key: '!items!Ogtkgv2XSuPhvWLb'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Starving nettle
+system:
+  actions:
+    - _id: r16mgrr73zenvlt5
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1d3]] Dex and [[1d3]] Con damage.
+            In addition, each time the creature fails a save against the poison,
+            for the following 24 hours it is overwhelmed with nausea whenever
+            food is presented to it and is unable to bring itself to eat, no
+            matter how hungry it becomes.
+      save:
+        dc: '15'
+        type: fort
+      tag: starvingNettle
+  description:
+    value: >-
+      <p><strong>Type</strong> injury; <strong>Save</strong> Fortitude DC
+      15</p><p><strong>Frequency</strong> 1/day for 8
+      days</p><p><strong>Effect</strong> 1d3 Dex and Con damage. In addition,
+      each time the creature fails a save against the poison, for the following
+      24 hours it is overwhelmed with nausea whenever food is presented to it
+      and is unable to bring itself to eat, no matter how hungry it
+      becomes.</p><p><strong>Cure</strong> 2 consecutive saves</p><p>This
+      peculiar nettle plant bears a singularly effective poison that protects it
+      from being eaten: creatures pricked by the nettle’s thorns and affected by
+      the poison are overcome with nausea at the mere idea of food, protecting
+      the plant from being consumed. Farmers remain vigilant for signs of this
+      fast-growing and hardy plant; it is difficult and dangerous to remove, so
+      culling it is best done early, while the plant is still relatively
+      small.</p>
+  price: 300
+  sources:
+    - id: PZO1140
+      pages: '145'
+  subType: poison
+  uses:
+    per: single
+type: consumable

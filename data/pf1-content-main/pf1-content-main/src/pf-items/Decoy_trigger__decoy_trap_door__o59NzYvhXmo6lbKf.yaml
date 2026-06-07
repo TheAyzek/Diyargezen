@@ -1,0 +1,40 @@
+_id: o59NzYvhXmo6lbKf
+_key: '!items!o59NzYvhXmo6lbKf'
+_stats:
+  coreVersion: '12.331'
+img: icons/environment/traps/plated.webp
+name: Decoy trigger (decoy trap door)
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 60 gp (decoy pressure switch), 120 gp (decoy
+      trap door), 25 gp (decoy tripwire); <strong>Weight</strong> - (decoy
+      pressure switch), - (decoy trap door), - (decoy tripwire)</p><p>Decoy
+      triggers are misleading mechanisms intended to divert a victim's attention
+      from a real trap by presenting an easily found decoy. Ideally, the victim
+      spots the fake mechanism and, in attempting to disarm or evade it,
+      triggers the real trap.</p><p>A decoy trigger grants a bonus to the
+      Perception DC of any trap it accessorizes-the decoy itself has an
+      intentionally low Perception DC. Though a decoy trigger increases the CR
+      of the trap it augments, as a standalone accessory it doesn't increase the
+      trap's Craft DC. Instead of a Disable Device DC, decoy triggers have a
+      Sense Motive DC. If a creature succeeds at the decoy's Sense Motive check,
+      it immediately recognizes the decoy trigger as a fake, and the real trap
+      loses the bonus to its Perception DC. All decoy triggers are single-use
+      only.</p><h2>Decoy Pressure Switch</h2><p><strong>Type
+      </strong>mechanical; <strong>Perception </strong>DC 12; <strong>Sense
+      Motive</strong> DC 24 </p><h2>Effects</h2> <strong>Trap
+      </strong>Perception DC +6, CR Modifier: +2</p><p> <h2>Decoy Trap Door</h2>
+      <strong>Type </strong>mechanical; <strong>Perception </strong>DC 10;
+      <strong>Sense Motive</strong> DC 28 <h2>Effects</h2> <strong>Trap
+      </strong>Perception DC +9, CR Modifier: +3</p><p> <h2>Decoy
+      Tripwire</h2><strong>Type </strong>mechanical; <strong>Perception
+      </strong>DC 15; <strong>Sense Motive</strong> DC 20 <h2>Effects</h2>
+      <strong>Trap </strong>Perception DC +3, CR Modifier: +1
+  equipped: false
+  price: 120
+  sources:
+    - id: PZO9432
+      pages: '28'
+  subType: tool
+type: loot

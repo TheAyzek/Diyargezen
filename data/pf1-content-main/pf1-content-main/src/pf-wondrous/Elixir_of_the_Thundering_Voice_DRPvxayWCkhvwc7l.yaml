@@ -1,0 +1,23 @@
+_id: DRPvxayWCkhvwc7l
+_key: '!items!DRPvxayWCkhvwc7l'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Elixir of the Thundering Voice
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>This light gray elixir makes the user's voice fiercer and louder, and
+      gives it an inhuman quality that rattles those he talks to, granting the
+      user a +10 competence bonus on Intimidate checks for 1
+      hour.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, sound burst</p>
+  price: 250
+  sources:
+    - id: PZO1129
+  subType: wondrous
+type: equipment

@@ -1,0 +1,32 @@
+_id: R3zqbSZlUyQNFvPN
+_key: '!items!R3zqbSZlUyQNFvPN'
+_stats:
+  coreVersion: '12.331'
+img: icons/environment/people/commoner.webp
+name: Hireling (untrained)
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 3 sp per day (trained), 1 sp per day
+      (untrained); <strong>Weight</strong> - (trained), -
+      (untrained)</p><h2>Description</h2><p>This listing is for any other sort
+      of typical employment not covered by another service or job in this
+      section. An untrained hireling is a crier, laborer, maid, mourner, porter,
+      or other menial worker. A trained hireling is a mason, mercenary warrior,
+      carpenter, blacksmith, cook, scribe, painter, teamster, and so on. The
+      listed price represents a minimum wage for an adequately skilled worker,
+      and an expert hireling usually requires significantly higher pay. The
+      listed price is a day's wages (generally 7-10 hours of work per
+      day).</p><p>Typical equipment for a guard or mercenary warrior is studded
+      leather armor and a club, shortsword, or shortspear. Most guards are
+      off-duty soldiers or city watchmen, though some are unskilled laborers
+      with a talent for fighting.</p>
+  equipped: false
+  price: 0.1
+  sources:
+    - id: PZO1123
+      pages: '99'
+  subType: tradeGoods
+  tags:
+    - Lodging/Services
+type: loot

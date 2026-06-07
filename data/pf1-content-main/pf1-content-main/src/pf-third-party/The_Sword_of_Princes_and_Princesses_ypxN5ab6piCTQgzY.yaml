@@ -1,0 +1,40 @@
+_id: ypxN5ab6piCTQgzY
+_key: '!items!ypxN5ab6piCTQgzY'
+_stats:
+  coreVersion: '12.331'
+folder: 5HPDAAtypP5m41CK
+img: icons/skills/melee/strike-blade-hooked-orange-blue.webp
+name: The Sword of Princes and Princesses
+system:
+  artifact: true
+  aura:
+    school: trs
+  cl: 12
+  description:
+    value: >-
+      <p>This +3 short sword is only usable by a Small being. It otherwise
+      functions as a -2 cursed short sword for anyone else (though it retains
+      its other abilities and its curse). This sword has a blade of a bluish
+      metal with nursery rhymes engraved on it. This sword has the ability to
+      cast locate object (for the Sword of Kings and Queens only) 1/hour. It can
+      cast light 1/day, and can cast protection from evil and sanctuary, each
+      1/week. The wielder of this sword has a continuous effect of feather fall
+      and water walk while the sword is drawn. It has an ego of 24 (never trust
+      anyone over 30) and an intelligence of 12. Like its parent sword, this
+      sword initially carries a curse. This curse can only be removed by a
+      miracle, wish or by the prescribed method. The effect of the curse is
+      two-fold. First, it causes fear on its wielder whenever he enters combat
+      (DC 20 Will save avoids). Second, if the wielder saves, the sword falls
+      out of the characters hand every other round of combat, quivering on the
+      ground (the sword itself trembles with fear). This curse can be lifted
+      permanently by striking it with the blade of the non-cursed parent sword
+      (spanking it).</p><p><strong>Base Item</strong>: +3 short sword|-2 cursed
+      short sword</p>
+  hp:
+    base: 10
+  sources:
+    - id: FGG32698
+  subType: other
+  weight:
+    value: 2
+type: weapon

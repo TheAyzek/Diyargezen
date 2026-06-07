@@ -1,0 +1,70 @@
+_id: EB8KP1FYBmuUpODf
+_key: '!items!EB8KP1FYBmuUpODf'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/guns/gun-pistol-wood.webp
+name: Enervating Pistol
+system:
+  actions:
+    - _id: zbsffn32e16avxaf
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: enervatingPistol
+  aura:
+    custom: true
+    school: necromancy [death]
+  baseTypes:
+    - Pistol
+  cl: 13
+  description:
+    value: >-
+      <p>Kerdak Bonefist had this +1 reliable distance pistol (Ultimate Combat
+      138, 142) specially crafted for him to take advantage of his unique
+      skeletal hand. The pistol shows signs of wear and exposure to the
+      elements, but its walnut stock, nickel-plated barrel, and gold accents are
+      of fine craftsmanship, and its mechanisms still move with precision.
+      Ammunition fired from an enervating pistol deals an extra 1d6 points of
+      negative energy damage on a successful hit. On a successful critical hit,
+      an enervating pistol bestows a negative level on its target. One day after
+      being struck, subjects must make a DC 16 Fortitude save for each negative
+      level or they become permanent. An enervating pistol bestows one permanent
+      negative level on any creature wielding it that is not undead or does not
+      possess an undead hand. The negative level remains as long as the weapon
+      is in hand and disappears when the weapon is no longer wielded. This
+      negative level cannot be overcome in any way (including restoration
+      spells) while the weapon is wielded.<p><strong>Base Item</strong>:
+      reliable distance
+      pistol</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, clairaudience/clairvoyance, finger of death,
+      enervation, mending</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 51300
+  showInQuickbar: false
+  sources:
+    - id: PZO9060
+  weaponGroups:
+    - firearms
+  weight:
+    value: 4
+type: weapon

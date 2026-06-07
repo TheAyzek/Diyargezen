@@ -1,0 +1,46 @@
+_id: POeM642LbPFcuIS7
+_key: '!journal!POeM642LbPFcuIS7'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Zaebos
+pages:
+  - _id: 4Y1W6oARsaQBuMYE
+    _key: '!journal.pages!POeM642LbPFcuIS7.4Y1W6oARsaQBuMYE'
+    _stats:
+      coreVersion: '12.331'
+    name: Zaebos
+    sort: 0
+    text:
+      content: >-
+        <h1>Zaebos</h1><h2>The Prince of Broken
+        Glass</h2>@Source[PZO9267;pages=326] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Zaebos">Zaebos</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Infernal Dukes<br /><strong>Areas of
+        Concern</strong> Arrogance, nobility, sexual perversion<br
+        /><strong>Domains</strong> Destruction, Evil, Law, Nobility<br
+        /><strong>Subdomains</strong> Devil (Evil), Devil (Law), Leadership,
+        Martyr, Torture<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Flail<br
+        /><strong>Symbol</strong> Glass shards cutting flesh<br /><strong>Sacred
+        Animal(s)</strong> Crocodile<br /><strong>Sacred Color(s)</strong>
+        Black, green</p><h3>Obedience</h3><p>Smash a crystal goblet and fling
+        shards upon anyone who steps into your way. Gain a +4 profane bonus to
+        CMD against disarm, sunder, and trip combat maneuvers.</p><h2>Boons -
+        Infernal Dukes</h2>@Source[PZO1139;pages=119]<br />The Lords of Hell,
+        the Dukes of Perdition, and the Princes of Damnation are all names for
+        the infamous nobility of the Pit- the elite caste of devilkind known as
+        the infernal dukes.<p> All infernal dukes are lawful evil and range in
+        power from CR 26 to CR 27. The boons they grant are less complex than
+        those granted by archdevils, manifesting as spell-like abilities usable
+        once per day each.</p><p><strong>1</strong>: <em>reckless
+        infatuation</em><br /><strong>2</strong>: <em>prismatic spray</em><br
+        /><strong>3</strong>: <em> mage's disjunction</em></p><h2>For Followers
+        of Zaebos</h2><h3>Feats</h3><p><em>Hellish Shackles</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

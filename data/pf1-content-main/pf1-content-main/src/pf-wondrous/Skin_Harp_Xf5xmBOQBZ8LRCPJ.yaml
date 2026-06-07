@@ -1,0 +1,34 @@
+_id: Xf5xmBOQBZ8LRCPJ
+_key: '!items!Xf5xmBOQBZ8LRCPJ'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Skin Harp
+system:
+  aura:
+    custom: true
+    school: enchantment and necromancy
+  cl: 9
+  description:
+    value: >-
+      <p>This small harp is made from a sprite's twisted, leathery corpse, its
+      arms and legs arching up to hold the crossbar along the instrument's top.
+      The strings are made from thin strips of twisted flesh flayed from the
+      fey's torso and strung between their anchor points on the corpse and the
+      crossbar. Though the corpse's chest cavity is clearly visible, all viscera
+      have been removed.  A skin harp functions as a masterwork harp. In
+      addition, once per day, it can be activated to cast either command undead
+      or dominate person (Will DC 19 negates). With a successful DC 20 Perform
+      (string instruments) check, the save DC for this effect increases by +2.
+      When used in this manner, the harp animates and plays itself, the corpse
+      freeing one hand from the crossbar in order to strum its flesh
+      strings.<h3>Requirements</h3><p>Craft Wondrous Item, command undead,
+      dominate person</p>
+  price: 16500
+  sources:
+    - id: PZO9063
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

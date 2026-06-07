@@ -1,0 +1,31 @@
+_id: BTcZmnAadXsbVpri
+_key: '!items!BTcZmnAadXsbVpri'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Gloves of Stolen Unlife
+system:
+  aura:
+    school: nec
+  cl: 3
+  description:
+    value: >-
+      <p>These pale gray gauntlets feature cabochons of banded black onyx that
+      slowly shift to white when the gloves are activated. Three times per day,
+      the wearer can activate the gloves as a swift action after successfully
+      affecting an undead creature with an offensive single-target spell. Doing
+      so grants the wearer a number of temporary hit points equal to 10 + the
+      Hit Dice of the affected undead (maximum +10), which last a number of
+      minutes equal to the level of the spell cast. This effect ends immediately
+      if either glove is
+      removed.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, false life</p>
+  price: 3040
+  slot: hands
+  sources:
+    - id: PZO9444
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

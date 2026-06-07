@@ -1,0 +1,26 @@
+_id: q5WwBesEVrTlakj7
+_key: '!items!q5WwBesEVrTlakj7'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Trapwarding
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint transmutation <strong>CL</strong>
+      5th</p><p><strong>Slot</strong> armor quality; <strong>Price</strong> +1
+      bonus;</p><p>A suit of trapwarding armor helps to protect the wearer
+      against all manner of traps. The wearer of a suit of trapwarding armor
+      gains a luck bonus on all saving throws against traps equal to the armor's
+      enhancement
+      bonus.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>find traps</em>; <strong>Price</strong> +1
+      bonus</p>
+  sources:
+    - id: PZO9235
+      pages: '50'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

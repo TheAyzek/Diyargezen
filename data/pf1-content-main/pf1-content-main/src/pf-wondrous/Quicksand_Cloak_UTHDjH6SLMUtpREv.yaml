@@ -1,0 +1,40 @@
+_id: UTHDjH6SLMUtpREv
+_key: '!items!UTHDjH6SLMUtpREv'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Quicksand Cloak
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>The exterior of the cloak is an extradimensional space filled with
+      water and sand. Each time a creature of the wearer's size or smaller
+      attempts to grapple the wearer, it must succeed at a DC 15 Reflex save or
+      fail at the attempt and be engulfed by quicksand (Pathfinder RPG Core
+      Rulebook 427). Every round it's trapped in the extradimensional space, the
+      trapped creature must make a Swim check (DC 15) to climb out, landing
+      prone adjacent to the wearer. Crawling out doesn't provoke an attack of
+      opportunity from the wearer, but does provoke from others. A creature that
+      fails its Swim check by 5 or more submerges and begins to drown. A
+      creature that succeeds at the initial save grapples the wearer normally,
+      and doesn't need to save again unless the wearer escapes and the creature
+      tries to grapple the wearer again.   A quicksand cloak left on the ground
+      behaves as a patch of quicksand filling one 5-foot square, and swimming
+      out works the same. Others may use aid another to help a creature trapped
+      in the cloak, as though the creature were grappled.   A quicksand cloak of
+      any size can contain only one creature at a time; a creature attempting to
+      grapple the wearer while the cloak already contains a body is not affected
+      by the cloak.</p><h3>Requirements</h3><p>Craft Wondrous Item, create
+      water, shifting sand</p>
+  price: 15000
+  slot: shoulders
+  sources:
+    - id: PZO9544
+  subType: wondrous
+  weight:
+    value: 4
+type: equipment

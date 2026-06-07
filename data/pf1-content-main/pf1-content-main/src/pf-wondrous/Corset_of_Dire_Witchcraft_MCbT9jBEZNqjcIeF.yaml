@@ -1,0 +1,61 @@
+_id: MCbT9jBEZNqjcIeF
+_key: '!items!MCbT9jBEZNqjcIeF'
+_stats:
+  coreVersion: '12.331'
+folder: tt1hnzL5ZdLfPdp0
+img: icons/equipment/wrist/bracer-simple-leather.webp
+name: Corset of Dire Witchcraft
+system:
+  actions:
+    - _id: k7pqW7oiI6Jc8xMU
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>If the wearer is a witch, each day when she communes with her
+        familiar to prepare spells, she may enhance one hex she knows,
+        increasing its caster level by +2 for 24 hours. This enhancement ends if
+        the corset is removed or if she uses it to enhance a different hex.</p>
+      name: Enhance hex
+  aura:
+    school: abj
+  changes:
+    - _id: C6siykby
+      formula: '4'
+      target: aac
+      type: untyped
+  cl: 6
+  description:
+    instructions: <p>You must modify the enhanced hex's caster level manually.</p>
+    unidentified: >-
+      <p>This slimming garment is fastened with laces, buckles, and buttons and
+      reinforced with ribs of leather or bone.</p>
+    value: >-
+      <p>This slimming garment is fastened with laces, buckles, and buttons and
+      reinforced with ribs of leather or bone.</p><h3>Effect</h3><p>A corset of
+      dire witchcraft grants a +4 armor bonus to AC. If the wearer is a witch,
+      each day when she communes with her familiar to prepare spells, she may
+      enhance one hex she knows, increasing its caster level by +2 for 24 hours.
+      This enhancement ends if the corset is removed or if she uses it to
+      enhance a different
+      hex.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.ucc0a31d1y86oleh]{mage armor},
+      </em>creator must be a witch <strong>Cost</strong> 11,000 gp</p>
+  price: 22000
+  slot: body
+  sources:
+    - id: PZO1123
+      pages: '214'
+  subType: wondrous
+  tags:
+    - Witch
+    - Hex
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,29 @@
+_id: CuPseKmcCNZxHeaR
+_key: '!items!CuPseKmcCNZxHeaR'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Rod of Vicious Ghosts
+system:
+  aura:
+    school: evo
+  cl: 13
+  description:
+    value: >-
+      <p>Foreboding runes flow like shadows across the surface of this mithral
+      rod. Up to three times per day while on the Ethereal Plane, the wielder of
+      this short rod can affect creatures on the Material Plane with spells and
+      spell-like abilities with the force descriptor. After using this ability,
+      the wielder glows faintly and can be seen by creatures on the Material
+      Plane and the Ethereal Plane. This glowing effect lasts for 1 minute and
+      is otherwise identical to faerie
+      fire.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Rod,
+      ethereal jaunt</p>
+  price: 26000
+  sources:
+    - id: PZO1141
+  subType: other
+  weight:
+    value: 1
+type: equipment

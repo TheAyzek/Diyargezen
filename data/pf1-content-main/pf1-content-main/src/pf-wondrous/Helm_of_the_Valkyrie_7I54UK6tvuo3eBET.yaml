@@ -1,0 +1,33 @@
+_id: 7I54UK6tvuo3eBET
+_key: '!items!7I54UK6tvuo3eBET'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Helm of the Valkyrie
+system:
+  aura:
+    school: con
+  cl: 14
+  description:
+    value: >-
+      <p>This shining helm glints with the multicolored hues of the aurora, and
+      features wings carved of fine whalebone that sweep back from the temples.
+      While it is in good shape, it shows signs of having seen battle. Once per
+      day the wearer can summon a giant spectral wolf. Treat this as phantom
+      steed cast by a 14th-level caster, but with an AC of 24 (-1 size, +8
+      natural armor, +7 Dexterity) and 100 hit points. The wolf can persist for
+      up to 24 hours, as long as the creature that summoned it is still wearing
+      the helm of the valkyrie. Even though it takes the form of a fierce
+      predator and is more powerful than other phantom steeds, the mount is
+      nothing more than mist and can't
+      attack.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, phantom steed</p>
+  price: 16000
+  slot: head
+  sources:
+    - id: PZO1129
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

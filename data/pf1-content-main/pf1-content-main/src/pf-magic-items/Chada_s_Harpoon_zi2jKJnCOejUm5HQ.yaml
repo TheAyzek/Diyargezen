@@ -1,0 +1,70 @@
+_id: zi2jKJnCOejUm5HQ
+_key: '!items!zi2jKJnCOejUm5HQ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/spear.png
+name: Chada's Harpoon
+system:
+  actions:
+    - _id: 36yndmyyrstsilh5
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: chadasHarpoon
+  aura:
+    school: trs
+  baseTypes:
+    - Spear
+  cl: 11
+  description:
+    value: >-
+      <p>This +2 keen returning spear is adorned with feathers and fur, as well
+      as with a bright steel chain that trails down from the top of its haft. On
+      a critical hit, Chada's harpoon lodges into the target's flesh or armor,
+      and the wielder can choose to pull the target toward him, reeling the
+      victim in by use of the magically extended chain. This functions as the
+      pull universal monster ability (Pathfinder RPG Bestiary 303) with the
+      following exceptions. Compare the initial attack roll (instead of a new
+      CMB check) to the target's CMD to determine success. Success pulls the
+      target 20 feet closer to the wielder. The wielder can make additional
+      attack rolls each round (instead of new CMB checks) to pull the victim
+      closer. Unlike the normal pull ability, Chada's harpoon can pull creatures
+      of any size. Once the target is pulled adjacent to the wielder, the bull
+      rush ends.<p><strong>Base Item</strong>: keen returning
+      spear</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, keen edge, telekinesis</p>
+  enh: 2
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 50302
+  properties:
+    brc: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9034
+  weaponGroups:
+    - spears
+    - thrown
+    - tribal
+  weight:
+    value: 2
+type: weapon

@@ -1,0 +1,179 @@
+_id: 9PHUtzngbpeK1oy7
+_key: '!tables!9PHUtzngbpeK1oy7'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+folder: 7ZeWJj7eKXb88Mo9
+formula: 1d100
+img: icons/svg/d20-grey.svg
+name: Advanced Fleshwarp Mutations
+replacement: true
+results:
+  - _id: ysUMTjGkDzAEUxRv
+    _key: '!tables.results!9PHUtzngbpeK1oy7.ysUMTjGkDzAEUxRv'
+    range:
+      - 1
+      - 5
+    text: >-
+      <strong>Bioluminescent</strong>: The creature’s flesh sheds an eerie
+      light, the strength of a candle’s. The creature takes a –4 penalty on
+      Stealth checks.
+    type: text
+    weight: 1
+  - _id: F1MscWMOwTLq6PwC
+    _key: '!tables.results!9PHUtzngbpeK1oy7.F1MscWMOwTLq6PwC'
+    range:
+      - 6
+      - 11
+    text: >-
+      <strong>Clogged Ears</strong>: The creature’s ears close up and become
+      useless. The creature is deafened.
+    type: text
+    weight: 1
+  - _id: q9tjDOsaRunlFZK8
+    _key: '!tables.results!9PHUtzngbpeK1oy7.q9tjDOsaRunlFZK8'
+    range:
+      - 12
+      - 17
+    text: >-
+      <strong>Crooked Spine</strong>: Strange ridges and dislocations mar the
+      creature’s spine. Reduce its carrying capacity by half.
+    type: text
+    weight: 1
+  - _id: uMQw04Q1nMtRE1nL
+    _key: '!tables.results!9PHUtzngbpeK1oy7.uMQw04Q1nMtRE1nL'
+    range:
+      - 18
+      - 25
+    text: >-
+      <strong>Deformed Joints</strong>: The creature’s joints are knobby and
+      twisted. It takes a –4 penalty on Dexterity-based skill checks.
+    type: text
+    weight: 1
+  - _id: 7NOkKXUsPz30feeL
+    _key: '!tables.results!9PHUtzngbpeK1oy7.7NOkKXUsPz30feeL'
+    range:
+      - 26
+      - 30
+    text: >-
+      <strong>Deformed Legs</strong>: The creature’s legs are warped or
+      misshapen in some fashion. Reduce its land speed by half.
+    type: text
+    weight: 1
+  - _id: iac5h3vNiL1yOhHz
+    _key: '!tables.results!9PHUtzngbpeK1oy7.iac5h3vNiL1yOhHz'
+    range:
+      - 31
+      - 37
+    text: >-
+      <strong>Dermal Fissures</strong>: The creature’s flesh painfully splits in
+      dry cracks and exposes tender tissue beneath. Double the armor check
+      penalty of any armor it wears and increases any bleed damage it takes by 1
+      point.
+    type: text
+    weight: 1
+  - _id: VDevtY0nWjX3DY2p
+    _key: '!tables.results!9PHUtzngbpeK1oy7.VDevtY0nWjX3DY2p'
+    range:
+      - 38
+      - 43
+    text: >-
+      <strong>Elongated Limbs</strong>: The creature’s limbs elongate slightly,
+      causing bone aches. It takes a –2 penalty on attack rolls and
+      Strength-based skill checks.
+    type: text
+    weight: 1
+  - _id: kFeJRYNH6jfhnslR
+    _key: '!tables.results!9PHUtzngbpeK1oy7.kFeJRYNH6jfhnslR'
+    range:
+      - 44
+      - 59
+    text: >-
+      <strong>Eye Clusters</strong>: The creature’s eyes divide and cluster into
+      multiple, smaller eyes contained in each socket. It takes a –4 penalty on
+      visual Perception checks.
+    type: text
+    weight: 1
+  - _id: VWBVmNO2WgqwSdSr
+    _key: '!tables.results!9PHUtzngbpeK1oy7.VWBVmNO2WgqwSdSr'
+    range:
+      - 60
+      - 62
+    text: >-
+      <strong>Frail</strong>: The creature’s organs fail easily. It takes a –2
+      penalty on Fortitude saves and on Constitution checks to stabilize while
+      dying.
+    type: text
+    weight: 1
+  - _id: Ta25Q8aIflt8JxCH
+    _key: '!tables.results!9PHUtzngbpeK1oy7.Ta25Q8aIflt8JxCH'
+    range:
+      - 63
+      - 68
+    text: >-
+      <strong>Light Sensitivity</strong>: The creature’s eyes take on a
+      reflective sheen, and it gains the light sensitivity universal monster
+      ability.
+    type: text
+    weight: 1
+  - _id: hiNsylMXQ39MvFdJ
+    _key: '!tables.results!9PHUtzngbpeK1oy7.hiNsylMXQ39MvFdJ'
+    range:
+      - 69
+      - 74
+    text: >-
+      <strong>Malformed Gills</strong>: The creature gains nonfunctional gills
+      that don’t allow it to breathe water, but it also has difficulty breathing
+      air and develops a wet, labored breathing. Additionally, it becomes
+      fatigued for 1 hour anytime it runs or charges on land, though this
+      condition ends if it submerges itself in water for 1 minute.
+    type: text
+    weight: 1
+  - _id: U4ZLKIvASpe4bIh7
+    _key: '!tables.results!9PHUtzngbpeK1oy7.U4ZLKIvASpe4bIh7'
+    range:
+      - 75
+      - 80
+    text: >-
+      <strong>Misshapen Mouth</strong>: The creature’s mouth is warped and
+      deformed. All spells with verbal components suffer a 10% spell-failure
+      chance and the creature takes a –4 penalty on checks that require it to
+      speak, such as Diplomacy or Perform (oratory) checks.
+    type: text
+    weight: 1
+  - _id: AilRMU7oJvwk4Ctv
+    _key: '!tables.results!9PHUtzngbpeK1oy7.AilRMU7oJvwk4Ctv'
+    range:
+      - 81
+      - 87
+    text: >-
+      <strong>Rubbery Flesh</strong>: Thick, rubbery hide replaces the
+      creature’s skin. It takes a –2 penalty on Dexteritybased skill checks and
+      Reflex saves.
+    type: text
+    weight: 1
+  - _id: pHy8Bfeq0JoDszrl
+    _key: '!tables.results!9PHUtzngbpeK1oy7.pHy8Bfeq0JoDszrl'
+    range:
+      - 88
+      - 94
+    text: >-
+      <strong>Tumorous Brain</strong>: Large tumors form in the creature’s
+      brain, causing its skull to deform. Anytime the creature casts a spell or
+      attempts an Intelligence-based skill check, it becomes staggered for 1
+      round.
+    type: text
+    weight: 1
+  - _id: 1n281W9MMiCrYdwB
+    _key: '!tables.results!9PHUtzngbpeK1oy7.1n281W9MMiCrYdwB'
+    range:
+      - 95
+      - 100
+    text: >-
+      <strong>Weeping Sores</strong>: Open sores weep strange fluids down the
+      creature’s body. The creature takes a –4 penalty on Fortitude saves to
+      resist diseases.
+    type: text
+    weight: 1
+sort: 1200000

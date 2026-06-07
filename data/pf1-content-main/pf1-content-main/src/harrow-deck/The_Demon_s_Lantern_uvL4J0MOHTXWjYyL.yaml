@@ -1,0 +1,30 @@
+_id: uvL4J0MOHTXWjYyL
+_key: '!journal!uvL4J0MOHTXWjYyL'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: PqqHaMsDrJKCNHAU
+name: The Demon's Lantern
+pages:
+  - _id: yX9NvWWaP8cPmnku
+    _key: '!journal.pages!uvL4J0MOHTXWjYyL.yX9NvWWaP8cPmnku'
+    _stats:
+      coreVersion: '12.331'
+    name: The Demon's Lantern
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Demon's Lantern</strong> (chaotic evil, Dexterity) is the
+        card of traps and tricks, sleight of hand and sleight of mind. These
+        will-o'-wisps and the man who sought their light represent an impossible
+        or intractable situation. Misaligned, The Demon's Lantern represents an
+        opportunity or a guide arriving at a perfect moment to show the
+        way.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Demon%27s%20Lantern.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,30 @@
+_id: pUeuuFwojhKQZKYQ
+_key: '!items!pUeuuFwojhKQZKYQ'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Spellstrike Gloves
+system:
+  aura:
+    custom: true
+    school: none
+  cl: 17
+  description:
+    value: >-
+      <p>These black leather gloves are lined with soft black velveteen and have
+      silver buckles that run from the wrist to the elbow. Three times per day,
+      the gloves allow the wearer to treat a ranged magus spell as a spell with
+      a range of touch, allowing him to deliver the spell with his spellstrike
+      ability. The glove can only affect spells that normally affect one or more
+      creatures at a range greater than touch (such as slow), not rays or other
+      created effects. The altered spell only affects the creature attacked (any
+      other targets normally allowed by the spell are
+      lost).</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, creator must be a magus</p>
+  price: 8000
+  slot: hands
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

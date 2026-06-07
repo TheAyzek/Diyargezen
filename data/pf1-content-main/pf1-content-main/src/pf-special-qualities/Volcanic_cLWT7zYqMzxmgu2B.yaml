@@ -1,0 +1,32 @@
+_id: cLWT7zYqMzxmgu2B
+_key: '!items!cLWT7zYqMzxmgu2B'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Volcanic
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> strong evocation <strong>CL</strong>
+      14th</p><p><strong>Slot</strong> none; <strong>Price</strong> +2 bonus;
+      <p>This special ability can be placed only on heavy armor.
+      <em>Volcanic</em> armor is often stony in appearance and gives off a soft
+      red glow. Once per day, the wearer can command the armor to erupt, causing
+      a cloud of smoke and hot molten liquid to shoot forth from the armor in a
+      5-foot radius centered on the wearer. The smoke provides concealment, and
+      the liquid deals 1d6 points of fire damage and ignites flammable
+      substances. One round after the armor erupts, the smoke clears and the
+      liquid cools and solidifies, creating difficult terrain. The wearer of
+      this armor isn't affected by the smoke, fire damage, or difficult terrain
+      created by this
+      armor.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>incendiary cloud</em>; <strong>Price</strong> +2
+      bonus</p>
+  sources:
+    - id: PZO9455
+      pages: '26'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

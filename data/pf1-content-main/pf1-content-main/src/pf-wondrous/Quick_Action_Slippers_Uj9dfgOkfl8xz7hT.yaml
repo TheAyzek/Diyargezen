@@ -1,0 +1,28 @@
+_id: Uj9dfgOkfl8xz7hT
+_key: '!items!Uj9dfgOkfl8xz7hT'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Quick Action Slippers
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>The wearer of a pair of quick action slippers may stand up from prone
+      as a free action. Such movement still provokes attacks of opportunity as
+      normal. If the wearer has the stand up rogue talent, the act of standing
+      up from prone no longer provokes attacks of
+      opportunity.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, haste, creator must have the stand up rogue
+      talent</p>
+  price: 10000
+  slot: feet
+  sources:
+    - id: PZO9440
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

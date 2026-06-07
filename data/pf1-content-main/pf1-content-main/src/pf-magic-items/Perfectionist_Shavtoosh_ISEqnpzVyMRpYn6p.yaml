@@ -1,0 +1,67 @@
+_id: ISEqnpzVyMRpYn6p
+_key: '!items!ISEqnpzVyMRpYn6p'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/whip.png
+name: Perfectionist Shavtoosh
+system:
+  actions:
+    - _id: f8bagbn6boxgenau
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: perfectionistShavtoosh
+  aura:
+    custom: true
+    school: conjuration and divination
+  baseTypes:
+    - Whip
+  cl: 3
+  description:
+    value: >-
+      <p>This long piece of cloth is so fine that it can pass through a finger
+      ring. Delicately woven with multiple colors to spell out Iroran prayers,
+      it is usually worn as a shawl or belt, or wrapped around the chest and
+      shoulders-it does not use a magic item body slot. If wrapped around at
+      least one limb, it grants the wearer the Improved Unarmed Strike feat. It
+      may also be wielded as a +1 whip. The wearer can meditate on the shawl's
+      sacred mantras to use cure light wounds and know the enemy each once per
+      day.</p><p><strong>Base Item</strong>: 
+      whip</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, cure light wounds, know the enemy</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: leather
+  price: 4461
+  properties:
+    dis: true
+    fin: true
+    nnl: true
+    rch: true
+    trp: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9267
+  weaponGroups:
+    - flails
+  weight:
+    value: 2
+type: weapon

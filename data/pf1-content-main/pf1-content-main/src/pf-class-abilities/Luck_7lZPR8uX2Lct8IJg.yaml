@@ -1,0 +1,28 @@
+_id: 7lZPR8uX2Lct8IJg
+_key: '!items!7lZPR8uX2Lct8IJg'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Luck
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Calistria, Desna, Shelyn.</p><p><strong>Lucky Presence (minor)</strong>:
+      At 1st level, you can touch an ally and grant it a lucky presence. The
+      target of this luck can call upon it to roll any one ability check, attack
+      roll, saving throw, or skill check twice and take the better result. The
+      decision to use this ability must be made before the roll is made. Once
+      used, or once 1 minute passes, the effect ends.</p><p><strong>Unlucky
+      Enemy (major)</strong>: At 10th level, as an immediate action you can
+      force an adjacent opponent to reroll an attack, saving throw, or skill or
+      ability check it just attempted; it must take the lower of the two rolls.
+      You must declare this after the roll is made but before the result is
+      revealed.</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

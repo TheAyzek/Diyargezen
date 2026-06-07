@@ -1,0 +1,28 @@
+_id: bvlgM0UIn7qsFJPR
+_key: '!items!bvlgM0UIn7qsFJPR'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Plant
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Erastil, Gozreh.</p><p><strong>Creeping Vines (minor)</strong>: At 1st
+      level, upon hitting with a melee attack, as a swift action you cause the
+      creature you hit to sprout entangling vines that attempt to hold it in
+      place, entangling it for 1 round (Reflex negates).</p><p><strong>Battle
+      Companion (major)</strong>: At 10th level, you can summon a battle
+      companion. This ability functions as summon nature's ally IV, with a
+      duration of 1 minute. This ability can summon only one animal, regardless
+      of the list used, and the creature's type changes to plant instead of
+      animal. For every 2 levels beyond 10th, the level of the summon nature's
+      ally spell increases by 1, to a maximum of summon nature's ally IX at 20th
+      level.</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

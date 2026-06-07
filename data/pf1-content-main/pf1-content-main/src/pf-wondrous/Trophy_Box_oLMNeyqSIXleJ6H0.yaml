@@ -1,0 +1,39 @@
+_id: oLMNeyqSIXleJ6H0
+_key: '!items!oLMNeyqSIXleJ6H0'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Trophy Box
+system:
+  aura:
+    school: con
+  cl: 9
+  description:
+    value: >-
+      <p>A trophy box is a 1-foot-wide clay box used to trap and release beasts
+      too dangerous to confront directly. As soon as the trophy box is placed
+      and the first command word is spoken, the trap is rigged to trigger
+      whenever a Medium or larger animal comes within 20 feet of the box. The
+      target must succeed at a DC 17 Will save or be drawn into an
+      extradimensional space within the box, where it is held in a state of
+      suspended animation for up to 24 hours. A trophy box can hold only one
+      such victim at a time. The first command word can be used once per day. If
+      the second command word is spoken, any animal trapped within the trophy
+      box appears adjacent to the box either immediately or when a Tiny or
+      larger creature (other than the user) comes within 20 feet (user's
+      choice). A creature within 20 feet that speaks the password (set when the
+      box is first activated) does not trigger the box. If the user is within 50
+      feet of the released animal, she can control it for 1 minute after its
+      release as the dominate animal spell. Otherwise, the released animal
+      attacks the nearest creature for 1 minute, after which its normal
+      instincts take
+      over.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, alarm, dominate animal, secret chest</p>
+  price: 18000
+  sources:
+    - id: PZO9440
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

@@ -1,0 +1,81 @@
+_id: VV0Tz3XbLtplBZii
+_key: '!items!VV0Tz3XbLtplBZii'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Labyrinthine Wilds (Occult Ritual)
+system:
+  actions:
+    - _id: 9zft73iot2sl5tb0
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        description: disbelief (if interacted with)
+        type: will
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    focus: true
+    material: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> illusion (glamer); <strong>Level</strong>
+      5</p><p><strong>Casting Time</strong> 50
+      minutes</p><p><strong>Components</strong> V, S, M (the bones of local
+      wildlife carved into divining runes and daubed in specially treated
+      wildlife blood worth 2,000 gp), F (a compass using a highly sensitive
+      magnetic needle worth 10,000 gp), SC (at least 4 and up to
+      10)</p><p><strong>Skill Checks</strong> Knowledge (geography) DC 30, 2
+      successes; Survival DC 30, 3 successes</p><p><strong>Range</strong>
+      close</p><p><strong>Area</strong> a 2-square-mile region/character level
+      of the primary caster</p><p><strong>Duration</strong> permanent
+      (D)</p><p><strong>Saving Throw</strong> Will disbelief (if interacted
+      with); <strong>SR</strong> no</p><p><strong>Backlash</strong> The primary
+      caster gains 1 temporary negative level.</p><p><strong>Failure</strong>
+      All casters gain 2 temporary negative levels and are permanently blinded
+      (the blindness is a curse effect, and it can be removed with <em>remove
+      curse</em> and similar effects).</p><h3>Effect</h3><p>The primary caster
+      must prepare for this ritual by walking a path along the outer edge of the
+      desired area-an act that likely takes longer than the ritual casting time.
+      As the primary caster walks this path, she must periodically mark the area
+      with tiny runes. Once the primary caster returns to her starting point,
+      and assuming the area she outlined is less than 2 square miles per
+      character level she has, the actual casting of the ritual can begin. At
+      this point, all casters cross the threshold to enter the region and then
+      begin following a series of erratic paths, each using the material
+      component divining runes as they wander aimlessly. Completing this ritual
+      creates a powerful obfuscating effect, affecting creatures entering the
+      area surrounded by the primary caster's initial walk.</p><p>The area
+      within the border becomes an illusory replica of the local terrain that is
+      difficult to navigate. In order to successfully travel to a desired
+      location within the labyrinthine wilds, a creature must succeed at a DC 20
+      Intelligence check or a DC 30 Survival check. Success at this check allows
+      a creature to reach its destination as normal. Failure at this check
+      indicates the creature (and any allies it guides) spends 2d6 hours
+      traveling along the path, only to return the starting point with no memory
+      of its wanderings and fatigued from the journey.</p>
+  flags:
+    dictionary:
+      summary: Turn an area into a labyrinth
+  level: 5
+  materials:
+    focus: a compass using a highly sensitive magnetic needle worth 10,000 gp
+    gpValue: 2000
+    value: >-
+      the bones of local wildlife carved into divining runes and daubed in
+      specially treated wildlife blood worth 2,000 gp
+  school: ill
+  sources:
+    - id: PZO1140
+      pages: '238'
+  sr: false
+type: spell

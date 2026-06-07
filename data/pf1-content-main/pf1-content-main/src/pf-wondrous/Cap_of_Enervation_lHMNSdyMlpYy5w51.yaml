@@ -1,0 +1,29 @@
+_id: lHMNSdyMlpYy5w51
+_key: '!items!lHMNSdyMlpYy5w51'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Cap of Enervation
+system:
+  aura:
+    school: nec
+  cl: 5
+  description:
+    value: >-
+      <p>This floppy leather hat allows a boggard or other froglike creature to
+      drain the strength of those it strikes with its tongue attack. If the
+      wearer ends its turn with its tongue attached to or grappling another
+      creature, the grappled creature takes a -1 penalty to Strength, and the
+      wearer's tongue gains 5 temporary hit points. The penalty and temporary
+      hit points last for 1 minute. For each round that the target remains
+      attached, the Strength penalty increases by 1, the tongue gains an
+      additional 5 temporary hit points (maximum 10), and the duration
+      resets.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, ray of enfeeblement, vampiric touch</p>
+  price: 3500
+  slot: head
+  sources:
+    - id: PZO1130
+  subType: wondrous
+type: equipment

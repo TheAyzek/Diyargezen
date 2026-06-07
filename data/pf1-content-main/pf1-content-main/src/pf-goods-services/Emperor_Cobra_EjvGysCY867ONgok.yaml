@@ -1,0 +1,22 @@
+_id: EjvGysCY867ONgok
+_key: '!items!EjvGysCY867ONgok'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/green_21.jpg
+name: Emperor Cobra
+system:
+  description:
+    value: >-
+      <p><em>Description from "Other Animals" section of Animal Archive, page
+      15.</em></p><p>The following reared animals don't fit into one of the
+      aforementioned categories, but can still be purchased by sellers who have
+      access to them. Some may be purchased already combat-trained at the GM's
+      discretion, and typically cost an amount equal to 1-1/2 × the price of the
+      standard animal.</p>
+  equipped: false
+  price: 1600
+  sources:
+    - id: PZO9429
+      pages: '15'
+  subType: animal
+type: loot

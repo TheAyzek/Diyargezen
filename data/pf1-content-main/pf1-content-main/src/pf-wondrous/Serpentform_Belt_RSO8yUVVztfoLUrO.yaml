@@ -1,0 +1,62 @@
+_id: RSO8yUVVztfoLUrO
+_key: '!items!RSO8yUVVztfoLUrO'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/equipment/finger/ring-ouroboros-copper.webp
+name: Serpentform Belt
+system:
+  actions:
+    - _id: v7IhX0Og4eDFtuMN
+      activation:
+        type: standard
+        unchained:
+          cost: 12
+          type: action
+      description: >-
+        <p>While in this form, the wearer gains a +4 bonus on combat maneuver
+        checks to grapple or pin a foe. Once a foe is grappled, the wearer can
+        constrict the opponent with any successful subsequent grapple checks,
+        dealing an amount of bludgeoning damage equal to 1d8 + her Strength
+        modifier, if Medium (1d6 if Small). The snake form lasts until another
+        command is given, or for a maximum of 10 minutes, whichever is
+        shorter.</p>
+      duration:
+        dismiss: true
+        units: minute
+        value: '10'
+      name: Serpentform
+      range:
+        units: personal
+  aura:
+    school: trs
+  cl: 5
+  description:
+    unidentified: >-
+      <p>This snakeskin belt is crafted from the hides of brightly hued
+      serpents.</p>
+    value: >-
+      <p>This snakeskin belt is crafted from the hides of brightly hued
+      serpents.</p><h3>Effect</h3><p>When buckled, it immediately binds tightly
+      to the wearer's waist. Once per day, the wearer can command the
+      serpentform belt to transform her lower half into that of a serpent. While
+      in this form, the wearer gains a +4 bonus on combat maneuver checks to
+      grapple or pin a foe. Once a foe is grappled, the wearer can constrict the
+      opponent with any successful subsequent grapple checks, dealing an amount
+      of bludgeoning damage equal to 1d8 + her Strength modifier, if Medium (1d6
+      if Small). The snake form lasts until another command is given, or for a
+      maximum of 10 minutes, whichever is
+      shorter.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      @UUID[Compendium.pf1.spells.Item.tjdfluulncmqacc3]{beast shape I}
+      <strong>Cost</strong> 10,000 gp</p>
+  price: 20000
+  showInQuickbar: true
+  slot: belt
+  sources:
+    - id: PZO9455
+      pages: '29'
+  subType: wondrous
+  weight:
+    value: 0.5
+type: equipment

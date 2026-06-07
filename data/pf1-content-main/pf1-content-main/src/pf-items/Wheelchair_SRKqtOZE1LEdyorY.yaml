@@ -1,0 +1,27 @@
+_id: SRKqtOZE1LEdyorY
+_key: '!items!SRKqtOZE1LEdyorY'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/tech/wheel.webp
+name: Wheelchair
+system:
+  description:
+    value: >-
+      <p>This device is a chair, typically made from wood, with large wheels
+      attached on either side. A wheelchair can seat a single Medium or Small
+      creature. When seated in a wheelchair, you can propel yourself along a
+      reasonably flat surface at your base speed as a move action, so long as
+      you have at least one hand free. Moving twice in a round or taking the run
+      action requires you to have both hands free. Moving uphill or over rough
+      terrain halves the speed you move in a wheelchair, and certain terrain
+      (such as fallen logs) may be entirely impassable. A wheelchair has
+      hardness 5 and 30 hit points.</p>
+  equipped: false
+  price: 20
+  sources:
+    - id: PZO9481
+      pages: '13'
+  subType: adventuring
+  weight:
+    value: 25
+type: loot

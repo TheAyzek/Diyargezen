@@ -1,0 +1,32 @@
+_id: Tm6l01PPM6xYWgmO
+_key: '!items!Tm6l01PPM6xYWgmO'
+_stats:
+  coreVersion: '12.331'
+folder: 8BDX6ut8OIZ2xbb0
+img: systems/pf1/icons/feats/scorpion-style.jpg
+name: Scorpion Stance (EitR)
+system:
+  description:
+    value: >-
+      <p><em>You can perform an unarmed strike that greatly hampers your
+      target's movement.</em></p><p>Unarmed Combatant, Deft Maneuvers or
+      Powerful Maneuvers.</p><p><strong>Benefits</strong>: You can bull rush,
+      hamstring, overrun, or trip an opponent who is up to two size categories
+      larger than you. You are treated as one size category larger while
+      grappling.</p><p><strong>Special</strong>: By spending 1 point from his ki
+      pool, a monk can bull rush, hamstring, overrun, or trip an opponent who is
+      up to three size categories larger than him and is treated as two size
+      categories larger while grappling. This effect lasts for a number of
+      rounds equal to his Wisdom modifier.</p><p><strong>Normal</strong>: You
+      can only bull rush, hamstring, overrun, or trip&nbsp; an&nbsp;
+      opponent&nbsp; who&nbsp; is&nbsp; no&nbsp; more&nbsp; than&nbsp; one&nbsp;
+      size&nbsp; category&nbsp; larger than you.</p>
+  sources:
+    - date: 04-2021
+      publisher: https://mammothisland.itch.io/elephant
+      title: The Elephant in the Room
+  tags:
+    - Combat
+    - Unarmed
+    - Offensive
+type: feat

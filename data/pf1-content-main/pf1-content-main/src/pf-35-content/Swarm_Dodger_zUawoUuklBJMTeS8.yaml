@@ -1,0 +1,27 @@
+_id: zUawoUuklBJMTeS8
+_key: '!items!zUawoUuklBJMTeS8'
+_stats:
+  coreVersion: '12.331'
+folder: 35gUR2g8lMd073yK
+img: icons/environment/creatures/bug-worm-toothed-grey.webp
+name: Swarm Dodger
+system:
+  description:
+    value: >-
+      <p><em>You have learned tricks to avoid being engulfed by the swarms of
+      crawling horrors that frequently inhabit Osirion's lost tombs and desolate
+      wastes.</em></p><p><strong>Prerequisites</strong>: Dex 15,
+      evasion.</p><p><strong>Benefits</strong>: When a swarm attacks you by
+      ending its turn in your space, you may attempt a Reflex save to avoid
+      damage (DC equal to the swarm's distraction save DC + 10). If the save
+      succeeds, you also avoid any poison, blood drain, or similar effects that
+      normally result from damage by the swarm. If you have improved evasion, it
+      also applies to swarm damage.</p><p><strong>Note</strong>: You must still
+      make a Fortitude save to avoid distraction if you begin your turn in a
+      space occupied by a swarm.</p><p>Reduce all skill rank requirements by -3
+      and remember that the Hide skill is now Stealth and that the Search skill
+      is now Perception</p>
+  tags:
+    - General
+    - '3.5'
+type: feat

@@ -1,0 +1,45 @@
+_id: LSpvGksBybAplqUR
+_key: '!items!LSpvGksBybAplqUR'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/hellknight-leather.PNG
+name: Elven Vengeance
+system:
+  armor:
+    acp: 3
+    dex: 4
+    material:
+      base:
+        value: steel
+      normal:
+        value: mithral
+    value: 6
+  aura:
+    school: abj
+  baseTypes:
+    - Elven Chain
+  cl: 12
+  description:
+    value: >-
+      <p>This set of +2 elven chain grants its wearer a +4 resistance bonus on
+      saving throws against spells, spell-like abilities, and other effects
+      created by worshipers and minions of a specific demon lord, chosen when
+      the armor is created. Against such foes, the armor's enhancement bonus
+      increases to +4. The first suit of this armor was created quite recently
+      by Perelir for her close friend Malindil as part of the ranger's vengeful
+      crusade against Abraxas; since then, many other suits focused against
+      other powerful demons (particularly the nascent demon lord Treerazer) have
+      been crafted.</p><p><strong>Base Item</strong>: elven
+      chain</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, detect evil, resistance</p>
+  enh: 2
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 16150
+  sources:
+    - id: PZO1138
+  spellFailure: 20
+  weight:
+    value: 20
+type: equipment

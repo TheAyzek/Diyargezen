@@ -1,0 +1,29 @@
+_id: 0KfvfSAX8QxV28Pz
+_key: '!items!0KfvfSAX8QxV28Pz'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Golden Eagle Epaulets
+system:
+  aura:
+    school: abj
+  cl: 5
+  description:
+    value: >-
+      <p>These decorative golden braids allow the wearer to cast bless and
+      sanctuary each once per day. They also grant a +2 competence bonus on
+      Diplomacy checks and checks for one other skill, depending on what branch
+      of the Eagle Knights the epaulets are attuned to (Perception for the Steel
+      Falcons, Ride for the Golden Legion, Swim for the Gray Corsairs, or
+      Stealth for the Twilight
+      Talons).</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, bless, guidance, sanctuary</p>
+  price: 4500
+  slot: shoulders
+  sources:
+    - id: PZO1138
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

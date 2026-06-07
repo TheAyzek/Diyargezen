@@ -1,0 +1,42 @@
+_id: ObRuJg5gIV8IW6iv
+_key: '!items!ObRuJg5gIV8IW6iv'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/red_27.jpg
+name: Qlippoth Lord Traits
+system:
+  description:
+    value: >-
+      <p><div><p>A qlippoth lord is a powerful, unique qlippoth that once ruled
+      a region of the Abyss but has been forced to retreat to forgotten corners
+      of reality deep in the Abyss. At the dawn of creation, qlippoth lords were
+      powerful creatures, perhaps even on par with deities, but today they have
+      dwindled to a pale shadow of that power. Still, they remain potent dangers
+      to mortal life in the rare instances when they are encountered. All
+      qlippoth lords are chaotic evil qlippoth in the range of CR 21 to CR 25.
+      Qlippoth lords have a particular suite of traits (unless otherwise noted
+      in a creature&rsquo;s entry), as summarized here.</p><ul><li>A qlippoth
+      lord can grant spells to its worshipers as if it were a deity. A qlippoth
+      lord&rsquo;s domains are Chaotic and Evil, plus two other domains and four
+      subdomains relevant to its theme and interests. Like a deity, a qlippoth
+      lord has a favored weapon.</li><li>A qlippoth lord&rsquo;s natural
+      weapons, as well as any weapons it wields, are treated as chaotic, epic,
+      and evil for the purpose of overcoming damage
+      reduction.</li><li><a>Horrific Appearance (Su)</a> This ability functions
+      similarly to the typical qlippoth ability, save that a qlippoth
+      lord&rsquo;s horrific appearance creates physical effects and changes in
+      its victims. Despite these physical effects, a qlippoth lord&rsquo;s
+      horrific appearance remains a mind-affecting
+      effect.</li><li><a>Immunity</a> to cold, death effects, mind-affecting
+      effects, and poison.</li><li><a>Regeneration (Ex)</a> Lawful damage
+      interrupts a qlippoth lord&rsquo;s regeneration.</li><li><a>Resistance</a>
+      to acid 30, electricity 30, and fire 30.</li><li><a>Summon Qlippoth
+      (Sp)</a> Once per day as a standard action, a qlippoth lord can summon any
+      combination of qlippoth whose total combined CR is 20 or lower. This
+      otherwise works like the <a>summon</a> universal monster rule with a 100%
+      chance of success, and it counts as a 9th-level spell
+      effect.</li><li><a>Telepathy</a> 300 feet.</li></ul></div></p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

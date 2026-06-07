@@ -1362,84 +1362,6 @@ def calculate_mm_defense_limits(power_level: int) -> Dict[str, int]:
 
 
 # ============================================================================
-# VtM Hesaplamaları
-# ============================================================================
-
-def calculate_vtm_health(character: Dict[str, Any]) -> int:
-    """
-    VtM Health hesaplama
-    3 + Stamina
-    """
-    attributes = character.get("attributes", {})
-    physical = attributes.get("Physical", {})
-    stamina = physical.get("Stamina", 0)
-    return 3 + stamina
-
-
-def calculate_vtm_willpower(character: Dict[str, Any]) -> int:
-    """
-    VtM Willpower hesaplama
-    Resolve + Composure
-    """
-    attributes = character.get("attributes", {})
-    mental = attributes.get("Mental", {})
-    social = attributes.get("Social", {})
-    resolve = mental.get("Resolve", 0)
-    composure = social.get("Composure", 0)
-    return resolve + composure
-
-
-def calculate_vtm_dice_pool(character: Dict[str, Any], attribute: str, skill: str, discipline: Optional[str] = None) -> int:
-    """
-    VtM Dice Pool hesaplama
-    Attribute + Skill + Discipline (varsa)
-    """
-    attributes = character.get("attributes", {})
-    skills = character.get("skills", {})
-    
-    # Attribute değerini bul
-    attr_value = 0
-    for category, attrs in attributes.items():
-        if attribute in attrs:
-            attr_value = attrs[attribute]
-            break
-    
-    # Skill değerini bul
-    skill_value = 0
-    for category, skls in skills.items():
-        if skill in skls:
-            skill_value = skls[skill]
-            break
-    
-    # Discipline bonus (varsa)
-    discipline_bonus = 0
-    if discipline:
-        disciplines = character.get("disciplines", [])
-        if discipline in disciplines:
-            # Discipline seviyesi (basitleştirilmiş, varsayılan 1)
-            discipline_bonus = 1
-    
-    return attr_value + skill_value + discipline_bonus
-
-
-def calculate_vtm_hunger_dice(humanity: int) -> int:
-    """
-    VtM Hunger Dice hesaplama
-    Humanity seviyesine göre (basitleştirilmiş)
-    """
-    if humanity >= 8:
-        return 1
-    elif humanity >= 6:
-        return 2
-    elif humanity >= 4:
-        return 3
-    elif humanity >= 2:
-        return 4
-    else:
-        return 5
-
-
-# ============================================================================
 # Genel Hesaplama Fonksiyonları
 # ============================================================================
 
@@ -1533,19 +1455,6 @@ def calculate_all_mm_stats(character: Dict[str, Any]) -> Dict[str, Any]:
             for ability, score in abilities.items()
         },
         "defense_limits": calculate_mm_defense_limits(power_level)
-    }
-    
-    return stats
-
-
-def calculate_all_vtm_stats(character: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Tüm VtM istatistiklerini hesapla
-    """
-    stats = {
-        "health": calculate_vtm_health(character),
-        "willpower": calculate_vtm_willpower(character),
-        "hunger_dice": calculate_vtm_hunger_dice(character.get("humanity", 7))
     }
     
     return stats
@@ -1754,12 +1663,6 @@ _DND_ABILITY_ALIASES: Dict[str, str] = {
 
 _PF1E_ABILITY_ALIASES = _DND_ABILITY_ALIASES  # PF1e ve D&D 5e ayni isimleri kullanir
 
-_VTM_ATTRIBUTE_ALIASES: Dict[str, str] = {
-    "strength": "Strength", "dexterity": "Dexterity", "stamina": "Stamina",
-    "charisma": "Charisma", "manipulation": "Manipulation", "composure": "Composure",
-    "intelligence": "Intelligence", "wits": "Wits", "resolve": "Resolve",
-}
-
 _MM3E_ABILITY_ALIASES: Dict[str, str] = {
     "str": "Strength", "strength": "Strength",
     "sta": "Stamina", "stamina": "Stamina",
@@ -1774,7 +1677,6 @@ _MM3E_ABILITY_ALIASES: Dict[str, str] = {
 _ALIAS_MAP: Dict[str, Dict[str, str]] = {
     "dnd5e":        _DND_ABILITY_ALIASES,
     "pathfinder1e": _PF1E_ABILITY_ALIASES,
-    "vtm5e":        _VTM_ATTRIBUTE_ALIASES,
     "mm3e":         _MM3E_ABILITY_ALIASES,
 }
 
@@ -1881,27 +1783,6 @@ def _apply_set_value(char: Dict[str, Any], target: str, value: Any, system: str)
     char[target] = value
 
 
-# ---- VtM 5e ozel handler'lar ---------------------------------------------
-
-def _apply_add_dot(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
-    """VtM 5e nokta (dot) sistemi icin deger artir."""
-    dots = char.setdefault("dots", {})
-    dots[target] = dots.get(target, 0) + int(value)
-
-
-def _apply_discipline_access(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
-    """VtM 5e disiplin erisimi ekle."""
-    discs = char.setdefault("discipline_access", [])
-    if target not in discs:
-        discs.append(target)
-
-
-def _apply_pool_bonus(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
-    """VtM 5e zar havuzu bonusu."""
-    bonuses = char.setdefault("pool_bonuses", {})
-    bonuses[target] = bonuses.get(target, 0) + int(value)
-
-
 # ---- M&M 3e ozel handler'lar ---------------------------------------------
 
 def _apply_defense_bonus(char: Dict[str, Any], target: str, value: Any, system: str) -> None:
@@ -1954,10 +1835,6 @@ _EFFECT_HANDLERS = {
     "disadvantage":      _apply_disadvantage,
     "grant_trait":       _apply_grant_trait,
     "set_value":         _apply_set_value,
-    # VtM 5e
-    "add_dot":           _apply_add_dot,
-    "discipline_access": _apply_discipline_access,
-    "pool_bonus":        _apply_pool_bonus,
     # M&M 3e
     "defense_bonus":     _apply_defense_bonus,
     "power_rank":        _apply_power_rank,
@@ -1983,7 +1860,7 @@ def apply_effects(
     Args:
         character: Karakter dict'i (in-place degistirilir).
         effects: EffectModel listesi veya dict listesi.
-        system: Sistem anahtari ('dnd5e', 'pathfinder1e', 'vtm5e', 'mm3e').
+        system: Sistem anahtari ('dnd5e', 'pathfinder1e', 'mm3e').
         ignore_conditions: True ise kosullu efektler de uygulanir.
 
     Returns:
@@ -2243,73 +2120,6 @@ def parse_pf1e_effect(text: str, source: str = "") -> Optional[Dict[str, Any]]:
     return None
 
 
-def parse_vtm5e_effect(text: str, source: str = "") -> Optional[Dict[str, Any]]:
-    """
-    VtM 5e metin ifadesini EffectModel dict'ine cevir.
-
-    Desteklenen kaliplar:
-      "Gain 1 dot in Potence"      -> add_dot, potence, 1
-      "+2 dots in Celerity"        -> add_dot, celerity, 2
-      "Access to Dominate"         -> discipline_access, dominate, True
-      "+1 to Strength"             -> add_dot, strength, 1
-      "+2 dice to Intimidation"    -> pool_bonus, intimidation, 2
-      "Compulsion: Rage"           -> grant_trait, compulsion, "Rage"
-    """
-    if not text:
-        return None
-    t = text.strip()
-
-    m = _re.match(
-        r"(?:Gain\s+)?[+]?(\d+)\s+dots?\s+(?:in|of|to)\s+(\w[\w\s]*)",
-        t, _re.IGNORECASE,
-    )
-    if m:
-        return {"target": m.group(2).strip().lower(), "effect_type": "add_dot",
-                "value": int(m.group(1)), "source": source}
-
-    m = _re.match(
-        r"(?:Access|Gain\s+access)\s+to\s+(\w[\w\s]*)",
-        t, _re.IGNORECASE,
-    )
-    if m:
-        return {"target": m.group(1).strip().lower(), "effect_type": "discipline_access",
-                "value": True, "source": source}
-
-    m = _re.match(
-        r"[+](\d+)\s+(?:to\s+)?(Strength|Dexterity|Stamina|Charisma|Manipulation|Composure|Intelligence|Wits|Resolve)",
-        t, _re.IGNORECASE,
-    )
-    if m:
-        return {"target": m.group(2).strip().lower(), "effect_type": "add_dot",
-                "value": int(m.group(1)), "source": source}
-
-    m = _re.match(
-        r"[+](\d+)\s+(?:dice?\s+)?(?:to|on|for)\s+(\w[\w\s]*?)(?:\s+(?:checks?|rolls?|pool))?$",
-        t, _re.IGNORECASE,
-    )
-    if m:
-        return {"target": m.group(2).strip().lower(), "effect_type": "pool_bonus",
-                "value": int(m.group(1)), "source": source}
-
-    m = _re.match(
-        r"Compulsion[:\s]+(.+)",
-        t, _re.IGNORECASE,
-    )
-    if m:
-        return {"target": "compulsion", "effect_type": "grant_trait",
-                "value": m.group(1).strip(), "source": source}
-
-    m = _re.match(
-        r"Bane[:\s]+(.+)",
-        t, _re.IGNORECASE,
-    )
-    if m:
-        return {"target": "bane", "effect_type": "grant_trait",
-                "value": m.group(1).strip(), "source": source}
-
-    return None
-
-
 def parse_mm3e_effect(text: str, source: str = "") -> Optional[Dict[str, Any]]:
     """
     Mutants & Masterminds 3e metin ifadesini EffectModel dict'ine cevir.
@@ -2388,7 +2198,6 @@ def parse_effect(text: str, system: str, source: str = "") -> Optional[Dict[str,
     _PARSERS = {
         "dnd5e":        parse_dnd5e_effect,
         "pathfinder1e": parse_pf1e_effect,
-        "vtm5e":        parse_vtm5e_effect,
         "mm3e":         parse_mm3e_effect,
     }
     parser = _PARSERS.get(system)

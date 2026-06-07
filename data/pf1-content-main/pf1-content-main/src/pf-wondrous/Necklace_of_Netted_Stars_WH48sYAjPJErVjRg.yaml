@@ -1,0 +1,40 @@
+_id: WH48sYAjPJErVjRg
+_key: '!items!WH48sYAjPJErVjRg'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Necklace of Netted Stars
+system:
+  aura:
+    custom: true
+    school: illusion and transmutation
+  cl: 12
+  description:
+    value: >-
+      <p>This marvelous mithral necklace forms a broad, draping lacework of
+      threadlike chains set with a multitude of tiny jewels. Seven of these
+      jewels are larger than the rest. While wearing a necklace of netted stars,
+      the wearer can create dancing lights at will and wandering star motes (see
+      Advanced Player's Guide) once per day. In addition, each of the seven
+      jewels of the necklace can recall a previously cast 1st-level spell, as a
+      pearl of power. Once per day, the wearer may use the necklace to catch a
+      spell targeted at him, as if readying an action to counterspell using
+      dispel magic, with a bonus on the check equal to 12 + the number of jewels
+      not yet used to recall spells that day. If all jewels have been used, this
+      ability cannot be used that day. The level of the spell to be countered
+      must be less than or equal to the number of unused jewels. If the
+      counterspell succeeds, the spell is negated and the wearer can use its
+      magical energy to recall a previously cast spell of the same level or
+      lower as an immediate action. Whether or not the attempt succeeds, this
+      action exhausts the power of all of the necklace's jewels for that
+      day.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, dancing lights, dispel magic, wandering star motes, creator
+      must be able to cast 7th-level spells</p>
+  price: 42000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

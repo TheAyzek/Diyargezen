@@ -1,0 +1,30 @@
+_id: EGJFVIbN2Gbof5T5
+_key: '!items!EGJFVIbN2Gbof5T5'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Hand of Abendego
+system:
+  aura:
+    school: evo
+  cl: 9
+  description:
+    value: >-
+      <p>This nearly perfect pearl replica of a hand is attached to a gold chain
+      and can be worn as an amulet. Once per day, the wearer can animate the
+      hand as an immediate action. The hand attempts to grapple an adjacent foe
+      of Medium size or smaller, using the wearer's CMB. If it succeeds, the
+      hand deals 1d4 non-lethal damage every round it maintains a grapple. If
+      the grapple attempt fails or the victim escapes the grapple, the hand
+      ceases its activity. If any creature within reach of the amulet (including
+      the wearer) attempts to steal anything, the hand activates and attempts to
+      choke the creature. If the amulet is not currently worn, it uses the
+      victim's own CMB and Strength to determine the attack bonus and
+      damage.<h3>Requirements</h3><p>Craft Wondrous Item, interposing hand</p>
+  price: 20258
+  slot: neck
+  sources:
+    - id: PZO9027
+  subType: wondrous
+type: equipment

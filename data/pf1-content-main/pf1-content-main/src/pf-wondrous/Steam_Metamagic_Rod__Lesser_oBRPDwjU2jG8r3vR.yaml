@@ -1,0 +1,25 @@
+_id: oBRPDwjU2jG8r3vR
+_key: '!items!oBRPDwjU2jG8r3vR'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Steam Metamagic Rod, Lesser
+system:
+  aura:
+    custom: true
+    school: none
+  cl: 17
+  description:
+    value: >-
+      <p>The wielder of this rod can cast fire spells effortlessly underwater up
+      to three times per day as though using the Steam Spell
+      feat.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Rod,
+      freedom of movement</p>
+  price: 1500
+  sources:
+    - id: PZO92102
+  subType: other
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,32 @@
+_id: wqBKkAxnxwFnSOEL
+_key: '!items!wqBKkAxnxwFnSOEL'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/light_05.jpg
+name: Consecrated weapon
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> +150 gp; <strong>Weight</strong> 2 lbs.<br
+      /><strong>Category</strong> Channel Foci</p><p><strong>Deity</strong>
+      Any</p><p>Consecrated weapons may be of any type-swords, axes, masterwork,
+      mithral, and even magical-and function appropriately. When activated, the
+      cleric charges the weapon with positive or negative energy (as
+      appropriate) so it deals extra damage when it hits a target. This
+      functions like the Channel Smite feat, except the additional damage is
+      equal to half the cleric's channel energy damage (the target makes a Will
+      save as normal, based on the cleric's channel energy DC). The weapon
+      remains charged with this energy until it successfully strikes a creature
+      or 24 hours pass, whichever comes first. Creatures other than the cleric
+      are able to use the charged weapon and this ability.</p>
+  equipped: false
+  price: 150
+  sources:
+    - id: PZO9410
+      pages: '24'
+  subType: gear
+  tags:
+    - Channel Foci
+  weight:
+    value: 2
+type: loot

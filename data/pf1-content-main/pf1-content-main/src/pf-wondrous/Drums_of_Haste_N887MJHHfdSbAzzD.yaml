@@ -1,0 +1,26 @@
+_id: N887MJHHfdSbAzzD
+_key: '!items!N887MJHHfdSbAzzD'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Drums of Haste
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>This set of kettle drums is carried on a shoulder strap and played
+      one-handed using a single two-sided mallet. By making a DC 20 Perform
+      (percussion) check, the bearer can grant the effects of a haste spell on
+      up to 5 creatures. The drums can affect up to 25 creatures per
+      day.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, haste</p>
+  price: 45000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

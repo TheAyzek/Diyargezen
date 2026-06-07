@@ -1,0 +1,39 @@
+_id: 81IOxJPcLqhxdvGi
+_key: '!journal!81IOxJPcLqhxdvGi'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: H8yLkZMDQ53BcEsK
+name: 2.04. Movement, Position, and Distance
+pages:
+  - _id: n38kLpDu67jOKvMD
+    _key: '!journal.pages!81IOxJPcLqhxdvGi.n38kLpDu67jOKvMD'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.04. Movement, Position, and Distance
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p><strong>@Compendium[pf-content.pf-rules.81IOxJPcLqhxdvGi]{2.04.
+        Movement, Position, and
+        Distance}</strong></p><ul><li>@Compendium[pf-content.pf-rules.xXq8OELXwLhAwOtV]{2.04.1.
+        Tactical
+        Movement}</li><li>@Compendium[pf-content.pf-rules.J8tSGDC3peyzFYiA]{2.04.2.
+        Measuring
+        Distance}</li><li>@Compendium[pf-content.pf-rules.TH46eU2rw2eDReNM]{2.04.3.
+        Moving Through a
+        Square}</li><li>@Compendium[pf-content.pf-rules.SZsIKZQOiMhMKE5c]{2.04.4.
+        Terrain and
+        Obstacles}</li><li>@Compendium[pf-content.pf-rules.l4flosvpm7JUQjHC]{2.04.5.
+        Special Movement Rules}</li></ul><hr
+        /><p>@Source[PZO1110;pages=192]</p><p>Miniatures are on the 30mm scale—a
+        miniature of a 6-foot-tall man is approximately 30mm tall. A square on
+        the battle grid is 1 inch across, representing a 5-foot-by-5-foot
+        area.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

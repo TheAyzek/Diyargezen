@@ -1,0 +1,22 @@
+_id: 974pJ0HbeCxWXHSJ
+_key: '!items!974pJ0HbeCxWXHSJ'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/bags/pouch-leather-green.webp
+name: War Spirit Pouch
+system:
+  description:
+    value: >-
+      <p>This tiny bundle of sacred herbs and bones supposedly attracts the
+      attention of helpful battle-spirits. By crushing the pouch as a standard
+      action, an orc (or a creature from a suitably warlike culture) gains 1d4+1
+      temporary hit points. These temporary hit points go away after 10 minutes.
+      A creature can only benefit from 1 spirit pouch at a time. Once used, the
+      spirit pouch is destroyed.</p><h2>Construction</h2><p><strong>Craft
+      (Alchemy)</strong> DC 20</p>
+  price: 50
+  sources:
+    - id: PZO1121
+      pages: '141'
+  subType: misc
+type: consumable

@@ -1,0 +1,38 @@
+_id: hkRgrpeIm00V2BtT
+_key: '!items!hkRgrpeIm00V2BtT'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/leather/leather-scrap-brown.webp
+name: Remora Pad
+system:
+  description:
+    value: >-
+      <p>This foot-long strip of double-sided alchemical adhesive is sealed with
+      waxed paper. When unsealed (this requires a move action) and pressed
+      between two surfaces (this also requires a move action), a remora pad
+      creates a firm and waterproof bond between two creatures or objects for up
+      to 24 hours. If two creatures connect themselves in this way, both gain
+      the grappled condition. However, if they are different size categories,
+      only the smaller creature gains this condition.</p><p>This bond survives
+      light buffeting and movement, such as that created by incoming tides or by
+      one attached surface dragging the other along underwater. Sharp tugs can
+      break the seal fairly easily, and a willingly attached creature can pull
+      free of the pad with a successful DC 5 Strength check as a standard action
+      (DC 10 as a swift action). This weakness makes remora pads fairly
+      ineffective when attempting to grapple a target, though a grappling
+      creature that sticks itself to a target with a remora pad receives a +6
+      circumstance bonus on grapple combat maneuver checks to sustain the
+      grapple in subsequent rounds (instead of the normal +5 bonus).</p><p>A
+      remora pad's bond is strong enough to support 200 pounds of material, so
+      bonding two heavier objects together requires multiple pads. Underwater
+      travelers often use remora pads to attach themselves to trained aquatic
+      animals for long journeys.</p>
+  equipped: false
+  price: 5
+  sources:
+    - id: PZO9489
+      pages: '6'
+  subType: adventuring
+  weight:
+    value: 0.5
+type: loot

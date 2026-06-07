@@ -1,0 +1,54 @@
+_id: oyi4ByFG6yVswC0m
+_key: '!journal!oyi4ByFG6yVswC0m'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: JGDhAq9vDimAEQj3
+name: 2.03.7. Temporary Hit Points
+pages:
+  - _id: EwWm9AjLys60TRuu
+    _key: '!journal.pages!oyi4ByFG6yVswC0m.EwWm9AjLys60TRuu'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.03.7. Temporary Hit Points
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.UEmSoktVjUEI46C2]{2.03.
+        Injury and
+        Death}</p><ul><li>@Compendium[pf-content.pf-rules.Z0gVQW6Hx4Hb4zps]{2.03.1.
+        Loss of Hit
+        Points}</li><li>@Compendium[pf-content.pf-rules.PN9yC36RUizvrAUk]{2.03.2.
+        Disabled (0 Hit
+        Points)}</li><li>@Compendium[pf-content.pf-rules.MgPati0XYUli8q2G]{2.03.3.
+        Dying (Negative Hit
+        Points)}</li><li>@Compendium[pf-content.pf-rules.ZKXUIJptoysFa5JI]{2.03.4.
+        Dead}</li><li>@Compendium[pf-content.pf-rules.nEPpg39gAOwIxDki]{2.03.5.
+        Stable Characters and
+        Recovery}</li><li>@Compendium[pf-content.pf-rules.JWPzEMuF9fPOLqCF]{2.03.6.
+        Healing}</li><li><strong>@Compendium[pf-content.pf-rules.oyi4ByFG6yVswC0m]{2.03.7.
+        Temporary Hit
+        Points}</strong></li><li>@Compendium[pf-content.pf-rules.Hzi8GbT19bP7mdSP]{2.03.8.
+        Nonlethal Damage}</li></ul><hr
+        /><p>@Source[PZO1110;pages=191]</p><p>Certain effects give a character
+        temporary hit points. These hit points are in addition to the
+        character’s current hit point total and any damage taken by the
+        character is subtracted from these hit points first. Any damage in
+        excess of a character’s temporary hit points is applied to his current
+        hit points as normal. If the effect that grants the temporary hit points
+        ends or is dispelled, any remaining temporary hit points go away. The
+        damage they sustained is not transferred to the character’s current hit
+        points.</p><p>When temporary hit points are lost, they cannot be
+        restored as real hit points can be, even by magic.</p><h2>Increases in
+        Constitution Score and Current Hit Points</h2><p>An increase in a
+        character’s Constitution score, even a temporary one, can give her more
+        hit points (an effective hit point increase), but these are not
+        temporary hit points. They can be restored, and they are not lost first
+        as temporary hit points are.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

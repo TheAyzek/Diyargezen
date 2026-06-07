@@ -1,0 +1,25 @@
+_id: B41hvnD4pp95cITN
+_key: '!items!B41hvnD4pp95cITN'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Fire
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Asmodeus, Sarenrae.</p><p><strong>Fire Strike (minor)</strong>: At 1st
+      level, you can touch one weapon and enhance it with the grandeur of fire.
+      For 1 minute, this weapon glows red-hot and deals an additional 1d4 points
+      of fire damage with each hit. This additional damage doesn't stack with
+      the additional damage from the flaming or flaming burst weapon special
+      abilities.</p><p><strong>Armor of Flame (major)</strong>: At 10th level,
+      you can touch an ally to wreath it in flames. This works as fire shield
+      (warm shield only) with a duration of 1 minute.</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

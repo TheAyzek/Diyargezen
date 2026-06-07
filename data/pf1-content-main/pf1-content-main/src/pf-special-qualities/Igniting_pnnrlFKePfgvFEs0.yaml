@@ -1,0 +1,28 @@
+_id: pnnrlFKePfgvFEs0
+_key: '!items!pnnrlFKePfgvFEs0'
+_stats:
+  coreVersion: '12.343'
+folder: AqjqWFWInPuTJU1V
+img: icons/skills/melee/strike-polearm-light-orange.webp
+name: Igniting
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> strong evocation <strong>CL</strong>
+      12th</p><p><strong>Slot</strong> weapon quality; <strong>Price</strong> +2
+      bonus;</p><p>An <em>igniting </em>weapon functions as a <em>flaming
+      </em>weapon that also causes the target to catch fire (<em>Core Rulebook
+      </em>444) upon striking it with a successful critical hit. The target does
+      not get a saving throw to avoid catching fire, but can make a save each
+      round on its turn to put out the fire. The <em>flaming </em>ability must
+      be active for the weapon to set enemies on
+      fire.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, <em>flame blade</em>, <em>flame strike</em>, or
+      <em>fireball</em>; <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1123
+      pages: '143'
+  subType: misc
+  tags:
+    - Universal Weapon Qualities
+type: feat

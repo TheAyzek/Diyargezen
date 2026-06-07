@@ -1,0 +1,41 @@
+_id: ukz9B0kwM0KtLvRf
+_key: '!journal!ukz9B0kwM0KtLvRf'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.3.2. Armor for Unusual Creatures
+pages:
+  - _id: ZIA8AHLkt0fyZsje
+    _key: '!journal.pages!ukz9B0kwM0KtLvRf.ZIA8AHLkt0fyZsje'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.3.2. Armor for Unusual Creatures
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li><p>@Compendium[pf-content.pf-rules.IcxBfkvPZ6hdWRuV]{6.0.3.
+        Armor}</p><ul><li>@Compendium[pf-content.pf-rules.DWU53DrpWkZoEyfe]{6.0.3.1.
+        Masterwork
+        Armor}</li><li><strong>@Compendium[pf-content.pf-rules.ukz9B0kwM0KtLvRf]{6.0.3.2.
+        Armor for Unusual
+        Creatures}</strong></li><li>@Compendium[pf-content.pf-rules.IHv2CuhMxrDUDNuf]{6.0.3.3.
+        Getting Into and Out of Armor}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=153]</p><p>Armor and shields for unusually
+        big creatures, unusually little creatures, and nonhumanoid creatures
+        (such as horses) have different costs and weights from those given on
+        Table 6–6. Refer to the appropriate line on Table 6–8 and apply the
+        multipliers to cost and weight for the armor type in
+        question.</p><h2>Table 6-8: Armor for Unusual
+        Creatures</h2><table><thead><tr><td></td><td>Humanoid</td><td>Nonhumanoid</td></tr><tr><td>Size</td><td>Cost</td><td>Weight</td><td>Cost</td><td>Weight</td></tr></thead><tbody><tr><td>Tiny
+        or
+        smaller*</td><td>×1/2</td><td>×1/10</td><td>×1</td><td>×1/10</td></tr><tr><td>Small</td><td>×1</td><td>×1/2</td><td>×2</td><td>×1/2</td></tr><tr><td>Medium</td><td>×1</td><td>×1</td><td>×2</td><td>×1</td></tr><tr><td>Large</td><td>×2</td><td>×2</td><td>×4</td><td>×2</td></tr><tr><td>Huge</td><td>×4</td><td>×5</td><td>×8</td><td>×5</td></tr><tr><td>Gargantuan</td><td>×8</td><td>×8</td><td>×16</td><td>×8</td></tr><tr><td>Colossal</td><td>×16</td><td>×12</td><td>×32</td><td>×12</td></tr></tbody></table><p>*Divide
+        armor bonus by 2.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

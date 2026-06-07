@@ -1,0 +1,30 @@
+_id: 6P62VZcA2Q2Vk1Lo
+_key: '!items!6P62VZcA2Q2Vk1Lo'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/biological/organ-brain-pink.webp
+name: Shattermind
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> disease (contact); <strong>Save</strong>
+      Fortitude DC 17;</p><p><strong>Onset</strong> 1
+      day;&nbsp;<strong>Frequency</strong>
+      1/day</p><p><strong>Effect</strong>&nbsp;1d4 Wis (cannot reduce Wisdom
+      below 1); on any day the victim fails her saving throw, she suffers the
+      effects of a type of insanity.</p><p>Unlike normal insanity, on any day
+      she makes a successful saving throw (using the DC for shattermind, not her
+      form of insanity), she regains her sanity for that day. A given variety of
+      shattermind spreads the same form of insanity to all of its
+      victims.</p><p><strong>Cure</strong> 2 consecutive saves</p><hr
+      /><p>Shattermind refers to a group of related infectious mental patterns
+      spread by skin-to-skin contact between infected victims. Most forms of
+      shattermind affect only humanoids and monstrous humanoids. Each form of
+      shattermind spreads a different form of insanity to its
+      victims.</p><p><a>Restoration</a>&nbsp;allows a new saving throw but does
+      not cure the insanity.</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

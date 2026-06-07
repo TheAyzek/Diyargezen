@@ -1,0 +1,38 @@
+_id: UmpLag06bYxL4aUl
+_key: '!journal!UmpLag06bYxL4aUl'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: Xs7WZeDzdO8Jg0jZ
+name: 2.10.03.3. Infestations
+pages:
+  - _id: pag0lXBrgAV7uvg7
+    _key: '!journal.pages!UmpLag06bYxL4aUl.pag0lXBrgAV7uvg7'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.10.03.3. Infestations
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.gzu4LYBcxAEzhEnd]{2.10.
+        Special
+        Abilities}</p><p>@Compendium[pf-content.pf-rules.xpY9oe1ZnDpzXtEK]{2.10.03.
+        Afflictions}</p><ul><li>@Compendium[pf-content.pf-rules.olc8NbzREqhR9ETZ]{2.10.03.1.
+        Curses}</li><li>@Compendium[pf-content.pf-rules.eMDcLEOn4gft6C5s]{2.10.03.2.
+        Diseases}</li><li><strong>@Compendium[pf-content.pf-rules.UmpLag06bYxL4aUl]{2.10.03.3.
+        Infestations}</strong></li><li>@Compendium[pf-content.pf-rules.kEWYsWvNyhPgjbC6]{2.10.03.4.
+        Poison}</li></ul><hr /><p>@Source[PZO1114;pages=245]</p><p>Parasites
+        such as ear seekers or rot grubs cause infestations, a type of
+        affliction similar to diseases. Infestations can only be cured through
+        specific means; no matter how many saving throws are made, the
+        infestation continues to afflict the target. While a remove disease
+        spell (or similar effect) instantly halts an infestation, immunity to
+        disease offers no protection, as the infestation itself is caused by
+        parasites.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,58 @@
+_id: kE5JlmUmSaZ8bvtf
+_key: '!items!kE5JlmUmSaZ8bvtf'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/minor-blue.jpg
+name: Liquid blade
+system:
+  actions:
+    - _id: hly2m5kfd6twpavz
+      ability:
+        critMult: 1
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - piercing
+          - {}
+      img: systems/pf1/icons/items/potions/minor-blue.jpg
+      name: Use
+      notes:
+        effect:
+          - fragile, see text
+      range:
+        units: ft
+        value: '0'
+      tag: liquidBlade
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Weapons</p><p>You can empty the
+      contents of this palm-sized metal tube with a quick flick of your wrist (a
+      move action), causing the bubbling transparent liquid within to instantly
+      solidify into a jagged crystalline blade. By holding the tube, you can
+      then use the crystalline blade as if it were a Medium short sword with the
+      fragile quality (see page 22). The blade lasts for 10 minutes, after which
+      it evaporates, leaving nothing behind but the tube. You can add one dose
+      of poison to the liquid in the bottle, which acts like applying a dose of
+      poison to a weapon except it is a fullround action; when the liquid turns
+      into a solid blade, the weapon includes one application of that poison.
+      When the blade evaporates, the poison does so as well. Crafting a liquid
+      blade is a DC 15 Craft (alchemy)
+      check.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      15</p>
+  price: 40
+  sources:
+    - id: PZO1123
+      pages: '107'
+  subType: misc
+  tags:
+    - Alchemical Weapons
+  weight:
+    value: 2
+type: consumable

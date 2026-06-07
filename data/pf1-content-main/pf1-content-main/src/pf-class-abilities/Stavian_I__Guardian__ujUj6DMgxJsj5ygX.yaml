@@ -1,0 +1,42 @@
+_id: ujUj6DMgxJsj5ygX
+_key: '!items!ujUj6DMgxJsj5ygX'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_37.jpg
+name: Stavian I (Guardian)
+system:
+  associations:
+    classes:
+      - Medium
+  description:
+    value: >-
+      <p><strong>Medium Legendary Spirit</strong></p><p>The Bounty Prince was
+      blessed with many advantages: great charm, noble leadership, and adamant
+      will. His stalwart defense of Taldor against the perceived incursions and
+      offenses of the Sarenites-starting with those whose divinations sparked
+      strife between Stavian and his own brothers-showed his resolve for
+      protecting the nation against the might of divine magic in enemy hands.
+      While some have questioned the necessity of the Great Purge, none can
+      argue the effectiveness with which Stavian pursued his enemies. His spirit
+      has since been called by any number of Taldans who oppose the divine,
+      whether fighting worshipers of evil deities or continuing Stavian's
+      crusade against Qadiran Sarenites.</p><p><strong>Gaining Favor</strong>:
+      Stavian tolerates no ambivalence toward or acceptance of an enemy's faith.
+      To gain Stavian's favor, you must destroy an altar or other permanent
+      fixture dedicated to a deity or religion whose followers have wronged you.
+      You must then completely submerge yourself in purifying waters for as long
+      as you can; this requires a Constitution check. If you succeed, Stavian
+      answers your call.</p><p><strong>Taboos</strong>: If you accept a taboo
+      while channeling Stavian, you must relentlessly oppose your enemies and
+      never consort with them.</p><p><strong>Magical Purge (Intermediate,
+      Su)</strong>: Stavian grants you protection against the magical power of
+      your enemies. You gain spell resistance equal to 11 + your medium
+      level.</p><p><strong>Confiscate Healing (Greater, Su)</strong>: As an
+      immediate action, when a creature within 30 feet would benefit from
+      magical healing, you can allow Stavian to gain 1 point of influence over
+      you to redirect the benefits of that healing from the original target to
+      yourself.</p>
+  subType: classFeat
+  tags:
+    - Medium Legendary Spirit
+type: feat

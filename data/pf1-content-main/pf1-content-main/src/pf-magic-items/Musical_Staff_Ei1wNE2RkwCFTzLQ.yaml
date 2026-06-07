@@ -1,0 +1,30 @@
+_id: Ei1wNE2RkwCFTzLQ
+_key: '!items!Ei1wNE2RkwCFTzLQ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Musical Staff
+system:
+  aura:
+    school: evo
+  cl: 8
+  description:
+    value: >-
+      <p>This staff is made from high-quality wood and festooned with brass rods
+      and keys, looking almost like an instrument. The staff allows use of the
+      following spells: • Ghost sound (1 charge)  • Piercing shriek (1 charge;
+      Ultimate Magic)  • Sculpt sound (2 charges)  • Wall of sound (2 charges;
+      Ultimate Magic)  In addition, as a swift action, the wielder of the
+      musical staff can cause it to transform into a string or wind instrument.
+      Any Perform skill checks made with the musical staff gain a +5 competence
+      bonus. The staff can still be used to cast spells while it is an
+      instrument, and it can revert back to a staff as a free
+      action.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, ghost sound, piercing shriek, sculpt sound, wall of sound</p>
+  price: 32000
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

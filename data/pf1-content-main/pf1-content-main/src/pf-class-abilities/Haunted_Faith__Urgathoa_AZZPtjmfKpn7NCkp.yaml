@@ -1,0 +1,41 @@
+_id: AZZPtjmfKpn7NCkp
+_key: '!items!AZZPtjmfKpn7NCkp'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: 'Haunted Faith: Urgathoa'
+system:
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p><strong>Associated Deity</strong>: Urgathoa</p><p><strong>Associated
+      Domain</strong>:
+      @UUID[Compendium.pf1.class-abilities.Item.pEeqEUa2kznrhmzM]{Death}</p><p><em>A
+      risen spirit is akin to a plant that must be tended. Such are the
+      teachings of Urgathoa, the goddess who is believed to be the first undead
+      creature. Unlike many of her deific counterparts, Urgathoa champions the
+      shepherding and protection of haunts and possessing spirits, even to the
+      danger and detriment of her own followers. The faithful of the Pallid
+      Princess believe that by prolonging the torment and tortured existence of
+      a spirit, they create something akin to a beautiful piece of artwork. In a
+      similar manner, servants of Urgathoa view the possession of a mortal body
+      by a deceased spirit as a blessing.</em></p><p><strong>Replacement
+      Powers</strong>: A cleric (or any other character capable of selecting a
+      domain) who worships Urgathoa can choose to gain the variant domain power
+      upon first gaining the domain in question, but the choice to replace the
+      domain power must be made immediately upon gaining access to that domain
+      and cannot be changed thereafter.</p><table><thead><tr><th>Replaced
+      Power</th><th>Replacement
+      Power</th></tr></thead><tbody><tr><td>@UUID[Compendium.pf1.class-abilities.Item.u5LefrXZxQgLqmyJ]{Bleeding
+      Touch
+      (Sp)}</td><td>@UUID[Compendium.pf-content.pf-class-abilities.Item.KclXopQs0lzCXYbE]{Necrotic
+      Tending (Sp)}</td></tr></tbody></table>
+  sources:
+    - id: PZO9471
+      pages: '8'
+  subType: classFeat
+  tags:
+    - Urgathoa
+type: feat

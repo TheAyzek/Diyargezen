@@ -1,0 +1,32 @@
+_id: YTodShTyI2zaYhjd
+_key: '!journal!YTodShTyI2zaYhjd'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Thremyr
+pages:
+  - _id: tesvbA8xe5jCiOVZ
+    _key: '!journal.pages!YTodShTyI2zaYhjd.tesvbA8xe5jCiOVZ'
+    _stats:
+      coreVersion: '12.331'
+    name: Thremyr
+    sort: 0
+    text:
+      content: >-
+        <h1>Thremyr</h1><h2>First Jarl</h2>@Source[PZO9267;pages=324] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Thremyr">Thremyr</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Giant Deities<br /><strong>Areas of
+        Concern</strong> Ice, salt, tribute<br /><strong>Domains</strong> Chaos,
+        Evil, War, Water<br /><strong>Subdomains</strong> Blood, Demon (Chaos),
+        Demon (Evil), Ice, Tactics<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Greataxe<br /><strong>Symbol</strong> Frozen blue gemstone<br
+        /><strong>Sacred Animal(s)</strong> Woolly rhinoceros<br
+        /><strong>Sacred Color(s)</strong> Ice blue, white</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

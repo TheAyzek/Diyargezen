@@ -1,0 +1,55 @@
+_id: Yp2nJCFAAiy0d6KI
+_key: '!items!Yp2nJCFAAiy0d6KI'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/gem-faceted-round-white.webp
+name: Clear Spindle Ioun Stone, Flawed
+system:
+  aura:
+    custom: true
+    school: varied
+  cl: 12
+  contextNotes:
+    - target: skill.sur
+      text: You do not need food but need double the normal amount of  water.
+    - target: conChecks
+      text: You do not need food but need double the normal amount of  water.
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>A clear prism with 10 or more sides. It may have irregular facets or
+      internal flaws.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone sustains the wearer without food but he must
+      consume twice the normal amount of
+      water.</p><h3>Resonance</h3><p><strong>Method 1, Fixed: </strong>The
+      wearer can cast protection from
+      @UUID[Compendium.pf1.spells.Item.md6ltvqh9paadsm4]{Chaos}/@UUID[Compendium.pf1.spells.Item.skgjjub1hng29nwo]{Evil}/@UUID[Compendium.pf1.spells.Item.71g6nmvy8qnodwyz]{Good}/@UUID[Compendium.pf1.spells.Item.ekhygw5fzfe52n35]{Law}
+      on himself once per day (CL 12th). He can activate this ability as an
+      immediate action, but doing so drains the ioun stone of its magic, turning
+      it into a dull gray ioun stone.</p><p><strong>Method 2, Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, creator must be 12th level <strong>Cost</strong>
+      1,000 gp</p><hr /><p><strong>Editor's note</strong>: There is text
+      conflict between Seeker of Secrets (SOS) and Adventurer's Guide (AG) for
+      the method 1 resonance. AG text is above, SOS text is as follows:
+      <em>Protection from possession and mental control (as protection from
+      evil)</em>.</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 2000
+  sources:
+    - id: PZO1138
+      pages: '149'
+    - id: PZO9211
+      pages: 47, 52
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

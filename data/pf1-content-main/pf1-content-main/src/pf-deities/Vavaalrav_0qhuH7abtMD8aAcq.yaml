@@ -1,0 +1,51 @@
+_id: 0qhuH7abtMD8aAcq
+_key: '!journal!0qhuH7abtMD8aAcq'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Vavaalrav
+pages:
+  - _id: MkEAxiCHRmcbBFjb
+    _key: '!journal.pages!0qhuH7abtMD8aAcq.MkEAxiCHRmcbBFjb'
+    _stats:
+      coreVersion: '12.331'
+    name: Vavaalrav
+    sort: 0
+    text:
+      content: >-
+        <h1>Vavaalrav</h1><h2>The Steeple's Skull</h2>@Source[PZO92114;pages=20]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Vavaalrav">Vavaalrav</a><h3>Details</h3><p><strong>Alignment</strong>
+        N<br /><strong>Pantheon</strong> Psychopomp Usher<br /><strong>Areas of
+        Concern</strong> Gargoyles, holy ground, and rest<br
+        /><strong>Domains</strong> Darkness, Earth, Protection, Repose<br
+        /><strong>Subdomains</strong> N/A<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Shortbow<br /><strong>Symbol</strong> Vertical line with a shorter
+        horizontal crossbar near the top, and a circle around the
+        overlap</p><h3>Obedience</h3><p>Spend an hour cleaning and maintaining a
+        crypt, graveyard, or other site dedicated to the dead. Gain a +2 insight
+        bonus on Climb, Perception, and Stealth checks on or within stone
+        structures.</p><h2>Boons - Monitor
+        Obedience</h2><h3>None</h3><p>@Source[PZO92114;pages=20]<br /><strong>1:
+        Cryptmaker (Sp)</strong> <em>expeditious excavation</em> 3/day,
+        <em>consecrate</em> 2/day, or <em>stone shape</em> 1/day<br /><strong>2:
+        Vavaalrav's Sight (Ex)</strong> You gain darkvision with a range of 30
+        feet or increase the range of your existing darkvision by 30 feet. Three
+        times per day, you can cast <em>comprehend languages</em> as a
+        spell-like ability, but only to read text and symbols on tombs,
+        gravestones, and other monuments to the dead.<br /><strong>3: Watchful
+        Stone (Su)</strong> Once per day, you can assume the form of a stone
+        statue, as the <em>statue</em> spell. Assuming a statue form or
+        reverting to your normal form requires a full-round action. You can
+        maintain this altered form for a number of days equal to your Hit Dice.
+        While in stone form, you do not need to eat, drink, breathe, or sleep,
+        and you remain aware of your surroundings as if you could see and hear
+        normally.</em></p><h2>For Followers of Vavaalrav</h2><h3>Prestige
+        Classes</h3><p><em>Mortal Usher</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

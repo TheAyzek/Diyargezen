@@ -1,0 +1,24 @@
+_id: rRMf7FmdbAwSuyDn
+_key: '!items!rRMf7FmdbAwSuyDn'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/beast_04.jpg
+name: Laser Blast
+system:
+  associations:
+    classes:
+      - Psychic
+  description:
+    value: >-
+      <p><strong>Psychic Psi-Tech Discovery</strong></p><p>You can generate
+      laser blasts powered by your psychic energy. As a standard action, you can
+      sacrifice an unused spell slot of 1st level or higher and transform it
+      into a ray of laser energy, targeting any foe within 30 feet as a ranged
+      touch attack. This attack deals 2d6 points of fire damage plus an
+      additional 1d6 points of fire damage for every level of the spell slot you
+      sacrificed. You can't sacrifice 0-level spells in this manner. You must be
+      at least 11th level to select this discovery.</p>
+  subType: classFeat
+  tags:
+    - Psychic Psi-Tech Discovery
+type: feat

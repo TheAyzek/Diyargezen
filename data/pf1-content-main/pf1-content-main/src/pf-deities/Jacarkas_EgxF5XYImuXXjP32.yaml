@@ -1,0 +1,45 @@
+_id: EgxF5XYImuXXjP32
+_key: '!journal!EgxF5XYImuXXjP32'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Jacarkas
+pages:
+  - _id: AqveNaEwMxVbDbuK
+    _key: '!journal.pages!EgxF5XYImuXXjP32.AqveNaEwMxVbDbuK'
+    _stats:
+      coreVersion: '12.331'
+    name: Jacarkas
+    sort: 0
+    text:
+      content: >-
+        <h1>Jacarkas</h1><h2>The Collector</h2>@Source[PZO9267;pages=318] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Jacarkas">Jacarkas</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Daemon Harbingers<br /><strong>Areas
+        of Concern</strong> Hobbling, lobotomizing, slavery<br
+        /><strong>Domains</strong> Death, Destruction, Evil, Nobility<br
+        /><strong>Subdomains</strong> Daemon, Fear, Leadership, Slavery<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Bolas<br /><strong>Symbol</strong>
+        Broken ankle in chains<br /><strong>Sacred Animal(s)</strong> Grub<br
+        /><strong>Sacred Color(s)</strong> Gray,
+        red</p><h3>Obedience</h3><p>Meditate within earshot of no fewer than a
+        dozen toiling slaves. Gain a +4 profane bonus to your CMD.</p><h2>Boons
+        - Daemon Harbingers</h2><p>@Source[PZO1139;pages=114]</p><p>Abaddon's
+        unique daemons take on a host of titles, customized to their methods and
+        vanity. These harbingers enjoy sweeping influence among daemons as
+        favored advisors, and they work to cultivate their own cults on Abaddon
+        and beyond.</p><p> Daemon harbingers are neutral evil demigods that
+        range in power from CR 21 to CR 25. The boons they grant are less
+        complex than those granted by the Horsemen themselves, manifesting as
+        spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>enthrall</em><br
+        /><strong>2</strong>: <em>charm monster</em><br /><strong>3</strong>:
+        <em>wither limb</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

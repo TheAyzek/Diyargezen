@@ -1,0 +1,22 @@
+_id: lDJVLFIv2mHrRHAS
+_key: '!items!lDJVLFIv2mHrRHAS'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/wood.jpg
+name: Collapsible plank
+system:
+  description:
+    value: >-
+      <p>Hinged in two places, collapsible planks can hold 250 pounds before
+      breaking. The 10-foot-long plank folds down into a
+      3-foot-by-1-foot-by-6-inch bundle. Folding or unfolding it is a standard
+      action.</p>
+  equipped: false
+  price: 0.4
+  sources:
+    - id: PZO1123
+      pages: '56'
+  subType: adventuring
+  weight:
+    value: 10
+type: loot

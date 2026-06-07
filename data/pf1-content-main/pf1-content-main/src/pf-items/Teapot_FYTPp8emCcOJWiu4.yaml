@@ -1,0 +1,20 @@
+_id: FYTPp8emCcOJWiu4
+_key: '!items!FYTPp8emCcOJWiu4'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/cooking/cauldron-empty.webp
+name: Teapot
+system:
+  description:
+    value: >-
+      <p>This is a small spouted pot for cooking tea. It includes a lid and a
+      strainer, and can make four cups of tea at a time.</p>
+  equipped: false
+  price: 0.1
+  sources:
+    - id: PZO1123
+      pages: '58'
+  subType: adventuring
+  weight:
+    value: 1
+type: loot

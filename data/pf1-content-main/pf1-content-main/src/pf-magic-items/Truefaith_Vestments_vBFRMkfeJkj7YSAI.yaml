@@ -1,0 +1,44 @@
+_id: vBFRMkfeJkj7YSAI
+_key: '!items!vBFRMkfeJkj7YSAI'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/chain-shirt.png
+name: Truefaith Vestments
+system:
+  armor:
+    acp: 2
+    dex: 4
+    material:
+      base:
+        value: steel
+    value: 4
+  aura:
+    school: ill
+  baseTypes:
+    - Chain Shirt
+  cl: 10
+  description:
+    value: >-
+      <p>Worn by enforcers and acolytes of the living god Razmir, this +1 chain
+      shirt appears as a fine hooded robe made of silk of a color appropriate to
+      the wearer's rank within the church as if it had the glamered special
+      ability (it appears white when worn by anyone who doesn't follow Razmir).
+      Used primarily as a means of appearing to be protected by the false god's
+      power, the armor is treated as a +3 breastplate against attacks made by
+      any enemy who has not seen through the illusion. Unlike with standard
+      glamered armor, any creature that successfully hits the target with a
+      melee weapon is considered to have interacted with the illusion, and can
+      see the armor's true form with a successful DC 16 Will
+      save.</p><p><strong>Base Item</strong>:
+      +1</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Wondrous
+      Item, disguise self</p>
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 6950
+  sources:
+    - id: PZO9268
+  spellFailure: 20
+  weight:
+    value: 1
+type: equipment

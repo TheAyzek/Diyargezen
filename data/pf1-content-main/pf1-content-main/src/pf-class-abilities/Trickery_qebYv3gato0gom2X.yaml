@@ -1,0 +1,27 @@
+_id: qebYv3gato0gom2X
+_key: '!items!qebYv3gato0gom2X'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Trickery
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Asmodeus, Calistria, Lamashtu, Norgorber.</p><p><strong>Double
+      (minor)</strong>: At 1st level, as a move action you can create an
+      illusory double of yourself. This double functions as a single mirror
+      image, and lasts for a number of rounds equal to your warpriest level, or
+      until the illusory duplicate is dispelled or destroyed. You can have no
+      more than one double at a time. The double created by this ability doesn't
+      stack with the additional images from the mirror image
+      spell.</p><p><strong>Greater Invisibility (major)</strong>: At 10th level,
+      as a swift action you can become invisible for 1 round (as greater
+      invisibility).</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

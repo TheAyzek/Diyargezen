@@ -1,0 +1,277 @@
+_id: bqMOCg4zoZShwoz7
+_key: '!tables!bqMOCg4zoZShwoz7'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+folder: CLExzzcA4kPYvya7
+formula: 1d100
+img: systems/pf1/icons/spells/enchant-blue-3.jpg
+name: '*Greater Major Magic Items'
+replacement: true
+results:
+  - _id: G7cr9fnI7FvccaUF
+    _key: '!tables.results!bqMOCg4zoZShwoz7.G7cr9fnI7FvccaUF'
+    documentCollection: pf1.ultimate-equipment
+    documentId: vCOfQyCMW29FlGbz
+    img: icons/equipment/chest/breastplate-layered-steel.webp
+    range:
+      - 1
+      - 10
+    text: Greater Major Armour and Shields
+    type: pack
+    weight: 1
+  - _id: UUzBILwaECO0WYoz
+    _key: '!tables.results!bqMOCg4zoZShwoz7.UUzBILwaECO0WYoz'
+    documentCollection: pf1.ultimate-equipment
+    documentId: Sa0HV1bL7OtDeu3u
+    img: icons/weapons/swords/sword-guard-flanged-purple.webp
+    range:
+      - 11
+      - 20
+    text: Greater Major Weapon
+    type: pack
+    weight: 1
+  - _id: cb0uza8gqhQwLgPT
+    _key: '!tables.results!bqMOCg4zoZShwoz7.cb0uza8gqhQwLgPT'
+    documentCollection: pf1.ultimate-equipment
+    documentId: h0G1Fj2UnFtz02E0
+    img: systems/pf1/icons/items/potions/minor-blue.jpg
+    range:
+      - 21
+      - 23
+    text: Common Level 3 Potions and Oils
+    type: pack
+    weight: 1
+  - _id: 69D3YZ9lIeRQZLFC
+    _key: '!tables.results!bqMOCg4zoZShwoz7.69D3YZ9lIeRQZLFC'
+    documentCollection: pf1.ultimate-equipment
+    documentId: VexBVnzysCLmK0b7
+    img: systems/pf1/icons/items/potions/minor-red.jpg
+    range:
+      - 24
+      - 25
+    text: Uncommon Level 3 Potions and Oils
+    type: pack
+    weight: 1
+  - _id: VbuER5eJYQnIYjzw
+    _key: '!tables.results!bqMOCg4zoZShwoz7.VbuER5eJYQnIYjzw'
+    documentCollection: pf1.ultimate-equipment
+    documentId: MTaO8e21pUk6kQGJ
+    img: icons/equipment/finger/ring-cabochon-silver-gold-green.webp
+    range:
+      - 26
+      - 35
+    text: Greater Major Rings
+    type: pack
+    weight: 1
+  - _id: n41cUmqky7dgYupe
+    _key: '!tables.results!bqMOCg4zoZShwoz7.n41cUmqky7dgYupe'
+    documentCollection: pf1.ultimate-equipment
+    documentId: 6WawIcv5zgGgljd5
+    img: icons/weapons/wands/wand-carved-fire.webp
+    range:
+      - 36
+      - 42
+    text: Greater Major Rod
+    type: pack
+    weight: 1
+  - _id: RUFrxj0dYWmbcj2e
+    _key: '!tables.results!bqMOCg4zoZShwoz7.RUFrxj0dYWmbcj2e'
+    documentCollection: pf1.ultimate-equipment
+    documentId: MagB5tV8y65b7cFr
+    img: icons/weapons/wands/wand-gem-teal.webp
+    range:
+      - 43
+      - 45
+    text: Metamagic Rods (+3 Spell Level), Normal
+    type: pack
+    weight: 1
+  - _id: J0z3FI3ErQffSF6Y
+    _key: '!tables.results!bqMOCg4zoZShwoz7.J0z3FI3ErQffSF6Y'
+    documentCollection: pf1.ultimate-equipment
+    documentId: ODSFGMRfWFWOUeuA
+    img: icons/sundries/scrolls/scroll-bound-sealed-red-white.webp
+    range:
+      - 46
+      - 50
+    text: Greater Major Arcane Scrolls
+    type: pack
+    weight: 1
+  - _id: E2wpNArB1KmgFiUH
+    _key: '!tables.results!bqMOCg4zoZShwoz7.E2wpNArB1KmgFiUH'
+    documentCollection: pf1.ultimate-equipment
+    documentId: 6Qas3aE1CYuEHaMK
+    img: icons/sundries/scrolls/scroll-bound-blue-white.webp
+    range:
+      - 51
+      - 55
+    text: Greater Major Divine Scrolls
+    type: pack
+    weight: 1
+  - _id: CN8xN260LbBf2SgK
+    _key: '!tables.results!bqMOCg4zoZShwoz7.CN8xN260LbBf2SgK'
+    documentCollection: pf1.ultimate-equipment
+    documentId: 0z8agOCTuhGOBUTP
+    img: icons/weapons/staves/staff-forest-jewel.webp
+    range:
+      - 56
+      - 68
+    text: Greater Major Staff
+    type: pack
+    weight: 1
+  - _id: FFhJEQshRkhkQfpt
+    _key: '!tables.results!bqMOCg4zoZShwoz7.FFhJEQshRkhkQfpt'
+    documentCollection: pf1.ultimate-equipment
+    documentId: VmPCNRAGvxhJBFwf
+    img: icons/weapons/wands/wand-gem-pink.webp
+    range:
+      - 69
+      - 72
+    text: Common Level 4 Wands
+    type: pack
+    weight: 1
+  - _id: hRg4sZvGQHn7ZnDG
+    _key: '!tables.results!bqMOCg4zoZShwoz7.hRg4sZvGQHn7ZnDG'
+    documentCollection: pf1.ultimate-equipment
+    documentId: MNyecR1TI8xc6Bmc
+    img: icons/weapons/wands/wand-gem-teal.webp
+    range:
+      - 73
+      - 76
+    text: Uncommon Level 4 Wands
+    type: pack
+    weight: 1
+  - _id: NoIwrQeEYhOjduqF
+    _key: '!tables.results!bqMOCg4zoZShwoz7.NoIwrQeEYhOjduqF'
+    documentCollection: pf1.ultimate-equipment
+    documentId: KCc76IoF8ZTMJhjY
+    img: icons/equipment/waist/belt-buckle-gem-red.webp
+    range:
+      - 77
+      - 78
+    text: Greater Major Belt
+    type: pack
+    weight: 1
+  - _id: 37eBbYbPmJmjLaM3
+    _key: '!tables.results!bqMOCg4zoZShwoz7.37eBbYbPmJmjLaM3'
+    documentCollection: pf1.ultimate-equipment
+    documentId: eCBumd3kZeo4sJ7D
+    img: icons/equipment/chest/coat-collared-red-gold.webp
+    range:
+      - 79
+      - 80
+    text: Greater Major Body
+    type: pack
+    weight: 1
+  - _id: fpN58CPUf9vwJJpr
+    _key: '!tables.results!bqMOCg4zoZShwoz7.fpN58CPUf9vwJJpr'
+    documentCollection: pf1.ultimate-equipment
+    documentId: o5r28P2mEjP43XkJ
+    img: icons/equipment/chest/robe-layered-purple.webp
+    range:
+      - 81
+      - 82
+    text: Greater Major Chest
+    type: pack
+    weight: 1
+  - _id: wXHL86HudaDHGd2d
+    _key: '!tables.results!bqMOCg4zoZShwoz7.wXHL86HudaDHGd2d'
+    documentCollection: pf1.ultimate-equipment
+    documentId: oPB1En9nFbKbljgu
+    img: icons/equipment/head/goggles-leather-blue.webp
+    range:
+      - 83
+      - 84
+    text: Greater Major Eye
+    type: pack
+    weight: 1
+  - _id: mf58cffKyazbLwOR
+    _key: '!tables.results!bqMOCg4zoZShwoz7.mf58cffKyazbLwOR'
+    documentCollection: pf1.ultimate-equipment
+    documentId: ZUq7nRjktPUZMARt
+    img: icons/equipment/feet/shoes-collared-leather-blue.webp
+    range:
+      - 85
+      - 86
+    text: Greater Major Feet
+    type: pack
+    weight: 1
+  - _id: oalQ9rPqxo55lrBL
+    _key: '!tables.results!bqMOCg4zoZShwoz7.oalQ9rPqxo55lrBL'
+    documentCollection: pf1.ultimate-equipment
+    documentId: nGHtVB3vz1p2M4Qk
+    img: icons/equipment/hand/gauntlet-simple-leather-brown-gold.webp
+    range:
+      - 87
+      - 88
+    text: Greater Major Hand
+    type: pack
+    weight: 1
+  - _id: cZNQntf1Xovgxi7n
+    _key: '!tables.results!bqMOCg4zoZShwoz7.cZNQntf1Xovgxi7n'
+    documentCollection: pf1.ultimate-equipment
+    documentId: enlcEouC7e5x0qKs
+    img: icons/equipment/head/helm-norman-brown.webp
+    range:
+      - 89
+      - 90
+    text: Greater Major Head
+    type: pack
+    weight: 1
+  - _id: gaSUmqqn9ctTnibB
+    _key: '!tables.results!bqMOCg4zoZShwoz7.gaSUmqqn9ctTnibB'
+    documentCollection: pf1.ultimate-equipment
+    documentId: jo2m3PUPZo4SF3Jc
+    img: icons/equipment/finger/ring-crown-gold-red.webp
+    range:
+      - 91
+      - 92
+    text: Greater Major Headband
+    type: pack
+    weight: 1
+  - _id: crkcNdqVMi8LLTXX
+    _key: '!tables.results!bqMOCg4zoZShwoz7.crkcNdqVMi8LLTXX'
+    documentCollection: pf1.ultimate-equipment
+    documentId: Iqwsqf4OyvotHdwz
+    img: icons/equipment/neck/amulet-simple-carved-stone-spiral.webp
+    range:
+      - 93
+      - 94
+    text: Greater Major Neck
+    type: pack
+    weight: 1
+  - _id: NsVpOBM4PZQVzNAm
+    _key: '!tables.results!bqMOCg4zoZShwoz7.NsVpOBM4PZQVzNAm'
+    documentCollection: pf1.ultimate-equipment
+    documentId: Ara3F7NtX7vbOngF
+    img: icons/equipment/shoulder/pauldron-segmented-steel-yellow.webp
+    range:
+      - 95
+      - 96
+    text: Greater Major Shoulders
+    type: pack
+    weight: 1
+  - _id: 0v3DXuke0Hisa1ei
+    _key: '!tables.results!bqMOCg4zoZShwoz7.0v3DXuke0Hisa1ei'
+    documentCollection: pf1.ultimate-equipment
+    documentId: EeCrueozgzo3OWbM
+    img: icons/equipment/wrist/bracer-orange-fancy.webp
+    range:
+      - 97
+      - 98
+    text: Greater Major Wrists
+    type: pack
+    weight: 1
+  - _id: G6jMDKX0pr5OLXhE
+    _key: '!tables.results!bqMOCg4zoZShwoz7.G6jMDKX0pr5OLXhE'
+    documentCollection: pf1.ultimate-equipment
+    documentId: aM9oCeiAHoqAhuXC
+    img: icons/commodities/treasure/broach-jeweled-pink.webp
+    range:
+      - 99
+      - 100
+    text: Greater Major Slotless
+    type: pack
+    weight: 1
+sort: 300000

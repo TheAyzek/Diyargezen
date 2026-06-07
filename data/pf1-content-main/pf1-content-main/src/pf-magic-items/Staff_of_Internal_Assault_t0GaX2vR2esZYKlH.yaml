@@ -1,0 +1,26 @@
+_id: t0GaX2vR2esZYKlH
+_key: '!items!t0GaX2vR2esZYKlH'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Internal Assault
+system:
+  aura:
+    custom: true
+    school: varies, varies
+  cl: 8
+  description:
+    value: >-
+      <p>Crumbling bark continuously flakes from this solid, aged oak staff
+      without diminishing its size. It allows the use of the following spells: 
+      • Calcific touch (2 charges)   • Corrosive touch (1 charge)   • Touch
+      injection (2
+      charges.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, calcific touch, corrosive touch, touch injection</p>
+  price: 20800
+  sources:
+    - id: PZO9434
+  subType: staff
+  weight:
+    value: 5
+type: consumable

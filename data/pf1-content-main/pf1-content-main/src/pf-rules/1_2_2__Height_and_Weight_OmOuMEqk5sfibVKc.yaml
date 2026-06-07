@@ -1,0 +1,66 @@
+_id: OmOuMEqk5sfibVKc
+_key: '!journal!OmOuMEqk5sfibVKc'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 3GAmKByTM8rM7ryv
+name: 1.2.2. Height and Weight
+pages:
+  - _id: bx4aFRbufJkgEZi2
+    _key: '!journal.pages!OmOuMEqk5sfibVKc.bx4aFRbufJkgEZi2'
+    _stats:
+      coreVersion: '12.331'
+    name: 1.2.2. Height and Weight
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.8scSEgBEtJZj0suf]{(Index) Basic
+        Rules}</p><p>@Compendium[pf-content.pf-rules.sq5gxKWZZWkJ8Oog]{1.2.
+        Character
+        Creation}</p><ul><li>@Compendium[pf-content.pf-rules.ggxCDkKRReD30GRu]{1.2.1.
+        Age}</li><li><strong>@Compendium[pf-content.pf-rules.OmOuMEqk5sfibVKc]{1.2.2.
+        Height and
+        Weight}</strong></li><li>@Compendium[pf-content.pf-rules.Lm4Q5P8i3nRq7IGV]{1.2.3.
+        Racial
+        Traits}</li><li>@Compendium[pf-content.pf-rules.m1GtHZZE31d7Acst]{1.2.4.
+        Archetypes}</li><li>@Compendium[pf-content.pf-rules.uRhhh0PMyi4cRl4l]{1.2.5.
+        Character
+        Backgrounds}</li><li>@Compendium[pf-content.pf-rules.xyNJJF0hJUqtvcUk]{1.2.6.
+        Traits}</li><li>@Compendium[pf-content.pf-rules.CgVqFS1fjMtDuoH0]{1.2.7.
+        Subraces}</li></ul><hr /><p>@Source[PZO1110;pages=169]</p><p>To
+        determine a character’s height, roll the modifier dice indicated on
+        Table 7–3 and add the result, in inches, to the base height for your
+        character’s race and gender. To determine a character’s weight, multiply
+        the result of the modifier dice by the weight multiplier and add the
+        result to the base weight for your character’s race and
+        gender.</p><h2>Table 7-3: Random Height and Weight</h2><table
+        border="1"><thead><tr><td>Race</td><td>Base Height</td><td>Base
+        Weight</td><td>Modifier</td><td>Weight
+        Multiplier</td></tr></thead><tbody><tr><td>Human, male</td><td>4 ft. 10
+        in.</td><td>120 lbs.</td><td>2d10</td><td>× 5
+        lbs.</td></tr><tr><td>Human, female</td><td>4 ft. 5 in.</td><td>85
+        lbs.</td><td>2d10</td><td>× 5 lbs.</td></tr><tr><td>Dwarf,
+        male</td><td>3 ft. 9 in.</td><td>150 lbs.</td><td>2d4</td><td>× 7
+        lbs.</td></tr><tr><td>Dwarf, female</td><td>3 ft. 7 in.</td><td>120
+        lbs.</td><td>2d4</td><td>× 7 lbs.</td></tr><tr><td>Elf, male</td><td>5
+        ft. 4 in.</td><td>100 lbs.</td><td>2d8</td><td>× 3
+        lbs.</td></tr><tr><td>Elf, female</td><td>5 ft. 4 in.</td><td>90
+        lbs.</td><td>2d6</td><td>× 3 lbs.</td></tr><tr><td>Gnome, male</td><td>3
+        ft. 0 in.</td><td>35 lbs.</td><td>2d4</td><td>x 1
+        lb.</td></tr><tr><td>Gnome, female</td><td>2 ft. 10 in.</td><td>30
+        lbs.</td><td>2d4</td><td>× 1 lb.</td></tr><tr><td>Half-elf,
+        male</td><td>5 ft. 2 in.</td><td>110 lbs.</td><td>2d8</td><td>× 5
+        lbs.</td></tr><tr><td>Half-elf, female</td><td>5 ft. 0 in.</td><td>90
+        lbs.</td><td>2d8</td><td>× 5 lbs.</td></tr><tr><td>Half-orc,
+        male</td><td>4 ft. 10 in.</td><td>150 lbs.</td><td>2d12</td><td>× 7
+        lbs.</td></tr><tr><td>Half-orc, female</td><td>4 ft. 5 in.</td><td>110
+        lbs.</td><td>2d12</td><td>× 7 lbs.</td></tr><tr><td>Halfling,
+        male,</td><td>2 ft. 8 in.</td><td>30 lbs.</td><td>2d4</td><td>× 1
+        lb.</td></tr><tr><td>Halfling, female</td><td>2 ft. 6 in.</td><td>25
+        lbs.</td><td>2d4</td><td>× 1 lb.</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

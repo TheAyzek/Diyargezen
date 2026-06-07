@@ -1,0 +1,26 @@
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# Build
+node_modules/
+*.lnk
+additions/
+release/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# IDE
+.vscode/
+.idea/
+
+# Type hints
+pf1
+packs/

@@ -1,0 +1,39 @@
+_id: n3eYRLhYS5woLzJJ
+_key: '!items!n3eYRLhYS5woLzJJ'
+_stats:
+  coreVersion: '12.331'
+folder: Qpty4Od7cOU5vY3R
+img: systems/pf1/icons/races/creature-types/vermin.png
+name: Frenzy (Trox)
+system:
+  changes:
+    - _id: nXLZQPQG
+      formula: '2'
+      target: con
+      type: racial
+    - _id: Oms2AtqR
+      formula: '2'
+      target: str
+      type: racial
+    - _id: 3OnN9pym
+      formula: '-2'
+      target: ac
+      type: untyped
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf-content.pf-racial-traits.Item.PpXi216y1kJgHY1C]{Frenzy}</p><p>You
+      fly into a frenzy for 1 minute, gaining a +2 racial bonus to Constitution
+      and Strength, but a -2 penalty to your AC.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '1'
+  sources:
+    - id: PZO9280
+      pages: '253'
+    - id: PZO1127
+      pages: '264'
+  subType: feat
+  tags:
+    - Trox
+type: buff

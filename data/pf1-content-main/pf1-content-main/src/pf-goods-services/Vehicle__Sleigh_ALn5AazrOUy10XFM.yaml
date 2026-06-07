@@ -1,0 +1,21 @@
+_id: ALn5AazrOUy10XFM
+_key: '!items!ALn5AazrOUy10XFM'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/wood/wood-wheel-brown.webp
+name: Vehicle, Sleigh
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 100 gp; <strong>Price of Passage (per
+      mile)</strong> 2 cp</p><p>This wagon has runners, making it an ideal
+      conveyance for snow and ice travel. In general, two horses (or other
+      beasts of burden) are needed to draw it. A sled comes with the harness
+      required to pull it.</p>
+  equipped: false
+  price: 100
+  sources:
+    - id: PZO1123
+      pages: '87'
+  subType: vehicle
+type: loot

@@ -1,0 +1,29 @@
+_id: fhwVWw4q2gqdbwzI
+_key: '!items!fhwVWw4q2gqdbwzI'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/biological/organ-intestines-red.webp
+name: Monster Bait
+system:
+  description:
+    value: >-
+      <p>This morsel of food contains special spices that make it particularly
+      enticing to a certain creature type. A creature whose type matches the
+      bait's must attempt a DC 12 Will save every minute it remains within 30
+      feet of the bait; if it fails, it takes a -2 penalty on Wisdom-based skill
+      checks while within the area and for 1d4 minutes afterward. The creature
+      can end this penalty by consuming the bait as a standard action.
+      Additionally, monster bait can be used as an additional spell component
+      for the following spells to modify the spell's
+      effects.</p><p><em>Beguiling gift<sup></sup></em>: Increase the save DC by
+      2 against targets of the bait's associated creature type</p><p><em>Charm
+      monster</em>: Increase the save DC by 1 against targets of the bait's
+      associated creature type.</p><p><em>Daze monster</em>: Increase the
+      maximum HD of the spell by 3 if the target's type matches the bait's
+      associated creature type.</p>
+  price: 60
+  sources:
+    - id: PZO9478
+      pages: '26'
+  subType: adventuring
+type: consumable

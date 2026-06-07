@@ -1,0 +1,69 @@
+_id: 1We4uXwnKkzIFXMR
+_key: '!items!1We4uXwnKkzIFXMR'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/falcata.png
+name: Purging Falcata
+system:
+  actions:
+    - _id: xeestyiggdcn2xlf
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: purgingFalcata
+  aura:
+    school: evo
+  baseTypes:
+    - Falcata
+  cl: 9
+  description:
+    value: >-
+      <p>First constructed for use during Taldor's great purge of the Sarenite
+      Cult of the Dawnflower, this +2 falcata is inscribed with various
+      religious slurs. While purging falcatas are typically attuned against
+      followers of the Dawnflower, variants of this blade have been keyed to all
+      variety of deities. The attuned religion is chosen when the weapon is
+      created, and can't be changed later. When a purging falcata is used
+      against members of the attuned religion, its enhancement bonus is +4
+      instead of +2. It also deals an additional 2d6 points of damage to
+      followers of the designated religion. This additional damage is not
+      multiplied on a critical hit. If the wielder of the purging falcata
+      possesses the challenge class feature, when issuing a challenge, he
+      doesn't take the -2 penalty to Armor Class against attacks made by
+      followers of the deity attuned to the blade. If the target of the
+      challenge follows the faith to which the blade is attuned, the wielder
+      deals an additional 3d6 points of damage instead of the normal
+      2d6.</p><p><strong>Base Item</strong>: 
+      falcata</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, weapon of awe, creator must use the weapon to slay a
+      member of the attuned religion</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 19318
+  showInQuickbar: false
+  sources:
+    - id: PZO9268
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 4
+type: weapon

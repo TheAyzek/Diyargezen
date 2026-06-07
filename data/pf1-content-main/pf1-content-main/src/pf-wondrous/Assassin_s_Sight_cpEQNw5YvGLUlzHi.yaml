@@ -1,0 +1,35 @@
+_id: cpEQNw5YvGLUlzHi
+_key: '!items!cpEQNw5YvGLUlzHi'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Assassin's Sight
+system:
+  aura:
+    school: div
+  cl: 5
+  description:
+    value: >-
+      <p>This black telescopic sight is made of lusterless metal and features a
+      thick glass lens. It can be mounted on the stock of a light or heavy
+      crossbow, but not a hand crossbow. An assassin's sight allows the wielder
+      to make ranged sneak attacks from greater distances than normal. This
+      sight has two settings: 0-30 feet and 30-60 feet. A character using a
+      crossbow equipped with an assassin's sight can make sneak attacks against
+      foes within the selected range. For example, by setting the range to 30-60
+      feet, a character can make sneak attacks against creatures only if they
+      are between 30 and 60 feet of the wielder; attacks against targets closer
+      than 30 feet or farther than 60 feet would not count as sneak attacks,
+      even if they met all the other requirements for making a sneak attack.
+      Setting the range on an assassin's sight is a full-round action that
+      provokes attacks of
+      opportunity.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, locate weakness, true strike</p>
+  price: 5250
+  sources:
+    - id: PZO9452
+  subType: wondrous
+  weight:
+    value: 4
+type: equipment

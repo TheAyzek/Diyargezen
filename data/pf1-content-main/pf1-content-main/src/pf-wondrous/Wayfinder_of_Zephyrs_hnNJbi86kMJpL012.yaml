@@ -1,0 +1,34 @@
+_id: hnNJbi86kMJpL012
+_key: '!items!hnNJbi86kMJpL012'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Wayfinder of Zephyrs
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>Swirling green and blue patterns bedeck the surface of this fine oak
+      wayfinder, whose compass and needle are made of light polished steel
+      engraved with themes of Gozreh's oceanic aspect. The needle does not point
+      north as one would expect, but instead indicates the direction the wind is
+      traveling in the area around the wayfinder. A wayfinder of zephyrs grants
+      its bearer a +5 circumstance bonus on Profession (sailor) checks.  Once
+      per day, the bearer of a wayfinder of zephyrs can move the needle to
+      change the direction the wind is traveling toward any direction on the
+      compass. Optionally, the wielder may also increase or decrease the wind's
+      intensity by one step (Core Rulebook 439) while changing its direction. A
+      wayfinder of zephyrs has no effect on magical wind effects other than
+      indicating the direction they are
+      traveling.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, alter winds , control winds</p>
+  price: 15000
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

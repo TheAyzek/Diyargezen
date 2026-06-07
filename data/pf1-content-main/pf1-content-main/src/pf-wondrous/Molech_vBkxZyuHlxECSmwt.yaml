@@ -1,0 +1,37 @@
+_id: vBkxZyuHlxECSmwt
+_key: '!items!vBkxZyuHlxECSmwt'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Molech
+system:
+  aura:
+    custom: true
+    school: enchantment and evocation [evil]
+  cl: 12
+  description:
+    value: >-
+      <p>This statue takes the form of a bull or a bull-headed humanoid. A hatch
+      in the idol's chest or side allows access to a hollow inside the
+      statue-this hatch can be opened only from the outside. This hollow is
+      typically large enough to accommodate one Medium creature, though larger
+      idols might accommodate more. One round after a creature is placed inside,
+      the idol's interior blazes with hellfire, which deals 6d6 points of damage
+      per round to any creature inside. Half the damage is fire damage, but the
+      other half results directly from unholy power and is therefore not subject
+      to reduction by resistance to fire-based attacks. Pipes inside the idol
+      amplify the screams of those within, making them sound like the bellows of
+      an enraged bull. A creature inside the idol can break out through the
+      locked door by succeeding at a DC 30 Strength check, or by dealing enough
+      damage (hardness 15; hp 90; immune to fire damage). If a creature dies
+      within the idol, all lawful evil creatures within 100 feet gain the
+      benefits of the spell bless for 1 hour.<h3>Requirements</h3><p>Craft
+      Wondrous Item, bless, produce flame, unholy blight</p>
+  price: 10000
+  sources:
+    - id: PZO90105
+  subType: wondrous
+  weight:
+    value: 2000
+type: equipment

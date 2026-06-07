@@ -1,0 +1,22 @@
+_id: uyC8oF6hePVPbvP4
+_key: '!items!uyC8oF6hePVPbvP4'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/fishing/net-hand-white.webp
+name: Rock Catching
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>The creature (which must be at least Large) can catch Small, Medium, or
+      Large rocks (or similar projectiles). Once per round, a creature that
+      would normally be hit by a rock can attempt a Reflex save to catch it as a
+      free action. The DC is 15 for a Small rock, 20 for a Medium rock, and 25
+      for a Large rock. (If the projectile provides a magical bonus on attack
+      rolls, the DC increases by that amount.) The creature must be aware of the
+      attack in order to use rock catching.</p>&nbsp;<p><em>Format</em>: rock
+      catching</p><p><em>Location</em>: Defensive Abilities.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

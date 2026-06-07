@@ -1,0 +1,26 @@
+_id: fdnmbQBiQlhBLEDk
+_key: '!items!fdnmbQBiQlhBLEDk'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Brawling (Armor)
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate enchantment <strong>CL</strong>
+      7th</p><p><strong>Slot</strong> none; <strong>Price</strong> +1 bonus;
+      This weapon special ability can be applied only to brass knuckles, a
+      cestus, a sap, or a light bludgeoning weapon. The wielder of this weapon
+      gains an enhancement bonus on combat maneuver checks equal to the
+      enhancement bonus of the
+      weapon.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, Improved Trip, <em>guidance</em>;
+      <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1129
+      pages: '212'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

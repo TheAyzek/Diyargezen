@@ -1,0 +1,59 @@
+_id: 1kFiiHmMiSE2wMkF
+_key: '!items!1kFiiHmMiSE2wMkF'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/battleaxe.PNG
+name: Shields' Bane
+system:
+  actions:
+    - _id: hn0biwzvjv56nrp7
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: shieldsBane
+  aura:
+    school: trs
+  baseTypes:
+    - Battleaxe
+  cl: 5
+  description:
+    value: >-
+      <p>Ulfen raiders traditionally fight carrying a shield alongside a
+      battleaxe or sword, leading to an arms race between armorers who seek to
+      produce unstoppable weapons and those who seek to make impenetrable
+      shields. Shields' bane is a long-bearded +1 battleaxe that ignores all
+      shield bonuses to the target's AC. Additionally, the wielder gains a +4
+      competence bonus on combat maneuver checks to sunder or disarm a foe of
+      equipment that grants a shield bonus.</p><p><strong>Base Item</strong>: 
+      battleaxe</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, shatter, true strike, creator must be an Ulfen</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 20310
+  showInQuickbar: false
+  sources:
+    - id: PZO9280
+  weaponGroups:
+    - axes
+  weight:
+    value: 6
+type: weapon

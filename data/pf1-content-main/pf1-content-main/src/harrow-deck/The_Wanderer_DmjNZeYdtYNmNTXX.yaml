@@ -1,0 +1,30 @@
+_id: DmjNZeYdtYNmNTXX
+_key: '!journal!DmjNZeYdtYNmNTXX'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: oEUKlY7s7aPkyznu
+name: The Wanderer
+pages:
+  - _id: FZ7229QnsJ4WNxnL
+    _key: '!journal.pages!DmjNZeYdtYNmNTXX.FZ7229QnsJ4WNxnL'
+    _stats:
+      coreVersion: '12.331'
+    name: The Wanderer
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Wanderer</strong> (neutral good, Intelligence) is a
+        collector. This centaur appreciates that which others regard as junk or
+        trash. The Wanderer appears to those clever enough to find the true
+        worth in something others ignore or treat as worthless. Misaligned, The
+        Wanderer signifies a loss of values, or the inability to see what is
+        truly valuable in a person or situation.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Wanderer.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

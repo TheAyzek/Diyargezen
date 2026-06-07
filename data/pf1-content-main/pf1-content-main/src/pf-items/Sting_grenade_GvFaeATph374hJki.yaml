@@ -1,0 +1,55 @@
+_id: GvFaeATph374hJki
+_key: '!items!GvFaeATph374hJki'
+_stats:
+  coreVersion: '12.343'
+img: icons/commodities/materials/orb-tassle-blue-yellow.webp
+name: Sting grenade
+system:
+  actions:
+    - _id: ccc86xwz5me1dvsb
+      ability:
+        critMult: 1
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - nonlethal
+          - formula: 1d6
+            types:
+              - fire
+      img: icons/commodities/materials/orb-tassle-blue-yellow.webp
+      name: Use
+      notes:
+        effect:
+          - see text
+      range:
+        units: ft
+        value: '10'
+      tag: stingGrenade
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Weapons</p><p>This hollow clay
+      container holds black powder, a slow-burning fuse, and rock salt or hard
+      beads of resin or rubber. Lighting the fuse is a move action; 1d3 rounds
+      later, the sting grenade explodes, dealing 2d6 points of nonlethal damage
+      and 1d6 points of fire damage in a 10-foot-radius burst (Reflex DC 15
+      half). A sting grenade is treated as a splash weapon with a range
+      increment of 10 feet. Crafting this item requires a successful DC 25 Craft
+      (alchemy) check.</p><h2>Construction</h2><p><strong>Craft
+      (Alchemy)</strong> DC 25</p>
+  price: 100
+  sources:
+    - id: PZO90115
+      pages: '74'
+  subType: misc
+  tags:
+    - Alchemical Weapons
+  weight:
+    value: 1
+type: consumable

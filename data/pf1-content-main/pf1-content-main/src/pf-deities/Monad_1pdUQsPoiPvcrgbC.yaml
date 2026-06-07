@@ -1,0 +1,50 @@
+_id: 1pdUQsPoiPvcrgbC
+_key: '!journal!1pdUQsPoiPvcrgbC'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Monad
+pages:
+  - _id: FENEDGbKyT4aKDiO
+    _key: '!journal.pages!1pdUQsPoiPvcrgbC.FENEDGbKyT4aKDiO'
+    _stats:
+      coreVersion: '12.331'
+    name: Monad
+    sort: 0
+    text:
+      content: >-
+        <h1>Monad</h1><h2>The Condition of All</h2>@Source[PZO92114;pages=11]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Monad">Monad</a><h3>Details</h3><p><strong>Alignment</strong>
+        N<br /><strong>Pantheon</strong> Aeon<br /><strong>Areas of
+        Concern</strong> Creation, the infinite, and truth<br
+        /><strong>Domains</strong> Artifice, Darkness, Knowledge, Void<br
+        /><strong>Subdomains</strong> N/A<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Unarmed
+        strike<br /><strong>Symbol</strong> Spiral
+        galaxy</p><h3>Obedience</h3><p>Spend 30 minutes in meditation, clearing
+        your mind of needs and prejudices. Then briefly wander and observe your
+        surroundings, seeking a source of excess, accomplishment, or emptiness.
+        Spend at least 30 minutes counteracting that phenomenon in some way,
+        such as by creating something where nothing exists, providing comfort to
+        a morose stranger, or thinning the excess population of ants in a field.
+        Upon completing this obedience, choose two Knowledge skills; you gain a
+        +4 sacred or profane bonus on checks with those skills.</p><h2>Boons -
+        Monitor Obedience</h2><h3>None</h3><p>@Source[PZO92114;pages=11]<br
+        /><strong>1: Aeon Arbiter (Sp)</strong> <em>unseen servant</em> 3/day,
+        <em>spectral hand</em> 2/day, or <em>gaseous form</em> 1/day<br
+        /><strong>2: Immaterial Flesh (Su)</strong> You gain the constant
+        benefits of the <em>moderate fortification</em> armor special ability.
+        If you already have a similar defensive ability, you increase that
+        ability's chance to negate the additional damage by 10%.<br /><strong>3:
+        Creative Destruction (Su)</strong> Once per day as a standard action,
+        you can touch two adjacent creatures (including yourself). One takes 150
+        points of damage (Fortitude half; DC = 10 + half your HD + your Charisma
+        modifier), and the other regains a number of hit points equal to the
+        damage taken by the first target.</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

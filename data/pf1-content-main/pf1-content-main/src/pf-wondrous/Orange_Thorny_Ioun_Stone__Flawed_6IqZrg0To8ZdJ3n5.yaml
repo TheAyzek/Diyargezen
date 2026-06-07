@@ -1,0 +1,49 @@
+_id: 6IqZrg0To8ZdJ3n5
+_key: '!items!6IqZrg0To8ZdJ3n5'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/magic/earth/projectile-spiked-stone-boulder-orange.webp
+name: Orange Thorny Ioun Stone, Flawed
+system:
+  aura:
+    custom: true
+    school: Varies
+  cl: 12
+  contextNotes:
+    - target: cmb
+      text: +[[2]] Competence bonus on sunder attempts.
+    - target: cmd
+      text: '-[[2]] penalty vs sunder.'
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>An orange spherical stone with needle-like points jutting out from all
+      sides. It may have irregular facets or internal flaws.</p>
+    value: >-
+      <h3>Effect</h3><p>The flawed version of a thorny ioun stone of any type
+      functions as the normal version, but the wearer also takes a -2 penalty to
+      CMD against the corresponding type of combat maneuver check.</p><p>+2
+      competence bonus on sunder attempts. -2 penalty to CMD against sunder
+      maneuvers.</p><h3>Resonance</h3><p><strong>Method 1, Fixed:
+      </strong>Grants the bearer the benefit of either the Acrobatic or the
+      Athletic feat. The feat varies by individual ioun stone, and each is
+      equally likely (50% chance).</p><p><strong>Method 2, Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, creator must be 12th level <strong>Cost</strong>
+      3,450 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 6900
+  sources:
+    - id: PZO9268
+      pages: 60-61
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

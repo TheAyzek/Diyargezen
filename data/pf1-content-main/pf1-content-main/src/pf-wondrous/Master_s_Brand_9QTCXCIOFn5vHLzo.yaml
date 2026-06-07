@@ -1,0 +1,30 @@
+_id: 9QTCXCIOFn5vHLzo
+_key: '!items!9QTCXCIOFn5vHLzo'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Master's Brand
+system:
+  aura:
+    school: trs
+  cl: 10
+  description:
+    value: >-
+      <p>This cast-iron brand glows hot with a command word, although the heat
+      does not affect objects. It can be used to strike a creature with a touch
+      attack. If it hits, it violently marks the victim as per greater brand (DC
+      16), except that the brand glows in reaction to the visible master's brand
+      rather than to holy symbols. Once the brand has struck a target, it cools
+      and cannot be used again that day.  If the wielder of the brand is a
+      hobgoblin, once per day he can speak a second command word to issue a
+      command (DC 13), as per the spell, to anyone marked by the
+      brand.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, command, greater brand, creator must be a hobgoblin</p>
+  price: 18200
+  sources:
+    - id: PZO9280
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

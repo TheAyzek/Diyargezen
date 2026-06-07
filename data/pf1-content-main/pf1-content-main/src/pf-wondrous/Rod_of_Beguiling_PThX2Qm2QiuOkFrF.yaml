@@ -1,0 +1,28 @@
+_id: PThX2Qm2QiuOkFrF
+_key: '!items!PThX2Qm2QiuOkFrF'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Rod of Beguiling
+system:
+  aura:
+    school: abj
+  cl: 5
+  description:
+    value: >-
+      <p>This eye-catching rod is bedecked with glittering spangles. The wielder
+      gains a +5 competence bonus on Bluff and Sleight of Hand checks, as well
+      as on opposed Charisma checks to give commands to charmed creatures..   A
+      rod of beguiling allows a bard's fascinate, suggestion, and mass
+      suggestion bardic performance to take effect as if she were 5 levels
+      higher, and grants a +5 bonus on a bard's Perform checks when using
+      distraction.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Rod, hypnosis</p>
+  price: 18000
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 5
+type: equipment

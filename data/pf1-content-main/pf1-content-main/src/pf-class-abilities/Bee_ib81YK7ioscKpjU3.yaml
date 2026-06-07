@@ -1,0 +1,19 @@
+_id: ib81YK7ioscKpjU3
+_key: '!items!ib81YK7ioscKpjU3'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Bee
+system:
+  associations:
+    classes:
+      - Hunter
+  description:
+    value: >-
+      <p><strong>Hunter Animal Focus</strong></p><p>The creature gains a +4
+      competence bonus on Fly checks. This bonus increases to +6 at 8th level
+      and +8 at 15th level.</p>
+  subType: classFeat
+  tags:
+    - Hunter Animal Focus
+type: feat

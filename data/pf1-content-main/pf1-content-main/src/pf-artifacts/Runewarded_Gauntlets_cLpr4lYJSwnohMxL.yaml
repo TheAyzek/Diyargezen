@@ -1,0 +1,28 @@
+_id: cLpr4lYJSwnohMxL
+_key: '!items!cLpr4lYJSwnohMxL'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Runewarded Gauntlets
+system:
+  artifact: true
+  aura:
+    school: abj
+  cl: 20
+  description:
+    value: >-
+      <p>A set of runewarded gauntlets helps to protect the wearer from the
+      influence of intelligent magic items, an effect that immediately becomes
+      apparent to a wearer when the gauntlets are first put on. While worn, the
+      gauntlets suppress all magical qualities of a single intelligent weapon
+      carried. They have no effect on nonintelligent magic weapons or nonweapon
+      intelligent magic items. Runewarded gauntlets make spellcasting more
+      difficult when worn, imparting a 10% spell failure chance to all spells
+      cast while worn (not just arcane spells). This spell failure chance does
+      not stack with spell failure chances from other worn items.</p>
+  sources:
+    - id: PZO90133
+  subType: other
+  weight:
+    value: 2
+type: equipment

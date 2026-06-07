@@ -1,0 +1,45 @@
+_id: eaKXcePbeODDVSKS
+_key: '!journal!eaKXcePbeODDVSKS'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Crocell
+pages:
+  - _id: lKTjPdwmMjdRtaST
+    _key: '!journal.pages!eaKXcePbeODDVSKS.lKTjPdwmMjdRtaST'
+    _stats:
+      coreVersion: '12.331'
+    name: Crocell
+    sort: 0
+    text:
+      content: >-
+        <h1>Crocell</h1><h2>The Soothing Sin</h2>@Source[PZO9267;pages=326] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Crocell">Crocell</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Infernal Dukes<br /><strong>Areas of
+        Concern</strong> Hidden waters, illusion, language<br
+        /><strong>Domains</strong> Evil, Knowledge, Law, Water<br
+        /><strong>Subdomains</strong> Devil (Evil), Devil (Law), Memory, Oceans,
+        Rivers<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Glaive<br
+        /><strong>Symbol</strong> Dark whirlpool<br /><strong>Sacred
+        Animal(s)</strong> Octopus<br /><strong>Sacred Color(s)</strong> Dark
+        blue, red</p><h3>Obedience</h3><p>Dissect a rat or another vermin, and
+        carve the patterns you see in its bared viscera. Gain a +4 profane bonus
+        on saving throws against illusions.</p><h2>Boons - Infernal
+        Dukes</h2>@Source[PZO1139;pages=116]<br />The Lords of Hell, the Dukes
+        of Perdition, and the Princes of Damnation are all names for the
+        infamous nobility of the Pit- the elite caste of devilkind known as the
+        infernal dukes.<p> All infernal dukes are lawful evil and range in power
+        from CR 26 to CR 27. The boons they grant are less complex than those
+        granted by archdevils, manifesting as spell-like abilities usable once
+        per day each.</p><p><strong>1</strong>: <em>major image</em><br
+        /><strong>2</strong>: <em>prismatic spray</em><br /><strong>3</strong>:
+        <em>world wave</em></p><h2>For Followers of
+        Crocell</h2><h3>Feats</h3><p><em>Hellish Shackles</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

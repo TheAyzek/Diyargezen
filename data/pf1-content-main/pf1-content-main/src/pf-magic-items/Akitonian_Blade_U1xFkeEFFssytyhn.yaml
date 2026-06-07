@@ -1,0 +1,64 @@
+_id: U1xFkeEFFssytyhn
+_key: '!items!U1xFkeEFFssytyhn'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/bill.PNG
+name: Akitonian Blade
+system:
+  actions:
+    - _id: vy1sif6th5nad5xw
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: akitonianBlade
+  aura:
+    school: trs
+  baseTypes:
+    - Bill
+  cl: 9
+  description:
+    value: >-
+      <p>This delicate-looking +1 bill imparts to its wielder the grace and
+      agility of one born in the low gravity of the red planet Akiton. When
+      holding the blade, the wielder triples the result of any Acrobatics checks
+      to determine how far she can jump. In addition, a successful DC 15
+      Acrobatics check allows the wielder to negate any damage from the first 30
+      feet of falling damage and converts any damage from the second 30 feet to
+      nonlethal damage.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, feather fall, longstrider</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 8311
+  properties:
+    brc: true
+    dis: true
+    rch: true
+    spc: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9455
+  weaponGroups:
+    - polearms
+  weight:
+    value: 2
+type: weapon

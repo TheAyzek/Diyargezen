@@ -1,0 +1,29 @@
+_id: ORNRxj2dfSwzCU4u
+_key: '!items!ORNRxj2dfSwzCU4u'
+_stats:
+  coreVersion: '12.343'
+folder: d9cuvREi0qdcYFZ0
+img: icons/magic/defensive/armor-shield-barrier-steel.webp
+name: Impervious (Armor)
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong>&nbsp;moderate
+      transmutation&nbsp;<strong>CL</strong>&nbsp;7th</p><p><strong>Slot</strong>&nbsp;armor/shield
+      quality;&nbsp;<strong>Price</strong>&nbsp;+1
+      bonus;&nbsp;<strong>Weight</strong>&nbsp;-</p><h3>Description</h3><p>A
+      shield or suit of armor with this special ability is especially hardy. It
+      gains double its enhancement bonus to hardness and hit points (instead of
+      just the enhancement bonus), its break DC increases by double its
+      enhancement bonus, and it gains a bonus on saving throws against direct
+      attacks (such as a rust monster's rust ability) equal to its enhancement
+      bonus.</p><h3>Construction</h3><p><strong>Requirements</strong>&nbsp;Craft
+      Magic Arms and Armor,&nbsp;<em>fabricate</em>,&nbsp;<em>make
+      whole</em>;&nbsp;<strong>Price</strong>&nbsp;+1 bonus</p>
+  sources:
+    - id: PZO1123
+      pages: '119'
+  subType: misc
+  tags:
+    - Universal Armor & Shield Qualities
+type: feat

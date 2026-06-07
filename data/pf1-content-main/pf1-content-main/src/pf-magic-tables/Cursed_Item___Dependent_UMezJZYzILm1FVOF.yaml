@@ -1,0 +1,194 @@
+_id: UMezJZYzILm1FVOF
+_key: '!tables!UMezJZYzILm1FVOF'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+folder: fsaYbHyVHnt2AA5A
+formula: 1d100
+img: icons/svg/d20-grey.svg
+name: Cursed Item - Dependent
+replacement: true
+results:
+  - _id: J4YWVwQP1AMCkIm9
+    _key: '!tables.results!UMezJZYzILm1FVOF.J4YWVwQP1AMCkIm9'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 3
+    text: Temperature below freezing
+    type: text
+    weight: 1
+  - _id: TNgsOdnwsaHKuFhQ
+    _key: '!tables.results!UMezJZYzILm1FVOF.TNgsOdnwsaHKuFhQ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 4
+      - 5
+    text: Temperature above freezing
+    type: text
+    weight: 1
+  - _id: 3FWyX01BMkcN5gjl
+    _key: '!tables.results!UMezJZYzILm1FVOF.3FWyX01BMkcN5gjl'
+    img: icons/svg/d20-black.svg
+    range:
+      - 6
+      - 10
+    text: During the day
+    type: text
+    weight: 1
+  - _id: aZLe1PzpNpDaE2yq
+    _key: '!tables.results!UMezJZYzILm1FVOF.aZLe1PzpNpDaE2yq'
+    img: icons/svg/d20-black.svg
+    range:
+      - 11
+      - 15
+    text: During the night
+    type: text
+    weight: 1
+  - _id: XPmipa8E1EzoYabI
+    _key: '!tables.results!UMezJZYzILm1FVOF.XPmipa8E1EzoYabI'
+    img: icons/svg/d20-black.svg
+    range:
+      - 16
+      - 20
+    text: In direct sunlight
+    type: text
+    weight: 1
+  - _id: WhzskAXHM87PyFDi
+    _key: '!tables.results!UMezJZYzILm1FVOF.WhzskAXHM87PyFDi'
+    img: icons/svg/d20-black.svg
+    range:
+      - 21
+      - 25
+    text: Out of direct sunlight
+    type: text
+    weight: 1
+  - _id: jbemoAoiHie9FtLC
+    _key: '!tables.results!UMezJZYzILm1FVOF.jbemoAoiHie9FtLC'
+    img: icons/svg/d20-black.svg
+    range:
+      - 26
+      - 34
+    text: Underwater
+    type: text
+    weight: 1
+  - _id: hGMesBSjEqUMONaW
+    _key: '!tables.results!UMezJZYzILm1FVOF.hGMesBSjEqUMONaW'
+    img: icons/svg/d20-black.svg
+    range:
+      - 35
+      - 37
+    text: Out of water
+    type: text
+    weight: 1
+  - _id: o7iy5Nm4jENKtyk2
+    _key: '!tables.results!UMezJZYzILm1FVOF.o7iy5Nm4jENKtyk2'
+    documentCollection: Actor
+    img: icons/svg/d20-black.svg
+    range:
+      - 38
+      - 45
+    text: Undergroun
+    type: text
+    weight: 1
+  - _id: c8la8EOByYT1eGtQ
+    _key: '!tables.results!UMezJZYzILm1FVOF.c8la8EOByYT1eGtQ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 46
+      - 55
+    text: Aboveground
+    type: text
+    weight: 1
+  - _id: ovdyb8TlGTPvJw1T
+    _key: '!tables.results!UMezJZYzILm1FVOF.ovdyb8TlGTPvJw1T'
+    img: icons/svg/d20-black.svg
+    range:
+      - 56
+      - 60
+    text: Within 10 feet of a random creature type
+    type: text
+    weight: 1
+  - _id: pomGbemGKcqlGGM8
+    _key: '!tables.results!UMezJZYzILm1FVOF.pomGbemGKcqlGGM8'
+    img: icons/svg/d20-black.svg
+    range:
+      - 61
+      - 64
+    text: Within 10 feet of a random race or kind of creature
+    type: text
+    weight: 1
+  - _id: jaPZHLRYHNqqsjHC
+    _key: '!tables.results!UMezJZYzILm1FVOF.jaPZHLRYHNqqsjHC'
+    img: icons/svg/d20-black.svg
+    range:
+      - 65
+      - 72
+    text: Within 10 feet of an arcane spellcaster
+    type: text
+    weight: 1
+  - _id: OTHvHVMLIVP6kraZ
+    _key: '!tables.results!UMezJZYzILm1FVOF.OTHvHVMLIVP6kraZ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 73
+      - 80
+    text: Within 10 feet of a divine spellcaster
+    type: text
+    weight: 1
+  - _id: oewYvz0kk1WUBVAg
+    _key: '!tables.results!UMezJZYzILm1FVOF.oewYvz0kk1WUBVAg'
+    img: icons/svg/d20-black.svg
+    range:
+      - 81
+      - 85
+    text: In the hands of a nonspellcaster
+    type: text
+    weight: 1
+  - _id: RkB6TeM8HqaJjZsw
+    _key: '!tables.results!UMezJZYzILm1FVOF.RkB6TeM8HqaJjZsw'
+    img: icons/svg/d20-black.svg
+    range:
+      - 86
+      - 90
+    text: In the hands of a spellcaster
+    type: text
+    weight: 1
+  - _id: iTnLzAOKe5H0Hcbe
+    _key: '!tables.results!UMezJZYzILm1FVOF.iTnLzAOKe5H0Hcbe'
+    img: icons/svg/d20-black.svg
+    range:
+      - 91
+      - 95
+    text: In the hands of a creature of a particular alignment
+    type: text
+    weight: 1
+  - _id: uXeVy5abE13Clncx
+    _key: '!tables.results!UMezJZYzILm1FVOF.uXeVy5abE13Clncx'
+    img: icons/svg/d20-black.svg
+    range:
+      - 96
+      - 96
+    text: In the hands of a creature of a particular gender
+    type: text
+    weight: 1
+  - _id: TdsQdx0Z5aKnAic6
+    _key: '!tables.results!UMezJZYzILm1FVOF.TdsQdx0Z5aKnAic6'
+    img: icons/svg/d20-black.svg
+    range:
+      - 97
+      - 99
+    text: On holy days or during particular astrological events
+    type: text
+    weight: 1
+  - _id: VZ6bh4YqhAJBDE0D
+    _key: '!tables.results!UMezJZYzILm1FVOF.VZ6bh4YqhAJBDE0D'
+    img: icons/svg/d20-black.svg
+    range:
+      - 100
+      - 100
+    text: More than 100 miles from a particular site
+    type: text
+    weight: 1
+sort: 200000

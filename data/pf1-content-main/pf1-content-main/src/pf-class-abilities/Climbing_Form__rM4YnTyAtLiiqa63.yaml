@@ -1,0 +1,18 @@
+_id: rM4YnTyAtLiiqa63
+_key: '!items!rM4YnTyAtLiiqa63'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_34.jpg
+name: Climbing Form*
+system:
+  associations:
+    classes:
+      - Shifter
+  description:
+    value: >-
+      <p><strong>Shifter Reactive Form</strong></p><p>The adaptive shifter gains
+      a climb speed equal to her base speed.</p>
+  subType: classFeat
+  tags:
+    - Shifter Reactive Form
+type: feat

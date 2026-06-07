@@ -1,0 +1,46 @@
+_id: xyvHWuG36MpQVE8R
+_key: '!journal!xyvHWuG36MpQVE8R'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Imbrex
+pages:
+  - _id: edwHNABUHQGD1iqW
+    _key: '!journal.pages!xyvHWuG36MpQVE8R.edwHNABUHQGD1iqW'
+    _stats:
+      coreVersion: '12.331'
+    name: Imbrex
+    sort: 0
+    text:
+      content: >-
+        <h1>Imbrex</h1><h2>The Twins</h2>@Source[PZO9298;pages=22] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Imbrex">Imbrex</a><h3>Details</h3><p><strong>Alignment</strong>
+        LN<br /><strong>Pantheon</strong> Eldest<br /><strong>Areas of
+        Concern</strong> Endings, statues, twins<br /><strong>Domains</strong>
+        Community, Earth, Law, Strength<br /><strong>Subdomains</strong> Family,
+        Home, Metal, Resolve<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Dire flail<br
+        /><strong>Symbol</strong> Clasped hands whose forearms bend and merge
+        together, creating a loop<br /><strong>Sacred Animal(s)</strong> animals
+        that hibernate or go into stasis<br /><strong>Sacred Color(s)</strong>
+        Gray, silver</p><h3>Obedience</h3><p>Carve or sculpt a figurine, then
+        split it in two and repair it or bind the pieces together. You gain
+        hardness 1 for the next 24 hours as your skin stiffens and takes on a
+        gray pallor.</p><h2>Boons - Fey
+        Obedience</h2><h3>Feysworn</h3><p>@Source[PZO9298;pages=22]<br
+        /><strong>1: Blessing of the Twins (Sp)</strong> <em>ill
+        omen<sup>APG</sup> 3/day, <em>mirror image</em> 2/day, or <em>hold
+        person</em> 1/day<br /><strong>2: Statuesque (Sp)</strong> You can cast
+        <em>statue three times per day.</em><br /><strong>3: Endbringer
+        (Sp)</strong> You can cast <em>storm of vengeance once per
+        day.</em></p><h2>For Followers of
+        Imbrex</h2><h3>Archetypes</h3><p><em>Twinned Summoner (Summoner),
+        Twinned Summoner (Summoner (Unchained))</em></p><h3>Feats</h3><p><em>Fey
+        Friend</em></p><h3>Traits</h3><p><em>Shaper of Reality</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,25 @@
+_id: riN2BgWNFKnFHigq
+_key: '!items!riN2BgWNFKnFHigq'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Eyes of the Dragon
+system:
+  aura:
+    school: trs
+  cl: 15
+  description:
+    value: >-
+      <p>These tigereye gems fit over and then meld into the eyes, transforming
+      the wearer's eyes into something slitted and draconic. These eyes grant
+      the wearer darkvision 120 ft. and blindsense 60 ft. The wearer sees four
+      times as well as a human in dim light and twice as well in normal
+      light.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, form of the dragon III</p>
+  price: 110000
+  slot: eyes
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

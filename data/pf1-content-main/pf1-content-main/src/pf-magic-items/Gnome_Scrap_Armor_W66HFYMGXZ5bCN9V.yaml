@@ -1,0 +1,57 @@
+_id: W66HFYMGXZ5bCN9V
+_key: '!items!W66HFYMGXZ5bCN9V'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/studded-leather.PNG
+name: Gnome Scrap Armor
+system:
+  armor:
+    acp: 1
+    dex: 5
+    material:
+      base:
+        value: leather
+    value: 3
+  aura:
+    school: trs
+  baseTypes:
+    - Studded Leather Armor
+  cl: 5
+  description:
+    value: >-
+      <p>A suit of gnome scrap armor protects its wearer as +2 studded leather
+      armor, but myriad metal trinkets festoon it in place of studs. A number of
+      these badges bear a special dweomer; each such badge can be removed as a
+      move action, at which point it turns into a full-sized version of the
+      trinket. The wearer automatically recognizes which badges have this
+      property, and only the wearer can detach them.  A fully stocked suit of
+      gnome scrap armor holds 20 badges representing the following gear: a flask
+      of acid, two flasks of alchemist's fire, a block and tackle, a buckler, a
+      crowbar, a heavy pick, a folded net, a potion of invisibility, a potion of
+      lesser restoration, a shovel, two lit sunrods, two tanglefoot bags, a
+      throwing axe, a thunderstone, a warhammer, a bottle of fine wine, and a
+      winter blanket. When the armor has 10 or fewer badges remaining, it is
+      reduced to +1 studded leather armor until sufficient badges are returned.
+      If all the patches are removed, the armor becomes nonmagical masterwork
+      studded leather armor.  While the armor retains any magic, the wearer can
+      return badges to the armor by casting shrink item on the appropriate
+      object while wearing the armor and touching the object to the armor. This
+      can even convert appropriate potions into badges, despite shrink item not
+      normally working on magic items. Only items exactly corresponding to
+      missing badges can be merged with the armor. Merging a potion reduces the
+      potion's caster level to the minimum caster level for that spell. Items
+      produced by gnome scrap armor match the size of the armor, so the typical
+      gnome-sized version of the suit produces items sized for Small
+      creatures.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, shrink i tem, creator must be a gnome</p>
+  enh: 2
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 11175
+  sources:
+    - id: PZO9280
+  spellFailure: 15
+  weight:
+    value: 10
+type: equipment

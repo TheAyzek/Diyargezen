@@ -1,0 +1,31 @@
+_id: UYroNAjDOF6qmRLm
+_key: '!items!UYroNAjDOF6qmRLm'
+_stats:
+  coreVersion: '12.331'
+folder: 52jofiLqjkyFLxLL
+img: icons/equipment/finger/ring-crown-teal-gold.webp
+name: Serpent's Band
+system:
+  aura:
+    custom: true
+    school: conjuration and enchantment
+  cl: 10
+  description:
+    value: >-
+      <p>The wearer of this circlet gains a +2 insight bonus on saving throws
+      against effects with the emotion descriptor, including fear effects. The
+      wearer gains fluency in Draconic and may converse with non-sentient (Int 1
+      or 2) reptilian animals and magical beasts as if using the speak with
+      animals spell, and gains a +4 competence bonus on Handle Animal and wild
+      empathy checks made when interacting with such
+      creatures.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, animal trance, hypnotism, speak with animals, summon
+      nature's ally V</p>
+  price: 9000
+  slot: headband
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

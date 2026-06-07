@@ -1,0 +1,46 @@
+_id: vGshuIogCxAhXi85
+_key: '!journal!vGshuIogCxAhXi85'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Muronna
+pages:
+  - _id: 4Qo7aWhcp2c2fQ6l
+    _key: '!journal.pages!vGshuIogCxAhXi85.4Qo7aWhcp2c2fQ6l'
+    _stats:
+      coreVersion: '12.331'
+    name: Muronna
+    sort: 0
+    text:
+      content: >-
+        <h1>Muronna</h1><h2>The Dark Mother</h2>@Source[PZO1139;pages=126] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Muronna">Muronna</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Oni Daimyo<br /><strong>Areas of
+        Concern</strong> Eclipses, sunsets, unseen things<br
+        /><strong>Domains</strong> Darkness, Evil, Sun, Trickery<br
+        /><strong>Subdomains</strong> Day, Deception, Night, Thievery<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong>
+        Kusarigama</p><h3>Obedience</h3><p>While blindfolded, turn your back to
+        the setting sun and concentrate on what the world might be like should
+        the sun fail to rise the next day. Gain a +4 profane bonus on saving
+        throws against blindness and vision-based effects.</p><h2>Boons - Oni
+        Daimyo</h2><p>@Source[PZO1139;pages=126]</p><p>The most powerful oni,
+        the oni daimyo, hold their domains in isolated regions of the Material
+        Plane. While they have transcended their lesser incarnations to become
+        something close to demigods in stature, they do not flaunt their power
+        and prefer to dwell in remote corners of the massive land of Tian
+        Xia.</p><p> Oni daimyo are always evil in alignment but can be chaotic,
+        lawful, or neutral. They range in power from CR 21 to CR 25. The boons
+        they grant are less complex than those granted by fiendish demigods,
+        manifesting as spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>blindness/deafness</em><br
+        /><strong>2</strong>: <em>greater invisibility</em><br
+        /><strong>3</strong>: <em>mislead</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

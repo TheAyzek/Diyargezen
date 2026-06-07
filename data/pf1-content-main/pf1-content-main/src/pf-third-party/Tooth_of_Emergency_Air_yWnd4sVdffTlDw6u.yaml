@@ -1,0 +1,29 @@
+_id: yWnd4sVdffTlDw6u
+_key: '!items!yWnd4sVdffTlDw6u'
+_stats:
+  coreVersion: '12.331'
+folder: 5HPDAAtypP5m41CK
+img: icons/svg/item-bag.svg
+name: Tooth of Emergency Air
+system:
+  aura:
+    school: trs
+  cl: 12
+  description:
+    value: >-
+      <p>This looks like a normal human or humanoid tooth.  When placed in the
+      socket of a freshly-removed tooth, it grafts itself in place, and assumes
+      a form in harmony with the teeth around it. Thereafter, whenever the
+      creature with the tooth bites down upon it (a free action), it provides
+      one minute of breathable air, protecting against vacuum, drowning, and
+      poisonous fumes for the duration. Once the tooth has been activated, or
+      when it is first emplaced, it requires one hour to charge itself before it
+      can function again.</p><h3>Requirements</h3><p>Craft Wondrous Item, water
+      breathing</p>
+  price: 15000
+  sources:
+    - date: '2012'
+      publisher: Necromancer Games & Frog God Games
+      title: Rappan Athuk
+  subType: wondrous
+type: equipment

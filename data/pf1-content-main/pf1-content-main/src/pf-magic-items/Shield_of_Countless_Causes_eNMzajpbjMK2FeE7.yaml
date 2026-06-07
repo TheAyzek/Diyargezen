@@ -1,0 +1,46 @@
+_id: eNMzajpbjMK2FeE7
+_key: '!items!eNMzajpbjMK2FeE7'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-heavy-wood.png
+name: Shield of Countless Causes
+system:
+  armor:
+    acp: 2
+    material:
+      base:
+        value: wood
+    value: 2
+  aura:
+    school: enc
+  baseTypes:
+    - Heavy Wooden Shield
+  cl: 5
+  description:
+    value: >-
+      <p>Dozens of pages of scripture cover the face of this +2 heavy wooden
+      shield, each detailing in word or illustration the tenets of a knightly
+      order. While worn or carried, the shield acts like a phylactery of
+      faithfulness, except that it only functions for actions that would violate
+      the edicts of the wearer's cavalier order. A newly created shield of
+      countless causes has 5 charges. By expending 1 charge and studying the
+      shield's texts for 10 minutes, the wielder can regain the use of his order
+      abilities as if 24 hours had passed. By expending 3 charges and studying
+      the shield's texts for 8 hours, the wielder can change his order. When the
+      last charge is used, the shield remains a +2 heavy wooden
+      shield.</p><p><strong>Base Item</strong>: heavy wooden
+      shield</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, atonement</p>
+  enh: 2
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 11157
+  slot: shield
+  sources:
+    - id: PZO9436
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 10
+type: equipment

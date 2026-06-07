@@ -1,0 +1,33 @@
+_id: NPW0yYQYFxL7EUwB
+_key: '!journal!NPW0yYQYFxL7EUwB'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Varg
+pages:
+  - _id: dCbw5ljrHiW3fcKK
+    _key: '!journal.pages!NPW0yYQYFxL7EUwB.dCbw5ljrHiW3fcKK'
+    _stats:
+      coreVersion: '12.331'
+    name: Varg
+    sort: 0
+    text:
+      content: >-
+        <h1>Varg</h1><h2>The Iron Warrior</h2>@Source[PZO9267;pages=328] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Varg">Varg</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Orc Deities<br /><strong>Areas of
+        Concern</strong> Iron, siege engines, war<br /><strong>Domains</strong>
+        Chaos, Earth, Evil, War<br /><strong>Subdomains</strong> Demon (Chaos),
+        Demon (Evil), Fear, Metal, Tactics<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Greataxe<br /><strong>Symbol</strong> Crumbling, smoking tower<br
+        /><strong>Sacred Animal(s)</strong> Woolly rhinoceros<br
+        /><strong>Sacred Color(s)</strong> Green, iron gray</p><h2>For Followers
+        of Varg</h2><h3>Archetypes</h3><p>Iron Tyrant (Antipaladin)</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

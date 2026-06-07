@@ -1,0 +1,17 @@
+_id: RCBmGCzygRwtSlcI
+_key: '!items!RCBmGCzygRwtSlcI'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/violet_21.jpg
+name: Unnatural Aura (1 EP)
+system:
+  abilityType: su
+  description:
+    value: >-
+      <p>An eidolon is obviously of unnatural origin.</p><p>Normal animals do
+      not willingly approach the eidolon unless the animal's master makes a DC
+      25 Handle Animal, Ride, or wild empathy check.</p>
+  subType: misc
+  tags:
+    - Eidolon Evolution
+type: feat

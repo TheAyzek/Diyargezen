@@ -1,0 +1,31 @@
+_id: VqTpUTcotxSRbPj4
+_key: '!items!VqTpUTcotxSRbPj4'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Honeytongue Elixir
+system:
+  aura:
+    school: trs
+  cl: 7
+  description:
+    value: >-
+      <p>Drinking this elixir grants the imbiber a +10 bonus on Bluff checks
+      made to convince another that her words are the truth. This bonus lasts
+      for 10 minutes, and doesn't apply to any other use of the Bluff skill,
+      such as feinting in combat, creating a diversion to hide, or communicating
+      a secret message via innuendo. If a magical effect is used against the
+      honeytongue elixir's imbiber that would detect her lies or force her to
+      speak the truth, the user of the effect must succeed at a DC 16 caster
+      level check to compel the elixir's imbiber to tell the truth. Failure
+      means the effect doesn't detect the imbiber's lies or force her to tell
+      the truth.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, glibness</p>
+  price: 750
+  sources:
+    - id: PZO9435
+  subType: wondrous
+  weight:
+    value: 0.5
+type: equipment

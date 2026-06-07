@@ -1,0 +1,30 @@
+_id: ff1W4k4WIBJ7wosc
+_key: '!items!ff1W4k4WIBJ7wosc'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/flute.jpg
+name: Beast whistle
+system:
+  description:
+    value: >-
+      <p></p><h2>Description</h2><p>This small wooden whistle emits a
+      high-pitched sound like that of a signal whistle, except the signal is
+      audible only to a specific type of creature-other types of creatures hear
+      only a quiet hissing sound.</p><p>Beast whistles come in six different
+      varieties: avian, canine, feline, rodent, reptile, and ungulate (other
+      varieties may be available at the GM's discretion). Animals and magical
+      beasts that match a beast whistle's type can hear the whistle as a human
+      hears a signal whistle. Creatures that fit into multiple categories (such
+      as griffons) can usually hear the call of multiple types of whistles,
+      though magical beasts who don't fit into any of the above categories
+      cannot hear a beast whistle. Beast whistles don't function underwater,
+      except if surrounded by an air bubble (<em>Pathfinder RPG Ultimate
+      Combat</em> 222) or similar effect, though creatures underwater may hear a
+      beast whistle sounded from above the surface if they are close enough.</p>
+  equipped: false
+  price: 5
+  sources:
+    - id: PZO9454
+      pages: '20'
+  subType: animalGear
+type: loot

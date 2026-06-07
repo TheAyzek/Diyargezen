@@ -1,0 +1,64 @@
+_id: lfeluxUOHcC7z8OA
+_key: '!items!lfeluxUOHcC7z8OA'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/ankus.png
+name: Goad of Obedience
+system:
+  actions:
+    - _id: 53ko0g4s86i8uep0
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: goadOfObedience
+  aura:
+    school: enc
+  baseTypes:
+    - Ankus
+  cl: 8
+  description:
+    value: >-
+      <p>This +1 ankus (see page 18) grants the wielder a +2 competence bonus on
+      wild empathy checks. Five times per day, the wielder can make a touch
+      attack with the goad of obedience against any animal as a standard action.
+      On a hit, the animal must succeed at a DC 11 Will save or be charmed by
+      the wielder, as charm animal. An animal that successfully saves against
+      this effect can't be charmed by the goad of obedience for 24 hours. In
+      addition, once per day as an immediate action, the wielder can paralyze an
+      animal hit by the goad of obedience, as hold animal (Will DC 13
+      negates).</p><p><strong>Base Item</strong>: 
+      ankus</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, charm animal, hold animal</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 11508
+  properties:
+    dis: true
+    trp: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9455
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 5
+type: weapon

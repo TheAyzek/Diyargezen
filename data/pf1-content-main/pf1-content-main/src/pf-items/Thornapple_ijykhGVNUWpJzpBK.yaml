@@ -1,0 +1,41 @@
+_id: ijykhGVNUWpJzpBK
+_key: '!items!ijykhGVNUWpJzpBK'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Thornapple
+system:
+  actions:
+    - _id: c11pbiv4fzt3ylx6
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1]] Int damage, [[1]] Wis damage,
+            [[1]] Con damage, and blind for [[1]] minute
+      save:
+        dc: '11'
+        type: fort
+      tag: thornapple
+  description:
+    value: >-
+      <p><strong>Type</strong> contact; <strong>Save</strong> Fortitude DC
+      11</p><p><strong>Onset</strong> 10 minutes; <strong>Frequency</strong>
+      1/minute for 6 minutes</p><p><strong>Effect</strong> 1 Int damage, 1 Wis
+      damage, 1 Con damage, and blind for 1 minute</p><p><strong>Cure</strong> 2
+      saves</p>
+  price: 90
+  sources:
+    - id: PZO9217E
+      pages: '14'
+  subType: poison
+  uses:
+    per: single
+type: consumable

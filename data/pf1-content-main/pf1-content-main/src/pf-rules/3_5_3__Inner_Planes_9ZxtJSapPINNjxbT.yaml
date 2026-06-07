@@ -1,0 +1,49 @@
+_id: 9ZxtJSapPINNjxbT
+_key: '!journal!9ZxtJSapPINNjxbT'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: B3pncms1TJP9sIoG
+name: 3.5.3. Inner Planes
+pages:
+  - _id: GAIah1hF2xZC3pL0
+    _key: '!journal.pages!9ZxtJSapPINNjxbT.GAIah1hF2xZC3pL0'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.5.3. Inner Planes
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.ryIRK7CjUk9fI8TT]{3.5.
+        The
+        Planes}</p><ul><li>@Compendium[pf-content.pf-rules.Q71BilaWEOeIsfux]{3.5.1.
+        Material
+        Plane}</li><li>@Compendium[pf-content.pf-rules.PWWyAj9RxKmCOZjr]{3.5.2.
+        Transitive
+        Planes}</li><li><strong>@Compendium[pf-content.pf-rules.9ZxtJSapPINNjxbT]{3.5.3.
+        Inner
+        Planes}</strong></li><li>@Compendium[pf-content.pf-rules.VNXqsTp4czvUWZn3]{3.5.4.
+        Outer
+        Planes}</li><li>@Compendium[pf-content.pf-rules.XC9n0Ynwpq8C9Sm9]{3.5.5.
+        Demiplanes}</li><li>@Compendium[pf-content.pf-rules.ngl3E9mNPsbToy2u]{3.5.6.
+        Layered
+        Planes}</li><li>@Compendium[pf-content.pf-rules.5HeGmOWABLZ7bME7]{3.5.7.
+        How Planes Interact}</li></ul><hr
+        /><p>@Source[PZO1110;pages=440]</p><p>The Inner Planes contain the
+        building blocks of reality—it’s easiest to envision these planes as
+        “containing” the Material Plane, but they do not overlap with the
+        Material Plane as do the transitive planes. Each Inner Plane is made up
+        of a single type of energy or element that overwhelms all others. The
+        natives of a particular Inner Plane are made of the same energy or
+        element as the plane itself.</p><p>Example Inner Planes include the
+        following.</p><ul><li>@Compendium[pf-content.pf-rules.BtNqgktOkZENzN1c]{3.5.3.1.
+        Elemental
+        Planes}</li><li>@Compendium[pf-content.pf-rules.EQFsfwmMHxeX34rq]{3.5.3.2.
+        Energy Planes}</li></ul>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

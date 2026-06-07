@@ -1,0 +1,32 @@
+_id: LnkMc1K01jv9Ypeh
+_key: '!items!LnkMc1K01jv9Ypeh'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Demonhide
+system:
+  aura:
+    custom: true
+    school: transmutation [evil]
+  cl: 10
+  description:
+    value: >-
+      <p>This rough, leathery hide is peeled from the body of a demon in
+      strips-it may be scaly, warty, scabrous, or even covered in rank, greasy
+      fur or feathers. To be grafted with demonhide, the recipient must first
+      have its own skin flayed off, taking 1d4 points each of Dexterity,
+      Constitution, and Charisma damage in the process. Once grafted, demonhide
+      grants the wearer a +1 natural armor bonus to Armor Class and resistance 5
+      to electricity. In addition, the recipient is immune to contact poison and
+      gains a +4 bonus on saving throws against poisons delivered by injury
+      (including those delivered by a touch
+      attacks).<h3>Requirements</h3><p>Craft Wondrous Item, barkskin, delay
+      poison, resist energy</p>
+  price: 20000
+  sources:
+    - id: PZO9074
+  subType: wondrous
+  weight:
+    value: 10
+type: equipment

@@ -1,0 +1,57 @@
+_id: sjmHLtUHjp10PRNg
+_key: '!journal!sjmHLtUHjp10PRNg'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: tfgLGI205b9dxEjx
+name: 6.2.2. Full Vehicle Rules
+pages:
+  - _id: ic3iZVAfYmekQ1x4
+    _key: '!journal.pages!sjmHLtUHjp10PRNg.ic3iZVAfYmekQ1x4'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.2.2. Full Vehicle Rules
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.F9hzOnUh5c0Ls2p6]{6.2.
+        Vehicles}</p><ul><li>@Compendium[pf-content.pf-rules.wtkl6UbvZjJKe1hM]{6.2.1.
+        Vehicle
+        Basics}</li><li><strong>@Compendium[pf-content.pf-rules.sjmHLtUHjp10PRNg]{6.2.2.
+        Full Vehicle
+        Rules}</strong></li><li>@Compendium[pf-content.pf-rules.539C4TSxha1IlXOT]{6.2.3.
+        Vehicle
+        Statistics}</li><li>@Compendium[pf-content.pf-rules.x0eiNjbEPSWvRSDc]{6.2.4.
+        Land
+        Vehicles}</li><li>@Compendium[pf-content.pf-rules.k1QL1hPoOfe1Or6X]{6.2.5.
+        Water
+        Vehicles}</li><li>@Compendium[pf-content.pf-rules.KhRRl87tEDU65YG5]{6.2.6.
+        Air Vehicles}</li></ul><hr /><p>@Source[PZO1118;pages=170]</p><p>The
+        basic rules give a general idea of how vehicles act in the structure of
+        the combat round, and how they are different than creatures. The
+        following sections go into greater depth about running vehicles in
+        combat.</p><ul><li>@Compendium[pf-content.pf-rules.CQgsuMCjnSXQT5tK]{6.2.2.01.
+        Drivers}</li><li>@Compendium[pf-content.pf-rules.n20ux7F2Gua3Henu]{6.2.2.02.
+        Occupants}</li><li>@Compendium[pf-content.pf-rules.WNrj8ktGtzmJ2idV]{6.2.2.03.
+        Propulsion and Driving
+        Checks}</li><li>@Compendium[pf-content.pf-rules.bqobhetOALHmOywu]{6.2.2.04.
+        Vehicle Size and
+        Space}</li><li>@Compendium[pf-content.pf-rules.bqobhetOALHmOywu]{6.2.2.04.
+        Vehicle Size and
+        Space}</li><li>@Compendium[pf-content.pf-rules.wYDD2ws3dIeQaHKV]{6.2.2.06.
+        Driving
+        Vehicles}</li><li>@Compendium[pf-content.pf-rules.AoRyhHSyrQd2YNsf]{6.2.2.07.
+        Optional Rule: Wide
+        Turns}</li><li>@Compendium[pf-content.pf-rules.uCzllyIwfv6C8w51]{6.2.2.08.
+        Vehicles in
+        Combat}</li><li>@Compendium[pf-content.pf-rules.RQx3RwhdQds2znsh]{6.2.2.09.
+        Propulsion
+        Devies}</li><li>@Compendium[pf-content.pf-rules.UkducnpdR3NCcjdK]{6.2.2.10.
+        Driving Devices}</li></ul>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

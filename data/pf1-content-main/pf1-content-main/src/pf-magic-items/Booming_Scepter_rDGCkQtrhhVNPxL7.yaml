@@ -1,0 +1,62 @@
+_id: rDGCkQtrhhVNPxL7
+_key: '!items!rDGCkQtrhhVNPxL7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/mace-light.png
+name: Booming Scepter
+system:
+  actions:
+    - _id: awc18mymd3w3jyd9
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: boomingScepter
+  aura:
+    school: evo
+  baseTypes:
+    - Light Mace
+  cl: 7
+  description:
+    value: >-
+      <p>This bejeweled scepter constantly emits a low hum that amplifies the
+      wielder's voice. A booming scepter acts as a +1 thundering light mace that
+      grants the wielder a +5 competence bonus on Intimidate checks and the
+      ability to use shout, as per the spell, once per day. When a booming
+      scepter is held in both hands, the wielder's voice carries far enough to
+      be heard by all creatures within 1 mile, regardless of ambient noise or
+      intervening obstacles, although this feature cannot penetrate the area of
+      a silence spell.</p><p><strong>Base Item</strong>: thundering light
+      mace</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, Craft Rod, shout, ventriloquism</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 34000
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9476
+  weaponGroups:
+    - hammers
+  weight:
+    value: 4
+type: weapon

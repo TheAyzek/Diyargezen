@@ -1,0 +1,34 @@
+_id: uIZK38b8HnxcBICo
+_key: '!journal!uIZK38b8HnxcBICo'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Fandarra
+pages:
+  - _id: YCziqsGf5NjPV0ci
+    _key: '!journal.pages!uIZK38b8HnxcBICo.YCziqsGf5NjPV0ci'
+    _stats:
+      coreVersion: '12.331'
+    name: Fandarra
+    sort: 0
+    text:
+      content: >-
+        <h1>Fandarra</h1><h2>Blood Mother</h2>@Source[PZO9267;pages=324] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Fandarra">Fandarra</a><h3>Details</h3><p><strong>Alignment</strong>
+        N<br /><strong>Pantheon</strong> Giant Deities<br /><strong>Areas of
+        Concern</strong> Cycle of life, earth, knowledge<br
+        /><strong>Domains</strong> Community, Death, Earth, Knowledge, Plant<br
+        /><strong>Subdomains</strong> Caves, Family, Growth, Home, Memory,
+        Thought<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Stone dagger<br
+        /><strong>Symbol</strong> Mountain and moon<br /><strong>Sacred
+        Animal(s)</strong> Mammoth<br /><strong>Sacred Color(s)</strong> Brown,
+        ivory</p><h2>For Followers of Fandarra</h2><h3>Magic Items - Wondrous
+        Items</h3><p>Sacrificial Dagger of the Blood Mother</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

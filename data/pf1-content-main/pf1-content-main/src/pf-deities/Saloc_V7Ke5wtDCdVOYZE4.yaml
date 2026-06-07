@@ -1,0 +1,47 @@
+_id: V7Ke5wtDCdVOYZE4
+_key: '!journal!V7Ke5wtDCdVOYZE4'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Saloc
+pages:
+  - _id: dGrmj12B9IjKthss
+    _key: '!journal.pages!V7Ke5wtDCdVOYZE4.dGrmj12B9IjKthss'
+    _stats:
+      coreVersion: '12.331'
+    name: Saloc
+    sort: 0
+    text:
+      content: >-
+        <h1>Saloc</h1><h2>The Minder of Immortals</h2>@Source[PZO92114;pages=16]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Saloc">Saloc</a><h3>Details</h3><p><strong>Alignment</strong>
+        N<br /><strong>Pantheon</strong> Psychopomp Usher<br /><strong>Areas of
+        Concern</strong> Agency, bronze, and education<br
+        /><strong>Domains</strong> Knowledge, Liberation, Repose, Strength<br
+        /><strong>Subdomains</strong> N/A<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Guisarme<br /><strong>Symbol</strong> Equilateral triangle set inside a
+        circle</p><h3>Obedience</h3><p>Spend at least 1 hour observing a crowded
+        public place and help the first person you see fail or err. This may be
+        mundane, such as assisting a shopkeep in her accounting, or dire, as in
+        helping a failed pickpocket escape the town guard. Gain 5 temporary
+        ranks in a skill you do not currently have any ranks in. These bonus
+        skill ranks vanish after 24 hours.</p><h2>Boons - Monitor
+        Obedience</h2><h3>None</h3><p>@Source[PZO92114;pages=16]<br /><strong>1:
+        Disciplined Educator (Sp)</strong> <em>forbid action</em> 3/day,
+        <em>bestow insight</em> 2/day, or <em>remove curse</em> 1/day<br
+        /><strong>2: Elder's Insight (Su)</strong> While preparing your spells,
+        you can treat yourself as one age category older than your true age for
+        the next 24 hours, temporarily gaining all the ability score bonuses and
+        penalties associated with your emulated age.<br /><strong>3: Cosmic
+        Appeal (Sp)</strong> You can cast <em>raise dead</em> once per day. You
+        cannot use this ability on the same creature more than
+        once.</em></p><h2>For Followers of Saloc</h2><h3>Prestige
+        Classes</h3><p><em>Mortal Usher</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

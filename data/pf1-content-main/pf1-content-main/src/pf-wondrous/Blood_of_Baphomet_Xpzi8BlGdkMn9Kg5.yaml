@@ -1,0 +1,29 @@
+_id: Xpzi8BlGdkMn9Kg5
+_key: '!items!Xpzi8BlGdkMn9Kg5'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Blood of Baphomet
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>This red elixir is always the temperature of freshly spilled blood. A
+      creature can consume a gobbet of flesh and drink this liquid as a single
+      standard action.   If the drinker is an animal, it is stunned for 1 round,
+      and must succeed at a DC 17 Will save or permanently acquire the
+      man-eating animal template. If the blood of Baphomet is consumed with
+      humanoid flesh, the animal receives no saving throw.   If the drinker is
+      not an animal, it enters a frenzy, as the rage spell. The drinker must
+      succeed at a DC 17 Will save or be confused for as long as it rages. If
+      the blood of Baphomet is consumed with humanoid flesh (a chaotic evil
+      act), the drinker receives no saving throw.<h3>Requirements</h3><p>Craft
+      Wondrous Item, beast shape III, rage</p>
+  price: 2250
+  sources:
+    - id: PZO9074
+  subType: wondrous
+type: equipment

@@ -1,0 +1,30 @@
+_id: OlTVxKdlIXaYv5MK
+_key: '!items!OlTVxKdlIXaYv5MK'
+_stats:
+  coreVersion: '12.331'
+folder: 52jofiLqjkyFLxLL
+img: icons/equipment/finger/ring-crown-teal-gold.webp
+name: Headband of Seduction
+system:
+  aura:
+    custom: true
+    school: enchantment and transmutation
+  cl: 5
+  description:
+    value: >-
+      <p>This plain white band makes the wearer seem more attractive. The wearer
+      gains a +2 competence bonus on Charisma-based checks with other members of
+      his creature type. If the wearer is of the humanoid type, he gains a +5
+      competence bonus on creatures of his subtype instead. Once per day, the
+      wearer can attempt to affect a creature as the spell unnatural lust
+      (Ultimate Magic) but with a duration of 10
+      minutes.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, unnatural lust</p>
+  price: 40000
+  slot: headband
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

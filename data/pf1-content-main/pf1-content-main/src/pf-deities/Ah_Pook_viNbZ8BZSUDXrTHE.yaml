@@ -1,0 +1,33 @@
+_id: viNbZ8BZSUDXrTHE
+_key: '!journal!viNbZ8BZSUDXrTHE'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Ah Pook
+pages:
+  - _id: FALImrt114pcfRh5
+    _key: '!journal.pages!viNbZ8BZSUDXrTHE.FALImrt114pcfRh5'
+    _stats:
+      coreVersion: '12.331'
+    name: Ah Pook
+    sort: 0
+    text:
+      content: >-
+        <h1>Ah Pook</h1><h2>The Destroyer</h2>@Source[PZO90143;pages=72] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Ah Pook">Ah
+        Pook</a><h3>Details</h3><p><strong>Alignment</strong> NE<br
+        /><strong>Pantheon</strong> Other Deities<br /><strong>Areas of
+        Concern</strong> Death, destruction, and the moon<br
+        /><strong>Domains</strong> Darkness, Death, Destruction, Evil, Void<br
+        /><strong>Subdomains</strong> Catastrophe, Fear, Isolation, Loss, Moon,
+        Sahkil<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Terbutje<br
+        /><strong>Symbol</strong> a skull with a crescent eclipse<br
+        /><strong>Sacred Animal(s)</strong> maggot</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

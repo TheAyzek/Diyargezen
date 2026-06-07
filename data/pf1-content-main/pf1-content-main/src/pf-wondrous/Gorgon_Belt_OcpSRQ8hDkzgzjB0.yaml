@@ -1,0 +1,90 @@
+_id: OcpSRQ8hDkzgzjB0
+_key: '!items!OcpSRQ8hDkzgzjB0'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/equipment/waist/belt-coiled-leather-steel.webp
+name: Gorgon Belt
+system:
+  actions:
+    - _id: 9OTAReY1M7eI9XI7
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 60 foot (18 m) cone
+      description: >-
+        <p>Once per day on command, its wearer can spew a 60 ft (18 m) cone of
+        poisonous green gas as a breath weapon. Any creature caught in the area
+        of the gas can attempt a DC 18 Fortitude saving throw to resist its
+        effect, but if the creature fails the saving throw, it is paralyzed for
+        1d4 rounds. At the end of its turn, a creature petrified by this breath
+        weapon can attempt a new save to end the paralysis effect. </p>
+      duration:
+        units: inst
+      measureTemplate:
+        color: '#15a252'
+        size: '60'
+        type: cone
+      name: poison breath
+      notes:
+        effect:
+          - '@Condition[paralyzed;duration=1d4]'
+      range:
+        units: ft
+        value: '0'
+      save:
+        dc: '18'
+        description: save or by paralyzed for 1d4 rounds (save each round to end condition)
+        type: fort
+  aura:
+    school: trs
+  changes:
+    - _id: fdh2x4qF
+      formula: '4'
+      target: str
+      type: enh
+  cl: 9
+  contextNotes:
+    - target: landSpeed
+      text: >-
+        You ignore difficult terrain while charging or making an overrun, bull
+        rush, or trample attempt.
+    - target: cmb
+      text: >-
+        You ignore difficult terrain while charging or making an overrun, bull
+        rush, or trample attempt.
+  description:
+    unidentified: <p>This belt is unremarkable.</p>
+    value: >-
+      <h3>Effect</h3><p>This belt grants its wearer a +4 enhancement bonus to
+      Strength, and the ability to ignore difficult terrain while charging or
+      making an overrun, bull rush, or trample attempt. Furthermore, once per
+      day on command, its wearer can spew a @Distance[60;dual] cone of poisonous
+      green gas as a breath weapon. Any creature caught in the area of the gas
+      can attempt a DC 18 Fortitude saving throw to resist its effect, but if
+      the creature fails the saving throw, it is paralyzed for 1d4 rounds. At
+      the end of its turn, a creature petrified by this breath weapon can
+      attempt a new save to end the paralysis effect. Treat the enhancement
+      bonus to Strength as a temporary ability bonus for the first 24 hours the
+      belt is worn.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.05i5rxwim12hwktu]{Bull's Strength},
+      @UUID[Compendium.pf1.spells.Item.bf2lu50t56iswz18]{feather step},
+      @UUID[Compendium.pf1.spells.Item.vdh0yuzpjwhky6kr]{poison}</em>
+      <strong>Cost</strong> 11,500 gp</p>
+  price: 23000
+  showInQuickbar: true
+  slot: belt
+  sources:
+    - id: PZO1123
+      pages: '212'
+  subType: wondrous
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+  weight:
+    value: 1
+type: equipment

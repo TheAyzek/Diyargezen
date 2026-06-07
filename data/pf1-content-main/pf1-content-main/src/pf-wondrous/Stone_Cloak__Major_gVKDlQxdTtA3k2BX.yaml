@@ -1,0 +1,25 @@
+_id: gVKDlQxdTtA3k2BX
+_key: '!items!gVKDlQxdTtA3k2BX'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Stone Cloak, Major
+system:
+  aura:
+    school: abj
+  cl: 8
+  description:
+    value: >-
+      <p>This cloak is identical to the stone cloak, save that it provides DR
+      10/adamantine when
+      activated.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, stoneskin</p>
+  price: 20000
+  slot: shoulders
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

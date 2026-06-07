@@ -1,0 +1,30 @@
+_id: bsmtP68PZr3AIbJ6
+_key: '!items!bsmtP68PZr3AIbJ6'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Tidy Trunk
+system:
+  aura:
+    school: uni
+  cl: 1
+  description:
+    value: >-
+      <p>This small-sized trunk is bound in polished metal and lined with velvet
+      fabric. While the trunk is latched, items contained within are kept free
+      of mold, moths, water damage, and other undesirable effects of long-term
+      storage, though perishable items still eventually decay. If the trunk is
+      kept latched for at least 8 hours, the items inside are neatly cleaned.
+      The trunk folds and presses clothing, polishes crystalline and metal
+      tableware, removes stains from items, and so on. Items are not repaired of
+      any preexisting damage; they're simply kept clean and
+      organized.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Items, prestidigitation</p>
+  price: 1000
+  sources:
+    - id: PZO9275
+  subType: wondrous
+  weight:
+    value: 25
+type: equipment

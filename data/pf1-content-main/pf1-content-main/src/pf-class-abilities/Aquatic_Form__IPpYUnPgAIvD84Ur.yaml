@@ -1,0 +1,18 @@
+_id: IPpYUnPgAIvD84Ur
+_key: '!items!IPpYUnPgAIvD84Ur'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_34.jpg
+name: Aquatic Form*
+system:
+  associations:
+    classes:
+      - Shifter
+  description:
+    value: >-
+      <p><strong>Shifter Reactive Form</strong></p><p>The adaptive shifter gains
+      a swim speed equal to her base speed, and she can breathe underwater.</p>
+  subType: classFeat
+  tags:
+    - Shifter Reactive Form
+type: feat

@@ -1,0 +1,65 @@
+_id: ExhFO4bmUvIuTHor
+_key: '!items!ExhFO4bmUvIuTHor'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/gnome-pincher.png
+name: Trailblazer's Spade
+system:
+  actions:
+    - _id: m2nvh7i9n0ql7i4c
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: trailblazersSpade
+  aura:
+    school: trs
+  baseTypes:
+    - Monk's Spade
+  cl: 3
+  description:
+    value: >-
+      <p>This two-ended tool can be used as +1/+1 monk's spade. Five times per
+      day as a standard action, the wielder can sweep an adjacent 10-foot
+      square. This action clears the affected area of objects and terrain that
+      hinder movement, such as caltrops, rubble, and undergrowth. The
+      trailblazer's spade has no effect on features more than 4 feet high or
+      deep. It has no effect on terrain that has been magically manipulated to
+      impede movement.</p><p><strong>Base Item</strong>: /+1 monk's
+      spade</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, soften earth and stone</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 11400
+  properties:
+    dbl: true
+    mnk: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9440
+  weaponGroups:
+    - double
+    - monk
+    - polearms
+  weight:
+    value: 3
+type: weapon

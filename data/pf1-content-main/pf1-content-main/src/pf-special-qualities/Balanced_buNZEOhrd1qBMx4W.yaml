@@ -1,0 +1,28 @@
+_id: buNZEOhrd1qBMx4W
+_key: '!items!buNZEOhrd1qBMx4W'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Balanced
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint evocation <strong>CL</strong>
+      3rd</p><p><strong>Slot</strong> armor quality; <strong>Price</strong> +1
+      bonus;</p><p>As an immediate action, the wearer of a suit of
+      <em>balanced</em> armor can reduce the enhancement bonus of the armor to
+      gain an equal enhancement bonus on one type of saving throw (Fortitude,
+      Reflex, or Will) designated when the armor is created. This effect lasts
+      until the beginning of the wearer's next turn. This ability can be applied
+      only to medium
+      armor.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>resistance</em>; <strong>Price</strong> +1
+      bonus</p>
+  sources:
+    - id: PZO9467
+      pages: '26'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

@@ -1,0 +1,25 @@
+_id: 0prLEJ5tLKU50ZsF
+_key: '!items!0prLEJ5tLKU50ZsF'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/flowers/lily-grey-orange.webp
+name: Nethys's Dagger
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Herbs</p><p><strong>Gather</strong> DC 18<br
+      /><strong>Terrain</strong> deserts</p><p>Found most often in lands heavily
+      modified by magic, this bulbous cactus is topped with twilight-blue
+      flowers. The sap from the cactus can be used as an additive when crafting
+      potions, causing all variable numeric effects of the potion to be
+      determined as if the potion's caster level were 1 higher. When processed
+      into a powder with a successful DC 15 Craft (alchemy) check, Nethys's
+      dagger can be used as an additional material component when casting
+      spells, granting the user a +1 alchemical bonus on caster level checks to
+      overcome spell resistance.</p>
+  price: 50
+  sources:
+    - id: PZO9456
+      pages: '10'
+  subType: herb
+type: loot

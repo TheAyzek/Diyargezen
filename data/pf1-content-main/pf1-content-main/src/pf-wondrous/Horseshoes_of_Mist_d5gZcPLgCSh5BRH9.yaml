@@ -1,0 +1,30 @@
+_id: d5gZcPLgCSh5BRH9
+_key: '!items!d5gZcPLgCSh5BRH9'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Horseshoes of Mist
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>When a horse is shod with these horseshoes, they give off a puff of
+      mist each time a hoof strikes the earth. On the rider's command, the mount
+      and the rider are both affected as if subject to a gaseous form spell. If
+      for some reason the rider and the mount become separated from one another
+      while in gaseous form, the effect automatically ends for both. The
+      horseshoes can be used for 10 minutes per day. The duration need not be
+      consecutive, but it must be spent in 1-minute
+      increments.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, gaseous form</p>
+  price: 27000
+  slot: feet
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 12
+type: equipment

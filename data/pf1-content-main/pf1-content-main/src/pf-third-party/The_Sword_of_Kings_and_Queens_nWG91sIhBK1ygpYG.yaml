@@ -1,0 +1,49 @@
+_id: nWG91sIhBK1ygpYG
+_key: '!items!nWG91sIhBK1ygpYG'
+_stats:
+  coreVersion: '12.331'
+folder: 5HPDAAtypP5m41CK
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: The Sword of Kings and Queens
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: divination illusion and transmutation
+  cl: 15
+  description:
+    value: >-
+      <p>This jewel encrusted +3 longsword is made of an unbreakable, purplish
+      metal engraved with twin crowns.  It contains the souls of both a demon
+      and an angel. It is neutrally aligned. It can emit a blinding flash 1/day
+      (DC 20 Fortitude save avoids blindness for 2d4 rounds to all within 30
+      ft., the sword wielder is not affected), and it has the ability to erase a
+      sleeping creatures dreams 1/day (spellcasters may not recover spells, no
+      natural daily healing is received, daily abilities are not recovered). It
+      can cast find the path 1/week (to locate the Sword of Princes and
+      Princesses only until found). Further, the sword gains the ability to cast
+      the dream spell 1/week. The sword has an ego of 21, and an intelligence of
+      13. The major drawback to this sword is that it carries a curse and a
+      geas.  This curse can only be removed by a miracle, wish or by the
+      prescribed method. The curse attracts monsters and creates hostility
+      towards non-neutral creatures; with triple normal chances of wandering
+      monsters occurring while a being possesses the sword, and a -4 Cha
+      modifier when determining actions of non-neutral creatures towards the
+      wielder.  Magic runes inscribed on the blade read destroy me if a read
+      magic is cast. If destroyed, this action frees both the demon and angel
+      from the sword. Both then disappear. This lifts the curse from the owner.
+      Better yet, the sword then reappears in the owner's possession (in a
+      non-cursed state) the first time he is unarmed, disarmed, or in danger or
+      combat and without a weapon. The owner does not know of this last effect
+      until it actually happens.  The geas on this sword forces the owner to
+      quest for what it considers its offspring, the Sword of Princes and
+      Princesses, located on Level 12B, Area 12B-9. Its powers and description
+      are listed here as well for reference.</p>
+  hp:
+    base: 10
+  sources:
+    - id: FGG32698
+  subType: other
+  weight:
+    value: 4
+type: equipment

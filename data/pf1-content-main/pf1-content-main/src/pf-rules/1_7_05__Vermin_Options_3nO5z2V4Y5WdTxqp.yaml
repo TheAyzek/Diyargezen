@@ -1,0 +1,91 @@
+_id: 3nO5z2V4Y5WdTxqp
+_key: '!journal!3nO5z2V4Y5WdTxqp'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: sWur0vXI68cZozsg
+name: 1.7.05. Vermin Options
+pages:
+  - _id: jcbbAvWHjUX7mObn
+    _key: '!journal.pages!3nO5z2V4Y5WdTxqp.jcbbAvWHjUX7mObn'
+    _stats:
+      coreVersion: '12.331'
+    name: 1.7.05. Vermin Options
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.Ic1tlF3EE1QNW3kE]{(Index)}</p><p>@Compendium[pf-content.pf-rules.8scSEgBEtJZj0suf]{(Index)
+        Basic
+        Rules}</p><ul><li><p>@Compendium[pf-content.pf-rules.sjhxRhOgV3ynmqf9]{1.7.
+        Animal
+        Companions}</p><ul><li>@Compendium[pf-content.pf-rules.bLW7my2JM1AWHcPt]{1.7.01.
+        Controlling Companions, Familiars, and
+        Followers}</li><li>@Compendium[pf-content.pf-rules.QrfgKKGq1a9P28cD]{1.7.02.
+        Animal
+        Options}</li><li>@Compendium[pf-content.pf-rules.751RCqF5c5cRGCVG]{1.7.03.
+        Monstrous
+        Options}</li><li>@Compendium[pf-content.pf-rules.A2INBQqsGOHfeN36]{1.7.04.
+        Plant
+        Options}</li><li><strong>@Compendium[pf-content.pf-rules.3nO5z2V4Y5WdTxqp]{1.7.05.
+        Vermin
+        Options}</strong></li><li>@Compendium[pf-content.pf-rules.fzg18IfdQWR57QpN]{1.7.06.
+        Advancing
+        Companions}</li><li>@Compendium[pf-content.pf-rules.EBgdBlDozsMHFm1r]{1.7.07.
+        Intelligent
+        Animals}</li><li>@Compendium[pf-content.pf-rules.MaMACE7dH6mGN9yB]{1.7.08.
+        Awakened
+        Animals}</li><li>@Compendium[pf-content.pf-rules.gxSnEAS4Jn1zHrAS]{1.7.09.
+        Tips for Remembering
+        Companions}</li><li>@Compendium[pf-content.pf-rules.S1ITgv2XUahBeROc]{1.7.10.
+        Companion Plot
+        Hooks}</li><li>@Compendium[pf-content.pf-rules.6zNHWvDTzqgtPPTd]{1.7.11.
+        Reviving and Replacing Companions}</li></ul></li></ul><hr
+        /><p>@Source[PZO1117]</p><p>In addition to the normal choices of animal
+        companions, a druid who is so inclined may select a vermin as her
+        companion. Vermin companions follow the same rules as animal companions,
+        advancing their Hit Dice and other abilities per the animal companion
+        base statistics table. Vermin companions can be trained as if they were
+        animals using the Handle Animal skill.</p><p><strong>Mindless</strong>:
+        Vermin companions have no Intelligence score and possess the mindless
+        trait. In spite of this, vermin companions may learn one trick, plus
+        additional bonus tricks. If a vermin animal companion gains an ability
+        score increase (at 4 Hit Dice, 8 Hit Dice, and so on), the druid can
+        apply this increase to the companion's Intelligence, changing it from —
+        to 1, at which point the companion loses the mindless quality and is
+        able to know up to 3 tricks per point of Intelligence, plus the
+        additional bonus tricks. Vermin companions have no skill points or feats
+        as long as they have the mindless quality.</p><p><strong>Trip</strong>:
+        Because many vermin have multiple limbs, they are very difficult to
+        trip. As a result, a CMD entry has been included for each, indicating
+        the bonus to CMD such vermin receive against trip attacks.</p><hr
+        /><p>@Compendium[pf-content.pf-companions.3ovmfxSd9xrbw1n5]{Eurypterid}</p><p>@Compendium[pf-content.pf-companions.DSrlTqY0EQiv3hu7]{Giant
+        Ant}</p><p>@Compendium[pf-content.pf-companions.jOOjynWbgkafpDTQ]{Giant
+        Assassin
+        Bug}</p><p>@Compendium[pf-content.pf-companions.kQADV3NZBImk77QK]{Giant
+        Beetle}</p><p>@Compendium[pf-content.pf-companions.ON3lPEFm1wHZ8GLN]{Giant
+        Caterpillar}</p><p>@Compendium[pf-content.pf-companions.PalYgqKfnMj9BgWc]{Giant
+        Centipede}</p><p>@Compendium[pf-content.pf-companions.CTRzv8eNNM7gNcYY]{Giant
+        Cockroach}</p><p>@Compendium[pf-content.pf-companions.uvHHPgsk8vsD2iaz]{Giant
+        Crab}</p><p>@Compendium[pf-content.pf-companions.NWkx3nCuPjrmfcS5]{Giant
+        Dragonfly}</p><p>@Compendium[pf-content.pf-companions.FI9UVtPoURAgBs3d]{Giant
+        Leech}</p><p>@Compendium[pf-content.pf-companions.KydnfsYxEQKqBhw3]{Giant
+        Locust}</p><p>@Compendium[pf-content.pf-companions.hmNhw7ZFlTyrM8Bi]{Giant
+        Mantis}</p><p>@Compendium[pf-content.pf-companions.AneYpTO9krD90Tml]{Giant
+        Mantis
+        Shrimp}</p><p>@Compendium[pf-content.pf-companions.i5ZL81oxd0jbISRZ]{Giant
+        Mosquito}</p><p>@Compendium[pf-content.pf-companions.wfa2SiJ3xgHaspto]{Giant
+        Scorpion}</p><p>@Compendium[pf-content.pf-companions.O7zwDUnK1fVhKY12]{Giant
+        Slug}</p><p>@Compendium[pf-content.pf-companions.yPFepyTDniAzwLg7]{Giant
+        Solifugid}</p><p>@Compendium[pf-content.pf-companions.zTaz6ChnBuJCwh9t]{Giant
+        Spider}</p><p>@Compendium[pf-content.pf-companions.2w6OtWKz2ADigas3]{Giant
+        Termite}</p><p>@Compendium[pf-content.pf-companions.Vcv76BEfI7eqMS56]{Giant
+        Wasp}</p><p>@Compendium[pf-content.pf-companions.KdQcpfADC8Q7mboC]{Giant
+        Whiptail
+        Centipede}</p><p>@Compendium[pf-content.pf-companions.E2bw3ELvajWCKEdD]{Web
+        Tyrant Spider}</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

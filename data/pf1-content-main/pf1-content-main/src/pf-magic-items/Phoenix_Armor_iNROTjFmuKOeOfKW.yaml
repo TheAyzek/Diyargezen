@@ -1,0 +1,44 @@
+_id: iNROTjFmuKOeOfKW
+_key: '!items!iNROTjFmuKOeOfKW'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/fullplate.PNG
+name: Phoenix Armor
+system:
+  armor:
+    acp: 6
+    dex: 1
+    material:
+      base:
+        value: steel
+    value: 9
+  aura:
+    custom: true
+    school: evocation and transmutation
+  baseTypes:
+    - Full Plate
+  cl: 9
+  description:
+    value: >-
+      <p>This brilliant golden +2 fire resistant full plate is decorated with an
+      ornate feather motif curling across its surface and seems to radiate
+      warmth. Once per day, the wearer can invoke the name of the phoenix that
+      blessed the armor and bring the might of that phoenix against the wearer's
+      foe. Activating the armor causes it to ignite, wreathing the wearer in
+      red-gold flames as if under the effects of fire shield. In addition, great
+      golden wings unfold out of the back of the armor, allowing the wearer to
+      fly as per the spell. Both of these effects last for 9
+      rounds.</p><p><strong>Base Item</strong>: fire resistant full
+      plate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, fire shield, fly</p>
+  enh: 2
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 36130
+  sources:
+    - id: PZO9431
+  spellFailure: 35
+  weight:
+    value: 50
+type: equipment

@@ -1,0 +1,31 @@
+_id: yK95jcIsVnZ6XSvf
+_key: '!items!yK95jcIsVnZ6XSvf'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Deck of Slivering Fate
+system:
+  aura:
+    school: evo
+  baseTypes:
+    - Harrow Deck
+  cl: 7
+  description:
+    value: >-
+      <p>The 54 cards in this +1 limning harrow deck have more violent imagery
+      than a standard harrow deck, and each card has a thin metallic frill
+      around its edges. When the wielder uses a card from this deck with the
+      Deadly Dealer feat (see page 15), the metallic frills become taut and
+      sharp. When they are used in this way, the cards deal slashing damage
+      instead of piercing, and the bonus damage from the Arcane Strike feat is
+      doubled.</p><p><strong>Base Item</strong>: limning harrow
+      deck</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magical Arms and Armor, Craft Wondrous Item, Deadly Dealer, magic
+      missile</p>
+  enh: 1
+  price: 13000
+  sources:
+    - id: PZO9446
+  subType: wondrous
+type: equipment

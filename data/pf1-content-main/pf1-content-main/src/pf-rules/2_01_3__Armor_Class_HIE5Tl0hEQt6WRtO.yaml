@@ -1,0 +1,76 @@
+_id: HIE5Tl0hEQt6WRtO
+_key: '!journal!HIE5Tl0hEQt6WRtO'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: GY65FtJNKIlC0ndi
+name: 2.01.3. Armor Class
+pages:
+  - _id: aTi4iXVeL3A7hZI8
+    _key: '!journal.pages!HIE5Tl0hEQt6WRtO.aTi4iXVeL3A7hZI8'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.01.3. Armor Class
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.xzfuY9W5LCixyHD2]{2.01.
+        Combat
+        Statistics}</p><ul><li>@Compendium[pf-content.pf-rules.fmqoRxGKOTrAFtwf]{2.01.1.
+        Attack
+        Roll}</li><li>@Compendium[pf-content.pf-rules.5fbGwhWB0NSGPflz]{2.01.2.
+        Attack
+        Bonus}</li><li><strong>@Compendium[pf-content.pf-rules.HIE5Tl0hEQt6WRtO]{2.01.3.
+        Armor
+        Class}</strong></li><li>@Compendium[pf-content.pf-rules.4oWKBkofZ9340k5M]{2.01.4.
+        Damage}</li><li>@Compendium[pf-content.pf-rules.yKtZdlrkOwgZ97Ua]{2.01.5.
+        Hit
+        Points}</li><li>@Compendium[pf-content.pf-rules.db5JuYfPDFbB8IXF]{2.01.6.
+        Attacks of
+        Opportunity}</li><li>@Compendium[pf-content.pf-rules.A0pu8qWAG3mBHdqB]{2.01.7.
+        Speed}</li><li>@Compendium[pf-content.pf-rules.ieNVOs9uKwbNXb6E]{2.01.8.
+        Saving Throws}</li></ul><hr /><p>@Source[PZO1110;pages=179]</p><p>Your
+        Armor Class (AC) represents how hard it is for opponents to land a
+        solid, damaging blow on you. It’s the attack roll result that an
+        opponent needs to achieve to hit you. Your AC is equal to the
+        following:</p><blockquote><p>10 + armor bonus + shield bonus + Dexterity
+        modifier + other modifiers</p></blockquote><p>Note that armor limits
+        your Dexterity bonus, so if you’re wearing armor, you might not be able
+        to apply your whole Dexterity bonus to your AC (see Table
+        6–6).</p><p>Sometimes you can’t use your Dexterity bonus (if you have
+        one). If you can’t react to a blow, you can’t use your Dexterity bonus
+        to AC. If you don’t have a Dexterity bonus, your AC does not
+        change.</p><h2>Other Modifiers</h2><p>Many other factors modify your
+        AC.</p><h2>Enhancement Bonuses</h2><p>Enhancement bonuses apply to your
+        armor to increase the armor bonus it provides.</p><h2>Deflection
+        Bonus</h2><p>Magical deflection effects ward off attacks and improve
+        your AC.</p><h2>Natural Armor</h2><p>If your race has a tough hide,
+        scales, or thick skin you receive a bonus to your AC.</p><h2>Dodge
+        Bonuses</h2><p>Dodge bonuses represent actively avoiding blows. Any
+        situation that denies you your Dexterity bonus also denies you dodge
+        bonuses. (Wearing armor, however, does not limit these bonuses the way
+        it limits a Dexterity bonus to AC.) Unlike most sorts of bonuses, dodge
+        bonuses stack with each other.</p><h2>Size Modifier</h2><p>You receive a
+        bonus or penalty to your AC based on your size.
+        </p><table><thead><tr><td>Size</td><td>AC
+        Bonus/Penalty</td></tr></thead><tbody><tr><td>Colossal</td><td>-8</td></tr><tr><td>Gargantuan</td><td>-4</td></tr><tr><td>Huge</td><td>-2</td></tr><tr><td>Large</td><td>-1</td></tr><tr><td>Medium</td><td>0</td></tr><tr><td>Small</td><td>+1</td></tr><tr><td>Tiny</td><td>+2</td></tr><tr><td>Diminutive</td><td>+4</td></tr><tr><td>Fine</td><td>+8</td></tr></tbody></table><h2>Touch
+        Attacks</h2><p>Some attacks completely disregard armor, including
+        shields and natural armor—the aggressor need only touch a foe for such
+        an attack to take full effect. In these cases, the attacker makes a
+        touch attack roll (either ranged or melee). When you are the target of a
+        touch attack, your AC doesn’t include any armor bonus, shield bonus, or
+        natural armor bonus. All other modifiers, such as your size modifier,
+        Dexterity modifier, and deflection bonus (if any) apply
+        normally.</p><p>Some creatures have the ability to make incorporeal
+        touch attacks. These attacks bypass solid objects, such as armor and
+        shields, by passing through them. Incorporeal touch attacks work
+        similarly to normal touch attacks except that they also ignore cover
+        bonuses. Incorporeal touch attacks do not ignore armor bonuses granted
+        by force effects, such as mage armor and Size.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,31 @@
+_id: NS9lDcFyM8dZIaZA
+_key: '!items!NS9lDcFyM8dZIaZA'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Bathing Basin
+system:
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  cl: 5
+  description:
+    value: >-
+      <p>This heavy bronze bowl, etched with outlines of waves, feels cool to
+      the touch. Once per day as a standard action, the bowl can be commanded to
+      grow in size and fill with 25 gallons of cool, fresh water. In its
+      enlarged state, the basin can accommodate a Medium or smaller creature.
+      The basin remains enlarged for 1 hour or until the user commands it to
+      shrink. All water in the basin disappears when the item shrinks, and any
+      creatures or objects that don't fit in the shrunken bowl are expelled into
+      an adjacent
+      square.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, create water, shrink item</p>
+  price: 6750
+  sources:
+    - id: PZO9283
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

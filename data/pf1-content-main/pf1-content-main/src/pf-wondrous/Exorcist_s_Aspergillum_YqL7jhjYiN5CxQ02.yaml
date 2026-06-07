@@ -1,0 +1,30 @@
+_id: YqL7jhjYiN5CxQ02
+_key: '!items!YqL7jhjYiN5CxQ02'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Exorcist's Aspergillum
+system:
+  aura:
+    school: div
+  cl: 7
+  description:
+    value: >-
+      <p>This short aspergillum is made of silver. An inquisitor who carries it
+      may use detect undead as if it were one of the spells associated with her
+      detect alignment ability. Once per day, the item can alter an inquisitor's
+      judgment ability; by spending one use of her judgment ability, she can
+      allow her spells of 3rd level and lower to have full effect against
+      incorporeal creatures, as though using the Ectoplasmic Spell feat. This
+      lasts until the combat
+      ends.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Ectoplasmic Spell (Advanced Player's Guide), detect undead,
+      creator must be an inquisitor</p>
+  price: 8000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

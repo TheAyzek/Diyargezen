@@ -1,0 +1,35 @@
+_id: au4Un7SeryHBwsNc
+_key: '!journal!au4Un7SeryHBwsNc'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Yamatsumi
+pages:
+  - _id: M24YZ7wqmrUdQs0G
+    _key: '!journal.pages!au4Un7SeryHBwsNc.M24YZ7wqmrUdQs0G'
+    _stats:
+      coreVersion: '12.331'
+    name: Yamatsumi
+    sort: 0
+    text:
+      content: >-
+        <h1>Yamatsumi</h1><h2>The Mountain Lord</h2>@Source[PZO9240;pages=58]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Yamatsumi">Yamatsumi</a><h3>Details</h3><p><strong>Alignment</strong>
+        N<br /><strong>Pantheon</strong> Deities of Tian Xia<br /><strong>Areas
+        of Concern</strong> Mountains, volcanoes, winter<br
+        /><strong>Domains</strong> Earth, Fire, Protection, Strength, Water<br
+        /><strong>Subdomains</strong> Ash, Caves, Defense, Fist, Flowing, Ice,
+        Resolve, Smoke, Solitude<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Tetsubo<br /><strong>Symbol</strong> Snow-capped erupting volcano<br
+        /><strong>Sacred Animal(s)</strong> Ram</p><h3>On
+        Golarion</h3><p><strong>Centers of Worship</strong> Dtang Ma, Hongal,
+        Minkai, Nagajor, Wall of Heaven, Zi Ha<br /><strong>Nationality</strong>
+        Tian-Min</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

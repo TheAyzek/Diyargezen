@@ -1,0 +1,52 @@
+_id: pJoUsoZWDjAAf5DK
+_key: '!items!pJoUsoZWDjAAf5DK'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Blue star
+system:
+  actions:
+    - _id: lrhx5jewn9ncogoc
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1d2]] Con damage. In addition,
+            the creature takes a [[-2]] penalty on saving throws to resist
+            poison for [[1]] week
+      save:
+        dc: '15'
+        type: fort
+      tag: blueStar
+  description:
+    value: >-
+      <p><strong>Type</strong> ingested; <strong>Save</strong> Fortitude DC
+      15</p><p><strong>Onset</strong> 10 minutes; <strong>Frequency</strong>
+      1/minute for 6 minutes</p><p><strong>Effect</strong> 1d2 Con damage. In
+      addition, the creature takes a –2 penalty on saving throws to resist
+      poison for 1 week</p><p><strong>Cure</strong> 2 consecutive
+      saves</p><p>This small bright-blue flower has five petals arrayed in a
+      star shape and looks remarkably similar to several other species of blue
+      flowers that live in similar regions, requiring a successful DC 15
+      Knowledge (nature) or Survival check to correctly identify. The poison
+      causes severe liver damage, making it even more difficult to resist future
+      poisons that a victim may encounter. Although rarely a direct danger to
+      humanoids, the flowers are sometimes consumed by livestock. When this
+      occurs, the venom can be passed on through milk the animals produce for
+      the next week, affecting those who drink it as though they had consumed a
+      dose of blue star.</p>
+  price: 500
+  sources:
+    - id: PZO1140
+      pages: '143'
+  subType: poison
+  uses:
+    per: single
+type: consumable

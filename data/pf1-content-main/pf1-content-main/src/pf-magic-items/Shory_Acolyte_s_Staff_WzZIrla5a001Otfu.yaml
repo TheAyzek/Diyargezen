@@ -1,0 +1,29 @@
+_id: WzZIrla5a001Otfu
+_key: '!items!WzZIrla5a001Otfu'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Shory Acolyte's Staff
+system:
+  aura:
+    custom: true
+    school: varies, varies
+  cl: 8
+  description:
+    value: >-
+      <p>These slender crystal shafts span 4 to 5 feet in length, with facets
+      covered in deeply etched white runes of unknown make. Since the only known
+      examples of these staves were discovered near Mount Dowama in the Mwangi
+      Expanse, most scholars conjecture that they are relics of the Shory. The
+      staff's holder is protected by a continuous feather fall effect.
+      Additionally, the staff contains the following spells: • Shocking grasp (1
+      charge)  • Levitate (2 charges)  • Fly (4
+      charges.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, fly, levitate, shocking grasp</p>
+  price: 21600
+  sources:
+    - id: PZO9451
+  subType: staff
+  weight:
+    value: 1
+type: consumable

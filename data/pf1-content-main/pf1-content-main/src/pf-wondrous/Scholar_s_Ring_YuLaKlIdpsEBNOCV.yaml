@@ -1,0 +1,28 @@
+_id: YuLaKlIdpsEBNOCV
+_key: '!items!YuLaKlIdpsEBNOCV'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Scholar's Ring
+system:
+  aura:
+    school: con
+  cl: 5
+  description:
+    value: >-
+      <p>A scholar's ring grants complete understanding of any written text or
+      spoken language, even one that the wearer has never encountered before (as
+      the comprehend languages spell), as well as a +5 competence bonus on
+      Knowledge (history) checks.   In addition, once every 5 days the wearer
+      can invoke a legend lore spell related to a subject that she has been
+      studying in the previous week, if she has attempted a Knowledge (history)
+      check aided by the
+      ring.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge Ring,
+      comprehend languages, legend lore</p>
+  price: 8700
+  slot: ring
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

@@ -1,0 +1,32 @@
+_id: 8uVd5IU6GZ6csIo0
+_key: '!journal!8uVd5IU6GZ6csIo0'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Sobek
+pages:
+  - _id: NoJOlOqsVNvta575
+    _key: '!journal.pages!8uVd5IU6GZ6csIo0.NoJOlOqsVNvta575'
+    _stats:
+      coreVersion: '12.331'
+    name: Sobek
+    sort: 0
+    text:
+      content: >-
+        <h1>Sobek</h1><h2>The Raging Torrent</h2>@Source[PZO9080;pages=65] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Sobek">Sobek</a><h3>Details</h3><p><strong>Alignment</strong>
+        CN<br /><strong>Pantheon</strong> Deities of Ancient Osirion<br
+        /><strong>Areas of Concern</strong> Crocodiles, fertility, military
+        prowess, rivers<br /><strong>Domains</strong> Chaos, Scalykind,
+        Strength, War, Water<br /><strong>Subdomains</strong> Blood, Ferocity,
+        Protean, Resolve, Rivers, Saurian<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Falchion<br /><strong>Symbol</strong> Green crocodile<br
+        /><strong>Sacred Animal(s)</strong> Crocodile</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

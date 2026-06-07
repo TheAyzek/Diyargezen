@@ -1,0 +1,27 @@
+_id: wtj3t7Ev2B3M2RaX
+_key: '!items!wtj3t7Ev2B3M2RaX'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Beguiling Bangles
+system:
+  aura:
+    school: enc
+  cl: 7
+  description:
+    value: >-
+      <p>Originally created by the Varisians, this elaborate silver and glass
+      necklace renders the wearer immune to any magical effect that detects lies
+      and grants the wearer a +2 bonus on Will saves to resist any magic that
+      would compel him to tell the truth. The necklace grants the wearer a +5
+      competence bonus on Bluff checks made to deceive (but not create a
+      diversion or
+      feint).</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, glibness</p>
+  price: 11000
+  slot: neck
+  sources:
+    - id: PZO9221
+  subType: wondrous
+type: equipment

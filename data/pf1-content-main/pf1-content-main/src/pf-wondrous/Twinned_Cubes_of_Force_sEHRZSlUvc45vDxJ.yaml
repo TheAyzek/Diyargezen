@@ -1,0 +1,26 @@
+_id: sEHRZSlUvc45vDxJ
+_key: '!items!sEHRZSlUvc45vDxJ'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Twinned Cubes of Force
+system:
+  aura:
+    school: evo
+  cl: 10
+  description:
+    value: >-
+      <p>These cubes function as two cubes of force, except that when a face on
+      one cube is pressed, its counterpart creates the appropriate wall instead
+      as long as the distance between the cubes does not exceed 100 feet. Both
+      cubes can remain active even after being set down on the ground and
+      abandoned.</p><h3>Requirements</h3><p>Craft Wondrous Item, wall of
+      force</p>
+  price: 66000
+  sources:
+    - id: PZO9220
+  subType: wondrous
+  weight:
+    value: 0.5
+type: equipment

@@ -1,0 +1,55 @@
+_id: ALl0BU7OnfIhikPU
+_key: '!items!ALl0BU7OnfIhikPU'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/ammunition/arrows-bodkin-yellow-red.webp
+name: Dart of Recovery
+system:
+  actions:
+    - _id: gyt95oa71ylulgqb
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: dartOfRecovery
+  aura:
+    school: con
+  baseTypes:
+    - Featherweight Dart
+  cl: 3
+  description:
+    value: >-
+      <p>This +1 featherweight dart (see page 232) is designed to be fired from
+      a small wrist launcher. As with a normal featherweight dart, it deals no
+      damage; it instead administers 1 dose of an applied poison as long as the
+      target doesn't have damage reduction, hardness, or the like. Once the dart
+      has been launched, whether it hits or misses, the creature that fired it
+      can use a swift action to recall the dart to a convenient location, such
+      as the palm of a hand or a pocket, removing the dart from the scene of the
+      attack. The magical recovery of the dart does not prevent it from being
+      damaged, so as with other magical ammunition, it can't be
+      reused.</p><p><strong>Base Item</strong>: featherweight
+      dart</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, apport object </p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  price: 206
+  showInQuickbar: false
+  sources:
+    - id: PZO1134
+type: weapon

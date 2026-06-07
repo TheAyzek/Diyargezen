@@ -1,0 +1,73 @@
+_id: MFd9qjR9ZQ1JQE2W
+_key: '!items!MFd9qjR9ZQ1JQE2W'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Harvest the Defiled Soul (Occult Ritual)
+system:
+  actions:
+    - _id: tw0weciadm3byj4p
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    focus: true
+    material: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> necromancy [evil]; <strong>Level</strong>
+      5</p><p><strong>Casting Time</strong> 5 hours; see
+      text</p><p><strong>Components</strong> V, S, M (one candle worth 10 gp per
+      5 feet of the area's perimeter), F (special alchemist's lab whose
+      components have handles made from bone), SC (up to the Intelligence,
+      Wisdom, or Charisma modifier of the primary caster [whichever is
+      highest])</p><p><strong>Skill Checks</strong> Knowledge (arcana or
+      religion) DC 29, 5 successes</p><p><strong>Range</strong>
+      close</p><p><strong>Area</strong> 100 square ft. + 10 square ft./character
+      level of the primary caster</p><p><strong>Duration</strong> 1
+      hour/character level of the primary caster</p><p><strong>Saving
+      Throw</strong> none; <strong>SR</strong>
+      no</p><p><strong>Backlash</strong> All casters take 1d6 points of
+      Constitution damage.</p><p><strong>Failure</strong> All casters take 1d6
+      points of Constitution drain.</p><h3>Effect</h3><p>Formulated and
+      perfected by the Whispering Way's most twisted minds, this ritual allows
+      the caster to perform a number of fell rites that thoroughly defile the
+      metaphysical soul of a specific haunt or incorporeal creature, causing its
+      essence to coalesce into a refined ectoplasmic material that can be used
+      to craft especially powerful magic items and artifacts. Before she can
+      begin casting this ritual, the primary caster must draw necromantic sigils
+      around the area to be affected and adorn them with candles, a 12-hour
+      process. Each secondary caster participating in the ritual reduces this
+      time by 1 hour, to a minimum of 1 hour. During the ritual, one specific
+      incorporeal undead creature or haunt must be present within the affected
+      area for its entire casting time. Upon completing the ritual, the primary
+      caster can harvest material components from the specific creature or haunt
+      as if she had the Haunt Scavenger feat, though the creature or haunt need
+      not be destroyed or neutralized. If she already has this feat, she gains a
+      +20 competence bonus on skill checks to harvest material components from
+      the specific creature or haunt and the gp value of those components
+      doubles. This process doesn't destroy or neutralize the creature or haunt,
+      and can be used on a specific creature or haunt only once per month.</p>
+  flags:
+    dictionary:
+      summary: Temporarily gain the Haunt Scavenger feat
+  level: 5
+  materials:
+    focus: special alchemist’s lab whose have handles made from bone
+    gpValue: 10
+    value: one candle worth 10 gp per 5 feet of the area’s perimeter
+  school: nec
+  sources:
+    - id: PZO9471
+      pages: '17'
+  sr: false
+type: spell

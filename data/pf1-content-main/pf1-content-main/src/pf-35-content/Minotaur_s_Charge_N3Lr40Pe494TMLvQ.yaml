@@ -1,0 +1,21 @@
+_id: N3Lr40Pe494TMLvQ
+_key: '!items!N3Lr40Pe494TMLvQ'
+_stats:
+  coreVersion: '12.331'
+folder: 35gUR2g8lMd073yK
+img: systems/pf1/icons/feats/greater-bull-rush.jpg
+name: Minotaur's Charge
+system:
+  description:
+    value: >-
+      <em>Your charge sends foes reeling away, knocking them to the
+      ground.</em></p><p><strong>Prerequisites</strong><br/>Str 13, Improved
+      Bull Rush, powerful charge.</p><p><strong>Benefits</strong><br/>When you
+      hit an opponent with a charge attack, you might also initiate a bull rush
+      as a free action. This does not require you to move into your opponent's
+      square and does not provoke an attack of opportunity. If you successfully
+      push your opponent 15 feet or more, he is also knocked prone.
+  tags:
+    - General
+    - '3.5'
+type: feat

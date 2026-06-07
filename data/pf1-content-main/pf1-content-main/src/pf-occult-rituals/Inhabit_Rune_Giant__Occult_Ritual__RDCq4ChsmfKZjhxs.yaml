@@ -1,0 +1,59 @@
+_id: RDCq4ChsmfKZjhxs
+_key: '!items!RDCq4ChsmfKZjhxs'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Inhabit Rune Giant (Occult Ritual)
+system:
+  actions:
+    - _id: ky9bogfldwifweyv
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        type: 'null'
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> necromancy; <strong>Level</strong>
+      6</p><p><strong>Casting Time</strong> 60
+      minutes</p><p><strong>Components</strong> V, S, SC (up to the Intelligence
+      modifier of the primary caster)</p><p><strong>Skill Checks</strong>
+      Knowledge (arcana) DC 26, 3 successes; Knowledge (local) DC 26, 3
+      successes</p><p><strong>Range</strong> 100 miles/character level of the
+      primary caster; see text</p><p><strong>Duration</strong> 1 hour/character
+      level of the primary caster (D)</p><p><strong>Saving Throw</strong> none;
+      <strong>SR</strong> no</p><p><strong>Backlash</strong> The primary caster
+      takes 2d6 points of damage.</p><p><strong>Failure</strong> All casters
+      gain 1 permanent negative level and are exhausted until that negative
+      level is removed.</p><h3>Effect</h3><p>The ritual allows the primary
+      caster to inhabit the body of a rune giant that she knows firsthand as if
+      using <em>possession</em>. The rune giant must be within 100 miles per
+      character level of the primary caster when the ritual is complete. The
+      rune giant receives no save against this effect. Unlike
+      <em>possession</em>, the primary caster can use all of her own abilities
+      as well as the rune giant's abilities while possessing the rune giant, and
+      the primary caster can choose to use either her own or the rune giant's
+      base attack bonus or base save bonuses. While the primary caster inhabits
+      the rune giant, the rune giant gains 5 bonus hit points per character
+      level of the primary caster.</p>
+  flags:
+    dictionary:
+      summary: Possess a known rune giant
+  level: 6
+  school: nec
+  sources:
+    - id: PZO90135
+      pages: '76'
+  sr: false
+type: spell

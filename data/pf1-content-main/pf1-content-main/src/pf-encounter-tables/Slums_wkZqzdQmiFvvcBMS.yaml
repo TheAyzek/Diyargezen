@@ -1,0 +1,102 @@
+_id: wkZqzdQmiFvvcBMS
+_key: '!tables!wkZqzdQmiFvvcBMS'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/settlement/building-rubble.webp
+name: Slums
+replacement: true
+results:
+  - _id: E4UapWyyYETfXmzD
+    _key: '!tables.results!wkZqzdQmiFvvcBMS.E4UapWyyYETfXmzD'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 9
+    text: Beggar [CR —]
+    type: text
+    weight: 1
+  - _id: mBN02BxlFBazAyPR
+    _key: '!tables.results!wkZqzdQmiFvvcBMS.mBN02BxlFBazAyPR'
+    img: icons/svg/d20-black.svg
+    range:
+      - 10
+      - 25
+    text: Peasants Blocking Path [CR —]
+    type: text
+    weight: 1
+  - _id: tJAZs01yKcIVDsE1
+    _key: '!tables.results!wkZqzdQmiFvvcBMS.tJAZs01yKcIVDsE1'
+    img: icons/svg/d20-black.svg
+    range:
+      - 26
+      - 30
+    text: Robbery In Progress (1d4 Thugs) [CR — or 5]
+    type: text
+    weight: 1
+  - _id: t63PnWc10n6Ikr3z
+    _key: '!tables.results!wkZqzdQmiFvvcBMS.t63PnWc10n6Ikr3z'
+    img: icons/svg/d20-black.svg
+    range:
+      - 31
+      - 40
+    text: Pickpocket (Rogue 1; Sleight Of Hand +7) [CR 1]
+    type: text
+    weight: 1
+  - _id: C22vfHLJ3wvjqcKy
+    _key: '!tables.results!wkZqzdQmiFvvcBMS.C22vfHLJ3wvjqcKy'
+    img: icons/svg/d20-black.svg
+    range:
+      - 41
+      - 50
+    text: 1d3 ([[1d3]]) Stirges [AVG CR 1]
+    type: text
+    weight: 1
+  - _id: 591LGB5uGxNRnwXF
+    _key: '!tables.results!wkZqzdQmiFvvcBMS.591LGB5uGxNRnwXF'
+    img: icons/svg/d20-black.svg
+    range:
+      - 51
+      - 60
+    text: 1 Rat Swarm [CR 2]
+    type: text
+    weight: 1
+  - _id: FwduIO3QmV31PqpZ
+    _key: '!tables.results!wkZqzdQmiFvvcBMS.FwduIO3QmV31PqpZ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 61
+      - 70
+    text: 2d4 ([[2d4]]) Small Monstrous Spiders [AVG CR 3]
+    type: text
+    weight: 1
+  - _id: eXUJv38TvxwSLCtW
+    _key: '!tables.results!wkZqzdQmiFvvcBMS.eXUJv38TvxwSLCtW'
+    img: icons/svg/d20-black.svg
+    range:
+      - 71
+      - 90
+    text: 1d4 ([[1d4]]) Thugs [AVG CR 5]
+    type: text
+    weight: 1
+  - _id: Kl2nRIqiC04GKBGz
+    _key: '!tables.results!wkZqzdQmiFvvcBMS.Kl2nRIqiC04GKBGz'
+    img: icons/svg/d20-black.svg
+    range:
+      - 91
+      - 99
+    text: 2d4 ([[2d4]]) Guards [AVG CR 7]
+    type: text
+    weight: 1
+  - _id: PxPM09UiVRzOKXti
+    _key: '!tables.results!wkZqzdQmiFvvcBMS.PxPM09UiVRzOKXti'
+    img: icons/svg/d20-black.svg
+    range:
+      - 100
+      - 100
+    text: 1d4 ([[1d4]]) Knights (Fighter 4) [AVG CR 7]
+    type: text
+    weight: 1
+sort: 1600000

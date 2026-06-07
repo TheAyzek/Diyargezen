@@ -1,0 +1,50 @@
+_id: 7tGwK5bKGzTyWlOL
+_key: '!items!7tGwK5bKGzTyWlOL'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/gem-raw-rough-green-yellow.webp
+name: Pale Green Prism Ioun Stone, Cracked (Saves)
+system:
+  aura:
+    custom: true
+    school: varied
+  changes:
+    - _id: U3gtYdph
+      formula: '1'
+      target: allSavingThrows
+      type: competence
+  cl: 12
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>This is a pale  green stone with the top and bottom ends having the
+      same number of sides (such as a hexagram). The width and angle of each
+      side is usually the same as all other sides. one or more of its surfaces
+      are marred with a crack.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone grants a +1 competence bonus on <s>attack
+      rolls or</s> saving throws.</p><h3>Resonance</h3><p><strong>Method 1,
+      Fixed: </strong>Twice per day as a free action, the bearer can remove the
+      fatigued condition from himself (or reduce the exhausted condition to
+      fatigued).</p><p><strong>Method 2, Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, creator must be 12th level <strong>Cost</strong>
+      2,000 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 4000
+  sources:
+    - id: PZO9211
+      pages: 47, 52
+    - id: PZO1138
+      pages: '149'
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

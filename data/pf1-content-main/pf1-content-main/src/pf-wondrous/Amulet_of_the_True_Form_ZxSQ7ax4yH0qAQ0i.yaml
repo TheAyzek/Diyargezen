@@ -1,0 +1,26 @@
+_id: ZxSQ7ax4yH0qAQ0i
+_key: '!items!ZxSQ7ax4yH0qAQ0i'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Amulet of the True Form
+system:
+  aura:
+    school: trs
+  cl: 7
+  description:
+    value: >-
+      <p>This impeccable sapphire amulet is set with an immaculate pearl. An
+      amulet of the true form is enchanted to ward off powers that would result
+      in unwanted transformation. It grants its wearer a +2 resistance bonus on
+      saving throws against polymorph effects and on a +4 resistance bonus on
+      saving throws against unwilling lycanthropic
+      transformation.</p><h3>Requirements</h3><p>Craft Wondrous Item,
+      polymorph</p>
+  price: 6500
+  slot: neck
+  sources:
+    - id: PZO9439
+  subType: wondrous
+type: equipment

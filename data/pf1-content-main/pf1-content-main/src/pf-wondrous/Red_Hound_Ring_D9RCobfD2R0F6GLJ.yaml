@@ -1,0 +1,28 @@
+_id: D9RCobfD2R0F6GLJ
+_key: '!items!D9RCobfD2R0F6GLJ'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Red Hound Ring
+system:
+  aura:
+    custom: true
+    school: abjuration conjuration and transmutation
+  cl: 5
+  description:
+    value: >-
+      <p>This white gold ring is engraved with the images of a mastiff and a
+      thundercloud. It functions as a ring of protection +1. In addition, once
+      per day, the wearer may use summon monster I to summon a red mastiff (use
+      statistics for a celestial dog). Additionally, once per day the wearer may
+      use beast shape I to transform into a Small red
+      mastiff.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, beast shape I, shield of faith, summon monster I, creator must be at
+      least 3rd level</p>
+  price: 4700
+  slot: ring
+  sources:
+    - id: PZO9267
+  subType: wondrous
+type: equipment

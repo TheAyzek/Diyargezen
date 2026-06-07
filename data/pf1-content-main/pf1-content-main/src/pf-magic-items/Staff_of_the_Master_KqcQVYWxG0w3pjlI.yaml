@@ -1,0 +1,34 @@
+_id: KqcQVYWxG0w3pjlI
+_key: '!items!KqcQVYWxG0w3pjlI'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of the Master
+system:
+  aura:
+    school: nec
+  cl: 8
+  description:
+    value: >-
+      <p>Often given as gifts to apprentices upon reaching the rank of master,
+      these staves come in eight different varieties, one for each school of
+      magic. This particular staff is for the school of necromancy. Aside from
+      acting as a +1/+1 quarterstaff, this staff allows use of the following
+      spells: • Ray of enfeeblement (1 charge) • Spectral hand (1 charge) •
+      Vampiric touch (2 charges) Additionally, the wielder can apply any
+      metamagic feats she knows when she casts the spells above from the staff.
+      This consumes a number of charges equal to the number of spell levels
+      increased by the feat. She can apply no more than one metamagic feat to a
+      spell cast from the staff in this way. Using the staff for this purpose
+      does not increase the casting time of the spell.</p><p><strong>Base
+      Item</strong>: +1/+1
+      quarterstaff</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, Craft Staff, ray of enfeeblement, spectral
+      hand, vampiric touch</p>
+  price: 30000
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

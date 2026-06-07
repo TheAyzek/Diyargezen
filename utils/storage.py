@@ -144,7 +144,6 @@ CREATE INDEX IF NOT EXISTS idx_charinv_charid      ON character_inventory(charac
 _SEED_SYSTEMS = [
     ("dnd5e",        "D&D 5th Edition",               "d20",      "Dungeons & Dragons 5e SRD"),
     ("pathfinder1e", "Pathfinder 1st Edition",         "d20",      "Pathfinder 1e Core Rulebook"),
-    ("vtm5e",        "Vampire: The Masquerade 5e",     "d10_pool", "VtM 5th Edition"),
     ("mm3e",         "Mutants & Masterminds 3e",       "d20",      "M&M 3rd Edition"),
 ]
 

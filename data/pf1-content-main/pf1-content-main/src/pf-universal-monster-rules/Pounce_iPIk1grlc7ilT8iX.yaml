@@ -1,0 +1,18 @@
+_id: iPIk1grlc7ilT8iX
+_key: '!items!iPIk1grlc7ilT8iX'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/beast_01.jpg
+name: Pounce
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>When a creature with this special attack charges, it can make a full
+      attack (including rake attacks if the creature also has the <a>rake</a>
+      ability).</p><p><em>Format</em>: pounce</p><p><em>Location</em>: Special
+      Attacks.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

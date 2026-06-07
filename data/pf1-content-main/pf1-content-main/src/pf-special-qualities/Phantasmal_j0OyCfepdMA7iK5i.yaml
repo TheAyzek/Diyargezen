@@ -1,0 +1,35 @@
+_id: j0OyCfepdMA7iK5i
+_key: '!items!j0OyCfepdMA7iK5i'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Phantasmal
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate illusion <strong>CL</strong>
+      7th</p><p><strong>Slot</strong> armor quality; <strong>Price</strong> +2
+      bonus;</p><p>Three times per day, the wearer of a suit of
+      <em>phantasmal</em> armor can leave an illusory afterimage of herself in a
+      square she occupied as part of a move action. This double is created
+      through illusion magic from the shadow subschool and is partly real. The
+      illusory double cannot move from its designated square but otherwise
+      reacts and maneuvers as directed by the wearer of a suit of
+      <em>phantasmal</em> armor. The double cannot attack, but it can menace
+      opponents and distract them, and thus counts as an ally for the purpose of
+      determining flanking. The illusory double has an AC equal to 12 + the
+      enhancement bonus of the <em>phantasmal</em> armor. A successful melee or
+      ranged attack against the illusory double (or any damage from an area
+      effect attack) dismisses the effect. The <em>phantasmal</em> special
+      ability can be applied only to light
+      armor.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>shadow projection</em><sup>APG</sup>;
+      <strong>Price</strong> +2 bonus</p>
+  sources:
+    - id: PZO9467
+      pages: '24'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

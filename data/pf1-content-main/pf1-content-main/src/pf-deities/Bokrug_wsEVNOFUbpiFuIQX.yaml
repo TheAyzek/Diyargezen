@@ -1,0 +1,35 @@
+_id: wsEVNOFUbpiFuIQX
+_key: '!journal!wsEVNOFUbpiFuIQX'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Bokrug
+pages:
+  - _id: iKAkkWyhOib0ZjBL
+    _key: '!journal.pages!wsEVNOFUbpiFuIQX.iKAkkWyhOib0ZjBL'
+    _stats:
+      coreVersion: '12.331'
+    name: Bokrug
+    sort: 0
+    text:
+      content: >-
+        <h1>Bokrug</h1><h2>The Water Lizard</h2>@Source[PZO90109;pages=65] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Bokrug">Bokrug</a><h3>Details</h3><p><strong>Alignment</strong>
+        CN<br /><strong>Pantheon</strong> Great Old Ones<br /><strong>Areas of
+        Concern</strong> Revenge, storms, water<br /><strong>Domains</strong>
+        Chaos, Destruction, Water, Weather<br /><strong>Subdomains</strong>
+        Catastrophe, Oceans, Rage, Storms<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Ranseur<br /><strong>Symbol</strong> Lizard with coiled tail<br
+        /><strong>Sacred Animal(s)</strong> None<br /><strong>Sacred
+        Color(s)</strong> Blue, green</p><h2>For Followers of
+        Bokrug</h2><h3>Feats</h3><p>Dreamed Secrets</p><h3>Magic Items -
+        Wondrous Items</h3><p>Preklikin's Book of
+        Cults</p><h3>Traits</h3><p>Unspeakable Bond</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

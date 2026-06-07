@@ -1,0 +1,53 @@
+_id: 4JltemKJnCPCqYTm
+_key: '!items!4JltemKJnCPCqYTm'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/explosion-red-2.jpg
+name: Firework (fire wheel)
+system:
+  actions:
+    - _id: 64o7y4xvkvnhvat4
+      ability:
+        critMult: 1
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - types:
+              - fire
+          - {}
+      img: systems/pf1/icons/spells/explosion-red-2.jpg
+      name: Use
+      notes:
+        effect:
+          - see text
+      range:
+        units: ft
+        value: '30'
+      tag: fireworkFireWheel
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Weapons</p><p>Once its fuse has
+      been lit, this hoop-shaped firework emits colorful sparks from a series of
+      outward-angled wooden tubes. It can then be rolled along the ground or
+      thrown as a splash weapon with a range increment of 30 feet. One round
+      after being lit, a fire wheel firework explodes in a spectacular
+      5-foottall cylindrical blast with a 20-foot radius. All creatures in the
+      area take 3d6 points of fire damage and are blinded for 1 minute (Reflex
+      DC 16 halves damage, negates
+      blindness).</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      25</p>
+  price: 200
+  sources:
+    - id: PZO9452
+      pages: '20'
+  subType: misc
+  tags:
+    - Alchemical Weapons
+  weight:
+    value: 1
+type: consumable

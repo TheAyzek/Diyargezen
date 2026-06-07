@@ -1,0 +1,29 @@
+_id: Pu65RqxvasZUynnJ
+_key: '!items!Pu65RqxvasZUynnJ'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Stagger-Proof Boots
+system:
+  aura:
+    custom: true
+    school: abjuration and transmutation
+  cl: 5
+  description:
+    value: >-
+      <p>These calf-high leather boots are inscribed with Cayden Cailean's holy
+      symbol. The wearer can stand up from prone without provoking attacks of
+      opportunity and gains a +4 bonus to CMD against bull rush and trip combat
+      maneuvers. Once per day as an immediate action, the wearer can move up to
+      30 feet; this movement provokes attacks of opportunity as
+      normal.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, cat's grace, haste</p>
+  price: 2000
+  slot: feet
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

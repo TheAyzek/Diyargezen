@@ -1,0 +1,33 @@
+_id: 9RHlP6A99LTi9azx
+_key: '!items!9RHlP6A99LTi9azx'
+_stats:
+  coreVersion: '12.331'
+folder: 5HPDAAtypP5m41CK
+img: icons/svg/item-bag.svg
+name: Chaos Diamond
+system:
+  aura:
+    custom: true
+    school: varied
+  cl: 19
+  description:
+    value: >-
+      <p>This lustrous gemstone is uncut and about the size of a human fist. The
+      gem grants its possessor the following powers: Cloak of chaos Lesser
+      confusion Magic circle against law Word of chaos Each power is usable 1d4
+      times per day. This is rolled for each power individually and the
+      character does not know the result.  A non-chaotic character who possesses
+      a chaos diamond gains one negative level. Although this level never
+      results in actual level loss, it remains as long as the diamond is in the
+      character's possession and cannot be overcome in any way (including
+      restoration spells).</p><h3>Requirements</h3><p>Craft Wondrous Item, cloak
+      of chaos, lesser confusion, magic circle against law, word of chaos</p>
+  price: 361000
+  sources:
+    - date: '2012'
+      publisher: Necromancer Games & Frog God Games
+      title: Rappan Athuk
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,65 @@
+_id: eSj1FO9KIWgW2oNi
+_key: '!items!eSj1FO9KIWgW2oNi'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/khopesh.png
+name: Riddling Khopesh
+system:
+  actions:
+    - _id: 0yl37l7f9kg3aaxc
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: riddlingKhopesh
+  aura:
+    custom: true
+    school: conjuration evocation and transmutation
+  baseTypes:
+    - Khopesh
+  cl: 10
+  description:
+    value: >-
+      <p>This +1 khopesh has a handle in the shape of an elongated sphinx, with
+      the sphinx's serene face as the pommel of the sword. Once per day, the
+      wielder can attempt to answer a series of riddles posed telepathically by
+      the khopesh over 10 minutes. At the end of that time, if the wielder
+      succeeds at a DC 15 Intelligence check (the wielder can't take 10 or 20 on
+      this check), the sword's enhancement bonus increases by 1 for the next 24
+      hours as long as it is wielded by the creature who correctly answered its
+      riddles. If the result of the Intelligence check is 20 or more, the
+      wielder can also add the flaming, ghost touch, or keen special weapon
+      ability to the weapon for 24 hours.</p><p><strong>Base Item</strong>: 
+      khopesh</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, commune</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 15320
+  properties:
+    trp: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9455
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 8
+type: weapon

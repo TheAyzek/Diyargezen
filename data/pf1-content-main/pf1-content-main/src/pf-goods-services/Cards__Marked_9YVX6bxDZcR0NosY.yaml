@@ -1,0 +1,23 @@
+_id: 9YVX6bxDZcR0NosY
+_key: '!items!9YVX6bxDZcR0NosY'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/gaming/playing-cards-brown.webp
+name: Cards, Marked
+system:
+  description:
+    value: >-
+      <p>Whether bent, colored, or scratched, marked cards allow an informed
+      user to know what's on the front of the card by viewing the mark on the
+      back. Realizing that the cards are marked requires a DC 25 Perception
+      check or DC 20 Profession (gambler) check. The listed price is for a
+      common paper deck.</p>
+  equipped: false
+  price: 1
+  sources:
+    - id: PZO1123
+      pages: '92'
+  subType: entertainment
+  weight:
+    value: 1
+type: loot

@@ -1,0 +1,27 @@
+_id: uxMMHlSsa3k9Tcer
+_key: '!items!uxMMHlSsa3k9Tcer'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/leather/leather-buckle-steel-tan.webp
+name: Nature climbing harness
+system:
+  description:
+    value: >-
+      <p>A nature climbing harness is a series of buckles, straps, and trusses
+      that can be worn over clothing or light armor. As a standard action, you
+      can secure yourself in place on a vertical surface so that both your hands
+      are free. You can remain in this position without needing to attempt
+      additional Climb checks, and you don't lose your Dexterity bonus to your
+      AC as long as you remain anchored. As long as you are anchored in this
+      way, you cannot move, but you gain a +5 circumstance bonus on Climb checks
+      to avoid falling whenever you take damage. You can release yourself to
+      start moving again as a move action.</p>
+  equipped: false
+  price: 60
+  sources:
+    - id: PZO1140
+      pages: '244'
+  subType: tool
+  weight:
+    value: 4
+type: loot

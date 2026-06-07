@@ -1,0 +1,116 @@
+_id: JGZoqzXHZANg9lWz
+_key: '!actors!JGZoqzXHZANg9lWz'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: icons/commodities/stone/masonry-bricks-brown.webp
+items:
+  - _id: ifDBas1gPXVtTVPL
+    _key: '!actors.items!JGZoqzXHZANg9lWz.ifDBas1gPXVtTVPL'
+    _stats:
+      compendiumSource: Actor.bjkcS5FuhuNuSF7o.Item.4BFWIqQZiG5ot8Sd
+      coreVersion: '12.331'
+    img: icons/commodities/stone/masonry-bricks-brown.webp
+    name: Falling Bricks
+    system:
+      actions:
+        - _id: hnk0pu8dpne0swui
+          actionType: save
+          activation:
+            type: standard
+            unchained:
+              cost: 2
+              type: action
+          damage:
+            parts:
+              - formula: 4d6
+                types:
+                  - bludgeoning
+          img: icons/commodities/stone/masonry-bricks-brown.webp
+          measureTemplate:
+            size: '10'
+            type: rect
+          name: Attack
+          save:
+            dc: '20'
+            description: Reflex half
+            type: ref
+          target:
+            value: All targets in a 10-ft.-square area
+      proficient: true
+      subType: misc
+    type: attack
+name: Falling Bricks
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 3
+    disarm: 20
+    duration: Instantaneous
+    effect: ''
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 20
+    reset: Manual
+    trigger: Manual
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

@@ -1,0 +1,49 @@
+_id: nsTfqRLe5aV8bq88
+_key: '!items!nsTfqRLe5aV8bq88'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/books/book-worn-brown.webp
+name: Cyrusian Codex (Spellbook, Level 11 Transmuter)
+system:
+  description:
+    value: >-
+      <p><em>This heavy tome bears a handsome leather cover over thick metal
+      plates. The front cover displays a dozen tiny dials arranged in a
+      semicircle around the locking mechanism.</em><br
+      /><strong>Protection</strong> Good lock with <em>arcane lock</em> (DC
+      40)</p><p><strong>Value</strong> 4,425 gp (9,125 gp with the preparation
+      ritual)</p><h2>Spells</h2><p>6th-<em>age resistance</em><sup>UM</sup>,
+      <em>disintegrate</em>, <em>greater heroism</em>, <em>wall of iron</em><br
+      /> 5th-<em>dissolution</em>, <em>major creation</em>, <em>open arms</em>,
+      <em>treasure stitching</em><sup>APG</sup></p><p> 4th-<em>adjustable
+      polymorph</em><sup>ACG</sup>, <em>calcific touch</em><sup>APG</sup>,
+      <em>greater darkvision</em><sup>UM</sup>, <em>liquefy</em>, <em>rags to
+      riches</em>, <em>shout</em></p><p> 3rd-<em>anthropomorphic
+      animal</em><sup>UM</sup>, <em>deft digits</em>, <em>disable
+      construct</em><sup>ACG</sup>, <em>dispel magic</em>, <em>fly</em>,
+      <em>lightning bolt</em></p><p> 2nd-<em>arcane lock</em>,
+      <em>darkness</em>, <em>detect thoughts</em>, <em>full pouch</em>,
+      <em>masterwork transformation</em><sup>UM</sup>, <em>shatter</em>,
+      <em>silk to steel</em><sup>UM</sup>, <em>twisted
+      space</em><sup>UC</sup></p><p> 1st-<em>ant haul</em><sup>APG</sup>,
+      <em>burning hands</em>, <em>endure elements</em>, <em>jump</em>, <em>mage
+      armor</em>, <em>mirror strike</em><sup>UC</sup>, <em>true strike</em>,
+      <em>vocal
+      alteration</em><sup>UM</sup></p><h2>Ritual</h2><p><strong>Enduring
+      Alteration (Su)</strong> Your spells resist reality's attempts to restore
+      the things you change. You can spend this boon to apply the benefits of
+      the Extend Spell feat to a transmutation spell as you cast it. This also
+      increases the DC to dispel that spell (via <em>dispel magic</em> or
+      similar abilities) by 4. This boon does not increase the spell level or
+      casting time of your spell.</p>
+  equipped: false
+  price: 9125
+  sources:
+    - id: PZO9465
+      pages: '18'
+  subType: gear
+  tags:
+    - Spellbooks
+  weight:
+    value: 5
+type: loot

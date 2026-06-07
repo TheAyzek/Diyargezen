@@ -1,0 +1,31 @@
+_id: vkZBTZtNYcbgFq71
+_key: '!items!vkZBTZtNYcbgFq71'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Daring Dancers
+system:
+  aura:
+    school: trs
+  cl: 8
+  description:
+    value: >-
+      <p>These glittering anklets or spurs are favorites of Varisians, both for
+      their showy addition to performances and their more practical uses.
+      Normally made of metal and leather and adorned with glass beads or small
+      gemstones, they make the wearer's feet light and agile, granting a +5
+      competence bonus to Perform (dance) checks. The wearer's footfalls become
+      so light that she can dance gracefully on any surface and make a 5-foot
+      step even in difficult terrain. If the wearer has 5 or more ranks in
+      Perform (dance), daring dancers allow her to cast dimension door on
+      herself once per day to travel up to 700
+      feet.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, dimension door, creator must have 10 ranks in Perform
+      (dance)</p>
+  price: 16000
+  slot: feet
+  sources:
+    - id: PZO9221
+  subType: wondrous
+type: equipment

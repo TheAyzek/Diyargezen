@@ -1,0 +1,42 @@
+_id: VAsMR1QjyWmDJZ6Q
+_key: '!items!VAsMR1QjyWmDJZ6Q'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/equipment/waist/belt-coiled-leather-steel.webp
+name: Minotaur Belt
+system:
+  aura:
+    school: trs
+  changes:
+    - _id: QA2ko6pK
+      formula: '2'
+      target: str
+      type: enh
+  cl: 4
+  contextNotes:
+    - target: landSpeed
+      text: >-
+        You ignore difficult terrain while charging or making an overrun, bull
+        rush, or trample.
+  description:
+    unidentified: <p>This belt is unremarkable.</p>
+    value: >-
+      <h3>Effect</h3><p>This belt grants its wearer a +2 enhancement bonus to
+      Strength, and the ability to ignore difficult terrain while charging or
+      making an overrun, bull rush, or trample attempt. Treat the enhancement
+      bonus to Strength as a temporary ability bonus for the first 24 hours the
+      belt is worn.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.05i5rxwim12hwktu]{Bull's Strength},
+      @UUID[Compendium.pf1.spells.Item.bf2lu50t56iswz18]{feather step}
+      </em><strong>Cost</strong> 6,500 gp</p>
+  price: 11000
+  slot: belt
+  sources:
+    - id: PZO1123
+      pages: '212'
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

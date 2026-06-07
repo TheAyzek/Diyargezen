@@ -1,0 +1,35 @@
+_id: rS2yCnlcKHDftXpu
+_key: '!items!rS2yCnlcKHDftXpu'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Skelterhide
+system:
+  aura:
+    school: enc
+  cl: 15
+  description:
+    value: >-
+      <p>This thick hide cloak grants its wearer the divided mind of a
+      skeltercat. While worn, the cloak imparts a +1 resistance bonus on
+      Fortitude and Reflex saves and a +2 resistance bonus on Will saves. In
+      addition, once per round, the wearer can reroll the percentile dice when
+      determining her actions while confused and choose the desired result. Once
+      the cloak is donned, the wearer cannot speak or write; she can communicate
+      only in unintelligible growls. The wearer still understands language as
+      normal.  If the wearer suffers from one or more permanent mental
+      afflictions that alter her behavior, such as insanity or the effects of a
+      helm of opposite alignment, for 15 minutes per day she can function as if
+      unaffected by these conditions. This time does not need to be used all at
+      once, but must be used in 1-minute
+      increments.<h3>Requirements</h3><p>Craft Wondrous Item, calm emotions,
+      resistance, blindness/deafness</p>
+  price: 4500
+  slot: shoulders
+  sources:
+    - id: PZO90117
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

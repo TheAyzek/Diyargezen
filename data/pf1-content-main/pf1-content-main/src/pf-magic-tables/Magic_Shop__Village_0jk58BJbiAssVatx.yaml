@@ -1,0 +1,37 @@
+_id: 0jk58BJbiAssVatx
+_key: '!tables!0jk58BJbiAssVatx'
+_stats:
+  coreVersion: '12.331'
+description: >-
+  Pop: 61-200 <br /> Reroll items worth &lt; 500 gp. <br /> Add Spells as
+  Potion, Scroll, or Wand.
+displayRoll: true
+folder: CLExzzcA4kPYvya7
+formula: 1d1
+img: icons/environment/settlement/lumbermill.webp
+name: 'Magic Shop: Village'
+replacement: true
+results:
+  - _id: XYRNSAgMjb1NNcke
+    _key: '!tables.results!0jk58BJbiAssVatx.XYRNSAgMjb1NNcke'
+    documentCollection: pf1.ultimate-equipment
+    documentId: 9zpuDLaD6gHAbRul
+    img: systems/pf1/icons/spells/enchant-sky-3.jpg
+    range:
+      - 1
+      - 1
+    text: Generate Minor Magic Item
+    type: pack
+    weight: 1
+  - _id: gN9QDG6vmpGIMaBA
+    _key: '!tables.results!0jk58BJbiAssVatx.gN9QDG6vmpGIMaBA'
+    documentCollection: pf1.ultimate-equipment
+    documentId: 61ZKmAr0lryZAHOn
+    img: systems/pf1/icons/spells/enchant-eerie-3.jpg
+    range:
+      - 1
+      - 1
+    text: Generate Medium Magic Item
+    type: pack
+    weight: 1
+sort: 1600000

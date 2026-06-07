@@ -1,0 +1,55 @@
+_id: 41Ie3KadQC9DGMyk
+_key: '!journal!41Ie3KadQC9DGMyk'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: UlEQEZMn7bUilTY4
+name: 1.4.1. Advancing Your Character
+pages:
+  - _id: di2RrQKOgEzVfb8t
+    _key: '!journal.pages!41Ie3KadQC9DGMyk.di2RrQKOgEzVfb8t'
+    _stats:
+      coreVersion: '12.331'
+    name: 1.4.1. Advancing Your Character
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.8scSEgBEtJZj0suf]{(Index) Basic
+        Rules}</p><p>@Compendium[pf-content.pf-rules.8Nz7dSYe8AdHtMRR]{1.4.
+        Character
+        Advancement}</p><ul><li><strong>@Compendium[pf-content.pf-rules.41Ie3KadQC9DGMyk]{1.4.1.
+        Advancing Your
+        Character}</strong></li><li>@Compendium[pf-content.pf-rules.bBCgoC07LGfsk4GW]{1.4.2.
+        Multiclassing}</li><li>@Compendium[pf-content.pf-rules.65d8pVRYrHZNPxEz]{1.4.3.
+        Favored
+        Class}</li><li>@Compendium[pf-content.pf-rules.tbAP08jcSWONo1KU]{1.4.4.
+        Prestige Classes}</li></ul><hr /><p>@Source[PZO1110;pages=30]</p><p>A
+        character advances in level as soon as he earns enough experience points
+        to do so—typically, this occurs at the end of a game session, when your
+        GM hands out that session’s experience point awards.</p><p>The process
+        of advancing a character works in much the same way as generating a
+        character, except that your ability scores, race, and previous choices
+        concerning class, skills, and feats cannot be changed. Adding a level
+        generally gives you new abilities, additional skill points to spend,
+        more hit points, possibly a permanent +1 increase to one ability score
+        of your choice, or an additional feat (see Table 3–1). Over time, as
+        your character rises to higher levels, he becomes a truly powerful force
+        in the game world, capable of ruling nations or bringing them to their
+        knees.</p><p>When adding new levels of an existing class or adding
+        levels of a new class (see
+        @Compendium[pf-content.pf-rules.bBCgoC07LGfsk4GW]{1.4.2.
+        Multiclassing}), make sure to take the following steps in order. First,
+        select your new class level. You must be able to qualify for this level
+        before any of the following adjustments are made. Second, apply any
+        ability score increases due to gaining a level. Third, integrate all of
+        the level’s class abilities and then roll for additional hit points.
+        Finally, add new skills and feats. For more information on when you gain
+        new feats and ability score increases, see
+        @Compendium[pf-content.pf-rules.8Nz7dSYe8AdHtMRR]{1.4. Character
+        Advancement}.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

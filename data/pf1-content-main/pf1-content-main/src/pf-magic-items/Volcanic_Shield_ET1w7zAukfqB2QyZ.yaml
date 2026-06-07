@@ -1,0 +1,41 @@
+_id: ET1w7zAukfqB2QyZ
+_key: '!items!ET1w7zAukfqB2QyZ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-heavy-metal.png
+name: Volcanic Shield
+system:
+  armor:
+    acp: 2
+    material:
+      base:
+        value: steel
+    value: 2
+  aura:
+    school: evo
+  baseTypes:
+    - Heavy Steel Shield
+  cl: 5
+  description:
+    value: >-
+      <p>This +1 bashing heavy steel shield burns with an internal fire upon its
+      boss, gaining the flaming weapon special ability when used to make shield
+      bash attacks. On command, the wielder can make the shield belch forth
+      smoke as a smokestick, but this smoke does not impair the shield user's
+      vision. Once per day, the wielder may cause the volcanic shield to erupt
+      in a cascade of brimstone as the flaming hands spell.</p><p><strong>Base
+      Item</strong>: +1
+      bashing</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, bull's strength, burning hands, pyrotechnics</p>
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 14170
+  slot: shield
+  sources:
+    - id: PZO1123
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 10
+type: equipment

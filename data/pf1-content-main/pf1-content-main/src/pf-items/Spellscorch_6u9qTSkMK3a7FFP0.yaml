@@ -1,0 +1,48 @@
+_id: 6u9qTSkMK3a7FFP0
+_key: '!items!6u9qTSkMK3a7FFP0'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Spellscorch
+system:
+  actions:
+    - _id: enwbomaiudfcociq
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: Refined from rare underground
+            crystals, this poison causes a burning headache that impedes
+            spellcasting. If the target fails its Fortitude save, for the next
+            minute the target must make a Concentration check with a DC equal to
+            10 + spell level to cast a spell, and all other concentration checks
+            to cast spells take a [[-5]] penalty.
+      save:
+        dc: '14'
+        type: fort
+      tag: spellscorch
+  description:
+    value: >-
+      <p><strong>Type</strong> injury; <strong>Save</strong> Fortitude DC
+      14</p><p><strong>Frequency</strong> 1/round for 4
+      rounds</p><p><strong>Effect</strong> Refined from rare underground
+      crystals, this poison causes a burning headache that impedes spellcasting.
+      If the target fails its Fortitude save, for the next minute the target
+      must make a Concentration check with a DC equal to 10 + spell level to
+      cast a spell, and all other concentration checks to cast spells take a –5
+      penalty.</p><p><strong>Cure</strong> 1 save</p>
+  price: 200
+  sources:
+    - id: PZO1121
+      pages: '1'
+  subType: poison
+  uses:
+    per: single
+type: consumable

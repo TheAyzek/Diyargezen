@@ -1,0 +1,28 @@
+_id: eD0rdoZqWjPYF4P8
+_key: '!items!eD0rdoZqWjPYF4P8'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Urgathoa's Breath
+system:
+  aura:
+    school: nec
+  cl: 4
+  description:
+    value: >-
+      <p>This smoked glass sphere contains a roiling, bone-white mist. The
+      sphere counts as a thrown weapon with a range increment of 10 feet. It
+      shatters on impact, releasing the contained vapors in a 10- foot cloud of
+      mist, as per fog cloud, for 1 round. Any creature that enters the mist
+      during this time must succeed at a DC 17 Fortitude save or contract a
+      particularly fast-acting strain of bubonic plague with an immediate
+      onset.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, contagion, fog cloud</p>
+  price: 2500
+  sources:
+    - id: PZO1136
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

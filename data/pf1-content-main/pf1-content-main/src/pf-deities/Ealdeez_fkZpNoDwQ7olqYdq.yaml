@@ -1,0 +1,47 @@
+_id: fkZpNoDwQ7olqYdq
+_key: '!journal!fkZpNoDwQ7olqYdq'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Ealdeez
+pages:
+  - _id: b6iNG29hC5OlOxda
+    _key: '!journal.pages!fkZpNoDwQ7olqYdq.b6iNG29hC5OlOxda'
+    _stats:
+      coreVersion: '12.331'
+    name: Ealdeez
+    sort: 0
+    text:
+      content: >-
+        <h1>Ealdeez</h1><h2>The Beast Behind the
+        Dream</h2>@Source[PZO9267;pages=318] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Ealdeez">Ealdeez</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Daemon Harbingers<br /><strong>Areas
+        of Concern</strong> Regression, reversion, savage revenge<br
+        /><strong>Domains</strong> Animal, Destruction, Evil, Strength<br
+        /><strong>Subdomains</strong> Daemon, Ferocity, Fur, Rage<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Greatclub<br /><strong>Symbol</strong>
+        Bloody claw<br /><strong>Sacred Animal(s)</strong> Ape<br
+        /><strong>Sacred Color(s)</strong> Black,
+        red</p><h3>Obedience</h3><p>Meticulously plot the brutal murder of an
+        enemy. Gain a +4 profane bonus on saving throws against effects
+        involving or originating from animals.</p><h2>Boons - Daemon
+        Harbingers</h2><p>@Source[PZO1139;pages=112]</p><p>Abaddon's unique
+        daemons take on a host of titles, customized to their methods and
+        vanity. These harbingers enjoy sweeping influence among daemons as
+        favored advisors, and they work to cultivate their own cults on Abaddon
+        and beyond.</p><p> Daemon harbingers are neutral evil demigods that
+        range in power from CR 21 to CR 25. The boons they grant are less
+        complex than those granted by the Horsemen themselves, manifesting as
+        spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>bull's strength</em><br
+        /><strong>2</strong>: <em>confusion</em><br /><strong>3</strong>:
+        <em>beast shape IV</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

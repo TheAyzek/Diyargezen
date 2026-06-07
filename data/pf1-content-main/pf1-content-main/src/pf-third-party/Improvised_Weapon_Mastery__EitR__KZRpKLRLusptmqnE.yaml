@@ -1,0 +1,25 @@
+_id: KZRpKLRLusptmqnE
+_key: '!items!KZRpKLRLusptmqnE'
+_stats:
+  coreVersion: '12.331'
+folder: 8BDX6ut8OIZ2xbb0
+img: systems/pf1/icons/feats/improvised-weapon-mastery.jpg
+name: Improvised Weapon Mastery (EitR)
+system:
+  description:
+    value: >-
+      <p><em>You can turn nearly any object into a deadly weapon, from a
+      razor-sharp chair leg to a sack of flour.</em></p><p>Unarmed Combatant,
+      Catch Off-Guard, base attack bonus +6.</p><p><strong>Benefits</strong>:
+      Increase the amount of damage dealt by an improvised weapon by one step
+      (for example, 1d4 becomes 1d6) to a maximum of 1d8 (2d6 if the improvised
+      weapon is two-handed). The improvised weapon has a critical threat range
+      of 19-20, with a critical multiplier of &times;2.</p>
+  sources:
+    - date: 04-2021
+      publisher: https://mammothisland.itch.io/elephant
+      title: The Elephant in the Room
+  tags:
+    - Combat
+    - Offensive
+type: feat

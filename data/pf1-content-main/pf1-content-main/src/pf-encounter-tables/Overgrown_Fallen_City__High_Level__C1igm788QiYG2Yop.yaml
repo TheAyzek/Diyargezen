@@ -1,0 +1,93 @@
+_id: C1igm788QiYG2Yop
+_key: '!tables!C1igm788QiYG2Yop'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/carved-standing-stone.webp
+name: Overgrown Fallen City (High Level)
+replacement: true
+results:
+  - _id: OCqHNGjU6Jek4HKA
+    _key: '!tables.results!C1igm788QiYG2Yop.OCqHNGjU6Jek4HKA'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 11
+    text: 1 Hezrou [CR 11]
+    type: text
+    weight: 1
+  - _id: aEjoVCyz1YMuMNoG
+    _key: '!tables.results!C1igm788QiYG2Yop.aEjoVCyz1YMuMNoG'
+    img: icons/svg/d20-black.svg
+    range:
+      - 12
+      - 23
+    text: 1 Fiendish Giant Flytrap [CR 11]
+    type: text
+    weight: 1
+  - _id: ectGhNofUMlmybCA
+    _key: '!tables.results!C1igm788QiYG2Yop.ectGhNofUMlmybCA'
+    img: icons/svg/d20-black.svg
+    range:
+      - 24
+      - 35
+    text: 1 Hezrou And 1d6 Scrags [CR 12]
+    type: text
+    weight: 1
+  - _id: vrg0dSjgdAbKxz1t
+    _key: '!tables.results!C1igm788QiYG2Yop.vrg0dSjgdAbKxz1t'
+    img: icons/svg/d20-black.svg
+    range:
+      - 36
+      - 47
+    text: 1 Fiendish Elder Water Elemental [CR 12]
+    type: text
+    weight: 1
+  - _id: ho3zBzGMxUBQFmUS
+    _key: '!tables.results!C1igm788QiYG2Yop.ho3zBzGMxUBQFmUS'
+    img: icons/svg/d20-black.svg
+    range:
+      - 48
+      - 59
+    text: 2d3 ([[2d3]]) Chuuls, 1 Advanced Giant Chuul [AVG CR 13]
+    type: text
+    weight: 1
+  - _id: 5wxl1DqEoy4nkfDw
+    _key: '!tables.results!C1igm788QiYG2Yop.5wxl1DqEoy4nkfDw'
+    img: icons/svg/d20-black.svg
+    range:
+      - 60
+      - 71
+    text: 1d3+1 ([[1d3+1]]) Giant Fiendish Treants [AVG CR 13]
+    type: text
+    weight: 1
+  - _id: bFAnHwHnKjNqT7iU
+    _key: '!tables.results!C1igm788QiYG2Yop.bFAnHwHnKjNqT7iU'
+    img: icons/svg/d20-black.svg
+    range:
+      - 72
+      - 83
+    text: 1 Green Hag Witch 11 [CR 14]
+    type: text
+    weight: 1
+  - _id: XDWKO7S0BZGUbOxR
+    _key: '!tables.results!C1igm788QiYG2Yop.XDWKO7S0BZGUbOxR'
+    img: icons/svg/d20-black.svg
+    range:
+      - 84
+      - 93
+    text: 1 Ancient Black Dragon [CR 16]
+    type: text
+    weight: 1
+  - _id: pQDuSqcTdWpb0sgs
+    _key: '!tables.results!C1igm788QiYG2Yop.pQDuSqcTdWpb0sgs'
+    img: icons/svg/d20-black.svg
+    range:
+      - 94
+      - 100
+    text: 1 Advanced Dretch Ranger 2 On Yeth Hound [CR 18]
+    type: text
+    weight: 1
+sort: 2800000

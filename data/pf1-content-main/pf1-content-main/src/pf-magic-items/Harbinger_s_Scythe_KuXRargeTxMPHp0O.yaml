@@ -1,0 +1,66 @@
+_id: KuXRargeTxMPHp0O
+_key: '!items!KuXRargeTxMPHp0O'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/scythe.PNG
+name: Harbinger's Scythe
+system:
+  actions:
+    - _id: 90kwgvpyvhbxarpq
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: harbingersScythe
+  aura:
+    custom: true
+    school: evocation and necromancy
+  baseTypes:
+    - Scythe
+  cl: 7
+  description:
+    value: >-
+      <p>This +2 scythe has a handle carved of bone and topped with a single
+      onyx gem. Once per day when the wielder of the weapon confirms a critical
+      hit against a foe, she can command the blade to release a wave of
+      soul-stealing power. All enemies within a 10-foot-radius burst of the
+      wielder must succeed at a DC 16 Will save or gain 1 temporary negative
+      level. After 1 hour, these temporary negative levels disappear
+      automatically without requiring a saving throw. This ability is not
+      triggered by a critical hit against a helpless or unaware creature or a
+      creature that has a number of Hit Dice less than half the wielder's total
+      Hit Dice.<p><strong>Base Item</strong>: 
+      scythe</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, enervation</p>
+  enh: 2
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 19518
+  properties:
+    trp: true
+  showInQuickbar: false
+  sources:
+    - id: PZO90139
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 10
+type: weapon

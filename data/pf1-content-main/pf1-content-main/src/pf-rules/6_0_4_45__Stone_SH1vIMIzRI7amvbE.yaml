@@ -1,0 +1,38 @@
+_id: SH1vIMIzRI7amvbE
+_key: '!journal!SH1vIMIzRI7amvbE'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.4.45. Stone
+pages:
+  - _id: equALKJ0kesqic5S
+    _key: '!journal.pages!SH1vIMIzRI7amvbE.equALKJ0kesqic5S'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.4.45. Stone
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li>@Compendium[pf-content.pf-rules.TROqcNjEw3b2q2Dk]{6.0.4.
+        Special Materials}</li></ul><hr /><p><strong>PFS
+        Legal</strong></p><p>@Source[PZO1123;pages=53]</p><p>Stone Age weapons
+        almost always utilize stone in some way. From rocks lashed to wooden
+        hafts to create early maces and axes, to flint knives and stone
+        arrowheads, these primitive weapons are still deadly.</p><p>Stone
+        weapons cost a quarter as much as base items of their type, and weigh
+        75% of what base items of their type do.</p><p>Light and one-handed
+        bludgeoning weapons, spears, axes, daggers, and arrowheads can all be
+        made of stone.</p><p>Weapons made of stone have half the hardness of
+        their base weapons, and have the fragile condition. With a few
+        exceptions (such as stoneplate, see page 14), armor cannot usually be
+        constructed from stone. Magically strengthened stone does not have the
+        fragile quality.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

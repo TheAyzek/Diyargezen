@@ -1,0 +1,60 @@
+_id: ieNVOs9uKwbNXb6E
+_key: '!journal!ieNVOs9uKwbNXb6E'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: GY65FtJNKIlC0ndi
+name: 2.01.8. Saving Throws
+pages:
+  - _id: TUaJTn0kM1rg72c6
+    _key: '!journal.pages!ieNVOs9uKwbNXb6E.TUaJTn0kM1rg72c6'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.01.8. Saving Throws
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.xzfuY9W5LCixyHD2]{2.01.
+        Combat
+        Statistics}</p><ul><li>@Compendium[pf-content.pf-rules.fmqoRxGKOTrAFtwf]{2.01.1.
+        Attack
+        Roll}</li><li>@Compendium[pf-content.pf-rules.5fbGwhWB0NSGPflz]{2.01.2.
+        Attack
+        Bonus}</li><li>@Compendium[pf-content.pf-rules.HIE5Tl0hEQt6WRtO]{2.01.3.
+        Armor
+        Class}</li><li>@Compendium[pf-content.pf-rules.4oWKBkofZ9340k5M]{2.01.4.
+        Damage}</li><li>@Compendium[pf-content.pf-rules.yKtZdlrkOwgZ97Ua]{2.01.5.
+        Hit
+        Points}</li><li>@Compendium[pf-content.pf-rules.db5JuYfPDFbB8IXF]{2.01.6.
+        Attacks of
+        Opportunity}</li><li>@Compendium[pf-content.pf-rules.A0pu8qWAG3mBHdqB]{2.01.7.
+        Speed}</li><li><strong>@Compendium[pf-content.pf-rules.ieNVOs9uKwbNXb6E]{2.01.8.
+        Saving Throws}</strong></li></ul><hr
+        /><p>@Source[PZO1110;pages=180]</p><p>Generally, when you are subject to
+        an unusual or magical attack, you get a saving throw to avoid or reduce
+        the effect. Like an attack roll, a saving throw is a d20 roll plus a
+        bonus based on your class and level, and an associated ability score.
+        Your saving throw modifier is:</p><blockquote><p>Base save bonus +
+        ability modifier</p></blockquote><h2>Saving Throw Types</h2><p>The three
+        different kinds of saving throws are Fortitude, Reflex, and
+        Will:</p><p><strong>Fortitude</strong>: These saves measure your ability
+        to stand up to physical punishment or attacks against your vitality and
+        health. Apply your Constitution modifier to your Fortitude saving
+        throws.</p><p><strong>Reflex</strong>: These saves test your ability to
+        dodge area attacks and unexpected situations. Apply your Dexterity
+        modifier to your Reflex saving throws.</p><p><strong>Will</strong>:
+        These saves ref lect your resistance to mental influence as well as many
+        magical effects. Apply your Wisdom modifier to your Will saving
+        throws.</p><h2>Saving Throw Difficulty Class</h2><p>The DC for a save is
+        determined by the attack itself.</p><h2>Automatic Failures and
+        Successes</h2><p>A natural 1 (the d20 comes up 1) on a saving throw is
+        always a failure (and may cause damage to exposed items; see Items
+        Surviving after a Saving Throw on page 217). A natural 20 (the d20 comes
+        up 20) is always a success.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

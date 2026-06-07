@@ -1,0 +1,45 @@
+_id: wKbjh00ZM269aFy3
+_key: '!items!wKbjh00ZM269aFy3'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/leather.PNG
+name: Advocate's Armor
+system:
+  armor:
+    dex: 6
+    material:
+      base:
+        value: leather
+    value: 2
+  aura:
+    school: enc
+  baseTypes:
+    - Leather Armor
+  cl: 11
+  description:
+    value: >-
+      <p>The papery layers of this robe barely constitute what would be
+      traditionally called armor, yet act as +3 leather armor. Once per day,
+      when the wearer is struck by a critical hit or sneak attack, he can choose
+      to have his blood splatter across one of the paper layers and form the
+      words of a binding deal between the attacker and the wearer. The wearer
+      can put the opponent under a specific restriction for 24 hours, such as I
+      will not attack elves, or I will attack only those who attacked me first.
+      The terms of the contract must be simple enough for the creature to
+      comprehend and spoken in a language it understands. This acts as a lesser
+      geas spell, except without a limit to how many Hit Dice the target can
+      have. A successful DC 19 Will save negates this effect.</p><p><strong>Base
+      Item</strong>: +3</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, geas/quest, creator must make a pact with a
+      devil</p>
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 33160
+  slot: armor
+  sources:
+    - id: PZO9455
+  spellFailure: 10
+  weight:
+    value: 15
+type: equipment

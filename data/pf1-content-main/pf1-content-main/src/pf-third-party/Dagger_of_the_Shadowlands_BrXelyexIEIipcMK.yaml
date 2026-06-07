@@ -1,0 +1,58 @@
+_id: BrXelyexIEIipcMK
+_key: '!items!BrXelyexIEIipcMK'
+_stats:
+  coreVersion: '12.331'
+folder: SkDgvmo2eCJs4yKY
+img: systems/pf1/icons/items/weapons/estoc.PNG
+name: Dagger of the Shadowlands
+system:
+  actions:
+    - _id: onl7u3gumlbv46jo
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: daggerOfTheShadowlands
+  aura:
+    school: trs
+  cl: 18
+  description:
+    value: >-
+      <p>This +2 dagger grants the wielder the ability to become one with the
+      Shadowlands for up to 10 rounds per day. The wielder is essentially
+      converted to shadowstuff, making him partially invisible. This gives him
+      concealment and grants him a +10 bonus to Stealth checks. In addition, he
+      is incorporeal, forcing a 50% miss chance. Attacks made with the dagger
+      while in shadow form deal 1d4 points of Strength damage to the victim
+      rather than hit point damage. Sneak attacks deal their damage output as
+      Strength damage instead of hit point damage. The only known example of
+      this dagger was given to Syn Mallow by Kayden the wizard, who crafted it
+      in the Plane of Shadow.</p><p><strong>Base Item</strong>: +2
+      dagger</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, etherealness, can only be created on the Plane of
+      Shadow</p>
+  hardness: 10
+  hp:
+    base: 10
+  masterwork: true
+  price: 12302
+  showInQuickbar: false
+  sources:
+    - id: FGG17316
+  weight:
+    value: 1
+type: weapon

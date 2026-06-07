@@ -1,0 +1,36 @@
+_id: dopFwl5VtFNJR4OP
+_key: '!items!dopFwl5VtFNJR4OP'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sap.png
+name: Sleeping Sap
+system:
+  aura:
+    school: enc
+  baseTypes:
+    - Sap
+  cl: 3
+  description:
+    value: >-
+      <p>On a confirmed critical hit, this +1 sap puts a creature to sleep for 3
+      minutes as per sleep, with no HD limit (Fort DC 13
+      negates).</p><p><strong>Base Item</strong>: +1
+      sap</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, sleep</p>
+  enh: 1
+  material:
+    base:
+      value: steel
+  price: 10301
+  properties:
+    fin: true
+    nnl: true
+  sources:
+    - id: PZO1136
+  subType: wondrous
+  weaponGroups:
+    - close
+  weight:
+    value: 2
+type: weapon

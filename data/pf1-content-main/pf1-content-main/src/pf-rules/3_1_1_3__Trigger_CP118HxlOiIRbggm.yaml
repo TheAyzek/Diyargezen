@@ -1,0 +1,83 @@
+_id: CP118HxlOiIRbggm
+_key: '!journal!CP118HxlOiIRbggm'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: GvRXJrNElDk9KwJW
+name: 3.1.1.3. Trigger
+pages:
+  - _id: 1oCaVWhnvNmg5Pmu
+    _key: '!journal.pages!CP118HxlOiIRbggm.1oCaVWhnvNmg5Pmu'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.1.1.3. Trigger
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.mmx5KJLX4vsGZ7vz]{3.1.
+        Traps}</p><ul><li>@Compendium[pf-content.pf-rules.NCntK4F0WJ0fxRKN]{3.1.1.1.
+        Type}</li><li>@Compendium[pf-content.pf-rules.7JjjQNXWzDZkRXba]{3.1.1.2.
+        Perception and Disable Device
+        DCs}</li><li><strong>@Compendium[pf-content.pf-rules.CP118HxlOiIRbggm]{3.1.1.3.
+        Trigger}</strong></li><li>@Compendium[pf-content.pf-rules.fwkTc0ZhsRtbcaSj]{3.1.1.4.
+        Duration}</li><li>@Compendium[pf-content.pf-rules.iYDeV3slpPALRRGC]{3.1.1.5.
+        Reset}</li><li>@Compendium[pf-content.pf-rules.KSmSTYX5p3S6Gc63]{3.1.1.6.
+        Bypass (Optional
+        Element)}</li><li>@Compendium[pf-content.pf-rules.IBBymgXvfGa0vOW8]{3.1.1.7.
+        Effect}</li><li>@Compendium[pf-content.pf-rules.MtjTOLIqTJtVOZtw]{3.1.1.8.
+        Miscellaneous Trap Features}</li></ul><hr
+        /><p>@Source[PZO1110;pages=417]</p><p>A trap’s trigger determines how it
+        is sprung.</p><h1>Location</h1><p>A location trigger springs a trap when
+        someone stands in a particular square.</p><h2>Proximity</h2><p>This
+        trigger activates the trap when a creature approaches within a certain
+        distance of it. A proximity trigger differs from a location trigger in
+        that the creature need not be standing in a particular square. Creatures
+        that are flying can spring a trap with a proximity trigger but not one
+        with a location trigger. Mechanical proximity triggers are extremely
+        sensitive to the slightest change in the air. This makes them useful
+        only in places such as crypts, where the air is unusually
+        still.</p><p>The proximity trigger used most often for magic device
+        traps is the alarm spell. Unlike when the spell is cast, an alarm spell
+        used as a trigger can have an area that’s no larger than the area the
+        trap is meant to protect. Some magic device traps have special proximity
+        triggers that activate only when certain kinds of creatures approach.
+        For example, a detect good spell can serve as a proximity trigger on an
+        evil altar, springing the attached trap only when someone of good
+        alignment gets close enough to it.</p><h2>Sound</h2><p>This trigger
+        springs a magic trap when it detects any sound. A sound trigger
+        functions like an ear and has a +15 bonus on Perception checks. A
+        successful Stealth check, magical silence, and other effects that would
+        negate hearing defeat it. A trap with a sound trigger requires the
+        casting of clairaudience during its
+        construction.</p><h2>Visual</h2><p>This trigger for magic traps works
+        like an actual eye, springing the trap whenever it “sees” something. A
+        trap with a visual trigger requires the casting of arcane eye,
+        clairvoyance, or true seeing during its construction. Sight range and
+        the Perception bonus conferred on the trap depend on the spell chosen,
+        as shown.</p><table border="\"><thead><tr><td>Spell</td><td>Sight
+        Ranges</td><td>Perception Bonus</td></tr></thead><tbody><tr><td>Arcane
+        eye</td><td>Line of sight (unlimited
+        range)</td><td>+20</td></tr><tr><td>Clairvoyance</td><td>One preselected
+        location</td><td>+15</td></tr><tr><td>True seeing</td><td>Line of sight
+        (up to 120 ft.)</td><td>+30</td></tr></tbody></table><p>If you want the
+        trap to see in the dark, you must either choose the true seeing option
+        or add darkvision to the trap as well. (Darkvision limits the trap’s
+        sight range in the dark to 60 feet.) If invisibility, disguises, or
+        illusions can fool the spell being used, they can fool the visual
+        trigger as well.</p><h2>Touch</h2><p>A touch trigger, which springs the
+        trap when touched, is one of the simplest kinds of trigger to construct.
+        This trigger may be physically attached to the part of the mechanism
+        that deals the damage or it may not. You can make a magic touch trigger
+        by adding alarm to the trap and reducing the area of the effect to cover
+        only the trigger spot.</p><h2>Timed</h2><p>This trigger periodically
+        springs the trap after a certain duration has
+        passed.</p><h2>Spell</h2><p>All spell traps have this kind of trigger.
+        The appropriate spell descriptions explain the trigger conditions for
+        traps that contain spell triggers.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

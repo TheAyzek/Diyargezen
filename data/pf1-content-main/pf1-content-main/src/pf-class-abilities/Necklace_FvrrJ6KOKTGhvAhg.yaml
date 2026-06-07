@@ -1,0 +1,23 @@
+_id: FvrrJ6KOKTGhvAhg
+_key: '!items!FvrrJ6KOKTGhvAhg'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/book-purple.jpg
+name: Necklace
+system:
+  associations:
+    classes:
+      - Occultist
+  description:
+    value: >-
+      <p><strong>Occultist Sacred Implement</strong></p><p><strong>Deity
+      </strong>Aroden; <strong>Implement </strong>necklace; <strong>Opposition
+      School </strong>illusion</p><p><em>Forgotten (Sp): </em>As a standard
+      action, you can expend 3 points of mental focus to target a single
+      creature within 30 feet using modify memory. This ability can be used only
+      to cause the target to forget the last 5 minutes of interaction with
+      you.</p>
+  subType: classFeat
+  tags:
+    - Occultist Sacred Implement
+type: feat

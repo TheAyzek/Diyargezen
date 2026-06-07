@@ -1,0 +1,24 @@
+_id: SwkofG9jBqg7L5I9
+_key: '!items!SwkofG9jBqg7L5I9'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Laurel of the Champion
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>This favor is a garland of leaves, often presented to the winner of a
+      joust or other competition. For 24 hours, the recipient takes a -2 penalty
+      on Disguise checks and can roll twice and take the better result on
+      Diplomacy checks.</p><h3>Requirements</h3><p>Craft Wondrous Item, eagle's
+      splendor, status</p>
+  price: 2000
+  slot: head
+  sources:
+    - id: PZO9476
+  subType: wondrous
+type: equipment

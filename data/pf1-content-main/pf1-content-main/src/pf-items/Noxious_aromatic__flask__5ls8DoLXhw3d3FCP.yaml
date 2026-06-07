@@ -1,0 +1,55 @@
+_id: 5ls8DoLXhw3d3FCP
+_key: '!items!5ls8DoLXhw3d3FCP'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-3.jpg
+name: Noxious aromatic (flask)
+system:
+  actions:
+    - _id: t9ze82daozk3cru6
+      ability:
+        critMult: 1
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - {}
+          - {}
+      img: systems/pf1/icons/items/potions/unique-3.jpg
+      name: Use
+      notes:
+        effect:
+          - nauseated, see text
+      range:
+        units: ft
+        value: '10'
+      save:
+        dc: '14'
+        type: fort
+      tag: noxiousAromaticFlask
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Weapons</p><p>This glass container
+      of foul-smelling oil shatters easily upon impact. You can throw a vial of
+      noxious aromatic as a splash weapon with a range increment of 10 feet. If
+      a creature with the scent sense is standing in the square of impact, it
+      must succeed at a DC 14 Fortitude save or be nauseated for 1d4+1 rounds.
+      Any creature with scent in an adjacent square must succeed at a DC 12
+      Fortitude save or be sickened for 1 round. Creatures without the scent
+      ability are not affected by noxious
+      aromatic.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      20</p>
+  price: 15
+  sources:
+    - id: PZO9429
+      pages: '13'
+  subType: misc
+  tags:
+    - Alchemical Weapons
+  weight:
+    value: 1
+type: consumable

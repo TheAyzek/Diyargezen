@@ -1,0 +1,105 @@
+_id: ER80inTIjIZvR0B8
+_key: '!journal!ER80inTIjIZvR0B8'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.2.1. Weapon Qualities
+pages:
+  - _id: wiwXS0juiTH16rRx
+    _key: '!journal.pages!ER80inTIjIZvR0B8.wiwXS0juiTH16rRx'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.2.1. Weapon Qualities
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li><p>@Compendium[pf-content.pf-rules.VOAlGu4isvHXBLjm]{6.0.2.
+        Weapons}</p><ul><li><strong>@Compendium[pf-content.pf-rules.ER80inTIjIZvR0B8]{6.0.2.1.
+        Weapon
+        Qualities}</strong></li><li>@Compendium[pf-content.pf-rules.VosfByLQH4UtiyxT]{6.0.2.2.
+        Masterwork Weapons}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=144]</p><p>Here is the format for weapon
+        entries (given as column headings on Table 6–4).</p><h2>Cost</h2><p>This
+        value is the weapon’s cost in gold pieces (gp) or silver pieces (sp).
+        The cost includes miscellaneous gear that goes with the weapon, such as
+        a scabbard or quiver. This cost is the same for a Small or Medium
+        version of the weapon. A Large version costs twice the listed
+        price.</p><h2>Dmg</h2><p>These columns give the damage dealt by the
+        weapon on a successful hit. The column labeled “Dmg (S)” is for Small
+        weapons. The column labeled “Dmg (M)” is for Medium weapons. If two
+        damage ranges are given, then the weapon is a double weapon. Use the
+        second damage figure given for the double weapon’s extra
+        attack.</p><p>Table 6–5 gives weapon damage values for Tiny and Large
+        weapons.</p><h2>Table 6-5: Tiny and Large Weapon
+        Damage</h2><table><thead><tr><td>Medium Weapon Damage</td><td>Tiny
+        Weapon Damage</td><td>Large Weapon
+        Damage</td></tr></thead><tbody><tr><td>1d2</td><td>—</td><td>1d3</td></tr><tr><td>1d3</td><td>1</td><td>1d4</td></tr><tr><td>1d4</td><td>1d2</td><td>1d6</td></tr><tr><td>1d6</td><td>1d3</td><td>1d8</td></tr><tr><td>1d8</td><td>1d4</td><td>2d6</td></tr><tr><td>1d10</td><td>1d6</td><td>2d8</td></tr><tr><td>1d12</td><td>1d8</td><td>3d6</td></tr><tr><td>2d4</td><td>1d4</td><td>2d6</td></tr><tr><td>2d6</td><td>1d8</td><td>3d6</td></tr><tr><td>2d8</td><td>1d10</td><td>3d8</td></tr><tr><td>2d10</td><td>2d6</td><td>4d8</td></tr></tbody></table><h2>Critical</h2><p>The
+        entry in this column notes how the weapon is used with the rules for
+        critical hits. When your character scores a critical hit, roll the
+        damage two, three, or four times, as indicated by its critical
+        multiplier (using all applicable modifiers on each roll), and add all
+        the results together.</p><p>Extra damage over and above a weapon’s
+        normal damage is not multiplied when you score a critical
+        hit.</p><h3>×2</h3><p>The weapon deals double damage on a critical
+        hit.</p><h3>×3</h3><p>The weapon deals triple damage on a critical
+        hit.</p><h3>×3/×4</h3><p>One head of this double weapon deals triple
+        damage on a critical hit. The other head deals quadruple damage on a
+        critical hit.</p><h3>×4</h3><p>The weapon deals quadruple damage on a
+        critical hit.</p><h3>19–20/×2</h3><p>The weapon scores a threat on a
+        natural roll of 19 or 20 (instead of just 20) and deals double damage on
+        a critical hit.</p><h3>18–20/×2</h3><p>The weapon scores a threat on a
+        natural roll of 18, 19, or 20 (instead of just 20) and deals double
+        damage on a critical hit.</p><h2>Range</h2><p>Any attack at more than
+        this distance is penalized for range. Beyond this range, the attack
+        takes a cumulative –2 penalty for each full range increment (or fraction
+        thereof ) of distance to the target. For example, a dagger (with a range
+        of 10 feet) thrown at a target that is 25 feet away would incur a –4
+        penalty. A thrown weapon has a maximum range of five range increments. A
+        projectile weapon can shoot to 10 range
+        increments.</p><h2>Weight</h2><p>This column gives the weight of a
+        Medium version of the weapon. Halve this number for Small weapons and
+        double it for Large weapons. Some weapons have a special
+        weight.</p><p>See the weapon’s description for
+        details.</p><h2>Type</h2><p>Weapons are classified according to the type
+        of damage they deal: B for bludgeoning, P for piercing, or S for
+        slashing. Some monsters may be resistant or immune to attacks from
+        certain types of weapons.</p><p>Some weapons deal damage of multiple
+        types. If a weapon causes two types of damage, the type it deals is not
+        half one type and half another; all damage caused is of both types.
+        Therefore, a creature would have to be immune to both types of damage to
+        ignore any of the damage caused by such a weapon.</p><p>In other cases,
+        a weapon can deal either of two types of damage. In a situation where
+        the damage type is significant, the wielder can choose which type of
+        damage to deal with such a weapon.</p><h2>Special</h2><p>Some weapons
+        have special features in addition to those noted in their
+        descriptions.</p><h2>Brace</h2><p>If you use a readied action to set a
+        brace weapon against a charge, you deal double damage on a successful
+        hit against a charging character (see Chapter
+        8).</p><h2>Disarm</h2><p>When you use a disarm weapon, you get a +2
+        bonus on Combat Maneuver Checks to disarm an enemy.</p><p>See
+        @Compendium[pf-content.pf-rules.2e9cYCdNMg0E9nDP]{2.07.3.03.
+        Disarm}</p><h2>Double</h2><p>You can use a double weapon to fight as if
+        fighting with two weapons, but if you do, you incur all the normal
+        attack penalties associated with fighting with two weapons, just as if
+        you were using a one-handed weapon and a light weapon. You can choose to
+        wield one end of a double weapon two-handed, but it cannot be used as a
+        double weapon when wielded in this way—only one end of the weapon can be
+        used in any given round.</p><h2>Monk</h2><p>A monk weapon can be used by
+        a monk to perform a flurry of blows (see Chapter
+        3).</p><h2>Nonlethal</h2><p>These weapons deal nonlethal damage (see
+        @Compendium[pf-content.pf-rules.Hzi8GbT19bP7mdSP]{2.03.8. Nonlethal
+        Damage}).</p><h2>Reach</h2><p>You use a reach weapon to strike opponents
+        10 feet away, but you can’t use it against an adjacent
+        foe.</p><h2>Trip</h2><p>You can use a trip weapon to make trip attacks.
+        If you are tripped during your own trip attempt, you can drop the weapon
+        to avoid being tripped.</p><p>See
+        @Compendium[pf-content.pf-rules.QBZtZChctrkE8ksB]{2.07.3.10. Trip}</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

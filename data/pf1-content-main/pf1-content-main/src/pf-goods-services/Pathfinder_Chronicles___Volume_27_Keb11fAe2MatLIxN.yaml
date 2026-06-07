@@ -1,0 +1,30 @@
+_id: Keb11fAe2MatLIxN
+_key: '!items!Keb11fAe2MatLIxN'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/books/book-rounded-red.webp
+name: Pathfinder Chronicles - Volume 27
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Pathfinder
+      Chronicles</p><h2>Description</h2><p>This volume made quite a stir upon
+      its release because it includes a good hundred pages of collected notes by
+      famed Pathfinder Durvin Gest-who had disappeared over a century earlier.
+      Many of these scraps recount only partial tales of danger and battle with
+      little context, though one surprisingly complete chapter describes Gest's
+      journey to the Crown of the World and his discoveries there. The portion
+      of the book not consisting of Gest's notes features a treatise on negating
+      the effects of magical traps by contemporary Mistress of Scrolls Andirissa
+      Belathax.</p><h2>Skill Bonuses</h2><ul><li>Navigate and follow tracks in
+      arctic environments (Survival +2) </li><li>Notice and disable magic traps
+      with surprising alacrity (Disable Device +2 and Perception +2)</li></ul>
+  equipped: false
+  price: 150
+  sources:
+    - id: PZO9435
+      pages: '27'
+  subType: tradeGoods
+  tags:
+    - Pathfinder Chronicles
+type: loot

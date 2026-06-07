@@ -1,0 +1,57 @@
+_id: 38Yqunt2FldR1BMR
+_key: '!journal!38Yqunt2FldR1BMR'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Olheon
+pages:
+  - _id: zAB0AoMDsYdDul1B
+    _key: '!journal.pages!38Yqunt2FldR1BMR.zAB0AoMDsYdDul1B'
+    _stats:
+      coreVersion: '12.331'
+    name: Olheon
+    sort: 0
+    text:
+      content: >-
+        <h1>Olheon</h1><h2>The Just Arbiter</h2>@Source[PZO9267;pages=322] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Olheon">Olheon</a><h3>Details</h3><p><strong>Alignment</strong>
+        LG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Deservedness, nobility, rulership<br
+        /><strong>Domains</strong> Good, Law, Nobility, Protection<br
+        /><strong>Subdomains</strong> Archon (Good), Archon (Law), Defense,
+        Hubris (Nobility)*, Leadership, Martyr<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Halberd<br /><strong>Symbol</strong> Figure framed by
+        branches<br /><strong>Sacred Animal(s)</strong> Wolf<br /><strong>Sacred
+        Color(s)</strong> Blue, gold</p><h3>Obedience</h3><p>Drop hot wax onto
+        your brow and press the spot with a signet ring-either your own or that
+        of a legitimate authority-to show your submission to deserved rulership.
+        For that day, so long as your brow remains uncovered, you gain a +4
+        sacred bonus on saving throws against charm and compulsion
+        effects.</p><h2>Boons - Celestial Obedience</h2><h3>Mystery
+        Cultist</h3><p>@Source[PZO9255;pages=19]<br /><strong>1: Verdict
+        (Sp)</strong> <em>command</em> 3/day, <em>enthrall</em> 2/day, or
+        <em>suggestion</em> 1/day<br /><strong>2: Olheon's Judgment
+        (Sp)</strong> Once per day, you can place a symbol on a target who has
+        shirked his obligations or showed poor judgment in his official
+        capacity; that symbol acts similarly to a <em>mark of justice</em>. This
+        spell-like ability has a casting time of 1 round instead of 10 minutes,
+        and when the mark activates it causes the target to take a -6 penalty to
+        Wisdom and Charisma. The conditions you place on the mark must relate to
+        the target's actions as a leader.<br /><strong>3: Lordship (Su)</strong>
+        You automatically gain the Leadership feat, and you are always
+        considered to have a reputation of fairness and generosity so long as
+        you maintain your allegiance to Olheon. If you already have the
+        Leadership feat, you gain an additional +2 bonus to your Leadership
+        score. You may choose to attract a hound or legion archon as a cohort.
+        Your archon cohort gains additional HD to bring its total HD to 2 lower
+        than your own level.</em></p><h2>For Followers of
+        Olheon</h2><h3>Feats</h3><p><em>Heroic
+        Interposition</em></p><h3>Traits</h3><p><em>Empyreal Focus</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

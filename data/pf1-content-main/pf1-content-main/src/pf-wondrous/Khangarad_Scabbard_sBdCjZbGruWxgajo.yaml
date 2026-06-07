@@ -1,0 +1,66 @@
+_id: sBdCjZbGruWxgajo
+_key: '!items!sBdCjZbGruWxgajo'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/equipment/neck/choker-carved-bone.webp
+name: Khangarad Scabbard
+system:
+  actions:
+    - _id: 9m04ga9Vxghd8LoQ
+      ability:
+        attack: _default
+      actionType: rcman
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      area: 10 ft (3 m)
+      attackName: trip
+      measureTemplate:
+        color: '#4173e6'
+        size: '10'
+        type: circle
+      name: gale-force winds
+  aura:
+    school: evo
+  cl: 9
+  description:
+    unidentified: >-
+      <p>This belt-and-scabbard set is decorated with golden depictions of
+      garudas</p>
+    value: >-
+      <p>This belt-and-scabbard set is decorated with golden depictions of
+      garudas.</p><h3>Effect</h3><p>The scabbard automatically reshapes itself
+      to fit the weapon that the wielder is currently using. If the wielder is
+      not using a weapon that would fit into a scabbard, as a free action the
+      wielder can command the khangarad scabbard to take the shape of any weapon
+      with which she has proficiency.</p><p>Once per day as a standard action,
+      the wielder can speak the scabbard’s command word to blast nearby
+      creatures with gale-force winds. As part of activating the scabbard, the
+      wielder can attempt a special trip combat maneuver check against all
+      creatures within @Distance[10;dual] using her normal CMB; this does not
+      provoke attacks of opportunity. Creatures whose CMD is lower than the
+      result are tripped. The wielder is not knocked down if the trip attempt
+      fails by 10 or
+      more.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.cnuin981hdq7ryit]{gust of wind};</em>
+      <strong>Cost</strong> 3,000 gp</p>
+  hp:
+    base: 10
+  price: 6000
+  showInQuickbar: true
+  slot: belt
+  sources:
+    - id: PZO9489
+      pages: '24'
+  subType: wondrous
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+  weight:
+    value: 2
+type: equipment

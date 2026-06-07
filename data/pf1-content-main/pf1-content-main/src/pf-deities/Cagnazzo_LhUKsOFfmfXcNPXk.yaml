@@ -1,0 +1,45 @@
+_id: LhUKsOFfmfXcNPXk
+_key: '!journal!LhUKsOFfmfXcNPXk'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Cagnazzo
+pages:
+  - _id: 0QMMmTEr98A5Bn9U
+    _key: '!journal.pages!LhUKsOFfmfXcNPXk.0QMMmTEr98A5Bn9U'
+    _stats:
+      coreVersion: '12.331'
+    name: Cagnazzo
+    sort: 0
+    text:
+      content: >-
+        <h1>Cagnazzo</h1><h2>Hunter of Souls</h2>@Source[PZO9267;pages=326] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Cagnazzo">Cagnazzo</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Malebranche<br /><strong>Areas of
+        Concern</strong> Elusiveness, fear, murder<br /><strong>Domains</strong>
+        Death, Evil, Law, Travel<br /><strong>Subdomains</strong> Devil (Evil),
+        Devil (Law), Murder, Souls, Trade<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Short
+        sword<br /><strong>Symbol</strong> Tormented soul<br /><strong>Sacred
+        Animal(s)</strong> Hound<br /><strong>Sacred Color(s)</strong> Black,
+        red</p><h3>Obedience</h3><p>Swear a lengthy blood oath against an enemy.
+        Gain a +4 profane bonus on saving throws against fear
+        effects.</p><h2>Boons -
+        Malebranche</h2>@Source[PZO1139;pages=122]<p>Malebranche are horned
+        devils transformed so as to conquer a mortal world in Hell's name. Many
+        malebranche exist in Hell's ranks, and the 12 detailed below are merely
+        the best known.</p><p> Malebranche occupy a tier of power just below
+        infernal dukes. All malebranche are lawful evil and range in power from
+        CR 21 to CR 25. The boons they grant are less complex than those granted
+        by archdevils, manifesting as spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>death knell</em><br
+        /><strong>2</strong>: <em>fear</em><br /><strong>3</strong>:
+        <em>harm</em></p><h2>For Followers of
+        Cagnazzo</h2><h3>Feats</h3><p><em>Hellish Shackles</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

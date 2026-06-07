@@ -1,0 +1,21 @@
+_id: U374uPT5XifXuK9V
+_key: '!items!U374uPT5XifXuK9V'
+_stats:
+  coreVersion: '12.331'
+img: icons/equipment/chest/coat-leather-blue.webp
+name: Wet suit
+system:
+  description:
+    value: >-
+      <p>This relatively aquadynamic wet suit is designed for surface-dwellers
+      exploring the deeps, with waterproof pockets to help keep important items
+      dry.</p>
+  price: 8
+  slot: clothing
+  sources:
+    - id: PZO92102
+      pages: '57'
+  subType: clothing
+  weight:
+    value: 4
+type: equipment

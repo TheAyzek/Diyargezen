@@ -1,0 +1,71 @@
+_id: 8aRYjA0JXz7irmfy
+_key: '!tables!8aRYjA0JXz7irmfy'
+_stats:
+  coreVersion: '12.331'
+description: >-
+  <p>The exact nature of a naturally occurring nightmare dreamscape is created
+  from the dreamer’s unconscious thoughts, and is not under its control. The GM
+  can select the dreamscape’s traits, or determine them randomly using the
+  following table.</p>
+displayRoll: true
+folder: 7ZeWJj7eKXb88Mo9
+formula: 1d100
+img: icons/svg/d20-grey.svg
+name: Nightmare - Gravity
+replacement: true
+results:
+  - _id: HA2VWn3ffqPfvPfe
+    _key: '!tables.results!8aRYjA0JXz7irmfy.HA2VWn3ffqPfvPfe'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 60
+    text: Normal
+    type: text
+    weight: 1
+  - _id: zC4uIGIAN8HnoTvl
+    _key: '!tables.results!8aRYjA0JXz7irmfy.zC4uIGIAN8HnoTvl'
+    img: icons/svg/d20-black.svg
+    range:
+      - 61
+      - 65
+    text: Heavy
+    type: text
+    weight: 1
+  - _id: 9yrIHg3n9qxZVimz
+    _key: '!tables.results!8aRYjA0JXz7irmfy.9yrIHg3n9qxZVimz'
+    img: icons/svg/d20-black.svg
+    range:
+      - 66
+      - 70
+    text: Light
+    type: text
+    weight: 1
+  - _id: vYWFBCvVT9WiB8El
+    _key: '!tables.results!8aRYjA0JXz7irmfy.vYWFBCvVT9WiB8El'
+    img: icons/svg/d20-black.svg
+    range:
+      - 71
+      - 80
+    text: None
+    type: text
+    weight: 1
+  - _id: qVM0K7XlfZEkVrAF
+    _key: '!tables.results!8aRYjA0JXz7irmfy.qVM0K7XlfZEkVrAF'
+    img: icons/svg/d20-black.svg
+    range:
+      - 81
+      - 90
+    text: Objective directional
+    type: text
+    weight: 1
+  - _id: j2lYDl3mp4mY5lmk
+    _key: '!tables.results!8aRYjA0JXz7irmfy.j2lYDl3mp4mY5lmk'
+    img: icons/svg/d20-black.svg
+    range:
+      - 91
+      - 100
+    text: Subjective directional
+    type: text
+    weight: 1
+sort: 500000

@@ -1,0 +1,24 @@
+_id: eKQSweZt8lRHHtuc
+_key: '!items!eKQSweZt8lRHHtuc'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/misc/pet-collar-blue.webp
+name: Rabbit
+system:
+  description:
+    value: >-
+      <p>Rabbits are often raised or hunted for their meat and skins, though
+      some people keep the skittish mammals as pets. Though they are often
+      confused with hares, rabbits are distinctly different in that they make
+      their homes in burrows beneath the ground, and they are usually smaller
+      than hares. Rabbits have the same statistics as rats (see the
+      <em>Bestiary</em>).</p>
+  equipped: false
+  price: 2
+  sources:
+    - id: PZO1123
+      pages: '80'
+  subType: animal
+  weight:
+    value: 3
+type: loot

@@ -1,0 +1,32 @@
+_id: HRCLaJFhyGjRMmEr
+_key: '!items!HRCLaJFhyGjRMmEr'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Orb of Foul Abaddon
+system:
+  aura:
+    school: con
+  cl: 10
+  description:
+    value: >-
+      <p>This grapefruit-sized sphere of glossy black stone glows with faint
+      whorls of orange fire deep within its inky substance. When held in hand,
+      it can be commanded to unleash a dread bolt once per day. When used as an
+      additional focus for casting a spell with the evil descriptor, the bearer
+      gains a +1 bonus to her caster level for these spells. It bestows one
+      permanent negative level on any good creature holding or carrying it. The
+      negative level remains as long as the creature has the orb and disappears
+      immediately when the orb is no longer held or carried. This negative level
+      cannot be overcome in any way (including by restoration spells) while the
+      bearer has the
+      orb.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, dread bolt (Ultimate Magic), creator must be evil</p>
+  price: 18000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

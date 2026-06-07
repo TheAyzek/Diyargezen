@@ -1,0 +1,54 @@
+_id: pJOYQhbhqIgy6kCF
+_key: '!journal!pJOYQhbhqIgy6kCF'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Seramaydiel
+pages:
+  - _id: 4fH9OZiD23ShX2X4
+    _key: '!journal.pages!pJOYQhbhqIgy6kCF.4fH9OZiD23ShX2X4'
+    _stats:
+      coreVersion: '12.331'
+    name: Seramaydiel
+    sort: 0
+    text:
+      content: >-
+        <h1> Seramaydiel</h1><h2>Lady of Inspired
+        Notes</h2>@Source[PZO9267;pages=324] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Seramaydiel">Seramaydiel</a><h3>Details</h3><p><strong>Alignment</strong>
+        NG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Communication, inspiration, music<br
+        /><strong>Domains</strong> Air, Charm, Good, Nobility<br
+        /><strong>Subdomains</strong> Agathion, Friendship, Leadership, Wind<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Blowgun<br /><strong>Symbol</strong>
+        Gold-and-silver harp<br /><strong>Sacred Animal(s)</strong> Katydid<br
+        /><strong>Sacred Color(s)</strong> Gold,
+        silver</p><h3>Obedience</h3><p>Sing or play a musical instrument in
+        public where strangers can hear you and be inspired by you. If no
+        suitable public areas are located nearby, compose an original poem about
+        Seramaydiel's influence in your life and leave it where a passing
+        stranger may find it. Gain a +4 sacred bonus on saving throws against
+        sonic effects.</p><h2>Boons - Celestial Obedience</h2><h3>Mystery
+        Cultist</h3><p>@Source[PZO9255;pages=22]<br /><strong>1: Communicator
+        (Sp)</strong> <em>comprehend languages</em> 3/day, <em>whispering wind
+        </em> 2/day, or <em>sculpt sound</em> 1/day<br /><strong>2: Quiet Muse
+        (Sp)</strong> You can cast silenced <em>brilliant
+        inspiration</em><sup>APG</sup> three times per day.<br /><strong>3:
+        Paralyzing Song (Su)</strong> You make music with such skill and pathos
+        that all around you become frozen still. Once per day as a full-round
+        action, you may attempt a Perform (keyboard instruments, percussion
+        instruments, string instruments, wind instruments, or sing) check. All
+        enemies within 30 feet who can hear you must make a successful Will save
+        (DC equal to the result of your Perform check) or be affected as though
+        by <em>hold monster </em>for as long as you continue
+        playing.</em></p><h2>For Followers of
+        Seramaydiel</h2><h3>Feats</h3><p><em>Heroic
+        Interposition</em></p><h3>Traits</h3><p><em>Empyreal Focus</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

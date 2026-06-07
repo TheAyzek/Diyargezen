@@ -1,0 +1,29 @@
+_id: WEq7VMVxS1NsXxcK
+_key: '!journal!WEq7VMVxS1NsXxcK'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: ywdNAUiVSklAOMDs
+name: The Tangled Briar
+pages:
+  - _id: PQI1geK3BiDEV2Yj
+    _key: '!journal.pages!WEq7VMVxS1NsXxcK.PQI1geK3BiDEV2Yj'
+    _stats:
+      coreVersion: '12.331'
+    name: The Tangled Briar
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Tangled Briar</strong> (lawful evil, Constitution) is a
+        card of ancient deeds. It indicates an object or person from long ago
+        that will somehow have great influence on the situation. The object or
+        person in question is one lost or murdered in some foul way. Misaligned,
+        the thorny past brings not just pain, but hope for the future.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Tangled%20Briar.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

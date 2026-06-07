@@ -1,0 +1,30 @@
+_id: s8omtkMl94PcmWdd
+_key: '!journal!s8omtkMl94PcmWdd'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: PqqHaMsDrJKCNHAU
+name: The Dance
+pages:
+  - _id: TnB0hYgUsa7WNcAd
+    _key: '!journal.pages!s8omtkMl94PcmWdd.TnB0hYgUsa7WNcAd'
+    _stats:
+      coreVersion: '12.331'
+    name: The Dance
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Dance</strong> (lawful good, Dexterity) is a rich and
+        delicate framework that, like the universe itself, requires everyone
+        within it to abide by its rules, lest the entire construct collapse. It
+        advises staying in perfect step, knowing your place in the greater good.
+        Those who step out of the pattern do so at their peril. Misaligned, that
+        pattern might be hypnotic, but not to the good of all.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Dance.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

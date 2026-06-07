@@ -1,0 +1,28 @@
+_id: fkDuvIveCDCrxEXo
+_key: '!items!fkDuvIveCDCrxEXo'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Bracers of Steadiness
+system:
+  aura:
+    school: abj
+  cl: 1
+  description:
+    value: >-
+      <p>These tortoiseshell bracers fit so snuggly against their wearer's skin
+      that they almost seem part of him. The wearer of these bracers becomes
+      exceptionally calm and composed if she takes her time to accomplish
+      particular tasks. Whenever she takes 20 on a skill check for a skill that
+      primarily depends on her arms and hands, she gains a +5 competence bonus
+      on the check.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, aid</p>
+  price: 2000
+  slot: wrists
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

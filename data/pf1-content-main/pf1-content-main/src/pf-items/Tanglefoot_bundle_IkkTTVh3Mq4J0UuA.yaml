@@ -1,0 +1,51 @@
+_id: IkkTTVh3Mq4J0UuA
+_key: '!items!IkkTTVh3Mq4J0UuA'
+_stats:
+  coreVersion: '12.343'
+img: icons/containers/bags/sack-simple-green.webp
+name: Tanglefoot bundle
+system:
+  actions:
+    - _id: 37xjt7cx3w6e3bco
+      ability:
+        critMult: 1
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - {}
+          - {}
+      img: icons/containers/bags/sack-simple-green.webp
+      name: Use
+      notes:
+        effect:
+          - entangle
+      range:
+        units: ft
+        value: '60'
+      tag: tanglefootBundle
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Weapons</p><p>This larger version
+      of a tanglefoot bag entangles its target as normal and requires a
+      successful DC 20 Reflex saving throw to avoid being stuck to the floor. In
+      addition, it can affect Huge and smaller creatures, and has a range
+      increment of 60 feet. A creature that is glued to the floor can break free
+      by succeeding at a DC 30 Strength check or by dealing 25 points of damage
+      to the goo with a slashing
+      weapon.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      35</p>
+  price: 250
+  sources:
+    - id: PZO9091
+      pages: '72'
+  subType: misc
+  tags:
+    - Alchemical Weapons
+  weight:
+    value: 20
+type: consumable

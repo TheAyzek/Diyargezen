@@ -1,0 +1,66 @@
+_id: WQgIx2fgJXVEhMXA
+_key: '!tables!WQgIx2fgJXVEhMXA'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/settlement/stone-stairs.webp
+name: Ruined City Risen from the Sea (High Level)
+replacement: true
+results:
+  - _id: XmN7Q4pulLS3Q3RL
+    _key: '!tables.results!WQgIx2fgJXVEhMXA.XmN7Q4pulLS3Q3RL'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 16
+    text: 2d6 ([[2d6]]) Vrocks [AVG CR 14]
+    type: text
+    weight: 1
+  - _id: wvbfuh8FJzuqLhQu
+    _key: '!tables.results!WQgIx2fgJXVEhMXA.wvbfuh8FJzuqLhQu'
+    img: icons/svg/d20-black.svg
+    range:
+      - 17
+      - 34
+    text: 1d4 ([[1d4]]) Shining Children [AVG CR 14]
+    type: text
+    weight: 1
+  - _id: BE8kZSjPDbFTTsHK
+    _key: '!tables.results!WQgIx2fgJXVEhMXA.BE8kZSjPDbFTTsHK'
+    img: icons/svg/d20-black.svg
+    range:
+      - 35
+      - 54
+    text: 1d4 ([[1d4]]) Ooze-Possessed Clerics [AVG CR 14]
+    type: text
+    weight: 1
+  - _id: mVhRivRdtLE81laq
+    _key: '!tables.results!WQgIx2fgJXVEhMXA.mVhRivRdtLE81laq'
+    img: icons/svg/d20-black.svg
+    range:
+      - 55
+      - 71
+    text: 2d6 ([[2d6]]) Salamanders And 1d6 Elder Fire Elementals [AVG CR 15]
+    type: text
+    weight: 1
+  - _id: YoZmXa18XJPx7MEG
+    _key: '!tables.results!WQgIx2fgJXVEhMXA.YoZmXa18XJPx7MEG'
+    img: icons/svg/d20-black.svg
+    range:
+      - 72
+      - 88
+    text: 1d4 ([[1d4]]) Nalfeshnees [AVG CR 16]
+    type: text
+    weight: 1
+  - _id: 83V2cHJRq4L6fOOR
+    _key: '!tables.results!WQgIx2fgJXVEhMXA.83V2cHJRq4L6fOOR'
+    img: icons/svg/d20-black.svg
+    range:
+      - 89
+      - 100
+    text: Nuruu’Gal [CR 21]
+    type: text
+    weight: 1
+sort: 2200000

@@ -1,0 +1,43 @@
+_id: u7Uq6zEn5U6yQkiD
+_key: '!items!u7Uq6zEn5U6yQkiD'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/scorpion-style.jpg
+name: Disease
+system:
+  actions:
+    - _id: et5io2gean6bl37z
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      img: systems/pf1/icons/feats/scorpion-style.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            Onset [[1d3]] days, frequency 1/day, effect [[1]] Con damage, cure 2
+            consecutive saves
+      save:
+        dc: '15'
+        type: fort
+      tag: diseaseExOrSu
+  description:
+    value: >-
+      <p>A creature with this ability causes disease in those it contacts. The
+      effects of the disease, including its save, frequency, and cure, are
+      included in the creature&rsquo;s description. The saving throw to negate
+      the disease is usually a Fortitude save (DC = 10 + 1/2 infecting
+      creature&rsquo;s racial HD + that creature&rsquo;s Constitution modifier;
+      the exact DC is given in the creature&rsquo;s descriptive text). Diseases
+      can be removed through <a>remove disease</a> and similar
+      effects.</p><p><em>Format</em>: <strong>Disease Name (Ex or Su)</strong>
+      Bite&mdash;injury; <em>save</em> Fort DC 15, <em>onset</em> 1d3 days,
+      <em>frequency</em> 1/day, <em>effect</em> 1 Con damage, <em>cure</em> 2
+      consecutive saves</p><p><em>Location</em>: Special Attacks and individual
+      attacks.</p><p><em>Usage:&nbsp;</em>Replace Fort DC, and context</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

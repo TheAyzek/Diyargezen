@@ -1,0 +1,55 @@
+_id: e6vFrNjb1BxbfbqW
+_key: '!journal!e6vFrNjb1BxbfbqW'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: The Green Mother
+pages:
+  - _id: tunn8rQHI8C0s4x5
+    _key: '!journal.pages!e6vFrNjb1BxbfbqW.tunn8rQHI8C0s4x5'
+    _stats:
+      coreVersion: '12.331'
+    name: The Green Mother
+    sort: 0
+    text:
+      content: >-
+        <h1>The Green Mother</h1><h2>The Feasting
+        Flower</h2>@Source[PZO9298;pages=20] <br /><strong>Pathfinder
+        Wiki</strong> <a href="http://www.pathfinderwiki.com/wiki/The Green
+        Mother">The Green
+        Mother</a><h3>Details</h3><p><strong>Alignment</strong> NE<br
+        /><strong>Pantheon</strong> Eldest<br /><strong>Areas of
+        Concern</strong> Carnivorous plants, intrigue, seduction<br
+        /><strong>Domains</strong> Charm, Earth, Evil, Plant<br
+        /><strong>Subdomains</strong> Caves, Decay, Growth, Lust, Thorns*<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Sickle<br /><strong>Symbol</strong>
+        sensual female lips wrapped in briars<br /><strong>Sacred
+        Animal(s)</strong> None (carnivorous plants)<br /><strong>Sacred
+        Color(s)</strong> Green, red</p><h3>Obedience</h3><p>Seek out the most
+        verdant plant life in the immediate area and achieve sexual release
+        amidst it, either alone or accompanied. At the moment of climax, whisper
+        a secret belonging to someone else. This secret must be different every
+        time. You gain a +4 profane bonus on saves against mind-affecting
+        effects.</p><h2>Boons - Fey
+        Obedience</h2><h3>Feysworn</h3><p>@Source[PZO9298;pages=20]<br
+        /><strong>1: Compelling Presence (Sp)</strong> <em>charm person</em>
+        3/day, <em>enthrall</em> 2/day, or <em>suggestion</em> 1/day<br
+        /><strong>2: Suble Influence (Sp)</strong> You can cast <em>dominate
+        person</em> three times per day, though you don't need to share a common
+        language with the target to give it complex commands.<br /><strong>3:
+        Beguiling Touch (Sp)</strong> You can cast <em>dominate monster</em>
+        once per day. If you make a successful touch attack against the target
+        as part of the casting, the save DC of the spell increases by
+        2.</em></p><h2><em>For Followers of The Green
+        Mother</em></h2><h3>Archetypes</h3><p><em>Grasping Vine (Shaman),
+        Seducer (Witch)</em></p><h3>Feats</h3><p><em>Fey
+        Friend</em></p><h3>Spells</h3><p><em>Alluring Spores, Strand of the
+        Tangled Knot, Thirsting
+        Entanglement</em></p><h3>Traits</h3><p><em>Shaper of Reality</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

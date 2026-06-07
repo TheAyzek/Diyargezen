@@ -1,0 +1,21 @@
+_id: X9QPHVklMxdzeX1I
+_key: '!items!X9QPHVklMxdzeX1I'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/feather-blue-grey.webp
+name: Duck
+system:
+  description:
+    value: >-
+      <p>Farm ducks are used for eggs, meat, and down, while wild ducks are
+      hunted for meat. Ducks have the same statistics as ravens (see the
+      <em>Bestiary</em>).</p>
+  equipped: false
+  price: 2
+  sources:
+    - id: PZO1123
+      pages: '81'
+  subType: animal
+  weight:
+    value: 3
+type: loot

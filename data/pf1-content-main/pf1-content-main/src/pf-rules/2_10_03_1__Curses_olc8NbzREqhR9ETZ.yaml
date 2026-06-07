@@ -1,0 +1,45 @@
+_id: olc8NbzREqhR9ETZ
+_key: '!journal!olc8NbzREqhR9ETZ'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: Xs7WZeDzdO8Jg0jZ
+name: 2.10.03.1. Curses
+pages:
+  - _id: 9Xp7lG8P6yk9zjmJ
+    _key: '!journal.pages!olc8NbzREqhR9ETZ.9Xp7lG8P6yk9zjmJ'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.10.03.1. Curses
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.gzu4LYBcxAEzhEnd]{2.10.
+        Special
+        Abilities}</p><p>@Compendium[pf-content.pf-rules.xpY9oe1ZnDpzXtEK]{2.10.03.
+        Afflictions}</p><ul><li><strong>@Compendium[pf-content.pf-rules.olc8NbzREqhR9ETZ]{2.10.03.1.
+        Curses}</strong></li><li>@Compendium[pf-content.pf-rules.eMDcLEOn4gft6C5s]{2.10.03.2.
+        Diseases}</li><li>@Compendium[pf-content.pf-rules.UmpLag06bYxL4aUl]{2.10.03.3.
+        Infestations}</li><li>@Compendium[pf-content.pf-rules.kEWYsWvNyhPgjbC6]{2.10.03.4.
+        Poison}</li></ul><hr /><p>@Source[PZO1110;pages=556]</p><p>Careless
+        rogues plundering a tomb, drunken heroes insulting a powerful wizard,
+        and foolhardy adventurers who pick up ancient swords all might suffer
+        from curses. These magic afflictions can have a wide variety of effects,
+        from a simple penalty to certain checks to transforming the victim into
+        a toad. Some even cause the afflicted to slowly rot away, leaving
+        nothing behind but dust. Unlike other afflictions, most curses cannot be
+        cured through a number of successful saving throws. Curses can be cured
+        through magic, however, usually via spells such as remove curse and
+        break enchantment. While some curses cause a progressive deterioration,
+        others inflict a static penalty from the moment they are contracted,
+        neither fading over time nor growing worse. In addition, there are a
+        number of magic items that act like curses.</p><p>See
+        @Compendium[pf-content.pf-rules.LaZ4cSkdCxMwDnXD]{6.1.18. Cursed Items}
+        for a description of these cursed items.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

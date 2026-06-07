@@ -1,0 +1,50 @@
+_id: 4BO4363qZk1KthYF
+_key: '!items!4BO4363qZk1KthYF'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/gem-faceted-rough-yellow.webp
+name: Gamboge Nodule Ioun Stone, Flawed
+system:
+  aura:
+    school: trs
+  cl: 12
+  contextNotes:
+    - target: allSavingThrows
+      text: You are immune to poison.
+    - target: allSavingThrows
+      text: '-[[4]] penalty vs curses and diseases.'
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>This irregular, but generally rounded, stone ranges in color from
+      yellow to orange to brown. It may have irregular facets or internal
+      flaws.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone grants immunity to poison and a -4 penalty on
+      saving throws against curses and
+      diseases.</p><h3>Resonance</h3><p><strong>Method 1, Fixed: </strong>+2
+      resistance bonus on saving throws against disease.</p><p><strong>Method 2,
+      Variable:
+      </strong>@UUID[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]{Ioun
+      Stone Resonance Powers Method
+      2}</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Wondrous
+      Item, <em>neutralize poison</em>, creator must be 12th level
+      <strong>Cost</strong> 20,000 gp</p><hr /><p><strong>Editor's
+      note</strong>: the sourcebook indicates a moderate strength aura despite
+      the item's Caster Level of 12</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 40000
+  sources:
+    - id: PZO9211
+      pages: 47, 52
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

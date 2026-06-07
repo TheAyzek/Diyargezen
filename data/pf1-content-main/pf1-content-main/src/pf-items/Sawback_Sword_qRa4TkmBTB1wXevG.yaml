@@ -1,0 +1,21 @@
+_id: qRa4TkmBTB1wXevG
+_key: '!items!qRa4TkmBTB1wXevG'
+_stats:
+  coreVersion: '12.331'
+img: icons/weapons/swords/sword-guard-serrated.webp
+name: Sawback Sword
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> +5 gp; <strong>Weight</strong> -<br
+      /><strong>Category</strong> Adventuring Gear</p><p>This is a modification
+      to any light or heavy blade rather than a unique weapon type. The saw
+      blade on the back of the sword lets you use it to perform crude
+      carpentry.</p>
+  equipped: false
+  price: 5
+  sources:
+    - id: PZO1123
+      pages: '57'
+  subType: adventuring
+type: loot

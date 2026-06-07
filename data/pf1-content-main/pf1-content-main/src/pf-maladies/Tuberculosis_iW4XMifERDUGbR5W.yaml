@@ -1,0 +1,23 @@
+_id: iW4XMifERDUGbR5W
+_key: '!items!iW4XMifERDUGbR5W'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/biological/organ-heart-black.webp
+name: Tuberculosis
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> disease (inhaled); <strong>Save</strong>
+      Fortitude DC 18;</p><p><strong>Onset</strong> 1d4
+      days;&nbsp;<strong>Frequency</strong> 1/day</p><p><strong>Effect</strong>
+      1d4 Str damage and 1d4 Con Damage</p><p><strong>Cure</strong>
+      &ndash;</p><hr /><p>This disease flourishes in unsanitary conditions,
+      places of stale air, and many humanoid cities. Symptoms include chest pain
+      and a productive, prolonged, bloody cough. If left untreated, the disease
+      quickly progresses, leading to high fever, chills, night sweats, appetite
+      loss, pallor, and fatigue.</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

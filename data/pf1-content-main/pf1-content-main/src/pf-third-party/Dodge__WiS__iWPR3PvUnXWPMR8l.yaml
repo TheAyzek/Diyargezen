@@ -1,0 +1,34 @@
+_id: iWPR3PvUnXWPMR8l
+_key: '!items!iWPR3PvUnXWPMR8l'
+_stats:
+  coreVersion: '12.331'
+folder: CQNw1H2zi4NilpKP
+img: systems/pf1/icons/feats/dodge.jpg
+name: Dodge (WiS)
+system:
+  changes:
+    - _id: 9onhsept
+      formula: '1'
+      target: ac
+      type: dodge
+  contextNotes:
+    - target: ac
+      text: +4 dodge bonus against AoO
+  description:
+    value: >-
+      <p><em>Your training and reflexes allow you to react swiftly to avoid an
+      opponents' attacks.</em></p><p>Dex 13.</p><p><strong>Benefits</strong>:
+      You gain a +1 dodge bonus to your AC. A condition that makes you lose your
+      Dex bonus to AC also makes you lose the benefits of this feat.</p><p>You
+      get a +4 dodge bonus to Armor Class against attacks of opportunity caused
+      when you move out of or within a threatened area. A condition that makes
+      you lose your Dexterity bonus to Armor Class (if any) also makes you lose
+      dodge bonuses.</p><p>Dodge bonuses stack with each other, unlike most
+      types of bonuses.</p>
+  sources:
+    - publisher: https://meliogeny.net/square-world/
+      title: World is Square
+  tags:
+    - Combat
+    - World is Square
+type: feat

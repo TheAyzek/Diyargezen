@@ -1,0 +1,37 @@
+_id: 2pQahBp8fEqSfQoh
+_key: '!items!2pQahBp8fEqSfQoh'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Quickmetal Bracers, Adamantine
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>Once per day when a user wearing both these bracers speaks a command
+      word, the metal turns entirely liquid and swims over the wearer's hands to
+      cover her weapons. The user can cover a two-handed melee weapon or up to
+      two one-handed or light melee weapons. For the next 10 rounds, the
+      affected weapons can overcome damage reduction as though the weapons were
+      made of adamantine, cold iron, or silver (as determined by the quickmetal
+      bracers' type).  The heavy, shifting metal coating affects the balance of
+      manufactured weapons, imposing a -2 penalty on attack rolls. Improvised
+      weapons, however, are already unwieldy, and the metal coating doesn't
+      significantly affect their balance.  If the wielder lets go of a weapon
+      affected by the bracers, the liquid metal immediately turns back into a
+      solid metal bracer- or bracers, in the case of a two-handed
+      weapon-reappearing on the user's wrists. The bracers cannot therefore
+      affect thrown weapons or ranged weapon
+      ammunition.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, major creation</p>
+  price: 5000
+  slot: wrists
+  sources:
+    - id: PZO9481
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

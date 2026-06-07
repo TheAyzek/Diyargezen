@@ -1,0 +1,28 @@
+_id: 55KbLEPGwj4BptiV
+_key: '!items!55KbLEPGwj4BptiV'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Boots of the Cat
+system:
+  aura:
+    school: trs
+  cl: 1
+  description:
+    value: >-
+      <p>These high-soled blue boots provide a great deal of comfort and arch
+      support while also making the wearer appear a little bit taller than
+      normal. The boot's wearer always takes the minimum possible damage from
+      falls (as if the GM had rolled a 1 on each die of damage incurred by the
+      fall) and at the end of a fall always lands on his
+      feet.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, feather fall</p>
+  price: 1000
+  slot: feet
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

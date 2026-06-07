@@ -1,0 +1,26 @@
+_id: Jv2mvn3Pod5j8c2t
+_key: '!items!Jv2mvn3Pod5j8c2t'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/skills/mech_10.jpg
+name: Serpentine Tattoo
+system:
+  aura:
+    school: con
+  cl: 1
+  description:
+    value: >-
+      <p>This sinuous tattoo appears to move when the bearer flexes his muscles.
+      Three times per day when the bearer makes a successful melee attack with a
+      monk or performance weapon or an unarmed strike, he can cause the tattoo
+      to lunge like a snake at the creature hit. This allows the bearer to
+      perform a dirty trick combat maneuver as an immediate action that does not
+      provoke attacks of
+      opportunity.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Improved Dirty Trick, Inscribe Magical Tattoo, summon monster I</p>
+  price: 2000
+  sources:
+    - id: PZO9440
+  subType: other
+type: equipment

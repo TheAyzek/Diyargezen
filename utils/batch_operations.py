@@ -69,14 +69,11 @@ def batch_export_characters(
                 from utils.export_pdf import (
                     export_dnd_character_pdf,
                     export_mm_character_pdf,
-                    export_vtm_character_pdf
                 )
                 if system == "DND5E":
                     export_dnd_character_pdf(character, output_file)
                 elif system == "MUTANTS_AND_MASTERMINDS":
                     export_mm_character_pdf(character, output_file)
-                elif system == "VTM5E":
-                    export_vtm_character_pdf(character, output_file)
                 else:
                     raise ValueError(f"Bilinmeyen sistem: {system}")
             
@@ -298,7 +295,7 @@ def get_characters_from_directory(
     
     Args:
         directory: Karakter dizini
-        system_filter: Sistem filtresi (DND5E, MUTANTS_AND_MASTERMINDS, VTM5E)
+        system_filter: Sistem filtresi (DND5E, MUTANTS_AND_MASTERMINDS, MM3E)
     
     Returns:
         Karakter dosya yolları listesi

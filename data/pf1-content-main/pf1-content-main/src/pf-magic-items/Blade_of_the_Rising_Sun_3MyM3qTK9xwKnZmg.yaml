@@ -1,0 +1,79 @@
+_id: 3MyM3qTK9xwKnZmg
+_key: '!items!3MyM3qTK9xwKnZmg'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/swords/sword-katana.webp
+name: Blade of the Rising Sun
+system:
+  actions:
+    - _id: ciw4llpidoegkcks
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: bladeOfTheRisingSun
+  aura:
+    custom: true
+    school: evocation and necromancy
+  baseTypes:
+    - Katana
+  cl: 15
+  description:
+    value: >-
+      <p>This golden-bladed +1 glorious undead bane katana shines like the first
+      rays of the morning sun. Whenever the wielder of a blade of the rising sun
+      threatens a critical threat (regardless of whether the critical is
+      confirmed or whether the target is subject to critical hits), the target
+      is surrounded by a halo of golden sunlight equivalent to faerie fire until
+      the beginning of the wielder's next turn. Undead surrounded by this glow
+      take 1d6 points of damage at the beginning of their turn.  The wielder of
+      a blade of the rising sun may declare a sacrificial strike (similar to the
+      retributive strike of a staff of power) as a standard action, or as an
+      immediate action before losing consciousness upon gaining the dying or
+      dead condition. A sacrificial strike converts the wielder's body and
+      spirit into raw energy equivalent to a sunburst (DC 22). Allies of the
+      wielder within the sunburst are not harmed, and the wielder may choose to
+      affect all allies within the sunburst as mass cure light wounds or all
+      allies within 10 feet as breath of life. The caster level for the effects
+      of the sacrificial strike is equal to the sword's caster level plus 1/2
+      the wielder's level (maximum 25th level).  A sacrificial strike destroys
+      the wielder's body (as the spell disintegrate), but she has a 50% chance
+      of being reincarnated (as the reincarnate spell) 24 hours after performing
+      a sacrificial strike in a random safe location within 1 mile. The
+      wielder's gear is left behind unharmed after the sacrificial strike;
+      however, the blade of the rising sun is teleported to a random location at
+      least 100 miles distant.</p><p><strong>Base Item</strong>: glorious undead
+      bane katana</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, blindness/deafness, daylight, flare, miracle,
+      sunburst</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 51850
+  properties:
+    dea: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 6
+type: weapon

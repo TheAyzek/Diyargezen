@@ -1,0 +1,68 @@
+_id: YpMkwYOZFvBjozvb
+_key: '!items!YpMkwYOZFvBjozvb'
+_stats:
+  coreVersion: '12.331'
+folder: VhWzpOwzBqWyvaa5
+img: icons/magic/fire/flame-burning-eye.webp
+name: Sin-Galemren
+system:
+  creatureSubtypes:
+    - Sin-Galemren
+  creatureTypes:
+    - humanoid
+  description:
+    value: >-
+      <h2>Standard Racial Traits</h2><ul><li><strong>+2 to One Ability
+      Score</strong>: Sin-galemren characters gain a +2 bonus to one ability
+      score of their choice at character creation to represent their varied
+      nature..</li><li><strong>Medium</strong>: Sin-galemren are Medium
+      creatures and have no bonuses or penalties due to their
+      size.</li><li><strong>Normal Speed</strong>: Sin-galemren have a base
+      speed of 30 feet.</li><li><strong>Languages</strong>: Sin-galemren begin
+      play speaking Common and Elven. Sin-galemren with high Intelligence scores
+      can choose any languages they want (except secret languages, such as
+      Druidic).</li><li><strong>Elf Blood</strong>: Sin-galemren count as both
+      elves and humans for any effect related to race..</li></ul><h3>Defense
+      Racial Traits</h3><ul><li><strong>Elven Immunities</strong>: Sin-galemren
+      are immune to magic sleep effects and gain a +2 racial bonus to saving
+      throws against enchantment spells and effects.</li></ul><h3>Feat and Skill
+      Racial Traits</h3><ul><li><strong>Adaptability</strong>: Sin-galemren
+      receive Skill Focus as a bonus feat at 1st
+      level.</li><li><strong>Hunted</strong>: Sin-galemren receive a +2 racial
+      bonus on Diplomacy and lntimidate checks.</li><li><strong>Keen
+      Senses</strong>: Sin-galemren receive a +2 racial bonus on Perception
+      checks.</li></ul><h3>Senses Racial Traits</h3><ul><li><strong>Low-Light
+      Vision</strong>: Sin-galemren can see twice as far as humans in conditions
+      of dim light.</li></ul><h3>Offensive Racial
+      Traits</h3><ul><li><strong>Weapon Familiarity</strong>: Sin-galemren are
+      proficient with longbows (including composite longbows), longswords,
+      rapiers, and shortbows (including composite shortbows), and they treat any
+      weapon with the word "elven" in its name as a martial weapon.</li></ul>
+  links:
+    supplements:
+      - name: +2 to One Ability Score (Sin-Galemren)
+        uuid: Compendium.pf-content.pf-collab-content.Item.Y1uY1P4G37nai7HQ
+      - name: Adaptability (Sin-Galemren)
+        uuid: Compendium.pf-content.pf-collab-content.Item.1eRAT881kWIYE0E7
+      - name: Elf Blood (Sin-Galemren)
+        uuid: Compendium.pf-content.pf-collab-content.Item.fjyGI9BTuiS7oYfq
+      - name: Elven Immunities (Sin-Galemren)
+        uuid: Compendium.pf-content.pf-collab-content.Item.uzrlhKXhCpJgJek2
+      - name: Hunted (Sin-Galemren)
+        uuid: Compendium.pf-content.pf-collab-content.Item.w2C6PetWp4GUGHxA
+      - name: Languages (Sin-Galemren)
+        uuid: Compendium.pf-content.pf-collab-content.Item.g10rmehpq9C0YTUB
+      - name: Low-Light Vision (Sin-Galemren)
+        uuid: Compendium.pf-content.pf-collab-content.Item.A4tpJzcRC4xzce3J
+      - name: Weapon Familiarity (Sin-Galemren)
+        uuid: Compendium.pf-content.pf-collab-content.Item.TkNEa7xtWixVu4aZ
+  sources:
+    - pages: '8'
+      publisher: Paizo / Stranger Comics
+      title: Niobe
+  speeds:
+    land: 30
+  tags:
+    - Niobe
+    - Sin-Galemren
+type: race

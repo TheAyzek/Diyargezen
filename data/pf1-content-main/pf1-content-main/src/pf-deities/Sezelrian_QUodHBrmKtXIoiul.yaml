@@ -1,0 +1,32 @@
+_id: QUodHBrmKtXIoiul
+_key: '!journal!QUodHBrmKtXIoiul'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Sezelrian
+pages:
+  - _id: In8SkDxXuRKyKfOj
+    _key: '!journal.pages!QUodHBrmKtXIoiul.In8SkDxXuRKyKfOj'
+    _stats:
+      coreVersion: '12.331'
+    name: Sezelrian
+    sort: 0
+    text:
+      content: >-
+        <h1>Sezelrian</h1><h2>The Fire God</h2>@Source[PZO9267;pages=328] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Sezelrian">Sezelrian</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Orc Deities<br /><strong>Areas of
+        Concern</strong> Fire, magic, revenge<br /><strong>Domains</strong>
+        Chaos, Evil, Fire, Magic<br /><strong>Subdomains</strong> Ash, Demon
+        (Chaos), Demon (Evil), Divine, Smoke<br /><em>* Requires the <u>Acolyte
+        of Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Heavy
+        mace<br /><strong>Symbol</strong> Burning boar skull<br /><strong>Sacred
+        Animal(s)</strong> Daeodon<br /><strong>Sacred Color(s)</strong> Green,
+        orange</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

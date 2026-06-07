@@ -1,0 +1,61 @@
+_id: H7pVdtQpzBqd9J38
+_key: '!items!H7pVdtQpzBqd9J38'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/sword-bastard.PNG
+name: Sacrificial Sword
+system:
+  actions:
+    - _id: txal2mhwmrf625zm
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: sacrificialSword
+  aura:
+    school: con
+  baseTypes:
+    - Bastard Sword
+  cl: 11
+  description:
+    value: >-
+      <p>This finely crafted +2 bastard sword has three blood-red gems embedded
+      in its pommel. When the wielder kills a living creature (even herself)
+      with the sacrificial sword, she can transfer the life force of that
+      creature into the body of a dead or dying ally up to 50 feet away as a
+      swift action. The transferred life force acts as a reach breath of life
+      spell. Each time this ability is activated, all color drains from one of
+      the embedded gems. When all three gems are clear, the sacrificial sword
+      can no longer transfer life energy, but it can still be used as a +2
+      bastard sword.</p><p><strong>Base Item</strong>: bastard
+      sword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, Reach Spell, breath of life</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 18235
+  showInQuickbar: false
+  sources:
+    - id: PZO9440
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 4
+type: weapon

@@ -1,0 +1,27 @@
+_id: KImjJWaP1hM4javf
+_key: '!items!KImjJWaP1hM4javf'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Fungal Slippers
+system:
+  aura:
+    school: con
+  cl: 3
+  description:
+    value: >-
+      <p>As a swift action up to three times per day, the wearer can create
+      fungi in every square through which she walks during her turn. The fungi
+      in these squares count as difficult terrain. After 1 minute, most of the
+      fungi disappear; those that remain provide no
+      impediment.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, entangle</p>
+  price: 2000
+  slot: feet
+  sources:
+    - id: PZO1136
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

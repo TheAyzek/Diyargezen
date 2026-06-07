@@ -1,0 +1,22 @@
+_id: 6XNVkGDKPQYr5cxi
+_key: '!items!6XNVkGDKPQYr5cxi'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_15.jpg
+name: Double
+system:
+  associations:
+    classes:
+      - Mesmerist
+  description:
+    value: >-
+      <p><strong>Mesmerist Trick</strong></p><p>An illusion makes either the
+      cult master's cohort or one of his followers appear to be him. The cult
+      master can trigger this trick when he is targeted by an attack, provided
+      he is adjacent to the subject, to give the attack a 50% miss chance. If
+      the attack misses the cult master, it targets the subject instead. This is
+      an illusion (glamer) effect.</p>
+  subType: classFeat
+  tags:
+    - Mesmerist Trick
+type: feat

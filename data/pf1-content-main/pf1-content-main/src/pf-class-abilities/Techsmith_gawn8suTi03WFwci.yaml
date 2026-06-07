@@ -1,0 +1,24 @@
+_id: gawn8suTi03WFwci
+_key: '!items!gawn8suTi03WFwci'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/beast_04.jpg
+name: Techsmith
+system:
+  associations:
+    classes:
+      - Psychic
+  description:
+    value: >-
+      <p><strong>Psychic Psi-Tech Discovery</strong></p><p>Select one type of
+      technological item (armor, cybertech, pharmaceuticals, technological gear,
+      or weapons). You can create items of this type 25% faster than normal, and
+      you gain a +4 bonus on Craft (mechanical) checks (or other checks, as
+      appropriate) to craft items of this type. You can select this discovery
+      multiple times; its effects do not stack. Instead, each time you select
+      this discovery, it applies to a single different type of technological
+      item.</p>
+  subType: classFeat
+  tags:
+    - Psychic Psi-Tech Discovery
+type: feat

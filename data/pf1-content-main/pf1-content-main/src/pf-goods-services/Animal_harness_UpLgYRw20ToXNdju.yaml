@@ -1,0 +1,24 @@
+_id: UpLgYRw20ToXNdju
+_key: '!items!UpLgYRw20ToXNdju'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/leather/leather-buckle-steel-tan.webp
+name: Animal harness
+system:
+  description:
+    value: >-
+      <p></p><h2>Description</h2><p>This leather or hemp harness allows a holder
+      to restrain and control a domesticated animal. A harness is standard
+      equipment for anyone trying to teach an animal tricks with the Handle
+      Animal skill. Ready-made harnesses are available in most markets for
+      common domesticated animals such as cats, dogs, horses, and oxen, but
+      harnesses can be made for nearly any creature.</p>
+  equipped: false
+  price: 2
+  sources:
+    - id: PZO1123
+      pages: '81'
+  subType: animalGear
+  weight:
+    value: 2
+type: loot

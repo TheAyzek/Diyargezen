@@ -1,0 +1,188 @@
+_id: WmWtP6DcnV60KOdF
+_key: '!journal!WmWtP6DcnV60KOdF'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.18.1. Common Cursed Item Effects
+pages:
+  - _id: PBCgMfPmgYwIH6yE
+    _key: '!journal.pages!WmWtP6DcnV60KOdF.PBCgMfPmgYwIH6yE'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.18.1. Common Cursed Item Effects
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.s3ene84nkQAyhCrW]{6.1.
+        Magic
+        Items}</p><ul><li>@Compendium[pf-content.pf-rules.LaZ4cSkdCxMwDnXD]{6.1.18.
+        Cursed Items}</li></ul><hr /><p>@Source[PZO1110;pages=536]</p><p>The
+        following are some of the most common cursed item effects. GMs should
+        feel free to invent new cursed item effects to fit specific
+        items.</p><h2>Table 15-27: Common Item
+        Curses</h2><table><thead><tr><td>d%</td><td>Curse</td></tr></thead><tbody><tr><td>01-15</td><td>Delusion</td></tr><tr><td>16-35</td><td>Opposite
+        effect or target</td></tr><tr><td>36-45</td><td>Intermittent
+        functioning</td></tr><tr><td>46-60</td><td>Requirement</td></tr><tr><td>61-75</td><td>Drawback</td></tr><tr><td>76-90</td><td>Completely
+        different effect</td></tr><tr><td>91-100</td><td>Substitute <a
+        href="https://www.aonprd.com/MagicCursed.aspx">specific cursed
+        item</a></td></tr></tbody></table><h2>Delusion</h2><p>The user believes
+        the item is what it appears to be, yet it actually has no magical power
+        other than to deceive. The user is mentally fooled into thinking the
+        item is functioning and cannot be convinced otherwise without the
+        casting of remove curse.</p><h2>Opposite Effect or Target</h2><p>These
+        cursed items malfunction, so that either they do the opposite of what
+        the creator intended, or they target the user instead of someone else.
+        The interesting point to keep in mind here is that these items aren’t
+        always bad to have. Opposite-effect items include weapons that impose
+        penalties on attack and damage rolls rather than bonuses. Just as a
+        character shouldn’t necessarily immediately know what the enhancement
+        bonus of a noncursed magic item is, she shouldn’t immediately know that
+        a weapon is cursed. Once she knows, however, the item can be discarded
+        unless some sort of compulsion is placed upon it that compels the
+        wielder to keep and use it. In such cases, a remove curse spell is
+        generally needed to get rid of the item.</p><h2>Intermittent
+        Functioning</h2><p>The three varieties of intermittent functioning items
+        all function perfectly as intended—at least some of the time. The three
+        varieties are unreliable, dependent, and uncontrolled
+        items.</p><h2>Unreliable</h2><p>Each time the item is activated, there
+        is a 5% chance (01–05 on d%) that it does not
+        function.</p><h2>Dependent</h2><p>The item only functions in certain
+        situations. To determine the situation, select or roll on the following
+        table.</p><table><thead><tr><td>d%</td><td>Situation</td></tr></thead><tbody><tr><td>01-03</td><td>Temperature
+        below freezing</td></tr><tr><td>04-06</td><td>Temperature above
+        freezing</td></tr><tr><td>07-10</td><td>During the
+        day</td></tr><tr><td>11-15</td><td>During the
+        night</td></tr><tr><td>16-20</td><td>In direct
+        sunlight</td></tr><tr><td>21-25</td><td>Out of direct
+        sunlight</td></tr><tr><td>26-34</td><td>Underwater</td></tr><tr><td>35-37</td><td>Out
+        of
+        water</td></tr><tr><td>38-45</td><td>Underground</td></tr><tr><td>46-55</td><td>Aboveground</td></tr><tr><td>56-60</td><td>Within
+        10 feet of a random creature type</td></tr><tr><td>61-64</td><td>Within
+        10 feet of a random race or kind of
+        creature</td></tr><tr><td>65-72</td><td>Within 10 feet of an arcane
+        spellcaster</td></tr><tr><td>73-80</td><td>Within 10 feet of a divine
+        spellcaster</td></tr><tr><td>81-85</td><td>In the hands of a
+        nonspellcaster</td></tr><tr><td>86-90</td><td>In the hands of a
+        spellcaster</td></tr><tr><td>91-95</td><td>In the hands of a creature of
+        a particular alignment</td></tr><tr><td>96</td><td>In the hands of a
+        creature of a particular gender</td></tr><tr><td>97-99</td><td>On holy
+        days or during particular astrological
+        events</td></tr><tr><td>100</td><td>More than 100 miles from a
+        particular site</td></tr></tbody></table><h2>Uncontrolled</h2><p>An
+        uncontrolled item occasionally activates at random times. Roll d% every
+        day.</p><p>On a result of 01–05 the item activates at some random point
+        during that day.</p><h2>Requirement</h2><p>Some items have stringent
+        requirements that must be met for them to be usable. To keep an item
+        with this kind of curse functioning, one or more of the following
+        conditions must be met.</p><ul><li>Character must eat twice as much as
+        normal.</li><li>Character must sleep twice as much as
+        normal.</li><li>Character must undergo a specific quest (one time only,
+        and the item functions normally thereafter).</li><li>Character must
+        sacrifice (destroy) 100 gp in valuables per day.</li><li>Character must
+        sacrifice (destroy) 2,000 gp worth of magic items each
+        week.</li><li>Character must swear fealty to a particular noble or to
+        his entire family.</li><li>Character must discard all other magic
+        items.</li><li>Character must worship a particular
+        deity.</li><li>Character must change her name to a specific name. The
+        item only works for characters of that name.</li><li>Character must add
+        a specific class at the next opportunity if not of that class
+        already.</li><li>Character must have a minimum number of ranks in a
+        particular skill.</li><li>Character must sacrifice some part of her life
+        energy (2 points of Constitution) one time. If the character gets the
+        Constitution points back (such as from a restoration spell), the item
+        ceases functioning. (The item does not cease functioning if the
+        character receives a Constitution increase caused by level gain, a wish,
+        or the use of a magic item.)</li><li>Item must be cleansed with holy
+        water each day.</li><li>Item must be used to kill a living creature each
+        day.</li><li>Item must be bathed in volcanic lava once per
+        month.</li><li>Item must be used at least once a day, or it won’t
+        function again for its current possessor.</li><li>Item must draw blood
+        when wielded (weapons only). It can’t be put away or exchanged for
+        another weapon until it has scored a hit.</li><li>Item must have a
+        particular spell cast upon it each day (such as bless, atonement, or
+        animate objects).</li></ul><p>Requirements are so dependent upon
+        suitability to the item that they should never be determined randomly.
+        An intelligent item with a requirement often imposes its requirement
+        through its personality. If the requirement is not met, the item ceases
+        to function. If it is met, usually the item functions for one day before
+        the requirement must be met again (although some requirements are one
+        time only, others monthly, and still others
+        continuous).</p><h2>Drawback</h2><p>Items with drawbacks are usually
+        still beneficial to the possessor but carry some negative aspect.
+        Although sometimes drawbacks occur only when the item is used (or held,
+        in the case of some weapons), usually the drawback remains with the
+        character for as long as she has the item. Unless otherwise indicated,
+        drawbacks remain in effect as long as the item is possessed. The DC to
+        save against any of these effects is usually equal to 10 + the item’s
+        caster
+        level.</p><table><thead><tr><td>d%</td><td>Drawback</td></tr></thead><tbody><tr><td>01-04</td><td>Character’s
+        hair grows 1 inch longer every
+        hour.</td></tr><tr><td>05-09</td><td>Character either shrinks 6 inches
+        (01–50 on d%) or grows that much taller (51–100). Only happens
+        once.</td></tr><tr><td>10–13</td><td>Temperature around item is 10° F
+        cooler than normal.</td></tr><tr><td>14–17</td><td>Temperature around
+        item is 10° F warmer than
+        normal.</td></tr><tr><td>18–21</td><td>Character’s hair color
+        changes.</td></tr><tr><td>22–25</td><td>Character’s skin color
+        changes.</td></tr><tr><td>26–29</td><td>Character now bears some
+        identifying mark (tattoo, weird glow, or the
+        like).</td></tr><tr><td>30–32</td><td>Character’s gender
+        changes.</td></tr><tr><td>33–34</td><td>Character’s race or kind
+        changes.</td></tr><tr><td>35</td><td>Character is afflicted with a
+        random disease that cannot be cured.</td></tr><tr><td>36–39</td><td>Item
+        continually emits a disturbing sound (moaning, weeping, screaming,
+        cursing, insults).</td></tr><tr><td>40</td><td>Item looks ridiculous
+        (garishly colored, silly shape, glows bright
+        pink).</td></tr><tr><td>41–45</td><td>Character becomes selfishly
+        possessive.</td></tr><tr><td>46–49</td><td>Character becomes paranoid
+        about losing the item and afraid of damage occurring to
+        it.</td></tr><tr><td>50–51</td><td>Character’s alignment
+        changes.</td></tr><tr><td>52–54</td><td>Character must attack nearest
+        creature (5% chance [01–05 on d%] each
+        day).</td></tr><tr><td>55–57</td><td>Character is stunned for 1d4 rounds
+        once item function is finished (or randomly,
+        1/day).</td></tr><tr><td>58–60</td><td>Character’s vision is blurry (–2
+        penalty on attack rolls, saves, and skill checks requiring
+        vision).</td></tr><tr><td>61–64</td><td>Character gains one negative
+        level.</td></tr><tr><td>65</td><td>Character gains two negative
+        levels.</td></tr><tr><td>66–70</td><td>Character must make a Will save
+        each day or take 1 point of Intelligence
+        damage.</td></tr><tr><td>71–75</td><td>Character must make a Will save
+        each day or take 1 point of Wisdom
+        damage.</td></tr><tr><td>76–80</td><td>Character must make a Will save
+        each day or take 1 point of Charisma
+        damage.</td></tr><tr><td>81–85</td><td>Character must make a Fortitude
+        save each day or take 1 point of Constitution
+        damage.</td></tr><tr><td>86–90</td><td>Character must make a Fortitude
+        save each day or take 1 point of Strength
+        damage.</td></tr><tr><td>91–95</td><td>Character must make a Fortitude
+        save each day or take 1 point of Dexterity
+        damage.</td></tr><tr><td>96</td><td>Character is polymorphed into a
+        specific creature (5% chance [01–05 on d%] each
+        day).</td></tr><tr><td>97</td><td>Character cannot cast arcane
+        spells.</td></tr><tr><td>98</td><td>Character cannot cast divine
+        spells.</td></tr><tr><td>99</td><td>Character cannot cast any
+        spells.</td></tr><tr><td>100</td><td>Either pick one of the above that’s
+        appropriate or create a drawback specifically for that
+        item.</td></tr></tbody></table><h2>Specific Cursed Items</h2><p>Perhaps
+        the most dangerous and insidious of all cursed items are those whose
+        intended functions are completely replaced by a curse. Yet even these
+        items can have their uses, particularly as traps or weapons. The cursed
+        items listed here provided as specific examples of cursed items. Instead
+        of prerequisites, each cursed item is associated with one or more
+        ordinary magic items whose creation might result in the cursed item.
+        Cursed items can be sold, if the curse is not known to the buyer, as if
+        they were the item they appear to be.</p><p><em>See PF-Artifacts
+        compendium for many Specific Cursed Items (Incomplete)</em></p><p>Cursed
+        suits of armor and weapons can come in many forms, and the examples
+        listed here are merely the most common. For example, a cursed –2 sword,
+        might appear as a +3 shortsword or a +1 dagger, with a similar negative
+        instead of the listed –2.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

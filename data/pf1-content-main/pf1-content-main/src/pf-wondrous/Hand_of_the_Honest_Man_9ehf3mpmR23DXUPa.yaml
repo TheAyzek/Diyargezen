@@ -1,0 +1,40 @@
+_id: 9ehf3mpmR23DXUPa
+_key: '!items!9ehf3mpmR23DXUPa'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Hand of the Honest Man
+system:
+  aura:
+    school: abj
+  cl: 5
+  description:
+    value: >-
+      <p>This mummified human hand comes from an honest man punished for a crime
+      he didn't commit, and is dried and hung from a simple twine thong around
+      the neck. The hand's scapegoat origins offer some protection to its
+      wearer. When the wearer of a hand of the honest man is targeted by a curse
+      or a misfortune effect such as a witch's misfortune or evil eye hex, the
+      curse is instead transferred to the hand with no ill effects to the
+      wearer. The hand retains the curse (even if it normally expires after a
+      set duration) until the effect is removed with a remove curse spell or
+      similar effect. A spellcaster receives a +2 bonus on her caster level
+      check to remove a curse stored in a hand of the honest man. Removing a
+      hand of the honest man while it holds a curse instantly transfers the
+      curse to its wearer. A hand of the honest man can hold only one curse or
+      effect at a time. If the wearer is targeted by another curse while the
+      hand is currently storing a curse, the new curse takes effect normally. A
+      hand of the honest man has no effect on curses already affecting a
+      creature. The wearer of a hand of the honest man is riddled with guilt
+      over any untruths she utters, and takes a -2 penalty on all Bluff checks
+      while wearing the hand.<h3>Requirements</h3><p>Craft Wondrous Item, remove
+      curse</p>
+  price: 3000
+  slot: neck
+  sources:
+    - id: PZO9080
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

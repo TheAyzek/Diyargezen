@@ -1,0 +1,39 @@
+_id: PHjZollV2EfO7rAa
+_key: '!journal!PHjZollV2EfO7rAa'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 6xAF0VmbLWU6dblG
+name: 2.02.7.2. Use Feat
+pages:
+  - _id: 0qBbHRX67UWf4WGC
+    _key: '!journal.pages!PHjZollV2EfO7rAa.0qBbHRX67UWf4WGC'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.02.7.2. Use Feat
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.VZCpOrg3jCyNaYeg]{2.02.
+        Actions in
+        Combat}</p><ul><li><p>@Compendium[pf-content.pf-rules.n3ejDpqIKzKy97TU]{2.02.7.
+        Miscellaneous
+        Actions}</p><ul><li>@Compendium[pf-content.pf-rules.3GeZw8nK6Zjs2qvC]{2.02.7.1.
+        Take 5-Foot
+        Step}</li><li><strong>@Compendium[pf-content.pf-rules.PHjZollV2EfO7rAa]{2.02.7.2.
+        Use
+        Feat}</strong></li><li>@Compendium[pf-content.pf-rules.pIDiwty0LLzlVhru]{2.02.7.3.
+        Use Skill}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=189]</p><p>Certain feats let you take special
+        actions in combat. Other feats do not require actions themselves, but
+        they give you a bonus when attempting something you can already do. Some
+        feats are not meant to be used within the framework of combat. The
+        individual feat descriptions tell you what you need to know about
+        them.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,20 @@
+_id: o6EnrpvxrINQC9u3
+_key: '!items!o6EnrpvxrINQC9u3'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/nautical/steering-wheel.webp
+name: Vehicle, Junk
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 15,000 gp; <strong>Price of Passage (per
+      mile)</strong> 1 sp</p><p>This flat-bottomed sailing ship has two or three
+      masts with junk-rigged sails, allowing it to be easily sailed by small
+      crews. Junks typically have a high poop deck and no keel.</p>
+  equipped: false
+  price: 15000
+  sources:
+    - id: PZO1123
+      pages: '87'
+  subType: vehicle
+type: loot

@@ -1,0 +1,38 @@
+_id: qRmsW3hSrUwymmGW
+_key: '!items!qRmsW3hSrUwymmGW'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of the Pyre Lord
+system:
+  aura:
+    school: evo
+  cl: 8
+  description:
+    value: >-
+      <p>This staff is carved entirely of polished obsidian inset with rubies.
+      Flickering flames seem to dance across its surface. As the wielder goes up
+      in level, the illusory flames grow larger and change in color, starting
+      out a faint yellow and eventually becoming a deep blue. This staff allows
+      the use of the following spells.  • Spark (1 charge)  • Scorching ray (2
+      charges)  10th Level: Scorching ray now costs only 1 charge, and the staff
+      allows the use of fireball for 2 charges.  12th Level: The staff's
+      fireball spells become empowered fireball. The staff counts as a +1
+      flaming quarterstaff when used as a weapon.  14th Level: The staff allows
+      the use of summon monster VI for 2 charges to summon fire elementals
+      only.  16th Level: The staff replaces summon monster VI with summon
+      monster VIII for 3 charges to summon fire elementals only. It also allows
+      the use of fire storm for 2 charges.  18th Level: The staff allows the use
+      of meteor swarm for 3 charges. The cost for summon monster VIII decreases
+      to 2 charges, and empowered fireball now costs 1 charge.  20th Level: The
+      cost of meteor swarm and fire storm each decrease to 1
+      charge.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, Empower Spell, fire storm, fireball, meteor swarm, scorching ray,
+      spark, summon monster VI, summon monster VIII</p>
+  price: 8800
+  sources:
+    - id: PZO1131
+  subType: staff
+  weight:
+    value: 1
+type: consumable

@@ -1,0 +1,32 @@
+_id: mfUlgwJlgJmAKcBg
+_key: '!items!mfUlgwJlgJmAKcBg'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Saliharion
+system:
+  aura:
+    school: div
+  cl: 5
+  description:
+    value: >-
+      <p>Named for Nashina aj-Salihar, the Sarenite monk who penned the original
+      work, this hefty tome contains inspiring parables, simple folk remedies
+      for widespread illnesses and injuries, and helpful hints for dealing with
+      common monsters. Its pages are expertly illuminated with brilliant inks
+      and metallic foil, depicting scenes of angels battling various
+      monstrosities. While in possession of this book, the owner gains a +2
+      sacred bonus on Heal checks and Knowledge skill checks to identify the
+      abilities and weaknesses of monsters.  If Sarenrae is the owner's patron,
+      the owner may instead choose to gain a sacred bonus equal to her Wisdom or
+      Charisma modifier on these skill checks instead of the normal +2
+      bonus.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, know the enemy, owl's wisdom</p>
+  price: 3000
+  sources:
+    - id: PZO9296
+  subType: wondrous
+  weight:
+    value: 15
+type: equipment

@@ -1,0 +1,29 @@
+_id: xUOVxxSamZNlrBtN
+_key: '!items!xUOVxxSamZNlrBtN'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Burglar Boots, Minor
+system:
+  aura:
+    school: div
+  cl: 1
+  description:
+    value: >-
+      <p>These form-fitting, calfskin boots are dyed black and lightly decorated
+      with raven feathers. grant their wearer a +5 competence bonus on
+      Perception checks to spot or locate traps and devices on the floor with 10
+      feet. This includes pits, pressure plates, and other mechanical and
+      magical devices located on or attached to the floor. This bonus also
+      applies to AC and on any Reflex saving throws against such
+      traps.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, creator must have 4 ranks in Perception</p>
+  price: 4000
+  slot: feet
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 0.5
+type: equipment

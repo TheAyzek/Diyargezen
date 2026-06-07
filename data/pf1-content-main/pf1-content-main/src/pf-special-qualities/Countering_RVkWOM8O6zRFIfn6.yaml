@@ -1,0 +1,30 @@
+_id: RVkWOM8O6zRFIfn6
+_key: '!items!RVkWOM8O6zRFIfn6'
+_stats:
+  coreVersion: '12.331'
+folder: YaC0PDBdquBGbbsG
+img: systems/pf1/icons/skills/violet_04.jpg
+name: Countering
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint transmutation <strong>CL</strong>
+      5th</p><p><strong>Slot</strong> weapon quality; <strong>Price</strong> +1
+      bonus;</p><p>A <em>countering </em>weapon gives its wielder a +2 bonus to
+      his combat maneuver defense against combat maneuvers made to disarm or
+      sunder this weapon. If the attempt fails, the wielder can immediately
+      attempt the same maneuver against the opponent without provoking attacks
+      of opportunity. The wielder never risks dropping his weapon with a failed
+      disarm combat maneuver when counterattacking in this manner. This ability
+      can be used even if the attacker is not within the wielder's reach.
+      <em>Countering </em>can only be placed on melee
+      weapons.</p><h3>Construction</h3><p><strong>Requirements</strong> Combat
+      Reflexes, Craft Magic Arms and Armor, <em>cat's grace</em>;
+      <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1123
+      pages: '138'
+  subType: misc
+  tags:
+    - Melee Qualities
+type: feat

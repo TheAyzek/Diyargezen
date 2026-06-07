@@ -1,0 +1,35 @@
+_id: YSACIlNUDgNhVutI
+_key: '!items!YSACIlNUDgNhVutI'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Ioun Spite Bracers
+system:
+  aura:
+    school: evo
+  cl: 12
+  description:
+    value: >-
+      <p>These bracers find particular use by Aspis agents who often tangle with
+      the Pathfinder Society. As a standard action, a creature wearing these
+      bracers can attempt a steal combat maneuver check to nab any orbiting ioun
+      stone within 30 feet, though the ioun stone's owner receives a +4
+      circumstance bonus to her CMD. If the bracers' wearer succeeds, the stolen
+      ioun stone embeds itself in one of the bracers' four available slots (each
+      bracer has two). Embedded ioun stones provide their bonuses to the wearer
+      and can be removed with a move action. As a standard action, the wearer
+      can temporarily drain the power of any ioun stone that is embedded in the
+      bracers and isn't dull gray, and can then channel that power to cast magic
+      missile as a spell-like ability, firing three missiles at a target or
+      targets up to 160 feet away. Drained ioun stones become dull gray for the
+      next 2d4 hours.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, magic missile, telekinesis</p>
+  price: 15000
+  slot: wrists
+  sources:
+    - id: PZO1138
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

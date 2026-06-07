@@ -1,0 +1,43 @@
+_id: A1OikgM4YN4OtTL5
+_key: '!actors!A1OikgM4YN4OtTL5'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Eternal Pyre (CR 11)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    hp:
+      max: 49
+  details:
+    alignment: CE
+    area: 30-ft. radius
+    biography: {}
+    cl: 1
+    cr:
+      base: 11
+    destruction: Destroying the witchfire also destroys the eternal pyre haunt.
+    effect: >-
+      A pillar of black and red flames manifests within the haunt's area each
+      round. This pillar functions as per <em>flame strike</em> (Reflex DC 19
+      negates), except its damage is half fire and half negative energy.
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Horror Adventures pg. 178</p>
+        <p><strong>Haunt Templates</strong>: chained fast free-roaming
+        persistent spiteful tenacious</p> <h3>Description</h3><p>An eternal pyre
+        is formed from the spirits of people who were burned alive during an
+        overzealous witch trial. It hates all living beings, but it has a strong
+        bond of kinship with the witchfire who arose from the most powerful of
+        those spirits. The witchfire often lurks within the haunt's area, as her
+        witchflame intensifies the power of the pyre's strikes, which in turn
+        heal her.</p>
+    notice: Perception DC 20 (to hear the crackling of a fire)
+    reset: 1 day
+    trigger: proximity
+    weakness: water spells and effects (these effects damage the haunt)
+type: haunt

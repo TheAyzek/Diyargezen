@@ -1,0 +1,28 @@
+_id: LPdoKMedqWtsdkow
+_key: '!items!LPdoKMedqWtsdkow'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_03.jpg
+name: Fugue
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> lesser madness; <strong>Save</strong> DC
+      18</p><p><strong>Onset</strong> 1d4 days</p><p><strong>Effect</strong> -2
+      penalty on Will saving throws and skill checks, and some memory loss (see
+      below)</p><p><strong>Dormancy Effect</strong> -2 penalty on Will saving
+      throws</p><p>A character suffering from a fugue cannot remember things;
+      her name and her past are all equal mysteries. While the character can
+      build new memories, she has trouble accessing those gained before she was
+      inflicted with this madness. While a character in a fugue state can still
+      speak and read any languages she knows and does not lose any of her
+      skills, feats, or skill ranks, she does not remember how she learned such
+      things, and is often surprised when using complex abilities.</p>
+  sources:
+    - id: PZO1135
+      pages: '184'
+  subType: misc
+  tags:
+    - Maladies
+    - Madness
+type: feat

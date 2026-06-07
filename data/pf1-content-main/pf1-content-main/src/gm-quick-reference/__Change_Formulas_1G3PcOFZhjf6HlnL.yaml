@@ -1,0 +1,117 @@
+_id: 1G3PcOFZhjf6HlnL
+_key: '!journal!1G3PcOFZhjf6HlnL'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: '- Change Formulas'
+pages:
+  - _id: RJWiQJxAWy3heiCl
+    _key: '!journal.pages!1G3PcOFZhjf6HlnL.RJWiQJxAWy3heiCl'
+    _stats:
+      coreVersion: '12.331'
+    name: '- Change Formulas'
+    sort: 100000
+    text:
+      content: >-
+        <blockquote><p>Below are a sample of formulas used in ability, item, and
+        feature Changes that may prove useful for adding or updating for
+        functionality. While these are not comprehensive, they aim is to aid
+        GM's and Players to correct or add missing changes. Thanks to @Eitan and
+        various others on the Discord for their useful
+        examples.</p><p>Additionally, if you add Changes to any of the entities
+        created by this module or the pf1 sys, please consider using Data
+        Toolbox's Contribute button, to upload them to be added/merged in future
+        releases.</p></blockquote><h1>'Change' Tips</h1><ul><li>Most values are
+        listed via hovering over the appropriate value in the character
+        sheet</li><li>Ability modifier: @abilities.con.mod</li><li>Ability
+        modifier without temporary buffs (i.e. Rage):
+        @abilities.con.baseMod</li><li>Changes can be set to Add to the value
+        (+) or Replace (=)</li><li>Scripts using js can also be used for
+        changes, for more complicated things.</li><li>Not everything available
+        in Pathfinder can currently be accomplished through
+        changes</li></ul><h1>Math functions</h1><h2>Basic</h2><p><strong>Round
+        Up</strong></p><p><code>ceil()</code></p><p><strong>Example</strong>:
+        <code>ceil(5 / 2)</code></p><p><strong>Result</strong>:
+        3</p><hr><p><strong>Round
+        Down</strong></p><p><code>floor()</code></p><p><strong>Example</strong>:
+        <code>floor(@attributes.bab.total /
+        6)</code></p><p><strong>Result</strong>: Divide by 6 and round
+        down</p><hr><p><strong>Minimum</strong></p><p><code>min(x,
+        y)</code></p><p><strong>Example</strong>:
+        <code>min(5,@cl)d6</code></p><p><strong>Result</strong>: Scales from
+        caster level, up to a max value of
+        5d6</p><hr><h3>Maximum</h3><p><code>max(x,
+        y)</code></p><p><strong>Example</strong>: <code>max(4,
+        (@class.level))</code></p><p><strong>Result</strong>: Uses 4, unless
+        class level is greater. Effectively creates a lower bounds until class
+        level &gt; 4, then uses class
+        levels.</p><hr><h3>Conditional</h3><p><code>ifthen(gt(X, Y), A,
+        B)</code></p><p><strong>Example</strong>:
+        <code>ifthen(gt(@attributes.hd.total, 9, 4,
+        2)</code></p><p><strong>Result</strong>: If HD is greater than 9, output
+        is 4, if it is not then 2</p><p>The same is true for other
+        variations:</p><table><tbody><tr><td><p style="text-align:
+        center;"><strong>Symbol</strong></p></td><td><p style="text-align:
+        center;"><strong>Meaning</strong></p></td><td><p style="text-align:
+        center;"><strong>&lt;Syntax&gt;(A, B)</strong></p></td></tr><tr><td><p
+        style="text-align: center;">&gt;</p></td><td><p style="text-align:
+        center;">greater than</p></td><td><p style="text-align:
+        center;">gt</p></td></tr><tr><td><p style="text-align:
+        center;">&gt;=</p></td><td><p style="text-align: center;">greater than
+        or equal to</p></td><td><p style="text-align:
+        center;">gte</p></td></tr><tr><td><p style="text-align:
+        center;">&lt;</p></td><td><p style="text-align: center;">less
+        than</p></td><td><p style="text-align:
+        center;">lt</p></td></tr><tr><td><p style="text-align:
+        center;">&lt;=</p></td><td><p style="text-align: center;">less than or
+        equal to</p></td><td><p style="text-align:
+        center;">lte</p></td></tr></tbody></table><hr><h3>Absolute
+        value</h3><p><code>abs()</code></p><p><strong>Example</strong>:
+        <code>abs(2 - 4)</code></p><p><strong>Result</strong>: Outputs 2 (rather
+        than -2)</p><hr><p>Foundry uses JS Math. For more math functions, go <a
+        href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">here</a>.
+        Reading how JS handles math might make things easier to
+        understand.</p><h2>Combined examples</h2><p><strong>Increase by 1 for
+        every 4 BAB</strong></p><p><code>max(1, floor(@attributes.bab.total /
+        4)))</code></p><p><strong>Result</strong>: BAB = 3: 1; BAB = 6: 1; BAB =
+        14: 3</p><p><strong>Half Class level, minimum
+        1</strong></p><p><code>max(1, floor(@class.level /
+        2))</code></p><h1>Specific Use Examples</h1><h2>Cavalier Challenge
+        Uses</h2><p><em>Once per day, plus one for every three levels beyond (1,
+        4, 7, 10, ...)</em></p><ul><li><strong>Limited Uses</strong>: <code>1 +
+        floor((@class.level - 1) / 3)</code></li></ul><h2>Channel Positive
+        Energy</h2><p><em>Heals 1d6 + 1d6 for every 2 levels beyond 1st (3, 5,
+        7, ...)</em></p><ul><li><strong>Healing</strong>:<code>
+        ceil(@class.level / 2))d6</code></li></ul><p><em>DC for the save is 10 +
+        1/2 cleric level + Cha mod</em></p><ul><li><strong>Save DC</strong>:
+        <code>10 + floor(@class.level / 2) +
+        @abilities.cha.mod</code></li></ul><h2>Cure Light
+        Wounds</h2><p><em>Heals 1d8 + cl (max of
+        5)</em></p><ul><li><strong>Healing</strong>:<code> 1d8 + min(5,
+        @cl)</code></li></ul><h2>Fireball</h2><p><em>Deals 1d6 per caster level,
+        max 10d6</em></p><ul><li><strong>Damage</strong>:<code> (min(10,
+        @cl))d6</code></li></ul><h2>Fleet</h2><p><em>Increase movement speed by
+        5, while wearing light (1) or no armor (0) and not encumbered.
+        (@armor.type - medium armor = 2, heavy =
+        3)</em></p><ul><li><strong>Change (+)</strong>:<code>
+        if(and(lt(@armor.type, 2), lt(@attributes.encumbrance.level, 1)),
+        5)</code></li></ul><h2>Power Attack<h2><p><em><strong>Gives -1 Atk / +2
+        Dmg, increasing by -1/+2 when BAB = 4, and every 4 points
+        after</strong></em></p><ul><li><strong>Attack</strong>:
+        <code>-floor((@attributes.bab.total+4)/4)</code></li><li><strong>Damage:<code>
+        </code></strong><code>floor((@attributes.bab.total+4)/4)*2</code></li></ul><h2>Sneak
+        Attack<h2><p><em><strong>Rogue sneak attack (Levels 1, 3, 5,
+        ...)</strong></em></p><ul><li><strong>Damage</strong>:
+        <code>ceil(@class.level / 2)d6</code></li></ul><p><em><strong>Slayer
+        sneak attack (Levels 3, 6, 9,
+        ...)</strong></em></p><ul><li><strong>Damage</strong>:
+        <code>floor(@class.level / 3)d6</code></li></ul><h2>Skill Focus
+        (Perception)<h2><p><em><strong>Gives +3 base, +6 at 10
+        ranks+</strong></em></p><ul><li><strong>Change</strong>:
+        <code>ifthen(gt(@skills.per.rank, 9), 6, 3)</code></li></ul>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

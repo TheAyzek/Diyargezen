@@ -1,0 +1,73 @@
+_id: r4MKuAOkkduX0vSB
+_key: '!journal!r4MKuAOkkduX0vSB'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.17.02. Intelligent Item Alignment
+pages:
+  - _id: ng6YB4Ow3EQERoMw
+    _key: '!journal.pages!r4MKuAOkkduX0vSB.ng6YB4Ow3EQERoMw'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.17.02. Intelligent Item Alignment
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.s3ene84nkQAyhCrW]{6.1.
+        Magic
+        Items}</p><ul><li><p>@Compendium[pf-content.pf-rules.muHuo2GwcCKyy4tP]{6.1.17.
+        Intelligent
+        Items}</p><ul><li>@Compendium[pf-content.pf-rules.b4LOq9k8VNrE5iyy]{6.1.17.01.
+        Designing an Intelligent
+        Item}</li><li><strong>@Compendium[pf-content.pf-rules.r4MKuAOkkduX0vSB]{6.1.17.02.
+        Intelligent Item
+        Alignment}</strong></li><li>@Compendium[pf-content.pf-rules.NcqR7y2f3W7w3zB3]{6.1.17.03.
+        Intelligent Item Ability
+        Scores}</li><li>@Compendium[pf-content.pf-rules.95c8F7Trvs0JaQEX]{6.1.17.04.
+        Languages Spoken by
+        Item}</li><li>@Compendium[pf-content.pf-rules.tnEvcNd14MiiEpB6]{6.1.17.05.
+        Senses and
+        Communication}</li><li>@Compendium[pf-content.pf-rules.n2JT7kfk2HfZ0uLS]{6.1.17.06.
+        Intelligent Item
+        Powers}</li><li>@Compendium[pf-content.pf-rules.h50LqdBk0F8Hy0fW]{6.1.17.07.
+        Special Purpose
+        Items}</li><li>@Compendium[pf-content.pf-rules.T6zgyR9mqlc3tIH9]{6.1.17.08.
+        Dedicated
+        Powers}</li><li>@Compendium[pf-content.pf-rules.VX4NrZsdHQAZ4EUF]{6.1.17.09.
+        Item
+        Ego}</li><li>@Compendium[pf-content.pf-rules.Bj3cXy4heUoCX53t]{6.1.17.10.
+        Items against Characters}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=533]</p><p>Any item with intelligence has an
+        alignment (see Table 15– 21). Note that intelligent weapons already have
+        alignments, either stated or by implication. If you’re generating a
+        random intelligent weapon, that weapon’s alignment must fit with any
+        alignment-oriented special abilities it has.</p><p>Any character whose
+        alignment does not correspond to that of the item (except as noted by
+        the asterisks on the table) gains one negative level if he or she so
+        much as picks up the item. Although this negative level never results in
+        actual level loss, it remains as long as the item is in hand and cannot
+        be overcome in any way (including by restoration spells). This negative
+        level is cumulative with any other penalties the item might place on
+        inappropriate wielders. Items with Ego scores (see below) of 20 to 29
+        bestow two negative levels. Items with Ego scores of 30 or higher bestow
+        three negative levels.</p><h2>Table 15–21: Intelligent Item
+        Alignment</h2><table><thead><tr><td>d%</td><td>Alignment of
+        Item</td></tr></thead><tbody><tr><td>01–10</td><td>Chaotic
+        good</td></tr><tr><td>11–20</td><td>Chaotic
+        neutral*</td></tr><tr><td>21–35</td><td>Chaotic
+        evil</td></tr><tr><td>36–45</td><td>Neutral
+        evil*</td></tr><tr><td>46–55</td><td>Lawful
+        evil</td></tr><tr><td>56–70</td><td>Lawful
+        good</td></tr><tr><td>71–80</td><td>Lawful
+        neutral*</td></tr><tr><td>81–90</td><td>Neutral
+        good*</td></tr><tr><td>91–100</td><td>Neutral</td></tr></tbody></table><p>*
+        The item can also be used by any character whose alignment corresponds
+        to the non-neutral portion of the item’s alignment.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

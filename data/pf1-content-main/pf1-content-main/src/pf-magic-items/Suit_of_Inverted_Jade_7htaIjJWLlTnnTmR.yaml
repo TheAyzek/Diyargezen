@@ -1,0 +1,50 @@
+_id: 7htaIjJWLlTnnTmR
+_key: '!items!7htaIjJWLlTnnTmR'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/lamellar-stone-coat.png
+name: Suit of Inverted Jade
+system:
+  armor:
+    acp: 7
+    enh: 3
+    material:
+      base:
+        value: stone
+    value: 8
+  aura:
+    school: nec
+  baseTypes:
+    - Stone Lamellar
+  cl: 14
+  description:
+    value: >-
+      <p>Originating in ancient Minkai, the typical jade burial suit consists of
+      several hundred jade plaques joined with gold wire, carefully inscribed
+      with prayers to Tsukiyo, the Tian-Min god of the moon, spirits, and
+      preservation. Jade is believed to have preservative properties, and many
+      ancient Tian royals were buried in jade suits. By disassembling and
+      inverting the plaques and replacing Tsukiyo's name with that of his
+      brother Fumeiyoshi, god of graves, one clever ru-shi learned how to give
+      the impression of death instead of life. A character wearing a suit of
+      inverted jade gains a +3 profane bonus on saving throws against disease,
+      mind-affecting effects, poison, sleep, and stunning. The wearer has the
+      aura of an undead for the purposes of divination spells and effects, and
+      unintelligent undead perceive the wearer as a fellow undead. The wearer,
+      however, becomes vulnerable to effects that target or deal additional
+      damage to undead (such as searing light). A suit of inverted jade
+      otherwise functions as +3 stone lamellar.</p><p><strong>Base
+      Item</strong>: stone
+      lamellar</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, undead anatomy II</p>
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 25000
+  slot: armor
+  sources:
+    - id: PZO90139
+  spellFailure: 40
+  weight:
+    value: 50
+type: equipment

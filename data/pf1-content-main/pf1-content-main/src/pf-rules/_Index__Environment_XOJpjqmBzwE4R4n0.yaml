@@ -1,0 +1,209 @@
+_id: XOJpjqmBzwE4R4n0
+_key: '!journal!XOJpjqmBzwE4R4n0'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: (Index) Environment
+pages:
+  - _id: HYZ6rZisqlXIwQ8z
+    _key: '!journal.pages!XOJpjqmBzwE4R4n0.HYZ6rZisqlXIwQ8z'
+    _stats:
+      coreVersion: '12.331'
+    name: (Index) Environment
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.Ic1tlF3EE1QNW3kE]{(Index)}</p><hr
+        /><h2>Dungeons</h2><p>@Compendium[pf-content.pf-rules.v5dHsJ6gCghRXQnL]{3.0.
+        Dungeons}</p><ul><li>@Compendium[pf-content.pf-rules.JaOBWaX6MgURoLHP]{3.0.1.
+        Types of
+        Dungeons}</li><li><p>@Compendium[pf-content.pf-rules.jgVKZvuXGPxfGXKQ]{3.0.2.
+        Dungeon
+        Terrain}</p><ul><li>@Compendium[pf-content.pf-rules.oM2nAFzXnVFIS0WD]{3.0.2.1.
+        Walls}</li><li>@Compendium[pf-content.pf-rules.J0yOXyPZB6M6ZUSi]{3.0.2.2.
+        Floors}</li><li>@Compendium[pf-content.pf-rules.YwZLtJ7Z59r1fx90]{3.0.2.3.
+        Doors}</li><li>@Compendium[pf-content.pf-rules.1OzU64OdBpfa0bJR]{3.0.2.4.
+        Walls, Doors, and Detect
+        Spells}</li><li>@Compendium[pf-content.pf-rules.tEkx7SQLAENe8KM8]{3.0.2.5.
+        Stairs}</li><li>@Compendium[pf-content.pf-rules.1bkKb1E1A73Tp1IK]{3.0.2.6.
+        Cave-Ins and Collapses (CR
+        8)}</li><li>@Compendium[pf-content.pf-rules.hfI8oxi1ywlhrGfs]{3.0.2.7.
+        Slimes, Molds, and Fungi}</li></ul></li></ul><hr
+        /><h2>Traps</h2><p>@Compendium[pf-content.pf-rules.mmx5KJLX4vsGZ7vz]{3.1.
+        Traps}</p><ul><li><p>@Compendium[pf-content.pf-rules.3f7JZIvocYHSXzvd]{3.1.1.
+        Elements of a
+        Trap}</p><ul><li>@Compendium[pf-content.pf-rules.NCntK4F0WJ0fxRKN]{3.1.1.1.
+        Type}</li><li>@Compendium[pf-content.pf-rules.7JjjQNXWzDZkRXba]{3.1.1.2.
+        Perception and Disable Device
+        DCs}</li><li>@Compendium[pf-content.pf-rules.CP118HxlOiIRbggm]{3.1.1.3.
+        Trigger}</li><li>@Compendium[pf-content.pf-rules.fwkTc0ZhsRtbcaSj]{3.1.1.4.
+        Duration}</li><li>@Compendium[pf-content.pf-rules.iYDeV3slpPALRRGC]{3.1.1.5.
+        Reset}</li><li>@Compendium[pf-content.pf-rules.KSmSTYX5p3S6Gc63]{3.1.1.6.
+        Bypass (Optional
+        Element)}</li><li>@Compendium[pf-content.pf-rules.IBBymgXvfGa0vOW8]{3.1.1.7.
+        Effect}</li><li>@Compendium[pf-content.pf-rules.MtjTOLIqTJtVOZtw]{3.1.1.8.
+        Miscellaneous Trap
+        Features}</li></ul></li><li>@Compendium[pf-content.pf-rules.XIjPXv3Qe62dFI3Z]{3.1.2.
+        Sample
+        Traps}</li><li><p>@Compendium[pf-content.pf-rules.IYnf1w2TjcHO2ExM]{3.1.3.
+        Designing a
+        Trap}</p><ul><li>@Compendium[pf-content.pf-rules.6cDhoB5fNw8e7LF3]{3.1.3.1.
+        Challenge Rating of a
+        Trap}</li><li>@Compendium[pf-content.pf-rules.CRcJbYvgkm6DXdQl]{3.1.3.2.
+        Mechanical Trap
+        Cost}</li><li>@Compendium[pf-content.pf-rules.HfHYbleSpRiYyq5o]{3.1.3.3.
+        Magic Device Trap
+        Cost}</li><li>@Compendium[pf-content.pf-rules.2YFLAgOtyleYCQxe]{3.1.3.4.
+        Spell Trap
+        Cost}</li><li>@Compendium[pf-content.pf-rules.47DJOElNsrdRkBxn]{3.1.3.5.
+        Craft DCs for Mechanical
+        Traps}</li></ul></li><li>@Compendium[pf-content.pf-rules.gGGKd0tOkXUqLZya]{3.1.4.
+        Wilderness Traps}</li></ul><hr
+        /><h2>Wilderness</h2><p>@Compendium[pf-content.pf-rules.CPUpraqn1jz9vhMh]{3.2.
+        Wilderness}</p><ul><li>@Compendium[pf-content.pf-rules.QrderWyxAp6RUvtz]{3.2.1.
+        Getting
+        Lost}</li><li><p>@Compendium[pf-content.pf-rules.pcu8vDTPaIYw82SU]{3.2.2.
+        Forest
+        Terrain}</p><ul><li>@Compendium[pf-content.pf-rules.YZZd4279nKAlIWdy]{3.2.2.1.
+        Forest
+        Fires}</li></ul></li><li>@Compendium[pf-content.pf-rules.zJ4qqxSB0Iufd5Be]{3.2.3.
+        Marsh
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.RVKULXygOAXTZ1WC]{3.2.4.
+        Hills
+        Terrain}</li><li><p>@Compendium[pf-content.pf-rules.B5qjfHf1pFgEA7bg]{3.2.5.
+        Mountain
+        Terrain}</p><ul><li>@Compendium[pf-content.pf-rules.uMrEisQUiYJPGSEn]{3.2.5.1.
+        Avalanches}</li></ul></li><li>@Compendium[pf-content.pf-rules.tuZEOzPezZUbz4Fj]{3.2.5.2.
+        Mountain
+        Travel}</li><li><p>@Compendium[pf-content.pf-rules.3YyU7Yg6wbShgOKM]{3.2.6.
+        Desert
+        Terrain}</p><ul><li>@Compendium[pf-content.pf-rules.meSI5igDtER7aVBn]{3.2.6.1.
+        Sandstorms}</li></ul></li><li>@Compendium[pf-content.pf-rules.QOCypcVHE6zpYlyD]{3.2.7.
+        Plains
+        Terrain}</li><li><p>@Compendium[pf-content.pf-rules.xiRC5p84P3tFW9mo]{3.2.8.
+        Aquatic
+        Terrain}</p><ul><li>@Compendium[pf-content.pf-rules.r4t1MHGGd6myKln7]{3.2.8.1.
+        Underwater
+        Combat}</li><li>@Compendium[pf-content.pf-rules.AlMWpchX9rOkfomx]{3.2.8.2.
+        Floods}</li></ul></li></ul><hr /><h2>Urban
+        Adventures</h2><p>@Compendium[pf-content.pf-rules.qx3PVEeLsKOdiESK]{3.3.
+        Urban
+        Adventures}</p><ul><li>@Compendium[pf-content.pf-rules.NN6T3x9Bkkbypfsz]{3.3.1.
+        Weapon and Spell
+        Restrictions}</li><li><p>@Compendium[pf-content.pf-rules.a0xDSVGQRE2pVzkA]{3.3.2.
+        Urban
+        Features}</p><ul><li>@Compendium[pf-content.pf-rules.kMiP5IZwDvMssIBY]{3.3.2.1.
+        Walls and
+        Gates}</li><li>@Compendium[pf-content.pf-rules.DBgMSNFxDzkCxJ7g]{3.3.2.2.
+        Guards and
+        Soldiers}</li><li>@Compendium[pf-content.pf-rules.MI0493ERUqLM2bT9]{3.3.2.3.
+        Siege
+        Engines}</li><li>@Compendium[pf-content.pf-rules.FmRlm273yvFj0UMs]{3.3.2.4.
+        City
+        Streets}</li><li>@Compendium[pf-content.pf-rules.A9MzLZ9Eu2NRiQfp]{3.3.2.5.
+        Above and Beneath the
+        Streets}</li><li>@Compendium[pf-content.pf-rules.ggcyCNuPo8NdzmjI]{3.3.2.6.
+        City
+        Buildings}</li><li>@Compendium[pf-content.pf-rules.deJ36cJDbvFpa2fr]{3.3.2.7.
+        City Lights}</li></ul></li></ul><hr
+        /><h2>Weather</h2><p>@Compendium[pf-content.pf-rules.GUKeQEgdxbleWA0l]{3.4.
+        Weather}</p><ul><li>@Compendium[pf-content.pf-rules.pHXeVyYf1x4VAEHD]{3.4.1.
+        Rain, Snow, Sleet, and
+        Hail}</li><li>@Compendium[pf-content.pf-rules.CGWYylbSPcCdf6xq]{3.4.2.
+        Storms}</li><li>@Compendium[pf-content.pf-rules.zbaKzSfM3Synw9Cd]{3.4.3.
+        Fog}</li><li>@Compendium[pf-content.pf-rules.TGNihLM3XTYgf6MV]{3.4.4.
+        Winds}</li></ul><hr /><h2>The
+        Planes</h2><p>@Compendium[pf-content.pf-rules.ryIRK7CjUk9fI8TT]{3.5. The
+        Planes}</p><ul><li>@Compendium[pf-content.pf-rules.Q71BilaWEOeIsfux]{3.5.1.
+        Material
+        Plane}</li><li><p>@Compendium[pf-content.pf-rules.PWWyAj9RxKmCOZjr]{3.5.2.
+        Transitive
+        Planes}</p><ul><li>@Compendium[pf-content.pf-rules.wIOKevEcdi1td8qE]{3.5.2.1.
+        Astral
+        Plane}</li><li>@Compendium[pf-content.pf-rules.DbV0r2IXhYsQM3yd]{3.5.2.2.
+        Etheral
+        Plane}</li><li>@Compendium[pf-content.pf-rules.6Al8NK1Ns6hjr5AL]{3.5.2.3.
+        Shadow
+        Plane}</li></ul></li><li><p>@Compendium[pf-content.pf-rules.9ZxtJSapPINNjxbT]{3.5.3.
+        Inner
+        Planes}</p><ul><li><p>@Compendium[pf-content.pf-rules.BtNqgktOkZENzN1c]{3.5.3.1.
+        Elemental
+        Planes}</p><ul><li>@Compendium[pf-content.pf-rules.mDgGgG7B4Ox86IEq]{3.5.3.1.1.
+        Plane of
+        Air}</li><li>@Compendium[pf-content.pf-rules.9Lhm9foOPJ0V7BKp]{3.5.3.1.2.
+        Plane of
+        Earth}</li><li>@Compendium[pf-content.pf-rules.dd3XFS6cZ47Y1Zut]{3.5.3.1.3.
+        Plane of
+        Fire}</li><li>@Compendium[pf-content.pf-rules.qjK0wOAyu9X5wWUC]{3.5.3.1.4.
+        Plane of
+        Water}</li></ul></li><li><p>@Compendium[pf-content.pf-rules.EQFsfwmMHxeX34rq]{3.5.3.2.
+        Energy
+        Planes}</p><ul><li>@Compendium[pf-content.pf-rules.qYmTleYgnpLOu7gq]{3.5.3.2.1.
+        Positive Energy
+        Plane}</li><li>@Compendium[pf-content.pf-rules.wlkXoMNImMqgBRmK]{3.5.3.2.2.
+        Negative Energy
+        Plane}</li></ul></li></ul></li><li><p>@Compendium[pf-content.pf-rules.VNXqsTp4czvUWZn3]{3.5.4.
+        Outer
+        Planes}</p><ul><li>@Compendium[pf-content.pf-rules.Vkaqhnw3JuB93M2b]{3.5.4.1.
+        Abaddon (Neutral
+        Evil)}</li><li>@Compendium[pf-content.pf-rules.Tv4XhzHyicyshnoI]{3.5.4.2.
+        The Abyss (Chaotic
+        Evil)}</li><li>@Compendium[pf-content.pf-rules.UgAswpClLHYhjrDU]{3.5.4.3.
+        Elysium (Chaotic
+        Good)}</li><li>@Compendium[pf-content.pf-rules.lizwtCEoZdcnCp6N]{3.5.4.3.
+        Heaven (Lawful
+        Good)}</li><li>@Compendium[pf-content.pf-rules.4S1CB7EY6OPMr6XE]{3.5.4.4.
+        Hell (Lawful
+        Evil)}</li><li>@Compendium[pf-content.pf-rules.B4QMP2x1LoDZ5vrg]{3.5.4.5.
+        Limbo (Chaotic
+        Neutral)}</li><li>@Compendium[pf-content.pf-rules.sUGoUviDZ2NdI4Qs]{3.5.4.6.
+        Nirvana (Neutral
+        Good)}</li><li>@Compendium[pf-content.pf-rules.Mwwxo5zMhkxYyYOE]{3.5.4.7.
+        Purgatory
+        (Neutral)}</li><li>@Compendium[pf-content.pf-rules.aJbeIdmrc5AY2dby]{3.5.4.8.
+        Utopia (Lawful
+        Neutral)}</li></ul></li><li><p>@Compendium[pf-content.pf-rules.XC9n0Ynwpq8C9Sm9]{3.5.5.
+        Demiplanes}</p><ul><li>@Compendium[pf-content.pf-rules.DaId5J0ipZ7wznlT]{3.5.5.1.
+        Dimension of
+        Dreams}</li><li>@Compendium[pf-content.pf-rules.CLx8JB9gcFB1kRXB]{3.5.5.2.
+        Akashic
+        Record}</li><li>@Compendium[pf-content.pf-rules.DrVCdwCjkDsb46QJ]{3.5.5.3.
+        The
+        Boneyard}</li><li>@Compendium[pf-content.pf-rules.Ak0Sm41IgVHpeC4x]{3.5.5.4.
+        Leng}</li></ul></li><li>@Compendium[pf-content.pf-rules.ngl3E9mNPsbToy2u]{3.5.6.
+        Layered
+        Planes}</li><li>@Compendium[pf-content.pf-rules.5HeGmOWABLZ7bME7]{3.5.7.
+        How Planes Interact}</li></ul><hr /><h2>Environmental
+        Rules</h2><p>@Compendium[pf-content.pf-rules.cWT946eZ614UBXMT]{3.6.
+        Environmental
+        Rules}</p><ul><li>@Compendium[pf-content.pf-rules.nw1AQDHLefid2fO2]{3.6.01.
+        Acid
+        Effects}</li><li><p>@Compendium[pf-content.pf-rules.pXwhr9IdI6o8aqm5]{3.6.02.
+        Cold
+        Dangers}</p><ul><li>@Compendium[pf-content.pf-rules.vEGj5N4zQXjAvQHA]{3.6.02.1.
+        Ice
+        Effects}</li></ul></li><li>@Compendium[pf-content.pf-rules.RGIZGWIIunQuRUkT]{3.6.03.
+        Darkness}</li><li>@Compendium[pf-content.pf-rules.urb5p3PXjRMFtO79]{3.6.04.
+        Falling}</li><li>@Compendium[pf-content.pf-rules.gXBmw2TLp6TUtDqp]{3.6.05.
+        Falling
+        Objects}</li><li><p>@Compendium[pf-content.pf-rules.d5jA5Uo7F7mpbfZE]{3.6.06.
+        Heat
+        Dangers}</p><ul><li>@Compendium[pf-content.pf-rules.8chZeOjIpuKkzTUR]{3.6.06.1.
+        Catching on
+        Fire}</li><li>@Compendium[pf-content.pf-rules.LpUSkoqMTp44gSdl]{3.6.06.2.
+        Lava
+        Effects}</li></ul></li><li>@Compendium[pf-content.pf-rules.CHkspcX3n9YBXU1I]{3.6.07.
+        Smoke
+        Effects}</li><li>@Compendium[pf-content.pf-rules.Hthl6DTaWRrdoenF]{3.6.08.
+        Starvation and
+        Thirst}</li><li>@Compendium[pf-content.pf-rules.IzDTrpYeEht9VTOF]{3.6.09.
+        Suffocation}</li><li><p>@Compendium[pf-content.pf-rules.dErmNWeOdWiEyQVB]{3.6.10.
+        Water
+        Dangers}</p><ul><li>@Compendium[pf-content.pf-rules.FjcLzjjWfJ47YGCs]{3.6.10.1
+        Drowning}</li></ul></li></ul>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

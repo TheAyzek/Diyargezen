@@ -1,0 +1,27 @@
+_id: S89fDpMDBP0YAXQ3
+_key: '!items!S89fDpMDBP0YAXQ3'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Eloko Bell
+system:
+  aura:
+    school: enc
+  cl: 7
+  description:
+    value: >-
+      <p>This small, rusty iron bell contains great magic. When the bell is rung
+      as a standard action, all creatures within 60 feet who can hear the bell
+      must make a DC 14 Will save or be compelled to seek out the source of the
+      sound for 7 rounds, moving at their normal speeds. If the sound leads its
+      subjects into a dangerous area, each affected creature gets a second save.
+      This is a mindaffecting compulsion effect. The bell affects a maximum of
+      24 HD of creatures. A bell can be used 5 times before it crumbles away
+      into rusty flakes and becomes useless.<h3>Requirements</h3><p>Craft
+      Wondrous Item, suggestion</p>
+  price: 5000
+  sources:
+    - id: PZO9038
+  subType: wondrous
+type: equipment

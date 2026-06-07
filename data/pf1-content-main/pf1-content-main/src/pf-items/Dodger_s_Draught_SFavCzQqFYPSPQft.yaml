@@ -1,0 +1,22 @@
+_id: SFavCzQqFYPSPQft
+_key: '!items!SFavCzQqFYPSPQft'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/unique-10.jpg
+name: Dodger's Draught
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Tincture</p><p>This dark green liquid has a
+      pungent odor. For 1 hour after you drink this tincture, your muscles
+      instinctively react to danger and you gain a +2 dodge bonus to AC. Your
+      involuntary muscle movement causes you to take a -2 penalty on attack
+      rolls for the same duration.</p><h2>Construction</h2><p><strong>Craft
+      (Alchemy)</strong> DC 25</p>
+  price: 300
+  sources:
+    - id: PZO9487
+      pages: '22'
+  tags:
+    - Tincture
+type: consumable

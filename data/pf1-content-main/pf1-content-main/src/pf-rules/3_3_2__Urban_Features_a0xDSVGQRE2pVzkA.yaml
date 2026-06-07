@@ -1,0 +1,46 @@
+_id: a0xDSVGQRE2pVzkA
+_key: '!journal!a0xDSVGQRE2pVzkA'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: jcYNlOHnTVoxPbLH
+name: 3.3.2. Urban Features
+pages:
+  - _id: QLVMYDLi2CyzaFhz
+    _key: '!journal.pages!a0xDSVGQRE2pVzkA.QLVMYDLi2CyzaFhz'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.3.2. Urban Features
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.qx3PVEeLsKOdiESK]{3.3.
+        Urban
+        Adventures}</p><ul><li>@Compendium[pf-content.pf-rules.NN6T3x9Bkkbypfsz]{3.3.1.
+        Weapon and Spell
+        Restrictions}</li><li><strong>@Compendium[pf-content.pf-rules.a0xDSVGQRE2pVzkA]{3.3.2.
+        Urban Features}</strong></li></ul><hr
+        /><p>@Source[PZO1110;pages=433]</p><p>Walls, doors, poor lighting, and
+        uneven footing: in many ways a city is much like a dungeon. Some special
+        considerations for an urban setting are covered
+        below.</p><ul><li>@Compendium[pf-content.pf-rules.kMiP5IZwDvMssIBY]{3.3.2.1.
+        Walls and
+        Gates}</li><li>@Compendium[pf-content.pf-rules.DBgMSNFxDzkCxJ7g]{3.3.2.2.
+        Guards and
+        Soldiers}</li><li>@Compendium[pf-content.pf-rules.MI0493ERUqLM2bT9]{3.3.2.3.
+        Siege
+        Engines}</li><li>@Compendium[pf-content.pf-rules.FmRlm273yvFj0UMs]{3.3.2.4.
+        City
+        Streets}</li><li>@Compendium[pf-content.pf-rules.A9MzLZ9Eu2NRiQfp]{3.3.2.5.
+        Above and Beneath the
+        Streets}</li><li>@Compendium[pf-content.pf-rules.ggcyCNuPo8NdzmjI]{3.3.2.6.
+        City
+        Buildings}</li><li>@Compendium[pf-content.pf-rules.deJ36cJDbvFpa2fr]{3.3.2.7.
+        City Lights}</li></ul>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

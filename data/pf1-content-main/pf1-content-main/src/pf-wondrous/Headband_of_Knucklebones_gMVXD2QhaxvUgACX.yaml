@@ -1,0 +1,27 @@
+_id: gMVXD2QhaxvUgACX
+_key: '!items!gMVXD2QhaxvUgACX'
+_stats:
+  coreVersion: '12.331'
+folder: 52jofiLqjkyFLxLL
+img: icons/equipment/finger/ring-crown-teal-gold.webp
+name: Headband of Knucklebones
+system:
+  aura:
+    school: nec
+  cl: 9
+  description:
+    value: >-
+      <p>This headband is made of interlocked finger bones woven together by
+      leathery tendons and gristle. The wearer may use command undead up to
+      three times per day, but only affecting zombies. Once per day, the wearer
+      may use the headband to animate one Medium zombie as if using animate
+      dead.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, animate dead, command undead</p>
+  price: 27500
+  slot: headband
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

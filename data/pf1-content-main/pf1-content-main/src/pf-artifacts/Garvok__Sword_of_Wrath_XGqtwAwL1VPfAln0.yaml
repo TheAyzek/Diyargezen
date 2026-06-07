@@ -1,0 +1,40 @@
+_id: XGqtwAwL1VPfAln0
+_key: '!items!XGqtwAwL1VPfAln0'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/greatsword.PNG
+name: Garvok, Sword of Wrath
+system:
+  artifact: true
+  aura:
+    school: evo
+  baseTypes:
+    - Greatsword
+  cl: 16
+  description:
+    value: >-
+      <p>This scarred piece of crimson stained metal functions similarly to a +5
+      returning throwing greatsword. Instead of the normal benefit of the
+      throwing weapon special ability, Garvok can be thrown with a 25-foot range
+      increment. Additionally, whenever Garvok strikes a foe, the target must
+      succeed at a DC 20 Reflex save or take an additional 5d6 points of fire
+      damage. If the sword scores a critical hit, it explodes in a fireball
+      centered on the wielder's opponent. All creatures within the fireball's
+      20-foot-radius spread-including Garvok's wielder and allies, if within
+      range-take 10d6 points of fire damage (DC 25 Reflex for half). The wielder
+      has no control over the sword's eruption and cannot prevent it from
+      exploding. The sword returns to its wielder's hand, fully reformed, just
+      before the beginning of his next turn.</p><p><strong>Base Item</strong>:
+      returning throwing greatsword</p>
+  enh: 5
+  held: 2h
+  material:
+    base:
+      value: steel
+  sources:
+    - id: PZO9250
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 10
+type: weapon

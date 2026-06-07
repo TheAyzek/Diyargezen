@@ -1,0 +1,36 @@
+_id: htdLwNDHOSj7LhP1
+_key: '!journal!htdLwNDHOSj7LhP1'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Armor Class Modifiers
+pages:
+  - _id: L5DxuvhgDFhgNxbz
+    _key: '!journal.pages!htdLwNDHOSj7LhP1.L5DxuvhgDFhgNxbz'
+    _stats:
+      coreVersion: '12.331'
+    name: Armor Class Modifiers
+    sort: 100000
+    text:
+      content: >-
+        <div
+        id="SO_ArmorClassModifiers"><table><tbody><tr><td><p><strong>Defender
+        is...</strong></p></td><td><p><strong>Melee</strong></p></td><td><p><strong>Ranged</strong></p></td></tr><tr><td><p>Behind
+        cover</p></td><td><p>+4</p></td><td><p>+4</p></td></tr><tr><td><p>Blinded</p></td><td><p>-2<sup>1</sup></p></td><td><p>-2<sup>1</sup></p></td></tr><tr><td><p>Concealed
+        or invisible</p></td><td><p>See
+        Concealment</p></td></tr><tr><td><p>Cowering</p></td><td><p>-2<sup>1</sup></p></td><td><p>-2<sup>1</sup></p></td></tr><tr><td><p>Entangled</p></td><td><p>+0<sup>2</sup></p></td><td><p>+0<sup>2</sup></p></td></tr><tr><td><p>Flat-footed</p></td><td><p>+0<sup>1</sup></p></td><td><p>+0<sup>1</sup></p></td></tr><tr><td><p>Grappling
+        (but the attacker is
+        not)</p></td><td><p>+0</p></td><td><p>+0</p></td></tr><tr><td><p>Helpless</p></td><td><p>-4<sup>3</sup></p></td><td><p>+0<sup>3</sup></p></td></tr><tr><td><p>Kneeling
+        or
+        sitting</p></td><td><p>-2</p></td><td><p>+2</p></td></tr><tr><td><p>Pinned</p></td><td><p>-4<sup>3</sup></p></td><td><p>+0<sup>3</sup></p></td></tr><tr><td><p>Prone</p></td><td><p>-4</p></td><td><p>+4</p></td></tr><tr><td><p>Squeezing
+        through a
+        space</p></td><td><p>-4</p></td><td><p>-4</p></td></tr><tr><td><p>Stunned</p></td><td><p>-2<sup>1</sup></p></td><td><p>-2<sup>1</sup></p></td></tr></tbody></table><p>1
+        The defender loses any Dexterity bonus to AC.<br />2 An entangled
+        character takes a –4 penalty to Dexterity.<br />3 The defender is
+        flat-footed and cannot add his Dex bonus to AC.</p></div>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

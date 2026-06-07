@@ -1,0 +1,43 @@
+_id: ylRv6yk4lXos49zr
+_key: '!items!ylRv6yk4lXos49zr'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_37.jpg
+name: Father of Legends (Marshal)
+system:
+  associations:
+    classes:
+      - Medium
+  description:
+    value: >-
+      <p><strong>Medium Legendary Spirit</strong></p><p>The Ulfen regard the
+      Father of Legends as the greatest skald of all time. During his life,
+      there was no greater honor than to be immortalized by his song, and
+      several of the most famous Ulfen epics were first sung by
+      him.</p><p><strong>Gaining Favor</strong>: To gain the Father of Legends'
+      favor, you must first compose a song or poem about a heroic event that you
+      witnessed but did not take part in. Then you must perform the piece in
+      front of a crowd of at least 100 people. If you succeed at a Charisma
+      check during the performance, the Father of Legends will answer your
+      call.</p><p><strong>Taboos</strong>: If you accept a taboo while
+      channeling the Father of Legends, you cannot take any actions that would
+      deny an ally an opportunity for glory. This includes killing an enemy that
+      an ally was attempting to defeat or forcibly removing an ally from combat,
+      even when her life is in danger.</p><p><strong>Song of Valor
+      (Intermediate, Su)</strong>: As a standard action, you can begin a
+      performance that fills allies with power and confidence. Any ally that
+      participated in your seance who can hear your performance receives a
+      morale bonus to Strength and Constitution equal to your spirit bonus. You
+      can maintain this performance for a number of rounds equal to your
+      Charisma modifier plus your spirit bonus. These rounds need not be
+      consecutive. Maintaining your performance is a free
+      action.</p><p><strong>Saga of Future Kings (Supreme, Su)</strong>: Each
+      ally who benefits from your song of valor gains DR/- equal to your spirit
+      bonus. In addition, when an ally affected by your song would be reduced to
+      fewer than 0 hit points, she can attempt a Fortitude saving throw (DC = 10
+      + half the damage received). If the ally succeeds, she instead is reduced
+      to 0 hit points.</p>
+  subType: classFeat
+  tags:
+    - Medium Legendary Spirit
+type: feat

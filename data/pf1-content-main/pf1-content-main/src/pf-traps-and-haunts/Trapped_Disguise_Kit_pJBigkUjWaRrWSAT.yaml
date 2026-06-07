@@ -1,0 +1,99 @@
+_id: pJBigkUjWaRrWSAT
+_key: '!actors!pJBigkUjWaRrWSAT'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: icons/containers/chest/chest-reinforced-stone.webp
+items:
+  - _id: OJt4eTJ8SSxlz4PT
+    _key: '!actors.items!pJBigkUjWaRrWSAT.OJt4eTJ8SSxlz4PT'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/chest/chest-reinforced-stone.webp
+    name: Scent Mark
+    system:
+      proficient: true
+      subType: weapon
+    type: attack
+name: Trapped Disguise Kit
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 0
+    disarm: 25
+    duration: Instantaneous
+    effect: >-
+      Onset Delay: 1 round
+
+
+      This appears to be a normal disguise kit, except that if any of the makeup
+      or false facial hair is applied, the victim is marked with a strong scent.
+      This scent mark decreases the DC of tracking the victim by scent by 4. The
+      mark can be washed off with vigorous scrubbing, but otherwise fades on its
+      own over several days.
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 25
+    reset: Repair
+    trigger: Touch
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

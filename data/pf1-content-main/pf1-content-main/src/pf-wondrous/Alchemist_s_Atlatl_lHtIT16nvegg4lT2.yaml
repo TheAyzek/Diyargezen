@@ -1,0 +1,29 @@
+_id: lHtIT16nvegg4lT2
+_key: '!items!lHtIT16nvegg4lT2'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Alchemist's Atlatl
+system:
+  aura:
+    school: trs
+  cl: 1
+  description:
+    value: >-
+      <p>This wooden atlatl resembles a handheld, lever-controlled catapult. One
+      end sports a shaft covered in carvings of alchemical formulae, and the
+      other is a roughly carved bowl. The user can place an alchemical splash
+      weapon, such as a flask of acid or alchemist's fire, in the bowl. This is
+      a move action that provokes an attack of opportunity. When the splash
+      weapon is launched from the atlatl, its range is doubled. Magic items
+      (including an alchemist's bombs) aren't affected by an alchemist's
+      atlatl.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, longshot</p>
+  price: 1500
+  sources:
+    - id: PZO9452
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

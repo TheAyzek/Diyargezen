@@ -1,0 +1,48 @@
+_id: S9tckmIqokleFNPT
+_key: '!items!S9tckmIqokleFNPT'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/sword-short.PNG
+name: Shin-Tari, Sword of Sloth
+system:
+  artifact: true
+  aura:
+    school: con
+  baseTypes:
+    - Short Sword
+  cl: 16
+  description:
+    value: >-
+      <p>A scene of imperial decadences depicted in fantastically fine
+      etchings-which seem to change upon each consideration- covers the surface
+      of this +5 short sword. Every time Shin-Tari successfully damages a
+      creature, it gains the bane weapon special ability, with the target's
+      creature type being its designated foe. This additional weapon quality
+      actives after the weapon first strikes an opponent, granting additional
+      damage to subsequent attacks but not the first attack.   The bane weapon
+      special ability persists for the rest of the day, or until the sword
+      strikes a foe of a different creature type. Additionally, whenever
+      Shin-Tari strikes a Large or smaller foe, the target must succeed at a DC
+      20 Will save or be affected as per the spell dimension door. This effect
+      functions as the spell, but Shin-Tari's wielder determines where his
+      opponent is transported to, and the destination must be within the
+      wielder's line of sight. The wielder cannot teleport an opponent into a
+      space occupied by another creature or a solid object. Only one creature
+      can be affected by this ability each round, and the target can act as
+      normal on its next turn. If the sword scores a critical hit, the target
+      must succeed at a DC 25 Will save or be affected by the spell teleport.
+      The sword's wielder determines the destination, which must be very
+      familiar to him.</p><p><strong>Base Item</strong>: short sword</p>
+  enh: 5
+  material:
+    base:
+      value: steel
+  properties:
+    fin: true
+  sources:
+    - id: PZO9250
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 2
+type: weapon

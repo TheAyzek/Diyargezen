@@ -1,0 +1,25 @@
+_id: 1NapWgKVBy4onHv7
+_key: '!items!1NapWgKVBy4onHv7'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Bookmark of Deception
+system:
+  aura:
+    school: ill
+  cl: 5
+  description:
+    value: >-
+      <p>This bookmark alters the book that holds it so that it appears to be
+      another book entirely, even upon a thorough reading. The apparent book is
+      determined when the bookmark is crafted, and is usually an especially
+      boring or commonplace book such as a legal or religious text. The bookmark
+      also protects itself and the book with
+      nondetection.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, nondetection, secret page</p>
+  price: 1500
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

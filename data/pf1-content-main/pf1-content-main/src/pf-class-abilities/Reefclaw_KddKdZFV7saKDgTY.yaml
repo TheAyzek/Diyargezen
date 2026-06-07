@@ -1,0 +1,19 @@
+_id: KddKdZFV7saKDgTY
+_key: '!items!KddKdZFV7saKDgTY'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Reefclaw
+system:
+  associations:
+    classes:
+      - Hunter
+  description:
+    value: >-
+      <p><strong>Hunter Animal Focus</strong></p><p>The creature gains Diehard
+      as a bonus feat. At 12th level, instead of gaining Diehard, the creature
+      gains the ferocity ability (Pathfinder RPG Bestiary 300).</p>
+  subType: classFeat
+  tags:
+    - Hunter Animal Focus
+type: feat

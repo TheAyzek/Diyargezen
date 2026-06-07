@@ -1,0 +1,30 @@
+_id: 5c7u26Y1QEDSNIlW
+_key: '!items!5c7u26Y1QEDSNIlW'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Animal
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Erastil, Gozreh.</p><p><strong>Animal Fury (minor)</strong>: At 1st level,
+      you can touch one ally and grant it feral features. The ally gains 2 claw
+      attacks that each deal 1d6 points of damage if the ally is Medium or 1d4
+      if it's Small, or 1 bite attack that deals 1d8 points of damage if the
+      ally is Medium or 1d6 if it's Small. These are primary natural attacks
+      that replace any similar primary natural attacks the ally might have. This
+      effect lasts for 1 minute.</p><p><strong>Battle Companion
+      (major)</strong>: At 10th level, you can summon a battle companion. This
+      ability functions as summon nature's ally V with a duration of 1 minute.
+      This ability can summon only one animal, regardless of the list used. For
+      every 2 levels beyond 10th, the level of the summon nature's ally spell
+      increases by 1 (to a maximum of summon nature's ally IX at 18th
+      level).</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

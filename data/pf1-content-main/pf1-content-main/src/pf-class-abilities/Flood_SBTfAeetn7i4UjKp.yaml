@@ -1,0 +1,28 @@
+_id: SBTfAeetn7i4UjKp
+_key: '!items!SBTfAeetn7i4UjKp'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Flood
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Evil deities that offer the Water blessing or nonevil deities with
+      disasters in their portfolios</p><p><strong>Lasting Breath
+      (minor)</strong>: You can touch an ally to bless it with an extra reserve
+      of breath. For 1 minute, while the ally holds its breath, standard and
+      full-round actions don't decrease the number of rounds the ally can hold
+      its breath (see page 445 of Pathfinder RPG Core
+      Rulebook).</p><p><strong>Tsunami Burst (major)</strong>: At 10th level,
+      when you are hit by a melee attack, you can invoke this blessing as an
+      immediate action. A wave of water blasts out from you at your attacker,
+      attempting a bull rush combat maneuver check using your CMB but adding
+      your Wisdom modifier instead of your Strength modifier.</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

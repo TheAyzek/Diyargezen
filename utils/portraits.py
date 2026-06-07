@@ -19,7 +19,6 @@ DISPLAY_SIZE = (300, 400)
 SYSTEM_PORTRAIT_SIZES = {
     "dnd5e": {"display": (300, 400), "thumbnail": (100, 133)},
     "pathfinder1e": {"display": (300, 400), "thumbnail": (100, 133)},
-    "vtm5e": {"display": (280, 380), "thumbnail": (93, 126)},
     "mm3e": {"display": (320, 420), "thumbnail": (107, 140)},
 }
 

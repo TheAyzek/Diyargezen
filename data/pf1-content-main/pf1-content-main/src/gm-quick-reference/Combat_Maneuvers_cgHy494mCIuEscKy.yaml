@@ -1,0 +1,45 @@
+_id: cgHy494mCIuEscKy
+_key: '!journal!cgHy494mCIuEscKy'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Combat Maneuvers
+pages:
+  - _id: 3uoeqm2xppG9gbBd
+    _key: '!journal.pages!cgHy494mCIuEscKy.3uoeqm2xppG9gbBd'
+    _stats:
+      coreVersion: '12.331'
+    name: Combat Maneuvers
+    sort: 0
+    text:
+      content: >-
+        <p>See @Compendium[pf-content.pf-rules.CK4ZYweM6IifrrV0]{2.07.3. Combat
+        Maneuvers}</p><table><tbody><tr><td><p>CMB = BAB + Str modifier +
+        special size modifier</p></td></tr><tr><td><p>CMD = BAB + Str modifier +
+        Dex modifier + special size modifier
+        +10</p></td></tr><tr><td><p><strong>Bull Rush</strong> Push target 5
+        ft., +5 ft. for every 5 by which check exceeds
+        CMD</p></td></tr><tr><td><p><strong>Dirty Trick</strong> Inflict a
+        temporary negative
+        condition</p></td></tr><tr><td><p><strong>Disarm</strong> Target drops 1
+        item or 2 items if check exceeds CMD by
+        10</p></td></tr><tr><td><p><strong>Drag</strong> Pull target 5 ft., +5
+        ft. for every 5 by which check exceeds
+        CMD</p></td></tr><tr><td><p><strong>Grapple</strong> Both target and
+        attacker gain grappled
+        condition</p></td></tr><tr><td><p><strong>Overrun</strong> Move through
+        target, knocked prone if check exceeds CMD by
+        5</p></td></tr><tr><td><p><strong>Reposition</strong> Move target 5 ft.
+        within reach, +5 ft. for every 5 by which check exceeds
+        CMD</p></td></tr><tr><td><p><strong>Steal</strong> Take a worn item from
+        the target</p></td></tr><tr><td><p><strong>Sunder</strong> Deal damage
+        to item held or worn by
+        target</p></td></tr><tr><td><p><strong>Trip</strong> Knock target prone,
+        attacker knocked prone if check fails by 10 or
+        more</p></td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

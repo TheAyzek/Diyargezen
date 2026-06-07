@@ -1,0 +1,36 @@
+_id: QRUlGMf9CuGcnFHG
+_key: '!items!QRUlGMf9CuGcnFHG'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Snake Charmer's Flute
+system:
+  aura:
+    custom: true
+    school: conjuration and enchantment
+  cl: 17
+  description:
+    value: >-
+      <p>Two distinct songs are etched on the entwined pipes of this flute.
+      Playing the first creates a soothing, rhythmic melody that lulls snakes
+      and serpents into compliance. This tune grants a +5 competence bonus on
+      Handle Animal and wild empathy checks to influence snakes as well as
+      snakelike animals and magical beasts. If the musician lacks the wild
+      empathy class feature, she can still use this song to influence snakes and
+      snakelike creatures as if she had wild empathy, applying only her Charisma
+      modifier and the flute's +5 bonus to the roll.  The second song of the
+      snake charmer's flute can be performed only once per day as a full-round
+      action. When used, it summons an advanced giant anaconda (Pathfinder RPG
+      Bestiary 2 292, 252). This serpent obeys the musician's mental commands
+      and remains as long as the user continues to spend a move action each
+      round maintaining the tune, up to a maximum of 3
+      minutes.<h3>Requirements</h3><p>Craft Wondrous Item, dominate monster,
+      summon nature's ally VIII</p>
+  price: 26000
+  sources:
+    - id: PZO90120
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

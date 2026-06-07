@@ -1,0 +1,17 @@
+_id: XAIecMFxepcIF9WQ
+_key: '!items!XAIecMFxepcIF9WQ'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/slime-thick-blue.webp
+name: Amorphous
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>The creature is malleable. It is <a>immune</a> to precision damage
+      (like sneak attacks) and critical hits.</p><p><em>Format</em>:
+      amorphous</p><p><em>Location</em>: Defensive Abilities.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

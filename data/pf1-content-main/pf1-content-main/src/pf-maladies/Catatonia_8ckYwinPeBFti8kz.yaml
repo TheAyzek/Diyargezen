@@ -1,0 +1,30 @@
+_id: 8ckYwinPeBFti8kz
+_key: '!items!8ckYwinPeBFti8kz'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_03.jpg
+name: Catatonia
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> greater madness; <strong>Save</strong> DC
+      24</p><p><strong>Onset</strong> immediate</p><p><strong>Effect</strong>
+      The afflicted character acts as if she were cowering, but this is not a
+      fear effect, unlike other forms of cowering.</p><p><strong>Dormancy
+      Effect</strong> The afflicted character is staggered.</p><p>A character
+      suffering from catatonia mentally shuts down completely, or nearly so,
+      greatly limiting her physical capabilities as well. While a catatonic
+      character still breathes, she can eat or drink without assistance only if
+      the catatonia is dormant. If a catatonic character is faced with a
+      dangerous situation, she must attempt a saving throw. If she succeeds, she
+      acts as if panicked (though this is not a fear effect) until she is out of
+      line of sight of the danger or is cornered. If she is cornered, she cowers
+      again.</p>
+  sources:
+    - id: PZO1135
+      pages: '186'
+  subType: misc
+  tags:
+    - Maladies
+    - Madness
+type: feat

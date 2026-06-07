@@ -1,0 +1,54 @@
+_id: IEy9PpkuVTCnDvjA
+_key: '!items!IEy9PpkuVTCnDvjA'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/breastplate.PNG
+name: Scarab Breastplate
+system:
+  armor:
+    acp: 4
+    dex: 3
+    material:
+      base:
+        value: steel
+    value: 6
+  aura:
+    school: trs
+  baseTypes:
+    - Breastplate
+  cl: 8
+  description:
+    value: >-
+      <p>This +3 breastplate is crafted from the carapace of a giant scarab
+      beetle, enchanted to be as hard and reflective as polished steel. The
+      wearer suffers only half damage from vermin swarms and gains a +2
+      resistance bonus on saving throws against the extraordinary abilities of
+      vermin swarms.  In addition, once per day on command, the wearer can
+      transform the scarab breastplate into a swarm of scarab beetles that
+      skitter from her chest to attack creatures nearby. This swarm has
+      statistics identical to an army ant swarm (Bestiary 16) and attacks any
+      creatures within its space. The wearer can command the swarm to move
+      (including changing the shape of the swarm) as a move action, but the
+      swarm must remain adjacent to her. If the swarm is reduced to 0 hit
+      points, if the wearer is forced to move away from the swarm, or if the
+      wearer commands it to return to her as a move action, the swarm crawls
+      back onto the wearer's torso and returns to armor form. While the swarm is
+      active, the wearer is not considered to be wearing the scarab breastplate
+      (except for purposes of commanding the swarm) and gains no defensive
+      benefits from it.  A druid of 6th level wearing a scarab breastplate can
+      use her wild shape ability to duplicate vermin shape I (Ultimate Magic).
+      At 8th level, she can also use it to duplicate vermin shape II (Ultimate
+      Magic).</p><p><strong>Base Item</strong>: 
+      breastplate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, creeping doom, spell turning, vermin shape II</p>
+  enh: 3
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 32350
+  sources:
+    - id: PZO1123
+  spellFailure: 25
+  weight:
+    value: 30
+type: equipment

@@ -1,0 +1,40 @@
+_id: bshM7ZrlLrjUxMqX
+_key: '!journal!bshM7ZrlLrjUxMqX'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.4.35. Serpentstone
+pages:
+  - _id: h84O4g2m9pcPUwo8
+    _key: '!journal.pages!bshM7ZrlLrjUxMqX.h84O4g2m9pcPUwo8'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.4.35. Serpentstone
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li>@Compendium[pf-content.pf-rules.TROqcNjEw3b2q2Dk]{6.0.4.
+        Special Materials}</li></ul><hr /><p>@Source[PZO9041]</p><p>Serpentstone
+        is a strange substance unique to the precursor alchemies of the ancient
+        serpentfolk. Its ancient name is lost to time, but modern explorers have
+        dubbed it “serpentstone” after its ophidian
+        creators.</p><p>Exceptionally resilient, all serpentstone is magically
+        treated stone. When properly worked and treated through eldritch means
+        known only to ancient serpentfolk wizards and sorcerers, serpentstone
+        can be programmed to emit sound and light in a variety of ways, shifting
+        at predetermined times from color to color and tone to tone, from
+        brightness equal to that of daylight to a dim, shadowy glimmer like that
+        of a candle. In addition, serpentstone can be set to radiate heat or
+        cold, or produce illusory smoke, roiling forth thin streams of scented,
+        incense-like fumes designed to delight, enlighten, or otherwise inform
+        serpentfolk in the vicinity. All of these effects function as major
+        image (caster level 18th).</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,24 @@
+_id: ioaaGUF0OHsmkPqi
+_key: '!items!ioaaGUF0OHsmkPqi'
+_stats:
+  coreVersion: '12.331'
+img: icons/equipment/feet/shoes-rounded-brown.webp
+name: Hollow-heeled boot
+system:
+  description:
+    value: >-
+      <p>This boot contains a hollow that grants a +4 bonus on Sleight of Hand
+      checks to conceal items within the boot while wearing it. The hollow can
+      hold up to 8 cubic inches. Putting on or removing the boot is a standard
+      action, as is retrieving or storing an item from the hollow when the boot
+      is in hand. Adding an item to or removing one from the boot while it is
+      worn is a full-round action.</p>
+  price: 10
+  slot: clothing
+  sources:
+    - id: PZO9460
+      pages: '13'
+  subType: clothing
+  weight:
+    value: 1
+type: equipment

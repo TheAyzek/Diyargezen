@@ -1,0 +1,29 @@
+_id: q2UZqpx9cJgaRMRY
+_key: '!items!q2UZqpx9cJgaRMRY'
+_stats:
+  coreVersion: '12.331'
+folder: 52jofiLqjkyFLxLL
+img: icons/equipment/finger/ring-crown-teal-gold.webp
+name: Headband of Ki Focus
+system:
+  aura:
+    school: abj
+  cl: 1
+  description:
+    value: >-
+      <p>This tied headband helps the wearer focus his ki more effectively.
+      Whenever the wearer spends ki points to make an additional attack, that
+      attack roll gains a +1 insight bonus (+2 if the wearer is using a ki focus
+      weapon with that attack). Furthermore, the wearer of a headband of ki
+      focus is immune to the ninja's ki block trick or similar effects that
+      block the wearer from using ki
+      points.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, creator must have a ki pool</p>
+  price: 5400
+  slot: headband
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

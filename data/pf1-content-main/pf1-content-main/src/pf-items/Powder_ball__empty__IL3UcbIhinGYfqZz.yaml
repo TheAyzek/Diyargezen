@@ -1,0 +1,34 @@
+_id: IL3UcbIhinGYfqZz
+_key: '!items!IL3UcbIhinGYfqZz'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/glass-orb.webp
+name: Powder ball (empty)
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 400 gp (empty), 300 gp (fuel);
+      <strong>Weight</strong> 4 lbs. (empty), 1 lb. (fuel)</p><p>This steel
+      sphere is about the size of a standard cannon ball, though it's
+      significantly lighter. Small holes pock the surface of the sphere, which
+      can be unscrewed into two hemispherical pieces. By filling the intricate
+      hollows in an opened powder ball with a specific mixture of volatile
+      chemical reagents (which can typically be purchased in Highhelm for around
+      200 gp) and inserting a proprietary fuse, an individual can use the weapon
+      as a time-delayed explosive device, throwing it as a splash weapon or
+      simply placing it where she wants it to explode. The fuse can be ignited
+      as a move action; 1d4 rounds afterward, the powder ball explodes, dealing
+      2d6 points of fire damage to anything in a 10-foot-radius burst (DC 15 for
+      half ). A powder ball explodes in this way three times- the second
+      explosion occurs 1d3 rounds after the initial explosion, and the third
+      explosion occurs 1d2 rounds after the second. After the third explosion,
+      the empty powder ball can be refilled and used again.</p>
+  equipped: false
+  price: 400
+  sources:
+    - id: PZO9257
+      pages: '39'
+  subType: tool
+  weight:
+    value: 4
+type: loot

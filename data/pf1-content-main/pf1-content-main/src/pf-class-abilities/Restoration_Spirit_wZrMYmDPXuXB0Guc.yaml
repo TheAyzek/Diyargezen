@@ -1,0 +1,60 @@
+_id: wZrMYmDPXuXB0Guc
+_key: '!items!wZrMYmDPXuXB0Guc'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/violet_11.jpg
+name: Restoration Spirit
+system:
+  associations:
+    classes:
+      - Shaman
+  description:
+    value: >-
+      <p><strong>Associated Spirit</strong>:
+      @UUID[Compendium.pf1.class-abilities.Item.z3ecyLaiYGjELkMT]{Life}</p><p><strong>Spirit
+      Magic Spell</strong>:
+      @UUID[Compendium.pf1.spells.Item.770nro22rs4fxz7y]{Remove sickness}
+      replaces the life spirit’s 1st-level spirit magic
+      spell.</p><h3>Replacement Hexes</h3><p>The following life spirit hexes
+      replace the curse of suffering and deny succor hexes that a shaman can
+      select from the life spirit.</p><p><strong>Shell of Succor (Su)</strong>:
+      The shaman surrounds one touched creature with a ward of succoring energy,
+      granting the target a number of temporary hit points equal to her Wisdom
+      bonus + an additional 1d6 temporary hit points per 2 shaman levels she has
+      (maximum 10d6). These temporary hit points last a number of minutes equal
+      to the shaman’s level.</p><p>The target always loses these temporary hit
+      points first, even before other temporary hit points (including those from
+      a kineticist’s force ward defense wild talent). If an attack deals fewer
+      points of damage than the target’s temporary hit points from this shell of
+      succor ability, it still reduces those temporary hit points but otherwise
+      counts as a miss for the purpose of abilities that trigger on a hit or a
+      miss. The shaman can use this hex a number of times per day equal to 1 +
+      her Charisma bonus.</p><p><strong>Spirit Boost (Su)</strong>: Whenever the
+      shaman casts a healing spell that heals a target up to its maximum hit
+      points, any excess hit points persist for 1 round per shaman level as
+      temporary hit points (up to a maximum number of temporary hit points equal
+      to the shaman’s level).</p><h3>True Spirit Ability</h3><p>The following
+      true spirit ability replaces the quick healing ability of the life
+      spirit.</p><p><strong>Spirit of Life (Su)</strong>: The shaman’s spirit
+      animal transforms into a conduit of life energy able to store succoring
+      magic that can keep the shaman’s allies safe. This allows the spirit
+      animal to cast stabilize as a spell-like ability at will using the
+      shaman’s level as the spell’s caster level. In addition, the shaman can
+      transfer any cure spell (a spell with “cure” in its name) she casts to her
+      spirit animal as a swift action, provided that the spirit animal is within
+      30 feet of her. This functions like imbue with spell ability, except a
+      spirit animal can be imbued with a cure spell of any spell level that its
+      master can cast regardless of the spirit animal’s Intelligence or Wisdom
+      score. The spirit animal can hold the spell indefinitely, but the shaman
+      cannot prepare a new spell in the imbued spell’s spell slot until her
+      spirit animal uses the spell or it is slain, or until she dismisses the
+      imbue with spell ability effect (a free action). A spirit animal can be
+      imbued with only one spell at a time in this manner. If the spirit animal
+      is slain while it is imbued with a cure spell, that spell is lost.</p>
+  sources:
+    - id: PZO9475
+      pages: '27'
+  subType: classFeat
+  tags:
+    - Restoration Spirit
+type: feat

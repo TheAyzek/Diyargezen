@@ -1,0 +1,55 @@
+_id: uzsXFLZ9vwB9urWd
+_key: '!items!uzsXFLZ9vwB9urWd'
+_stats:
+  coreVersion: '12.331'
+folder: xBDkeYWwOx17NYOO
+img: systems/pf1/icons/skills/blue_18.jpg
+name: Cover (Improved)
+system:
+  changes:
+    - _id: vpv0rczm
+      formula: '10'
+      target: skill.ste
+      type: untyped
+    - _id: iosiv0rg
+      formula: '8'
+      target: ac
+      type: untyped
+    - _id: wfj8tu8w
+      formula: '4'
+      target: ref
+      type: untyped
+  contextNotes:
+    - target: ref
+      text: >-
+        Effectively have Improved Evasion: no damage on success and only half on
+        failure.
+    - target: skill.ste
+      text: Can enter stealth due to Improved Cover.
+    - target: ac
+      text: AoO can't be made against you.
+    - target: attack
+      text: Can't make AoOs vs opponents that have improved cover from you.
+  description:
+    value: >-
+      <p>In some cases, such as attacking a target hiding behind an arrow slit,
+      cover may provide a greater bonus to AC and Reflex saves. In such
+      situations, the normal cover bonuses to AC and Reflex saves can be doubled
+      (to +8 and +4, respectively). A creature with this improved cover
+      effectively gains improved evasion against any attack to which the Reflex
+      save bonus applies. Furthermore, improved cover provides a +10 bonus on
+      Stealth checks.</p><hr><p><strong>Improved Cover and Attacks of
+      Opportunity</strong></p><p>You can’t execute an attack of opportunity
+      against an opponent with improved cover relative to
+      you.</p><hr><p><strong>Improved Cover and Stealth
+      Checks</strong></p><p>You can use improved cover to make a Stealth check.
+      Without cover, you usually need concealment (see below) to make a Stealth
+      check.</p><hr><p><strong>Big Creatures and Cover</strong></p><p>Any
+      creature with a space larger than 5 feet (1 square) determines cover
+      against melee attacks slightly differently than smaller creatures do. Such
+      a creature can choose any square that it occupies to determine if an
+      opponent has cover against its melee attacks. Similarly, when making a
+      melee attack against such a creature, you can pick any of the squares it
+      occupies to determine if it has cover against you.</p>
+  level: null
+type: buff

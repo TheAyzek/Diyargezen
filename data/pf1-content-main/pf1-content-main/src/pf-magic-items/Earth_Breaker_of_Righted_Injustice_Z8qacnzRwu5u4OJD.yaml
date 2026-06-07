@@ -1,0 +1,64 @@
+_id: Z8qacnzRwu5u4OJD
+_key: '!items!Z8qacnzRwu5u4OJD'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/earthbreaker.PNG
+name: Earth Breaker of Righted Injustice
+system:
+  actions:
+    - _id: a2mbt3gosehkhwd6
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: earthBreakerOfRightedInjustice
+  aura:
+    school: evo
+  baseTypes:
+    - Earth Breaker
+  cl: 10
+  description:
+    value: >-
+      <p>The tribal symbols covering the surface of this +2 anarchic flaming
+      earth breaker radiate a tangible heat. These brutal weapons are crafted by
+      the Shoanti blacksmiths of the Storval Plateau, and each is attuned to the
+      wildest tempers of the people of the Sklar-Quah and the Cinderlands that
+      they call their home. If the wielder possesses the rage class feature, he
+      can choose to add either the devil bane special ability or the orc bane
+      special ability to the weapon at the beginning of his rage. This added
+      weapon special ability lasts only for the duration of the wielder's rage,
+      and once the special ability has been selected, it cannot be switched
+      until the next time the wielder enters a rage.</p><p><strong>Base
+      Item</strong>: 2 anarchic
+      flaming</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor; chaos hammer; fireball, flame blade, or flame
+      strike; creator must be chaotic</p>
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 61340
+  showInQuickbar: false
+  sources:
+    - id: PZO9268
+  weaponGroups:
+    - hammers
+  weight:
+    value: 14
+type: weapon

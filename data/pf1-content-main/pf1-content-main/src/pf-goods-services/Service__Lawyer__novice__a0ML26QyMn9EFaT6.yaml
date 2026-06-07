@@ -1,0 +1,27 @@
+_id: a0ML26QyMn9EFaT6
+_key: '!items!a0ML26QyMn9EFaT6'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/documents/document-sealed-red-white.webp
+name: Service, Lawyer (novice)
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 3 gp (competent), 10 gp (experienced),
+       5 sp (novice);
+      <strong>Weight</strong> - (competent), - (experienced), -
+      (novice)</p><h2>Description</h2><p>A lawyer is a person who knows and
+      practices law. A lawyer writes and interprets contracts, represents
+      clients or the government in civil and criminal trials, gives legal
+      advice, or presides over cases as a judge. An experienced lawyer with a
+      successful history can charge higher fees than a novice or competent but
+      unremarkable one. The listed price is per day.</p>
+  equipped: false
+  price: 0.5
+  sources:
+    - id: PZO1123
+      pages: '99'
+  subType: tradeGoods
+  tags:
+    - Lodging/Services
+type: loot

@@ -1,0 +1,30 @@
+_id: 2oAPEkbiq87Cjg6d
+_key: '!items!2oAPEkbiq87Cjg6d'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Disk of Ghol-Gan
+system:
+  aura:
+    custom: true
+    school: conjuration teleportation
+  cl: 11
+  description:
+    value: >-
+      <p>Excavated within the Shackles among the temples of its lost Ghol-Gan
+      culture, these stone disks display whorls of symbols in the dead language
+      of that dead kingdom, centered about a sphere of black volcanic glass.
+      Each disk acts as a word of recall spell when the command word is spoken;
+      each disk is keyed to a specific island in the territory once controlled
+      by the people of Ghol-Gan. The disk functions once per day, and its
+      destination cannot be changed. Most of these are in the hands of Shackles
+      pirate lords.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, word of recall</p>
+  price: 24000
+  sources:
+    - id: PZO9221
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

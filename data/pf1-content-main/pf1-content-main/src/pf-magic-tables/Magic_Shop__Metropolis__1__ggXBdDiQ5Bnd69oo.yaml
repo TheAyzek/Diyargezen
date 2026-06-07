@@ -1,0 +1,27 @@
+_id: ggXBdDiQ5Bnd69oo
+_key: '!tables!ggXBdDiQ5Bnd69oo'
+_stats:
+  coreVersion: '12.331'
+description: >-
+  <strong>Note</strong> Roll both Metropolis tables. <br />
+  <strong>Pop</strong>: 25,001+ <br /> Reroll items worth &lt; 16,000 gp. <br />
+  Add Spells as Potion, Scroll, or Wand.
+displayRoll: true
+folder: CLExzzcA4kPYvya7
+formula: 1d1
+img: icons/environment/settlement/watchtower-city.webp
+name: 'Magic Shop: Metropolis (1)'
+replacement: true
+results:
+  - _id: L7BF2BigVQ6zWzcE
+    _key: '!tables.results!ggXBdDiQ5Bnd69oo.L7BF2BigVQ6zWzcE'
+    documentCollection: pf1.ultimate-equipment
+    documentId: 61ZKmAr0lryZAHOn
+    img: systems/pf1/icons/spells/enchant-eerie-3.jpg
+    range:
+      - 1
+      - 1
+    text: Generate Medium Magic Item
+    type: pack
+    weight: 1
+sort: 1100000

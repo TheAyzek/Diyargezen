@@ -1,0 +1,374 @@
+_id: 14ziFcrp6SfJctWJ
+_key: '!actors!14ziFcrp6SfJctWJ'
+_stats:
+  coreVersion: '12.343'
+img: icons/svg/mystery-man.svg
+items:
+  - _id: U1P5AKUboMXW5jWg
+    _key: '!actors.items!14ziFcrp6SfJctWJ.U1P5AKUboMXW5jWg'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/affliction_07.jpg
+    name: 'Race: Undead'
+    system:
+      creatureSubtypes:
+        - ''
+      creatureTypes:
+        - undead
+      description:
+        value: >-
+          sbc | As the statblock did not include a race, a custom one was
+          generated.
+    type: race
+  - _id: gWishnbqYTYW3AmV
+    _key: '!actors.items!14ziFcrp6SfJctWJ.gWishnbqYTYW3AmV'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/shadow_12.jpg
+    name: 'Sense: Darkvision 60ft.'
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          Darkvision is the extraordinary ability to see with no light source at
+          all, out to a range specified for the creature. Darkvision is
+          black-and-white only (colors cannot be discerned). It does not allow
+          characters to see anything that they could not see otherwise—invisible
+          objects are still invisible, and illusions are still visible as what
+          they seem to be. Likewise, darkvision subjects a creature to gaze
+          attacks normally. The presence of light does not spoil darkvision.
+      subType: racial
+    type: feat
+  - _id: ziPwPyyurAYYPIbX
+    _key: '!actors.items!14ziFcrp6SfJctWJ.ziPwPyyurAYYPIbX'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/monster-forearm.jpg
+    name: Slam
+    system:
+      actions:
+        - _id: uux9ot4bwxjtugu4
+          ability:
+            attack: _default
+            damage: str
+          actionType: mwak
+          activation:
+            type: attack
+            unchained:
+              type: attack
+          attackBonus: '0'
+          attackName: Slam
+          damage:
+            parts:
+              - formula: 1d2+0
+                types:
+                  - bludgeoning
+          duration:
+            units: inst
+          img: systems/pf1/icons/items/inventory/monster-forearm.jpg
+          name: Attack
+          notes:
+            footer:
+              - slam +2 (1d2)
+          range:
+            units: melee
+          tag: slam
+      subType: natural
+    type: attack
+  - _id: KYPgHRsomzjgliJR
+    _key: '!actors.items!14ziFcrp6SfJctWJ.KYPgHRsomzjgliJR'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Environment: Any'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: TYLCmNQOSq8JdomH
+    _key: '!actors.items!14ziFcrp6SfJctWJ.TYLCmNQOSq8JdomH'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Organization: Solitary, Pair, Or Patrol (3-6)'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: Nabeig2z3jGnjc3O
+    _key: '!actors.items!14ziFcrp6SfJctWJ.Nabeig2z3jGnjc3O'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Treasure: None'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: RVDEZo3lSXmiVJhT
+    _key: '!actors.items!14ziFcrp6SfJctWJ.RVDEZo3lSXmiVJhT'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: sbc | Conversion Buff
+    system:
+      active: true
+      changes:
+        - _id: uvh0m2c8
+          formula: '2'
+          target: cmb
+          type: untypedPerm
+        - _id: 52o9zo3z
+          formula: '-8'
+          target: skill.fly
+          type: untypedPerm
+      description:
+        value: >-
+          <h2>sbc | Conversion Buff</h2><p>This Buff was created by
+          <strong>sbc</strong> to compensate for differences between the input
+          and the values FoundryVTT calculates automatically.</p><p>Especially
+          when the pathfinder system gets upgraded, entries in compendiums get
+          updated or foundry changes in some way, this buff may become
+          outdated.</p><p>For most mooks the conversion should more or less
+          work, but for important NPCs or creatures it is adviced to double
+          check the conversion manually.</p>
+      hideFromToken: true
+      subType: perm
+      tag: sbcConversionBuff
+    type: buff
+name: Beheaded
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    con:
+      value: 0
+    dex:
+      value: 15
+    int:
+      value: 0
+    str:
+      value: 11
+    wis:
+      value: 11
+  attributes:
+    cmdNotes: can't be tripped
+    hpAbility: cha
+    savingThrows:
+      fort:
+        ability: cha
+    speed:
+      fly:
+        base: 40
+        maneuverability: perfect
+      land:
+        base: 40
+    spells:
+      spellbooks:
+        primary:
+          name: Primary
+        secondary:
+          name: Secondary
+        spelllike:
+          name: Spell-likes
+        tertiary:
+          name: Tertiary
+  details:
+    alignment: ne
+    cr:
+      base: 0.3375
+    notes:
+      value: >2-
+
+                <div class="statblockContainer" style="margin-top:15px"><div style="width:100%;background-color:#ffe9c7;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);columns:2 150px">
+            <hr style="margin-left:0;margin-top:-2px;width:100%;height:4px;background-color:#e0a100;border:1px solid #000;column-span:all" />
+            <div style="padding:5px">
+                <h1>Beheaded CR 1/3 </h1>
+                
+                
+                <div style="break-inside:avoid">
+                    <strong>Source</strong>: Bestiary 4 pg. 17<br />
+                    <strong>XP 135</strong><br />
+                    
+                    
+                    
+                    
+                    
+                    NE 
+                    Tiny 
+                    Undead <br />
+                    <strong>Init</strong> 2;
+                    <strong>Senses</strong> darkvision 60 ft.; Perception +0; 
+                    
+                </div>
+                <div style="break-inside:avoid">
+                    <h3>Defense</h3>
+                        <strong>AC</strong> 14, <strong>Touch</strong> 14, <strong>Flat-Footed</strong> 12 (+2 Dex, +2 size)<br />
+                    <strong>Hit Points</strong> 4 (1 HD; 1d8)<br />
+                    <strong>Fort</strong> 0, <strong>Ref</strong> 2, <strong>Will</strong> 2
+                    
+                    
+                    <strong>Immune</strong> undead traits; 
+                    
+                    
+                    
+                    
+                </div>
+                <div>
+                    <div style="break-inside:avoid">
+                        <h3>Offense</h3>
+                                <strong>Speed</strong> 40 ft. (perfect)<br />
+                        <strong>Melee</strong> slam +2 (1d2)<br />
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+                        
+                
+                        
+                        
+                        
+                        
+                
+                <div style="break-inside:avoid">
+                    <h3>Statistics</h3>
+                        <strong>Str</strong> 11, <strong>Dex</strong> 15, <strong>Con</strong> 0, <strong>Int</strong> 0, <strong>Wis</strong> 11, <strong>Cha</strong> 10<br />
+                    <strong>Base Atk</strong> +0; <strong>CMB</strong> +0; <strong>CMD</strong> 10<br />
+                    <strong>Feats</strong> <br />
+                    <strong>Skills</strong> Fly +14<br />
+                    <strong>Languages</strong> <br />
+                    
+                    
+                    
+                    
+                </div>
+                
+                    <div style="break-inside:avoid">
+                        <h3>Ecology</h3>                <strong>Environment</strong>: any<br />
+                        <strong>Organization</strong>: solitary, pair, or patrol (3-6)<br />
+                        <strong>Treasure</strong>: none<br />
+                    </div>
+                
+                
+                
+                    <div style="break-inside:avoid">
+                        <h3>Description</h3>        <div style="white-space:pre-wrap">A beheaded is a severed head or skull animated as a mindless undead sentinel that silently floats at eye level as it lies in wait for living prey or is sent out into the lands of the living to terrorize everyone it finds. A beheaded set loose near populated areas thumps ominously against shut doors and windows, biding its time until someone responds to the incessant knocking. The beheaded then assaults this victim.
+
+        Beheaded also guard grim crypts, abattoirs, and hideouts of murders who
+        like to keep reminders of their past sins close at hand. Beheaded come
+        in many varieties, usually based on the creature the head came from. A
+        beheaded prefers to float at head height so it can more easily attack
+        the face, neck, and shoulders of its victim.
+
+
+        A neutral evil spellcaster can gain a beheaded as a familiar at 3rd
+        level by taking the Improved Familiar feat. A beheaded familiar loses
+        the mindless trait and has an Intelligence score appropriate for its
+        master's level.
+
+        </div>
+                            
+            </div>
+            <hr style="margin-left:0;margin-bottom:-3px;width:100%;height:4px;background-color:#e0a100;border:1px solid #000;column-span:all" />
+        </div></div>
+            
+                <br />
+                <hr />
+                <div class="rawInputContainer" style="margin-top:15px">
+                    <h2>RAW INPUT</h2>
+                    <hr />
+                    <pre style="white-space:pre-wrap;font-size:10px">Beheaded CR 1/3
+        Source Bestiary 4 pg. 17
+
+        XP 135
+
+        NE Tiny undead
+
+        Init +2; Senses darkvision 60 ft.; Perception +0
+
+        Defense
+
+        AC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)
+
+        hp 4 (1d8)
+
+        Fort +0, Ref +2, Will +2
+
+        Immune undead traits
+
+        Offense
+
+        Speed fly 40 ft. (perfect)
+
+        Melee slam +2 (1d2)
+
+        Space 2-1/2 ft., Reach 0 ft.
+
+        Statistics
+
+        Str 11, Dex 15, Con -, Int -, Wis 11, Cha 10
+
+        Base Atk +0; CMB +0; CMD 10 (can't be tripped)
+
+        Skills Fly +14
+
+        Ecology
+
+        Environment any
+
+        Organization solitary, pair, or patrol (3-6)
+
+        Treasure none
+
+        Description
+
+        A beheaded is a severed head or skull animated as a mindless undead
+        sentinel that silently floats at eye level as it lies in wait for living
+        prey or is sent out into the lands of the living to terrorize everyone
+        it finds. A beheaded set loose near populated areas thumps ominously
+        against shut doors and windows, biding its time until someone responds
+        to the incessant knocking. The beheaded then assaults this victim.
+
+
+        Beheaded also guard grim crypts, abattoirs, and hideouts of murders who
+        like to keep reminders of their past sins close at hand. Beheaded come
+        in many varieties, usually based on the creature the head came from. A
+        beheaded prefers to float at head height so it can more easily attack
+        the face, neck, and shoulders of its victim.
+
+
+        A neutral evil spellcaster can gain a beheaded as a familiar at 3rd
+        level by taking the Improved Familiar feat. A beheaded familiar loses
+        the mindless trait and has an Intelligence score appropriate for its
+        master's level.</pre>
+                </div>
+            </div>
+  skills:
+    fly:
+      rank: 5
+  traits:
+    senses:
+      custom: darkvision 60 ft.; Perception +0
+      dv:
+        value: 60
+    size: tiny
+type: npc

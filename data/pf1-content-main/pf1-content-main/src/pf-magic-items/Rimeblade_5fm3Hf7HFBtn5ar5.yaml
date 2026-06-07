@@ -1,0 +1,74 @@
+_id: 5fm3Hf7HFBtn5ar5
+_key: '!items!5fm3Hf7HFBtn5ar5'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/scimitar.PNG
+name: Rimeblade
+system:
+  actions:
+    - _id: eio7udaimtgicekq
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: rimeblade
+  aura:
+    custom: true
+    school: evocation [cold]
+  baseTypes:
+    - Scimitar
+  cl: 8
+  description:
+    value: >-
+      <p>This +1 frost scimitar has been forged from a single piece of
+      razor-sharp, super-hardened ice. A rimeblade automatically resizes itself
+      to match the size of its wielder, and if a rimeblade is damaged, the
+      wielder can cause the blade to melt away and reform with full hit points
+      as a full-round action. This ability cannot be used if the weapon is
+      destroyed.  Once per day on command, the wielder can transform a rimeblade
+      into a beam of ice-cold flame called rimefire. The weapon is still wielded
+      as scimitar, and attacks with the blade-like beam are melee touch attacks
+      that deal 1d8+3 points of cold damage (regardless of the wielder's size).
+      Because the beam is immaterial, the wielder's Strength modifier doesn't
+      apply to damage. In addition, a creature that takes cold damage from the
+      rimefire beam is covered in clinging frost and is entangled for 1 round.
+      The rimefire beam lasts for 1 minute, after which the weapon returns to
+      its normal form.  In addition, once per day as a swift action before an
+      attack, a rimeblade's wielder can cause the blade to glow with a pale blue
+      radiance. On a successful attack, the rimeblade deals an additional 4d6
+      points of cold damage and causes the target to be staggered for 1 round.
+      If the attack is a critical hit, the target is staggered for 1 minute
+      instead. This effect ends after a single attack, regardless of whether the
+      attack is successful or not.</p><p><strong>Base Item</strong>: +1 frost
+      scimitar</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, Elemental Spell, Rime Spell, chill metal or ice
+      storm, flame blade, frigid touch</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 16955
+  showInQuickbar: false
+  sources:
+    - id: PZO9070
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 4
+type: weapon

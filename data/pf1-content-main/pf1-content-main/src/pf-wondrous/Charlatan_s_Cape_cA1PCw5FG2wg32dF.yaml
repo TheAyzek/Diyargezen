@@ -1,0 +1,29 @@
+_id: cA1PCw5FG2wg32dF
+_key: '!items!cA1PCw5FG2wg32dF'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Charlatan's Cape
+system:
+  aura:
+    custom: true
+    school: evocation and illusion
+  cl: 13
+  description:
+    value: >-
+      <p>This garish cloak of red velvet is embroidered with gold-threaded
+      patterns, typically in shapes of sinisterly masked harlequins or other
+      imagery of sinister revelry. The cloak acts like a cloak of the
+      mountebank, but its dimension door power can be used three times per day.
+      Furthermore, once per day the wearer of the cloak can use ethereal jaunt,
+      as per the spell.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, dimension door, ethereal jaunt</p>
+  price: 45000
+  slot: shoulders
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,30 @@
+_id: HJU5brUXcSMnB1kI
+_key: '!items!HJU5brUXcSMnB1kI'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Death
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Norgorber, Pharasma, Urgathoa, Zon-Kuthon.</p><p><strong>From the Grave
+      (minor)</strong>: At 1st level, you can take on a corpse-like visage for 1
+      minute, making you more intimidating and giving you undead-like protection
+      from harm. You gain a +4 bonus on Disguise checks to resemble an undead
+      creature and on Intimidate checks, as well as a +2 profane bonus on saving
+      throws against disease, mindaffecting effects, paralysis, poison, and
+      stun.</p><p><strong>Death's Touch (major)</strong>: At 10th level, you can
+      make a melee touch attack against an opponent to deliver grim suffering.
+      If you succeed, you inflict 1 temporary negative level on the target for 1
+      minute. Alternatively, you can activate this ability as a swift action
+      upon hitting an opponent with a melee attack. These temporary negative
+      levels stack. You gain no benefit from imposing these negative levels
+      (such as the temporary hit points undead gain from enervation).</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

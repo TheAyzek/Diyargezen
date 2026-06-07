@@ -1,0 +1,50 @@
+_id: O85csFrQNyKpxdmx
+_key: '!items!O85csFrQNyKpxdmx'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/green_12.jpg
+name: Horrific Appearance
+system:
+  abilityType: su
+  actions:
+    - _id: 3mr2rq321h1aosh7
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/green_12.jpg
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      notes:
+        effect:
+          - >-
+            DC 10 + 1/2 the qlippoth’s Hit Dice+ the qlippoth’s Charisma
+            modifier
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: '15'
+        description: Reduces or Negates (see text)
+        type: will
+      tag: horrificAppearanceSu
+      target:
+        value: all living creatures
+  description:
+    value: >-
+      <p>All qlippoth have such horrific and mind-rending shapes that those who
+      gaze upon them suffer all manner of ill effects. A qlippoth can present
+      itself as a standard action to assault the senses of all living creatures
+      within 30 feet. The exact effects caused by a qlippoth&rsquo;s horrific
+      appearance vary by the type of qlippoth. A successful Will save (DC 10 +
+      1/2 the qlippoth&rsquo;s Hit Dice+ the qlippoth&rsquo;s Charisma
+      modifier): reduces or negates the effect.</p><p>This ability is a
+      mind-affecting <a>Gaze</a> attack.</p><p><em>Location:&nbsp;</em>Special
+      Abilities</p><p><em>Usage:</em> Effect varies by Qlippoth, replace context
+      notes.</p>
+  subType: misc
+type: feat

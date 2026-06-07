@@ -1,0 +1,33 @@
+_id: NiXLeL0dpotAgkM7
+_key: '!items!NiXLeL0dpotAgkM7'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: War Mask of Terror
+system:
+  aura:
+    school: nec
+  cl: 9
+  description:
+    value: >-
+      <p>Shamans and warriors of many of the indigenous tribes of western Garund
+      add to their fierceness and mystique by wearing wooden masks that bear
+      terrifying visages of demonic spirits. A war mask is considered sacred and
+      personal, and is often handed down to the next generation when a wearer
+      dies. Individual masks are often notorious, and many tribesfolk can
+      readily identify masks of other tribes with a DC 15 Knowledge (local)
+      check. A war mask of terror provides its wearer with a +2 competence bonus
+      on Intimidate checks and a +1 deflection bonus to Armor Class. In
+      addition, the wearer may cast scare once per day. Other war masks exist
+      with different abilities; some have higher deflection bonuses, while
+      others can cast bull's strength, fear, or flesh to stone instead of
+      scare.<h3>Requirements</h3><p>Craft Wondrous Item, scare, shield</p>
+  price: 9000
+  slot: head
+  sources:
+    - id: PZO9038
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

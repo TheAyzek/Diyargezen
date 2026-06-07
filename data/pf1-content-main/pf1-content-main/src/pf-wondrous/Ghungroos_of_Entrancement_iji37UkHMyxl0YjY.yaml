@@ -1,0 +1,31 @@
+_id: iji37UkHMyxl0YjY
+_key: '!items!iji37UkHMyxl0YjY'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Ghungroos of Entrancement
+system:
+  aura:
+    school: enc
+  cl: 3
+  description:
+    value: >-
+      <p>Each of these musical anklets bears rows of tiny bells that accentuate
+      the rhythmic elements of a trained dancer's performances and enhance an
+      accompanying musical performance, fascinating her audiences. When using a
+      distraction bardic performance, the wearer gains a +5 competence bonus on
+      Perform (dance) checks; when using a fascinate bardic performance, the
+      wearer gains a +1 competence bonus to the saving throw DC. In addition,
+      the wearer can use Perform (dance) with a countersong bardic performance,
+      and gains a +2 competence bonus on the Perform (dance) check.  The wearer
+      takes a -2 penalty on Stealth checks while wearing the
+      ghungroos.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, hypnotism, creator must have bardic performance and 5 ranks
+      in Perform (dance)</p>
+  price: 3750
+  slot: feet
+  sources:
+    - id: PZO1136
+  subType: wondrous
+type: equipment

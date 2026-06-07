@@ -1,0 +1,55 @@
+_id: LNUz3DFcouYTSzad
+_key: '!items!LNUz3DFcouYTSzad'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Bloodpyre
+system:
+  actions:
+    - _id: wknz4k877lqptn11
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - fire
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1]] Cha, Int, and Wis, 2d6 fire,
+            see text
+      save:
+        dc: '14'
+        type: fort
+      tag: bloodpyre
+  description:
+    value: >-
+      <p><strong>Type</strong> contact; <strong>Save</strong> Fortitude DC
+      14</p><p><strong>Frequency</strong> 1/round for 6
+      rounds</p><p><strong>Effect</strong> 1 Cha, Int, and Wis, 2d6 fire, see
+      text</p><p><strong>Cure</strong> 1 save</p><p>This orange liquid burns
+      regardless of temperature, which its drow creators claim is a side-effect
+      of its Abyssal inspiration. The staggering pain inflicted by bloodpyre’s
+      slow burn inhibits victims’ mental faculties but provides fiendish
+      strength, so some drow houses enhance their warriors with bloodpyre
+      despite the pain and damage it causes. Each round a victim fails her
+      saving throw against bloodpyre’s effects, she gains a cumulative +1
+      alchemical bonus to her Strength, to a maximum of +6 after six failed
+      saves. In addition to ability score damage, the victim also takes 2d6
+      points of fire damage each time she fails the saving throw against the
+      poison.</p>
+  price: 1000
+  sources:
+    - id: PZO9464
+      pages: '22'
+  subType: poison
+  uses:
+    per: single
+type: consumable

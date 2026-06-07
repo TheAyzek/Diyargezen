@@ -1,0 +1,59 @@
+_id: qShvTN3RSBlERprr
+_key: '!items!qShvTN3RSBlERprr'
+_stats:
+  coreVersion: '12.331'
+folder: tt1hnzL5ZdLfPdp0
+img: icons/equipment/leg/pants-mud-leather-pants.webp
+name: Dhoti of Style Mastery
+system:
+  actions:
+    - _id: VmvZmRaZuFDSm6kB
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>When the wearer enters a stance from a style feat while wearing a
+        dhoti of style mastery, he gains [[1d8+3]] temporary hit points plus an
+        additional [[1d8]] temporary hit points for each feat he has that lists
+        that style feat as a prerequisite (maximum [[3d8+3]] temporary hit
+        points). These temporary hit points last as long as the wearer maintains
+        the stance during that combat, but vanish when the combat concludes. The
+        wearer cannot gain temporary hit points in this way more than once per
+        day.</p>
+      name: Gain Temporary HP from a stance
+      notes:
+        effect:
+          - ''
+  aura:
+    school: nec
+  cl: 3
+  description:
+    unidentified: >-
+      <p>This garment is unremarkable.</p><p>A dhoti is an ankle-length
+      breechcloth, wrapped around the waist and the legs, in resemblance to the
+      shape of trousers</p>
+    value: >-
+      <h3>Effect</h3><p>When the wearer enters a stance from a style feat while
+      wearing a dhoti of style mastery, he gains 1d8+3 temporary hit points plus
+      an additional 1d8 temporary hit points for each feat he has that lists
+      that style feat as a prerequisite (maximum 3d8+3 temporary hit points).
+      These temporary hit points last as long as the wearer maintains the stance
+      during that combat, but vanish when the combat concludes. The wearer
+      cannot gain temporary hit points in this way more than once per
+      day.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      any style feat,
+      <em>@UUID[Compendium.pf1.spells.Item.3ze0kso9hxff5u2f]{false life}</em>
+      <strong>Cost</strong> 2,700 gp</p>
+  price: 5400
+  slot: body
+  sources:
+    - id: PZO1138
+      pages: '107'
+  subType: wondrous
+  tags:
+    - Style Feat
+  weight:
+    value: 1
+type: equipment

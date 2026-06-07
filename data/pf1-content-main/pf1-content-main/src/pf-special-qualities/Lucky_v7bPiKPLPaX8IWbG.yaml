@@ -1,0 +1,34 @@
+_id: v7bPiKPLPaX8IWbG
+_key: '!items!v7bPiKPLPaX8IWbG'
+_stats:
+  coreVersion: '12.331'
+folder: 4DXOvYyjpcciEjGL
+img: icons/skills/ranged/arrow-strike-glowing-teal.webp
+name: Lucky
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate transmutation <strong>CL</strong>
+      8th</p><p><strong>Slot</strong> weapon quality; <strong>Price</strong> +1
+      bonus;</p><p>This special ability can only be placed on one-handed or
+      two-handed firearms. A <em>lucky </em>firearm has its own magical
+      reservoir of grit (see <em>Ultimate Combat</em>). Usually this grit is
+      stored within the marks of an engraving or in a trinket that hangs from
+      the firearm. Often these marks take the form of holy symbols or fetishes,
+      but such a reservoir can take just about any form. This reservoir holds 1
+      grit point, which is refreshed at the start of each day. Whether or not
+      the wielder of a <em>lucky </em>firearm has any deeds (see <em>Ultimate
+      Combat</em>), she can always spend 1 grit point from the lucky firearm to
+      reroll an attack from it that would result in a misfire. When the wielder
+      does so, she must take the second result, even if that attack roll also
+      results in a
+      misfire.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>heroism</em>, creator must be a grit user;
+      <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1123
+      pages: '145'
+  subType: misc
+  tags:
+    - Ranged Qualities
+type: feat

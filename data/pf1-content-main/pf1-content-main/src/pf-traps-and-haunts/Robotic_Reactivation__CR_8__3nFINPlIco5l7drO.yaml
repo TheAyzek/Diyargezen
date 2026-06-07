@@ -1,0 +1,73 @@
+_id: 3nFINPlIco5l7drO
+_key: '!actors!3nFINPlIco5l7drO'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Robotic Reactivation (CR 8)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    hp:
+      max: 36
+  details:
+    alignment: 'N'
+    area: 20-ft. radius centered on the activated robot
+    biography: {}
+    cl: 8
+    cr:
+      base: 8
+    destruction: Destroying the myrmidon prevents this technological surge from recurring.
+    effect: >-
+      A whirling cloud of miniature repair robots animates and reactivates a
+      dormant myrmidon robot. The repair robots follow the myrmidon and augment
+      its defenses. The myrmidon's force field improves to 75 hit points with
+      fast healing of 15, and the myrmidon gains a +2 bonus on all saving throws
+      and to AC.
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Horror Realms pg. 63</p> <p><strong>Haunt
+        Templates</strong>: chained persistent
+        variant</p><h3>Description</h3><p>When an ancient starship crashed on
+        Numerian soil millennia ago, countless robots emerged, terrorizing
+        anyone unfortunate enough to cross their paths. Some robots still lie
+        dormant within the scattered wreckage, waiting for a signal or a stray
+        surge of power to reactivate.</p><h3>Technological
+        Surges</h3><p>Advanced technology remains a mystery to most denizens of
+        Golarion. In places where these wonders lie abandoned, such as the
+        wrecks of the starships that crashed on Numerian soil or the mysterious
+        halls of the Empty Lands of Apostae, strange interactions with unstable
+        power sources can coax circuits back to life. GMs might consider using
+        these same rules to handle other advanced magic and technology, such as
+        a malfunctioning Shory sky city or a newly uncovered marvel of Azlanti
+        electro-thaumaturgy.</p><p>The animating force behind technological
+        surges is not life energy, but electricity. As such, technological
+        surges cannot be harmed with positive or negative energy. Instead,
+        stopping them requires shutting down their function. Anyone trained in
+        Disable Device can use the skill to attempt to disrupt the surge, and
+        characters with the Technologist feat can use Knowledge (engineering)
+        instead and gain a +5 bonus on either skill check. The DC of the skill
+        check is equal to 15 + the haunt's CR. Each successful check deals 5
+        points of damage plus 1 additional point of damage per point by which
+        the result exceeds the DC. A <em>discharge</em> or <em>greater
+        discharge</em> spell that targets a technological surge inflicts damage
+        equal to the spell's caster level (for <em>discharge</em>) or 1d4 points
+        per caster level (for <em>greater discharge</em>). Electromagnetic
+        effects, such as those caused by an EMP pistol or rifle, inflict normal
+        damage to a technological surge. Other similar effects may well have an
+        impact on a surge at the GM's discretion.</p><p>A technological surge's
+        caster level represents its strength. Technological surges are
+        completely nonmagical. Their effects cannot be disrupted with
+        <em>antimagic field</em>, <em>dispel magic</em>, or similar abilities,
+        even when they replicate spell effects. All technological surges are
+        neutral aligned.</p>
+    notice: Perception DC 20 (to hear whirring mechanisms springing to life)
+    reset: 1 hour
+    trigger: proximity
+    weakness: >-
+      harmed by Disable Device DC 23 and electricity effects (immune to positive
+      energy)
+type: haunt

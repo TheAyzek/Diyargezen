@@ -1,0 +1,23 @@
+_id: SzTGeOhWFBJvrRNh
+_key: '!items!SzTGeOhWFBJvrRNh'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/unique-10.jpg
+name: Thinker's Tipple
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Tincture</p><p>This orange liquid invigorates
+      the mind. For 1 hour after drinking this tincture, you gain a +2
+      alchemical bonus on Knowledge checks and can attempt untrained Knowledge
+      checks if the DC is 15 or lower. This saps your energy, imposing a -4
+      penalty on Fortitude saving throws for the same
+      duration.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      25</p>
+  price: 300
+  sources:
+    - id: PZO9487
+      pages: '23'
+  tags:
+    - Tincture
+type: consumable

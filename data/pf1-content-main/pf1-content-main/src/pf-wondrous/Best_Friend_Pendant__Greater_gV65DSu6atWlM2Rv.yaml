@@ -1,0 +1,29 @@
+_id: gV65DSu6atWlM2Rv
+_key: '!items!gV65DSu6atWlM2Rv'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Best Friend Pendant, Greater
+system:
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  cl: 7
+  description:
+    value: >-
+      <p>Made of finely wrought platinum, this neckpiece is an improved version
+      of a best friend pendant. In addition to the regular abilities of a best
+      friend pendant, this version can absorb Medium and Large animals as well
+      as Tiny or Small elementals, magical beasts, and outsiders. Elementals,
+      magical beasts, and outsiders don't require Handle Animal checks to be
+      made willing to enter the necklace, but might require other forms of
+      coercion at the GM's
+      discretion.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, dimension door, reduce animal</p>
+  price: 9000
+  slot: neck
+  sources:
+    - id: PZO1134
+  subType: wondrous
+type: equipment

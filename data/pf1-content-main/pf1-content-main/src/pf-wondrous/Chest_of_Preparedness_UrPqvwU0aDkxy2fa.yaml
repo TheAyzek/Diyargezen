@@ -1,0 +1,32 @@
+_id: UrPqvwU0aDkxy2fa
+_key: '!items!UrPqvwU0aDkxy2fa'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Chest of Preparedness
+system:
+  aura:
+    school: con
+  cl: 7
+  description:
+    value: >-
+      <p>Created by the Prophets of Kalistrade, this chest is approximately 2
+      feet wide and 1 foot long. On creation, the maker chooses 10 nonmagical
+      items worth under 100 gp that could fit within the chest's dimensions.
+      They can be specially created items for the chest (such as a silvered
+      dagger) or a standard item (such as 50 feet of silk rope). Thereafter,
+      when the box is closed, the owner need only speak the name of one of the
+      the items, and it appears within the chest, ready to be removed and used.
+      A given item only appears once per day, and disappears after 24 hours.
+      Prophets use these chests to keep backups of important tools, and to hide
+      weapons in case of
+      emergency.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, minor creation</p>
+  price: 5000
+  sources:
+    - id: PZO9221
+  subType: wondrous
+  weight:
+    value: 30
+type: equipment

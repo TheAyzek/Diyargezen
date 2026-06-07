@@ -1,0 +1,23 @@
+_id: qp0XKq0advAt9cZW
+_key: '!items!qp0XKq0advAt9cZW'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/minor-red.jpg
+name: Blood-Clotter Salve
+system:
+  description:
+    value: >-
+      <p>Applying this herbal salve to a bleeding wound cures 1 point of damage
+      and prevents additional damage from bleeding for 1 hour per application.
+      After an hour, if the bleed effect hasn't been properly treated, the
+      injury resumes bleeding and more salve must be applied. Though
+      blood-clotter salve can be applied successively to the same injury,
+      applying multiple doses doesn't cure additional
+      damage.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      20</p>
+  price: 30
+  sources:
+    - id: PZO1129
+      pages: '206'
+  subType: misc
+type: consumable

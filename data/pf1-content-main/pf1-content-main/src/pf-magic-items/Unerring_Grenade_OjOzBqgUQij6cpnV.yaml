@@ -1,0 +1,55 @@
+_id: OjOzBqgUQij6cpnV
+_key: '!items!OjOzBqgUQij6cpnV'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/estoc.PNG
+name: Unerring Grenade
+system:
+  actions:
+    - _id: bbi2t5zhy2iddzaj
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: unerringGrenade
+  aura:
+    school: div
+  baseTypes:
+    - Fuse Grenade
+  cl: 9
+  description:
+    value: >-
+      <p>The warped clay sphere of this +1 fuse grenade (Ultimate Equipment 107)
+      is painted with a crimson bull's-eye symbol and its fuse is dyed red. An
+      unerring grenade can be lit as a move action and thrown like a splash
+      weapon. An unerring grenade veers toward its target, whether a creature or
+      a grid intersection, negating any miss chances that would otherwise apply,
+      such as from concealment. The thrower still has to aim at the right square
+      or grid intersection. An unerring grenade otherwise functions as a normal
+      fuse grenade (Reflex DC 16 half).<p><strong>Base Item</strong>: fuse
+      grenade</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, true seeing</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  price: 266
+  showInQuickbar: false
+  sources:
+    - id: PZO9091
+  weight:
+    value: 1
+type: weapon

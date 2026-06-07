@@ -1,0 +1,22 @@
+_id: gpwmUVvfKY0ZOWKu
+_key: '!items!gpwmUVvfKY0ZOWKu'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Banishing Shot
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>At 19th level, whenever a
+      planar rifter confirms a critical hit against an extraplanar target, he
+      can spend 1 grit to deal normal damage, and the target must succeed at a
+      Will saving throw with a DC equal to 20 + the planar rifter's Wisdom
+      modifier. On a failed saving throw, the target is returned to its original
+      plane as per the banishment spell.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

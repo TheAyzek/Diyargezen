@@ -1,0 +1,33 @@
+_id: NIWIXwlgwZX4ubrL
+_key: '!journal!NIWIXwlgwZX4ubrL'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.4.38. Silversheen
+pages:
+  - _id: iRgovWUIACmTwqEn
+    _key: '!journal.pages!NIWIXwlgwZX4ubrL.iRgovWUIACmTwqEn'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.4.38. Silversheen
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li>@Compendium[pf-content.pf-rules.TROqcNjEw3b2q2Dk]{6.0.4.
+        Special Materials}</li></ul><hr /><p><strong>PFS
+        Legal</strong></p><p>@Source[PZO9406;pages=25]</p><p>Blades made of this
+        special metal count as alchemical silver weapons and are immune to rust,
+        including that of rust monsters, the rusting grasp spell, and so on.
+        They are always masterwork weapons—most often scimitars or longswords;
+        the listed price includes the cost of the masterwork bonus.</p><p>No
+        aura (nonmagical property); CL —; Craft (alchemy) 5 ranks, Craft
+        (weaponsmithing) 5 ranks; Price +750 gp.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,34 @@
+_id: SHFwmWE1c59Nblft
+_key: '!journal!SHFwmWE1c59Nblft'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Hshurha
+pages:
+  - _id: MO22jVOxN2UH8AWU
+    _key: '!journal.pages!SHFwmWE1c59Nblft.MO22jVOxN2UH8AWU'
+    _stats:
+      coreVersion: '12.331'
+    name: Hshurha
+    sort: 0
+    text:
+      content: >-
+        <h1>Hshurha</h1><h2>Duchess of All Winds</h2>@Source[PZO9267;pages=322]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Hshurha">Hshurha</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Elemental Lords<br /><strong>Areas of
+        Concern</strong> Air, last breaths, windstorms<br
+        /><strong>Domains</strong> Air, Destruction, Evil, Weather<br
+        /><strong>Subdomains</strong> Fear, Storms, Wind<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Longbow<br /><strong>Symbol</strong> Lightning vortex
+        around eye<br /><strong>Sacred Animal(s)</strong> Roc<br
+        /><strong>Sacred Color(s)</strong> White, yellow</p><h2>For Followers of
+        Hshurha</h2><h3>Feats</h3><p>Elemental
+        Vigor</p><h3>Traits</h3><p>Affinity of the Elements</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

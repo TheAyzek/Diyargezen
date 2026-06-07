@@ -1,0 +1,74 @@
+_id: muHuo2GwcCKyy4tP
+_key: '!journal!muHuo2GwcCKyy4tP'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.17. Intelligent Items
+pages:
+  - _id: 5iOrjBr9VKBu4lys
+    _key: '!journal.pages!muHuo2GwcCKyy4tP.5iOrjBr9VKBu4lys'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.17. Intelligent Items
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.s3ene84nkQAyhCrW]{6.1.
+        Magic
+        Items}</p><ul><li>@Compendium[pf-content.pf-rules.sP6qrGJREE0X596I]{6.1.01.
+        Magic Items and Detect
+        Magic}</li><li>@Compendium[pf-content.pf-rules.N3qNOnemt2nuACdl]{6.1.02.
+        Using
+        Items}</li><li>@Compendium[pf-content.pf-rules.VOtMqlqVoaZs7zu3]{6.1.03.
+        Magic Items on the
+        Body}</li><li>@Compendium[pf-content.pf-rules.EyKVuz8Ae2Bh5Z32]{6.1.04.
+        Saving Throws Against Magic Item
+        Powers}</li><li>@Compendium[pf-content.pf-rules.oXM5hPY9YSNGCEpU]{6.1.05.
+        Damaging Magic
+        Items}</li><li>@Compendium[pf-content.pf-rules.M3XyBvOcp11YAnAL]{6.1.06.
+        Purchasing Magic
+        Items}</li><li>@Compendium[pf-content.pf-rules.iZ6tZ7PFna0TiXkW]{6.1.07.
+        Magic Item
+        Descriptions}</li><li>@Compendium[pf-content.pf-rules.b91t5OrtW3axrmKd]{6.1.08.
+        Magic
+        Armor}</li><li>@Compendium[pf-content.pf-rules.TT91XHZCetT5yyVc]{6.1.09.
+        Magic
+        Weapons}</li><li>@Compendium[pf-content.pf-rules.itDodwwkCVnIf0jU]{6.1.10.
+        Potions}</li><li>@Compendium[pf-content.pf-rules.LFs1l4pTdQgqrkjx]{6.1.11.
+        Rings}</li><li>@Compendium[pf-content.pf-rules.LxBkrhoOTfPeNQ7Z]{6.1.12.
+        Rods}</li><li>@Compendium[pf-content.pf-rules.2QvAhr3WucxaQNeN]{6.1.13.
+        Scrolls}</li><li>@Compendium[pf-content.pf-rules.3mXUlZodNKkPDj0D]{6.1.14.
+        Staves}</li><li>@Compendium[pf-content.pf-rules.wi435P7HqEEOQwFA]{6.1.15.
+        Wands}</li><li>@Compendium[pf-content.pf-rules.HYNbOvjpMu4OZlfs]{6.1.16.
+        Wondrous
+        Items}</li><li><strong>@Compendium[pf-content.pf-rules.muHuo2GwcCKyy4tP]{6.1.17.
+        Intelligent
+        Items}</strong></li><li>@Compendium[pf-content.pf-rules.LaZ4cSkdCxMwDnXD]{6.1.18.
+        Cursed
+        Items}</li><li>@Compendium[pf-content.pf-rules.87rVetLgCkc8cm5d]{6.1.19.
+        Artifacts}</li><li>@Compendium[pf-content.pf-rules.X6hkpqXjE3T3jRy2]{6.1.20.
+        Magic Item Creation}</li></ul><hr
+        /><p>@Source[PZO1110;pages=532]</p><p>Magic items sometimes have
+        intelligence of their own. Magically imbued with sentience, these items
+        think and feel the same way characters do and should be treated as NPCs.
+        Intelligent items have extra abilities and sometimes extraordinary
+        powers and special purposes. Only permanent magic items (as opposed to
+        single-use items or those with charges) can be intelligent. (This means
+        that potions, scrolls, and wands, among other items, are never
+        intelligent.) In general, less than 1% of magic items have
+        intelligence.</p><p>Intelligent items can actually be considered
+        creatures because they have Intelligence, Wisdom, and Charisma scores.
+        Treat them as constructs. Intelligent items often have the ability to
+        illuminate their surroundings at will (as magic weapons do); many cannot
+        see otherwise.</p><p>Unlike most magic items, intelligent items can
+        activate their own powers without waiting for a command word from their
+        owner. Intelligent items act during their owner’s turn in the initiative
+        order.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

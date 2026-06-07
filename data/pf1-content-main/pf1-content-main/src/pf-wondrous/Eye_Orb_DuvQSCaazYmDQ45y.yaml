@@ -1,0 +1,31 @@
+_id: DuvQSCaazYmDQ45y
+_key: '!items!DuvQSCaazYmDQ45y'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Eye Orb
+system:
+  aura:
+    school: div
+  cl: 9
+  description:
+    value: >-
+      <p>If a blind creature holds this orb, that creature can see with
+      darkvision with a range of 120 feet, but also gains light sensitivity
+      (Pathfinder RPG Bestiary 301). If a sighted creature holds this orb and
+      holds his eyes shut for 1 minute, he gains the blinded condition until he
+      opens his eyes (as a free action), but can see through the orb as if he
+      were a blind creature.   By expending one use of mythic power, a creature
+      using the eye orb can see as though using true seeing, and loses light
+      sensitivity. These effects last for 1 minute or until he stops using the
+      orb to see, whichever comes
+      first.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Mythic Crafter, darkvision, true seeing</p>
+  price: 80000
+  sources:
+    - id: PZO1126
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

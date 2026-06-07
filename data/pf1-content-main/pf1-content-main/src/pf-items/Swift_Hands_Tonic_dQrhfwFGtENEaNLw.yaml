@@ -1,0 +1,23 @@
+_id: dQrhfwFGtENEaNLw
+_key: '!items!dQrhfwFGtENEaNLw'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/unique-4.jpg
+name: Swift Hands Tonic
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>When imbibed, this
+      bitter, rust-colored concoction grants you 1d4 uses of alchemical
+      inspiration that can be used only on Disable Device checks and Sleight of
+      Hand checks. These benefits last for 1 hour; during this time, you must
+      roll all Acrobatics checks and Escape Artist checks twice and take the
+      worse result.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong>
+      DC 20</p>
+  price: 250
+  sources:
+    - id: PZO1134
+      pages: '236'
+  tags:
+    - Alchemical Tools
+type: consumable

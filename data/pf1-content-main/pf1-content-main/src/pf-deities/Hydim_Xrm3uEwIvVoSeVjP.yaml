@@ -1,0 +1,42 @@
+_id: Xrm3uEwIvVoSeVjP
+_key: '!journal!Xrm3uEwIvVoSeVjP'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Hydim
+pages:
+  - _id: RhPYlN3h7qWSsbbG
+    _key: '!journal.pages!Xrm3uEwIvVoSeVjP.RhPYlN3h7qWSsbbG'
+    _stats:
+      coreVersion: '12.331'
+    name: Hydim
+    sort: 0
+    text:
+      content: >-
+        <h1>Hydim</h1><h2>of the Eternal Fast</h2>@Source[PZO1139;pages=110] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Hydim">Hydim</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Asura Ranas<br /><strong>Areas of
+        Concern</strong> Eternity, hunger, madness<br /><strong>Domains</strong>
+        Evil, Knowledge, Law, Madness<br /><strong>Subdomains</strong> Insanity,
+        Memory, Nightmare, Thought<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Kukri</p><h3>Obedience</h3><p>Consume 13 pages from a sacred text. Gain
+        a +4 profane bonus on saving throws against effects that cause
+        exhaustion, fatigue, hunger, or pain.</p><h2>Boons - Asura
+        Ranas</h2>@Source[PZO1139;pages=110]<br />Over time, the mightiest of
+        the asuras complete enough cycles of reincarnation and build upon the
+        atrocities committed over multiple lives to incarnate into the most
+        powerful of their kind: the asura ranas.<p> Asura ranas are lawful evil
+        demigods that range in power from CR 26 to CR 30. Each asura rana
+        detailed below is given an obedience, but the boons they grant are less
+        complex than those granted by archdevils, manifesting as spell-like
+        abilities usable once per day each.</p><p><strong>1</strong>: extended
+        <em>feast of ashes</em><br /><strong>2</strong>: <em>insanity</em><br
+        /><strong>3</strong>: <em>maze of madness and suffering</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

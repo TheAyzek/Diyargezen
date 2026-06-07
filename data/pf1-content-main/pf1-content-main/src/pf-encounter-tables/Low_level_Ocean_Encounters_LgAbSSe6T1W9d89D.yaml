@@ -1,0 +1,192 @@
+_id: LgAbSSe6T1W9d89D
+_key: '!tables!LgAbSSe6T1W9d89D'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/settlement/ship.webp
+name: Low-level Ocean Encounters
+replacement: true
+results:
+  - _id: aArFO3PrIwlsIkWQ
+    _key: '!tables.results!LgAbSSe6T1W9d89D.aArFO3PrIwlsIkWQ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 5
+    text: 1d4 ([[1d4]]) Merfolk [AVG CR 1/2]
+    type: text
+    weight: 1
+  - _id: 8a4Wo8hB7jiFPfqN
+    _key: '!tables.results!LgAbSSe6T1W9d89D.8a4Wo8hB7jiFPfqN'
+    img: icons/svg/d20-black.svg
+    range:
+      - 6
+      - 11
+    text: 1 Fuath [CR 1]
+    type: text
+    weight: 1
+  - _id: vV96lru9Ry2oTOcX
+    _key: '!tables.results!LgAbSSe6T1W9d89D.vV96lru9Ry2oTOcX'
+    img: icons/svg/d20-black.svg
+    range:
+      - 12
+      - 16
+    text: 1d4 ([[1d4]]) Grindylows [AVG CR 1]
+    type: text
+    weight: 1
+  - _id: lfMMXU3L9QM31DVz
+    _key: '!tables.results!LgAbSSe6T1W9d89D.lfMMXU3L9QM31DVz'
+    img: icons/svg/d20-black.svg
+    range:
+      - 17
+      - 21
+    text: 1 Squid [CR 1]
+    type: text
+    weight: 1
+  - _id: 2SVZS6BjVQH7ivK8
+    _key: '!tables.results!LgAbSSe6T1W9d89D.2SVZS6BjVQH7ivK8'
+    img: icons/svg/d20-black.svg
+    range:
+      - 22
+      - 27
+    text: 1d6 ([[1d6]]) Dolphins [AVG CR 2]
+    type: text
+    weight: 1
+  - _id: fnSN5PKtuiVfN8s6
+    _key: '!tables.results!LgAbSSe6T1W9d89D.fnSN5PKtuiVfN8s6'
+    img: icons/svg/d20-black.svg
+    range:
+      - 28
+      - 32
+    text: 1d6 ([[1d6]]) Locathahs [AVG CR 2]
+    type: text
+    weight: 1
+  - _id: mMiIbv0r9EXJziWg
+    _key: '!tables.results!LgAbSSe6T1W9d89D.mMiIbv0r9EXJziWg'
+    img: icons/svg/d20-black.svg
+    range:
+      - 33
+      - 36
+    text: 1 Adaro [CR 3]
+    type: text
+    weight: 1
+  - _id: Q0ogT46k1PLXxEuo
+    _key: '!tables.results!LgAbSSe6T1W9d89D.Q0ogT46k1PLXxEuo'
+    img: icons/svg/d20-black.svg
+    range:
+      - 37
+      - 40
+    text: 1 Bunyip [CR 3]
+    type: text
+    weight: 1
+  - _id: WwvV6pK3X2G2b8fx
+    _key: '!tables.results!LgAbSSe6T1W9d89D.WwvV6pK3X2G2b8fx'
+    img: icons/svg/d20-black.svg
+    range:
+      - 41
+      - 44
+    text: 1 Wereshark [CR 3]
+    type: text
+    weight: 1
+  - _id: DeMe51QSLCYwuunm
+    _key: '!tables.results!LgAbSSe6T1W9d89D.DeMe51QSLCYwuunm'
+    img: icons/svg/d20-black.svg
+    range:
+      - 45
+      - 51
+    text: 1d8 ([[1d8]]) Stingrays [AVG CR 3]
+    type: text
+    weight: 1
+  - _id: Tuv1pZAFPW34Akcd
+    _key: '!tables.results!LgAbSSe6T1W9d89D.Tuv1pZAFPW34Akcd'
+    img: icons/svg/d20-black.svg
+    range:
+      - 52
+      - 56
+    text: 1d4 ([[1d4]]) Reefclaws [AVG CR 3]
+    type: text
+    weight: 1
+  - _id: ZR5nloqvZLGhxotG
+    _key: '!tables.results!LgAbSSe6T1W9d89D.ZR5nloqvZLGhxotG'
+    img: icons/svg/d20-black.svg
+    range:
+      - 57
+      - 62
+    text: 2d6 ([[2d6]]) Grindylows [AVG CR 4]
+    type: text
+    weight: 1
+  - _id: 6BUk8GPWFNZ7GlW9
+    _key: '!tables.results!LgAbSSe6T1W9d89D.6BUk8GPWFNZ7GlW9'
+    img: icons/svg/d20-black.svg
+    range:
+      - 63
+      - 67
+    text: 1 Sea Hag [CR 4]
+    type: text
+    weight: 1
+  - _id: 0YKJ8GIK5z3Qaf7n
+    _key: '!tables.results!LgAbSSe6T1W9d89D.0YKJ8GIK5z3Qaf7n'
+    img: icons/svg/d20-black.svg
+    range:
+      - 68
+      - 72
+    text: 1 Cecaelia [CR 5]
+    type: text
+    weight: 1
+  - _id: zlBjI9FvsJB0QUWz
+    _key: '!tables.results!LgAbSSe6T1W9d89D.zlBjI9FvsJB0QUWz'
+    img: icons/svg/d20-black.svg
+    range:
+      - 73
+      - 78
+    text: 1d4 ([[1d4]]) Draugr Pirates [AVG CR 5]
+    type: text
+    weight: 1
+  - _id: tSK3QlkGajeVa6Cr
+    _key: '!tables.results!LgAbSSe6T1W9d89D.tSK3QlkGajeVa6Cr'
+    img: icons/svg/d20-black.svg
+    range:
+      - 79
+      - 83
+    text: 1 Giant Moray Eel [CR 5]
+    type: text
+    weight: 1
+  - _id: ijDSP62q2jKC3zsP
+    _key: '!tables.results!LgAbSSe6T1W9d89D.ijDSP62q2jKC3zsP'
+    img: icons/svg/d20-black.svg
+    range:
+      - 84
+      - 88
+    text: 1 Globster [CR 5]
+    type: text
+    weight: 1
+  - _id: NrYzQGeVCDj9jHWp
+    _key: '!tables.results!LgAbSSe6T1W9d89D.NrYzQGeVCDj9jHWp'
+    img: icons/svg/d20-black.svg
+    range:
+      - 89
+      - 92
+    text: 1d6 ([[1d6]]) Sahuagin [AVG CR 5]
+    type: text
+    weight: 1
+  - _id: Gr6IEXFA4CnRczQE
+    _key: '!tables.results!LgAbSSe6T1W9d89D.Gr6IEXFA4CnRczQE'
+    img: icons/svg/d20-black.svg
+    range:
+      - 93
+      - 96
+    text: 1 Jellyfish Swarm [CR 6]
+    type: text
+    weight: 1
+  - _id: DrFN6QpiV4jkcfIZ
+    _key: '!tables.results!LgAbSSe6T1W9d89D.DrFN6QpiV4jkcfIZ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 97
+      - 100
+    text: 1d8 ([[1d8]]) Sharks [AVG CR 6]
+    type: text
+    weight: 1
+sort: 2600000

@@ -1,0 +1,37 @@
+_id: SrWM8NTEKSm9CLl1
+_key: '!items!SrWM8NTEKSm9CLl1'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/scribal/ink-quill-pink.webp
+name: Ink, Invisible (Simple)
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 10 gp (average), 25 gp (good), 2 gp (simple), 75
+      gp (superior); <strong>Weight</strong> - (average), - (good), - (simple),
+      - (superior)</p><p>Invisible ink is a staple of spies, rebels, and secret
+      societies everywhere. Messages written with invisible ink only become
+      visible under specific circumstances. Revealing the secret message with
+      the proper triggering agent is a full-round action per page of text. A
+      successful Craft (alchemy) check reveals the message without the proper
+      trigger and takes 1 hour (the DC varies by ink
+      quality).</p><p><em>Simple</em>: This ink is keyed to a single, fairly
+      common trigger, such as heat or vinegar (DC 20 to reveal without the
+      trigger).</p><p><em>Average</em>: This ink is keyed to either two common
+      triggers or one uncommon trigger, such as blood or acid (DC 25 to reveal
+      without the trigger).</p><p><em>Good</em>: This ink is keyed to either two
+      uncommon triggers or one rare trigger, such as a specific vintage of wine
+      or a specific kind of monster's blood (DC 30 to reveal without the
+      trigger).</p><p><em>Superior</em>: This ink is keyed to either two rare
+      triggers or one unique trigger, such as the blood of a specific person (DC
+      35 to reveal without the
+      trigger).</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      20</p>
+  price: 2
+  sources:
+    - id: PZO1123
+      pages: '103'
+  subType: misc
+  tags:
+    - Alchemical Tools
+type: consumable

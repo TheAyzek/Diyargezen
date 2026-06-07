@@ -1,0 +1,127 @@
+_id: YvkhbOdFpLgfUtc2
+_key: '!actors!YvkhbOdFpLgfUtc2'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: icons/weapons/polearms/spear-flared-green.webp
+items:
+  - _id: BEcFWl6rWx7XfqjZ
+    _key: '!actors.items!YvkhbOdFpLgfUtc2.BEcFWl6rWx7XfqjZ'
+    _stats:
+      compendiumSource: Actor.obmBmvb0USPRCyWT.Item.AFKRc9cI8QWoowXv
+      coreVersion: '12.331'
+    img: icons/weapons/polearms/spear-flared-green.webp
+    name: Javelin
+    system:
+      actions:
+        - _id: yjqnjz6g068vwl9q
+          actionType: rwak
+          activation:
+            type: special
+            unchained:
+              type: special
+          attackBonus: '15'
+          damage:
+            parts:
+              - formula: 1d6+6
+                types:
+                  - piercing
+          img: icons/weapons/polearms/spear-flared-green.webp
+          name: Attack
+          range:
+            maxIncrements: 5
+            units: ft
+            value: '30'
+          target:
+            value: Single target
+      description:
+        value: >-
+          <p><strong>Type</strong>&nbsp;mechanical;&nbsp;<strong>Perception</strong>&nbsp;DC
+          20;&nbsp;<strong>Disable Device</strong>&nbsp;DC 20</p>
+
+          <hr />
+
+          <p><strong>EFFECTS</strong></p>
+
+          <hr />
+
+          <p><strong>Trigger</strong>&nbsp;location;&nbsp;<strong>Reset</strong>&nbsp;none</p>
+
+          <p><strong>Effect&nbsp;</strong>Atk +15 ranged (javelin; 1d6+6)</p>
+      proficient: true
+      subType: weapon
+    type: attack
+name: Javelin Trap
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 2
+    disarm: 20
+    duration: Instantaneous
+    effect: ''
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 20
+    reset: None
+    trigger: Location
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

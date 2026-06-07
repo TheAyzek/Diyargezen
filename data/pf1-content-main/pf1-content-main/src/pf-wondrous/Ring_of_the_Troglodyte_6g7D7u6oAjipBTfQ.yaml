@@ -1,0 +1,29 @@
+_id: 6g7D7u6oAjipBTfQ
+_key: '!items!6g7D7u6oAjipBTfQ'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of the Troglodyte
+system:
+  aura:
+    school: con
+  cl: 5
+  description:
+    value: >-
+      <p>Two times per day on command, the wearer of this ring can produce a
+      horrific smell affecting all living creatures other than the wearer within
+      a 10-foot radius. Once created, the smell remains, centered on the wearer,
+      until she dismisses it as a free action. This is a poison effect.   Any
+      creature affected by the disgusting aroma produced by the ring must
+      succeed at a DC 14 Fortitude saving throw when it starts its turn in the
+      ring's stench radius. Those that fail a saving throw become sickened for 1
+      round. If they are already sickened, they become nauseated for 1 round
+      instead.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, stinking cloud</p>
+  price: 12000
+  slot: ring
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

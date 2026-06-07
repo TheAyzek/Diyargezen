@@ -1,0 +1,28 @@
+_id: aTBVvij5h9tYo4wY
+_key: '!items!aTBVvij5h9tYo4wY'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Chalice of Communal Dweomer
+system:
+  aura:
+    school: trs
+  cl: 7
+  description:
+    value: >-
+      <p>Once per day, a creature can pour a potion with a duration longer than
+      instantaneous into the chalice, then drink it as a standard action that
+      provokes attacks of opportunity. The bearer and up to two willing allies
+      within 30 feet gain the benefits as though they had consumed the potion;
+      however, the duration is divided evenly between all recipients (including
+      the bearer), rounded down to the nearest
+      round.</p><h3>Requirements</h3><p>Craft Wondrous Item, alchemical
+      allocation, amplify elixir</p>
+  price: 3750
+  sources:
+    - id: PZO9544
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

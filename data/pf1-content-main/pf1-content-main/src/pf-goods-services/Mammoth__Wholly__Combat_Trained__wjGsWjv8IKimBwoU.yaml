@@ -1,0 +1,24 @@
+_id: wjGsWjv8IKimBwoU
+_key: '!items!wjGsWjv8IKimBwoU'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/bones/hooves-cloven-brown.webp
+name: Mammoth, Wholly (Combat-Trained)
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 4,500 gp (combat-trained), 3,000 gp (normal);
+      <strong>Weight</strong> 6 tons (combat-trained), 6 tons
+      (normal)</p><h2>Description</h2><p>oached from the Realm of the Mammoth
+      Lords, these hairy pachyderms are used by the orcs of Belkzen as mounts
+      and living siege engines. As if these mounts weren't intimidating enough,
+      the orcs outfit them with spiked metal barding and tusk blades.</p>
+  equipped: false
+  price: 4500
+  sources:
+    - id: PZO9276
+      pages: '39'
+  subType: animal
+  weight:
+    value: 12000
+type: loot

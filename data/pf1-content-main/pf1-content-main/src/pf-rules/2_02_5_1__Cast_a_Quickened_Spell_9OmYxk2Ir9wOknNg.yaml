@@ -1,0 +1,35 @@
+_id: 9OmYxk2Ir9wOknNg
+_key: '!journal!9OmYxk2Ir9wOknNg'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 6xAF0VmbLWU6dblG
+name: 2.02.5.1. Cast a Quickened Spell
+pages:
+  - _id: R0PcY2sQmFxQEhq7
+    _key: '!journal.pages!9OmYxk2Ir9wOknNg.R0PcY2sQmFxQEhq7'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.02.5.1. Cast a Quickened Spell
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.VZCpOrg3jCyNaYeg]{2.02.
+        Actions in
+        Combat}</p><ul><li><p>@Compendium[pf-content.pf-rules.EwuWKrrT3zgSlesa]{2.02.5.
+        Swift
+        Actions}</p><ul><li><strong>@Compendium[pf-content.pf-rules.9OmYxk2Ir9wOknNg]{2.02.5.1.
+        Cast a Quickened Spell}</strong></li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=188]</p><p>You can cast a quickened spell
+        (see the Quicken Spell feat), or any spell whose casting time is
+        designated as a free or swift action, as a swift action. Only one such
+        spell can be cast in any round, and such spells don’t count toward your
+        normal limit of one spell per round. Casting a spell as a swift action
+        doesn’t incur an attack of opportunity.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,24 @@
+_id: XhdN1r72cqqEyvOV
+_key: '!items!XhdN1r72cqqEyvOV'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/gems/pearl-turquoise.webp
+name: Venombane Lozenges
+system:
+  description:
+    value: >-
+      <p>These faintly glowing lozenges often come in a discrete brown pouch. A
+      single venombane lozenge lasts for 5 minutes after being placed in a
+      creature's mouth. During this time, the user gains a cumulative +1
+      alchemical bonus on saving throws against poisons every minute for 5
+      minutes. At the end of the 5 minutes, the lozenge dissolves and its
+      effects end. If at any time the user becomes poisoned while under the
+      effects of a lozenge that has not dissolved, she can crush the lozenge to
+      immediately gain the benefits for 1 round as if it had lasted its full
+      duration. Using a lozenge in this way immediately ends the effect.</p>
+  price: 35
+  sources:
+    - id: PZO9487
+      pages: '31'
+  subType: misc
+type: consumable

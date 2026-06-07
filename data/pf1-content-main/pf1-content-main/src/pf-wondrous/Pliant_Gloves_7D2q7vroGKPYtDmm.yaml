@@ -1,0 +1,30 @@
+_id: 7D2q7vroGKPYtDmm
+_key: '!items!7D2q7vroGKPYtDmm'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Pliant Gloves
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>Wearing these form-fitting fingerless black gloves makes the wearer's
+      arms and body more flexible. As a swift action, the wearer can lengthen
+      his arms for up to 10 rounds per day, gaining an additional 5 feet of
+      reach. These rounds need not be consecutive. Attacking with these extended
+      arms is unwieldy, and the wearer takes a -2 penalty on attack rolls,
+      increasing to -4 if he is using two-handed weapons. Even when his limbs
+      aren't extended, the wearer gains a +5 enhancement bonus on Escape Artist
+      checks and Acrobatics checks to avoid falling damage. The wearer is still
+      able to use hand-based natural attacks such as claws while wearing the
+      gloves.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, liquid form</p>
+  price: 10000
+  slot: hands
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

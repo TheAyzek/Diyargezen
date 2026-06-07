@@ -1,0 +1,28 @@
+_id: wXK6qhoCbcD8EIR8
+_key: '!items!wXK6qhoCbcD8EIR8'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Retreat
+system:
+  aura:
+    school: con
+  cl: 12
+  description:
+    value: >-
+      <p>Each of these silver-and-gemstone rings is attuned to a specific
+      aiudara, or elf gate. The ring must be created at the aiudara in question,
+      and its gemstone always matches the gate's portal-key. On command once per
+      week, the ring teleports its wearer back to that gate, as per word of
+      recall. Theoretically, a ring of retreat could be crafted instead to
+      transport the wearer to a specific site of import, such as a temple or
+      stronghold, but to date, these rings have been crafted only with elf gates
+      in mind.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, word of recall</p>
+  price: 12000
+  slot: ring
+  sources:
+    - id: PZO1138
+  subType: wondrous
+type: equipment

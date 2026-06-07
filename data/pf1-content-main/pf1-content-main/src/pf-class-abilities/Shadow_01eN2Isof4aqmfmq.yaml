@@ -1,0 +1,31 @@
+_id: 01eN2Isof4aqmfmq
+_key: '!items!01eN2Isof4aqmfmq'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Shadow
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Nocticula, Norgorber, Zon-Kuthon.</p><p><strong>Flicker of Shadows
+      (minor)</strong>: At 1st level, you can cause a weapon you touch to warp
+      and become insubstantial for a split second before an attack. The first
+      attack made with this weapon each round ignores any shield bonus to Armor
+      Class, as well as bonuses from cover. Total cover still provides a
+      creature its full benefit. This effect lasts for 1
+      minute.</p><p><strong>Swift as Shadow (major)</strong>: At 10th level, you
+      can spend a swift action to empower yourself or an ally within 30 feet to
+      move over the ground as easily as its shadow. The subject's land speed
+      increases by 10 feet and it takes no movement penalties for darkness,
+      difficult terrain, or slickness. The creature can safely move over areas
+      of ice and even those affected by a grease spell. When a creature affected
+      by this ability hits with a charge attack, that attack deals an amount of
+      additional cold damage equal to your level.</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

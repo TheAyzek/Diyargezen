@@ -1,0 +1,64 @@
+_id: HKrBrOtpFLUSRpjJ
+_key: '!items!HKrBrOtpFLUSRpjJ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/shortbow.PNG
+name: Serpentseeker Bow
+system:
+  actions:
+    - _id: zu3gauxm00hogxhd
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: serpentseekerBow
+  aura:
+    custom: true
+    school: conjuration and divination
+  baseTypes:
+    - Shortbow
+  cl: 7
+  description:
+    value: >-
+      <p>This +1 shortbow is crafted from one of the long spines that bristle
+      along the body of a sea serpent. When used against a magical beast with
+      the aquatic subtype, a serpentseeker bow gains the benefit of the bane
+      weapon special ability. If such a creature is hit by an arrow fired from
+      this weapon, anyone who touches the bow senses the location of that
+      creature as though by locate creature as long as the arrow remains
+      imbedded in the creature. If the creature is protected by nondetection or
+      a similar effect, anyone holding the bow gains a +10 competence bonus on
+      the caster level check to overcome it, but a failed check means the
+      arrow's magic burns out. The locating magic on an arrow fired from this
+      bow automatically ends after 1d6 days.</p><p><strong>Base Item</strong>: 
+      shortbow</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, locate creature, summon monster I</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: wood
+  price: 15330
+  showInQuickbar: false
+  sources:
+    - id: PZO9252
+  weaponGroups:
+    - bows
+  weight:
+    value: 2
+type: weapon

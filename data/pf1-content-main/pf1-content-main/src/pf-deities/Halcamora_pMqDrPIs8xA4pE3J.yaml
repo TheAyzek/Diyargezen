@@ -1,0 +1,47 @@
+_id: pMqDrPIs8xA4pE3J
+_key: '!journal!pMqDrPIs8xA4pE3J'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Halcamora
+pages:
+  - _id: 1sMGGa5cAaiaPMDa
+    _key: '!journal.pages!pMqDrPIs8xA4pE3J.1sMGGa5cAaiaPMDa'
+    _stats:
+      coreVersion: '12.331'
+    name: Halcamora
+    sort: 0
+    text:
+      content: >-
+        <h1>Halcamora</h1><h2>Lady of Ripe Bounty</h2>@Source[PZO9267;pages=322]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Halcamora">Halcamora</a><h3>Details</h3><p><strong>Alignment</strong>
+        NG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Gardens, orchards, wine<br /><strong>Domains</strong>
+        Good, Luck, Plant, Weather<br /><strong>Subdomains</strong> Agathion,
+        Growth, Revelry, Seasons<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Club<br
+        /><strong>Symbol</strong> Jug of grapes<br /><strong>Sacred
+        Animal(s)</strong> Ladybug<br /><strong>Sacred Color(s)</strong> Red,
+        white</p><h3>Obedience</h3><p>Pour half of a bottle of wine onto fertile
+        earth. Drink the rest of the wine yourself while praying to Halcamora.
+        Gain a +4 sacred bonus on saves against bleed and disease
+        effects.</p><h2>Boons - Celestial Obedience</h2><h3>Mystery
+        Cultist</h3><p>@Source[PZO9255;pages=14]<br /><strong>1: Bountiful
+        Spirit (Sp)</strong> <em>goodberry</em> 3/day, <em>tree shape</em>
+        2/day, or <em>plant growth</em> 1/day<br /><strong>2: Touch of Wine
+        (Su)</strong> Once per day, you can make a touch attack to cause a
+        creature to become intoxicated. If your attack is successful, the target
+        takes 1d6 points of Dexterity, Wisdom, and Charisma damage. The damage
+        is halved with a successful Fortitude save (DC 10 + 1/2 your HD + your
+        Wis modifier).<br /><strong>3: Divine Gardener (Sp)</strong> You can
+        cast <em>control plants </em>three times per day. This ability is the
+        equivalent of an 8th-level spell.</em></p><h2>For Followers of
+        Halcamora</h2><h3>Feats</h3><p><em>Heroic
+        Interposition</em></p><h3>Traits</h3><p><em>Empyreal Focus</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

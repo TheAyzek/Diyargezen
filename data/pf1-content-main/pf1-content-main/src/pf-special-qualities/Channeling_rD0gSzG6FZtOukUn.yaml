@@ -1,0 +1,29 @@
+_id: rD0gSzG6FZtOukUn
+_key: '!items!rD0gSzG6FZtOukUn'
+_stats:
+  coreVersion: '12.331'
+folder: mlc1L2Rz3WgZW7BG
+img: icons/equipment/shield/heater-steel-boss-red.webp
+name: Channeling
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate conjuration <strong>CL</strong>
+      8th</p><p><strong>Slot</strong> none; <strong>Price</strong> +18,000
+      gp;</p><p>A shield with this special ability is crafted to resemble an
+      angel or other outsider holding a basin of some sort, and is engraved with
+      holy symbols. The shield is keyed to either positive or negative energy
+      when it is crafted. If the bearer can channel energy of the keyed type,
+      three times per day he can increase the total number of dice of channeled
+      energy by 1. The wearer also reduces any damage taken from energy of the
+      type opposed to the keyed type by 10
+      points.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>cure/inflict moderate wounds</em>, creator must
+      be able to channel energy; <strong>Price</strong> +9,000 gp</p>
+  sources:
+    - id: PZO9455
+      pages: '26'
+  subType: misc
+  tags:
+    - Shield Qualities
+type: feat

@@ -1,0 +1,40 @@
+_id: 2LTAvosqwriHMSzg
+_key: '!items!2LTAvosqwriHMSzg'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Sniper's Helmet
+system:
+  aura:
+    school: div
+  cl: 5
+  description:
+    value: >-
+      <p>A sniper's helmet looks like the simple steel soldier's helmet common
+      to the European trenches of the First World War, with the addition of a
+      steel eye shield. Once per day, the wearer of a sniper's helmet can, as a
+      standard action, denote one creature within her line of sight as her
+      target. The wearer can perceive the target when it is invisible or
+      ethereal as though using the see invisibility spell, and gains a +20
+      competence bonus on Perception checks to locate the target. The wearer
+      ignores concealment provided by fog or mist, blur, displacement,
+      invisibility, and similar effects affecting the target, but not
+      concealment provided by darkness. These bonuses last for 5 minutes or
+      until the target creature is dead. The sniper's helmet provides no
+      benefits to the wearer's allies, and the wearer gains no benefits against
+      creatures other than her chosen target.   In addition, once per day, the
+      wearer of a sniper's helmet can create a magical sensor up to 600 feet
+      above her that gives her a full 360-degree viewpoint as if she were
+      actually there. The wearer perceives with her normal visual senses, and
+      though the sensor cannot penetrate solid surfaces, it is unaffected by
+      foliage and the like.</p><h3>Requirements</h3><p>Craft Wondrous Item,
+      eagle eye, hunter's eye</p>
+  price: 9000
+  slot: head
+  sources:
+    - id: PZO9071
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

@@ -11,8 +11,6 @@ from utils.calculations import (
     calculate_armor_class,
     calculate_hit_points,
     calculate_mm_power_points,
-    calculate_vtm_health,
-    calculate_vtm_willpower,
 )
 
 
@@ -135,50 +133,6 @@ def calculate_dynamic_power_points(power_level: Union[int, str], rules: Optional
         return calculate_mm_power_points(pl)
     except (ValueError, TypeError):
         return 0
-
-
-def calculate_dynamic_health(character: Dict[str, Any], rules: Optional[Dict[str, Any]] = None) -> int:
-    """
-    Dinamik Health hesaplama (VtM)
-    """
-    if rules and 'rules' in rules:
-        health_rule = rules['rules'].get('health')
-        if health_rule:
-            base = health_rule.get('base', 3)
-            attr_name = health_rule.get('attribute', 'Stamina')
-            
-            attributes = character.get("attributes", {})
-            for category, attrs in attributes.items():
-                if attr_name in attrs:
-                    return base + attrs[attr_name]
-    
-    # Varsayılan hesaplama
-    return calculate_vtm_health(character)
-
-
-def calculate_dynamic_willpower(character: Dict[str, Any], rules: Optional[Dict[str, Any]] = None) -> int:
-    """
-    Dinamik Willpower hesaplama (VtM)
-    """
-    if rules and 'rules' in rules:
-        willpower_rule = rules['rules'].get('willpower')
-        if willpower_rule:
-            attr_names = willpower_rule.get('attributes', [])
-            if len(attr_names) == 2:
-                attributes = character.get("attributes", {})
-                attr1_value = 0
-                attr2_value = 0
-                
-                for category, attrs in attributes.items():
-                    if attr_names[0] in attrs:
-                        attr1_value = attrs[attr_names[0]]
-                    if attr_names[1] in attrs:
-                        attr2_value = attrs[attr_names[1]]
-                
-                return attr1_value + attr2_value
-    
-    # Varsayılan hesaplama
-    return calculate_vtm_willpower(character)
 
 
 def load_rules_for_system(base_dir: Path, system: str) -> Optional[Dict[str, Any]]:

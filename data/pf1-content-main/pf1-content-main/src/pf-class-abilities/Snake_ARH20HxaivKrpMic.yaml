@@ -1,0 +1,20 @@
+_id: ARH20HxaivKrpMic
+_key: '!items!ARH20HxaivKrpMic'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Snake
+system:
+  associations:
+    classes:
+      - Hunter
+  description:
+    value: >-
+      <p><strong>Hunter Animal Focus</strong></p><p>The creature gains a +2
+      bonus on attack rolls when making attacks of opportunity and a +2 dodge
+      bonus to AC against attacks of opportunity. These bonuses increase to +4
+      at 8th level and +6 at 15th level.</p>
+  subType: classFeat
+  tags:
+    - Hunter Animal Focus
+type: feat

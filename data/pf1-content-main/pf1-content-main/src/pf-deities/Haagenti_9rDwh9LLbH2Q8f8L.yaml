@@ -1,0 +1,110 @@
+_id: 9rDwh9LLbH2Q8f8L
+_key: '!journal!9rDwh9LLbH2Q8f8L'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Haagenti
+pages:
+  - _id: wG4Lp4VWUTm51Dqa
+    _key: '!journal.pages!9rDwh9LLbH2Q8f8L.wG4Lp4VWUTm51Dqa'
+    _stats:
+      coreVersion: '12.331'
+    name: Haagenti
+    sort: 0
+    text:
+      content: >-
+        <h1>Haagenti</h1><h2>The Whispers Within</h2>@Source[PZO9267;pages=320]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Haagenti">Haagenti</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Demon Lords<br /><strong>Areas of
+        Concern</strong> Alchemy, invention, transformation<br
+        /><strong>Domains</strong> Artifice, Chaos, Evil, Strength<br
+        /><strong>Subdomains</strong> Alchemy (Artifice)*, Construct, Demon
+        (Chaos), Demon (Evil), Resolve, Self-Realization (Strength)*, Toil<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Battleaxe<br /><strong>Symbol</strong>
+        Philosopher's stone<br /><strong>Sacred Animal(s)</strong> Bull<br
+        /><strong>Sacred Color(s)</strong> Gold, lead
+        gray</p><h3>Obedience</h3><p>Practice the Divine Experiment by following
+        the procedure to transmute lead into gold; this process normally
+        requires a philosopher's stone, but for this obedience, the thaumaturge
+        can substitute any material for lead-it's not the actual transmutation
+        that functions as the obedience, but the act of going through the
+        motions. Gain a +4 profane bonus against transmutation
+        effects.</p><h2>Boons - Demonic
+        Obedience</h2><h3>Demoniac</h3><p>@Source[PZO9225;pages=16]<br
+        /><strong>1: Truth in the Flesh (Sp)</strong> <em>enlarge person</em>
+        3/day, <em>alter self</em> 2/day, or <em>beast shape I</em> 1/day<br
+        /><strong>2: Transformation (Sp)</strong> Extended <em>transformation
+        </em>once per day.<br /><strong>3: Master of Shapes (Su)</strong> You
+        gain the shapechanger subtype. Your body can react instantaneously to
+        mitigate attacks, granting immunity to critical hits and sneak attacks
+        (which are treated as normal attacks). Whenever you are affected by a
+        polymorph effect, you heal 4d8 points of damage.</em></p><h2>Boons -
+        Fiendish
+        Obedience</h2><h3>Evangelist</h3><p>@Source[PZO1139;pages=56]<br
+        /><strong>1: Novice Philosopher (Sp)</strong> <em>cure light wounds
+         </em> 3/day, <em>lesser restoration</em> 2/day, or <em>cure serious wounds
+         </em> 1/day<br /><strong>2: Altered State (Su)</strong> It is said that
+        Haagenti introduced the concept of mutagens to the first alchemists at
+        the dawn of time. Regardless of the veracity of this legend, your
+        worship and faith in the Whispers Within grants you the ability to
+        create a mutagen, as per an alchemist of a level equal to your Hit Dice
+        - 4 (maximum 20th level). If you could already create mutagens, any
+        mutagen you create from this point onward no longer applies its
+        penalties to ability scores; in addition, any ability score increased by
+        your mutagen increases by an additional 2 points.<br /><strong>3:
+        Immortal Chymist (Su)</strong> You have mastered the legendary
+        techniques of Haagenti's Divine Experiment. Your body no longer
+        physically ages (although you continue to accrue mental bonuses), and
+        you don't die from old age. If you were middle-aged or older, your body
+        returns to its prime- you retain your mental bonuses but lose any
+        penalties to Strength, Dexterity, and Constitution gained from advanced
+        age. Each day, when you perform your obedience, you create a small
+        amount of mystic quicksilver; if mixed with a <em>potion of cure serious
+        wounds</em>, it creates a dose of <em>oil of life. Just like that
+        created by a <em>philosopher's stone</em>, if this oil is sprinkled over
+        a dead body (a standard action), it revives the dead creature as per
+        <em>true resurrection</em>. Alternatively, the quicksilver can be used
+        to convert up to 1 pound of lead into gold (worth a maximum of 50 gp).
+        This quicksilver loses its potency after 24 hours or when you next
+        perform your
+        obedience.</em></p><h3>Exalted</h3><p>@Source[PZO1139;pages=56]<br
+        /><strong>1: Truth in the Flesh (Sp)</strong> <em>enlarge person </em>
+        3/day, <em>alter self</em> 2/day, or <em>beast shape I</em> 1/day<br
+        /><strong>2: Transformation (Sp)</strong> You can cast extended
+        <em>transformation</em> as a spell-like ability once per day.<br
+        /><strong>3: Master of Shapes (Su)</strong> You gain the shapechanger
+        subtype. Your body can react instantaneously to mitigate attacks,
+        granting you immunity to critical hits and sneak attacks (which are
+        treated as normal attacks). Whenever you are affected by a polymorph
+        effect, you regain 4d8 hit
+        points.</em></p><h3>Sentinel</h3><p>@Source[PZO1139;pages=56]<br
+        /><strong>1: Alchemical Armaments (Sp)</strong> <em>lead blades</em>
+        3/day, <em>alchemical allocation</em> 2/day, or <em>versatile
+        weapon</em> 1/day<br /><strong>2: Inventive Warfare (Ex)</strong> You
+        can treat any weapon as if you were proficient with it. Any feats or
+        effects you have that apply specifically to battleaxes (such as Weapon
+        Focus or the sentinel's symbolic weapon class feature) or to the axe
+        weapon group (such as the fighter's weapon training class feature) apply
+        to any weapon you wield. In addition, as a swift action, you can grant
+        weapons you wield one of the following special weapon features for 1
+        round: brace, disarm, nonlethal, reach, or trip.<br /><strong>3:
+        Adaptive Flesh and Twisting Steel (Sp)</strong> You can transform into
+        whatever form is most efficient for the battle ahead, and your tools
+        remain ready for use. Whenever you use any polymorph effect, all of your
+        equipment is altered in whatever manner necessary to function with your
+        new form (including functioning as <em>ghost touch or similar magical
+        effects). You can use <em>shapechange</em> once per day. In addition,
+        add <em>monstrous physique IV</em>, <em>undead anatomy IV, and
+        <em>vermin shape II</em> to the list of spells that shapechange spells
+        you cast can function as.</em></p><h2>For Followers of
+        Haagenti</h2><h3>Feats</h3><p><em>Channel Discord</em></p><h3>Magic
+        Items - Wondrous Items</h3><p><em>Dagon's
+        Eye</em></p><h3>Traits</h3><p><em>Demonic Persuasion</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,59 @@
+_id: 5W0sj7MnVZooRKpO
+_key: '!items!5W0sj7MnVZooRKpO'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/morningstar.PNG
+name: Enduring Bloom
+system:
+  actions:
+    - _id: wn9t7ckycwphz7lj
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: enduringBloom
+  aura:
+    custom: true
+    school: conjuration and enchantment
+  baseTypes:
+    - Morningstar
+  cl: 3
+  description:
+    value: >-
+      <p>This +1 morningstar has a rose design on the handle and the spikes on
+      its head resemble thorns. Once per day, the wielder can use bless.
+      Additionally, once per day when the wielder is reduced to 0 hit points or
+      fewer, the weapon automatically casts cure light wounds on the wielder at
+      the start of her next turn, so long as it remains in the same square as
+      the wielder.</p><p><strong>Base Item</strong>: 
+      morningstar</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, Quicken Spell, bless, cure light wounds</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 3848
+  showInQuickbar: false
+  sources:
+    - id: PZO9267
+  weaponGroups:
+    - flails
+  weight:
+    value: 6
+type: weapon

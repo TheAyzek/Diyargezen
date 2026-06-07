@@ -1,0 +1,31 @@
+_id: SQDfkjC0h0yAZ9LM
+_key: '!items!SQDfkjC0h0yAZ9LM'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Wings
+system:
+  aura:
+    custom: true
+    school: illusion and transmutation
+  cl: 13
+  description:
+    value: >-
+      <p>Angels crafted the first staff of wings to assist their mortal allies
+      during a fiendish invasion onto the Material Plane. Copies have since been
+      made by secular crafters. A staff of wings is made of light birch and
+      topped with a carved pair of angelic wings made out of precious stone.
+      This staff produces flight effects, and the wielder gains translucent,
+      illusory wings upon casting them. Depending on the alignment and chosen
+      patron of the creator, these wings may appear draconic, feathery, or
+      prismatic, or may have other celestial features. The staff allows the use
+      of the following spells: • Fly (1 charge)   • Overland flight (2
+      charges)   • Mass fly (3 charges.</p><h3>Requirements</h3><p>Craft Staff,
+      fly, mass fly, overland flight, silent image</p>
+  price: 59400
+  sources:
+    - id: PZO9255
+  subType: staff
+  weight:
+    value: 5
+type: consumable

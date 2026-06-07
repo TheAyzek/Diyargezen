@@ -1,0 +1,20 @@
+_id: FYMvmmE9n7SKg8ax
+_key: '!items!FYMvmmE9n7SKg8ax'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/wood/wood-pole.webp
+name: Billiards gear
+system:
+  description:
+    value: >-
+      <p>This set includes a wooden cue, a block of cue chalk, 15 wooden balls,
+      and a triangular wooden ball rack.</p>
+  equipped: false
+  price: 0.5
+  sources:
+    - id: PZO1123
+      pages: '92'
+  subType: entertainment
+  weight:
+    value: 8
+type: loot

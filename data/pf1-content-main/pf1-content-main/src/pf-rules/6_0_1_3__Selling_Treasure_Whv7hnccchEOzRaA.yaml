@@ -1,0 +1,37 @@
+_id: Whv7hnccchEOzRaA
+_key: '!journal!Whv7hnccchEOzRaA'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.1.3. Selling Treasure
+pages:
+  - _id: 32QAjIWrgjMfnlzM
+    _key: '!journal.pages!Whv7hnccchEOzRaA.32QAjIWrgjMfnlzM'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.1.3. Selling Treasure
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li><p>@Compendium[pf-content.pf-rules.yeIb3PW3M1QmlVNG]{6.0.1.
+        Wealth and
+        Money}</p><ul><li>@Compendium[pf-content.pf-rules.nYX664DCRfLLEAvT]{6.0.1.1.
+        Coins}</li><li>@Compendium[pf-content.pf-rules.oSsJes7s4K1SMEWf]{6.0.1.2.
+        Other
+        Wealth}</li><li><strong>@Compendium[pf-content.pf-rules.Whv7hnccchEOzRaA]{6.0.1.3.
+        Selling Treasure}</strong></li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=140]</p><p>In general, a character can sell
+        something for half its listed price, including weapons, armor, gear, and
+        magic items. This also includes character-created items.</p><p>Trade
+        goods are the exception to the half-price rule. A trade good, in this
+        sense, is a valuable good that can be easily exchanged almost as if it
+        were cash itself.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

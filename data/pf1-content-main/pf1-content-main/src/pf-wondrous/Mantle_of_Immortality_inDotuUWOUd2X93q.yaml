@@ -1,0 +1,32 @@
+_id: inDotuUWOUd2X93q
+_key: '!items!inDotuUWOUd2X93q'
+_stats:
+  coreVersion: '12.331'
+folder: KOT1geWrUrAU083b
+img: icons/equipment/chest/vest-leather-pink.webp
+name: Mantle of Immortality
+system:
+  aura:
+    school: trs
+  cl: 17
+  description:
+    value: >-
+      <p>This elegant cape, trimmed in gold in a pattern resembling an ancient
+      maze, forestalls the negative effects of aging. The wearer no longer
+      suffers penalties to Strength, Dexterity, and Constitution from being of
+      middle age or older (Core Rulebook 169). The penalties return if the robe
+      is removed (or its powers suppressed), and the sudden weight of years is
+      so traumatic that the wearer must make a DC 20 Fortitude save or be
+      exhausted for 24 hours. Donning the robe again removes the age penalties,
+      but does not remove this exhaustion, which must pass on its own or be
+      remedied with
+      magic.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, greater age resistance</p>
+  price: 50000
+  slot: chest
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

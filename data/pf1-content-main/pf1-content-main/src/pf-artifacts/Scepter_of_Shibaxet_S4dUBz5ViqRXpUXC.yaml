@@ -1,0 +1,40 @@
+_id: S4dUBz5ViqRXpUXC
+_key: '!items!S4dUBz5ViqRXpUXC'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/longsword.png
+name: Scepter of Shibaxet
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: all
+  baseTypes:
+    - Longsword
+  cl: 30
+  description:
+    value: >-
+      <p>Pazuzu's weapon is the Scepter of Shibaxet, a staff of black metal with
+      a large hook at its tip. The scepter functions as a rod of enemy detection
+      that can be used any number of times per day. If Pazuzu presents the
+      scepter as a standard action, all creatures within 30 feet who view it
+      become panicked for 1d6 rounds unless they succeed at a DC 23 Will save
+      (this is a mind-affecting fear effect). Once per day, Pazuzu can use the
+      Scepter of Shibaxet as a rod of cancellation (this does not deplete or
+      harm the scepter). As a standard action, he can call the scepter to his
+      hand from any distance, even across planar boundaries. As an immediate
+      action, Pazuzu can transform the scepter into a +5 anarchic keen unholy
+      longsword or return it to its normal shape. None of its other powers can
+      be used in sword form.</p><p><strong>Base Item</strong>: anarchic keen
+      unholy longsword</p>
+  enh: 5
+  material:
+    base:
+      value: steel
+  sources:
+    - id: PZO1127
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 4
+type: weapon

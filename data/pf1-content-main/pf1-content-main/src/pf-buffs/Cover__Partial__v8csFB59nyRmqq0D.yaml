@@ -1,0 +1,33 @@
+_id: v8csFB59nyRmqq0D
+_key: '!items!v8csFB59nyRmqq0D'
+_stats:
+  coreVersion: '12.331'
+folder: xBDkeYWwOx17NYOO
+img: systems/pf1/icons/feats/shield-focus.jpg
+name: Cover (Partial)
+system:
+  changes:
+    - _id: 3b9czjnt
+      formula: '2'
+      target: ac
+      type: circumstance
+    - _id: ubuzm5yd
+      formula: '1'
+      target: ref
+      type: circumstance
+  contextNotes:
+    - target: attack
+      text: Can't make AoOs vs opponents that have partial cover from you.
+  description:
+    value: >-
+      <p>If a creature has cover, but more than half the creature is visible,
+      its cover bonus is reduced to a +2 to AC and a +1 bonus on Reflex saving
+      throws. This partial cover is subject to the GM‘s
+      discretion.</p><hr><p><strong>Partial Cover and Attacks of
+      Opportunity</strong></p><p>You can’t execute an attack of opportunity
+      against an opponent with partial cover relative to
+      you.</p><hr><div><p><strong>Partial Cover and Stealth
+      Checks</strong></p><p>You can cannot use partial cover to make a Stealth
+      check.</p></div>
+  level: null
+type: buff

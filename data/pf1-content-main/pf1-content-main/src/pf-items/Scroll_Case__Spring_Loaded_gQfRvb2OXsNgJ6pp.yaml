@@ -1,0 +1,23 @@
+_id: gQfRvb2OXsNgJ6pp
+_key: '!items!gQfRvb2OXsNgJ6pp'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/chest/chest-simple-box-steel-brown.webp
+name: Scroll Case, Spring Loaded
+system:
+  description:
+    value: >-
+      <p>This specialized scroll case can hold a single scroll and features a
+      leather strap to hang the case from a belt or backpack. Retrieving the
+      scroll held within is a swift action. Preparing the case for this use
+      requires cranking the case's tiny gears and springs into place (a
+      full-round action that provokes an attack of opportunity).</p>
+  equipped: false
+  price: 5
+  sources:
+    - id: PZO9481
+      pages: '13'
+  subType: adventuring
+  weight:
+    value: 1
+type: loot

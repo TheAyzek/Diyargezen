@@ -1,0 +1,48 @@
+_id: wuscRRxDKhUNsd8k
+_key: '!journal!wuscRRxDKhUNsd8k'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Aroggus
+pages:
+  - _id: QqUQ4fCPz1EeaWwg
+    _key: '!journal.pages!wuscRRxDKhUNsd8k.QqUQ4fCPz1EeaWwg'
+    _stats:
+      coreVersion: '12.331'
+    name: Aroggus
+    sort: 0
+    text:
+      content: >-
+        <h1>Aroggus</h1><h2>The Abbey Maker</h2>@Source[PZO1139;pages=120] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Aroggus">Aroggus</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Kyton Demagogues<br /><strong>Areas of
+        Concern</strong> Possibility, revenge, sanctuary<br
+        /><strong>Domains</strong> Evil, Law, Protection, Trickery<br
+        /><strong>Subdomains</strong> Deception, Defense, Fear, Tyranny<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Warhammer</p><h3>Obedience</h3><p>List
+        the names of those who have wronged you until the writing covers a page,
+        then consume the parchment. Gain a +4 profane bonus on saving throws to
+        resist compulsion effects.</p><h2>Boons - Kyton
+        Demagogues</h2>@Source[PZO1139;pages=120]<br />The principals of the
+        kyton race number among the planes' most audacious explorers, artistes,
+        and scientists. Constrained by neither morals nor taboos, kyton
+        demagogues pursue perfection in myriad profane fields. Lost limbs and
+        lives mean little to the kyton demagogue-only the next boundary to
+        shatter and the promise of what could be. The kyton demagogues are
+        legion, but nine of those best known to Golarion's cultic scholars are
+        presented here.<p> Kyton demagogues are far less likely than other
+        fiendish demigods to flaunt their power. All kyton demagogues are lawful
+        evil and range in power from CR 26 to CR 30. The boons they grant are
+        less complex than those granted by other fiendish demigods, manifesting
+        as spell-like abilities each usable once per
+        day.</p><p><strong>1</strong>: <em>nondetection</em><br
+        /><strong>2</strong>: <em>forcecage</em><br /><strong>3</strong>: 
+        <em>imprisonment</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

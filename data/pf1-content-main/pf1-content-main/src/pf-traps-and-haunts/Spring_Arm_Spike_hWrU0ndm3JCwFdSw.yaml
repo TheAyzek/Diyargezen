@@ -1,0 +1,122 @@
+_id: hWrU0ndm3JCwFdSw
+_key: '!actors!hWrU0ndm3JCwFdSw'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: icons/sundries/survival/stake-rough-heavy-brown.webp
+items:
+  - _id: qjGhVPSsmaUZsTFI
+    _key: '!actors.items!hWrU0ndm3JCwFdSw.qjGhVPSsmaUZsTFI'
+    _stats:
+      compendiumSource: Actor.XM5XzzQo5JjBp1PF.Item.PRQ4QA6zDPNAQY8M
+      coreVersion: '12.331'
+    img: icons/sundries/survival/stake-rough-heavy-brown.webp
+    name: Spring-Arm Spike
+    system:
+      actions:
+        - _id: o2wf7c2wtzppoxdm
+          ability:
+            critMult: 3
+          actionType: mwak
+          activation:
+            type: nonaction
+            unchained:
+              type: nonaction
+          attackBonus: '15'
+          damage:
+            parts:
+              - formula: 2d10+4
+                types:
+                  - untyped
+          img: icons/sundries/survival/stake-rough-heavy-brown.webp
+          name: Attack
+          notes:
+            effect:
+              - >-
+                The spring-arm spike makes a melee attack against the target,
+                which is also knocked prone unless it succeeds at a Reflex save.
+          range:
+            units: melee
+          save:
+            dc: '20'
+            type: ref
+      proficient: true
+      subType: weapon
+    type: attack
+name: Spring-Arm Spike
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 1
+    disarm: 20
+    duration: Instantaneous
+    effect: >-
+      Associated Terrain any forests, jungles, or swamps
+
+
+      A spring-arm spike is similar to a spring snare trap in that it
+      incorporates a strong sapling bent into a taut arc.
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 20
+    reset: Manual
+    trigger: Location
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

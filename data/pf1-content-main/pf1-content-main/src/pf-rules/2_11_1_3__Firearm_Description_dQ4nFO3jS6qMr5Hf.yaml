@@ -1,0 +1,56 @@
+_id: dQ4nFO3jS6qMr5Hf
+_key: '!journal!dQ4nFO3jS6qMr5Hf'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: I2QJK0e1tzfogtkr
+name: 2.11.1.3. Firearm Description
+pages:
+  - _id: 9YGLfqsRzcsjks6T
+    _key: '!journal.pages!dQ4nFO3jS6qMr5Hf.9YGLfqsRzcsjks6T'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.11.1.3. Firearm Description
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.OWmmbQYIhQmw9DVg]{2.11.
+        Mastering
+        Combat}</p><ul><li><p>@Compendium[pf-content.pf-rules.ryYgy2vRvnwdlDVK]{2.11.1.
+        Firearms}</p><ul><li>@Compendium[pf-content.pf-rules.0q6GTnQ8ojLIo86Q]{2.11.1.1.
+        Firearms in Your
+        Campaign}</li><li>@Compendium[pf-content.pf-rules.IOq28JGPxTOVlg8S]{2.11.1.2.
+        Firearm
+        Rules}</li><li><strong>@Compendium[pf-content.pf-rules.dQ4nFO3jS6qMr5Hf]{2.11.1.3.
+        Firearm Description}</strong></li></ul></li></ul><hr
+        /><p>@Source[PZO1118;pages=137]</p><p>There are two general categories
+        of firearms: early and advanced.</p><p>Firearms are further divided into
+        one-handed, twohanded, and siege firearms. As the category’s name
+        implies, one-handed firearms need only one hand to wield and shoot.
+        Two-handed firearms work best when you use twohands while shooting them.
+        Two-handed firearms can be shot with one hand at a –4 penalty on the
+        attack roll. Siege weapons are typically mounted on some sort of
+        platform, movable or otherwise, and have greater power but a much slower
+        rate of fire.</p><h2>Scatter Weapon Quality</h2><p>A weapon with the
+        scatter weapon quality can shoot two different types of ammunition. It
+        can fire normal bullets that target one creature, or it can make a
+        scattering shot, attacking all creatures within a cone. Cannons with the
+        scatter weapon quality only fire grapeshot, unless their descriptions
+        state otherwise. When a scatter weapon attacks all creatures within a
+        cone, it makes a separate attack roll against each creature within the
+        cone. Each attack roll takes a –2 penalty, and its attack damage cannot
+        be modified by precision damage or damage-increasing feats such as Vital
+        Strike. Effects that grant concealment, such as fog or smoke, or the
+        blur, invisibility, or mirror image spells, do not foil a scatter
+        attack. If any of the attack rolls threaten a critical, confirm the
+        critical for that attack roll alone. A firearm that makes a scatter shot
+        misfires only if all of the attack rolls made misfire. If a scatter
+        weapon explodes on a misfire, it deals triple its damage to all
+        creatures within the misfire radius.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

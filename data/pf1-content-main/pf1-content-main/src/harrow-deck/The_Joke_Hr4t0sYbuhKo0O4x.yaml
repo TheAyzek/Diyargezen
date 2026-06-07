@@ -1,0 +1,29 @@
+_id: Hr4t0sYbuhKo0O4x
+_key: '!journal!Hr4t0sYbuhKo0O4x'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: oEUKlY7s7aPkyznu
+name: The Joke
+pages:
+  - _id: 2S9GzhrrocDaEFLR
+    _key: '!journal.pages!Hr4t0sYbuhKo0O4x.2S9GzhrrocDaEFLR'
+    _stats:
+      coreVersion: '12.331'
+    name: The Joke
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Joke</strong> (chaotic good, Intelligence) shows a terror
+        that must be overcome - but not by physical means. This monster can only
+        be defeated by trickery or artifice. This card can represent the value
+        of humor in finding the way past a difficult person or task. When
+        misaligned, it often signals that the joke will be on you.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Joke.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

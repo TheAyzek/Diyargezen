@@ -1,0 +1,30 @@
+_id: B0RpGVTgTNO7wGH2
+_key: '!items!B0RpGVTgTNO7wGH2'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Eldritch Egress
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>This cunningly designed bundle of wooden slats unfolds and interlocks
+      to form a 3-foot-by-3-foot frame. Once per day you may place the unfolded
+      frame upon a solid surface to form a passage up to 10 feet deep, as if
+      using a passwall spell. The passageway lasts for 1 hour unless the frame
+      is removed earlier. Folding or unfolding the frame is a full-round action
+      that provokes attacks of opportunity. Using the unfolded frame to create a
+      passage is a standard action. Medium or smaller creatures can easily pass
+      through the tunnel, while Large creatures require an Escape Artist check.
+      The eldritch egress can only be removed from outside the surface it was
+      placed on, so careful planning is required when using
+      it.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, passwall</p>
+  price: 10000
+  sources:
+    - id: PZO9211
+  subType: wondrous
+type: equipment

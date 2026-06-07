@@ -1,0 +1,29 @@
+_id: indnUQU7INNW84mL
+_key: '!journal!indnUQU7INNW84mL'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: slmqizDyyiaJyP1N
+name: The Courtesan
+pages:
+  - _id: Jx62xbLOPVfPIRjW
+    _key: '!journal.pages!indnUQU7INNW84mL.Jx62xbLOPVfPIRjW'
+    _stats:
+      coreVersion: '12.331'
+    name: The Courtesan
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Courtesan</strong> (chaotic neutral, Charisma) is the
+        card of political intrigue. Her mask embodies the social niceties that
+        must be followed. If it slips, negotiations can take an unexpected turn.
+        The card can also indicate a woman of power who shapes events. How she
+        is treated decides the outcome of the situation.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Courtesan.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

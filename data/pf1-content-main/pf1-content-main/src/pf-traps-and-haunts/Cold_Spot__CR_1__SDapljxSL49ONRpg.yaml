@@ -1,0 +1,42 @@
+_id: SDapljxSL49ONRpg
+_key: '!actors!SDapljxSL49ONRpg'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Cold Spot (CR 1)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    hp:
+      max: 2
+  details:
+    alignment: NE
+    area: 5-ft. radius
+    biography: {}
+    cl: 1
+    cr:
+      base: 1
+    destruction: >-
+      If the cold spot is destroyed with holy fire (such as with <em>flame
+      strike</em>), it never returns.
+    effect: >-
+      The temperature suddenly plummets below freezing. All creatures within the
+      radius are affected as if they had been outside in cold weather for 1
+      hour, taking 1d6 points of nonlethal damage unless they succeed at a DC 15
+      Fortitude save. The cold temperature lingers for 10 minutes, but has no
+      additional mechanical effect.
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Horror Adventures pg. 175</p>
+        <h3>Description</h3><p>Cold spots are echoes of spirits too weak to
+        manifest as ghosts. They can occur alone or cluster around significant
+        areas.</p>
+    notice: Perception DC 20 (to feel the temperature dropping)
+    reset: 1 day
+    trigger: proximity
+    weakness: fire (these effects can damage the haunt)
+type: haunt

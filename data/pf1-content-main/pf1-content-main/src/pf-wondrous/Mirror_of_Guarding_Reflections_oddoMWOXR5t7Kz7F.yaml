@@ -1,0 +1,32 @@
+_id: oddoMWOXR5t7Kz7F
+_key: '!items!oddoMWOXR5t7Kz7F'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Mirror of Guarding Reflections
+system:
+  aura:
+    school: ill
+  cl: 7
+  description:
+    value: >-
+      <p>Reflections visible in this palm-sized hand mirror always seem ghostly
+      and insubstantial. When a creature holding the mirror is targeted by an
+      attack, he can spend an immediate action to summon his reflection from the
+      glass to interpose itself between him and the blow. The reflection
+      functions as an image produced by the spell mirror image. If the image is
+      struck by the attack, it shatters with a resounding crash. The creature
+      that destroyed the image is subject to bad luck; the next time it makes an
+      attack roll or saving throw, it must roll twice and take the worse result.
+      If the attack does not strike the image, the image fades away at the start
+      of the mirror bearer's next turn. The mirror can be used three times per
+      day.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, mirror image</p>
+  price: 7000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 4
+type: equipment

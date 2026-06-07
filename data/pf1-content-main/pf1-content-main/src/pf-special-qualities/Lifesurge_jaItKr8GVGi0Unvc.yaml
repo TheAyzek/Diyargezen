@@ -1,0 +1,39 @@
+_id: jaItKr8GVGi0Unvc
+_key: '!items!jaItKr8GVGi0Unvc'
+_stats:
+  coreVersion: '12.331'
+folder: YaC0PDBdquBGbbsG
+img: systems/pf1/icons/skills/violet_04.jpg
+name: Lifesurge
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate conjuration <strong>CL</strong>
+      8th</p><p><strong>Slot</strong> weapon quality; <strong>Price</strong> +2
+      bonus;</p><p>This special ability can only be placed on melee weapons. A
+      <em>lifesurge </em>weapon boosts and sustains the wielder's life energy
+      while he is in the throes of combat. The wielder gains a bonus on saving
+      throws against necromantic effects-including the ability damage, ability
+      drain, and energy drain powers of the undead-equal to the weapon's
+      enhancement bonus. In addition, whenever the wielder receives temporary
+      hit points from any source, he adds the weapon's enhancement bonus to
+      these temporary hit points; this does not stack for temporary hit points
+      from multiple sources, and these points are lost if the <em>lifesurge</em>
+      weapon is not being wielded.<p>In combat, the weapon's critical threat
+      range is doubled abilities against undead; this does not stack with the
+      <em>keen </em>special ability or Improved Critical. Whenever a
+      <em>lifesurge </em>weapon confirms a critical hit against an undead
+      creature, it erupts with 1d8 points of positive energy (2d8 for weapons
+      with a critical multiplier of x3, 3d8 if it is x4); the wielder may choose
+      to deal this as damage to an undead target or to absorb half this amount
+      as healing, with the remaining positive energy
+      dissipating.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, Channel Smite, <em>cure serious wounds</em>,
+      <em>death ward</em>, <em>disrupt undead</em>; <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1123
+      pages: '144'
+  subType: misc
+  tags:
+    - Melee Qualities
+type: feat

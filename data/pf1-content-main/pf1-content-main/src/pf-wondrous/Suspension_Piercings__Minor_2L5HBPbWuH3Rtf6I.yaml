@@ -1,0 +1,23 @@
+_id: 2L5HBPbWuH3Rtf6I
+_key: '!items!2L5HBPbWuH3Rtf6I'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/jewelry/pendant-green.jpg
+name: Suspension Piercings, Minor
+system:
+  aura:
+    school: trs
+  cl: 7
+  description:
+    value: >-
+      <p>These piercings are popular among suspensionists, who hang from hooks
+      attached to their skin.  Minor: The wearer gains feather fall as a
+      continuous effect.  Major: The wearer may use levitate twice per day. 
+      Greater: The wearer may use air walk once per
+      day.</p><h3>Requirements</h3><p>Craft Shadow Piercing, feather fall</p>
+  price: 6000
+  sources:
+    - id: PZO9450
+  subType: other
+type: equipment

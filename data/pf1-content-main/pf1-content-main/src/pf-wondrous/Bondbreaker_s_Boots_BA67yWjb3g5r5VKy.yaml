@@ -1,0 +1,31 @@
+_id: BA67yWjb3g5r5VKy
+_key: '!items!BA67yWjb3g5r5VKy'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Bondbreaker's Boots
+system:
+  aura:
+    school: trs
+  cl: 1
+  description:
+    value: >-
+      <p>These leather boots bear a knife motif worked into their durable blue
+      leather. Three times per day, the wearer can speak a command word as a
+      swift action, causing a serrated knife to fly from the boots and instantly
+      slice through any nonmagical bond currently restraining the wearer. The
+      knife conjured from bondbreaker's boots can cut through brambles, ropes,
+      tanglefoot bags, vines, webs, or any other similar nonmagical item
+      restraining the wearer, but cannot help when the owner is actively
+      restrained by a creature. Bondbreaker's boots also cannot free the wearer
+      if manacles or chains restrain her.</p><h3>Requirements</h3><p>Craft
+      Wondrous Item, unseen servant</p>
+  price: 1600
+  slot: feet
+  sources:
+    - id: PZO9431
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

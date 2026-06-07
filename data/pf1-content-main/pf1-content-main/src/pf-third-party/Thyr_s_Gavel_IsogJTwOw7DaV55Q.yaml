@@ -1,0 +1,37 @@
+_id: IsogJTwOw7DaV55Q
+_key: '!items!IsogJTwOw7DaV55Q'
+_stats:
+  coreVersion: '12.331'
+folder: 5HPDAAtypP5m41CK
+img: icons/skills/melee/strike-blade-hooked-orange-blue.webp
+name: Thyr's Gavel
+system:
+  artifact: true
+  aura:
+    school: trs
+  cl: 22
+  description:
+    value: >-
+      <p>The Lawgiver bestows this unique warhammer upon his greatest champion,
+      typically a high priest or paladin, though warriors have been known to
+      wield the weapon at times as well. The weapon currently sits deep
+      underground, in a makeshift tomb of the last Champion of Thyr, a priest
+      named Bofred. Thyr patiently bides his time, waiting for a new champion to
+      rise up and claim the weapon. Thyr's Gavel is a +6 holy axiomatic cold
+      iron warhammer. If the weapon is willingly picked up by an undead, evil
+      outsider or chaotic outsider, that creature must make a DC 37 Will save or
+      be slain (no additional save). If the creature is successful, a new save
+      must be attempted every hour, and it still suffers from the negative
+      levels imposed by the holy and axiomatic weapon properties. The wielder of
+      Thyr's Gavel can cast daylight at will as a spell-like ability (CL 20th).
+      If the wielder is a follower of Thyr, she may add her Charisma bonus (if
+      any) to her armor class as a sacred bonus and to her saving throws as a
+      luck bonus.</p><p><strong>Base Item</strong>: +6 holy axiomatic cold iron
+      warhammer</p>
+  hp:
+    base: 10
+  sources:
+    - id: FGG32698
+  weight:
+    value: 8
+type: weapon

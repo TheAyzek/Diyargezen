@@ -1,0 +1,27 @@
+_id: noc9ztLhKoYPahwK
+_key: '!items!noc9ztLhKoYPahwK'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/spells/protect-red-1.jpg
+name: Ward Shield
+system:
+  contextNotes:
+    - target: ref
+      text: +[[5]] bonus vs spells and effects.
+    - target: sr
+      text: +[[(10 + @item.level)]] Spell Resistance (see text)
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.ifjagt7v39crbejg]{Ward
+      Shield}</p><p>This shield grants spell resistance 10 + your caster level
+      against spells so long as the shield can be interposed between the wielder
+      and the spell effect. A spell shield does not provide spell resistance
+      against area effect spells such as fireball, but does provide a +5 bonus
+      on Reflex saving throws against such spells.</p>
+  duration:
+    units: minute
+    value: '@item.level'
+  level: 7
+  subType: spell
+type: buff

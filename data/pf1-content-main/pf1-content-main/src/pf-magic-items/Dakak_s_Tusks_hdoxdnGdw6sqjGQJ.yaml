@@ -1,0 +1,61 @@
+_id: hdoxdnGdw6sqjGQJ
+_key: '!items!hdoxdnGdw6sqjGQJ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/pick-heavy.png
+name: Dakak's Tusks
+system:
+  actions:
+    - _id: vqa5hy06d3lr55bv
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: dakaksTusks
+  aura:
+    school: nec
+  baseTypes:
+    - Heavy Pick
+  cl: 9
+  description:
+    value: >-
+      <p>Containing the bound essence of a troll warlord, this matched pair of
+      +1 vicious heavy picks rends flesh with horrifying efficiency. Each pick
+      is a darkwood shaft pierced by a weathered tusk. The ends of the picks are
+      connected with a cord of dried sinew. This cord is long enough that the
+      picks can be wielded with one in each hand. A wielder holding only one of
+      the picks can recover its mate with a swift action as though the
+      unattended pick were on a weapon cord.  If the wielder hits an opponent
+      with both picks in the same round, the picks additionally deal 1d4 points
+      of bleed damage.</p><p><strong>Base Item</strong>: vicious heavy
+      pick</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, bleed, enervation</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 26616
+  showInQuickbar: false
+  sources:
+    - id: PZO9455
+  weaponGroups:
+    - axes
+  weight:
+    value: 13
+type: weapon

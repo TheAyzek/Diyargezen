@@ -1,0 +1,128 @@
+_id: lBMaONyNMVevHszV
+_key: '!journal!lBMaONyNMVevHszV'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Hanspur
+pages:
+  - _id: tYpgjfPGXRArfA1R
+    _key: '!journal.pages!lBMaONyNMVevHszV.tYpgjfPGXRArfA1R'
+    _stats:
+      coreVersion: '12.331'
+    name: Hanspur
+    sort: 0
+    text:
+      content: >-
+        <h1>Hanspur</h1><h2>The Water Rat</h2>@Source[PZO9290;pages=59] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Hanspur">Hanspur</a><h3>Details</h3><p><strong>Alignment</strong>
+        CN<br /><strong>Pantheon</strong> Other Deities<br /><strong>Areas of
+        Concern</strong> River travel, rivers, smugglers<br
+        /><strong>Domains</strong> Chaos, Death, Travel, Water<br
+        /><strong>Subdomains</strong> Exploration, Murder, Rivers, Trade<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Trident<br /><strong>Symbol</strong>
+        Rat walking on water<br /><strong>Sacred Animal(s)</strong> Rat<br
+        /><strong>Sacred Color(s)</strong> Blue,
+        gold</p><h3>Obedience</h3><p>With the assistance of another priest of
+        Hanspur or by yourself, simulate the act of drowning. You can do this by
+        fully submerging yourself in a body of water, exhaling all of your
+        breath, and painfully inhaling water instead of air. Alternatively, you
+        can lie on your back with your head at a lower elevation than your legs
+        while water is slowly poured on your face and up your nose. If you
+        choose the latter method, you must cover your face with a cloth while
+        the water is poured. When you conclude this simulated drowning,
+        contemplate your life and how your goals coincide with the teachings of
+        Hanspur and the Six River Freedoms. You gain a +4 sacred or profane
+        bonus on Survival checks attempted while on or near rivers. The type of
+        bonus depends on your alignment-if you're neither good nor evil, you
+        must choose either a sacred bonus or a profane bonus the first time you
+        perform your obedience, and this choice can't be changed.</p><h3>On
+        Golarion</h3><p><strong>Centers of Worship</strong> River Kingdoms<br
+        /><strong>Nationality</strong> Kellid</p><h2>Boons - Deific
+        Obedience</h2><h3> Evangelist</h3><p>@Source[PZO9290;pages=59]<br
+        /><strong>1: River Sage (Sp)</strong> <em>hydraulic push<sup>APG</sup>
+        3/day, <em>river whip</em><sup>ACG</sup> 2/day, or <em>hydraulic
+        torrent</em><sup>APG</sup> 1/day<br /><strong>2: River Scion
+        (Su)</strong> Just as drowning was not the end of Hanspur's story,
+        inhaling water holds no terror for you. As a free action you can breathe
+        underwater, as if affected by <em>water breathing</em>, for a number of
+        hours per day equal to the number of Hit Dice you possess. These hours
+        need not be used consecutively, but must be used in 1-hour
+        increments.<br /><strong>3: River's Embodiment (Sp)</strong> The river
+        is a part of you, and you are a part of it. Once per day as a standard
+        action, you can transform yourself into a Huge water elemental, as per
+        <em>elemental body IV</em>. You can stay in this form for 1 minute per
+        Hit Die you possess, and can dismiss this effect as a free
+        action.</em></p><h3>Exalted</h3><p>@Source[PZO9290;pages=59]<br
+        /><strong>1: River Guide (Sp)</strong> <em>obscuring mist</em> 3/day,
+        <em>haunting mists<sup>UM</sup> 2/day, or <em>aqueous orb<sup>APG</sup>
+        1/day<br /><strong>2: River Traveler (Su)</strong> A priest of Hanspur
+        should never fear the water, and should move as freely as the fish (and
+        rats) that make their homes within it. As a free action, you can grant
+        yourself and any allies within 30 feet of you a swim speed of 60 feet.
+        This effect lasts for 1 round per Hit Die you possess or until you
+        dismiss it as a free action, whichever comes first. Your allies must
+        remain within 30 feet of you or lose this benefit. In addition, you gain
+        a +2 profane or sacred bonus (of the same type as that provided by your
+        obedience) on saves against spells with the water descriptor.<br
+        /><strong>3: River's Depths (Su)</strong> The river is your companion,
+        and it fights on your behalf, teaching your enemies about the holy act
+        of drowning. Once per day as a standard action, you can cause one
+        creature within 30 feet to begin drowning, filling its lungs with water.
+        The target of this ability can attempt a Fortitude save (DC = 10 + 1/2
+        your Hit Dice + your Wisdom modifier) to negate the effect. If the
+        target succeeds, it is staggered for 1 round while it gasps for breath.
+        On a failed save, the target immediately begins to suffocate. On the
+        target's next turn, it falls unconscious and is reduced to 0 hit points.
+        One round later, the target drops to -1 hit points and is dying. One
+        round after that, the target dies. Each round, the target can attempt a
+        Fortitude save to end the effect. This ability affects only living
+        creatures that must breathe and cannot breathe underwater. This is a
+        curse effect.</em></p><h3>Sentinel</h3><p>@Source[PZO9290;pages=59]<br
+        /><strong>1: River Warden (Sp)</strong> <em>wave shield<sup>ACG</sup>
+        3/day, <em>masterwork transformation<sup>UM</sup> 2/day, or
+        <em>quench</em> 1/day<br /><strong>2: River Champion (Su)</strong> The
+        river is your weapon. Three times per day as a standard action, you can
+        sculpt water into the form of a melee weapon with which you are
+        proficient (typically a trident, but it could also take the form of a
+        dagger or another light weapon). You must have enough water to form the
+        weapon, an amount equal to the weapon's normal weight. Once formed, the
+        weapon behaves as a weapon of its type with an enhancement bonus of +1.
+        This bonus increases by 1 for every 5 additional Hit Dice you have
+        beyond 5 (up to a maximum of +4 at 20 Hit Dice). This weapon deals
+        double the normal amount of damage to creatures with the fire subtype.
+        The weapon dissolves into ordinary water after a number of rounds equal
+        to your Hit Dice or as soon as it leaves your hand, whichever happens
+        first.<br /><strong>3: River's Renewal (Su)</strong> As Hanspur was
+        reborn in the water, so too are you healed by it. When completely
+        submerged in water, you gain fast healing 2. You can recover a total
+        number of hit points equal to twice your Hit Dice in this manner each
+        day. At 20th level, if you fall below 0 hit points and your body is
+        fully submerged in a river, you automatically
+        stabilize.</em></p><h2>Antipaladin Code</h2><em>While antipaladins of
+        Hanspur are exceedingly rare, a handful have emerged over the centuries
+        to cause untold damage across the River Kingdoms. These cruel and
+        vengeful followers focus their violence against adherents and suspected
+        allies of the harbinger Corosbel, leading to violent and bloody
+        inquisitions that, on the surface, are done in Hanspur's name. More
+        likely, however, these vendettas serve only to consolidate the
+        antipaladins' personal power or serve their own agendas. Their code is
+        one of persecution under the guise of protection. Its tenets include the
+        following adages. <ul><li>Make them suffer as he did-drown your enemies
+        alive so they may understand.</li><li>The river is free, but the land is
+        our reward.</li><li>To kill death is to master it. We shall crush the
+        daemons under our heel.</li><li>Respect is blood or gold; let none ply
+        our rivers without giving respect.</li></ul><h2>For Followers of
+        Hanspur</h2><h3>Traits</h3><p>Light Sleeper, River Freedom</p><h2>Unique
+        Spell
+        Rules</h2>@Source[PZO9290;pages=62]<p><h3>Druid</h3></p><p><em>Water
+        Walk</em> can be prepared as a 3rd-level
+        spell</p><h3>Ranger</h3><p><em>Water Breathing</em> can be prepared as a
+        2nd-level spell</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

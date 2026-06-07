@@ -1,0 +1,30 @@
+_id: 2AycUvOOeMHDFKka
+_key: '!items!2AycUvOOeMHDFKka'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Gladiator's Sandals
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>These sand-worn leather sandals are designed to lace around the calf
+      and are favored by pit fighters and those who make careers out of
+      performing in the ring. When the wearer acts during a surprise round and
+      attempts any combat maneuver check, she gains a +4 circumstance bonus on
+      that check. If the check is successful, the wearer can also attempt a
+      performance combat check (Pathfinder RPG Ultimate Combat 153) with a +10
+      circumstance bonus to affect the crowd's
+      attitude.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, eagle's splendor, haste</p>
+  price: 6000
+  slot: feet
+  sources:
+    - id: PZO9455
+  subType: wondrous
+  weight:
+    value: 0.5
+type: equipment

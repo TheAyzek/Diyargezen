@@ -1,0 +1,45 @@
+_id: QKbXNyxmDOlDN2B8
+_key: '!items!QKbXNyxmDOlDN2B8'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/fullplate.PNG
+name: Maiden's Panoply
+system:
+  armor:
+    acp: 6
+    dex: 1
+    material:
+      base:
+        value: steel
+    value: 9
+  aura:
+    custom: true
+    school: abjuration and divination
+  baseTypes:
+    - Gray Maiden Plate
+  cl: 11
+  description:
+    value: >-
+      <p>This set of +3 Gray Maiden plate creates a mental link between the
+      wearer and her allies. The wearer can telepathically communicate with
+      allies within 30 feet (although this communication is one-way, unless an
+      ally also has telepathy). If an ally within 30 feet is aware of a threat,
+      the wearer of this armor is aware as well, and the wearer is never
+      flat-footed unless all allies within 30 feet are also flat-footed. In
+      addition, if the wearer of a maiden's panoply also wields a maiden's
+      aegis, activating that shield's ability does not reduce the maiden's
+      aegis's enhancement bonus, and the bonus it grants increases to
+      +2.</p><p><strong>Base Item</strong>: Gray Maiden
+      plate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, detect thoughts, telepathy</p>
+  enh: 3
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 30650
+  sources:
+    - id: PZO1138
+  spellFailure: 35
+  weight:
+    value: 50
+type: equipment

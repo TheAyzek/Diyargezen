@@ -1,0 +1,28 @@
+_id: c4ASdSNyooKYcmRD
+_key: '!items!c4ASdSNyooKYcmRD'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Spiteful Cookie
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>These appealing treats usually come wrapped in wax paper, sealed with a
+      drop of red wax embossed with the face of a smiling child. Made from sugar
+      and bone meal, spiteful cookies can be made in a variety of shapes, such
+      as humanoid creatures, dragons, or other legendary beasts. When the seal
+      is broken and the cookie unwrapped, the creature that unwrapped the cookie
+      must succeed at a DC 12 Will save or be compelled to eat the spiteful
+      cookie. While initially quite tasty, the treat soon turns to ash, cursing
+      the victim to starvation for the next 6 days, as the feast of ashes
+      spell.</p><h3>Requirements</h3><p>Craft Wondrous Item, beguiling gift,
+      feast of ashes</p>
+  price: 750
+  sources:
+    - id: PZO9067
+  subType: wondrous
+type: equipment

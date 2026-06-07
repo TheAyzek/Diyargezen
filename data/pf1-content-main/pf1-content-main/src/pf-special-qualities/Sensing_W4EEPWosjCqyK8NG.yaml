@@ -1,0 +1,29 @@
+_id: W4EEPWosjCqyK8NG
+_key: '!items!W4EEPWosjCqyK8NG'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Sensing
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> strong divination <strong>CL</strong>
+      14th</p><p><strong>Slot</strong> none; <strong>Price</strong> +3 bonus;
+      <p>A set of <em>sensing </em>armor compensates when its wearer has been
+      blinded, is in total darkness (as long as the wearer doesn't have
+      darkvision or the see in darkness ability), or is in magical darkness (as
+      long as the wearer doesn't have the see in darkness ability). When one of
+      these conditions affects the wearer, <em>sensing armor</em> immediately
+      grants its wearer blindsight with a 5-foot range and blindsense with a
+      60-foot range. As soon as the wearer can see, the additional senses end.
+      The wearer can't gain these abilities by closing her
+      eyes.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, <em>true seeing</em>; <strong>Price</strong> +3 bonus</p>
+  sources:
+    - id: PZO1129
+      pages: '210'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

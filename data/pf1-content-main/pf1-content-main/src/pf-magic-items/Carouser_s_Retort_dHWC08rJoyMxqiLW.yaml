@@ -1,0 +1,63 @@
+_id: dHWC08rJoyMxqiLW
+_key: '!items!dHWC08rJoyMxqiLW'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/rapier.PNG
+name: Carouser's Retort
+system:
+  actions:
+    - _id: m52canq419tpyjta
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: carousersRetort
+  aura:
+    custom: true
+    school: abjuration and transmutation
+  baseTypes:
+    - Rapier
+  cl: 3
+  description:
+    value: >-
+      <p>This simple but finely crafted +1 rapier has a hilt in the shape of a
+      tankard, open on one end for the wielder's hand. Once per day, the wielder
+      can use remove fear; if the wielder ever becomes frightened or panicked
+      and this ability has not already been expended for the day, the weapon
+      automatically activates this ability on the wielder's next turn. Once per
+      day, the wielder can turn up to 8 gallons of water (fresh, salt, or
+      contaminated) into weak beer that is safe to drink.</p><p><strong>Base
+      Item</strong>: +1
+      rapier</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, purify food and drink, remove fear</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 3060
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9267
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 2
+type: weapon

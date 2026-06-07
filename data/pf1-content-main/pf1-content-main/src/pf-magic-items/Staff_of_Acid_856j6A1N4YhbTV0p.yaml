@@ -1,0 +1,25 @@
+_id: 856j6A1N4YhbTV0p
+_key: '!items!856j6A1N4YhbTV0p'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Acid
+system:
+  aura:
+    school: con
+  cl: 11
+  description:
+    value: >-
+      <p>This staff is made of a rust-colored metal that has been corroded by
+      acid, with a sickly green gem at its tip. The staff allows use of the
+      following spells: • Corrosive touch (1 charge; Ultimate Magic)   • Acid
+      arrow (2 charges)   • Acid fog (3
+      charges.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, acid arrow, acid fog, corrosive touch</p>
+  price: 28600
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

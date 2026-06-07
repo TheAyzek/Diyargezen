@@ -1,0 +1,30 @@
+_id: Pr1MKjsUmuER1xg0
+_key: '!items!Pr1MKjsUmuER1xg0'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Wayfinder of the Planes
+system:
+  aura:
+    school: abj
+  cl: 6
+  description:
+    value: >-
+      <p>This wayfinder is made of magically hardened glass, through which the
+      complex inner matrix of the compass can be seen. Once per day, the wielder
+      of a wayfinder of the planes can choose one of the following alignments:
+      chaotic, evil, good, or lawful. For 1 hour thereafter, the wayfinder of
+      the planes creates a magic circle effect against the chosen alignment,
+      centered on the wayfinder. Once selected, the alignment of the magic
+      circle effect can't be changed until the effect recharges the next
+      day.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, light, magic circle against chaos, magic circle against
+      evil, magic circle against good, magic circle against law</p>
+  price: 18000
+  sources:
+    - id: PZO9435
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

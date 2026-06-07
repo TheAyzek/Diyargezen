@@ -1,0 +1,379 @@
+_id: wPMVp6tpMtbllO9x
+_key: '!actors!wPMVp6tpMtbllO9x'
+_stats:
+  coreVersion: '12.343'
+img: icons/svg/mystery-man.svg
+items:
+  - _id: YcsYs8f2PbzPQPej
+    _key: '!actors.items!wPMVp6tpMtbllO9x.YcsYs8f2PbzPQPej'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/blue_29.jpg
+    name: 'Race: Animal'
+    system:
+      creatureSubtypes:
+        - ''
+      creatureTypes:
+        - animal
+      description:
+        value: >-
+          sbc | As the statblock did not include a race, a custom one was
+          generated.
+    type: race
+  - _id: XJl2vJ9m3vnyH8eg
+    _key: '!actors.items!wPMVp6tpMtbllO9x.XJl2vJ9m3vnyH8eg'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/shadow_11.jpg
+    name: 'Sense: Low-light Vision'
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          A creature with low-light vision can see twice as far as a human in
+          starlight, moonlight, torchlight, and similar conditions of dim light.
+          It retains the ability to distinguish color and detail under these
+          conditions.
+      subType: racial
+    type: feat
+  - _id: YK6zpoNDNy1uuCUF
+    _key: '!actors.items!wPMVp6tpMtbllO9x.YK6zpoNDNy1uuCUF'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Special Quality: Weak Flier'
+    system:
+      description:
+        value: >-
+          sbc | Placeholder for Special Qualities, which in most statblocks are
+          listed under SQ in the statistics block, but described in the Special
+          Abilities. Remove duplicates as needed!
+      subType: misc
+    type: feat
+  - _id: dHDg8uHdKsDOCKxL
+    _key: '!actors.items!wPMVp6tpMtbllO9x.dHDg8uHdKsDOCKxL'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/monster-head.jpg
+    name: Bite
+    system:
+      actions:
+        - _id: fysv46ed05bf2qcm
+          ability:
+            attack: _default
+            damage: str
+          actionType: mwak
+          activation:
+            type: attack
+            unchained:
+              type: attack
+          attackBonus: '6'
+          attackName: Bite
+          damage:
+            parts:
+              - formula: 1d4+0
+                types:
+                  - slashing
+          duration:
+            units: inst
+          img: systems/pf1/icons/items/inventory/monster-head.jpg
+          name: Attack
+          notes:
+            footer:
+              - bite +4 (1d4-4)
+          range:
+            units: melee
+          tag: bite
+      subType: natural
+    type: attack
+  - _id: JAW0HhJxrj05WPOf
+    _key: '!actors.items!wPMVp6tpMtbllO9x.JAW0HhJxrj05WPOf'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Environment: Temperate Or Warm Forests'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: WPUtt2zl2tCwC14H
+    _key: '!actors.items!wPMVp6tpMtbllO9x.WPUtt2zl2tCwC14H'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Organization: Single, Pair, Or Nest (4-10)'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: YNU13qb3Nf7JFiEF
+    _key: '!actors.items!wPMVp6tpMtbllO9x.YNU13qb3Nf7JFiEF'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Treasure: None'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: JR1slDgWxijehkI7
+    _key: '!actors.items!wPMVp6tpMtbllO9x.JR1slDgWxijehkI7'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: Weak Flier
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          An archaeopteryx can't hover or fly up at an angle greater than 45
+          degrees while flying.
+      subType: classFeat
+    type: feat
+  - _id: xrGk06N3uQOZZhv7
+    _key: '!actors.items!wPMVp6tpMtbllO9x.xrGk06N3uQOZZhv7'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: sbc | Conversion Buff
+    system:
+      active: true
+      changes:
+        - _id: 8kfyzcnf
+          formula: '6'
+          target: cmb
+          type: untypedPerm
+        - _id: 12njb7dy
+          formula: '-8'
+          target: skill.clm
+          type: untypedPerm
+        - _id: 95nfcslv
+          formula: '7'
+          target: skill.fly
+          type: untypedPerm
+      description:
+        value: >-
+          <h2>sbc | Conversion Buff</h2><p>This Buff was created by
+          <strong>sbc</strong> to compensate for differences between the input
+          and the values FoundryVTT calculates automatically.</p><p>Especially
+          when the pathfinder system gets upgraded, entries in compendiums get
+          updated or foundry changes in some way, this buff may become
+          outdated.</p><p>For most mooks the conversion should more or less
+          work, but for important NPCs or creatures it is adviced to double
+          check the conversion manually.</p>
+      hideFromToken: true
+      subType: perm
+      tag: sbcConversionBuff
+    type: buff
+name: Archaeopteryx
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    cha:
+      value: 7
+    dex:
+      value: 15
+    int:
+      value: 2
+    str:
+      value: 3
+    wis:
+      value: 12
+  attributes:
+    speed:
+      climb:
+        base: 10
+      fly:
+        base: 40
+        maneuverability: poor
+      land:
+        base: 40
+    spells:
+      spellbooks:
+        primary:
+          name: Primary
+        secondary:
+          name: Secondary
+        spelllike:
+          name: Spell-likes
+        tertiary:
+          name: Tertiary
+  details:
+    cr:
+      base: 0.25
+    notes:
+      value: >2-
+
+                <div class="statblockContainer" style="margin-top:15px"><div style="width:100%;background-color:#ffe9c7;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);columns:2 150px">
+            <hr style="margin-left:0;margin-top:-2px;width:100%;height:4px;background-color:#e0a100;border:1px solid #000;column-span:all" />
+            <div style="padding:5px">
+                <h1>Archaeopteryx CR 1/4 </h1>
+                
+                
+                <div style="break-inside:avoid">
+                    <strong>Source</strong>: Bestiary 4 pg. 96<br />
+                    <strong>XP 100</strong><br />
+                    
+                    
+                    
+                    
+                    
+                    N 
+                    Tiny 
+                    Animal <br />
+                    <strong>Init</strong> 2;
+                    <strong>Senses</strong> low-light vision; Perception +1; 
+                    
+                </div>
+                <div style="break-inside:avoid">
+                    <h3>Defense</h3>
+                        <strong>AC</strong> 14, <strong>Touch</strong> 14, <strong>Flat-Footed</strong> 12 (+2 Dex, +2 size)<br />
+                    <strong>Hit Points</strong> 4 (1 HD; 1d8)<br />
+                    <strong>Fort</strong> 2, <strong>Ref</strong> 4, <strong>Will</strong> 1
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                <div>
+                    <div style="break-inside:avoid">
+                        <h3>Offense</h3>
+                                <strong>Speed</strong> 40 ft. (poor)<br />
+                        <strong>Melee</strong> bite +4 (1d4-4)<br />
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+                        
+                
+                        
+                        
+                        
+                        
+                
+                <div style="break-inside:avoid">
+                    <h3>Statistics</h3>
+                        <strong>Str</strong> 3, <strong>Dex</strong> 15, <strong>Con</strong> 10, <strong>Int</strong> 2, <strong>Wis</strong> 12, <strong>Cha</strong> 7<br />
+                    <strong>Base Atk</strong> +0; <strong>CMB</strong> +0; <strong>CMD</strong> 6<br />
+                    <strong>Feats</strong> Weapon Finesse<br />
+                    <strong>Skills</strong> Climb +10, Fly +6<br />
+                    <strong>Languages</strong> <br />
+                    
+                    
+                    
+                    
+                </div>
+                
+                    <div style="break-inside:avoid">
+                        <h3>Ecology</h3>                <strong>Environment</strong>: temperate or warm forests<br />
+                        <strong>Organization</strong>: single, pair, or nest (4-10)<br />
+                        <strong>Treasure</strong>: none<br />
+                    </div>
+                
+                    <div style="break-inside:avoid">
+                        <h3>Special Abilities</h3>                <div style="white-space:pre-wrap">Weak Flier (ex): An archaeopteryx can't hover or fly up at an angle greater than 45 degrees while flying.</div>
+                    </div>
+                
+                
+                    <div style="break-inside:avoid">
+                        <h3>Description</h3>        <div style="white-space:pre-wrap">Archaeopteryxes are primitive birds. Instead of beaks, they have lizardlike heads with serrated teeth.
+        </div>
+                            
+            </div>
+            <hr style="margin-left:0;margin-bottom:-3px;width:100%;height:4px;background-color:#e0a100;border:1px solid #000;column-span:all" />
+        </div></div>
+            
+                <br />
+                <hr />
+                <div class="rawInputContainer" style="margin-top:15px">
+                    <h2>RAW INPUT</h2>
+                    <hr />
+                    <pre style="white-space:pre-wrap;font-size:10px">Archaeopteryx CR 1/4
+        Source Bestiary 4 pg. 96
+
+        XP 100
+
+        N Tiny animal
+
+        Init +2; Senses low-light vision; Perception +1
+
+        Defense
+
+        AC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)
+
+        hp 4 (1d8)
+
+        Fort +2, Ref +4, Will +1
+
+        Offense
+
+        Speed 40 ft., climb 10 ft., fly 40 ft. (poor)
+
+        Melee bite +4 (1d4-4)
+
+        Space 2-1/2 ft., Reach 0 ft.
+
+        Statistics
+
+        Str 3, Dex 15, Con 10, Int 2, Wis 12, Cha 7
+
+        Base Atk +0; CMB +0; CMD 6
+
+        Feats Weapon Finesse
+
+        Skills Climb +10, Fly +6
+
+        SQ weak flier
+
+        Ecology
+
+        Environment temperate or warm forests
+
+        Organization single, pair, or nest (4-10)
+
+        Treasure none
+
+        Special Abilities
+
+        Weak Flier (Ex) An archaeopteryx can't hover or fly up at an angle
+        greater than 45 degrees while flying.
+
+        Description
+
+        Archaeopteryxes are primitive birds. Instead of beaks, they have
+        lizardlike heads with serrated teeth.</pre>
+                </div>
+            </div>
+  skills:
+    clm:
+      rank: 11
+    fly:
+      rank: -3
+  traits:
+    senses:
+      custom: low-light vision; Perception +1
+    size: tiny
+type: npc

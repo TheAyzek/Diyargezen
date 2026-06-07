@@ -1,0 +1,43 @@
+_id: VyxZUUPVQwupQQWq
+_key: '!items!VyxZUUPVQwupQQWq'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/inventory/ore-gold.jpg
+name: Gold Nodule Ioun Stone, Flawed
+system:
+  aura:
+    school: div
+  cl: 12
+  description:
+    instructions: >-
+      <p>Update the details tab of this item with the language
+      selected.</p><p>Only 25% of cracked or flawed ioun stones grant resonant
+      powers when placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>This gold colored stone is irregularly shaped but generally rounded. It
+      may have irregular facets or internal flaws.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone grants you the ability to comprehend and
+      read, but not speak or write, a single language (chosen by the ioun
+      stone’s creator).</p><h3>Resonance</h3><p><strong>Method 1,
+      Fixed</strong>: +1 bonus on saves against language-dependent
+      effects.</p><p><strong>Method 2, Variable</strong>:
+      @UUID[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]{Ioun
+      Stone Resonance Powers Method
+      2}</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Wondrous
+      Item, <em>tongues</em>, creator must be 12th level <strong>Cost</strong>
+      2,500 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 1000
+  sources:
+    - id: PZO9435
+      pages: '23'
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

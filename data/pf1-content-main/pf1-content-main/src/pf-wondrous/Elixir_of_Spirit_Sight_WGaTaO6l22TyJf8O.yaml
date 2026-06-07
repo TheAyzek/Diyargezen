@@ -1,0 +1,25 @@
+_id: WGaTaO6l22TyJf8O
+_key: '!items!WGaTaO6l22TyJf8O'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Elixir of Spirit Sight
+system:
+  aura:
+    custom: true
+    school: divination and transmutation
+  cl: 5
+  description:
+    value: >-
+      <p>This elixir seems to be made of thick vapor rather than liquid, and
+      constantly emits soft whispers when uncorked. For 1 minute, the drinker
+      gains the ability to see invisibility (as the spell), and his weapons and
+      armor are treated as if they had the ghost touch special
+      ability.<h3>Requirements</h3><p>Craft Wondrous Item, plane shift, see
+      invisibility</p>
+  price: 1000
+  sources:
+    - id: PZO9039
+  subType: wondrous
+type: equipment

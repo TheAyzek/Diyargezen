@@ -1,0 +1,123 @@
+_id: bWyClgumTi5KLf3c
+_key: '!journal!bWyClgumTi5KLf3c'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Groetus
+pages:
+  - _id: LsVqAqs07sVgdL8z
+    _key: '!journal.pages!bWyClgumTi5KLf3c.LsVqAqs07sVgdL8z'
+    _stats:
+      coreVersion: '12.331'
+    name: Groetus
+    sort: 0
+    text:
+      content: >-
+        <h1>Groetus</h1><h2>God of the End Times</h2>@Source[PZO9290;pages=47]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Groetus">Groetus</a><h3>Details</h3><p><strong>Alignment</strong>
+        CN<br /><strong>Pantheon</strong> Other Deities<br /><strong>Areas of
+        Concern</strong> Empty places, oblivion, ruins<br
+        /><strong>Domains</strong> Chaos, Darkness, Destruction, Madness,
+        Void<br /><strong>Subdomains</strong> Catastrophe, Entropy, Insanity,
+        Loss, Night, Stars, Truth*<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Heavy
+        flail<br /><strong>Symbol</strong> Skull-faced moon<br /><strong>Sacred
+        Animal(s)</strong> None<br /><strong>Sacred Color(s)</strong>
+        None</p><h3>Obedience</h3><p>Preach of the coming end times to a
+        listener who has not yet accepted this truth. If the person leaves or
+        otherwise refuses to listen to you for the full hour, you must find
+        another person to preach to so that you are proselytizing the entire
+        time. Alternatively, if no one at all is available to listen, spend an
+        hour contemplating ways and times the world might end-do so in an empty
+        place where nothing lives and no person except Groetan worshipers have
+        been for at least a month. While you contemplate, deface any surface
+        available to you with unholy images and symbols, such as a skull-like
+        moon. You then gain a +1 sacred or profane bonus on Will saving throws.
+        The type of bonus depends on your alignment- if you're neither good nor
+        evil, you must choose either sacred or profane the first time you
+        perform your obedience, and this choice can't be changed.</p><h3>On
+        Golarion</h3><p><strong>Centers of Worship</strong> Geb, Nidal, Sodden
+        Lands, Ustalav<br /><strong>Nationality</strong> none</p><h2>Boons -
+        Deific Obedience</h2><h3> Evangelist</h3><p>@Source[PZO9290;pages=47]<br
+        /><strong>1: Doomsayer (Sp)</strong> <em>doom</em> 3/day,
+        <em>augury</em> 2/day, or <em>bestow curse</em> 1/day<br /><strong>2:
+        Consume Essence (Su)</strong> As Groetus will one day consume all
+        existence, so do you seek to consume other mortals. Once per day, you
+        can consume the essence of a dead creature. You must touch the target
+        corpse, which can attempt a Fortitude saving throw (DC = 10 + 1/2 your
+        Hit Dice + your Charisma modifier). If it fails this saving throw, the
+        target is destroyed as per <em>disintegrate</em>, and you gain 1d8
+        temporary hit points. These temporary hit points last for a number of
+        hours equal to your Hit Dice.<br /><strong>3: Whispers of Insanity
+        (Su)</strong> Once per day as a standard action, you can whisper an
+        insight gleaned from Groetus to shatter the mind of another creature
+        within 30 feet. The target must attempt a Will saving throw (DC = 10 +
+        1/2 your Hit Dice + your Charisma modifier). If it fails, the target is
+        driven mad by thoughts and concepts far beyond what the brain can
+        handle, as if the workings of Thassilonian magic were revealed to a
+        common ant; it is affected as if by the <em>insanity</em> spell. In
+        addition to the normal ways to remove this spell, this ability's
+        maddening thoughts can be removed using <em>modify memory</em>. A
+        successful Knowledge (religion) check (DC = 10 + 1/2 your Hit Dice +
+        your Charisma modifier) reveals this additional way to negate the
+        effect.</em></p><h3>Exalted</h3><p>@Source[PZO9290;pages=47]<br
+        /><strong>1: Maddening Voice (Sp)</strong> <em>lesser confusion</em>
+        3/day, <em>mad hallucination<sup>UM</sup> 2/day, or <em>confusion</em>
+        1/day<br /><strong>2: Silent Witness (Su)</strong> Emulating Groetus,
+        you can observe your surroundings and the people within them without
+        being heeded or harmed. Once per day as a full-round action, you can
+        protect yourself with the effects of <em>invisibility,
+        <em>nondetection</em>, and <em>sanctuary</em> for 10 minutes per Hit Die
+        you possess. Anyone who succeeds at a Will saving throw (DC = 10 + 1/2
+        your Hit Dice + your Wisdom modifier) or a caster level check (DC = 11 +
+        your Hit Dice) against these effects sees a glimpse of something
+        unfathomable and becomes confused for 1 round unless it succeeds at a
+        second Will save with the same DC.<br /><strong>3: Infinite Patience
+        (Su)</strong> You will serve Groetus until the end of the world, no
+        matter how long you must wait. You cannot die of old age, even by
+        magical means, although aging otherwise affects you normally. In
+        addition, once per day as a standard action, you can choose any one
+        action you could ready and define a condition under which you will take
+        that action. Within the next 24 hours, whenever you observe that
+        condition, you can take the chosen action as an immediate
+        action.</em></p><h3>Sentinel</h3><p>@Source[PZO9290;pages=47]<br
+        /><strong>1: Endbringer (Sp)</strong> <em>true strike</em> 3/day,
+        <em>death knell</em> 2/day, or <em>keen edge</em> 1/day<br /><strong>2:
+        Visions of the End (Su)</strong> Once per day as a full-round action,
+        you can gain a sudden vision of a target's doom. You gain the benefits
+        of <em>augury, <em>know the enemy<sup>UM</sup>, and <em>locate
+        weakness</em><sup>UC</sup> simultaneously, all regarding the same
+        creature or object (even if the spell normally doesn't function with
+        objects) and its death or undoing. You can use the <em>locate
+        weakness</em> effect on only the target creature.<br /><strong>3:
+        Frightful Presence (Su)</strong> You have looked into oblivion, and its
+        horrors are reflected in your eyes. You can terrify foes as a free
+        action whenever you take an offensive action, such as attacking. Foes
+        within 30 feet of you and with fewer Hit Dice than you must succeed at a
+        Will saving throw or become shaken for a number of rounds equal to your
+        Hit Dice (DC = 10 + 1/2 your Hit Dice + your Charisma modifier). If the
+        victim has 4 or fewer Hit Dice, it becomes panicked instead. Foes with
+        more Hit Dice than you are immune to this ability.</em></p><h2>For
+        Followers of Groetus</h2><h3>Magic Items -
+        Weapons</h3><p><em>Obliviating Flail</em></p><h3>Magic Items - Wondrous
+        Items</h3><p><em>Deathlurker's
+        Cloak</em></p><h3>Monsters</h3><p><em>End's Voice
+        (Herald)</em></p><h3>Spells</h3><p><em>Curse
+        Item</em></p><h3>Traits</h3><p><em>Broken Mind</em></p><h2>Unique Spell
+        Rules</h2><em>@Source[PZO9290;pages=50]</em><br
+        /><h3>Cleric/Warpriest</h3></em><p><em>Fear can be prepared as a
+        4th-level spell<br /><em>Confusion, Lesser</em> can be prepared as a
+        2nd-level spell [clerics with madness or void domain only]<br
+        /><em>Confusion</em> can be prepared as a 4th-level spell [clerics with
+        madness or void domain only]<br /></em></p><h2>Unique Summon
+        Rules</h2>@Source[PZO9064;pages=73]<br /><strong>Summon Monster
+        II</strong>: Akata (extraplanar)<br /><strong>Summon Monster
+        VI</strong>: Chaos Beast<br /><strong>Summon Monster VI</strong>:
+        Mothman (extraplanar)
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

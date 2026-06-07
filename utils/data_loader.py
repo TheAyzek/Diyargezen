@@ -126,7 +126,6 @@ class DataLoader:
     SYSTEM_FILES: Dict[str, str] = {
         "dnd": "dnd_data.json",
         "pathfinder_1e": "pathfinder_1e_data.json",
-        "vtm": "vtm_data.json",
         "mm": "mm_data.json",
     }
 
@@ -145,7 +144,6 @@ class DataLoader:
         _loaders: Dict[str, Callable[[], Dict[str, Any]]] = {
             "dnd": self._load_dnd,
             "pathfinder_1e": self._load_pathfinder,
-            "vtm": lambda: self._load_simple("vtm_data.json"),
             "mm": lambda: self._load_simple("mm_data.json"),
         }
 
@@ -297,11 +295,6 @@ def load_dnd_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
 def load_mm_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
     """M&M verisini yükler (cache destekli)."""
     return get_loader(base_dir).load("mm")
-
-
-def load_vtm_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:
-    """VtM verisini yükler (cache destekli)."""
-    return get_loader(base_dir).load("vtm")
 
 
 def load_pathfinder_1e_data(base_dir: Path, lazy: bool = False) -> Dict[str, Any]:

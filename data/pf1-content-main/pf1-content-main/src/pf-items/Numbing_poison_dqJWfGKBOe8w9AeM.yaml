@@ -1,0 +1,39 @@
+_id: dqJWfGKBOe8w9AeM
+_key: '!items!dqJWfGKBOe8w9AeM'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Numbing poison
+system:
+  actions:
+    - _id: oftablj7b8o0coqo
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1d3]] Str and [[1d3]] Dex
+            <strong>Secondary Effect</strong>: [[1d3]] Str and [[1d3]] Dex
+      save:
+        dc: '13'
+        type: fort
+      tag: numbingPoison
+  description:
+    value: >-
+      <h3><img src="modules/pf-content/assets/ThreeFiveSymbol.gif" title="3.5
+      Material">Numbing poison</h3><p><strong>Source</strong>: Pathfinder #7:
+      Edge of Anarchy pg. 89</p><p><strong>Type</strong> injury;
+      <strong>Save</strong> Fortitude DC 13</p><p><strong>Initial
+      Effect</strong> 1d3 Str and 1d3 Dex; <strong>Secondary Effect</strong> 1d3
+      Str and 1d3 Dex</p>
+  price: 100
+  subType: poison
+  uses:
+    per: single
+type: consumable

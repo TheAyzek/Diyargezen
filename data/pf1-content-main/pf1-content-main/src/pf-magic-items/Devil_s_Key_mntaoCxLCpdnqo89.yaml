@@ -1,0 +1,67 @@
+_id: mntaoCxLCpdnqo89
+_key: '!items!mntaoCxLCpdnqo89'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/longsword.png
+name: Devil's Key
+system:
+  actions:
+    - _id: iuueuupxubmfj1rt
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: devilsKey
+  aura:
+    custom: true
+    school: abjuration conjuration and evocation
+  baseTypes:
+    - Longsword
+  cl: 17
+  description:
+    value: >-
+      <p>Forged with a wicked barbed end that resembles a key, this +2 redeemed
+      longsword was once the unholy sword of a diabolist-before a party of
+      adventurers retrieved it from his corpse and repurposed the weapon for
+      good. The devil's key is designed to permanently slay evil outsiders by
+      bringing the fight to their plane of origin so they can be killed
+      outright. Once per day as a swift action after a successful attack against
+      an evil outsider, the wielder can activate the sword to plane shift the
+      wielder and the target of the attack to the creature's home plane. The
+      targeted outsider can resist this effect with a successful DC 20 Will
+      save. Once the target of this ability is slain by the wielder, the sword
+      activates another plane shift as an immediate action that brings the
+      wielder back to the exact spot it previously left.</p><p><strong>Base
+      Item</strong>: redeemed
+      longsword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, consecrate, holy smite, plane shift, creator must be
+      good</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 66750
+  showInQuickbar: false
+  sources:
+    - id: PZO9431
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 5
+type: weapon

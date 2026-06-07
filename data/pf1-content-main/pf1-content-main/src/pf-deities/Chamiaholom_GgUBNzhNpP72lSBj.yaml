@@ -1,0 +1,41 @@
+_id: GgUBNzhNpP72lSBj
+_key: '!journal!GgUBNzhNpP72lSBj'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Chamiaholom
+pages:
+  - _id: axUbyXoF0HjPBEm3
+    _key: '!journal.pages!GgUBNzhNpP72lSBj.axUbyXoF0HjPBEm3'
+    _stats:
+      coreVersion: '12.331'
+    name: Chamiaholom
+    sort: 0
+    text:
+      content: >-
+        <h1>Chamiaholom</h1><h2>Skull Staff</h2>@Source[PZO1139;pages=132] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Chamiaholom">Chamiaholom</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Sahkil Tormentors<br /><strong>Areas
+        of Concern</strong> Domination, hopelessness, mortality<br
+        /><strong>Domains</strong> Death, Evil, Magic, Repose<br
+        /><strong>Subdomains</strong> Fear, Murder, Souls, Undead<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong>
+        Quarterstaff</p><h3>Obedience</h3><p>Pray while performing a false
+        divination for a stranger in which you reveal the person's death. Gain a
+        +1 profane bonus to the DC of your enchantment spells and
+        abilities.</p><h2>Boons - Sahkil
+        Tormentors</h2>@Source[PZO1139;pages=132]<br />Sahkil tormentors hold
+        dominion over mortal fears and suffering. All are chaotic evil and range
+        in power from CR 21 to CR 25. Their boons are less complex than those of
+        other demigods, manifesting as spell-like abilities usable twice per day
+        each.<p><strong>1</strong>: <em>grasping corpse</em><br
+        /><strong>2</strong>: <em>animate dead</em><br /><strong>3</strong>:
+        <em>create undead</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

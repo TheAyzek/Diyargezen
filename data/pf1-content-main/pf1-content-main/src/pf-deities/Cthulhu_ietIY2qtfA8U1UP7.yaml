@@ -1,0 +1,36 @@
+_id: ietIY2qtfA8U1UP7
+_key: '!journal!ietIY2qtfA8U1UP7'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Cthulhu
+pages:
+  - _id: 8J2lbgEeEbpVpTYJ
+    _key: '!journal.pages!ietIY2qtfA8U1UP7.8J2lbgEeEbpVpTYJ'
+    _stats:
+      coreVersion: '12.331'
+    name: Cthulhu
+    sort: 0
+    text:
+      content: >-
+        <h1>Cthulhu</h1><h2>The Dreamer in the
+        Deep</h2>@Source[PZO90109;pages=66] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Cthulhu">Cthulhu</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Great Old Ones<br /><strong>Areas of
+        Concern</strong> Cataclysms, dreams, the stars<br
+        /><strong>Domains</strong> Chaos, Evil, Madness, Void<br
+        /><strong>Subdomains</strong> Dark Tapestry, Insanity, Nightmare,
+        Stars<br /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Dagger<br /><strong>Symbol</strong>
+        Complex rune around eye<br /><strong>Sacred Animal(s)</strong> None<br
+        /><strong>Sacred Color(s)</strong> Black, blue</p><h2>For Followers of
+        Cthulhu</h2><h3>Feats</h3><p>Dreamed Secrets</p><h3>Magic Items -
+        Wondrous Items</h3><p>Preklikin's Book of
+        Cults</p><h3>Traits</h3><p>Unspeakable Bond</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

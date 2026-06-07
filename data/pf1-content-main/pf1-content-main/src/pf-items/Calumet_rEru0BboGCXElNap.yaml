@@ -1,0 +1,25 @@
+_id: rEru0BboGCXElNap
+_key: '!items!rEru0BboGCXElNap'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/pipe.jpg
+name: Calumet
+system:
+  description:
+    value: >-
+      <p>A calumet is a two-piece ceremonial smoking pipe with a bowl shaped
+      from stone or clay and an intricately carved wooden stem decorated with
+      dangling fetishes. The pipe is typically carried in a special leather
+      pouch festooned with beads, patterns, and trinkets. The pipe is used to
+      smoke various herbal mixtures required for certain rituals. The communal
+      smoking of a calumet is sometimes incorporated into diplomatic meetings as
+      a sign of solidarity between various parties. You gain a +1 circumstance
+      bonus on Diplomacy checks against anyone you share your calumet with in
+      this way.</p>
+  equipped: false
+  price: 20
+  sources:
+    - id: PZO1129
+      pages: '203'
+  subType: adventuring
+type: loot

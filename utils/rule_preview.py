@@ -44,10 +44,6 @@ def format_rule_preview(rules: Dict[str, Any]) -> str:
     elif system == "MUTANTS_AND_MASTERMINDS":
         lines.extend(_format_mm_rules(rules_dict))
     
-    # VtM kuralları
-    elif system == "VTM5E":
-        lines.extend(_format_vtm_rules(rules_dict))
-    
     # Genel format (bilinmeyen sistem)
     else:
         lines.extend(_format_generic_rules(rules_dict))
@@ -139,33 +135,6 @@ def _format_mm_rules(rules_dict: Dict[str, Any]) -> list[str]:
                         lines.append(f"   • {pl_key:20} → {pl_info}")
             else:
                 lines.append("   (Tablo boş)")
-        lines.append("")
-    
-    return lines
-
-
-def _format_vtm_rules(rules_dict: Dict[str, Any]) -> list[str]:
-    """VtM kurallarını formatla"""
-    lines = []
-    
-    # Health
-    if "health" in rules_dict:
-        health_rule = rules_dict["health"]
-        lines.append("❤️ Health:")
-        base = health_rule.get("base", "?")
-        attribute = health_rule.get("attribute", "?")
-        lines.append(f"   Health = {base} + {attribute}")
-        lines.append("")
-    
-    # Willpower
-    if "willpower" in rules_dict:
-        willpower_rule = rules_dict["willpower"]
-        lines.append("🧠 Willpower:")
-        attributes = willpower_rule.get("attributes", [])
-        if len(attributes) == 2:
-            lines.append(f"   Willpower = {attributes[0]} + {attributes[1]}")
-        else:
-            lines.append(f"   Willpower = {', '.join(attributes)}")
         lines.append("")
     
     return lines

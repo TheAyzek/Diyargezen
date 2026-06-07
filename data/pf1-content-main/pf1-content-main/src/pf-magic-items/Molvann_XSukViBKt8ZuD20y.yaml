@@ -1,0 +1,65 @@
+_id: XSukViBKt8ZuD20y
+_key: '!items!XSukViBKt8ZuD20y'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/warhammer.png
+name: Molvann
+system:
+  actions:
+    - _id: ibtuv02rprp21tbj
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: molvann
+  aura:
+    custom: true
+    school: necromancy and transmutation
+  baseTypes:
+    - Warhammer
+  cl: 15
+  description:
+    value: >-
+      <p>This heavy warhammer is capped with steel spikes on both ends of its
+      massive head, and a leather thong prevents it from falling from the
+      wielder's hand. Molv&#235;nn is a +3 warhammer that deals both piercing
+      and bludgeoning damage. Yet although it is already a formidable weapon,
+      its true potential is only realized in the hands of a barbarian. Wielded
+      by a barbarian, Molv&#235;nn becomes a +5 thundering warhammer. The
+      barbarian gains an additional 1 hit point per barbarian level when raging
+      and can add twice her Strength modifier (instead of half again her
+      Strength modifier) to damage rolls while wielding Molv&#235;nn two-handed.
+      Additionally, while Molv&#235;nn's wielder is raging, she cannot be
+      disarmed, nor can Molv&#235;nn be sundered.<p><strong>Base Item</strong>:
+      warhammer|+5 thundering
+      warhammer</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, blindness/deafness, rage</p>
+  enh: 3
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 63312
+  showInQuickbar: false
+  sources:
+    - id: PZO9034
+  weaponGroups:
+    - hammers
+  weight:
+    value: 5
+type: weapon

@@ -1,0 +1,62 @@
+_id: i0BFzFGHRWn0rgLe
+_key: '!items!i0BFzFGHRWn0rgLe'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/sword-dueling.png
+name: Rostland Edge
+system:
+  actions:
+    - _id: fxa87r0lxpidj9gv
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: rostlandEdge
+  aura:
+    custom: true
+    school: evocation and transmutation
+  baseTypes:
+    - Aldori Dueling Sword
+  cl: 10
+  description:
+    value: >-
+      <p>Crafted to defend against enemies seeking to damage it rather than its
+      wielder, a Rostland edge is a +2 countering impervious Aldori dueling
+      sword. If the weapon is ever destroyed, it explodes with tremendous force,
+      dealing 10d6 points of fire damage to every creature within a
+      20-foot-radius spread (Reflex DC 14 half).</p><p><strong>Base
+      Item</strong>: countering impervious Aldori dueling
+      sword</p><h3>Construction</h3><p><strong>Requirements</strong> Combat
+      Reflexes, Craft Magic Arms and Armor, cat's grace, fabricate, fireball,
+      make whole</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 21820
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1138
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 3
+type: weapon

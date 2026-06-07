@@ -1,0 +1,70 @@
+_id: gboLU87M5riYeFol
+_key: '!actors!gboLU87M5riYeFol'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Spawn of the Abyss (CR 11)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    hp:
+      max: 49
+  details:
+    alignment: CE
+    area: 40-ft. radius
+    aura: strong conjuration
+    biography: {}
+    cl: 3
+    cr:
+      base: 11
+    destruction: >-
+      The instability can only be permanently closed with a <em>miracle</em> or
+      <em>wish</em> spell. A <em>hallow</em> spell tied to a dimensional anchor
+      can temporarily prevent the instability's effects.
+    effect: >-
+      When a mortal creature enters the area, it's presence provokes curiosity
+      from the other side. The instability begins spewing a demon each round,
+      and continues doing so for 1 minute. Use the chart in notes tab to
+      determine what demon appears. These demons are not summoned.
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Horror Adventures pg. 172</p>
+        <p><strong>Haunt Templates</strong>: persistent vaporous variant</p>
+        <p><table class="inner">
+        <tbody><tr><td><strong>d4</strong></td><td><strong>Demon</strong></td></tr>
+        <tr><td>1</td><td>Dretch (CR 2)</td></tr> <tr><td>2</td><td>Babau (CR
+        6)</td></tr> <tr><td>3</td><td>Succubus (CR 7)</td></tr>
+        <tr><td>4</td><td>Nabasu (CR 8)</td></tr>
+        </tbody></table></p><p><strong>Benefit</strong> A character can channel
+        the instability's power by spending 1 minute in the area while
+        performing a ritual to focus its energy, requiring a DC 30 Knowledge
+        (arcana) or Knowledge (planes) check. If she succeeds, she gains the
+        fiendish template for 24 hours, and her alignment shifts one step closer
+        to chaotic evil. If she fails, she is pulled into the
+        Abyss.</p><h3>Description</h3><p>Dimensional instabilities are areas
+        where the boundary between the Material Plane and another plane is thin
+        and rifts between the planes frequently open. They take damage from
+        effects that oppose the connected plane's fundamental nature. For
+        example, a dimensional instability associated with the chaotic evil
+        Abyss takes damage from good or lawful spells or effects, and an
+        instability tied to the Elemental Plane of Fire takes damage from water
+        and cold effects. Instabilities can even provide benefits to those who
+        know how to cultivate them.</p><p>The sample haunt appeared when an
+        ancient wizard bound 666 demons. Over time, the boundary between the
+        Abyss and his summoning chamber grew thin, and the plane's influence
+        fractured the binding circle he carved into the floor, creating tiny
+        rifts that flicker into existence at irregular intervals.</p><p>In
+        addition to good and lawful effects, the haunt is vulnerable to other
+        damage associated with good or law at the GM's discretion, such as the
+        extra damage from a <em>holy</em> weapon.</p>
+    notice: >-
+      Perception or Knowledge (arcana) DC 25 (to notice a faint shimmering or
+      recognize the significance of the fractured circle)
+    reset: 1d20 days
+    trigger: proximity
+    weakness: good and lawful effects (immune to positive energy)
+type: haunt

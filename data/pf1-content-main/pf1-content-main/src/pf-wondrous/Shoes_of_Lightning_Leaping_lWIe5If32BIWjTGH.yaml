@@ -1,0 +1,33 @@
+_id: lWIe5If32BIWjTGH
+_key: '!items!lWIe5If32BIWjTGH'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Shoes of Lightning Leaping
+system:
+  aura:
+    school: trs
+  cl: 6
+  description:
+    value: >-
+      <p>These short black shoes fit tightly around the wearer's feet and bear
+      designs of leaping arcs of lightning and wild winds. Once per day on
+      command, a creature wearing these boots can transform into lightning and
+      move up to 50 feet in a straight line, re-materializing at the far end of
+      the lightning bolt. Creatures in the path of the lightning take 6d6 points
+      of electricity damage and objects take damage as per the lightning bolt
+      spell. If the lightning strikes an object or barrier and fails to burst
+      through it, the creature wearing the boots appears next to the impacted
+      object and is staggered for 1 round. Movement while in lightning form does
+      not provoke attacks of
+      opportunity.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, expeditious retreat, lightning bolt</p>
+  price: 10500
+  slot: feet
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

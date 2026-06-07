@@ -1,0 +1,44 @@
+_id: X2hdCqVvZ88AyP3N
+_key: '!items!X2hdCqVvZ88AyP3N'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/armored-coat.PNG
+name: Aldori Dueling Armor
+system:
+  armor:
+    acp: 2
+    dex: 3
+    enh: 2
+    material:
+      base:
+        value: leather
+    value: 4
+  aura:
+    custom: true
+    school: illusion and transmutation
+  baseTypes:
+    - Armored Coat
+  cl: 9
+  description:
+    value: >-
+      <p>These +2 armored coats are traditionally worn by the Aldori swordlords
+      of Brevoy. The wearer of this armor gains a +2 enhancement bonus on
+      initiative checks and a +2 circumstance bonus on attacks of opportunity if
+      the attacks are made with an Aldori dueling sword. Once per day when the
+      wearer of Aldori dueling armor is the target of a melee attack, she can
+      make an attack with an Aldori dueling sword as an immediate action. If the
+      result of her attack roll is higher than that of her attacker, the wearer
+      of Aldori dueling armor parries the attack and takes no
+      damage.</p><p><strong>Base Item</strong>: +2 armored
+      coat</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, cat's grace, symbol of striking</p>
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 24200
+  sources:
+    - id: PZO9467
+  spellFailure: 20
+  weight:
+    value: 20
+type: equipment

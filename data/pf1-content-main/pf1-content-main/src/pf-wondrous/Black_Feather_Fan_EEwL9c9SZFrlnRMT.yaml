@@ -1,0 +1,26 @@
+_id: EEwL9c9SZFrlnRMT
+_key: '!items!EEwL9c9SZFrlnRMT'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Black Feather Fan
+system:
+  aura:
+    school: evo
+  cl: 5
+  description:
+    value: >-
+      <p>This elaborate fan is made with a dozen black feathers set into a metal
+      handle embossed with a stylized crest. The bearer can use it to create a
+      gust of wind, whispering wind, or wind wall. The fan's effects can be used
+      3 times per day, in any
+      combination.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, gust of wind, whispering wind, wind wall</p>
+  price: 10000
+  sources:
+    - id: PZO1121
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

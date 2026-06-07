@@ -1,0 +1,24 @@
+_id: SLNNC21aP0gAbVoq
+_key: '!items!SLNNC21aP0gAbVoq'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Daring Vault
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>A black powder vaulter can
+      spend 1 grit point as a swift action to increase her land speed by 20 feet
+      (gaining the appropriate bonus on Acrobatics checks to jump) until the end
+      of her turn. If the black powder vaulter jumps while affected by this
+      deed, she can make a second jump while midair if she is adjacent to a
+      wall, column, or other solid, permanent structure. The second jump counts
+      as having a running start even if the direction is different from the
+      first jump.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

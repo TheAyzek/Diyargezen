@@ -1,0 +1,46 @@
+_id: tcc5V6cyv9wRMH50
+_key: '!items!tcc5V6cyv9wRMH50'
+_stats:
+  coreVersion: '12.331'
+folder: CAxOlglJyXdUOHF9
+img: icons/tools/navigation/map-chart-tan.webp
+name: Seeking Adventure (Legacy of Fire)
+system:
+  description:
+    value: >-
+      <p><em>The Pathfinder Society has long intrigued you—tales of the exotic
+      lands and strange discoveries made by Pathfinders have enchanted your
+      dreams and fired your imagination since childhood. When Pathfinders came
+      through your village or neighborhood, they immediately enthralled you with
+      their stories and knowledge. Yet at the time, you were far too young to
+      join them, and when they left for adventure you had to stay behind. Now
+      that you are of age, you’ve traveled to Absalom to apply for membership.
+      The application process went well, and you’re now a full
+      member.</em></p><p><em>Your first assignment is to accompany Garavel’s
+      group to Kelmarane—the Pathfinder Society has heard rumors of several
+      ancient structures in the area, including a ruined monastery once
+      dedicated to Sarenrae, and would like to learn more about them. Even more
+      pressing is the mystery of what brought about Kelmarane’s ruin in the
+      first place—reports of which are vague at best. If you can determine the
+      cause of the village’s abandonment so many years ago, you’re sure the
+      Society would be impressed.</em></p><p><strong>Benefits</strong>: You
+      begin the game with your own
+      <em>@UUID[Compendium.pf-content.pf-wondrous.Item.SyKirMypun1K59Tx]{wayfinder},</em>
+      a loan from your venture-captain. You’ve promised to pay your
+      venture-captain 500 gp for the wayfinder some day, but for now it’s yours
+      to use.</p><p>A <em>wayfinder</em> is a magical compass that grants you a
+      +2 circumstance bonus on Survival checks to avoid becoming lost, and can
+      be commanded to emit light as the spell (CL 5th) as a standard action.
+      Further details on the Pathfinder Society and <em>wayfinders</em> may be
+      found in the <em>Pathfinder Chronicles Campaign Setting</em> (pages
+      194–195) or <em>Seekers of Secrets</em>.</p>
+  sources:
+    - id: PZO9404
+      pages: '10'
+  subType: trait
+  tags:
+    - '3.5'
+    - Legacy of Fire
+    - 'Pathfinder Society '
+  traitType: campaign
+type: feat

@@ -1,0 +1,30 @@
+_id: Axey3n9m3YObpFyf
+_key: '!items!Axey3n9m3YObpFyf'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Agent's Clasp
+system:
+  aura:
+    school: evo
+  cl: 9
+  description:
+    value: >-
+      <p>These small, stylish golden clasps come in pairs: one for a handler and
+      one for an agent. The handler's clasp provides constant information to the
+      wearer as per the spell status regarding the wearer of the agent's clasp.
+      At will, the wearer of either clasp can speak a command word to transmit a
+      sending (as per the spell) to the wearer of the other clasp. If the other
+      clasp is not worn, the sending is stored in the recipient clasp until it
+      is next donned, at which time the message is delivered and the recipient
+      has a chance to respond as normal.  The price and cost listed are for a
+      matched pair of
+      clasps.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, sending, status, creator must be a Taldan</p>
+  price: 60000
+  slot: neck
+  sources:
+    - id: PZO9280
+  subType: wondrous
+type: equipment

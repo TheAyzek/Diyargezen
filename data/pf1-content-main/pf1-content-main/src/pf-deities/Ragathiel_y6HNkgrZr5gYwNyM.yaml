@@ -1,0 +1,68 @@
+_id: y6HNkgrZr5gYwNyM
+_key: '!journal!y6HNkgrZr5gYwNyM'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Ragathiel
+pages:
+  - _id: WwxJdM63iKVN4jy3
+    _key: '!journal.pages!y6HNkgrZr5gYwNyM.WwxJdM63iKVN4jy3'
+    _stats:
+      coreVersion: '12.331'
+    name: Ragathiel
+    sort: 0
+    text:
+      content: >-
+        <h1> Ragathiel</h1><h2>General of
+        Vengeance</h2>@Source[PZO9267;pages=322] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Ragathiel">Ragathiel</a><h3>Details</h3><p><strong>Alignment</strong>
+        LG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Chivalry, duty, vengeance<br /><strong>Domains</strong>
+        Destruction, Good, Law, Nobility<br /><strong>Subdomains</strong> Archon
+        (Good), Archon (Law), Judgment, Martyr, Rage<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Bastard sword<br /><strong>Symbol</strong> Sword crossed
+        with wing<br /><strong>Sacred Animal(s)</strong> Mastiff<br
+        /><strong>Sacred Color(s)</strong> Crimson,
+        gold</p><h3>Obedience</h3><p>Slay a proven wrongdoer in Ragathiel's
+        name. It is not enough for the sacrifice to have an evil heart or evil
+        intentions; the sacrifice must have committed evil or unlawful deeds.
+        Gain a +4 sacred bonus on saving throws against spells and effects cast
+        by evil creatures.</p><h2>Boons - Celestial Obedience</h2><h3>Mystery
+        Cultist</h3><p>@Source[PZO9255;pages=21]<br /><strong>1: Virtuous Combat
+        (Sp)</strong> <em>bless weapon</em> 3/day, <em>litany of
+        righteousness</em><sup>UC</sup> 2/day, or <em>magic vestment </em>
+        1/day<br /><strong>2: Retribution (Su)</strong> You gain a sacred bonus
+        equal to half your HD on damage rolls made with slashing weapons against
+        the last creature to have physically wounded you within the last 24
+        hours.<br /><strong>3: Pure Soul (Sp)</strong> You can cast <em>holy
+        aura </em>on yourself once per day. In addition to the effects of the
+        spell, you gain DR 10/good and cold iron and you treat any weapon in
+        hand as a <em>+5 holy weapon </em>for the duration of the
+        effect.</em></p><h2>Paladin Code</h2><em>The paladins of Ragathiel are
+        shining beacons of furious resolve on the battlefield, and they are
+        careful stewards of valor everywhere. These paladins disproportionately
+        come from cultures that are typically hostile to paladin training,
+        including those of half-orcs, hobgoblins, Gebbites, and the Nidalese.
+        The tenets of Ragathiel's paladins include the following
+        affirmations.<ul><li> I will avenge evil wrought upon the
+        innocent.</li><li> I will not give my word lightly, but once it is
+        given, I will uphold a promise until my last breath.</li><li> Those
+        proven guilty must be punished for their crimes. I will not turn a blind
+        eye to wrongdoing.</li><li> Rage is a virtue and a strength only when
+        focused against the deserving. I will never seek disproportionate
+        retribution.</li><li> Redemption finds hearts from even the cruelest
+        origins. I will strive not to act upon prejudice against fellow mortals
+        based on race or origin.</li></ul><h2>For Followers of
+        Ragathiel</h2><h3>Archetypes</h3><p>Angelfire Apostle (Cleric), Sixth
+        Wing Bulwark (Warpriest)</p><h3>Feats</h3><p>Heroic
+        Interposition</p><h3>Prestige Classes</h3><p>Crimson
+        Templar</p><h3>Spells</h3><p>Shield of Wings</p><h3>Traits</h3><p>Avowed
+        Inspiration, Empyreal Focus, Redeemed by Ragathiel</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

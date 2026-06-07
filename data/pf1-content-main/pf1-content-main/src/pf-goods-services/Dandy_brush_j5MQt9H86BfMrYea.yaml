@@ -1,0 +1,23 @@
+_id: j5MQt9H86BfMrYea
+_key: '!items!j5MQt9H86BfMrYea'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/trinket-fur-brown.jpg
+name: Dandy brush
+system:
+  description:
+    value: >-
+      <p></p><h2>Description</h2><p>This hard-bristled tool has a handle that
+      slips over the wearer's hand, and is used by animal breeders, owners, and
+      grooms to brush the animals in their care, loosening dirt and detritus
+      from the creatures' coats and stimulating the skin so it produces the
+      natural oils that keep them healthy and clean.</p>
+  equipped: false
+  price: 0.2
+  sources:
+    - id: PZO9429
+      pages: '12'
+  subType: animalGear
+  weight:
+    value: 2
+type: loot

@@ -1,0 +1,156 @@
+_id: oj88xtMMbI7lpmAe
+_key: '!tables!oj88xtMMbI7lpmAe'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/mine-interior-dungeon-door.webp
+name: Ruined City in the Desert (Low Level)
+replacement: true
+results:
+  - _id: hMNJV0hFFDl1DHm4
+    _key: '!tables.results!oj88xtMMbI7lpmAe.hMNJV0hFFDl1DHm4'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 6
+    text: 1d6 ([[1d6]]) Fire Beetles [AVG CR 1]
+    type: text
+    weight: 1
+  - _id: zlbTc3VbQvQDJs47
+    _key: '!tables.results!oj88xtMMbI7lpmAe.zlbTc3VbQvQDJs47'
+    img: icons/svg/d20-black.svg
+    range:
+      - 7
+      - 12
+    text: 1 Venomous Snake [CR 1]
+    type: text
+    weight: 1
+  - _id: w2M4703jaDOl8rxn
+    _key: '!tables.results!oj88xtMMbI7lpmAe.w2M4703jaDOl8rxn'
+    img: icons/svg/d20-black.svg
+    range:
+      - 13
+      - 18
+    text: 1 Skeletal Champion [CR 2]
+    type: text
+    weight: 1
+  - _id: bUD2w5R3r5SHoPXi
+    _key: '!tables.results!oj88xtMMbI7lpmAe.bUD2w5R3r5SHoPXi'
+    img: icons/svg/d20-black.svg
+    range:
+      - 19
+      - 24
+    text: 1 Vargouille [CR 2]
+    type: text
+    weight: 1
+  - _id: igQbuDqahy7upVZe
+    _key: '!tables.results!oj88xtMMbI7lpmAe.igQbuDqahy7upVZe'
+    img: icons/svg/d20-black.svg
+    range:
+      - 25
+      - 30
+    text: 1 Giant Mantis [CR 3]
+    type: text
+    weight: 1
+  - _id: 39QtbFKoP1YygCQm
+    _key: '!tables.results!oj88xtMMbI7lpmAe.39QtbFKoP1YygCQm'
+    img: icons/svg/d20-black.svg
+    range:
+      - 31
+      - 36
+    text: 1 Shadow [CR 3]
+    type: text
+    weight: 1
+  - _id: UvFoxfLd2xCJOScn
+    _key: '!tables.results!oj88xtMMbI7lpmAe.UvFoxfLd2xCJOScn'
+    img: icons/svg/d20-black.svg
+    range:
+      - 37
+      - 42
+    text: 1 An-Hetkoshu* [CR 3]
+    type: text
+    weight: 1
+  - _id: ugXeJeX9s9H2Cn3B
+    _key: '!tables.results!oj88xtMMbI7lpmAe.ugXeJeX9s9H2Cn3B'
+    img: icons/svg/d20-black.svg
+    range:
+      - 43
+      - 48
+    text: 1 Mithral Cobra [CR 3]
+    type: text
+    weight: 1
+  - _id: 49IM3sdsiEFBJk6I
+    _key: '!tables.results!oj88xtMMbI7lpmAe.49IM3sdsiEFBJk6I'
+    img: icons/svg/d20-black.svg
+    range:
+      - 49
+      - 60
+    text: 1d6 ([[1d6]]) Gnoll Raiders [AVG CR 4]
+    type: text
+    weight: 1
+  - _id: jHsw5vUrUg2mbBCk
+    _key: '!tables.results!oj88xtMMbI7lpmAe.jHsw5vUrUg2mbBCk'
+    img: icons/svg/d20-black.svg
+    range:
+      - 61
+      - 66
+    text: 1 Fast Zombie Bulette [CR 5]
+    type: text
+    weight: 1
+  - _id: gSzyzxV02AwEfMMY
+    _key: '!tables.results!oj88xtMMbI7lpmAe.gSzyzxV02AwEfMMY'
+    img: icons/svg/d20-black.svg
+    range:
+      - 67
+      - 72
+    text: 1 Mummy [CR 5]
+    type: text
+    weight: 1
+  - _id: MR0KNgnJvWT6F3Lz
+    _key: '!tables.results!oj88xtMMbI7lpmAe.MR0KNgnJvWT6F3Lz'
+    img: icons/svg/d20-black.svg
+    range:
+      - 73
+      - 78
+    text: 1d6 ([[1d6]]) Morlocks [AVG CR 5]
+    type: text
+    weight: 1
+  - _id: J6LBcFnJDgslRFRY
+    _key: '!tables.results!oj88xtMMbI7lpmAe.J6LBcFnJDgslRFRY'
+    img: icons/svg/d20-black.svg
+    range:
+      - 79
+      - 84
+    text: 1 Basilisk [CR 5]
+    type: text
+    weight: 1
+  - _id: IjNYrJOzXoGddX8I
+    _key: '!tables.results!oj88xtMMbI7lpmAe.IjNYrJOzXoGddX8I'
+    img: icons/svg/d20-black.svg
+    range:
+      - 85
+      - 90
+    text: 1d6 ([[1d6]]) Human Cultists [AVG CR 5]
+    type: text
+    weight: 1
+  - _id: otXTY9DXZlCTILH1
+    _key: '!tables.results!oj88xtMMbI7lpmAe.otXTY9DXZlCTILH1'
+    img: icons/svg/d20-black.svg
+    range:
+      - 91
+      - 95
+    text: 1 Will-O’-Wisp [CR 6]
+    type: text
+    weight: 1
+  - _id: fmfe2vNW44sBBNmS
+    _key: '!tables.results!oj88xtMMbI7lpmAe.fmfe2vNW44sBBNmS'
+    img: icons/svg/d20-black.svg
+    range:
+      - 96
+      - 100
+    text: 1 Wyvern [CR 6]
+    type: text
+    weight: 1
+sort: 2000000

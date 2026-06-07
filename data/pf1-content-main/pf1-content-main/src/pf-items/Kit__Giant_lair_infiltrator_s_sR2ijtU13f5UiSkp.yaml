@@ -1,0 +1,19 @@
+_id: sR2ijtU13f5UiSkp
+_key: '!items!sR2ijtU13f5UiSkp'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/chest/chest-reinforced-stone.webp
+name: Kit, Giant lair infiltrator's
+system:
+  description:
+    value: >-
+      <p>This kit, most widely available in Varisia, includes a block and
+      tackle, 50 feet of chain, a climber's kit, a crowbar, and a pole.</p>
+  sources:
+    - id: PZO9453
+      pages: '25'
+  tags:
+    - Kits
+  weight:
+    value: 33
+type: container

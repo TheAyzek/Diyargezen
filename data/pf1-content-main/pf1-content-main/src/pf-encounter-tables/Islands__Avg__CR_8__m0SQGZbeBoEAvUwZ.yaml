@@ -1,0 +1,156 @@
+_id: m0SQGZbeBoEAvUwZ
+_key: '!tables!m0SQGZbeBoEAvUwZ'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/island.webp
+name: Islands (Avg. CR 8)
+replacement: true
+results:
+  - _id: EtJfQtmzDoEIBphv
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.EtJfQtmzDoEIBphv'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 4
+    text: 1 Monkey Swarm [CR 2]
+    type: text
+    weight: 1
+  - _id: OengAdwDwS5wHhxi
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.OengAdwDwS5wHhxi'
+    img: icons/svg/d20-black.svg
+    range:
+      - 5
+      - 12
+    text: '[[2d4]] Baboons [AVG CR 3]'
+    type: text
+    weight: 1
+  - _id: bolCd9Bmltts28Bb
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.bolCd9Bmltts28Bb'
+    img: icons/svg/d20-black.svg
+    range:
+      - 13
+      - 17
+    text: '[[1d4]] Garden Oozes [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: spfTngijk7E1W6LC
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.spfTngijk7E1W6LC'
+    img: icons/svg/d20-black.svg
+    range:
+      - 18
+      - 27
+    text: '[[2d6]] Kuru [AVG CR 4]]'
+    type: text
+    weight: 1
+  - _id: 434pxYEGiXDasSCZ
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.434pxYEGiXDasSCZ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 28
+      - 32
+    text: '[[1d4]] Chickcharneys [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: eTx7UQcS8rikx7Fd
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.eTx7UQcS8rikx7Fd'
+    img: icons/svg/d20-black.svg
+    range:
+      - 33
+      - 38
+    text: '[[1d6]] Giant Chameleons [AVG CR 6]'
+    type: text
+    weight: 1
+  - _id: TncxXmwavpKf4guC
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.TncxXmwavpKf4guC'
+    img: icons/svg/d20-black.svg
+    range:
+      - 39
+      - 42
+    text: 1 Elder Nirento [CR 6]
+    type: text
+    weight: 1
+  - _id: fdxxqr7RzBnMBPS7
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.fdxxqr7RzBnMBPS7'
+    img: icons/svg/d20-black.svg
+    range:
+      - 43
+      - 50
+    text: '[[1d4]] Archelons [AVG CR 7]'
+    type: text
+    weight: 1
+  - _id: eVp5tEmgViQ3yESf
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.eVp5tEmgViQ3yESf'
+    img: icons/svg/d20-black.svg
+    range:
+      - 51
+      - 57
+    text: '[[1d6]] Cyclopes [AVG CR 8]'
+    type: text
+    weight: 1
+  - _id: y0VHIbLQv2PRAltG
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.y0VHIbLQv2PRAltG'
+    img: icons/svg/d20-black.svg
+    range:
+      - 58
+      - 64
+    text: '[[1d4]] Soucouyants [AVG CR 10]'
+    type: text
+    weight: 1
+  - _id: KlO8fZZpOb4H4xYv
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.KlO8fZZpOb4H4xYv'
+    img: icons/svg/d20-black.svg
+    range:
+      - 65
+      - 72
+    text: 1 Larabay [CR 11]
+    type: text
+    weight: 1
+  - _id: UkucAAEmaOOQI2Lc
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.UkucAAEmaOOQI2Lc'
+    img: icons/svg/d20-black.svg
+    range:
+      - 73
+      - 82
+    text: '[[1d4]] Jungle Giants [AVG CR 12]'
+    type: text
+    weight: 1
+  - _id: vreMbCYhRTGgC37F
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.vreMbCYhRTGgC37F'
+    img: icons/svg/d20-black.svg
+    range:
+      - 83
+      - 87
+    text: '[[1d4]] Gholdakos [AVG CR 12]'
+    type: text
+    weight: 1
+  - _id: kPLld9CigXdtqAVv
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.kPLld9CigXdtqAVv'
+    img: icons/svg/d20-black.svg
+    range:
+      - 88
+      - 93
+    text: 1 Storm Giant [CR 13]
+    type: text
+    weight: 1
+  - _id: MFvlduCR1HPVF1Ah
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.MFvlduCR1HPVF1Ah'
+    img: icons/svg/d20-black.svg
+    range:
+      - 94
+      - 97
+    text: 1 Jubjub Bird [CR 15]
+    type: text
+    weight: 1
+  - _id: hkj6n5JRi58x6x2k
+    _key: '!tables.results!m0SQGZbeBoEAvUwZ.hkj6n5JRi58x6x2k'
+    img: icons/svg/d20-black.svg
+    range:
+      - 98
+      - 100
+    text: '[[1d4]] Kongamatos [AVG CR 17]'
+    type: text
+    weight: 1
+sort: 3900000

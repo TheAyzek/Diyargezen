@@ -1,0 +1,23 @@
+_id: c8Ly5ntSWpYjJfXk
+_key: '!items!c8Ly5ntSWpYjJfXk'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/wood.jpg
+name: Collapsible trampoline
+system:
+  description:
+    value: >-
+      <p>This compact trampoline comes apart and rolls up like a tent for easy
+      transport. Setting up or taking apart the trampoline takes 1 minute. When
+      operated by two creatures, the collapsible trampoline confers a +5 bonus
+      on all Acrobatics checks made to jump. If a falling creature lands on the
+      trampoline, it ignores the first 10 feet of falling damage.</p>
+  equipped: false
+  price: 50
+  sources:
+    - id: PZO1129
+      pages: '203'
+  subType: adventuring
+  weight:
+    value: 10
+type: loot

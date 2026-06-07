@@ -1,0 +1,42 @@
+_id: t8bK7qKBqpm3QqJ8
+_key: '!actors!t8bK7qKBqpm3QqJ8'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Foreboding Mist (CR 3)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    hp:
+      max: 13
+  details:
+    alignment: NE
+    area: 15-ft. radius
+    biography: {}
+    cl: 3
+    cr:
+      base: 3
+    destruction: >-
+      Casting <em>consecrate</em> on the ground underneath the mist prevents it
+      from returning.
+    effect: >-
+      A chilly fog descends, twisting and condensing into claws that grab and
+      prod those within it. This fog functions as per <em>haunting mists</em>
+      (DC 13).
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Horror Adventures pg. 175</p>
+        <p><strong>Haunt Templates</strong>:
+        persistent</p><h3>Description</h3><p>Foreboding mists lurk in ill-kept
+        graveyards, drawing their substance from the unrest of all who are
+        buried below. They manifest regardless of the weather, and target the
+        minds of those who fail to recognize they are not entirely real.</p>
+    notice: Perception DC 15 (to notice a chill fog forming)
+    reset: 1 hour
+    trigger: proximity
+    weakness: slow
+type: haunt

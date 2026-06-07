@@ -1,0 +1,28 @@
+_id: 0fOH5Wh6ETuxpaYb
+_key: '!items!0fOH5Wh6ETuxpaYb'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Wings of Flying, Lesser
+system:
+  aura:
+    school: trs
+  cl: 10
+  description:
+    value: >-
+      <p>This mechanical backpack is a mess of gears and cogs, with two large
+      canvas wings extending out from it to rise over the wearer's shoulders.
+      When the wearer touches the button on the pack's chest harness, the wings
+      whir to life and begin flapping rapidly, hauling the wearer awkwardly into
+      the air.  Lesser wings of flying grant the wearer a fly speed of 30 feet
+      (poor maneuverability).<h3>Requirements</h3><p>Craft Wondrous Item,
+      fly</p>
+  price: 22000
+  slot: shoulders
+  sources:
+    - id: PZO9063
+  subType: wondrous
+  weight:
+    value: 10
+type: equipment

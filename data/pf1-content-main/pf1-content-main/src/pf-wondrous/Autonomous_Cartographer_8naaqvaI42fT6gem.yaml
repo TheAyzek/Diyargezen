@@ -1,0 +1,27 @@
+_id: 8naaqvaI42fT6gem
+_key: '!items!8naaqvaI42fT6gem'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Autonomous Cartographer
+system:
+  aura:
+    school: div
+  cl: 5
+  description:
+    value: >-
+      <p>Upon command, this item draws your surroundings, out to the limits of
+      your normal vision, rendering them as if depicted by a competent but
+      unexceptional artist. It does not record any details you cannot see. The
+      autonomous cartographer creates the map as needed to fit upon a
+      1-foot-by-4-foot parchment or scroll contained within the item. A second
+      command erases the scroll, allowing you to use it again. You may insert or
+      remove a scroll as a full-round
+      action.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, erase, prestidigitation</p>
+  price: 2000
+  sources:
+    - id: PZO9211
+  subType: wondrous
+type: equipment

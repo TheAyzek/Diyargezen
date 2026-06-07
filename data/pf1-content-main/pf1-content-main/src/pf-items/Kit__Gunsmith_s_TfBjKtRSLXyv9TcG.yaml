@@ -1,0 +1,22 @@
+_id: TfBjKtRSLXyv9TcG
+_key: '!items!TfBjKtRSLXyv9TcG'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/chest/chest-reinforced-stone.webp
+name: Kit, Gunsmith's
+system:
+  description:
+    value: >-
+      <p>This small kit has all the tools a person needs to create, repair, and
+      restore firearms, except for the necessary raw materials. Without such a
+      kit, you cannot properly construct or provide upkeep for firearms.</p>
+  sources:
+    - id: PZO1123
+      pages: '57'
+    - id: PZO1118
+      pages: '141'
+  tags:
+    - Kits
+  weight:
+    value: 2
+type: container

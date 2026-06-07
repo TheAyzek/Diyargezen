@@ -1,0 +1,28 @@
+_id: 1cnwO5c6sIbu7UXb
+_key: '!items!1cnwO5c6sIbu7UXb'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Natural Attunement (kami)
+system:
+  aura:
+    school: con
+  cl: 5
+  description:
+    value: >-
+      <p>This ring carved from a single piece of cherry wood bears an
+      inscription written in Tien. If the wearer can cast summon nature's ally
+      spells, the wearer adds shikigamiB3 to the 3rd-level list of monsters he
+      can summon with those spells, adds kodamaB3 to the 5th-level list, adds
+      zuishinB3 to the 7th-level list, and adds toshigamiB3 to the 9th-level
+      list. Also, once per day on command the wearer can use this ring to summon
+      a shikigami, as if by the summon nature's ally III
+      spell.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, commune with nature, summon nature's ally III</p>
+  price: 7800
+  slot: ring
+  sources:
+    - id: PZO1129
+  subType: wondrous
+type: equipment

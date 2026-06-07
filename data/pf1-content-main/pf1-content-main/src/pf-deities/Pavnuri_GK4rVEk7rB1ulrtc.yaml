@@ -1,0 +1,46 @@
+_id: GK4rVEk7rB1ulrtc
+_key: '!journal!GK4rVEk7rB1ulrtc'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Pavnuri
+pages:
+  - _id: 3Zi7CkeE38klIOt9
+    _key: '!journal.pages!GK4rVEk7rB1ulrtc.3Zi7CkeE38klIOt9'
+    _stats:
+      coreVersion: '12.331'
+    name: Pavnuri
+    sort: 0
+    text:
+      content: >-
+        <h1>Pavnuri</h1><h2>Lord of Nothing</h2>@Source[PZO9267;pages=318] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Pavnuri">Pavnuri</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Daemon Harbingers<br /><strong>Areas
+        of Concern</strong> Cacodaemons, cannibalism, secret messages<br
+        /><strong>Domains</strong> Death, Evil, Knowledge, Travel<br
+        /><strong>Subdomains</strong> Daemon, Language, Murder, Thought<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Morningstar<br
+        /><strong>Symbol</strong> Maw and fiery pyramid<br /><strong>Sacred
+        Animal(s)</strong> Ape<br /><strong>Sacred Color(s)</strong>
+        Black</p><h3>Obedience</h3><p>Whisper a personal secret to a stranger.
+        Gain a +4 profane bonus on saving throws against death and negative
+        energy effects.</p><h2>Boons - Daemon
+        Harbingers</h2><p>@Source[PZO1139;pages=114]</p><p>Abaddon's unique
+        daemons take on a host of titles, customized to their methods and
+        vanity. These harbingers enjoy sweeping influence among daemons as
+        favored advisors, and they work to cultivate their own cults on Abaddon
+        and beyond.</p><p> Daemon harbingers are neutral evil demigods that
+        range in power from CR 21 to CR 25. The boons they grant are less
+        complex than those granted by the Horsemen themselves, manifesting as
+        spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>augury</em><br /><strong>2</strong>:
+        <em>hunger for flesh</em><br /><strong>3</strong>: <em>legend
+        lore</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

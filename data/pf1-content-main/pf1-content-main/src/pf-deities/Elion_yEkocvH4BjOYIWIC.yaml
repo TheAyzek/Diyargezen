@@ -1,0 +1,32 @@
+_id: yEkocvH4BjOYIWIC
+_key: '!journal!yEkocvH4BjOYIWIC'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Elion
+pages:
+  - _id: 9EIGyVVty5JTU2GU
+    _key: '!journal.pages!yEkocvH4BjOYIWIC.9EIGyVVty5JTU2GU'
+    _stats:
+      coreVersion: '12.331'
+    name: Elion
+    sort: 0
+    text:
+      content: >-
+        <h1>Elion</h1><h2>The Farseeker</h2>@Source[PZO90123;pages=69] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Elion">Elion</a><h3>Details</h3><p><strong>Alignment</strong>
+        CG<br /><strong>Pantheon</strong> Azlanti Pantheon<br /><strong>Areas of
+        Concern</strong> Colonization, discovery, and exploration<br
+        /><strong>Domains</strong> Chaos, Community, Good, Travel, Weather<br
+        /><strong>Subdomains</strong> Azata (Chaos), Azata (Good), Cooperation,
+        Education (Community), Exploration, Friendship, Home<br /><em>* Requires
+        the <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Longbow<br /><strong>Symbol</strong> Compass</p><h2>For
+        Followers of Elion</h2><h3>Traits</h3><p>Sacred Orienteer</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,22 @@
+_id: QDyPfUervGzCX5H7
+_key: '!items!QDyPfUervGzCX5H7'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/violet_07.jpg
+name: Hidden Magic
+system:
+  associations:
+    classes:
+      - Vigilante
+  description:
+    value: >-
+      <p><strong>Vigilante Social Talent</strong></p><p>The auras of magic items
+      the vigilante is carrying are hidden (as per magic aura). The vigilante
+      can suppress or reactivate this effect as a standard action. At 11th
+      level, the vigilante and any magic items he is carrying appear to be
+      nonmagical (as if he had cast greater magic aura). The vigilante must be
+      at least 5th level to select this talent.</p>
+  subType: classFeat
+  tags:
+    - Vigilante Social Talent
+type: feat

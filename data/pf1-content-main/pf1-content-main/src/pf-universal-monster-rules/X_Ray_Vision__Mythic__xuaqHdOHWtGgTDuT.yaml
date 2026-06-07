@@ -1,0 +1,18 @@
+_id: xuaqHdOHWtGgTDuT
+_key: '!items!xuaqHdOHWtGgTDuT'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_44.jpg
+name: X-Ray Vision (Mythic)
+system:
+  abilityType: su
+  description:
+    value: >-
+      <p>The monster can see through solid matter as if wearing a Ring Of X-ray
+      Vision. This is as exhausting as if the monster were actually using the
+      ring.</p><p><em>Format</em>: x-ray vision</p><p><em>Location</em>:
+      Senses.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

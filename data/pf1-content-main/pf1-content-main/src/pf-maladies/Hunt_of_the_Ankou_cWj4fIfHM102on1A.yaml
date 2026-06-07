@@ -1,0 +1,21 @@
+_id: cWj4fIfHM102on1A
+_key: '!items!cWj4fIfHM102on1A'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_11.jpg
+name: Hunt of the Ankou
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> curse; <strong>Save</strong> Will DC
+      22</p><p><strong>Effect</strong> The victim is hunted by an ankou as
+      described in hunt of the bogeyman.</p><p><strong>Cure</strong> Only a
+      <em>miracle</em> or <em>wish</em> can free the victim.</p>
+  sources:
+    - id: PZO1135
+      pages: '138'
+  subType: misc
+  tags:
+    - Maladies
+    - Curse
+type: feat

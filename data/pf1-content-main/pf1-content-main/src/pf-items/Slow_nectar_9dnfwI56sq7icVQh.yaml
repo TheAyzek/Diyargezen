@@ -1,0 +1,43 @@
+_id: 9dnfwI56sq7icVQh
+_key: '!items!9dnfwI56sq7icVQh'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Slow nectar
+system:
+  actions:
+    - _id: 1q4mlf0lz2su8840
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1d3]] Dex damage plus paralysis
+            for [[1]] round
+      save:
+        dc: '17'
+        type: fort
+      tag: slowNectar
+  description:
+    value: >-
+      <p><strong>Price</strong> N/A; <strong>Weight</strong>
+      0</p><p><strong>Type</strong> injury; <strong>Save</strong> Fortitude DC
+      17</p><p><strong>Frequency</strong> 1/round for 6
+      rounds</p><p><strong>Effect</strong> 1d3 Dex damage plus paralysis for 1
+      round</p><p><strong>Cure</strong> 1 save</p><p>The ettercaps collect the
+      sap of small white flowers that grow on the nearby cliffs to create a
+      paralytic poison known as slow nectar, which the creatures use in their
+      traps.</p>
+  sources:
+    - id: PZO9093
+      pages: '8'
+  subType: poison
+  uses:
+    per: single
+type: consumable

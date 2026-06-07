@@ -1,0 +1,22 @@
+_id: 3qWt0AJXYlLG3K6Z
+_key: '!items!3qWt0AJXYlLG3K6Z'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/biological/shell-ridged-green.webp
+name: Turtle
+system:
+  description:
+    value: >-
+      <p>These reptiles have bony shells that they can retreat into. They are
+      sometimes kept as pets and used as familiars, and in some places their
+      flesh is eaten or used as an ingredient in medicines. More information on
+      turtles can be found in <em>Ultimate Magic</em>.</p>
+  equipped: false
+  price: 3
+  sources:
+    - id: PZO1123
+      pages: '80'
+  subType: animal
+  weight:
+    value: 4
+type: loot

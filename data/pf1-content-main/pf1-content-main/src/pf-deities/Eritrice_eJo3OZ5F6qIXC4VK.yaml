@@ -1,0 +1,48 @@
+_id: eJo3OZ5F6qIXC4VK
+_key: '!journal!eJo3OZ5F6qIXC4VK'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Eritrice
+pages:
+  - _id: JDqTOxLeOPMMXjPR
+    _key: '!journal.pages!eJo3OZ5F6qIXC4VK.JDqTOxLeOPMMXjPR'
+    _stats:
+      coreVersion: '12.331'
+    name: Eritrice
+    sort: 0
+    text:
+      content: >-
+        <h1> Eritrice</h1><h2>Heart-Speaker</h2>@Source[PZO9267;pages=322] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Eritrice">Eritrice</a><h3>Details</h3><p><strong>Alignment</strong>
+        NG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Debate, opinions, truth<br /><strong>Domains</strong>
+        Charm, Good, Knowledge, Nobility<br /><strong>Subdomains</strong>
+        Agathion, Education (Knowledge), Leadership, Memory, Thought<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Dagger<br /><strong>Symbol</strong>
+        Lion-shaped lectern<br /><strong>Sacred Animal(s)</strong> Lion<br
+        /><strong>Sacred Color(s)</strong> Gold,
+        white</p><h3>Obedience</h3><p>Write a truth on a scrap of parchment,
+        roll the parchment in honey, and hold it in your mouth until the honey
+        dissolves. Gain a +4 sacred bonus on saves against
+        illusions.</p><h2>Boons - Celestial Obedience</h2><h3>Mystery
+        Cultist</h3><p>@Source[PZO9255;pages=12]<br /><strong>1: Adept Debater
+        (Sp)</strong> <em>comprehend languages</em> 3/day, <em>enthrall</em>
+        2/day, or <em>tongues</em> 1/day<br /><strong>2: Unbeamed Eye
+        (Sp)</strong> You can cast silenced <em>true seeing </em>three times per
+        day. This ability is the equivalent of a 7th-level spell.<br
+        /><strong>3: Thunder of Truth (Su)</strong> Once per day, you can emit a
+        powerful roar that affects a 60-foot cone with the effects of a <em>holy
+        word </em>spell and also deals 2d6 points of sonic damage to all
+        creatures in the area (Fortitude negates; DC 10 + 1/2 your HD + your Cha
+        modifier). This is a sonic effect.</em></p><h2>For Followers of
+        Eritrice</h2><h3>Feats</h3><p><em>Heroic
+        Interposition</em></p><h3>Traits</h3><p><em>Empyreal Focus</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

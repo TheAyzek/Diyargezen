@@ -1,0 +1,18 @@
+_id: Nx798UF6uHLnMdnR
+_key: '!items!Nx798UF6uHLnMdnR'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/emerald_11.jpg
+name: Shakes
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> disease (contact); <strong>Save</strong>
+      Fortitude DC 13;</p><p><strong>Onset</strong> 1
+      day;&nbsp;<strong>Frequency</strong> 1/day</p><p><strong>Effect</strong>
+      1d8 Dex damage</p><p><strong>Cure</strong> 2 consecutive saves</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

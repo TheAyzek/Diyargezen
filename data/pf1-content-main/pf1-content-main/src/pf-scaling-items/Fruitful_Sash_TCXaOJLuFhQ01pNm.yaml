@@ -1,0 +1,51 @@
+_id: TCXaOJLuFhQ01pNm
+_key: '!items!TCXaOJLuFhQ01pNm'
+_stats:
+  coreVersion: '12.331'
+img: icons/equipment/waist/sash-cloth-red.webp
+name: Fruitful Sash
+system:
+  aura:
+    school: con
+  cl: 5
+  description:
+    value: >-
+      <p>This colorful sash seems to be the sort normally worn by any common
+      sailor or traveler, yet within its folds is a bountiful pocket. The wearer
+      can reach into this hidden pocket and remove a piece of fruit a number of
+      times per day equal to his character level. The type of fruit varies. One
+      piece of fruit has enough nourishment and water to sustain one humanoid
+      for 24 hours. After 24 hours, the fruit rots and cannot nourish anyone.
+      </p><p>Once removed from its wearer, the sash doesn't produce fruit for
+      anyone else for 24 hours. If redonned by its most recent wearer during
+      that time, the sash resumes function normally (and the amount of fruit
+      remaining within it isn't reset). </p><p>6th Level: Consuming a fruit
+      produced from the sash cures a creature of 1 point of damage as if it were
+      a goodberry. A given creature can recover a maximum of 8 hit points in
+      this way in a 24-hour period. </p><p>8th Level: Three times per day, the
+      wearer can draw forth a large, ripe piece of healing fruit that explodes
+      when thrown. This functions as a splash weapon, but cures a target it hits
+      of 1d6 points of damage and cures each creature it splashes on of 1 point
+      of damage. This counts against the total number of pieces of fruit the
+      sash can produce per day. </p><p>10th Level: Once per day, the wearer can
+      draw forth one piece of fruit that acts as a potion of cure moderate
+      wounds, delay poison, lesser restoration, or remove paralysis. This counts
+      against the total number of pieces of fruit the sash can produce per day.
+      </p><p>13th Level: The fruits produced by the sash cure 1d4 points of
+      damage each instead of 1 point. An exploding fruit's healing power is
+      unchanged. </p><p>15th Level: Once per week, the sash can produce the
+      effects of heroes'
+      feast.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, create food and water, cure moderate wounds, delay poison,
+      goodberry, heroes' feast, lesser restoration, remove paralysis</p>
+  hp:
+    base: 10
+  price: 710
+  slot: belt
+  sources:
+    - id: PZO1131
+      pages: '173'
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

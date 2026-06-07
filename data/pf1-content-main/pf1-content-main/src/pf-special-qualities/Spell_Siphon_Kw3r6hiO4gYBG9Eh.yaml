@@ -1,0 +1,40 @@
+_id: Kw3r6hiO4gYBG9Eh
+_key: '!items!Kw3r6hiO4gYBG9Eh'
+_stats:
+  coreVersion: '12.331'
+folder: YaC0PDBdquBGbbsG
+img: systems/pf1/icons/skills/violet_04.jpg
+name: Spell Siphon
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> strong transmutation <strong>CL</strong>
+      15th</p><p><strong>Slot</strong> none; <strong>Price</strong> +5 bonus;
+      This special ability can be placed only on melee weapons. A <em>spell
+      siphon</em> weapon allows the wielder to siphon a single combat spell from
+      a target. When the wielder rolls a critical threat against the target, she
+      can forgo confirming the critical hit (dealing normal damage) to instead
+      automatically learn what combat spells are active on the target. For the
+      purposes of this ability, a combat spell is any spell that grants a bonus
+      to Strength, Dexterity, Constitution, movement, or Armor Class, or on
+      attack rolls, damage rolls, or saving throws.<p>The wielder can then
+      attempt a check to siphon one of the combat spells of her choice. This
+      check uses either the wielder's caster level or the wielder's base attack
+      bonus plus the weapon's enhancement bonus, and is attempted against a DC
+      of 11 + the targeted spell's caster level. If the wielder succeeds, the
+      target immediately loses access to the spell being siphoned, and the
+      wielder gains the effects of the spell for its remaining duration or 1
+      minute, whichever is shorter. If the <em>spell siphon</em> weapon has a
+      critical multiplier greater than x2, the wielder can attempt to siphon one
+      additional combat spell for each additional multiplier beyond 2 (two
+      spells for x3, three for x4, and so
+      on).</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, <em>greater arcane sight</em>, <em>limited wish</em>;
+      <strong>Price</strong> -</p>
+  sources:
+    - id: PZO9455
+      pages: '27'
+  subType: misc
+  tags:
+    - Melee Qualities
+type: feat

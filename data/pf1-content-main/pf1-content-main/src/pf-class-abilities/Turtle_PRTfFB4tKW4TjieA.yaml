@@ -1,0 +1,20 @@
+_id: PRTfFB4tKW4TjieA
+_key: '!items!PRTfFB4tKW4TjieA'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Turtle
+system:
+  associations:
+    classes:
+      - Hunter
+  description:
+    value: >-
+      <p><strong>Hunter Animal Focus</strong></p><p>The creature gains a +2
+      enhancement bonus to its natural armor bonus. This bonus increases to +4
+      at 8th level and to +6 at 15th level. (A creature without natural armor
+      has an effective natural armor bonus of +0.)</p>
+  subType: classFeat
+  tags:
+    - Hunter Animal Focus
+type: feat

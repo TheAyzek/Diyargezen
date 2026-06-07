@@ -1,0 +1,33 @@
+_id: AWZQ4Vb6P6fWYcLk
+_key: '!items!AWZQ4Vb6P6fWYcLk'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Dark Life Ring
+system:
+  aura:
+    school: nec
+  cl: 3
+  description:
+    value: >-
+      <p>Mortal blacksmiths residing in the Gebbite city of Graydirge created
+      the first dark life rings. Too often had these living unfortunates
+      suffered collateral damage from the negative energy effects used daily in
+      the streets of the undead-ruled city, so they forged these rings in hopes
+      of mitigating at least some of the harm their unliving rulers carelessly
+      inflicted upon them. Before the Blood Lords at Mechitar could punish the
+      insolent smiths of Graydirge, the dark life rings and their imitators made
+      their way into the wider world.  A dark life ring grants its wearer a +2
+      profane bonus on Will saving throws against channeled negative energy and
+      inflict spells (any spell with inflict in its name). In addition, anytime
+      the wearer takes damage from channeled negative energy or an inflict
+      spell, she subtracts 5 from the damage taken (calculated after the wearer
+      has rolled her Will save against the effect), to a minimum of 0 points of
+      damage.</p><h3>Requirements</h3><p>Forge Ring, death ward</p>
+  price: 1250
+  slot: ring
+  sources:
+    - id: PZO9450
+  subType: wondrous
+type: equipment

@@ -1,0 +1,32 @@
+_id: S9pyAWP3vAAJyVy1
+_key: '!journal!S9pyAWP3vAAJyVy1'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Nulgreth
+pages:
+  - _id: EZy0ZHFN6U5fs8Ls
+    _key: '!journal.pages!S9pyAWP3vAAJyVy1.EZy0ZHFN6U5fs8Ls'
+    _stats:
+      coreVersion: '12.331'
+    name: Nulgreth
+    sort: 0
+    text:
+      content: >-
+        <h1>Nulgreth</h1><h2>The Blood God</h2>@Source[PZO9267;pages=328] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Nulgreth">Nulgreth</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Orc Deities<br /><strong>Areas of
+        Concern</strong> Anger, rage, strength<br /><strong>Domains</strong>
+        Chaos, Evil, Strength, War<br /><strong>Subdomains</strong> Blood, Demon
+        (Chaos), Demon (Evil), Ferocity, Rage<br /><em>* Requires the <u>Acolyte
+        of Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Orc
+        double axe<br /><strong>Symbol</strong> Bloody double-axe<br
+        /><strong>Sacred Animal(s)</strong> Wolverine<br /><strong>Sacred
+        Color(s)</strong> Green, red</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

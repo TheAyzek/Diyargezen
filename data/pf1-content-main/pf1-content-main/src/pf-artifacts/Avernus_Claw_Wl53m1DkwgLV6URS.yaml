@@ -1,0 +1,42 @@
+_id: Wl53m1DkwgLV6URS
+_key: '!items!Wl53m1DkwgLV6URS'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/trident.PNG
+name: Avernus Claw
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: varied
+  baseTypes:
+    - Trident
+  cl: 28
+  description:
+    value: >-
+      <p>Furcas's weapon is a +4 axiomatic flaming burst unholy trident. The
+      weapon's flaming burst special ability wreathes the trident in
+      hellfire-half the damage its flames deal is fire damage, while the other
+      half results directly from infernal power and is therefore not reduced by
+      fire resistance. As a standard action, Furcas can slam the trident's haft
+      against the ground, causing all creatures within 30 feet to be affected by
+      dimensional anchor. Any affected creature that attempts to teleport or
+      travel to another plane (even by a permanent gate) instead appears in a
+      square adjacent to Furcas. As a standard action, Furcas can call the
+      trident to his hand from any distance, even across planar
+      boundaries.</p><p><strong>Base Item</strong>: axiomatic flaming burst
+      unholy trident</p>
+  enh: 4
+  material:
+    base:
+      value: steel
+  properties:
+    brc: true
+  sources:
+    - id: PZO9281
+  weaponGroups:
+    - spears
+    - thrown
+  weight:
+    value: 24
+type: weapon

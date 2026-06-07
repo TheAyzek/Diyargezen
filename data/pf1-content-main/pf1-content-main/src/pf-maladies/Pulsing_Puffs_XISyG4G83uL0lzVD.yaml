@@ -1,0 +1,28 @@
+_id: XISyG4G83uL0lzVD
+_key: '!items!XISyG4G83uL0lzVD'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/gems/gem-rough-pendeloque-blue.webp
+name: Pulsing Puffs
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> disease (fungus),
+      injury;&nbsp;<strong>Save</strong> Fortitude DC
+      16;</p><p><strong>Onset</strong> 1 day;&nbsp;<strong>Frequency</strong>
+      1/day</p><p><strong>Effect</strong>&nbsp;1d4 Dex
+      damage</p><p><strong>Cure</strong> 2 consecutive saves</p><hr /><p>A
+      character who has taken a wound (or even a small scratch) that remains
+      unhealed for any length of time may soon find small blue-white spores
+      sprouting within it. These spores quickly grow into phosphorescent, domed
+      mounds that pulse along with the bearer&rsquo;s heartbeat. At first, the
+      only effect of the growths is to prevent natural healing of the wound.
+      However, if left untreated for more than a day, the spores take deeper
+      root and begin to damage the character&rsquo;s Dexterity. Due to the
+      fungus&rsquo;s beauty, some jungle tribes are known to cultivate it on the
+      bound bodies of their prisoners.</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

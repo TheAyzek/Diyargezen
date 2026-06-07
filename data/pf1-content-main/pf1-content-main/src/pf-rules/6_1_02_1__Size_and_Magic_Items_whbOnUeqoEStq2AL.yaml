@@ -1,0 +1,36 @@
+_id: whbOnUeqoEStq2AL
+_key: '!journal!whbOnUeqoEStq2AL'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.02.1. Size and Magic Items
+pages:
+  - _id: wvfekaVNSchcMpD5
+    _key: '!journal.pages!whbOnUeqoEStq2AL.wvfekaVNSchcMpD5'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.02.1. Size and Magic Items
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.s3ene84nkQAyhCrW]{6.1.
+        Magic
+        Items}</p><ul><li>@Compendium[pf-content.pf-rules.N3qNOnemt2nuACdl]{6.1.02.
+        Using Items}</li></ul><hr /><p>@Source[PZO1110;pages=459]</p><p>When an
+        article of magic clothing or jewelry is discovered, most of the time
+        size shouldn’t be an issue. Many magic garments are made to be easily
+        adjustable, or they adjust themselves magically to the wearer. Size
+        should not keep characters of various kinds from using magic items.
+        There may be rare exceptions, especially with race-specific
+        items.</p><h2>Armor and Weapon Sizes</h2><p>Armor and weapons that are
+        found at random have a 30% chance of being Small (01–30), a 60% chance
+        of being Medium (31–90), and a 10% chance of being any other size
+        (91–100).</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

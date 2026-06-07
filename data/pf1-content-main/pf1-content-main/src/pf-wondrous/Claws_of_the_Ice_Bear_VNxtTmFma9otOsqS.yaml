@@ -1,0 +1,31 @@
+_id: VNxtTmFma9otOsqS
+_key: '!items!VNxtTmFma9otOsqS'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Claws of the Ice Bear
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>Strapped to the hands, these spiked climbing claws grant a +2
+      competence bonus on Climb checks and Acrobatics checks made when using
+      both hands to aid in movement, and allow the wearer to ignore the normal
+      penalties on those skills for slippery or icy surfaces. In addition, up to
+      3 times per day, the wearer can activate the claws as a swift action to
+      gain the benefits of spider climb for 1 round. The wearer cannot hold
+      anything else in her hands while using claws of the ice bear. If used as a
+      weapon, claws of the ice bear function as spiked
+      gauntlets.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, spider climb</p>
+  price: 1300
+  slot: hands
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

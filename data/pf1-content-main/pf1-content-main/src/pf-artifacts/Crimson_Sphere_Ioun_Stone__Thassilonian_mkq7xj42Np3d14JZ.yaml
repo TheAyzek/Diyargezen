@@ -1,0 +1,48 @@
+_id: mkq7xj42Np3d14JZ
+_key: '!items!mkq7xj42Np3d14JZ'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/gems/pearl-fire-swirl.webp
+name: Crimson Sphere Ioun Stone, Thassilonian
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: varied
+  changes:
+    - _id: N6vCBP2p
+      formula: '2'
+      target: int
+      type: enh
+  cl: 12
+  description:
+    instructions: >-
+      <p>If you have multiple stones which stack together, edit the changes tab
+      of one to match the total bonus.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: <p>This spherical stone is a deep, rich red.</p>
+    value: >-
+      <h3>Background Details</h3><p>Whether they were invented by the Azlanti or
+      merely discovered by them, ioun stones were an important part of Azlanti
+      society-and by extension, of Thassilonian society. Many of Thassilon's
+      rulers - particularly runelords like Karzoug-took to the art of embedding
+      these stones in their flesh. An ioun stone implanted in this manner cannot
+      be sundered or stolen. Further rules on implanting ioun stones can be
+      found in Pathfinder Campaign Setting: Seekers of Secrets. Thassilonian
+      wizards perfected and enhanced many forms of ioun stones, such as the four
+      unusually powerful stones listed below. These stones are minor artifacts,
+      and methods of their creation have been lost since Thassilon's
+      fall.</p><h3>Effect</h3><p>This ioun stone grants a +2 enhancement bonus
+      to Intelligence (the bonuses from possessing multiple crimson spheres
+      stack, up to a maximum of +6).</p><h3>Destruction</h3><p>No details
+      provided</p>
+  hp:
+    base: 1
+  sources:
+    - id: PZO1002
+      pages: 421-422
+  subType: other
+  tags:
+    - Ioun Stone
+type: equipment

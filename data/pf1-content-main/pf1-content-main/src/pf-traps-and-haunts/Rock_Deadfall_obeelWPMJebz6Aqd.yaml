@@ -1,0 +1,114 @@
+_id: obeelWPMJebz6Aqd
+_key: '!actors!obeelWPMJebz6Aqd'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: icons/commodities/stone/rock-pile-grey.webp
+items:
+  - _id: 5bnhCvLjkSBEonZt
+    _key: '!actors.items!obeelWPMJebz6Aqd.5bnhCvLjkSBEonZt'
+    _stats:
+      compendiumSource: Actor.irEynqdw8ZM8CdDf.Item.M3Ak66weTnoRHQTt
+      coreVersion: '12.331'
+    img: icons/commodities/stone/rock-pile-grey.webp
+    name: Rock Deadfall
+    system:
+      actions:
+        - _id: tjc0zatp80ek51p7
+          actionType: mwak
+          activation:
+            type: special
+            unchained:
+              type: special
+          attackBonus: '12'
+          damage:
+            parts:
+              - formula: 3d6
+                types:
+                  - bludgeoning
+          img: icons/commodities/stone/rock-pile-grey.webp
+          measureTemplate:
+            size: '10'
+            type: rect
+          name: Attack
+          range:
+            units: melee
+          target:
+            value: multiple targets (all targets in a 5 ft. by 10 ft. area)
+      proficient: true
+      subType: misc
+    type: attack
+name: Rock Deadfall
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 2
+    disarm: 25
+    duration: Instantaneou
+    effect: ''
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 20
+    reset: Repair
+    trigger: Touch (tripwire)
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

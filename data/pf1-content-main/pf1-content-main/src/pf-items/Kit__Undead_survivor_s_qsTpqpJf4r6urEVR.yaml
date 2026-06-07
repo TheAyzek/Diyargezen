@@ -1,0 +1,23 @@
+_id: qsTpqpJf4r6urEVR
+_key: '!items!qsTpqpJf4r6urEVR'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/chest/chest-reinforced-stone.webp
+name: Kit, Undead survivor's
+system:
+  description:
+    value: >-
+      <p>Although this sturdy leather bandolier contains a few items to help
+      combat undead foes, its primary purpose is to supply the right tools to
+      recover from an undead attack and escape. This kit includes 4 <em>potions
+      of hide from undead, a potion of lesser restoration, 2 flasks of holy
+      water, 2 doses of holy weapon balm, a vial of soul stimulant, and 2 vials
+      of twitch tonic.</em></p>
+  sources:
+    - id: PZO9481
+      pages: '17'
+  tags:
+    - Kits
+  weight:
+    value: 3
+type: container

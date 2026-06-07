@@ -1,0 +1,74 @@
+_id: T6zgyR9mqlc3tIH9
+_key: '!journal!T6zgyR9mqlc3tIH9'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.17.08. Dedicated Powers
+pages:
+  - _id: 00OO0ZIXWl1K53UZ
+    _key: '!journal.pages!T6zgyR9mqlc3tIH9.00OO0ZIXWl1K53UZ'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.17.08. Dedicated Powers
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.s3ene84nkQAyhCrW]{6.1.
+        Magic
+        Items}</p><ul><li><p>@Compendium[pf-content.pf-rules.muHuo2GwcCKyy4tP]{6.1.17.
+        Intelligent
+        Items}</p><ul><li>@Compendium[pf-content.pf-rules.b4LOq9k8VNrE5iyy]{6.1.17.01.
+        Designing an Intelligent
+        Item}</li><li>@Compendium[pf-content.pf-rules.r4MKuAOkkduX0vSB]{6.1.17.02.
+        Intelligent Item
+        Alignment}</li><li>@Compendium[pf-content.pf-rules.NcqR7y2f3W7w3zB3]{6.1.17.03.
+        Intelligent Item Ability
+        Scores}</li><li>@Compendium[pf-content.pf-rules.95c8F7Trvs0JaQEX]{6.1.17.04.
+        Languages Spoken by
+        Item}</li><li>@Compendium[pf-content.pf-rules.tnEvcNd14MiiEpB6]{6.1.17.05.
+        Senses and
+        Communication}</li><li>@Compendium[pf-content.pf-rules.n2JT7kfk2HfZ0uLS]{6.1.17.06.
+        Intelligent Item
+        Powers}</li><li>@Compendium[pf-content.pf-rules.h50LqdBk0F8Hy0fW]{6.1.17.07.
+        Special Purpose
+        Items}</li><li><strong>@Compendium[pf-content.pf-rules.T6zgyR9mqlc3tIH9]{6.1.17.08.
+        Dedicated
+        Powers}</strong></li><li>@Compendium[pf-content.pf-rules.VX4NrZsdHQAZ4EUF]{6.1.17.09.
+        Item
+        Ego}</li><li>@Compendium[pf-content.pf-rules.Bj3cXy4heUoCX53t]{6.1.17.10.
+        Items against Characters}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=535]</p><p>A dedicated power operates only
+        when an intelligent item is in pursuit of its special purpose. This
+        determination is always made by the item. It should always be easy and
+        straightforward to see how the ends justify the means. Unlike its other
+        powers, an intelligent item can refuse to use its dedicated powers even
+        if the owner is dominant (see Items Against Characters). The caster
+        level for these effects is equal to the item’s caster level. Save DCs
+        are based on the item’s highest mental ability score.</p><p>See Table
+        15–26 for a list of dedicated powers.</p><h2>Table 15–26: Special
+        Purpose Item Dedicated
+        Powers</h2><table><thead><tr><td>d%</td><td>Dedicated Power</td><td>Base
+        Price Modifier</td><td>Ego
+        Modifier</td></tr></thead><tbody><tr><td>01–20</td><td>Item can detect
+        any special purpose foes within 60 feet</td><td>+10,000
+        gp</td><td>+1</td></tr><tr><td>21–35</td><td>Item can use a 4th-level
+        spell at will</td><td>+56,000
+        gp</td><td>+2</td></tr><tr><td>36–50</td><td>Wielder gets +2 luck bonus
+        on attacks, saves, and checks</td><td>+80,000
+        gp</td><td>+2</td></tr><tr><td>51–65</td><td>Item can use a 5th-level
+        spell at will</td><td>+90,000
+        gp</td><td>+2</td></tr><tr><td>66–80</td><td>Item can use a 6th-level
+        spell at will</td><td>+132,000
+        gp</td><td>+2</td></tr><tr><td>81–95</td><td>Item can use a 7th-level
+        spell at will</td><td>+182,000
+        gp</td><td>+2</td></tr><tr><td>96–100</td><td>Item can use true
+        resurrection on wielder, once per month</td><td>+200,000
+        gp</td><td>+2</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

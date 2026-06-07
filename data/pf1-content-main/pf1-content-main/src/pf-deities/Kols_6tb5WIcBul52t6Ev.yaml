@@ -1,0 +1,42 @@
+_id: 6tb5WIcBul52t6Ev
+_key: '!journal!6tb5WIcBul52t6Ev'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Kols
+pages:
+  - _id: pFOzn5O1qFq6NcBN
+    _key: '!journal.pages!6tb5WIcBul52t6Ev.pFOzn5O1qFq6NcBN'
+    _stats:
+      coreVersion: '12.331'
+    name: Kols
+    sort: 0
+    text:
+      content: >-
+        <h1><a><em>Inner Sea Gods pg. 320</em></a><br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Kols">Kols</a></h1><h3>Details</h3><p><strong>Alignment</strong>
+        LN<br /><strong>Pantheon</strong> Dwarven Deities<br /><strong>Areas of
+        Concern</strong> Duty, honor, promises<br /><strong>Domains</strong>
+        Glory, Law, Nobility, Strength<br /><strong>Subdomains</strong>
+        Inevitable, Leadership, Loyalty, Resolve<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Hammer<br /><strong>Symbol</strong> Lizard perched on
+        scroll<br /><strong>Sacred Animal(s)</strong> Lizard<br /><strong>Sacred
+        Color(s)</strong> Brown, green</p><h2>Paladin Code</h2>The paladins of
+        Kols are skyseekers, honorable servants of rightful dwarven lords,
+        steadfast guardians of dwarven sites, and punishers of deserters and
+        oathbreakers. Their tenets include the following affirmations.<ul><li>
+        My responsibilities to my people are a sacred duty to my god. I will
+        never willingly shirk my duties.</li><li> Oathbreakers and deserters
+        undermine the bonds that hold society together. I will never allow one
+        to go unpunished if it is within my power.</li><li> A promise is sacred.
+        I will never willingly break any oath or contract.</li></ul><h2>For
+        Followers of Kols</h2><h3>Spells</h3><p>Oath of
+        Justice</p><h3>Traits</h3><p>Strict Judgment</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

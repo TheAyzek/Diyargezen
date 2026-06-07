@@ -1,0 +1,27 @@
+_id: YN7FFwcXFMAxbNxz
+_key: '!items!YN7FFwcXFMAxbNxz'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Spiteful
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate enchantment <strong>CL</strong>
+      7th</p><p><strong>Slot</strong> none; <strong>Price</strong> +7,000 gp;
+      This armor's ability functions only if its wearer has the panache class
+      feature. When a melee attack made by an enemy within the wearer's melee
+      reach would reduce the wearer to fewer than 0 hit points, the wearer can
+      spend 1 panache point as an immediate action. This allows her to make a
+      single melee attack against the creature that reduced her to 0 hit points
+      or fewer. This occurs prior to the wearer falling unconscious or
+      dead.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, <em>haste</em>; <strong>Price</strong> 3,500 gp</p>
+  sources:
+    - id: PZO1129
+      pages: '210'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

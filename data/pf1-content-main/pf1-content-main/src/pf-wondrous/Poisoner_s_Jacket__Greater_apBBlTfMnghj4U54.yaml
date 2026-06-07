@@ -1,0 +1,28 @@
+_id: apBBlTfMnghj4U54
+_key: '!items!apBBlTfMnghj4U54'
+_stats:
+  coreVersion: '12.331'
+folder: KOT1geWrUrAU083b
+img: icons/equipment/chest/vest-leather-pink.webp
+name: Poisoner's Jacket, Greater
+system:
+  aura:
+    custom: true
+    school: conjuration and necromancy
+  cl: 15
+  description:
+    value: >-
+      <p>This jacket has the abilities of a lesser poisoner's jacket, and once
+      per day the wearer can create a vial that reproduces the effect of any
+      poison in the Core Rulebook that costs 4,000 gp or less. The jacket's
+      poison always looks like a murky lime fluid. This poison becomes inert
+      after 1 hour.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, major creation, poison</p>
+  price: 58000
+  slot: chest
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 4
+type: equipment

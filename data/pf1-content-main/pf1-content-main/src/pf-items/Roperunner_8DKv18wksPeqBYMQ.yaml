@@ -1,0 +1,28 @@
+_id: 8DKv18wksPeqBYMQ
+_key: '!items!8DKv18wksPeqBYMQ'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/tech/wheel-wooden.webp
+name: Roperunner
+system:
+  description:
+    value: >-
+      <p>You can place this metal contraption onto a taut section of a rope
+      connecting a high point to a lower one, allowing you to slide down the
+      length of the rope with ease. Using a roperunner requires only one hand,
+      leaving the other hand free during the descent. Attaching the roperunner
+      to a rope is a move action. Beginning the descent is a swift action. You
+      slide down the rope at a rate of 60 feet per round. This requires no
+      action on your part, but you must move along the length of the rope in the
+      downward direction. Retrieving the roperunner once you have come to a stop
+      at the end of the rope is a move action. You can let go of the roperunner
+      as a free action.</p>
+  equipped: false
+  price: 50
+  sources:
+    - id: PZO1129
+      pages: '205'
+  subType: tool
+  weight:
+    value: 3
+type: loot

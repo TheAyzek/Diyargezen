@@ -1,0 +1,22 @@
+_id: iCv2tApXh2shqCJn
+_key: '!items!iCv2tApXh2shqCJn'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/navigation/spyglass-telescope-brass.webp
+name: Spyglass (Masterwork)
+system:
+  description:
+    value: >-
+      <p>Objects viewed through a masterwork spyglass are magnified to four
+      times their size. Characters using a masterwork spyglass take a -1 penalty
+      on Perception checks per 40 feet of distance to the target (instead of per
+      20 feet as with a normal spyglass).</p>
+  equipped: false
+  price: 4000
+  sources:
+    - id: PZO9452
+      pages: '21'
+  subType: adventuring
+  weight:
+    value: 2
+type: loot

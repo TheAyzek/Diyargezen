@@ -1,0 +1,33 @@
+_id: CtaK8eU3MRfdKFBD
+_key: '!items!CtaK8eU3MRfdKFBD'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Brooch of Blending
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>Occasionally, half-elves find it socially advantageous to blend in
+      fully with either elves or humans. As a standard action, the wearer of
+      this brooch can transform his features to appear either entirely elven or
+      entirely human. The magic of this brooch actually changes the wearer's
+      features physically, granting him a +20 circumstance bonus on Disguise
+      checks to appear as a member of the selected race. The transformation does
+      not otherwise alter the wearer's features, and those who know him
+      recognize him without a Perception check. This change remains until the
+      brooch is used again or removed. This change does not radiate magic and
+      cannot be seen with detect magic, although true seeing does reveal the
+      alteration. This item only functions for half-elves, but there are
+      versions that exist for half-orcs as
+      well.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, alter self, creator must be a half-elf</p>
+  price: 2000
+  slot: neck
+  sources:
+    - id: PZO1121
+  subType: wondrous
+type: equipment

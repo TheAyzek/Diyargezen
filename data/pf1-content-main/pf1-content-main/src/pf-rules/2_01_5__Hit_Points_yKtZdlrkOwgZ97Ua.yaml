@@ -1,0 +1,44 @@
+_id: yKtZdlrkOwgZ97Ua
+_key: '!journal!yKtZdlrkOwgZ97Ua'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: GY65FtJNKIlC0ndi
+name: 2.01.5. Hit Points
+pages:
+  - _id: XXVezvG3RLtrKi7Z
+    _key: '!journal.pages!yKtZdlrkOwgZ97Ua.XXVezvG3RLtrKi7Z'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.01.5. Hit Points
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.xzfuY9W5LCixyHD2]{2.01.
+        Combat
+        Statistics}</p><ul><li>@Compendium[pf-content.pf-rules.fmqoRxGKOTrAFtwf]{2.01.1.
+        Attack
+        Roll}</li><li>@Compendium[pf-content.pf-rules.5fbGwhWB0NSGPflz]{2.01.2.
+        Attack
+        Bonus}</li><li>@Compendium[pf-content.pf-rules.HIE5Tl0hEQt6WRtO]{2.01.3.
+        Armor
+        Class}</li><li>@Compendium[pf-content.pf-rules.4oWKBkofZ9340k5M]{2.01.4.
+        Damage}</li><li><strong>@Compendium[pf-content.pf-rules.yKtZdlrkOwgZ97Ua]{2.01.5.
+        Hit
+        Points}</strong></li><li>@Compendium[pf-content.pf-rules.db5JuYfPDFbB8IXF]{2.01.6.
+        Attacks of
+        Opportunity}</li><li>@Compendium[pf-content.pf-rules.A0pu8qWAG3mBHdqB]{2.01.7.
+        Speed}</li><li>@Compendium[pf-content.pf-rules.ieNVOs9uKwbNXb6E]{2.01.8.
+        Saving Throws}</li></ul><hr /><p>@Source[PZO1110;pages=179]</p><p>When
+        your hit point total reaches 0, you’re disabled. When it reaches –1,
+        you’re dying. When it gets to a negative amount equal to your
+        Constitution score, you’re dead.</p><p>See
+        @Compendium[pf-content.pf-rules.UEmSoktVjUEI46C2]{2.03. Injury and
+        Death} for more information.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

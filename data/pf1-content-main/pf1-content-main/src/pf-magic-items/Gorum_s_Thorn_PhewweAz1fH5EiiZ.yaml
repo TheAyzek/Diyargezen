@@ -1,0 +1,61 @@
+_id: PhewweAz1fH5EiiZ
+_key: '!items!PhewweAz1fH5EiiZ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/greatsword.PNG
+name: Gorum's Thorn
+system:
+  actions:
+    - _id: 02rcyq18q1lo4zbu
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: gorumsThorn
+  aura:
+    school: trs
+  baseTypes:
+    - Greatsword
+  cl: 10
+  description:
+    value: >-
+      <p>This forge-blackened +1 keen greatsword is festooned with religious
+      iconography depicting glorious images of the Lord in Iron. If Gorum is the
+      wielder's patron, Gorum's Thorn gains an additional ability: when the
+      wielder confirms a critical hit against any creature with the giant
+      subtype, he can attempt to trip that target as a free action without
+      provoking an attack of opportunity and ignoring any size restrictions
+      related to the target. If the trip attempt fails by 10 or more, the
+      wielder is not knocked prone.<p><strong>Base Item</strong>: +1 keen
+      greatsword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, keen edge, righteous might</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 12350
+  showInQuickbar: false
+  sources:
+    - id: PZO9092
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 8
+type: weapon

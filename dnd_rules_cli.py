@@ -12,7 +12,7 @@ from utils.rule_preview import format_rule_preview
 def _pick_system() -> str:
     return inquirer.select(
         message="Sistem seç:",
-        choices=["DND5E", "MUTANTS_AND_MASTERMINDS", "VTM5E"],
+        choices=["DND5E", "MUTANTS_AND_MASTERMINDS", "MM3E"],
     ).execute()
 
 
@@ -65,7 +65,7 @@ if __name__ == "__main__":
 def _pick_system() -> str:
     return inquirer.select(
         message="Sistem seç:",
-        choices=["DND5E", "MUTANTS_AND_MASTERMINDS", "VTM5E"],
+        choices=["DND5E", "MUTANTS_AND_MASTERMINDS", "MM3E"],
     ).execute()
 
 
@@ -120,7 +120,7 @@ if __name__ == "__main__":
 def _pick_system() -> str:
     return inquirer.select(
         message="Sistem seç:",
-        choices=["DND5E", "MUTANTS_AND_MASTERMINDS", "VTM5E"],
+        choices=["DND5E", "MUTANTS_AND_MASTERMINDS", "MM3E"],
     ).execute()
 
 
@@ -173,7 +173,7 @@ if __name__ == "__main__":
 def _pick_system() -> str:
     return inquirer.select(
         message="Sistem seç:",
-        choices=["DND5E", "MUTANTS_AND_MASTERMINDS", "VTM5E"],
+        choices=["DND5E", "MUTANTS_AND_MASTERMINDS", "MM3E"],
     ).execute()
 
 

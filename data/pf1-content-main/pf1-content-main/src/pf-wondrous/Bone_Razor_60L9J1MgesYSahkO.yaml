@@ -1,0 +1,33 @@
+_id: 60L9J1MgesYSahkO
+_key: '!items!60L9J1MgesYSahkO'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Bone Razor
+system:
+  aura:
+    school: nec
+  cl: 5
+  description:
+    value: >-
+      <p>This jagged bone knife seems too thin and frail for combat but easily
+      cuts flesh. If used to perform a coup de grace on a helpless living
+      creature and the creature dies from the attack, the creature's flesh
+      begins to peel off and its bones animate as a skeleton under the command
+      of the bearer of the razor. The creature's flesh is not destroyed, but
+      decays at a steady rate. The bearer of the razor can spend 1 minute
+      reattaching the flesh to the animate skeleton, which ends the necromantic
+      magic and results in a normal corpse (though a corpse of a person killed
+      or mutilated by knife wounds). If the bearer uses the razor to flense and
+      animate another creature's bones, the previous animate skeleton is
+      immediately
+      destroyed.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, animate dead</p>
+  price: 5000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

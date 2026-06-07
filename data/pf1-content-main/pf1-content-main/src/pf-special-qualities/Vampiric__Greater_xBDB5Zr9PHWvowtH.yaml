@@ -1,0 +1,26 @@
+_id: xBDB5Zr9PHWvowtH
+_key: '!items!xBDB5Zr9PHWvowtH'
+_stats:
+  coreVersion: '12.331'
+folder: YaC0PDBdquBGbbsG
+img: systems/pf1/icons/skills/violet_04.jpg
+name: Vampiric, Greater
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate necromancy <strong>CL</strong>
+      8th</p><p><strong>Price</strong> +2 bonus;</p><p>This special ability
+      functions as the <em>vampiric</em> special ability, except that the daily
+      limit of healing from <em>greater vampiric</em> weapons is 5 hit points
+      per Hit Die of the owner. A wielder can be attuned to only one
+      <em>vampiric</em> or <em>greater vampiric</em> weapon at a
+      time.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, <em>cure moderate wounds</em>, <em>inflict moderate
+      wounds</em>, <em>vampiric touch</em>; <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1135
+      pages: '214'
+  subType: misc
+  tags:
+    - Melee Qualities
+type: feat

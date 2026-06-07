@@ -1,0 +1,32 @@
+_id: cBGbpaNdLvb3Rxk0
+_key: '!items!cBGbpaNdLvb3Rxk0'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Fugitive's Grenade
+system:
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  cl: 3
+  description:
+    value: >-
+      <p>These small grenades are made from hollowed eggshells filled with
+      assorted powders and reagents and inscribed with magical glyphs. When
+      broken, a fugitive's grenade creates a 10-foot-radius cloud that lasts for
+      2 rounds. This cloud is otherwise identical to a fog cloud. A single smoke
+      tendril in the center of the cloud forms a solid-feeling rope, 20 feet
+      long, that functions as a rope trick spell. When the smoke cloud
+      dissipates, so does the smoke rope, though the rope trick's
+      extradimensional space remains for its full duration. Once the smoke rope
+      disperses, any creatures inside the extradimensional space must jump or
+      climb out by other means. A fugitive's grenade may be thrown as a ranged
+      touch attack with a range increment of 10
+      feet.<h3>Requirements</h3><p>Craft Wondrous Item, fog cloud, rope
+      trick</p>
+  price: 750
+  sources:
+    - id: PZO9050
+  subType: wondrous
+type: equipment

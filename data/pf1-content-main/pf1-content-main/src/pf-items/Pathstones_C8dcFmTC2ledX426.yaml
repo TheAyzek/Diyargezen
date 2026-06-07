@@ -1,0 +1,27 @@
+_id: C8dcFmTC2ledX426
+_key: '!items!C8dcFmTC2ledX426'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/gems/gem-fragments-turquoise.webp
+name: Pathstones
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>Similar to sunrods,
+      these small white pebbles are alchemically treated so that they shed a
+      soft light once activated by striking them together. The glow is
+      faint-just barely enough to illuminate the stone. Though not bright enough
+      to serve as an effective light source, they can be placed in patterns to
+      create messages or laid out in a path, marking it for others to
+      follow.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      25</p>
+  price: 50
+  sources:
+    - id: PZO1129
+      pages: '208'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 1
+type: consumable

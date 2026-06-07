@@ -1,0 +1,30 @@
+_id: g4YHmoav5rKogPt2
+_key: '!journal!g4YHmoav5rKogPt2'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: slmqizDyyiaJyP1N
+name: The Theater
+pages:
+  - _id: sV4qkQyjRI074NFk
+    _key: '!journal.pages!g4YHmoav5rKogPt2.sV4qkQyjRI074NFk'
+    _stats:
+      coreVersion: '12.331'
+    name: The Theater
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Theater</strong> (neutral good, Charisma) is the card of
+        true prophecy. The puppets act out a scene, just as the prophet acts out
+        a scene in which she has no part. The prophet is the audience and the
+        prophecy is the show. She has no influence on what she sees, and its
+        importance is often not recognized until too late. If The Theater is
+        misaligned, the prophecy is just for show.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Theater.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

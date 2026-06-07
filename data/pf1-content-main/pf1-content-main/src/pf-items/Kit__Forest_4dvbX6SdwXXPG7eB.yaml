@@ -1,0 +1,20 @@
+_id: 4dvbX6SdwXXPG7eB
+_key: '!items!4dvbX6SdwXXPG7eB'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/chest/chest-simple-box-red.webp
+name: Kit, Forest
+system:
+  description:
+    value: >-
+      <p>This kit contains tools useful for building shelters and finding food
+      in a forest. It includes a bear trap, camouflage netting, five fishhooks,
+      a handaxe, 50 feet of hemp rope, and 100 feet of twine.</p>
+  sources:
+    - id: PZO9456
+      pages: '9'
+  tags:
+    - Kits
+  weight:
+    value: 29
+type: container

@@ -1,0 +1,34 @@
+_id: 5TauboobtuvUygKD
+_key: '!items!5TauboobtuvUygKD'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Protected Life
+system:
+  aura:
+    school: con
+  cl: 7
+  description:
+    value: >-
+      <p>This silver ring features arboreal motifs, and is set with a small but
+      brilliant sapphire. If the wearer has the channel energy class feature,
+      the radius of his channeled energy increases by 5 feet. Additionally, when
+      the wearer channels energy, he may choose to exempt one creature from the
+      effects of his channeling. If the wearer has the Selective Channeling
+      feat, the ring of protected life increases the number of creatures he may
+      normally exempt by one. Finally, once per day the wearer may channel
+      energy as a swift action that does not provoke attacks of opportunity;
+      doing so renders the ring of protected life inert for 24 hours, during
+      which time it does not confer any
+      benefits.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, Selective Channeling, creator must have the channel energy class
+      feature</p>
+  price: 9000
+  slot: ring
+  sources:
+    - id: PZO9444
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

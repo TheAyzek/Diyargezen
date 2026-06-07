@@ -1,0 +1,43 @@
+_id: xcE6n2U0x5FCikTu
+_key: '!items!xcE6n2U0x5FCikTu'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Skeleton Anchor
+system:
+  aura:
+    school: nec
+  cl: 7
+  description:
+    value: >-
+      <p>This ship's anchor is crafted of fused bones and skulls, but it has the
+      strength and hardness of iron. When attached to a ship by a rope or chain
+      and dropped into the water, the anchor increases its weight to properly
+      anchor the ship it is attached to. Once per day, the skeleton anchor can
+      hold the ship it is attached to immobile for up to 1 day, or until
+      commanded to release.  The greatest property of a skeleton anchor,
+      however, is to summon undead skeletons from the corpses of drowned
+      mariners, who rise from the depths of the sea and clamber up the sides of
+      the ship to serve as its crew. The undead created by the anchor are 1 Hit
+      Die skeletons (Pathfinder RPG Bestiary 250) that possess Profession
+      (sailor) scores of +7. Each skeleton can perform the duties of one crew
+      member but has no other abilities. The skeletons cannot speak, attack, or
+      even defend themselves. They are not proficient with any weapons or armor.
+      The skeletons obey the commands of the ship's captain or pilot, but they
+      only obey orders pertaining to the operation of a ship.  A skeleton anchor
+      can be used just once every 7 days to create up to 28 skeletal crew
+      members. The skeletons do not count against the maximum total Hit Dice
+      worth of undead creatures that the user can control. The skeletons act as
+      crew for 1 week or until dismissed by the ship's captain or pilot. At the
+      end of the week, the skeletons abandon the
+      ship.<h3>Requirements</h3><p>Craft Wondrous Item, desecrate, levitate,
+      skeleton crew (Pathfinder Player Companion: Pirates of the Inner Sea
+      29)</p>
+  price: 14450
+  sources:
+    - id: PZO9058
+  subType: wondrous
+  weight:
+    value: 100
+type: equipment

@@ -1,0 +1,58 @@
+_id: qEJAgzjQc2sZNjl8
+_key: '!journal!qEJAgzjQc2sZNjl8'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Green Faith
+pages:
+  - _id: 6V8NwLRSLrZNgkZo
+    _key: '!journal.pages!qEJAgzjQc2sZNjl8.6V8NwLRSLrZNgkZo'
+    _stats:
+      coreVersion: '12.331'
+    name: Green Faith
+    sort: 0
+    text:
+      content: >-
+        <h1>Green Faith</h1><h2>The Old Faith</h2>@Source[PZO9075;pages=64] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Green Faith">Green
+        Faith</a><h3>Details</h3><p><strong>Alignment</strong> N<br
+        /><strong>Pantheon</strong> Core Deities<br /><strong>Areas of
+        Concern</strong> Air, beast, earth, fire, water<br
+        /><strong>Domains</strong> Air, Animal, Earth, Fire, Plant<br
+        /><strong>Subdomains</strong> Leshy<br /><em>* Requires the <u>Acolyte
+        of Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Druidic weapons</p><h2>For Followers of Green
+        Faith</h2><h3>Archetypes</h3><p>Cultivator (Bard), Green Faith Initiate
+        (Druid), Green Faith Marshal (Inquisitor)</p><h3>Feats</h3><p>Green
+        Faith Acolyte</p><h3>Magic Items - Weapons</h3><p>Midsummer
+        Sickle</p><h3>Magic Items - Wondrous Items</h3><p>Evergreen Seed Pouch,
+        Warden's Cudgel</p><h3>Prestige Classes</h3><p>Green Faith
+        Acolyte</p><h3>Spells</h3><p>Hibernate, Summon Elemental Steed,
+        Tripvine</p><h3>Traits</h3><p>Eyes of the Wild, Know the
+        Land</p><h2>Unique Summon Rules</h2>@Source[PZO9075;pages=64]<br
+        /><strong>Summon Nature's Ally II</strong>: Axe Beak [Order of Wing]<br
+        /><strong>Summon Nature's Ally II</strong>: Dire Badger [Order of
+        Earth]<br /><strong>Summon Nature's Ally II</strong>: Giant Porcupine
+        [Order of Earth]<br /><strong>Summon Nature's Ally IV</strong>: Giant
+        Chameleon Lizard [Order of Fang]<br /><strong>Summon Nature's Ally
+        IV</strong>: Giant Skunk [Order of Earth]<br /><strong>Summon Nature's
+        Ally IV</strong>: Seaweed Leshy [Order of Leaf or Wave]<br
+        /><strong>Summon Nature's Ally IV</strong>: Giant Vulture [Order of
+        Wing]<br /><strong>Summon Nature's Ally V</strong>: Emperor Cobra [Order
+        of Fang]<br /><strong>Summon Nature's Ally V</strong>: Giant Owl [Order
+        of Wing]<br /><strong>Summon Nature's Ally V</strong>: Giant Gar [Order
+        of Wave]<br /><strong>Summon Nature's Ally VI</strong>: Shambling Mound
+        [Order of Leaf]<br /><strong>Summon Nature's Ally VII</strong>: Giant
+        Snapping Turtle [Order of Wave]<br /><strong>Summon Nature's Ally
+        VII</strong>: Giant Anaconda [Order of Fang]<br /><strong>Summon
+        Nature's Ally VII</strong>: Giant Flytrap [Order of Leaf]<br /><h2>Other
+        Rules</h2><p>@Source[PZO9075;pages=64]</p><p>No clerics of the Green
+        Faith, domains are for Druids. The Green Faith is not headed by a deity,
+        but is an order that worships and gains power from nature.</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,24 @@
+_id: oJhyrfcH2F4pisoi
+_key: '!items!oJhyrfcH2F4pisoi'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/bones/horn-antler-tan.webp
+name: Reindeer
+system:
+  description:
+    value: >-
+      <p>These sturdy and majestic caribou roam the northern tundra in great
+      herds, and provide fur, meat, and other useful products to both Erutaki
+      and Varki herders and hunters. Irrisen's Jadwiga, Snowcaster elves, and
+      eccentric Linnorm Kings use domesticated reindeer to pull sleighs.
+      Reindeer use the same statistics as elk (see <em>Bestiary 3</em>, page
+      147).</p>
+  equipped: false
+  price: 75
+  sources:
+    - id: PZO9428
+      pages: '28'
+  subType: animal
+  weight:
+    value: 450
+type: loot

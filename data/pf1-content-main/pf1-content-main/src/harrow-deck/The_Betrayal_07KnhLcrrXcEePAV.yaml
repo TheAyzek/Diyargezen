@@ -1,0 +1,29 @@
+_id: 07KnhLcrrXcEePAV
+_key: '!journal!07KnhLcrrXcEePAV'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: slmqizDyyiaJyP1N
+name: The Betrayal
+pages:
+  - _id: bqw5YKJmpMwyBE2L
+    _key: '!journal.pages!07KnhLcrrXcEePAV.bqw5YKJmpMwyBE2L'
+    _stats:
+      coreVersion: '12.331'
+    name: The Betrayal
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Betrayal</strong> (neutral evil, Charisma) is selfishness
+        incarnate. Envy twists the spirit and leads ultimately to devastation.
+        It can also indicate a person whose loveliness hides an evil heart.
+        Misaligned, the card means self-sacrifice or turning away from the
+        material world and its temptations.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Betrayal.webp"
+        width="299" height="493" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

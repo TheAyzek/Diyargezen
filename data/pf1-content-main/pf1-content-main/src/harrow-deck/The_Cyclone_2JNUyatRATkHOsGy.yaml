@@ -1,0 +1,30 @@
+_id: 2JNUyatRATkHOsGy
+_key: '!journal!2JNUyatRATkHOsGy'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: RoV1YSN6te1rRTAK
+name: The Cyclone
+pages:
+  - _id: fn1sjbQDTtWIsLi7
+    _key: '!journal.pages!2JNUyatRATkHOsGy.fn1sjbQDTtWIsLi7'
+    _stats:
+      coreVersion: '12.331'
+    name: The Cyclone
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Cyclone</strong> (chaotic evil, Strength) is a force that
+        tears through whatever it meets. This disaster does not come in the
+        course of natural order but is one that comes from the plots of
+        intelligent beings. The Cyclone signifies war, arson, or other events
+        that destroy everything they touch. Misaligned, this card can indicate
+        renewal after a blustery trial.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Cyclone.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

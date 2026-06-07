@@ -1,0 +1,26 @@
+_id: 23LMM0JYIluww86I
+_key: '!items!23LMM0JYIluww86I'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Quickfingers Gloves
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>These dark-colored, skin-tight gloves are typically made of either
+      supple calfskin or silk. A wearer of these gloves with at least 1 rank in
+      Sleight of Hand can perform such a check as a move action by taking a -10
+      penalty on the check rather than the normal -20. Both gloves must be worn
+      for the magic to be
+      effective.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, cat's grace, haste</p>
+  price: 2500
+  slot: hands
+  sources:
+    - id: PZO1121
+  subType: wondrous
+type: equipment

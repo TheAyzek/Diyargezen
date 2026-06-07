@@ -1,0 +1,31 @@
+_id: 1EvBiiUnVOT4cUbT
+_key: '!journal!1EvBiiUnVOT4cUbT'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: SorUvhSclTosG5ZR
+name: 4.2. Breaking and Entering
+pages:
+  - _id: TFj6fUYnrio589aj
+    _key: '!journal.pages!1EvBiiUnVOT4cUbT.TFj6fUYnrio589aj'
+    _stats:
+      coreVersion: '12.331'
+    name: 4.2. Breaking and Entering
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.kAJexDuJ2IAXZODj]{(Index)
+        Exploration}</p><p>@Compendium[pf-content.pf-rules.vsp6TyvvUw3KOD0b]{4.0.
+        Movement}</p><p>@Compendium[pf-content.pf-rules.TrYHWkJ3jiOCYufl]{4.1.
+        Vision and
+        Light}</p><p><strong>@Compendium[pf-content.pf-rules.1EvBiiUnVOT4cUbT]{4.2.
+        Breaking and Entering}</strong></p><hr
+        /><p>@Source[PZO1110;pages=173]</p><p>When attempting to break an
+        object, you have two choices: smash it with a weapon or break it with
+        sheer strength.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

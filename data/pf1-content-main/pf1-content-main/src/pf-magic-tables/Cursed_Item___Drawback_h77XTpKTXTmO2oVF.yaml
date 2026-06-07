@@ -1,0 +1,327 @@
+_id: h77XTpKTXTmO2oVF
+_key: '!tables!h77XTpKTXTmO2oVF'
+_stats:
+  coreVersion: '12.331'
+description: >-
+  <p>Items with drawbacks are usually still beneficial to the possessor, but
+  carry some negative aspect. Although sometimes drawbacks occur only when the
+  item is used (or held, in the case of some weapons), usually the drawback
+  remains with the character for as long as she has the item. Unless otherwise
+  indicated, drawbacks remain in effect as long as the item is possessed. The DC
+  to save against any of these effects is usually equal to 10 + the item’s
+  caster level.</p>
+displayRoll: true
+folder: fsaYbHyVHnt2AA5A
+formula: 1d100
+img: icons/svg/d20-grey.svg
+name: Cursed Item - Drawback
+replacement: true
+results:
+  - _id: dFuuxGIO6jr5bEeC
+    _key: '!tables.results!h77XTpKTXTmO2oVF.dFuuxGIO6jr5bEeC'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 4
+    text: Character’s hair grows 1 inch longer every hour.
+    type: text
+    weight: 1
+  - _id: WUxUWvA7PCK4JzXg
+    _key: '!tables.results!h77XTpKTXTmO2oVF.WUxUWvA7PCK4JzXg'
+    img: icons/svg/d20-black.svg
+    range:
+      - 5
+      - 9
+    text: >-
+      Character either shrinks 6 inches (01-50, on d%) or grows that much taller
+      (51-100,). Only happens once.
+    type: text
+    weight: 1
+  - _id: W1XOBS94cS2eJIlS
+    _key: '!tables.results!h77XTpKTXTmO2oVF.W1XOBS94cS2eJIlS'
+    img: icons/svg/d20-black.svg
+    range:
+      - 10
+      - 13
+    text: Temperature around item is 10° f cooler than normal.
+    type: text
+    weight: 1
+  - _id: hPIrcIfEjpGZEz5N
+    _key: '!tables.results!h77XTpKTXTmO2oVF.hPIrcIfEjpGZEz5N'
+    img: icons/svg/d20-black.svg
+    range:
+      - 14
+      - 17
+    text: Temperature around item is 10° f warmer than normal.
+    type: text
+    weight: 1
+  - _id: QDsjm3vGIvJM2Ecu
+    _key: '!tables.results!h77XTpKTXTmO2oVF.QDsjm3vGIvJM2Ecu'
+    img: icons/svg/d20-black.svg
+    range:
+      - 18
+      - 21
+    text: Character’s hair color changes.
+    type: text
+    weight: 1
+  - _id: o4bWLUclnlOeBtbL
+    _key: '!tables.results!h77XTpKTXTmO2oVF.o4bWLUclnlOeBtbL'
+    img: icons/svg/d20-black.svg
+    range:
+      - 22
+      - 25
+    text: Character’s skin color changes.
+    type: text
+    weight: 1
+  - _id: u1l1MYjTps0Igyyr
+    _key: '!tables.results!h77XTpKTXTmO2oVF.u1l1MYjTps0Igyyr'
+    img: icons/svg/d20-black.svg
+    range:
+      - 26
+      - 29
+    text: >-
+      Character now bears some identifying mark (tattoo, weird glow, or the
+      like).
+    type: text
+    weight: 1
+  - _id: KKlMtMMBjjo5DX8k
+    _key: '!tables.results!h77XTpKTXTmO2oVF.KKlMtMMBjjo5DX8k'
+    img: icons/svg/d20-black.svg
+    range:
+      - 30
+      - 32
+    text: Character’s gender changes.
+    type: text
+    weight: 1
+  - _id: IP7TINWJy88d97VU
+    _key: '!tables.results!h77XTpKTXTmO2oVF.IP7TINWJy88d97VU'
+    img: icons/svg/d20-black.svg
+    range:
+      - 33
+      - 34
+    text: Character’s race or kind changes.
+    type: text
+    weight: 1
+  - _id: 8npKQ2b9Ph2gYy0f
+    _key: '!tables.results!h77XTpKTXTmO2oVF.8npKQ2b9Ph2gYy0f'
+    img: icons/svg/d20-black.svg
+    range:
+      - 35
+      - 35
+    text: Character is afflicted with a random disease that cannot be cured.
+    type: text
+    weight: 1
+  - _id: Tf3vj9DRsCG52Zcn
+    _key: '!tables.results!h77XTpKTXTmO2oVF.Tf3vj9DRsCG52Zcn'
+    img: icons/svg/d20-black.svg
+    range:
+      - 36
+      - 39
+    text: >-
+      Item continually emits a disturbing sound (moaning, weeping, screaming,
+      cursing, insults).
+    type: text
+    weight: 1
+  - _id: rurdBfuO3WifkuSd
+    _key: '!tables.results!h77XTpKTXTmO2oVF.rurdBfuO3WifkuSd'
+    img: icons/svg/d20-black.svg
+    range:
+      - 40
+      - 40
+    text: Item looks ridiculous (garishly colored, silly shape, glows bright pink).
+    type: text
+    weight: 1
+  - _id: tm8I3T8cnv46OTdi
+    _key: '!tables.results!h77XTpKTXTmO2oVF.tm8I3T8cnv46OTdi'
+    img: icons/svg/d20-black.svg
+    range:
+      - 41
+      - 45
+    text: Character becomes selfishly possessive.
+    type: text
+    weight: 1
+  - _id: 1rgUBIOSwgtpoLDB
+    _key: '!tables.results!h77XTpKTXTmO2oVF.1rgUBIOSwgtpoLDB'
+    img: icons/svg/d20-black.svg
+    range:
+      - 46
+      - 49
+    text: >-
+      Character becomes paranoid about losing the item and afraid of damage
+      occurring to it.
+    type: text
+    weight: 1
+  - _id: 2rKYeQUc8Pp7qCjc
+    _key: '!tables.results!h77XTpKTXTmO2oVF.2rKYeQUc8Pp7qCjc'
+    img: icons/svg/d20-black.svg
+    range:
+      - 50
+      - 51
+    text: Character’s alignment changes.
+    type: text
+    weight: 1
+  - _id: dpGYLDC00pQB7dky
+    _key: '!tables.results!h77XTpKTXTmO2oVF.dpGYLDC00pQB7dky'
+    img: icons/svg/d20-black.svg
+    range:
+      - 52
+      - 54
+    text: >-
+      Character must attack nearest creature (5% chance [01-05, on d%] each
+      day).
+    type: text
+    weight: 1
+  - _id: E8z5ep8Ewgs5SPOm
+    _key: '!tables.results!h77XTpKTXTmO2oVF.E8z5ep8Ewgs5SPOm'
+    img: icons/svg/d20-black.svg
+    range:
+      - 55
+      - 57
+    text: >-
+      Character is stunned for 1d4 rounds once item function is finished (or
+      randomly, 1/day).
+    type: text
+    weight: 1
+  - _id: x6jtLsVYHoXXhjuH
+    _key: '!tables.results!h77XTpKTXTmO2oVF.x6jtLsVYHoXXhjuH'
+    img: icons/svg/d20-black.svg
+    range:
+      - 58
+      - 60
+    text: >-
+      Character’s vision is blurry (–2 penalty on attack rolls, saves, and skill
+      checks requiring vision).
+    type: text
+    weight: 1
+  - _id: yNzbK8xKc2ZaCpYD
+    _key: '!tables.results!h77XTpKTXTmO2oVF.yNzbK8xKc2ZaCpYD'
+    img: icons/svg/d20-black.svg
+    range:
+      - 61
+      - 64
+    text: Character gains one negative level.
+    type: text
+    weight: 1
+  - _id: 0sXeWS0ak8lgLxKs
+    _key: '!tables.results!h77XTpKTXTmO2oVF.0sXeWS0ak8lgLxKs'
+    img: icons/svg/d20-black.svg
+    range:
+      - 65
+      - 65
+    text: Character gains two negative levels.
+    type: text
+    weight: 1
+  - _id: PBhTnyuV8c4aaOsh
+    _key: '!tables.results!h77XTpKTXTmO2oVF.PBhTnyuV8c4aaOsh'
+    img: icons/svg/d20-black.svg
+    range:
+      - 66
+      - 70
+    text: >-
+      Character must make a Will save each day or take 1 point of Intelligence
+      damage.
+    type: text
+    weight: 1
+  - _id: SnDTVnPnFed5qEcX
+    _key: '!tables.results!h77XTpKTXTmO2oVF.SnDTVnPnFed5qEcX'
+    img: icons/svg/d20-black.svg
+    range:
+      - 71
+      - 75
+    text: Character must make a Will save each day or take 1 point of Wisdom damage.
+    type: text
+    weight: 1
+  - _id: YZMSwWHUHL6mrXzl
+    _key: '!tables.results!h77XTpKTXTmO2oVF.YZMSwWHUHL6mrXzl'
+    img: icons/svg/d20-black.svg
+    range:
+      - 76
+      - 80
+    text: >-
+      Character must make a Will save each day or take 1 point of Charisma
+      damage.
+    type: text
+    weight: 1
+  - _id: z7pXdoiUP8NI9r5k
+    _key: '!tables.results!h77XTpKTXTmO2oVF.z7pXdoiUP8NI9r5k'
+    img: icons/svg/d20-black.svg
+    range:
+      - 81
+      - 85
+    text: >-
+      Character must make a Fortitude save each day or take 1 point of
+      Constitution damage.
+    type: text
+    weight: 1
+  - _id: 3BNiuZ6v5Bt0jij5
+    _key: '!tables.results!h77XTpKTXTmO2oVF.3BNiuZ6v5Bt0jij5'
+    img: icons/svg/d20-black.svg
+    range:
+      - 86
+      - 90
+    text: >-
+      Character must make a Fortitude save each day or take 1 point of Strength
+      damage.
+    type: text
+    weight: 1
+  - _id: cULIkIkntjpQriWH
+    _key: '!tables.results!h77XTpKTXTmO2oVF.cULIkIkntjpQriWH'
+    img: icons/svg/d20-black.svg
+    range:
+      - 91
+      - 95
+    text: >-
+      Character must make a Fortitude save each day or take 1 point of Dexterity
+      damage.
+    type: text
+    weight: 1
+  - _id: TZwXlel7GNent1Uo
+    _key: '!tables.results!h77XTpKTXTmO2oVF.TZwXlel7GNent1Uo'
+    img: icons/svg/d20-black.svg
+    range:
+      - 96
+      - 96
+    text: >-
+      Character is polymorphed into a specific creature (5% chance [01-05, on
+      d%] each day).
+    type: text
+    weight: 1
+  - _id: iwJhGjd3Z95QyeX6
+    _key: '!tables.results!h77XTpKTXTmO2oVF.iwJhGjd3Z95QyeX6'
+    img: icons/svg/d20-black.svg
+    range:
+      - 97
+      - 97
+    text: Character cannot cast arcane spells.
+    type: text
+    weight: 1
+  - _id: Sp0qifE0Xz0TJkuN
+    _key: '!tables.results!h77XTpKTXTmO2oVF.Sp0qifE0Xz0TJkuN'
+    img: icons/svg/d20-black.svg
+    range:
+      - 98
+      - 98
+    text: Character cannot cast divine spells.
+    type: text
+    weight: 1
+  - _id: Q5OsrfrLQ5L2pLSa
+    _key: '!tables.results!h77XTpKTXTmO2oVF.Q5OsrfrLQ5L2pLSa'
+    img: icons/svg/d20-black.svg
+    range:
+      - 99
+      - 99
+    text: Character cannot cast any spells.
+    type: text
+    weight: 1
+  - _id: tgVtMql0vMVPmroV
+    _key: '!tables.results!h77XTpKTXTmO2oVF.tgVtMql0vMVPmroV'
+    img: icons/svg/d20-black.svg
+    range:
+      - 100
+      - 100
+    text: >-
+      Either pick one of the above that’s appropriate or create a drawback
+      specifically for that item.
+    type: text
+    weight: 1
+sort: 300000

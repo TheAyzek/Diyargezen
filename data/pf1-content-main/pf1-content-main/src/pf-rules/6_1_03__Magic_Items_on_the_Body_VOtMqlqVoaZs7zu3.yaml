@@ -1,0 +1,84 @@
+_id: VOtMqlqVoaZs7zu3
+_key: '!journal!VOtMqlqVoaZs7zu3'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.03. Magic Items on the Body
+pages:
+  - _id: GtK10bFoFGKQYzzd
+    _key: '!journal.pages!VOtMqlqVoaZs7zu3.GtK10bFoFGKQYzzd'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.03. Magic Items on the Body
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.s3ene84nkQAyhCrW]{6.1.
+        Magic
+        Items}</p><ul><li>@Compendium[pf-content.pf-rules.sP6qrGJREE0X596I]{6.1.01.
+        Magic Items and Detect
+        Magic}</li><li>@Compendium[pf-content.pf-rules.N3qNOnemt2nuACdl]{6.1.02.
+        Using
+        Items}</li><li><strong>@Compendium[pf-content.pf-rules.VOtMqlqVoaZs7zu3]{6.1.03.
+        Magic Items on the
+        Body}</strong></li><li>@Compendium[pf-content.pf-rules.EyKVuz8Ae2Bh5Z32]{6.1.04.
+        Saving Throws Against Magic Item
+        Powers}</li><li>@Compendium[pf-content.pf-rules.oXM5hPY9YSNGCEpU]{6.1.05.
+        Damaging Magic
+        Items}</li><li>@Compendium[pf-content.pf-rules.M3XyBvOcp11YAnAL]{6.1.06.
+        Purchasing Magic
+        Items}</li><li>@Compendium[pf-content.pf-rules.iZ6tZ7PFna0TiXkW]{6.1.07.
+        Magic Item
+        Descriptions}</li><li>@Compendium[pf-content.pf-rules.b91t5OrtW3axrmKd]{6.1.08.
+        Magic
+        Armor}</li><li>@Compendium[pf-content.pf-rules.TT91XHZCetT5yyVc]{6.1.09.
+        Magic
+        Weapons}</li><li>@Compendium[pf-content.pf-rules.itDodwwkCVnIf0jU]{6.1.10.
+        Potions}</li><li>@Compendium[pf-content.pf-rules.LFs1l4pTdQgqrkjx]{6.1.11.
+        Rings}</li><li>@Compendium[pf-content.pf-rules.LxBkrhoOTfPeNQ7Z]{6.1.12.
+        Rods}</li><li>@Compendium[pf-content.pf-rules.2QvAhr3WucxaQNeN]{6.1.13.
+        Scrolls}</li><li>@Compendium[pf-content.pf-rules.3mXUlZodNKkPDj0D]{6.1.14.
+        Staves}</li><li>@Compendium[pf-content.pf-rules.wi435P7HqEEOQwFA]{6.1.15.
+        Wands}</li><li>@Compendium[pf-content.pf-rules.HYNbOvjpMu4OZlfs]{6.1.16.
+        Wondrous
+        Items}</li><li>@Compendium[pf-content.pf-rules.muHuo2GwcCKyy4tP]{6.1.17.
+        Intelligent
+        Items}</li><li>@Compendium[pf-content.pf-rules.LaZ4cSkdCxMwDnXD]{6.1.18.
+        Cursed
+        Items}</li><li>@Compendium[pf-content.pf-rules.87rVetLgCkc8cm5d]{6.1.19.
+        Artifacts}</li><li>@Compendium[pf-content.pf-rules.X6hkpqXjE3T3jRy2]{6.1.20.
+        Magic Item Creation}</li></ul><hr
+        /><p>@Source[PZO1110;pages=459]</p><p>Many magic items need to be donned
+        by a character who wants to employ them or benefit from their abilities.
+        It’s possible for a creature with a humanoid-shaped body to wear as many
+        as 15 magic items at the same time. However, each of those items must be
+        worn on (or over) a particular part of the body, known as a
+        “slot.”</p><p>A humanoid-shaped body can be decked out in magic gear
+        consisting of one item from each of the following groups, keyed to which
+        slot on the body the item is worn.</p><ul><li><strong>Armor</strong>:
+        suits of armor.</li><li><strong>Belts</strong>: belts and
+        girdles.</li><li><strong>Body</strong>: robes and
+        vestments.</li><li><strong>Chest</strong>: mantles, shirts, and
+        vests.</li><li><strong>Eyes</strong>: eyes, glasses, and
+        goggles.</li><li><strong>Feet</strong>: boots, shoes, and
+        slippers.</li><li><strong>Hands</strong>: gauntlets and
+        gloves.</li><li><strong>Head</strong>: circlets, crowns, hats, helms,
+        and masks.</li><li><strong>Headband</strong>: headbands and
+        phylacteries.</li><li><strong>Neck</strong>: amulets, brooches,
+        medallions, necklaces, periapts, and scarabs.</li><li><strong>Ring (up
+        to two)</strong>: rings.</li><li><strong>Shield</strong>:
+        shields.</li><li><strong>Shoulders</strong>: capes and
+        cloaks.</li><li><strong>Wrist</strong>: bracelets and
+        bracers.</li></ul><p>Of course, a character may carry or possess as many
+        items of the same type as he wishes. However, additional items beyond
+        those in the slots listed above have no effect.</p><p>Some items can be
+        worn or carried without taking up a slot on a character’s body. The
+        description of an item indicates when an item has this property.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

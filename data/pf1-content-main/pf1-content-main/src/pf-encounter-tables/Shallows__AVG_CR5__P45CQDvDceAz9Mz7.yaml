@@ -1,0 +1,156 @@
+_id: P45CQDvDceAz9Mz7
+_key: '!tables!P45CQDvDceAz9Mz7'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/island.webp
+name: Shallows (AVG CR5)
+replacement: true
+results:
+  - _id: Ux3H6wMnmXgwb8zJ
+    _key: '!tables.results!P45CQDvDceAz9Mz7.Ux3H6wMnmXgwb8zJ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 5
+    text: 1d4 ([[1d4]]) Dolphins [AVG CR 1]
+    type: text
+    weight: 1
+  - _id: ilaWNxbGbLyRu0Va
+    _key: '!tables.results!P45CQDvDceAz9Mz7.ilaWNxbGbLyRu0Va'
+    img: icons/svg/d20-black.svg
+    range:
+      - 6
+      - 9
+    text: 1 Incutilis [CR 2]
+    type: text
+    weight: 1
+  - _id: cayilGyu4Pl6XZWp
+    _key: '!tables.results!P45CQDvDceAz9Mz7.cayilGyu4Pl6XZWp'
+    img: icons/svg/d20-black.svg
+    range:
+      - 10
+      - 16
+    text: 1d4 ([[1d4]]) Hippocampi [AVG CR 3]
+    type: text
+    weight: 1
+  - _id: mNef2zuIctVXyJPa
+    _key: '!tables.results!P45CQDvDceAz9Mz7.mNef2zuIctVXyJPa'
+    img: icons/svg/d20-black.svg
+    range:
+      - 17
+      - 25
+    text: 2d6 ([[2d6]]) Merfolk [AVG CR 3]
+    type: text
+    weight: 1
+  - _id: UC7ArJLlYost75JF
+    _key: '!tables.results!P45CQDvDceAz9Mz7.UC7ArJLlYost75JF'
+    img: icons/svg/d20-black.svg
+    range:
+      - 26
+      - 29
+    text: 2d6 ([[2d6]]) Grindylows [AVG CR 4]
+    type: text
+    weight: 1
+  - _id: 9joQ1jhmgAFZVg98
+    _key: '!tables.results!P45CQDvDceAz9Mz7.9joQ1jhmgAFZVg98'
+    img: icons/svg/d20-black.svg
+    range:
+      - 30
+      - 38
+    text: 2d4 ([[2d4]]) Stingrays [AVG CR 4]
+    type: text
+    weight: 1
+  - _id: jPxlAJSXkJpKDwag
+    _key: '!tables.results!P45CQDvDceAz9Mz7.jPxlAJSXkJpKDwag'
+    img: icons/svg/d20-black.svg
+    range:
+      - 39
+      - 44
+    text: 1d8 ([[1d8]]) Manta Rays [AVG CR 5]
+    type: text
+    weight: 1
+  - _id: kBBLcr0Dlo0UEGfs
+    _key: '!tables.results!P45CQDvDceAz9Mz7.kBBLcr0Dlo0UEGfs'
+    img: icons/svg/d20-black.svg
+    range:
+      - 45
+      - 54
+    text: 2d4 ([[2d4]]) Sea Snakes [AVG CR 5]
+    type: text
+    weight: 1
+  - _id: miO5BhAHyHByoywb
+    _key: '!tables.results!P45CQDvDceAz9Mz7.miO5BhAHyHByoywb'
+    img: icons/svg/d20-black.svg
+    range:
+      - 55
+      - 59
+    text: 1 Grodair [CR 5]
+    type: text
+    weight: 1
+  - _id: 5VBBfIGfmneRO8Ab
+    _key: '!tables.results!P45CQDvDceAz9Mz7.5VBBfIGfmneRO8Ab'
+    img: icons/svg/d20-black.svg
+    range:
+      - 60
+      - 67
+    text: 1d6 ([[1d6]]) Adaros [AVG CR 6]
+    type: text
+    weight: 1
+  - _id: MLpDGvettissHjcd
+    _key: '!tables.results!P45CQDvDceAz9Mz7.MLpDGvettissHjcd'
+    img: icons/svg/d20-black.svg
+    range:
+      - 68
+      - 74
+    text: 1d4 ([[1d4]]) Cecaelias [AVG CR 7]
+    type: text
+    weight: 1
+  - _id: djdhTIhURw1prGbw
+    _key: '!tables.results!P45CQDvDceAz9Mz7.djdhTIhURw1prGbw'
+    img: icons/svg/d20-black.svg
+    range:
+      - 75
+      - 83
+    text: 1 Tylosaurus [CR 8]
+    type: text
+    weight: 1
+  - _id: CIQ0eN5aEMg08SHI
+    _key: '!tables.results!P45CQDvDceAz9Mz7.CIQ0eN5aEMg08SHI'
+    img: icons/svg/d20-black.svg
+    range:
+      - 84
+      - 91
+    text: 1d6 ([[1d6]]) Giant Moray Eels [AVG CR 8]
+    type: text
+    weight: 1
+  - _id: vQiFmgc86abRpqyh
+    _key: '!tables.results!P45CQDvDceAz9Mz7.vQiFmgc86abRpqyh'
+    img: icons/svg/d20-black.svg
+    range:
+      - 92
+      - 95
+    text: 1d4 ([[1d4]]) Giant Sea Snakes [AVG CR 9]
+    type: text
+    weight: 1
+  - _id: CxEWZZxoZfb0oLN0
+    _key: '!tables.results!P45CQDvDceAz9Mz7.CxEWZZxoZfb0oLN0'
+    img: icons/svg/d20-black.svg
+    range:
+      - 96
+      - 98
+    text: 1 Dire Shark [CR 9]
+    type: text
+    weight: 1
+  - _id: BBWamYdfCYngZSVy
+    _key: '!tables.results!P45CQDvDceAz9Mz7.BBWamYdfCYngZSVy'
+    img: icons/svg/d20-black.svg
+    range:
+      - 99
+      - 100
+    text: 1 Nereid [CR 10]
+    type: text
+    weight: 1
+sort: 700000

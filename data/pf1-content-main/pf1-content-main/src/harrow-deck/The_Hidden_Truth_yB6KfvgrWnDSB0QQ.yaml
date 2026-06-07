@@ -1,0 +1,30 @@
+_id: yB6KfvgrWnDSB0QQ
+_key: '!journal!yB6KfvgrWnDSB0QQ'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: oEUKlY7s7aPkyznu
+name: The Hidden Truth
+pages:
+  - _id: y1NsuneAvfvoWuFz
+    _key: '!journal.pages!yB6KfvgrWnDSB0QQ.y1NsuneAvfvoWuFz'
+    _stats:
+      coreVersion: '12.331'
+    name: The Hidden Truth
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Hidden Truth</strong> (lawful good, Intelligence)
+        symbolizes the ability to see past the obvious and the banal to a
+        greater truth within. Sometimes this discovery is an esoteric one,
+        sometimes it is a literal find, such as an item revealed within a room.
+        Regardless, it is a card with the power to reveal secrets. Misaligned,
+        it can mean a secret being revealed to the subject's detriment.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Hidden%20Truth.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,38 @@
+_id: 4oDu7xSElhywU6KH
+_key: '!items!4oDu7xSElhywU6KH'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/leather.PNG
+name: Dragonform Armor
+system:
+  armor:
+    dex: 6
+    material:
+      base:
+        value: leather
+    value: 2
+  aura:
+    school: trs
+  baseTypes:
+    - Leather Armor
+  cl: 11
+  description:
+    value: >-
+      <p>This +1 leather armor is the same color as the dragon type with which
+      it is associated and has been worked to resemble dragon hide. Once per day
+      the wearer can speak the command word and transform into the associated
+      dragon type as the form of the dragon I spell. This effect lasts 11
+      minutes.</p><p><strong>Base Item</strong>: leather
+      armor</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, form of the dragon I</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 24120
+  sources:
+    - id: PZO9434
+  spellFailure: 10
+  weight:
+    value: 15
+type: equipment

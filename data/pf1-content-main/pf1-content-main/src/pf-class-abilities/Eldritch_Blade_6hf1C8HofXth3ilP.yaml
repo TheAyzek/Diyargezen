@@ -1,0 +1,19 @@
+_id: 6hf1C8HofXth3ilP
+_key: '!items!6hf1C8HofXth3ilP'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/spells/runes-blue-2.jpg
+name: Eldritch Blade
+system:
+  associations:
+    classes:
+      - Arcanist
+  description:
+    value: >-
+      <p><strong>Arcanist Exploit - Adept</strong></p><p>A blade adept with this
+      exploit uses her caster level instead of her class level for the purpose
+      of advancing her bonded sword's powers.</p>
+  subType: classFeat
+  tags:
+    - Arcanist Exploit - Adept
+type: feat

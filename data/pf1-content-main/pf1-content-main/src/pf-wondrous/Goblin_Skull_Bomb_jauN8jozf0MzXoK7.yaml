@@ -1,0 +1,39 @@
+_id: jauN8jozf0MzXoK7
+_key: '!items!jauN8jozf0MzXoK7'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Goblin Skull Bomb
+system:
+  aura:
+    school: evo
+  cl: 6
+  description:
+    value: >-
+      <p>An ember glow lights the beady eyes of this blackened, burned out
+      goblin's skull. It is very brittle and shatters if dropped on solid
+      ground. When a goblin skull bomb breaks, the very last creature to touch
+      it bursts into a raging magical flame, automatically suffering 5d6 points
+      of fire damage and also catching fire should it fail a Reflex save (DC
+      13). If this kills the creature, its body burns away in one round, leaving
+      behind only a pile of ash and the creature's blackened, burned-out skull,
+      which is a new goblin skull bomb. If the target survives the fire, doesn't
+      have a skull, or if its skull is destroyed before another creature touches
+      it, it does not create a new goblin skull bomb.   A skull bomb can be used
+      as a thrown weapon with a range increment of 10 feet. If the attacker
+      hits, the skull shatters, immolating the target as described above. If the
+      attacker misses, the skull breaks upon the floor or another nearby hard
+      surface and the attacker bursts into flame. Touching the skull using
+      gloves, gauntlets, or handheld items such as tools or weapons counts as
+      touching the skull. It can be safely moved using spells (such as mage hand
+      or telekinesis) or attacked with ranged weapons (hardness 0, 1
+      hp).</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, flaming sphere</p>
+  price: 1200
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

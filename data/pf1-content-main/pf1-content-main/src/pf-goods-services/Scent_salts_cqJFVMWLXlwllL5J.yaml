@@ -1,0 +1,19 @@
+_id: cqJFVMWLXlwllL5J
+_key: '!items!cqJFVMWLXlwllL5J'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/bowl-powder-teal.webp
+name: Scent salts
+system:
+  description:
+    value: >-
+      <p>Stored in a waterproof pouch, these salt crystals dissolve slowly in
+      water, producing a pleasing scent in the nearby water for roughly 1
+      hour.</p>
+  equipped: false
+  price: 0.1
+  sources:
+    - id: PZO92102
+      pages: '56'
+  subType: entertainment
+type: loot

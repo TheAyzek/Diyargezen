@@ -1,0 +1,28 @@
+_id: o7yHUGnmm8rRPcTm
+_key: '!items!o7yHUGnmm8rRPcTm'
+_stats:
+  coreVersion: '12.331'
+folder: YaC0PDBdquBGbbsG
+img: systems/pf1/icons/skills/violet_04.jpg
+name: Invigorating
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint enchantment <strong>CL</strong>
+      5th</p><p><strong>Slot</strong> weapon quality; <strong>Price</strong> +2
+      bonus;</p><p>This special ability can only be placed on melee weapons.
+      After an attack with this weapon drops a living foe (kills it or drops it
+      to negative hit points), the weapon infuses its wielder with vigor. If its
+      wielder is fatigued, the weapon removes the fatigue. If exhausted, the
+      wielder becomes fatigued instead. If neither exhausted nor fatigued, the
+      wielder gains a +2 morale bonus on attack rolls and a +10 foot enhancement
+      bonus to all modes of movement possessed until the end of the wielder's
+      next turn.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>good hope</em>; <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1123
+      pages: '144'
+  subType: misc
+  tags:
+    - Melee Qualities
+type: feat

@@ -1,0 +1,34 @@
+_id: EuE87XNC3Lxvz2X7
+_key: '!journal!EuE87XNC3Lxvz2X7'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Kroina
+pages:
+  - _id: Zv3fzRlmZjYTaxsl
+    _key: '!journal.pages!EuE87XNC3Lxvz2X7.Zv3fzRlmZjYTaxsl'
+    _stats:
+      coreVersion: '12.331'
+    name: Kroina
+    sort: 0
+    text:
+      content: >-
+        <h1>Kroina</h1><h2>Lady All-Sight</h2>@Source[PZO9267;pages=322] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Kroina">Kroina</a><h3>Details</h3><p><strong>Alignment</strong>
+        LG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Divination, eyes, instincts<br
+        /><strong>Domains</strong> Good, Knowledge, Law, Magic<br
+        /><strong>Subdomains</strong> Archon (Good), Archon (Law), Divine,
+        Memory, Thought<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Longbow<br
+        /><strong>Symbol</strong> Two heterochromatic eyes<br /><strong>Sacred
+        Animal(s)</strong> Woodpecker<br /><strong>Sacred Color(s)</strong>
+        Green, violet</p><h2>For Followers of Kroina</h2><h3>Feats</h3><p>Heroic
+        Interposition</p><h3>Traits</h3><p>Empyreal Focus</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

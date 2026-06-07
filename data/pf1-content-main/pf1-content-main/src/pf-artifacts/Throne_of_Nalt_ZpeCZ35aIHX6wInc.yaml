@@ -1,0 +1,25 @@
+_id: ZpeCZ35aIHX6wInc
+_key: '!items!ZpeCZ35aIHX6wInc'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Throne of Nalt
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: divination and enchantment
+  cl: 20
+  description:
+    value: >-
+      <p>Great horns of gold, a massive sea serpent's skull, and the wings of
+      Kazavon form the ornate Throne of Nalt. The throne grants whoever is
+      seated upon it a +6 enhancement bonus to Charisma and Wisdom. Once per
+      day, the user can cast geas/ quest. Any creature with the evil subtype
+      takes a -6 penalty on saving throws to resist this effect.</p>
+  sources:
+    - id: PZO9250
+  subType: other
+  weight:
+    value: 3475
+type: equipment

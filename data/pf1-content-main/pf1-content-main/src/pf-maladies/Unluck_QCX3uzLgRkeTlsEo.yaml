@@ -1,0 +1,21 @@
+_id: QCX3uzLgRkeTlsEo
+_key: '!items!QCX3uzLgRkeTlsEo'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_11.jpg
+name: Unluck
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> curse; <strong>Save</strong> Will DC
+      20</p><p><strong>Effect</strong> target must reroll any roll decided by
+      the GM and take the worse result</p><p><strong>Frequency</strong>
+      1/hour</p>
+  sources:
+    - id: PZO1110
+      pages: '557'
+  subType: misc
+  tags:
+    - Maladies
+    - Curse
+type: feat

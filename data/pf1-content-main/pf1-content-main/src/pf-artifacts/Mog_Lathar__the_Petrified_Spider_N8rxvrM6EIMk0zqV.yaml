@@ -1,0 +1,35 @@
+_id: N8rxvrM6EIMk0zqV
+_key: '!items!N8rxvrM6EIMk0zqV'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Mog-Lathar, the Petrified Spider
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: all schools
+  cl: 20
+  description:
+    value: >-
+      <p>Mog-Lathar is a well-preserved fossil of a gigantic Leng spider that
+      has achieved sentience. Since its discovery in the Mindspin Mountains and
+      subsequent arrival in Bridgefront, the petrified idol's cult has grown to
+      over 300 supplicants. The idol's holy days fall on the vernal and autumnal
+      equinoxes, as well as on the northern solstice. Sacrifices are typically
+      in the form of fine goods and deeply intoxicated, lucidly dreaming
+      humanoids.  Despite its imposing petrified bulk, the fossil is relatively
+      brittle for a stone object of its size, with hardness 8, 78 hp, and break
+      DC 35.  The Huge idol can animate at will, as the spell animate object,
+      and can grant divine spells to worshipers up to 5th level with access to
+      the Chaos, Evil, and Trickery domains as a result of selecting the divine
+      source idol ability twice. Its immortal promise ability grants a limited
+      immortality to up to 20 favored worshipers. They do not age; do not need
+      to eat, drink, or breathe; and do not suffer ill effects from extreme heat
+      or cold.</p>
+  sources:
+    - id: PZO9549
+  subType: other
+  weight:
+    value: 6000
+type: equipment

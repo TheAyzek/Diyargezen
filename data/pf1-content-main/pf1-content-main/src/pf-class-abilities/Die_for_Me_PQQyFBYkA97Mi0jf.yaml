@@ -1,0 +1,22 @@
+_id: PQQyFBYkA97Mi0jf
+_key: '!items!PQQyFBYkA97Mi0jf'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_15.jpg
+name: Die for Me
+system:
+  associations:
+    classes:
+      - Mesmerist
+  description:
+    value: >-
+      <p><strong>Mesmerist Masterful Trick</strong></p><p>The cult master
+      instills within either his cohort or one of his followers the desire to
+      give her life for him. The cult master can trigger this trick whenever he
+      would take hit point damage from an attack, spell, or effect and the
+      subject is with 60 feet of him. Half the damage is psychically transferred
+      to the subject. This is an enchantment (compulsion) effect.</p>
+  subType: classFeat
+  tags:
+    - Mesmerist Masterful Trick
+type: feat

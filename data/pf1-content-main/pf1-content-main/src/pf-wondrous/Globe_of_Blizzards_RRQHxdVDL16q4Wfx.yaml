@@ -1,0 +1,34 @@
+_id: RRQHxdVDL16q4Wfx
+_key: '!items!RRQHxdVDL16q4Wfx'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Globe of Blizzards
+system:
+  aura:
+    school: trs
+  cl: 13
+  description:
+    value: >-
+      <p>Tiny white crystals hang suspended in a clear fluid inside this
+      fist-sized glass ball, which contains a miniature scene of leafless trees
+      in a snow-covered landscape. Shaking the globe (a move action) activates
+      it, and causes the crystals inside to fly wildly about the globe, taking
+      on the appearance of a mad snowstorm for 1d6 minutes until they settle
+      back down. Shattering an activated globe (hardness 1, hp 2) creates raging
+      blizzard conditions in a 2-mile-radius circle centered on the location
+      where the globe was shattered. In this area, temperatures drop to below
+      freezing, winds blow at over 50 miles per hour, and heavy snow falls (see
+      pages 438-439 of the Core Rulebook). It takes 10 minutes for the blizzard
+      to form, and the conditions last for 1 hour before dissipating, at which
+      point normal weather conditions in the area return. Once shattered, a
+      globe of blizzards is destroyed.<h3>Requirements</h3><p>Craft Wondrous
+      Item, control weather</p>
+  price: 4550
+  sources:
+    - id: PZO9069
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

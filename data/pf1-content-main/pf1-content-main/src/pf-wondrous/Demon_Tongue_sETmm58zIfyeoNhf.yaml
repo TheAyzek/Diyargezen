@@ -1,0 +1,30 @@
+_id: sETmm58zIfyeoNhf
+_key: '!items!sETmm58zIfyeoNhf'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Demon Tongue
+system:
+  aura:
+    custom: true
+    school: transmutation [chaotic evil]
+  cl: 10
+  description:
+    value: >-
+      <p>This puckered black tongue replaces the recipient's original tongue,
+      which must be cut out beforehand. Removing the recipient's tongue deals
+      2d6 points of damage to the recipient and prevents it from speaking until
+      the demon tongue is implanted. Once attached, a demon tongue grants the
+      recipient a +4 profane bonus on Bluff checks used to verbally lie or
+      deceive. A demon tongue also grants its recipient a portion of a demon's
+      immunity to poison. A creature with a demon tongue implanted gains a +4
+      bonus on saving throws made to resist an ingested poison. In addition, the
+      creature can detect the presence of an ingested poison in anything it eats
+      or drinks as the detect poison spell.<h3>Requirements</h3><p>Craft
+      Wondrous Item, detect poison, eagle's splendor</p>
+  price: 10000
+  sources:
+    - id: PZO9074
+  subType: wondrous
+type: equipment

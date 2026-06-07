@@ -1,0 +1,40 @@
+_id: Zmc31HLoKN9tnef5
+_key: '!items!Zmc31HLoKN9tnef5'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-heavy-metal.png
+name: Collapsible Tower
+system:
+  armor:
+    acp: 2
+    material:
+      base:
+        value: steel
+    value: 2
+  aura:
+    school: trs
+  baseTypes:
+    - Heavy Steel Shield
+  cl: 6
+  description:
+    value: >-
+      <p>Three times per day, this +2 heavy steel shield can be commanded to
+      transform into a +2 tower shield. It can stay in tower shield form for 1
+      minute or until it is commanded to take its normal form again (a swift
+      action). A collapsible tower's weight does not change when it takes tower
+      shield form.</p><p><strong>Base Item</strong>: heavy steel
+      shield|+2</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, shrink item</p>
+  enh: 2
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 8170
+  slot: shield
+  sources:
+    - id: PZO1123
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 15
+type: equipment

@@ -1,0 +1,52 @@
+_id: ozO7NiDeUPmSlcCN
+_key: '!items!ozO7NiDeUPmSlcCN'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/equipment/finger/ring-shell-white-blue.webp
+name: Belt of the Weasel
+system:
+  aura:
+    school: trs
+  changes:
+    - _id: 9IR8uIAp
+      formula: '2'
+      target: dex
+      type: enh
+  cl: 4
+  contextNotes:
+    - target: landSpeed
+      text: You can move at half normal speed while prone.
+    - target: ac
+      text: You do not take a penalty to AC against melee attacks while prone.
+    - target: melee
+      text: You do not take a penalty to melee attack rolls while prone.
+  description:
+    unidentified: >-
+      <p>This surprisingly soft belt has an absurdly large buckle, made even
+      more absurd by the fact that it's crafted in the shape of a smiling
+      weasel's face.</p>
+    value: >-
+      <h3>Effect</h3><p>It grants its wearer a +2 enhancement bonus to
+      Dexterity, and the ability to move at half normal speed while prone. Treat
+      the enhancement bonus to Dexterity as a temporary ability bonus for the
+      first 24 hours the belt is worn. The wearer does not take a penalty on
+      melee attack rolls or to AC against melee attacks while prone.
+      Additionally, the wearer gains the compression ability (Bestiary 2
+      295).</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.tjdfluulncmqacc3]{Beast Shape
+      I}</em><strong> Cost</strong> 5,000 gp</p>
+  links:
+    supplements:
+      - name: Compression
+        uuid: Compendium.pf-content.pf-universal-monster-rules.Item.sz8l1HerDXKPeJHE
+  price: 10000
+  slot: belt
+  sources:
+    - id: PZO1123
+      pages: '210'
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

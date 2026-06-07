@@ -1,0 +1,32 @@
+_id: bPk255IMaevKZWt6
+_key: '!items!bPk255IMaevKZWt6'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Replenishing Aquarium Ball, Lesser
+system:
+  aura:
+    school: con
+  cl: 7
+  description:
+    value: >-
+      <p>Replenishing aquarium balls act as standard aquarium balls (see page
+      20), but are endowed with magical effects beneficial to the creature held
+      within. The power of the magic depends on the kind of replenishing
+      aquarium ball.  Lesser: The ball continually refreshes itself with clean
+      water, allowing a creature within to live as long as it has food. 
+      Standard: The ball continually refreshes itself with clean water and fresh
+      food.  Greater: The ball continually refreshes itself with clean water and
+      fresh food. In addition, a greater replenishing aquarium ball is magically
+      enhanced so that the glass is as hard as stone (hardness 8, 15 hp) without
+      increasing its
+      weight.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item; create water</p>
+  price: 500
+  sources:
+    - id: PZO9454
+  subType: wondrous
+  weight:
+    value: 20
+type: equipment

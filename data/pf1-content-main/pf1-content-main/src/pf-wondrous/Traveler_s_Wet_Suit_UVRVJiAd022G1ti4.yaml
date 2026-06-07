@@ -1,0 +1,27 @@
+_id: UVRVJiAd022G1ti4
+_key: '!items!UVRVJiAd022G1ti4'
+_stats:
+  coreVersion: '12.331'
+folder: tt1hnzL5ZdLfPdp0
+img: icons/equipment/chest/coat-collared-red-gold.webp
+name: Traveler's Wet Suit
+system:
+  aura:
+    school: div
+  cl: 3
+  description:
+    value: >-
+      <p>This wet suit protects against environmental cold damage and
+      hypothermia. Anything stored in its waterproof pockets is kept magically
+      separate from any surrounding water, even if the wearer opens the pocket
+      underwater. Finally, the wearer gains a +2 competence bonus on Swim
+      checks.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, endure elements</p>
+  price: 2750
+  slot: body
+  sources:
+    - id: PZO92102
+  subType: wondrous
+  weight:
+    value: 4
+type: equipment

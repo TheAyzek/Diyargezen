@@ -1,0 +1,44 @@
+_id: SNwyiqKNWBs9MEQf
+_key: '!items!SNwyiqKNWBs9MEQf'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Amulet of the Spirits, Flame
+system:
+  aura:
+    school: evo
+  cl: 8
+  description:
+    value: >-
+      <p>Each different type of amulet of the spirit grants its wearer powers
+      from one type of shaman spirit bond, but makes her vulnerable to attacks
+      and effects that target creatures with that spirit bond (such as a
+      spirit-hunting weapon). If a creature that already has the associated
+      mystery or spirit wears the amulet, that wearer does not gain the
+      abilities listed below; instead, the effective level of her mystery or
+      spirit powers increases by 2. This effect does not stack with other
+      abilities that increase the effective level of mystery or spirit
+      powers.    Flame: This amulet is a single fire opal hanging from a chain
+      of brass. Twice per day as a swift action, the wearer can activate a fire
+      ward. The next time she is struck with a melee weapon, the creature making
+      the attack takes 1d6+4 points of fire damage. The ward lasts for 1 minute,
+      after which it fades away if not expended. In addition, twice per day as a
+      swift action the wearer can cause a creature within 30 feet to become
+      vulnerable to fire until the end of the wearer's turn. Whenever the
+      creature takes fire damage, it takes half again as much damage (+50%). If
+      the creature is already vulnerable to fire, this hex has no effect. Fire
+      immunity and resistances apply as normal, and any saving throw allowed by
+      the effect that caused the damage reduces it as normal. Moderate
+      evocation; CL 8th; Craft Wondrous Item, burning
+      hands.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, burning hands, creator must be a shaman with the
+      appropriate spirit</p>
+  price: 10000
+  slot: neck
+  sources:
+    - id: PZO1129
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

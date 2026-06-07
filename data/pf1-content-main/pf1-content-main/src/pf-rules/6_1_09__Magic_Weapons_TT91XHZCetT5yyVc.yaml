@@ -1,0 +1,149 @@
+_id: TT91XHZCetT5yyVc
+_key: '!journal!TT91XHZCetT5yyVc'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.09. Magic Weapons
+pages:
+  - _id: bOeDEsdX21KDxRxv
+    _key: '!journal.pages!TT91XHZCetT5yyVc.bOeDEsdX21KDxRxv'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.09. Magic Weapons
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.s3ene84nkQAyhCrW]{6.1.
+        Magic
+        Items}</p><ul><li>@Compendium[pf-content.pf-rules.sP6qrGJREE0X596I]{6.1.01.
+        Magic Items and Detect
+        Magic}</li><li>@Compendium[pf-content.pf-rules.N3qNOnemt2nuACdl]{6.1.02.
+        Using
+        Items}</li><li>@Compendium[pf-content.pf-rules.VOtMqlqVoaZs7zu3]{6.1.03.
+        Magic Items on the
+        Body}</li><li>@Compendium[pf-content.pf-rules.EyKVuz8Ae2Bh5Z32]{6.1.04.
+        Saving Throws Against Magic Item
+        Powers}</li><li>@Compendium[pf-content.pf-rules.oXM5hPY9YSNGCEpU]{6.1.05.
+        Damaging Magic
+        Items}</li><li>@Compendium[pf-content.pf-rules.M3XyBvOcp11YAnAL]{6.1.06.
+        Purchasing Magic
+        Items}</li><li>@Compendium[pf-content.pf-rules.iZ6tZ7PFna0TiXkW]{6.1.07.
+        Magic Item
+        Descriptions}</li><li>@Compendium[pf-content.pf-rules.b91t5OrtW3axrmKd]{6.1.08.
+        Magic
+        Armor}</li><li><strong>@Compendium[pf-content.pf-rules.TT91XHZCetT5yyVc]{6.1.09.
+        Magic
+        Weapons}</strong></li><li>@Compendium[pf-content.pf-rules.itDodwwkCVnIf0jU]{6.1.10.
+        Potions}</li><li>@Compendium[pf-content.pf-rules.LFs1l4pTdQgqrkjx]{6.1.11.
+        Rings}</li><li>@Compendium[pf-content.pf-rules.LxBkrhoOTfPeNQ7Z]{6.1.12.
+        Rods}</li><li>@Compendium[pf-content.pf-rules.2QvAhr3WucxaQNeN]{6.1.13.
+        Scrolls}</li><li>@Compendium[pf-content.pf-rules.3mXUlZodNKkPDj0D]{6.1.14.
+        Staves}</li><li>@Compendium[pf-content.pf-rules.wi435P7HqEEOQwFA]{6.1.15.
+        Wands}</li><li>@Compendium[pf-content.pf-rules.HYNbOvjpMu4OZlfs]{6.1.16.
+        Wondrous
+        Items}</li><li>@Compendium[pf-content.pf-rules.muHuo2GwcCKyy4tP]{6.1.17.
+        Intelligent
+        Items}</li><li>@Compendium[pf-content.pf-rules.LaZ4cSkdCxMwDnXD]{6.1.18.
+        Cursed
+        Items}</li><li>@Compendium[pf-content.pf-rules.87rVetLgCkc8cm5d]{6.1.19.
+        Artifacts}</li><li>@Compendium[pf-content.pf-rules.X6hkpqXjE3T3jRy2]{6.1.20.
+        Magic Item Creation}</li></ul><hr
+        /><p>@Source[PZO1110;pages=468]</p><p>A magic weapon is enhanced to
+        strike more truly and deliver more damage. Magic weapons have
+        enhancement bonuses ranging from +1 to +5. They apply these bonuses to
+        both attack and damage rolls when used in combat. All magic weapons are
+        also masterwork weapons, but their masterwork bonuses on attack rolls do
+        not stack with their enhancement bonuses on attack rolls.</p><p>Weapons
+        come in two basic categories: melee and ranged. Some of the weapons
+        listed as melee weapons can also be used as ranged weapons. In this
+        case, their enhancement bonuses apply to both melee and ranged
+        attacks.</p><p>Some magic weapons have special abilities. Special
+        abilities count as additional bonuses for determining the market value
+        of the item, but do not modify attack or damage bonuses except where
+        specifically noted). A single weapon cannot have a modified bonus
+        (enhancement bonus plus special ability bonus equivalents, including
+        from character abilities and spells) higher than +10. A weapon with a
+        special ability must also have at least a +1 enhancement bonus. Weapons
+        cannot possess the same special ability more than once.</p><p>Weapons or
+        ammunition can be made of an unusual material. Roll d%: 01–95 indicates
+        that the item is of a standard sort, and 96– 100 indicates that it is
+        made of a special material (see Chapter 6).</p><h2>Caster Level for
+        Weapons</h2><p>The caster level of a weapon with a special ability is
+        given in the item description. For an item with only an enhancement
+        bonus and no other abilities, the caster level is three times the
+        enhancement bonus. If an item has both an enhancement bonus and a
+        special ability, the higher of the two caster level requirements must be
+        met.</p><h2>Additional Damage Dice</h2><p>Some magic weapons deal
+        additional dice of damage. Unlike other modifiers to damage, additional
+        dice of damage are not multiplied when the attacker scores a critical
+        hit.</p><h2>Ranged Weapons and Ammunition</h2><p>The enhancement bonus
+        from a ranged weapon does not stack with the enhancement bonus from
+        ammunition. Only the higher of the two enhancement bonuses
+        applies.</p><p>Ammunition fired from a projectile weapon with an
+        enhancement bonus of +1 or higher is treated as a magic weapon for the
+        purpose of overcoming damage reduction. Similarly, ammunition fired from
+        a projectile weapon with an alignment gains the alignment of that
+        projectile weapon.</p><h2>Magic Ammunition and Breakage</h2><p>When a
+        magic arrow, crossbow bolt, or sling bullet misses its target, there is
+        a 50% chance it breaks or is otherwise rendered useless. A magic arrow,
+        bolt, or bullet that successfully hits a target is automatically
+        destroyed after it delivers its damage.</p><h2>Light
+        Generation</h2><p>Fully 30% of magic weapons shed light equivalent to a
+        light spell. These glowing weapons are quite obviously magical. Such a
+        weapon can’t be concealed when drawn, nor can its light be shut off.
+        Some of the specific weapons detailed below always or never glow, as
+        defined in their descriptions.</p><h2>Hardness and Hit
+        Points</h2><p>Each +1 of a magic weapon’s enhancement bonus adds +2 to
+        its hardness and +10 to its hit points. See also Table 7–12 on page
+        175.</p><h2>Activation</h2><p>Usually a character benefits from a magic
+        weapon in the same way a character benefits from a mundane weapon— by
+        wielding (attacking with) it. If a weapon has a special ability that the
+        user needs to activate, then the user usually needs to utter a command
+        word (a standard action). A character can activate the special abilities
+        of 50 pieces of ammunition at the same time, assuming each piece has
+        identical abilities.</p><h2>Magic Weapons and Critical Hits</h2><p>Some
+        weapon special abilities and some specific weapons have an extra effect
+        on a critical hit. This special effect also functions against creatures
+        not normally subject to critical hits. On a successful critical roll,
+        apply the special effect, but do not multiply the weapon’s regular
+        damage.</p><h2>Weapons for Unusually Sized Creatures</h2><p>The cost of
+        weapons for creatures who are neither Small nor Medium varies (see
+        Chapter 6). The cost of the masterwork quality and any magical
+        enhancement remains the same.</p><h2>Special Qualities</h2><p>Roll d%. A
+        01–30 result indicates that the item sheds light, 31–45 indicates that
+        something (a design, inscription, or the like) provides a clue to the
+        weapon’s function, and 46–100 indicates no special
+        qualities.</p><h2>Table 15-8: Weapons</h2><table
+        border="1"><thead><tr><td>Minor</td><td>Medium</td><td>Major</td><td>Weapon
+        Bonus</td><td>Base
+        Price<sup>1</sup></td></tr></thead><tbody><tr><td>01-70</td><td>01-10</td><td>—</td><td>+1</td><td>2,000
+        gp</td></tr><tr><td>71-85</td><td>11-29</td><td>—</td><td>+2</td><td>8,000
+        gp</td></tr><tr><td>—</td><td>30-58</td><td>01-20</td><td>+3</td><td>18,000
+        gp</td></tr><tr><td>—</td><td>59-62</td><td>21-38</td><td>+4</td><td>32,000
+        gp</td></tr><tr><td>—</td><td>—</td><td>39-49</td><td>+5</td><td>50,000
+        gp</td></tr><tr><td>—</td><td>—</td><td>—</td><td>+6<sup>2</sup></td><td>72,000
+        gp</td></tr><tr><td>—</td><td>—</td><td>—</td><td>+7<sup>2</sup></td><td>98,000
+        gp</td></tr><tr><td>—</td><td>—</td><td>—</td><td>+8<sup>2</sup></td><td>128,000
+        gp</td></tr><tr><td>—</td><td>—</td><td>—</td><td>+9<sup>2</sup></td><td>162,000
+        gp</td></tr><tr><td>—</td><td>—</td><td>—</td><td>+10<sup>2</sup></td><td>200,000
+        gp</td></tr><tr><td>86-90</td><td>63-68</td><td>50-63</td><td>Specifc
+        weapon<sup>3</sup></td><td>—</td></tr><tr><td>92-100</td><td>69-100</td><td>64-100</td><td>Special
+        ability and roll
+        again<sup>4</sup></td><td>—</td></tr></tbody></table><p><br />1 For
+        ammunition, this price is for 50 arrows, bolts, or bullets.<br />2 A
+        weapon can’t have an enhancement bonus higher than +5. Use these lines
+        to determine price when special abilities are added in.<br />3 See <a
+        href="https://www.aonprd.com/MagicWeapons.aspx?Category=SpecificWeapon">here</a>.<br
+        />4 See <a
+        href="https://www.aonprd.com/MagicWeapons.aspx?Category=MeleeWeaponQuality">here
+        for melee weapons</a> and <a
+        href="https://www.aonprd.com/MagicWeapons.aspx?Category=RangedWeaponQuality">here
+        for ranged weapons</a>.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

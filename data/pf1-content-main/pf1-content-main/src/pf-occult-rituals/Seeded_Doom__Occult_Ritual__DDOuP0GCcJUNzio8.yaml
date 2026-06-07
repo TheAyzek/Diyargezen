@@ -1,0 +1,77 @@
+_id: DDOuP0GCcJUNzio8
+_key: '!items!DDOuP0GCcJUNzio8'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Seeded Doom (Occult Ritual)
+system:
+  actions:
+    - _id: 9jyfb1np0rwo8xz7
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        type: 'null'
+      target:
+        value: one object
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    focus: true
+    material: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> transmutation [evil]; <strong>Level</strong>
+      8</p><p><strong>Casting Time</strong> 8
+      hours</p><p><strong>Components</strong> V, S, M (internal organs of an
+      aberration), F (the crystallized brain of an aberration worth at least
+      7,500 gp and a book, painting, or section of sheet music), SC (up to
+      12)</p><p><strong>Skill Checks</strong> Knowledge (arcana or history) DC
+      37, 2 successes; Knowledge (planes or religion) DC 37, 2 successes;
+      Spellcraft DC 37, 4 successes</p><p><strong>Range</strong>
+      close</p><p><strong>Target</strong> one
+      object</p><p><strong>Duration</strong> instantaneous; see
+      text</p><p><strong>Saving Throw</strong> see text; <strong>SR</strong> see
+      text</p><p><strong>Backlash</strong> The primary caster is reduced to –1
+      hit point and is exhausted, and all secondary casters are
+      exhausted.</p><p><strong>Failure</strong> The ritual fails to affect the
+      object, and all casters are afflicted by the seed's effect with no saving
+      throw.</p><h3>Effect</h3><p>The casters grind the organs into paste and
+      use it to paint their lips and tongue. Anointed by madness, they chant
+      profane blasphemies into the focus brain, causing it to throb and glow.
+      The primary caster releases this energy as a foul sludge, which trickles
+      onto the other focus before seeping into the paper or paint. A successful
+      ritual corrupts the targeted piece of art, planting a metaphysical seed
+      into it, which propagates itself into any copies of the work later created
+      based on the corrupted original; this includes book copies or matched
+      painting duplicates, but not art, literature, or music that is merely
+      derivative. A living creature subjected to the seeded piece of art,
+      typically by hearing or seeing it, must succeed at a Will save or be
+      afflicted by the seed (SR applies).</p><p>By default, the seed causes
+      <em>insanity</em> or a madness (see page 182), but numerous types of seeds
+      exist, from different variants on this ritual with slightly different
+      components, foci, and ritual DC. A few examples include becoming blind or
+      deaf, contracting a disease, or rising as a zombie after death.</p>
+  flags:
+    dictionary:
+      summary: Imbue a work of art with contagious madness
+  level: 8
+  materials:
+    focus: >-
+      the crystallized brain of an aberration worth at least 7,500 gp and a
+      book, painting, or section of sheet music
+    value: internal organs of an aberration
+  school: trs
+  sources:
+    - id: PZO1135
+      pages: '133'
+  sr: false
+type: spell

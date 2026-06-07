@@ -1,0 +1,30 @@
+_id: haVQT1E8T5efrW1s
+_key: '!items!haVQT1E8T5efrW1s'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Deadly Draught
+system:
+  aura:
+    school: evo
+  cl: 11
+  description:
+    value: >-
+      <p>This vial has a narrow, pinched spout and is sealed with gray wax.
+      Casting a targeted spell (up to 3rd level) into the vial activates it and
+      causes it to glow a soft red. A creature can then break the spout
+      (destroying the vial) and imbibe the liquid therein as a standard action.
+      Doing so infuses the drinker's blood with the spell cast on the vial, but
+      the spell does not affect the drinker (the spell instead acts as though it
+      had been affected by contingency). The next time a creature feeds on the
+      drinker's blood, the infused spell immediately targets the attacking
+      creature; if the spell allows a saving throw, the creature takes a -2
+      penalty on the save. The infused spell fades after it is triggered or 24
+      hours have passed, whichever comes first.</p><h3>Requirements</h3><p>Craft
+      Wondrous Item, contingency</p>
+  price: 900
+  sources:
+    - id: PZO9427
+  subType: wondrous
+type: equipment

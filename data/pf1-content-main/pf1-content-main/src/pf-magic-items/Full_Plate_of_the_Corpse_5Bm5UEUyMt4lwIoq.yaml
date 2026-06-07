@@ -1,0 +1,42 @@
+_id: 5Bm5UEUyMt4lwIoq
+_key: '!items!5Bm5UEUyMt4lwIoq'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/fullplate.PNG
+name: Full Plate of the Corpse
+system:
+  armor:
+    acp: 6
+    dex: 1
+    material:
+      base:
+        value: steel
+    value: 9
+  aura:
+    school: abj
+  baseTypes:
+    - Full Plate
+  cl: 5
+  description:
+    value: >-
+      <p>This suit of +2 full plate has been etched and stained in such a way
+      that it resembles the form and shape of a decomposed body that is encased
+      in a suit of armor. The wearer is effectively hidden from non-intelligent
+      undead, which can't see, hear, or smell him; even extraordinary or
+      supernatural senses capabilities can't penetrate the magical shroud. An
+      intelligent undead creature can attempt a single Will saving throw (DC 14)
+      to penetrate the ward. All affected undead behave as if the wearer simply
+      isn't there.</p><p><strong>Base Item</strong>: full
+      plate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, hide from undead</p>
+  enh: 2
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 35650
+  sources:
+    - id: PZO1129
+  spellFailure: 35
+  weight:
+    value: 50
+type: equipment

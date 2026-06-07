@@ -1,0 +1,30 @@
+_id: TbxZ3J2tn2irBVR3
+_key: '!items!TbxZ3J2tn2irBVR3'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Pirate Lord's Patch
+system:
+  aura:
+    school: div
+  cl: 3
+  description:
+    value: >-
+      <p>This eye patch is woven entirely from gold cloth and features a skull
+      and crossbones embroidered in black stitching. A pair of small sapphires
+      is sewn into the cloth within the skull's eye sockets, making them appear
+      as gleaming pinpricks of blue light. The wearer can see as if the eye
+      patch were not there.  The wearer gains a +2 competence bonus on Appraise
+      and Intimidate checks. Once per day, the wearer can activate the patch in
+      order to gain the benefits of see invisibility for 5 minutes.
+      Additionally, once per day, he can activate the patch in order to see
+      through solid objects for 1 minute, as though with a ring of x-ray
+      vision.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, locate object, see invisibility</p>
+  price: 8500
+  slot: eyes
+  sources:
+    - id: PZO1136
+  subType: wondrous
+type: equipment

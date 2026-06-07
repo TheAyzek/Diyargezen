@@ -1,0 +1,22 @@
+_id: uwAEyp4p7lBWC4hw
+_key: '!items!uwAEyp4p7lBWC4hw'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/trinket-carving.jpg
+name: Cane, hollow
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> +1 gp; <strong>Weight</strong> -<br
+      /><strong>Category</strong> Adventuring Gear</p><p>A hollow cane has a
+      false top that conceals a small compartment within the cane. The
+      compartment is large enough to house a potion or vial. Spotting the secret
+      compartment of a hollow cane requires a successful DC 18 Perception
+      check.</p>
+  equipped: false
+  price: 1
+  sources:
+    - id: PZO9481
+      pages: '12'
+  subType: adventuring
+type: loot

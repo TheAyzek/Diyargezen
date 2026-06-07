@@ -1,0 +1,30 @@
+_id: m7B11fwrqkCTsqPp
+_key: '!items!m7B11fwrqkCTsqPp'
+_stats:
+  coreVersion: '12.331'
+folder: 8BDX6ut8OIZ2xbb0
+img: systems/pf1/icons/feats/greater-penatrating-strike.jpg
+name: Greater Hamstring (EitR)
+system:
+  contextNotes:
+    - target: cmb
+      text: +2 to hamstring (stacks with powerful maneuvers)
+  description:
+    value: >-
+      <p><em>You can stop enemies in their tracks.</em></p><p>Str 13, Powerful
+      Maneuvers, base attack bonus +6.</p><p><strong>Benefit</strong>: You&nbsp;
+      receive&nbsp; a&nbsp; +2&nbsp; bonus&nbsp; on&nbsp; checks&nbsp;
+      made&nbsp; to&nbsp; hamstring&nbsp; a&nbsp; foe.&nbsp; This&nbsp;
+      bonus&nbsp; stacks&nbsp; with&nbsp; the&nbsp; bonus&nbsp; granted by
+      Powerful Maneuvers. When you successfully hamstring an opponent using an
+      attack of opportunity, that opponent cannot move for the rest of his
+      turn.</p>
+  sources:
+    - date: 04-2021
+      publisher: https://mammothisland.itch.io/elephant
+      title: The Elephant in the Room
+  tags:
+    - Combat
+    - Combat Maneuver
+    - Offensive
+type: feat

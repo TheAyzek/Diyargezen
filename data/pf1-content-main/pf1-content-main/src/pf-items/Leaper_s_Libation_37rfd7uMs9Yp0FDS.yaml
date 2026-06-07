@@ -1,0 +1,25 @@
+_id: 37rfd7uMs9Yp0FDS
+_key: '!items!37rfd7uMs9Yp0FDS'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/unique-10.jpg
+name: Leaper's Libation
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Tincture</p><p>This bubbly drink has a zesty
+      scent and invigorates the muscles. For 1 hour after drinking this
+      tincture, you gain a +4 alchemical bonus on Acrobatics checks to jump
+      horizontally, you are always treated as having a running start for the
+      purpose of these checks, and your jump distance can exceed your base
+      speed. Due to your exaggerated movement, you take a -2 penalty on attack
+      rolls and cannot take 5-foot steps for the same
+      duration.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      20</p>
+  price: 200
+  sources:
+    - id: PZO9487
+      pages: '22'
+  tags:
+    - Tincture
+type: consumable

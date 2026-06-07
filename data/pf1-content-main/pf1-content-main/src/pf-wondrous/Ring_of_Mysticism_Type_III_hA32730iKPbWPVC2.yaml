@@ -1,0 +1,29 @@
+_id: hA32730iKPbWPVC2
+_key: '!items!hA32730iKPbWPVC2'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Mysticism Type III
+system:
+  aura:
+    custom: true
+    school: none
+  cl: 11
+  description:
+    value: >-
+      <p>This ring of bone fused with crystal comes in four varieties, all of
+      them useful only to psychic spellcasters. The wearer's number of psychic
+      spells per day is doubled for one specific spell level. A ring of
+      mysticism I doubles 1st-level spells, a ring of mysticism II doubles
+      2nd-level spells, a ring of mysticism III doubles 3rd-level spells, and a
+      ring of mysticism IV doubles 4th-level spells. Bonus spells from high
+      ability scores are not
+      doubled.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, limited wish</p>
+  price: 70000
+  slot: ring
+  sources:
+    - id: PZO9477
+  subType: wondrous
+type: equipment

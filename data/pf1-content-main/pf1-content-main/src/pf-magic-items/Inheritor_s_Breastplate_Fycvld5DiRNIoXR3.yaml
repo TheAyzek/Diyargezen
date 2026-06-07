@@ -1,0 +1,39 @@
+_id: Fycvld5DiRNIoXR3
+_key: '!items!Fycvld5DiRNIoXR3'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/breastplate.PNG
+name: Inheritor's Breastplate
+system:
+  armor:
+    acp: 4
+    dex: 3
+    material:
+      base:
+        value: steel
+    value: 6
+  aura:
+    custom: true
+    school: abjuration and transmutation
+  baseTypes:
+    - Breastplate
+  cl: 3
+  description:
+    value: >-
+      <p>This reflective +1 breastplate is decorated with a sword-and-starburst
+      symbol. The armor is normally a golden color, but in battle it becomes
+      silver-gray. The wearer can use bless weapon and remove fear each once per
+      day.</p><p><strong>Base Item</strong>: 
+      breastplate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, bless weapon, remove fear</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 2430
+  sources:
+    - id: PZO9267
+  spellFailure: 25
+  weight:
+    value: 30
+type: equipment

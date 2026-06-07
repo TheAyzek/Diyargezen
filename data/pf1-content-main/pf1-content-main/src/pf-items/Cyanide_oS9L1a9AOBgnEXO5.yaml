@@ -1,0 +1,50 @@
+_id: oS9L1a9AOBgnEXO5
+_key: '!items!oS9L1a9AOBgnEXO5'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Cyanide
+system:
+  actions:
+    - _id: w8f60wbpnhqkezog
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1d4]] Con damage, target must
+            succeed at a second Fortitude save or [[1]] point of the Con damage
+            is instead drain. Cyanide’s unique metal-extracting properties make
+            it effective against elementals with the earth subtype, despite
+            their natural immunity to other poisons.
+      save:
+        dc: '20'
+        type: fort
+      tag: cyanide
+  description:
+    value: >-
+      <p><strong>Type</strong> contact; <strong>Save</strong> Fortitude DC
+      20</p><p><strong>Onset</strong> 1 minute; <strong>Frequency</strong>
+      1/round for 6 rounds</p><p><strong>Effect</strong> 1d4 Con damage, target
+      must succeed at a second Fortitude save or 1 point of the Con damage is
+      instead drain. Cyanide’s unique metal-extracting properties make it
+      effective against elementals with the earth subtype, despite their natural
+      immunity to other poisons.</p><p><strong>Cure</strong> 2 saves</p><p>This
+      potent toxin is used by both drow and duergar to extract gold from ore and
+      to eliminate political enemies. Cyanide poisoning usually manifests as
+      bright red flushing of the skin, even more noticeable in pallid creatures
+      like derros and duergar.</p>
+  price: 4000
+  sources:
+    - id: PZO9479
+      pages: '31'
+  subType: poison
+  uses:
+    per: single
+type: consumable

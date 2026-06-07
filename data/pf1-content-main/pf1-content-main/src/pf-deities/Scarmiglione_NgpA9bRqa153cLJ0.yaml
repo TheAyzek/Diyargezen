@@ -1,0 +1,47 @@
+_id: NgpA9bRqa153cLJ0
+_key: '!journal!NgpA9bRqa153cLJ0'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Scarmiglione
+pages:
+  - _id: MWK3y9kC5DgR6txg
+    _key: '!journal.pages!NgpA9bRqa153cLJ0.MWK3y9kC5DgR6txg'
+    _stats:
+      coreVersion: '12.331'
+    name: Scarmiglione
+    sort: 0
+    text:
+      content: >-
+        <h1>Scarmiglione</h1><h2>The Pale Promise</h2>@Source[PZO9267;pages=328]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Scarmiglione">Scarmiglione</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Malebranche<br /><strong>Areas of
+        Concern</strong> Deceit, poison, temptation<br
+        /><strong>Domains</strong> Charm, Evil, Law, Water<br
+        /><strong>Subdomains</strong> Deception, Devil (Evil), Devil (Law),
+        Lust, Venom<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Hand crossbow<br
+        /><strong>Symbol</strong> Poisoned hand crossbow<br /><strong>Sacred
+        Animal(s)</strong> Cobra<br /><strong>Sacred Color(s)</strong> White,
+        yellow</p><h3>Obedience</h3><p>Weave a fabric of lies glorifying
+        yourself and your malebranche liege, but never name him, instead hinting
+        at glorious truths your faith reveals. Gain a +4 profane bonus on saving
+        throws against language-dependent effects.</p><h2>Boons -
+        Malebranche</h2>@Source[PZO1139;pages=123]<p>Malebranche are horned
+        devils transformed so as to conquer a mortal world in Hell's name. Many
+        malebranche exist in Hell's ranks, and the 12 detailed below are merely
+        the best known.</p><p> Malebranche occupy a tier of power just below
+        infernal dukes. All malebranche are lawful evil and range in power from
+        CR 21 to CR 25. The boons they grant are less complex than those granted
+        by archdevils, manifesting as spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>detect thoughts</em><br
+        /><strong>2</strong>: <em>poison</em><br /><strong>3</strong>: 
+        <em>veil</em></p><h2>For Followers of
+        Scarmiglione</h2><h3>Feats</h3><p><em>Hellish Shackles</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

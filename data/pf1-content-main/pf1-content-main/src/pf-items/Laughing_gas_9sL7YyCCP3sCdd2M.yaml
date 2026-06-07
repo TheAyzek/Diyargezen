@@ -1,0 +1,43 @@
+_id: 9sL7YyCCP3sCdd2M
+_key: '!items!9sL7YyCCP3sCdd2M'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Laughing gas
+system:
+  actions:
+    - _id: trburni8ruwhg6sf
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: The subject experiences a bout of
+            uncontrollable laughter and is dazed for [[1]] round
+      save:
+        dc: '12'
+        type: fort
+      tag: laughingGas
+  description:
+    value: >-
+      <p><strong>Type</strong> inhaled; <strong>Save</strong> Fortitude DC
+      12</p><p><strong>Onset</strong> immediate; <strong>Frequency</strong>
+      1/round for 5 rounds</p><p><strong>Effect</strong> The subject experiences
+      a bout of uncontrollable laughter and is dazed for 1
+      round</p><p><strong>Cure</strong> 1 save</p>
+  price: 500
+  sources:
+    - id: PZO9459
+      pages: '9'
+  subType: poison
+  uses:
+    per: single
+  weight:
+    value: 0.5
+type: consumable

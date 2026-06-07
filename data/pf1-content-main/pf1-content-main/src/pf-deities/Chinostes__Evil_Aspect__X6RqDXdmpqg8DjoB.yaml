@@ -1,0 +1,39 @@
+_id: X6RqDXdmpqg8DjoB
+_key: '!journal!X6RqDXdmpqg8DjoB'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Chinostes (Evil Aspect)
+pages:
+  - _id: eJSZLirzt1S51DRy
+    _key: '!journal.pages!X6RqDXdmpqg8DjoB.eJSZLirzt1S51DRy'
+    _stats:
+      coreVersion: '12.331'
+    name: Chinostes (Evil Aspect)
+    sort: 0
+    text:
+      content: >-
+        <h1>Chinostes (Evil Aspect)</h1><h2>The Fallen
+        Blade</h2>@Source[PZO90144;pages=74] <br /><strong>Pathfinder
+        Wiki</strong> <a href="http://www.pathfinderwiki.com/wiki/Chinostes
+        (Evil Aspect)">Chinostes (Evil
+        Aspect)</a><h3>Details</h3><p><strong>Alignment</strong> NE<br
+        /><strong>Pantheon</strong> Iblydan Hero-Gods<br /><strong>Areas of
+        Concern</strong> Tragedy, sacrifice<br /><strong>Domains</strong> Evil,
+        Luck, Nobility<br /><strong>Subdomains</strong> Curse, Martyr<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> wooden stake</p><h3>On
+        Golarion</h3><p><strong>Centers of Worship</strong> Reanpharos<br
+        /><strong>Nationality</strong> Iblydan</p><h2>Unique Spell
+        Rules</h2>@Source[PZO90144;pages=74]<p><em></em><br
+        /><h3>Cleric/Warpriest</h3></em></p><p><em>Undead Anatomy II can be
+        prepared as a 5th-level spell<br /></em></p><h3>Oracle</h3><p><em>Undead
+        Anatomy II</em> can be prepared as a 5th-level spell<br
+        /></em></p><h2>Other Rules</h2><em>@Source[PZO90144;pages=74]</em><br
+        />Chinostes can grant up to 6th-level spells
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

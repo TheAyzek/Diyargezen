@@ -1,0 +1,35 @@
+_id: kMp9U61wZw3X1cY6
+_key: '!items!kMp9U61wZw3X1cY6'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Fivefold Rings of Fire
+system:
+  aura:
+    school: evo
+  cl: 10
+  description:
+    value: >-
+      <p>These five golden rings are each set with a fire opal and are linked
+      together by thin golden chains (making them take up only a single ring
+      item slot). The wearer can release up to five scorching rays each day, one
+      from each of the five rings. She can release one ray as a standard action
+      or two rays (from two different rings) as a full-round action.  12th
+      Level: Each day, the wearer can ignore up to 40 points of fire damage as
+      if using protection from energy. This fire damage is absorbed into the
+      fivefold rings of fire; when this happens, if the wearer has already
+      expended one or more of her scorching rays for the day, she can recharge
+      one of the rings for every 20 points of fire damage she absorbs.  14th
+      Level: In place of a scorching ray, the wearer can choose to create a
+      flaming sphere. The effect takes the form of hollow rings of flame instead
+      of a sphere, but otherwise functions as the spell.  16th Level: The amount
+      of fire damage the wearer can absorb each day increases to 100
+      points.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, flaming sphere, protection from energy, scorching ray</p>
+  price: 10800
+  slot: ring
+  sources:
+    - id: PZO1131
+  subType: wondrous
+type: equipment

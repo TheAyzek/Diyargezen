@@ -1,0 +1,37 @@
+_id: 6jiLGjqHEAmsLlo7
+_key: '!items!6jiLGjqHEAmsLlo7'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Explosion Pocket
+system:
+  aura:
+    school: evo
+  cl: 1
+  description:
+    value: >-
+      <p>An explosion pocket looks like a cloth pouch just large enough to
+      contain a Small or Medium humanoid's hand. When placed against a shirt,
+      vest, jacket, trousers, or similar piece of clothing, this ragged green
+      patch attaches to the clothing, creating a loose pocket. The pocket
+      functions as a normal pocket, but once per day the pocket's wearer can, as
+      a standard action by speaking a command word while his hand is in the
+      pocket, cause the pocket to create a single vial of alchemist's fire. If a
+      vial of alchemist's fire is in the explosion pocket when it is commanded
+      to create a vial of alchemist's fire, the pocket instead supercharges the
+      existing vial within so that it inflicts double the normal fire damage a
+      vial of alchemist's fire would normally inflict. An explosion pocket can
+      be removed as a full-round action, allowing it to be placed on a different
+      piece of clothing as the owner wishes. A vial of alchemist's fire created
+      or supercharged by an explosion pocket reverts to a vial of inert
+      bitter-tasting water 1 minute after it is created or
+      supercharged.</p><h3>Requirements</h3><p>Craft Wondrous Item, burning
+      hands</p>
+  price: 3000
+  sources:
+    - id: PZO9419
+  subType: wondrous
+  weight:
+    value: 0.5
+type: equipment

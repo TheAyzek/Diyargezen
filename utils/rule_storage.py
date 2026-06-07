@@ -90,7 +90,7 @@ def list_available_rules(base_dir: Path) -> Dict[str, bool]:
     Mevcut kural dosyalarını listele
     """
     rules_dir = get_rules_dir(base_dir)
-    systems = ['dnd5e', 'mutants_and_masterminds', 'vtm5e']
+    systems = ['dnd5e', 'mutants_and_masterminds', 'mm3e']
     
     available = {}
     for system in systems:

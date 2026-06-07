@@ -1,0 +1,34 @@
+_id: TKewNf0l5IatqGj3
+_key: '!items!TKewNf0l5IatqGj3'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Mountebank's Megaphone
+system:
+  aura:
+    school: ill
+  cl: 7
+  description:
+    value: >-
+      <p>This cone has openings at both ends and a large mouthpiece on the small
+      end, and is crafted from brass hoops and sheets of leather and painted
+      garish colors. Anyone holding the mountebank's megaphone in one hand can
+      speak through it to make his voice up to 10 times louder, allowing him to
+      be understood across a large crowd. If the megaphone's holder has the
+      bardic performance class feature, he can treat any space within a 30-foot
+      cone in front of him as the point of origin for any bardic performance
+      that usually centers on the performer. Projecting a bardic performance
+      through the megaphone takes additional effort, costing double the normal
+      number of rounds. If the user moves from his current location, any bardic
+      performance he is projecting through the megaphone immediately ends, even
+      if his new position is still within
+      range.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, ghost sound, exquisite accompaniment</p>
+  price: 4500
+  sources:
+    - id: PZO1136
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

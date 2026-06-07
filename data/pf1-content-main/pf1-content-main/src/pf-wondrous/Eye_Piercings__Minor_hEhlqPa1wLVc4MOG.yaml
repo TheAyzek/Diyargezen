@@ -1,0 +1,25 @@
+_id: hEhlqPa1wLVc4MOG
+_key: '!items!hEhlqPa1wLVc4MOG'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/jewelry/pendant-green.jpg
+name: Eye Piercings, Minor
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>These piercings may penetrate the eyebrow, eyelid, or the eye itself.
+      Due to magical, they do not impair the owner's vision. All effects from an
+      eye piercing are continuous.  Minor: The wearer gains low-light vision. If
+      the wearer already has low-light vision, the ability's range is doubled. 
+      Major: The wearer gains darkvision to 60 feet.  Greater: The wearer gains
+      the see in darkness special ability.</p><h3>Requirements</h3><p>Craft
+      Shadow Piercing, keen senses</p>
+  price: 6000
+  sources:
+    - id: PZO9450
+  subType: other
+type: equipment

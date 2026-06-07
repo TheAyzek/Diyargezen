@@ -1,0 +1,41 @@
+_id: 07PqiOM181YVzxHk
+_key: '!items!07PqiOM181YVzxHk'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Rimepelt
+system:
+  aura:
+    school: trs
+  cl: 11
+  description:
+    value: >-
+      <p>This snow-white fur pelt of a winter wolf can be worn over the
+      shoulders as a cloak. The pelt functions as furs, granting its wearer a +2
+      bonus on Fortitude saves to resist cold weather. The wearer can, as a
+      standard action, transform into a Large winter wolf as if using beast
+      shape IV. In certain special locations where winter wolves have the
+      ability to take human form, such as the Howlings district of Whitethrone
+      or the town of Redtooth, the wearer of a rimepelt in wolf form can take
+      human form as winter wolves do, appearing as a white-haired, blue-eyed
+      human. In either wolf or human form, the wearer of a rimepelt smells like
+      a winter wolf to other winter wolves and creatures with the scent ability.
+      When the wearer returns to his normal form, or after 2 hours have elapsed,
+      the rimepelt becomes a mundane winter wolf pelt.   Very rarely, a properly
+      skinned winter wolf pelt manifests the properties of a rimepelt without
+      requiring additional enchantment. A winter wolf whose pelt has such
+      potential usually manifests some telltale physical attribute, such as
+      heterochromatic eyes. Creating a rimepelt from such a rare creature
+      requires a successful DC 25 Profession (hunter) or Survival check. Taking
+      20 is not allowed in this situation, and a failed check results in the
+      pelt being utterly ruined for any use.<h3>Requirements</h3><p>Craft
+      Wondrous Item, beast shape IV</p>
+  price: 3350
+  slot: shoulders
+  sources:
+    - id: PZO9068
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

@@ -1,0 +1,27 @@
+_id: zbIoSB9YxrvJXpFz
+_key: '!items!zbIoSB9YxrvJXpFz'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Blind Man's Fold
+system:
+  aura:
+    school: trs
+  cl: 6
+  description:
+    value: >-
+      <p>Fashioned from a scrap of a blind beggar's clothing, a blind man's fold
+      is often used by explorers who must traverse caves inhabited by invisible
+      creatures, or those drawn to sources of light. A blind man's fold fully
+      obscures normal vision while worn, but grants the effects of the Improved
+      Blind-Fight feat (Advanced Player's Guide 162). Creatures which are unable
+      to see normally gain no benefit from wearing a blind man's
+      fold.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Improved Blind-Fight, darkness</p>
+  price: 12000
+  slot: eyes
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

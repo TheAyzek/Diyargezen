@@ -1,0 +1,34 @@
+_id: G94k9zdaWGVebYXF
+_key: '!items!G94k9zdaWGVebYXF'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Incense of Transcendence
+system:
+  aura:
+    school: enc
+  cl: 7
+  description:
+    value: >-
+      <p>The heady vapors of this coiled incense facilitate a deep meditative
+      trance. When an oracle lights a coil of incense of transcendence and then
+      spends 8 hours praying and meditating nearby, she can replace one of her
+      revelations with another revelation. The new revelation must be one
+      available to her (such as from the same mystery) and must be available at
+      the same class level as the original revelation (for example, she cannot
+      replace a revelation available at 1st level with a revelation requiring a
+      minimum of 7th level). If she replaces a revelation that is a prerequisite
+      for another revelation or ability, she cannot use that other revelation or
+      ability while under the influence of the incense.   The coil of incense
+      burns for 8 hours. Its effects persist for 24 hours, after which the
+      oracle's original revelations
+      return.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, prayer, creator must be oracle level 7th</p>
+  price: 1000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

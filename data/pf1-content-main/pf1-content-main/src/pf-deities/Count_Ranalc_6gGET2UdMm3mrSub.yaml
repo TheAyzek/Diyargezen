@@ -1,0 +1,51 @@
+_id: 6gGET2UdMm3mrSub
+_key: '!journal!6gGET2UdMm3mrSub'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Count Ranalc
+pages:
+  - _id: yvpGmB9G5E7sbHDm
+    _key: '!journal.pages!6gGET2UdMm3mrSub.yvpGmB9G5E7sbHDm'
+    _stats:
+      coreVersion: '12.331'
+    name: Count Ranalc
+    sort: 0
+    text:
+      content: >-
+        <h1>Count Ranalc</h1><h2>The Traitor</h2>@Source[PZO9298;pages=18] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Count Ranalc">Count
+        Ranalc</a><h3>Details</h3><p><strong>Alignment</strong> CN<br
+        /><strong>Pantheon</strong> Eldest<br /><strong>Areas of
+        Concern</strong> Betrayal, exiles, shadows<br /><strong>Domains</strong>
+        Chaos, Darkness, Nobility, Travel<br /><strong>Subdomains</strong>
+        Exploration, Loss, Martyr, Night<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Rapier<br
+        /><strong>Symbol</strong> Eye with crescent moon pupil, usually crying a
+        single black tear<br /><strong>Sacred Animal(s)</strong> Bat<br
+        /><strong>Sacred Color(s)</strong> Black,
+        gray</p><h3>Obedience</h3><p>Find or create an area of shadow. While
+        sitting within it, whisper the name of someone you intend to betray or
+        who has betrayed you, and what you wish to do to them. You gain a +4
+        sacred bonus to AC against attacks whenever you are denied your
+        Dexterity bonus (such as in a surprise round or when
+        paralyzed).</p><h2>Boons - Fey
+        Obedience</h2><h3>Feysworn</h3><p>@Source[PZO9298;pages=18]<br
+        /><strong>1: Dark Seeds (Sp)</strong> <em>shadow
+        weapon<sup>UM</sup></em> 3/day, <em>death knell</em> 2/day, or
+        <em>deeper darkness</em> 1/day<br /><strong>2: Shadow Travel
+        (Sp)</strong> You are one with the shadows, using magic to move easily
+        through the daylight world. You gain the ability to cast <em>shadow step
+        three times per day, as well as <em>shadow walk</em> one per day.<br
+        /><strong>3: Shadow Army (Sp)</strong> Once per day, you can cast
+        <em>shades</em></p><h2>For Followers of Count
+        Ranalc</h2><h3>Archetypes</h3><p><em>Ankou's Shadow (Slayer), Shadow
+        Scion (Rogue)</em></p><h3>Feats</h3><p><em>Fey
+        Friend</em></p><h3>Traits</h3><p><em>Shaper of Reality</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

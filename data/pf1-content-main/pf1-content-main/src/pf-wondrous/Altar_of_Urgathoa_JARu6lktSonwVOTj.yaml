@@ -1,0 +1,28 @@
+_id: JARu6lktSonwVOTj
+_key: '!items!JARu6lktSonwVOTj'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Altar of Urgathoa
+system:
+  aura:
+    custom: true
+    school: abjuration and necromancy [evil]
+  cl: 10
+  description:
+    value: >-
+      <p>This altar is a large sculpted table or slab for ceremonial feasts. 
+      Praying at the altar grants a +2 circumstance bonus on saving throws
+      against death effects, disease, energy drain, and negative energy effects;
+      an undead worshiper instead gains 5 temporary hit
+      points.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, death ward, false life, magic circle against good, creator
+      must worship Urgathoa</p>
+  price: 8000
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 500
+type: equipment

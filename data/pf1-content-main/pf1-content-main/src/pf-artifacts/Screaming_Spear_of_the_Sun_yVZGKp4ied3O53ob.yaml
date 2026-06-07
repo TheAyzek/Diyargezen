@@ -1,0 +1,44 @@
+_id: yVZGKp4ied3O53ob
+_key: '!items!yVZGKp4ied3O53ob'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/longspear.PNG
+name: Screaming Spear of the Sun
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: divination and enchantment
+  baseTypes:
+    - Longspear
+  cl: 20
+  description:
+    value: >-
+      <p>This +4 wounding throwing longspear has a 2-foot-long iron spearhead
+      covered with over 30 cruel flesh barbs. On a critical hit, the barbs lodge
+      in the victim's flesh and can be removed only by tearing the blade free.
+      Yanking the blade free is a full-round action that requires a successful
+      Strength check with a DC equal to the attack roll that struck the critical
+      hit, and deals 3d6 points of damage to the victim.  In the hands of a
+      mythic creature, the spear gains the returning special ability, and when
+      thrown seemingly comes alive, screaming wickedly as it flies. When it hits
+      a creature, it radiates fear (as the spell) in a 60-foot-radius burst
+      surrounding the creature struck.  Each use of mythic power the wielder
+      expends when throwing the spear increases the spear's throwing range by
+      100 feet.</p><p><strong>Base Item</strong>: wounding throwing
+      longspear</p>
+  enh: 4
+  held: 2h
+  material:
+    base:
+      value: steel
+  properties:
+    brc: true
+    rch: true
+  sources:
+    - id: PZO1126
+  weaponGroups:
+    - spears
+  weight:
+    value: 4
+type: weapon

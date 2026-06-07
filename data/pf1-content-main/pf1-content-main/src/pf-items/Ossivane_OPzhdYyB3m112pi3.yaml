@@ -1,0 +1,43 @@
+_id: OPzhdYyB3m112pi3
+_key: '!items!OPzhdYyB3m112pi3'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Ossivane
+system:
+  actions:
+    - _id: zd00x9yttfdmgsiy
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - '<strong>Primary Effect</strong: [[1d3]] Dex'
+      save:
+        dc: '18'
+        type: fort
+      tag: ossivane
+  description:
+    value: >-
+      <p><strong>Type</strong> injury; <strong>Save</strong> Fortitude DC
+      18</p><p><strong>Frequency</strong> 1/round for 6 rounds (see
+      text)</p><p><strong>Effect</strong> 1d3 Dex</p><p><strong>Cure</strong> 2
+      saves</p><p>Ossivane mimics the petrification capability of cockatrices,
+      but the toxin relies on the victim’s heart pumping hard to spread the
+      poison throughout the body as it stiffens limbs and locks joints. After
+      the initial save, the victim attempts an additional Fortitude save against
+      the poison only during rounds in which she takes a move, standard, or
+      full-round action.</p>
+  price: 350
+  sources:
+    - id: PZO9487
+      pages: '25'
+  subType: poison
+  uses:
+    per: single
+type: consumable

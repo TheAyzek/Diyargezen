@@ -1,0 +1,20 @@
+_id: Wm79SnAAYQMmvCjN
+_key: '!items!Wm79SnAAYQMmvCjN'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/navigation/map-chart-tan.webp
+name: Nautical Chart
+system:
+  description:
+    value: >-
+      <p>Nautical charts map waterways, showing the depth of water and height of
+      coastlines, as well as currents, harbors, navigational hazards, reefs, and
+      tides. A nautical chart grants a +4 circumstance bonus on Profession
+      (sailor) checks to navigate in the area detailed by the chart.</p>
+  equipped: false
+  price: 25
+  sources:
+    - id: PZO9481
+      pages: '13'
+  subType: adventuring
+type: loot

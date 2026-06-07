@@ -1,0 +1,27 @@
+_id: DGjAzumD0GEW0wtm
+_key: '!items!DGjAzumD0GEW0wtm'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/bolt.PNG
+name: Mage Shot, Acid
+system:
+  aura:
+    school: evo
+  cl: 6
+  description:
+    value: >-
+      <p>When propelled from a firearm, this +1 alchemical paper cartridge
+      changes the damage to acid damage. If the target takes acid damage from
+      the cartridge, it takes an additional 2d4 points of acid damage for the
+      next 2 rounds or until the acid is neutralized. This damage doesn't stack
+      with multiple shots or with acid arrow.</p><p><strong>Base Item</strong>: 
+      alchemical paper
+      cartridge</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, acid arrow</p>
+  equipped: false
+  extraType: gunBullet
+  price: 178
+  sources:
+    - id: PZO1136
+  subType: ammo
+type: loot

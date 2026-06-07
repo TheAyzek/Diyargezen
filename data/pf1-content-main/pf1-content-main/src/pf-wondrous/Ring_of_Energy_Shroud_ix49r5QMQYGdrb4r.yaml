@@ -1,0 +1,33 @@
+_id: ix49r5QMQYGdrb4r
+_key: '!items!ix49r5QMQYGdrb4r'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Energy Shroud
+system:
+  aura:
+    school: abj
+  cl: 13
+  description:
+    value: >-
+      <p>A ring of energy shroud always appears to be glass or crystal in
+      construction, tinted in a red, green, blue, or yellow hue. Closer
+      inspection reveals a small band of metal within the glass or crystal.
+      Treasured by frontline fighters and anyone with a trusted evoker ally,
+      rings of energy shroud normally function as a minor ring of energy
+      resistance. However, once per day as an immediate action, the ring's
+      wearer can negate the damage of an incoming acid, cold, electricity, or
+      fire energy effect for himself (but not for other creatures affected by
+      the spell or effect), transforming that damage into a shroud of energy
+      that wreathes the wearer's body acting as if under the effects of the
+      elemental aura spell (Advanced Player's Guide). The elemental aura effect
+      has the same energy type of the damage
+      negated.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, elemental aura, resist energy</p>
+  price: 19500
+  slot: ring
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

@@ -1,0 +1,46 @@
+_id: Y2vaVw7gax9Ln0iZ
+_key: '!items!Y2vaVw7gax9Ln0iZ'
+_stats:
+  coreVersion: '12.343'
+folder: CAxOlglJyXdUOHF9
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Arcane Dabbler (Elf)
+system:
+  actions:
+    - _id: lDfY2wKJOTrQyk46
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      description: >-
+        <p>Choose a 0-level arcane spell. </p><p>You may cast that spell once
+        per day as a spell-like ability. </p><p>Your caster level is equal to
+        your highest class level in a spellcasting class; if you have no caster
+        level, it functions at CL 1st. </p><p>The spell-like ability’s save DC
+        is Intelligence- or Charisma-based (chosen when you select this
+        trait).</p>
+      img: systems/pf1/icons/skills/blue_35.jpg
+      name: Use
+  description:
+    value: >-
+      <p><em>Though your magical studies were decades ago, you still remember
+      your favorite little trick.</em></p><p><strong>Requirements</strong>:
+      Elf</p><p><strong>Benefits</strong>: Choose a 0-level arcane spell. You
+      may cast that spell once per day as a spell-like ability. Your caster
+      level is equal to your highest class level in a spellcasting class; if you
+      have no caster level, it functions at CL 1st. The spell-like ability’s
+      save DC is Intelligence- or Charisma-based (chosen when you select this
+      trait).</p>
+  sources:
+    - id: PZO9402
+      pages: '15'
+  subType: trait
+  tags:
+    - '3.5'
+    - Elf
+  traitType: race
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

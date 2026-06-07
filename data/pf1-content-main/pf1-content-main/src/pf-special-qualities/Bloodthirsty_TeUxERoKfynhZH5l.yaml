@@ -1,0 +1,29 @@
+_id: TeUxERoKfynhZH5l
+_key: '!items!TeUxERoKfynhZH5l'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Bloodthirsty
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate enchantment <strong>CL</strong>
+      7th</p><p><strong>Price</strong> +2 bonus;</p><p>Jagged designs of
+      lightning, fangs, or weaponry adorn any <em>bloodthirsty</em> armor, which
+      bolsters its wearer's confidence and presence with each wound the wearer
+      inflicts. Only light or medium armor can be enchanted with the
+      <em>bloodthirsty</em> special ability. Such a set of armor promotes wanton
+      bloodshed, as its enhancement bonus to AC increases by 1 for 1 round after
+      its wearer deals damage with a natural attack or melee weapon. If the
+      wearer of a suit of <em>bloodthirsty</em> armor is raging, the armor's
+      enhancement bonus increases by 3
+      instead.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>rage</em>; <strong>Price</strong> +2 bonus</p>
+  sources:
+    - id: PZO9464
+      pages: '26'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

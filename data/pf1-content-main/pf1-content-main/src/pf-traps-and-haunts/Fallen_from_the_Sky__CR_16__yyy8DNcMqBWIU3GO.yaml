@@ -1,0 +1,51 @@
+_id: yyy8DNcMqBWIU3GO
+_key: '!actors!yyy8DNcMqBWIU3GO'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Fallen from the Sky (CR 16)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    hp:
+      max: 72
+  details:
+    alignment: NE
+    area: 160-ft.-radius area among the base and upper edge of a 200-ft.-tall cliff
+    biography: {}
+    cl: 6
+    cr:
+      base: 16
+    destruction: >-
+      The current head magistrate of the city must go to the cliff's edge and
+      issue individual pardons by name to everyone who was ever thrown off the
+      cliff, even those whose names were never recorded.
+    effect: >-
+      The haunt causes all creatures within the haunt's area along the cliff's
+      edge to plummet 200 feet to the ground, dealing 20d6 points of damage. The
+      haunt temporarily negates spells, spell-like abilities, and supernatural
+      abilities within its area as per <em>antimagic field</em>, except it does
+      not block effects that deal positive energy damage. The haunt's entire
+      area is always difficult terrain. Extraordinary abilities, such as a
+      monk's slow fall ability, reduce falling damage as normal. The haunt lifts
+      creatures back to the top of the cliff on each subsequent round, but it
+      must then succeed at a combat maneuver check to bull rush each creature
+      off the cliff (CMB +25). Creatures with natural flight can attempt a Fly
+      check opposed by the haunt's CMB to control their descent and take no
+      damage.
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Horror Adventures pg. 179</p>
+        <p><strong>Haunt Templates</strong>: fast increased area persistent
+        unyielding</p> <h3>Description</h3><p>A thriving metropolis on the top
+        of a cliff customarily executed criminals by throwing them off the
+        precipice, until the spirits of the condemned hurled the city's head
+        magistrate over the edge as well.</p>
+    notice: Perception DC 20 (to feel a slight tremor in the ground)
+    reset: 1 day
+    trigger: proximity
+type: haunt

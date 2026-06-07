@@ -1,0 +1,52 @@
+_id: KUS5n1nH0JjoimKr
+_key: '!items!KUS5n1nH0JjoimKr'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/gem-rough-heart-pink.webp
+name: Pink Rhomboid Ioun Stone, Flawed
+system:
+  aura:
+    custom: true
+    school: varied
+  changes:
+    - _id: cmYUT41W
+      formula: '2'
+      target: con
+      type: enh
+    - _id: Z4bfob1C
+      formula: '-2'
+      target: dex
+      type: untyped
+  cl: 12
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>A pink prism with sides of unequal widths or angles, giving it a
+      flattened cross section. It may have irregular facets or internal
+      flaws.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone grants a +2 enhancement bonus to Constitution
+      and –2 penalty to Dexterity.</p><h3>Resonance</h3><p><strong>Method 1,
+      Fixed: </strong>+1 bonus on Reflex saves.</p><p><strong>Method 2,
+      Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, creator must be 12th level <strong>Cost</strong>
+      3,000 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 6000
+  sources:
+    - id: PZO1138
+      pages: '149'
+    - id: PZO9211
+      pages: 50, 53
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

@@ -1,0 +1,29 @@
+_id: q3C8A1gMjgAbO6w5
+_key: '!items!q3C8A1gMjgAbO6w5'
+_stats:
+  coreVersion: '12.343'
+folder: AqjqWFWInPuTJU1V
+img: icons/skills/melee/strike-polearm-light-orange.webp
+name: Confounding
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint transmutation <strong>CL</strong>
+      5th</p><p><strong>Slot</strong> none; <strong>Price</strong> +1 bonus;
+      When the wielder confirms a critical hit with a <em>confounding</em>
+      weapon, she can spend 1 panache point to attempt a combat maneuver to
+      disarm, reposition, sunder, or trip the target as an immediate action,
+      gaining an enhancement bonus on the combat maneuver check equal to the
+      enhancement bonus of the <em>confounding </em>weapon. This combat maneuver
+      does not provoke an attack of opportunity. The wielder can't use panache
+      gained by confirming the critical hit to activate this
+      ability.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>eagle's splendor</em>; <strong>Price</strong>
+      -</p>
+  sources:
+    - id: PZO1129
+      pages: '212'
+  subType: misc
+  tags:
+    - Universal Weapon Qualities
+type: feat

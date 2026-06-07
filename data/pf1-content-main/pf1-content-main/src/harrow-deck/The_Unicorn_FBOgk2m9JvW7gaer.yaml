@@ -1,0 +1,28 @@
+_id: FBOgk2m9JvW7gaer
+_key: '!journal!FBOgk2m9JvW7gaer'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: slmqizDyyiaJyP1N
+name: The Unicorn
+pages:
+  - _id: fMF8qwGimGJnxTWP
+    _key: '!journal.pages!FBOgk2m9JvW7gaer.fMF8qwGimGJnxTWP'
+    _stats:
+      coreVersion: '12.331'
+    name: The Unicorn
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Unicorn</strong> (chaotic good, Charisma) is a card that
+        generously offers that which the subject seeks, just as the charger in
+        the picture off ersup its fruit. When misaligned, the card means
+        betrayal, poisoning, or a false friend.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Unicorn.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

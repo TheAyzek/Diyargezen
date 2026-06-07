@@ -1,0 +1,24 @@
+_id: duM0zqRDbigAITII
+_key: '!items!duM0zqRDbigAITII'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Soles of the Silent Stride
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>These simple leather shoes are the color of a moonless night and
+      instantly adjust to the wearer's foot shape, becoming skintight while
+      providing magical cushioning and support. The wearer gains a +5 competence
+      bonus on Stealth checks and can attempt Stealth checks while running at a
+      -20 penalty.</p><h3>Requirements</h3><p>Craft Wondrous Item, silence</p>
+  price: 8250
+  slot: feet
+  sources:
+    - id: PZO9466
+  subType: wondrous
+type: equipment

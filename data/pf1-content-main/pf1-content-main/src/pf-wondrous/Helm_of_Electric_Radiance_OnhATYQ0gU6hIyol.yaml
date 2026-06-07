@@ -1,0 +1,34 @@
+_id: OnhATYQ0gU6hIyol
+_key: '!items!OnhATYQ0gU6hIyol'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Helm of Electric Radiance
+system:
+  aura:
+    custom: true
+    school: varied
+  cl: 13
+  description:
+    value: >-
+      <p>The helm of electric radiance is similar to a helm of brilliance,
+      except its spells focus on electricity rather than fire. Other aspects of
+      the helm, such as detecting and damaging undead, remain unchanged. The
+      helm has 10 sapphires that can be used for chain lightning, 20 pieces of
+      amber that can be used for lightning bolt, 30 pieces of petrified wood
+      that can be used for shocking sphere (as flaming sphere but dealing
+      electricity damage), and 40 opals that can be used for daylight. In
+      addition, the wearer gains resistance to electricity 30 and his weapons
+      become shocking weapons instead of flaming
+      weapons.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, chain lightning, daylight, detect undead, flaming sphere,
+      lightning bolt, protection from energy, shocking grasp</p>
+  price: 125000
+  slot: head
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

@@ -1,0 +1,38 @@
+_id: YJ4xfezBYnwndQFf
+_key: '!items!YJ4xfezBYnwndQFf'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/half-plate.png
+name: Half-Plate of the Dark Prince
+system:
+  armor:
+    acp: 7
+    material:
+      base:
+        value: steel
+    value: 8
+  aura:
+    custom: true
+    school: conjuration and enchantment
+  baseTypes:
+    - Half-plate
+  cl: 3
+  description:
+    value: >-
+      <p>This regal-looking +1 half-plate is a status symbol in the church of
+      Asmodeus, and is decorated with red infernal symbols and an inverted
+      pentagram. The wearer can use charm person and infernal healing each once
+      per day.</p><p><strong>Base Item</strong>: 
+      half-plate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, charm person, infernal healing</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 3910
+  sources:
+    - id: PZO9267
+  spellFailure: 40
+  weight:
+    value: 50
+type: equipment

@@ -1,0 +1,28 @@
+_id: Ymazqcj7U9MOBix0
+_key: '!items!Ymazqcj7U9MOBix0'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Swordmaster's Blindfold
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>This black band of silk grants its wearer spectacular senses within a
+      limited range. Some believe these items were made to grant lesser
+      swordmasters the illusion of skill. When the wearer places the blindfold
+      over her eyes, she becomes blinded, but gains blindsight (Bestiary 298)
+      within the reach of her melee weapon, or 5 feet if the wearer is not
+      wielding a melee weapon. Furthermore, the wearer is under the effect of a
+      constant locate weakness (Ultimate Combat 236) spell, but only when making
+      melee attacks.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, blindness, locate weakness</p>
+  price: 80000
+  slot: eyes
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

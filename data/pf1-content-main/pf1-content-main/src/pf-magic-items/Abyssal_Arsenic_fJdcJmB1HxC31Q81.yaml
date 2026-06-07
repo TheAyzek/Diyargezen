@@ -1,0 +1,22 @@
+_id: fJdcJmB1HxC31Q81
+_key: '!items!fJdcJmB1HxC31Q81'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/minor-green.jpg
+name: Abyssal Arsenic
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>Favored by demon cultists, this malign variant of arsenic causes a wide
+      variety of painful deformations in the victim's flesh.  Type poison,
+      ingested; Save Fortitude DC 13  Onset 10 minutes; Frequency 1/minute for 4
+      minutes Effect 1d2 Con damage; Cure 1 save Spell Effect disfiguring touch
+      (Will DC 13.</p><h3>Construction</h3><p><strong>Requirements</strong> Brew
+      Potion, Infuse Poison, disfiguring touch</p>
+  price: 420
+  sources:
+    - id: PZO9462
+type: consumable

@@ -1,0 +1,41 @@
+_id: NAg8l2QkFv4DmzEa
+_key: '!items!NAg8l2QkFv4DmzEa'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/breastplate.PNG
+name: Breastplate of the Planes
+system:
+  armor:
+    acp: 4
+    dex: 3
+    material:
+      base:
+        value: steel
+    value: 6
+  aura:
+    school: evo
+  baseTypes:
+    - Breastplate
+  cl: 15
+  description:
+    value: >-
+      <p>This sturdy, unadorned breastplate has a +1 enhancement bonus on the
+      Material Plane. On any Elemental Plane, or against attacks made by
+      creatures native to any Elemental Plane, its enhancement bonus increases
+      to +2. On the Astral Plane or the Ethereal Plane, or against attacks made
+      by creatures native to either of those planes, its enhancement bonus
+      increases to +3. On any other plane, or against attacks made by any
+      outsider, its enhancement bonus increases to +4.</p><p><strong>Base
+      Item</strong>: 
+      breastplate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, plane shift</p>
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 11350
+  sources:
+    - id: PZO1141
+  spellFailure: 25
+  weight:
+    value: 30
+type: equipment

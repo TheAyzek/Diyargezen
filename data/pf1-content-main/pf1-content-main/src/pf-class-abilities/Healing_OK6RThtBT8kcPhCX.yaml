@@ -1,0 +1,25 @@
+_id: OK6RThtBT8kcPhCX
+_key: '!items!OK6RThtBT8kcPhCX'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Healing
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Irori, Pharasma, Sarenrae.</p><p><strong>Powerful Healer (minor)</strong>:
+      At 1st level, you can add power to a cure spell as you cast it. As a swift
+      action, you can treat any cure spell as if it were empowered (as the
+      Empower Spell feat), causing it to heal 50% more damage (or deal 50% more
+      damage if used against undead). This ability doesn't stack with itself or
+      the Empower Spell feat.</p><p><strong>Fast Healing (major)</strong>: At
+      10th level, you can touch an ally and grant it fast healing 3 for 1
+      minute.</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

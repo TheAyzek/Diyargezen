@@ -1,0 +1,33 @@
+_id: RoB5JckYaROIw4PM
+_key: '!items!RoB5JckYaROIw4PM'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Scavenger 's Stone
+system:
+  aura:
+    school: trs
+  cl: 1
+  description:
+    value: >-
+      <p>This jagged, egg-shaped stone emits a faint red glow when not in direct
+      sunlight. By rubbing a scavenger's stone against a damaged (but not
+      destroyed) construct or object as a full-round action, you repair 1d6
+      points of damage to the object or construct. If this brings a broken
+      object's hit points above half its maximum hit points, it loses the broken
+      condition. As a standard action, you can smash a scavenger's stone against
+      a destroyed object or damaged construct.  Doing so immediately repairs the
+      object to full functionality or heals a damaged construct of 10d6 points
+      of damage. Destroyed magic items can be repaired in this manner if their
+      caster level is no higher than 3rd-more powerful destroyed magical items
+      cannot be repaired by a scavenger's stone. A newly-created scavenger's
+      stone has 50 charges-smashing a stone against an object uses up 10
+      charges.</p><h3>Requirements</h3><p>Craft Wondrous Item, make whole</p>
+  price: 2000
+  sources:
+    - id: PZO9419
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

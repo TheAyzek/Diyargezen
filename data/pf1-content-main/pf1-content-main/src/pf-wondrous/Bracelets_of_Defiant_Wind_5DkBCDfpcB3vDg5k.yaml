@@ -1,0 +1,30 @@
+_id: 5DkBCDfpcB3vDg5k
+_key: '!items!5DkBCDfpcB3vDg5k'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Bracelets of Defiant Wind
+system:
+  aura:
+    custom: true
+    school: conjuration and evocation [air]
+  cl: 10
+  description:
+    value: >-
+      <p>These azure-and-white marbled bracelets feel smooth and perpetually
+      cool to the touch. When worn, they activate once per day as an immediate
+      action to safeguard against sudden airborne attacks and effects by
+      automatically surrounding their wearer in a cylinder of pure wind and
+      elemental air. This effect functions simultaneously as both air bubble and
+      wind wall, protecting against missile weapons, gases, and most gaseous
+      breath weapons. It also activates underwater if the wearer begins to
+      drown. Once activated, the effect lasts for 10
+      rounds.</p><h3>Requirements</h3><p>Craft Wondrous Item, air bubble,
+      contingency, wind wall</p>
+  price: 9000
+  slot: wrists
+  sources:
+    - id: PZO9083
+  subType: wondrous
+type: equipment

@@ -1,0 +1,42 @@
+_id: kaEatPe5VXgThpS0
+_key: '!actors!kaEatPe5VXgThpS0'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Watery Grave (CR 8)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    hp:
+      max: 36
+  details:
+    alignment: CE
+    area: one ship, up to a 40-ft. radius
+    biography: {}
+    cl: 9
+    cr:
+      base: 8
+    destruction: >-
+      The watery grave haunt is destroyed if the ghost ship's captain is
+      permanently destroyed.
+    effect: >-
+      A ghostly tendril of water erupts from the sea and forces itself into the
+      lungs of a living creature aboard the ship, which then begins to drown.
+      This functions as per <em>suffocation</em> (Fortitude DC 17 negates). The
+      haunt affects one additional victim each round until it is dispersed.
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Horror Adventures pg. 177</p>
+        <p><strong>Haunt Templates</strong>: chained free-roaming persistent</p>
+        <h3>Description</h3><p>Watery grave haunts typically travel aboard ghost
+        ships, protecting the ghost vessel's passengers. When the ghost ship's
+        captain boards an enemy vessel, the watery grave haunt drifts aboard as
+        well.</p>
+    notice: Perception DC 20 (to hear bubbles rising to the surface of the water)
+    reset: 1 day
+    trigger: proximity
+type: haunt

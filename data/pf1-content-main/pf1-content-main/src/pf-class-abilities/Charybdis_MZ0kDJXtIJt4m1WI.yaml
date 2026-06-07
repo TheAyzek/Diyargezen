@@ -1,0 +1,20 @@
+_id: MZ0kDJXtIJt4m1WI
+_key: '!items!MZ0kDJXtIJt4m1WI'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Charybdis
+system:
+  associations:
+    classes:
+      - Hunter
+  description:
+    value: >-
+      <p><strong>Hunter Animal Focus</strong></p><p>The creature's attacks
+      ignore the first 5 points of hardness. This improves to ignore the first 7
+      points of hardness at 8th level and the first 10 points of hardness at
+      15th level.</p>
+  subType: classFeat
+  tags:
+    - Hunter Animal Focus
+type: feat

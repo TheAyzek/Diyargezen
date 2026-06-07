@@ -1,0 +1,44 @@
+_id: jjz9wvE2MU3eEWt4
+_key: '!journal!jjz9wvE2MU3eEWt4'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Narriseminek
+pages:
+  - _id: w4imjhRuvOrUHSwr
+    _key: '!journal.pages!jjz9wvE2MU3eEWt4.w4imjhRuvOrUHSwr'
+    _stats:
+      coreVersion: '12.331'
+    name: Narriseminek
+    sort: 0
+    text:
+      content: >-
+        <h1>Narriseminek</h1><h2>The Crownless, the Maker of
+        Kings</h2>@Source[PZO92114;pages=14] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Narriseminek">Narriseminek</a><h3>Details</h3><p><strong>Alignment</strong>
+        CN<br /><strong>Pantheon</strong> Protean Lord<br /><strong>Areas of
+        Concern</strong> Ascendance, keketars, and revelations<br
+        /><strong>Domains</strong> Chaos, Knowledge, Liberation, Madness<br
+        /><strong>Subdomains</strong> N/A<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Handaxe<br /><strong>Symbol</strong> Imentesh head wreathed in a circle
+        of flame</p><h3>Obedience</h3><p>Surround yourself in a burning circle
+        of flames at least 5 feet out from where you stand, chanting prayers
+        until the flames burn down to coals or smoke from any source harms you.
+        Gain a +4 sacred bonus on saves against fire-based spells and
+        attacks.</p><h2>Boons - Monitor
+        Obedience</h2><h3>None</h3><p>@Source[PZO92114;pages=14]<br /><strong>1:
+        Ascended (Sp)</strong> <em>anticipate peril</em> 3/day, <em>detect
+        thoughts</em> 2/day, or <em>heroism</em> 1/day<br /><strong>2: Crownless
+        Crown (Ex)</strong> You gain a halo of illusory protean symbols around
+        your head. Once per day, you can call upon it to invoke a keketar's
+        reshape reality ability, except it functions as a 7th-level spell rather
+        than a 9th-level spell.<br /><strong>3: Mantle of Revelation
+        (Sp)</strong> You can cast <em>foresight</em> once per day.</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

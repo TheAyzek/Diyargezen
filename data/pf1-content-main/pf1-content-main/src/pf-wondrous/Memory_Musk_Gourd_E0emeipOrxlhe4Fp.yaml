@@ -1,0 +1,31 @@
+_id: E0emeipOrxlhe4Fp
+_key: '!items!E0emeipOrxlhe4Fp'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Memory Musk Gourd
+system:
+  aura:
+    school: enc
+  cl: 16
+  description:
+    value: >-
+      <p>This delicious-looking gourd is infused with a pungent musk derived
+      from plants gathered in the southern jungles of the Mwangi Expanse. The
+      gourd can be thrown as a splash weapon. Anyone within 10 feet of the point
+      of impact is dazed and blinded by the fumes for 1d4 rounds and forgets the
+      events of the previous round. A successful DC 20 Will saving throw
+      mitigates the effect. Those who succeed at the saving throw are merely
+      dazzled for 1 round. This is a mind-affecting poison effect. A wielder
+      with the bombs class feature can spend 1 use of that ability to use the
+      ability's DC
+      instead.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, modify memory, waves of ecstasy</p>
+  price: 4800
+  sources:
+    - id: PZO9292
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,32 @@
+_id: tH2y3uOuFnQP8j3q
+_key: '!items!tH2y3uOuFnQP8j3q'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Kinsight Goggles
+system:
+  aura:
+    school: div
+  cl: 2
+  description:
+    value: >-
+      <p>Kinsight goggles are in fact two separate crystal monocles, linked
+      together with a simple silver clasp that allows them to both be worn at
+      once like pince-nez spectacles. The left and right halves may be separated
+      and worn individually, allowing two people to see through one another's
+      eyes. When separated, the wearer of either half of the goggles may speak a
+      command word to see through the lens of the other half, so long as the
+      halves of the goggles remain within 500 feet of one another. When the two
+      lenses are attached and worn as one item, they offer no magical
+      benefit-just some minor
+      magnification.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, share senses (Advanced Player's Guide)</p>
+  price: 7500
+  slot: eyes
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

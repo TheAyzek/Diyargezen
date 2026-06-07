@@ -1,0 +1,65 @@
+_id: rK7OfryDiKtDdc3I
+_key: '!items!rK7OfryDiKtDdc3I'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/lance.PNG
+name: Knight-captain's Lance
+system:
+  actions:
+    - _id: gqgx8g469ckq005x
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: knightcaptainsLance
+  aura:
+    school: evo
+  baseTypes:
+    - Lance
+  cl: 6
+  description:
+    value: >-
+      <p>This ornate +2 lance changes in color and style to match the armor of
+      the wielder. A bright pennon flies from the end of the lance, mounted just
+      behind the lance's point, and if the wielder has personal heraldry, the
+      pennon displays that heraldry. This pennon can serve as a cavalier's
+      banner. The weapon counts as alchemical silver for purposes of penetrating
+      DR. Three times per day, when the wielder successfully damages a target
+      with the knight-captain's lance, as a swift action she may grant all
+      allies within 60 feet a +2 morale bonus on the next attack roll they make
+      against the same target. The bonus lasts for 1 round.</p><p><strong>Base
+      Item</strong>: 
+      lance</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, divine favor</p>
+  enh: 2
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 22710
+  properties:
+    rch: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9426
+  weaponGroups:
+    - spears
+  weight:
+    value: 13
+type: weapon

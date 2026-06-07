@@ -1,0 +1,27 @@
+_id: hRWoaOYLF2aR863c
+_key: '!items!hRWoaOYLF2aR863c'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Kerchief of Remembrance
+system:
+  aura:
+    school: div
+  cl: 3
+  description:
+    value: >-
+      <p>This favor is a simple checked kerchief worn around the arm or wrist.
+      For 1 week, the recipient can automatically call to mind a detailed
+      recollection of the presenter's features, even if his memory has been
+      impaired or modified (such as by modify memory). In addition, the
+      recipient can take a standard action to know the presenter's status in the
+      same manner that the presenter can take a standard action to know the
+      recipient's status.</p><h3>Requirements</h3><p>Craft Wondrous Item, modify
+      memory, status</p>
+  price: 600
+  slot: wrists
+  sources:
+    - id: PZO9476
+  subType: wondrous
+type: equipment

@@ -1,0 +1,31 @@
+_id: soHOi8Il0mGpmzf2
+_key: '!items!soHOi8Il0mGpmzf2'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Rod of Cancellation
+system:
+  aura:
+    school: abj
+  cl: 17
+  description:
+    value: >-
+      <p>This dreaded rod is a bane to magic items, for its touch drains an item
+      of all magical properties. The item touched must make a successful DC 23
+      Will save to prevent the rod from draining it. If a creature is holding it
+      at the time, then the item can use the holder's Will save bonus in place
+      of its own if the holder's is better. In such cases, contact is made by
+      making a melee touch attack roll. Upon draining an item, the rod becomes
+      brittle and cannot be used again. Drained items are only restorable by a
+      wish or miracle spell. If a sphere of annihilation and a rod of
+      cancellation negate each other, nothing can restore either of
+      them.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Rod,
+      mage's disjunction</p>
+  price: 11000
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 5
+type: equipment

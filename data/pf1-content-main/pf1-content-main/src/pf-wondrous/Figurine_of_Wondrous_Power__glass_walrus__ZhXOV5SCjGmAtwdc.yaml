@@ -1,0 +1,34 @@
+_id: ZhXOV5SCjGmAtwdc
+_key: '!items!ZhXOV5SCjGmAtwdc'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Figurine of Wondrous Power (glass walrus)
+system:
+  aura:
+    school: trs
+  cl: 11
+  description:
+    value: >-
+      <p>This figurine of wondrous power is shaped like a walrus and is carved
+      out of a prismatic crystal. It follows all the normal rules for figurines
+      of wondrous power (Pathfinder RPG Core Rulebook 513). When animated, a
+      glass walrus acts in all ways like a normal walrus (see page 29) except it
+      can glide along the surface of water as though under the constant effects
+      of water walk. Up to two Medium creatures or four Small creatures can fit
+      on a glass walrus's back as the creature glides across water (the walrus
+      moves at half speed while carrying creatures), and the walrus can carry up
+      to 600 pounds in this way before it becomes too encumbered to move. A
+      glass walrus can be used twice per week for up to 6 hours per use. When 6
+      hours have passed or when the command word is spoken, the glass walrus
+      again becomes a tiny
+      statuette.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, animate objects, water walk</p>
+  price: 14000
+  sources:
+    - id: PZO9429
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

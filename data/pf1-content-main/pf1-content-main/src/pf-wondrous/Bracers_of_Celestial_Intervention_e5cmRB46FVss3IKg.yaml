@@ -1,0 +1,30 @@
+_id: e5cmRB46FVss3IKg
+_key: '!items!e5cmRB46FVss3IKg'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Bracers of Celestial Intervention
+system:
+  aura:
+    school: con
+  cl: 13
+  description:
+    value: >-
+      <p>Prayers and engravings of celestial beings cover these golden bracers.
+      A paladin can expend one or more of her uses of smite evil into these
+      bracers as a standard action to call forth agathions, angels, or archons
+      to aid her. This acts as a summon monster spell of a spell level equal to
+      the number of smite evil uses the paladin expends. Outsiders summoned with
+      the bracers must be from the list detailed in the summon monster spell or
+      from the expanded summon monster list on pages
+      28-29.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, summon monster VII, creator must be lawful good</p>
+  price: 16000
+  slot: wrists
+  sources:
+    - id: PZO9458
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,24 @@
+_id: 3sJFcgx5KWWbKHs4
+_key: '!items!3sJFcgx5KWWbKHs4'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/kitchenware/vase-bottle-brown.webp
+name: Ember Pot
+system:
+  description:
+    value: >-
+      <p>Roughly carved from porous stone that litters the base of the Tusk
+      Mountains, these pots allow Kellid nomads to carry burning coals from one
+      day's campsite to the next, so they can quickly start cook fires wherever
+      they find themselves. Coals placed within an ember pot stay hot for 24
+      hours, and allow anyone to light a fire in normal conditions without
+      needing to make a Survival check.</p>
+  equipped: false
+  price: 0.5
+  sources:
+    - id: PZO9428
+      pages: '28'
+  subType: adventuring
+  weight:
+    value: 1
+type: loot

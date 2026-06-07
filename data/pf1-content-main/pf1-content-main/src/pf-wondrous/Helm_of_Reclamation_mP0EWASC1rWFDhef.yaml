@@ -1,0 +1,30 @@
+_id: mP0EWASC1rWFDhef
+_key: '!items!mP0EWASC1rWFDhef'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Helm of Reclamation
+system:
+  aura:
+    custom: true
+    school: varied
+  cl: 15
+  description:
+    value: >-
+      <p>The helm of reclamation is designed to destroy large groups of undead
+      or powerful individual undead creatures, and is often used by
+      undead-hating clerics with a flair for the dramatic. The gems of this helm
+      produce sunburst (10 yellow diamonds), searing light (30 bloodstones), and
+      daylight (40 opals). Like a standard helm of brilliance, it glows near and
+      harms undead, and has the flaming weapon ability, but does not protect
+      against fire or risk detonation.</p><h3>Requirements</h3><p>Craft Wondrous
+      Item, daylight, detect undead, flame blade, searing light, sunburst</p>
+  price: 80000
+  slot: head
+  sources:
+    - id: PZO9220
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

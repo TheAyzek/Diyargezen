@@ -1,0 +1,22 @@
+_id: OybES9IhZQp7DIFR
+_key: '!items!OybES9IhZQp7DIFR'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/unique-10.jpg
+name: Mage's Assistant
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Tincture</p><p>This navy blue liquid is
+      riddled with colorful flecks of minerals. For 1 hour after drinking this
+      tincture, you gain a +5 alchemical bonus on concentration checks. The
+      increased focus imposes a -2 penalty on Perception and Sense Motive checks
+      for the same duration.</p><h2>Construction</h2><p><strong>Craft
+      (Alchemy)</strong> DC 20</p>
+  price: 150
+  sources:
+    - id: PZO9487
+      pages: '22'
+  tags:
+    - Tincture
+type: consumable

@@ -1,0 +1,36 @@
+_id: kPTwIzmkYcZFUWsW
+_key: '!items!kPTwIzmkYcZFUWsW'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Harmonizing
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate illusion <strong>CL</strong>
+      7th</p><p><strong>Slot</strong> armor quality; <strong>Price</strong>
+      +15,000 gp;</p><p>Every step taken in <em>harmonizing </em>armor produces
+      a symphony of sounds. The armor harmonizes with music played, lyrics sung,
+      and words spoken by its wearer, creating a pleasant counter-melody. Its
+      wearer gains a +5 competence bonus on Perform checks, but takes a -5
+      penalty on Stealth checks. The wearer can be silent only if he takes no
+      physical actions. The armor also amplifies harmful sounds, and the wearer
+      gains vulnerability to sonic energy damage (sonic energy attacks deal an
+      additional 50% damage to the wearer).</p><p> If the wearer has the bardic
+      performance class feature, the <em>harmonizing </em>armor causes bonuses
+      and penalties from performances that have an audible component to continue
+      for 1 round after the wearer ceases performing. Beginning a new bardic
+      performance ends the effects of the previous performance immediately. This
+      ability does not stack with the Lingering Performance feat.</p><p>The
+      <em>harmonizing </em>ability can be applied to any armor, but not
+      shields.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>major image </em>or bardic performance;
+      <strong>Price</strong> +7,500 gp</p>
+  sources:
+    - id: PZO1123
+      pages: '119'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

@@ -1,0 +1,26 @@
+_id: 4rJas9U85433Ppmo
+_key: '!items!4rJas9U85433Ppmo'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/flask.jpg
+name: Animal repellent
+system:
+  description:
+    value: >-
+      <p></p><h2>Description</h2><p>Leshys and other plant creatures have to be
+      wary of hungry herbivorous animals. A dose of animal repellent makes a
+      plant creature smell unappetizing for 24 hours. Animals do not attempt to
+      consume a plant creature coated in animal repellent if there are other
+      food sources available, and in combat prefer to use natural attacks that
+      are not bite attacks against such a creature if they can. Animal repellent
+      counts as a strong scent, allowing creatures with the scent ability to
+      detect it at a greater range (<em>Pathfinder RPG Bestiary</em> 304).
+      Animal repellent does not work on ghorans with the delicious racial trait.
+      Crafting this item requires a successful DC 20 Craft (alchemy) check.</p>
+  equipped: false
+  price: 15
+  sources:
+    - id: PZO1140
+      pages: '24'
+  subType: animalGear
+type: loot

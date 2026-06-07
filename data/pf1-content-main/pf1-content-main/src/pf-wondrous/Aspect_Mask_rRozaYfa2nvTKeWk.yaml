@@ -1,0 +1,29 @@
+_id: rRozaYfa2nvTKeWk
+_key: '!items!rRozaYfa2nvTKeWk'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Aspect Mask
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>This leather mask is vaguely animalistic, and is inlaid with various
+      primitive designs. Three times per day on command, the wearer gains the
+      benefit of a single aspect of an animal attuned to the mask, as if by the
+      hunter's animal focus class feature. Each mask is attuned to one type of
+      animal from the animal focus list, chosen when the mask is
+      created.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, creator must have animal focus or wild shape class
+      feature</p>
+  price: 6500
+  slot: head
+  sources:
+    - id: PZO1129
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

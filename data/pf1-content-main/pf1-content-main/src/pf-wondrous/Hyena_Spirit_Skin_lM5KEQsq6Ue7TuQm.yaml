@@ -1,0 +1,29 @@
+_id: lM5KEQsq6Ue7TuQm
+_key: '!items!lM5KEQsq6Ue7TuQm'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Hyena Spirit Skin
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>This ragged piece of fur and skin contains powerful magic.  Once per
+      day, when draped over the head and shoulders, the skin grants its wearer
+      the physical characteristics of a hyena for 10 minutes as the aspect of
+      the wolf spell. The wearer gains a +4 enhancement bonus to Strength and
+      Dexterity, the scent ability, and a +2 enhancement bonus on trip attacks,
+      and she can make a trip combat maneuver as a swift action that does not
+      provoke attacks of opportunity.<h3>Requirements</h3><p>Craft Wondrous
+      Item, aspect of the wolf (Advanced Player's Guide 204)</p>
+  price: 16000
+  slot: shoulders
+  sources:
+    - id: PZO9039
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

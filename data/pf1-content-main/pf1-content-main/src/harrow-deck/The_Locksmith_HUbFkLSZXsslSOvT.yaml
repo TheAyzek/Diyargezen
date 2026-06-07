@@ -1,0 +1,29 @@
+_id: HUbFkLSZXsslSOvT
+_key: '!journal!HUbFkLSZXsslSOvT'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: PqqHaMsDrJKCNHAU
+name: The Locksmith
+pages:
+  - _id: u0Ui5aF3fxUSJ7Fu
+    _key: '!journal.pages!HUbFkLSZXsslSOvT.u0Ui5aF3fxUSJ7Fu'
+    _stats:
+      coreVersion: '12.331'
+    name: The Locksmith
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Locksmith</strong> (lawful neutral, Dexterity) presents
+        the subject with the keys she needs to unlock her destiny. He grants the
+        tools to access a new location, clue, or treasure. He does not grant
+        insight into how or where to use the tools granted. This card often
+        represents a strange, ancient, or magical object.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Locksmith.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

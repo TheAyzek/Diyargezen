@@ -1,0 +1,26 @@
+_id: YJXRGwAYbNef98JH
+_key: '!items!YJXRGwAYbNef98JH'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/bowl-liquid-white.webp
+name: Pallid Suspension
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>This small vial
+      contains an alchemical suspension that preserves a sample of pallid gift.
+      This functions like plague powder (<em>Pathfinder RPG Horror
+      Adventures</em> 213) for pallid gift (DC 20, see page 68), allowing the
+      user to apply pallid gift to a weapon (a standard action, or whatever
+      action the character normally takes to apply poison to a weapon if that is
+      better) and deliver it as with an injury poison. Just as for plague
+      powder, the creation of a pallid suspension exposes the crafter to the
+      disease on each day of crafting.</p>
+  price: 324
+  sources:
+    - id: PZO1136
+      pages: '69'
+  subType: misc
+  tags:
+    - Alchemical Tools
+type: consumable

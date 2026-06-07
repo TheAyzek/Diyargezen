@@ -1,0 +1,24 @@
+_id: GAnOeaOzouJ6qZLS
+_key: '!items!GAnOeaOzouJ6qZLS'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/skills/mech_10.jpg
+name: Penumbra Tattoo
+system:
+  aura:
+    school: evo
+  cl: 3
+  description:
+    value: >-
+      <p>This ritualistic scar is infused with shadowstuff that shifts and
+      writhes within the bearer's skin. Whenever the bearer is exposed to
+      illumination brighter than dim light, the tattoo emits a vapor, shrouding
+      the bearer in a dusky haze that provides the benefits of protective
+      penumbra.</p><h3>Requirements</h3><p>Inscribe Magical Tattoo (Inner Sea
+      Magic 16), protective penumbra</p>
+  price: 24000
+  sources:
+    - id: PZO9466
+  subType: other
+type: equipment

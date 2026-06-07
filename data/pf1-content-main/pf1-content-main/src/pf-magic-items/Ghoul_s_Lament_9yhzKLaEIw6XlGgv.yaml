@@ -1,0 +1,58 @@
+_id: 9yhzKLaEIw6XlGgv
+_key: '!items!9yhzKLaEIw6XlGgv'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/warhammer.png
+name: Ghoul's Lament
+system:
+  actions:
+    - _id: v14tav0t72pckjd7
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: ghoulsLament
+  aura:
+    school: evo
+  baseTypes:
+    - Warhammer
+  cl: 11
+  description:
+    value: >-
+      <p>This massive +1 ghost touch disrupting warhammer is crafted from a
+      single piece of metal. It surface has no blemishes or distinguishing
+      marks, and its haft is wrapped in dry, leathery, ancient skin. Three times
+      per day as a free action, when used to strike an undead creature, that
+      creature must succeed at a DC 20 Fortitude save or be knocked
+      prone.</p><p><strong>Base Item</strong>: ghost touch disrupting
+      warhammer</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, heal, plane shift</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 35312
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - hammers
+  weight:
+    value: 5
+type: weapon

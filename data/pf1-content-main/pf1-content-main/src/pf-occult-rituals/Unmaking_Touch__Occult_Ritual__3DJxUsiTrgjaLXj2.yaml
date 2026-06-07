@@ -1,0 +1,70 @@
+_id: 3DJxUsiTrgjaLXj2
+_key: '!items!3DJxUsiTrgjaLXj2'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Unmaking Touch (Occult Ritual)
+system:
+  actions:
+    - _id: ifrkd6gzccbunu8x
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        type: 'null'
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    focus: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> transmutation; <strong>Level</strong>
+      5</p><p><strong>Casting Time</strong> 50
+      minutes</p><p><strong>Components</strong> V, S, F (a <em>chaos
+      emerald</em>), SC (up to the Charisma modifier of the primary
+      caster)</p><p><strong>Skill Checks</strong> Knowledge (planes) DC 32, 2
+      successes; Sleight of Hand DC 32, 1 success; Use Magic Device DC 32, 2
+      successes</p><p><strong>Range</strong> primary
+      caster</p><p><strong>Duration</strong> 1 hour/character level of the
+      primary caster (D)</p><p><strong>Backlash</strong> The primary caster
+      takes 1d4 points of Constitution damage and becomes
+      fatigued.</p><p><strong>Failure</strong> All casters gain a temporary
+      negative level (DC = 16 + the primary caster's Charisma bonus to remove
+      the negative level after the first day) and are also exhausted until this
+      negative level is removed.</p><h3>Effect</h3><p>The primary caster juggles
+      the <em>chaos emerald</em> back and forth between his hands, under his
+      clothing, and between any secondary casters involved in the ritual. As the
+      ritual progresses, the primary caster's actions with the <em>chaos
+      emerald</em> become increasingly improbable (putting it into his mouth and
+      pulling it out of his ear, for example, or placing it into the cupped
+      hands of one secondary caster and removing it from the cupped hands of a
+      different secondary caster). If the ritual is successful, the <em>chaos
+      emerald</em> disappears entirely, and the primary caster gains the ability
+      to inflict warpwaves like a protean for the ritual's duration. The primary
+      caster can inflict a warpwave on a creature within 100 feet as a standard
+      action. The target can negate the effects of the warpwave with a
+      successful Fortitude save (DC 10 + half the primary caster's character
+      level + the primary caster's Charisma modifier). When the duration
+      expires, the <em>chaos emerald</em> reappears in the primary caster's
+      possession-usually in a hidden place, such as the bottom of a backpack or
+      inside a hat.</p>
+  flags:
+    dictionary:
+      summary: Harness the power of a chaos emerald
+  level: 5
+  materials:
+    focus: a chaos emerald
+  school: trs
+  sources:
+    - id: PZO92114
+      pages: '47'
+  sr: false
+type: spell

@@ -1,0 +1,37 @@
+_id: S0tBWduGIK7mIgen
+_key: '!items!S0tBWduGIK7mIgen'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Boots of the Eternal Rose
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>These leather boots are found in a variety of styles but always have a
+      prominent engraving of a rose. The wearer gains a +2 competence bonus on
+      Perform (dance) and Stealth checks. The wearer may move through areas of
+      flowers (whether wild-growing or a garden) at normal speed and without
+      suffering any impairment or taking damage from thorns, brambles, or
+      similar hazards; areas of flowers that have been magically manipulated to
+      impede motion still affect the wearer.  If Shelyn is the wearer's patron,
+      the wearer may use daze monster once per day; if the wearer is dancing,
+      singing, or using some other Perform skill as part of a performance
+      lasting at least 1 minute, he may activate daze monster as a free action
+      during his performance. As a free action once per round, the wearer may
+      conjure a beautiful, nonmagical, common flower (such as a daisy, pansy,
+      rose, sunflower, or the like) that lasts for 1 day before crumbling into
+      perfume and dust.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, daze monster, pass without trace, creator must have 5
+      ranks in Perform (dance) and Stealth</p>
+  price: 4000
+  slot: feet
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

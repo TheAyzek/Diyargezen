@@ -1,0 +1,26 @@
+_id: Wxqfy3Il7KllmEYD
+_key: '!items!Wxqfy3Il7KllmEYD'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/plant-sprout-seed-green.webp
+name: Flash Seeds
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>These alchemical beads
+      function as sentry seeds, but are also filled with an alchemical gas that
+      explodes on contact with the air. This explosion is louder and flashier
+      than the pop of normal sentry seeds (Perception DC 0). Creatures within 5
+      feet of the beads when they break must succeed at a DC 11 Fortitude save
+      or be blinded for 1 round.</p><h2>Construction</h2><p><strong>Craft
+      (Alchemy)</strong> DC 15</p>
+  price: 35
+  sources:
+    - id: PZO1134
+      pages: '236'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 0.5
+type: consumable

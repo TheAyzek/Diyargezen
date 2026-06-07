@@ -1,0 +1,56 @@
+_id: IHv2CuhMxrDUDNuf
+_key: '!journal!IHv2CuhMxrDUDNuf'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.3.3. Getting Into and Out of Armor
+pages:
+  - _id: jqJW55OlWvxTairc
+    _key: '!journal.pages!IHv2CuhMxrDUDNuf.jqJW55OlWvxTairc'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.3.3. Getting Into and Out of Armor
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li><p>@Compendium[pf-content.pf-rules.IcxBfkvPZ6hdWRuV]{6.0.3.
+        Armor}</p><ul><li>@Compendium[pf-content.pf-rules.DWU53DrpWkZoEyfe]{6.0.3.1.
+        Masterwork
+        Armor}</li><li>@Compendium[pf-content.pf-rules.ukz9B0kwM0KtLvRf]{6.0.3.2.
+        Armor for Unusual
+        Creatures}</li><li><strong>@Compendium[pf-content.pf-rules.IHv2CuhMxrDUDNuf]{6.0.3.3.
+        Getting Into and Out of Armor}</strong></li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=153]</p><p>The time required to don armor
+        depends on its type; see Table 6–7.</p><h2>Don</h2><p>This column tells
+        how long it takes a character to put the armor on. (One minute is 10
+        rounds.) Readying (strapping on) a shield is only a move
+        action.</p><h2>Don Hastily</h2><p>This column tells how long it takes to
+        put the armor on in a hurry. The armor check penalty and armor bonus for
+        hastily donned armor are each 1 point worse than
+        normal.</p><h2>Remove</h2><p>This column tells how long it takes to get
+        the armor off. Removing a shield from the arm and dropping it is only a
+        move action.</p><h2>Table 6-7: Donning
+        Armor</h2><table><thead><tr><td>Armor Type</td><td>Don</td><td>Don
+        Hastily</td><td>Remove</td></tr></thead><tbody><tr><td>Shield
+        (any)</td><td>1 move action</td><td>n/a</td><td>1 move
+        action</td></tr><tr><td>Padded, leather, hide, studded leather, or chain
+        shirt</td><td>1 minute</td><td>5 rounds</td><td>1
+        minute<sup>1</sup></td></tr><tr><td>Breastplate, scale mail, chainmail,
+        banded mail, or splint mail</td><td>4 minutes<sup>1</sup></td><td>1
+        minute</td><td>1 minute<sup>1</sup></td></tr><tr><td>Half-plate or full
+        plate</td><td>4 minutes<sup>2</sup></td><td>4
+        minutes<sup>1</sup></td><td>1d4+1
+        minutes<sup>1</sup></td></tr></tbody></table><p>1 If the character has
+        some help, cut this time in half. A single character doing nothing else
+        can help one or two adjacent characters. Twocharacters can’t help each
+        other don armor at the same time.<br />2 The wearer must have help to
+        don this armor. Without help, it can be donned only hastily.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

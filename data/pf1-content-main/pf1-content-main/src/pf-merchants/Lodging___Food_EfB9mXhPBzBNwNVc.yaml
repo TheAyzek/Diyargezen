@@ -1,0 +1,1554 @@
+_id: EfB9mXhPBzBNwNVc
+_key: '!actors!EfB9mXhPBzBNwNVc'
+_stats:
+  coreVersion: '12.343'
+flags:
+  core:
+    sheetClass: PF1.ActorSheetPFNPCLoot
+img: icons/environment/settlement/tavern.webp
+items:
+  - _id: Vx8DOZF4dLKrdgdD
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.Vx8DOZF4dLKrdgdD'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/settlement/stable.webp
+    name: Service, Inn stay
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 81</em>, <em>PRPG
+          Core Rulebook pg. 159</p><p><strong>Price</strong> 5 sp;
+          <strong>Weight</strong> -</p><p><strong>Category</strong> Animal
+          Gear</p><h2>Description</h2>This is the amount it costs to stable a
+          single creature that is Large or smaller for one day, at a typical
+          stable or hostler. Particularly fancy stables may cost more, and
+          larger or more exotic creatures cost double.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Animal Gear
+      price: 0.5
+      subType: tradeGoods
+    type: loot
+  - _id: tk6EVXCIMTuDT5or
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.tk6EVXCIMTuDT5or'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/materials/bowl-powder-yellow.webp
+    name: Absinthe (Bottle)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Merchant's Manifest pg.
+          7</p><p><strong>Price</strong> 3 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>Although Anulites make great use of
+          foreign spices, Anulite paprika is perhaps the most popular in the
+          city, especially among the wealthy. This bright red seasoning is used
+          in all manner of seafood and vegetable dishes, imparting the heat
+          greatly treasured in Anulite cuisine. Consuming a meal seasoned with
+          Anulite paprika grants you some resistance against flames, reducing
+          the amount of damage taken each round when you have caught on fire by
+          1. This benefit lasts for 8 hours and does not stack with
+          itself.</p><p> The price and weight listed represent a jar containing
+          enough paprika to season 10 meals.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 3
+      subType: misc
+    type: consumable
+  - _id: SBozgLRejLq0j0MF
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.SBozgLRejLq0j0MF'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/vase-004.webp
+    name: Applejack (Gallon)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This clear alcoholic beverage,
+          distilled from sorghum, is extremely potent, and is often regarded as
+          an acquired taste due to its corrosive flavor.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 10
+      subType: misc
+      weight:
+        value: 2
+    type: consumable
+  - _id: ktS1OgeF7G7pmzHx
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.ktS1OgeF7G7pmzHx'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/meat.jpg
+    name: Banquet (Per Person)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 95</em>, <em>PRPG
+          Core Rulebook pg. 159</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>A banquet includes several food
+          courses, good drinks, and servants to bring the food and take away
+          empty plates. The listed price is for having a banquet at a restaurant
+          (though some restaurant owners can be hired to serve a banquet at a
+          private location). The price listed above is per person.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 10
+      subType: misc
+    type: consumable
+  - _id: eXiHHfAwIF0qLJ6e
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.eXiHHfAwIF0qLJ6e'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/bread.jpg
+    name: Bread
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 95</em>, <em>PRPG
+          Core Rulebook pg. 159</p><p><strong>Price</strong> 2 cp;
+          <strong>Weight</strong> 1/2 lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This is a loaf of bread with a crust
+          that ranges from crisp to soft, depending on the local ingredients and
+          baking methods. Bread may be leavened or unleavened, depending on
+          whether yeast is used to make it rise. Unleavened bread is also known
+          as flatbread, and ranges in thickness from that of a cracker to half
+          an inch thick. Both leavened and unleavened bread may be stuffed with
+          cheese, fruit, olives, meat, or other rich ingredients when prepared
+          for festive occasions. Bread that is left exposed to air become dry
+          and stale in about a day.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.02
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: 993BtSDSZasPriYj
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.993BtSDSZasPriYj'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/vase-015.webp
+    name: Bufo (Jug)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 1 gp; <strong>Weight</strong> 2
+          lbs.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This drink is a favorite of goblins,
+          boggards, and other primitive humanoids. It is made by soaking a
+          poisonous toad or frog (or its eggs) in weak beer, or by 'milking'
+          these animals for their poison and mixing it with the beer (which
+          allows the animal to be used over and over again). Some tribes use
+          wide-mouthed jugs and leave the dead animal inside as a crunchy treat
+          for eating once the drink is gone. A creature drunk on bufo has the
+          dazzled condition in addition to the normal intoxication effect.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 1
+      subType: misc
+      weight:
+        value: 2
+    type: consumable
+  - _id: uGmqm553wKOXlyZ7
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.uGmqm553wKOXlyZ7'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/fish-spotted-tan.webp
+    name: Candlefish
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Merchant's Manifest pg.
+          26</p><p><strong>Price</strong> 7 sp; <strong>Weight</strong> 1
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This long, oily, salted fish comes
+          strung on a wick similar to that found in a candle. The fish can be
+          cooked and eaten as a tasty trail ration, with the listed price buying
+          a fish big enough for one day's worth of food for a single creature.
+          As long as the fish stays dry, it can go for months without spoiling.
+          Sections of the candlefish can also be burned as a candle. One day's
+          worth of candlefish is equivalent to six candles. Once used as a
+          candle, a candlefish can no longer be eaten.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.7
+      subType: misc
+      weight:
+        value: 1
+    type: consumable
+  - _id: heNO52AdQysQrjM6
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.heNO52AdQysQrjM6'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/vase-015.webp
+    name: Cauim (Gourd)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 1 gp; <strong>Weight</strong> 2
+          lbs.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This beerlike drink, made from
+          manioc root or corn, requires extensive chewing as part of its
+          production.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 1
+      subType: misc
+      weight:
+        value: 2
+    type: consumable
+  - _id: CnrEkK88QcrMHED0
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.CnrEkK88QcrMHED0'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/fish-spotted-tan.webp
+    name: Caviar
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>These translucent, salty fish eggs
+          are a delicacy. They are usually eaten as a spread on crackers, boiled
+          eggs, bread, pastries, or vegetables. They tend to spoil quickly and
+          are rare outside of the coastal areas where they are harvested.
+          Purists only consider sturgeon eggs to be true caviar, but others are
+          more relaxed about the definition and include salmon, trout, and
+          whitefish eggs as caviar. In some countries, the roe of larger exotic
+          fish and sea creatures (such as chuul, giant gar, and reefclaws) are
+          eaten as caviar, though at much higher prices.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 50
+      subType: misc
+    type: consumable
+  - _id: NV2Jo3Ee0zMIoE4L
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.NV2Jo3Ee0zMIoE4L'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/tankard-full.jpg
+    name: Caydenbrew
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Adventurer's Armory pg.
+          19</p><p><strong>Price</strong> 5 cp/mug; <strong>Weight</strong> 1/2
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This ale is the standard beer drunk
+          in Absalom. The recipe was said to be the last beer Cayden Cailean had
+          before he undertook the <em>Test of the Starstone</em>. The hops for
+          this beer were originally grown on the Isle of Kortos, but the massive
+          brewery now imports from Andoran and Taldor.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.05
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: CGSi0el61kDpZYsx
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.CGSi0el61kDpZYsx'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/materials/plant-sprout-teal.webp
+    name: Celwynvian Stone Fruit
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Merchant's Manifest pg.
+          21</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This bizarre fruit appears to be
+          carved from stone, though it has a lovely aroma and is easily
+          consumed. Stone fruits occasionally sprout from the strange treelike
+          monument known as the Celwynvian Charge (<em>Pathfinder Campaign
+          Setting: Magnimar, City of Monuments</em> 29), where they are gathered
+          by licensed vendors and sold to travelers. Eating a stone fruit
+          hardens flesh and restores vitality. When a creature eats the fruit as
+          a fullround action that provokes attacks of opportunity, it
+          immediately recovers 2d6 hit points and gains a +2 enhancement bonus
+          to its natural armor for 1 minute.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 500
+      subType: misc
+      weight:
+        value: 1
+    type: consumable
+  - _id: JB7wij9ckVOJluIh
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.JB7wij9ckVOJluIh'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/liquid-orange.jpg
+    name: Cheese
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 95</em>, <em>PRPG
+          Core Rulebook pg. 159</p><p><strong>Price</strong> 1 sp;
+          <strong>Weight</strong> 1/2 lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>The listed price is for a hunk of
+          cheese from a wheel. A 5- or 10-pound wheel of aged cheese is encased
+          in a tough rind, which keeps the interior fresh.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.1
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: azKoKgQsKQ7pFoZD
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.azKoKgQsKQ7pFoZD'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/liquid-purple.jpg
+    name: Chocolate (Bar)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 5 gp; <strong>Weight</strong> 1/2
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This dark, bitter treat can be
+          consumed as a solid or melted and added to a beverage such as milk. In
+          some lands it is mixed with sugar or chilies.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 5
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: YbMvQrKQljvo49Wp
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.YbMvQrKQljvo49Wp'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/goblet-wood-engraved-brown.webp
+    name: Coffee (Cup)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 95</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Price</strong> 1 cp;
+          <strong>Weight</strong> 1/2 lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This drink is brewed by pouring
+          boiling water through crushed, roasted coffee beans. Two cups is
+          potent enough to reduce the penalties from the fatigued condition from
+          -2 to -1 for 1 hour.</p><p>Brewing your own coffee requires ground
+          coffee beans (5 cp for 1 pound of coffee beans, or 8 cp for 1 pound of
+          ground beans) and a cooking device. You can boil the grounds in a pot,
+          then pour the liquid after allowing the solids to settle, or filter
+          the drink by pouring it through a sieve or cloth. Many travelers
+          prefer the convenience of using a coffee pot (see page 62).
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.01
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: MGssdVGVmLdmJvNG
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.MGssdVGVmLdmJvNG'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/tankard-full.jpg
+    name: Corentyn Wine
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Adventurer's Armory pg.
+          19</p><p><strong>Price</strong> 15 gp/bottle; <strong>Weight</strong>
+          1/2 lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>Red and white wines grown in the
+          salt spray of Corentyn have a sweet-tart flavor valued by nobles
+          throughout Cheliax.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 15
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: UyyaUnekhsDutZji
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.UyyaUnekhsDutZji'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/tankard-full.jpg
+    name: Dragon Punch Whiskey
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Halflings of Golarion pg.
+          10</p><p><strong>Price</strong> 10 gp/cup; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2><em>Non-halflings do not receive any
+          bonus from this drink.</em> According to legend, the inventor of this
+          dark and harsh liquor actually did attack a dragon bare handed (and
+          presumably lived to pass on the recipe). Halflings who drink four cups
+          of Dragon Punch Whiskey in the space of an hour take a -4 penalty to
+          Dexterity but gain a +4 alchemical bonus on saves against fear for the
+          next 10 minutes.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 10
+      subType: misc
+    type: consumable
+  - _id: OeJFXwYkn9bATQhU
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.OeJFXwYkn9bATQhU'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/goblet-wood-engraved-brown.webp
+    name: Dragon's Blend
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Merchant's Manifest pg.
+          27</p><p><strong>Price</strong> 1 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This aromatic blend fills the belly
+          with the sensation of fire, warming the drinker's body. By drinking
+          two cups of dragon's blend coffee, you gain cold resistance 5 for 1
+          hour. Once the coffee has prevented 5 points of cold damage, the
+          effect ends. You can benefit from dragon's blend coffee only once per
+          day.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 1
+      subType: misc
+    type: consumable
+  - _id: VGi1INaAudQ2LgxR
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.VGi1INaAudQ2LgxR'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/tankard-full.jpg
+    name: Dwarven Stout (Mug)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 95</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Price</strong> 4 cp;
+          <strong>Weight</strong> 1/2 lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>More a family of beers than one
+          single drink, dwarven stout is known by different names in human
+          lands. Dwarven stouts are dark beers characterized by a slightly burnt
+          flavor and a foamy head; they are said to be as filling as a meal.
+          Most dwarven clans use a recipe unique to that clan, and family
+          rivalries over the best brew may date back for hundreds of years.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.04
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: BOfth0vevbyWCIMy
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.BOfth0vevbyWCIMy'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/bread.jpg
+    name: Dwarven Trail Rations
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 2 gp; <strong>Weight</strong> 1-1/2
+          lbs.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>Dwarven trail rations consist of
+          smoked sausages and salted meat, rounded out with hard biscuits and
+          dried vegetables. If you are a dwarf who subsists on nothing but these
+          rations for at least 1 week, you can hustle or make a forced march for
+          an additional hour without ill effects, but cannot do both in the same
+          day. This benefit lasts until you eat a meal other than the rations or
+          go for a full day without eating a day's worth.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 2
+      subType: misc
+      weight:
+        value: 1.5
+    type: consumable
+  - _id: XvgIzN2GkjkALsPu
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.XvgIzN2GkjkALsPu'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/bread.jpg
+    name: Elven Trail Rations
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 2 gp; <strong>Weight</strong> 1
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>Elves favor soft trail bread made of
+          oats mixed with other grains, berries, and nuts and sweetened with
+          honey. They supplement this trail bread with dried fruits and nuts. If
+          you are an elf who subsists on nothing but these rations for at least
+          1 week, you receive a +2 bonus on checks and saves that benefit from
+          the Endurance feat. This benefit lasts until you eat a meal other than
+          the rations or go for a full day without eating a day's worth.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 2
+      subType: misc
+      weight:
+        value: 1
+    type: consumable
+  - _id: M49sbs6psxOrBtKA
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.M49sbs6psxOrBtKA'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/bread.jpg
+    name: Fortune Cookie
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 1 cp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This twist of hard, baked pastry
+          surrounds a slip of paper that contains cryptic advice.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.01
+      subType: misc
+    type: consumable
+  - _id: N9QgZz6jnlI5p1v6
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.N9QgZz6jnlI5p1v6'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/bread.jpg
+    name: Gnome Trail Rations
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 2 gp; <strong>Weight</strong> 1 lb.
+          </p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>Almost any preserved food can be
+          found in gnome trail rations, which are designed to keep a wandering
+          gnome from needing to dine on the same meal twice in a week. If you
+          are a gnome who subsists on nothing but these rations for at least 1
+          week, you are treated as being 1 Hit Die higher for the purposes of
+          spells and supernatural abilities that have variable effects based on
+          Hit Dice, such as color spray and sleep. This does not actually
+          improve your caster level, character level, or Hit Dice in any other
+          way. This benefit lasts until you eat a meal other than the rations or
+          go for a full day without eating a day's worth.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 2
+      subType: misc
+      weight:
+        value: 1
+    type: consumable
+  - _id: HsW5W8gVQwb7zYXc
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.HsW5W8gVQwb7zYXc'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/tankard-full.jpg
+    name: Grog
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 95</em>,
+          <em>Pirates of the Inner Sea pg. 21</em>, <em>Adventurer's Armory pg.
+          19</p><p><strong>Price</strong> 2 cp; <strong>Weight</strong> 1/2
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>A foul mix of different alcohols and
+          whatever's handy, grog was invented by pirates and sailors and never
+          managed to crawl far onto land. Grog is no one's first choice of
+          drink, but anyone who's spent enough time on a ship has had at least a
+          taste.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.02
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: QJtlRQJFQhZmLXit
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.QJtlRQJFQhZmLXit'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/meat.jpg
+    name: Haggis
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 1 sp; <strong>Weight</strong> 1-1/2
+          lbs.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This dish is a meaty pudding made of
+          sheep organs (mainly heart, liver, and lungs) minced with onion, oats,
+          fat, spices, and salt, wrapped in a sheep stomach and slow-cooked.
+          Though its ingredients discourage cautious eaters, fans of haggis
+          consider it a hearty meal with a wonderful texture. It is usually
+          served with turnips, potatoes, and whiskey.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.1
+      subType: misc
+      weight:
+        value: 1.5
+    type: consumable
+  - _id: tSlDd0EWo8PBiO5o
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.tSlDd0EWo8PBiO5o'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/bread.jpg
+    name: Halfling Trail Rations
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 2 gp; <strong>Weight</strong> 1/2
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>A day's worth of halfling trail
+          rations is actually more than what a typical adventuring halfling eats
+          in a day-a full belly strengthens a halfling's resolve. Common foods
+          include sweetened dried fruit, aged sausage, hard sharp cheese, honey
+          cakes, and a mixture of roasted grains, nuts, and molasses. If you are
+          a halfling who subsists on nothing but these rations for at least 1
+          week, you reduce the penalty for the shaken condition from -2 to -1.
+          This benefit lasts until you eat a meal other than the rations or go
+          for a full day without eating a day's worth.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 2
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: O2COo6C4QnbZkPwY
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.O2COo6C4QnbZkPwY'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/vase-015.webp
+    name: Honey (Jar)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 1 gp; <strong>Weight</strong> 1/2
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This golden liquid is used as a
+          sweetener. It naturally resists spoilage, and if stored in a sealed
+          wooden, glass, or ceramic container it can be used to preserve fruit,
+          nuts, meat, or even leather for decades.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 1
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: T4WOAnEKFhNntq5k
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.T4WOAnEKFhNntq5k'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/soup.jpg
+    name: Ice Cream
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 1 sp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This exotic dessert is made with
+          milk and cream, often flavored with fruit or mint. Because it quickly
+          melts at room temperature, it must be made fresh from snow or ice, or
+          maintained at a low temperature, such as in a cold cellar or with
+          alchemy or magic. This limitation means it is expensive and in most
+          lands it is only available during certain seasons. The listed price is
+          for a large scoop (1 cup).
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.1
+      subType: misc
+    type: consumable
+  - _id: crjOBQjI9kH0JOSX
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.crjOBQjI9kH0JOSX'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/goblet-wood-engraved-brown.webp
+    name: Jungle Coffee (Cup)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 3 cp; <strong>Weight</strong> 1/2
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>Coffee brewed 'jungle style' has a
+          winelike acidic taste that is too strong for a novice palate.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.03
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: kYCPru8KNh7wjIT6
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.kYCPru8KNh7wjIT6'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/goblet-wood-engraved-brown.webp
+    name: Kahve (Cup)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 95</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Price</strong> 2 cp;
+          <strong>Weight</strong> 1/2 lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This style of coffee is served with
+          generous helpings of milk, sugar, and spices to counteract its natural
+          bitterness. Kahve is drunk throughout the day, both at home and at
+          coffeehouses around town. The grounds left in the bottom of a cup are
+          sometimes used for fortune-telling.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.02
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: zmzRYQnrjBwoiyo4
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.zmzRYQnrjBwoiyo4'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/goblet-wood-engraved-brown.webp
+    name: Karazhica
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Merchant's Manifest pg.
+          27</p><p><strong>Price</strong> 1 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>The gold standard of coffee in Ular
+          Kel, Karazhica is notable for its acidity and smooth flavor. By
+          drinking two cups of Karazhica coffee, you can walk for an additional
+          hour before you must make a forced march. This additional hour counts
+          as an hour of marching beyond the maximum for the purpose of
+          determining the DC of Constitution checks for a subsequent forced
+          march. You can benefit from Karazhica coffee only once per day.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 1
+      subType: misc
+    type: consumable
+  - _id: 8kFvHcr3FwGy0LWa
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.8kFvHcr3FwGy0LWa'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/flask.jpg
+    name: Kumis (Wineskin)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 5 sp; <strong>Weight</strong> 1-1/2
+          lbs.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This alcoholic beverage, made from
+          fermented horse milk, has approximately the same potency as typical
+          beer. It is served cold.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.5
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: oLu0zUXCsXURjlbc
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.oLu0zUXCsXURjlbc'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/tankard-full.jpg
+    name: Linnorm Mead
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Adventurer's Armory pg.
+          19</p><p><strong>Price</strong> 5 cp/mug; <strong>Weight</strong> 1/2
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>The favorite drink of the Ulfen,
+          this honey mead has traveled with them into the southern lands. It is
+          sweet and strong and, according to Ulfen bards, is an indisputable aid
+          to singing.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.05
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: UAyv6rSMvvEubKNn
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.UAyv6rSMvvEubKNn'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/goblet-handled-wood-brown.webp
+    name: Lisken's Medicinal Tonic
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Halflings of Golarion pg.
+          10</p><p><strong>Price</strong> 10 gp/cup; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2><em>Non-halflings do not receive any
+          bonus from this drink.</em> This mild sedative is normally used to
+          treat insomnia, making the drinker reluctant to take hasty actions but
+          adept at remaining still or silent. One cup of the tonic gives a
+          halfling a -4 penalty on initiative checks for 10 minutes and a +2
+          alchemical bonus on Stealth checks for that time.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 10
+      subType: misc
+    type: consumable
+  - _id: IsGeo8AkIbMmbOs9
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.IsGeo8AkIbMmbOs9'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/fish-scaled-yellow-grey.webp
+    name: Lonoma Eel
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Merchant's Manifest pg.
+          6</p><p><strong>Price</strong> 1 gp; <strong>Weight</strong> 1/2
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>Every spring, the waters south of
+          Iblydos fill with the newly hatched young of the archipelago's immense
+          lonoma eels, which fishermen harvest and brine to preserve for
+          year-round consumption. Traditionally consumed as sailors' meals
+          before long voyages to regain one's sea legs, lonoma eel grants a +2
+          competence bonus on concentration checks required for vigorous or
+          violent motion for 8 hours.</p><p>The price listed is for a single
+          serving of lonoma eel.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 1
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: YXHGLEPEyCpRBq6Z
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.YXHGLEPEyCpRBq6Z'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/tankard-full.jpg
+    name: Luglurch Ale
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Halflings of Golarion pg.
+          10</p><p><strong>Price</strong> 1 gp/gallon, 4 sp/mug;
+          <strong>Weight</strong> -</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2><em>Non-halflings do not receive any
+          bonus from this drink.</em> Most races find this pale and frothy beer
+          too salty to swallow, but halflings simply consider it an acquired
+          taste. Drinking three or more cups of Luglurch in a 1-minute span
+          gives a halfling a -2 penalty on Perception checks and a +1 bonus on
+          Reflex saves and Acrobatics checks for 10 minutes.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.4
+      subType: misc
+    type: consumable
+  - _id: 2fOwVDseId21NOeg
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.2fOwVDseId21NOeg'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/vase-015.webp
+    name: Maple Syrup (Jar)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 1 gp; <strong>Weight</strong> 1/2
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This sweet liquid comes from
+          tapping, and partially draining, the sap of maple trees during the
+          early spring. The sap is then boiled down into a syrup, though it is
+          sometimes thickened further and then poured over snow to create a
+          taffylike candy, known as snow candy.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 1
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: crkFT28q1lp99NLn
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.crkFT28q1lp99NLn'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/meat.jpg
+    name: Mead (Gallon)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 95</em>, <em>PRPG
+          Core Rulebook pg. 159</p><p><strong>Price</strong> 3 sp;
+          <strong>Weight</strong> 1/2 lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This is a chunk of meat big enough
+          to be a meal. In most temperate locations, it is meat from a fish (or
+          other seafood), pig (bacon, ham, or pork), sheep (lamb or mutton),
+          chicken, quail, duck, goose, goat (chevon), rabbit, deer (venison),
+          cow (beef), or horse. In other climates and cultures it may instead be
+          meat from a moose, seal, whale, walrus, caribou, reindeer, dog, cat,
+          alpaca, snake, rat, guinea pig, lizard, frog, or insect.</p><p>Inns
+          with frequent adventurer clientele may have more exotic meats on the
+          menu such as the meat of basilisks, dinosaurs, dire animals, giant
+          scorpions, girallons, hydras, or shocker lizards, costing anywhere
+          from 1-100 gp per meal depending on the danger and rarity of the
+          creature.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.3
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: hN1iszylvyoImHaN
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.hN1iszylvyoImHaN'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/liquid-orange.jpg
+    name: Mekainae
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Merchant's Manifest pg.
+          6</p><p><strong>Price</strong> 5 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>Honey collectors harvest the immense
+          combs created by the giant bees in the foothills of Pol-Ptirmeios.
+          Local confectioners ferment this honey for several weeks before mixing
+          it with flour and spices and cutting it into chewy cubes. Once
+          reserved for hero-gods to enhance their longevity, mekainae is now
+          served as a rare treat on important anniversaries and birthdays.
+          Eating a serving of mekainae limits the reduction in a creature's
+          current and total hit points to only 3 for each negative level it has
+          (instead of the normal 5-point reduction in current and total hit
+          points); other penalties imposed by negative levels remain unchanged
+          Additionally, you gain a +1 resistance bonus on saving throws to
+          remove negative levels. Both effects last 24 hours. The price listed
+          is for a single serving of mekainae.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 5
+      subType: misc
+    type: consumable
+  - _id: O40RLYuMa88ZIySo
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.O40RLYuMa88ZIySo'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/soup.jpg
+    name: Milk
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 5 cp; <strong>Weight</strong> 1/2
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>Milk is a nutritious liquid created
+          by mammals, in particular cows, goats, sheep, and horses. Fresh milk
+          is thick and tends to separate. Often, the cream is allowed to rise to
+          the top and then skimmed off, with the remainder served as a beverage.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.05
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: MovUcYRwHwGJMko1
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.MovUcYRwHwGJMko1'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/goblet-wood-engraved-brown.webp
+    name: Mwangi Coffee
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Adventurer's Armory pg.
+          19</p><p><strong>Price</strong> 3 cp/cup; <strong>Weight</strong> 1/2
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>Coffee brewed 'Mwangi style' has a
+          wine-like acid taste that is too strong for a novice palate.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.03
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: Yj4iTSwaE15GecrC
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.Yj4iTSwaE15GecrC'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/vase-004.webp
+    name: Oldlaw Whiskey (Bottle)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 95</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This single-malt whiskey is made
+          with a recipe that's nearly 200 years old, and is a favorite alcoholic
+          beverage of old soldiers everywhere.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 20
+      subType: misc
+      weight:
+        value: 1
+    type: consumable
+  - _id: TjtlOzyMuZYXHkdp
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.TjtlOzyMuZYXHkdp'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/bread.jpg
+    name: Orc Trail Rations
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 1 gp; <strong>Weight</strong> 1
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>A typical orc trail ration consists
+          of coarse black bread, thin sausages as hard as leather that must be
+          chewed slowly to soften them, dried meat of uncertain origin, and
+          pungent peppers. If you are an orc or half-orc who subsists on nothing
+          but these rations for at least 1 week, you add +2 to the DC to resist
+          any Intimidate checks you make. This bonus lasts until you eat a meal
+          other than the rations or go for a full day without eating a day's
+          worth.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 1
+      subType: misc
+      weight:
+        value: 1
+    type: consumable
+  - _id: 2rDS9CoG9BtawfoG
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.2rDS9CoG9BtawfoG'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/vase-012.webp
+    name: Pickles, Goblin (1 Jar)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Goblins of Golarion pg.
+          12</p><p><strong>Price</strong> 4 sp; <strong>Weight</strong> 1
+          lb.</p><p><strong>Category</strong> Food/Drink</p><h2>Description</h2>
+          Goblins pickle everything, and thus goblin pickles can be composed of
+          almost anything. Their only shared characteristic is that they're
+          mostly edible. At the GM's discretion, a non-goblin who eats a goblin
+          pickle must make a DC 10 Fortitude save to avoid being sickened for 1
+          hour. A single jar of goblin pickles provides a goblin enough
+          nourishment for a day.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.4
+      subType: misc
+      weight:
+        value: 1
+    type: consumable
+  - _id: tYEyEW4mX1XWyM09
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.tYEyEW4mX1XWyM09'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/soup.jpg
+    name: Powdered Milk
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 1 sp; <strong>Weight</strong> 1
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This dry powder can be mixed with
+          water to produce skim milk. It is dried by slowly adding millet flour
+          to milk while heating it, cooking it down until it becomes thick, then
+          allowing it to dry. Powdered milk is sold in sealed pots or jars. One
+          pound makes approximately 1 gallon of milk.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.1
+      subType: misc
+      weight:
+        value: 1
+    type: consumable
+  - _id: 2tsARDJT0sxKl5LP
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.2tsARDJT0sxKl5LP'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/bread.jpg
+    name: Pulque (Cup)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: People of the Stars pg.
+          19</p><p><strong>Price</strong> 1 gp; <strong>Weight</strong> 1/2
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>Generally composed of meat, hard
+          cheese, fruits and vegetables, nut and bean pastes, and vital herbs,
+          space rations are dehydrated and then kept extremely dry in order to
+          maximize preservation and storage efficiency. A single serving feeds a
+          Medium character for 1 day, but unless an equal weight of water is
+          added to the rations, the character eating them becomes fatigued until
+          she drinks enough water.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 1
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: vLsLS3ytkgqxGDlK
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.vLsLS3ytkgqxGDlK'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/tankard-full.jpg
+    name: Rumboozle (Cup)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 95</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Price</strong> 1 sp;
+          <strong>Weight</strong> 1/2 lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>A potent drink featuring rum, wine,
+          ale, eggs, sugar, and spices, rumboozle is served warm in finer
+          taverns.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.1
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: FwWNxqedgZCnp8WB
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.FwWNxqedgZCnp8WB'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/flask.jpg
+    name: Sangwine
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Merchant's Manifest pg.
+          8</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This deep red wine is highly tannic
+          and has notes of currants and cocoa and an aroma of cedar. Sangwine is
+          a favorite of Caliphas's elite, who associate drinking it with long
+          life. Drinking a glass of sangwine takes at least 1 round, though many
+          imbibers take longer to savor the wine's complex flavors. After
+          drinking a glass, the wine gives the drinker's blood a bitter flavor
+          for 1 hour, causing any creature that deals damage using the blood
+          drain extraordinary ability to become sickened for a number of rounds
+          equal to the points of Constitution damage dealt (this effect is not
+          subject to the poison immunity of vampires and other undead). Repeated
+          uses of the blood drain ability on a creature that has imbibed at
+          least one glass of sangwine extends the duration of the sickened
+          condition. The price listed is for a bottle, which contains six
+          glasses' worth of sangwine.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 200
+      subType: misc
+      weight:
+        value: 2
+    type: consumable
+  - _id: ikixczsLv9HMqP3E
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.ikixczsLv9HMqP3E'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/vase-004.webp
+    name: Sealord Wine (Bottle)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>These red and white wines grown in
+          certain coastal vineyards have a sweet-tart flavor valued by nobles in
+          many lands.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 15
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: 1WWJzDeoPvyoqJ7o
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.1WWJzDeoPvyoqJ7o'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/meat.jpg
+    name: Spice, Flaming Sumac
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 1 cp; <strong>Weight</strong> 1/2
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>Usually sold by vendors on a thin
+          wooden stick, these small chunks of cooked meat often come from many
+          different sorts of creatures-rats and pigeons are the most common.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.01
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: 5ZjANdAnJMinq59x
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.5ZjANdAnJMinq59x'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/materials/plant-sprout-teal.webp
+    name: Sylirican Lemons
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Merchant's Manifest pg.
+          6</p><p><strong>Price</strong> 1 gp; <strong>Weight</strong> 1
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>Sylirican lemons make prized
+          preserves when ground, salted, and sealed in jars, adding an intense
+          citrus flavor when sprinkled atop other foods. If, within 8 hours of
+          consuming a meal seasoned with Sylirican lemons, you gain the confused
+          condition, you can roll 1d6 and subtract the result from the result of
+          your d% roll to determine what action you take for the first round in
+          which you are confused. This benefit does not stack with itself. The
+          price and weight listed represent a jar containing enough preserved
+          lemons to season 10 meals.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 1
+      subType: misc
+      weight:
+        value: 1
+    type: consumable
+  - _id: KhNugx0JPdFzmD4S
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.KhNugx0JPdFzmD4S'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/goblet-handle-gold.webp
+    name: Tea (Ceremonial, Cup)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 95</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This includes a tray, a teapot, a
+          whisk, a bowl to mix the tea in, four tiny cups, and a decorative box
+          in which to store all of these items. The ceremonial brewing of tea is
+          part of the classical tea ceremony. Knowing the proper steps for
+          preparing and participating in a tea ceremony requires a successful DC
+          15 Knowledge (nobility) skill check.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 25
+      subType: misc
+      weight:
+        value: 5
+    type: consumable
+  - _id: T5QHX6J6M7kDCMyz
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.T5QHX6J6M7kDCMyz'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/goblet-handled-grey.webp
+    name: Tea, Kelp
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Blood of the Sea pg.
+          19</p><p><strong>Price</strong> 3 sp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>elp tea is a favorite relaxing drink
+          under the sea, brewed from various rare species of kelp to create over
+          a dozen distinctive flavors. The listed price pays for enough tea to
+          fill a small waterproof bladder such as a sureseal bladder
+          (<em>Pathfinder Campaign Setting Aquatic Adventures</em> 56) and
+          doesn't include the price of the bladder.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.3
+      subType: misc
+    type: consumable
+  - _id: P147y1hc3hVV4fui
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.P147y1hc3hVV4fui'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/tankard-full.jpg
+    name: Tepache (Cup)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 5 cp; <strong>Weight</strong> 1/2
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This mildly alcoholic beverage is
+          made of beer, pineapple (or other tropical fruit), sugar, and
+          cinnamon, then fermented a few days and served cold with chili powder.
+          It is sweet and pleasant but common only in warmer climates.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.05
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: tyq6Pf4Bt4P88F1l
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.tyq6Pf4Bt4P88F1l'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/bread.jpg
+    name: Trail Rations
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 95</em>, <em>PRPG
+          Core Rulebook pg. 158</p><p><strong>Price</strong> 5 sp;
+          <strong>Weight</strong> 1 lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>The listed price is for a day's
+          worth of food. This bland food is usually some kind of hard tack,
+          jerky, and dried fruit, though the contents vary from region to region
+          and the race of those creating it. As long as it stays dry, it can go
+          for months without spoiling.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.5
+      subType: misc
+      weight:
+        value: 1
+    type: consumable
+  - _id: Wh1vuZbnbkySelXF
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.Wh1vuZbnbkySelXF'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/materials/powder-black.webp
+    name: Travel Cake Mix
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 1 sp; <strong>Weight</strong> 1
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This mixture of flour, powdered
+          milk, natron, sugar, and salt lasts for months in a sealed container.
+          When mixed with water (eggs are optional), it creates a batter you can
+          use to make biscuits (or other quickbreads such as pancakes, waffles,
+          scones, or muffins) or a cake. One pound of travel cake mix makes a
+          dozen biscuits.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.1
+      subType: misc
+      weight:
+        value: 1
+    type: consumable
+  - _id: WsV5gu2vIrUT93cJ
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.WsV5gu2vIrUT93cJ'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/bread.jpg
+    name: Wandermeal (Per Day)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 95</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Price</strong> 1 cp;
+          <strong>Weight</strong> 1/2 lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This tough, dried cake is a halfling
+          invention made from flour, water, and spices. Wandermeal keeps for
+          months without spoiling, travels well, and fills the belly. However,
+          eating it for over a week without other nutrients requires the eater
+          to make a daily Fortitude saving throw (DC 15 + 1 for each additional
+          day) or be sickened. The effect ends 1 day after more nutritious food
+          is eaten. The listed price is for a day's worth of food.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.01
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: q7w9vXJK36mPTzpr
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.q7w9vXJK36mPTzpr'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/tankard-full.jpg
+    name: Wasp Metheglin
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Merchant's Manifest pg.
+          4</p><p><strong>Category</strong> Food/Drink</p><h2>Description</h2>A
+          rare breed of wasp produces the honey used to make this spiced,
+          mead-like drink. For 1 hour after consuming a glass of wasp metheglin
+          (this takes 1 round), the drinker is quick to respond to harm, gaining
+          a +1 alchemical bonus on attack rolls against any creature that has
+          damaged her with an attack within the previous round. This bonus does
+          not stack with itself. A typical bottle holds four glasses' worth of
+          metheglin.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 400
+      subType: misc
+      weight:
+        value: 2
+    type: consumable
+  - _id: aYisGHEle70JG2wX
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.aYisGHEle70JG2wX'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/goblet-wood-engraved-brown.webp
+    name: Whiskey (Cup)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          95</p><p><strong>Price</strong> 1 sp; <strong>Weight</strong> 1/2
+          lb.</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>Whiskey is a distilled beverage made
+          from fermented grain mash (typically barley, corn, malt, rye, or
+          wheat) aged in a wooden cask. The longer the drink ages in the cask,
+          the smoother the final product.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.1
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+  - _id: Euv7CDMHZMKsHvxM
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.Euv7CDMHZMKsHvxM'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/containers/kitchenware/goblet-wood-engraved-brown.webp
+    name: Wine (Common, Pitcher)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Merchant's Manifest pg.
+          27</p><p><strong>Price</strong> 1 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Food/Drink</p><h2>Description</h2>This bitter coffee cultivar
+          increases the drinker's alertness to nearby threats. For 1 hour after
+          drinking two cups of Yenchaburian hybrid coffee, you gain a +2
+          competence bonus on Perception checks to notice a creature that is
+          using Stealth. You can benefit from yenchaburian hybrid coffee only
+          once per day.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 1
+      subType: misc
+    type: consumable
+  - _id: gr0RqqlT2gmbgzxI
+    _key: '!actors.items!EfB9mXhPBzBNwNVc.gr0RqqlT2gmbgzxI'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/soup.jpg
+    name: Yogurt
+    system:
+      description:
+        value: >-
+          <h1> Yogurt</h1><strong>Source</strong> <a class="external-link"
+          href="http://paizo.com/products/btpy8tmc?Pathfinder-Roleplaying-Game-Ultimate-Equipment"
+          target="_blank"><em>Ultimate Equipment pg.
+          95</em></a></p><p><strong>Price</strong>  1 sp;
+          <strong>Weight</strong>  1/2 lb.</p><p><strong>Category</strong>
+          Food/Drink<h2>Description</h2>This thick, fermented milk has a tangier
+          taste than unprocessed milk. It may be sweetened with fruit, honey, or
+          jam; blended with chopped herbs and oil to create a sauce; or mixed
+          with water and salt, sugar, fruit, or mint as a drink.
+      flags:
+        dictionary:
+          Category: Food/Drink
+      price: 0.1
+      subType: misc
+      weight:
+        value: 0.5
+    type: consumable
+name: Lodging & Food
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    spells:
+      spellbooks:
+        primary:
+          name: Primary
+        secondary:
+          name: Secondary
+        spelllike:
+          name: Spell-likes
+        tertiary:
+          name: Tertiary
+type: npc

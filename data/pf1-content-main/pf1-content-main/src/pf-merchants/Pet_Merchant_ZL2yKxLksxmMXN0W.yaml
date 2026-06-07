@@ -1,0 +1,2146 @@
+_id: ZL2yKxLksxmMXN0W
+_key: '!actors!ZL2yKxLksxmMXN0W'
+_stats:
+  coreVersion: '12.343'
+flags:
+  core:
+    sheetClass: PF1.ActorSheetPFNPCLoot
+img: icons/sundries/misc/pet-collar-blue.webp
+items:
+  - _id: QGqcNZmt2cCIjwTI
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.QGqcNZmt2cCIjwTI'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/leather/fur-white-tan.webp
+    name: Anaconda, Giant
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 45
+    type: loot
+  - _id: q8Jha2ssDhE4aslE
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.q8Jha2ssDhE4aslE'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/beak-hooked-red.webp
+    name: Ape, Dire
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          81</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These Large avian predators are
+          sometimes used as hunting animals but are prized as mounts. More
+          information on these creatures can be found in <em>Bestiary 3</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 1500
+      weight:
+        value: 500
+    type: loot
+  - _id: YEu5qjZJTpesqvgu
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.YEu5qjZJTpesqvgu'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/materials/slime-brown.webp
+    name: Axe Beak Egg
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 15
+    type: loot
+  - _id: EzISTQ8mMopuMBIr
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.EzISTQ8mMopuMBIr'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/sundries/misc/pet-collar-blue.webp
+    name: Badger
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These fierce, burrowing creatures
+          are only rarely kept as pets. More information on badgers can be found
+          in <em>Bestiary 2</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 15
+      weight:
+        value: 20
+    type: loot
+  - _id: QpTHC6hgLEQvusOn
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.QpTHC6hgLEQvusOn'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/biological/wing-bat-pink.webp
+    name: Badger, Dire
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 80</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Price</strong> 5 gp;
+          <strong>Weight</strong> 1 lb.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These Diminutive rodents are
+          nocturnal fliers that eat insects and fruit. They rely primarily on
+          sound to navigate rather than sight. They are absent only in desert
+          and arctic regions. Some cultures keep bat houses near towns and
+          villages to control insect problems. More information on bats can be
+          found in the <em>Bestiary</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 5
+      weight:
+        value: 1
+    type: loot
+  - _id: hQky6BXBzdMIDo7c
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.hQky6BXBzdMIDo7c'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/claws/claw-bear-brown.webp
+    name: Bat, Dire
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 740
+    type: loot
+  - _id: 4i6U8ASAHUX4bnx8
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.4i6U8ASAHUX4bnx8'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/biological/eye-lizard-orange-red.webp
+    name: Boar
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>Rarely, Medium cats such as
+          cheetahs and leopards are trained to hunt for humanoid masters.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 100
+      weight:
+        value: 100
+    type: loot
+  - _id: mhcB80GHGvdhYSkj
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.mhcB80GHGvdhYSkj'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/hooves-cloven-brown.webp
+    name: Cat (Osirian Wise-Eye)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          81</p><p><strong>Price</strong> 10-50 gp; <strong>Weight</strong>
+          1,500 lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>Cattle are kept for milk and meat,
+          and used as beasts of burden. A bull is used primarily for mating.
+          Other males are castrated and become oxen, which are used to carry
+          loads and plow fields.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      weight:
+        value: 1500
+    type: loot
+  - _id: 33cr9BYGUPkIRxFK
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.33cr9BYGUPkIRxFK'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/bug-centipede-brown.webp
+    name: Centipede, House
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Price</strong> 1 cp; <strong>Weight</strong> 3
+          oz.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These creatures come in many forms,
+          from the lighter-colored 20-legged variety to the darker 300-legged
+          variety. Typically, these arthropods are what pass for pets in the
+          slums, but the young and eccentric often search for the best specimens
+          to serve as familiars. Centipedes employed as familiars have an
+          Intelligence score and lose the mindless trait. More information on
+          house centipedes can be found in <em>Ultimate Magic</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 0.01
+      weight:
+        value: 0.15
+    type: loot
+  - _id: epL9vMi0tYEhfVtH
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.epL9vMi0tYEhfVtH'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/biological/eye-lizard-orange-red.webp
+    name: Cheetah
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 160
+    type: loot
+  - _id: 6cg2jaVDTolyclM6
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.6cg2jaVDTolyclM6'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/beak-hooked-red.webp
+    name: Chicken
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          81</p><p><strong>Price</strong> 1 gp; <strong>Weight</strong> 6
+          lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These domesticated birds are not
+          capable of long distance flights, and are raised for their eggs and
+          meat. Male chickens are kept for mating and occasionally blood sport.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 1
+      weight:
+        value: 6
+    type: loot
+  - _id: jD4eqWQZ5EYqMQb4
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.jD4eqWQZ5EYqMQb4'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/green_21.jpg
+    name: Constrictor Snake
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 90
+    type: loot
+  - _id: G5zcNZFiYHSsgKVZ
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.G5zcNZFiYHSsgKVZ'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/crustacean-crab-yellow.webp
+    name: Crab
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>Aquatic spellcasters often find
+          large ocean crabs to be agreeable familiars. Without the bond of a
+          familiar, however, these crustacean's lack of intelligence makes them
+          dull pets. More information on king crabs can be found in <em>Ultimate
+          Magic</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 20
+      weight:
+        value: 6
+    type: loot
+  - _id: Kw4brHnpTwctvatX
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.Kw4brHnpTwctvatX'
+    _stats:
+      coreVersion: '12.331'
+    img: modules/pf-content/icons/spell780.png
+    name: Crocodile
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          14</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 55
+    type: loot
+  - _id: 1dS46teTmJ2HB7do
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.1dS46teTmJ2HB7do'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/beak-hooked-red.webp
+    name: Crocodile, Dire
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Price</strong> 5 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 5
+    type: loot
+  - _id: 5XJj4tecJzgcz8Ri
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.5XJj4tecJzgcz8Ri'
+    _stats:
+      coreVersion: '12.331'
+    img: modules/pf-content/icons/spell780.png
+    name: Dog, Goblin
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          14</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 105
+    type: loot
+  - _id: AgYTli5J0GIGrbpl
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.AgYTli5J0GIGrbpl'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/hooves-cloven-brown.webp
+    name: Donkey/Mule
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          81</p><p><strong>Price</strong> 8 gp; <strong>Weight</strong> 600-800
+          lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>Donkeys and mules are stolid in the
+          face of danger, hardy, surefooted, and capable of carrying heavy loads
+          over vast distances. Unlike a horse, a donkey or mule is willing
+          (though not eager) to enter dungeons and other strange or threatening
+          places. Donkeys and mules have the same statistics as ponies (see the
+          <em>Bestiary</em>).
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 8
+    type: loot
+  - _id: G53X4Fegarzfo1QS
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.G53X4Fegarzfo1QS'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/materials/feather-blue-grey.webp
+    name: Duck
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          81</p><p><strong>Price</strong> 2 gp; <strong>Weight</strong> 3
+          lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>Farm ducks are used for eggs, meat,
+          and down, while wild ducks are hunted for meat. Ducks have the same
+          statistics as ravens (see the <em>Bestiary</em>).
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 2
+      weight:
+        value: 3
+    type: loot
+  - _id: 4EBjXhygGPXhg467
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.4EBjXhygGPXhg467'
+    _stats:
+      coreVersion: '12.331'
+    img: modules/pf-content/icons/spell780.png
+    name: Dwarf Caiman
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          14</p><p><strong>Price</strong> 7 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 7
+    type: loot
+  - _id: YZwxNO9535ZtFkTl
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.YZwxNO9535ZtFkTl'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/materials/feather-colored-green.webp
+    name: Eagle
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 40
+    type: loot
+  - _id: MmsLTAUGxb1e9b8y
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.MmsLTAUGxb1e9b8y'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/biological/fin-red-green.webp
+    name: Electric Eel
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          14</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 125
+    type: loot
+  - _id: KLvBwBcJjKBSx7hB
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.KLvBwBcJjKBSx7hB'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/green_21.jpg
+    name: Emperor Cobra
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 1600
+    type: loot
+  - _id: Z0avrIg6H4RIdLMT
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.Z0avrIg6H4RIdLMT'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/materials/feather-colored-red.webp
+    name: Falcon
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 81</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>This Tiny, long-winged hawk is a
+          popular hunting bird among many aristocracies. Falcons are technically
+          a subset of hawks but are considered more 'noble' in many cultures.
+          Ownership of these birds is denied to commoners in many nations with
+          hierarchical monarchies.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 40
+      weight:
+        value: 2
+    type: loot
+  - _id: cSTQZACzw4izFsxJ
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.cSTQZACzw4izFsxJ'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/leather/fur-white-tan.webp
+    name: Fox
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Price</strong> 8 gp; <strong>Weight</strong> 12
+          lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These quick and wily carnivores can
+          be difficult to train, but often make excellent familiars. Many
+          humanoid communities see these canines as a menace to their farming
+          fowl, and some use dogs to track them during recreational hunts. More
+          information on foxes can be found in <em>Bestiary 3</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 8
+      weight:
+        value: 12
+    type: loot
+  - _id: AXhnRNeD8oP6JI0o
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.AXhnRNeD8oP6JI0o'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/frog-spotted-green.webp
+    name: Frilled Lizard, Giant
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          14</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 75
+    type: loot
+  - _id: kYZ0vYgp0cvbgId3
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.kYZ0vYgp0cvbgId3'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/frog-spotted-green.webp
+    name: Frog, Poison
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 60
+    type: loot
+  - _id: PUqVFzHmsz9dQmP3
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.PUqVFzHmsz9dQmP3'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/fish-spotted-blue-grey.webp
+    name: Gar
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          14</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 90
+    type: loot
+  - _id: kd1JX0FCwTjD8sDZ
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.kd1JX0FCwTjD8sDZ'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/hooves-cloven-brown.webp
+    name: Gar, Giant
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Price</strong> 1-6 gp; <strong>Weight</strong> 50
+          lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>As an agricultural animal, goats
+          provide milk, meat, hair, and hide, and they are sometimes used to
+          clear fields of weeds and shrubbery. Some spellcasters bond with them
+          as familiars. More information on goats can be found in <em>Bestiary
+          3</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      weight:
+        value: 50
+    type: loot
+  - _id: Cng1QOmHK1sdFm2E
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.Cng1QOmHK1sdFm2E'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/materials/slime-brown.webp
+    name: Gorilla
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 175
+    type: loot
+  - _id: tjnUmj7zSsS8QjWe
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.tjnUmj7zSsS8QjWe'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/claws/claw-bird-yellow.webp
+    name: Griffon Egg
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 81</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>This Tiny, short-winged raptor is a
+          popular hunting bird, but is utilized more often by lower nobility
+          than by commoners without titles. Hawks are known for their sharp
+          eyesight and powerful aerial dives. More information on hawks can be
+          found in the <em>Bestiary</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 18
+      weight:
+        value: 2
+    type: loot
+  - _id: 4XGtRfFYWe83NTHV
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.4XGtRfFYWe83NTHV'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/sundries/misc/pet-collar-blue.webp
+    name: Hedgehog
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Price</strong> 5 gp; <strong>Weight</strong> 3
+          lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These spiny mammals roll into a
+          ball when threatened. They are sometimes kept as pets and are favored
+          by some wizards as familiars. More information on hedgehogs can be
+          found in <em>Ultimate Magic</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 5
+      weight:
+        value: 3
+    type: loot
+  - _id: BB9018FCWePM4psq
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.BB9018FCWePM4psq'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/bone-jaw-teeth-white.webp
+    name: Hippogriff Egg
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 80
+    type: loot
+  - _id: pQ9jf6QGF0z1otp9
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.pQ9jf6QGF0z1otp9'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/sundries/misc/pet-collar-blue.webp
+    name: Hyena, Dire
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 30
+    type: loot
+  - _id: 3tIDHcX30kPfj7Za
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.3tIDHcX30kPfj7Za'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/biological/eye-lizard-orange-red.webp
+    name: Leopard
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 100
+    type: loot
+  - _id: jYqxfc7wRnQ83hCb
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.jYqxfc7wRnQ83hCb'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/fish-spotted-orange.webp
+    name: Lion
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 25
+    type: loot
+  - _id: e4u3nyeN2n4NZ2uh
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.e4u3nyeN2n4NZ2uh'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/red_20.jpg
+    name: Marine Iguana
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Price</strong> 6 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 6
+    type: loot
+  - _id: jTbB9S3DBElZB3QD
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.jTbB9S3DBElZB3QD'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/bone-jaw-teeth-white.webp
+    name: Mongoose
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Price</strong> 4 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 4
+    type: loot
+  - _id: l7pwQJvwQ9Z23ISn
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.l7pwQJvwQ9Z23ISn'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/red_20.jpg
+    name: Monitor Lizard
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 150
+    type: loot
+  - _id: YmHDWNhvz1L51zqk
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.YmHDWNhvz1L51zqk'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/materials/slime-brown.webp
+    name: Monkey
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 80</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Price</strong> 3 gp;
+          <strong>Weight</strong> 5 lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These Tiny herbivorous primates can
+          be found in a variety of habitats, but typically favor warm forests
+          and jungles. They can grasp and carry objects that weigh under a
+          pound. They are sometimes used as familiars. More information on
+          monkeys can be found in the <em>Bestiary</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 3
+      weight:
+        value: 5
+    type: loot
+  - _id: BFF9sSoVJ1M2d0vU
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.BFF9sSoVJ1M2d0vU'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/biological/fin-red-green.webp
+    name: Moray Eel, Giant
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          14</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 1000
+    type: loot
+  - _id: khFKYgqYFrfxYtCm
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.khFKYgqYFrfxYtCm'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/horn-simple-white.webp
+    name: Narwhal
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 350
+    type: loot
+  - _id: xpYU10YKG3jCBDsi
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.xpYU10YKG3jCBDsi'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/cephalopod-octopus-red.webp
+    name: Octopus
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These cunning animals can be
+          employed as familiars by aquatic spellcasters. If they are kept is
+          pets, they must be kept in water, as they cannot survive out of it.
+          More information on blue ringed octopuses can be found in <em>Ultimate
+          Magic</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 25
+      weight:
+        value: 2
+    type: loot
+  - _id: iU03v7aExkhMMEFq
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.iU03v7aExkhMMEFq'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/cephalopod-octopus-red.webp
+    name: Octopus, Giant
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          14</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 1800
+    type: loot
+  - _id: FjIK2hxSv3yWfS8Q
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.FjIK2hxSv3yWfS8Q'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/biological/wing-bird-white.webp
+    name: Orca
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 45
+    type: loot
+  - _id: pPAWuW5BsPGxFpic
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.pPAWuW5BsPGxFpic'
+    _stats:
+      coreVersion: '12.331'
+    img: modules/pf-content/icons/spell780.png
+    name: Otter
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These playful water mammals are
+          either used as familiars or trained to perform tricks as pets. They
+          are surprisingly intelligent, and have been known to use rocks as
+          simple tools, such as for opening the shells of mollusks. More
+          information on otters can be found in <em>Bestiary 3</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 20
+      weight:
+        value: 10
+    type: loot
+  - _id: DfpUhbnTfcnLWAH9
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.DfpUhbnTfcnLWAH9'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/treasure/figurine-owl.webp
+    name: Owl
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 22
+    type: loot
+  - _id: asVYF7O4rFt9zqYc
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.asVYF7O4rFt9zqYc'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/claws/claw-bird-yellow.webp
+    name: Owl, Verduran
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These colorful and intelligent
+          birds can be trained to mimic humanoid voices. They are often kept as
+          pets by the wealthy and those who live in the tropical climates they
+          favor. Parrots have the same statistics as ravens (see the
+          <em>Bestiary</em>).
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 50
+      weight:
+        value: 4
+    type: loot
+  - _id: uXGoBPaAxnuev2hn
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.uXGoBPaAxnuev2hn'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/sundries/misc/piggybank.webp
+    name: Pig
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Price</strong> 3-10 gp; <strong>Weight</strong>
+          100-300 lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>Domesticated pigs are the
+          descendents of wild boars, and are raised for their meat and hide,
+          being among the most versatile and common farm animals. More
+          information on pigs can be found in <em>Bestiary 3</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+    type: loot
+  - _id: BUZDlDcaPc7L4S6n
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.BUZDlDcaPc7L4S6n'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/horns-pointed-grey.webp
+    name: Porcupine
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Price</strong> 5 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 5
+    type: loot
+  - _id: 36wKE6P4xTr9GpqZ
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.36wKE6P4xTr9GpqZ'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/horns-pointed-grey.webp
+    name: Porcupine, Giant
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 135
+    type: loot
+  - _id: wY752xHfvXpjIh2p
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.wY752xHfvXpjIh2p'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/biological/wing-lizard-green.webp
+    name: Pseudodragon
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 80</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>Found primarily in temperate
+          forests, pseudodragons are intelligent enough that some consider their
+          sale slavery. A handful of pseudodragons offer themselves for hire to
+          adventurers, typically for half their listed price per week of work.
+          For more information, see the <em>Bestiary</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 200
+      weight:
+        value: 7
+    type: loot
+  - _id: PlvcoOWtubaxK14y
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.PlvcoOWtubaxK14y'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/sundries/misc/pet-collar-blue.webp
+    name: Rabbit
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Price</strong> 2 gp; <strong>Weight</strong> 3
+          lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>Rabbits are often raised or hunted
+          for their meat and skins, though some people keep the skittish mammals
+          as pets. Though they are often confused with hares, rabbits are
+          distinctly different in that they make their homes in burrows beneath
+          the ground, and they are usually smaller than hares. Rabbits have the
+          same statistics as rats (see the <em>Bestiary</em>).
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 2
+      weight:
+        value: 3
+    type: loot
+  - _id: pQR7oRGvQzbWNT2s
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.pQR7oRGvQzbWNT2s'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/sundries/misc/pet-collar-blue.webp
+    name: Raccoon
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Price</strong> 5 gp; <strong>Weight</strong> 7
+          lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These nocturnal hunter-scavengers
+          are found primarily in forested terrains, and are noted for their
+          domino mask-like visages, highly dextrous forepaws (which they rely on
+          for their hyper-sensitive sense of touch), and the strangely
+          anthropomorphic tendency to 'wash' their food in water before eating
+          it. Raccoons are sometimes kept as pets and used by some spellcasters
+          as familiars. More information on raccoons can be found in
+          <em>Bestiary 3</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 5
+      weight:
+        value: 7
+    type: loot
+  - _id: SQN6Qnm243VgZwTU
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.SQN6Qnm243VgZwTU'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/races/ratfolk.png
+    name: Ram
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 80</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Price</strong> 5 gp;
+          <strong>Weight</strong> 50 lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These Small animals are vicious
+          scavengers in the wild. However, dire rats raised in captivity can be
+          trained as loyal pets and protectors. Pet dire rats do not have filth
+          fever. More information on dire rats can be found in the
+          <em>Bestiary</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 5
+      weight:
+        value: 50
+    type: loot
+  - _id: eYm24hmdOaAxQLvm
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.eYm24hmdOaAxQLvm'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/races/ratfolk.png
+    name: Rat, Riding
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 80</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Price</strong> 1 gp;
+          <strong>Weight</strong> 50 lbs</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These Tiny capybara-like white
+          rodents are native to temperate swamps and coasts. They are common
+          pets and livestock in some lands. More information on donkey rats can
+          be found in <em>Ultimate Magic</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 1
+      weight:
+        value: 50
+    type: loot
+  - _id: 4P9mCQfqiyQBtoU0
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.4P9mCQfqiyQBtoU0'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/materials/feather-black-blue.webp
+    name: Raven
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 80</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Price</strong> 2 gp;
+          <strong>Weight</strong> 3 lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These Tiny birds are known for
+          their intelligence, and even play games with each other in the wild.
+          They eat insects and can be found in surprisingly varied habitats.
+          More information on ravens can be found in the <em>Bestiary</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 2
+      weight:
+        value: 3
+    type: loot
+  - _id: nHxr7fpS5ehaTHLe
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.nHxr7fpS5ehaTHLe'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/bug-beetle-gold-green.webp
+    name: Roc
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Advanced Class Guide pg.
+          205</p><p><strong>Price</strong> 3 gp; <strong>Weight</strong> 1
+          lb.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>This glass jar contains a colony of
+          carnivorous scavenger beetles. The beetles must be fed at least a
+          quarter pound of meat per day or they die. When released on a dead
+          organism, they break it down and devour its flesh in 1d4 days, leaving
+          only bones. Scavenger beetles eat only dead flesh, and can't harm
+          living creatures. Once released, the beetles can't be returned to the
+          jar.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 3
+      weight:
+        value: 1
+    type: loot
+  - _id: qTeVofVqN7SsWhAu
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.qTeVofVqN7SsWhAu'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/biological/stinger-insect-grey.webp
+    name: Scorpion, Greensting
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>Typically found in forested areas,
+          these Tiny scorpions sport pincers too small to be dangerous to
+          anything larger than an insect, but they still possess a poisonous
+          stinger. Sometimes they are kept as pets or serve as familiars.
+          Greensting scorpions employed as familiars have an Intelligence score
+          and lose the mindless trait. More information on greensting scorpions
+          can be found in <em>Ultimate Magic</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 15
+      weight:
+        value: 0.55
+    type: loot
+  - _id: OLlBhHng362YEmZN
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.OLlBhHng362YEmZN'
+    _stats:
+      coreVersion: '12.331'
+    img: modules/pf-content/icons/spell780.png
+    name: Sea Krait
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Price</strong> 5 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 5
+    type: loot
+  - _id: npTuoeW4xbLfvOuI
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.npTuoeW4xbLfvOuI'
+    _stats:
+      coreVersion: '12.331'
+    img: modules/pf-content/icons/spell780.png
+    name: Seahorse, Giant
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 45
+    type: loot
+  - _id: q8xBGiaMPhjlmD68
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.q8xBGiaMPhjlmD68'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/bone-jaw-teeth-brown.webp
+    name: Shark
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 325
+    type: loot
+  - _id: qY6kCYXhSuayQUWy
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.qY6kCYXhSuayQUWy'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/horn-curved-brown.webp
+    name: Shark, Dire
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          81</p><p><strong>Price</strong> 2-20 gp; <strong>Weight</strong> 150
+          lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These livestock animals are kept
+          for their fur, meat, and hide, and can be found in virtually any
+          civilized settlement. They are especially prized in colder environs,
+          where their wool and hide can be used to make durable and highly
+          insulated clothing. Sheep have the same statistics as goats (see
+          <em>Bestiary 3</em>).
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      weight:
+        value: 150
+    type: loot
+  - _id: GBbQXvbWAxpfvRlw
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.GBbQXvbWAxpfvRlw'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/sundries/misc/pet-collar-blue.webp
+    name: Skunk
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These creatures are infamous for
+          the overwhelmingly foul odor they produce to ward off predators.
+          Skunks are sometimes kept as pets, though usually only after their
+          scent glands have been removed. More information on skunks can be
+          found in <em>Bestiary 3</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 10
+      weight:
+        value: 10
+    type: loot
+  - _id: PMWP8tGZncLLGZSo
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.PMWP8tGZncLLGZSo'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/sundries/misc/pet-collar-blue.webp
+    name: Skunk, Giant
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 190
+    type: loot
+  - _id: VJLvDFYOjw3aYC0G
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.VJLvDFYOjw3aYC0G'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/crustacean-mollusk-yellow.webp
+    name: Snail Kite
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 18
+    type: loot
+  - _id: SrVcCe1tKHdPZGUh
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.SrVcCe1tKHdPZGUh'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/green_21.jpg
+    name: Snake, Constrictor
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 80</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Price</strong> 5 gp;
+          <strong>Weight</strong> 60 lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These Medium reptiles are found
+          chiefly in warm climates. Somewhat aggressive, constrictors squeeze
+          their prey to death before consuming it. Due to their size, these
+          snakes are less popular for traveling spellcasters, but they can be
+          quite helpful in a laboratory. More information on constrictor snakes
+          can be found in the <em>Bestiary</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 5
+      weight:
+        value: 60
+    type: loot
+  - _id: 69bAAQ8wfW8uDanV
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.69bAAQ8wfW8uDanV'
+    _stats:
+      coreVersion: '12.331'
+    img: modules/pf-content/icons/spell222.png
+    name: Snapping Turtle
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Price</strong> 5 gp; <strong>Weight</strong>
+          -</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 5
+    type: loot
+  - _id: jb0fbIHuxzV05ZtK
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.jb0fbIHuxzV05ZtK'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/green_23.jpg
+    name: Snapping Turtle, Giant
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These Tiny spiders have red bodies
+          and black legs. They are hunting spiders, so they do not cast webs,
+          though they are poisonous. For more information, see <em>Ultimate
+          Magic</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 25
+      weight:
+        value: 0.5
+    type: loot
+  - _id: Ae59xWf8B5JeJlvZ
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.Ae59xWf8B5JeJlvZ'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/cephalopod-squid-pale-pink.webp
+    name: Squid
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 25
+    type: loot
+  - _id: 18cFSK5SrJp7hKfB
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.18cFSK5SrJp7hKfB'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/fish-spotted-orange.webp
+    name: Squid, Giant
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 18
+    type: loot
+  - _id: xZWNMEOjeUu2CkrX
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.xZWNMEOjeUu2CkrX'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/biological/wing-insect-blue.webp
+    name: Stirge
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 80</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These Tiny beasts are allegedly
+          sold for indoor defense to rich clients, but often wind up in exotic
+          blood sports. Despite the popular misconception that stirges are
+          untameable vermin, such creatures are trainable, but they must be fed
+          fresh blood daily to dissuade them from turning on their handlers.
+          More information about stirges can be found in the <em>Bestiary</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 20
+      weight:
+        value: 1
+    type: loot
+  - _id: y40K6oum2OaaCe65
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.y40K6oum2OaaCe65'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/biological/wing-bird-white.webp
+    name: Thrush
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Price</strong> 1 sp; <strong>Weight</strong> 7
+          oz.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These small plump birds are
+          sometimes kept as pets, but are more often used as familiars for
+          spellcasters. They are known for their beautiful song and their
+          potential for actual speech. More information on thrushes can be found
+          in <em>Ultimate Magic</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 0.1
+      weight:
+        value: 0.35
+    type: loot
+  - _id: wDt3QOtMbEfmFPNI
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.wDt3QOtMbEfmFPNI'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/bone-jaw-teeth-white.webp
+    name: Thylacine
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 18
+    type: loot
+  - _id: wE87KbpRsUYntkda
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.wE87KbpRsUYntkda'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/frog-spotted-green.webp
+    name: Tiger
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 80</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Price</strong> 2 cp;
+          <strong>Weight</strong> 7 oz.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>This Diminutive amphibian is
+          primarily kept as a familiar by spellcasters. Toads live in most
+          temperate and warm environments, and eat insects. More information on
+          toads can be found in <em>Bestiary</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 0.02
+      weight:
+        value: 0.35
+    type: loot
+  - _id: 7ELycSiyeRNpq5NK
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.7ELycSiyeRNpq5NK'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/frog-spotted-green.webp
+    name: Toad (Vision)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Adventurer's Armory pg.
+          19</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These animals are found in areas of
+          the Mwangi Expanse. They have a psychoactive skin venom which acts as
+          a mild hallucinogen if the toad's skin is licked,-though breeding
+          programs for these creatures outside of Mwangi produce venomless
+          offspring.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 10
+      weight:
+        value: 0.25
+    type: loot
+  - _id: kDavSZEqteZe4Txg
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.kDavSZEqteZe4Txg'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/creatures/frog-spotted-green.webp
+    name: Toad, Giant
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Aquatic
+          Animals" section of Animal Archive, page 14.</em></p><p>Many of the
+          following aquatic animals can be bought at seaside markets or from
+          fisherfolk merchants out at sea. Pirates often make use of sharks,
+          eels, and other nasty sea denizens when interrogating captured
+          prisoners, searching for underwater traps, or retrieving sunken
+          treasure. Some of the larger or rarer creatures, such as whales, are
+          obviously much more difficult to find on the open market, and may only
+          be available in seedy underground bazaars. Most aquatic animals can be
+          trained as normal, though they are rarely sold already trained.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 150
+    type: loot
+  - _id: rsGxb8z5lt0P39Hr
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.rsGxb8z5lt0P39Hr'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/beak-orange-green.webp
+    name: Toucan
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 40
+    type: loot
+  - _id: QjET5PcDVeGYMygH
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.QjET5PcDVeGYMygH'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/amber.jpg
+    name: Traveling bee hive
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Advanced Class Guide pg.
+          206</p><p><strong>Category</strong> Animal
+          Gear</p><h2>Description</h2>These straw baskets provide a portable
+          home for bees. They are dome shaped, with a hole in the top that a
+          smaller woven basket covers as a cap. This hole allows for the
+          harvesting of small amounts of honey without destroying the entire
+          hive. Believing that certain bees provide for a superior crop yield,
+          some farmers pay beekeepers to travel to their farms with the
+          bees.</p><p> Destroying a traveling bee hive causes the bees to swarm,
+          creating a 5-foot-radius cloud. A creature is blinded and for as long
+          as it remains in the cloud, and must succeed at a DC 12 Fortitude
+          saving throw or become sickened for 1 minute. The sickened condition
+          is a poison effect.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Animal Gear
+      price: 10
+      subType: gear
+      weight:
+        value: 10
+    type: loot
+  - _id: CUXCRnDAat8FDfwK
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.CUXCRnDAat8FDfwK'
+    _stats:
+      coreVersion: '12.331'
+    img: modules/pf-content/icons/spell222.png
+    name: Turtle
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          80</p><p><strong>Price</strong> 3 gp; <strong>Weight</strong> 4
+          lbs.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These reptiles have bony shells
+          that they can retreat into. They are sometimes kept as pets and used
+          as familiars, and in some places their flesh is eaten or used as an
+          ingredient in medicines. More information on turtles can be found in
+          <em>Ultimate Magic</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 3
+      weight:
+        value: 4
+    type: loot
+  - _id: j8WQTsSkpwzqRVoH
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.j8WQTsSkpwzqRVoH'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/beak-hooked-red.webp
+    name: Vulture
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 30
+    type: loot
+  - _id: RPvS9NMNyJc6xY87
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.RPvS9NMNyJc6xY87'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/leather/fur-white-tan.webp
+    name: Vulture, Giant
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 80</em>,
+          <em>Adventurer's Armory pg. 19</p><p><strong>Price</strong> 2 gp;
+          <strong>Weight</strong> 8 oz.</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These Tiny animals eat smaller
+          animals and can be found in nearly any environment. They are clever
+          and curious, traits that are magnified when they are kept as
+          familiars. Many varieties of weasel exude a strong musky odor. This
+          description also applies to similar animals, such as ferrets, minks,
+          polecats, and stoats. More information on weasels can be found in the
+          <em>Bestiary</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 2
+      weight:
+        value: 5
+    type: loot
+  - _id: HdBqTqrlTBkXw6zm
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.HdBqTqrlTBkXw6zm'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/blue_29.jpg
+    name: Whale
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 100
+    type: loot
+  - _id: udxMoLkft6x8aO7T
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.udxMoLkft6x8aO7T'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/bones/bone-jaw-teeth-white.webp
+    name: Wolf, Dire
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Animal Archive pg.
+          15</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2><em>Description from "Other
+          Animals" section of Animal Archive, page 15.</em></p><p>The following
+          reared animals don't fit into one of the aforementioned categories,
+          but can still be purchased by sellers who have access to them. Some
+          may be purchased already combat-trained at the GM's discretion, and
+          typically cost an amount equal to 1-1/2 × the price of the standard
+          animal.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 125
+    type: loot
+  - _id: PkrivanC0aRsQyLF
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.PkrivanC0aRsQyLF'
+    _stats:
+      coreVersion: '12.331'
+    img: modules/pf-content/icons/spell218.png
+    name: Wolverine, Dire
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          81</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These shaggy-haired relatives to
+          cows are more at home in mountainous terrain where they are frequently
+          used as pack animals and to pull plows. Yaks have the same statistics
+          as bison (see the <em>Bestiary</em>).
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 24
+      weight:
+        value: 1000
+    type: loot
+  - _id: mU9PyY0keC3Q9B68
+    _key: '!actors.items!ZL2yKxLksxmMXN0W.mU9PyY0keC3Q9B68'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/materials/feather-orange.webp
+    name: Bat, Dire (Riding, Combat Trained)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          81</p><p><strong>Category</strong>
+          Mounts/Pets</p><h2>Description</h2>These deadly but majestic fliers
+          are the favored aerial cavalry of many kingdoms. While griffons can be
+          trained, some good deities consider doing so akin to enacting slavery,
+          insisting that a griffon must come to its rider on its own free will.
+          The price listed is for a trained griffon; free will is bought with
+          different currency (determined by the GM). More information on
+          griffons can be found in the <em>Bestiary</em>.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Mounts/Pets
+      price: 8000
+      weight:
+        value: 500
+    type: loot
+name: Pet Merchant
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    spells:
+      spellbooks:
+        primary:
+          name: Primary
+        secondary:
+          name: Secondary
+        spelllike:
+          name: Spell-likes
+        tertiary:
+          name: Tertiary
+type: npc

@@ -1,0 +1,42 @@
+_id: 1zWe8qZvHsqhQUF0
+_key: '!items!1zWe8qZvHsqhQUF0'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/leather.PNG
+name: Blackfingers Apron
+system:
+  armor:
+    dex: 6
+    material:
+      base:
+        value: leather
+    value: 2
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  baseTypes:
+    - Leather Armor
+  cl: 5
+  description:
+    value: >-
+      <p>This +1 bitter leather armor looks much like a blacksmith's apron or an
+      alchemist's smock, and has many small pockets suitable for holding
+      extracts, potions, or poisons. Once per day, the wearer can use negate
+      aroma (lasting 1 hour). This effect suspends the armor's bitter special
+      ability if used on the wearer. Once per day, the wearer can pull a
+      tanglefoot bag from one of the apron's pockets, although the bag crumbles
+      into dust if it is not used within 1 minute.</p><p><strong>Base
+      Item</strong>: bitter leather
+      armor</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, negate aroma, stinking cloud, web</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 5240
+  sources:
+    - id: PZO9267
+  spellFailure: 10
+  weight:
+    value: 15
+type: equipment

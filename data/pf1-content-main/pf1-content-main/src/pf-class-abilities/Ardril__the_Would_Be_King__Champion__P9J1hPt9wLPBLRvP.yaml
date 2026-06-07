@@ -1,0 +1,40 @@
+_id: P9J1hPt9wLPBLRvP
+_key: '!items!P9J1hPt9wLPBLRvP'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_37.jpg
+name: Ardril, the Would-Be King (Champion)
+system:
+  associations:
+    classes:
+      - Medium
+  description:
+    value: >-
+      <p><strong>Medium Legendary Spirit</strong></p><p>The Would-Be King is an
+      Ulfen folk hero famous for slaying nearly a dozen linnorms but refusing to
+      rule any nation until she had slain Fafnheir, the father of all linnorms.
+      The Linnorm Kings at the time were fearful of losing their positions and
+      sent their own warriors to kill her. Ardril barely escaped with her life,
+      and she fled her home for Valenhall.</p><p><strong>Gaining Favor</strong>:
+      To gain Ardril's favor, you must defeat an enemy with the dragon type and
+      at least 7 Hit Dice without any aid from allies. After defeating the
+      enemy, you must attempt a Wisdom check as you are bombarded with the
+      memory of a linnorm's curse. If you succeed, Ardril answers your
+      call.</p><p><strong>Taboos</strong>: If you accept a taboo while
+      channeling Ardril, you must never seek out or accept any position of power
+      or leadership.</p><p><strong>Challenge (Lesser, Su)</strong>: You gain the
+      challenge ability as a cavalier of your level. When you challenge a foe,
+      your attacks ignore any damage reduction your target has. In addition, you
+      gain a +2 bonus on saving throws until the challenge
+      ends.</p><p><strong>Death Curse (Supreme, Su)</strong>: When you channel
+      Ardril, you can select any two linnorm death curse rage powers. You can
+      select different rage powers each time you channel Ardril. Treat your
+      medium level as your barbarian level for the purpose of meeting
+      prerequisites. You gain the benefit of these rage powers against
+      challenged foes even if you are not raging. For each additional point of
+      damage that would be dealt by a rage power, you deal 1d6 points of damage
+      instead.</p>
+  subType: classFeat
+  tags:
+    - Medium Legendary Spirit
+type: feat

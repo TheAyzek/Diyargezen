@@ -1,0 +1,21 @@
+_id: T8ADpCwzV9rPkuru
+_key: '!items!T8ADpCwzV9rPkuru'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/instruments/megaphone.webp
+name: Speaking trumpet
+system:
+  description:
+    value: >-
+      <p>This large animal horn is hollowed out to amplify sounds that enter
+      through the narrow end. The DC of Perception checks to hear a speaker
+      using a speaking trumpet is reduced by 5.</p>
+  equipped: false
+  price: 6
+  sources:
+    - id: PZO9452
+      pages: '21'
+  subType: tool
+  weight:
+    value: 2
+type: loot

@@ -1,0 +1,34 @@
+_id: Ao4Gmm4VfQ72wr8m
+_key: '!items!Ao4Gmm4VfQ72wr8m'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Swarmwalker's Ring
+system:
+  aura:
+    school: con
+  cl: 7
+  description:
+    value: >-
+      <p>This shining, ash-white ring of bone is crafted to look like countless
+      interlocking rat fangs, set with a dozen dark, garnet eyes like those of
+      albino sewer-hunters. The wearer of this ring can utter a command word to
+      call forth 1d3 rat swarms within 40 feet. These swarms each act
+      immediately and vanish after 7 rounds. They are independent and not under
+      the wearer's control, though the wearer is immune to the effects and
+      attacks of any swarm created through use of this ring.  Alternatively,
+      upon command, the ring's wearer can use dimension door. This magical
+      transportation must begin and end in a square that includes a swarm
+      summoned by use of this ring.  This ring's abilities can be used a total
+      of three times per day, in any combination. An urban druid (Pathfinder RPG
+      Advanced Player's Guide 101) wearing this ring can gain one additional use
+      per day by expending three daily uses of her wild shape
+      ability.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, dimension door, summon swarm</p>
+  price: 26000
+  slot: ring
+  sources:
+    - id: PZO1134
+  subType: wondrous
+type: equipment

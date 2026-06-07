@@ -1,0 +1,25 @@
+_id: sLJqaWb4muo5BlVQ
+_key: '!items!sLJqaWb4muo5BlVQ'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/feather-blue.webp
+name: Miner's Bird
+system:
+  description:
+    value: >-
+      <p>A miner's bird is a Diminutive, semi-trained animal (typically a canary
+      or other delicate songbird) in a portable cage. The enclosure is most
+      often made of wood or metal. The bird within has 1 hit point, a
+      Constitution score of 3, and a Fortitude save bonus of -2 (otherwise, its
+      statistics are identical to a thrush<sup></sup>). When the bird fails its
+      first saving throw against a poison-based effect, it emits a loud
+      chirping, audible within 60 feet.</p>
+  equipped: false
+  price: 5
+  sources:
+    - id: PZO9479
+      pages: '10'
+  subType: adventuring
+  weight:
+    value: 1
+type: loot

@@ -1,0 +1,30 @@
+_id: 7Sv8FB2JYRuLDxr0
+_key: '!items!7Sv8FB2JYRuLDxr0'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Feather Token, Catapult
+system:
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  cl: 12
+  description:
+    value: >-
+      <p>Each of these items is a small feather that has the power to create a
+      specific siege engine. The kinds of tokens are described below. Each token
+      is usable only once. A particular feather token has no specific feature to
+      identify it unless its magic aura is viewed-even tokens with identical
+      powers can be wildly different in appearance.  Catapult: This token
+      creates a standard catapult (Ultimate Combat 161). The catapult disappears
+      after 12 hours.  Ram: This token creates a Huge ram (Ultimate Combat 165).
+      The ram disappears after 24 hours.  Siege Tower: This token creates a Huge
+      siege tower (Ultimate Combat 165). The tower disappears after 1
+      hour.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, major creation, telekinetic assembly</p>
+  price: 400
+  sources:
+    - id: PZO9268
+  subType: wondrous
+type: equipment

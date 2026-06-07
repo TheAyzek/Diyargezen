@@ -1,0 +1,32 @@
+_id: wy6L4aKy7ybdEYQ7
+_key: '!items!wy6L4aKy7ybdEYQ7'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/survival/rope-wrapped-brown.webp
+name: Rope, Marine (Treated Hemp)
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 10 gp (treated hemp), 20 gp (woven kelp);
+      <strong>Weight</strong> 12 lbs. (treated hemp), 5 lbs. (woven
+      kelp)</p><p>Rope used by surface dwellers breaks down when submerged for
+      long periods, so undersea dwellers make use of rope designed to withstand
+      their environment. Treated hemp rope is usually created by surfacers in
+      the same manner as hemp rope, but it is infused with beeswax or linseed
+      oil to preserve its integrity underwater. This rope is therefore only
+      commonly used by underwater races that trade with land dwellers on a
+      regular basis. Woven kelp rope is crafted from specially grown seaweed by
+      undersea communities and is much more common in insular or deepwater
+      communities.</p><p>Both types of marine rope are sold in 50-foot lengths.
+      Treated hemp has 2 hit points and can be broken with a DC 23 Strength
+      check. Woven kelp has 3 hit points and can be broken with a DC 24 Strength
+      check.</p>
+  equipped: false
+  price: 10
+  sources:
+    - id: PZO9482
+      pages: '19'
+  subType: adventuring
+  weight:
+    value: 12
+type: loot

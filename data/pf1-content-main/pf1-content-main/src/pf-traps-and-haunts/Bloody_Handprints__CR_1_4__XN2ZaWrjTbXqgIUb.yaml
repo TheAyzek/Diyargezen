@@ -1,0 +1,38 @@
+_id: XN2ZaWrjTbXqgIUb
+_key: '!actors!XN2ZaWrjTbXqgIUb'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Bloody Handprints (CR 1/4)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    hp:
+      max: 1
+  details:
+    alignment: NE
+    area: surface with area up to 5-ft. square
+    biography: {}
+    cl: 1
+    cr:
+      base: 0.25
+    destruction: >-
+      The bloody handprints vanish if the surface is thoroughly cleaned and
+      scrubbed with holy water.
+    effect: >-
+      Bloody handprints slowly appear on the surface. Anyone touching the
+      surface takes 1d6 points of damage.
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Horror Adventures pg. 174</p>
+        <h3>Description</h3><p>A murder or other violent death lingers as bloody
+        marks that harm any creature touching the surface on which they
+        appear.</p>
+    notice: Perception DC 5 (to see dried bloody prints on the sruface
+    reset: 1 day
+    trigger: touch
+type: haunt

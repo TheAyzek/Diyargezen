@@ -22,7 +22,6 @@ Diyargezer/
 │   ├── base_creator.py            # Abstract base class
 │   ├── dnd5e_creator.py           # D&D 5e karakter oluşturucu
 │   ├── pathfinder1e_creator.py    # Pathfinder 1e karakter oluşturucu
-│   ├── vtm5e_creator.py           # VtM 5e karakter oluşturucu
 │   └── mm3e_creator.py            # M&M 3e karakter oluşturucu
 │
 ├── utils/
@@ -48,7 +47,6 @@ Diyargezer/
 │   ├── dnd_data.json              # D&D 5e verileri (~5MB)
 │   ├── pathfinder_1e_data.json    # Pathfinder 1e verileri (~1.5MB)
 │   ├── mm_data.json               # M&M 3e verileri
-│   ├── vtm_data.json              # VtM 5e verileri
 │   └── backgrounds/               # Background örnekleri
 │
 ├── tests/

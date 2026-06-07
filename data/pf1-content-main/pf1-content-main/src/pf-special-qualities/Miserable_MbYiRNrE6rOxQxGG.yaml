@@ -1,0 +1,27 @@
+_id: MbYiRNrE6rOxQxGG
+_key: '!items!MbYiRNrE6rOxQxGG'
+_stats:
+  coreVersion: '12.343'
+folder: AqjqWFWInPuTJU1V
+img: icons/skills/melee/strike-polearm-light-orange.webp
+name: Miserable
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate conjuration <strong>CL</strong>
+      8th</p><p><strong>Price</strong> +1 bonus;</p><p>A <em>miserable</em>
+      weapon cuts through the energy resistance of certain foes.
+      <em>Miserable</em> weapons must be crafted with a designated creature type
+      (just like <em>bane</em> weapons), and each time they deal damage to their
+      designated foes, their magic halves the creatures' natural energy
+      resistances for 1
+      round.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>summon monster I</em>; <strong>Price</strong>
+      -</p>
+  sources:
+    - id: PZO9464
+      pages: '26'
+  subType: misc
+  tags:
+    - Universal Weapon Qualities
+type: feat

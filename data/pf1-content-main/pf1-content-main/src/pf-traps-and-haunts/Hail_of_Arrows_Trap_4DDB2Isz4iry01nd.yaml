@@ -1,0 +1,115 @@
+_id: 4DDB2Isz4iry01nd
+_key: '!actors!4DDB2Isz4iry01nd'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: systems/pf1/icons/skills/arrow_16.jpg
+items:
+  - _id: j0bJWU1xetl5GuNR
+    _key: '!actors.items!4DDB2Isz4iry01nd.j0bJWU1xetl5GuNR'
+    _stats:
+      compendiumSource: Actor.8EQXew7zhqHoM9rX.Item.9WuEgtGioC8sKtb1
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/arrow_16.jpg
+    name: Hail of Arrows
+    system:
+      actions:
+        - _id: 3mt8acwap3o1vgrv
+          actionType: rwak
+          activation:
+            type: special
+            unchained:
+              type: special
+          attackBonus: '20'
+          damage:
+            parts:
+              - formula: 6d6
+                types:
+                  - piercing
+          img: systems/pf1/icons/skills/arrow_16.jpg
+          measureTemplate:
+            size: '20'
+            type: ray
+          name: Attack
+          range:
+            units: spec
+            value: sight
+          target:
+            value: multiple targets (all targets in a 20-ft. line)
+      proficient: true
+      subType: weapon
+    type: attack
+name: Hail of Arrows Trap
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 9
+    disarm: 25
+    duration: Instantaneous
+    effect: ''
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 25
+    reset: Repair
+    trigger: Visual (arcane eye)
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

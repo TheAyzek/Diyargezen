@@ -1,0 +1,44 @@
+_id: 9l3isd9r2To2wrMm
+_key: '!journal!9l3isd9r2To2wrMm'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Lorcan
+pages:
+  - _id: 17d57EY447EWeTEU
+    _key: '!journal.pages!9l3isd9r2To2wrMm.17d57EY447EWeTEU'
+    _stats:
+      coreVersion: '12.331'
+    name: Lorcan
+    sort: 0
+    text:
+      content: >-
+        <h1>Lorcan</h1><h2>The Red Reply</h2>@Source[PZO9267;pages=326] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Lorcan">Lorcan</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Infernal Dukes<br /><strong>Areas of
+        Concern</strong> Blood, rebirth, undeath<br /><strong>Domains</strong>
+        Evil, Healing, Law, Repose<br /><strong>Subdomains</strong> Devil
+        (Evil), Devil (Law), Resurrection, Souls, Undead<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Short sword<br /><strong>Symbol</strong> Bloody
+        bassinet<br /><strong>Sacred Animal(s)</strong> Pelican<br
+        /><strong>Sacred Color(s)</strong> Red,
+        white</p><h3>Obedience</h3><p>Chew on pieces of undead flesh. Gain a +4
+        profane bonus on saves against negative energy effects.</p><h2>Boons -
+        Infernal Dukes</h2>@Source[PZO1139;pages=117]<br />The Lords of Hell,
+        the Dukes of Perdition, and the Princes of Damnation are all names for
+        the infamous nobility of the Pit- the elite caste of devilkind known as
+        the infernal dukes.<p> All infernal dukes are lawful evil and range in
+        power from CR 26 to CR 27. The boons they grant are less complex than
+        those granted by archdevils, manifesting as spell-like abilities usable
+        once per day each.</p><p><strong>1</strong>: <em>halt undead</em><br
+        /><strong>2</strong>: <em>control undead</em><br /><strong>3</strong>:
+        <em>true resurrection</em></p><h2>For Followers of
+        Lorcan</h2><h3>Feats</h3><p><em>Hellish Shackles</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

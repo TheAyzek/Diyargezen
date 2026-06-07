@@ -1,0 +1,26 @@
+_id: KjSDT2SHZdOsTScy
+_key: '!items!KjSDT2SHZdOsTScy'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of the Freed Man
+system:
+  aura:
+    custom: true
+    school: varies, varies
+  cl: 17
+  description:
+    value: >-
+      <p>Just over 7 feet tall and topped with what looks like a large iron
+      skeleton key, this unassuming oaken staff appears to be nothing but a
+      common walking stick. It allows use of the following spells: • Detect
+      secret doors (2 charges)   • Knock (2 charges)   • Passwall (3 charges)  
+      • Freedom (5 charges.</p><h3>Requirements</h3><p>Craft Staff, detect
+      secret doors, freedom, knock, passwall</p>
+  price: 51688
+  sources:
+    - id: PZO9431
+  subType: staff
+  weight:
+    value: 5
+type: consumable

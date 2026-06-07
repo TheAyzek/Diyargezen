@@ -1,0 +1,77 @@
+_id: kt4vegsgZAoW66CB
+_key: '!items!kt4vegsgZAoW66CB'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/gem-rough-cushion-orange.webp
+name: Pale Orange Rhomboid Ioun Stone
+system:
+  actions:
+    - _id: tWVF0xxepCg4i8D2
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: <p>@UUID[Compendium.pf1.spells.Item.8ai7fslz4zu8xe9s]{magic jar}</p>
+      duration:
+        units: hour
+        value: '12'
+      name: Magic Jar
+      range:
+        units: medium
+      save:
+        dc: 10 + 5 + 2
+        description: negates
+        type: will
+      target:
+        value: you
+  aura:
+    school: nec
+  cl: 12
+  description:
+    instructions: >-
+      <p>Only 75% of normal ioun stones grant resonant powers when placed in a
+      wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>A orange stone prism with sides of unequal widths or angles, giving it
+      a flattened cross section.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone absorbs your soul as the
+      @UUID[Compendium.pf1.spells.Item.8ai7fslz4zu8xe9s]{magic jar} spell
+      immediately prior to your death. You can't transfer your soul from the
+      ioun stone receptacle to another creature's body, and are, for all intents
+      and purposes, dead. While your soul is in the ioun stone, you can sense
+      any life forces within @Distance[120;dual] as though you were placed in a
+      magic jar. At any point within 12 hours of your soul's transfer into the
+      pale orange rhombus ioun stone, you can return to your body as long as it
+      is within @Distance[120;dual] of the ioun stone. Upon returning to your
+      body, you are unconscious and dying with a number of negative hit points
+      equal to your Constitution score minus 1. If you fail to stabilize and
+      aren't healed after 1 turn, you die and your soul is not absorbed by the
+      ioun stone. Your soul can be absorbed into a pale orange rhombus ioun
+      stone only once per 24-hour period.</p><h3>Resonance</h3><p><strong>Method
+      1, Fixed: </strong>A soul held within the stone can remain there
+      indefinitely as long as the wayfinder remains on the soul's original body.
+      If the wayfinder is removed from the body, the ioun stone's resonant power
+      is suppressed until the wayfinder is replaced.</p><p><strong>Method 2,
+      Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, <em>magic jar</em>, creator must be 12th level
+      <strong>Cost</strong> 100,000 gp</p>
+  hardness: 5
+  price: 200000
+  showInQuickbar: true
+  sources:
+    - id: PZO9435
+      pages: 22, 23
+  subType: wondrous
+  tags:
+    - Ioun Stone
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: equipment

@@ -1,0 +1,32 @@
+_id: jLTABcRdeQQBbinS
+_key: '!items!jLTABcRdeQQBbinS'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Flying Chest
+system:
+  aura:
+    school: trs
+  cl: 10
+  description:
+    value: >-
+      <p>These chests most often appear as hinged, reinforced wooden barrels
+      with saddles. Upon close inspection, a keyhole is visible on the side of
+      the barrel, where a good lock is inset. The chest's interior can hold up
+      to 6 cubic feet of material. The chest can be ridden by a single Medium
+      creature or two Small creatures, and is able to fly through the air as if
+      affected by an overland flight spell (with a +5 bonus on Fly checks) for
+      up to 10 hours per day, split up as its owner desires. The chest can carry
+      up to 300 pounds at a speed of 40 feet, or up to 600 pounds at a speed of
+      30 feet. Only the weight of riders and materials strapped to the chest's
+      exterior counts for this limitation, not the weight of material stored
+      within.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, animate object, overland flight, permanency</p>
+  price: 19000
+  sources:
+    - id: PZO9275
+  subType: wondrous
+  weight:
+    value: 100
+type: equipment

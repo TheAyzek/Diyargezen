@@ -1,0 +1,46 @@
+_id: OpvoFF3jvVjxSceJ
+_key: '!journal!OpvoFF3jvVjxSceJ'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Wylgart
+pages:
+  - _id: dmDY4RQDPRiG0jrh
+    _key: '!journal.pages!OpvoFF3jvVjxSceJ.dmDY4RQDPRiG0jrh'
+    _stats:
+      coreVersion: '12.331'
+    name: Wylgart
+    sort: 0
+    text:
+      content: >-
+        <h1>Wylgart</h1><h2>The Unbroken Word</h2>@Source[PZO9267;pages=326] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Wylgart">Wylgart</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Infernal Dukes<br /><strong>Areas of
+        Concern</strong> Condemnation, judges, revision<br
+        /><strong>Domains</strong> Earth, Evil, Law, Protection<br
+        /><strong>Subdomains</strong> Defense, Devil (Evil), Devil (Law), Metal,
+        Tyranny<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Sling<br
+        /><strong>Symbol</strong> Iron-plated gavel<br /><strong>Sacred
+        Animal(s)</strong> Owl<br /><strong>Sacred Color(s)</strong> Black,
+        white</p><h3>Obedience</h3><p>Pass a binding judgment on the words or
+        deeds of a creature you've recently encountered, perhaps even yourself.
+        Gain a +4 profane bonus on saving throws against
+        compulsions.</p><h2>Boons - Infernal
+        Dukes</h2>@Source[PZO1139;pages=119]<br />The Lords of Hell, the Dukes
+        of Perdition, and the Princes of Damnation are all names for the
+        infamous nobility of the Pit- the elite caste of devilkind known as the
+        infernal dukes.<p> All infernal dukes are lawful evil and range in power
+        from CR 26 to CR 27. The boons they grant are less complex than those
+        granted by archdevils, manifesting as spell-like abilities usable once
+        per day each.</p><p><strong>1</strong>: <em>tongues</em><br
+        /><strong>2</strong>: <em>sequester</em><br /><strong>3</strong>: 
+        <em>power word kill</em></p><h2>For Followers of
+        Wylgart</h2><h3>Feats</h3><p><em>Hellish Shackles</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,33 @@
+_id: I3H3oHZFMr5B6CIg
+_key: '!items!I3H3oHZFMr5B6CIg'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/sword-bastard.PNG
+name: Briar
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: conjuration necromancy transmutation
+  baseTypes:
+    - Bastard Sword
+  cl: 20
+  description:
+    value: >-
+      <p>The blade called Briar is an intelligent +5 cold iron vorpal bastard
+      sword whose special purpose is to defeat denizens of the First
+      World.</p><p><strong>Base Item</strong>: cold iron vorpal bastard
+      sword</p>
+  enh: 5
+  material:
+    base:
+      value: steel
+    normal:
+      value: coldIron
+  sources:
+    - id: PZO9250
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 6
+type: weapon

@@ -1,0 +1,86 @@
+_id: rjdwOtqTXzWZxHdL
+_key: '!journal!rjdwOtqTXzWZxHdL'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: xDFOSIB9zt1JpooT
+name: 1.3.1. Generating Ability Scores
+pages:
+  - _id: gECWd5qCELt9dozu
+    _key: '!journal.pages!rjdwOtqTXzWZxHdL.gECWd5qCELt9dozu'
+    _stats:
+      coreVersion: '12.331'
+    name: 1.3.1. Generating Ability Scores
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.8scSEgBEtJZj0suf]{(Index) Basic
+        Rules}</p><p>@Compendium[pf-content.pf-rules.lm0j3gk5D1zbMSty]{1.3.
+        Ability
+        Scores}</p><ul><li><strong>@Compendium[pf-content.pf-rules.rjdwOtqTXzWZxHdL]{1.3.1.
+        Generating Ability
+        Scores}</strong></li><li>@Compendium[pf-content.pf-rules.h5FyB8UrkmgirwW6]{1.3.2.
+        Abilities and
+        Spellcasters}</li><li>@Compendium[pf-content.pf-rules.zOA9QmZKLKiZAsfW]{1.3.3.
+        Carrying Capacity}</li></ul><hr
+        /><p>@Source[PZO1110;pages=15]</p><p>There are a number of different
+        methods used to generate ability scores. Each of these methods gives a
+        different level of flexibility and randomness to character
+        generation.</p><p><br />Racial modifiers (adjustments made to your
+        ability scores due to your character’s race—see Chapter 2) are applied
+        after the scores are generated.</p><h2>Standard</h2><p>Roll 4d6, discard
+        the lowest die result, and add the three remaining results together.
+        Record this total and repeat the process until six numbers are
+        generated. Assign these totals to your ability scores as you see fit.
+        This method is less random than Classic and tends to create characters
+        with above-average ability scores.</p><h2>Classic</h2><p>Roll 3d6 and
+        add the dice together. Record this total and repeat the process until
+        you generate six numbers. Assign these results to your ability scores as
+        you see fit. This method is quite random, and some characters will have
+        clearly superior abilities. This randomness can be taken one step
+        further, with the totals applied to specific ability scores in the order
+        they are rolled. Characters generated using this method are difficult to
+        fit to predetermined concepts, as their scores might not support given
+        classes or personalities, and instead are best designed around their
+        ability scores.</p><h2>Heroic</h2><p>Roll 2d6 and add 6 to the sum of
+        the dice. Record this total and repeat the process until six numbers are
+        generated. Assign these totals to your ability scores as you see fit.
+        This is less random than the Standard method and generates characters
+        with mostly above-average scores.</p><h2>Dice Pool</h2><p>Each character
+        has a pool of 24d6 to assign to his statistics. Before the dice are
+        rolled, the player selects the number of dice to roll for each score,
+        with a minimum of 3d6 for each ability. Once the dice have been
+        assigned, the player rolls each group and totals the result of the three
+        highest dice. For more high-powered games, the GM should increase the
+        total number of dice to 28. This method generates characters of a
+        similar power to the Standard method.</p><h2>Purchase</h2><p>Each
+        character receives a number of points to spend on increasing his basic
+        attributes. In this method, all attributes start at a base of 10. A
+        character can increase an individual score by spending some of his
+        points. Likewise, he can gain more points to spend on other scores by
+        decreasing one or more of his ability scores. No score can be reduced
+        below 7 or raised above 18 using this method. See Table 1–1 on the next
+        page for the costs of each score. After all the points are spent, apply
+        any racial modifiers the character might have.</p><p>The number of
+        points you have to spend using the purchase method depends on the type
+        of campaign you are playing. The standard value for a character is 15
+        points. Average nonplayer characters (NPCs) are typically built using as
+        few as 3 points. See Table 1–2 on the next page for a number of possible
+        point values depending on the style of campaign. The purchase method
+        emphasizes player choice and creates equally balanced characters. This
+        system is typically used for organized play events, such as the
+        Pathfinder Society (visit paizo.com/pathfinderSociety for more details
+        on this exciting campaign).</p><h2>Table 1-1: Ability Score
+        Costs</h2><table><thead><tr><td>Score</td><td>Points</td></tr></thead><tbody><tr><td>7</td><td>-4</td></tr><tr><td>8</td><td>-2</td></tr><tr><td>9</td><td>-1</td></tr><tr><td>10</td><td>0</td></tr><tr><td>11</td><td>1</td></tr><tr><td>12</td><td>2</td></tr><tr><td>13</td><td>3</td></tr><tr><td>14</td><td>5</td></tr><tr><td>15</td><td>7</td></tr><tr><td>16</td><td>10</td></tr><tr><td>17</td><td>13</td></tr><tr><td>18</td><td>17</td></tr></tbody></table><h2><br
+        />Table 1-2: Ability Score Points</h2><table><thead><tr><td>Campaign
+        Type</td><td>Points</td></tr></thead><tbody><tr><td>Low
+        Fantasy</td><td>10</td></tr><tr><td>Standard
+        Fantasy</td><td>15</td></tr><tr><td>High
+        Fantasy</td><td>20</td></tr><tr><td>Epic
+        Fantasy</td><td>25</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

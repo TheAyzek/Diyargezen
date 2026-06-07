@@ -1,0 +1,27 @@
+_id: Qs5ooeAO5Cgf31pu
+_key: '!items!Qs5ooeAO5Cgf31pu'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Bottled Yeti Fur
+system:
+  aura:
+    school: abj
+  cl: 3
+  description:
+    value: >-
+      <p>This small opaque flask releases a thick stream of coarse white fur
+      when opened. This fur creeps up the user's arm and across her entire body
+      until she is completely covered in a tangled pelt. While coated with this
+      fur she gains cold resistance 5, a +2 natural armor bonus to AC, and a +4
+      competence bonus on Stealth checks in areas of ice and snow. This fur
+      sheds from her body after 24 hours, or can be removed early by soaking it
+      in alcohol. The flask is expended after one
+      use.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, barkskin, resist energy</p>
+  price: 800
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

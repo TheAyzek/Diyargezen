@@ -1,0 +1,21 @@
+_id: N7tNcaopa20htEky
+_key: '!items!N7tNcaopa20htEky'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_34.jpg
+name: Resistant Form*
+system:
+  associations:
+    classes:
+      - Shifter
+  description:
+    value: >-
+      <p><strong>Shifter Reactive Form</strong></p><p>When assuming this form,
+      the adaptive shifter chooses acid, cold, electricity, fire, or sonic
+      damage. She gains resistance to the chosen damage type equal to 5 plus
+      half her level. She can learn this form a second time, increasing the
+      resistance granted to 10 plus her level.</p>
+  subType: classFeat
+  tags:
+    - Shifter Reactive Form
+type: feat

@@ -1,0 +1,35 @@
+_id: SWUQBLKz545TXbhs
+_key: '!journal!SWUQBLKz545TXbhs'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Venkelvore
+pages:
+  - _id: FCZRZt27JvH27hZE
+    _key: '!journal.pages!SWUQBLKz545TXbhs.FCZRZt27JvH27hZE'
+    _stats:
+      coreVersion: '12.331'
+    name: Venkelvore
+    sort: 0
+    text:
+      content: >-
+        <h1>Venkelvore</h1><h2>Most Glorious
+        Neverfull</h2>@Source[PZO9267;pages=324] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Venkelvore">Venkelvore</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Goblin Hero-Gods<br /><strong>Areas of
+        Concern</strong> Famine, graves, torture<br /><strong>Domains</strong>
+        Death, Destruction, Earth, Evil<br /><strong>Subdomains</strong>
+        Catastrophe, Daemon, Torture, Undead<br /><em>* Requires the <u>Acolyte
+        of Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Spear<br /><strong>Symbol</strong> Half-eaten piece of food<br
+        /><strong>Sacred Animal(s)</strong> Crow<br /><strong>Sacred
+        Color(s)</strong> Gray, green</p><h2>For Followers of
+        Venkelvore</h2><h3>Magic Items - Wondrous Items</h3><p>Great Barghest
+        Hero Cloak</p><h3>Traits</h3><p>Restless Hunger</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

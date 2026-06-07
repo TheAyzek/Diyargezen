@@ -1,0 +1,28 @@
+_id: bI9zJIe3I8asBHiZ
+_key: '!items!bI9zJIe3I8asBHiZ'
+_stats:
+  coreVersion: '12.343'
+folder: AqjqWFWInPuTJU1V
+img: icons/skills/melee/strike-polearm-light-orange.webp
+name: Benevolent
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong>&nbsp;faint
+      enchantment&nbsp;<strong>CL</strong>&nbsp;5th</p><p><strong>Slot</strong>&nbsp;weapon
+      quality;&nbsp;<strong>Price</strong>&nbsp;+1
+      bonus;&nbsp;<strong>Weight</strong>&nbsp;-</p><h3>Description</h3><p>This
+      ability can only be placed on a melee weapon. When the wielder of a
+      benevolent weapon uses the aid another action to grant an ally a bonus on
+      attack rolls, he increases the aid another bonus by the enhancement bonus
+      of the
+      weapon.</p><h3>Construction</h3><p><strong>Requirements</strong>&nbsp;Craft
+      Magic Arms and
+      Armor,&nbsp;<em>aid</em>;&nbsp;<strong>Price</strong>&nbsp;-</p>
+  sources:
+    - id: PZO1123
+      pages: '136'
+  subType: misc
+  tags:
+    - Universal Weapon Qualities
+type: feat

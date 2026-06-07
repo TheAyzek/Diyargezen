@@ -1,0 +1,25 @@
+_id: Gib0C48KvJtdgI5J
+_key: '!items!Gib0C48KvJtdgI5J'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/unique-10.jpg
+name: Stout Solution
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Tincture</p><p>This highly viscous liquid
+      resembles tree sap and is difficult to swallow. For 2 hours after drinking
+      this tincture, you gain a +2 alchemical bonus to your CMD and you can
+      perform combat maneuvers as if you were one size category larger. Your
+      skeleton's increased density causes you to be treated as if you were
+      carrying a medium load, or a heavy load if you were already encumbered by
+      a medium load, for the same
+      duration.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      15</p>
+  price: 100
+  sources:
+    - id: PZO9487
+      pages: '23'
+  tags:
+    - Tincture
+type: consumable

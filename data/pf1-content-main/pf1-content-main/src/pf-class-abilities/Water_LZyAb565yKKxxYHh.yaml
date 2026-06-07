@@ -1,0 +1,25 @@
+_id: LZyAb565yKKxxYHh
+_key: '!items!LZyAb565yKKxxYHh'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Water
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Gozreh, Pharasma.</p><p><strong>Ice Strike (minor)</strong>: At 1st level,
+      you can touch one weapon and enhance it with the power of water. For 1
+      minute, this weapon glows with a blue-white chill and deals an additional
+      1d4 points of cold damage with each strike. This additional damage doesn't
+      stack with the additional damage from the frost or icy burst weapon
+      special abilities.</p><p><strong>Armor of Ice (major)</strong>: At 10th
+      level, you can touch any one ally and wreath it in freezing mist. This
+      works as fire shield (chill shield only) with a duration 1 minute.</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

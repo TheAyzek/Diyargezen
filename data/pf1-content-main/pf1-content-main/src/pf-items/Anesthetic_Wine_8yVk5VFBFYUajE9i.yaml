@@ -1,0 +1,23 @@
+_id: 8yVk5VFBFYUajE9i
+_key: '!items!8yVk5VFBFYUajE9i'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/unique-2.jpg
+name: Anesthetic Wine
+system:
+  description:
+    value: >-
+      <p>This alchemical anesthetic, developed from ancient recipes for Sarenite
+      sacred wine, grants a powerful resistance to pain. For 1 hour after
+      drinking anesthetic wine, you gain a +5 bonus on saving throws against
+      pain effects, and when you would take nonlethal damage, reduce the amount
+      of damage taken by 1.</p><h2>Construction</h2><p><strong>Craft
+      (Alchemy)</strong> DC 20</p>
+  price: 50
+  sources:
+    - id: PZO9481
+      pages: '29'
+  subType: misc
+  weight:
+    value: 1
+type: consumable

@@ -1,0 +1,174 @@
+_id: rCkDQsCLpcrfRjIB
+_key: '!tables!rCkDQsCLpcrfRjIB'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/terrain-river-road-gray.webp
+name: Cold Mountains (Medium Level)
+replacement: true
+results:
+  - _id: hYpnLnQfOYxVMd1M
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.hYpnLnQfOYxVMd1M'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 7
+    text: 1 Dire Polar Bear [CR 7]
+    type: text
+    weight: 1
+  - _id: 3PGkVSBomHDXT4hI
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.3PGkVSBomHDXT4hI'
+    img: icons/svg/d20-black.svg
+    range:
+      - 8
+      - 13
+    text: 1 Hill Giant [CR 7]
+    type: text
+    weight: 1
+  - _id: Q30pjW1bCLzihtH4
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.Q30pjW1bCLzihtH4'
+    img: icons/svg/d20-black.svg
+    range:
+      - 14
+      - 18
+    text: 1 Remorhaz [CR 7]
+    type: text
+    weight: 1
+  - _id: tBSDGGEOZBz97V8w
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.tBSDGGEOZBz97V8w'
+    img: icons/svg/d20-black.svg
+    range:
+      - 19
+      - 23
+    text: 1 Crag Spider [CR 8]
+    type: text
+    weight: 1
+  - _id: SJVCoVRbVqb6kS7M
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.SJVCoVRbVqb6kS7M'
+    img: icons/svg/d20-black.svg
+    range:
+      - 24
+      - 29
+    text: 1 Denizen of Leng [CR 8]
+    type: text
+    weight: 1
+  - _id: RgUH5wlHk5Ny1ciS
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.RgUH5wlHk5Ny1ciS'
+    img: icons/svg/d20-black.svg
+    range:
+      - 30
+      - 34
+    text: '[[2d3]] Harpies [AVG CR 8]'
+    type: text
+    weight: 1
+  - _id: nV2ffB4bIPv9mNtU
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.nV2ffB4bIPv9mNtU'
+    img: icons/svg/d20-black.svg
+    range:
+      - 35
+      - 40
+    text: '[[2d4]] Raiders (CN Human Rogue 4) [AVG CR 8]'
+    type: text
+    weight: 1
+  - _id: d6S0HRvuiIs9ItqJ
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.d6S0HRvuiIs9ItqJ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 41
+      - 46
+    text: 2 Shambling Mounds [CR 8]
+    type: text
+    weight: 1
+  - _id: 095J3HoKYJ5ltfQ1
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.095J3HoKYJ5ltfQ1'
+    img: icons/svg/d20-black.svg
+    range:
+      - 47
+      - 51
+    text: Colonists or Pilgrims [CR 9]
+    type: text
+    weight: 1
+  - _id: jKkTH4BDBecHMtGS
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.jKkTH4BDBecHMtGS'
+    img: icons/svg/d20-black.svg
+    range:
+      - 52
+      - 57
+    text: 3 Xorns [CR 9]
+    type: text
+    weight: 1
+  - _id: w6gGw4vQ63h3x4zf
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.w6gGw4vQ63h3x4zf'
+    img: icons/svg/d20-black.svg
+    range:
+      - 58
+      - 62
+    text: '[[2d4]] Lamias [AVG CR 9]'
+    type: text
+    weight: 1
+  - _id: VnQe7Cu4dfThV8tT
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.VnQe7Cu4dfThV8tT'
+    img: icons/svg/d20-black.svg
+    range:
+      - 63
+      - 67
+    text: 1 Roc [CR 9]
+    type: text
+    weight: 1
+  - _id: 3QpNdtMCWn8lylHT
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.3QpNdtMCWn8lylHT'
+    img: icons/svg/d20-black.svg
+    range:
+      - 68
+      - 72
+    text: '[[3d4]] Ogres [AVG CR 10]'
+    type: text
+    weight: 1
+  - _id: BiyLM8BohqxqHaaw
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.BiyLM8BohqxqHaaw'
+    img: icons/svg/d20-black.svg
+    range:
+      - 73
+      - 77
+    text: 2 Stone Giants [CR 10]
+    type: text
+    weight: 1
+  - _id: CBmLWL71IXzlMDnp
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.CBmLWL71IXzlMDnp'
+    img: icons/svg/d20-black.svg
+    range:
+      - 78
+      - 81
+    text: '[[2d4]] Winter Wolves [AVG CR 10]'
+    type: text
+    weight: 1
+  - _id: ub7cKZePP1GCqLrT
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.ub7cKZePP1GCqLrT'
+    img: icons/svg/d20-black.svg
+    range:
+      - 82
+      - 87
+    text: 3 Frost Drakes [AVG CR 11]
+    type: text
+    weight: 1
+  - _id: pofovrBhzAOyChuN
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.pofovrBhzAOyChuN'
+    img: icons/svg/d20-black.svg
+    range:
+      - 88
+      - 93
+    text: Skulk Natives (N Skulk Cleric 5 and [[2d6]] Skulks) [AVG CR 11]
+    type: text
+    weight: 1
+  - _id: 36P76mAEzW3KYya7
+    _key: '!tables.results!rCkDQsCLpcrfRjIB.36P76mAEzW3KYya7'
+    img: icons/svg/d20-black.svg
+    range:
+      - 94
+      - 100
+    text: Yeti Tribe (Yeti Barbarian 8 and [[2d4]] Yetis) [AVG CR 11]
+    type: text
+    weight: 1
+sort: 4300000

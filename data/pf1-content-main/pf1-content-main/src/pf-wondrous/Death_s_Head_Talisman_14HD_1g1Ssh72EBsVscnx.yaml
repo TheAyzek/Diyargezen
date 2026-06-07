@@ -1,0 +1,33 @@
+_id: 1g1Ssh72EBsVscnx
+_key: '!items!1g1Ssh72EBsVscnx'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Death's Head Talisman 14HD
+system:
+  aura:
+    custom: true
+    school: varies
+  cl: 7
+  description:
+    value: >-
+      <p>This amulet allows the wearer to command a number of undead skeletons
+      and zombies, which are keyed to the amulet when it is created. The
+      animation of the undead is part of the creation process-undead that have
+      already been created cannot be bound to a death's head talisman. The
+      number of HD of undead tied to the amulet is equal to twice the amulet's
+      caster level. The amulet allows the wearer to command the undead as if she
+      had created them with animate dead, even if she has no magical talent of
+      her own. The undead are only under control while the amulet is worn; if
+      the amulet is removed, the undead revert to normal behavior, standing in
+      place but responding if attacked. Once the specific undead tied to the
+      amulet are destroyed, the talisman loses all
+      power.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, animate dead</p>
+  price: 1400
+  slot: neck
+  sources:
+    - id: PZO9223
+  subType: wondrous
+type: equipment

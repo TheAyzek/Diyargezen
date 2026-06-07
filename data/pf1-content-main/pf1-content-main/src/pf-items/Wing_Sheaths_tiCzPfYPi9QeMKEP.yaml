@@ -1,0 +1,25 @@
+_id: tiCzPfYPi9QeMKEP
+_key: '!items!tiCzPfYPi9QeMKEP'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/cloth/cloth-worn-leaf-green.webp
+name: Wing Sheaths
+system:
+  description:
+    value: >-
+      <p>Wing sheaths are protective coverings created from thick fabric or
+      canvas. The sheaths are designed to tightly cover a pair of wings to keep
+      them hidden beneath a cloak or loose-fitting clothing. Noticing hidden
+      wings bound within wing sheaths requires a successful DC 20 Perception
+      check. Donning or removing wing sheaths requires 1 minute, or a full-round
+      action with assistance. Wing sheaths can be burst with a successful DC 22
+      Strength check.</p>
+  equipped: false
+  price: 10
+  sources:
+    - id: PZO9481
+      pages: '13'
+  subType: adventuring
+  weight:
+    value: 10
+type: loot

@@ -1,0 +1,39 @@
+_id: j27N0Pae6J9If6Vf
+_key: '!items!j27N0Pae6J9If6Vf'
+_stats:
+  coreVersion: '12.343'
+folder: CAxOlglJyXdUOHF9
+img: icons/environment/wilderness/cave-entrance-rocky.webp
+name: Militia Veteran (Taldor)
+system:
+  changes:
+    - _id: l14M99Zz
+      formula: '2'
+      type: trait
+  description:
+    value: >-
+      <p><em>Your first job was serving in a civilian militia in your
+      hometown.</em></p><p><em>Skills learned while daily drilling and
+      protecting your fellow townsfolk gave you special insight into military
+      life.</em></p><p>Requirements</p><p>Taldor</p><p>Benefits</p><p>Select one
+      of the following skills: Profession (soldier), Ride, or Survival. You gain
+      a +2 trait bonus on that skill, and it is always a class skill for
+      you.</p><div><hr /></div><p>Usage</p><p>Select Profession (soldier), Ride,
+      or Survival when you take this trait.</p><p>If you Select Profession
+      (soldier), Update the Skills tab of your Actor to add the chosen
+      skill.</p><p>Update the Class skills section of the details tab of this
+      trait to reflect your choice.</p><p>Update the target of the change on the
+      Changes tab of this trait to reflect your choice.</p><p><strong>Special
+      Note</strong>: This is the 3.5 Ruleset version of this trait. To view the
+      updated version for the Pathfinder rules click the link
+      below:</p><p>@UUID[Compendium.pf-content.pf-traits.Item.q7Yn8LrdhIZDmaFI]{Militia
+      Veteran (Any Town or Village)}</p>
+  sources:
+    - id: PZO9405
+      pages: '13'
+  subType: trait
+  tags:
+    - '3.5'
+    - Taldor
+  traitType: region
+type: feat

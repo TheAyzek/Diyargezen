@@ -1,0 +1,43 @@
+_id: jdjSjQttOV1N1sqW
+_key: '!items!jdjSjQttOV1N1sqW'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-8.jpg
+name: Harlot Sweets
+system:
+  actions:
+    - _id: gmx61f2buqhw16zp
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-8.jpg
+      name: Use
+      notes:
+        effect:
+          - <strong>Effect</strong> 1 hour;  +1d4 Cha and +1 Dex
+          - <strong>Damage</strong> 1d2 Int damage
+      save:
+        dc: '18'
+        type: fort
+      tag: harlotSweets
+  description:
+    value: >-
+      <p><strong>Type</strong> ingested;<strong> Addiction </strong>moderate,
+      Fortitude DC 18</p><p><strong>Price </strong>60&nbsp;gp; <strong>Weight
+      </strong>0 lbs</p><p><strong>Effect </strong>1 hour; &nbsp;+1d4 Cha and +1
+      Dex</p><p><strong>Damage </strong>1d2 Int damage</p><p>These amber-colored
+      lozenges instill within the user a slightly increased agility and enhance
+      both physical beauty and speech. So named for the fact that prostitutes
+      often abuse the drug, harlot sweets are gaining popularity among certain
+      circles in the aristocracy as well.</p>
+  price: 60
+  sources:
+    - id: PZO9232
+      pages: '53'
+  subType: drug
+  uses:
+    per: single
+type: consumable

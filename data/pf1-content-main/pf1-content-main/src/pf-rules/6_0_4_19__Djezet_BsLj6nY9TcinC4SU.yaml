@@ -1,0 +1,39 @@
+_id: BsLj6nY9TcinC4SU
+_key: '!journal!BsLj6nY9TcinC4SU'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.4.19. Djezet
+pages:
+  - _id: hwZpYv7dA0NULv18
+    _key: '!journal.pages!BsLj6nY9TcinC4SU.hwZpYv7dA0NULv18'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.4.19. Djezet
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li>@Compendium[pf-content.pf-rules.TROqcNjEw3b2q2Dk]{6.0.4.
+        Special Materials}</li></ul><hr /><p>@Source[PZO9061;pages=70]</p><p>One
+        of the strangest of the seven known types of skymetal, rust-red djezet
+        is liquid at all temperatures. This makes the metal relatively useless
+        for crafting metal objects (although many gifted metallurgists, such as
+        Xin himself, have had some success creating djezet alloys), but most who
+        seek out this metal intend to use it instead as an additional material
+        component for spellcasting, since it possesses an ability to enhance
+        magic.</p><p>Djezet is associated with enchantment magic, love, and
+        lust. Used as an additional material component, a dose of djezet
+        increases the effective level of a spell by +1, as if it were being
+        modified by the Heighten Spell feat. In order to function as an
+        additional material component, the spellcaster must use a number of
+        doses of djezet equal to the spell’s level—additional djezet used beyond
+        this amount does nothing. Djezet costs 200 gp per dose.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

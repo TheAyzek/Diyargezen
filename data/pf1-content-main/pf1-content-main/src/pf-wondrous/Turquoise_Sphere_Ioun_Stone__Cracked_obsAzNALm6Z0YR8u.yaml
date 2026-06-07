@@ -1,0 +1,46 @@
+_id: obsAzNALm6Z0YR8u
+_key: '!items!obsAzNALm6Z0YR8u'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/pearl-turquoise.webp
+name: Turquoise Sphere Ioun Stone, Cracked
+system:
+  aura:
+    school: trs
+  changes:
+    - _id: 1xjpetgx
+      formula: '1'
+      target: skill.rid
+      type: competence
+  cl: 12
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>A spherical stone with shades of green and blue.  A crack mars its
+      surface.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone grants you a +1 competence bonus on Ride
+      checks.</p><h3>Resonance</h3><p><strong>Method 1, Fixed: </strong>+2
+      competence bonus on Handle Animal checks.</p><p><strong>Method 2,
+      Variable:
+      </strong>@UUID[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]{Ioun
+      Stone Resonance Powers Method
+      2}</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Wondrous
+      Item, <em>charm animal, longstrider</em>, creator must be 12th level
+      <strong>Cost</strong> 100 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 200
+  sources:
+    - id: PZO9211
+      pages: 47, 53
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

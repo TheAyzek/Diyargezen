@@ -1,0 +1,228 @@
+_id: LXXmT6ieQ4r0vJpw
+_key: '!tables!LXXmT6ieQ4r0vJpw'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/altar-hidden.webp
+name: Jungle [Warm] (AVG CR 5)
+replacement: true
+results:
+  - _id: 6Hpzb1NXsGSBXbc5
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.6Hpzb1NXsGSBXbc5'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 4
+    text: 1 Bat Swarm [CR 2]
+    type: text
+    weight: 1
+  - _id: 3Zbd6RMnGoI8zERt
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.3Zbd6RMnGoI8zERt'
+    img: icons/svg/d20-black.svg
+    range:
+      - 5
+      - 8
+    text: 1 Yellow Musk Creeper [CR 2]
+    type: text
+    weight: 1
+  - _id: b6FC2ibsaFFE2Fd7
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.b6FC2ibsaFFE2Fd7'
+    img: icons/svg/d20-black.svg
+    range:
+      - 9
+      - 14
+    text: 1 Constrictor Snake [CR 2]
+    type: text
+    weight: 1
+  - _id: yZMk8lBO8ke8OSvu
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.yZMk8lBO8ke8OSvu'
+    img: icons/svg/d20-black.svg
+    range:
+      - 15
+      - 18
+    text: '[[1d6]] Giant Centipedes [AVG CR 3]'
+    type: text
+    weight: 1
+  - _id: V5gHbqoKKvTUsRP7
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.V5gHbqoKKvTUsRP7'
+    img: icons/svg/d20-black.svg
+    range:
+      - 19
+      - 26
+    text: 1 Leopard [CR 2]
+    type: text
+    weight: 1
+  - _id: qkthrpwSu1Gxhojn
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.qkthrpwSu1Gxhojn'
+    img: icons/svg/d20-black.svg
+    range:
+      - 27
+      - 30
+    text: '[[1d4]] Giant Spiders [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: xEeStp4TokqOUSLK
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.xEeStp4TokqOUSLK'
+    img: icons/svg/d20-black.svg
+    range:
+      - 31
+      - 34
+    text: '[[1d6]] Venomous Spiders [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: ifyyTP24iluDjhmO
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.ifyyTP24iluDjhmO'
+    img: icons/svg/d20-black.svg
+    range:
+      - 35
+      - 40
+    text: '[[1d4]] Boars [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: GpuZPUmbQVKvhnQs
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.GpuZPUmbQVKvhnQs'
+    img: icons/svg/d20-black.svg
+    range:
+      - 41
+      - 44
+    text: 1 Dire Boar [CR 4]
+    type: text
+    weight: 1
+  - _id: 96PJ2MD4oPLX68Oi
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.96PJ2MD4oPLX68Oi'
+    img: icons/svg/d20-black.svg
+    range:
+      - 45
+      - 50
+    text: 1 Tiger [CR 4]
+    type: text
+    weight: 1
+  - _id: zIDR4UAj8VXFqAQo
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.zIDR4UAj8VXFqAQo'
+    img: icons/svg/d20-black.svg
+    range:
+      - 51
+      - 54
+    text: 1 Giant Frilled Lizard [CR 5]
+    type: text
+    weight: 1
+  - _id: BbnRZftn0jTh24dP
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.BbnRZftn0jTh24dP'
+    img: icons/svg/d20-black.svg
+    range:
+      - 55
+      - 60
+    text: '[[1d6]] Monitor Lizards [AVG CR 6]'
+    type: text
+    weight: 1
+  - _id: jqyilNndzWU1vPmP
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.jqyilNndzWU1vPmP'
+    img: icons/svg/d20-black.svg
+    range:
+      - 61
+      - 62
+    text: 1 Army Ant Swarm [CR 5]
+    type: text
+    weight: 1
+  - _id: R5Xedy7s1uTaetcq
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.R5Xedy7s1uTaetcq'
+    img: icons/svg/d20-black.svg
+    range:
+      - 63
+      - 64
+    text: 1 Ankylosaurus [CR 6]
+    type: text
+    weight: 1
+  - _id: Jta9tplz6EvwZIWV
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.Jta9tplz6EvwZIWV'
+    img: icons/svg/d20-black.svg
+    range:
+      - 65
+      - 70
+    text: '[[1d6]] Dire Apes [AVG CR 7]'
+    type: text
+    weight: 1
+  - _id: MmtvgvHeslCBOqms
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.MmtvgvHeslCBOqms'
+    img: icons/svg/d20-black.svg
+    range:
+      - 71
+      - 78
+    text: '[[2d4]] Gorillas [AVG CR 7]'
+    type: text
+    weight: 1
+  - _id: WCJCxl480hU8NOQI
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.WCJCxl480hU8NOQI'
+    img: icons/svg/d20-black.svg
+    range:
+      - 79
+      - 82
+    text: '[[2d4]] Deinonychuses [AVG CR 8]'
+    type: text
+    weight: 1
+  - _id: tolfypvdbPXlMWTQ
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.tolfypvdbPXlMWTQ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 83
+      - 84
+    text: 1 Nymph [CR 7]
+    type: text
+    weight: 1
+  - _id: q0melHzryPSTIFW4
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.q0melHzryPSTIFW4'
+    img: icons/svg/d20-black.svg
+    range:
+      - 85
+      - 86
+    text: '[[1d4]] Girallons [AVG CR 9]'
+    type: text
+    weight: 1
+  - _id: GcFL18BbFRGgV7bg
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.GcFL18BbFRGgV7bg'
+    img: icons/svg/d20-black.svg
+    range:
+      - 87
+      - 90
+    text: 1 Dire Tiger [CR 8]
+    type: text
+    weight: 1
+  - _id: sPbcR8kdNlhRx6Iv
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.sPbcR8kdNlhRx6Iv'
+    img: icons/svg/d20-black.svg
+    range:
+      - 91
+      - 94
+    text: '[[1d4]] Shambling Mounds [AVG CR 9]'
+    type: text
+    weight: 1
+  - _id: VWt79ZKFokNpBedI
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.VWt79ZKFokNpBedI'
+    img: icons/svg/d20-black.svg
+    range:
+      - 95
+      - 96
+    text: 1 Treant [CR 8]
+    type: text
+    weight: 1
+  - _id: bKWv8YjgyFVBnjJq
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.bKWv8YjgyFVBnjJq'
+    img: icons/svg/d20-black.svg
+    range:
+      - 97
+      - 98
+    text: 1 Tyrannosaurus [CR 9]
+    type: text
+    weight: 1
+  - _id: sfdyF0k7A7YmrvCz
+    _key: '!tables.results!LXXmT6ieQ4r0vJpw.sfdyF0k7A7YmrvCz'
+    img: icons/svg/d20-black.svg
+    range:
+      - 99
+      - 100
+    text: 1 Brachiosaurus [CR 10]
+    type: text
+    weight: 1
+sort: 800000

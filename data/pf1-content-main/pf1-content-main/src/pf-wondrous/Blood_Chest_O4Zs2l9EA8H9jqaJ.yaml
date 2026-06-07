@@ -1,0 +1,39 @@
+_id: O4Zs2l9EA8H9jqaJ
+_key: '!items!O4Zs2l9EA8H9jqaJ'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Blood Chest
+system:
+  aura:
+    custom: true
+    school: transformation
+  cl: 9
+  description:
+    value: >-
+      <p>A blood chest is a medium-sized chest of red iron with a volume of 4
+      cubic feet. The metal sculpture of a monstrous fanged face surrounds the
+      inset superior quality lock, making it impossible to reach the lock
+      without putting a hand in the mouth. The chest is additionally sealed by a
+      permanent arcane lock, and is protected by powerful magic that makes the
+      chest as resilient as a wall of force.  The chest is attuned to a
+      particular owner, which can be changed by speaking a command word while
+      the chest is open. Any key can be used in the lock, but whenever a key is
+      inserted, the fanged mouth closes on the hand holding it (or on the device
+      holding it, if some contraption is used to insert the key) and deals 1
+      point of damage. If the bitten hand is that of the owner attuned to the
+      chest, the chest opens. If the hand belongs to anyone else, or no hand is
+      present to bite, or the hand is not damaged by the bite, the chest doesn't
+      open. If the lock is picked with a successful DC 50 Disable Device check,
+      the teeth don't
+      close.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, arcane lock, vampiric hunger (Pathfinder Player Companion:
+      Faiths of Corruption 29), wall of force</p>
+  price: 42000
+  sources:
+    - id: PZO9275
+  subType: wondrous
+  weight:
+    value: 50
+type: equipment

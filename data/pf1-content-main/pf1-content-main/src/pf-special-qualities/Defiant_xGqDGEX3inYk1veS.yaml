@@ -1,0 +1,34 @@
+_id: xGqDGEX3inYk1veS
+_key: '!items!xGqDGEX3inYk1veS'
+_stats:
+  coreVersion: '12.343'
+folder: YaC0PDBdquBGbbsG
+img: systems/pf1/icons/skills/violet_04.jpg
+name: Defiant
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong>&nbsp;strong
+      abjuration&nbsp;<strong>CL</strong>&nbsp;10th</p><p><strong>Slot</strong>&nbsp;weapon
+      quality;&nbsp;<strong>Price</strong>&nbsp;+2
+      bonus;&nbsp;<strong>Weight</strong>&nbsp;-</p><h3>Description</h3><p>This
+      special ability can only be placed on melee weapons.
+      A&nbsp;<em>defiant&nbsp;</em>weapon helps its wielder stay alive in
+      desperate conditions. It stays in its wielder's hand even if she is
+      panicked, stunned, or unconscious. She adds the weapon's enhancement bonus
+      as a bonus on checks to stabilize when dying and on saving throws to end
+      ongoing conditions such as disease, poison, and&nbsp;<em>hold person</em>.
+      If the wielder possesses Heroic Defiance, Heroic Recovery, Improved Great
+      Fortitude, Improved Iron Will, or Improved Lightning Reflexes, she gains a
+      number of additional daily uses equal to the weapon's enhancement bonus
+      that can be used on any of these
+      feats.</p><h3>Construction</h3><p><strong>Requirements</strong>&nbsp;Craft
+      Magic Arms and Armor, Heroic Defiance,&nbsp;<em>break
+      enchantment</em>,&nbsp;<em>stabilize</em>;&nbsp;<strong>Price</strong>&nbsp;-</p>
+  sources:
+    - id: PZO1123
+      pages: '140'
+  subType: misc
+  tags:
+    - Melee Qualities
+type: feat

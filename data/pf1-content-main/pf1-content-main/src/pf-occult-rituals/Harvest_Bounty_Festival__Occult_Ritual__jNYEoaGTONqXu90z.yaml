@@ -1,0 +1,67 @@
+_id: jNYEoaGTONqXu90z
+_key: '!items!jNYEoaGTONqXu90z'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Harvest Bounty Festival (Occult Ritual)
+system:
+  actions:
+    - _id: 3r9cwmh1eaopzb29
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        description: negates
+        harmless: true
+        type: will
+      target:
+        value: one creature
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    focus: true
+    material: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> transmutation; <strong>Level</strong>
+      8</p><p><strong>Casting Time</strong> 24
+      hours</p><p><strong>Components</strong> V, S, M (a feast capable of
+      feeding at least 1,000 people), F (ceremonial sickle worth at least 500
+      gp), SC (up to 100)</p><p><strong>Skill Checks</strong> Perform (oratory)
+      DC 33, 2 successes; Knowledge (nature) DC 33, 3 successes; Profession
+      (cook) DC 33, 3 successes</p><p><strong>Range</strong>
+      touch</p><p><strong>Target</strong> one
+      creature</p><p><strong>Duration</strong> 30 days; see
+      text</p><p><strong>Saving Throw</strong> Will negates (harmless);
+      <strong>SR</strong> no</p><p><strong>Backlash</strong> The primary caster
+      is sickened for 1d4 days.</p><p><strong>Failure</strong> The casters are
+      nauseated for 24 hours.</p><h3>Effect</h3><p>At the completion of this
+      ritual, one of the casters is selected as the target for the effect. The
+      selected caster gains the ability to cast <em>commune with nature</em> as
+      a spell-like ability once over the course of the next 30 days, and the
+      ability to cast <em>plant growth</em> (enrichment only) five times over
+      the course of the next 30 days. The caster level for these effects is
+      equal to the character level of the primary caster. In addition, all
+      casters who celebrate the festival gain a +1 morale bonus on Diplomacy
+      checks for 48 hours.</p>
+  flags:
+    dictionary:
+      summary: Target can cast plant-based spells during the next 30 days
+  level: 8
+  materials:
+    focus: ceremonial sickle worth at least 500 gp
+    value: a feast capable of feeding at least 1,000 people
+  school: trs
+  sources:
+    - id: PZO9285
+      pages: '52'
+  sr: false
+type: spell

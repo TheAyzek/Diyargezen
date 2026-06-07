@@ -1,0 +1,82 @@
+_id: St9hpjjACPQqzFMn
+_key: '!journal!St9hpjjACPQqzFMn'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.20.08. Creating Staves
+pages:
+  - _id: cv9fshG4iKxKElYo
+    _key: '!journal.pages!St9hpjjACPQqzFMn.cv9fshG4iKxKElYo'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.20.08. Creating Staves
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.s3ene84nkQAyhCrW]{6.1.
+        Magic
+        Items}</p><ul><li><p>@Compendium[pf-content.pf-rules.X6hkpqXjE3T3jRy2]{6.1.20.
+        Magic Item
+        Creation}</p><ul><li>@Compendium[pf-content.pf-rules.MKyiWPbkUFcVvhbY]{6.1.20.01.
+        Magic Item Gold Piece
+        Values}</li><li>@Compendium[pf-content.pf-rules.iNnOJ9140oED1qrh]{6.1.20.02.
+        Creating Magic
+        Armor}</li><li>@Compendium[pf-content.pf-rules.eqJGh3BnP3n72Lrw]{6.1.20.03.
+        Creating Magic
+        Weapons}</li><li>@Compendium[pf-content.pf-rules.ckOP5mdpe4WV1qFU]{6.1.20.04.
+        Creating
+        Potions}</li><li>@Compendium[pf-content.pf-rules.yhRnmIAGnV2LhC91]{6.1.20.05.
+        Creating
+        Rings}</li><li>@Compendium[pf-content.pf-rules.i87q7N8kBH0ztizC]{6.1.20.06.
+        Creating
+        Rods}</li><li>@Compendium[pf-content.pf-rules.ycZUll4iVfFtobWL]{6.1.20.07.
+        Creating
+        Scrolls}</li><li><strong>@Compendium[pf-content.pf-rules.St9hpjjACPQqzFMn]{6.1.20.08.
+        Creating
+        Staves}</strong></li><li>@Compendium[pf-content.pf-rules.T5CscckFyyiebamM]{6.1.20.09.
+        Creating
+        Wands}</li><li>@Compendium[pf-content.pf-rules.LIXx5H71BJ1OxJw9]{6.1.20.10.
+        Creating Wondrous
+        Items}</li><li>@Compendium[pf-content.pf-rules.dX8eAXiO1h6yKNVo]{6.1.20.11.
+        Adding New Abilities}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=552]</p><p>To create a magic staff, a
+        character needs a supply of materials, the most obvious being a staff or
+        the pieces of the staff to be assembled.</p><p>The materials cost is
+        subsumed in the cost of creation: 400 gp × the level of the
+        highest-level spell × the level of the caster, plus 75% of the value of
+        the next most costly ability (300 gp × the level of the spell × the
+        level of the caster), plus 1/2 the value of any other abilities (200 gp
+        × the level of the spell × the level of the caster). Staves are always
+        fully charged (10 charges) when created.</p><p>If desired, a spell can
+        be placed into the staff at less than the normal cost, but then
+        activating that particular spell drains additional charges from the
+        staff. Divide the cost of the spell by the number of charges it consumes
+        to determine its final price. Note that this does not change the order
+        in which the spells are priced (the highest level spell is still priced
+        first, even if it requires more than one charge to activate). The caster
+        level of all spells in a staff must be the same, and no staff can have a
+        caster level of less than 8th, even if all the spells in the staff are
+        low-level spells.</p><p>The creator must have prepared the spells to be
+        stored (or must know the spells, in the case of a sorcerer or bard) and
+        must provide any focus the spells require as well as material component
+        costs sufficient to activate the spell 50 times (divide this amount by
+        the number of charges one use of the spell expends). Material components
+        are consumed when he begins working, but focuses are not. (A focus used
+        in creating a staff can be reused.) The act of working on the staff
+        triggers the prepared spells, making them unavailable for casting during
+        each day of the staff ’s creation. (That is, those spell slots are
+        expended from the caster’s currently prepared spells, just as if they
+        had been cast.)</p><p>Creating a few staves may entail other
+        prerequisites beyond spellcasting. See the individual descriptions for
+        details.</p><p>Crafting a staff requires 1 day for each 1,000 gp of the
+        base price.</p><h2>Item Creation Feat Required</h2><p>Craft
+        Staff.</p><h2>Skill Used in Creation</h2><p>Spellcraft, Craft (
+        jewelry), Craft (sculptures), or Profession (woodcutter).</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

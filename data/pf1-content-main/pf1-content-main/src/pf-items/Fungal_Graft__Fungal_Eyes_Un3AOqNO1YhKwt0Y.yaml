@@ -1,0 +1,24 @@
+_id: Un3AOqNO1YhKwt0Y
+_key: '!items!Un3AOqNO1YhKwt0Y'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/biological/pustules-red.webp
+name: Fungal Graft, Fungal Eyes
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 18,000 gp; <strong>Slot</strong>
+      eyes</p><p>These small, glowing blue fungi form a protective film over the
+      subjects eyes, preventing her from seeing with normal vision but granting
+      her blindsight to a range of 30 feet.</p><h2>Cultivation
+      Requirements</h2><p>Craft (alchemy) 12 ranks; <strong>Skill</strong> Craft
+      (alchemy) DC 25, Heal DC 25; <strong>Cultivation Cost</strong> 9,000
+      gp</p>
+  equipped: false
+  price: 18000
+  sources:
+    - id: PZO9445
+      pages: '10'
+  tags:
+    - Fungal Graft
+type: loot

@@ -1,0 +1,34 @@
+_id: D4X8fbw9EElwZILE
+_key: '!items!D4X8fbw9EElwZILE'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Armband of the Golden Serpent
+system:
+  aura:
+    school: abj
+  cl: 9
+  description:
+    value: >-
+      <p>Heavy golden coils form this serpentine armband. It wraps snugly around
+      the upper arm of its wearer and stays firmly in place once donned.  An
+      armband of the golden serpent allows its wearer to cast spells with the
+      range of touch in melee combat without provoking attacks of opportunity.
+      Spells with ranges other than touch provoke attacks of opportunity as
+      normal-even spells with a range of personal. When the wearer of an armband
+      of the golden serpent casts a touch spell in melee combat, the armband
+      animates, slithering down the wearer's arm and striking to deliver the
+      touch attack. Although the armband delivers the spell, the wearer is still
+      required to take the necessary actions and make the required attack roll;
+      the wearer does not gain any additional
+      actions.<h3>Requirements</h3><p>Combat Casting, Craft Wondrous Item,
+      spectral hand</p>
+  price: 20000
+  slot: wrists
+  sources:
+    - id: PZO9082
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

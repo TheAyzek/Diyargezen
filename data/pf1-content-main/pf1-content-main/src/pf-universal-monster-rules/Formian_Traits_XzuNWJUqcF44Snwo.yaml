@@ -1,0 +1,29 @@
+_id: XzuNWJUqcF44Snwo
+_key: '!items!XzuNWJUqcF44Snwo'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/green_23.jpg
+name: Formian Traits
+system:
+  description:
+    value: >-
+      <p>Formians are a spacefaring race of insectlike creatures from a forest
+      world that aggressively colonize other worlds. A formian possesses the
+      following traits (unless otherwise noted in a creature&rsquo;s
+      entry).</p><ul><li><a>Darkvision</a> 60 feet and <a>blindsense</a> 30
+      feet.</li><li><a>Hive Mind (Ex)</a> Formians share a telepathic bond with
+      other members of their hive that enhances their hive mates&rsquo;
+      perception. As long as a formian is within telepathic range of at least
+      one hive mate, it gains a +4 racial bonus on initiative checks and
+      Perception checks. If at least one formian disbelieves an illusion, all
+      formians within its telepathic range are also considered to disbelieve
+      that illusion. If one formian is aware of combatants, all other hive mates
+      within the range of its telepathy are also aware of those
+      combatants.</li><li><a>Resistance</a> to sonic 10.</li><li><a>Telepathic
+      Caster (Ex)</a> Due to a formian&rsquo;s telepathic nature, if it casts
+      spells it does so as spell-like
+      abilities.</li><li><a>Telepathy</a>&nbsp;60 ft.</li></ul>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

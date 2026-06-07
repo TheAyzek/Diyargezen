@@ -1,0 +1,21 @@
+_id: eRqn2j2DEQpCw5NK
+_key: '!items!eRqn2j2DEQpCw5NK'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/unique-5.jpg
+name: Calistria's Kindness
+system:
+  description:
+    value: >-
+      <p>This tonic reduces menstrual pains and dramatically reduces the chances
+      of conception during sexual intercourse if taken daily for 1 month. The
+      effects last as long as it is taken daily thereafter. Each bottle contains
+      30 doses. Crafting it requires a successful DC 20 Craft (alchemy)
+      check.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      20</p>
+  price: 3
+  sources:
+    - id: PZO9292
+      pages: '50'
+  subType: misc
+type: consumable

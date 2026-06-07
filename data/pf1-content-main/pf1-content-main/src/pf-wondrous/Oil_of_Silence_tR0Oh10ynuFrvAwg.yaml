@@ -1,0 +1,25 @@
+_id: tR0Oh10ynuFrvAwg
+_key: '!items!tR0Oh10ynuFrvAwg'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Oil of Silence
+system:
+  aura:
+    school: ill
+  cl: 5
+  description:
+    value: >-
+      <p>When applied to a one-handed or two-handed firearm, this strange
+      grayish oil renders that firearm silent for 1 hour. Five vials of oil of
+      silence can be used in conjunction to silence a Large firearm siege
+      engine, and 10 can be used to silence a Huge firearm siege engine. The oil
+      does not work on firearm siege engines that are larger than
+      Huge.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, silence</p>
+  price: 250
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

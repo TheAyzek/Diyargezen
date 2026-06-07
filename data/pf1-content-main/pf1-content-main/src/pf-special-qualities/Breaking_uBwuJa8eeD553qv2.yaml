@@ -1,0 +1,28 @@
+_id: uBwuJa8eeD553qv2
+_key: '!items!uBwuJa8eeD553qv2'
+_stats:
+  coreVersion: '12.343'
+folder: AqjqWFWInPuTJU1V
+img: icons/skills/melee/strike-polearm-light-orange.webp
+name: Breaking
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint evocation <strong>CL</strong>
+      5th</p><p><strong>Slot</strong> weapon quality; <strong>Price</strong> +1
+      bonus;</p><p>Upon command, a <em>breaking </em>weapon deals an extra 2d6
+      points of damage against inanimate objects and crystalline creatures on a
+      successful hit and ignores the hardness of objects with a hardness of 5 or
+      lower. When used against a crystalline creature, the damage from this
+      effect does not stack with bane or similar weapon special abilities. This
+      effect remains until another command is
+      given.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>break</em> or <em>shatter</em>;
+      <strong>Price</strong> -</p>
+  sources:
+    - id: PZO9430
+      pages: '28'
+  subType: misc
+  tags:
+    - Universal Weapon Qualities
+type: feat

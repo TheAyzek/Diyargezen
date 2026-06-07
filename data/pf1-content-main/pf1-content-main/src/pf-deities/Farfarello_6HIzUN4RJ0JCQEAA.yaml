@@ -1,0 +1,47 @@
+_id: 6HIzUN4RJ0JCQEAA
+_key: '!journal!6HIzUN4RJ0JCQEAA'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Farfarello
+pages:
+  - _id: ZD23DB54Yh596amS
+    _key: '!journal.pages!6HIzUN4RJ0JCQEAA.ZD23DB54Yh596amS'
+    _stats:
+      coreVersion: '12.331'
+    name: Farfarello
+    sort: 0
+    text:
+      content: >-
+        <h1>Farfarello</h1><h2>Lord of the
+        Forgotten</h2>@Source[PZO9267;pages=326] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Farfarello">Farfarello</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Malebranche<br /><strong>Areas of
+        Concern</strong> Antiquity, death, mists<br /><strong>Domains</strong>
+        Death, Evil, Knowledge, Law<br /><strong>Subdomains</strong> Devil
+        (Evil), Devil (Law), Memory, Murder, Thought<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Morningstar<br /><strong>Symbol</strong> Python around
+        gravestone<br /><strong>Sacred Animal(s)</strong> Python<br
+        /><strong>Sacred Color(s)</strong> Black,
+        white</p><h3>Obedience</h3><p>Contemplate the terror an army of your
+        lord's spirits might wreak while reclining atop a grave. Gain a +4
+        profane bonus on saving throws against death effects.</p><h2>Boons -
+        Malebranche</h2>@Source[PZO1139;pages=123]<p>Malebranche are horned
+        devils transformed so as to conquer a mortal world in Hell's name. Many
+        malebranche exist in Hell's ranks, and the 12 detailed below are merely
+        the best known.</p><p> Malebranche occupy a tier of power just below
+        infernal dukes. All malebranche are lawful evil and range in power from
+        CR 21 to CR 25. The boons they grant are less complex than those granted
+        by archdevils, manifesting as spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>fog cloud</em><br
+        /><strong>2</strong>: <em>solid fog</em><br /><strong>3</strong>:
+        <em>acid fog</em></p><h2>For Followers of
+        Farfarello</h2><h3>Feats</h3><p><em>Hellish Shackles</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

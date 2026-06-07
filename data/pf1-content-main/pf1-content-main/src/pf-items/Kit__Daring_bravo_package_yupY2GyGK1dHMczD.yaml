@@ -1,0 +1,35 @@
+_id: yupY2GyGK1dHMczD
+_key: '!items!yupY2GyGK1dHMczD'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/chest/chest-reinforced-stone.webp
+name: Kit, Daring bravo package
+system:
+  description:
+    value: >-
+      <p>The daring bravo is equally adept in social situations and combat, with
+      the right equipment to move fluidly from one to the other. Such
+      adventurers are known as much for their flair and panache as their martial
+      prowess, and the daring bravo's equipment is often ornately ornamented or
+      personalized. This equipment package is good for a bard, fighter, rogue,
+      swashbuckler, or vigilante. Certain cavaliers, investigators, skalds, or
+      even paladins may also find it appealing. If the PC can cast spells, add a
+      spell component pouch.</p><p><strong>Armor</strong>: Masterwork chain
+      shirt.</p><p><strong>Weapons</strong>: Light crossbow with 10 bolts,
+      masterwork rapier, sap, alchemical silver dagger.</p><p><strong>Combat
+      Gear</strong>: Acid (2), alchemist's kindness, <em>potions of cure light
+      wounds</em> (2), sunrods (3).</p><p><strong>Other Gear</strong>: Backpack,
+      bedroll, belt pouch, bottle of fine wine, chalk (5 pieces), courtier's
+      outfit with 50 gp in jewelry, flask, flint and steel, grooming kit,
+      masterwork musical instrument, mess kit, mirror, perfume or cologne, sack,
+      signet ring, silk rope (50 ft.), trail rations (5 days), waterskin,
+      whetstone, 5 gp.</p><p><strong>Total Weight</strong>: 76-1/2 lbs. (40-1/2
+      lbs. for a Small character).</p>
+  sources:
+    - id: PZO9481
+      pages: '4'
+  tags:
+    - Kits
+  weight:
+    value: 76.5
+type: container

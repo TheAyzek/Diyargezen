@@ -1,0 +1,90 @@
+_id: Ww5XK3IoRmmxDlJg
+_key: '!journal!Ww5XK3IoRmmxDlJg'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Hastur
+pages:
+  - _id: 6g5N9M3undeqADl5
+    _key: '!journal.pages!Ww5XK3IoRmmxDlJg.6g5N9M3undeqADl5'
+    _stats:
+      coreVersion: '12.331'
+    name: Hastur
+    sort: 0
+    text:
+      content: >-
+        <h1>Hastur</h1><h2>The King in Yellow</h2>@Source[PZO90110;pages=73] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Hastur">Hastur</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Great Old Ones<br /><strong>Areas of
+        Concern</strong> Decadence, disorder, nihilism<br
+        /><strong>Domains</strong> Chaos, Evil, Rune, Void<br
+        /><strong>Subdomains</strong> Dark Tapestry, Language, Stars, Wards<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Rapier<br /><strong>Symbol</strong>
+        The yellow sign<br /><strong>Sacred Animal(s)</strong> None<br
+        /><strong>Sacred Color(s)</strong> Yellow</p><h3>Obedience</h3><p>Spend
+        an hour in absolute stillness, meditating in an area surrounded by rich
+        furnishings and dressed in elegant and expensive clothing and jewelry.
+        The total combined value of your clothing and the furnishings of the
+        area within 30 feet of your meditation spot must be at least 1,000 gp
+        per character level (magical items do not count in determining the
+        overall value of your surroundings unless they are particularly ornate,
+        in which case only the value over and above the item's normal cost
+        counts). Alternatively, you can perform this obedience in the presence
+        of an active Yellow Sign. If you know them, you must silently recite
+        lines from <em>The King In Yellow</em> as you meditate-otherwise, you
+        can simply concentrate on nothingness. You gain a +4 profane bonus on
+        all Perform checks.</p><h2>Boons - Deific
+        Obedience</h2><h3>Evangelist</h3><p>@Source[PZO90110;pages=72]<br
+        /><strong>1: Words of Disorder (Sp)</strong> <em>lesser confusion</em>
+        3/day, <em>hideous laughter</em> 2/day, or <em>rage</em> 1/day<br
+        /><strong>2: Confusion Command (Su)</strong> As a swift action, you can
+        issue a verbal command to a single creature within 30 feet that is
+        currently suffering from a <em>confusion</em> effect or a similar
+        effect. This allows you to choose how that creature is affected on its
+        turn that round.<br /><strong>3: Yellow Sign (Sp)</strong> You gain the
+        ability to cast <em>Yellow Sign</em> once per day as a spell-like
+        ability.</em></p><h3>Exalted</h3><p>@Source[PZO90110;pages=72]<br
+        /><strong>1: Decadent Grace (Sp)</strong> <em>disguise self</em> 3/day,
+        <em>eagle's splendor</em> 2/day, or <em>glibness</em> 1/day<br
+        /><strong>2: No Mask! (Su)</strong> You gain the change shape (<em>alter
+        self</em>, any humanoid of your size) ability, which is usable once per
+        day. Transforming back to your true form is a free action, but as you do
+        so, the unsettling effect of this change causes all creatures within 20
+        feet to become shaken for 1d4 rounds if they fail a Will saving throw
+        (DC = 10 + your Wisdom modifier + 1/2 your Hit Dice). If you make an
+        initiative check in the same round that you assume your true form, you
+        gain a +4 bonus on the initiative check.<br /><strong>3: Hedonist
+        (Su)</strong> As long as you wear fine clothing and jewelry worth at
+        least 500 gp per character level (magic items do not count in
+        determining this value), you gain a deflection bonus to your Armor Class
+        equal to your Charisma modifier. This ability doesn't function if you
+        wear armor or carry a shield (including items that grant armor or shield
+        bonuses).</em></p><h3>Sentinel</h3><p>@Source[PZO90110;pages=72]<br
+        /><strong>1: All Things Must End (Sp)</strong> <em>doom</em> 3/day,
+        <em>death knell</em> 2/day, or <em>bestow curse</em> 1/day<br
+        /><strong>2: Impossible Mind (Ex)</strong> You are immune to confusion
+        and insanity effects, save those created by Hastur or worshipers and
+        servants of Hastur who have more Hit Dice than you.<br /><strong>3:
+        Nihilist (Ex)</strong> You are immune to death and petrification
+        effects. In addition, once per day if you are targeted by a death or
+        petrification effect of any level that targets you alone, you can choose
+        to reflect that death effect back on its source as per <em>spell
+        turning</em>.</em></p><h2>For Followers of
+        Hastur</h2><h3>Feats</h3><p><em>Dreamed Secrets</em></p><h3>Magic Items
+        - Wondrous Items</h3><p><em>Preklikin's Book of
+        Cults</em></p><h3>Spells</h3><p><em>Yellow
+        Sign</em></p><h3>Traits</h3><p><em>Unspeakable Bond</em></p><h2>Unique
+        Spell Rules</h2><em>@Source[PZO90110;pages=72]</em><br
+        /><h3>Cleric/Warpriest</h3></em><p><em>Confusion can be prepared as a
+        4th-level spell<br /><em>Insanity</em> can be prepared as a 7th-level
+        spell</em></p><h2>Unique Summon Rules</h2>@Source[PZO90110;pages=71]<br
+        /><strong>Summon Monster IV</strong>: Byakhee<br /><strong>Summon
+        Monster V</strong>: Keeper of the Yellow Sign
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

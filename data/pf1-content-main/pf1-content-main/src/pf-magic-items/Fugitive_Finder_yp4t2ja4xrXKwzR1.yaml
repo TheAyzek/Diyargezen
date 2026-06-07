@@ -1,0 +1,60 @@
+_id: yp4t2ja4xrXKwzR1
+_key: '!items!yp4t2ja4xrXKwzR1'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/crossbow-light.PNG
+name: Fugitive Finder
+system:
+  actions:
+    - _id: fry06mt0tiw0pxfe
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: fugitiveFinder
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  baseTypes:
+    - Light crossbow
+  cl: 8
+  description:
+    value: >-
+      <p>This +1 human-bane light crossbow has a gold-colored metal lath and a
+      keyholeshaped slot for the bolt to rest in. The wielder gains a +10-foot
+      enhancement bonus to his base speed. The church of Abadar typically
+      commissions fugitive finders to aid officials in chasing down and
+      capturing escaped criminals, but Abadarans also craft variants that have
+      the merciful special ability instead of human-bane, giving the wielder a
+      better opportunity to capture a fleeing target alive.</p><p><strong>Base
+      Item</strong>: 1
+      human-bane</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, longstrider, summon monster I</p>
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: wood
+  price: 12655
+  showInQuickbar: false
+  sources:
+    - id: PZO9267
+  weaponGroups:
+    - crossbows
+  weight:
+    value: 4
+type: weapon

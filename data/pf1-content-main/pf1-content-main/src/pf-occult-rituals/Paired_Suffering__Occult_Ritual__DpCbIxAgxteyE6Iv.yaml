@@ -1,0 +1,74 @@
+_id: DpCbIxAgxteyE6Iv
+_key: '!items!DpCbIxAgxteyE6Iv'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Paired Suffering (Occult Ritual)
+system:
+  actions:
+    - _id: 6fzq3ivuhjvlqrm4
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        type: 'null'
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    focus: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> necromancy; <strong>Level</strong>
+      6</p><p><strong>Casting Time</strong> 6
+      hours</p><p><strong>Components</strong> V, S, F (an ornate ceremonial
+      dagger worth at least 1,000 gp)</p><p><strong>Skill Checks</strong>
+      Knowledge (planes) DC 30, 2 successes; Knowledge (religion) DC 30, 4
+      successes</p><p><strong>Range</strong> touch; see
+      text</p><p><strong>Duration</strong> instantaneous; see
+      text</p><p><strong>Saving Throw</strong> none; <strong>SR</strong>
+      no</p><p><strong>Backlash</strong> The primary caster is staggered for the
+      next 24 hours.</p><p><strong>Failure</strong> The primary caster is
+      affected by <em>slay living</em> (using the ritual's save DC and caster
+      level).</p><h3>Effect</h3><p>The caster prepares a ritual site no more
+      than 100 feet long by 100 feet wide by 20 feet high, including sigils that
+      prevent souls from escaping the perimeter. At the culmination of the
+      ritual, the caster forces two spiritually close humanoid creatures
+      experiencing a transitional state of their lives into ritual combat to the
+      death. Among most humanoids, only teenage twins (fraternal or identical)
+      young enough that they haven't gained a level in a PC class can be targets
+      of this ritual; other pairings work only at the GM's discretion. One of
+      the targets must slay the other with the ceremonial dagger focus for the
+      ritual to succeed; even if all the checks succeed, if either target leaves
+      the area while the other lives, or if someone else slays one of the
+      targets, the ritual counts as a failure, and the primary caster suffers
+      the failure effects.</p><p>If the ritual succeeds, the soul of the
+      creature slain by the ritual dagger is trapped within the ritual site. The
+      surviving target has a choice either to allow the soul into her body, or
+      to bar it from doing so. If the surviving target allows the soul inside
+      her, she becomes a spiritualist, with the slain target as her phantom. If
+      the surviving target chooses not to allow the spirit entry, it instead
+      becomes an unfettered phantom and eventually a malevolent ghost, haunting
+      the ritual site. This ghost cannot directly attack the surviving target,
+      but in order to overcome its rejuvenation, someone must provide proof of
+      the surviving target's death (false evidence is not sufficient; that
+      target must actually be dead).</p>
+  flags:
+    dictionary:
+      summary: Force two similar creatures to fight to the death
+  level: 6
+  materials:
+    focus: an ornate ceremonial dagger worth at least 1,000 gp
+  school: nec
+  sources:
+    - id: PZO1135
+      pages: '132'
+  sr: false
+type: spell

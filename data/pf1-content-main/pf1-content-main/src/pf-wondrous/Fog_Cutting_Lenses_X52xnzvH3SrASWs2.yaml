@@ -1,0 +1,30 @@
+_id: X52xnzvH3SrASWs2
+_key: '!items!X52xnzvH3SrASWs2'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Fog-Cutting Lenses
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>These goggles are made of polished rock crystal, with frames of
+      polished brass and a simple leather strap and buckle sized for a giant's
+      head (but easily adjustable for smaller wearers). The goggles allow the
+      wearer to see through magical and normal fogs, mists, and similar
+      obscurement. They do not confer darkvision or low-light vision. Further,
+      the goggles distort and skew vision strangely, imposing a -4 penalty on
+      Perception
+      checks.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, darkvision, fog cloud</p>
+  price: 8000
+  slot: eyes
+  sources:
+    - id: PZO1130
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

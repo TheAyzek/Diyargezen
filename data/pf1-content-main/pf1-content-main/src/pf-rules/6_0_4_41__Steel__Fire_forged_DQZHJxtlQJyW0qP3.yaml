@@ -1,0 +1,53 @@
+_id: DQZHJxtlQJyW0qP3
+_key: '!journal!DQZHJxtlQJyW0qP3'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.4.41. Steel, Fire-forged
+pages:
+  - _id: RfuDUUJpQle0MPNp
+    _key: '!journal.pages!DQZHJxtlQJyW0qP3.RfuDUUJpQle0MPNp'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.4.41. Steel, Fire-forged
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li>@Compendium[pf-content.pf-rules.TROqcNjEw3b2q2Dk]{6.0.4.
+        Special Materials}</li></ul><hr /><p><strong>PFS
+        Legal</strong></p><p>@Source[PZO1123;pages=50]</p><p>Dwarves stumbled
+        across the secret of crafting fire-forged steel in an effort to make
+        forge-friendly tools. It didn’t take them long to adapt its unique
+        properties to arms and armor. Fire-forged steel channels heat in one
+        direction to protect its wearer or wielder. When it is crafted into
+        armor, heat is channeled away from the wearer, offering some limited
+        protection. Armor crafted from fire-forged steel grants the wearer fire
+        resistance 2.</p><p>Weapons crafted from fire-forged steel similarly
+        channel heat away from the wearer; this does not grant the wielder
+        energy resistance. Instead, the blade absorbs and channels heat to the
+        parts of the weapon that contact enemies. If the weapon is exposed to 10
+        points or more of fire damage (such as from an opponent’s fireball or by
+        holding it in a campfire for 1 full round), the weapon adds +1d4 points
+        of fire damage to its attacks for the next 2 rounds. If the wielder is
+        wearing fire-forged armor and using a fire-forged weapon, this bonus
+        damage increases to 1d6 points of fire damage and lasts for 4 rounds.
+        This bonus damage does not stack with fire damage from weapon
+        enhancements such as flaming.</p><p>Armor or weapons made from
+        fire-forged steel are always considered masterwork, and the masterwork
+        costs are included in the listed prices.</p><p>Fire-forged steel has the
+        same hit points and hardness as steel.</p><table><thead><tr><td>Type of
+        Fire-Forged Steel Item</td><td>Item Price
+        Modifier</td></tr></thead><tbody><tr><td>Ammunition</td><td>+15 gp per
+        item</td></tr><tr><td>Light armor</td><td>+1,000
+        gp</td></tr><tr><td>Medium armor</td><td>+2,500
+        gp</td></tr><tr><td>Heavy armor</td><td>+3,000
+        gp</td></tr><tr><td>Weapon</td><td>+600 gp</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

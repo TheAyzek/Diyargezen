@@ -1,0 +1,24 @@
+_id: yreGFR1YVAjAQkew
+_key: '!items!yreGFR1YVAjAQkew'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/leather/leather-studded-tan.webp
+name: Qadiran saddle
+system:
+  description:
+    value: >-
+      <p></p><h2>Description</h2><p>Developed by Al-Zabriti riders, a Qadiran
+      saddle is sturdy but minimal, allowing horse and rider to communicate
+      through slight muscle shifts and delicate balance adjustments. A Qadiran
+      saddle gives a rider a +2 circumstance bonus on Ride checks, and it allows
+      a rider to ignore the AC penalty from a charge when she is mounted and her
+      mount charges.</p>
+  equipped: false
+  price: 200
+  sources:
+    - id: PZO9299
+      pages: '57'
+  subType: animalGear
+  weight:
+    value: 5
+type: loot

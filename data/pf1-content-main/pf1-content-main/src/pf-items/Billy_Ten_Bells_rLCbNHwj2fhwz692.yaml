@@ -1,0 +1,28 @@
+_id: rLCbNHwj2fhwz692
+_key: '!items!rLCbNHwj2fhwz692'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/instruments/chimes-wood-white.webp
+name: Billy Ten-Bells
+system:
+  description:
+    value: >-
+      <p>Bearing a marked resemblance to an anthropomorphic wind chime, this
+      complicated arrangement of strings, sticks, and bells is hung from a
+      ceiling or branch and has a purse or money-pouch deep inside. The trick is
+      to silently steal a coin from Billy Ten-Bells, as the slightest movement
+      will set the bells ringing. Veteran thieves sometimes decorate Billy with
+      scraps of stolen clothing for good luck. Training with Billy Ten-Bells
+      requires 1 hour of practice and a DC 20 Sleight of Hand check. If you
+      succeed at the check, you gain a +2 circumstance bonus on Sleight of Hand
+      checks to pick pockets. This bonus lasts for 24 hours or until you fail a
+      Sleight of Hand check.</p>
+  equipped: false
+  price: 50
+  sources:
+    - id: PZO9493
+      pages: '30'
+  subType: tool
+  weight:
+    value: 6
+type: loot

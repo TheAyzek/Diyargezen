@@ -1,0 +1,23 @@
+_id: mLJ1Y1FZNDqGYDNM
+_key: '!items!mLJ1Y1FZNDqGYDNM'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Resistance +1
+system:
+  aura:
+    school: abj
+  cl: 5
+  description:
+    value: >-
+      <p>Protective symbols adorn this magic ring. It functions as a cloak of
+      resistance with an equivalent bonus.<h3>Requirements</h3><p>Forge Ring,
+      resistance, creator's caster level must be at least three times the ring's
+      bonus</p>
+  price: 1500
+  slot: ring
+  sources:
+    - id: PZO90123
+  subType: wondrous
+type: equipment

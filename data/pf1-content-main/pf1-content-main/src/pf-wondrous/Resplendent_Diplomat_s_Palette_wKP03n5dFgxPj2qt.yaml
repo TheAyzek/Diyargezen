@@ -1,0 +1,37 @@
+_id: wKP03n5dFgxPj2qt
+_key: '!items!wKP03n5dFgxPj2qt'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Resplendent Diplomat's Palette
+system:
+  aura:
+    custom: true
+    school: enchantment and illusion
+  cl: 3
+  description:
+    value: >-
+      <p>This shallow box contains an assortment of beeswax, oils, pigments,
+      brushes, and quills, and allows a user to blend seemlessly into new
+      cultures and fashion scenes. By spending 5 minutes applying these
+      contents, a user may adopt the hairstyle, fashion, and social cues of any
+      culture with which he is familiar, granting a +2 circumstance bonus on
+      Bluff or Diplomacy checks with members of that culture, but leaving him
+      otherwise recognizable. Alternatively, the palette may be used to conceal
+      the user's identity entirely; it cannot make the user appear shorter or
+      taller or otherwise alter their body, but otherwise allows him to adopt
+      the appearance of another creature of the same type with the same body
+      type and build. Either application lasts for 5 hours or until removed with
+      soap and water. A resplendent diplomat's palette has 50 charges when
+      created, and each use consumes 1 charge.  The palette qualifies as a
+      disguise kit, granting a +2 circumstance bonus on Disguise checks. Using
+      it as such does not consume a charge.</p><h3>Requirements</h3><p>Craft
+      Wondrous Item, disguise self, eagle's splendor</p>
+  price: 5500
+  sources:
+    - id: PZO9550
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

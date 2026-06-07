@@ -1,0 +1,39 @@
+_id: bjoBWfEelTMeRi4U
+_key: '!items!bjoBWfEelTMeRi4U'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/gauntlet.png
+name: Godclaw Gauntlets
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: abjuration evocation and transmutation
+  baseTypes:
+    - Gauntlet
+  cl: 17
+  description:
+    value: >-
+      <p>Each Godclaw gauntlet is a +2 axiomatic spiked gauntlet. Once per day,
+      the left Godclaw gauntlet can be used to cast a quickened order's wrath
+      spell, while the right Godclaw gauntlet can be used to cast a quickened
+      dismissal spell.  If a character wears both Godclaw gauntlets, he gains
+      the benefit of Two-Weapon Fighting while attacking with the gauntlets (but
+      not with other weapons he might wield). In addition, once per day, the
+      wearer can request the aid of one of five deities and cast a specific
+      spell, as detailed below. Note that calling upon the aid of a deity of a
+      different alignment than your own or the aid of a deity other than the one
+      you worship (if you are a divine spellcaster who worships a specific
+      deity) may have alignment- or class-based repercussions.  Abadar: The
+      wearer gains the benefit of discern lies.  Asmodeus: The wearer creates a
+      wall of fire.  Iomedae: The wearer gains the benefit of divine power. 
+      Irori: The wearer gains the benefit of freedom of movement.  Torag: The
+      wearer gains the benefit of stoneskin.<p><strong>Base Item</strong>:
+      axiomatic spiked gauntlet</p>
+  enh: 2
+  sources:
+    - id: PZO90107
+  subType: other
+  weight:
+    value: 1
+type: equipment

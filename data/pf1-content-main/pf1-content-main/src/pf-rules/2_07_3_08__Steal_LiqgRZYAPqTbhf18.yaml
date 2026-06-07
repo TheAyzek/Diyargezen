@@ -1,0 +1,62 @@
+_id: LiqgRZYAPqTbhf18
+_key: '!journal!LiqgRZYAPqTbhf18'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: mJGgfLDxjMpNAoek
+name: 2.07.3.08. Steal
+pages:
+  - _id: 7Rpp3eJ3BtWUbJ5r
+    _key: '!journal.pages!LiqgRZYAPqTbhf18.7Rpp3eJ3BtWUbJ5r'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.07.3.08. Steal
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.u7ymeeQewjTXVrlW]{2.07.
+        Special
+        Attacks}</p><p>@Compendium[pf-content.pf-rules.CK4ZYweM6IifrrV0]{2.07.3.
+        Combat
+        Maneuvers}</p><ul><li>@Compendium[pf-content.pf-rules.4ZtXz1UxNVHAoK9F]{2.07.3.01.
+        Bull
+        Rush}</li><li>@Compendium[pf-content.pf-rules.TOgcg1rD2rqozLK8]{2.07.3.02.
+        Dirty
+        Trick}</li><li>@Compendium[pf-content.pf-rules.2e9cYCdNMg0E9nDP]{2.07.3.03.
+        Disarm}</li><li>@Compendium[pf-content.pf-rules.2QXapJZHDOdCaqJC]{2.07.3.04.
+        Drag}</li><li>@Compendium[pf-content.pf-rules.wwDkxmSkg7edogZk]{2.07.3.05.
+        Grapple}</li><li>@Compendium[pf-content.pf-rules.6txWY4yVuOOzjdRf]{2.07.3.06.
+        Overrun}</li><li>@Compendium[pf-content.pf-rules.8CRc1rPAFBfhJfBN]{2.07.3.07.
+        Reposition}</li><li><strong>@Compendium[pf-content.pf-rules.LiqgRZYAPqTbhf18]{2.07.3.08.
+        Steal}</strong></li><li>@Compendium[pf-content.pf-rules.bEwb7yQOidiPzb5v]{2.07.3.09.
+        Sunder}</li><li>@Compendium[pf-content.pf-rules.QBZtZChctrkE8ksB]{2.07.3.10.
+        Trip}</li></ul><hr /><p>@Source[PZO1115;pages=322]</p><p>You can attempt
+        to take an item from a foe as a standard action. This maneuver can be
+        used in melee to take any item that is neither held nor hidden in a bag
+        or pack. You must have at least one hand free (holding nothing) to
+        attempt this maneuver.</p><p>You must select the item to be taken before
+        the check is made. Items that are simply tucked into a belt or loosely
+        attached (such as brooches or necklaces) are the easiest to take. Items
+        fastened to a foe (such as cloaks, sheathed weapons, or pouches) are
+        more difficult to take, and give the opponent a +5 bonus (or greater) to
+        his CMD.</p><p>Items that are closely worn (such as armor, backpacks,
+        boots, clothing, or rings) cannot be taken with this
+        maneuver.</p><p>Items held in the hands (such as wielded weapons or
+        wands) also cannot be taken with the steal maneuver—you must use the
+        disarm combat maneuver instead. The GM is the final arbiter of what
+        items can be taken. If you do not have the Improved Steal feat or a
+        similar ability, attempting to steal an object provokes an attack of
+        opportunity from the target of your maneuver.</p><p>Although this
+        maneuver can only be performed if the target is within your reach, you
+        can use a whip to steal an object from a target within range with a –4
+        penalty on the attack roll.</p><p>If your attack is successful, you may
+        take one item from your opponent. You must be able to reach the item to
+        be taken (subject to GM discretion). Your enemy is immediately aware of
+        this theft unless you possess the Greater Steal feat.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

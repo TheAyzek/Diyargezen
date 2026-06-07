@@ -1,0 +1,34 @@
+_id: FGdzuTh71Zl5OYPl
+_key: '!items!FGdzuTh71Zl5OYPl'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/bones/bone-jaw-teeth-white.webp
+name: Dog, Guard
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong>  25 gp (guard),  15 gp (lap),  150 gp (riding);
+      <strong>Weight</strong> 25 lbs. (guard), 5 lbs. (lap), 50 lbs.
+      (riding)</p><h2>Description</h2><p>Most dogs fall into one of the
+      following categories.</p><p><em>Guard Dog</em>: This Small, combat-trained
+      dog is bred for battle; breeders favor strength, a thick body, and a low
+      center of gravity. Guard dogs are sold in most large cities and some
+      cultures use them for sport fighting or in some armies' special infantry.
+      More information on dogs can be found in the Bestiary.</p><p><em>Lap
+      Dog</em>: These tiny dogs are commonly kept as pets. They cannot be combat
+      trained, but can serve as noisy-but-skittish watch creatures. Lap dogs
+      have the same statistics as foxes (see Bestiary 3).</p><p><em>Riding
+      Dog</em>: This Medium dog is bred for carrying Small riders, and is combat
+      trained. Breeders select dogs with strong backs, endurance, and loyal
+      dispositions and train them for riding and combat before sale. Reputable
+      breeders can be found in major cities. More information on riding dogs can
+      be found in the Bestiary.</p>
+  equipped: false
+  price: 25
+  sources:
+    - id: PZO1123
+      pages: '81'
+  subType: animal
+  weight:
+    value: 25
+type: loot

@@ -1,0 +1,276 @@
+_id: RR2N41I4f6V7xSXx
+_key: '!tables!RR2N41I4f6V7xSXx'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/tomb-entrance.webp
+name: Dungeon (Avg. CR 2)
+replacement: true
+results:
+  - _id: 7WTADmKBDucLwCrG
+    _key: '!tables.results!RR2N41I4f6V7xSXx.7WTADmKBDucLwCrG'
+    documentCollection: pf1.bestiary_3
+    documentId: cEIwlwBIH4XoBjo4
+    img: systems/pf1/icons/races/creature-types/animal.png
+    range:
+      - 1
+      - 6
+    text: Dire Rat
+    type: pack
+    weight: 6
+  - _id: 3Lu5G2xellCsDTPr
+    _key: '!tables.results!RR2N41I4f6V7xSXx.3Lu5G2xellCsDTPr'
+    documentCollection: pf1.bestiary_3
+    documentId: TBbWMuA3ma1zGyoK
+    img: systems/pf1/icons/races/creature-types/vermin.png
+    range:
+      - 7
+      - 12
+    text: Fire Beetle
+    type: pack
+    weight: 6
+  - _id: tyd1rvGiUhxHmp6C
+    _key: '!tables.results!RR2N41I4f6V7xSXx.tyd1rvGiUhxHmp6C'
+    documentCollection: pf1.bestiary_2
+    documentId: KWfx7YvFXxEbNd9V
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 13
+      - 20
+    text: Human Skeleton
+    type: pack
+    weight: 8
+  - _id: SSJi5Ll7AceXWI9Z
+    _key: '!tables.results!RR2N41I4f6V7xSXx.SSJi5Ll7AceXWI9Z'
+    documentCollection: pf1.bestiary_2
+    documentId: HwqXLKatfK5kA5Hh
+    img: systems/pf1/icons/races/creature-types/vermin.png
+    range:
+      - 21
+      - 24
+    text: Giant Centipede
+    type: pack
+    weight: 4
+  - _id: GIfKJHLQj04ZrMBs
+    _key: '!tables.results!RR2N41I4f6V7xSXx.GIfKJHLQj04ZrMBs'
+    documentCollection: pf1.bestiary_4
+    documentId: jFLVObBcDzqa9FYu
+    img: systems/pf1/icons/races/creature-types/vermin.png
+    range:
+      - 25
+      - 26
+    text: Spider Swarm
+    type: pack
+    weight: 2
+  - _id: 0wsVovF44jb01E2i
+    _key: '!tables.results!RR2N41I4f6V7xSXx.0wsVovF44jb01E2i'
+    documentCollection: pf1.bestiary_3
+    documentId: d2n5HZe0QHwBFG84
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 27
+      - 32
+    text: Human Zombie
+    type: pack
+    weight: 6
+  - _id: VfiSM3Jd44G8xGfR
+    _key: '!tables.results!RR2N41I4f6V7xSXx.VfiSM3Jd44G8xGfR'
+    documentCollection: pf1.bestiary_2
+    documentId: LE5VrU9CtBnFIrmQ
+    img: systems/pf1/icons/races/creature-types/abberation.png
+    range:
+      - 33
+      - 34
+    text: Choker
+    type: pack
+    weight: 2
+  - _id: ojkAZMIMP4feGUIY
+    _key: '!tables.results!RR2N41I4f6V7xSXx.ojkAZMIMP4feGUIY'
+    documentCollection: pf1.bestiary_1
+    documentId: 8keCLW4lGsSGUZLE
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 35
+      - 36
+    text: Skeletal Champion
+    type: pack
+    weight: 2
+  - _id: htIAXRGFk5IsIqka
+    _key: '!tables.results!RR2N41I4f6V7xSXx.htIAXRGFk5IsIqka'
+    documentCollection: pf1.bestiary_4
+    documentId: llxODxws7Z6okRyE
+    img: systems/pf1/icons/races/human.jpg
+    range:
+      - 37
+      - 44
+    text: Goblin
+    type: pack
+    weight: 8
+  - _id: 49r7UtVFkf8PqVtH
+    _key: '!tables.results!RR2N41I4f6V7xSXx.49r7UtVFkf8PqVtH'
+    documentCollection: pf1.bestiary_4
+    documentId: hdtp42CUJz5SIP3q
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 45
+      - 48
+    text: Ghoul
+    type: pack
+    weight: 4
+  - _id: 3oKEFQAtzETahnVk
+    _key: '!tables.results!RR2N41I4f6V7xSXx.3oKEFQAtzETahnVk'
+    documentCollection: pf1.bestiary_4
+    documentId: ds4vPRYweLdAx0BA
+    img: systems/pf1/icons/races/creature-types/vermin.png
+    range:
+      - 49
+      - 54
+    text: Giant Spider
+    type: pack
+    weight: 6
+  - _id: 4ovaHWcB1qSnlgog
+    _key: '!tables.results!RR2N41I4f6V7xSXx.4ovaHWcB1qSnlgog'
+    documentCollection: pf1.bestiary_3
+    documentId: ZYuHt48QfOOEH7z0
+    img: systems/pf1/icons/races/creature-types/magical-beast.png
+    range:
+      - 55
+      - 56
+    text: Cockatrice
+    type: pack
+    weight: 2
+  - _id: cKv9ZMx6FCKLOybk
+    _key: '!tables.results!RR2N41I4f6V7xSXx.cKv9ZMx6FCKLOybk'
+    documentCollection: pf1.bestiary_4
+    documentId: rXC2xosoN3IcgwYI
+    img: systems/pf1/icons/races/creature-types/ooze.jpg
+    range:
+      - 57
+      - 60
+    text: Gelatinous Cube
+    type: pack
+    weight: 4
+  - _id: zq4j3zRJnct17xPA
+    _key: '!tables.results!RR2N41I4f6V7xSXx.zq4j3zRJnct17xPA'
+    documentCollection: pf1.bestiary_2
+    documentId: KHRqoJaN9sr1jSzy
+    img: systems/pf1/icons/races/creature-types/abberation.png
+    range:
+      - 61
+      - 64
+    text: Rust Monster
+    type: pack
+    weight: 4
+  - _id: 54hkkQXqVkDG8K1N
+    _key: '!tables.results!RR2N41I4f6V7xSXx.54hkkQXqVkDG8K1N'
+    documentCollection: pf1.bestiary_1
+    documentId: 9KJIbVd6LHQFKUmr
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 65
+      - 68
+    text: Shadow
+    type: pack
+    weight: 4
+  - _id: BK3p7wKpSF2xJZpN
+    _key: '!tables.results!RR2N41I4f6V7xSXx.BK3p7wKpSF2xJZpN'
+    documentCollection: pf1.bestiary_3
+    documentId: ZVXXiNRKNuqNnrsR
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 69
+      - 70
+    text: Wight
+    type: pack
+    weight: 2
+  - _id: Or4tuQ6tZAqOCDvd
+    _key: '!tables.results!RR2N41I4f6V7xSXx.Or4tuQ6tZAqOCDvd'
+    documentCollection: pf1.bestiary_2
+    documentId: Gt0YJ7LvKSXwfgoI
+    img: systems/pf1/icons/races/creature-types/magical-beast.png
+    range:
+      - 71
+      - 76
+    text: Stirge
+    type: pack
+    weight: 6
+  - _id: zS4DylTolp8qN7Sb
+    _key: '!tables.results!RR2N41I4f6V7xSXx.zS4DylTolp8qN7Sb'
+    documentCollection: pf1.bestiary_2
+    documentId: LTq96ZzieTl12mQZ
+    img: systems/pf1/icons/races/creature-types/magical-beast.png
+    range:
+      - 77
+      - 82
+    text: Darkmantle
+    type: pack
+    weight: 6
+  - _id: M5HZJMiIeSXVja8W
+    _key: '!tables.results!RR2N41I4f6V7xSXx.M5HZJMiIeSXVja8W'
+    documentCollection: pf1.bestiary_5
+    documentId: zzxmOdMa6fJXUFFo
+    img: systems/pf1/icons/races/human.jpg
+    range:
+      - 83
+      - 86
+    text: Troglodyte
+    type: pack
+    weight: 4
+  - _id: fn6qYTfAtDhk5HyD
+    _key: '!tables.results!RR2N41I4f6V7xSXx.fn6qYTfAtDhk5HyD'
+    documentCollection: pf1.bestiary_3
+    documentId: T3WTAhGyET0ZuUW3
+    img: systems/pf1/icons/races/human.jpg
+    range:
+      - 87
+      - 90
+    text: Bugbear
+    type: pack
+    weight: 4
+  - _id: MO3R4illSmqgSnMB
+    _key: '!tables.results!RR2N41I4f6V7xSXx.MO3R4illSmqgSnMB'
+    documentCollection: pf1.bestiary_3
+    documentId: TWl2zopfAx2JwpZv
+    img: systems/pf1/icons/races/creature-types/outsider.png
+    range:
+      - 91
+      - 92
+    text: Vargouille
+    type: pack
+    weight: 2
+  - _id: y24nFImT9BFyqPs2
+    _key: '!tables.results!RR2N41I4f6V7xSXx.y24nFImT9BFyqPs2'
+    documentCollection: pf1.bestiary_2
+    documentId: OExJpuRMUXZU52HU
+    img: systems/pf1/icons/races/creature-types/ooze.jpg
+    range:
+      - 93
+      - 94
+    text: Gray Ooze
+    type: pack
+    weight: 2
+  - _id: nR2S9GoL4maYBExG
+    _key: '!tables.results!RR2N41I4f6V7xSXx.nR2S9GoL4maYBExG'
+    documentCollection: pf1.bestiary_1
+    documentId: 6jkljwu6GjOg05XQ
+    img: systems/pf1/icons/races/creature-types/abberation.png
+    range:
+      - 95
+      - 96
+    text: Mimic
+    type: pack
+    weight: 2
+  - _id: f2fv5cYDIgNBASF2
+    _key: '!tables.results!RR2N41I4f6V7xSXx.f2fv5cYDIgNBASF2'
+    documentCollection: pf1.bestiary_1
+    documentId: 97B7sc43ADLF6bnR
+    img: systems/pf1/icons/races/human.jpg
+    range:
+      - 97
+      - 100
+    text: Ogre
+    type: pack
+    weight: 4
+sort: 1100000

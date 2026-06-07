@@ -1,0 +1,41 @@
+_id: FmP4rOfVTGJNaq3i
+_key: '!items!FmP4rOfVTGJNaq3i'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/half-plate.png
+name: Uskroth's Armor
+system:
+  armor:
+    acp: 7
+    material:
+      base:
+        value: steel
+    value: 8
+  aura:
+    school: trs
+  baseTypes:
+    - Half-plate
+  cl: 5
+  description:
+    value: >-
+      <p>This battered, well-used suit of +1 half-plate automatically resizes
+      itself to match the size of its wearer. Once per day on command, the armor
+      can bestow upon its wearer the effects of righteous might for 5 rounds.
+      The wearer's alignment determines the DR gained from this ability. A good
+      wearer gains DR 5/evil, an evil wearer gains DR 5/good, and a wearer who
+      is neither good nor evil chooses which DR to gain the first time she
+      activates this ability-once chosen, it cannot be changed.<p><strong>Base
+      Item</strong>: 
+      half-plate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, righteous might</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 11350
+  sources:
+    - id: PZO9091
+  spellFailure: 40
+  weight:
+    value: 100
+type: equipment

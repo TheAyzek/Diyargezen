@@ -1,0 +1,31 @@
+_id: x7xyfFqw19Hb0N6M
+_key: '!items!x7xyfFqw19Hb0N6M'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Perfect Tuning Fork
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>Shelyn's association with harmony and music inspires many composers to
+      pen glorious songs in the Eternal Rose's honor, and numerous tools have
+      been devised by her church to improve the performances of such melodies.
+      The perfect tuning fork provides the ideal pitch to quickly begin an
+      inspirational tune. When holding a perfect tuning fork in the hand, the
+      wielder can strike the fork as part of the action of beginning a bardic
+      performance.  If the wielder can start a bardic performance as a standard
+      action, she can do so as a move action instead. If the wielder can start a
+      bardic performance as a move action, she can do so as a swift action
+      instead. A perfect tuning fork loses its magic after one use, but it can
+      be used as an ordinary tuning fork
+      thereafter.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, haste</p>
+  price: 600
+  sources:
+    - id: PZO9267
+  subType: wondrous
+type: equipment

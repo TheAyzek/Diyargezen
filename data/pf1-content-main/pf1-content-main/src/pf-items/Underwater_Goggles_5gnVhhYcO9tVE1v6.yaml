@@ -1,0 +1,20 @@
+_id: 5gnVhhYcO9tVE1v6
+_key: '!items!5gnVhhYcO9tVE1v6'
+_stats:
+  coreVersion: '12.331'
+img: icons/equipment/head/goggles-leather-grey.webp
+name: Underwater Goggles
+system:
+  description:
+    value: >-
+      <p>These inexpensive, watertight goggles are essential protection for
+      land-dwellers' eyes, particularly in salt water or water high in
+      particulates. Any land-dweller wearing goggles can use visual Perception
+      like an aquatic native (see page 46).</p>
+  equipped: false
+  price: 5
+  sources:
+    - id: PZO92102
+      pages: '57'
+  subType: adventuring
+type: loot

@@ -1,0 +1,25 @@
+_id: 5ZQshbzacLwLS9sn
+_key: '!items!5ZQshbzacLwLS9sn'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Magic Beans
+system:
+  aura:
+    school: con
+  cl: 7
+  description:
+    value: >-
+      <p>This item takes the form of a half-dozen brown beans, usually contained
+      in a simple burlap sack. Ten minutes after the beans are planted in the
+      ground, they sprout into a 350-foot-tall beanstalk as if created by the
+      beanstalk spell (see page 70). The magic beans are consumed in the
+      process. The beanstalk lasts for 24 hours before collapsing into a pile of
+      rotten plant matter.<h3>Requirements</h3><p>Craft Wondrous Items,
+      beanstalk</p>
+  price: 1400
+  sources:
+    - id: PZO9091
+  subType: wondrous
+type: equipment

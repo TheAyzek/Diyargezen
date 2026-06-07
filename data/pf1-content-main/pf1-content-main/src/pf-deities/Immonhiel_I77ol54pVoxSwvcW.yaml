@@ -1,0 +1,48 @@
+_id: I77ol54pVoxSwvcW
+_key: '!journal!I77ol54pVoxSwvcW'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Immonhiel
+pages:
+  - _id: aRacyWdYK4nyraGs
+    _key: '!journal.pages!I77ol54pVoxSwvcW.aRacyWdYK4nyraGs'
+    _stats:
+      coreVersion: '12.331'
+    name: Immonhiel
+    sort: 0
+    text:
+      content: >-
+        <h1> Immonhiel</h1><h2>Balm-Bringer</h2>@Source[PZO9267;pages=322] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Immonhiel">Immonhiel</a><h3>Details</h3><p><strong>Alignment</strong>
+        CG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Herbs, medicine, toads<br /><strong>Domains</strong>
+        Chaos, Good, Healing, Plant<br /><strong>Subdomains</strong> Azata
+        (Chaos), Azata (Good), Growth, Medicine*, Restoration, Resurrection<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Handaxe<br /><strong>Symbol</strong>
+        Herb-covered wooden toad<br /><strong>Sacred Animal(s)</strong> Toad<br
+        /><strong>Sacred Color(s)</strong> Brown,
+        green</p><h3>Obedience</h3><p>Fill your mouth with fresh, fragrant
+        herbs. Recline in a tub or pool of cool water with a live toad on your
+        breast and meditate on the teachings of Immonhiel for 1 hour, then let
+        the toad go. Gain a +4 sacred bonus on saves against
+        disease.</p><h2>Boons - Celestial Obedience</h2><h3>Mystery
+        Cultist</h3><p>@Source[PZO9255;pages=14]<br /><strong>1: Grower of Herbs
+        (Sp)</strong> <em>cure light wounds</em> 3/day, <em>barkskin</em> 2/
+        day, or <em>lily pad stride</em><sup>APG</sup> 1/day<br /><strong>2:
+        Swamp Healer (Sp)</strong> You can cast empowered <em>heal</em>
+        1/day.<br /><strong>3: Vine Caller (Su)</strong> Once per day you can
+        summon a Large mass of living plant matter. The plant matter has the
+        statistics of a viper vine (<em>Bestiary</em> 2</em> 279), but is
+        chaotic good. The viper vine follows your commands perfectly for 1
+        minute per HD before vanishing back to Elysium.</em></p><h2>For
+        Followers of Immonhiel</h2><h3>Feats</h3><p><em>Heroic
+        Interposition</em></p><h3>Traits</h3><p><em>Empyreal Focus</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

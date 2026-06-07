@@ -1,0 +1,60 @@
+_id: cgdwlB6ZcYZclpJl
+_key: '!items!cgdwlB6ZcYZclpJl'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/scimitar.PNG
+name: Clarity
+system:
+  actions:
+    - _id: blf7fwalgijuy5m3
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: clarity
+  aura:
+    custom: true
+    school: evocation [good]
+  baseTypes:
+    - Scimitar
+  cl: 7
+  description:
+    value: >-
+      <p>Clarity is a +1 holy scimitar crafted to vanquish the evil creatures of
+      the night. Though she can't speak, her empathic communications clearly
+      indicate a protective mindset. Clarity enjoys giving warm, encouraging
+      energy to her wielder as long as that wielder opposes evil and gives his
+      best effort. To preserve her wielder's valor in fights, she can cast
+      remove fear up to three times per day, affecting only her
+      wielder.</p><p><strong>Base Item</strong>: holy
+      scimitar</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, holy smite, remove fear</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 21015
+  showInQuickbar: false
+  sources:
+    - id: PZO9544
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 4
+type: weapon

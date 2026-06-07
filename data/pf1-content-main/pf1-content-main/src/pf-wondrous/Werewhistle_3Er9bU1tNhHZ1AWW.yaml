@@ -1,0 +1,24 @@
+_id: 3Er9bU1tNhHZ1AWW
+_key: '!items!3Er9bU1tNhHZ1AWW'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Werewhistle
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>This whistle is shaped like a wolf's head and is crafted out of silver.
+      Once per day the bearer may blow the whistle to cause one lycanthrope
+      within 30 feet to make a DC 17 Will save or be forced back into its
+      humanoid form for the next 24
+      hours.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, baleful polymorph</p>
+  price: 8000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

@@ -1,0 +1,26 @@
+_id: xIFqJNjnQqgAlLyj
+_key: '!items!xIFqJNjnQqgAlLyj'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_11.jpg
+name: Unseasonable Weather
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> regional curse; <strong>Save</strong> Will DC
+      23</p><p><strong>Effect</strong> The weather in the cursed region changes
+      drastically, even bringing snow to a blazing desert. The area is plagued
+      by your choice of, very hot conditions, or frequent powerful storms. The
+      weather remains unpredictable, and can change over time (as determined by
+      the GM), but the baseline weather is altered as long as the curse
+      remains.</p><p><strong>Cure</strong> The cursed weather can be returned to
+      normal only by casting <em>remove curse</em> at the center of the affected
+      area, followed by a casting of <em>control weather</em>.</p>
+  sources:
+    - id: PZO1135
+      pages: '145'
+  subType: misc
+  tags:
+    - Maladies
+    - Curse
+type: feat

@@ -1,0 +1,20 @@
+_id: A6Jq41lbqybB1C2T
+_key: '!items!A6Jq41lbqybB1C2T'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Crow
+system:
+  associations:
+    classes:
+      - Hunter
+  description:
+    value: >-
+      <p><strong>Hunter Animal Focus</strong></p><p>The creature gains a +4
+      competence bonus on Knowledge checks to identify the abilities and
+      weaknesses of creatures. This bonus increases to +6 at 8th level and +8 at
+      15th level.</p>
+  subType: classFeat
+  tags:
+    - Hunter Animal Focus
+type: feat

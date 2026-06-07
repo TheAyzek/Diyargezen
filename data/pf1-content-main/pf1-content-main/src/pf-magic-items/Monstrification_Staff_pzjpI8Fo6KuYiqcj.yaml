@@ -1,0 +1,29 @@
+_id: pzjpI8Fo6KuYiqcj
+_key: '!items!pzjpI8Fo6KuYiqcj'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Monstrification Staff
+system:
+  aura:
+    custom: true
+    school: transmutation polymorph
+  cl: 8
+  description:
+    value: >-
+      <p>The figures on this scrimshawed ivory staff slowly morph from one
+      monstrous image into another, and often grow to take up more space on the
+      staff's surface. An alchemist or other character capable of creating
+      extracts can pour an extract of enlarge person over this staff to restore
+      1 charge to the staff or pour an extract of monstrous physique I over it
+      to restore 3 charges.  • Enlarge person (1 charge)  • Monstrous physique I
+      (3 charges.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, enlarge person, monstrous physique I, creator must be an
+      alchemist</p>
+  price: 12000
+  sources:
+    - id: PZO1129
+  subType: staff
+  weight:
+    value: 4
+type: consumable

@@ -1,0 +1,63 @@
+_id: c2BT02mhDRymdtM3
+_key: '!items!c2BT02mhDRymdtM3'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/warhammer.png
+name: Norgir's Ruin
+system:
+  actions:
+    - _id: gf4qnze1y96202jl
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: norgirsRuin
+  aura:
+    school: evo
+  baseTypes:
+    - Warhammer
+  cl: 15
+  description:
+    value: >-
+      <p>Norgir's Ruin is an intelligent +2 dwarf bane warhammer. It has spent
+      the past several generations in the possession of the same enemies it was
+      once crafted to defeat. In that time, the weapon has gone somewhat insane,
+      warped to thirst for the death of non-duergar dwarves and eager to please
+      the line of duergar rulers of Tar Vermilon. Restoring it to its original
+      purpose is possible only by seeking out a living descendant of Vald Norgir
+      and securing an atonement spell from that dwarf to absolve the magic
+      warhammer of its madness. Doing so re-aligns its special purpose to oppose
+      duergar, changes its alignment to lawful good, and raises its Wisdom score
+      up to 14.</p><p><strong>Base Item</strong>: dwarf bane
+      warhammer</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, dispel magic, earthquake, invisibility purge, summon
+      monster I</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 91712
+  showInQuickbar: false
+  sources:
+    - id: PZO9234
+  weaponGroups:
+    - hammers
+  weight:
+    value: 5
+type: weapon

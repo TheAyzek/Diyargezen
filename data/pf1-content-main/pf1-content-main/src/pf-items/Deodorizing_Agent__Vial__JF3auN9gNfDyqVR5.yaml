@@ -1,0 +1,23 @@
+_id: JF3auN9gNfDyqVR5
+_key: '!items!JF3auN9gNfDyqVR5'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/unique-4.jpg
+name: Deodorizing Agent (Vial)
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>Coating a creature in
+      a vial of this milky, odorless substance takes 1 minute and renders it
+      scentless for 1d3 hours. Creatures that rely on scent for locating
+      creatures do not gain the benefit of this ability against a creature
+      affected by a dose of deodorizing
+      agent.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      25</p>
+  price: 30
+  sources:
+    - id: PZO9429
+      pages: '13'
+  tags:
+    - Alchemical Tools
+type: consumable

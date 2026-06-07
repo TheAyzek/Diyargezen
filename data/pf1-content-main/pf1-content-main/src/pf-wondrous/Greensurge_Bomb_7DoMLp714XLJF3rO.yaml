@@ -1,0 +1,31 @@
+_id: 7DoMLp714XLJF3rO
+_key: '!items!7DoMLp714XLJF3rO'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Greensurge Bomb
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>A greensurge bomb is a small magically and alchemically treated plant
+      bulb with a root growing out of that forms a handle. The bomb can be
+      thrown like a splash weapon with a range increment of 10 feet. When the
+      bomb strikes the ground, it bursts open, scattering weeds in a 10-foot
+      radius. At the beginning of the thrower's next turn, the weeds rapidly
+      grow into thick undergrowth, creating an area of difficult terrain. The
+      weeds flourish regardless of the surrounding natural terrain (even in
+      urban settings or on hard rock floors) but don't grow on damaging
+      surfaces, such as pools of lava or acid. The new vegetation lasts for 5
+      minutes before it turns brown and crumbles to
+      dust.</p><h3>Requirements</h3><p>Craft Wondrous Item, plant growth</p>
+  price: 750
+  sources:
+    - id: PZO9456
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

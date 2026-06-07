@@ -1,0 +1,41 @@
+_id: LpUSkoqMTp44gSdl
+_key: '!journal!LpUSkoqMTp44gSdl'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: dNglrJwmVUUfnonT
+name: 3.6.06.2. Lava Effects
+pages:
+  - _id: VY2GZWNQOJhCqeDc
+    _key: '!journal.pages!LpUSkoqMTp44gSdl.VY2GZWNQOJhCqeDc'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.6.06.2. Lava Effects
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.cWT946eZ614UBXMT]{3.6.
+        Environmental
+        Rules}</p><ul><li><p>@Compendium[pf-content.pf-rules.d5jA5Uo7F7mpbfZE]{3.6.06.
+        Heat
+        Dangers}</p><ul><li>@Compendium[pf-content.pf-rules.8chZeOjIpuKkzTUR]{3.6.06.1.
+        Catching on
+        Fire}</li><li><strong>@Compendium[pf-content.pf-rules.LpUSkoqMTp44gSdl]{3.6.06.2.
+        Lava Effects}</strong></li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=444]</p><p>Lava or magma deals 2d6 points of
+        fire damage per round of exposure, except in the case of total immersion
+        (such as when a character falls into the crater of an active volcano),
+        which deals 20d6 points of fire damage per round.</p><p>Damage from lava
+        continues for 1d3 rounds after exposure ceases, but this additional
+        damage is only half of that dealt during actual contact (that is, 1d6 or
+        10d6 points per round). Immunity or resistance to fire serves as an
+        immunity or resistance to lava or magma. A creature immune or resistant
+        to fire might still drown if completely immersed in lava (see
+        Drowning).</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

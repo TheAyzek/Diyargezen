@@ -1,0 +1,34 @@
+_id: A38ABtyjbZSHJqOr
+_key: '!journal!A38ABtyjbZSHJqOr'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Pharimia
+pages:
+  - _id: 7QunXjUJU6vRO6nZ
+    _key: '!journal.pages!A38ABtyjbZSHJqOr.7QunXjUJU6vRO6nZ'
+    _stats:
+      coreVersion: '12.331'
+    name: Pharimia
+    sort: 0
+    text:
+      content: >-
+        <h1>Pharimia</h1>@Source[PZO90144;pages=74] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Pharimia">Pharimia</a><h3>Details</h3><p><strong>Alignment</strong>
+        Unaligned<br /><strong>Pantheon</strong> Iblydan Hero-Gods<br
+        /><strong>Areas of Concern</strong> Ports, lighthouses<br
+        /><strong>Domains</strong> Fire, Sun, Travel, Water<br
+        /><strong>Subdomains</strong> Exploration, Light, Oceans, Trade<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> <em>none</em></p><h3>On
+        Golarion</h3><p><strong>Nationality</strong> Iblydan</p><h2>Other
+        Rules</h2><p>@Source[PZO90144;pages=74]</p><p>Because Pharimia is
+        unaligned, clerics of any alignment can worship her.</p><p>Pharimia can
+        grant 9th-level</p><p>spells.</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

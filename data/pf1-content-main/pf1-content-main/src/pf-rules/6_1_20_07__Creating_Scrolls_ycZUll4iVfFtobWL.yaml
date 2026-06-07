@@ -1,0 +1,90 @@
+_id: ycZUll4iVfFtobWL
+_key: '!journal!ycZUll4iVfFtobWL'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.20.07. Creating Scrolls
+pages:
+  - _id: mfmnBh5AkiUYOAwL
+    _key: '!journal.pages!ycZUll4iVfFtobWL.mfmnBh5AkiUYOAwL'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.20.07. Creating Scrolls
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.s3ene84nkQAyhCrW]{6.1.
+        Magic
+        Items}</p><ul><li><p>@Compendium[pf-content.pf-rules.X6hkpqXjE3T3jRy2]{6.1.20.
+        Magic Item
+        Creation}</p><ul><li>@Compendium[pf-content.pf-rules.MKyiWPbkUFcVvhbY]{6.1.20.01.
+        Magic Item Gold Piece
+        Values}</li><li>@Compendium[pf-content.pf-rules.iNnOJ9140oED1qrh]{6.1.20.02.
+        Creating Magic
+        Armor}</li><li>@Compendium[pf-content.pf-rules.eqJGh3BnP3n72Lrw]{6.1.20.03.
+        Creating Magic
+        Weapons}</li><li>@Compendium[pf-content.pf-rules.ckOP5mdpe4WV1qFU]{6.1.20.04.
+        Creating
+        Potions}</li><li>@Compendium[pf-content.pf-rules.yhRnmIAGnV2LhC91]{6.1.20.05.
+        Creating
+        Rings}</li><li>@Compendium[pf-content.pf-rules.i87q7N8kBH0ztizC]{6.1.20.06.
+        Creating
+        Rods}</li><li><strong>@Compendium[pf-content.pf-rules.ycZUll4iVfFtobWL]{6.1.20.07.
+        Creating
+        Scrolls}</strong></li><li>@Compendium[pf-content.pf-rules.St9hpjjACPQqzFMn]{6.1.20.08.
+        Creating
+        Staves}</li><li>@Compendium[pf-content.pf-rules.T5CscckFyyiebamM]{6.1.20.09.
+        Creating
+        Wands}</li><li>@Compendium[pf-content.pf-rules.LIXx5H71BJ1OxJw9]{6.1.20.10.
+        Creating Wondrous
+        Items}</li><li>@Compendium[pf-content.pf-rules.dX8eAXiO1h6yKNVo]{6.1.20.11.
+        Adding New Abilities}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=552]</p><p>To create a scroll, a character
+        needs a supply of choice writing materials, the cost of which is
+        subsumed in the cost for scribing the scroll: 12.5 gp × the level of the
+        spell × the level of the caster.</p><p>All writing implements and
+        materials used to scribe a scroll must be fresh and unused. A character
+        must pay the full cost for scribing each spell scroll no matter how many
+        times she previously has scribed the same spell.</p><p>The creator must
+        have prepared the spell to be scribed (or must know the spell, in the
+        case of a sorcerer or bard) and must provide any material component or
+        focus the spell requires. A material component is consumed when she
+        begins writing, but a focus is not. (A focus used in scribing a scroll
+        can be reused.) The act of writing triggers the prepared spell, making
+        it unavailable for casting until the character has rested and regained
+        spells. (That is, that spell slot is expended from the caster’s
+        currently prepared spells, just as if it had been cast.)</p><p>Scribing
+        a scroll requires 1 day per 1,000 gp of the base price. Although an
+        individual scroll might contain more than one spell, each spell must be
+        scribed as a separate effort, meaning that no more than 1 spell can be
+        scribed in a day.</p><h2>Item Creation Feat Required</h2><p>Scribe
+        Scroll.</p><h2>Skill Used in Creation</h2><p>Spellcraft, Craft
+        (calligraphy), or Profession (scribe).</p><h2>Scroll Base Costs (By
+        Scriber's Class)</h2><table><thead><tr><td>Spell Level</td><td>Cleric,
+        Druid, Wizard</td><td>Sorcerer</td><td>Bard</td><td>Paladin,
+        Ranger*</td></tr></thead><tbody><tr><td>0</td><td>12 gp 5 sp</td><td>12
+        gp 5 sp</td><td>12 gp 5 sp</td><td>—</td></tr><tr><td>1st</td><td>25
+        gp</td><td>25 gp</td><td>25 gp</td><td>25
+        gp</td></tr><tr><td>2nd</td><td>150 gp</td><td>200 gp</td><td>200
+        gp</td><td>200 gp</td></tr><tr><td>3rd</td><td>375 gp</td><td>450
+        gp</td><td>525 gp</td><td>525 gp</td></tr><tr><td>4th</td><td>700
+        gp</td><td>800 gp</td><td>1,000 gp</td><td>1,000
+        gp</td></tr><tr><td>5th</td><td>1,125 gp</td><td>1,250 gp</td><td>1,625
+        gp</td><td>—</td></tr><tr><td>6th</td><td>1,650 gp</td><td>1,800
+        gp</td><td>2,400 gp</td><td>—</td></tr><tr><td>7th</td><td>2,275
+        gp</td><td>2,450
+        gp</td><td>—</td><td>—</td></tr><tr><td>8th</td><td>3,000
+        gp</td><td>3,200
+        gp</td><td>—</td><td>—</td></tr><tr><td>9th</td><td>3,825
+        gp</td><td>4,050 gp</td><td>—</td><td>—</td></tr></tbody></table><p>*
+        Caster level is equal to class level –3.<br />Prices assume that the
+        scroll was made at the minimum caster level. The cost to create a scroll
+        is half the base price.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

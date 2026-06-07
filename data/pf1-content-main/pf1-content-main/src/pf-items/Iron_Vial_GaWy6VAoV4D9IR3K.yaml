@@ -1,0 +1,20 @@
+_id: GaWy6VAoV4D9IR3K
+_key: '!items!GaWy6VAoV4D9IR3K'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/laboratory/vial-orange.webp
+name: Iron Vial
+system:
+  description:
+    value: >-
+      <p>This metal potion bottle has hardness 5, 3 hit points, and a break DC
+      of 14.</p>
+  equipped: false
+  price: 0.1
+  sources:
+    - id: PZO1123
+      pages: '57'
+  subType: adventuring
+  weight:
+    value: 1
+type: loot

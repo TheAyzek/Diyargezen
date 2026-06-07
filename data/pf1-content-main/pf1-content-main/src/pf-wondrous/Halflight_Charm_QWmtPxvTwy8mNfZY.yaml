@@ -1,0 +1,25 @@
+_id: QWmtPxvTwy8mNfZY
+_key: '!items!QWmtPxvTwy8mNfZY'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Halflight Charm
+system:
+  aura:
+    school: div
+  cl: 3
+  description:
+    value: >-
+      <p>This amulet is a small crystal at the end of a simple leather thong. It
+      glows brightly from within, shedding light equivalent to that of a torch.
+      Once per day, the amulet's bearer can clutch the object and call for help.
+      Doing so immediately contacts the three closest Duskwardens and gives them
+      intimate knowledge of the pendant's location, as per the locate object
+      spell, out to a distance of a mile.<h3>Requirements</h3><p>Craft Wondrous
+      Item, light, locate object</p>
+  price: 2500
+  sources:
+    - id: PZO9063
+  subType: wondrous
+type: equipment

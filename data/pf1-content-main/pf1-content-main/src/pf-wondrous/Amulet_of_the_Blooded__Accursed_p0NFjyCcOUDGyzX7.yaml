@@ -1,0 +1,42 @@
+_id: p0NFjyCcOUDGyzX7
+_key: '!items!p0NFjyCcOUDGyzX7'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Amulet of the Blooded, Accursed
+system:
+  aura:
+    school: nec
+  cl: 9
+  description:
+    value: >-
+      <p>Each different type of amulet of the blooded grants its wearer powers
+      from one sorcerer bloodline, but makes him vulnerable to attacks and
+      effects that target creatures with the appropriate bloodline (such as a
+      blood-hunting weapon). If a creature that already has the associated
+      bloodline wears the amulet, the wearer does not gain the abilities listed
+      below; instead, the effective level of his bloodline powers increases by
+      2. This effect does not stack with other abilities that increase the
+      effective level of bloodline powers.     Accursed: This swirling green
+      malachite hangs from a chain of oxidized copper. Sinister, unblinking eyes
+      are etched upon its surface. The wearer gains a +2 bonus on saving throws
+      against charm, cold, fear, fire, and sleep effects. Three times per day as
+      a standard action, the wearer can fix his gaze on any one creature within
+      60 feet. The target becomes staggered for 4 rounds unless it succeeds at a
+      Will saving throw (DC 18). Only one target can be affected by the wearer's
+      gaze at a time; if the wearer attempts to stagger a new opponent, the
+      previous target immediately recovers whether the new attempt is successful
+      or not. Moderate necromancy; CL 9th; Craft Wondrous Item, bestow curse,
+      resist energy,
+      resistance.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, bestow curse, resist energy, resistance, creator must be a
+      sorcerer of the appropriate bloodline</p>
+  price: 12000
+  slot: neck
+  sources:
+    - id: PZO1129
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

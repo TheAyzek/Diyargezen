@@ -1,0 +1,32 @@
+_id: sR0CMYybxN6ytGTe
+_key: '!items!sR0CMYybxN6ytGTe'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Gallows Rope
+system:
+  aura:
+    school: nec
+  cl: 9
+  description:
+    value: >-
+      <p>This grisly, knotted rope is tied into a noose, and at first glance
+      appears to be nothing more than a gruesome memento of a hanging. While the
+      noose is worn tightly around the neck, any time the wearer is reduced
+      below 0 hit points he gains DR 10/- and fast healing 5 until he regains
+      consciousness. While the wearer is unconscious, his breathing stops and he
+      appears dead. If the wearer would be killed due to hit point loss while
+      wearing the noose, he can expend any number of uses of mythic power to
+      heal 10 hit points per use spent. This doesn't require an action. If that
+      healing would bring him above the threshold for death, the wearer doesn't
+      die.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Mythic Crafter, mythic regenerate</p>
+  price: 18000
+  slot: neck
+  sources:
+    - id: PZO1126
+  subType: wondrous
+  weight:
+    value: 4
+type: equipment

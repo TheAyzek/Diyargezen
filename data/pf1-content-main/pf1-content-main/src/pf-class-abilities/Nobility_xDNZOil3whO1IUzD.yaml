@@ -1,0 +1,27 @@
+_id: xDNZOil3whO1IUzD
+_key: '!items!xDNZOil3whO1IUzD'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Nobility
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Abadar.</p><p><strong>Inspiring Word (minor)</strong>: At 1st level, you
+      can speak a few words to a creature within 30 feet that fill them with
+      inspiration. You can grant that creature a +2 morale bonus on attack
+      rolls, ability checks, skill checks, or saving throws (your choice). This
+      effect lasts for 1 minute.</p><p><strong>Lead by Example (major)</strong>:
+      At 10th level, as a swift action you can inspire your allies to follow
+      your lead. If the following action on your turn is an attack or skill
+      check, all allies within 30 feet who take the same action against the same
+      foe or obstacle on their next turn gain a +4 morale bonus on that
+      roll.</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

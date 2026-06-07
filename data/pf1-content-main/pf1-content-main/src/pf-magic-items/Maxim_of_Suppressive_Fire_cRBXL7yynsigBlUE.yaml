@@ -1,0 +1,62 @@
+_id: cRBXL7yynsigBlUE
+_key: '!items!cRBXL7yynsigBlUE'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/guns/rifle-brown.webp
+name: Maxim of Suppressive Fire
+system:
+  actions:
+    - _id: 3kix0v265n7jwgof
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: maximOfSuppressiveFire
+  aura:
+    school: con
+  baseTypes:
+    - Maxim M1910 Machine Gun
+  cl: 13
+  description:
+    value: >-
+      <p>The bullets fired by this +2 Maxim M1910 machine gun (see page 65) are
+      enhanced to pierce protective cover, allowing the wielder to ignore the AC
+      bonus granted to targets by anything less than total cover. A Maxim of
+      suppressive fire can make attacks against targets with total cover, but
+      the wielder must still guess the correct square of its target's location,
+      and the target still benefits from total concealment (50% miss
+      chance).<p><strong>Base Item</strong>: Maxim M1910 machine
+      gun</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, phase door</p>
+  enh: 2
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 33800
+  properties:
+    ato: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9071
+  weaponGroups:
+    - firearms
+  weight:
+    value: 140
+type: weapon

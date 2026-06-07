@@ -1,0 +1,31 @@
+_id: iVRo0ebA7YeJF8yd
+_key: '!items!iVRo0ebA7YeJF8yd'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/laboratory/bowl-liquid-black.webp
+name: Oil, Firearm
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>This clear, viscous
+      oil comes in a squat bottle with a dropper that dispenses one drop of oil
+      at a time. When applied to an early or advanced firearm, it seeps into the
+      weapon's inner workings and protects the gun from powder residue and
+      everyday wear and tear. Applying firearm oil takes 1 minute; once applied,
+      it reduces the misfire value of the firearm by 1 for 1 hour or until the
+      firearm is discharged. Firearm oil can't reduce a firearm's misfire value
+      to lower than 1. A single bottle contains enough oil for 20 applications
+      on one-handed firearms (or 10 applications on two-handed firearms).
+      Crafting firearm oil requires a successful DC 15 Craft (alchemy)
+      check.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      15</p>
+  price: 260
+  sources:
+    - id: PZO9486
+      pages: '14'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 1
+type: consumable

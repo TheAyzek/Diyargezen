@@ -1,0 +1,37 @@
+_id: ZmAwyO86RFKC9xjw
+_key: '!items!ZmAwyO86RFKC9xjw'
+_stats:
+  coreVersion: '12.331'
+folder: 8BDX6ut8OIZ2xbb0
+img: systems/pf1/icons/skills/blood_11.jpg
+name: Unarmed Strike (EitR)
+system:
+  associations:
+    classes:
+      - Monk
+  description:
+    value: >-
+      <p>At 1st level, a monk gains
+      @UUID[Compendium.pf-content.pf-third-party.Item.mqt8xsRApH8UFqLT]{Unarmed
+      Combatant (EitR)} as a bonus feat. A monk’s attacks may be with fist,
+      elbows, knees, and feet. This means that a monk may make unarmed strikes
+      with his hands full. There is no such thing as an off-hand attack for a
+      monk striking unarmed. A monk may thus apply his full Strength bonus on
+      damage rolls for all his unarmed strikes.</p><p>Usually a monk’s unarmed
+      strikes deal lethal damage, but he can choose to deal nonlethal damage
+      instead with no penalty on his attack roll. He has the same choice to deal
+      lethal or nonlethal damage while grappling.</p><p>A monk’s unarmed strike
+      is treated as both a manufactured weapon and a natural weapon for the
+      purpose of spells and effects that enhance or improve either manufactured
+      weapons or natural weapons.</p><p>A monk also deals more damage with his
+      unarmed strikes than a normal person would, as shown above on Table: Monk.
+      The unarmed damage values listed on Table: Monk are for Medium monks. A
+      Small monk deals less damage than the amount given there with his unarmed
+      attacks, while a Large monk deals more damage; see Table: Small or Large
+      Monk Unarmed Damage.</p><hr><div><table border="1"
+      cellpadding="5"><caption><strong>Table: Small or Large Monk Unarmed
+      Damage</strong></caption><thead><tr><th>Level</th><th>Damage (Small
+      monk)</th><th>Damage (Large
+      monk)</th></tr></thead><tbody><tr><td>1st–3rd</td><td>1d4</td><td>1d8</td></tr><tr><td>4th–7th</td><td>1d6</td><td>2d6</td></tr><tr><td>8th–11th</td><td>1d8</td><td>2d8</td></tr><tr><td>12th–15th</td><td>1d10</td><td>3d6</td></tr><tr><td>16th–19th</td><td>2d6</td><td>3d8</td></tr><tr><td>20th</td><td>2d8</td><td>4d8</td></tr></tbody></table></div>
+  subType: classFeat
+type: feat

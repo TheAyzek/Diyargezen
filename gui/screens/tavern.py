@@ -20,7 +20,7 @@ from utils.storage import list_characters, delete_character, CharacterRecord
 
 SYSTEM_BADGES = {
     "DND5E": "D&D 5e", "PATHFINDER_1E": "PF 1e", "PATHFINDER1E": "PF 1e",
-    "VTM5E": "VtM 5e", "MM3E": "M&M 3e",
+    "MM3E": "M&M 3e",
 }
 
 

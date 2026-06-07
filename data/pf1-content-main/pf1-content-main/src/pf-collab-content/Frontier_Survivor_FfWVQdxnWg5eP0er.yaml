@@ -1,0 +1,40 @@
+_id: FfWVQdxnWg5eP0er
+_key: '!items!FfWVQdxnWg5eP0er'
+_stats:
+  coreVersion: '12.331'
+folder: kbyaAby1KRWdeRfU
+img: systems/pf1/icons/races/human.jpg
+name: Frontier Survivor
+system:
+  changes:
+    - _id: e1VOl560
+      formula: '1'
+      target: bonusFeats
+      type: untyped
+  contextNotes:
+    - target: skill.sur
+      text: +[[2]] Racial bonus in the ruins of cities.
+  description:
+    value: >-
+      <p><strong>Race</strong>: Human<br /><strong>Replaced Trait(s)</strong>:
+      Skilled</p><hr /><p>Many humans raised on the Frontier live in the shadow
+      of fallen wonders and steel ruins. While few can hope to recreate the
+      marvels of ages past, many have become adept at salvaging what they can
+      and repurposing it in basic, life-prolonging ways. Humans with this trait
+      gain the @UUID[Compendium.pf1.feats.Item.1foaZv9wfqZVrZ90]{Technologist}
+      feat, which grants them understanding of technological subjects
+      (Pathfinder Campaign Setting: Technology Guide 7). Additionally, they gain
+      a +2 racial bonus on Survival checks in the ruins of cities.</p>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.feats.Item.1foaZv9wfqZVrZ90
+  sources:
+    - date: '2016'
+      pages: '5'
+      publisher: Paizo - Hideyuki Kikuchi
+      title: Pathfinder - The World of Vampire Hunter D
+  subType: racial
+  tags:
+    - Human
+    - The World of Vampire Hunter D
+type: feat

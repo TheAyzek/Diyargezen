@@ -1,0 +1,25 @@
+_id: T2oGKaIUr05OeAQG
+_key: '!items!T2oGKaIUr05OeAQG'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/bowl-liquid-white.webp
+name: Monochrome Camouflage
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>This slimy gray
+      unguent distorts wavelengths of light beyond of the normal visual
+      spectrum, causing you to appear blurry to creatures using darkvision.
+      Applying the camouflage takes 1 minute and provides a +4 alchemical bonus
+      on Stealth checks against creatures relying on darkvision to see. One dose
+      of monochrome camouflage lasts for 1 hour.</p>
+  price: 40
+  sources:
+    - id: PZO9479
+      pages: '30'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 1
+type: consumable

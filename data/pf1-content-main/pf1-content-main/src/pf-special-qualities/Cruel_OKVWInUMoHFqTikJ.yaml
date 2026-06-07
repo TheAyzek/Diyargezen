@@ -1,0 +1,26 @@
+_id: OKVWInUMoHFqTikJ
+_key: '!items!OKVWInUMoHFqTikJ'
+_stats:
+  coreVersion: '12.343'
+folder: AqjqWFWInPuTJU1V
+img: icons/skills/melee/strike-polearm-light-orange.webp
+name: Cruel
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint necromancy <strong>CL</strong>
+      5th</p><p><strong>Slot</strong> weapon quality; <strong>Price</strong> +1
+      bonus;</p><p>When the wielder strikes a creature that is frightened,
+      shaken, or panicked with a <em>cruel </em>weapon, that creature becomes
+      sickened for 1 round. When the wielder uses the weapon to knock
+      unconscious or kill a creature, he gains 5 temporary hit points that last
+      for 10 minutes.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, <em>cause fear</em>, <em>death knell</em>;
+      <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1123
+      pages: '138'
+  subType: misc
+  tags:
+    - Universal Weapon Qualities
+type: feat

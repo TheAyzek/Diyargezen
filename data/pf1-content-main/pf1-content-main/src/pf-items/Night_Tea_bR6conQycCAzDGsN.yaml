@@ -1,0 +1,21 @@
+_id: bR6conQycCAzDGsN
+_key: '!items!bR6conQycCAzDGsN'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/flowers/lotus-violet.webp
+name: Night Tea
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Black Market</p><p>This frothy tea made from
+      the bone-white, triangular leaves of the night tea plant renders a
+      humanoid female sterile if drunk every day. In high doses, it may be able
+      to end a pregnancy.</p>
+  price: 0.1
+  sources:
+    - id: PZO9410
+      pages: '19'
+  subType: misc
+  tags:
+    - Black Market
+type: consumable

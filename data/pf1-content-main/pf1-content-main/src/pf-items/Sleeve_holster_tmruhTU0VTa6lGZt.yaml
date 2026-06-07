@@ -1,0 +1,25 @@
+_id: tmruhTU0VTa6lGZt
+_key: '!items!tmruhTU0VTa6lGZt'
+_stats:
+  coreVersion: '12.331'
+img: icons/equipment/wrist/bracer-shadow.webp
+name: Sleeve holster
+system:
+  description:
+    value: >-
+      <p>When worn inside voluminous sleeves, this leather holster allows you to
+      draw a concealed hand crossbow or coat pistol<sup></sup> as a move action.
+      The weapon sits on sliders and is drawn directly into the hand. Unlike a
+      wrist sheath, a sleeve holster is bulky enough that it is obvious on close
+      inspection, though under a loose enough garment it might not provoke a
+      reactive Perception check. An individual sleeve holster fits for either a
+      hand crossbow or a coat pistol, but not both.</p>
+  equipped: false
+  price: 100
+  sources:
+    - id: PZO1129
+      pages: '205'
+  subType: tool
+  weight:
+    value: 1
+type: loot

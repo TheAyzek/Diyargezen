@@ -1,0 +1,37 @@
+_id: GCnwmnD03CVE6oUq
+_key: '!items!GCnwmnD03CVE6oUq'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Seducer's Bane
+system:
+  aura:
+    school: abj
+  cl: 6
+  description:
+    value: >-
+      <p>This slender silver bracelet is worked in an intertwined design of
+      three flowers. A DC 20 Knowledge (nature) check identifies the flowers as
+      acacia, apocynum, and bilberry, symbolizing concealment, treachery, and
+      falsehood.  The bracelet grants the wearer a +5 competence bonus on Sense
+      Motive checks, and a +5 resistance bonus on Will saves against enchantment
+      effects. If the wearer makes a successful Will save against an
+      enchantment, the caster of that spell incorrectly senses the effect has
+      succeeded. Additionally, the bracelet's wearer knows an enchantment
+      targeted him and the enchantment's source. Seducer's bane creates an aura
+      on its wearer, visible to detect magic, matching the failed enchantment
+      spell or effect, and lasting as long as the intended enchantment's
+      duration. However, if the bracelet's wearer attacks the caster or its
+      allies, or otherwise acts in a way that's contradictory to the failed
+      spell's effect, the caster of that spell immediately realizes the
+      enchantment was
+      ineffective.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, detect magic, magic aura, resistance, creator must
+      have 3 ranks in Sense Motive</p>
+  price: 9900
+  slot: wrists
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

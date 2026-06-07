@@ -1,0 +1,21 @@
+_id: nGaTKzlcbIupNy33
+_key: '!items!nGaTKzlcbIupNy33'
+_stats:
+  coreVersion: '12.331'
+img: icons/environment/creatures/frog-spotted-green.webp
+name: Toad
+system:
+  description:
+    value: >-
+      <p>This Diminutive amphibian is primarily kept as a familiar by
+      spellcasters. Toads live in most temperate and warm environments, and eat
+      insects. More information on toads can be found in <em>Bestiary</em>.</p>
+  equipped: false
+  price: 0.02
+  sources:
+    - id: PZO1123
+      pages: '80'
+  subType: animal
+  weight:
+    value: 0.35
+type: loot

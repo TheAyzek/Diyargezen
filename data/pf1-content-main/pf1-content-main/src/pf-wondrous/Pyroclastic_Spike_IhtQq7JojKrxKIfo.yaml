@@ -1,0 +1,43 @@
+_id: IhtQq7JojKrxKIfo
+_key: '!items!IhtQq7JojKrxKIfo'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Pyroclastic Spike
+system:
+  aura:
+    school: trs
+  cl: 7
+  description:
+    value: >-
+      <p>This 3-foot-long, magically reinforced obsidian rod is capped with a
+      globe of volcanic glass at one end, and a gleaming spike at the other.
+      Veins of molten earth glow faintly beneath the rod's surface, flowing from
+      a swirling fiery mass at the orb's core.  Once per day, the spiked end can
+      be driven into sand, mud, or loose earth as a move action, into dense soil
+      or loose gravel as a standard action, or into stone or metal as a
+      full-round action. Once anchored, the earth in a path that is 5 feet wide
+      and 30 feet long cracks and erupts with superheated gases in the direction
+      of the wielder's choosing, originating in a square adjacent to the
+      pyroclastic spike. Creatures standing in the path take 2d6 points of fire
+      damage (Reflex DC 16 half) from the flaming jets of sulfuric gases as the
+      ground beneath them begins to liquefy.  One round after anchoring the rod,
+      liquid fire begins to pour from the pyroclastic spike along the affected
+      area, creating a molten river 2 feet deep. The pyroclastic flow deals 10d6
+      points of fire damage to any barriers it encounters until it is able to
+      flow freely forward to the full range of effect. Creatures in the area of
+      effect automatically take 2d6 points of fire damage each round; those
+      falling prone or held under the liquid fire take 10d6 points of fire
+      damage each round. The molten river persists until the pyroclastic spike
+      is removed from the ground as a full-round action, at which point the
+      affected area immediately cools. Any creature in the molten terrain
+      becomes entangled when the rock cools, but may escape with a successful DC
+      16 Reflex save.</p><h3>Requirements</h3><p>Craft Rod, firefall</p>
+  price: 28000
+  sources:
+    - id: PZO9550
+  subType: other
+  weight:
+    value: 5
+type: equipment

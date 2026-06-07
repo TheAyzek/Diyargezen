@@ -1,0 +1,48 @@
+_id: aLruTlrrn3j8z0AD
+_key: '!items!aLruTlrrn3j8z0AD'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Book of Written Whispers
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>When first created, a book of written whispers is a relatively slim
+      volume of blank pages. Typically, the cover of a book of written whispers
+      is made to appear nondescript or plain, but the actual design of the
+      book's cover has no bearing on the item's use. This magic item is used to
+      pen secret messages to allies in distant areas. Each book of whispers is
+      linked to a specific activation word. The backside of each of the book's
+      pages can be removed as a standard action; the removed page appears as a
+      normal piece of paper, and the front side of the page that remains in the
+      book of whispers turns uniformly dark gray. The removed page is known as a
+      secret letter, while the page from which it was removed is known as a
+      source page. A secret letter doesn't radiate magic, behaving as if under
+      the effects of a magic aura spell.  At any point thereafter, the owner of
+      the book of written whispers can write a message on the source page. This
+      message can be up to 25 words long, a simple line drawing, or even a
+      straightforward map. When the book's owner writes the activation word in
+      the page's margin (this word does not count against the message's total
+      word count), the message or image inscribed on the page instantly
+      duplicates on the page's linked secret letter, and the actual contents of
+      both the source page and the secret letter are hidden by a secret page
+      effect. The carrier of the secret letter can use the activation word to
+      reveal the actual contents of the message or to restore the misleading
+      secret page contents.  As a standard action, the owner of a book of
+      written whispers can rip an entire source page out of the book. Doing so
+      causes its linked secret letter to crumble to ash, whether or not any
+      messages have yet been sent. A book of written whispers can be used only
+      25 times before it is filled; once used, a page cannot be reused to send a
+      new message.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, magic aura, secret page, sending</p>
+  price: 6000
+  sources:
+    - id: PZO9472
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,41 @@
+_id: jQI6OMtvKIrPYDpp
+_key: '!items!jQI6OMtvKIrPYDpp'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Kiss of barbatos
+system:
+  actions:
+    - _id: wp6xsk87x7m87s2z
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: fatigued, [[1d2]] Str drain, and
+            [[1]] Con drain
+      save:
+        dc: '23'
+        type: fort
+      tag: kissOfBarbatos
+  description:
+    value: >-
+      <p><strong>Type</strong> contact, ingested; <strong>Save</strong>
+      Fortitude DC 23</p><p><strong>Onset</strong> 1d6 days;
+      <strong>Frequency</strong> 1/day</p><p><strong>Effect</strong> fatigued,
+      1d2 Str drain, and 1 Con drain</p><p><strong>Cure</strong> 3 consecutive
+      saves</p>
+  price: 7500
+  sources:
+    - id: PZO9248
+      pages: '45'
+  subType: poison
+  uses:
+    per: single
+type: consumable

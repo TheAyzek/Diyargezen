@@ -1,0 +1,64 @@
+_id: ZYepLvv06CapjzMJ
+_key: '!items!ZYepLvv06CapjzMJ'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/clubs/club-banded-barbed-black.webp
+name: Oathtaker
+system:
+  actions:
+    - _id: o3vb1dnr93lgn0ay
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: oathtaker
+  aura:
+    school: nec
+  baseTypes:
+    - Tetsubo
+  cl: 9
+  description:
+    value: >-
+      <p>This Large +1 tetsubo (see page 27) is banded in corroded iron bearing
+      brass studs that are embossed with wicked Tien characters of punishment
+      and pain. Once per day, the wielder can bestow a blood geas upon a willing
+      subject who swears an oath to the wielder (the wielder and the subject
+      must agree on the exact nature of the oath). The blood geas functions as a
+      mark of justice that activates if the subject of the blood geas breaks his
+      oath, dealing 12d6+9 points of damage to the subject. If the subject
+      survives, the blood geas is removed, though the subject can swear a new
+      oath and receive a new blood geas if he chooses. A character can be under
+      only one blood geas at a time. A blood geas is permanent unless removed by
+      the wielder.<p><strong>Base Item</strong>: 
+      tetsubo</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, mark of justice, slay living</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 18540
+  showInQuickbar: false
+  sources:
+    - id: PZO9050
+  weaponGroups:
+    - hammers
+  weight:
+    value: 20
+type: weapon

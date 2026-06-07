@@ -1,0 +1,32 @@
+_id: 7ronDQvGYmR9ISKF
+_key: '!items!7ronDQvGYmR9ISKF'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Periapt of Temporary Familiar
+system:
+  aura:
+    school: con
+  cl: 9
+  description:
+    value: >-
+      <p>This clear blue crystal amulet contains a pearl figurine depicting a
+      miniature animal on the familiar list, such as a bat, monkey, or raven.
+      Three times per day, the wearer can call forth the animal depicted in the
+      amulet to serve as her familiar. This temporary familiar has all of the
+      familiar abilities as if the wearer was a 5th-level wizard, and remains
+      for 5 minutes or until it is reduced to 0 hit points. If the temporary
+      familiar is reduced to 0 hit points, it cannot be summoned again for 24
+      hours. The familiar retains memories from past summonings. Only those
+      without familiars of their own can activate a periapt of temporary
+      familiar.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, summon monster V, creator must have a familiar</p>
+  price: 8000
+  slot: neck
+  sources:
+    - id: PZO9458
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

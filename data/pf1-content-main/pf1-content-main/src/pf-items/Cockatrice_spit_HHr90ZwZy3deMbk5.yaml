@@ -1,0 +1,48 @@
+_id: HHr90ZwZy3deMbk5
+_key: '!items!HHr90ZwZy3deMbk5'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Cockatrice spit
+system:
+  actions:
+    - _id: 4ebdc1rvcg2ahfy6
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1d2]] Dex damage (a creature who
+            takes Dexterity damage equal to its Dexterity score from this poison
+            becomes petrified; each day, a petrified victim can attempt a new DC
+            12 Fortitude save to recover from the venom and become unpetrified
+            with an amount of Dexterity damage equal to [[1]] point less than
+            its Dexterity score)
+      save:
+        dc: '12'
+        type: fort
+      tag: cockatriceSpit
+  description:
+    value: >-
+      <p><strong>Type</strong> contact, injury, ingested; <strong>Save</strong>
+      Fortitude DC 12</p><p><strong>Frequency</strong> 1/round for 4
+      rounds</p><p><strong>Effect</strong> 1d2 Dex damage (a creature who takes
+      Dexterity damage equal to its Dexterity score from this poison becomes
+      petrified; each day, a petrified victim can attempt a new DC 12 Fortitude
+      save to recover from the venom and become unpetrified with an amount of
+      Dexterity damage equal to 1 point less than its Dexterity
+      score)</p><p><strong>Cure</strong> 1 save</p>
+  price: 1000
+  sources:
+    - id: PZO9232
+      pages: '53'
+  subType: poison
+  uses:
+    per: single
+type: consumable

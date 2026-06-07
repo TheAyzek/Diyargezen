@@ -1,0 +1,22 @@
+_id: oORVQxazyGbyHN7f
+_key: '!items!oORVQxazyGbyHN7f'
+_stats:
+  coreVersion: '12.331'
+img: icons/environment/creatures/frog-spotted-green.webp
+name: Toad (Vision)
+system:
+  description:
+    value: >-
+      <p>These animals are found in areas of the Mwangi Expanse. They have a
+      psychoactive skin venom which acts as a mild hallucinogen if the toad's
+      skin is licked,-though breeding programs for these creatures outside of
+      Mwangi produce venomless offspring.</p>
+  equipped: false
+  price: 10
+  sources:
+    - id: PZO9410
+      pages: '19'
+  subType: animal
+  weight:
+    value: 0.25
+type: loot

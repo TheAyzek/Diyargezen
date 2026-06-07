@@ -1,0 +1,21 @@
+_id: iVp3rfqS0bgq3i24
+_key: '!items!iVp3rfqS0bgq3i24'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/survival/rope-coiled-brown.webp
+name: Measuring Cord, 10 Ft.
+system:
+  description:
+    value: >-
+      <p>This length of sturdy twine is marked off in foot-long increments for
+      ease of measurement. Measuring cord is purchased in increments of 10
+      feet.</p>
+  equipped: false
+  price: 1
+  sources:
+    - id: PZO9235
+      pages: '48'
+  subType: adventuring
+  weight:
+    value: 0.5
+type: loot

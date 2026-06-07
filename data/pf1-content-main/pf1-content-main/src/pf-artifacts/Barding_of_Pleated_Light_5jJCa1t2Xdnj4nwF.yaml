@@ -1,0 +1,49 @@
+_id: 5jJCa1t2Xdnj4nwF
+_key: '!items!5jJCa1t2Xdnj4nwF'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_16.jpg
+name: Barding of Pleated Light
+system:
+  armor:
+    enh: 2
+  artifact: true
+  aura:
+    school: abj
+  baseTypes:
+    - Full Plate Barding
+  cl: 20
+  description:
+    value: >-
+      <p>The barding of pleated light was crafted by angels in service to
+      Pulura, the Shimmering Maiden, an empyreal lord once venerated by the
+      conquered people of Sarkoris. This ornately crafted mithral full plate
+      armor resizes to fit a horse, warhorse, or equivalent mount that it is
+      placed upon. It acts as +2 greater spell resistance (19) full plate
+      barding. The barding of pleated light grants additional powers related to
+      the rippling light of an aurora. These powers can be activated by the
+      wearer's rider; the wearer can activate the barding's powers only if it
+      has an Intelligence score of 3 or greater.  First, the barding can be
+      activated as the blinding shield special ability at will, but the wearer
+      and the wearer's rider are both immune to this blinding effect. Second, as
+      an immediate action, the armor can be activated to divert harmful light or
+      shadows. This grants the armor's spell resistance to the wearer's rider
+      for 1 round, but this spell resistance only protects against spells with
+      the light or shadow descriptor. Finally, the armor allows the wearer to
+      pass through shimmering curtains of light. As an immediate action when
+      charging, the armor can be activated to select any 10-foot-square area in
+      the path of the charge. A curtain of multicolored light appears
+      momentarily on each side of this area. The wearer can charge across this
+      area as though it did not exist, disappearing into a ripple of light on
+      one side and reappearing in a ripple of light on the other side. The
+      wearer ignores terrain or obstacles in the intervening area (allowing the
+      wearer to charge through allies in the area, for example), and the
+      intervening area does not count toward the wearer's charge movement. The
+      ripple of light cannot be used for movement by anyone except the wearer
+      and the wearer's rider.<p><strong>Base Item</strong>: +2 greater spell
+      resistance (19) full plate barding</p>
+  sources:
+    - id: PZO9074
+  weight:
+    value: 100
+type: equipment

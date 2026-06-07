@@ -1,0 +1,25 @@
+_id: ANiirOfofH9FTgSj
+_key: '!items!ANiirOfofH9FTgSj'
+_stats:
+  coreVersion: '12.331'
+img: icons/equipment/finger/ring-band-engraved-scrolls-gold.webp
+name: Sanctified rings (pair)
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Channel Foci</p><p><strong>Deity</strong>
+      Any</p><p>A single tiny religious symbol adorns each ring in this matched
+      pair. If two people each wear one of the rings and clasp hands, a cleric
+      may activate both rings with one use of channel energy. If the person
+      wearing one of these rings dies or removes it, the other ring instantly
+      cracks; the wearer of the broken ring knows if it cracked because the
+      other wearer died or the ring was removed.</p>
+  equipped: false
+  price: 5
+  sources:
+    - id: PZO9410
+      pages: '25'
+  subType: gear
+  tags:
+    - Channel Foci
+type: loot

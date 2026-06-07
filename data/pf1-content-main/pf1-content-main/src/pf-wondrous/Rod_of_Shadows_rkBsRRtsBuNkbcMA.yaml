@@ -1,0 +1,32 @@
+_id: rkBsRRtsBuNkbcMA
+_key: '!items!rkBsRRtsBuNkbcMA'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/mace-light.png
+name: Rod of Shadows
+system:
+  aura:
+    school: abj
+  baseTypes:
+    - Light Mace
+  cl: 8
+  description:
+    value: >-
+      <p>This ebon rod is so dark it seems to absorb the light around it. The
+      rod functions as a +2 light mace, and allows its wielder to see in
+      darkness as if she had the see in darkness ability (Bestiary 2 301). Three
+      times per day, the wielder can use it to create a deeper darkness effect
+      (caster level 8th). To use this ability, the rod's wielder must touch the
+      target object, which is a standard action that provokes attacks of
+      opportunity.</p><p><strong>Base Item</strong>: light
+      mace</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Rod,
+      deeper darkness, true seeing</p>
+  enh: 2
+  price: 64305
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 5
+type: equipment

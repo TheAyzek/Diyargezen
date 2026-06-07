@@ -1,0 +1,34 @@
+_id: URQS6xaJUYMmgpPh
+_key: '!journal!URQS6xaJUYMmgpPh'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Tsathoggua
+pages:
+  - _id: Nf9EpVIlvEYJCqWf
+    _key: '!journal.pages!URQS6xaJUYMmgpPh.Nf9EpVIlvEYJCqWf'
+    _stats:
+      coreVersion: '12.331'
+    name: Tsathoggua
+    sort: 0
+    text:
+      content: >-
+        <h1>Tsathoggua</h1><h2>Father of Night</h2>@Source[PZO90109;pages=72]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Tsathoggua">Tsathoggua</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Great Old Ones<br /><strong>Areas of
+        Concern</strong> Magic, outcasts, the underworld<br
+        /><strong>Domains</strong> Chaos, Evil, Knowledge, Magic<br
+        /><strong>Subdomains</strong> Arcane, Divine, Thought, Whimsy<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Short sword<br
+        /><strong>Symbol</strong> Crouching eyeless toad</p><h2>For Followers of
+        Tsathoggua</h2><h3>Feats</h3><p>Dreamed Secrets</p><h3>Magic Items -
+        Wondrous Items</h3><p>Preklikin's Book of
+        Cults</p><h3>Traits</h3><p>Unspeakable Bond</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

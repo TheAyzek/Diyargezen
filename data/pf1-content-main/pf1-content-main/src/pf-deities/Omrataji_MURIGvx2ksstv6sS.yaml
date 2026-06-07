@@ -1,0 +1,33 @@
+_id: MURIGvx2ksstv6sS
+_key: '!journal!MURIGvx2ksstv6sS'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Omrataji
+pages:
+  - _id: wT8hS8ENkrWn20Eo
+    _key: '!journal.pages!MURIGvx2ksstv6sS.wT8hS8ENkrWn20Eo'
+    _stats:
+      coreVersion: '12.331'
+    name: Omrataji
+    sort: 0
+    text:
+      content: >-
+        <h1>Omrataji</h1><h2>The Spirit in Silver</h2>@Source[PZO9285;pages=43]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Omrataji">Omrataji</a><h3>Details</h3><p><strong>Alignment</strong>
+        NG<br /><strong>Pantheon</strong> Other Deities<br /><strong>Areas of
+        Concern</strong> Silver, silverwork, and silver mining<br
+        /><strong>Domains</strong> Artifice, Earth, Good, Nobility<br
+        /><strong>Subdomains</strong> Friendship, Leadership, Metal, Toil<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Spiked chain<br
+        /><strong>Symbol</strong> A shimmering silver star<br /><strong>Sacred
+        Animal(s)</strong> Mole</p><h3>On Golarion</h3><p><strong>Centers of
+        Worship</strong> Radripal<br /><strong>Nationality</strong> Vudra</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

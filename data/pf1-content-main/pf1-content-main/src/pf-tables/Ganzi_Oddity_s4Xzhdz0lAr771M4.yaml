@@ -1,0 +1,70 @@
+_id: s4Xzhdz0lAr771M4
+_key: '!tables!s4Xzhdz0lAr771M4'
+_stats:
+  coreVersion: '12.331'
+description: >-
+  <p>options from the
+  @UUID[Compendium.pf-content.pf-racial-traits.Item.hYaZXrQBzKotSxMa]{Ganzi
+  Oddity} racial trait</p>
+displayRoll: true
+folder: 4U2G1dgYv0KDKN6a
+formula: 1d20
+img: icons/creatures/abilities/tail-swipe-green.webp
+name: Ganzi Oddity
+replacement: true
+results:
+  - _id: RhsAGfNlJjlcb3xC
+    _key: '!tables.results!s4Xzhdz0lAr771M4.RhsAGfNlJjlcb3xC'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 2
+    text: Chaos Champion (Su)
+    type: text
+    weight: 1
+  - _id: sXCJMIv8EiKXmqFx
+    _key: '!tables.results!s4Xzhdz0lAr771M4.sXCJMIv8EiKXmqFx'
+    img: icons/svg/d20-black.svg
+    range:
+      - 3
+      - 4
+    text: Entropic Flesh (Ex)
+    type: text
+    weight: 1
+  - _id: FZZEQyeiWkDuG7dU
+    _key: '!tables.results!s4Xzhdz0lAr771M4.FZZEQyeiWkDuG7dU'
+    img: icons/svg/d20-black.svg
+    range:
+      - 5
+      - 6
+    text: Prehensile Tail (Ex)
+    type: text
+    weight: 1
+  - _id: suHZ42RBApfIpoaq
+    _key: '!tables.results!s4Xzhdz0lAr771M4.suHZ42RBApfIpoaq'
+    img: icons/svg/d20-black.svg
+    range:
+      - 7
+      - 14
+    text: Quibble (Su)
+    type: text
+    weight: 1
+  - _id: LVTyjFZPbBFTwbsI
+    _key: '!tables.results!s4Xzhdz0lAr771M4.LVTyjFZPbBFTwbsI'
+    img: icons/svg/d20-black.svg
+    range:
+      - 15
+      - 18
+    text: Spell-Like Ability (Sp)
+    type: text
+    weight: 1
+  - _id: LVEJbOtyAGecw8xt
+    _key: '!tables.results!s4Xzhdz0lAr771M4.LVEJbOtyAGecw8xt'
+    img: icons/svg/d20-black.svg
+    range:
+      - 19
+      - 22
+    text: ''
+    type: text
+    weight: 1
+sort: 0

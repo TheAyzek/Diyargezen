@@ -1,0 +1,40 @@
+_id: sb31FFq9M1f6tdFh
+_key: '!items!sb31FFq9M1f6tdFh'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Style-Stealing Vambrace
+system:
+  aura:
+    school: trs
+  cl: 10
+  description:
+    value: >-
+      <p>This plain silver-and-steel bracelet grants the keen weapon special
+      ability to any piercing or slashing weapon wielded by the wearer. Each
+      time the wearer confirms a critical hit with such a weapon, however, she
+      must succeed at a DC 17 Fortitude save or the bracelet severs her hand,
+      dealing 1d6 points of Dexterity drain and 2d6 points of bleed damage. The
+      style-stealing vambrace and the severed hand immediately teleport to the
+      item's creator if he is on the same plane, or else drop to the ground if
+      he is not.  Once per day, a creature holding the severed hand can speak
+      the bracelet's command word to gain access to one combat feat known by the
+      previous wearer for 24 hours, as if it were a bonus feat. The creature
+      must meet all of the usual prerequisites for the feat.  The wearer's hand
+      can be restored instantly with a regenerate spell, or with a restoration
+      spell or regeneration (such as that granted by a ring of regeneration) if
+      the severed hand is held against the stump. Restoring the wearer's hand
+      removes the Dexterity drain. The style-stealing vambrace cannot be removed
+      from the severed hand it holds or be reused until its victim dies or the
+      hand is
+      reattached.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, bestow curse, gentle repose, keen edge</p>
+  price: 15000
+  slot: wrists
+  sources:
+    - id: PZO9462
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

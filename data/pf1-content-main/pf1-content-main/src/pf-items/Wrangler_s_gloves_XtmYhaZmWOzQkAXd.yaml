@@ -1,0 +1,29 @@
+_id: XtmYhaZmWOzQkAXd
+_key: '!items!XtmYhaZmWOzQkAXd'
+_stats:
+  coreVersion: '12.331'
+img: icons/equipment/hand/glove-tooled-leather-brown.webp
+name: Wrangler's gloves
+system:
+  description:
+    value: >-
+      <p>Fine plates of articulated steel reinforce these elbow-length leather
+      gloves, which are designed to allow animal handlers and animal hunters
+      alike to confront beasts with natural defenses like spines and quills.
+      While wearing the gloves, you gain DR 2/magic against attacks of
+      opportunity provoked when you attempt a combat maneuver check to grapple a
+      creature. You also gain this damage reduction and a +1 circumstance bonus
+      on Reflex saves against defensive abilities that deal damage when you
+      strike a creature with a nonreach weapon, unarmed strike, or natural
+      attack. The thick gloves restrict your movement, imposing a -2 penalty on
+      precision-based skill checks that involve your hands (such as using
+      Disable Device to pick a lock)</p>
+  price: 20
+  slot: clothing
+  sources:
+    - id: PZO9478
+      pages: '27'
+  subType: clothing
+  weight:
+    value: 6
+type: equipment

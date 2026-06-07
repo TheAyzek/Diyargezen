@@ -1,0 +1,60 @@
+_id: K7Egfu3ktiDxh4m1
+_key: '!journal!K7Egfu3ktiDxh4m1'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 3GAmKByTM8rM7ryv
+name: 1.2.7.17. Sylph Subraces
+pages:
+  - _id: xvXWfA7ZXlAdITJ5
+    _key: '!journal.pages!K7Egfu3ktiDxh4m1.xvXWfA7ZXlAdITJ5'
+    _stats:
+      coreVersion: '12.331'
+    name: 1.2.7.17. Sylph Subraces
+    sort: 0
+    text:
+      content: >-
+        <h2> Smokesoul (Fume
+        Sylph)</h2><p>@Source[PZO9492;pages=21]</p><p>Veiled and surreptitious,
+        smokesoul sylphs are natural deceivers, always concealing their true
+        intentions.</p><p><strong>Typical Alignment</strong> CE<br
+        /><strong>Ability Modifiers</strong> +2 Dex, +2 Cha, –2 Con<br
+        /><strong>Alternate Spell-Like Ability</strong> Smokesouls gain
+        <em>blurred movement</em> as a spell-like ability.<br /><strong>Smoke
+        Affinity</strong> This racial trait functions as and can be replaced as
+        the base sylph’s air affinity, except it benefits sorcerers with the
+        shadow bloodline and spellcasters with the Smoke
+        subdomain.</p><p>Obfuscation, secrecy, and the shape of things not
+        there: all these are the natural realms of smokesouls. They are experts
+        at concealing both their bodies and motivations, and at making the
+        insubstantial seem as real as any physical object. Smokesouls are drawn
+        to areas of dangerous politics and intrigue, and many can be found in
+        Nidal and Brevoy pursuing whatever machinations amuse them.</p><p>With
+        few distinguishing features save ashen skin and dark hair, smokesouls
+        can be mistaken for any number of other races. Smokesouls often change
+        their clothing, cosmetics, or style to keep their appearance in a
+        constant state of flux.</p><h2> Stormsoul (Lightning
+        Sylph)</h2><p>@Source[PZO9492;pages=21]</p><p>With an abundance of
+        confidence and a shortage of patience, stormsoul sylphs are
+        personalities who cannot be ignored.</p><p><strong>Typical
+        Alignment</strong> CN<br /><strong>Ability Modifiers</strong> +2 Dex, +2
+        Cha, –2 Wis<br /><strong>Alternate Spell-Like Ability</strong>
+        Stormsouls gain <em>shocking grasp</em> as a spell-like ability.<br
+        /><strong>Lightning Affinity</strong> This racial trait functions as and
+        can be replaced as the base sylph’s air affinity, except it benefits
+        sorcerers with the stormborn bloodline and spellcasters with the Weather
+        domain.</p><p>When a stormsoul moves, either in word or in action, the
+        world notices. Unafraid to speak their minds, they are both direct and
+        unsubtle, and they make fierce allies. When friends are in need,
+        stormsouls act without thinking and are always the first to leap to
+        their aid.</p><p>A stormsoul sylph has hair that always seems to move,
+        even when there is no breeze, and acts with a sudden intensity that can
+        seem out of control. Their eyes are the color of stormy water or
+        lightning-lit skies, and even a casual glance from a stormsoul can seem
+        severe.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

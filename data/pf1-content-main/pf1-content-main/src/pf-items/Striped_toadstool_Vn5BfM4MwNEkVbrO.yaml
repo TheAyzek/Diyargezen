@@ -1,0 +1,38 @@
+_id: Vn5BfM4MwNEkVbrO
+_key: '!items!Vn5BfM4MwNEkVbrO'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Striped toadstool
+system:
+  actions:
+    - _id: w8rxhiots0hyat3f
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - '<strong>Primary Effect</strong: [[1d3]] Wis and [[1]] Int'
+      save:
+        dc: '11'
+        type: fort
+      tag: stripedToadstool
+  description:
+    value: >-
+      <p><strong>Type</strong> ingested; <strong>Save</strong> Fortitude DC
+      11</p><p><strong>Onset</strong> 10 minutes; <strong>Frequency</strong>
+      1/minute for 4 minutes</p><p><strong>Effect</strong> 1d3 Wis and 1
+      Int</p><p><strong>Cure</strong> 1 save</p>
+  price: 180
+  sources:
+    - id: PZO1123
+      pages: '111'
+  subType: poison
+  uses:
+    per: single
+type: consumable

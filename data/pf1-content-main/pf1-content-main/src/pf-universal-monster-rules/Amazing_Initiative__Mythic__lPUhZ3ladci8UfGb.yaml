@@ -1,0 +1,21 @@
+_id: lPUhZ3ladci8UfGb
+_key: '!items!lPUhZ3ladci8UfGb'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/feats/dodge.jpg
+name: Amazing Initiative [Mythic]
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>The creature has a bonus on initiative checks equal to its mythic
+      ranks. As a free action on its turn, it can expend one use of <a>mythic
+      power</a> to take an additional standard action during that turn. This
+      additional standard action can&rsquo;t be used to cast a spell. It
+      can&rsquo;t gain an extra action in this way more than once per
+      round.</p><p><em>Format</em>: amazing initiative</p><p><em>Location</em>:
+      Special Attacks.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

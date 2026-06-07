@@ -1,0 +1,66 @@
+_id: GunDvxcgXZJJetFb
+_key: '!items!GunDvxcgXZJJetFb'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/greatsword.PNG
+name: Sword of Vengeance
+system:
+  actions:
+    - _id: s2vs49uwmpge0glb
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: swordOfVengeance
+  aura:
+    custom: true
+    school: evocation [good]
+  baseTypes:
+    - Greatsword
+  cl: 9
+  description:
+    value: >-
+      <p>It is said that the empyreal lord Ragathiel's divine soldiers wield
+      these golden +1 holy greatswords in their battles against fiends and other
+      evil creatures. Once per day upon successfully striking an evil-aligned
+      creature with a sword of vengeance, the wielder can cause the sword to
+      emit a 20-foot-radius burst of holy energy. This effect is identical to
+      that of a holy smite spell centered on the creature struck, and deals 4d8
+      points of damage to each evil creature in the area (or 9d6 points of
+      damage to evil outsiders) and causes each to become blinded for 1 round. A
+      successful DC 16 Will save halves the damage and negates the blinded
+      effect. Neutral creatures in the area only take half damage (reduced to
+      one-quarter on a successful save) and are not blinded.</p><p><strong>Base
+      Item</strong>: holy
+      greatsword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, holy smite, creator must be good</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 32350
+  showInQuickbar: false
+  sources:
+    - id: PZO9255
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 8
+type: weapon

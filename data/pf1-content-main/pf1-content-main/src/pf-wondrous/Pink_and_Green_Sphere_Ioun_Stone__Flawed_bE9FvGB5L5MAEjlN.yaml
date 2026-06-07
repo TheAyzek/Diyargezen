@@ -1,0 +1,51 @@
+_id: bE9FvGB5L5MAEjlN
+_key: '!items!bE9FvGB5L5MAEjlN'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/spells/light-eerie-1.jpg
+name: Pink and Green Sphere Ioun Stone, Flawed
+system:
+  aura:
+    custom: true
+    school: varied
+  changes:
+    - _id: zAlR8lRN
+      formula: '2'
+      target: cha
+      type: enh
+    - _id: ZiTaPz0l
+      formula: '-2'
+      target: con
+      type: untyped
+  cl: 12
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>This spherical stone is both pink and green. It may have irregular
+      facets or internal flaws.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone grants a +2 enhancement bonus to Charisma and
+      a -2 penalty to Constitution.</p><h3>Resonance</h3><p><strong>Method 1,
+      Fixed:</strong> +1 bonus on Will saves.</p><p><strong>Method 2,
+      Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, creator must be 12th level <strong>Cost</strong>
+      3,000 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 6000
+  sources:
+    - id: PZO1138
+      pages: '149'
+    - id: PZO9211
+      pages: 50, 52
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

@@ -1,0 +1,21 @@
+_id: t7YB0M7hBXjBXdIK
+_key: '!items!t7YB0M7hBXjBXdIK'
+_stats:
+  coreVersion: '12.331'
+img: icons/weapons/axes/pickaxe-double-black.webp
+name: Miner's Pick
+system:
+  description:
+    value: >-
+      <p>If a miner's pick is used in combat, treat it as a two-handed
+      improvised weapon that deals piercing damage equal to that of a heavy pick
+      of its size.</p>
+  equipped: false
+  price: 3
+  sources:
+    - id: PZO1123
+      pages: '57'
+  subType: adventuring
+  weight:
+    value: 10
+type: loot

@@ -1,0 +1,25 @@
+_id: Wbfa1zFLrMnvTCvR
+_key: '!items!Wbfa1zFLrMnvTCvR'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Greater Hat of Disguise
+system:
+  aura:
+    school: ill
+  cl: 3
+  description:
+    value: >-
+      <p>Like a hat of disguise, this garment allows its wearer to alter her
+      appearance. It functions as an alter self spell (as opposed to disguise
+      self). The hat becomes a part of the disguise and can be a hat, a helmet,
+      a headscarf, and so
+      forth.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, alter self</p>
+  price: 12000
+  slot: head
+  sources:
+    - id: PZO9526
+  subType: wondrous
+type: equipment

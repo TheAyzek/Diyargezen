@@ -1,0 +1,102 @@
+_id: P3DwiYmT9U4g2c8P
+_key: '!tables!P3DwiYmT9U4g2c8P'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/settlement/city-gate.webp
+name: City Streets
+replacement: true
+results:
+  - _id: s9AX48laJH9K3vtp
+    _key: '!tables.results!P3DwiYmT9U4g2c8P.s9AX48laJH9K3vtp'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 2
+    text: Important person (noble or royal)
+    type: text
+    weight: 1
+  - _id: XyeALWoqHTFq6UwW
+    _key: '!tables.results!P3DwiYmT9U4g2c8P.XyeALWoqHTFq6UwW'
+    img: icons/svg/d20-black.svg
+    range:
+      - 3
+      - 5
+    text: Important person (arbiter or magistrate)
+    type: text
+    weight: 1
+  - _id: 5515js8mpepZH3ca
+    _key: '!tables.results!P3DwiYmT9U4g2c8P.5515js8mpepZH3ca'
+    img: icons/svg/d20-black.svg
+    range:
+      - 6
+      - 10
+    text: Peasants blocking path
+    type: text
+    weight: 1
+  - _id: sA6UfR4KKVT6a3eE
+    _key: '!tables.results!P3DwiYmT9U4g2c8P.sA6UfR4KKVT6a3eE'
+    img: icons/svg/d20-black.svg
+    range:
+      - 11
+      - 20
+    text: Pushy vendor
+    type: text
+    weight: 1
+  - _id: 2PFAeQECc2xWhpAt
+    _key: '!tables.results!P3DwiYmT9U4g2c8P.2PFAeQECc2xWhpAt'
+    img: icons/svg/d20-black.svg
+    range:
+      - 21
+      - 30
+    text: Pickpocket (rogue 1; Sleight of Hand +7) [AVG CR 1]
+    type: text
+    weight: 1
+  - _id: fqRESwoqKWoAr6s0
+    _key: '!tables.results!P3DwiYmT9U4g2c8P.fqRESwoqKWoAr6s0'
+    img: icons/svg/d20-black.svg
+    range:
+      - 31
+      - 40
+    text: Bar brawl spreads to street ([[2d6]] commoner 1) [AVG CR 4]
+    type: text
+    weight: 1
+  - _id: AYZspFIPo2QoP4I9
+    _key: '!tables.results!P3DwiYmT9U4g2c8P.AYZspFIPo2QoP4I9'
+    img: icons/svg/d20-black.svg
+    range:
+      - 41
+      - 50
+    text: '[[1d3]] thugs [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: lHBcKsDEBtpaFSvT
+    _key: '!tables.results!P3DwiYmT9U4g2c8P.lHBcKsDEBtpaFSvT'
+    img: icons/svg/d20-black.svg
+    range:
+      - 51
+      - 60
+    text: '[[1d3]] Knights (fighter 4) [AVG CR 6]'
+    type: text
+    weight: 1
+  - _id: 8TjCdTbuBM5EVAMs
+    _key: '!tables.results!P3DwiYmT9U4g2c8P.8TjCdTbuBM5EVAMs'
+    img: icons/svg/d20-black.svg
+    range:
+      - 61
+      - 80
+    text: '[[2d4]] Heavy cavalry [AVG CR 7]'
+    type: text
+    weight: 1
+  - _id: fCmuIP5dUEc7actQ
+    _key: '!tables.results!P3DwiYmT9U4g2c8P.fCmuIP5dUEc7actQ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 81
+      - 100
+    text: '[[1d3]] Elite marines [AVG CR 7]'
+    type: text
+    weight: 1
+sort: 1000000

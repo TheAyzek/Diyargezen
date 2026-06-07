@@ -1,0 +1,29 @@
+_id: mMvLaV4aTnovCvoE
+_key: '!items!mMvLaV4aTnovCvoE'
+_stats:
+  coreVersion: '12.331'
+folder: CAxOlglJyXdUOHF9
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Latent Psion (Human; Vudrani)
+system:
+  contextNotes:
+    - target: allSavingThrows
+      text: +[[2]] Trait bonus against mind-affecting effects.
+  description:
+    value: >-
+      <p><em>The power to affect the world with the mind is very much a reality
+      in your distant homeland. Although you may not even have been born in
+      Vudra, this power remains potent in your mind as well and protects you
+      from mental assault.</em></p><p><strong>Requirements</strong>: Vudrani
+      Human Heritage</p><p><strong>Benefits</strong>: You gain a +2 trait bonus
+      on saves against mind-affecting effects.</p>
+  sources:
+    - id: PZO9404
+      pages: '8'
+  subType: trait
+  tags:
+    - '3.5'
+    - Human
+    - Vudrani
+  traitType: race
+type: feat

@@ -1,0 +1,49 @@
+_id: 5EbEndpkB8OhsSh4
+_key: '!journal!5EbEndpkB8OhsSh4'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Wadjet
+pages:
+  - _id: OrsaIsJB4VRorLZy
+    _key: '!journal.pages!5EbEndpkB8OhsSh4.OrsaIsJB4VRorLZy'
+    _stats:
+      coreVersion: '12.331'
+    name: Wadjet
+    sort: 0
+    text:
+      content: >-
+        <h1>Wadjet</h1><h2>The Green Empress</h2>@Source[PZO9080;pages=65] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Wadjet">Wadjet</a><h3>Details</h3><p><strong>Alignment</strong>
+        LG<br /><strong>Pantheon</strong> Deities of Ancient Osirion<br
+        /><strong>Areas of Concern</strong> Good serpents, the River Sphinx,
+        wisdom<br /><strong>Domains</strong> Good, Law, Protection, Travel,
+        Water<br /><strong>Subdomains</strong> Archon (Good), Archon (Law),
+        Defense, Exploration, Purity, Rivers, Trade<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Light mace<br /><strong>Symbol</strong> Uraeus<br
+        /><strong>Sacred Animal(s)</strong> Uraeus</p><h2>Paladin
+        Code</h2>Paladins of Wadjet are stoic yet gentle defenders of the
+        people, devoted especially to those living near rivers and other bodies
+        of water. They are relentless in their crusade against Apep, the evil
+        god of snakes and darkness. Their tenets include the following
+        affirmations. <ul><li>The just and innocent are my wards. I will keep
+        them safe and protected from evil to my last breath. </li><li>There are
+        those who cannot travel to find what they need. If I find myself lacking
+        in just actions, I will journey and find those who need my help.
+        </li><li>I will offer my services to explorers, traders, and travelers
+        who are unable to defend themselves. Their journeys aid us all.
+        </li><li>I never turn away those that seek my counsel. If I cannot aid,
+        I will find one who can. </li><li>Apep and his minions seek to destroy
+        others. I am the only one who stands against his will. When I can, I
+        will journey to cleanse his presence in this world. </li><li>Water is
+        life. I must protect the rivers and waters to keep them safe and pure
+        for all, as even the pharaoh thirsts.</li></ul><h2>For Followers of
+        Wadjet</h2><h3>Traits</h3><p>Snake Handler</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

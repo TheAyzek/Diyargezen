@@ -1,0 +1,28 @@
+_id: yQWQ0qffKDPIjzL7
+_key: '!items!yQWQ0qffKDPIjzL7'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Warding Lips
+system:
+  aura:
+    custom: true
+    school: conjuration and necromancy
+  cl: 7
+  description:
+    value: >-
+      <p>When placed upon the lips, these thin, translucent sheets of wax melt
+      invisibly onto the user's mouth. The user is aware of-but unaffected
+      by-any magical attacks or effects that might harm him through the lips or
+      mouth (such as a succubus's energy drain attack). In addition, the next
+      time he would be exposed to an ingested poison, the warding lips instead
+      absorb the toxin and leave him unharmed. Once exposed to a magical attack
+      or ingested poison, a set of warding lips loses its magic and becomes
+      useless.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, death ward, neutralize poison</p>
+  price: 1900
+  sources:
+    - id: PZO9437
+  subType: wondrous
+type: equipment

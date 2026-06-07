@@ -1,0 +1,90 @@
+_id: tbAP08jcSWONo1KU
+_key: '!journal!tbAP08jcSWONo1KU'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: UlEQEZMn7bUilTY4
+name: 1.4.4. Prestige Classes
+pages:
+  - _id: BkspO0o9wd3JLPGC
+    _key: '!journal.pages!tbAP08jcSWONo1KU.BkspO0o9wd3JLPGC'
+    _stats:
+      coreVersion: '12.331'
+    name: 1.4.4. Prestige Classes
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.8scSEgBEtJZj0suf]{(Index) Basic
+        Rules}</p><p>@Compendium[pf-content.pf-rules.8Nz7dSYe8AdHtMRR]{1.4.
+        Character
+        Advancement}</p><ul><li>@Compendium[pf-content.pf-rules.41Ie3KadQC9DGMyk]{1.4.1.
+        Advancing Your
+        Character}</li><li>@Compendium[pf-content.pf-rules.bBCgoC07LGfsk4GW]{1.4.2.
+        Multiclassing}</li><li>@Compendium[pf-content.pf-rules.65d8pVRYrHZNPxEz]{1.4.3.
+        Favored
+        Class}</li><li><strong>@Compendium[pf-content.pf-rules.tbAP08jcSWONo1KU]{1.4.4.
+        Prestige Classes}</strong></li></ul><hr
+        /><p>@Source[PZO1110;pages=374]</p><p>Prestige classes allow characters
+        to become truly exceptional, gaining powers beyond the ken of their
+        peers. Unlike the core classes, characters must meet specific
+        requirements before they can take their first level of a prestige class.
+        If a character does not meet the requirements for a prestige class
+        before gaining any benefits of that level, that character cannot take
+        that prestige class. Characters that take levels in prestige classes do
+        not gain any favored class bonuses for those levels.</p><p>This chapter
+        presents 10 prestige classes for you to choose from, and other prestige
+        classes appear in other Pathfinder products. Some prestige classes are
+        quite focused and heavy on flavor that might not be compatible with your
+        campaign—consult with your GM before you start to work toward qualifying
+        for a prestige class to make sure that the class is allowed.</p><p>For
+        full list of Prestige Classes see
+        @Compendium[pf-content.pf-rules.S3OV4tpgHqvVzuUs]{1.4.4.1. List of
+        Prestige Classes}.</p><p>The prestige classes presented in this chapter
+        are summarized below.</p><hr
+        /><p>@Compendium[pf1e-archetypes.pf-prestige-classes.scW8OGgB3L0eGnUi]{Arcane
+        Archer}</p><p>An arcane spellcaster who draws upon ancient elven
+        traditions to infuse his arrows with potent magical
+        power.</p><p>@Compendium[pf1e-archetypes.pf-prestige-classes.FFjy4c39WOyew64b]{Arcane
+        Trickster}</p><p>A troublemaker and a scoundrel who uses arcane magic to
+        enhance her thievery and
+        trickery.</p><p>@Compendium[pf1e-archetypes.pf-prestige-classes.EE7ooB0OLqasi444]{Assassin}</p><p>A
+        remorseless murderer who kills for money and the sheer thrill of
+        death-dealing.</p><p>@Compendium[pf1e-archetypes.pf-prestige-classes.3KNVDOuz0SsFbjJ5]{Dragon
+        Disciple}</p><p>An arcane spellcaster who has embraced his latent
+        draconic heritage and, over the course of training and devotion,
+        undergoes a partial transformation into a
+        dragon.</p><p>@Compendium[pf1e-archetypes.pf-prestige-classes.XPSm2CMgfTurzn4g]{Duelist}</p><p>A
+        swashbuckling swordfighter who relies upon grace, poise, and acrobatics
+        to win the
+        day.</p><p>@Compendium[pf1e-archetypes.pf-prestige-classes.SPNA8xdO7ABr4rxn]{Eldritch
+        Knight}</p><p>An arcane spellcaster who augments his magical skills with
+        combat to create a deadly combination of weapons and
+        magic.</p><p>@Compendium[pf1e-archetypes.pf-prestige-classes.4bzApqhO9vmbWMiN]{Loremaster}</p><p>A
+        spellcaster who devotes his life to research and rumination upon the
+        mysteries of the
+        world.</p><p>@Compendium[pf1e-archetypes.pf-prestige-classes.8JcLMHBiRCLFtFSG]{Mystic
+        Theurge}</p><p>Equally devoted to divine and arcane magic, the mystic
+        theurge combines both magical traditions into one incredibly diverse
+        class.</p><p>@Compendium[pf1e-archetypes.pf-prestige-classes.7Rj6AGJk2gAz74di]{Pathfinder
+        Chronicler}</p><p>An explorer at heart, the Pathfinder chronicler
+        travels to distant, exotic lands to expand her knowledge of the
+        world.</p><p>@Compendium[pf1e-archetypes.pf-prestige-classes.a02IaAT1nUKztldr]{Shadowdancer}</p><p>A
+        mysterious adventurer who walks the boundaries between the real world
+        and the realm of shadows, and who can command shadows to do her
+        bidding.</p><h2>Definitions of
+        Terms</h2><p>@Source[PZO1110;pages=374]</p><p>Here are definitions of
+        some terms used in this section.</p><p><strong>Core Class</strong>: One
+        of the standard eleven classes found in Chapter 3.</p><p><strong>Caster
+        Level</strong>: Generally equal to the number of class levels (see
+        below) in a spellcasting class. Some prestige classes add caster levels
+        to an existing class.</p><p><strong>Character Level</strong>: The total
+        level of the character, which is the sum of all class levels held by
+        that character.</p><p><strong>Class Level</strong>: The level of a
+        character in a particular class. For a character with levels in only one
+        class, class level and character level are the same.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,65 @@
+_id: xZ1iry2RdJiIpbEC
+_key: '!items!xZ1iry2RdJiIpbEC'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/hook-hand.PNG
+name: Wizard Hook
+system:
+  actions:
+    - _id: 8ynpxe1bedopq7dc
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: wizardHook
+  aura:
+    school: nec
+  baseTypes:
+    - Hook Hand
+  cl: 6
+  description:
+    value: >-
+      <p>A wizard hook is a +1 hook hand (Pirates of the Inner Sea 19) and a
+      useful item for any arcane spellcaster. Although a wizard hook does not
+      allow for fine manipulation, it is infused with magic that bolsters
+      somatic components-you can use a hand stump outfitted with a wizard hook
+      to fulfill any somatic components for casting arcane spells. A wizard hook
+      also grants proficiency in its use as a weapon. You can make touch attacks
+      with spells using a wizard hook, either by making a normal attack with the
+      hook (in which case it deals normal hook hand damage plus the spell
+      effect), or by making a touch attack with the hook (in which case you gain
+      a +4 bonus on the attack roll and the save DC of the spell increases by
+      +1, but you do not do hook hand damage).<p><strong>Base Item</strong>:
+      hook hand</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, spectral hand</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 4310
+  properties:
+    dis: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9059
+  weaponGroups:
+    - close
+  weight:
+    value: 1
+type: weapon

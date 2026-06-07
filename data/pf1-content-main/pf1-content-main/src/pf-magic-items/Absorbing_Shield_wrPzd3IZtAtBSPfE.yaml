@@ -1,0 +1,41 @@
+_id: wrPzd3IZtAtBSPfE
+_key: '!items!wrPzd3IZtAtBSPfE'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-heavy-metal.png
+name: Absorbing Shield
+system:
+  armor:
+    acp: 2
+    material:
+      base:
+        value: steel
+    value: 2
+  aura:
+    school: trs
+  baseTypes:
+    - Heavy Steel Shield
+  cl: 17
+  description:
+    value: >-
+      <p>This +1 heavy steel shield is made of metal, but i ts color is a flat
+      black that seems to absorb light. Once every 2 days, on command, it can
+      disintegrate an object that it touches, as the spell but requiring a melee
+      touch attack. This effect only functions as an attack-it can't be
+      activated to target a creature or weapon as it strikes the
+      shield.</p><p><strong>Base Item</strong>: heavy steel
+      shield</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, disintegrate</p>
+  enh: 1
+  equipmentSubtype: lightShield
+  hardness: 10
+  masterwork: true
+  price: 50170
+  slot: shield
+  sources:
+    - id: PZO1123
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 15
+type: equipment

@@ -1,0 +1,182 @@
+_id: B63cJ0h77Ivuz2mE
+_key: '!journal!B63cJ0h77Ivuz2mE'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Urgathoa
+pages:
+  - _id: aZV93m3wPIxTh3Ed
+    _key: '!journal.pages!B63cJ0h77Ivuz2mE.aZV93m3wPIxTh3Ed'
+    _stats:
+      coreVersion: '12.331'
+    name: Urgathoa
+    sort: 0
+    text:
+      content: >-
+        <h1>Urgathoa</h1><h2>The Pallid Princess</h2>@Source[PZO9267;pages=156]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Urgathoa">Urgathoa</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Core Deities<br /><strong>Areas of
+        Concern</strong> Disease, gluttony, undeath<br
+        /><strong>Domains</strong> Death, Evil, Magic, Strength, War<br
+        /><strong>Subdomains</strong> Blood, Cannibalism, Corruption, Daemon,
+        Divine, Ferocity, Murder, Plague (Death), Plague (Evil),
+        Self-Realization (Strength)*, Shadow (Death), Undead<br /><em>* Requires
+        the <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Scythe<br /><strong>Symbol</strong> Skull-decorated
+        fly<br /><strong>Sacred Animal(s)</strong> Fly<br /><strong>Sacred
+        Color(s)</strong> Red, green</p><h3>Obedience</h3><p>Cover a table (or
+        suitable flat surface) with a black velvet cloth and spread a feast atop
+        it. If you are in the wilderness or another area where fine food is not
+        readily available, load the table with the best quality food you can
+        find in whatever amount you have. Eat to the point of painful fullness,
+        sipping wine between dishes and reciting a prayer to Urgathoa. At the
+        end of the hour, consume a piece of rotten fruit, rancid meat, moldy
+        cheese, or other spoiled bit of food. Trust in Urgathoa to protect you
+        from any sickness or disease that might follow. Treat your caster level
+        as 1 higher when casting necromancy spells.</p><h3>Divine
+        Gift</h3><p>@Source[PZO1141;pages=81] <br /><em>Nethys Note: See here
+        for details on how to gain a Divine Gift</em><br />The recipient dies
+        and rises at the next sunset (or after 12 hours have passed, whichever
+        comes first, but never in a situation that would result in the gift
+        being granted during the day) as a vampire. (At the GM's discretion,
+        other vampire templates, such as jiang-shi or nosferatu, can be applied
+        rather than the standard vampire template.) If the character is already
+        a vampire, he does not suffer any of the traditional vampire weaknesses
+        (such as sunlight or running water) for 24 hours.</p><h3>On
+        Golarion</h3><p><strong>Centers of Worship</strong> Darklands, Geb,
+        Osirion, Ustalav, Varisia<br /><strong>Nationality</strong>
+        Varisian</p><h2>Boons - Deific Obedience</h2><h3>
+        Evangelist</h3><p>@Source[PZO9267;pages=156]<em></em><br /><strong>1:
+        Pestilent Penitent (Sp)</strong> <em>curse water</em> 3/day, <em>feast
+        of ashes</em><sup>APG</sup> 2/day, or <em>contagion</em> 1/day<br
+        /><strong>2: Death Knowledge (Su)</strong> Your knowledge of the arcane
+        workings of death increases. Your familiar can teach you one new spell
+        from either the Death or Magic domain spell list. The spell must be of a
+        level you can cast, and once you choose the spell, your selection can't
+        be changed. If you cast spells from a spellbook, you learn a new spell
+        in the same manner, though it appears magically in your spellbook. If
+        you cast spells spontaneously, you can choose one spell to add to your
+        list of spells known, but you gain no additional spell slots.<br
+        /><strong>3: Blight of Ruin (Su)</strong> Your blight hex gains power
+        from Urgathoa's favor. If you use your blight hex on a plot of land, you
+        can affect an area whose radius is equal to 20 x your combined witch and
+        evangelist levels. If you blight a creature of the animal or plant type,
+        increase the saving throw DC by 4 and the curse's effect to 2 points of
+        Constitution damage per day. If the target successfully saves against
+        your blight hex, it instead takes 3d6 points of negative energy damage.
+        If you don't have access to the blight hex, you instead gain the ability
+        to use <em>mass fester</em><sup>APG</sup> once per day as a spell-like
+        ability.</em></p><h3>Exalted</h3><p>@Source[PZO9267;pages=156]<br
+        /><strong>1: Mistress of Undeath (Sp)</strong> <em>inflict light wounds
+        </em> 3/day, <em>desecrate</em> 2/day, or <em>animate dead</em> 1/day<br
+        /><strong>2: Bolstering Channel (Su)</strong> When you channel negative
+        energy to heal undead creatures, you infuse the targets with negative
+        energy made more powerful by Urgathoa's influence. Any undead creatures
+        healed by your channeled energy increase their movement speed by 10 feet
+        for 1 round for every Hit Die you possess.<br /><strong>3: Ally from the
+        Grave (Sp)</strong> The Pallid Princess's servants have taken notice of
+        your deeds and answer your call. Once per day as a standard action, you
+        can summon a bhuta (<em>Pathfinder RPG Bestiary</em> 3</em> 41) to serve
+        you. You gain telepathy with the bhuta to a range of 100 feet. The bhuta
+        follows your commands perfectly for 1 minute for every Hit Die you
+        possess before vanishing back to its home. It doesn't obey commands that
+        would make it perform overly good acts, and such instructions could
+        cause it to attack you if they are particularly
+        egregious.</em></p><h3>Sentinel</h3><p>@Source[PZO9267;pages=156]<br
+        /><strong>1: Glutton for Slaughter (Sp)</strong> <em>magic missile</em>
+        3/day, <em>acid arrow</em> 2/day, or <em>fireball</em> 1/day<br
+        /><strong>2: Scythe Wielder (Ex)</strong> You have trained extensively
+        with Urgathoa's deadly favored weapon and with many related weapons, and
+        you wield them with the skill of the Pallid Princess's most favored
+        undead champions. If you selected the heavy blades group for your weapon
+        training class feature, increase your attack and damage bonuses with
+        heavy blades by 1. If you don't have the weapon training class feature,
+        you instead gain a +1 bonus on attack and damage rolls with the scythe
+        only.<br /><strong>3: Fearless in the Face of Undeath (Ex)</strong> You
+        have spent too much time among the unliving to be taken in by their
+        tricks and abilities, and you are proof against many of their powers.
+        Increase your bravery saving throw bonus by 1. This bonus now applies to
+        saving throws against any spells and effects generated by undead
+        creatures, as well as against fear effects. The bonus also applies to
+        nonmagical effects generated by undead creatures, such as a deathweb's
+        poison. If you don't have the bravery class feature, you instead gain a
+        +2 profane bonus on saving throws against spells and effects generated
+        by undead.</em></p><h2>Antipaladin Code</h2><em>The antipaladins of
+        Urgathoa are creatures of the night, plague-bearers and bringers of
+        death. They seek to spread Urgathoa's gifts by the sword and by
+        emulating their goddess. Their tenets include the following
+        affirmations. <ul><li>The grave opens to us all. We hasten the living on
+        their inevitable path.</li><li>The deathless are the true expression of
+        existence, for they are beyond life and death. I will emulate their ways
+        and destroy those who would defile their timeless perfection.</li><li>I
+        have no duty but to my hunger and my goddess.</li><li>Existence is
+        hunger. Both life and death feed on life. I am an instrument of
+        transition.</li></ul><h2>Divine Fighting Technique</h2><h3>Urgathoa's
+        Hunger</h3><p>@Source[PZO9472;pages=31] <br />The grisly content of
+        <em>Pallid Cravings</em> can be found in many places where the Pallid
+        Princess maintains a significant presence, especially within the undead
+        nation of Geb. The pages of this manuscript are said to be tattooed onto
+        a humanoid and flensed off while the victim is still alive; the swaths
+        of skin are then carefully preserved for presentation in the book.
+        <em>Pallid Cravings</em> details hundreds of ways for a member of
+        Urgathoa's faithful to satisfy her depraved urges for an opponent's
+        flesh and blood while in battle.</p><p><strong>Initial Benefit</strong>:
+        A number of times per day equal to your Wisdom bonus, you can feast upon
+        the life essence of a creature that you hit with a scythe. Activating
+        this ability is a swift action. When you do so, you gain a number of
+        temporary hit points equal to the damage you dealt with the scythe
+        attack. These temporary hit points last for 1 minute and don't
+        stack.</p><p><strong>Advanced Prerequisites</strong>: Divine Fighting
+        Technique, Heal 10 ranks, base attack bonus +7. </p><p><strong>Advanced
+        Benefit</strong>: A number of times per day equal to your Wisdom bonus,
+        you can exacerbate any lingering contagions within a target's body upon
+        making a successful melee attack with a scythe. Activating this ability
+        is a swift action, and causes the target to immediately attempt
+        additional saving throws against all diseases with which it is currently
+        afflicted. Any failed saves cause the target to immediately take the
+        effects of that disease, while a successful save does not count toward
+        the number of consecutive saves that the target must succeed at in order
+        to cure the disease.</p><h2>For Followers of
+        Urgathoa</h2><h3>Archetypes</h3><p>Dirge Bard (Bard), Gravewalker
+        (Witch), Undead Lord (Cleric)</p><h3>Feats</h3><p>Bolster Undead, Potion
+        Glutton, Shatter Resolve, Thanatopic Spell, Threnodic Spell, Undead
+        Master</p><h3>Magic Items - Altars</h3><p>Altar of Urgathoa</p><h3>Magic
+        Items - Armor</h3><p>Pallid Chain</p><h3>Magic Items -
+        Rings</h3><p>Gluttonous Feasting Ring</p><h3>Magic Items -
+        Sets</h3><p>Urgathoa's Gluttony</p><h3>Magic Items - Weapons</h3><p>Nail
+        of the Princess, Reaper's Lantern</p><h3>Magic Items - Wondrous
+        Items</h3><p>Darkskull, Gloves of Bony Power, Mask of the Skull, Pallid
+        Crystal, Plagueborn Mantle, Robe of Bones, Urgathoa's
+        Breath</p><h3>Monsters</h3><p>Mother's Maw (Herald), Pallid Angel,
+        Sarcovalt</p><h3>Spells</h3><p>Epidemic, Ghoul Hunger, Plague
+        Bearer</p><h3>Traits</h3><p>Corpse Cannibal, Deathspeaker, Denial of
+        Fate, Inoculated</p><h2>Unique Spell
+        Rules</h2>@Source[PZO9267;pages=163]<p><h3>Antipaladin</h3></p><p><em>Ghoul
+        Touch can be prepared as a</em> 2nd-level spell<br /><em>Purify Food and
+        Drink</em> can be prepared as a 1st-level spell<br
+        /></em></p><h3>Cleric/Warpriest</h3><p><em>Ghoul Touch can be prepared
+        as a 2nd-level spell<br /></em></p><h3>Inquisitor</h3><p><em>Ghoul
+        Touch</em> can be prepared as a 2nd-level spell<br /><em>Purify Food and
+        Drink</em> can be prepared as a 0-level spell<br
+        /></em></p><h3>Sorcerer</h3><p><em>Contagion can be prepared as a
+        3rd-level spell [arcane version]<br /><em>Remove Disease can be prepared
+        as a 3rd-level spell [arcane version]<br
+        /></em></p><h3>Wizard</h3><p><em>Contagion can be prepared as a
+        3rd-level spell [necromancer only, arcane version]<br /><em>Remove
+        Disease</em> can be prepared as a 3rd-level spell [necromancer only,
+        arcane version]<br /></em></p><h2>Unique Summon
+        Rules</h2>@Source[PZO9047;pages=71]<br /><strong>Summon Monster
+        I</strong>: Bloody Human Skeleton<br /><strong>Summon Monster
+        VII</strong>: Daughter of Urgathoa (extraplanar)<br /><h2>Other
+        Rules</h2>@Source[PZO9267;pages=163]<br />Priests who cast <em>remove
+        disease </em>may draw diseases into themselves as they heal their
+        targets; they become carriers without suffering ill effects.
+        <em>Contagion </em>spells cast by Urgathoa's priests always use the
+        caster's spell DC for the disease's secondary saves.
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

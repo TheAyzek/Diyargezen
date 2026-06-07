@@ -1,0 +1,21 @@
+_id: w0duH8JI8Mu5AAhR
+_key: '!items!w0duH8JI8Mu5AAhR'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_15.jpg
+name: Devilbane Impediment
+system:
+  associations:
+    classes:
+      - Mesmerist
+  description:
+    value: >-
+      <p><strong>Mesmerist Devilbane Gaze</strong></p><p>The target of your
+      hypnotic stare must succeed at a concentration check (DC = 15 + the level
+      of the spell) to activate any of its spell-like abilities (but not
+      standard spellcasting). If the target fails the check, the spelllike
+      ability doesn't function but is still expended.</p>
+  subType: classFeat
+  tags:
+    - Mesmerist Devilbane Gaze
+type: feat

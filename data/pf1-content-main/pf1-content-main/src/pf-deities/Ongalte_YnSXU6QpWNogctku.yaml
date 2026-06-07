@@ -1,0 +1,40 @@
+_id: YnSXU6QpWNogctku
+_key: '!journal!YnSXU6QpWNogctku'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Ongalte
+pages:
+  - _id: IaUwqF8FU8xmKDyo
+    _key: '!journal.pages!YnSXU6QpWNogctku.IaUwqF8FU8xmKDyo'
+    _stats:
+      coreVersion: '12.331'
+    name: Ongalte
+    sort: 0
+    text:
+      content: >-
+        <h1>Ongalte</h1><h2>Death of Divinity</h2>@Source[PZO90144;pages=75] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Ongalte">Ongalte</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Iblydan Hero-Gods<br /><strong>Areas
+        of Concern</strong> Deicide<br /><strong>Domains</strong> Chaos, Death,
+        Evil<br /><strong>Subdomains</strong> Entropy, Murder<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> greataxe</p><h3>On
+        Golarion</h3><p><strong>Centers of Worship</strong> None<br
+        /><strong>Nationality</strong> cyclops</p><h2>Unique Spell
+        Rules</h2>@Source[PZO90144;pages=75]<p><h3>Inquisitor</h3></p><p><em>Bleed
+        Glory can be prepared as a</em> 2nd-level spell<br /><em>Steal
+        Power</em> can be prepared as a 4th-level spell</em></p><h2>Other
+        Rules</h2><em>@Source[PZO90144;pages=76]</em><br />When casting
+        <em>bleed glory, <em>mythic severance</em>, <em>steal power</em>, or any
+        other spell that specifically harms mythic creatures, the clerics,
+        inquisitors, and oracles of Ongalte are treated as mythic sources for
+        the purpose of resisting the spells' effects.<p>Ongalte can grant up to
+        8th-level spells.</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

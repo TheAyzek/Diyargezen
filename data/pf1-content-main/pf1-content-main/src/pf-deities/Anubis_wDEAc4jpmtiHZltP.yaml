@@ -1,0 +1,32 @@
+_id: wDEAc4jpmtiHZltP
+_key: '!journal!wDEAc4jpmtiHZltP'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Anubis
+pages:
+  - _id: hFMlXKxlln9KdyK4
+    _key: '!journal.pages!wDEAc4jpmtiHZltP.hFMlXKxlln9KdyK4'
+    _stats:
+      coreVersion: '12.331'
+    name: Anubis
+    sort: 0
+    text:
+      content: >-
+        <h1>Anubis</h1><h2>Guardian of the Tomb</h2>@Source[PZO9080;pages=65]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Anubis">Anubis</a><h3>Details</h3><p><strong>Alignment</strong>
+        LN<br /><strong>Pantheon</strong> Deities of Ancient Osirion<br
+        /><strong>Areas of Concern</strong> Burial, the dead, funeral rites,
+        mummification, tombs<br /><strong>Domains</strong> Death, Earth, Law,
+        Protection, Repose<br /><strong>Subdomains</strong> Ancestors, Defense,
+        Inevitable, Metal, Purity, Souls<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Flail<br
+        /><strong>Symbol</strong> Black jackal head<br /><strong>Sacred
+        Animal(s)</strong> Jackal</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

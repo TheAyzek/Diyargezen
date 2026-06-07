@@ -1,0 +1,33 @@
+_id: gLt5aanYUSL3Mk2j
+_key: '!journal!gLt5aanYUSL3Mk2j'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Two-Weapon Fighting Penalties
+pages:
+  - _id: iqUMV5qv1OGVDHUQ
+    _key: '!journal.pages!gLt5aanYUSL3Mk2j.iqUMV5qv1OGVDHUQ'
+    _stats:
+      coreVersion: '12.331'
+    name: Two-Weapon Fighting Penalties
+    sort: 0
+    text:
+      content: >-
+        <p>See @Compendium[pf-content.pf-rules.jLQbe8GmyB470OIJ]{2.07.7.
+        Two-Weapon
+        Fighting}</p><table><tbody><tr><td><p><strong>Circumstances</strong></p></td><td><p><strong>Primary
+        Hand</strong></p></td><td><p><strong>Off
+        Hand</strong></p></td></tr><tr><td><p>Normal
+        penalties</p></td><td><p>-6</p></td><td><p>-10</p></td></tr><tr><td><p>Off-hand
+        weapon is
+        light</p></td><td><p>-4</p></td><td><p>-8</p></td></tr><tr><td><p>Two-Weapon
+        Fighting
+        feat</p></td><td><p>-4</p></td><td><p>-4</p></td></tr><tr><td><p>Off-hand
+        weapon is light and Two-Weapon Fighting
+        feat</p></td><td><p>-2</p></td><td><p>-2</p></td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

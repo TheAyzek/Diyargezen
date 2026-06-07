@@ -1,0 +1,34 @@
+_id: Ona78VVAKWzvgPHu
+_key: '!items!Ona78VVAKWzvgPHu'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/books/book-symbol-reverse-blue.webp
+name: Songs of Shazathared
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Black Market</p><h2>Description</h2><p>Nearly
+      50 ancient tales and songs have been collected on this long scroll.
+      Contrasting with the obvious antiquity of the papyrus, the illuminated
+      images are vivid and the writing is clear (though occasionally difficult
+      to decipher due to elaborate embellishments), as the inks used were
+      infused with <em>unguent of timelessness</em>.</p><p>This folio is the
+      most complete extant collection of poems by the legendary marid bard
+      Shazathared. Most of the poems recount the binding of Rovagug by the gods
+      and the fates of his terrible spawn, but several pieces, told from the
+      point of view of a genie princess, speak of defending the princess's home
+      and allies against bandit-kings, tempests, and evil magic. A bard with
+      access to a complete copy of these poems can learn the defensive songs in
+      the folio as the masterpiece presented below by paying the normal
+      masterpiece cost (<em>Pathfinder RPG Ultimate Magic</em> 21).</p>
+  equipped: false
+  price: 11000
+  sources:
+    - id: PZO9275
+      pages: '54'
+  subType: tradeGoods
+  tags:
+    - Black Market
+  weight:
+    value: 4
+type: loot

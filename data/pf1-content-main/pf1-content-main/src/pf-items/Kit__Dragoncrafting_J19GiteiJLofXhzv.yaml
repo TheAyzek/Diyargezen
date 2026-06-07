@@ -1,0 +1,23 @@
+_id: J19GiteiJLofXhzv
+_key: '!items!J19GiteiJLofXhzv'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/chest/chest-simple-box-red.webp
+name: Kit, Dragoncrafting
+system:
+  description:
+    value: >-
+      <p>This kit contains all the butchers' tools, preservatives, and
+      desiccants necessary to turn a dragon corpse into usable items. It
+      provides the user with a +2 circumstance bonus on all Heal and Craft skill
+      checks made to harvest dragoncraft materials and create dragoncraft items
+      (see page 18).</p>
+  equipped: false
+  price: 40
+  sources:
+    - id: PZO9434
+      pages: '26'
+  subType: tool
+  weight:
+    value: 4
+type: loot

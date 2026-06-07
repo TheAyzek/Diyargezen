@@ -1,0 +1,60 @@
+_id: 3HmUAVI78JGriOJQ
+_key: '!journal!3HmUAVI78JGriOJQ'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: CMTuXqZ6Ywxqk9Ar
+name: 7.1.4. Building and Modifying Constructs
+pages:
+  - _id: VAxGFZyRnrbcFbhu
+    _key: '!journal.pages!3HmUAVI78JGriOJQ.VAxGFZyRnrbcFbhu'
+    _stats:
+      coreVersion: '12.331'
+    name: 7.1.4. Building and Modifying Constructs
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.dS0UkKOINqI2iTDX]{(Index)
+        Magic}</p><p>@Compendium[pf-content.pf-rules.zCeqoMSKdZ8r4EPd]{7.1.
+        Mastering
+        Magic}</p><ul><li>@Compendium[pf-content.pf-rules.gmY5SUa7PRX8Dgbv]{7.1.1.
+        Spellblights}</li><li>@Compendium[pf-content.pf-rules.fZNU70m81H98CDY1]{7.1.2.
+        Spell
+        Duels}</li><li>@Compendium[pf-content.pf-rules.Sz0GZaZV3zxb9UTY]{7.1.3.
+        Binding
+        Outsiders}</li><li><strong>@Compendium[pf-content.pf-rules.3HmUAVI78JGriOJQ]{7.1.4.
+        Building and Modifying
+        Constructs}</strong></li><li>@Compendium[pf-content.pf-rules.xdyGkidQGN7vYL1E]{7.1.5.
+        Designing Spells}</li></ul><hr /><p>@Source[PZO1117;pages=111]</p><p>The
+        Craft Construct feat allows a spellcaster to create all manner of
+        permanent constructs in a process much like magic item creation. Each
+        construct has a purchase price and a crafting cost, along with a list of
+        requirements and the skills used to create them. Some require special
+        materials in addition to the cost for basic crafting supplies, generally
+        for the construct’s body. Special material costs increase both the
+        purchase price and the crafting cost of the construct.</p><p>The DC to
+        craft a construct is 5 + the default caster level of the construct, just
+        like for a magic item. Like when crafting magic items, a creator with a
+        sufficiently high skill bonus may ignore these requirements. Each
+        missing requirement increases the Craft DC by 5. Regardless, the creator
+        must meet all item creation feats and minimum caster level requirements.
+        Crafting a construct takes 1 day per 1,000 gp in the item’s base price,
+        excluding any special material costs.</p><p>This process is identical to
+        the process for crafting a magic item, including the rules for
+        accelerating creation and handling
+        interruptions.</p><p>@Compendium[pf-content.pf-rules.IX8Xif3UBwvGZoTL]{7.1.4.1.
+        Animated
+        Objects}</p><p>@Compendium[pf-content.pf-rules.1wOUB8cMjiIMP0Ma]{7.1.4.2.
+        New Animated Object
+        Abilities}</p><p>@Compendium[pf-content.pf-rules.a0XTKDAaQ86Axg4S]{7.1.4.3.
+        Building New
+        Constructs}</p><p>@Compendium[pf-content.pf-rules.7MT0MXLxIZ9incU4]{7.1.4.4.
+        Repairing
+        Constructs}</p><p>@Compendium[pf-content.pf-rules.VGwccLk2uCxKaC57]{7.1.4.5.
+        Construct Modifications}</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

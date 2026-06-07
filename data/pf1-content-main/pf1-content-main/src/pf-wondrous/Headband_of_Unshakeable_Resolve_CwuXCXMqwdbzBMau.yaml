@@ -1,0 +1,33 @@
+_id: CwuXCXMqwdbzBMau
+_key: '!items!CwuXCXMqwdbzBMau'
+_stats:
+  coreVersion: '12.331'
+folder: 52jofiLqjkyFLxLL
+img: icons/equipment/finger/ring-crown-teal-gold.webp
+name: Headband of Unshakeable Resolve
+system:
+  aura:
+    custom: true
+    school: abjuration and transmutation
+  cl: 8
+  description:
+    value: >-
+      <p>This simple white cotton headband is decorated with a stylized imperial
+      dragon coiled above the wearer's forehead. The headband grants the wearer
+      a +2 enhancement bonus to her Wisdom score. Treat this as a temporary
+      ability bonus for the first 24 hours the headband is worn.   Whenever the
+      wearer suffers a fear effect, she may spend an immediate action to reduce
+      the severity of the fear effect by one step. If the wearer would become
+      panicked, she is instead frightened. If she would become frightened, she
+      is instead shaken. If the wearer would become shaken, the effect is
+      negated entirely. The wearer can use this ability up to three times per
+      day.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, owl's wisdom, remove fear</p>
+  price: 5600
+  slot: headband
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

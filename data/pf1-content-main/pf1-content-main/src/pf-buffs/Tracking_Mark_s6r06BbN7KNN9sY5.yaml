@@ -1,0 +1,26 @@
+_id: s6r06BbN7KNN9sY5
+_key: '!items!s6r06BbN7KNN9sY5'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/feats/improved-precise-shot.jpg
+name: Tracking Mark
+system:
+  contextNotes:
+    - target: skill.sur
+      text: All Survival DCs made to Track are [[5]] lower than normal.
+    - target: skill.per
+      text: +[[5]] to Notice if target if it is using Stealth or using a disguise.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.aniaqwkahlczx4m5]{Tracking
+      Mark}</p><p>You treat the DCs of all Survival checks made to track the
+      target as if they were 5 lower than normal, and you gain a +5 bonus on
+      Perception checks made to notice the target if it is using Stealth or
+      recognize it if it is using Disguise.</p>
+  duration:
+    units: minute
+    value: '@item.level * 10'
+  level: 1
+  subType: spell
+type: buff

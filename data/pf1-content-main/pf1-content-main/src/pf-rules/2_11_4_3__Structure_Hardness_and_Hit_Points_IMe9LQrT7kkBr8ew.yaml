@@ -1,0 +1,111 @@
+_id: IMe9LQrT7kkBr8ew
+_key: '!journal!IMe9LQrT7kkBr8ew'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: I2QJK0e1tzfogtkr
+name: 2.11.4.3. Structure Hardness and Hit Points
+pages:
+  - _id: J6VjveNy55CZyHHk
+    _key: '!journal.pages!IMe9LQrT7kkBr8ew.J6VjveNy55CZyHHk'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.11.4.3. Structure Hardness and Hit Points
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.OWmmbQYIhQmw9DVg]{2.11.
+        Mastering
+        Combat}</p><p>@Compendium[pf-content.pf-rules.BA9GnqGPouWXISZm]{2.11.4.
+        Siege
+        Engines}</p><ul><li>@Compendium[pf-content.pf-rules.1r4vHoZMGtSTTqJL]{2.11.4.1.
+        Siege Engine
+        Rules}</li><li>@Compendium[pf-content.pf-rules.fRkRfI16CX5G78Oy]{2.11.4.2.
+        Siege Weapon
+        Description}</li><li><strong>@Compendium[pf-content.pf-rules.IMe9LQrT7kkBr8ew]{2.11.4.3.
+        Structure Hardness and Hit
+        Points}</strong></li><li>@Compendium[pf-content.pf-rules.Rft1LIY5C8XOK3Kr]{2.11.4.4.
+        Siege Engine Details}</li></ul><hr
+        /><p>@Source[PZO1118;pages=166]</p><p>While armies can use siege weapons
+        against troops, usually the goal of a siege engine is to demoralize foes
+        and pound their structures to rubble. The following rules give the
+        statistics for various buildings and barriers that are often the targets
+        of siege engine attacks. They are split up into three different
+        categories: buildings, gates, and walls.</p><p>When any of these
+        structures gain the broken condition, their hardness is halved, along
+        with any other effects of the broken
+        condition.</p><h2>Buildings</h2><p>@Source[PZO1118;pages=167]</p><p>Buildings
+        are sizable structures with many hit points and very poor ACs (a Large
+        building is AC 4, a Huge building is AC 3, and a Gargantuan or larger
+        building is AC 0). When a building is reduced to half its hit points, it
+        is broken—it still stands, but only partially. It can be easily entered,
+        and for all intents and purposes it has been breached. Reducing a
+        building to 0 hit points completely destroys that building. Creatures
+        inside the building suffer the effects of a cave-in.</p><p>All these
+        building statistics assume that the structure’s inside is somewhat
+        hollow but sturdily built, with enough space for its occupants to walk
+        around inside. Flimsy buildings have half the hit points of the
+        buildings detailed in Table 3–18. Buildings can be magically treated,
+        like dungeon walls and doors can. Doing so doubles their hardness and
+        hit points. Magically treating a building costs 5,000 gp for a Large
+        building, 10,000 gp for a Huge building, 20,000 gp for a Gargantuan
+        building, and 40,000 gp for a Colossal building. A spellcaster with the
+        Craft Magic Arms and Armor feat can magically treat buildings.</p><p>For
+        larger buildings, put together multiple buildings of these sizes and add
+        the hit points together.</p><h2>Table 3-18:
+        Buildings</h2><table><tbody><tr><td colspan="2"></td><td
+        colspan="4"><p>Hit
+        Points</p></td></tr><tr><td><p>Material</p></td><td><p>Hardness</p></td><td><p>Large</p></td><td><p>Huge</p></td><td><p>Gargantuan</p></td><td><p>Colossal</p></td></tr><tr><td><p>Wood</p></td><td><p>5</p></td><td><p>120</p></td><td><p>270</p></td><td><p>960</p></td><td><p>3,240</p></td></tr><tr><td><p>Stone</p></td><td><p>8</p></td><td><p>200</p></td><td><p>450</p></td><td><p>1,600</p></td><td><p>5,400</p></td></tr><tr><td><p>Iron
+        or
+        steel</p></td><td><p>10</p></td><td><p>400</p></td><td><p>900</p></td><td><p>3,200</p></td><td><p>10,800</p></td></tr><tr><td><p>Adamantine</p></td><td><p>20</p></td><td><p>560</p></td><td><p>1,260</p></td><td><p>4,480</p></td><td><p>15,120</p></td></tr></tbody></table><h2>Gates</h2><p>@Source[PZO1118;pages=167]</p><p>Gates
+        serve as the entrances and exits to fortified structures, and are
+        typically the weakest spots in any fortification’s defenses. Gates are
+        at least Large, but can be as large as Colossal. It typically takes
+        three full-round actions to open or close a Large gate (up to three
+        creatures can work together to close a Large gate as a full-round
+        action), and larger gates typically take at least a minute to close or
+        open. Gates have ACs based on their size (a Large gate is AC 4, a Huge
+        gate is AC 3, and a Gargantuan or larger gate is AC 0).</p><p>Gates can
+        be magically treated. Doing so doubles the hardness and hit points.
+        Magically treating a gate costs 2,000 gp for a Large gate, 4,000 gp for
+        a Huge gate, 8,000 gp for a Gargantuan gate, and 16,000 gp for a
+        Colossal gate. A spellcaster with the Craft Magic Arms and Armor feat
+        can magically treat gates.</p><p>Gates can be attacked and damaged, or
+        they can become broken (as the condition) with a successful Strength
+        check, usually as a result of ramming. When a gate gains the broken
+        condition, it is effectively breached, and can be moved through as if it
+        were an opening one size smaller.</p><h2>Table 3-20:
+        Gates</h2><table><tbody><tr><td colspan="3"></td><td colspan="4"><p>Hit
+        Points</p></td></tr><tr><td><p>Material</p></td><td><p>Break
+        DC1</p></td><td><p>Hardness</p></td><td><p>Large</p></td><td><p>Huge</p></td><td><p>Gargantuan</p></td><td><p>Colossal</p></td></tr><tr><td><p>Wood</p></td><td><p>35</p></td><td><p>5</p></td><td><p>60</p></td><td><p>135</p></td><td><p>240</p></td><td><p>540</p></td></tr><tr><td><p>Stone</p></td><td><p>38</p></td><td><p>8</p></td><td><p>100</p></td><td><p>225</p></td><td><p>400</p></td><td><p>900</p></td></tr><tr><td><p>Iron
+        or
+        steel</p></td><td><p>24</p></td><td><p>10</p></td><td><p>200</p></td><td><p>500</p></td><td><p>800</p></td><td><p>1,800</p></td></tr><tr><td><p>Adamantine</p></td><td><p>40</p></td><td><p>20</p></td><td><p>280</p></td><td><p>630</p></td><td><p>1,120</p></td><td><p>2,520</p></td></tr></tbody></table><p>1:
+        The DC assumes the gate is size Large and is barred and locked. Huge
+        doors increase the break DC by 5, Gargantuan doors increase the DC by
+        10, and Colossal doors increase the DC by 15. Arcane lock increases the
+        DC by 10.</p><h2>Walls</h2><p>@Source[PZO1118;pages=167]</p><p>The walls
+        that guard castles and cities are sturdy fortifications, usually
+        constructed in a series of 5-foot squares. A square of wall has an AC of
+        5, and hardness and hit points equal to its type.</p><p>Squares of walls
+        can be magically treated. Doing so doubles the hardness and hit points.
+        Magically treating wall squares costs 500 gp per wall square. A
+        spellcaster with the Craft Magic Arms and Armor feat can magically treat
+        walls.</p><p>When a wall gains the broken condition, its hardness is
+        halved, but the wall is not breached. Only destroying a section of wall
+        allows it to become breached. When a square of wall is breached, any
+        sections directly above it fall onto the missing section of walls. Doing
+        this reduces the falling wall section to half its current hit point
+        total –1, which applies the broken condition to that square of
+        wall.</p><h2>Table 3-19:
+        Walls</h2><table><tbody><tr><td><p>Material</p></td><td><p>Hardness</p></td><td><p>Hit
+        Points per 5-Foot
+        Square</p></td></tr><tr><td><p>Wood</p></td><td><p>5</p></td><td><p>30</p></td></tr><tr><td><p>Stone</p></td><td><p>8</p></td><td><p>45</p></td></tr><tr><td><p>Iron
+        or
+        steel</p></td><td><p>10</p></td><td><p>90</p></td></tr><tr><td><p>Adamantine</p></td><td><p>20</p></td><td><p>120</p></td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

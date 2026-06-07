@@ -1,0 +1,34 @@
+_id: JHytLbbynjnz0mUg
+_key: '!items!JHytLbbynjnz0mUg'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Clasp of the Mind Scream
+system:
+  aura:
+    school: evo
+  cl: 8
+  description:
+    value: >-
+      <p>This strange device grants the ability to mentally communicate with
+      others, yet proves difficult to control. It generates a constant field of
+      mental static that grants the wearer a +1 bonus on Will saves against
+      mind-affecting effects. The wearer may generate an attack similar to the
+      spell shout, though the sound is mental, and thus does not affect items or
+      creatures immune to mind-affecting effects, and its damage is not affected
+      by sonic vulnerability, resistance, or immunity. In addition, as part of
+      the attack, the wearer may make a DC 20 Charisma check to shape a specific
+      noise or message of five words or fewer. These sounds are purely mental
+      and not heard by any creature outside the area of effect. The wearer may
+      use this effect 1d3 times per day. The GM determines how many times per
+      day the clasp of the mind scream can be used. If the wearer attempts to
+      use the clasp beyond this number of times, he is affected by its effects
+      and the clasp is inert for the next 24 hours.<h3>Requirements</h3><p>Craft
+      Wondrous Item, detect thoughts, shout</p>
+  price: 12800
+  slot: head
+  sources:
+    - id: PZO9027
+  subType: wondrous
+type: equipment

@@ -1,0 +1,21 @@
+_id: Giscq4jZ8PNbUrEL
+_key: '!items!Giscq4jZ8PNbUrEL'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/chest/chest-simple-box-red.webp
+name: Kit, Desert
+system:
+  description:
+    value: >-
+      <p>This kit contains tools necessary for staying cool and hydrated in hot,
+      dry terrain. It includes a 10-foot-by-10-foot piece of canvas, 3 doses of
+      blain bane (see above), a hot weather outfit, a signal whistle, a scarf,
+      and four waterskins.</p>
+  sources:
+    - id: PZO9456
+      pages: '9'
+  tags:
+    - Kits
+  weight:
+    value: 20
+type: container

@@ -1,0 +1,20 @@
+_id: 4t1gn2g1Zn4BAkHa
+_key: '!items!4t1gn2g1Zn4BAkHa'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_15.jpg
+name: Allay Pain
+system:
+  associations:
+    classes:
+      - Mesmerist
+  description:
+    value: >-
+      <p><strong>Mesmerist Masterful Trick</strong></p><p>The subject of this
+      trick gains DR 15/- against one attack that deals nonlethal damage. The
+      mesmerist can trigger this trick whenever the subject is hit with an
+      attack that deals nonlethal damage.</p>
+  subType: classFeat
+  tags:
+    - Mesmerist Masterful Trick
+type: feat

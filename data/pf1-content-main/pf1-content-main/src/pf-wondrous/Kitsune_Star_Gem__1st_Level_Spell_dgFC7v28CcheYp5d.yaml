@@ -1,0 +1,23 @@
+_id: dgFC7v28CcheYp5d
+_key: '!items!dgFC7v28CcheYp5d'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Kitsune Star Gem, 1st Level Spell
+system:
+  aura:
+    school: trs
+  cl: 1
+  description:
+    value: >-
+      <p>This magical jewel glows like faerie fire, shedding light as a candle.
+      It acts as pearl of power, except it only allows a kitsune to recover a
+      spent use of a spell-like ability of the appropriate spell
+      level.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, creator must be a kitsune</p>
+  price: 750
+  sources:
+    - id: PZO1121
+  subType: wondrous
+type: equipment

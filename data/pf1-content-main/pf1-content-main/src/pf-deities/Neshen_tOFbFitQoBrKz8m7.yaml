@@ -1,0 +1,35 @@
+_id: tOFbFitQoBrKz8m7
+_key: '!journal!tOFbFitQoBrKz8m7'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Neshen
+pages:
+  - _id: 9nHJHLY1oH4PmArp
+    _key: '!journal.pages!tOFbFitQoBrKz8m7.9nHJHLY1oH4PmArp'
+    _stats:
+      coreVersion: '12.331'
+    name: Neshen
+    sort: 0
+    text:
+      content: >-
+        <h1>Neshen</h1><h2>Knight of the Steel
+        Lash</h2>@Source[PZO9267;pages=322] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Neshen">Neshen</a><h3>Details</h3><p><strong>Alignment</strong>
+        LG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Penitence, repentance, suffering<br
+        /><strong>Domains</strong> Good, Law, Liberation, Strength<br
+        /><strong>Subdomains</strong> Archon (Good), Archon (Law), Freedom,
+        Judgment, Resolve<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Ranseur<br
+        /><strong>Symbol</strong> Coiled steel lash<br /><strong>Sacred
+        Animal(s)</strong> Ram<br /><strong>Sacred Color(s)</strong> Iron gray,
+        red</p><h2>For Followers of Neshen</h2><h3>Feats</h3><p>Heroic
+        Interposition</p><h3>Traits</h3><p>Empyreal Focus</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

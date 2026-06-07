@@ -1,0 +1,64 @@
+_id: WMToM66IPjJBCkBM
+_key: '!items!WMToM66IPjJBCkBM'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Voice of the Damned (Occult Ritual)
+system:
+  actions:
+    - _id: ydmy5mx46kgqlr73
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        description: negates
+        type: will
+      target:
+        value: one neutralized haunt
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    material: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> necromancy; <strong>Level</strong>
+      4</p><p><strong>Casting Time</strong> 30
+      minutes</p><p><strong>Components</strong> V, S, M (a blade worth 150 gp
+      and a parchment), SC (up to the Intelligence modifier of the primary
+      caster)</p><p><strong>Skill Checks</strong> Diplomacy DC 31, 2 successes;
+      Intimidate DC 31, 2 successes</p><p><strong>Range</strong>
+      close</p><p><strong>Target</strong> one neutralized
+      haunt</p><p><strong>Duration</strong> 1 minute/level</p><p><strong>Saving
+      Throw</strong> Will negates; <strong>SR</strong>
+      no</p><p><strong>Backlash</strong> All casters take 1d6 points of
+      Constitution damage.</p><p><strong>Failure</strong> All casters take 1d6
+      points of Constitution drain.</p><h3>Effect</h3><p>The caster rouses the
+      lingering consciousness of a neutralized haunt. Upon the ritual's
+      completion, a spirit resembling the entity that empowered the haunt
+      manifests before the caster and scrawls a message of 25 words or less onto
+      the provided parchment, using the caster's blood. This message provides a
+      cryptic clue regarding how to permanently destroy the haunt, acting much
+      like the information granted by a <em>divination</em> spell, except that
+      there is no chance that the information will be incorrect because the
+      haunt hopes to end its suffering.</p>
+  flags:
+    dictionary:
+      summary: Gain clues on how to permanently destroy a neutralized haunt
+  level: 4
+  materials:
+    gpValue: 150
+    value: a blade worth 150 gp and a parchment
+  school: nec
+  sources:
+    - id: PZO9471
+      pages: '17'
+  sr: false
+type: spell

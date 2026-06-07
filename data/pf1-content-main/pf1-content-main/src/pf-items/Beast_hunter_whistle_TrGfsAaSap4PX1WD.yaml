@@ -1,0 +1,23 @@
+_id: TrGfsAaSap4PX1WD
+_key: '!items!TrGfsAaSap4PX1WD'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/flute.jpg
+name: Beast-hunter whistle
+system:
+  description:
+    value: >-
+      <p>This whistle produces sound at a pitch that can only be heard by
+      aberrations, animals, dragons, fey, and magical beasts. The sound can be
+      detected easily (Perception DC 0) from a quarter-mile away. If the user
+      makes a successful DC 15 Perform (wind instruments) check, all creatures
+      within 30 feet that can hear the whistle must succeed at a DC 10 Fortitude
+      save or be dazzled for 1 round (the -1 penalty applies to hearing-based,
+      rather than sight-based, Perception checks).</p>
+  equipped: false
+  price: 5
+  sources:
+    - id: PZO9478
+      pages: '26'
+  subType: adventuring
+type: loot

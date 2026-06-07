@@ -1,0 +1,20 @@
+_id: QyXDOQZGMLW28NBm
+_key: '!items!QyXDOQZGMLW28NBm'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_15.jpg
+name: Devilbane Binding
+system:
+  associations:
+    classes:
+      - Mesmerist
+  description:
+    value: >-
+      <p><strong>Mesmerist Devilbane Gaze</strong></p><p>The hypnotic stare
+      penalty also applies to all Charisma checks to escape planar binding
+      spells, and applies to the target's spell resistance against a planar
+      binding spell.</p>
+  subType: classFeat
+  tags:
+    - Mesmerist Devilbane Gaze
+type: feat

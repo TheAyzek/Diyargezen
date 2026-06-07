@@ -1,0 +1,498 @@
+_id: 0nEtajjqYSldQTfQ
+_key: '!actors!0nEtajjqYSldQTfQ'
+_stats:
+  coreVersion: '12.343'
+img: icons/svg/mystery-man.svg
+items:
+  - _id: fkz2KKxcDSRf6nRN
+    _key: '!actors.items!0nEtajjqYSldQTfQ.fkz2KKxcDSRf6nRN'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/blue_29.jpg
+    name: 'Race: Animal'
+    system:
+      creatureSubtypes:
+        - ''
+      creatureTypes:
+        - animal
+      description:
+        value: >-
+          sbc | As the statblock did not include a race, a custom one was
+          generated.
+    type: race
+  - _id: E69vHRUZNOTv27jL
+    _key: '!actors.items!0nEtajjqYSldQTfQ.E69vHRUZNOTv27jL'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/shadow_12.jpg
+    name: 'Sense: Darkvision 60ft.'
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          Darkvision is the extraordinary ability to see with no light source at
+          all, out to a range specified for the creature. Darkvision is
+          black-and-white only (colors cannot be discerned). It does not allow
+          characters to see anything that they could not see otherwise—invisible
+          objects are still invisible, and illusions are still visible as what
+          they seem to be. Likewise, darkvision subjects a creature to gaze
+          attacks normally. The presence of light does not spoil darkvision.
+      subType: racial
+    type: feat
+  - _id: tTzVVQPLSbSOO6WT
+    _key: '!actors.items!0nEtajjqYSldQTfQ.tTzVVQPLSbSOO6WT'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/shadow_11.jpg
+    name: 'Sense: Low-light Vision'
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          A creature with low-light vision can see twice as far as a human in
+          starlight, moonlight, torchlight, and similar conditions of dim light.
+          It retains the ability to distinguish color and detail under these
+          conditions.
+      subType: racial
+    type: feat
+  - _id: 2EwpCDayBZBoMBgh
+    _key: '!actors.items!0nEtajjqYSldQTfQ.2EwpCDayBZBoMBgh'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: Pressure Adaptation
+    system:
+      description:
+        value: sbc | Placeholder
+      subType: classFeat
+    type: feat
+  - _id: BHd3VxHAipYv3g56
+    _key: '!actors.items!0nEtajjqYSldQTfQ.BHd3VxHAipYv3g56'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/monster-head.jpg
+    name: Bite
+    system:
+      actions:
+        - _id: huzxpiipn3u6f879
+          ability:
+            attack: _default
+            damage: str
+          actionType: mwak
+          activation:
+            type: attack
+            unchained:
+              type: attack
+          attackBonus: '0'
+          attackName: Bite
+          damage:
+            parts:
+              - formula: 1d3+0
+                types:
+                  - slashing
+          duration:
+            units: inst
+          img: systems/pf1/icons/items/inventory/monster-head.jpg
+          name: Attack
+          notes:
+            footer:
+              - bite +0 (1d3-2)
+          range:
+            units: melee
+          tag: bite
+      held: null
+      subType: natural
+    type: attack
+  - _id: fdqTsd0KH4j2UQxG
+    _key: '!actors.items!0nEtajjqYSldQTfQ.fdqTsd0KH4j2UQxG'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/items/inventory/monster-tentacle.jpg
+    name: Tentacles
+    system:
+      actions:
+        - _id: bqw0r4b8rbtfxtma
+          ability:
+            attack: _default
+            damage: str
+          actionType: mwak
+          activation:
+            type: attack
+            unchained:
+              type: attack
+          attackBonus: '5'
+          attackName: Tentacles
+          damage:
+            parts:
+              - formula: 0d0+7
+                types:
+                  - bludgeoning
+          duration:
+            units: inst
+          img: systems/pf1/icons/items/inventory/monster-tentacle.jpg
+          name: Attack
+          notes:
+            effect:
+              - grab
+            footer:
+              - tentacles +0 (grab)
+          range:
+            units: melee
+          tag: tentacles
+      subType: natural
+    type: attack
+  - _id: uS9YrvxT5RgTYl5t
+    _key: '!actors.items!0nEtajjqYSldQTfQ.uS9YrvxT5RgTYl5t'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Environment: Any Oceans'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: b4ABrI7vBogceosA
+    _key: '!actors.items!0nEtajjqYSldQTfQ.b4ABrI7vBogceosA'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Organization: Solitary, Pair, Or School (3-8)'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: QetRWP60reHBOqZQ
+    _key: '!actors.items!0nEtajjqYSldQTfQ.QetRWP60reHBOqZQ'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Treasure: None'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: Fevi97JqnhDmdYZg
+    _key: '!actors.items!0nEtajjqYSldQTfQ.Fevi97JqnhDmdYZg'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: Photophores
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          Once per day as a standard action while underwater, the vampire squid
+          can release a 15-foot cone of disorienting bioluminescent mucus from
+          its photophores, illuminating the area with dim light. A creature
+          within this shimmering cloud of blue light must succeed at a DC 11
+          Fortitude save or be dazzled for as long as it remains in the cloud
+          and for 1 round thereafter. The cloud persists for 1d4+1 rounds. The
+          save DC is Constitution-based.
+      subType: classFeat
+    type: feat
+  - _id: 2KrGtlLgbjzZmj2G
+    _key: '!actors.items!0nEtajjqYSldQTfQ.2KrGtlLgbjzZmj2G'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: Pressure Adaptation
+    system:
+      abilityType: ex
+      description:
+        value: A vampire squid takes no pressure damage from changes in water depth.
+      subType: classFeat
+    type: feat
+  - _id: 5v318mzRlBHRlBdL
+    _key: '!actors.items!0nEtajjqYSldQTfQ.5v318mzRlBHRlBdL'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: Tentacles
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          A vampire squid's tentacles all strike as a single primary attack but
+          only to grapple.
+      subType: classFeat
+    type: feat
+  - _id: wonWxvRAP3MMnznI
+    _key: '!actors.items!0nEtajjqYSldQTfQ.wonWxvRAP3MMnznI'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: sbc | Conversion Buff
+    system:
+      active: true
+      changes:
+        - _id: tr1p8lvj
+          formula: '4'
+          target: cmb
+          type: untypedPerm
+        - _id: 78yw5rm3
+          formula: '-8'
+          target: mhp
+          type: untypedPerm
+        - _id: uk0r6lfs
+          formula: '-8'
+          target: skill.swm
+          type: untypedPerm
+      description:
+        value: >-
+          <h2>sbc | Conversion Buff</h2><p>This Buff was created by
+          <strong>sbc</strong> to compensate for differences between the input
+          and the values FoundryVTT calculates automatically.</p><p>Especially
+          when the pathfinder system gets upgraded, entries in compendiums get
+          updated or foundry changes in some way, this buff may become
+          outdated.</p><p>For most mooks the conversion should more or less
+          work, but for important NPCs or creatures it is adviced to double
+          check the conversion manually.</p>
+      hideFromToken: true
+      subType: perm
+      tag: sbcConversionBuff
+    type: buff
+name: Vampire Squid
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    cha:
+      value: 3
+    con:
+      value: 12
+    dex:
+      value: 15
+    int:
+      value: 2
+    str:
+      value: 6
+    wis:
+      value: 13
+  attributes:
+    speed:
+      land:
+        base: 0
+      swim:
+        base: 20
+    spells:
+      spellbooks:
+        primary:
+          name: Primary
+        secondary:
+          name: Secondary
+        spelllike:
+          name: Spell-likes
+        tertiary:
+          name: Tertiary
+  details:
+    cr:
+      base: 0.5
+    notes:
+      value: >2-
+
+                <div class="statblockContainer" style="margin-top:15px"><div style="width:100%;background-color:#ffe9c7;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);columns:2 150px">
+            <hr style="margin-left:0;margin-top:-2px;width:100%;height:4px;background-color:#e0a100;border:1px solid #000;column-span:all" />
+            <div style="padding:5px">
+                <h1>Vampire Squid CR 1/2 </h1>
+                
+                
+                <div style="break-inside:avoid">
+                    <strong>Source</strong>: Ultimate Wilderness pg. 208<br />
+                    <strong>XP 200</strong><br />
+                    
+                    
+                    
+                    
+                    
+                    N 
+                    Tiny 
+                    Animal <br />
+                    <strong>Init</strong> 2;
+                    <strong>Senses</strong> darkvision 60 ft., low-light vision; Perception +1; 
+                    
+                </div>
+                <div style="break-inside:avoid">
+                    <h3>Defense</h3>
+                        <strong>AC</strong> 14, <strong>Touch</strong> 14, <strong>Flat-Footed</strong> 12 (+2 Dex, +2 size)<br />
+                    <strong>Hit Points</strong> 5 (1 HD; 1d8+1)<br />
+                    <strong>Fort</strong> 3, <strong>Ref</strong> 6, <strong>Will</strong> 1
+                    <br /><strong>Defensive Abilities</strong> pressure adaptation; 
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                <div>
+                    <div style="break-inside:avoid">
+                        <h3>Offense</h3>
+                                <strong>Speed</strong> 20 ft.<br />
+                        <strong>Melee</strong> bite +0 (1d3-2), tentacles +0 (grab)<br />
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+                        
+                
+                        
+                        
+                        
+                        
+                
+                <div style="break-inside:avoid">
+                    <h3>Statistics</h3>
+                        <strong>Str</strong> 6, <strong>Dex</strong> 15, <strong>Con</strong> 12, <strong>Int</strong> 2, <strong>Wis</strong> 13, <strong>Cha</strong> 3<br />
+                    <strong>Base Atk</strong> +0; <strong>CMB</strong> +0; <strong>CMD</strong> 8<br />
+                    <strong>Feats</strong> Lightning Reflexes<br />
+                    <strong>Skills</strong> Stealth +14, Swim +10<br />
+                    <strong>Languages</strong> <br />
+                    
+                    
+                    
+                    
+                </div>
+                
+                    <div style="break-inside:avoid">
+                        <h3>Ecology</h3>                <strong>Environment</strong>: any oceans<br />
+                        <strong>Organization</strong>: solitary, pair, or school (3-8)<br />
+                        <strong>Treasure</strong>: none<br />
+                    </div>
+                
+                    <div style="break-inside:avoid">
+                        <h3>Special Abilities</h3>                <div style="white-space:pre-wrap">Photophores (ex): Once per day as a standard action while underwater, the vampire squid can release a 15-foot cone of disorienting bioluminescent mucus from its photophores, illuminating the area with dim light. A creature within this shimmering cloud of blue light must succeed at a DC 11 Fortitude save or be dazzled for as long as it remains in the cloud and for 1 round thereafter. The cloud persists for 1d4+1 rounds. The save DC is Constitution-based.
+
+        Pressure Adaptation (ex): A vampire squid takes no pressure damage from
+        changes in water depth.
+
+
+        Tentacles (ex): A vampire squid's tentacles all strike as a single
+        primary attack but only to grapple.</div>
+                    </div>
+                
+                
+                    <div style="break-inside:avoid">
+                        <h3>Description</h3>        <div style="white-space:pre-wrap">The vampire squid-so called for its red eyes and cloak-like webbing-is a cephalopod from the lightless depths of the oceans. This eerie mollusk is covered in photophores, which it can use to create a defensive barrage of light when agitated.
+
+        A vampire squid can reach a total body length of up to 1 foot and weighs
+        1 pound.
+
+        </div>
+                            
+            </div>
+            <hr style="margin-left:0;margin-bottom:-3px;width:100%;height:4px;background-color:#e0a100;border:1px solid #000;column-span:all" />
+        </div></div>
+            
+                <br />
+                <hr />
+                <div class="rawInputContainer" style="margin-top:15px">
+                    <h2>RAW INPUT</h2>
+                    <hr />
+                    <pre style="white-space:pre-wrap;font-size:10px">Vampire Squid CR 1/2
+        Source Ultimate Wilderness pg. 208
+
+        XP 200
+
+        N Tiny animal
+
+        Init +2; Senses darkvision 60 ft., low-light vision; Perception +1
+
+        Defense
+
+        AC 14, touch 14, flat-footed 12 (+2 Dex, +2 size)
+
+        hp 5 (1d8+1)
+
+        Fort +3, Ref +6, Will +1
+
+        Defensive Abilities pressure adaptation
+
+        Offense
+
+        Speed 0 ft., swim 20 ft.
+
+        Melee bite +0 (1d3-2), tentacles +0 (grab)
+
+        Space 2-1/2 ft., Reach 0 ft.
+
+        Special Attacks photophores
+
+        Statistics
+
+        Str 6, Dex 15, Con 12, Int 2, Wis 13, Cha 3
+
+        Base Atk +0; CMB +0; CMD 8
+
+        Feats Lightning Reflexes
+
+        Skills Stealth +14, Swim +10
+
+        Ecology
+
+        Environment any oceans
+
+        Organization solitary, pair, or school (3-8)
+
+        Treasure none
+
+        Special Abilities
+
+        Photophores (Ex) Once per day as a standard action while underwater, the
+        vampire squid can release a 15-foot cone of disorienting bioluminescent
+        mucus from its photophores, illuminating the area with dim light. A
+        creature within this shimmering cloud of blue light must succeed at a DC
+        11 Fortitude save or be dazzled for as long as it remains in the cloud
+        and for 1 round thereafter. The cloud persists for 1d4+1 rounds. The
+        save DC is Constitution-based.
+
+
+        Pressure Adaptation (Ex) A vampire squid takes no pressure damage from
+        changes in water depth.
+
+
+        Tentacles (Ex) A vampire squid's tentacles all strike as a single
+        primary attack but only to grapple.
+
+        Description
+
+        The vampire squid-so called for its red eyes and cloak-like webbing-is a
+        cephalopod from the lightless depths of the oceans. This eerie mollusk
+        is covered in photophores, which it can use to create a defensive
+        barrage of light when agitated.
+
+
+        A vampire squid can reach a total body length of up to 1 foot and weighs
+        1 pound.</pre>
+                </div>
+            </div>
+  skills:
+    ste:
+      rank: 1
+    swm:
+      rank: 9
+  traits:
+    senses:
+      custom: darkvision 60 ft., low-light vision; Perception +1
+      dv:
+        value: 60
+    size: tiny
+type: npc

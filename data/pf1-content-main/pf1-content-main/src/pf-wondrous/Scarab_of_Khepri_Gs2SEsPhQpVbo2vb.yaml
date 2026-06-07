@@ -1,0 +1,28 @@
+_id: Gs2SEsPhQpVbo2vb
+_key: '!items!Gs2SEsPhQpVbo2vb'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Scarab of Khepri
+system:
+  aura:
+    school: con
+  cl: 5
+  description:
+    value: >-
+      <p>This small, blue figurine is fashioned in the likeness of a scarab
+      beetle, the sacred animal of Khepri, the Ancient Osirian god of freedom,
+      the rising sun, and work. Once per day, the bearer of the scarab can speak
+      with vermin as if using speak with animals, though the information
+      obtained is very limited. If the bearer has the wild empathy class
+      feature, she may use it to influence vermin as easily as she influences
+      animals. Once per day, the bearer can cast summon swarm to summon as warm
+      of scarab beetles (treat as a spider swarm, but instead of poison, the
+      swarm causes filth fever).</p><h3>Requirements</h3><p>Craft Wondrous Item,
+      Vermin Heart, speak with animals, summon swarm</p>
+  price: 7800
+  sources:
+    - id: PZO9084
+  subType: wondrous
+type: equipment

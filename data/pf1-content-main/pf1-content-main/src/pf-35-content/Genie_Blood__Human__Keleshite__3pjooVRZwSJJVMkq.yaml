@@ -1,0 +1,55 @@
+_id: 3pjooVRZwSJJVMkq
+_key: '!items!3pjooVRZwSJJVMkq'
+_stats:
+  coreVersion: '12.331'
+folder: CAxOlglJyXdUOHF9
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Genie Blood (Human; Keleshite)
+system:
+  contextNotes:
+    - target: allSavingThrows
+      text: >-
+        +[[1]] Trait bonus on checks made against attacks that utilize the
+        <chosen> subtype.
+    - target: skill.blf
+      text: >-
+        +[[1]] Trait bonus on checks made against creatures of the <chosen>
+        subtype.
+    - target: skill.dip
+      text: >-
+        +[[1]] Trait bonus on checks made against creatures of the <chosen>
+        subtype.
+    - target: skill.int
+      text: >-
+        +[[1]] Trait bonus on checks made against creatures of the <chosen>
+        subtype.
+    - target: skill.sen
+      text: >-
+        +[[1]] Trait bonus on checks made against creatures of the <chosen>
+        subtype.
+  description:
+    instructions: >-
+      <p>Select an element (air, earth, fire, or water) when you take this
+      trait.</p><p>Edit the text of all of the Context notes on the changes tab
+      of this trait to reflect the energy type associated with your
+      choice</p><p>(cold for air, acid for earth, fire for fire, and electricity
+      for water),</p>
+    value: >-
+      <p><em>One of your ancestors was
+      genie-kind.</em></p><p><strong>Requirements</strong>: Keleshite Human
+      Heritage</p><p><strong>Benefits</strong>: Select an element (air, earth,
+      fire, or water). You gain a +1 trait bonus on saving throws against
+      attacks that utilize that element (cold for air, acid for earth, fire for
+      fire, and electricity for water), and gain a +1 trait bonus on Bluff,
+      Diplomacy, Intimidate, and Sense Motive checks made against creatures of
+      that subtype.</p>
+  sources:
+    - id: PZO9404
+      pages: '8'
+  subType: trait
+  tags:
+    - '3.5'
+    - Human
+    - Keleshite
+  traitType: race
+type: feat

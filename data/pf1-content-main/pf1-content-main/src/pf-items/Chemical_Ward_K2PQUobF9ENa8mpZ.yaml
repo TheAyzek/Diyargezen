@@ -1,0 +1,33 @@
+_id: K2PQUobF9ENa8mpZ
+_key: '!items!K2PQUobF9ENa8mpZ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/minor-green.jpg
+name: Chemical Ward
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>This gray paste
+      congeals when spread onto a surface, gradually changing color to match its
+      surroundings. When applied, its reagents bond with chemicals in the
+      environment, exuding a magnified aura that can fool blindsight and
+      blindsense. This affects only blindsight or blindsense based on smell,
+      taste, vibration, and similar senses; it does not affect extraordinary
+      sight, hearing, or tremorsense. Applying a flask of chemical ward to the
+      edge of a 5-foot square takes a full-round action, creating an opaque
+      barrier against blindsense and blindsight that lasts for 1 hour. A
+      creature can sense through the barrier with a successful Perception check
+      (DC 15 for blindsight, 20 for blindsense), although individuals on the
+      opposite side of the barrier can attempt Stealth checks against the
+      creature's blindsight or blindsense as though they had concealment. The
+      barrier does not inhibit movement.</p>
+  price: 25
+  sources:
+    - id: PZO9478
+      pages: '26'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 1
+type: consumable

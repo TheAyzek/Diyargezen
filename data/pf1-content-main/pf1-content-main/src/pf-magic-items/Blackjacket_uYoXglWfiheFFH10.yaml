@@ -1,0 +1,33 @@
+_id: uYoXglWfiheFFH10
+_key: '!items!uYoXglWfiheFFH10'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/hellknight-leather.PNG
+name: Blackjacket
+system:
+  aura:
+    school: enc
+  cl: 6
+  description:
+    value: >-
+      <p>This jet-black uniform is assigned to top agents in Druma's
+      military-the Mercenary League. Wearers of this +3 armored coat continually
+      benefit from the spell undetectable alignment. When following the orders
+      of a member of the Kalistocracy, the wearer receives a +2 morale bonus on
+      all attack rolls, saves, and skill checks related to completion of her
+      mission. Anytime the wearer tries to disregard an order given by a member
+      of the Kalistocracy, she must attempt a Will save with a DC equal to 10 +
+      1/2 the total Hit Dice of the creature giving the order. If she fails, she
+      must follow the order to the best of her ability. If she succeeds, she can
+      remove the armor as a move action to ignore the
+      command.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, charm person, heroism</p>
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 28700
+  sources:
+    - id: PZO9268
+  weight:
+    value: 20
+type: equipment

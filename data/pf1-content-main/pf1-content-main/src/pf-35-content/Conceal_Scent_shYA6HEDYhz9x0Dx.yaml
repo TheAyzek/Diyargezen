@@ -1,0 +1,22 @@
+_id: shYA6HEDYhz9x0Dx
+_key: '!items!shYA6HEDYhz9x0Dx'
+_stats:
+  coreVersion: '12.331'
+folder: 35gUR2g8lMd073yK
+img: systems/pf1/icons/skills/green_18.jpg
+name: Conceal Scent
+system:
+  description:
+    value: >-
+      <p><em>You have learned the essential tricks of disguising your odor and
+      keeping creatures from locating you by your
+      scent.</em></p><p><strong>Prerequisites</strong>: Hide 3 ranks, Survival 3
+      ranks.</p><p><strong>Benefits</strong>: Creatures cannot use the scent
+      ability to track you (though they can still track you through standard
+      means such as footprints). Creatures with scent can detect your presence
+      by smell at half the normal distance, but cannot pinpoint your location
+      with scent.</p>
+  tags:
+    - General
+    - '3.5'
+type: feat

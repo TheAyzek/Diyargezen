@@ -1,0 +1,23 @@
+_id: A5RVYodNiH2SCqgn
+_key: '!items!A5RVYodNiH2SCqgn'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/treasure/statue-carved-figurehead.webp
+name: Sentry Mannequin
+system:
+  description:
+    value: >-
+      <p>After 5 minutes of assembly and coverage with the included loose hood
+      and baggy clothing, this wooden frame looks like a vigilant humanoid
+      figure. Creatures more than 30 feet distant from it must succeed at a DC
+      10 Perception check in order to realize it is not someone standing
+      watch.</p>
+  equipped: false
+  price: 30
+  sources:
+    - id: PZO1123
+      pages: '57'
+  subType: adventuring
+  weight:
+    value: 35
+type: loot

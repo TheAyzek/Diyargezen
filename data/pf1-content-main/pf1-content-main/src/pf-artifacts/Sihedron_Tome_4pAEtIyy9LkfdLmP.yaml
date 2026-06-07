@@ -1,0 +1,29 @@
+_id: 4pAEtIyy9LkfdLmP
+_key: '!items!4pAEtIyy9LkfdLmP'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Sihedron Tome
+system:
+  artifact: true
+  aura:
+    school: trs
+  cl: 16
+  description:
+    value: >-
+      <p>The first Sihedron Tomes were said to have been crafted by a dragon in
+      the service of Emperor Xin. Each of these books has a unique appearance,
+      and hold an infinite number of pages for spellcasters to inscribe spells
+      upon. Any wizard who prepares spells from a Sihedron Tome, which
+      potentially holds libraries worth of arcane knowledge, may prepare bonus
+      spells as if her Intelligence were 6 points higher. This is not an actual
+      bonus to Intelligence and grants the user no additional benefit. Karzoug's
+      Sihedron Tome contains all sorcerer/wizard spells (save for those of the
+      schools of Enchantment and Illusion) found in the Core Rulebook and this
+      book-at the GM's discretion, it can certainly hold more spells.</p>
+  sources:
+    - id: PZO1002
+  subType: other
+  weight:
+    value: 5
+type: equipment

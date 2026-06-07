@@ -1,0 +1,47 @@
+_id: WNw9njfDXrNPzA39
+_key: '!items!WNw9njfDXrNPzA39'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/pearl-natural.webp
+name: Nacreous Gray Sphere Ioun Stone, Cracked
+system:
+  aura:
+    school: abj
+  cl: 12
+  contextNotes:
+    - target: allSavingThrows
+      text: You do not take natural or magical aging penalties to (chosen ability).
+  description:
+    instructions: >-
+      <p>The protected ability score must be chosen at the time of the stone's
+      creation. Update the context note on the details tab of this item to
+      reflect that choice.</p><p>Only 25% of cracked or flawed ioun stones grant
+      resonant powers when placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>This spherical stone is a lustrous gray color.  A crack mars its
+      surface.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone protects the wearer from one type of ability
+      damage (such as Strength or Constitution) caused by natural or magical
+      aging. It otherwise functions as a normal
+      @UUID[Compendium.pf-content.pf-wondrous.Item.qUIur9loLwmMf81e]{nacreous
+      gray sphere ioun stone}.</p><h3>Resonance</h3><p><strong>Method 1, Fixed:
+      </strong>Miss chance against incorporeal creatures decreases to
+      25%.</p><p><strong>Method 2, Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, <em>bear's endurance</em>, creator must be 12th level
+      <strong>Cost</strong> 1,700 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 3400
+  sources:
+    - id: PZO9211
+      pages: 47, 52
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

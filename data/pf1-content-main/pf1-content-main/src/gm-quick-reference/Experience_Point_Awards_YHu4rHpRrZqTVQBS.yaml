@@ -1,0 +1,25 @@
+_id: YHu4rHpRrZqTVQBS
+_key: '!journal!YHu4rHpRrZqTVQBS'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Experience Point Awards
+pages:
+  - _id: wlsinCO5HIKqPVND
+    _key: '!journal.pages!YHu4rHpRrZqTVQBS.wlsinCO5HIKqPVND'
+    _stats:
+      coreVersion: '12.331'
+    name: Experience Point Awards
+    sort: 0
+    text:
+      content: >-
+        <p>See Designing
+        Encounters</p><table><tbody><tr><td></td><td><p><strong>Individual
+        XP</strong></p></td></tr><tr><td><p><strong>CR</strong></p></td><td><p><strong>Total
+        XP</strong></p></td><td><p><strong>1-3</strong></p></td><td><p><strong>4-5</strong></p></td><td><p><strong>6+</strong></p></td></tr><tr><td><p>1/8</p></td><td><p>50</p></td><td><p>15</p></td><td><p>15</p></td><td><p>10</p></td></tr><tr><td><p>1/6</p></td><td><p>65</p></td><td><p>20</p></td><td><p>15</p></td><td><p>10</p></td></tr><tr><td><p>1/4</p></td><td><p>100</p></td><td><p>35</p></td><td><p>25</p></td><td><p>15</p></td></tr><tr><td><p>1/3</p></td><td><p>135</p></td><td><p>45</p></td><td><p>35</p></td><td><p>25</p></td></tr><tr><td><p>1/2</p></td><td><p>200</p></td><td><p>65</p></td><td><p>50</p></td><td><p>35</p></td></tr><tr><td><p>1</p></td><td><p>400</p></td><td><p>135</p></td><td><p>100</p></td><td><p>65</p></td></tr><tr><td><p>2</p></td><td><p>600</p></td><td><p>200</p></td><td><p>150</p></td><td><p>100</p></td></tr><tr><td><p>3</p></td><td><p>800</p></td><td><p>265</p></td><td><p>200</p></td><td><p>135</p></td></tr><tr><td><p>4</p></td><td><p>1,200</p></td><td><p>400</p></td><td><p>300</p></td><td><p>200</p></td></tr><tr><td><p>5</p></td><td><p>1,600</p></td><td><p>535</p></td><td><p>400</p></td><td><p>265</p></td></tr><tr><td><p>6</p></td><td><p>2,400</p></td><td><p>800</p></td><td><p>600</p></td><td><p>400</p></td></tr><tr><td><p>7</p></td><td><p>3,200</p></td><td><p>1,070</p></td><td><p>800</p></td><td><p>535</p></td></tr><tr><td><p>8</p></td><td><p>4,800</p></td><td><p>1,600</p></td><td><p>1,200</p></td><td><p>800</p></td></tr><tr><td><p>9</p></td><td><p>6,400</p></td><td><p>2,130</p></td><td><p>1,600</p></td><td><p>1,070</p></td></tr><tr><td><p>10</p></td><td><p>9,600</p></td><td><p>3,200</p></td><td><p>2,400</p></td><td><p>1,600</p></td></tr><tr><td><p>11</p></td><td><p>12,800</p></td><td><p>4,270</p></td><td><p>3,200</p></td><td><p>2,130</p></td></tr><tr><td><p>12</p></td><td><p>19,200</p></td><td><p>6,400</p></td><td><p>4,800</p></td><td><p>3,200</p></td></tr><tr><td><p>13</p></td><td><p>25,600</p></td><td><p>8,530</p></td><td><p>6,400</p></td><td><p>4,270</p></td></tr><tr><td><p>14</p></td><td><p>38,400</p></td><td><p>12,800</p></td><td><p>9,600</p></td><td><p>6,400</p></td></tr><tr><td><p>15</p></td><td><p>51,200</p></td><td><p>17,100</p></td><td><p>12,800</p></td><td><p>8,530</p></td></tr><tr><td><p>16</p></td><td><p>76,800</p></td><td><p>25,600</p></td><td><p>19,200</p></td><td><p>12,800</p></td></tr><tr><td><p>17</p></td><td><p>102,400</p></td><td><p>34,100</p></td><td><p>25,600</p></td><td><p>17,100</p></td></tr><tr><td><p>18</p></td><td><p>153,600</p></td><td><p>51,200</p></td><td><p>38,400</p></td><td><p>25,600</p></td></tr><tr><td><p>19</p></td><td><p>204,800</p></td><td><p>68,300</p></td><td><p>51,200</p></td><td><p>34,100</p></td></tr><tr><td><p>20</p></td><td><p>307,200</p></td><td><p>102,000</p></td><td><p>76,800</p></td><td><p>51,200</p></td></tr><tr><td><p>21</p></td><td><p>409,600</p></td><td><p>137,000</p></td><td><p>102,400</p></td><td><p>68,300</p></td></tr><tr><td><p>22</p></td><td><p>614,400</p></td><td><p>205,000</p></td><td><p>153,600</p></td><td><p>102,400</p></td></tr><tr><td><p>23</p></td><td><p>819,200</p></td><td><p>273,000</p></td><td><p>204,800</p></td><td><p>137,000</p></td></tr><tr><td><p>24</p></td><td><p>1,228,800</p></td><td><p>410,000</p></td><td><p>307,200</p></td><td><p>204,800</p></td></tr><tr><td><p>25</p></td><td><p>1,638,400</p></td><td><p>546,000</p></td><td><p>409,600</p></td><td><p>273,000</p></td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

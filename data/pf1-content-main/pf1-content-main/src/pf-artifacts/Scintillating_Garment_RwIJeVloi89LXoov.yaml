@@ -1,0 +1,31 @@
+_id: RwIJeVloi89LXoov
+_key: '!items!RwIJeVloi89LXoov'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Scintillating Garment
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: abjuration and conjuration
+  cl: 20
+  description:
+    value: >-
+      <p>Sorshen's Scintillating Garment is the traditional robe of the Runelord
+      of Lust. Woven of the finest of silks and accented with precious stones,
+      the garment is surprisingly light and easy to move in. The Scintillating
+      Garment functions as a robe of scintillating colors, but it has additional
+      powers as well. The wearer casts spells at +1 caster level and gains a +5
+      deflection bonus to AC, a +5 resistance bonus on saving throws, and spell
+      resistance 30. Four of the garment's pockets function as handy haversacks.
+      The wearer of this garment is immune to mind-affecting effects unless she
+      chooses otherwise, and the garment grants all of her ability scores a +6
+      enhancement bonus (the bonus to Intelligence also imparts ranks in Escape
+      Artist, Fly, and Use Magic Device).</p>
+  sources:
+    - id: PZO90138
+  subType: other
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,30 @@
+_id: N5eUotS7tqhI7l4w
+_key: '!journal!N5eUotS7tqhI7l4w'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: ywdNAUiVSklAOMDs
+name: The Waxworks
+pages:
+  - _id: Su6StBRKcUQN5Je0
+    _key: '!journal.pages!N5eUotS7tqhI7l4w.Su6StBRKcUQN5Je0'
+    _stats:
+      coreVersion: '12.331'
+    name: The Waxworks
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Waxworks</strong> (chaotic evil, Constitution) is a place
+        of helplessness and physical entropy. The mind might be willing, but the
+        flesh is frozen in this place of horror. It is also the card of torture
+        and imprisonment, signifying literal inability to move or a paralysis of
+        a more prosaic kind. Misaligned, this card indicates an abundance of
+        energy at a crucial moment that changes all.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Waxworks.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

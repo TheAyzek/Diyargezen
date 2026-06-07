@@ -1,0 +1,32 @@
+_id: UnTjaVJw2yOwZyxh
+_key: '!journal!UnTjaVJw2yOwZyxh'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Dretha
+pages:
+  - _id: 1iOhY0yztybfEryi
+    _key: '!journal.pages!UnTjaVJw2yOwZyxh.1iOhY0yztybfEryi'
+    _stats:
+      coreVersion: '12.331'
+    name: Dretha
+    sort: 0
+    text:
+      content: >-
+        <h1>Dretha</h1><h2>The Dark Mother</h2>@Source[PZO9267;pages=328] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Dretha">Dretha</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Orc Deities<br /><strong>Areas of
+        Concern</strong> Birth, fertility, tribes<br /><strong>Domains</strong>
+        Chaos, Community, Evil, Protection<br /><strong>Subdomains</strong>
+        Defense, Demon (Chaos), Demon (Evil), Family, Home<br /><em>* Requires
+        the <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Scimitar<br /><strong>Symbol</strong> Two gauntleted
+        fists<br /><strong>Sacred Animal(s)</strong> Dire wolf<br
+        /><strong>Sacred Color(s)</strong> Brown, green</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

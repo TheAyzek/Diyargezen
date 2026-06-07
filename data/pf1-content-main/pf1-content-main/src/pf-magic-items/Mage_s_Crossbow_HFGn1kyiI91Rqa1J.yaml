@@ -1,0 +1,63 @@
+_id: HFGn1kyiI91Rqa1J
+_key: '!items!HFGn1kyiI91Rqa1J'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/crossbow-light.PNG
+name: Mage's Crossbow
+system:
+  actions:
+    - _id: iapa85ut2ft2z7zj
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: magesCrossbow
+  aura:
+    school: trs
+  baseTypes:
+    - Light Crossbow
+  cl: 8
+  description:
+    value: >-
+      <p>This +2 light crossbow is made of silver that never needs to be
+      polished. A mage's crossbow is especially effective against creatures with
+      spell resistance. Against such creatures, the weapon's effective
+      enhancement bonus increases to +3, and it deals an additional 1d6 points
+      of damage. Whenever the wielder casts a spell that requires him to make a
+      ranged touch attack (such as a ray) while he has the crossbow in hand, he
+      gains a bonus on his ranged attack roll equal to the crossbow's
+      enhancement bonus against the target creature. If the spell hits, the
+      caster also applies this bonus to the caster level check to overcome the
+      target's spell resistance (if any) and on the spell's damage roll (if
+      any).</p><p><strong>Base Item</strong>: light
+      crossbow</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, Spell Penetration, summon monster I, true strike</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: wood
+  price: 18335
+  showInQuickbar: false
+  sources:
+    - id: PZO9452
+  weaponGroups:
+    - crossbows
+  weight:
+    value: 4
+type: weapon

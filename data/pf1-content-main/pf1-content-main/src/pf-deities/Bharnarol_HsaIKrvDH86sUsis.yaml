@@ -1,0 +1,53 @@
+_id: HsaIKrvDH86sUsis
+_key: '!journal!HsaIKrvDH86sUsis'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Bharnarol
+pages:
+  - _id: QBW60Rb1Hv6XU5VH
+    _key: '!journal.pages!HsaIKrvDH86sUsis.QBW60Rb1Hv6XU5VH'
+    _stats:
+      coreVersion: '12.331'
+    name: Bharnarol
+    sort: 0
+    text:
+      content: >-
+        <h1>Bharnarol</h1><h2>The Tempered
+        Inventor</h2>@Source[PZO9267;pages=322] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Bharnarol">Bharnarol</a><h3>Details</h3><p><strong>Alignment</strong>
+        NG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Creativity, invention, persistence<br
+        /><strong>Domains</strong> Artifice, Community, Good, Knowledge<br
+        /><strong>Subdomains</strong> Agathion, Construct, Cooperation,
+        Education (Community), Education (Knowledge), Thought<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Sickle<br /><strong>Symbol</strong>
+        Two mixing potions<br /><strong>Sacred Animal(s)</strong> Elephant<br
+        /><strong>Sacred Color(s)</strong> Blue,
+        red</p><h3>Obedience</h3><p>Perform the motions of your preferred method
+        of creation while letting your mind center on the teachings of
+        Bharnarol. Follow any creative thoughts that arise to their conclusion.
+        Gain a +4 sacred bonus to AC against attacks made by constructs and a +4
+        sacred bonus on saves against spells and effects cast by
+        constructs.</p><h2>Boons - Celestial Obedience</h2><h3>Mystery
+        Cultist</h3><p>@Source[PZO9255;pages=8]<br /><strong>1: Inventor's Tools
+        (Sp)</strong> <em>grease</em> 3/day, <em>fox's cunning </em>2/day, or
+        <em>secret page</em> 1/day<br /><strong>2: Improve Item (Su)</strong>
+        Three times per day, you can enhance the effects of a magic item that
+        either is consumed during use or has charges. As a swift action, you can
+        enhance a held expendable item's effects as if using either the Empower
+        Spell, Enlarge Spell, or Extend Spell metamagic feat. You must use the
+        item during the same round you improve it in order to gain the benefits
+        of the selected metamagic feat.<br /><strong>3: Transmogrify
+        (Sp)</strong> You can cast extended <em>polymorph any object </em>once
+        per day.</em></p><h2>For Followers of
+        Bharnarol</h2><h3>Feats</h3><p><em>Heroic
+        Interposition</em></p><h3>Traits</h3><p><em>Empyreal Focus</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,18 @@
+_id: HrtBNVwPOuW3OreQ
+_key: '!items!HrtBNVwPOuW3OreQ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/spells/light-air-fire-3.jpg
+name: Sunlight Powerlessness
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>If the creature is in sunlight (but not in an area of <a>daylight</a>
+      or similar spells), it cannot attack and is
+      <a>staggered</a>.</p><p><em>Format</em>: sunlight
+      powerlessness</p><p><em>Location</em>: Weaknesses.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

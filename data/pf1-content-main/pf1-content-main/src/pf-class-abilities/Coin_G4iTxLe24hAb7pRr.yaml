@@ -1,0 +1,27 @@
+_id: G4iTxLe24hAb7pRr
+_key: '!items!G4iTxLe24hAb7pRr'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/book-purple.jpg
+name: Coin
+system:
+  associations:
+    classes:
+      - Occultist
+  description:
+    value: >-
+      <p><strong>Occultist Sacred Implement</strong></p><p><strong>Deity
+      </strong>Urgathoa; <strong>Implement </strong>coin; <strong>Opposition
+      School </strong>evocation</p><p><em>Wake (Su): </em>As a standard action,
+      you can expend 1 point of mental focus to inspire fits of grief in a
+      single creature within 30 feet that can see and hear you. You fill the
+      target with haunting visions of the deaths of loved ones and the brevity
+      of life, and for 1 minute, the target's emotional vulnerability grants you
+      a circumstance bonus equal to your occultist level on Diplomacy and
+      Intimidate checks attempted against the target. If this implement is used
+      in combat, these emotions instead distract your target, leaving it dazzled
+      for 1 round per occultist level you have.</p>
+  subType: classFeat
+  tags:
+    - Occultist Sacred Implement
+type: feat

@@ -1,0 +1,31 @@
+_id: n9EzIdX8kDsTjy3h
+_key: '!items!n9EzIdX8kDsTjy3h'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of the Sophisticate
+system:
+  aura:
+    custom: true
+    school: transmutation and divination
+  cl: 8
+  description:
+    value: >-
+      <p>Often worn on the little finger, this ring grants its wearer a +4
+      competence bonus on Sense Motive and Knowledge (local) checks. Also, once
+      per day on command, the wearer can use the ring to cast either locate
+      creature or locate object (the wearer's choice). Furthermore, on command
+      and at will, the wearer can instantly know the direction from herself to
+      the nearest tavern, pub, or similar watering hole as long as that
+      establishment is in a settlement whose population is equivalent to that of
+      a village or greater (GameMastery Guide 203) and that is within 20 miles
+      of the wearer.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Forge Ring, know direction, locate creature, locate object, creator must
+      have at least 4 ranks in both Sense Motive and Knowledge (local)</p>
+  price: 11000
+  slot: ring
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

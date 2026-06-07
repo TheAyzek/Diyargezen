@@ -1,0 +1,27 @@
+_id: qGeUc42pTIJ2SEWL
+_key: '!items!qGeUc42pTIJ2SEWL'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of the Sea Strider
+system:
+  aura:
+    school: con
+  cl: 7
+  description:
+    value: >-
+      <p>This ring is made of a single piece of deep blue crystal. The ring
+      grants its wearer a swim speed of 30 feet, as well as +8 racial bonus on
+      swim checks for having a swim speed. Furthermore, once per day as a swift
+      action, as long as the wearer is in contact with liquid, he can use
+      dimension door as the spell, but its starting and ending points must be
+      connected by a contagious mass of
+      liquid.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, dimension door, touch of the sea</p>
+  price: 14000
+  slot: ring
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

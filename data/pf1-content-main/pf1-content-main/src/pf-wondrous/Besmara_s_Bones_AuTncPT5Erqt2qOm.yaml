@@ -1,0 +1,34 @@
+_id: AuTncPT5Erqt2qOm
+_key: '!items!AuTncPT5Erqt2qOm'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Besmara's Bones
+system:
+  aura:
+    school: nec
+  cl: 5
+  description:
+    value: >-
+      <p>Named for the goddess of piracy, strife, and sea monsters, this
+      figurehead must be mounted on the prow of a ship function. Once per day, a
+      ship carrying can inflict a curse on an enemy ship struck with a
+      successful ramming attack. The target ship must succeed at a DC 14 Will
+      save or its pilot takes a -4 penalty on Profession (sailor) checks to
+      control the ship. In addition, the cursed ship can never gain the upper
+      hand in ship-to-ship combat (Skull & Shackles Player's Guide 9). The curse
+      inflicted by the figurehead cannot be dispelled, but it can be removed
+      with a break enchantment, limited wish, miracle, remove curse, or wish
+      spell. In addition, once per day, can be used to cast false life (CL 5th)
+      on the captain of the ship carrying the figurehead. A ship may not have
+      more than one figurehead, magical or otherwise, mounted on it at one
+      time.<h3>Requirements</h3><p>Craft Wondrous Item, bestow curse, false
+      life</p>
+  price: 10800
+  sources:
+    - id: PZO9056
+  subType: wondrous
+  weight:
+    value: 300
+type: equipment

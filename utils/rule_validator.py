@@ -284,81 +284,6 @@ def validate_mm_rules(rules: Dict[str, Any]) -> List[ValidationIssue]:
     return issues
 
 
-def validate_vtm_rules(rules: Dict[str, Any]) -> List[ValidationIssue]:
-    """
-    VtM kurallarını doğrula
-    """
-    issues = []
-    rules_dict = rules.get("rules", {})
-    
-    # Health kontrolü
-    if "health" in rules_dict:
-        health_rule = rules_dict["health"]
-        if not isinstance(health_rule, dict):
-            issues.append(ValidationIssue(
-                ValidationSeverity.ERROR,
-                "Health kuralı dictionary olmalıdır",
-                "health"
-            ))
-        else:
-            if "base" not in health_rule:
-                issues.append(ValidationIssue(
-                    ValidationSeverity.WARNING,
-                    "Health kuralında 'base' değeri eksik",
-                    "health"
-                ))
-            elif not isinstance(health_rule["base"], int):
-                issues.append(ValidationIssue(
-                    ValidationSeverity.ERROR,
-                    "Health kuralında 'base' değeri integer olmalıdır",
-                    "health"
-                ))
-            
-            if "attribute" not in health_rule:
-                issues.append(ValidationIssue(
-                    ValidationSeverity.WARNING,
-                    "Health kuralında 'attribute' adı eksik",
-                    "health"
-                ))
-            elif not isinstance(health_rule["attribute"], str):
-                issues.append(ValidationIssue(
-                    ValidationSeverity.ERROR,
-                    "Health kuralında 'attribute' değeri string olmalıdır",
-                    "health"
-                ))
-    
-    # Willpower kontrolü
-    if "willpower" in rules_dict:
-        willpower_rule = rules_dict["willpower"]
-        if not isinstance(willpower_rule, dict):
-            issues.append(ValidationIssue(
-                ValidationSeverity.ERROR,
-                "Willpower kuralı dictionary olmalıdır",
-                "willpower"
-            ))
-        else:
-            if "attributes" not in willpower_rule:
-                issues.append(ValidationIssue(
-                    ValidationSeverity.ERROR,
-                    "Willpower kuralında 'attributes' listesi eksik",
-                    "willpower"
-                ))
-            elif not isinstance(willpower_rule["attributes"], list):
-                issues.append(ValidationIssue(
-                    ValidationSeverity.ERROR,
-                    "Willpower kuralında 'attributes' değeri liste olmalıdır",
-                    "willpower"
-                ))
-            elif len(willpower_rule["attributes"]) != 2:
-                issues.append(ValidationIssue(
-                    ValidationSeverity.ERROR,
-                    f"Willpower kuralında 'attributes' listesi tam olarak 2 öğe içermelidir (şu anda {len(willpower_rule['attributes'])})",
-                    "willpower"
-                ))
-    
-    return issues
-
-
 def validate_rules(rules: Dict[str, Any]) -> Tuple[bool, List[ValidationIssue]]:
     """
     Kuralları doğrula ve sorunları döndür
@@ -378,8 +303,6 @@ def validate_rules(rules: Dict[str, Any]) -> Tuple[bool, List[ValidationIssue]]:
         issues.extend(validate_dnd_rules(rules))
     elif system == "MUTANTS_AND_MASTERMINDS":
         issues.extend(validate_mm_rules(rules))
-    elif system == "VTM5E":
-        issues.extend(validate_vtm_rules(rules))
     elif system:
         issues.append(ValidationIssue(
             ValidationSeverity.WARNING,

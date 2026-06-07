@@ -1,0 +1,34 @@
+_id: p8h1FHHG4uNkx4gd
+_key: '!items!p8h1FHHG4uNkx4gd'
+_stats:
+  coreVersion: '12.331'
+folder: KOT1geWrUrAU083b
+img: icons/equipment/chest/vest-leather-pink.webp
+name: Baldric of Magical Stability
+system:
+  aura:
+    school: abj
+  cl: 15
+  description:
+    value: >-
+      <p>This rugged leather baldric can hold one weapon in its sheath and has
+      pockets sufficient to hold one of the following (or gear of an equivalent
+      volume): two cases of bolts, one quiver of arrows, or 40 bullets or
+      firearm cartridges. The wearer, as well as each item held in the baldric,
+      gains a +2 insight bonus on saving throws against the effects of primal
+      magic (Pathfinder Campaign Setting: Inner Sea Magic 12). When a Garundi
+      wearer attempts a concentration check to prevent a primal magic event from
+      triggering, she gains a +2 competence bonus on the check; she can attempt
+      the check even if she is not a spellcaster, treating her effective caster
+      level as 5 and applying the highest of her Intelligence, Wisdom, and
+      Charisma
+      modifiers.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, antimagic field, creator must be a Garundi</p>
+  price: 14000
+  slot: chest
+  sources:
+    - id: PZO9280
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

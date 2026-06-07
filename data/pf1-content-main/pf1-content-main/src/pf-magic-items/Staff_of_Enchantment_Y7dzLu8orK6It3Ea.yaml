@@ -1,0 +1,26 @@
+_id: Y7dzLu8orK6It3Ea
+_key: '!items!Y7dzLu8orK6It3Ea'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Enchantment
+system:
+  aura:
+    school: enc
+  cl: 13
+  description:
+    value: >-
+      <p>Often made from applewood and topped with a clear crystal, this staff
+      allows use of the following spells: • Hideous laughter (1 charge)   •
+      Sleep (1 charge)   • Suggestion (1 charge)   • Crushing despair (2
+      charges)   • Mind fog (2 charges)   • Mass suggestion (3
+      charges.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, crushing despair, hideous laughter, mass suggestion, mind fog,
+      sleep, suggestion</p>
+  price: 82000
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

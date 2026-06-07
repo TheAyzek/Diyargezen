@@ -1,0 +1,33 @@
+_id: fjyGI9BTuiS7oYfq
+_key: '!items!fjyGI9BTuiS7oYfq'
+_stats:
+  coreVersion: '12.331'
+folder: qfmWWFueuXXt4NRD
+img: icons/magic/fire/flame-burning-eye.webp
+name: Elf Blood (Sin-Galemren)
+system:
+  contextNotes:
+    - target: allSavingThrows
+      text: >-
+        +[[2]] Racial bonus against enchantment spells and effects and immunity
+        to magic sleep effects.
+  creatureSubtypes:
+    - elf
+    - human
+  creatureTypes:
+    - humanoid
+  description:
+    value: >-
+      <p><strong>Race</strong>: Sin-Galemren</p><hr /><p>Sin-Galemren count as
+      both elves and humans for any effect related to race.</p>
+  sources:
+    - date: '2019'
+      pages: '9'
+      publisher: Paizo / Stranger Comics
+      title: Niobe
+  subType: racial
+  tags:
+    - Sin-Galemren
+    - Niobe
+  traitCategory: other
+type: feat

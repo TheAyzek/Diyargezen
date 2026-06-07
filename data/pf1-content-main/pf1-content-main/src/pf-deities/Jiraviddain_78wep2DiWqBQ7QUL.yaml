@@ -1,0 +1,44 @@
+_id: 78wep2DiWqBQ7QUL
+_key: '!journal!78wep2DiWqBQ7QUL'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Jiraviddain
+pages:
+  - _id: qOH5KzYYergsHGi6
+    _key: '!journal.pages!78wep2DiWqBQ7QUL.qOH5KzYYergsHGi6'
+    _stats:
+      coreVersion: '12.331'
+    name: Jiraviddain
+    sort: 0
+    text:
+      content: >-
+        <h1>Jiraviddain</h1><h2>Duke of Fissures</h2>@Source[PZO9267;pages=326]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Jiraviddain">Jiraviddain</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Infernal Dukes<br /><strong>Areas of
+        Concern</strong> Debility, dependence, frailty<br
+        /><strong>Domains</strong> Community, Evil, Healing, Law<br
+        /><strong>Subdomains</strong> Devil (Evil), Devil (Law), Family, Home,
+        Restoration<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Sap<br
+        /><strong>Symbol</strong> Crumbling fissure<br /><strong>Sacred
+        Animal(s)</strong> Mule<br /><strong>Sacred Color(s)</strong> Black,
+        brown</p><h3>Obedience</h3><p>Pray on the frailty of flesh while you cut
+        yourself. Gain a +4 profane bonus on saves against disease.</p><h2>Boons
+        - Infernal Dukes</h2>@Source[PZO1139;pages=116]<br />The Lords of Hell,
+        the Dukes of Perdition, and the Princes of Damnation are all names for
+        the infamous nobility of the Pit- the elite caste of devilkind known as
+        the infernal dukes.<p> All infernal dukes are lawful evil and range in
+        power from CR 26 to CR 27. The boons they grant are less complex than
+        those granted by archdevils, manifesting as spell-like abilities usable
+        once per day each.</p><p><strong>1</strong>: <em>death knell</em><br
+        /><strong>2</strong>: <em>heal</em><br /><strong>3</strong>: <em>symbol
+        of vulnerability</em></p><h2>For Followers of
+        Jiraviddain</h2><h3>Feats</h3><p><em>Hellish Shackles</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,63 @@
+_id: eLjHieQgjU2ewDvL
+_key: '!items!eLjHieQgjU2ewDvL'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/gem-faceted-round-white.webp
+name: Silver Spindle Ioun Stone, Flawed
+system:
+  actions:
+    - _id: Nv27uSjy7dvxzU2y
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p> a 1st-level spell from the cleric, druid, or sorcerer/wizard spell
+        list </p>
+      name: 1st level spell
+  aura:
+    school: evo
+  cl: 12
+  description:
+    instructions: >-
+      <p>You must update the action on the details tab to match with the
+      selected spell.</p><p>Only 25% of cracked or flawed ioun stones grant
+      resonant powers when placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>This stone is shaped in a prism with 10 or more sides, making it
+      generally cylindrical. it is a silvery color.  It may have irregular
+      facets or internal flaws.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone functions as a normal
+      @UUID[Compendium.pf-content.pf-wondrous.Item.gayNZbUn1KzHnBVM]{silver
+      spindle ioun stone}, but it deals 1d3 Charisma damage to you each time you
+      use the spell-like ability.</p><h3>Resonance</h3><p><strong>Method 1,
+      Fixed: </strong>All spell-like abilities granted by race are treated as 1
+      caster level higher.</p><p><strong>Method 2, Variable:
+      </strong>@UUID[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]{Ioun
+      Stone Resonance Powers Method
+      2}</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Wondrous
+      Item, <em>imbue with spell ability</em>, creator must be 12th level
+      <strong>Cost</strong> 8,000 gp</p>
+  effectNotes:
+    - each use causes [[1d3]] Charisma damage.
+  hardness: 5
+  hp:
+    base: 10
+  price: 16000
+  showInQuickbar: true
+  sources:
+    - id: PZO9435
+      pages: '23'
+  subType: wondrous
+  tags:
+    - Ioun Stone
+  uses:
+    maxFormula: gte(@abilities.cha.total, 11) * 3
+    per: day
+    value: 0
+type: equipment

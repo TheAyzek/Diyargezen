@@ -1,0 +1,20 @@
+_id: K1iWaoeYPh6CwgCm
+_key: '!items!K1iWaoeYPh6CwgCm'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/feats/persuasive.jpg
+name: Tetanus
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> disease (injury); <strong>Save</strong> Fortitude
+      DC 14;</p><p><strong>Onset</strong> 1d6
+      days;&nbsp;<strong>Frequency</strong> 1/day</p><p><strong>Effect</strong>
+      1d4 Dex damage and 50% chance stiffened jaw muscles prevent speech for the
+      next 24 hours.</p><p><strong>Cure</strong> &ndash;</p><hr /><p>A carrion
+      golem transmits tetanus on a successful slam attack.</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

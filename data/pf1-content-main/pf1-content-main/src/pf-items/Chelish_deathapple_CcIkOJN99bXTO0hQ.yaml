@@ -1,0 +1,52 @@
+_id: CcIkOJN99bXTO0hQ
+_key: '!items!CcIkOJN99bXTO0hQ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Chelish deathapple
+system:
+  actions:
+    - _id: b24t4p2l66quhlhn
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: enter a deathlike trance for [[1]]
+            minute; see below <strong>Secondary Effect</strong>: remain in this
+            deathlike trance for [[8]] hours
+      save:
+        dc: '23'
+        type: fort
+      tag: chelishDeathapple
+  description:
+    value: >-
+      <p><strong>Type</strong> ingested; <strong>Save</strong> Fortitude DC
+      23</p><p><strong>Onset</strong> 1 minute; <strong>Frequency</strong>
+      1/minute for 2 minutes</p><p><strong>Initial Effect</strong> enter a
+      deathlike trance for 1 minute; see below; <strong>Secondary
+      Effect</strong> remain in this deathlike trance for 8
+      hours</p><p><strong>Cure</strong> 1 save</p><p>This poison is culled from
+      specially bred thornapples, and is often administered on the skin of an
+      apple itself. It is typically employed to fake the deaths of dissidents so
+      their disappearances don’t attract attention. Creatures in the deathlike
+      trance this poison causes are unconscious and can’t be woken by mundane
+      means; a successful DC 25 Heal check is required to realize the victim is
+      alive. The victim can be shaken from this trance with any magical healing
+      (including lesser restoration, as appropriate).</p>
+  price: 200
+  sources:
+    - id: PZO9292
+      pages: '50'
+  subType: poison
+  uses:
+    per: single
+  weight:
+    value: 0.5
+type: consumable

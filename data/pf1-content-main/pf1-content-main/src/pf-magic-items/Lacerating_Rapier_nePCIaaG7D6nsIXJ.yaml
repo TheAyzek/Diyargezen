@@ -1,0 +1,63 @@
+_id: nePCIaaG7D6nsIXJ
+_key: '!items!nePCIaaG7D6nsIXJ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/rapier.PNG
+name: Lacerating Rapier
+system:
+  actions:
+    - _id: nlccorlrrbnfngn6
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: laceratingRapier
+  aura:
+    school: trs
+  baseTypes:
+    - Rapier
+  cl: 5
+  description:
+    value: >-
+      <p>The blade of this +1 rapier is imbued with the ability to change form
+      slightly when used to sneak attack foes, allowing the wielder to hit
+      multiple targets. Three times per day when the wielder makes a sneak
+      attack against a foe that is adjacent to another creature, she may choose
+      to attack both opponents with a single strike as the blade unwinds,
+      lengthens, and bends to meet their flesh. The wielder uses the same attack
+      roll result to hit both creatures. If successful, the attack deals weapon
+      damage to any creature it hits, though only the first creature takes sneak
+      attack damage.</p><p><strong>Base Item</strong>: 
+      rapier</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, greater magic weapon, mirror strike</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 10302
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9440
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 4
+type: weapon

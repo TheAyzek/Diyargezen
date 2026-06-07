@@ -1,0 +1,48 @@
+_id: 95ex5hkOSwKAe5qf
+_key: '!items!95ex5hkOSwKAe5qf'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Insecticide
+system:
+  actions:
+    - _id: nw95hdvfb8ph64i1
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1]] Str damage (creatures with
+            the vermin type are stunned for [[1]] round)
+      save:
+        dc: '10'
+        type: fort
+      tag: insecticide
+  description:
+    value: >-
+      <p><strong>Type</strong> inhaled; <strong>Save</strong> Fortitude DC 10
+      (see text)</p><p><strong>Frequency</strong> 1/round for 3
+      rounds</p><p><strong>Effect</strong> 1 Str damage (creatures with the
+      vermin type are stunned for 1 round)</p><p><strong>Cure</strong> 1
+      save</p><p>Farmers protecting their crops and landlords maintaining their
+      properties use insecticide to clear out pest infestations, but they must
+      avoid the fumes of this dangerous gas. While it is formulated to
+      exterminate vermin, the poison poses a danger to anyone. A single dose of
+      insecticide immediately fills a 10-foot-by-10-foot area. It can be thrown
+      at a range of 20 feet, and it dissipates after 1d6 rounds in a
+      well-ventilated area. A moderate wind disperses the gas in 1 round.
+      Creatures with the vermin type take a –5 penalty on the save</p>
+  price: 175
+  sources:
+    - id: PZO9487
+      pages: '24'
+  subType: poison
+  uses:
+    per: single
+type: consumable

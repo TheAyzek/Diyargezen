@@ -1,0 +1,34 @@
+_id: IgwsIOWtffCpupw4
+_key: '!items!IgwsIOWtffCpupw4'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Shackles of Durance Vile
+system:
+  aura:
+    school: enc
+  cl: 9
+  description:
+    value: >-
+      <p>These masterwork iron manacles sap the will of their wearer. When they
+      are attached to a humanoid creature as their command word is spoken, they
+      affect their prisoner with a dominate person spell, except that if the
+      prisoner fails its saving throw, the effect lasts for as long as the
+      shackles are attached. Removing or destroying the shackles immediately
+      breaks the enchantment. The shackles can be so used once per day. Shackles
+      of durance vile can only be activated against a helpless, restrained, or
+      willing creature; if attached to a creature still able to resist they
+      function only as manacles, albeit superior ones. Shackles of durance vile
+      have hardness 15, 20 hit points, and a superior lock. They have a break DC
+      of 30 and an Escape Artist DC of
+      35.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, dominate person</p>
+  price: 16200
+  slot: wrists
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

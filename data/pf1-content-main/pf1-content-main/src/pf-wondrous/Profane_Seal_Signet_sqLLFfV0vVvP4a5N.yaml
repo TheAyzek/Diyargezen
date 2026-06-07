@@ -1,0 +1,27 @@
+_id: sqLLFfV0vVvP4a5N
+_key: '!items!sqLLFfV0vVvP4a5N'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Profane Seal Signet
+system:
+  aura:
+    custom: true
+    school: abjuration enchantment and universal
+  cl: 5
+  description:
+    value: >-
+      <p>This ring is made of red gold with a single ruby cut into a pentagon
+      shape. It functions as a ring of protection +1. In addition, the wearer
+      may use arcane mark at will, but only on objects and willing creatures.
+      Once per day, the wearer may use wrath
+      .</p><h3>Construction</h3><p><strong>Requirements</strong> Forge Ring,
+      arcane mark, shield of faith, wrath, creator must be at least 3rd
+      level</p>
+  price: 3000
+  slot: ring
+  sources:
+    - id: PZO9267
+  subType: wondrous
+type: equipment

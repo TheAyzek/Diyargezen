@@ -1,0 +1,69 @@
+_id: NcqR7y2f3W7w3zB3
+_key: '!journal!NcqR7y2f3W7w3zB3'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.17.03. Intelligent Item Ability Scores
+pages:
+  - _id: 1Uai39msvIuDZFTM
+    _key: '!journal.pages!NcqR7y2f3W7w3zB3.1Uai39msvIuDZFTM'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.17.03. Intelligent Item Ability Scores
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.s3ene84nkQAyhCrW]{6.1.
+        Magic
+        Items}</p><ul><li><p>@Compendium[pf-content.pf-rules.muHuo2GwcCKyy4tP]{6.1.17.
+        Intelligent
+        Items}</p><ul><li>@Compendium[pf-content.pf-rules.b4LOq9k8VNrE5iyy]{6.1.17.01.
+        Designing an Intelligent
+        Item}</li><li>@Compendium[pf-content.pf-rules.r4MKuAOkkduX0vSB]{6.1.17.02.
+        Intelligent Item
+        Alignment}</li><li><strong>@Compendium[pf-content.pf-rules.NcqR7y2f3W7w3zB3]{6.1.17.03.
+        Intelligent Item Ability
+        Scores}</strong></li><li>@Compendium[pf-content.pf-rules.95c8F7Trvs0JaQEX]{6.1.17.04.
+        Languages Spoken by
+        Item}</li><li>@Compendium[pf-content.pf-rules.tnEvcNd14MiiEpB6]{6.1.17.05.
+        Senses and
+        Communication}</li><li>@Compendium[pf-content.pf-rules.n2JT7kfk2HfZ0uLS]{6.1.17.06.
+        Intelligent Item
+        Powers}</li><li>@Compendium[pf-content.pf-rules.h50LqdBk0F8Hy0fW]{6.1.17.07.
+        Special Purpose
+        Items}</li><li>@Compendium[pf-content.pf-rules.T6zgyR9mqlc3tIH9]{6.1.17.08.
+        Dedicated
+        Powers}</li><li>@Compendium[pf-content.pf-rules.VX4NrZsdHQAZ4EUF]{6.1.17.09.
+        Item
+        Ego}</li><li>@Compendium[pf-content.pf-rules.Bj3cXy4heUoCX53t]{6.1.17.10.
+        Items against Characters}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=533]</p><p>Intelligent magic items possess
+        all three mental ability scores: Intelligence, Wisdom, and Charisma.
+        Each one of these ability scores begins at a value of 10, but can be
+        increased to as high as 20. Table 15–22 shows the cost to increase one
+        of the item’s ability scores. This cost must be paid for each ability
+        score raised above 10. For example, an intelligent magic item with a 15
+        Intelligence, 12 Wisdom, and 10 Charisma would cost at least 2,400 gp
+        more than the base item (including the 500 gp for being an intelligent
+        item).</p><h2>Table 15–22: Intelligent Item Ability
+        Scores</h2><table><thead><tr><td>Score Base</td><td>Price
+        Modifier</td><td>Ego
+        Modifier</td></tr></thead><tbody><tr><td>10</td><td>—</td><td>—</td></tr><tr><td>11</td><td>+200
+        gp</td><td>—</td></tr><tr><td>12</td><td>+500
+        gp</td><td>+1</td></tr><tr><td>13</td><td>+700
+        gp</td><td>+1</td></tr><tr><td>14</td><td>+1,000
+        gp</td><td>+2</td></tr><tr><td>15</td><td>+1,400
+        gp</td><td>+2</td></tr><tr><td>16</td><td>+2,000
+        gp</td><td>+3</td></tr><tr><td>17</td><td>+2,800
+        gp</td><td>+3</td></tr><tr><td>18</td><td>+4,000
+        gp</td><td>+4</td></tr><tr><td>19</td><td>+5,200
+        gp</td><td>+4</td></tr><tr><td>20</td><td>+8,000
+        gp</td><td>+5</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

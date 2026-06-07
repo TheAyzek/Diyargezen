@@ -1,0 +1,31 @@
+_id: h209Kj8JKFO81RAE
+_key: '!items!h209Kj8JKFO81RAE'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Evil
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Asmodeus, Lamashtu, Norgorber, Rovagug, Urgathoa,
+      Zon-Kuthon.</p><p><strong>Unholy Strike (minor)</strong>: At 1st level,
+      you can touch one weapon and give it an evil blessing. For 1 minute, this
+      weapon takes on a black, orange, or violet cast and deals an additional
+      1d6 points of damage against good creatures. During this time, it's
+      treated as evil for the purposes of overcoming damage reduction. This
+      additional damage doesn't stack with the additional damage from the unholy
+      weapon special ability.</p><p><strong>Battle Companion (major)</strong>:
+      At 10th level, you can summon a battle companion. This ability functions
+      as summon monster IV with a duration of 1 minute, but for only an evil
+      outsider or an animal with the fiendish creature simple template. This
+      ability can summon only one creature, regardless of the list used. For
+      every 2 levels beyond 10th, the level of the summon monster spell
+      increases by 1 (to a maximum of summon monster IX at 20th level).</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

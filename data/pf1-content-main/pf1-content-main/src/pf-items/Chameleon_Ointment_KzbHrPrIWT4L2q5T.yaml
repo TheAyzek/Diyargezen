@@ -1,0 +1,25 @@
+_id: KzbHrPrIWT4L2q5T
+_key: '!items!KzbHrPrIWT4L2q5T'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/minor-green.jpg
+name: Chameleon Ointment
+system:
+  description:
+    value: >-
+      <p>When applied to a homunculus's skin (which takes 1 minute), this
+      ointment causes the creature's flesh to shift color and pattern
+      reflexively to match its surroundings. The homunculus gains a +4
+      circumstance bonus on Stealth checks for 24 hours. The ointment can also
+      be applied to other creatures as long as they are Medium or smaller and
+      wear no clothing or armor to obstruct their skin, but the bonus is reduced
+      to +2.</p><h2>Alchemical Recipe</h2><p><strong>Recipe</strong> (1 gold +
+      12 silver + 12 urea)/ceration; <strong>Craft</strong>
+      20</p><p><strong>Time</strong> 10 minutes; <strong>Tools</strong>
+      crucible; <strong>Type</strong> alchemical remedy</p>
+  price: 20
+  sources:
+    - id: PZO9445
+      pages: '15'
+  subType: misc
+type: consumable

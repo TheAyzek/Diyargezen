@@ -1,0 +1,51 @@
+_id: mqEnvA7QsOT3blAv
+_key: '!journal!mqEnvA7QsOT3blAv'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Jaidz
+pages:
+  - _id: gS0j5EEfYjOTI9Op
+    _key: '!journal.pages!mqEnvA7QsOT3blAv.gS0j5EEfYjOTI9Op'
+    _stats:
+      coreVersion: '12.331'
+    name: Jaidz
+    sort: 0
+    text:
+      content: >-
+        <h1>Jaidz</h1><h2>Fearless Claw</h2>@Source[PZO9267;pages=322] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Jaidz">Jaidz</a><h3>Details</h3><p><strong>Alignment</strong>
+        NG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Cowards, the untested, youths<br
+        /><strong>Domains</strong> Glory, Good, Protection, Travel<br
+        /><strong>Subdomains</strong> Agathion, Defense, Exploration, Hubris
+        (Glory)*, Purity<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Short sword<br
+        /><strong>Symbol</strong> Path between two trees<br /><strong>Sacred
+        Animal(s)</strong> Black tiger<br /><strong>Sacred Color(s)</strong>
+        Brown, green</p><h3>Obedience</h3><p>Mark your arms and legs with white
+        chalk, drawing patterns that mirror the flow of spiritual energy you
+        experience as you meditate on the teachings of Jaidz. Trace over these
+        lines once again with a tiger's fang, but do not break the skin. Gain a
+        +4 sacred bonus to AC against attacks of opportunity made with natural
+        attacks.</p><h2>Boons - Celestial Obedience</h2><h3>Mystery
+        Cultist</h3><p>@Source[PZO9255;pages=16]<br /><strong>1: Dauntless
+        (Sp)</strong> <em>remove fear</em> 3/day, <em>darkvision</em> 2/day, or
+        <em>heroism</em> 1/day<br /><strong>2: Courageous Roar (Sp)</strong> You
+        can cast still <em>greater heroism three times per day. This ability is
+        the equivalent of a 7th-level spell.<br /><strong>3: Holy Terror
+        (Sp)</strong> Once per day you can inscribe a symbol of Jaidz in the air
+        that acts like a <em>symbol of fear</em>. The symbol appears as the
+        glowing outline of Jaidz's holy symbol and hovers stationary wherever
+        you inscribe it. This spell requires no material components and has a
+        casting time of only 1 minute. You can attune up to 10 creatures to the
+        symbol without extending its casting time.</em></p><h2>For Followers of
+        Jaidz</h2><h3>Feats</h3><p><em>Heroic
+        Interposition</em></p><h3>Traits</h3><p><em>Empyreal Focus</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

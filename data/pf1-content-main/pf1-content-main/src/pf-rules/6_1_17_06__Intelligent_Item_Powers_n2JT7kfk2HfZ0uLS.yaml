@@ -1,0 +1,88 @@
+_id: n2JT7kfk2HfZ0uLS
+_key: '!journal!n2JT7kfk2HfZ0uLS'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.17.06. Intelligent Item Powers
+pages:
+  - _id: vYKh1WFu6EWzgq81
+    _key: '!journal.pages!n2JT7kfk2HfZ0uLS.vYKh1WFu6EWzgq81'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.17.06. Intelligent Item Powers
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.s3ene84nkQAyhCrW]{6.1.
+        Magic
+        Items}</p><ul><li><p>@Compendium[pf-content.pf-rules.muHuo2GwcCKyy4tP]{6.1.17.
+        Intelligent
+        Items}</p><ul><li>@Compendium[pf-content.pf-rules.b4LOq9k8VNrE5iyy]{6.1.17.01.
+        Designing an Intelligent
+        Item}</li><li>@Compendium[pf-content.pf-rules.r4MKuAOkkduX0vSB]{6.1.17.02.
+        Intelligent Item
+        Alignment}</li><li>@Compendium[pf-content.pf-rules.NcqR7y2f3W7w3zB3]{6.1.17.03.
+        Intelligent Item Ability
+        Scores}</li><li>@Compendium[pf-content.pf-rules.95c8F7Trvs0JaQEX]{6.1.17.04.
+        Languages Spoken by
+        Item}</li><li>@Compendium[pf-content.pf-rules.tnEvcNd14MiiEpB6]{6.1.17.05.
+        Senses and
+        Communication}</li><li><strong>@Compendium[pf-content.pf-rules.n2JT7kfk2HfZ0uLS]{6.1.17.06.
+        Intelligent Item
+        Powers}</strong></li><li>@Compendium[pf-content.pf-rules.h50LqdBk0F8Hy0fW]{6.1.17.07.
+        Special Purpose
+        Items}</li><li>@Compendium[pf-content.pf-rules.T6zgyR9mqlc3tIH9]{6.1.17.08.
+        Dedicated
+        Powers}</li><li>@Compendium[pf-content.pf-rules.VX4NrZsdHQAZ4EUF]{6.1.17.09.
+        Item
+        Ego}</li><li>@Compendium[pf-content.pf-rules.Bj3cXy4heUoCX53t]{6.1.17.10.
+        Items against Characters}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=535]</p><p>Each intelligent item should
+        possess at least one power, although more powerful items might possess a
+        host of powers. To f ind the item’s specific powers, choose or roll on
+        Table 15–24. All powers function at the direction of the item, although
+        intelligent items generally follow the wishes of their owner. Activating
+        a power or concentrating on an active one is a standard action the item
+        takes. The caster level for these effects is equal to the item’s caster
+        level. Save DCs are based off the item’s highest mental ability
+        score.</p><h2>Table 15–24: Intelligent Item
+        Powers</h2><table><thead><tr><td>d%</td><td>Item Power</td><td>Base
+        Price Modifier</td><td>Ego
+        Modifier</td></tr></thead><tbody><tr><td>01–10</td><td>Item can cast a
+        0-level spell at will</td><td>+1,000
+        gp</td><td>+1</td></tr><tr><td>11–20</td><td>Item can cast a 1st-level
+        spell 3/day</td><td>+1,200
+        gp</td><td>+1</td></tr><tr><td>21–25</td><td>Item can use magic aura on
+        itself at will</td><td>+2,000
+        gp</td><td>+1</td></tr><tr><td>26–35</td><td>Item can cast a 2nd-level
+        spell 1/day</td><td>+2,400
+        gp</td><td>+1</td></tr><tr><td>36–45</td><td>Item has 5 ranks in one
+        skill*</td><td>+2,500 gp</td><td>+1</td></tr><tr><td>46–50</td><td>Item
+        can sprout limbs and move with a speed of 10 feet</td><td>+5,000
+        gp</td><td>+1</td></tr><tr><td>51–55</td><td>Item can cast a 3rd-level
+        spell 1/day</td><td>+6,000
+        gp</td><td>+1</td></tr><tr><td>56–60</td><td>Item can cast a 2nd-level
+        spell 3/day</td><td>+7,200
+        gp</td><td>+1</td></tr><tr><td>61–70</td><td>Item has 10 ranks in one
+        skill* +10,000 gp</td><td>+2</td></tr><tr><td>71–75</td><td>Item can
+        change shape into one other form of the same size</td><td>+10,000
+        gp</td><td>+2</td></tr><tr><td>76–80</td><td>Item can fly, as per the
+        spell, at a speed of 30 feet</td><td>+10,000
+        gp</td><td>+2</td></tr><tr><td>81–85</td><td>Item can cast a 4th-level
+        spell 1/day</td><td>+11,200
+        gp</td><td>+2</td></tr><tr><td>86–90</td><td>Item can teleport itself
+        1/day</td><td>+15,000 gp</td><td>+2</td></tr><tr><td>91–95</td><td>Item
+        can cast a 3rd-level spell 3/day</td><td>+18,000
+        gp</td><td>+2</td></tr><tr><td>96–100</td><td>Item can cast a 4th-level
+        spell 3/day</td><td>+33,600 gp</td><td>+2</td></tr></tbody></table><p>*
+        Intelligent items can only possess Intelligence-, Wisdom-, or
+        Charisma-based skills, unless they also possess some form of ability to
+        move.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

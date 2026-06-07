@@ -1,0 +1,51 @@
+_id: CRcJbYvgkm6DXdQl
+_key: '!journal!CRcJbYvgkm6DXdQl'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: GvRXJrNElDk9KwJW
+name: 3.1.3.2. Mechanical Trap Cost
+pages:
+  - _id: aDIp6tITJz3VkmPp
+    _key: '!journal.pages!CRcJbYvgkm6DXdQl.aDIp6tITJz3VkmPp'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.1.3.2. Mechanical Trap Cost
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.mmx5KJLX4vsGZ7vz]{3.1.
+        Traps}</p><p>@Compendium[pf-content.pf-rules.IYnf1w2TjcHO2ExM]{3.1.3.
+        Designing a
+        Trap}</p><ul><li>@Compendium[pf-content.pf-rules.6cDhoB5fNw8e7LF3]{3.1.3.1.
+        Challenge Rating of a
+        Trap}</li><li><strong>@Compendium[pf-content.pf-rules.CRcJbYvgkm6DXdQl]{3.1.3.2.
+        Mechanical Trap
+        Cost}</strong></li><li>@Compendium[pf-content.pf-rules.HfHYbleSpRiYyq5o]{3.1.3.3.
+        Magic Device Trap
+        Cost}</li><li>@Compendium[pf-content.pf-rules.2YFLAgOtyleYCQxe]{3.1.3.4.
+        Spell Trap
+        Cost}</li><li>@Compendium[pf-content.pf-rules.47DJOElNsrdRkBxn]{3.1.3.5.
+        Craft DCs for Mechanical Traps}</li></ul><hr
+        /><p>@Source[PZO1110;pages=423]</p><p>The cost of a mechanical trap is
+        1,000 gp × the trap’s Challenge Rating. If the trap uses spells in its
+        trigger or reset, add those costs separately. If the trap cannot be
+        reset, divide the cost in half. If the trap has an automatic reset,
+        increase the cost by half (+50%). Particularly simple traps, such as pit
+        traps, might have a greatly reduced cost, subject to GM discretion. Such
+        traps might cost as little as 250 gp × the trap’s Challenge
+        Rating.</p><p>After you’ve determined the cost by Challenge Rating, add
+        the price of any alchemical items or poison you incorporated into the
+        trap. If the trap uses one of these elements and has an automatic reset,
+        multiply the poison or alchemical item cost by 20 to provide an adequate
+        supply of doses.</p><h2>Multiple Traps</h2><p>If a trap is really two or
+        more connected traps, determine the final cost of each separately, then
+        add those values together. This holds for both multiple dependent and
+        multiple independent traps.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

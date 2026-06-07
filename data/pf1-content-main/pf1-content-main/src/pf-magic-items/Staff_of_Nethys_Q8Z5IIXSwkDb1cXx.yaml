@@ -1,0 +1,38 @@
+_id: Q8Z5IIXSwkDb1cXx
+_key: '!items!Q8Z5IIXSwkDb1cXx'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Nethys
+system:
+  aura:
+    custom: true
+    school: abjuratio
+  cl: 13
+  description:
+    value: >-
+      <p>These staves are often made of darkwood and topped with the holy symbol
+      of Nethys, the eyes of which are made of rare gems that glow with magical
+      energy. While the upper end of the staff (along with its symbol) always
+      appears clean and pristine, the lower end of the staff's shaft appears
+      charred by fire and pitted by acid. This staff allows the use of the
+      following spells: • Arcane sight (1 charge)  • Channel the gift (1
+      charge)  • Fractions of heal and harm (1 charge)  • Spell gauge (1
+      charge)  • Prying eyes (2 charges) • Spell scourge (3 charges)  In
+      addition, the wielder of the staff can store additional spells in the
+      staff itself, similarly to a ring of spell storing. The staff of Nethys
+      can contain up to 5 levels of spells (arcane, divine, or psychic, or even
+      a mix of all three). The wielder doesn't need to spend charges to cast one
+      of these stored spells from the staff, but must have levels in a class
+      with that spell on its spell
+      list.</p><h3>Construction</h3><p><strong>Requirements</strong> Create
+      Staff, Heightened Spell, arcane sight, channel the gift or imbue with
+      spell ability, fractions of heal and harm, prying eyes, spell gauge, spell
+      scourge</p>
+  price: 131550
+  sources:
+    - id: PZO9472
+  subType: staff
+  weight:
+    value: 5
+type: consumable

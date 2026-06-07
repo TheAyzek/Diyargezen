@@ -1,0 +1,27 @@
+_id: sGpQiBNx6WlitwQn
+_key: '!items!sGpQiBNx6WlitwQn'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/slime-thick-orange.webp
+name: Twitch Tonic
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Remedies</p><p>This thick syrup is
+      extracted from bitter herbs and enhanced by alchemy to ward against sleep,
+      paralysis, and the staggered condition. If you drink twitch tonic, you
+      gain a +2 alchemical bonus on saving throws made against these effects for
+      the next hour. If you drink twitch tonic while suffering from any of these
+      effects, you may immediately roll another saving throw against the effect
+      (with the +2 bonus); you may gain this particular benefit only once per
+      day. You can administer twitch tonic to an unconscious or paralyzed
+      creature as a full-round action, similar to administering a
+      potion.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      25</p>
+  price: 45
+  sources:
+    - id: PZO1123
+      pages: '101'
+  tags:
+    - Alchemical Remedies
+type: consumable

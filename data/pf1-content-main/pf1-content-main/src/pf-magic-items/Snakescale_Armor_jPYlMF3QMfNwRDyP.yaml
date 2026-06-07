@@ -1,0 +1,39 @@
+_id: jPYlMF3QMfNwRDyP
+_key: '!items!jPYlMF3QMfNwRDyP'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/scale-mail.png
+name: Snakescale Armor
+system:
+  armor:
+    acp: 4
+    dex: 3
+    enh: 1
+    material:
+      base:
+        value: steel
+    value: 5
+  aura:
+    school: ill
+  baseTypes:
+    - Scale Mail
+  cl: 5
+  description:
+    value: >-
+      <p>This +1 scale mail is made from hardened, reinforced snakeskin scales.
+      The armor has an arcane spell failure chance of 15%, a maximum Dexterity
+      bonus of +5, and a -2 armor check penalty. It also grants its wearer a +5
+      competence bonus on Climb and Stealth checks. Snakescale armor is
+      considered light armor.<p><strong>Base Item</strong>: +1 scale
+      mail</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, invisibility, silence, spider climb</p>
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 8900
+  sources:
+    - id: PZO9042
+  spellFailure: 25
+  weight:
+    value: 20
+type: equipment

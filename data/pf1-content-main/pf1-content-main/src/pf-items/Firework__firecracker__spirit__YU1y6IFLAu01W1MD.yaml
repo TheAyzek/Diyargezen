@@ -1,0 +1,52 @@
+_id: YU1y6IFLAu01W1MD
+_key: '!items!YU1y6IFLAu01W1MD'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/explosion-red-2.jpg
+name: Firework (firecracker, spirit)
+system:
+  actions:
+    - _id: j8r5vxiddz85b437
+      ability:
+        critMult: 1
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - {}
+          - {}
+      img: systems/pf1/icons/spells/explosion-red-2.jpg
+      name: Use
+      notes:
+        effect:
+          - see text
+      range:
+        units: ft
+        value: '0'
+      tag: fireworkFirecrackerSpirit
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Weapons</p><p>These firecrackers
+      are covered in magical runes and are mixed with ghost salt. One round
+      after you light a spirit firecracker in an adjacent square, the firework
+      detonates and deals 1d4+1 points of damage to incorporeal creatures in the
+      same space. In addition, an affected incorporeal creature with light
+      sensitivity, light blindness, or sunlight powerlessness becomes blinded
+      for 1 round. A spirit firecracker has no effect on corporeal
+      creatures.</p><h2>Alchemical Recipe</h2><p><strong>Recipe</strong> (1
+      black powder + 6 brimstone + 4 saltpeter + 10 silver)/calcination;
+      <strong>Craft</strong> 25</p><p><strong>Time</strong> 1 hour;
+      <strong>Tools</strong> crucible; <strong>Type</strong> alchemical
+      weapon</p>
+  price: 30
+  sources:
+    - id: PZO9445
+      pages: '29'
+  subType: misc
+  tags:
+    - Alchemical Weapons
+type: consumable

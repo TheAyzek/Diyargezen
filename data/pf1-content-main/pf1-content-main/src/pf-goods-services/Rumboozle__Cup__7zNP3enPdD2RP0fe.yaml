@@ -1,0 +1,19 @@
+_id: 7zNP3enPdD2RP0fe
+_key: '!items!7zNP3enPdD2RP0fe'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/tankard-full.jpg
+name: Rumboozle (Cup)
+system:
+  description:
+    value: >-
+      <p>A potent drink featuring rum, wine, ale, eggs, sugar, and spices,
+      rumboozle is served warm in finer taverns.</p>
+  price: 0.1
+  sources:
+    - id: PZO1123
+      pages: '95'
+  subType: food
+  weight:
+    value: 0.5
+type: consumable

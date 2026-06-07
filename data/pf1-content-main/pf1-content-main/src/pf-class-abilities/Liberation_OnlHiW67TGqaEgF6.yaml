@@ -1,0 +1,25 @@
+_id: OnlHiW67TGqaEgF6
+_key: '!items!OnlHiW67TGqaEgF6'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Liberation
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Desna.</p><p><strong>Liberation (minor)</strong>: At 1st level, for 1
+      round as a swift action, you can ignore impediments to your mobility and
+      effects that cause paralysis (as freedom of movement). You can activate
+      this blessing even if you're otherwise unable to take actions, but not if
+      you're unconscious.</p><p><strong>Freedom's Shout (major)</strong>: At
+      10th level, as a swift action you can emit a 30-foot aura that affects all
+      allies with the liberation blessing described above. This effect lasts for
+      1 round.</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

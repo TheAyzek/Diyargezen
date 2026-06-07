@@ -1,0 +1,68 @@
+_id: 0Mkce8sScFXauUT6
+_key: '!items!0Mkce8sScFXauUT6'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/swords/sword-katana.webp
+name: Whispering Shrike
+system:
+  actions:
+    - _id: g9uhst9qzuawn878
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: whisperingShrike
+  aura:
+    school: abj
+  baseTypes:
+    - Wakizashi
+  cl: 5
+  description:
+    value: >-
+      <p>Whispering Shrike is a +1 wakizashi (Ultimate Combat 134) of incredibly
+      beautiful design. The sword is etched with images of seven shrikes perched
+      on a coiling branch that runs the length of the blade. Once per day,
+      Whispering Shrike can be used to cast shield other on any creature touched
+      by the blade while you wield it. The blade's tsuka (hilt) has not
+      weathered the passage of time as well as the blade itself, and until the
+      pommel is repaired (a process requiring 600 gp, a day's work, and a DC 20
+      Craft [weapons] check), attacks with the weapon take a -2 penalty due to
+      the loose grip. A DC 20 Perception check (an automatic success once repair
+      is underway) reveals a secret compartment in the hilt just large enough to
+      hold a small item such as a flask or rolled piece of paper. This
+      compartment currently holds an important letter-see page 22 for details on
+      this find.<p><strong>Base Item</strong>: +1
+      wakizashi</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, shield other</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 5940
+  properties:
+    dea: true
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9049
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 2
+type: weapon

@@ -1,0 +1,25 @@
+_id: qAb9TshwWpr5JDB2
+_key: '!items!qAb9TshwWpr5JDB2'
+_stats:
+  coreVersion: '12.331'
+folder: Hwm6pYlpMW9YOTO8
+img: systems/pf1/icons/races/ratfolk.png
+name: Animal Focus (Mouse)
+system:
+  description:
+    instructions: >-
+      <p>Set this buff's level equal to the total class level granting the
+      Animal Focus feature.</p>
+    value: >-
+      <p>The creature gains evasion, as the rogue class feature. At 12th level,
+      this increases to improved evasion, as the rogue advanced talent.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '1'
+  level: 1
+  links:
+    supplements:
+      - uuid: Compendium.pf1.class-abilities.Item.KQYCRLEdD4bGA5ak
+  subType: feat
+type: buff

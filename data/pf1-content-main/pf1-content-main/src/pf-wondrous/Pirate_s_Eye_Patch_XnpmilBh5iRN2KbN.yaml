@@ -1,0 +1,26 @@
+_id: XnpmilBh5iRN2KbN
+_key: '!items!XnpmilBh5iRN2KbN'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Pirate's Eye Patch
+system:
+  aura:
+    school: trs
+  cl: 2
+  description:
+    value: >-
+      <p>This black silk eye patch is adorned by a skull and crossbones worked
+      in silver thread. The wearer of this patch gains a +2 competence bonus on
+      Swim and Climb checks. In addition, once per day, the wearer of this eye
+      patch can gain the effects of either touch of the sea (Advanced Player's
+      Guide) or expeditious retreat on command (wearer's
+      choice).</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, expeditious retreat, touch of the sea</p>
+  price: 2600
+  slot: eyes
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

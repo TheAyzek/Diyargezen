@@ -1,0 +1,26 @@
+_id: KORBn3Lo3haEbFgR
+_key: '!items!KORBn3Lo3haEbFgR'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Earthquake
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Evil deities that offer the Earth blessing or nonevil deities with
+      disasters in their portfolios</p><p><strong>Stone's Base (minor)</strong>:
+      You can touch an ally to bless it with the stalwart resilience of stone.
+      For 1 minute, the creature gains a +4 bonus to its CMD against maneuvers
+      that would move the ally or knock it prone.</p><p><strong>Earth Hammer
+      (major)</strong>: At 10th level, you can touch a weapon to bless it with
+      the force of a mighty earthquake for 1 minute. When the weapon hits a
+      creature, the target must succeed at a Reflex save or fall prone; either
+      way, the creature is immune to this ability for 24 hours.</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

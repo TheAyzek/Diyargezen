@@ -1,0 +1,40 @@
+_id: degd46hlifTTWyCQ
+_key: '!journal!degd46hlifTTWyCQ'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Ananshea
+pages:
+  - _id: dbfZI02i5wgWJK8Z
+    _key: '!journal.pages!degd46hlifTTWyCQ.dbfZI02i5wgWJK8Z'
+    _stats:
+      coreVersion: '12.331'
+    name: Ananshea
+    sort: 0
+    text:
+      content: >-
+        <h1>Ananshea</h1><h2>The Skin That Walks on
+        Teeth</h2>@Source[PZO1139;pages=132] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Ananshea">Ananshea</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Sahkil Tormentors<br /><strong>Areas
+        of Concern</strong> Brutality, torture, wild animals<br
+        /><strong>Domains</strong> Animal, Destruction, Evil, Strength<br
+        /><strong>Subdomains</strong> Fear, Ferocity, Rage, Torture<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Kukri</p><h3>Obedience</h3><p>Rend
+        your flesh, dealing 1d4 points of damage with one of your natural
+        weapons or a knife. Gain a +3 profane bonus to AC against attacks from
+        animals or vermin.</p><h2>Boons - Sahkil
+        Tormentors</h2>@Source[PZO1139;pages=132]<br />Sahkil tormentors hold
+        dominion over mortal fears and suffering. All are chaotic evil and range
+        in power from CR 21 to CR 25. Their boons are less complex than those of
+        other demigods, manifesting as spell-like abilities usable twice per day
+        each.<p><strong>1</strong>: <em>bloodbath</em><br /><strong>2</strong>:
+        <em>fear</em><br /><strong>3</strong>: <em>blade barrier</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,30 @@
+_id: WZX09EaScuyskKYj
+_key: '!items!WZX09EaScuyskKYj'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Farglass
+system:
+  aura:
+    school: div
+  cl: 5
+  description:
+    value: >-
+      <p>This telescoping brass spyglass functions as a normal spyglass and
+      allows clear vision to the horizon 3 miles away at sea level. From atop a
+      typical crow's nest or 70-foot-tall tower like Tidewater Rock, this vision
+      extends to over 10 miles. Once per day, the user of a farglass can
+      activate a clairaudience/ clairvoyance effect upon any location seen
+      through the farglass's lens. As long as the location is kept in sight
+      through the lens, the clairaudience/clairvoyance sensor can move with the
+      location. This effect lasts for up to 5
+      minutes.<h3>Requirements</h3><p>Craft Wondrous Item, clairaudience/
+      clairvoyance</p>
+  price: 6400
+  sources:
+    - id: PZO9056
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

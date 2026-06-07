@@ -1,0 +1,44 @@
+_id: 7JjjQNXWzDZkRXba
+_key: '!journal!7JjjQNXWzDZkRXba'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: GvRXJrNElDk9KwJW
+name: 3.1.1.2. Perception and Disable Device DCs
+pages:
+  - _id: jVmX57cA6bVOgjIz
+    _key: '!journal.pages!7JjjQNXWzDZkRXba.jVmX57cA6bVOgjIz'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.1.1.2. Perception and Disable Device DCs
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.mmx5KJLX4vsGZ7vz]{3.1.
+        Traps}</p><ul><li>@Compendium[pf-content.pf-rules.NCntK4F0WJ0fxRKN]{3.1.1.1.
+        Type}</li><li><strong>@Compendium[pf-content.pf-rules.7JjjQNXWzDZkRXba]{3.1.1.2.
+        Perception and Disable Device
+        DCs}</strong></li><li>@Compendium[pf-content.pf-rules.CP118HxlOiIRbggm]{3.1.1.3.
+        Trigger}</li><li>@Compendium[pf-content.pf-rules.fwkTc0ZhsRtbcaSj]{3.1.1.4.
+        Duration}</li><li>@Compendium[pf-content.pf-rules.iYDeV3slpPALRRGC]{3.1.1.5.
+        Reset}</li><li>@Compendium[pf-content.pf-rules.KSmSTYX5p3S6Gc63]{3.1.1.6.
+        Bypass (Optional
+        Element)}</li><li>@Compendium[pf-content.pf-rules.IBBymgXvfGa0vOW8]{3.1.1.7.
+        Effect}</li><li>@Compendium[pf-content.pf-rules.MtjTOLIqTJtVOZtw]{3.1.1.8.
+        Miscellaneous Trap Features}</li></ul><hr
+        /><p>@Source[PZO1110;pages=417]</p><p>The builder sets the Perception
+        and Disable Device DCs for a mechanical trap. For a magic trap, the
+        values depend on the highest-level spell used.</p><h2>Mechanical
+        Trap</h2><p>The base DC for both Perception and Disable Device checks is
+        20. Raising or lowering either of these DCs affects the CR (Table
+        13–3).</p><h2>Magic Trap</h2><p>The DC for both Perception and Disable
+        Device checks is equal to 25 + the spell level of the highestlevel spell
+        used. Only characters with the trapfinding class feature can attempt a
+        Disable Device check involving a magic trap.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,47 @@
+_id: DDMKron9EphE5AMZ
+_key: '!items!DDMKron9EphE5AMZ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/klar.png
+name: Lyrune-Quah Klar
+system:
+  armor:
+    acp: 1
+    material:
+      base:
+        value: wood
+    value: 1
+  aura:
+    school: ill
+  baseTypes:
+    - Klar
+  cl: 7
+  description:
+    value: >-
+      <p>Considered the greatest archers among the Shoanti people, the folk of
+      the Lyrune-Quah tribe treasure this +2 klar shaped from the skull of a
+      lion. The specific shape of the skull allows the wielder to properly hold
+      and shoot a shortbow (though not a longbow) while still benefiting from
+      the Lyrune- Quah klar's shield bonus. Up to three times per day as a free
+      action, the wielder of a Lyrune-Quah klar can utter praise to the nature
+      totem of the moon. The next arrow fired after the prayer trails a line of
+      shimmering stars in its wake. If a creature is struck by this arrow, the
+      stars orbit it for the next 8 rounds, negating any concealment for the
+      target and causing it to emit light as if it were holding a
+      sunrod.</p><p><strong>Base Item</strong>: 
+      klar</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, wandering star motes, creator must be proficient with a
+      shortbow</p>
+  enh: 2
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 19912
+  slot: shield
+  sources:
+    - id: PZO9268
+  spellFailure: 5
+  subType: shield
+  weight:
+    value: 6
+type: equipment

@@ -1,0 +1,23 @@
+_id: on6FmN3jjrCPPChM
+_key: '!items!on6FmN3jjrCPPChM'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/tech/motor-rotating.webp
+name: Compressed air
+system:
+  description:
+    value: >-
+      <p>Longer lasting than an air bladder (<em>Ultimate Equipment</em> 58), a
+      jar of compressed air comes with a breathing apparatus that can be
+      strapped over the mouth with a leather cord and provides enough air for a
+      Medium character to breathe normally for 10 minutes (20 minutes for a
+      Small character).</p>
+  equipped: false
+  price: 50
+  sources:
+    - id: PZO9449
+      pages: '19'
+  subType: tool
+  weight:
+    value: 10
+type: loot

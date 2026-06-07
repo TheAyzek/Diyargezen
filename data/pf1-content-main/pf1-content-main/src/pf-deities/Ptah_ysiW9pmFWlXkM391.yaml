@@ -1,0 +1,32 @@
+_id: ysiW9pmFWlXkM391
+_key: '!journal!ysiW9pmFWlXkM391'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Ptah
+pages:
+  - _id: fbgUFeNOjZzEZGyv
+    _key: '!journal.pages!ysiW9pmFWlXkM391.fbgUFeNOjZzEZGyv'
+    _stats:
+      coreVersion: '12.331'
+    name: Ptah
+    sort: 0
+    text:
+      content: >-
+        <h1>Ptah</h1><h2>Lord of Eternity</h2>@Source[PZO9080;pages=65] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Ptah">Ptah</a><h3>Details</h3><p><strong>Alignment</strong>
+        N<br /><strong>Pantheon</strong> Deities of Ancient Osirion<br
+        /><strong>Areas of Concern</strong> Architecture, craftsmanship,
+        creation, metalworking<br /><strong>Domains</strong> Artifice, Earth,
+        Fire, Knowledge, Travel<br /><strong>Subdomains</strong> Ash, Construct,
+        Metal, Smoke, Thought, Trade<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Quarterstaff<br /><strong>Symbol</strong> Staff composed of the ankh,
+        djed, and was<br /><strong>Sacred Animal(s)</strong> Bull</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

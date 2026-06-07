@@ -1,0 +1,43 @@
+_id: QjHgjK8yLzdgS9C2
+_key: '!journal!QjHgjK8yLzdgS9C2'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 6xAF0VmbLWU6dblG
+name: 2.02.1.4. Start/Complete Full-Round Action
+pages:
+  - _id: 62ZFdmrCGFZhaqfn
+    _key: '!journal.pages!QjHgjK8yLzdgS9C2.62ZFdmrCGFZhaqfn'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.02.1.4. Start/Complete Full-Round Action
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.VZCpOrg3jCyNaYeg]{2.02.
+        Actions in
+        Combat}</p><ul><li><p>@Compendium[pf-content.pf-rules.rBQpOuMH0B3O44Da]{2.02.1.
+        Standard
+        Actions}</p><ul><li>@Compendium[pf-content.pf-rules.PsEv51WUo7p8GpBc]{2.02.1.1.
+        Attack}</li><li>@Compendium[pf-content.pf-rules.r0ymFTNYo4FzlMSq]{2.02.1.2.
+        Activate Magic
+        Item}</li><li>@Compendium[pf-content.pf-rules.qm7mqCXwfpA2EM6w]{2.02.1.3.
+        Cast a
+        Spell}</li><li><strong>@Compendium[pf-content.pf-rules.QjHgjK8yLzdgS9C2]{2.02.1.4.
+        Start/Complete Full-Round
+        Action}</strong></li><li>@Compendium[pf-content.pf-rules.YVJsIHmx7LM0vjis]{2.02.1.5.
+        Total
+        Defense}</li><li>@Compendium[pf-content.pf-rules.1gHRLA4nwxDAlhkT]{2.02.1.6.
+        Use Special Ability}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=185]</p><p>The “start full-round action”
+        standard action lets you start undertaking a full-round action, which
+        you can complete in the following round by using another standard
+        action. You can’t use this action to start or complete a full attack,
+        charge, run, or withdraw.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,27 @@
+_id: L88LlFPlBzm2trND
+_key: '!items!L88LlFPlBzm2trND'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Pauldrons of the Bull
+system:
+  aura:
+    school: abj
+  cl: 5
+  description:
+    value: >-
+      <p>These steel pauldrons are engraved with images of charging bulls. When
+      their wearer makes a bull rush combat maneuver, she can make the check
+      twice and take the better result. Furthermore, they grant a +2 enhancement
+      bonus to CMD against bull
+      rushes.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, bull's strength</p>
+  price: 10000
+  slot: shoulders
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

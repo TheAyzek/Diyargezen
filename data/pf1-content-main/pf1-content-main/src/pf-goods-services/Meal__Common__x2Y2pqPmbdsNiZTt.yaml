@@ -1,0 +1,22 @@
+_id: x2Y2pqPmbdsNiZTt
+_key: '!items!x2Y2pqPmbdsNiZTt'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/monster-ribs.jpg
+name: Meal (Common)
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 3 sp (common, per day), 5 sp (good, per day), 1
+      sp (poor, per day); <strong>Weight</strong> - (common, per day), - (good,
+      per day), - (poor, per day)</p><h2>Description</h2><p>The listed price is
+      for a day's worth of meals. Poor meals might consist of bread, baked
+      turnips, onions, and water. Common meals might consist of bread, chicken
+      stew, carrots, and watered-down ale or wine. Good meals might consist of
+      bread and pastries, beef, peas, and ale or wine.</p>
+  price: 0.3
+  sources:
+    - id: PZO1123
+      pages: '95'
+  subType: food
+type: loot

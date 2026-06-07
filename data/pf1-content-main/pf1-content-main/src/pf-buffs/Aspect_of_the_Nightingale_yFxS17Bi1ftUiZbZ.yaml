@@ -1,0 +1,35 @@
+_id: yFxS17Bi1ftUiZbZ
+_key: '!items!yFxS17Bi1ftUiZbZ'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: icons/equipment/head/mask-carved-bird-grey-pink.webp
+name: Aspect of the Nightingale
+system:
+  changes:
+    - _id: sfv0ple7
+      formula: '2'
+      target: skill.dip
+      type: competence
+  contextNotes:
+    - target: skill.prf
+      text: +[[2]] Competence to Sing.
+    - target: will
+      text: >-
+        1/per minute, if you are effected by a charm effect that allows a saving
+        throw, you may re-roll and take the better result.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.p9q7imu4kiba6ry6]{Aspect of the
+      Nightingale}</p><p>You take on an aspect of a nightingale. Your voice
+      becomes clear and pleasant. You gain a +2 competence bonus on Perform
+      (sing) checks and a +2 competence bonus on Diplomacy checks. Once per
+      minute, if you are subject to a charm effect that allows a saving throw,
+      you may roll twice and take the more favorable result.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 1
+  subType: spell
+type: buff

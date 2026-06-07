@@ -1,0 +1,66 @@
+_id: DQm9ytzmhfw7Arb8
+_key: '!items!DQm9ytzmhfw7Arb8'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/dagger.PNG
+name: Bone Bearer's Cutter
+system:
+  actions:
+    - _id: uxst33488nsj6tmk
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: boneBearersCutter
+  aura:
+    custom: true
+    school: necromancy and transmutation
+  baseTypes:
+    - Dagger
+  cl: 10
+  description:
+    value: >-
+      <p>The bone handle of this +1 wounding dagger is engraved with imagery of
+      fierce beasts. Once per day as a standard action, the dagger can be driven
+      into a target's appendage by making a melee attack with a -5 penalty. If
+      this attack hits, the dagger drives itself into the bone of the creature,
+      giving the creature a -2 penalty on attacks, damage rolls, and Reflex
+      saves for 1 minute. The dagger can be removed by the target or another
+      adjacent creature with a successful DC 15 Strength check. The dagger also
+      grants a +4 competence bonus on skill checks attempted in conjunction with
+      the Harvest Parts feat (see page 24).</p><p><strong>Base Item</strong>:
+      wounding dagger</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, bleed, crafter's fortune, howling agony</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 21802
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9478
+  weaponGroups:
+    - bladesLight
+    - thrown
+    - tribal
+  weight:
+    value: 1
+type: weapon

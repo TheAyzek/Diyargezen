@@ -1,0 +1,24 @@
+_id: 21d9vpB9O32BR2Iq
+_key: '!items!21d9vpB9O32BR2Iq'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/biological/wing-insect-blue.webp
+name: Stirge
+system:
+  description:
+    value: >-
+      <p>These Tiny beasts are allegedly sold for indoor defense to rich
+      clients, but often wind up in exotic blood sports. Despite the popular
+      misconception that stirges are untameable vermin, such creatures are
+      trainable, but they must be fed fresh blood daily to dissuade them from
+      turning on their handlers. More information about stirges can be found in
+      the <em>Bestiary</em>.</p>
+  equipped: false
+  price: 20
+  sources:
+    - id: PZO1123
+      pages: '80'
+  subType: animal
+  weight:
+    value: 1
+type: loot

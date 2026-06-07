@@ -1,0 +1,36 @@
+_id: yka5j7LrQbQNUp7r
+_key: '!items!yka5j7LrQbQNUp7r'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/chain-shirt.png
+name: Calamitous Mail
+system:
+  armor:
+    acp: 2
+    dex: 4
+    material:
+      base:
+        value: steel
+    value: 4
+  aura:
+    school: evo
+  baseTypes:
+    - Chain Shirt
+  cl: 3
+  description:
+    value: >-
+      <p>This style of +1 chain shirt is decorated with small agates, and was
+      first created by followers of the halfling goddess of mischief and battle.
+      The wearer gains a +1 luck bonus on all saving throws.</p><p><strong>Base
+      Item</strong>: 1</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, divine favor</p>
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 3750
+  sources:
+    - id: PZO9267
+  spellFailure: 20
+  weight:
+    value: 25
+type: equipment

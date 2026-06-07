@@ -1,0 +1,20 @@
+_id: 4OIuKnvstMXw5FiB
+_key: '!items!4OIuKnvstMXw5FiB'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Scorpion (Stealth)
+system:
+  associations:
+    classes:
+      - Hunter
+  description:
+    value: >-
+      <p><strong>Hunter Animal Focus</strong></p><p>The creature gains a +2
+      competence bonus on Stealth checks and grapple combat maneuver checks.
+      These bonuses increase to +6 and +4 respectively at 8th level, and +8 and
+      +6 at 15th level.</p>
+  subType: classFeat
+  tags:
+    - Hunter Animal Focus
+type: feat

@@ -1,0 +1,28 @@
+_id: iTSA8dqsovlafjOq
+_key: '!items!iTSA8dqsovlafjOq'
+_stats:
+  coreVersion: '12.343'
+folder: AqjqWFWInPuTJU1V
+img: icons/skills/melee/strike-polearm-light-orange.webp
+name: Heretical
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate evocation <strong>CL</strong>
+      9th</p><p><strong>Slot</strong> none; <strong>Price</strong> +2 bonus;
+      <p>A <em>heretical </em>weapon functions as a fervent weapon, but when
+      wielded against a member of the religion to which it is attuned, the
+      weapon's enhancement bonus is +2 better than its actual bonus. It also
+      deals an extra 2d6 points of damage against followers of the designated
+      religion.  This extra damage is not multiplied on a critical
+      hit.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, <em>align weapon</em>, <em>weapon of
+      awe</em><sup>APG</sup>, creator must be a member of the attuned religion;
+      <strong>Price</strong> -</p>
+  sources:
+    - id: PZO9433
+      pages: '30'
+  subType: misc
+  tags:
+    - Universal Weapon Qualities
+type: feat

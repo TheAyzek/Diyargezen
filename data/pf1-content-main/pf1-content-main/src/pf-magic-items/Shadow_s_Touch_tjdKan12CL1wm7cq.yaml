@@ -1,0 +1,67 @@
+_id: tjdKan12CL1wm7cq
+_key: '!items!tjdKan12CL1wm7cq'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/dagger.PNG
+name: Shadow's Touch
+system:
+  actions:
+    - _id: l23bns4szrlhzxcv
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: shadowsTouch
+  aura:
+    school: ill
+  baseTypes:
+    - Dagger
+  cl: 13
+  description:
+    value: >-
+      <p>Amazingly light, this ebon +2 keen dagger fades into near intangibility
+      at its tip. It ignores bonuses to AC provided by deflection and force
+      effects, and deals 2 points of Strength damage on a confirmed critical
+      hit. By expending one use of mythic power while attacking, the wielder can
+      strike a force effect and disintegrate it as a touch attack. This effect
+      also automatically dispels force effects that can be dispelled whether or
+      not they're subject to disintegrate.  As a standard action, the wielder
+      can expend a use of mythic power while slashing at the air to open up a
+      rift to the Shadow Plane. This functions as shadow walk, except that a
+      maximum number of creatures equal to double the wielder's tier can pass
+      through before the rift closes.</p><p><strong>Base Item</strong>: keen
+      dagger</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, Mythic Creator, shadow walk, shadow weapon</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 102962
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1126
+  weaponGroups:
+    - bladesLight
+    - thrown
+    - tribal
+  weight:
+    value: 0.5
+type: weapon

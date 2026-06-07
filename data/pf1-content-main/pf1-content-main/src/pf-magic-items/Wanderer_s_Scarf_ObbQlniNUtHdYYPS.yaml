@@ -1,0 +1,67 @@
+_id: ObbQlniNUtHdYYPS
+_key: '!items!ObbQlniNUtHdYYPS'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/bladed-scarf.PNG
+name: Wanderer's Scarf
+system:
+  actions:
+    - _id: pakf5oo2kqihugsz
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: wanderersScarf
+  aura:
+    school: nec
+  baseTypes:
+    - Bladed Scarf
+  cl: 1
+  description:
+    value: >-
+      <p>Dyed in somber shades of gray and tipped with treated shards of bone
+      instead of blade-tips, this +1 bladed scarf is predominantly used by
+      wandering Varisian caravans in the nation of Ustalav. The wielder of a
+      wanderer's scarf is affected by a continual hide from undead spell as long
+      as he carries or wears it. In circumstances where the spell effect would
+      normally end (such as when channeling positive energy), this effect is
+      suspended for 24 hours. Intelligent undead can perceive the wielder by
+      succeeding at a DC 10 Will saving throw. When used in combat, this weapon
+      deals an additional 1d6 points of positive energy damage to any undead
+      creature it strikes.</p><p><strong>Base Item</strong>: bladed
+      scarf</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, disrupt undead, hide from undead</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 7812
+  properties:
+    dis: true
+    fin: true
+    trp: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9268
+  weaponGroups:
+    - flails
+  weight:
+    value: 2
+type: weapon

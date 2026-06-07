@@ -1,0 +1,42 @@
+_id: 0sZdqFbBcZtFIeeU
+_key: '!items!0sZdqFbBcZtFIeeU'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-heavy-metal.png
+name: Shield of the Mazeborn
+system:
+  armor:
+    acp: 2
+    material:
+      base:
+        value: steel
+    value: 2
+  aura:
+    custom: true
+    school: divination and enchantment
+  baseTypes:
+    - Heavy Steel Shield
+  cl: 5
+  description:
+    value: >-
+      <p>This +1 bashing heavy steel shield resembles a bull's head with a
+      complex, maze-like rune inscribed on the creature's forehead. In addition
+      to the shield's bashing ability, the shield allows the wielder to use know
+      direction at will and find the path once per week. As long as the shield
+      is equipped, it also grants the wearer immunity to the maze
+      spell.</p><p><strong>Base Item</strong>:
+      bashing</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, bull's strength, find the path, know direction</p>
+  enh: 1
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 18170
+  slot: shield
+  sources:
+    - id: PZO9455
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 15
+type: equipment

@@ -1,0 +1,33 @@
+_id: hCD76i1mzmPBBAlP
+_key: '!items!hCD76i1mzmPBBAlP'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of the Woodlands
+system:
+  aura:
+    custom: true
+    school: varies, varies
+  cl: 13
+  description:
+    value: >-
+      <p>Appearing to have grown naturally into its shape, this oak, ash, or yew
+      staff allows use of the following spells: • Charm animal (1 charge)  •
+      Speak with animals (1 charge)  • Barkskin (2 charges)  • Summon nature's
+      ally VI (3 charges)  • Wall of thorns (3 charges)  • Animate plants (4
+      charges)  The staff may be used as a weapon, functioning as a +2
+      quarterstaff. The staff of the woodlands also allows its wielder to cast
+      pass without trace at will, with no charge cost. These two attributes
+      continue to function after all the charges are
+      expended.</p><p><strong>Base Item</strong>: +2
+      quarterstaff</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, Craft Staff, animate plants, barkskin, charm
+      animal, pass without trace, speak with animals, summon nature's ally VI,
+      wall of thorns</p>
+  price: 100400
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

@@ -1,0 +1,34 @@
+_id: WpLcIAyu1VFCcshE
+_key: '!items!WpLcIAyu1VFCcshE'
+_stats:
+  coreVersion: '12.343'
+folder: AqjqWFWInPuTJU1V
+img: icons/skills/melee/strike-polearm-light-orange.webp
+name: Redeemed
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> strong abjuration and evocation [good]
+      <strong>CL</strong> 12th</p><p><strong>Slot</strong> weapon quality;
+      <strong>Price</strong> +3 bonus;</p><p>A <em>redeemed </em>weapon was once
+      a corrupt <em>unholy </em>weapon. The taint of evil has been purged from
+      it, however, and the weapon is now in all ways a <em>holy </em>weapon,
+      dealing an additional 2d6  points of damage against all creatures of evil
+      alignment. In addition, the wielder gains a sacred bonus on saving throws
+      equal to the weapon's enhancement bonus against the spells and abilities
+      of evil outsiders and a +5 competence bonus on Knowledge (planes) checks
+      to identify evil outsiders and their special powers or vulnerabilities.
+      When the <em>redeemed </em>weapon special ability is added to an
+      <em>unholy </em>weapon, the weapon loses the <em>unholy </em>property and
+      gains the <em>redeemed </em>property, and the crafter must pay the price
+      of adding a +1 enhancement bonus to the
+      weapon.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>consecrate</em>, <em>holy smite</em>, creator
+      must be good; <strong>Price</strong> -</p>
+  sources:
+    - id: PZO9431
+      pages: '30'
+  subType: misc
+  tags:
+    - Universal Weapon Qualities
+type: feat

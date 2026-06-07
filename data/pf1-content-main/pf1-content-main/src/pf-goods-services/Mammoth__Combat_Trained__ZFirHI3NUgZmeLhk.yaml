@@ -1,0 +1,29 @@
+_id: ZFirHI3NUgZmeLhk
+_key: '!items!ZFirHI3NUgZmeLhk'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/bones/hooves-cloven-brown.webp
+name: Mammoth (Combat-Trained)
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 2,250 gp (combat-trained), 2,000 gp (common);
+      <strong>Weight</strong> 8 tons (combat-trained), 8 tons
+      (common)</p><h2>Description</h2><p>This woollier variety of the mastodon
+      is adapted to cold, and is a larger and more powerfully built cousin to
+      the elephant. A favored beast of burden among Kellid tribes, mammoths are
+      more temperamental than elephants. Combat-trained mammoths are used
+      primarily as mounts by the Kellid tribes of the Realm of the Mammoth
+      Lords. Such beasts might be bought from some tribes, but for a more
+      significant cost. Many Kellids sell mammoths only to those they trust to
+      both respect the animals and not turn the powerful beasts back against
+      their tribe. For more information, see the <em>Bestiary</em>.</p>
+  equipped: false
+  price: 2250
+  sources:
+    - id: PZO9428
+      pages: '28'
+  subType: animal
+  weight:
+    value: 18000
+type: loot

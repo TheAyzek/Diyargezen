@@ -1,0 +1,33 @@
+_id: B5vPRT9U19xrHrRR
+_key: '!items!B5vPRT9U19xrHrRR'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/laboratory/mortar-powder-green.webp
+name: Beast-Scent
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>This mixture of
+      scent-gland extracts and aromatic herbs serves as both attractor and
+      olfactory camouflage. It masks the natural scent of a creature with a
+      pungent musk that is alluring to animals. Beast-scent provides a +2
+      circumstance bonus on Handle Animal and wild empathy checks and a -5
+      penalty on attempts to track the wearer by his original scent. If the
+      tracking creature is following the smell of beast-scent itself, Survival
+      checks to track gain a +10 circumstance bonus instead.</p><p> A single
+      vial of beast-scent masks the scent of one Medium creature or two smaller
+      creatures; larger creatures require proportionally more to gain the
+      benefits. Beast-scent becomes inert after 1 hour of exposure to air.
+      Applying a vial is a full-round action that provokes attacks of
+      opportunity.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong>
+      DC 25</p>
+  price: 75
+  sources:
+    - id: PZO9481
+      pages: '24'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 0.5
+type: consumable

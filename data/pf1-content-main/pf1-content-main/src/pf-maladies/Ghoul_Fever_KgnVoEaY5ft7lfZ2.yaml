@@ -1,0 +1,24 @@
+_id: KgnVoEaY5ft7lfZ2
+_key: '!items!KgnVoEaY5ft7lfZ2'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/shadow_01.jpg
+name: Ghoul Fever
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> disease (injury);&nbsp;<strong>Save</strong>
+      Fortitude DC 13;</p><p><strong>Onset</strong> 1
+      day;&nbsp;<strong>Frequency</strong> 1/day</p><p><strong>Effect</strong>
+      1d3 Con damage and 1d3 Dex damage</p><p><strong>Cure</strong> 2
+      consecutive saves</p><hr /><p>A humanoid who dies of ghoul fever rises as
+      a ghoul at the next midnight. A humanoid who becomes a ghoul in this way
+      retains none of the abilities it possessed in life. It is not under the
+      control of any other ghouls, but it hungers for the flesh of the living
+      and behaves like a normal ghoul in all respects. A humanoid of 4 Hit Dice
+      or more rises as a ghast. The save DC is Charisma-based.</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

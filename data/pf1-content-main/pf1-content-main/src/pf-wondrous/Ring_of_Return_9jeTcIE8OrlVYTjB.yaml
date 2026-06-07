@@ -1,0 +1,26 @@
+_id: 9jeTcIE8OrlVYTjB
+_key: '!items!9jeTcIE8OrlVYTjB'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Return
+system:
+  aura:
+    school: con
+  cl: 7
+  description:
+    value: >-
+      <p>This gold ring is set with three stones: blue, green, and red. Three
+      times per day, the wearer of the ring can, as a move action, use it to
+      form a link with the particular 5-foot square she occupies at that moment.
+      This causes one of the stones on the ring to glow. As a swift action, the
+      wearer of the ring can teleport to any unoccupied linked square within 100
+      feet.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge Ring,
+      dimension door</p>
+  price: 33600
+  slot: ring
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

@@ -1,0 +1,48 @@
+_id: XRAmeq9zVRdyFHvo
+_key: '!items!XRAmeq9zVRdyFHvo'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/equipment/waist/belt-coiled-leather-steel.webp
+name: Belt of Foraging
+system:
+  aura:
+    school: div
+  cl: 3
+  contextNotes:
+    - target: skill.sur
+      text: >-
+        if you have at least 1 rank in Survival, you always succeed at checks to
+        get along in the wild (for yourself only), provided you move at half
+        your overland speed. 
+
+        You can choose to make the check to provide food and water for one other
+        creature for every 2 points by which your result exceeds DC 10. If you
+        move at full speed, you must make a DC 20 check and again  for every 2
+        points you exceed 20 you can provide for 1 additional creature.
+  description:
+    unidentified: <p>This belt is unremarkable.</p>
+    value: >-
+      <h3>Effect</h3><p>This belt allows its wearer to easily forage while in
+      the wilderness. As long as the wearer of this belt has at least 1 rank in
+      Survival, she need not make a check to get along in the wild; she always
+      succeeds at that Survival check as long as she moves at half her overland
+      speed. She can still choose to make that check to provide food and water
+      for one other creature for every 2 points by which her result exceeds DC
+      10. Furthermore, she can instead make a DC 20 Survival check to get along
+      in the wild while moving at full speed instead of half speed. While doing
+      so, she can provide food and water for one other creature for every 2
+      points by which his check result exceeds
+      20.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, <em>detect animals and plants</em>, creator must have 1
+      rank in Survival <strong>Cost</strong> 3,000 gp</p>
+  price: 6000
+  slot: belt
+  sources:
+    - id: PZO1123
+    - id: PZO1121
+      pages: '78'
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

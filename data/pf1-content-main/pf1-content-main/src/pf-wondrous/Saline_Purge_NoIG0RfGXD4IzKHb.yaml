@@ -1,0 +1,27 @@
+_id: NoIG0RfGXD4IzKHb
+_key: '!items!NoIG0RfGXD4IzKHb'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Saline Purge
+system:
+  aura:
+    school: con
+  cl: 5
+  description:
+    value: >-
+      <p>The putrid concoction in this glass bottle smells foul and tastes
+      worse. Anyone who drinks a dose of saline purge must succeed at a DC 14
+      Fortitude save or become nauseated for 1d4+1 rounds. Whether or not this
+      save is successful, the imbiber is cured of any curses or poisons
+      affecting him as his body purges the ill
+      effects.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, neutralize poison, remove curse</p>
+  price: 900
+  sources:
+    - id: PZO9440
+  subType: wondrous
+  weight:
+    value: 0.5
+type: equipment

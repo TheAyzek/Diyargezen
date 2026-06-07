@@ -1,0 +1,47 @@
+_id: Pww4q2QCB7JEkYN5
+_key: '!items!Pww4q2QCB7JEkYN5'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/books/book-worn-brown.webp
+name: The Last Azlanti's Analects (Spellbook, Level 15 Universalist)
+system:
+  description:
+    value: >-
+      <p><em>This book's ancient leather cover is emblazoned with a simplified
+      winged eye.</em></p><p><strong>Protection</strong> Average lock with
+      <em>arcane lock</em> (DC 35) and <em>explosive runes</em> (Reflex DC
+      16)</p><p><strong>Value</strong> 7,030 gp (10,030 gp with the preparation
+      ritual)</p><h2>Spells</h2><p>8th-<em>dimensional lock</em>, <em>iron
+      body</em></p><p> 7th-<em>Aroden's magic army</em>, <em>delayed blast
+      fireball</em>, <em>instant summons</em>, <em>limited wish</em></p><p>
+      6th-<em>antimagic field</em>, <em>Last Azlanti's defending sword</em>,
+      <em>mass human potential</em>, <em>transformation</em></p><p>
+      5th-<em>banishing blade</em>, <em>cone of cold</em>, <em>fabricate</em>,
+      <em>greater guardian monument</em></p><p> 4th-<em>dimensional anchor</em>,
+      <em>fear</em>, <em>locate creature</em>, <em>resilient sphere</em></p><p>
+      3rd-<em>daylight</em>, <em>dispel magic</em>, <em>fireball</em>,
+      <em>greater magic weapon</em></p><p> 2nd-<em>continual flame</em>,
+      <em>false life</em>, <em>human potential</em>, <em>whispering wind</em><br
+      /> 1st-<em>alarm</em>, <em>anticipate peril</em><sup>UM</sup>,
+      <em>expeditious construction</em>, <em>floating disk</em>, <em>hold
+      portal</em>, <em>magic missile</em>, <em>protection from chaos</em>,
+      <em>unseen servant</em></p><h2>Ritual</h2><p><strong>Efficient Creator
+      (Su)</strong> You can spend this boon to use the magic item creation rules
+      to create items with the Craft skill for one day. When doing this, your
+      material costs are equal to half the final value of the item crafted
+      (rather than the normal 1/3 of the cost for using the Craft skill). You
+      can craft items with a cost greater than 1,000 gp by expending this boon
+      over successive days, in the same way magic items with a cost over 1,000
+      gp can be crafted over multiple days. You otherwise follow all the rules
+      and options for magic item creations.</p>
+  equipped: false
+  price: 10030
+  sources:
+    - id: PZO9465
+      pages: '6'
+  subType: gear
+  tags:
+    - Spellbooks
+  weight:
+    value: 5
+type: loot

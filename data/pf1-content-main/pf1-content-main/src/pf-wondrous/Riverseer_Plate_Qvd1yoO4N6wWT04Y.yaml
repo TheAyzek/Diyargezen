@@ -1,0 +1,34 @@
+_id: Qvd1yoO4N6wWT04Y
+_key: '!items!Qvd1yoO4N6wWT04Y'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Riverseer Plate
+system:
+  aura:
+    school: div
+  cl: 5
+  description:
+    value: >-
+      <p>This disc of thick green glass is 12 inches in diameter and has a
+      small, stylized image of a boat acid-etched into its center. When set
+      against the deck of a waterborne vessel, the plate warns of nearby
+      obstacles on or under the water, presenting them as glowing green
+      silhouettes on the glass in relation to the boat etched on the plate's
+      center. A riverseer plate warns of inanimate dangers within a 300-foot
+      radius beyond the vessel in which it is set, providing a +6 competence
+      bonus on sailing checks to navigate the vessel around potential dangers
+      (see Ultimate Combat for the full rules on sailing checks).  Once per day,
+      a creature can apply a drop of blood to a riverseer plate's surface. For 5
+      minutes thereafter, the plate marks the location of Small or larger
+      animate creatures in the water around the vessel, presenting them on the
+      plate's surface as glowing red dots.</p><h3>Requirements</h3><p>Craft
+      Wondrous Item, detect animals or plants, riversight (see page 27)</p>
+  price: 5000
+  sources:
+    - id: PZO9448
+  subType: wondrous
+  weight:
+    value: 0.5
+type: equipment

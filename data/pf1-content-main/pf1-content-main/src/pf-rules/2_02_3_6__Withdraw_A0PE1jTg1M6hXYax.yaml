@@ -1,0 +1,52 @@
+_id: A0PE1jTg1M6hXYax
+_key: '!journal!A0PE1jTg1M6hXYax'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 6xAF0VmbLWU6dblG
+name: 2.02.3.6. Withdraw
+pages:
+  - _id: Xil2RU7aVr5zcq7X
+    _key: '!journal.pages!A0PE1jTg1M6hXYax.Xil2RU7aVr5zcq7X'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.02.3.6. Withdraw
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.q5bgNObausAXw2UA]{2.02.3.
+        Full-Round
+        Actions}</p><ul><li>@Compendium[pf-content.pf-rules.8cm2RntAmLLlg7nz]{2.02.3.1.
+        Full
+        Attack}</li><li>@Compendium[pf-content.pf-rules.EQdgZgwMQkFK2adC]{2.02.3.2.
+        Cast a
+        Spell}</li><li>@Compendium[pf-content.pf-rules.pHyKz8UQhg8FImjY]{2.02.3.3.
+        Move 5 Feet through Difficult
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.adrsWQRvBNEI4q1M]{2.02.3.4.
+        Run}</li><li>@Compendium[pf-content.pf-rules.sDdDsMio3YkKR36L]{2.02.3.5.
+        Use Special
+        Ability}</li><li><strong>@Compendium[pf-content.pf-rules.A0PE1jTg1M6hXYax]{2.02.3.6.
+        Withdraw}</strong></li></ul><hr
+        /><p>@Source[PZO1110;pages=188]</p><p>Withdrawing from melee combat is a
+        full-round action. When you withdraw, you can move up to double your
+        speed. The square you start out in is not considered threatened by any
+        opponent you can see, and therefore visible enemies do not get attacks
+        of opportunity against you when you move from that square. Invisible
+        enemies still get attacks of opportunity against you, and you can't
+        withdraw from combat if you're blinded. You can't take a 5-foot step
+        during the same round in which you withdraw.</p><p>If, during the
+        process of withdrawing, you move out of a threatened square (other than
+        the one you started in), enemies get attacks of opportunity as
+        normal.</p><p>You may not withdraw using a form of movement for which
+        you don't have a listed speed.</p><p>Note that despite the name of this
+        action, you don't actually have to leave combat
+        entirely.</p><h2>Restricted Withdraw</h2><p>If you are limited to taking
+        only a standard action each round you can withdraw as a standard action.
+        In this case, you may move up to your speed.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

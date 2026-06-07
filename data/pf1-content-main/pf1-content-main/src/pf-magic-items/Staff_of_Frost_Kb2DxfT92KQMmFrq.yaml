@@ -1,0 +1,24 @@
+_id: Kb2DxfT92KQMmFrq
+_key: '!items!Kb2DxfT92KQMmFrq'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Frost
+system:
+  aura:
+    school: evo
+  cl: 10
+  description:
+    value: >-
+      <p>Tipped on either end with a glistening diamond, this rune-covered staff
+      allows use of the following spells: • Ice storm (1 charge)   • Wall of ice
+      (2 charges)   • Cone of cold (3
+      charges.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, cone of cold, ice storm, wall of ice</p>
+  price: 41400
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

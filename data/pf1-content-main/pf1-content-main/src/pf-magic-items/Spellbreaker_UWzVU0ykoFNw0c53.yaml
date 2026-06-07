@@ -1,0 +1,67 @@
+_id: UWzVU0ykoFNw0c53
+_key: '!items!UWzVU0ykoFNw0c53'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/quarterstaff.png
+name: Spellbreaker
+system:
+  actions:
+    - _id: orvk8lhtfioj909b
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: spellbreaker
+  aura:
+    school: abj
+  baseTypes:
+    - Quarterstaff
+  cl: 12
+  description:
+    value: >-
+      <p>Only one end of this iron-shod +3 quarterstaff has an enhancement
+      bonus. The enhanced end acts as a bane weapon against any creature with
+      the ability to cast spells or use spell-like abilities. As a standard
+      action, the wielder can strike the unenhanced end against the ground while
+      expending one use of mythic power to produce an antimagic field centered
+      on the staff. This effect has a duration of 2 hours. Anyone striking the
+      staff against the ground a second time dismisses the effect. The antimagic
+      field remains in effect if the staff is dropped or disarmed. The staff
+      retains its enhancement bonus and extra damage against spellcasters inside
+      any antimagic field.</p><p><strong>Base Item</strong>: 
+      quarterstaff</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, Mythic Crafter, antimagic field</p>
+  enh: 3
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: wood
+  price: 71600
+  properties:
+    dbl: true
+    mnk: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1126
+  weaponGroups:
+    - double
+    - monk
+  weight:
+    value: 4
+type: weapon

@@ -1,0 +1,21 @@
+_id: P8fi60dZuhbtWIdP
+_key: '!items!P8fi60dZuhbtWIdP'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/soup.jpg
+name: Milk
+system:
+  description:
+    value: >-
+      <p>Milk is a nutritious liquid created by mammals, in particular cows,
+      goats, sheep, and horses. Fresh milk is thick and tends to separate.
+      Often, the cream is allowed to rise to the top and then skimmed off, with
+      the remainder served as a beverage.</p>
+  price: 0.05
+  sources:
+    - id: PZO1123
+      pages: '95'
+  subType: food
+  weight:
+    value: 0.5
+type: consumable

@@ -1,0 +1,62 @@
+_id: 4enVqozSJxusPvNl
+_key: '!items!4enVqozSJxusPvNl'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/battle-aspergillum.png
+name: Everflowing Aspergillum
+system:
+  actions:
+    - _id: aunkkwo52tov0aes
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: everflowingAspergillum
+  aura:
+    school: con
+  baseTypes:
+    - Battle Aspergillum
+  cl: 5
+  description:
+    value: >-
+      <p>The holy water in this +1 battle aspergillum never runs dry. However,
+      the water vanishes 1 round after leaving the aspergillum, so it cannot be
+      collected. As a full-round action, the wielder can swing the weapon to
+      dispense a vial's worth of holy water as a ranged touch attack with a
+      maximum range of 10 feet and no range penalty. An everflowing aspergillum
+      counts as a good-aligned weapon for purposes of overcoming damage
+      reduction.</p><p><strong>Base Item</strong>: battle
+      aspergillum</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, bless water, create water</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 7805
+  properties:
+    fin: true
+    spc: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - hammers
+  weight:
+    value: 4
+type: weapon

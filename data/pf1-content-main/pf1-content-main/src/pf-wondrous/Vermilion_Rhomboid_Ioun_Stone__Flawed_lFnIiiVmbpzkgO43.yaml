@@ -1,0 +1,54 @@
+_id: lFnIiiVmbpzkgO43
+_key: '!items!lFnIiiVmbpzkgO43'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/gem-rough-cushion-red.webp
+name: Vermilion Rhomboid Ioun Stone, Flawed
+system:
+  aura:
+    school: trs
+  changes:
+    - _id: sAEBF0TC
+      formula: '5'
+      target: skill.acr
+      type: competence
+    - _id: 0Xzdyrxc
+      formula: '5'
+      target: skill.swm
+      type: competence
+    - _id: BuCE2f1g
+      formula: '-2'
+      target: con
+      type: untyped
+  cl: 12
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>A brilliant red stone in the form of a type of prism with sides of
+      unequal widths or angles, giving it a flattened cross section.  It may
+      have irregular facets or internal flaws.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone grants you a +5 competence bonus on
+      Acrobatics and Swim checks and a -2 penalty to
+      Constitution.</p><h3>Resonance</h3><p><strong>Method 1, Fixed:</strong>
+      Breathe water for up to 10 minutes per day, useable in 1-minute
+      increments.</p><p><strong>Method 2, Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, <em>bull's strength</em>, <em>cat's grace</em>,
+      creator must be 12th level <strong>Cost</strong> 4,000 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 8000
+  sources:
+    - id: PZO9211
+      pages: 50, 53
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

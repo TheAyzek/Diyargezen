@@ -1,0 +1,37 @@
+_id: f5ixGv4fXUeLF5Lr
+_key: '!items!f5ixGv4fXUeLF5Lr'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Collar of Obedience
+system:
+  aura:
+    school: enc
+  cl: 9
+  description:
+    value: >-
+      <p>This collar of bright red leather bears a small golden pendant and
+      makes the wearer much more biddable and compliant. The wearer takes a -4
+      penalty on saving throws against mind-affecting effects used by the
+      creature that placed the collar on it, and that creature gains a +4 bonus
+      on Handle Animal checks to train or push the wearer. Any other creatures
+      take a -4 penalty on Handle Animal checks against the wearer, and the
+      wearer gains a +2 resistance bonus on saving throws against their
+      mind-affecting effects.   A collar of obedience can be placed on any
+      Small, Medium, or Large creature. Placing a collar of obedience on a
+      creature is a full-round action that requires a successful grapple
+      maneuver. Removing the collar is also a full-round action, and the
+      creature removing it must have precise digits capable of working the
+      locking mechanism. A creature made helpful with wild empathy does not
+      resist having the collar equipped or
+      removed.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, charm animal or mind fog</p>
+  price: 5000
+  slot: neck
+  sources:
+    - id: PZO9429
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

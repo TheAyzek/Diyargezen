@@ -1,0 +1,106 @@
+_id: osoMkDti3clgURz9
+_key: '!journal!osoMkDti3clgURz9'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: zcCMo97bY7HQ8cns
+name: 7.0.2.10. Saving Throw
+pages:
+  - _id: fYhjwN0RDCxgYigG
+    _key: '!journal.pages!osoMkDti3clgURz9.fYhjwN0RDCxgYigG'
+    _stats:
+      coreVersion: '12.331'
+    name: 7.0.2.10. Saving Throw
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.dS0UkKOINqI2iTDX]{(Index)
+        Magic}</p><p>@Compendium[pf-content.pf-rules.VqmfepmRULVzQGwS]{7.0.
+        Magic
+        Basics}</p><ul><li><p>@Compendium[pf-content.pf-rules.JrvOGuTDYfoiaCZf]{7.0.2.
+        Spell
+        Descriptions}</p><ul><li>@Compendium[pf-content.pf-rules.pPk4zIniRiNT8bkZ]{7.0.2.01.
+        Name}</li><li>@Compendium[pf-content.pf-rules.elUkRwtMDJnpBUbt]{7.0.2.02.
+        School
+        (Subschool)}</li><li>@Compendium[pf-content.pf-rules.uHFbrzKIeTHMBW89]{7.0.2.03.
+        Descriptor}</li><li>@Compendium[pf-content.pf-rules.BK6acSa2umnwCvYo]{7.0.2.04.
+        Level}</li><li>@Compendium[pf-content.pf-rules.85G4EAPyKRDKdp4F]{7.0.2.05.
+        Components}</li><li>@Compendium[pf-content.pf-rules.kJ9Y6R0EmdWvWAYS]{7.0.2.06.
+        Casting
+        Time}</li><li>@Compendium[pf-content.pf-rules.eoicSkLMiuBmRsJG]{7.0.2.07.
+        Range}</li><li>@Compendium[pf-content.pf-rules.CObmMzf1HCwePOdv]{7.0.2.08.
+        Aiming a
+        Spell}</li><li>@Compendium[pf-content.pf-rules.IoLudXWL9DLU1p9l]{7.0.2.09.
+        Duration}</li><li><strong>@Compendium[pf-content.pf-rules.osoMkDti3clgURz9]{7.0.2.10.
+        Saving
+        Throw}</strong></li><li>@Compendium[pf-content.pf-rules.iqCQcMGmm0pmWqUf]{7.0.2.11.
+        Spell
+        Resistance}</li><li>@Compendium[pf-content.pf-rules.PybdVd7VGR9riGuX]{7.0.2.12.
+        Descriptive Text}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=216]</p><p>Usually a harmful spell allows a
+        target to make a saving throw to avoid some or all of the effect. The
+        saving throw entry in a spell description defines which type of saving
+        throw the spell allows and describes how saving throws against the spell
+        work.</p><h2>Negates</h2><p>The spell has no effect on a subject that
+        makes a successful saving throw.</p><h2>Partial</h2><p>The spell has an
+        effect on its subject. A successful saving throw means that some lesser
+        effect occurs.</p><h2>Half</h2><p>The spell deals damage, and a
+        successful saving throw halves the damage taken (round
+        down).</p><h2>None</h2><p>No saving throw is
+        allowed.</p><h2>Disbelief</h2><p>A successful save lets the subject
+        ignore the spell's effect.</p><h2>(Object)</h2><p>The spell can be cast
+        on objects, which receive saving throws only if they are magical or if
+        they are attended (held, worn, grasped, or the like) by a creature
+        resisting the spell, in which case the object uses the creature's saving
+        throw bonus unless its own bonus is greater. This notation does not mean
+        that a spell can be cast only on objects. Some spells of this sort can
+        be cast on creatures or objects. A magic item's saving throw bonuses are
+        each equal to 2 + 1/2 the item's caster
+        level.</p><h2>(Harmless)</h2><p>The spell is usually beneficial, not
+        harmful, but a targeted creature can attempt a saving throw if it
+        desires.</p><h2>Saving Throw Difficulty Class</h2><p>A saving throw
+        against your spell has a DC of 10 + the level of the spell + your bonus
+        for the relevant ability (Intelligence for a wizard, Charisma for a
+        bard, paladin, or sorcerer, or Wisdom for a cleric, druid, or ranger). A
+        spell's level can vary depending on your class. Always use the spell
+        level applicable to your class.</p><h2>Succeeding on a Saving
+        Throw</h2><p>A creature that successfully saves against a spell that has
+        no obvious physical effects feels a hostile force or a tingle, but
+        cannot deduce the exact nature of the attack. Likewise, if a creature's
+        saving throw succeeds against a targeted spell, you sense that the spell
+        has failed. You do not sense when creatures succeed on saves against
+        effect and area spells.</p><h2>Automatic Failures and Successes</h2><p>A
+        natural 1 (the d20 comes up 1) on a saving throw is always a failure,
+        and the spell may cause damage to exposed items (see Items Surviving
+        after a Saving Throw, below). A natural 20 (the d20 comes up 20) is
+        always a success.</p><h2>Voluntarily Giving up a Saving Throw</h2><p>A
+        creature can voluntarily forego a saving throw and willingly accept a
+        spell's result. Even a character with a special resistance to magic can
+        suppress this quality.</p><h2>Items Surviving after a Saving
+        Throw</h2><p>Unless the descriptive text for the spell specifies
+        otherwise, all items carried or worn by a creature are assumed to
+        survive a magical attack. If a creature rolls a natural 1 on its saving
+        throw against the effect, however, an exposed item is harmed (if the
+        attack can harm objects). Refer to Table 9–2: Items Affected by Magical
+        Attacks. Determine which four objects carried or worn by the creature
+        are most likely to be affected and roll randomly among them. The
+        randomly determined item must make a saving throw against the attack
+        form and take whatever damage the attack dealt. If the selected item is
+        not carried or worn and is not magical, it does not get a saving throw.
+        It simply is dealt the appropriate damage.</p><h2>Table 9-2: Items
+        Affected by Magical
+        Attacks</h2><table><thead><tr><td>Order*</td><td>Item</td></tr></thead><tbody><tr><td>1st</td><td>Shield</td></tr><tr><td>2nd</td><td>Armor</td></tr><tr><td>3rd</td><td>Magic
+        helmet, hat, or headband</td></tr><tr><td>4th</td><td>Item in hand
+        (including weapon, wand, or the like)</td></tr><tr><td>5th</td><td>Magic
+        cloak</td></tr><tr><td>6th</td><td>Stowed or sheathed
+        weapon</td></tr><tr><td>7th</td><td>Magic
+        bracers</td></tr><tr><td>8th</td><td>Magic
+        clothing</td></tr><tr><td>9th</td><td>Magic jewelry (including
+        rings)</td></tr><tr><td>10th</td><td>Anything
+        else</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

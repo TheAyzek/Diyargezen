@@ -1,0 +1,27 @@
+_id: 48FmYQOzHiONpEv4
+_key: '!items!48FmYQOzHiONpEv4'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Symbol of Unholy Command
+system:
+  aura:
+    school: nec
+  cl: 3
+  description:
+    value: >-
+      <p>This unholy symbol is carved entirely from human bone. When the wielder
+      uses this unholy symbol as a focus for the Command Undead feat, he gains a
+      +1 profane bonus to the DC of that feat.  Good creatures of 5 Hit Dice or
+      less that attempt to touch the symbol must make a DC 15 Will save or be
+      shaken for 1 round. Deliberate use of a symbol of unholy command is an
+      evil act.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Command Undead or command undead</p>
+  price: 8000
+  sources:
+    - id: PZO1121
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

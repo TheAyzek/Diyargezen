@@ -1,0 +1,39 @@
+_id: DYnUZAMg7PfTuyp9
+_key: '!items!DYnUZAMg7PfTuyp9'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/club.PNG
+name: Lava Rod
+system:
+  aura:
+    custom: true
+    school: evocation [fire]
+  baseTypes:
+    - Club
+  cl: 13
+  description:
+    value: >-
+      <p>This irregularly shaped iron rod is studded with orange gems. It can be
+      wielded as a +2 club. For 10 rounds per day, the rod can be wielded as a
+      +2 flaming burst club. These rounds need not be consecutive. Additionally,
+      three times per day as a standard action, a creature wielding this rod can
+      use it to spray a 30-foot cone of lava droplets that deals 13d6 points of
+      fire damage (Reflex DC 20 half). Once per day as a standard action, the
+      wielder can instead release a cone of harmless pebbles that fall to the
+      ground and cover the area. These pebbles transform into tiny blobs of lava
+      up to 5 rounds later. The user determines the round upon which the pebbles
+      transform into lava when initially activating the rod for this effect. Any
+      creature in the area of the pebbles when they transform takes 13d6 points
+      of fire damage (Reflex DC 20 half).<p><strong>Base Item</strong>: club|+2
+      flaming burst
+      club</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Rod,
+      delayed blast fireball</p>
+  enh: 2
+  price: 80000
+  sources:
+    - id: PZO9095
+  subType: other
+  weight:
+    value: 8
+type: equipment

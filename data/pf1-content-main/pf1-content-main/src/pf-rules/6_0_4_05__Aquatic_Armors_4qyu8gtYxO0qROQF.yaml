@@ -1,0 +1,57 @@
+_id: 4qyu8gtYxO0qROQF
+_key: '!journal!4qyu8gtYxO0qROQF'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.4.05. Aquatic Armors
+pages:
+  - _id: I2XXuZVyti7bqLx4
+    _key: '!journal.pages!4qyu8gtYxO0qROQF.I2XXuZVyti7bqLx4'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.4.05. Aquatic Armors
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li>@Compendium[pf-content.pf-rules.TROqcNjEw3b2q2Dk]{6.0.4.
+        Special Materials}</li></ul><hr /><h2>Coral</h2><p>Armor made of coral
+        is grown, not made. Special corals are shaped and molded while growing,
+        and then harvested and hardened to be worn as armor. Coral armor often
+        has a bizarre organic look to it.</p><h2>Clamshell</h2><p>Clamshell
+        armor is made by connecting together various sized shells harvested from
+        giant clams.</p><h2>Chitim</h2><p>Chitin armor is constructed from the
+        exoskeletons of giant aquatic vermin, such as giant crabs and lobsters.
+        It is full-body armor.</p><h2>Table: Aquatic Armors</h2><table><caption>
+        </caption><thead><tr><th>Medium
+        Armors</th></tr><tr><th>Armor</th><th>Cost</th><th><p>Armor<br
+        />Bonus</p></th><th><p>Maximum<br />Dex Bonus</p></th><th><p>Armor
+        Check<br />Penalty</p></th><th><p>Arcane<br />Spell
+        Failure</p></th><th>Speed</th></tr><tr><th>30 ft.</th><th>20
+        ft.</th></tr></thead><tbody><tr><td>Clamshell</td><td>200
+        gp</td><td>+5</td><td>+3</td><td>–4</td><td>25%</td><td>20
+        ft.</td><td>15
+        ft.</td></tr></tbody><tfoot><tr><td><table><thead><tr><th>Heavy
+        Armors</th></tr><tr><th>Armor</th><th>Cost</th><th><p>Armor<br
+        />Bonus</p></th><th><p>Maximum<br />Dex Bonus</p></th><th><p>Armor
+        Check<br />Penalty</p></th><th><p>Arcane<br />Spell
+        Failure</p></th><th>Speed</th></tr><tr><th>30 ft.</th><th>20
+        ft.</th></tr></thead><tbody><tr><td>Chitin</td><td>200
+        gp</td><td>+6</td><td>+0</td><td>–7</td><td>40%</td><td>20
+        ft.</td><td>15 ft.</td></tr><tr><td>Coral</td><td>1,500
+        gp</td><td>+8</td><td>+1</td><td>–6</td><td>35%</td><td>20
+        ft.</td><td>15
+        ft.</td></tr></tbody></table><table><thead><tr><th>Shields</th></tr><tr><th>Armor</th><th>Cost</th><th><p>Armor<br
+        />Bonus</p></th><th><p>Maximum<br />Dex Bonus</p></th><th><p>Armor
+        Check<br />Penalty</p></th><th><p>Arcane<br />Spell
+        Failure</p></th><th>Speed</th></tr><tr><th>30 ft.</th><th>20
+        ft.</th></tr></thead><tbody><tr><td>Light shield, coral</td><td>8
+        gp</td><td>+1</td><td>—</td><td>–1</td><td>5%</td><td>—</td><td>—</td></tr></tbody></table></td></tr></tfoot></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,224 @@
+_id: 8XhK4sPeRZOi2tsE
+_key: '!tables!8XhK4sPeRZOi2tsE'
+_stats:
+  coreVersion: '12.331'
+description: >-
+  <p>Not every adventurer approves of these things, but some consider them
+  invaluable.</p>
+displayRoll: true
+folder: WRIhxGMO1MKw7Mne
+formula: 1d19
+img: icons/equipment/head/hood-cloth-brown.webp
+name: Black Market Items
+replacement: true
+results:
+  - _id: ZVH1D5BPFoiPozhH
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.ZVH1D5BPFoiPozhH'
+    documentCollection: pf-content.pf-goods-services
+    documentId: ItawQ74h7jEIwp5E
+    img: modules/pf-content/icons/items/trade-goods/herbalism/herb249.webp
+    range:
+      - 1
+      - 1
+    text: Bamboo palace
+    type: pack
+    weight: 1
+  - _id: kVSABjTmcLwl9y5C
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.kVSABjTmcLwl9y5C'
+    documentCollection: pf-content.pf-goods-services
+    documentId: USO3vyK0ojTG0X3x
+    img: modules/pf-content/icons/items/equipment/rings/ring31.webp
+    range:
+      - 2
+      - 2
+    text: Gaspodar's signet
+    type: pack
+    weight: 1
+  - _id: eEU2YQHgvS0TzOkK
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.eEU2YQHgvS0TzOkK'
+    documentCollection: pf-content.pf-goods-services
+    documentId: 0mxYhNCUewikPPux
+    img: icons/sundries/misc/pipe-wooden-01.webp
+    range:
+      - 3
+      - 3
+    text: Hookah
+    type: pack
+    weight: 1
+  - _id: OyfC7lpNBRKrDN6Z
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.OyfC7lpNBRKrDN6Z'
+    documentCollection: pf-content.pf-goods-services
+    documentId: ax2Lrd8U80BNVwCz
+    img: icons/sundries/misc/pipe-wooden-01.webp
+    range:
+      - 4
+      - 4
+    text: Hookah, Premium
+    type: pack
+    weight: 1
+  - _id: T1bswfwP3wqNMNSF
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.T1bswfwP3wqNMNSF'
+    documentCollection: pf-content.pf-goods-services
+    documentId: rQHXQtYwTQRNiHQ6
+    img: icons/sundries/misc/pipe-wooden-01.webp
+    range:
+      - 5
+      - 5
+    text: Hookah, Traveler's
+    type: pack
+    weight: 1
+  - _id: 8eXjLvVZAJNsSOHJ
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.8eXjLvVZAJNsSOHJ'
+    documentCollection: pf-content.pf-goods-services
+    documentId: I9RGr1QqXLotW1cN
+    img: icons/commodities/gems/gem-rough-cushion-red-pink.webp
+    range:
+      - 6
+      - 6
+    text: Leng ruby
+    type: pack
+    weight: 1
+  - _id: 3beMXijpjB67UUPf
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.3beMXijpjB67UUPf'
+    documentCollection: pf-content.pf-goods-services
+    documentId: LkiMNZpWNSGL0jKh
+    img: icons/commodities/gems/gem-teardrop-blue.webp
+    range:
+      - 7
+      - 7
+    text: Mengkare's shards
+    type: pack
+    weight: 1
+  - _id: 8Jtk0zUjwu43UFe7
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.8Jtk0zUjwu43UFe7'
+    documentCollection: pf-content.pf-goods-services
+    documentId: fesdfKd3G5fOeQfV
+    img: icons/commodities/materials/feather-white.webp
+    range:
+      - 8
+      - 8
+    text: Mishan's melodious feather
+    type: pack
+    weight: 1
+  - _id: fW5WEcn1phyS4iLs
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.fW5WEcn1phyS4iLs'
+    documentCollection: pf-content.pf-goods-services
+    documentId: iTJ05IVO5H2jI6C9
+    img: icons/tools/instruments/chimes-wood-brown.webp
+    range:
+      - 9
+      - 9
+    text: Pump organ
+    type: pack
+    weight: 1
+  - _id: cYcZtd6vQyqUNT6i
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.cYcZtd6vQyqUNT6i'
+    documentCollection: pf-content.pf-goods-services
+    documentId: p73YKf46dqUomLTY
+    img: icons/tools/fasteners/pin-spiked.webp
+    range:
+      - 10
+      - 10
+    text: Quieting needles
+    type: pack
+    weight: 1
+  - _id: MUQJ5oapS4Qbmn4s
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.MUQJ5oapS4Qbmn4s'
+    documentCollection: pf-content.pf-goods-services
+    documentId: Ns3xqlvQjQJviaGg
+    img: icons/sundries/survival/cuffs-shackles-steel.webp
+    range:
+      - 11
+      - 11
+    text: Slave
+    type: pack
+    weight: 1
+  - _id: NZlN7Bh6R1b3BB3j
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.NZlN7Bh6R1b3BB3j'
+    documentCollection: pf-content.pf-goods-services
+    documentId: 3A2YJg9YC8ojO1XR
+    img: icons/sundries/survival/cuffs-shackles-steel.webp
+    range:
+      - 12
+      - 12
+    text: Slave (hard labor)
+    type: pack
+    weight: 1
+  - _id: DjDVv4hjgyJ2yrDX
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.DjDVv4hjgyJ2yrDX'
+    documentCollection: pf-content.pf-goods-services
+    documentId: WwcAbQpJ7XVf77MZ
+    img: icons/sundries/survival/cuffs-shackles-steel.webp
+    range:
+      - 13
+      - 13
+    text: Slave (household)
+    type: pack
+    weight: 1
+  - _id: EqGJz9cWsRfr4r9r
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.EqGJz9cWsRfr4r9r'
+    documentCollection: pf-content.pf-goods-services
+    documentId: xd0JCi68HXPet1Zf
+    img: icons/sundries/survival/cuffs-shackles-steel.webp
+    range:
+      - 14
+      - 14
+    text: Slave (slip, halfling)
+    type: pack
+    weight: 1
+  - _id: XmFHmjRnWGoLUG2q
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.XmFHmjRnWGoLUG2q'
+    documentCollection: pf-content.pf-goods-services
+    documentId: 9RKLTxzfwk7GZX7f
+    img: icons/sundries/survival/cuffs-shackles-steel.webp
+    range:
+      - 15
+      - 15
+    text: Slave (specialized)
+    type: pack
+    weight: 1
+  - _id: 6JG6VXEmzSs5uwkw
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.6JG6VXEmzSs5uwkw'
+    documentCollection: pf-content.pf-goods-services
+    documentId: iHVRSu2s8CxbIclt
+    img: icons/containers/boxes/box-gift-white.webp
+    range:
+      - 16
+      - 16
+    text: Snuffbox (bone or tortoise shell)
+    type: pack
+    weight: 1
+  - _id: o4u513SfKgncpUOh
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.o4u513SfKgncpUOh'
+    documentCollection: pf-content.pf-goods-services
+    documentId: nYP5bvEotcuDgwvz
+    img: icons/containers/boxes/box-gift-white.webp
+    range:
+      - 17
+      - 17
+    text: Snuffbox (ivory or precious metal)
+    type: pack
+    weight: 1
+  - _id: KVRoEgDXqMVpsZhM
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.KVRoEgDXqMVpsZhM'
+    documentCollection: pf-content.pf-goods-services
+    documentId: oY82zNQzeSMcyEEo
+    img: icons/containers/boxes/crate-reinforced-brown.webp
+    range:
+      - 18
+      - 18
+    text: Snuffbox (tin or wood)
+    type: pack
+    weight: 1
+  - _id: yGCR6bXLGi2odonu
+    _key: '!tables.results!8XhK4sPeRZOi2tsE.yGCR6bXLGi2odonu'
+    documentCollection: pf-content.pf-goods-services
+    documentId: Ona78VVAKWzvgPHu
+    img: icons/sundries/books/book-symbol-reverse-blue.webp
+    range:
+      - 19
+      - 19
+    text: Songs of Shazathared
+    type: pack
+    weight: 1
+sort: 200000

@@ -1,0 +1,25 @@
+_id: A4tpJzcRC4xzce3J
+_key: '!items!A4tpJzcRC4xzce3J'
+_stats:
+  coreVersion: '12.331'
+folder: qfmWWFueuXXt4NRD
+img: icons/magic/fire/flame-burning-eye.webp
+name: Low-Light Vision (Sin-Galemren)
+system:
+  changeFlags:
+    lowLightVision: true
+  description:
+    value: >-
+      <p><strong>Race</strong>: Sin-Galemren</p><hr /><p>Sin-Galemren can see
+      twice as far as humans in conditions of dim light.</p>
+  sources:
+    - date: '2019'
+      pages: '9'
+      publisher: Paizo / Stranger Comics
+      title: Niobe
+  subType: racial
+  tags:
+    - Sin-Galemren
+    - Niobe
+  traitCategory: senses
+type: feat

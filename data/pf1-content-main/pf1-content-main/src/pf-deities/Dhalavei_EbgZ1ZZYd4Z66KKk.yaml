@@ -1,0 +1,32 @@
+_id: EbgZ1ZZYd4Z66KKk
+_key: '!journal!EbgZ1ZZYd4Z66KKk'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Dhalavei
+pages:
+  - _id: CMoxSRbEvHvmzlGt
+    _key: '!journal.pages!EbgZ1ZZYd4Z66KKk.CMoxSRbEvHvmzlGt'
+    _stats:
+      coreVersion: '12.331'
+    name: Dhalavei
+    sort: 0
+    text:
+      content: >-
+        <h1>Dhalavei</h1><h2>The Unsuspected Rot</h2>@Source[PZO9529;pages=6]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Dhalavei">Dhalavei</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Other Deities<br /><strong>Areas of
+        Concern</strong> Secrets, discord, eclipses<br
+        /><strong>Domains</strong> Destruction, Evil, Knowledge, Law,
+        Trickery<br /><strong>Subdomains</strong> N/A<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Temple sword<br /><strong>Symbol</strong> Six feminine
+        arms forming a hexagon shape</p><h3>On
+        Golarion</h3><p><strong>Nationality</strong> Vudrani</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

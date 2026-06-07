@@ -1,0 +1,29 @@
+_id: mbEDFjrmOqIJVSzJ
+_key: '!items!mbEDFjrmOqIJVSzJ'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Sandals of Quick Reaction
+system:
+  aura:
+    school: trs
+  cl: 4
+  description:
+    value: >-
+      <p>These supple leather sandals grant a burst of speed during times of
+      duress. When the wearer acts during a surprise round, he can take a
+      standard and a move action during the surprise round. If the wearer
+      already has the ability to take a standard and a move action during the
+      surprise round, he instead gains a +10 circumstance bonus to speed when
+      acting during a surprise
+      round.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, anticipate peril (Ultimate Magic), haste</p>
+  price: 4000
+  slot: feet
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

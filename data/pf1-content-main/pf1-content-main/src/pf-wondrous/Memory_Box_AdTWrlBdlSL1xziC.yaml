@@ -1,0 +1,44 @@
+_id: AdTWrlBdlSL1xziC
+_key: '!items!AdTWrlBdlSL1xziC'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Memory Box
+system:
+  aura:
+    custom: true
+    school: conjuration and enchantment
+  cl: 12
+  description:
+    value: >-
+      <p>This 3-inch cubic puzzle box is coated in dark lacquer and elegantly
+      decorated with gold leaf, mother-of-pearl, and precious stones. Opening
+      the box requires 1 minute and a successful DC 22 Intelligence check, which
+      can be attempted only once per day. The box opens into a nondimensional
+      space, like a bag of holding, that can contain up to 2 cubic feet or 20
+      pounds of material. Even when the box is filled, its weight remains
+      negligible.  A memory box can store more than just material. Once per day,
+      if the user speaks a command word when the box is open, she can recount
+      one piece of knowledge she possesses to remove that knowledge from her
+      mind, as repress memory, and store it in the box. If the user speaks a
+      command word when the box is closed and then opens it within 1 minute, she
+      can mentally review any of her memories that are stored in the box and
+      permanently erase or instantly restore any she wishes. Memories stored in
+      the box can't be restored by other means. Once she closes the box, the
+      user retains the knowledge that the box contains stored memories, but no
+      details regarding which. A creature that has one or more memories stored
+      in the box gains a +12 circumstance bonus on the Intelligence check
+      required to reopen it.  The user can't review stored memories that belong
+      to someone else. Memories that are erased from the box can be restored to
+      their owner only by break enchantment, psychic surgery, limited wish,
+      miracle, or wish. A memory box can contain up to 12 memories at a time.
+      Storing a new memory when the box is already at its full capacity causes
+      the oldest memory to be erased, regardless of whose memory it
+      is.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, repress memory, secret chest</p>
+  price: 28000
+  sources:
+    - id: PZO1134
+  subType: wondrous
+type: equipment

@@ -1,0 +1,29 @@
+_id: yNalXlN6vzyZ2Xxn
+_key: '!items!yNalXlN6vzyZ2Xxn'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Altar of Gorum
+system:
+  aura:
+    custom: true
+    school: abjuration and transmutation [chaotic]
+  cl: 10
+  description:
+    value: >-
+      <p>This altar is an iron platform and frame designed to support a heavy
+      suit of spiked armor and weapons, typically mounted in the shape of a
+      massively imposing, 8-foot-tall warrior. Praying at the altar grants a +4
+      morale bonus on saves against fear effects, and any non-masterwork iron or
+      steel weapon the worshiper wields is treated as if it were
+      masterwork.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, magic circle against law, masterwork transformation, remove
+      fear, creator must worship Gorum</p>
+  price: 8000
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 750
+type: equipment

@@ -1,0 +1,31 @@
+_id: mMwEnMocK3VHkuw9
+_key: '!items!mMwEnMocK3VHkuw9'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/skills/mech_10.jpg
+name: Kin's Face Tattoo
+system:
+  aura:
+    school: ill
+  cl: 5
+  description:
+    value: >-
+      <p>This intricate tattoo covers the bearer's face in thousands of
+      hair-fine lines of ink and carefully incised scars. The bearer can
+      activate the tattoo to cause the marked design to shift and the scars to
+      open and pull the bearer's face into a different shape. The bearer then
+      gains the benefits of disguise self, save that he can take only the form
+      of a specific half-orc, human, or orc, and the disguise lasts up to 5
+      hours per day. This duration need not be continuous, but it must be used
+      in 1-hour increments.  The material components for the kin's face tattoo
+      include rare pigments that are mixed with the bearer's blood, then worked
+      into the bearer's skin. To remove this tattoo the tattooed portions must
+      be erased and the scars healed.<h3>Requirements</h3><p>Inscribe Magical
+      Tattoo (Pathfinder RPG Campaign Setting: Inner Sea Magic 16), disguise
+      self</p>
+  price: 1600
+  sources:
+    - id: PZO9091
+  subType: other
+type: equipment

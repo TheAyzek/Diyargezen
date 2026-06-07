@@ -1,0 +1,60 @@
+_id: rTmxMK0aIvNJQNNo
+_key: '!items!rTmxMK0aIvNJQNNo'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Diplomat's Traveling Stick
+system:
+  actions:
+    - _id: 7kz95irerw4qwqjr
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: diplomatsTravelingStick
+  aura:
+    school: trs
+  baseTypes:
+    - Sword Cane
+  cl: 3
+  description:
+    value: >-
+      <p>The blade of this +1 sword cane is sheathed within a polished oaken
+      cane bearing a brass head in the shape of clasped hands. When sheathed,
+      the diplomat's traveling stick grants the wielder a +3 competence bonus on
+      Diplomacy checks. Once per day as part of an action to draw the blade, the
+      wielder can attempt an Intimidate check to demoralize all foes within 30
+      feet who can see or hear him.</p><p><strong>Base Item</strong>: sword
+      cane</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, eagle's splendor</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 9345
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9455
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 4
+type: weapon

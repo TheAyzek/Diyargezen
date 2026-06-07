@@ -1,0 +1,30 @@
+_id: K9b3WAUD63Up5YM2
+_key: '!journal!K9b3WAUD63Up5YM2'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: qu3mmwmdmSYsci2K
+name: 2.08. Special Initiative Actions
+pages:
+  - _id: gQ10c1PyoBAlvpEI
+    _key: '!journal.pages!K9b3WAUD63Up5YM2.gQ10c1PyoBAlvpEI'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.08. Special Initiative Actions
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.K9b3WAUD63Up5YM2]{2.08.
+        Special Initiative Actions}</p><hr
+        /><p>@Source[PZO1110;pages=202]</p><p>Here are ways to change when you
+        act during combat by altering your place in the initiative
+        order.</p><ul><li>@Compendium[pf-content.pf-rules.1A7nPEz6CxR5AD9Q]{2.08.1.
+        Delay}</li><li>@Compendium[pf-content.pf-rules.Ym7e16lz11IvIRE9]{2.08.2.
+        Ready}</li></ul>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

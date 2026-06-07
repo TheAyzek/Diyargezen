@@ -1,0 +1,63 @@
+_id: j3wNQ2GUjYO2OWJB
+_key: '!items!j3wNQ2GUjYO2OWJB'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/dagger-punching.PNG
+name: Spider's Fang
+system:
+  actions:
+    - _id: t6zgxi7ys533qhxa
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: spidersFang
+  aura:
+    school: evo
+  baseTypes:
+    - Punching Dagger
+  cl: 10
+  description:
+    value: >-
+      <p>This punching dagger's blade is engraved with images of spider webs.
+      Upon close inspection, the images seem to come alive as if spiders were
+      swarming across the webs on the blade. Twice per day as a free action,
+      this +2 keen wounding punching dagger can poison a living creature hit by
+      an attack made by this weapon as the poison spell (Fortitude DC 20
+      negates). In addition, the wielder gains a +2 competence bonus on
+      Acrobatics checks made to move through an enemy's threatened area without
+      provoking an attack of opportunity.</p><p><strong>Base Item</strong>: keen
+      wounding punching
+      dagger</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, bleed, keen edge, ray of enfeeblement</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 79102
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - close
+  weight:
+    value: 1
+type: weapon

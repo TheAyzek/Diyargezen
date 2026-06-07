@@ -1,0 +1,26 @@
+_id: 413JpcUWX9QcELY0
+_key: '!items!413JpcUWX9QcELY0'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/kitchenware/goblet-worn-engraved-gold.webp
+name: Minkaian Ceremonial Tea
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>This tea is extremely
+      rare and expensive, requiring several years to grow and prepare. A geisha
+      bard (<em>Pathfinder RPG Ultimate Magic</em> 27) who uses this tea as part
+      of her tea ceremony to inspire courage increases the bonuses granted by 1.
+      A lotus geisha bard (<em>Pathfinder Player Companion: Dragon Empires
+      Primer</em> 22) who drinks this tea increases the bonus granted by her
+      enrapturing performance ability by 1; this effect lasts for 24
+      hours.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      35</p>
+  price: 900
+  sources:
+    - id: PZO9481
+      pages: '28'
+  subType: misc
+  tags:
+    - Alchemical Tools
+type: consumable

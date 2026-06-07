@@ -1,0 +1,45 @@
+_id: FHquac6fZEAhUy0q
+_key: '!items!FHquac6fZEAhUy0q'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/four-mirror.PNG
+name: Ghost Mirror Armor
+system:
+  armor:
+    acp: 5
+    dex: 2
+    material:
+      base:
+        value: steel
+    value: 6
+  aura:
+    custom: true
+    school: abjuration and transmutation
+  baseTypes:
+    - Four-mirror
+  cl: 15
+  description:
+    value: >-
+      <p>Crafted by Uqtaal spirit-shamans, this ancient +1 ghost touch
+      four-mirror armor (Pathfinder RPG Ultimate Combat 128, or use breastplate)
+      consists of four polished steel plates harnessed together with leather
+      shoulder straps. Two round plates protect the wearer's front and back,
+      while two smaller rectangular plates cover the sides of the torso.  The
+      wearer of ghost mirror armor can cast deathwatch (caster level 1st) three
+      times per day. In addition, when the wearer is attacked by an incorporeal
+      undead creature, the armor automatically casts protection from evil on the
+      wearer as an immediate action up to once per day.<p><strong>Base
+      Item</strong>: ghost touch four-mirror
+      armor</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, deathwatch, etherealness, protection from evil</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 22675
+  sources:
+    - id: PZO9051
+  spellFailure: 30
+  weight:
+    value: 45
+type: equipment

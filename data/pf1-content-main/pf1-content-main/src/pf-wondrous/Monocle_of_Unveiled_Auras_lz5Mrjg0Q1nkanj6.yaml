@@ -1,0 +1,30 @@
+_id: lz5Mrjg0Q1nkanj6
+_key: '!items!lz5Mrjg0Q1nkanj6'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Monocle of Unveiled Auras
+system:
+  aura:
+    school: div
+  cl: 5
+  description:
+    value: >-
+      <p>The wearer of this crystal monocle gains the ability to use detect
+      chaos, detect evil, detect good, detect magic, or detect law, each at will
+      for as long as he concentrates, but only one at a time. Any caster level
+      checks to penetrate magical protections receive a +5 bonus, and use the
+      higher of the item's caster level or the wearer's character level. The
+      wearer can expend one use of mythic power to gain the benefits of arcane
+      sight and see invisibility for 1 hour, or until the monocle is
+      removed.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Mythic Crafter, arcane sight, see invisibility, and any one
+      of the following: detect chaos, detect evil, detect good, detect law, or
+      detect magic</p>
+  price: 12700
+  slot: eyes
+  sources:
+    - id: PZO1126
+  subType: wondrous
+type: equipment

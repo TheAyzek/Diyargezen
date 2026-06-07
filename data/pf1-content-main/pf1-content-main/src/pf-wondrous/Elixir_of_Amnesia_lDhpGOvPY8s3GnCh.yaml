@@ -1,0 +1,28 @@
+_id: lDhpGOvPY8s3GnCh
+_key: '!items!lDhpGOvPY8s3GnCh'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Elixir of Amnesia
+system:
+  aura:
+    school: enc
+  cl: 5
+  description:
+    value: >-
+      <p>This elixir, derived from ambergris and cytillesh fungus, is used by
+      spies, secret agents, and hidden cultists to erase their own memories if
+      they might become a liability to themselves or their allies. When drinking
+      the elixir, the drinker can select one event or specific piece of
+      information (such as the password to enter a thieves' guild, the secret
+      identity of a local vigilante, or the location of stashed loot) to forget
+      (Will DC 14 negates). The forgotten memory can be restored only with a
+      modify memory spell or similar effect. This is a mind-affecting compulsion
+      enchantment.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, modify memory</p>
+  price: 500
+  sources:
+    - id: PZO9292
+  subType: wondrous
+type: equipment

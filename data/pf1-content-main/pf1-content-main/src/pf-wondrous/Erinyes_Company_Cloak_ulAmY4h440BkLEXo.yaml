@@ -1,0 +1,29 @@
+_id: ulAmY4h440BkLEXo
+_key: '!items!ulAmY4h440BkLEXo'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Erinyes Company Cloak
+system:
+  aura:
+    school: trs
+  cl: 10
+  description:
+    value: >-
+      <p>This crimson cloak is trimmed with feathers taken from erinyes devils.
+      Three times per day on command, the cloak transforms into a pair of
+      black-feathered wings that grant the wearer a fly speed of 30 feet
+      (average maneuverability) for 10 minutes. If the wearer is wearing Gray
+      Maiden plate, its armor check penalty does not apply to the wearer's Fly
+      checks. In addition, the wearer gains a +2 resistance bonus on all saving
+      throws.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, fly, resistance</p>
+  price: 22000
+  slot: shoulders
+  sources:
+    - id: PZO1138
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

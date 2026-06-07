@@ -1,0 +1,74 @@
+_id: JFdLfBNsMjGTlTbj
+_key: '!items!JFdLfBNsMjGTlTbj'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/improved-iron-will.jpg
+name: Gaze
+system:
+  abilityType: su
+  actions:
+    - _id: pq6lnh1m78ks6haj
+      actionType: save
+      activation:
+        type: passive
+        unchained:
+          type: passive
+      img: systems/pf1/icons/feats/improved-iron-will.jpg
+      measureTemplate:
+        size: '30'
+        type: circle
+      name: Use
+      notes:
+        effect:
+          - >-
+            DC = 10 + 1/2 the gazing creature’s racial HD + that creature’s
+            Charisma modifier
+      range:
+        units: ft
+        value: '30'
+      save:
+        dc: '16'
+        type: fort
+      tag: gazeSu
+  description:
+    value: >-
+      <p>This attack takes effect when foes look at the attacking
+      creature&rsquo;s eyes. The attack can have any sort of effect; charm,
+      death, and <a>petrification</a> are common. The typical range is 30 feet,
+      but check the creature&rsquo;s entry for details. The type of saving throw
+      for a gaze attack varies, but it is usually a Will or Fortitude save (DC =
+      10 + 1/2 the gazing creature&rsquo;s racial HD + that creature&rsquo;s
+      Charisma modifier; the exact DC is given in the creature&rsquo;s text). A
+      successful saving throw negates the effect. A monster&rsquo;s gaze attack
+      is described in abbreviated form in its description. Each opponent within
+      range of a gaze attack must attempt a saving throw each round at the
+      beginning of her turn in the initiative order. Only looking directly at a
+      creature with a gaze attack leaves an opponent vulnerable. Opponents can
+      avoid the need to attempt the save by not looking at the creature, in one
+      of two ways.</p><p><em>Averting Eyes</em>: The opponent avoids looking at
+      the creature&rsquo;s face, instead looking at its body, watching its
+      shadow, tracking it in a reflective surface, etc. Each round, the opponent
+      has a 50% chance to avoid having to attempt a saving throw against the
+      gaze attack. The creature with the gaze attack, however, gains concealment
+      against that opponent.</p><p><em>Wearing a Blindfold</em>: The foe cannot
+      see the creature at all (also possible to achieve by turning one&rsquo;s
+      back on the creature or shutting one&rsquo;s eyes). The creature with the
+      gaze attack gains total concealment against the opponent.</p><p>A creature
+      with a gaze attack can actively gaze as an attack action by choosing a
+      target within range. That opponent must attempt a saving throw but can try
+      to avoid this as described above. Thus, it is possible for an opponent to
+      save against a creature&rsquo;s gaze twice during the same round, once
+      before the opponent&rsquo;s action and once during the creature&rsquo;s
+      turn.</p><p>Gaze attacks can affect ethereal opponents. A creature is
+      immune to gaze attacks of others of its kind unless otherwise noted.
+      Allies with a gaze attack might be affected. The creature&rsquo;s allies
+      are considered to be averting their eyes from the creature with the gaze
+      attack, and have a 50% chance to not need to attempt a saving throw
+      against the gaze attack each round. The creature can also veil its eyes,
+      thus negating its gaze ability.</p><p><em>Format</em>:
+      gaze</p><p><em>Location</em>: Special Attacks.</p><p><em>Usage:</em>
+      Replace DC and range</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

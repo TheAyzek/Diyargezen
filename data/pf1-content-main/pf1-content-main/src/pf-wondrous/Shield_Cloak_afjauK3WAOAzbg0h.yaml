@@ -1,0 +1,30 @@
+_id: afjauK3WAOAzbg0h
+_key: '!items!afjauK3WAOAzbg0h'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Shield Cloak
+system:
+  aura:
+    school: abj
+  cl: 4
+  description:
+    value: >-
+      <p>The wearer of this rough, gray cloak can, as a move action, grasp the
+      garment's edge and cause it to harden. The wearer can use the hardened
+      edge it as if it were a masterwork light wooden shield. Using the cloak in
+      this fashion imposes no armor check penalty, but does impose a 5% arcane
+      spell failure chance. The edge of the cloak can be dropped and made pliant
+      again as a free action. Shield enhancement bonuses and special abilities
+      can be added to the cloak as if it were a masterwork
+      shield.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Craft Magic Arms and Armor, shield</p>
+  price: 1000
+  slot: shoulders
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

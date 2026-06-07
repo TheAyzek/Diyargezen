@@ -1,0 +1,39 @@
+_id: 1fNVLIeBVvfh5hDW
+_key: '!items!1fNVLIeBVvfh5hDW'
+_stats:
+  coreVersion: '12.343'
+folder: CAxOlglJyXdUOHF9
+img: icons/magic/life/ankh-shadow-green.webp
+name: Under Siege (Sarenrae)
+system:
+  changes:
+    - _id: idzomuah
+      formula: '1'
+      target: skill.blf
+      type: trait
+    - _id: Fg9Bu4sf
+      formula: '1'
+      target: skill.sen
+      type: trait
+  description:
+    instructions: >-
+      <p>Select Bluff or Sense Motive when you take this trait.</p><p>Update the
+      Class skills section of the Details tab of this trait to reflect your
+      choice.</p>
+    value: >-
+      <p><em>In order to maintain your devotion to Sarenrae in Taldor and stay
+      alive, you and your fellow worshipers developed a complex system of hand
+      signs and facial gestures to identify yourselves as faithful in the Cult
+      of the Dawnflower.</em></p><p><strong>Requirements</strong>:
+      Sarenrae</p><p><strong>Benefits</strong>: You gain a +1 trait bonus on
+      Bluff and Sense Motive checks. One of these skills (your choice) is always
+      a class skill for you.</p>
+  sources:
+    - id: PZO9405
+      pages: '14'
+  subType: trait
+  tags:
+    - '3.5'
+    - Sarenrae
+  traitType: religion
+type: feat

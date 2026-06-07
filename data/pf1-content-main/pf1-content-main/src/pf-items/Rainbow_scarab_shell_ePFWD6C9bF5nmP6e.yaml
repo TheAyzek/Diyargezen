@@ -1,0 +1,44 @@
+_id: ePFWD6C9bF5nmP6e
+_key: '!items!ePFWD6C9bF5nmP6e'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Rainbow scarab shell
+system:
+  actions:
+    - _id: dtxvn0tizpm6j73q
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1d4]] Strength damage and
+            suffocation (see above)
+      save:
+        dc: '14'
+        type: fort
+      tag: rainbowScarabShell
+  description:
+    value: >-
+      <p><strong>Type</strong> injury; <strong>Save</strong> Fortitude DC
+      14</p><p><strong>Onset</strong> 1 round; <strong>Frequency</strong>
+      1/round for 4 rounds</p><p><strong>Effect</strong> 1d4 Strength damage and
+      suffocation (see above)</p><p><strong>Cure</strong> 1 save</p><p>This
+      iridescent toxin is made from the crushed shells of a rare type of Osirian
+      beetle. A creature reduced to 0 Strength by the poison asphyxiates and
+      immediately begins suffocating. Creatures that do not breathe are immune
+      to this suffocation, but not the Strength damage.</p>
+  price: 150
+  sources:
+    - id: PZO9481
+      pages: '18'
+  subType: poison
+  uses:
+    per: single
+type: consumable

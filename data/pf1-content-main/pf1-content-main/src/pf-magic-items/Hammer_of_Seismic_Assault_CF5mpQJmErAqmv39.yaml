@@ -1,0 +1,62 @@
+_id: CF5mpQJmErAqmv39
+_key: '!items!CF5mpQJmErAqmv39'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/warhammer.png
+name: Hammer of Seismic Assault
+system:
+  actions:
+    - _id: e20haydu0venvhh5
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: hammerOfSeismicAssault
+  aura:
+    school: evo
+  baseTypes:
+    - Warhammer
+  cl: 15
+  description:
+    value: >-
+      <p>This +3 impact warhammer deals 2d6 points of bludgeoning damage when it
+      hits. As a swift action, the wielder can will the hammer's crystalline
+      head to grow jagged spikes, switching its damage type to piercing for a
+      single blow. When the bearer confirms a critical hit with the hammer of
+      seismic assault, a concussive blast emits from the hammer in a
+      10-foot-radius spread, causing a tremor to rip through the ground. Any
+      creatures standing on the ground in this area with a CMD equal to or lower
+      than the result of the confirmation roll are knocked prone. This damaged
+      area is considered rough terrain for 10 minutes.</p><p><strong>Base
+      Item</strong>: impact
+      warhammer</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, earthquake, lead blades</p>
+  enh: 3
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 80000
+  showInQuickbar: false
+  sources:
+    - id: PZO90120
+  weaponGroups:
+    - hammers
+  weight:
+    value: 5
+type: weapon

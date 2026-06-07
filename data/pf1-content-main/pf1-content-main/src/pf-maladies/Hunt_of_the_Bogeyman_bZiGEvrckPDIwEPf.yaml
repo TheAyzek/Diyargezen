@@ -1,0 +1,28 @@
+_id: bZiGEvrckPDIwEPf
+_key: '!items!bZiGEvrckPDIwEPf'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_11.jpg
+name: Hunt of the Bogeyman
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> curse; <strong>Save</strong> Will DC
+      19</p><p><strong>Effect</strong> The victim is hunted by a bogeyman. Once
+      per day, the victim must attempt a Will save against the curse. If he
+      succeeds, he takes a cumulative -1 penalty on future saving throws against
+      the curse. If he fails, a bogeyman is called within 1 mile and begins
+      stalking him over the course of 2d12 hours, attempting to kill him when he
+      appears to be most vulnerable. When combat begins with the bogeyman, the
+      victim automatically becomes shaken for 1 minute. The curse revives the
+      slain bogeyman to hunt the victim again the next time he fails the saving
+      throw against this curse.</p><p><strong>Cure</strong> Only a <em>limited
+      wish</em>, <em>miracle</em>, or <em>wish</em> can free the hunted.</p>
+  sources:
+    - id: PZO1135
+      pages: '139'
+  subType: misc
+  tags:
+    - Maladies
+    - Curse
+type: feat

@@ -26,7 +26,7 @@ logging.basicConfig(
 def main() -> None:
     print("═" * 50)
     print("  Diyargezer — TTRPG Karakter Yöneticisi")
-    print("  D&D 5e  •  Pathfinder 1e  •  VtM 5e  •  M&M 3e")
+    print("  D&D 5e  •  Pathfinder 1e  •  M&M 3e")
     print("═" * 50)
 
     try:

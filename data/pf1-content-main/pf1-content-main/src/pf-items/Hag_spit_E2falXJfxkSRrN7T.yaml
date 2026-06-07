@@ -1,0 +1,41 @@
+_id: E2falXJfxkSRrN7T
+_key: '!items!E2falXJfxkSRrN7T'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Hag spit
+system:
+  actions:
+    - _id: fiw73ai1167k7uc2
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: blindness for [[1d10]] rounds
+            <strong>Secondary Effect</strong>: [[1d4]] Wis damage
+      save:
+        dc: '16'
+        type: fort
+      tag: hagSpit
+  description:
+    value: >-
+      <p><strong>Type</strong> injury, ingested; <strong>Save</strong> Fortitude
+      DC 16</p><p><strong>Frequency</strong> 1/round for 6
+      rounds</p><p><strong>Initial Effect</strong> blindness for 1d10 rounds;
+      <strong>Secondary Effect</strong> 1d4 Wis
+      damage</p><p><strong>Cure</strong> 2 saves</p>
+  price: 1500
+  sources:
+    - id: PZO9232
+      pages: '53'
+  subType: poison
+  uses:
+    per: single
+type: consumable

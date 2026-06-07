@@ -1,0 +1,46 @@
+_id: VosfByLQH4UtiyxT
+_key: '!journal!VosfByLQH4UtiyxT'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.2.2. Masterwork Weapons
+pages:
+  - _id: l6KVQQwQV77R0OvA
+    _key: '!journal.pages!VosfByLQH4UtiyxT.l6KVQQwQV77R0OvA'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.2.2. Masterwork Weapons
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li><p>@Compendium[pf-content.pf-rules.VOAlGu4isvHXBLjm]{6.0.2.
+        Weapons}</p><ul><li>@Compendium[pf-content.pf-rules.ER80inTIjIZvR0B8]{6.0.2.1.
+        Weapon
+        Qualities}</li><li><strong>@Compendium[pf-content.pf-rules.VosfByLQH4UtiyxT]{6.0.2.2.
+        Masterwork Weapons}</strong></li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=149]</p><p>A masterwork weapon is a finely
+        crafted version of a normal weapon. Wielding it provides a +1
+        enhancement bonus on attack rolls.</p><p>You can’t add the masterwork
+        quality to a weapon after it is created; it must be crafted as a
+        masterwork weapon (see the Craft skill). The masterwork quality adds 300
+        gp to the cost of a normal weapon (or 6 gp to the cost of a single unit
+        of ammunition). Adding the masterwork quality to a double weapon costs
+        twice the normal increase (+600 gp).</p><p>Masterwork ammunition is
+        damaged (effectively destroyed) when used. The enhancement bonus of
+        masterwork ammunition does not stack with any enhancement bonus of the
+        projectile weapon firing it.</p><p>All magic weapons are automatically
+        considered to be of masterwork quality. The enhancement bonus granted by
+        the masterwork quality doesn’t stack with the enhancement bonus provided
+        by the weapon’s magic.</p><p>Even though some types of armor and shields
+        can be used as weapons, you can’t create a masterwork version of such an
+        item that confers an enhancement bonus on attack rolls. Instead,
+        masterwork armor and shields have lessened armor check penalties.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

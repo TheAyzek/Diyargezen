@@ -1,0 +1,26 @@
+_id: MLzKpKDC3DJQXLhF
+_key: '!items!MLzKpKDC3DJQXLhF'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/bolt.PNG
+name: Venomous Whisper Dart
+system:
+  aura:
+    school: enc
+  cl: 5
+  description:
+    value: >-
+      <p>The wielder of this gleaming purple +2 blowgun dart can whisper while
+      loading the dart to imbue it with a suggestion. When the dart strikes a
+      creature, the target must succeed at a DC 14 Will save or forget the sting
+      of the dart and hear the words of the suggestion as if they were whispered
+      in her ear.</p><p><strong>Enhancement Bonus</strong>: blowgun
+      </p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic Arms
+      and Armor, modify memory, suggestion</p>
+  equipped: false
+  extraType: dart
+  price: 1466
+  sources:
+    - id: PZO9452
+  subType: ammo
+type: loot

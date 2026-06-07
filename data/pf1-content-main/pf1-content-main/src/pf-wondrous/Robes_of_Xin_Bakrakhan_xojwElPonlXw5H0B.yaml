@@ -1,0 +1,33 @@
+_id: xojwElPonlXw5H0B
+_key: '!items!xojwElPonlXw5H0B'
+_stats:
+  coreVersion: '12.331'
+folder: tt1hnzL5ZdLfPdp0
+img: icons/equipment/chest/coat-collared-red-gold.webp
+name: Robes of Xin-Bakrakhan
+system:
+  aura:
+    custom: true
+    school: abjuration and conjuration
+  cl: 16
+  description:
+    value: >-
+      <p>The traditional robes of the Runelord of Wrath are known as the robes
+      of Xin-Bakrakhan. Woven of the finest of crimson silks and accented with
+      precious gold, the robes are surprisingly light and easy to move in. The
+      robes of Xin- Bakrakhan aid and accentuate their wearer's spellcasting
+      ability. They grant a +5 shield bonus and spell resistance 24, and the
+      wearer casts all spells at +1 caster level. Two of the robe's pockets
+      function as handy haversacks. The wearer of these robes is immune to the
+      effects of calm emotions and can use all skills and abilities that require
+      patience or concentration when under the effects of a rage spell or
+      similar effect.<h3>Requirements</h3><p>Craft Wondrous Item, calm emotions,
+      protection from spells, shield, secret chest</p>
+  price: 198000
+  slot: body
+  sources:
+    - id: PZO90138
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

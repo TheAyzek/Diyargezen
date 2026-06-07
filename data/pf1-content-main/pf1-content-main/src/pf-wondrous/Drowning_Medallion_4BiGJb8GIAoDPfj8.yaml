@@ -1,0 +1,31 @@
+_id: 4BiGJb8GIAoDPfj8
+_key: '!items!4BiGJb8GIAoDPfj8'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Drowning Medallion
+system:
+  aura:
+    school: con
+  cl: 10
+  description:
+    value: >-
+      <p>Often crafted by the people of Riverton and sold to traveling
+      river-goers, this small stone disk is etched with the symbol of waves and
+      affixed to a silver chain. If the wearer falls unconscious from drowning
+      while wearing a drowning medallion, she can remain unconscious for up to
+      10 minutes before she must start attempting Constitution checks to avoid
+      asphyxiation. One round after emerging from the substance that caused the
+      wearer to drown (usually water), the wearer regains consciousness at 0 hit
+      points and the medallion crumbles to
+      dust.</p><h3>Requirements</h3><p>Craft Wondrous Item, air bubble
+      (Pathfinder RPG Ultimate Combat 222)</p>
+  price: 1000
+  slot: neck
+  sources:
+    - id: PZO9448
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

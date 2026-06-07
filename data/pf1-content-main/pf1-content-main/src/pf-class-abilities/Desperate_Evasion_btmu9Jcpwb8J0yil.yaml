@@ -1,0 +1,21 @@
+_id: btmu9Jcpwb8J0yil
+_key: '!items!btmu9Jcpwb8J0yil'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Desperate Evasion
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Dares</strong></p><p>While this dare is active, you
+      gain the evasion class feature. If you already have this class feature,
+      while this dare is active you roll twice when making a Reflex saving throw
+      and take the higher result. You regain 1 grit or panache point when you
+      succeed at two Reflex saving throws while using this dare.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Dares
+type: feat

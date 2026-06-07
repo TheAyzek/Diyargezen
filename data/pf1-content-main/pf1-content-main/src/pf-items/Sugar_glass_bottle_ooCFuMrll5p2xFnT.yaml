@@ -1,0 +1,21 @@
+_id: ooCFuMrll5p2xFnT
+_key: '!items!ooCFuMrll5p2xFnT'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/laboratory/vial-orange.webp
+name: Sugar glass bottle
+system:
+  description:
+    value: >-
+      <p>This bottle looks like it's made of glass, but is more fragile and
+      doesn't cause damage when it strikes a creature or object. Highly prized
+      by theater performers, sugar glass bottles grant a +2 circumstance bonus
+      on Bluff and Perform checks involving the creation of seemingly realistic
+      fights.</p>
+  equipped: false
+  price: 1
+  sources:
+    - id: PZO1129
+      pages: '206'
+  subType: tool
+type: loot

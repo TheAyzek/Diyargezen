@@ -1,0 +1,23 @@
+_id: iUn5F3SZLV1nD0Wq
+_key: '!items!iUn5F3SZLV1nD0Wq'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/liquid-droplet-blue.webp
+name: Alchemical Resin
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>When applied to your
+      hands, this clear, sticky substance made from alchemically prepared pine
+      sap provides a +2 alchemical bonus to your CMD against disarm attempts, on
+      combat maneuver checks to grapple, and on Climb checks; it also functions
+      underwater. Applying the resin is a standard action, and it wears off 1
+      hour after being applied.</p>
+  price: 100
+  sources:
+    - id: PZO1140
+      pages: '246'
+  subType: misc
+  tags:
+    - Alchemical Tools
+type: consumable

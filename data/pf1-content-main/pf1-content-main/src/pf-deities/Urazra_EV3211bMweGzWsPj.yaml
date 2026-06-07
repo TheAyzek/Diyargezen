@@ -1,0 +1,35 @@
+_id: EV3211bMweGzWsPj
+_key: '!journal!EV3211bMweGzWsPj'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Urazra
+pages:
+  - _id: u0HYfhKSu9tPeuDb
+    _key: '!journal.pages!EV3211bMweGzWsPj.u0HYfhKSu9tPeuDb'
+    _stats:
+      coreVersion: '12.331'
+    name: Urazra
+    sort: 0
+    text:
+      content: >-
+        <h1>Urazra</h1><h2>Breaker of Bones</h2>@Source[PZO9267;pages=324] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Urazra">Urazra</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Giant Deities<br /><strong>Areas of
+        Concern</strong> Battle, brutality, strength<br
+        /><strong>Domains</strong> Animal, Chaos, Evil, Strength, War<br
+        /><strong>Subdomains</strong> Blood, Demon (Chaos), Demon (Evil),
+        Ferocity, Fur, Resolve, Tactics<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Spiked
+        gauntlet<br /><strong>Symbol</strong> Bear totem<br /><strong>Sacred
+        Animal(s)</strong> Grizzly bear<br /><strong>Sacred Color(s)</strong>
+        Brown, red</p><h2>For Followers of Urazra</h2><h3>Archetypes</h3><p>Iron
+        Tyrant (Antipaladin)</p><h3>Magic Items - Wondrous Items</h3><p>Bear
+        Pelt of the Bonebreaker</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

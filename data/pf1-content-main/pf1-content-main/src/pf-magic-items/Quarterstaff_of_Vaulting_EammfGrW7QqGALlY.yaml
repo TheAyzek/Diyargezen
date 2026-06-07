@@ -1,0 +1,74 @@
+_id: EammfGrW7QqGALlY
+_key: '!items!EammfGrW7QqGALlY'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/quarterstaff.png
+name: Quarterstaff of Vaulting
+system:
+  actions:
+    - _id: vucxt54iauckelyc
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: quarterstaffOfVaulting
+  aura:
+    school: trs
+  baseTypes:
+    - Quarterstaff
+  cl: 5
+  description:
+    value: >-
+      <p>This +1/+1 darkwood quarterstaff grants superior balance and acrobatic
+      skill. It glows with a faint green-yellow radiance when in use and can
+      extend to nearly double its length, though only when being used to perform
+      acrobatic feats. The wielder gains a +5 competence bonus on Acrobatics
+      checks and can move at full speed without penalty when using Acrobatics to
+      move on narrow surfaces or uneven ground. When making a high jump while
+      wielding the quarterstaff of vaulting, the Acrobatics DC is equal to 3
+      times the height to be reached instead of 4.  In addition, with a
+      successful DC 25 Acrobatics check, the wielder can use the staff to vault
+      over an opponent's head in place of taking a 5-foot step. She can only use
+      this ability on creatures no more than one size category larger than her,
+      and must end her movement in the nearest adjacent square on the opposite
+      side of the creature. If this square is unavailable, she cannot use this
+      ability. This movement does not provoke attacks of
+      opportunity.</p><p><strong>Base Item</strong>: /+1 darkwood
+      quarterstaff</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, jump</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: wood
+    normal:
+      value: darkwood
+  price: 19100
+  properties:
+    dbl: true
+    mnk: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - double
+    - monk
+  weight:
+    value: 4
+type: weapon

@@ -1,0 +1,23 @@
+_id: 1feBepf6nTtZLkSn
+_key: '!items!1feBepf6nTtZLkSn'
+_stats:
+  coreVersion: '12.331'
+img: icons/environment/creatures/fish-scaled-green-blue.webp
+name: Otter
+system:
+  description:
+    value: >-
+      <p>These playful water mammals are either used as familiars or trained to
+      perform tricks as pets. They are surprisingly intelligent, and have been
+      known to use rocks as simple tools, such as for opening the shells of
+      mollusks. More information on otters can be found in <em>Bestiary
+      3</em>.</p>
+  equipped: false
+  price: 20
+  sources:
+    - id: PZO1123
+      pages: '80'
+  subType: animal
+  weight:
+    value: 10
+type: loot

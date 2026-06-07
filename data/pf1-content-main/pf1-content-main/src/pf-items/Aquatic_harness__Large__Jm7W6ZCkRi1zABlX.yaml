@@ -1,0 +1,24 @@
+_id: Jm7W6ZCkRi1zABlX
+_key: '!items!Jm7W6ZCkRi1zABlX'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/monster-chitin-blue.jpg
+name: Aquatic harness (Large)
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 20 gp (Large), 10 gp (Medium);
+      <strong>Weight</strong> 3 lbs. (Large), 2 lbs. (Medium)</p><p>This waxed
+      leather harness is designed to withstand submersion and is adjustable to
+      fit dolphins, giant eels, giant seahorses<sup>B4</sup>, and other aquatic
+      mounts. Undersea races without access to leather often use harnesses woven
+      from special kelp, which has the same price.</p>
+  equipped: false
+  price: 20
+  sources:
+    - id: PZO9482
+      pages: '18'
+  subType: adventuring
+  weight:
+    value: 3
+type: loot

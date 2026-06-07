@@ -1,0 +1,57 @@
+_id: PLol5GD9npm7ItlL
+_key: '!items!PLol5GD9npm7ItlL'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/sword-short.PNG
+name: Sword of Subtlety
+system:
+  actions:
+    - _id: ndydb294sxgbj1qv
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: swordOfSubtlety
+  aura:
+    school: ill
+  baseTypes:
+    - Short Sword
+  cl: 7
+  description:
+    value: >-
+      <p>A +1 short sword with a thin, dull gray blade, this weapon provides a
+      +4 bonus on its wielder's attack and damage rolls when she makes a sneak
+      attack with it.</p><p><strong>Base Item</strong>: short
+      sword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, blur</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 22310
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 2
+type: weapon

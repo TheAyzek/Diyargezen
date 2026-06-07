@@ -1,0 +1,75 @@
+_id: H5F2D0UxKxQCbA9f
+_key: '!items!H5F2D0UxKxQCbA9f'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/quarterstaff.png
+name: Oaken Staff
+system:
+  actions:
+    - _id: w2wrt775lm7sb113
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: oakenStaff
+  aura:
+    school: evo
+  baseTypes:
+    - Quarterstaff
+  cl: 10
+  description:
+    value: >-
+      <p>This thick, 5-foot-long wooden staff is made of rough oak and has two
+      branches growing from the top. The branches twist together and bend back
+      toward the body of the staff, and their leaves often rustle as if blown by
+      a light breeze even when the surrounding air is still. An oaken staff
+      functions as a +1 called spell storing quarterstaff, but can't be used as
+      a double weapon (only one end of the staff is usable in combat). The staff
+      allows use of the following spells.  • Barkskin (1 charge)  • Plant growth
+      (2 charges)  • Speak with plants (2 charges)  The wielder is immune to the
+      terrain effects of the plant growth spell cast from the staff. In
+      addition, shillelagh can be cast on an oaken staff despite it being a
+      magic quarterstaff, increasing its enhancement bonus by 1. The staff
+      retains the effects of the shillelagh spell even if wielded by someone
+      other than the spell's caster. Once per day, a character wielding an oaken
+      staff who has either barkskin or plant growth on her class spell list can
+      cast speak with plants from the staff without attempting a Use Magic
+      Device check (this expends 3 charges instead of 2).</p><p><strong>Base
+      Item</strong>: called spell storing
+      quarterstaff</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, Craft Staff, barkskin, plant growth, speak
+      with plants, teleport, creator must be a caster of at least 12th level</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: wood
+  price: 31800
+  properties:
+    dbl: true
+    mnk: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9456
+  weaponGroups:
+    - double
+    - monk
+  weight:
+    value: 4
+type: weapon

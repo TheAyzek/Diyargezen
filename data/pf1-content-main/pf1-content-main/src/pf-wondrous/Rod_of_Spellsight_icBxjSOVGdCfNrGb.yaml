@@ -1,0 +1,29 @@
+_id: icBxjSOVGdCfNrGb
+_key: '!items!icBxjSOVGdCfNrGb'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Rod of Spellsight
+system:
+  aura:
+    school: div
+  cl: 13
+  description:
+    value: >-
+      <p>This beautiful ivory rod is embedded with countless sapphires and
+      covered with intricate designs inlaid in silver. The vision of a rod of
+      spellsight's wielder is unaffected by any magical cloud, fog, mist, smoke,
+      or vapor effect. This allows the wielder to see through the effects of fog
+      cloud, obscuring mist, and even incendiary cloud. The rod does not protect
+      the wearer against blinding effects such as blindness/deafness or the
+      blinding effect of
+      glitterdust.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Rod, gust of wind, true seeing</p>
+  price: 12000
+  sources:
+    - id: PZO9468
+  subType: other
+  weight:
+    value: 6
+type: equipment

@@ -1,0 +1,41 @@
+_id: DGIpQvZmMxZmaE00
+_key: '!items!DGIpQvZmMxZmaE00'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Baneberry
+system:
+  actions:
+    - _id: keih4tt91foe61ur
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1d3]] Strength damage, [[1]] Con
+            damage, paralyzed for [[1d3]] rounds
+      save:
+        dc: '15'
+        type: fort
+      tag: baneberry
+  description:
+    value: >-
+      <p><strong>Type</strong> ingested or injury; <strong>Save</strong>
+      Fortitude DC 15</p><p><strong>Onset</strong> 1 round (injury), 30 minutes
+      (ingested); <strong>Frequency</strong> 1/minute for 5
+      minutes</p><p><strong>Effect</strong> 1d3 Strength damage, 1 Con damage,
+      paralyzed for 1d3 rounds</p><p><strong>Cure</strong> 2 saves</p>
+  price: 90
+  sources:
+    - id: PZO9217E
+      pages: '14'
+  subType: poison
+  uses:
+    per: single
+type: consumable

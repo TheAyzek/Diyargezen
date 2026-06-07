@@ -1,0 +1,23 @@
+_id: Unn2i2BD7jPDQGIX
+_key: '!items!Unn2i2BD7jPDQGIX'
+_stats:
+  coreVersion: '12.331'
+img: icons/equipment/chest/robe-layered-blue.webp
+name: Shinobi shozoku
+system:
+  description:
+    value: >-
+      <p>This close-fitting bodysuit of soft, dark fabric is favored by ninja
+      and assassins. When worn, it grants a +2 circumstance bonus on Stealth
+      checks. Wearing armor with a base armor bonus higher than +1 negates this
+      bonus, as does additional heavy clothing or equipment worn under the
+      shinobi shozoku (at the GM's discretion).</p>
+  price: 50
+  slot: clothing
+  sources:
+    - id: PZO9481
+      pages: '28'
+  subType: clothing
+  weight:
+    value: 2
+type: equipment

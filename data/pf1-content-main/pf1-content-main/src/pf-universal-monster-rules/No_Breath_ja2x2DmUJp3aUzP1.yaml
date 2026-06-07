@@ -1,0 +1,19 @@
+_id: ja2x2DmUJp3aUzP1
+_key: '!items!ja2x2DmUJp3aUzP1'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/water_05.jpg
+name: No Breath
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>The monster does not breathe and is immune to effects that require
+      breathing (such as inhaled poison). This does not give it immunity to
+      cloud or gas attacks that do not require
+      breathing.</p>&nbsp;<p><em>Format</em>: no breath</p><p><em>Location</em>:
+      SQ.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

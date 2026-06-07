@@ -1,0 +1,37 @@
+_id: gvjtIHr7RwxS4p7u
+_key: '!items!gvjtIHr7RwxS4p7u'
+_stats:
+  coreVersion: '12.331'
+folder: Ah9aHaDhwaQBVNcg
+img: icons/magic/fire/flame-burning-eye.webp
+name: Weapon Familiarity (Galemren)
+system:
+  description:
+    value: >-
+      <p><strong>Race</strong>: Galemren</p><hr /><p>Galemren are proficient
+      with longbows (including composite longbows), longswords, longspears,
+      rapiers, shortbows (including composite shortbows), shortspears, spears,
+      and throwing axes, and they treat any weapon with the word "elven" in its
+      name as a martial weapon.</p>
+  sources:
+    - date: '2019'
+      pages: '8'
+      publisher: Paizo / Stranger Comics
+      title: Niobe
+  subType: racial
+  tags:
+    - Galemren
+    - Niobe
+  traitCategory: offense
+  weaponProf:
+    - Longbow
+    - Composite Longbow
+    - Shortbow
+    - Composite Shortbow
+    - Longsword
+    - Rapier
+    - Longspear
+    - Shortspear
+    - Spear
+    - Throwing Axe
+type: feat

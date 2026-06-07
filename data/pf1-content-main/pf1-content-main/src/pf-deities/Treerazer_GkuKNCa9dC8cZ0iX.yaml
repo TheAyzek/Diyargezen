@@ -1,0 +1,40 @@
+_id: GkuKNCa9dC8cZ0iX
+_key: '!journal!GkuKNCa9dC8cZ0iX'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Treerazer
+pages:
+  - _id: fzvfPeNUwXTp423a
+    _key: '!journal.pages!GkuKNCa9dC8cZ0iX.fzvfPeNUwXTp423a'
+    _stats:
+      coreVersion: '12.331'
+    name: Treerazer
+    sort: 0
+    text:
+      content: >-
+        <h1>Treerazor</h1><h2>Lord of the Blasted
+        Tarn</h2>@Source[PZO9267;pages=328] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Treerazor">Treerazor</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Nascent Demon Lords<br /><strong>Areas
+        of Concern</strong> Corruption of nature, pollution<br
+        /><strong>Domains</strong> Chaos, Destruction, Evil, Plant<br
+        /><strong>Subdomains</strong> Catastrophe, Decay, Demon (Chaos), Demon
+        (Evil), Rage<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Greataxe<br
+        /><strong>Symbol</strong> Axe in bleeding tree stump<br /><strong>Sacred
+        Animal(s)</strong> Deinonychus<br /><strong>Sacred Color(s)</strong>
+        Black, green</p><h3>Obedience</h3><p>Feast on rotting flesh infested
+        with hallucinogenic or poisonous fungus, then meditate upon the
+        harrowing visions they provide.</p><h2>Boons - Demonic
+        Obedience</h2><h3>Demoniac</h3><p>@Source[PZO9225;pages=39]<br
+        /><strong>1: First Boon (Sp)</strong> <em>warp wood</em> 1/day<br
+        /><strong>2: Second Boon (Sp)</strong> <em>antiplant shell</em> 1/day<br
+        /><strong>3: Third Boon (Sp)</strong> <em>repel wood</em> 1/day</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

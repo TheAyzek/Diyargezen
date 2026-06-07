@@ -1,0 +1,19 @@
+_id: 0GnY4G1adMsElE4s
+_key: '!items!0GnY4G1adMsElE4s'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/biological/head-zebra.webp
+name: Head (2 EP)
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>An eidolon grows an additional head. The eidolon does not gain any
+      additional natural attacks for the additional head, but the additional
+      head does allow the eidolon to take other evolutions that add an
+      additional attack to a head (such as a bite, gore, or breath
+      weapon).</p><p>This evolution can be selected more than once.</p>
+  subType: misc
+  tags:
+    - Eidolon Evolution
+type: feat

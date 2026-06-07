@@ -1,0 +1,21 @@
+_id: 6neZrrSpdaJaACGU
+_key: '!items!6neZrrSpdaJaACGU'
+_stats:
+  coreVersion: '12.331'
+folder: 35gUR2g8lMd073yK
+img: icons/environment/people/commoner.webp
+name: Taldan Squire
+system:
+  description:
+    value: >-
+      <p><em>You spent time as a squire to a Taldan knight and understand how to
+      fight alongside him.</em></p><p><strong>Prerequisites</strong>: Base
+      attack bonus +1, proficient in a martial
+      weapon.</p><p><strong>Benefits</strong>: When within 50 feet of a mounted
+      ally with the Mounted Combat feat, you get a +2 bonus on initiative. If
+      this ally is injured, you gain a +1 dodge bonus on AC as long as you are
+      within 10 feet of him.</p>
+  tags:
+    - General
+    - '3.5'
+type: feat

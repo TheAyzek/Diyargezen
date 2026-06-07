@@ -1,0 +1,32 @@
+_id: 0spj7nlmgNN14C8e
+_key: '!journal!0spj7nlmgNN14C8e'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Isis
+pages:
+  - _id: hWrAkWWo8pdr64Ss
+    _key: '!journal.pages!0spj7nlmgNN14C8e.hWrAkWWo8pdr64Ss'
+    _stats:
+      coreVersion: '12.331'
+    name: Isis
+    sort: 0
+    text:
+      content: >-
+        <h1>Isis</h1><h2>Queen of Miracles</h2>@Source[PZO9080;pages=65] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Isis">Isis</a><h3>Details</h3><p><strong>Alignment</strong>
+        NG<br /><strong>Pantheon</strong> Deities of Ancient Osirion<br
+        /><strong>Areas of Concern</strong> Fertility, magic, motherhood,
+        rebirth<br /><strong>Domains</strong> Charm, Community, Good, Healing,
+        Magic<br /><strong>Subdomains</strong> Agathion, Arcane, Divine, Family,
+        Love, Resurrection<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Quarterstaff<br
+        /><strong>Symbol</strong> Knot of Isis<br /><strong>Sacred
+        Animal(s)</strong> Kite</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,37 @@
+_id: p1pBkwtU825SkX0f
+_key: '!items!p1pBkwtU825SkX0f'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/liquid-green.webp
+name: Kaava Musk
+system:
+  description:
+    value: >-
+      <p><em><strong>Price</strong> 40 gp; <strong>Weight</strong> 1/2 lb.<br
+      /><strong>Category</strong> Alchemical Tools</em></p><p><em>This
+      emerald-colored adhesive is made from animal glands, urine, and other
+      powerful scents that are difficult to wash off. A target splashed with it
+      smells like weak prey to predators. Creatures with the scent ability can
+      detect a marked creature at five times the normal range, note its
+      direction as a free action, pinpoint it when it is within 25 feet, and
+      track it by scent with a +5 bonus on their Survival checks. Immersion in
+      water within 1 round of exposure washes the musk off; otherwise the effect
+      decreases by 1 range increment per day (four times normal range after 1
+      day, three times normal range after 2 days, and so on) until the creature
+      is again at normal scent levels. One dose of Kaava musk costs 40 gp and
+      weighs 1/2 lb.; the Craft (alchemy) DC to create Kaava musk is 20. For
+      more information on Kaava musk, see page
+      31.</em></p><h2>Construction</h2><p><em><strong>Craft (Alchemy)</strong>
+      DC 20</em></p>
+  price: 40
+  sources:
+    - id: PZO9412
+      pages: '24'
+    - id: PZO9410
+      pages: '19'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 0.5
+type: consumable

@@ -1,0 +1,18 @@
+_id: H1w9JvUPoZKNfxd7
+_key: '!items!H1w9JvUPoZKNfxd7'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/biological/pustules-red.webp
+name: Red Ache
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> disease (injury); <strong>Save</strong> Fortitude
+      DC 15;</p><p><strong>Onset</strong> 1d3
+      days;&nbsp;<strong>Frequency</strong> 1/day</p><p><strong>Effect</strong>
+      1d6 Str damage</p><p><strong>Cure</strong> 2 consecutive saves</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

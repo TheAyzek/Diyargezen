@@ -1,0 +1,52 @@
+_id: 2hAtXgvKZoUvJaQA
+_key: '!items!2hAtXgvKZoUvJaQA'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/gem-faceted-cushion-teal-black.webp
+name: Pale Blue Rhomboid Ioun Stone, Flawed
+system:
+  aura:
+    custom: true
+    school: varied
+  changes:
+    - _id: LJ77BaxY
+      formula: '2'
+      target: str
+      type: enh
+    - _id: pqjoAX4j
+      formula: '-2'
+      target: con
+      type: untyped
+  cl: 12
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>A pale blue stone prism with sides of unequal widths or angles, giving
+      it a flattened cross section.  It may have irregular facets or internal
+      flaws.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone grants a +2 enhancement bonus to Strength and
+      a -2 penalty to Constitution.</p><h3>Resonance</h3><p><strong>Method 1,
+      Fixed: </strong>+1 bonus on Fortitude saves.</p><p><strong>Method 2,
+      Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, creator must be 12th level <strong>Cost</strong>
+      3,000 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 6000
+  sources:
+    - id: PZO1138
+      pages: '149'
+    - id: PZO9211
+      pages: 50, 52
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

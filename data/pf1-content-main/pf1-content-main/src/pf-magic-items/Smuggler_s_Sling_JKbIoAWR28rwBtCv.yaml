@@ -1,0 +1,59 @@
+_id: JKbIoAWR28rwBtCv
+_key: '!items!JKbIoAWR28rwBtCv'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/sling.png
+name: Smuggler's Sling
+system:
+  actions:
+    - _id: 3yel72ao43k477l5
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: smugglersSling
+  aura:
+    school: con
+  baseTypes:
+    - Sling
+  cl: 5
+  description:
+    value: >-
+      <p>Smuggler's slings are favored in Chu Ye, where they are employed by
+      freedom fighters sneaking contraband weapons past oni slave masters. The
+      wielder of this +1 sling gains a +5 competence bonus on Sleight of Hand
+      checks to conceal the sling. Up to five times per day, the wearer can load
+      the sling with a conjured bullet as a swift action. A conjured bullet
+      counts as magical for the purposes of overcoming damage reduction and
+      attacking incorporeal creatures, but is otherwise a standard sling bullet.
+      This bullet must be fired by the end of the round or it
+      vanishes.</p><p><strong>Base Item</strong>: 
+      sling</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, reloading hands</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: leather
+  price: 5300
+  showInQuickbar: false
+  sources:
+    - id: PZO9453
+  weaponGroups:
+    - thrown
+type: weapon

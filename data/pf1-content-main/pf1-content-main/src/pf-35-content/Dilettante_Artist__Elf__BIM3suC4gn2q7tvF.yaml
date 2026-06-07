@@ -1,0 +1,41 @@
+_id: BIM3suC4gn2q7tvF
+_key: '!items!BIM3suC4gn2q7tvF'
+_stats:
+  coreVersion: '12.343'
+folder: CAxOlglJyXdUOHF9
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Dilettante Artist (Elf)
+system:
+  changes:
+    - _id: R3VnwuwV
+      formula: '1'
+      target: skill.dip
+      type: trait
+    - _id: 3ZwJWy9G
+      formula: '1'
+      type: trait
+  description:
+    instructions: >-
+      <ol><li><p>Select one Perform skill when you take this
+      trait.</p></li><li><p>Update the Skills tab of your Actor to add the
+      chosen skill.</p></li><li><p>Update the target of the untargeted change on
+      the Changes tab of this trait to reflect your
+      choice.</p></li><li><p>Select Diplomacy or the previously selected Perform
+      Skill when you take this trait.</p></li><li><p>Update the Class skills
+      section of the Details tab of this trait to reflect your
+      choice.</p></li></ol>
+    value: >-
+      <p><em>Art for you is a social gateway and you use it to influence and
+      penetrate high society.</em></p><p><strong>Requirements</strong>:
+      Elf</p><p><strong>Benefits</strong>: You gain a +1 trait bonus to one
+      category of Perform checks and a +1 trait bonus to Diplomacy checks. One
+      of these skills (your choice) is always a class skill for you.</p><hr />
+  sources:
+    - id: PZO9405
+      pages: '14'
+  subType: trait
+  tags:
+    - '3.5'
+    - Elf
+  traitType: race
+type: feat

@@ -1,0 +1,29 @@
+_id: QRDRN9JTqDIR8zre
+_key: '!items!QRDRN9JTqDIR8zre'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/slime-thick-orange.webp
+name: Ooze Attractant
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>Drow alchemists of
+      House Tracinoa developed this mixture to function as a lure for mindless
+      oozes. You can throw a flask of ooze attractant as a splash weapon. On a
+      direct hit, each mindless ooze within 60 feet must succeed at a DC 12 Will
+      save or be compelled to approach the target for the next 1d4+1 rounds. On
+      a miss, an ooze still attempts a Will save, but on a failure it instead
+      approaches the square in which the flask landed. Once an ooze moves
+      adjacent to the targeted creature or into the targeted square, it resumes
+      its normal behavior. An ooze can be affected by ooze attractant only once
+      in a 24-hour period.</p>
+  price: 100
+  sources:
+    - id: PZO9479
+      pages: '31'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 1
+type: consumable

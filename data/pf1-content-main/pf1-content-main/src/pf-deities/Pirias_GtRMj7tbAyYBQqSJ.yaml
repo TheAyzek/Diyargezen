@@ -1,0 +1,45 @@
+_id: GtRMj7tbAyYBQqSJ
+_key: '!journal!GtRMj7tbAyYBQqSJ'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Pirias
+pages:
+  - _id: iiqzUV9OQDIREBOb
+    _key: '!journal.pages!GtRMj7tbAyYBQqSJ.iiqzUV9OQDIREBOb'
+    _stats:
+      coreVersion: '12.331'
+    name: Pirias
+    sort: 0
+    text:
+      content: >-
+        <h1>Pirias</h1><h2>The Whispering Vial</h2>@Source[PZO9267;pages=326]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Pirias">Pirias</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Infernal Dukes<br /><strong>Areas of
+        Concern</strong> Denial, drugs, wonder<br /><strong>Domains</strong>
+        Evil, Law, Madness, Plant<br /><strong>Subdomains</strong> Devil (Evil),
+        Devil (Law), Growth, Insanity, Nightmare<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Throwing axe<br /><strong>Symbol</strong> Vial with
+        runes escaping<br /><strong>Sacred Animal(s)</strong> Yellow jacket<br
+        /><strong>Sacred Color(s)</strong> Black,
+        yellow</p><h3>Obedience</h3><p>Mix a concoction from materials you have
+        on hand, and drink it without considering its effects. Gain a +4 profane
+        bonus on saving throws against poison.</p><h2>Boons - Infernal
+        Dukes</h2>@Source[PZO1139;pages=118]<br />The Lords of Hell, the Dukes
+        of Perdition, and the Princes of Damnation are all names for the
+        infamous nobility of the Pit- the elite caste of devilkind known as the
+        infernal dukes.<p> All infernal dukes are lawful evil and range in power
+        from CR 26 to CR 27. The boons they grant are less complex than those
+        granted by archdevils, manifesting as spell-like abilities usable once
+        per day each.</p><p><strong>1</strong>: <em>create drug</em><br
+        /><strong>2</strong>: <em>caustic eruption</em><br /><strong>3</strong>:
+        <em>prismatic sphere</em></p><h2>For Followers of
+        Pirias</h2><h3>Feats</h3><p><em>Hellish Shackles</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

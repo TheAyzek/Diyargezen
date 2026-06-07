@@ -1,0 +1,29 @@
+_id: xfk03x9QSa1lpROU
+_key: '!items!xfk03x9QSa1lpROU'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Mask of Destruction and Creation
+system:
+  aura:
+    custom: true
+    school: evocation and illusion
+  cl: 5
+  description:
+    value: >-
+      <p>This reversible silken mask is flat white on one side and a swirling
+      mass of colors above a black background on the other.  When worn with the
+      white side out, it allows the wearer to use detect magic once per day.
+      When worn with the black side out, it allows the wearer to use read magic
+      once per day. If Nethys is your patron, you can use the black side of the
+      mask to cast magic missile as a 3rd-level caster once per day. Likewise,
+      you can use the white side of the mask to cast disguise self once per
+      day.</p><h3>Requirements</h3><p>Craft Wondrous Item, detect magic,
+      disguise self, magic missile, read magic</p>
+  price: 5000
+  slot: head
+  sources:
+    - id: PZO9418
+  subType: wondrous
+type: equipment

@@ -1,0 +1,22 @@
+_id: ql7MF8XFOQEIivW7
+_key: '!items!ql7MF8XFOQEIivW7'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: icons/sundries/misc/piggybank.webp
+name: Innocence
+system:
+  contextNotes:
+    - target: skill.blf
+      text: +[[10]] Competence to convince others of your innocence.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.4w51afqi5d9t8nl4]{Innocence}</p><p>You
+      gain a +10 competence bonus on Bluff skill checks to convince others of
+      your innocence.</p>
+  duration:
+    units: minute
+    value: '@item.level'
+  level: 1
+  subType: spell
+type: buff

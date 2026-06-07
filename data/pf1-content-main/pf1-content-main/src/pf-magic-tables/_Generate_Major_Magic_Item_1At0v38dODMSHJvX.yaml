@@ -1,0 +1,35 @@
+_id: 1At0v38dODMSHJvX
+_key: '!tables!1At0v38dODMSHJvX'
+_stats:
+  coreVersion: '12.331'
+description: <p>Generate a random Lesser Major or Greater Major magic item.</p>
+displayRoll: true
+folder: CLExzzcA4kPYvya7
+formula: 1d6
+img: systems/pf1/icons/spells/enchant-blue-3.jpg
+name: '*Generate Major Magic Item'
+replacement: true
+results:
+  - _id: fVJUxhdmQpBWjowu
+    _key: '!tables.results!1At0v38dODMSHJvX.fVJUxhdmQpBWjowu'
+    documentCollection: pf1.ultimate-equipment
+    documentId: 7buBBmB2sA2FqP4E
+    img: systems/pf1/icons/spells/enchant-blue-3.jpg
+    range:
+      - 1
+      - 4
+    text: Lesser Major Magic Items
+    type: pack
+    weight: 1
+  - _id: PLaDrv6dG6dFzbnC
+    _key: '!tables.results!1At0v38dODMSHJvX.PLaDrv6dG6dFzbnC'
+    documentCollection: pf1.ultimate-equipment
+    documentId: PReegfFEql7nPB5A
+    img: systems/pf1/icons/spells/enchant-blue-3.jpg
+    range:
+      - 5
+      - 6
+    text: Greater Major Magic Items
+    type: pack
+    weight: 1
+sort: 100000

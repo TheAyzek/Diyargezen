@@ -1,0 +1,31 @@
+_id: D4WjasLGdwJHbkPW
+_key: '!items!D4WjasLGdwJHbkPW'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Figurine of Wondrous Power (pearl dolphin)
+system:
+  aura:
+    custom: true
+    school: enchantment and transmutation
+  cl: 11
+  description:
+    value: >-
+      <p>This 2-inch-long pearl figurine turns into a dolphin on command (but it
+      retains its composition, which gives it hardness 10). The dolphin follows
+      the verbal commands of the creature who spoke the command word and will
+      follow commands as a summoned creature. With a second command word, the
+      dolphin will swim to an indicated location at double its swim speed,
+      bearing a message just like a creature affected by an animal messenger
+      spell.  The pearl dolphin can maintain its nonfigurine status for only 24
+      hours per week. The duration need not be continuous, but it must be used
+      in 1-hour increments.<h3>Requirements</h3><p>Craft Wondrous Item, animal
+      messenger, animate objects</p>
+  price: 7600
+  sources:
+    - id: PZO90122
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

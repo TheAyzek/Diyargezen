@@ -1,0 +1,32 @@
+_id: Gw3iySWr4xrEJs4r
+_key: '!journal!Gw3iySWr4xrEJs4r'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Easivra
+pages:
+  - _id: bknJ18pQhPcbBbsc
+    _key: '!journal.pages!Gw3iySWr4xrEJs4r.bknJ18pQhPcbBbsc'
+    _stats:
+      coreVersion: '12.331'
+    name: Easivra
+    sort: 0
+    text:
+      content: >-
+        <h1>Easivra</h1><h2>The Dawn Eagle</h2>@Source[PZO9267;pages=316] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Easivra">Easivra</a><h3>Details</h3><p><strong>Alignment</strong>
+        LG<br /><strong>Pantheon</strong> Other Deities<br /><strong>Areas of
+        Concern</strong> Avians, gold, the sun<br /><strong>Domains</strong>
+        Animal, Good, Law, Sun<br /><strong>Subdomains</strong> Archon (Good),
+        Archon (Law), Day, Feather, Light<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Morningstar<br /><strong>Symbol</strong> Eagle head in profile<br
+        /><strong>Sacred Animal(s)</strong> Golden eagle<br /><strong>Sacred
+        Color(s)</strong> Blue, gold</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

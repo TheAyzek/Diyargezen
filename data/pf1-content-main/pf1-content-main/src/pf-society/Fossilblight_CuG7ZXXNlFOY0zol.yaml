@@ -1,0 +1,43 @@
+_id: CuG7ZXXNlFOY0zol
+_key: '!items!CuG7ZXXNlFOY0zol'
+_stats:
+  coreVersion: '13.347'
+folder: 860OGQmrUTgXsUHT
+img: systems/pf1/icons/items/weapons/pick-heavy.png
+name: Fossilblight
+system:
+  artifact: true
+  aura:
+    school: evo
+  baseTypes:
+    - Heavy Pick
+  cl: 18
+  description:
+    value: >-
+      <p>This +3 keen adamantine heavy pick emits dim light from its diamond
+      head. Once per day, as a swift action, the wielder can cause Fossilblight
+      to ignore the hardness or DR of a single object or creature (including
+      DR/mythic) within 60 feet for the next 10 minutes. This weapon is capable
+      of making critical hits against elementals, despite that creature type's
+      normal immunity to such attacks. Whenever the bearer a critical hit, as an
+      immediate action she can voluntarily let go of Fossilblight and have the
+      weapon pin the target against any adjacent solid object. The weapon's CMD
+      for the purpose of escaping this effect is equal to half the damage dealt
+      with the critical hit. A creature pinned in this way takes 2d6+6 points of
+      damage at the end of its turn for the first 3 rounds in which it remains
+      pinned.  For each Earth Affinity boon Fossilblight's wielder has, increase
+      the artifact's effective enhancement bonus by 1 (maximum
+      +5).</p><p><strong>Base Item</strong>: keen adamantine heavy pick</p>
+  enh: 3
+  material:
+    base:
+      value: steel
+    normal:
+      value: adamantine
+  sources:
+    - id: PZOPSS0825E
+  weaponGroups:
+    - axes
+  weight:
+    value: 6
+type: weapon

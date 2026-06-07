@@ -1,0 +1,62 @@
+_id: 3B4ht6xJIWUdyo1s
+_key: '!items!3B4ht6xJIWUdyo1s'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/longbow.PNG
+name: Bow of Ashes
+system:
+  actions:
+    - _id: zkjesrjnsautrzfr
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: bowOfAshes
+  aura:
+    school: con
+  baseTypes:
+    - Longbow
+  cl: 8
+  description:
+    value: >-
+      <p>This +1 adaptive flaming composite longbow is made of a single piece of
+      petrified wood that appears to have been burnt black but is magically
+      sturdy. When the wielder pulls the bowstring while within 5 feet of a
+      flame at least as large as a lit torch, the bow generates and nocks an
+      arrow of rock-hard ash. Attacks made with an ash arrow deal damage as a
+      normal bow but ignore concealment miss chances from smoke, ash, dust, fog,
+      and other airborne particles (though the wielder still risks targeting the
+      wrong square when trying to shoot at foes with total concealment). The ash
+      arrow crumbles to nothing 1 round after leaving the
+      bow.</p><p><strong>Base Item</strong>: +1 adaptive flaming composite
+      longbow</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, fireball or flame blade, warp wood</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: wood
+  price: 11400
+  showInQuickbar: false
+  sources:
+    - id: PZO9452
+  weaponGroups:
+    - bows
+  weight:
+    value: 3
+type: weapon

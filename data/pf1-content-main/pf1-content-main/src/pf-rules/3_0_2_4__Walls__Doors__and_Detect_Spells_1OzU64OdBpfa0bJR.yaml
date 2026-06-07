@@ -1,0 +1,40 @@
+_id: 1OzU64OdBpfa0bJR
+_key: '!journal!1OzU64OdBpfa0bJR'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: UW4tzDX1A62qPAzr
+name: 3.0.2.4. Walls, Doors, and Detect Spells
+pages:
+  - _id: ONmDOVPBZUT2LK0b
+    _key: '!journal.pages!1OzU64OdBpfa0bJR.ONmDOVPBZUT2LK0b'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.0.2.4. Walls, Doors, and Detect Spells
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.v5dHsJ6gCghRXQnL]{3.0.
+        Dungeons}</p><ul><li>@Compendium[pf-content.pf-rules.oM2nAFzXnVFIS0WD]{3.0.2.1.
+        Walls}</li><li>@Compendium[pf-content.pf-rules.J0yOXyPZB6M6ZUSi]{3.0.2.2.
+        Floors}</li><li>@Compendium[pf-content.pf-rules.YwZLtJ7Z59r1fx90]{3.0.2.3.
+        Doors}</li><li><strong>@Compendium[pf-content.pf-rules.1OzU64OdBpfa0bJR]{3.0.2.4.
+        Walls, Doors, and Detect
+        Spells}</strong></li><li>@Compendium[pf-content.pf-rules.tEkx7SQLAENe8KM8]{3.0.2.5.
+        Stairs}</li><li>@Compendium[pf-content.pf-rules.1bkKb1E1A73Tp1IK]{3.0.2.6.
+        Cave-Ins and Collapses (CR
+        8)}</li><li>@Compendium[pf-content.pf-rules.hfI8oxi1ywlhrGfs]{3.0.2.7.
+        Slimes, Molds, and Fungi}</li></ul><hr
+        /><p>@Source[PZO1110;pages=415]</p><p>Stone walls, iron walls, and iron
+        doors are usually thick enough to block most detect spells, such as
+        detect thoughts. Wooden walls, wooden doors, and stone doors are usually
+        not thick enough to do so. A secret stone door built into a wall and as
+        thick as the wall itself (at least 1 foot) does block most detect
+        spells.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

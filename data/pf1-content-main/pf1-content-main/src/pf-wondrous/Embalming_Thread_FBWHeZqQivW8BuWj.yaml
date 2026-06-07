@@ -1,0 +1,31 @@
+_id: FBWHeZqQivW8BuWj
+_key: '!items!FBWHeZqQivW8BuWj'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Embalming Thread
+system:
+  aura:
+    school: trs
+  cl: 7
+  description:
+    value: >-
+      <p>This coarse, acrid-smelling thread is more akin to wire than fabric.
+      When carefully sewn into the body of a flesh golem or zombie (requiring 1
+      hour per Hit Die of the creature and a successful DC 20 Heal or Spellcraft
+      check), the stitches change the creature's damage reduction to DR 5/
+      adamantine and slashing. Variant zombies lacking damage reduction (such as
+      fast zombies) instead gain DR 5/slashing. One length of stitching is
+      required for every Hit Die of the creature being enhanced. Using an
+      insufficient number of lengths has no effect. A full thimble of embalming
+      thread contains 20 lengths.   If the skill check to use the stitches
+      fails, they are not wasted, but must first be cleaned and unknotted,
+      requiring 1 hour per stitch. Once used successfully, the stitches cannot
+      be reused.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, gentle repose, stoneskin</p>
+  price: 10000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

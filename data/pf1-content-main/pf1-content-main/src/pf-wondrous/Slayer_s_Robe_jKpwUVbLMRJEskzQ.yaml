@@ -1,0 +1,34 @@
+_id: jKpwUVbLMRJEskzQ
+_key: '!items!jKpwUVbLMRJEskzQ'
+_stats:
+  coreVersion: '12.331'
+folder: tt1hnzL5ZdLfPdp0
+img: icons/equipment/chest/coat-collared-red-gold.webp
+name: Slayer's Robe
+system:
+  aura:
+    school: div
+  cl: 9
+  description:
+    value: >-
+      <p>This ragged, brown robe could be mistaken for a monk's cassock, but the
+      devotees who wear it are dedicated only to the art of killing. This robe
+      grants the wearer a +5 competence bonus on Stealth checks and Sleight of
+      Hand checks to conceal a weapon, and a +1 resistance bonus on all saving
+      throws. If worn by a slayer, the resistance bonus on saving throws
+      increases to match the slayer's studied target bonus when he is facing a
+      studied target.  On command, the robe's wearer is able to turn into a
+      brown mist (as the gaseous form spell) for up to 5 minutes per day. This
+      duration doesn't need to be continuous, but must be used in 1-minute
+      increments. While the wearer is in this form, the bonus on Stealth checks
+      increases to +10. The wearer can end this effect as a standard
+      action.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Items, gaseous form, guidance</p>
+  price: 15000
+  slot: body
+  sources:
+    - id: PZO1129
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

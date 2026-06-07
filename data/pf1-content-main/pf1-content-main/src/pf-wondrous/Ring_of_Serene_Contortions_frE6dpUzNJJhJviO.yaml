@@ -1,0 +1,26 @@
+_id: frE6dpUzNJJhJviO
+_key: '!items!frE6dpUzNJJhJviO'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Serene Contortions
+system:
+  aura:
+    school: abj
+  cl: 5
+  description:
+    value: >-
+      <p>This simple copper ring bears the image of a blue enamel hand. It
+      grants the wearer a +2 bonus on Escape Artist checks. At will, the wearer
+      may create the sound of a peaceful chime, small gong, or temple bell. Once
+      per day, the wearer may also use true
+      strike.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, ghost sound, true strike, creator must have 5 ranks in Escape
+      Artist</p>
+  price: 1200
+  slot: ring
+  sources:
+    - id: PZO9267
+  subType: wondrous
+type: equipment

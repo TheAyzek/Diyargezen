@@ -1,0 +1,31 @@
+_id: xJQ8ralbBiBnkD0R
+_key: '!items!xJQ8ralbBiBnkD0R'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Candle of Comity
+system:
+  aura:
+    school: enc
+  cl: 3
+  description:
+    value: >-
+      <p>This tall, blue candle is shot through with swirls of an amber color
+      and puts off a pleasant fragrance similar to honeysuckle when lit. Any
+      creature within 10 feet of the candle gains a +5 bonus on Diplomacy and
+      Sense Motive checks, while at the same time taking a -5 penalty on Bluff
+      and Intimidate checks. These bonuses and penalties apply only on checks
+      against other creatures within the candle's influence. It is a favorite
+      for use during negotiations and parleys. The candle can burn for a total
+      of 8 hours. These hours don't need to be used consecutively, but must be
+      used in 1-hour increments. Once all 8 hours are used, the candle is
+      destroyed.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, calm emotions, charm person</p>
+  price: 2000
+  sources:
+    - id: PZO1134
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

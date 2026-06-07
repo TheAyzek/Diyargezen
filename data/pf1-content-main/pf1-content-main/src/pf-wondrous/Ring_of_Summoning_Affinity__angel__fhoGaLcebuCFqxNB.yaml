@@ -1,0 +1,28 @@
+_id: fhoGaLcebuCFqxNB
+_key: '!items!fhoGaLcebuCFqxNB'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Summoning Affinity (angel)
+system:
+  aura:
+    custom: true
+    school: conjuration [good]
+  cl: 5
+  description:
+    value: >-
+      <p>This ring is cut from transparent crystal. If the wearer can cast
+      summon monster spells, the wearer adds cassianB2 to the 3rd-level list of
+      monsters she can summon with those spells, adds movanic devaB2 to the
+      7th-level list, and adds monadic devaB2 to the 8th-level list. Also, once
+      per day on command the wearer can use this ring to summon a cassian, as if
+      by the summon monster III
+      spell.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, planar ally or planar binding, creator must be good</p>
+  price: 7200
+  slot: ring
+  sources:
+    - id: PZO1129
+  subType: wondrous
+type: equipment

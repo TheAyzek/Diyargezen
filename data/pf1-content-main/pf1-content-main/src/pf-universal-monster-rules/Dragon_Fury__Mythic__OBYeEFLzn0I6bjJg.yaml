@@ -1,0 +1,18 @@
+_id: OBYeEFLzn0I6bjJg
+_key: '!items!OBYeEFLzn0I6bjJg'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/spells/evil-eye-red-3.jpg
+name: Dragon Fury [Mythic]
+system:
+  abilityType: su
+  description:
+    value: >-
+      <p>If a mythic dragon confirms a critical hit with a natural weapon, it
+      adds its <a>dragon blood</a> damage to the damage dealt by the natural
+      attack.</p><p><em>Format</em>: dragon fury (1d6
+      fire)</p><p><em>Location</em>: Special Attacks.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

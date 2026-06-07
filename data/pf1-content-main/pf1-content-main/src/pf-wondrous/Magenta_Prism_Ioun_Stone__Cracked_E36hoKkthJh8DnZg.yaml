@@ -1,0 +1,65 @@
+_id: E36hoKkthJh8DnZg
+_key: '!items!E36hoKkthJh8DnZg'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/gem-cut-faceted-square-purple.webp
+name: Magenta Prism Ioun Stone, Cracked
+system:
+  actions:
+    - _id: eXuCDhLmu2qyDHlP
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Change Modified Skill
+  aura:
+    school: trs
+  changes:
+    - _id: tZqH6UwW
+      formula: '2'
+      target: skill.acr
+      type: competence
+  cl: 12
+  description:
+    instructions: >-
+      <p>This stone is set to modify Acrobatics. Any changes to the modified
+      skill must be done manually on the details tab of this item by editing the
+      change target.</p><p>Only 25% of cracked or flawed ioun stones grant
+      resonant powers when placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>This is a reddish purple stone is in a regular shape with the top and
+      bottom ends having the same number of sides (such as a hexagram). The
+      width and angle of each side is usually equal.  A crack mars its
+      surface.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone grants you a +2 competence bonus on checks
+      with any one skill you choose, and you can change the skill modified once
+      per day, as a normal
+      @UUID[Compendium.pf-content.pf-wondrous.Item.i9yuzvI866Lckypd]{magenta
+      prism ioun stone}.</p><h3>Resonance</h3><p><strong>Method 1, Fixed:
+      </strong>+1 bonus on one saving throw not modified by the ability score
+      the stone is currently attuned to (chosen at the same time as the ability
+      score).</p><p><strong>Method 2, Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, <em>bear's endurance, bull's strength, cat's grace,
+      eagle's splendor, fox's cunning, owl's wisdom</em>, creator must be 12th
+      level <strong>Cost </strong>400 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 800
+  showInQuickbar: true
+  sources:
+    - id: PZO9435
+      pages: '23'
+  subType: wondrous
+  tags:
+    - Ioun Stone
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: equipment

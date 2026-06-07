@@ -1,0 +1,64 @@
+_id: OC4f7R4BjgF98wR7
+_key: '!items!OC4f7R4BjgF98wR7'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/scimitar.PNG
+name: Spiteful Scimitar
+system:
+  actions:
+    - _id: 52g5bql8v675lh34
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: spitefulScimitar
+  aura:
+    custom: true
+    school: abjuration transmutation and necromancy
+  baseTypes:
+    - Scimitar
+  cl: 11
+  description:
+    value: >-
+      <p>This +2 cruel furyborn scimitar was created accidentally by Treerazer
+      when the demon lord plunged the glaistig Hephloma's scimitar through her
+      own chest. Images of shriveled vines and wilted flowers decorate its
+      blade. Three times per day as an immediate action after dealing damage to
+      a creature, the wielder can cause the blighted plant life depicted on the
+      blade to animate, embedding thorny vines in the creature's wounds. The
+      creeping, twisting vines cause the creature to become entangled for 1d4
+      rounds, and it is nauseated by the pain while the entangled condition
+      persists. A successful DC 22 Fortitude saving throw negates the nauseated
+      condition.</p><p><strong>Base Item</strong>: +2 cruel furyborn
+      scimitar</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, cause fear, death knell, rage, sickening
+      entanglement</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 75315
+  showInQuickbar: false
+  sources:
+    - id: PZO90119
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 4
+type: weapon

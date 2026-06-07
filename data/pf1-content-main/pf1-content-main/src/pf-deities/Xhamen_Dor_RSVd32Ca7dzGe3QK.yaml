@@ -1,0 +1,117 @@
+_id: RSVd32Ca7dzGe3QK
+_key: '!journal!RSVd32Ca7dzGe3QK'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Xhamen-Dor
+pages:
+  - _id: CGGQz0iNa5KaOS8y
+    _key: '!journal.pages!RSVd32Ca7dzGe3QK.CGGQz0iNa5KaOS8y'
+    _stats:
+      coreVersion: '12.331'
+    name: Xhamen-Dor
+    sort: 0
+    text:
+      content: >-
+        <h1>Xhamen-Dor</h1><h2>The Inmost Blot</h2>@Source[PZO90113;pages=65]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Xhamen-Dor">Xhamen-Dor</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Great Old Ones<br /><strong>Areas of
+        Concern</strong> Decay, parasites, transformation<br
+        /><strong>Domains</strong> Death, Evil, Plant, Trickery<br
+        /><strong>Subdomains</strong> Decay, Deception, Murder, Undead<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Spear<br /><strong>Symbol</strong>
+        Sphere of tendrils<br /><strong>Sacred Animal(s)</strong> None<br
+        /><strong>Sacred Color(s)</strong> Black, dark
+        green</p><h3>Obedience</h3><p>You must ingest a toxic fungus, rotting
+        flesh infested with parasites, or flesh harvested from a creature of
+        your own species while the creature sleeps and dreams. Gain a +4 profane
+        bonus on saving throws against effects that cause ability damage or
+        ability drain.</p><h2>Boons - Deific
+        Obedience</h2><h3>Evangelist</h3><p>@Source[PZO90113;pages=67]<br
+        /><strong>1: Infesting Invocation (Sp)</strong> <em>ray of enfeeblement
+         </em> 3/day, <em>protection from spores</em> 2/day, or <em>fungal
+        infestation</em> 1/day<br /><strong>2: Seed the Unseeded (Sp)</strong>
+        Up to three times per day, as a swift action when you cast any
+        mind-affecting spell, you can cause that spell to behave as if you were
+        under the effects of <em>what grows within</em>.<br /><strong>3: Extract
+        Griefgall (Su)</strong> Twice per day, you can wrack a target with pain.
+        The target must be within 30 feet and in line of sight. As a standard
+        action, you deal 1d6 points of Constitution damage to the target, who
+        then becomes nauseated for 1d4 rounds. This damage bypasses all forms of
+        damage reduction, but can affect only living creatures. If the target
+        creature succeeds at a Fortitude saving throw (DC = 10 + 1/2 your
+        character level + your Constitution modifier), it negates the
+        Constitution damage and is staggered for 1 round instead. Regardless of
+        the success or failure of this saving throw, a monstrous parasite is
+        expelled from the target's body, either from an orifice or from a wound.
+        If the target succeeded at its saving throw, the parasite expelled is a
+        single griefgall (<em>Pathfinder RPG Bestiary</em> 5</em> 133). If the
+        target failed its saving throw, advanced griefgalls emerge instead; the
+        number that emerge is equal to 1 + the amount of Constitution damage the
+        victim took. The griefgalls are not under your control, but they regard
+        you as an ally.</em></p><h3>Exalted</h3><p>@Source[PZO90113;pages=67]<br
+        /><strong>1: Fester the Flesh (Sp)</strong> <em>decompose corpse</em>
+        3/day, <em>pox pustules</em> 2/day, or <em>undead anatomy I</em>
+        1/day<br /><strong>2: Festering Strike (Su)</strong> As a swift action
+        whenever you confirm a critical hit against a creature with a weapon or
+        spell, you can forgo the additional damage that the critical hit would
+        otherwise have dealt and instead afflict the creature struck with a
+        rotting toxin. The creature can resist this effect with a successful
+        Fortitude saving throw (DC = 10 + 1/2 your character level + your
+        Constitution modifier), but otherwise it immediately takes 1d4 points of
+        Strength damage and 1d4 points of Constitution damage as its flesh
+        withers and rots away. On a successful save, the victim takes no ability
+        damage but is instead sickened for 1d4 rounds. If your weapon has a
+        critical modifier of x3, the victim takes a -2 penalty on the saving
+        throw to resist your festering strike, and if your weapon has a critical
+        modifier of x4 or higher, this penalty increases to -4. This is a poison
+        effect.<br /><strong>3: Shed Life (Sp)</strong> Once per day, you can
+        cast <em>undead anatomy IV as a spell-like ability. If you are already
+        undead, you also gain the effects of a <em>harm</em> spell as this
+        spell-like ability takes effect, and adjacent living creatures are
+        targeted by an <em>inflict serious wounds</em> effect as if you had cast
+        that spell on
+        them.</em></p><h3>Sentinel</h3><p>@Source[PZO90113;pages=67]<br
+        /><strong>1: Twisted Nature (Sp)</strong> <em>entangle</em> 3/day,
+        <em>alter self</em> 2/day, or <em>excruciating deformation</em> 1/day<br
+        /><strong>2: Transformation Mastery (Su)</strong> The save DCs of
+        polymorph effects you create increase by 2, and all polymorph spells
+        that affect you are enhanced as if via the Extend Spell metamagic feat.
+        When you are in a form other than your own, you exalt in your temporary
+        body and gain a +2 profane bonus on saving throws. In addition, you gain
+        the shapechanger subtype, and your attacks are particularly painful to
+        other creatures with this subtype, since you use your mastery of
+        transformation to twist the mutable elements of the shapechanger's flesh
+        to cause additional harm. Add your Charisma bonus as a modifier to all
+        weapon damage dealt to creatures with the shapechanger subtype or
+        creatures under the effects of a polymorph spell. Increase the save DC
+        of any spell that deals hit point damage by 2 when you affect a
+        shapechanger or a polymorphed target.<br /><strong>3: Awaken Life
+        (Sp)</strong> Once per day, you can cast <em>polymorph any object</em>
+        as a spell-like ability, but only to transform an inanimate nonmagical
+        object into a living creature. The creature's physical ability scores
+        (Strength, Dexterity, and Constitution) become 20, and its mental
+        ability scores (Intelligence, Wisdom, and Charisma) become 10. The
+        creature's alignment is neutral evil, and while you do not control it,
+        the creature recognizes you as an ally. If the creature you create is a
+        plant, the duration of the <em>polymorph any object</em> effect is
+        doubled.</em></p><h2>For Followers of
+        Xhamen-Dor</h2><h3>Feats</h3><p><em>Dreamed Secrets</em></p><h3>Magic
+        Items - Wondrous Items</h3><p><em>Preklikin's Book of
+        Cults</em></p><h3>Spells</h3><p><em>What Grows
+        Within</em></p><h3>Traits</h3><p><em>Unspeakable Bond</em></p><h2>Unique
+        Spell Rules</h2><em>@Source[PZO90113;pages=66]</em><br
+        /><h3>Cleric/Warpriest</h3><p><em>Wall of Thorns can be prepared as a
+        6th-level spell<br /><em>Insanity</em> can be prepared as a 7th-level
+        spell</em></p><h2>Unique Summon Rules</h2>@Source[PZO90113;pages=65]<br
+        /><strong>Summon Monster IV</strong>: Phycomid<br /><strong>Summon
+        Monster V</strong>: Basidirond<br /><strong>Summon Monster VI</strong>:
+        Mi-go
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

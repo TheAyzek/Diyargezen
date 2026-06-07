@@ -1,0 +1,23 @@
+_id: d3q176vMzJWhndPf
+_key: '!items!d3q176vMzJWhndPf'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/green_13.jpg
+name: Rider Bond (2 EP)
+system:
+  abilityType: ex
+  description:
+    instructions: >-
+      <p>Add this feature to the summoner, add
+      @Compendium[pf-content.pf-feats.tZO6hWGZu9MwbtLI]{Mounted Combat} as well,
+      while riding.&nbsp;</p>
+    value: >-
+      <p>You and your eidolon share an empathic connection while you ride
+      it.</p><p>You gain a bonus on Ride checks equal to one-half your summoner
+      level and you also gain Mounted Combat as a bonus feat when mounted on
+      your eidolon.</p><p><strong>Requirements</strong></p><p>The eidolon must
+      possess the mount evolution to take this evolution.</p>
+  subType: misc
+  tags:
+    - Eidolon Evolution
+type: feat

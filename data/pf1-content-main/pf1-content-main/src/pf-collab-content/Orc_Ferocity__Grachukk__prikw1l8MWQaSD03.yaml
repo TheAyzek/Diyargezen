@@ -1,0 +1,38 @@
+_id: prikw1l8MWQaSD03
+_key: '!items!prikw1l8MWQaSD03'
+_stats:
+  coreVersion: '12.331'
+folder: lT7IYq5v6kqeFzv8
+img: icons/magic/fire/flame-burning-eye.webp
+name: Orc Ferocity (Grachukk)
+system:
+  actions:
+    - _id: sqGhU7xyLvjEg7vs
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      name: Use
+  description:
+    value: >-
+      <p><strong>Race</strong>: Grachukk</p><hr /><p>Once per day, when a
+      grachukk is brought below 0 hit points but not killed, he can fight on for
+      1 more round as if disabled. At the end of his next turn, unless brought
+      to above 0 hit points, he immediately falls unconscious and begins
+      dying.</p>
+  showInQuickbar: true
+  sources:
+    - date: '2019'
+      pages: '9'
+      publisher: Paizo / Stranger Comics
+      title: Niobe
+  subType: racial
+  tags:
+    - Grachukk
+    - Niobe
+  traitCategory: offense
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+type: feat

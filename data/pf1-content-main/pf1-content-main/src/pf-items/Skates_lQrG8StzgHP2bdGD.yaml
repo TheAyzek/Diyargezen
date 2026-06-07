@@ -1,0 +1,26 @@
+_id: lQrG8StzgHP2bdGD
+_key: '!items!lQrG8StzgHP2bdGD'
+_stats:
+  coreVersion: '12.331'
+img: icons/equipment/feet/shoes-rounded-pink.webp
+name: Skates
+system:
+  description:
+    value: >-
+      <p>These honed metal blades are worn on boots to enable swift passage over
+      ice. The wearer may move (but not climb) at her full speed on level icy
+      surfaces. Her speed is halved when moving up an icy slope, but she may run
+      or charge downhill on gentle or steep snowy slopes at quadruple speed.
+      However, any skill check penalties for traversing rough ice while wearing
+      skates are doubled, and the wearer takes a -4 penalty on combat maneuver
+      checks to bull rush, drag, or trip, and to CMD against these maneuvers.
+      Donning or removing skates takes 1 minute.</p>
+  price: 10
+  slot: clothing
+  sources:
+    - id: PZO9051
+      pages: '67'
+  subType: clothing
+  weight:
+    value: 3
+type: equipment

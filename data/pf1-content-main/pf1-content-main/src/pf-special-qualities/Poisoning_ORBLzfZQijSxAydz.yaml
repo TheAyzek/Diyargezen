@@ -1,0 +1,31 @@
+_id: ORBLzfZQijSxAydz
+_key: '!items!ORBLzfZQijSxAydz'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Poisoning
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate necromancy <strong>CL</strong>
+      7th</p><p><strong>Slot</strong> armor; <strong>Price</strong> +1
+      bonus;</p><p>A suit of armor with this ability becomes poisonous to the
+      touch. The user must slip a vial of 1 dose of the injury or ingested
+      poison to be used into a hidden slot along the armor's inner thigh. Three
+      rounds afterward, the entire suit of armor becomes infused with the
+      poison; any creature that grapples with the wearer (if an injury poison is
+      used) or that successfully hits the wearer with a bite attack (if an
+      ingested poison is used) is immediately exposed to the poison and must
+      save accordingly. Whether or not the victim successfully saves, the poison
+      is discharged from the armor and the wearer must load a new vial into the
+      armor to recharge this
+      ability.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>poison</em>; <strong>Price</strong> +1 bonus</p>
+  sources:
+    - id: PZO9440
+      pages: '27'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

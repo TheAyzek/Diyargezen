@@ -1,0 +1,41 @@
+_id: TzWE2E25cZ0sh45o
+_key: '!actors!TzWE2E25cZ0sh45o'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Scratching Behind the Wall (CR 1)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    hp:
+      max: 1
+  details:
+    alignment: CE
+    area: 5-ft.-by-10-ft. hallway
+    biography: {}
+    cl: 1
+    cr:
+      base: 0.5
+    destruction: >-
+      A character who finds the servant's body and removes her from behind the
+      wall destroys the haunt forever.
+    effect: >-
+      The sound of claws scraping on the inside of the wall echoes throughout
+      the hallway. Creatures within its area must succeed at a DC 11 Will save
+      or be shaken for 1d4 rounds.
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Horror Adventures pg. 175</p>
+        <h3>Description</h3><p>A lord with a terrible secret caught a servant
+        snooping through his papers. He knocked the servant over the head and
+        threw her into a disused dumbwaiter, which he jammed between floors. The
+        servant awoke the following day, and her desperate attempts to escape
+        infuse the walls that contained her.</p>
+    notice: Perception DC 15 (to hear the faint scream behind the wall)
+    reset: 1 day
+    trigger: proximity
+type: haunt

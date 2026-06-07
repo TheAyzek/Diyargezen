@@ -1,0 +1,25 @@
+_id: keRXUCwf9DVVeS2I
+_key: '!items!keRXUCwf9DVVeS2I'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/unique-10.jpg
+name: Sorcerer's Spirits
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Tincture</p><p>This silvery liquid amplifies
+      magical energies. For 1 hour after drinking this tincture, treat your
+      caster level as 2 higher for the purpose of determining spells' durations
+      and ranges. The liquid unsettles the stomach, imposing a -1 penalty on
+      Fortitude and Reflex saves for the same duration. Whenever you fail a
+      Fortitude or Reflex save while under these effects, you must succeed at a
+      DC 20 Fortitude saving throw or become nauseated for 1
+      round.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      30</p>
+  price: 300
+  sources:
+    - id: PZO9487
+      pages: '23'
+  tags:
+    - Tincture
+type: consumable

@@ -1,0 +1,82 @@
+_id: CTtD2jiuYEg7CYxp
+_key: '!items!CTtD2jiuYEg7CYxp'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Enter the Umbral Court (Occult Ritual)
+system:
+  actions:
+    - _id: 9zfqkv0s4dr8hx3w
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        description: negates
+        type: will
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    material: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> necromancy; <strong>Level</strong>
+      8</p><p><strong>Casting Time</strong> 80
+      minutes</p><p><strong>Components</strong> V, S, M (a whip made of braided
+      strips of skin flyed from the target), SC (at least 2 and up to
+      7)</p><p><strong>Skill Checks</strong> Intimidate DC 31, 2 successes;
+      Knowledge (planes) DC 31, 2 successes; Knowledge (religion) DC 31, 4
+      successes</p><p><strong>Range</strong> close</p><p><strong>Target</strong>
+      one creature</p><p><strong>Duration</strong>
+      permanent</p><p><strong>Saving Throw</strong> Will negates;
+      <strong>SR</strong> yes</p><p><strong>Backlash</strong> casters take 1
+      permanent negative level.</p><p><strong>Failure</strong> The casters are
+      immediately shunted to a single place on the Shadow Plane that is anywhere
+      from 5 to 500 miles (5d%) from Xovaikain, Zon-Kuthon's deific realm, as
+      plane shift. Within 1 round of arriving, the casters are attacked by a
+      number of apostle kytons equal to the number of casters plus
+      3.</p><h3>Effect</h3><p>Before this ritual can be cast, the casters must
+      reach deep into the target's mind to extract the most personally heinous
+      torture the target could imagine, and then the casters must inflict it
+      upon the target during the casting. This often involves whips, spiked
+      chains, barbed hooks, or other torturous elements usually constructed from
+      the target's own skin and viscera. While the target endures this torture,
+      it must recite the parable of Nidal's pact with Zon-Kuthon while the
+      casters alternatingly chant epic poetry vaguely detailing the Midnight
+      Lord's travels behind reality and the unfathomable horrors that he is
+      capable of inflicting on the target's soul. If the target does not cower
+      in fear at these descriptions, the ritual fails.</p><p>Upon successful
+      completion of this ritual, the target's eyes fill with inky black shadow,
+      and it gains the following benefits. It is immune to spells from the
+      shadow subschool and those with the shadow descriptor, though it can
+      choose to suppress or restore this immunity as a standard action. The
+      target also gains regeneration 5, bypassed by good weapons and spells and
+      silver weapons, and DR 15/good or silver.</p><p>If the target's alignment
+      is not already lawful evil, it immediately shifts to such upon this
+      ritual's successful completion. Further, this ritual ties a shard of the
+      target's soul to Zon-Kuthon and his realm on the Shadow Plane. If the
+      target commits a heretical act against Zon-Kuthon's faith, there is a 25%
+      chance (1–25 on d%) that at a random time within 24 hours the target is
+      transported to Xovaikain via plane shift into a private, eternal
+      torment-scape of the Midnight Lord's choosing. This effect cannot be
+      suppressed or removed.</p>
+  flags:
+    dictionary:
+      summary: >-
+        A vile ritual that imbues the target with dark power in return for
+        service to Zon-Kuthon
+  level: 8
+  materials:
+    value: a whip made of braided strips of skin flyed from the target
+  school: nec
+  sources:
+    - id: PZO92108
+      pages: '7'
+type: spell

@@ -1,0 +1,30 @@
+_id: 7OSwrTN9aamwx2Ps
+_key: '!items!7OSwrTN9aamwx2Ps'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/bolt.PNG
+name: Stirge Dart
+system:
+  aura:
+    custom: true
+    school: necromancy and transmutation
+  cl: 15
+  description:
+    value: >-
+      <p>When thrown, this +1 dart animates and attacks a single target as a
+      dancing weapon for 4 rounds. When a stirge dart hits, instead of dealing
+      normal damage, the dart drains blood from the target, dealing 1 point of
+      Constitution damage. The dart falls to the ground harmlessly once it stops
+      attacking. A stirge dart can be used only once before it loses all of its
+      magical properties.</p><p><strong>Enhancement Bonus</strong>: +1
+      </p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic Arms
+      and Armor, animate objects, bleed</p>
+  equipped: false
+  extraType: dart
+  price: 4501
+  sources:
+    - id: PZO9459
+  subType: ammo
+  weight:
+    value: 0.5
+type: loot

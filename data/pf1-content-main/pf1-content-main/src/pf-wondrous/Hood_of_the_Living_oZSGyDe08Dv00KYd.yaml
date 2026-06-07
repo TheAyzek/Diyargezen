@@ -1,0 +1,35 @@
+_id: oZSGyDe08Dv00KYd
+_key: '!items!oZSGyDe08Dv00KYd'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Hood of the Living
+system:
+  aura:
+    school: div
+  cl: 1
+  description:
+    value: >-
+      <p>This simple leather coif is of a style popular along the Crusader Road
+      and throughout northern Avistan. The wearer gains a +2 resistance bonus on
+      Will saves against mind-affecting effects created by undead creatures.
+      Three times per day, the wearer may activate the hood of the living to
+      detect the auras of any undead creatures within a 30-foot radius. Doing so
+      is a full-round action that discloses the presence of any undead auras,
+      the number of undead auras, and the direction of the nearest undead aura,
+      as though the user had concentrated for 3 rounds while using detect
+      undead.  When activated, a hood of the living also detects any living
+      creatures within a 30-foot radius that are acting under the effects of a
+      charm or compulsion created by an undead creature.  This effect only
+      reveals the presence of such creatures, not their number or
+      location.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, detect undead, protection from evil</p>
+  price: 2840
+  slot: head
+  sources:
+    - id: PZO9444
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

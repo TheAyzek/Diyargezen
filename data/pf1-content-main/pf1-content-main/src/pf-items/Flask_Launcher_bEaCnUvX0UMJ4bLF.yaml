@@ -1,0 +1,34 @@
+_id: bEaCnUvX0UMJ4bLF
+_key: '!items!bEaCnUvX0UMJ4bLF'
+_stats:
+  coreVersion: '12.331'
+img: icons/weapons/guns/gun-worn-steel.webp
+name: Flask Launcher
+system:
+  description:
+    value: >-
+      <p>This crossbow-style device is modified to throw splash weapons or
+      contact poisons rather than firing bolts. Its trigger connects to a long
+      spool of wire, which can be strung across one or two 5-foot squares within
+      10 feet. Once set, the flask launcher can be loaded with a thrown splash
+      weapon or vial of contact poison (which must be purchased separately). The
+      flask launcher fires automatically at the first Tiny or larger creature
+      that disturbs its tripwire. Alchemist bombs cannot be fired by a flask
+      launcher.</p><p>The flask launcher isn't designed to be used as a ranged
+      weapon; treat it as an improvised weapon with a 10-foot range increment.
+      Reloading the launcher is a full-round action that requires two hands and
+      provokes an attack of opportunity.</p><p>This can be crafted with a DC 25
+      Craft (traps) check. </p><h2>Flash Launcher
+      Trap</h2><p><strong>Type</strong> mechanical; <strong>Perception</strong>
+      DC 15; <strong>Disable Device</strong> DC 15 </p><h2>Effects</h2>
+      <strong>Trigger</strong> touch; <strong>Reset</strong> manual</p><p>
+      <strong>Effect</strong> Atk +5 ranged touch (effects vary by payload)
+  equipped: false
+  price: 300
+  sources:
+    - id: PZO9462
+      pages: '20'
+  subType: adventuring
+  weight:
+    value: 9
+type: loot

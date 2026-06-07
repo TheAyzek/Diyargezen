@@ -1,0 +1,33 @@
+_id: II4qyZ0jGFU7WJe9
+_key: '!items!II4qyZ0jGFU7WJe9'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/chest/chest-reinforced-stone.webp
+name: Kit, Wilderness wanderer package
+system:
+  description:
+    value: >-
+      <p>This equipment package is appropriate for any lightly-armored combatant
+      in the wild, such as a barbarian, hunter<sup></sup>, or ranger. If the PC
+      can cast spells, add a spell component pouch and holly and mistletoe. The
+      GM might consider altering which weapon is masterwork, based on the PC's
+      specialization. For example, an archery-focused ranger might prefer a
+      masterwork composite longbow over a masterwork greataxe.
+      </p><p><strong>Armor</strong>: Light wooden quickdraw shield<sup></sup>,
+      masterwork studded leather armor. </p>Weapons: Cold iron flail, composite
+      longbow with 20 arrows, masterwork greataxe, short sword.
+      <p><strong>Combat Gear</strong>: Alchemist's fire (2), antitoxin,
+      <em>potion of keen senses<sup></sup></em>, sunrods (3).
+      </p><p><strong>Other Gear</strong>: Backpack, bedroll, belt pouch, chalk
+      (5 pieces), climber's kit, cold-weather outfit, fishhook, flint and steel,
+      mess kit<sup></sup>, pole (10 ft.), shovel, signal whistle, silk rope (50
+      ft.), trail rations (5 days), waterskin, 2 sp. </p><p><strong>Total
+      Weight</strong>: 108-1/2 lbs. (63-1/4 lbs. for a Small character).</p>
+  sources:
+    - id: PZO9481
+      pages: '5'
+  tags:
+    - Kits
+  weight:
+    value: 108.5
+type: container

@@ -1,0 +1,39 @@
+_id: byZkoQIoc8apoLmt
+_key: '!items!byZkoQIoc8apoLmt'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Rod of Flame Extinguishing
+system:
+  aura:
+    school: trs
+  cl: 12
+  description:
+    value: >-
+      <p>This rod can extinguish Medium or smaller nonmagical fires with simply
+      a touch (a standard action). For the rod to be effective against other
+      sorts of fires, the wielder must expend 1 or more of the rod's charges.  
+      Extinguishing a Large or larger nonmagical fire or a magic fire of size
+      Medium or smaller (such as that of a flaming weapon or a burning hands
+      spell), expends 1 charge. Continual magic flames, such as those generated
+      by a weapon or a fire creature, are suppressed for 6 rounds and flare up
+      again after that time. To extinguish an instantaneous fire spell, the rod
+      must be within the area of the effect and the wielder must have used a
+      ready action, effectively countering the entire spell.   When applied to
+      Large or larger magic fires, such as those caused by fireball, flame
+      strike, or wall of fire, extinguishing the flames expends 2 charges from
+      the rod.   If a rod of flame extinguishing is touched to a creature with
+      the fire subtype by making a successful melee touch attack, the rod deals
+      6d6 points of damage to the creature. This use requires 3 charges.   A rod
+      of flame extinguishing has 10 charges when found. Spent charges are
+      renewed every day, so that a wielder can expend up to 10 charges in any
+      24-hour period.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Rod, pyrotechnics</p>
+  price: 15000
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 5
+type: equipment

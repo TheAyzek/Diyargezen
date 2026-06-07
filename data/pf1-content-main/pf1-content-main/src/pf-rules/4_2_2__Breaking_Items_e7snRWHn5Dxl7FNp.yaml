@@ -1,0 +1,58 @@
+_id: e7snRWHn5Dxl7FNp
+_key: '!journal!e7snRWHn5Dxl7FNp'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: SorUvhSclTosG5ZR
+name: 4.2.2. Breaking Items
+pages:
+  - _id: D425YnmCEWKLHGk2
+    _key: '!journal.pages!e7snRWHn5Dxl7FNp.D425YnmCEWKLHGk2'
+    _stats:
+      coreVersion: '12.331'
+    name: 4.2.2. Breaking Items
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.kAJexDuJ2IAXZODj]{(Index)
+        Exploration}</p><p>@Compendium[pf-content.pf-rules.1EvBiiUnVOT4cUbT]{4.2.
+        Breaking and
+        Entering}</p><ul><li>@Compendium[pf-content.pf-rules.rEHXXby37VzctF5p]{4.2.1.
+        Smashing an
+        Object}</li><li><strong>@Compendium[pf-content.pf-rules.e7snRWHn5Dxl7FNp]{4.2.2.
+        Breaking Items}</strong></li></ul><hr
+        /><p>@Source[PZO1110;pages=175]</p><p>When a character tries to break or
+        burst something with sudden force rather than by dealing damage, use a
+        Strength check (rather than an attack roll and damage roll, as with the
+        sunder special attack) to determine whether he succeeds. Since hardness
+        doesn't affect an object's break DC, this value depends more on the
+        construction of the item than on the material the item is made of.
+        Consult Table 7–15 for a list of common break DCs.</p><p>If an item has
+        lost half or more of its hit points, the item gains the
+        @Compendium[pf1.conditions.jQLJg0XQq4rx9yzx]{Broken} condition (see
+        Appendix 2) and the DC to break it drops by 2.</p><p>Larger and smaller
+        creatures get size bonuses and size penalties on Strength checks to
+        break open doors as follows:</p><p>Fine –16, Diminutive –12, Tiny –8,
+        Small –4, Large +4, Huge +8, Gargantuan +12, Colossal +16.</p><p>A
+        crowbar or portable ram improves a character's chance of breaking open a
+        door (see Chapter 6).</p><h2>7-15: DCs to Break or Burst
+        Items</h2><table><thead><tr><td>Strength Check
+        to:</td><td>DC</td></tr></thead><tbody><tr><td>Break down simple
+        door</td><td>13</td></tr><tr><td>Break down good
+        door</td><td>18</td></tr><tr><td>Break down strong
+        door</td><td>23</td></tr><tr><td>Burst rope
+        bonds</td><td>23</td></tr><tr><td>Bend iron
+        bars</td><td>24</td></tr><tr><td>Break down barred
+        door</td><td>25</td></tr><tr><td>Burst chain
+        bonds</td><td>26</td></tr><tr><td>Break down iron
+        door</td><td>28</td></tr><tr><td> </td><td>
+        </td></tr><tr><td>Condition</td><td>DC Adjustment*</td></tr><tr><td>Hold
+        portal</td><td>+5</td></tr><tr><td>Arcane
+        lock</td><td>+10</td></tr></tbody></table><p>*If both apply, use the
+        larger number.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

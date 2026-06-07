@@ -1,0 +1,61 @@
+_id: zmwDZ57cUqZtBmkD
+_key: '!items!zmwDZ57cUqZtBmkD'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/pick-heavy.png
+name: Blancher
+system:
+  actions:
+    - _id: ukuoi1fxgcktwx2a
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: blancher
+  aura:
+    school: nec
+  baseTypes:
+    - Heavy Pick
+  cl: 15
+  description:
+    value: >-
+      <p>This Large +4 adamantine heavy pick has a haft of petrified bone and a
+      head of crudely formed adamantine. Blancher is unusually heavy and must be
+      wielded with two hands, but it deals damage as if it were a Huge weapon
+      rather than a Large weapon. On a successful critical hit, it deals 1d12
+      points of bleed damage (this bleed damage does not stack with multiple
+      hits) and 1d3 points of Charisma damage as the victim's flesh, hair, and
+      eyes are blanched and whitened.<p><strong>Base Item</strong>: adamantine
+      heavy pick</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor; bestow curse, bleed</p>
+  enh: 4
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+    normal:
+      value: adamantine
+  price: 63312
+  showInQuickbar: false
+  sources:
+    - id: PZO9076
+  weaponGroups:
+    - axes
+  weight:
+    value: 25
+type: weapon

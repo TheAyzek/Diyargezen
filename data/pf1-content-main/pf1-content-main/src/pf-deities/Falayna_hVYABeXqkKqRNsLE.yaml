@@ -1,0 +1,49 @@
+_id: hVYABeXqkKqRNsLE
+_key: '!journal!hVYABeXqkKqRNsLE'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Falayna
+pages:
+  - _id: RLdCJeHr3G3PX88V
+    _key: '!journal.pages!hVYABeXqkKqRNsLE.RLdCJeHr3G3PX88V'
+    _stats:
+      coreVersion: '12.331'
+    name: Falayna
+    sort: 0
+    text:
+      content: >-
+        <h1> Falayna</h1><h2>Warrior's Ring</h2>@Source[PZO9267;pages=322] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Falayna">Falayna</a><h3>Details</h3><p><strong>Alignment</strong>
+        LG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Femininity, martial training, rings<br
+        /><strong>Domains</strong> Good, Law, Liberation, Strength<br
+        /><strong>Subdomains</strong> Archon (Good), Archon (Law), Freedom,
+        Resolve, Revolution, Self-Realization (Liberation)*, Self-Realization
+        (Strength)*<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Longsword<br
+        /><strong>Symbol</strong> Sword held aloft<br /><strong>Sacred
+        Animal(s)</strong> Cat<br /><strong>Sacred Color(s)</strong> Silver,
+        white</p><h3>Obedience</h3><p>Don a jeweled ring on each finger and
+        strike a practice dummy barehanded until the impression of the rings is
+        left in your skin. Gain a +4 sacred bonus on grapple checks and to
+        CMD.</p><h2>Boons - Celestial Obedience</h2><h3>Mystery
+        Cultist</h3><p>@Source[PZO9255;pages=12]<br /><strong>1: Martial
+        Excellence (Sp)</strong> <em>divine favor</em> 3/day, <em>spiritual
+        weapon </em> 2/day, or <em>greater magic weapon</em> 1/day<br
+        /><strong>2: Strong Arm (Su)</strong> As a swift action, you can
+        increase the damage die of your weapon by one step for a number of
+        rounds per day equal to your HD. These rounds need not be
+        consecutive.<br /><strong>3: Falayna's Rings (Su)</strong> Once per day,
+        you can summon a floating array of giant iron rings that provide cover
+        or attack foes, as if you had cast <em>crushing
+        hand</em>.</em></p><h2>For Followers of
+        Falayna</h2><h3>Feats</h3><p><em>Heroic
+        Interposition</em></p><h3>Traits</h3><p><em>Empyreal Focus</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,23 @@
+_id: kswr13CfN5RfbOOV
+_key: '!items!kswr13CfN5RfbOOV'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Winter Wolf Runetooth
+system:
+  aura:
+    school: con
+  cl: 10
+  description:
+    value: >-
+      <p>When this canine fang is crushed or broken as a full-round action, it
+      summons a winter wolf (Pathfinder RPG Bestiary 280). The wolf is under the
+      control of the creature that broke the fang. The wolf remains for 1 minute
+      or until slain.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, summon nature's ally V</p>
+  price: 2500
+  sources:
+    - id: PZO1130
+  subType: wondrous
+type: equipment

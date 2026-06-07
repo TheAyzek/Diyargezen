@@ -1,0 +1,24 @@
+_id: JyxSxDgplat3yRBs
+_key: '!items!JyxSxDgplat3yRBs'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Necklace of Strangulation
+system:
+  aura:
+    school: con
+  cl: 18
+  cursed: true
+  description:
+    value: >-
+      <p>A necklace of strangulation appears to be a wondrous piece of magical
+      jewelry. When placed on the neck, the necklace immediately tightens,
+      dealing 6 points of damage per round. It cannot be removed by any means
+      short of a limited wish, wish, or miracle, and remains clasped around the
+      victim's throat even after his death. Only when he has decayed to a dry
+      skeleton (after approximately 1 month) does the necklace loosen, ready for
+      another victim.</p>
+  sources:
+    - id: PZO1123
+  subType: other
+type: equipment

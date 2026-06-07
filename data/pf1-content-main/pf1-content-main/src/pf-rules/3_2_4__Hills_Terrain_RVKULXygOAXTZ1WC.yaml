@@ -1,0 +1,82 @@
+_id: RVKULXygOAXTZ1WC
+_key: '!journal!RVKULXygOAXTZ1WC'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: br8fwJFrbgshQXJz
+name: 3.2.4. Hills Terrain
+pages:
+  - _id: UHSDq2H64gPft39Y
+    _key: '!journal.pages!RVKULXygOAXTZ1WC.UHSDq2H64gPft39Y'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.2.4. Hills Terrain
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.CPUpraqn1jz9vhMh]{3.2.
+        Wilderness}</p><ul><li>@Compendium[pf-content.pf-rules.QrderWyxAp6RUvtz]{3.2.1.
+        Getting
+        Lost}</li><li>@Compendium[pf-content.pf-rules.pcu8vDTPaIYw82SU]{3.2.2.
+        Forest
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.zJ4qqxSB0Iufd5Be]{3.2.3.
+        Marsh
+        Terrain}</li><li><strong>@Compendium[pf-content.pf-rules.RVKULXygOAXTZ1WC]{3.2.4.
+        Hills
+        Terrain}</strong></li><li>@Compendium[pf-content.pf-rules.B5qjfHf1pFgEA7bg]{3.2.5.
+        Mountain
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.tuZEOzPezZUbz4Fj]{3.2.5.2.
+        Mountain
+        Travel}</li><li>@Compendium[pf-content.pf-rules.3YyU7Yg6wbShgOKM]{3.2.6.
+        Desert
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.QOCypcVHE6zpYlyD]{3.2.7.
+        Plains
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.xiRC5p84P3tFW9mo]{3.2.8.
+        Aquatic Terrain}</li></ul><hr /><p>@Source[PZO1110;pages=427]</p><p>A
+        hill can exist in most other types of terrain, but hills can also
+        dominate the landscape. Hills terrain is divided into two categories:
+        gentle hills and rugged hills. Hills terrain often serves as a
+        transition zone between rugged terrain such as mountains and flat
+        terrain such as plains.</p><hr /><table><thead><tr><td>Hills
+        Category</td></tr><tr><td> </td><td>Gentle Hills</td><td>Rugged
+        Hills</td></tr></thead><tbody><tr><td>Gradual
+        slope</td><td>75%</td><td>40%</td></tr><tr><td>Steep
+        slope</td><td>20%</td><td>50%</td></tr><tr><td>Cliff</td><td>5%</td><td>10%</td></tr><tr><td>Light
+        undergrowth</td><td>15%</td><td>15%</td></tr></tbody></table><hr
+        /><h2>Gradual Slope</h2><p>This incline isn’t steep enough to affect
+        movement, but characters gain a +1 bonus on melee attacks against foes
+        downhill from them.</p><h2>Steep Slope</h2><p>Characters moving uphill
+        (to an adjacent square of higher elevation) must spend 2 squares of
+        movement to enter each square of steep slope. Characters running or
+        charging downhill (moving to an adjacent square of lower elevation) must
+        succeed on a DC 10 Acrobatics check upon entering the first steep slope
+        square. Mounted characters make a DC 10 Ride check instead. Characters
+        who fail this check stumble and must end their movement 1d2 × 5 feet
+        later. Characters who fail by 5 or more fall prone in the square where
+        they end their movement. A steep slope increases the DC of Acrobatics
+        checks by 2.</p><h2>Cliff</h2><p>A cliff typically requires a DC 15
+        Climb check to scale and is 1d4 × 10 feet tall, although the needs of
+        your map might mandate a taller cliff. A cliff isn’t perfectly vertical,
+        taking up 5-foot squares if it’s less than 30 feet tall and 10-foot
+        squares if it’s 30 feet or taller.</p><h2>Light
+        Undergrowth</h2><p>Sagebrush and other scrubby bushes grow on hills,
+        although they rarely cover the landscape. Light undergrowth provides
+        concealment and increases the DC of Acrobatics and Stealth checks by
+        2.</p><h2>Other Hills Terrain Elements</h2><p>Trees aren’t out of place
+        in hills terrain, and valleys often have active streams (5 to 10 feet
+        wide and no more than 5 feet deep) or dry streambeds (treat as a trench
+        5 to 10 feet across) in them. If you add a stream or streambed, remember
+        that water always flows downhill.</p><h2>Stealth and Detection in
+        Hills</h2><p>In gentle hills, the maximum distance at which a Perception
+        check for detecting the nearby presence of others can succeed is 2d10 ×
+        10 feet. In rugged hills, this distance is 2d6 × 10 feet. Hiding in
+        hills terrain can be difficult if there isn’t undergrowth around. A
+        hilltop or ridge provides enough cover to hide from anyone below the
+        hilltop or ridge.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

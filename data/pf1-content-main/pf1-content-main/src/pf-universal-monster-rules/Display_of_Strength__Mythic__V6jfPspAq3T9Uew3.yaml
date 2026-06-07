@@ -1,0 +1,22 @@
+_id: V6jfPspAq3T9Uew3
+_key: '!items!V6jfPspAq3T9Uew3'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/feats/athletic.jpg
+name: Display of Strength [Mythic]
+system:
+  abilityType: su
+  description:
+    value: >-
+      <p>As a free action, the creature can expend one use of <a>mythic
+      power</a> to attempt a feat of Strength, gaining a +20 circumstance bonus
+      on one Strength-based skill check or Strength ability check.
+      Alternatively, the creature can use this ability to apply a +20
+      circumstance bonus to its Strength score for a number of hours equal to
+      its mythic rank for the purpose of determining its carrying
+      capacity.</p><p><em>Format</em>: display of
+      strength</p><p><em>Location</em>: SQ.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

@@ -1,0 +1,26 @@
+_id: XnrYPtwEgabRRuSV
+_key: '!items!XnrYPtwEgabRRuSV'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Viol of Potent Summoning
+system:
+  aura:
+    school: con
+  cl: 13
+  description:
+    value: >-
+      <p>Whenever the bearer casts a conjuration (summoning) spell, he can
+      expend a number of rounds of bardic performance equal to the level of the
+      spell. Creatures summoned with that spell are treated as if the caster had
+      the Augment Summoning feat.<h3>Requirements</h3><p>Augment Summoning,
+      Craft Wondrous Item, summon monster III, Perform (string instruments) 5
+      ranks</p>
+  price: 24400
+  sources:
+    - id: PZO90114
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

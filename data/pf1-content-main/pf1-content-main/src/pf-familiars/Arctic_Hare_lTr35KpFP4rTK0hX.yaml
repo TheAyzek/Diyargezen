@@ -1,0 +1,327 @@
+_id: lTr35KpFP4rTK0hX
+_key: '!actors!lTr35KpFP4rTK0hX'
+_stats:
+  coreVersion: '12.343'
+img: icons/svg/mystery-man.svg
+items:
+  - _id: imOmTT0pJDmEtee0
+    _key: '!actors.items!lTr35KpFP4rTK0hX.imOmTT0pJDmEtee0'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/blue_29.jpg
+    name: 'Race: Animal'
+    system:
+      creatureSubtypes:
+        - ''
+      creatureTypes:
+        - animal
+      description:
+        value: >-
+          sbc | As the statblock did not include a race, a custom one was
+          generated.
+    type: race
+  - _id: rEAB49GddKBoNP1v
+    _key: '!actors.items!lTr35KpFP4rTK0hX.rEAB49GddKBoNP1v'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/shadow_11.jpg
+    name: 'Sense: Low-light Vision'
+    system:
+      abilityType: ex
+      description:
+        value: >-
+          A creature with low-light vision can see twice as far as a human in
+          starlight, moonlight, torchlight, and similar conditions of dim light.
+          It retains the ability to distinguish color and detail under these
+          conditions.
+      subType: racial
+    type: feat
+  - _id: UexccwPmJK3cMTCj
+    _key: '!actors.items!lTr35KpFP4rTK0hX.UexccwPmJK3cMTCj'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/svg/mystery-man.svg
+    name: New Item
+    system:
+      actions:
+        - _id: nj1hh1jixzl8f8eq
+          ability:
+            attack: _default
+            damage: str
+          actionType: mwak
+          activation:
+            type: attack
+            unchained:
+              type: attack
+          attackBonus: '0'
+          damage:
+            parts:
+              - formula: 1d3+0
+          duration:
+            units: inst
+          img: icons/svg/mystery-man.svg
+          name: Attack
+          notes:
+            footer:
+              - '-2 (1d3-4)'
+          range:
+            units: melee
+          tag: newItem
+      subType: weapon
+    type: attack
+  - _id: l1sLrv3tCxV0yQKo
+    _key: '!actors.items!lTr35KpFP4rTK0hX.l1sLrv3tCxV0yQKo'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Environment: Cold Forests And Plains'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: d8Bp1n3uW7PXoPx0
+    _key: '!actors.items!lTr35KpFP4rTK0hX.d8Bp1n3uW7PXoPx0'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Organization: Solitary, Pair, Or Down (3-16)'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: JSay1CF67uDqQ98O
+    _key: '!actors.items!lTr35KpFP4rTK0hX.JSay1CF67uDqQ98O'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: 'Treasure: None'
+    system:
+      description:
+        value: >-
+          sbc | Here you’ll find information on how the monster fits into the
+          world, notes on its ecology and society, and other bits of useful lore
+          and flavor that will help you breathe life into the creature when your
+          PCs encounter it.
+      subType: misc
+    type: feat
+  - _id: MKqxnZi0jK2iSsYe
+    _key: '!actors.items!lTr35KpFP4rTK0hX.MKqxnZi0jK2iSsYe'
+    _stats:
+      coreVersion: '12.331'
+    img: systems/pf1/icons/skills/yellow_36.jpg
+    name: sbc | Conversion Buff
+    system:
+      active: true
+      changes:
+        - _id: 8yy08jln
+          formula: '7'
+          target: cmb
+          type: untypedPerm
+      description:
+        value: >-
+          <h2>sbc | Conversion Buff</h2><p>This Buff was created by
+          <strong>sbc</strong> to compensate for differences between the input
+          and the values FoundryVTT calculates automatically.</p><p>Especially
+          when the pathfinder system gets upgraded, entries in compendiums get
+          updated or foundry changes in some way, this buff may become
+          outdated.</p><p>For most mooks the conversion should more or less
+          work, but for important NPCs or creatures it is adviced to double
+          check the conversion manually.</p>
+      hideFromToken: true
+      subType: perm
+      tag: sbcConversionBuff
+    type: buff
+name: Arctic Hare
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    cha:
+      value: 5
+    con:
+      value: 9
+    dex:
+      value: 16
+    int:
+      value: 2
+    str:
+      value: 3
+    wis:
+      value: 12
+  attributes:
+    cmdNotes: 11 vs. trip
+    speed:
+      land:
+        base: 50
+    spells:
+      spellbooks:
+        primary:
+          name: Primary
+        secondary:
+          name: Secondary
+        spelllike:
+          name: Spell-likes
+        tertiary:
+          name: Tertiary
+  details:
+    cr:
+      base: 0.1625
+    notes:
+      value: >2-
+
+                <div class="statblockContainer" style="margin-top:15px"><div style="width:100%;background-color:#ffe9c7;box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);columns:2 150px">
+            <hr style="margin-left:0;margin-top:-2px;width:100%;height:4px;background-color:#e0a100;border:1px solid #000;column-span:all" />
+            <div style="padding:5px">
+                <h1>Arctic Hare CR 1/6 </h1>
+                
+                
+                <div style="break-inside:avoid">
+                    <strong>Source</strong>: Ultimate Wilderness pg. 191, Reign of Winter Player's Guide pg. 10<br />
+                    <strong>XP 65</strong><br />
+                    
+                    
+                    
+                    
+                    
+                    N 
+                    Tiny 
+                    Animal <br />
+                    <strong>Init</strong> 3;
+                    <strong>Senses</strong> low-light vision; Perception +1; 
+                    
+                </div>
+                <div style="break-inside:avoid">
+                    <h3>Defense</h3>
+                        <strong>AC</strong> 15, <strong>Touch</strong> 15, <strong>Flat-Footed</strong> 12 (+3 Dex, +2 size)<br />
+                    <strong>Hit Points</strong> 3 (1 HD; 1d8-1)<br />
+                    <strong>Fort</strong> 1, <strong>Ref</strong> 5, <strong>Will</strong> 1
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+                <div>
+                    <div style="break-inside:avoid">
+                        <h3>Offense</h3>
+                                <strong>Speed</strong> 50 ft.<br />
+                        <strong>Melee</strong> bite -2 (1d3-4)<br />
+                        
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+                        
+                
+                        
+                        
+                        
+                        
+                
+                <div style="break-inside:avoid">
+                    <h3>Statistics</h3>
+                        <strong>Str</strong> 3, <strong>Dex</strong> 16, <strong>Con</strong> 9, <strong>Int</strong> 2, <strong>Wis</strong> 12, <strong>Cha</strong> 5<br />
+                    <strong>Base Atk</strong> +0; <strong>CMB</strong> +1; <strong>CMD</strong> 7<br />
+                    <strong>Feats</strong> Run<br />
+                    <strong>Skills</strong> Stealth +15 (+19 in snow), Racial Modifiers +4 Stealth in snow<br />
+                    <strong>Languages</strong> <br />
+                    
+                    
+                    
+                    
+                </div>
+                
+                    <div style="break-inside:avoid">
+                        <h3>Ecology</h3>                <strong>Environment</strong>: cold forests and plains<br />
+                        <strong>Organization</strong>: solitary, pair, or down (3-16)<br />
+                        <strong>Treasure</strong>: none<br />
+                    </div>
+                
+                
+                
+                    <div style="break-inside:avoid">
+                        <h3>Description</h3>        <div style="white-space:pre-wrap">An arctic hare has adapted to life in cold environments but fares well in warmer climes.
+        </div>
+                            
+            </div>
+            <hr style="margin-left:0;margin-bottom:-3px;width:100%;height:4px;background-color:#e0a100;border:1px solid #000;column-span:all" />
+        </div></div>
+            
+                <br />
+                <hr />
+                <div class="rawInputContainer" style="margin-top:15px">
+                    <h2>RAW INPUT</h2>
+                    <hr />
+                    <pre style="white-space:pre-wrap;font-size:10px">Arctic Hare CR 1/6
+        Source Ultimate Wilderness pg. 191, Reign of Winter Player's Guide pg.
+        10
+
+        XP 65
+
+        N Tiny animal
+
+        Init +3; Senses low-light vision; Perception +1
+
+        Defense
+
+        AC 15, touch 15, flat-footed 12 (+3 Dex, +2 size)
+
+        hp 3 (1d8-1)
+
+        Fort +1, Ref +5, Will +1
+
+        Offense
+
+        Speed 50 ft.
+
+        Melee bite -2 (1d3-4)
+
+        Space 2-1/2 ft., Reach 0 ft.
+
+        Statistics
+
+        Str 3, Dex 16, Con 9, Int 2, Wis 12, Cha 5
+
+        Base Atk +0; CMB +1; CMD 7 (11 vs. trip)
+
+        Feats Run
+
+        Skills Stealth +15 (+19 in snow); Racial Modifiers +4 Stealth in snow
+
+        Ecology
+
+        Environment cold forests and plains
+
+        Organization solitary, pair, or down (3-16)
+
+        Treasure none
+
+        Description
+
+        An arctic hare has adapted to life in cold environments but fares well
+        in warmer climes.</pre>
+                </div>
+            </div>
+  skills:
+    ste:
+      rank: 1
+  traits:
+    senses:
+      custom: low-light vision; Perception +1
+    size: tiny
+type: npc

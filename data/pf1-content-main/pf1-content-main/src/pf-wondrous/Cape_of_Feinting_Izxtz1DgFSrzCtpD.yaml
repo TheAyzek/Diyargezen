@@ -1,0 +1,31 @@
+_id: Izxtz1DgFSrzCtpD
+_key: '!items!Izxtz1DgFSrzCtpD'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Cape of Feinting
+system:
+  aura:
+    school: enc
+  cl: 8
+  description:
+    value: >-
+      <p>This hooded cape is crafted from fine fabric with colorful embroidery
+      and elegant weasel-fur trim. Three times per day, the wearer can spend a
+      standard action to purposely miss an opponent, performing a dramatic feint
+      that causes that foe to lose its Dexterity bonus to AC until the wearer's
+      next turn. If a swashbuckler wearing a cloak of feinting performs the
+      superior feint deed or uses this cape's ability, the foe is also dazed
+      until the start of the swashbuckler's next turn if the foe fails a DC 13
+      Will save.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, daze, creator must be able to perform the superior feint
+      deed</p>
+  price: 14000
+  slot: shoulders
+  sources:
+    - id: PZO1129
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,41 @@
+_id: nEeJ2sPShmSjwaXi
+_key: '!journal!nEeJ2sPShmSjwaXi'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Charg
+pages:
+  - _id: Hmnz70tjErZ9TqVp
+    _key: '!journal.pages!nEeJ2sPShmSjwaXi.Hmnz70tjErZ9TqVp'
+    _stats:
+      coreVersion: '12.331'
+    name: Charg
+    sort: 0
+    text:
+      content: >-
+        <h1>Charg</h1><h2>The Typhon Wheel</h2>@Source[PZO1139;pages=132] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Charg">Charg</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Sahkil Tormentors<br /><strong>Areas
+        of Concern</strong> Catastrophic decline, detrimental complacency,
+        monsters<br /><strong>Domains</strong> Destruction, Evil, Madness,
+        Strength<br /><strong>Subdomains</strong> Catastrophe, Fear, Ferocity,
+        Nightmare<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong>
+        Falchion</p><h3>Obedience</h3><p>Meditate on the hunting habits of a
+        dangerous animal. The duration of your conjuration spells and spelllike
+        abilities increases by 2 rounds.</p><h2>Boons - Sahkil
+        Tormentors</h2>@Source[PZO1139;pages=132]<br />Sahkil tormentors hold
+        dominion over mortal fears and suffering. All are chaotic evil and range
+        in power from CR 21 to CR 25. Their boons are less complex than those of
+        other demigods, manifesting as spell-like abilities usable twice per day
+        each.<p><strong>1</strong>: <em>touch of idiocy</em><br
+        /><strong>2</strong>: extended <em>sands of time</em><br
+        /><strong>3</strong>: <em>summon monster VI</em></p><h2>For Followers of
+        Charg</h2><h3>Traits</h3><p><em>Burst of Speed</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

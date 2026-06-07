@@ -1,0 +1,63 @@
+_id: coE9qfM6gfGwcDUh
+_key: '!items!coE9qfM6gfGwcDUh'
+_stats:
+  coreVersion: '12.331'
+folder: tt1hnzL5ZdLfPdp0
+img: icons/equipment/back/mantle-collared-black.webp
+name: Cassock of the Black Monk
+system:
+  aura:
+    school: trs
+  changes:
+    - _id: 1YbtJmQM
+      formula: '4'
+      target: tac
+      type: luck
+  cl: 12
+  description:
+    instructions: >-
+      <p>There are 4 possible secondary benefit cases which should be adjusted
+      on your actor manually:</p><p>Non-oracle = No secondary
+      benefit</p><p>Oracle, with occult mystery, but no spectral spells
+      revelation = gains the spectral spells revelation as a bonus (while
+      wearing the cassock).</p><p>Oracle, with both occult mystery and spectral
+      spells revelation = +1 use of the revelation</p><p>Oracle, with neither
+      occult mystery nor spectral spells revelation = +1 spell cast with
+      ectoplasmic spell (with no level increase).</p>
+    unidentified: >-
+      <p>This ankle-length black robe, bears little ornamentation beyond its
+      gold buttons and subtle  embroidery in black thread at the skirt's
+      hem.</p>
+    value: >-
+      <p>This ankle-length black robe, cut in the style favored by Orthodox
+      priests, bears little outward ornamentation beyond its gold buttons,
+      though subtle occult symbols embroidered in black thread decorate the
+      skirt's hem.</p><h3>Effect</h3><p>The cassock of the Black Monk grants a
+      +4 luck bonus to the wearer's touch AC. In addition, while wearing the
+      cassock, an oracle of the
+      @UUID[Compendium.pf1.class-abilities.Item.YTtE4znGtflUxUEj]{occult
+      mystery} gains access to the
+      @UUID[Compendium.pf1.class-abilities.Item.Hrbq1TbEOgPNdKzb]{spectral
+      spells} revelation and may use it as if he had it as a normal class
+      feature. If the wearer already has that revelation, he can use that
+      ability one additional time per day. This ability has no effect if worn by
+      a non-oracle. If the wearer is an oracle but does not have the occult
+      mystery, once per day he can cast a spell with the
+      @UUID[Compendium.pf-content.pf-feats.Item.SeujPWdlorigGuTv]{Ectoplasmic
+      Spell} feat as a standard action that does not increase the level of the
+      spell. This ability has no effect if the wearer is a
+      non-oracle.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.21bxbzdaawjrnvyo]{divine favor},
+      @UUID[Compendium.pf1.spells.Item.tyhxeck30qtsp35q]{ghostbane dirge}</em>
+      <strong>Cost</strong> 17,000 gp</p>
+  price: 34000
+  slot: body
+  sources:
+    - id: PZO9071
+  subType: wondrous
+  tags:
+    - Oracle
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,31 @@
+_id: ISTWoaLDXkEF11Jb
+_key: '!items!ISTWoaLDXkEF11Jb'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Hyena Shawl
+system:
+  aura:
+    custom: true
+    school: abjuration and necromancy
+  cl: 8
+  description:
+    value: >-
+      <p>When wrapped around the neck and jaw, this swath of black cloth lets
+      its wearer see normally in a sandstorm (her vision isn't reduced, nor does
+      she take the -4 penalty on Perception checks) and avoid taking nonlethal
+      damage from the storm.  Once per day on command, the shawl's wearer can
+      emit a strange cackling. Enemies within 30 feet of the shawl's wearer who
+      can hear the cackling must succeed at a DC 16 Will saving throw or become
+      frightened for 1 round. Those who succeed at the saving throw are shaken
+      for 1d4 rounds instead. Both of the cackle's effects are sonic
+      mind-affecting fear
+      effects.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, fear</p>
+  price: 11000
+  slot: head
+  sources:
+    - id: PZO1130
+  subType: wondrous
+type: equipment

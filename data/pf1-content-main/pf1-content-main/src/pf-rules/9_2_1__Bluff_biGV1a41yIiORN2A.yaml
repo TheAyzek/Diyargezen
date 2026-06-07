@@ -1,0 +1,48 @@
+_id: biGV1a41yIiORN2A
+_key: '!journal!biGV1a41yIiORN2A'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: lnmu98MzhpeHCLdt
+name: 9.2.1. Bluff
+pages:
+  - _id: yX1s89e613lDvPTl
+    _key: '!journal.pages!biGV1a41yIiORN2A.yX1s89e613lDvPTl'
+    _stats:
+      coreVersion: '12.331'
+    name: 9.2.1. Bluff
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.zUOuZVJH1nKufQSo]{(Index)
+        Skills}</p><p>@Compendium[pf-content.pf-rules.EJtwDpvYymcGqQZk]{9.2.
+        Skills in
+        Conflict}</p><ul><li><strong>@Compendium[pf-content.pf-rules.biGV1a41yIiORN2A]{9.2.1.
+        Bluff}</strong></li><li>@Compendium[pf-content.pf-rules.sNy0QWGaxnccWVTz]{9.2.2.
+        Diplomacy}</li><li>@Compendium[pf-content.pf-rules.NzqehppEukjnQUfy]{9.2.3.
+        Disguise}</li><li>@Compendium[pf-content.pf-rules.frhg7KrHN2tYhhkM]{9.2.4.
+        Intimidate}</li><li>@Compendium[pf-content.pf-rules.NTIduFRh5A0p0hIu]{9.2.5.
+        Perception and
+        Stealth}</li><li>@Compendium[pf-content.pf-rules.B1ULzO6COuN6ILPA]{9.2.6.
+        Sense
+        Motive}</li><li>@Compendium[pf-content.pf-rules.92nmC7Usb2puToet]{9.2.7.
+        Replacing Opposed Rolls}</li></ul><hr
+        /><p>@Source[PZO1134;pages=182]</p><p><em>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.kRK5XwVBvcMi35w2]{Bluff}</em></p><p>The
+        Bluff skill is an extremely versatile, though sometimes misunderstood,
+        social skill. Unlike Diplomacy and Intimidate, which can directly push
+        their target toward a course of action, Bluff feeds the target
+        misinformation. A skilled user of the Bluff skill needs to understand
+        how the target’s mind works, in order to deliver just the right
+        misinformation to achieve the desired results. The disadvantage is that
+        such manipulation is less predictable and more difficult to pull off,
+        but the advantage is that the target is not aware that he is being
+        manipulated, whereas even the most successful Diplomacy or Intimidate
+        attempt leaves the target realizing who has convinced him to take
+        action. This section includes clarifications and details on several
+        different ways to use Bluff—and on several things that don’t work.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

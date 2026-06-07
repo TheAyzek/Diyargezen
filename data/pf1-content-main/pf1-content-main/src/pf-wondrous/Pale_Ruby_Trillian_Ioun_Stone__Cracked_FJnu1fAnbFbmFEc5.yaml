@@ -1,0 +1,46 @@
+_id: FJnu1fAnbFbmFEc5
+_key: '!items!FJnu1fAnbFbmFEc5'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/gem-rough-square-red.webp
+name: Pale Ruby Trillian Ioun Stone, Cracked
+system:
+  aura:
+    school: trs
+  changes:
+    - _id: 5eXhjqjq
+      formula: '1'
+      target: skill.ste
+      type: competence
+  cl: 12
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>A pale red stone in the form of a disk, but with three sides (either
+      straight or curved outward) rather than being round. A crack mars its
+      surface.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone grants you a +1 competence bonus on Stealth
+      checks.</p><h3>Resonance</h3><p><strong>Method 1, Fixed:</strong> Increase
+      by @Distance[10;dual] the distance the bearer may fall safely (stacks with
+      other effects that increase this distance, such as making Acrobatics
+      checks or falling into water).</p><p><strong>Method 2, Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, cat's grace, creator must be 12th level
+      <strong>Cost</strong> 100 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 200
+  sources:
+    - id: PZO9211
+      pages: 47, 52
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

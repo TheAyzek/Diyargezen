@@ -1,0 +1,70 @@
+_id: tJAVq6WG7K1X6ssx
+_key: '!items!tJAVq6WG7K1X6ssx'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Waning Light Festival (Occult Ritual)
+system:
+  actions:
+    - _id: xbngbdbvt0o2dtez
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        description: negates
+        harmless: true
+        type: will
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    focus: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> divination; <strong>Level</strong>
+      8</p><p><strong>Casting Time</strong> 9
+      hours</p><p><strong>Components</strong> V, S, F (each caster must wear a
+      ceremonial costume worth 500 gp), SC (up to 12)</p><p><strong>Skill
+      Checks</strong> Knowledge (religion) DC 29, 3 successes; Perform (dance)
+      DC 29, 3 successes; Perform (percussion) DC 29, 3
+      successes</p><p><strong>Range</strong> primary and secondary
+      casters</p><p><strong>Duration</strong> 2 hours</p><p><strong>Saving
+      Throw</strong> Will negates (harmless); <strong>SR</strong>
+      no</p><p><strong>Backlash</strong> All casters become exhausted and gain 1
+      temporary negative level (DC = 16 + the primary caster's Charisma bonus to
+      remove after the first day).</p><p><strong>Failure</strong> All casters
+      gain 1 temporary negative level (DC = 16 + the primary caster's Charisma
+      bonus to remove after the first day), and the primary caster takes 4d6
+      points of damage.</p><h3>Effect</h3><p>At the completion of the festival,
+      the primary and secondary casters are charged with magical energy. For the
+      next 2 hours, any creature they touch gains a resistance bonus on their
+      next 5 saving throws equal to 1 for every 5 Hit Dice the primary caster
+      possesses. It's considered auspicious if it rains during the festival,
+      even more so if thunder and lightning crack through the sky. If the ritual
+      is performed in these conditions, the benefit is doubled, instead granting
+      the bonus on saving throws for the next 10 saves.</p><p> Since the casters
+      must touch a celebrant to bestow the boon, the 2-hour period after the
+      ritual turns into a huge parade as the casters wind through the city to
+      greet the populace. Segadans gather along the streets to reach out and
+      touch one of the casters as they pass.</p>
+  flags:
+    dictionary:
+      summary: >-
+        Casters can convey a resistance bonus to saving throws to any creature
+        they touch
+  level: 8
+  materials:
+    focus: each caster must wear a ceremonial costume worth 500 gp
+  school: div
+  sources:
+    - id: PZO9285
+      pages: '53'
+  sr: false
+type: spell

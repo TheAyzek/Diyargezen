@@ -1,0 +1,33 @@
+_id: Ktvx1qqXkZ5S2dwE
+_key: '!journal!Ktvx1qqXkZ5S2dwE'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Aerekostes
+pages:
+  - _id: PU044OG5RKWXWQWT
+    _key: '!journal.pages!Ktvx1qqXkZ5S2dwE.PU044OG5RKWXWQWT'
+    _stats:
+      coreVersion: '12.331'
+    name: Aerekostes
+    sort: 0
+    text:
+      content: >-
+        <h1>Aerekostes</h1>@Source[PZO90144;pages=74] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Aerekostes">Aerekostes</a><h3>Details</h3><p><strong>Alignment</strong>
+        N<br /><strong>Pantheon</strong> Iblydan Hero-Gods<br /><strong>Areas of
+        Concern</strong> Contingencies, intelligent items<br
+        /><strong>Domains</strong> Artifice, Healing, Knowledge, Magic<br
+        /><strong>Subdomains</strong> Arcane, Construct, Memory, Resurrection<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> <em>none</em></p><h3>On
+        Golarion</h3><p><strong>Nationality</strong> Iblydan </p><h2>Other
+        Rules</h2>@Source[PZO90144;pages=74]<br />Aerekostes can grant 9th-level
+        spells
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,24 @@
+_id: Xcu2onjUvmmc2bHl
+_key: '!items!Xcu2onjUvmmc2bHl'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Electricity
+system:
+  aura:
+    school: evo
+  cl: 11
+  description:
+    value: >-
+      <p>This staff is made of shining silver, with a tip shaped like a
+      lightning bolt. The staff allows use of the following spells: • Shocking
+      grasp (1 charge)   • Lightning bolt (2 charges)   • Chain lightning (3
+      charges.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, chain lightning, lightning bolt, shocking grasp</p>
+  price: 31900
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

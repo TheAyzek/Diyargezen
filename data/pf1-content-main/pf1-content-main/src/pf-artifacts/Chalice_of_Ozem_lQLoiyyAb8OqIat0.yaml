@@ -1,0 +1,37 @@
+_id: lQLoiyyAb8OqIat0
+_key: '!items!lQLoiyyAb8OqIat0'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Chalice of Ozem
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: abjuration and evocation [force]
+  cl: 20
+  description:
+    value: >-
+      <p>This chalice is perhaps the last surviving artifact from Sacred Ozem,
+      now forever lost in a tragic battle that ultimately led to the foundation
+      of the Knights of Ozem. Made of shimmering mithral and studded with dozens
+      of rubies, the Chalice of Ozem was carried from the ruins and handed down
+      through generations until it was finally given to Iomedae, who used it in
+      her fight against Erum-Hel during the Battle of Three Sorrows.   The
+      chalice cannot be harmed by any substance it holds, no matter how caustic.
+      Further, any liquid placed within the chalice will never spill unless the
+      chalice's carrier wills it. If the chalice is held and the command phrase
+      spoken (Ozem for Iomedae!), it projects a globe of invulnerability. If a
+      second command phrase is spoken (Her sheltering shield!) and a scooping
+      motion is made with the chalice, a resilient sphere is created around the
+      carrier. Each of these effects can be called upon twice per day.   Once
+      per day, a mythic character can expend one use of mythic power while
+      pouring a dose of holy water into the chalice to immediately transform
+      that dose of holy water into a single dose of nectar of the gods (
+      Pathfinder RPG Mythic Adventures 155).</p>
+  sources:
+    - id: PZO9077
+  subType: other
+  weight:
+    value: 1
+type: equipment

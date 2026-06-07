@@ -1,0 +1,28 @@
+_id: hlr6ZhXbJ5qEJa4Q
+_key: '!items!hlr6ZhXbJ5qEJa4Q'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Spell Dodging
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint abjuration <strong>CL</strong>
+      4th</p><p><strong>Slot</strong> none; <strong>Price</strong> +2 bonus;
+      <p>A suit of <em>spell dodging</em> armor makes it more difficult for
+      attacks from spells and spell-like abilities to hit its wearer, often
+      physically pulling and pushing its wearer out of the way of incoming
+      magical attacks. The wearer gains a +4 dodge bonus to AC against attack
+      rolls from spells and spelllike abilities (including touch attacks) and
+      the attacks of summoned
+      creatures.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>mage armor</em>; <strong>Price</strong> +2
+      bonus</p>
+  sources:
+    - id: PZO1129
+      pages: '210'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

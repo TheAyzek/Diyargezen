@@ -1,0 +1,53 @@
+_id: KTAUEzhZCUioQdqK
+_key: '!journal!KTAUEzhZCUioQdqK'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: p0mBpSImsQVg3MX0
+name: 1.6. Familiars
+pages:
+  - _id: kwOinoHL7EWUYrQq
+    _key: '!journal.pages!KTAUEzhZCUioQdqK.kwOinoHL7EWUYrQq'
+    _stats:
+      coreVersion: '12.331'
+    name: 1.6 Familiars
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.Ic1tlF3EE1QNW3kE]{(Index)}</p><p>@Compendium[pf-content.pf-rules.8scSEgBEtJZj0suf]{(Index)
+        Basic
+        Rules}</p><ul><li><p><strong>@Compendium[pf-content.pf-rules.KTAUEzhZCUioQdqK]{1.6.
+        Familiars}</strong></p><ul><li>@Compendium[pf-content.pf-rules.veGCPC3JzsxR5MnQ]{1.6.01.
+        Familiar
+        Basics}</li><li>@Compendium[pf-content.pf-rules.aja8EOSAA4RagQT3]{1.6.02.
+        Familiar Ability
+        Descriptions}</li><li>@Compendium[pf-content.pf-rules.ObzGkbjtwZP7ZJtr]{1.6.03.
+        Familiar
+        List}</li><li>@Compendium[pf-content.pf-rules.iO98MfTiAuGYTEYV]{1.6.04.
+        Improved Familiar
+        List}</li><li>@Compendium[pf-content.pf-rules.1M5KD9yy2yLQ9RVo]{1.6.05.
+        Small and Vermin
+        Familiars}</li><li>@Compendium[pf-content.pf-rules.ORtPnTEJdt3O9xHf]{1.6.06.
+        Approximating
+        Familiars}</li><li>@Compendium[pf-content.pf-rules.bLW7my2JM1AWHcPt]{1.6.07.
+        Controlling Companions, Familiars, and Followers}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110]</p><p>A familiar is an animal chosen by a
+        spellcaster to aid him in his study of magic. It retains the appearance,
+        Hit Dice, base attack bonus, base save bonuses, skills, and feats of the
+        normal animal it once was, but is now a magical beast for the purpose of
+        effects that depend on its type. Only a normal, unmodified animal may
+        become a familiar. An animal companion cannot also function as a
+        familiar.</p><p>A familiar grants special abilities to its master, as
+        given on the table below. These special abilities apply only when the
+        master and familiar are within 1 mile of each other.</p><p>Levels of
+        different classes that are entitled to familiars stack for the purpose
+        of determining any familiar abilities that depend on the master's
+        level.</p><p>If a familiar is dismissed, lost or dies, it can be
+        replaced 1 week later through a specialized ritual that costs 200 gp per
+        wizard level. The ritual takes 8 hours to complete.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

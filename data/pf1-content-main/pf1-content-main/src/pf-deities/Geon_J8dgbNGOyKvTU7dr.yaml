@@ -1,0 +1,46 @@
+_id: J8dgbNGOyKvTU7dr
+_key: '!journal!J8dgbNGOyKvTU7dr'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Geon
+pages:
+  - _id: KQmHm40CCw4cj9e8
+    _key: '!journal.pages!J8dgbNGOyKvTU7dr.KQmHm40CCw4cj9e8'
+    _stats:
+      coreVersion: '12.331'
+    name: Geon
+    sort: 0
+    text:
+      content: >-
+        <h1>Geon</h1><h2>The Dancing Fiend</h2>@Source[PZO9267;pages=318] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Geon">Geon</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Daemon Harbingers<br /><strong>Areas
+        of Concern</strong> Nightmares, quartering, trampling<br
+        /><strong>Domains</strong> Air, Evil, Fire, Travel<br
+        /><strong>Subdomains</strong> Daemon, Fear, Nightmare, Wind<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Lance<br /><strong>Symbol</strong>
+        Rearing horse<br /><strong>Sacred Animal(s)</strong> Warhorse<br
+        /><strong>Sacred Color(s)</strong> Brown,
+        red</p><h3>Obedience</h3><p>Ingest drugs that put you in a nightmarish
+        fugue state for an hour. Gain a +4 profane bonus on saving throws and
+        checks involving mounts and mounted combat.</p><h2>Boons - Daemon
+        Harbingers</h2><p>@Source[PZO1139;pages=112]</p><p>Abaddon's unique
+        daemons take on a host of titles, customized to their methods and
+        vanity. These harbingers enjoy sweeping influence among daemons as
+        favored advisors, and they work to cultivate their own cults on Abaddon
+        and beyond.</p><p> Daemon harbingers are neutral evil demigods that
+        range in power from CR 21 to CR 25. The boons they grant are less
+        complex than those granted by the Horsemen themselves, manifesting as
+        spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: extended <em>mount</em><br
+        /><strong>2</strong>: extended <em>phantom steed</em><br
+        /><strong>3</strong>: <em>night terrors</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

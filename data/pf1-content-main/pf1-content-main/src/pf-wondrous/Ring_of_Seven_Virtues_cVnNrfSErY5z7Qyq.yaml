@@ -1,0 +1,29 @@
+_id: cVnNrfSErY5z7Qyq
+_key: '!items!cVnNrfSErY5z7Qyq'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Seven Virtues
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>This bronze band is covered in geometric shapes and studded with tiny
+      pearls. The wearer of the ring gains a constant endure elements effect and
+      a +5 competence bonus on Survival checks made in jungles. In Saventh-Yhi,
+      the wearer also enjoys the active benefits of one of that city's seven
+      spears for as long as she is in that spear's district. The wearer loses
+      the benefits of a particular spear if she leaves that spear's district,
+      but gains new active benefits if she enters a new spear's district. The
+      ring's wearer can only gain the benefits of a single spear at any one
+      time.<h3>Requirements</h3><p>Forge Ring, Self-Sufficient, endure
+      elements</p>
+  price: 10000
+  slot: ring
+  sources:
+    - id: PZO9039
+  subType: wondrous
+type: equipment

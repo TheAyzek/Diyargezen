@@ -1,0 +1,32 @@
+_id: POEWsixyx2dJBQJ8
+_key: '!journal!POEWsixyx2dJBQJ8'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Thoth
+pages:
+  - _id: k8mMZBMzAxSaqQiq
+    _key: '!journal.pages!POEWsixyx2dJBQJ8.k8mMZBMzAxSaqQiq'
+    _stats:
+      coreVersion: '12.331'
+    name: Thoth
+    sort: 0
+    text:
+      content: >-
+        <h1>Thoth</h1><h2>Lord of Divine Words</h2>@Source[PZO9080;pages=65] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Thoth">Thoth</a><h3>Details</h3><p><strong>Alignment</strong>
+        LN<br /><strong>Pantheon</strong> Deities of Ancient Osirion<br
+        /><strong>Areas of Concern</strong> Magic, the moon, wisdom, writing<br
+        /><strong>Domains</strong> Darkness, Knowledge, Law, Magic, Rune<br
+        /><strong>Subdomains</strong> Arcane, Inevitable, Language, Memory,
+        Moon, Wards<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Sickle<br
+        /><strong>Symbol</strong> Scroll with lunar disk and crescent<br
+        /><strong>Sacred Animal(s)</strong> Ibis</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

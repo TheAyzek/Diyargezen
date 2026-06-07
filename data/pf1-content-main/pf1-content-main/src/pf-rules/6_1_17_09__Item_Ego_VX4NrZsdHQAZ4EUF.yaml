@@ -1,0 +1,63 @@
+_id: VX4NrZsdHQAZ4EUF
+_key: '!journal!VX4NrZsdHQAZ4EUF'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.17.09. Item Ego
+pages:
+  - _id: R2kgrSeC1oLalyTs
+    _key: '!journal.pages!VX4NrZsdHQAZ4EUF.R2kgrSeC1oLalyTs'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.17.09. Item Ego
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.s3ene84nkQAyhCrW]{6.1.
+        Magic
+        Items}</p><ul><li><p>@Compendium[pf-content.pf-rules.muHuo2GwcCKyy4tP]{6.1.17.
+        Intelligent
+        Items}</p><ul><li>@Compendium[pf-content.pf-rules.b4LOq9k8VNrE5iyy]{6.1.17.01.
+        Designing an Intelligent
+        Item}</li><li>@Compendium[pf-content.pf-rules.r4MKuAOkkduX0vSB]{6.1.17.02.
+        Intelligent Item
+        Alignment}</li><li>@Compendium[pf-content.pf-rules.NcqR7y2f3W7w3zB3]{6.1.17.03.
+        Intelligent Item Ability
+        Scores}</li><li>@Compendium[pf-content.pf-rules.95c8F7Trvs0JaQEX]{6.1.17.04.
+        Languages Spoken by
+        Item}</li><li>@Compendium[pf-content.pf-rules.tnEvcNd14MiiEpB6]{6.1.17.05.
+        Senses and
+        Communication}</li><li>@Compendium[pf-content.pf-rules.n2JT7kfk2HfZ0uLS]{6.1.17.06.
+        Intelligent Item
+        Powers}</li><li>@Compendium[pf-content.pf-rules.h50LqdBk0F8Hy0fW]{6.1.17.07.
+        Special Purpose
+        Items}</li><li>@Compendium[pf-content.pf-rules.T6zgyR9mqlc3tIH9]{6.1.17.08.
+        Dedicated
+        Powers}</li><li><strong>@Compendium[pf-content.pf-rules.VX4NrZsdHQAZ4EUF]{6.1.17.09.
+        Item
+        Ego}</strong></li><li>@Compendium[pf-content.pf-rules.Bj3cXy4heUoCX53t]{6.1.17.10.
+        Items against Characters}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=535]</p><p>Ego is a measure of the total
+        power and force of personality that an item possesses. An item’s Ego
+        score is the sum of all of its Ego modifiers plus an additional bonus
+        for the cost of the base magic item (excluding the cost of all of the
+        intelligent item enhancements). An item’s Ego score helps determine
+        whether the item or the character is dominant in their relationship, as
+        detailed below.</p><table><thead><tr><td>Base Magic Item
+        Value</td><td>Ego Modifier</td></tr></thead><tbody><tr><td>Up to 1,000
+        gp</td><td>—</td></tr><tr><td>1,001 gp to 5,000
+        gp</td><td>+1</td></tr><tr><td>5,001 gp to 10,000
+        gp</td><td>+2</td></tr><tr><td>10,001 gp to 20,000
+        gp</td><td>+3</td></tr><tr><td>20,001 gp to 50,000
+        gp</td><td>+4</td></tr><tr><td>50,001 gp to 100,000
+        gp</td><td>+6</td></tr><tr><td>100,001 gp to 200,000
+        gp</td><td>+8</td></tr><tr><td>200,001 gp and
+        higher</td><td>+12</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,22 @@
+_id: MYjZQX1Oo1HrEPHH
+_key: '!items!MYjZQX1Oo1HrEPHH'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/trinket-carving.jpg
+name: Cane
+system:
+  description:
+    value: >-
+      <p>A cane is a walking stick fashioned from wood. A cane sports either a
+      metal cap or a curved top that's easy to grip. Simple canes are no more
+      than a sturdy branch, while high quality canes are made from fine
+      materials and bear intricate carvings or adornments.</p>
+  equipped: false
+  price: 0.1
+  sources:
+    - id: PZO9481
+      pages: '12'
+  subType: adventuring
+  weight:
+    value: 3
+type: loot

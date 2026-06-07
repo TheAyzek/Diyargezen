@@ -1,0 +1,19 @@
+_id: NGExvrbxEc3qFvO4
+_key: '!items!NGExvrbxEc3qFvO4'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Staggering Shot
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>At 15th level, when a
+      graveslinger confirms a critical hit against an undead creature with one
+      of her ghostbane shots, the creature is staggered for 1 round.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

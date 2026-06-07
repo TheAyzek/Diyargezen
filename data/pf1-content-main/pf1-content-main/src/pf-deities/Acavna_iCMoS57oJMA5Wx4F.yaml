@@ -1,0 +1,31 @@
+_id: iCMoS57oJMA5Wx4F
+_key: '!journal!iCMoS57oJMA5Wx4F'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Acavna
+pages:
+  - _id: 0hl44AhuhBeIQUWu
+    _key: '!journal.pages!iCMoS57oJMA5Wx4F.0hl44AhuhBeIQUWu'
+    _stats:
+      coreVersion: '12.331'
+    name: Acavna
+    sort: 0
+    text:
+      content: >-
+        <h1>Acavna</h1><h2>The Shield</h2>@Source[PZO90123;pages=66] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Acavna">Acavna</a><h3>Details</h3><p><strong>Alignment</strong>
+        CN<br /><strong>Pantheon</strong> Azlanti Pantheon<br /><strong>Areas of
+        Concern</strong> Companionship, defensive battle, and the moon<br
+        /><strong>Domains</strong> Chaos, Darkness, Protection, Repose, War<br
+        /><strong>Subdomains</strong> Ancestors, Defense, Moon, Night, Tactics,
+        Wards<br /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Spear<br /><strong>Symbol</strong>
+        Crossed spears over a full moon</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

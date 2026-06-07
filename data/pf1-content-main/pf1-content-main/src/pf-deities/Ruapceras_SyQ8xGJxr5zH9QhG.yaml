@@ -1,0 +1,46 @@
+_id: SyQ8xGJxr5zH9QhG
+_key: '!journal!SyQ8xGJxr5zH9QhG'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Ruapceras
+pages:
+  - _id: tjjKLf5cajOykEJi
+    _key: '!journal.pages!SyQ8xGJxr5zH9QhG.tjjKLf5cajOykEJi'
+    _stats:
+      coreVersion: '12.331'
+    name: Ruapceras
+    sort: 0
+    text:
+      content: >-
+        <h1>Ruapceras</h1><h2>The Scarlet Promise</h2>@Source[PZO9267;pages=318]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Ruapceras">Ruapceras</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Daemon Harbingers<br /><strong>Areas
+        of Concern</strong> Cyclical revenge, crusades, intolerance<br
+        /><strong>Domains</strong> Evil, Nobility, Strength, War<br
+        /><strong>Subdomains</strong> Daemon, Leadership, Resolve, Tactics<br
+        /><em>* Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Heavy flail<br
+        /><strong>Symbol</strong> Red and yellow ouroboros<br /><strong>Sacred
+        Animal(s)</strong> Cicada<br /><strong>Sacred Color(s)</strong> Red,
+        yellow</p><h3>Obedience</h3><p>Work on crafting an ever-expanding
+        manifesto of your hatreds and intolerances. Gain a +4 profane bonus on
+        saving throws against conjuration effects.</p><h2>Boons - Daemon
+        Harbingers</h2><p>@Source[PZO1139;pages=115]</p><p>Abaddon's unique
+        daemons take on a host of titles, customized to their methods and
+        vanity. These harbingers enjoy sweeping influence among daemons as
+        favored advisors, and they work to cultivate their own cults on Abaddon
+        and beyond.</p><p> Daemon harbingers are neutral evil demigods that
+        range in power from CR 21 to CR 25. The boons they grant are less
+        complex than those granted by the Horsemen themselves, manifesting as
+        spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>death knell</em><br
+        /><strong>2</strong>: <em>divine power</em><br /><strong>3</strong>:
+        <em>transformation</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

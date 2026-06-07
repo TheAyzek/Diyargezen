@@ -1,0 +1,44 @@
+_id: 4NQmzwlpebReFtt0
+_key: '!items!4NQmzwlpebReFtt0'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Amulet of the Spirits, Heavens
+system:
+  aura:
+    school: div
+  cl: 8
+  description:
+    value: >-
+      <p>Each different type of amulet of the spirit grants its wearer powers
+      from one type of shaman spirit bond, but makes her vulnerable to attacks
+      and effects that target creatures with that spirit bond (such as a
+      spirit-hunting weapon). If a creature that already has the associated
+      mystery or spirit wears the amulet, that wearer does not gain the
+      abilities listed below; instead, the effective level of her mystery or
+      spirit powers increases by 2. This effect does not stack with other
+      abilities that increase the effective level of mystery or spirit
+      powers.     Heavens: This black cat's eye hanging from a silver chain
+      reflects any light that hits its surface back as a six-pointed star.
+      Whenever the wearer can see the open sky at night, she can determine her
+      precise location, and can add her Wisdom modifier to her Charisma modifier
+      on all Charisma checks and Charisma-based skill checks. In addition, as a
+      standard action the wearer can cause one enemy within 30 feet to treat the
+      light level as two steps lower: bright light becomes dim light, normal
+      light becomes darkness, and areas of dim light and darkness become
+      supernaturally dark (like darkness, but even creatures with darkvision
+      can't see). This effect lasts for 8 rounds (Will DC 13 negates). This
+      action doesn't provoke attacks of opportunity. Moderate divination; CL
+      8th; Craft Wondrous Item, darkness, locate
+      creature.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, darkness, locate creature, creator must be a shaman with
+      the appropriate spirit</p>
+  price: 8000
+  slot: neck
+  sources:
+    - id: PZO1129
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

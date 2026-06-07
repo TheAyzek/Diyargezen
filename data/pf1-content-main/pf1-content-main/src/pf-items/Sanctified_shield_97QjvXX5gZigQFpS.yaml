@@ -1,0 +1,27 @@
+_id: 97QjvXX5gZigQFpS
+_key: '!items!97QjvXX5gZigQFpS'
+_stats:
+  coreVersion: '12.331'
+img: icons/equipment/shield/heater-embossed-gold.webp
+name: Sanctified shield
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> +100 gp; <strong>Weight</strong> -<br
+      /><strong>Category</strong> Channel Foci</p><p><strong>Deity</strong>
+      Any</p><p>A sanctified shield may be any type of shield (including
+      bucklers, tower shields, and even magical shields). When activated, a
+      sacred shield adds a +1 sacred (if positive energy) or profane (if
+      negative energy) bonus to the wearer's Armor Class. This bonus lasts for
+      24 hours or until the wearer is struck in combat, whichever comes first.
+      Creatures other than the cleric are able to use the charged shield and
+      this ability.</p>
+  equipped: false
+  price: 100
+  sources:
+    - id: PZO9410
+      pages: '25'
+  subType: gear
+  tags:
+    - Channel Foci
+type: loot

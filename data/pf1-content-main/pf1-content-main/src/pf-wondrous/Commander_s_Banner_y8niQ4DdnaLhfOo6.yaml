@@ -1,0 +1,31 @@
+_id: y8niQ4DdnaLhfOo6
+_key: '!items!y8niQ4DdnaLhfOo6'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Commander's Banner
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>A commander's banner is a cloth flag or standard (typically 2 feet wide
+      and 4 feet long) meant to be carried and displayed on a lance, polearm,
+      frame, or staff. It has no effect unless it is mounted properly, and a
+      wielder is carrying the object bearing it. It normally depicts the
+      insignia or heraldic symbol of a particular noble.   A character with the
+      tactician class feature carrying a commander's banner can use her
+      tactician ability one additional time per day, she can use it to grant the
+      teamwork feat granted by the tactician ability to allies within 60 feet
+      (rather than 30 feet), and allies can use the granted feat for 2 rounds
+      longer than normal.</p><h3>Requirements</h3><p>Craft Wondrous Item,
+      eagle's splendor, creator must have 5 ranks in the Diplomacy skill</p>
+  price: 10000
+  sources:
+    - id: PZO9426
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

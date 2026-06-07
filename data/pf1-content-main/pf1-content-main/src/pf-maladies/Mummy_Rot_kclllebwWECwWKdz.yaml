@@ -1,0 +1,23 @@
+_id: kclllebwWECwWKdz
+_key: '!items!kclllebwWECwWKdz'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_11.jpg
+name: Mummy Rot
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> curse; <strong>Save</strong> Fortitude DC
+      16</p><p><strong>Onset</strong> 1 minute</p><p><strong>Effect</strong> 1d6
+      Con damage and 1d6 Cha damage</p><p><strong>Frequency</strong>
+      1/day</p><p><strong>Cure</strong> mummy rot can only be cured by
+      successfully casting both <em>remove curse</em> and <em>remove
+      disease</em> within 1 minute of each other.</p>
+  sources:
+    - id: PZO1110
+      pages: '557'
+  subType: misc
+  tags:
+    - Maladies
+    - Curse
+type: feat

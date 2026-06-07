@@ -1,0 +1,46 @@
+_id: yZvhDyYLnguhzOE8
+_key: '!items!yZvhDyYLnguhzOE8'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Grinding joint paste
+system:
+  actions:
+    - _id: m6baawuwk7ny7uvi
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - '<strong>Primary Effect</strong: [[1d4]] Dexterity damage'
+      save:
+        dc: '16'
+        type: fort
+      tag: grindingJointPaste
+  description:
+    value: >-
+      <p><strong>Type</strong> ingested; <strong>Save</strong> Fortitude DC
+      16</p><p><strong>Onset</strong> 10 minutes; <strong>Frequency</strong>
+      1/minute for 6 minutes</p><p><strong>Effect</strong> 1d4 Dexterity
+      damage</p><p><strong>Cure</strong> 1 save</p><p>This poisonous paste, made
+      from dried cockatrice organs, causes extreme muscle stiffness and joint
+      pain, with an unpleasant feeling of gravel grinding in the victim’s
+      shoulders, hips, and knees. As long as a creature has any Dexterity damage
+      from this poison, the creature finds it physically painful to make wide
+      motions with its limbs. Whenever the creature attacks with a two-handed
+      weapon or moves more than 10 feet in a round (other than via travel that
+      doesn’t require movement, such as by wagon, or teleportation), it takes
+      2d6 points of damage.</p>
+  price: 2100
+  sources:
+    - id: PZO9481
+      pages: '18'
+  subType: poison
+  uses:
+    per: single
+type: consumable

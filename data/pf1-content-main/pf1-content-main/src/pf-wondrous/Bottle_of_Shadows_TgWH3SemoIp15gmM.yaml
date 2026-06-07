@@ -1,0 +1,28 @@
+_id: TgWH3SemoIp15gmM
+_key: '!items!TgWH3SemoIp15gmM'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Bottle of Shadows
+system:
+  aura:
+    school: con
+  cl: 5
+  description:
+    value: >-
+      <p>This bottle is crafted from the darkest ebony. When opened and held
+      upright, faint whispers can be heard emanating from the bottle's mouth.
+      The bottle initially has 4 charges. When turned upside down, the bottle
+      summons a shadow to do the bidding of the user, draining 1 charge each
+      round of service. As a standard action, the bearer may dismiss the
+      summoned shadow. If the shadow kills a humanoid creature of at least 4 HD,
+      the bottle gains 1 charge. The bottle is automatically restored to 4
+      charges at
+      sundown.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, animate dead</p>
+  price: 7000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

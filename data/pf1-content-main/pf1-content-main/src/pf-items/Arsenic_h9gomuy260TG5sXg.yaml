@@ -1,0 +1,38 @@
+_id: h9gomuy260TG5sXg
+_key: '!items!h9gomuy260TG5sXg'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Arsenic
+system:
+  actions:
+    - _id: pf77xcz73nt83oaa
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - '<strong>Primary Effect</strong>: [[1d2]] Con'
+      save:
+        dc: '13'
+        type: fort
+      tag: arsenic
+  description:
+    value: >-
+      <p><strong>Type</strong> ingested; <strong>Save</strong> Fortitude DC
+      13</p><p><strong>Onset</strong> 10 minutes; <strong>Frequency</strong>
+      1/minute for 4 minutes</p><p><strong>Effect</strong> 1d2
+      Con</p><p><strong>Cure</strong> 1 save</p>
+  price: 120
+  sources:
+    - id: PZO1123
+      pages: '111'
+  subType: poison
+  uses:
+    per: single
+type: consumable

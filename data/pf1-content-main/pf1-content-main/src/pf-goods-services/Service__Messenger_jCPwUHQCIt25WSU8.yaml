@@ -1,0 +1,31 @@
+_id: jCPwUHQCIt25WSU8
+_key: '!items!jCPwUHQCIt25WSU8'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/documents/document-bound-white.webp
+name: Service, Messenger
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 2 cp per mile; <strong>Weight</strong> -<br
+      /><strong>Category</strong> Lodging/Services</p><h2>Description</h2><p>A
+      messenger carries a written or verbal message to its intended target.
+      Verbal messages must be short enough for the messenger to memorize
+      (typically about 25 words). A few messengers have exceptional memories and
+      charge 5 sp to relay a verbal message of up to 300 words. Most messengers
+      are only willing to travel to locations within the current city or
+      outlying areas. You can pay a messenger the return fee if you want her to
+      wait for the message recipient to reply, just in case the recipient is too
+      miserly or poor to pay for a return message. Depending on the location and
+      the overall wealth in a settlement, a messenger may be a runner or ride a
+      horse. If you can find someone already traveling to a place, she may only
+      charge you half as much to carry your message.</p>
+  equipped: false
+  price: 0.02
+  sources:
+    - id: PZO1123
+      pages: '99'
+  subType: tradeGoods
+  tags:
+    - Lodging/Services
+type: loot

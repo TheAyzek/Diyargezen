@@ -1,0 +1,30 @@
+_id: IMllyEbZQL7NXe0Z
+_key: '!items!IMllyEbZQL7NXe0Z'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Phantom Entourage
+system:
+  aura:
+    school: ill
+  cl: 6
+  description:
+    value: >-
+      <p>This fashionable silken shawl is incredibly light. Once per day on
+      command, a phantom entourage surrounds its wearer with 1d4+2 illusions of
+      attractive socialites. These illusions cluster closely around the wearer,
+      laugh at his jokes, and generally stroke his ego with fawning flattery.
+      This functions similarly to a mirror image spell, except an attacker has a
+      50% chance of ignoring the effect (as the illusions don't match the
+      wearer). In addition, for every two illusory socialites the wearer
+      currently has attending to him, he gains a +1 circumstance bonus on Bluff,
+      Diplomacy, and Perform (sing) checks and takes a -2 penalty on Stealth
+      checks. This effect lasts for 6 hours.</p><h3>Requirements</h3><p>Craft
+      Wondrous Item, Extend Spell, mirror image</p>
+  price: 9000
+  slot: shoulders
+  sources:
+    - id: PZO9476
+  subType: wondrous
+type: equipment

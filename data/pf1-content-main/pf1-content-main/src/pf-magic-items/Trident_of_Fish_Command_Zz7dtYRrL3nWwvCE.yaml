@@ -1,0 +1,64 @@
+_id: Zz7dtYRrL3nWwvCE
+_key: '!items!Zz7dtYRrL3nWwvCE'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/trident.PNG
+name: Trident of Fish Command
+system:
+  actions:
+    - _id: qnavd5iblgboxi95
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: tridentOfFishCommand
+  aura:
+    school: enc
+  baseTypes:
+    - Trident
+  cl: 7
+  description:
+    value: >-
+      <p>The magical properties of this +1 trident with a 6-foot-long haft
+      enable its wielder to charm up to 14 Hit Dice of aquatic animals as per
+      the spell charm animals (Will DC 16 negates, animals get a +5 bonus if
+      currently under attack by the wielder or her allies), no two of which can
+      be more than 30 feet apart. The wielder can use this effect up to three
+      times per day. The wielder can communicate with the animals as if using a
+      speak with animals spell. Animals that successfully make their saving
+      throws are free of control, but they will not approach within 10 feet of
+      the trident.</p><p><strong>Base Item</strong>: 
+      trident</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, charm animals, speak with animals</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 18650
+  properties:
+    brc: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - spears
+    - thrown
+  weight:
+    value: 4
+type: weapon

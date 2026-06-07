@@ -1,0 +1,74 @@
+_id: vsp6TyvvUw3KOD0b
+_key: '!journal!vsp6TyvvUw3KOD0b'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: pqVHetlXys8NATtP
+name: 4.0. Movement
+pages:
+  - _id: yAmiDK4tOOw3hydN
+    _key: '!journal.pages!vsp6TyvvUw3KOD0b.yAmiDK4tOOw3hydN'
+    _stats:
+      coreVersion: '12.331'
+    name: 4.0. Movement
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.kAJexDuJ2IAXZODj]{(Index)
+        Exploration}</p><p><strong>@Compendium[pf-content.pf-rules.vsp6TyvvUw3KOD0b]{4.0.
+        Movement}</strong></p><p>@Compendium[pf-content.pf-rules.TrYHWkJ3jiOCYufl]{4.1.
+        Vision and
+        Light}</p><p>@Compendium[pf-content.pf-rules.1EvBiiUnVOT4cUbT]{4.2.
+        Breaking and Entering}</p><hr
+        /><p>@Source[PZO1110;pages=170]</p><p>There are three movement scales,
+        as follows:</p><ul><li>Tactical, for combat, measured in feet (or 5-foot
+        squares) per round.</li><li>Local, for exploring an area, measured in
+        feet per minute.</li><li>Overland, for getting from place to place,
+        measured in miles per hour or miles per day.</li></ul><h2>Modes of
+        Movement</h2><p>While moving at the different movement scales, creatures
+        generally walk, hustle, or run.</p><h2>Walk</h2><p>A walk represents
+        unhurried but purposeful movement (3 miles per hour for an unencumbered
+        adult human).</p><h2>Hustle</h2><p>A hustle is a jog (about 6 miles per
+        hour for an unencumbered human). A character moving his speed twice in a
+        single round, or moving that speed in the same round that he or she
+        performs a standard action or another move action, is hustling when he
+        or she moves.</p><h2>Run (×3)</h2><p>Moving three times speed is a
+        running pace for a character in heavy armor (about 7 miles per hour for
+        a human in full plate).</p><h2>Run (×4)</h2><p>Moving four times speed
+        is a running pace for a character in light, medium, or no armor (about
+        12 miles per hour for an unencumbered human, or 9 miles per hour for a
+        human in chainmail). See Table 7–6 for details.</p><h2>Table 7-6:
+        Movement and
+        Distance</h2><table><thead><tr><td><strong>Speed</strong></td><td><strong>15
+        feet</strong></td><td><strong>20 feet</strong></td><td><strong>30
+        feet</strong></td><td><strong>40
+        feet</strong></td></tr></thead><tbody><tr><td><strong>One Round
+        (Tactical)*</strong></td><td> </td></tr><tr><td>Walk</td><td>15
+        ft.</td><td>20 ft.</td><td>30 ft.</td><td>40
+        ft.</td></tr><tr><td>Hustle</td><td>30 ft.</td><td>40 ft.</td><td>60
+        ft.</td><td>80 ft.</td></tr><tr><td>Run (x3)</td><td>45 ft.</td><td>60
+        ft.</td><td>90 ft.</td><td>120 ft.</td></tr><tr><td>Run (x4)</td><td>60
+        ft.</td><td>80 ft.</td><td>120 ft.</td><td>160
+        ft.</td></tr><tr><td><strong>One Minute (Local)</strong></td><td>
+        </td></tr><tr><td>Walk</td><td>150 ft.</td><td>200 ft.</td><td>300
+        ft.</td><td>400 ft.</td></tr><tr><td>Hustle</td><td>300 ft.</td><td>400
+        ft.</td><td>600 ft.</td><td>800 ft.</td></tr><tr><td>Run
+        (x3)</td><td>450 ft.</td><td>600 ft.</td><td>900 ft.</td><td>1,200
+        ft.</td></tr><tr><td>Run (x4)</td><td>600 ft.</td><td>800
+        ft.</td><td>1,200 ft.</td><td>1,600 ft.</td></tr><tr><td><strong>One
+        Hour (Overland)</strong></td><td> </td></tr><tr><td>Walk</td><td>1-1/2
+        miles</td><td>2 miles</td><td>3 miles</td><td>4
+        miles</td></tr><tr><td>Hustle</td><td>3 miles</td><td>4 miles</td><td>6
+        miles</td><td>8
+        miles</td></tr><tr><td>Run</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td><strong>One
+        Day (Overland)</strong></td><td> </td></tr><tr><td>Walk</td><td>12
+        miles</td><td>16 miles</td><td>24 miles</td><td>32
+        miles</td></tr><tr><td>Hustle</td><td>—</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Run</td><td>—</td><td>—</td><td>—</td><td>—</td></tr></tbody></table><p>*
+        Tactical Movement is often measured in squares on the battle grid (1
+        square = 5 feet) rather than feet.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

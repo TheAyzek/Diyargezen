@@ -1,0 +1,54 @@
+_id: rPwm9Uf9R1XmsXHA
+_key: '!journal!rPwm9Uf9R1XmsXHA'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Vale
+pages:
+  - _id: Y0IOmtJ2IVbdkkG7
+    _key: '!journal.pages!rPwm9Uf9R1XmsXHA.Y0IOmtJ2IVbdkkG7'
+    _stats:
+      coreVersion: '12.331'
+    name: Vale
+    sort: 0
+    text:
+      content: >-
+        <h1>Vale</h1><h2>The Court of Ancestors</h2>@Source[PZO92114;pages=18]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Vale">Vale</a><h3>Details</h3><p><strong>Alignment</strong>
+        N<br /><strong>Pantheon</strong> Psychopomp Usher<br /><strong>Areas of
+        Concern</strong> Consequence, superstition, and tradition<br
+        /><strong>Domains</strong> Community, Knowledge, Nobility, Repose<br
+        /><strong>Subdomains</strong> N/A<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Heavy
+        flail<br /><strong>Symbol</strong> Three circles bisected by a
+        horizontal line</p><h3>Obedience</h3><p>Recite a family history to a
+        surviving member of that family. Researching requires 45 minutes, while
+        the recitation requires 15-30 minutes. Select a particular alignment
+        component-chaos, evil, good, or law-and gain a +2 sacred bonus to AC
+        against opponents with that alignment component.</p><h2>Boons - Monitor
+        Obedience</h2><h3>None</h3><p>@Source[PZO92114;pages=18]<br /><strong>1:
+        It Is Known (Sp)</strong> <em>discern next of kin</em> 3/day, <em>early
+        judgment</em> 2/day, or <em>seek thoughts</em> 1/day<br /><strong>2:
+        Issue Judgment (Sp)</strong> Once per day, you can issue a judgment on a
+        crime whose testimony and evidence you have either personally witnessed
+        or studied for at least 1 hour. If you find the target guilty, you can
+        cast <em>major curse</em> on that creature as a spell-like ability with
+        a caster level equal to your Hit Dice. The condition to remove the curse
+        must relate directly to making amends or growing beyond the criminal
+        behavior.<br /><strong>3: Collective Knowledge (Su)</strong> Whenever
+        you are among a culture, you gain a +5 insight bonus on Knowledge checks
+        to intuitively understand local customs, etiquette, history, lore, and
+        magic of that particular culture, and you can attempt such Knowledge
+        checks untrained. For the purposes of this power, a 'culture' is any
+        particular group of at least 100 people within 5 miles of each other who
+        share a common ethnicity, language, or race, and you are considered
+        among the culture when you are no more than 1 mile away from anyone in
+        this particular group.</em></p><h2>For Followers of
+        Vale</h2><h3>Prestige Classes</h3><p><em>Mortal Usher</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

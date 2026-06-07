@@ -1,0 +1,63 @@
+_id: Rhzez0lioHjuvY8V
+_key: '!items!Rhzez0lioHjuvY8V'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/mace-heavy.PNG
+name: Mace of Smiting, Lesser
+system:
+  actions:
+    - _id: 581w9cdyjumgqigq
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: maceOfSmitingLesser
+  aura:
+    school: trs
+  baseTypes:
+    - Heavy Mace
+  cl: 7
+  description:
+    value: >-
+      <p>A lesser mace of smiting is a +1 adamantine heavy mace with a +3
+      enhancement bonus against constructs. When it deals a successful critical
+      hit to a construct, it deals x4 damage rather than x2. A critical hit
+      dealt to an outsider deals x3 damage rather than x2.  A mace of smiting is
+      a +3 adamantine heavy mace has a +5 enhancement bonus against constructs.
+      When it deals a successful critical hit to a construct, it completely
+      destroys the construct (no saving throw). A critical hit dealt to an
+      outsider deals x4 damage rather than x2.</p><p><strong>Base Item</strong>:
+      adamantine heavy
+      mace</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, disintegrate</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+    normal:
+      value: adamantine
+  price: 16012
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - hammers
+  weight:
+    value: 8
+type: weapon

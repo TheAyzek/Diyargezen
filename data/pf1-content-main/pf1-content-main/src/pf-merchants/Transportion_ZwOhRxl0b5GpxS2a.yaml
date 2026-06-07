@@ -1,0 +1,220 @@
+_id: ZwOhRxl0b5GpxS2a
+_key: '!actors!ZwOhRxl0b5GpxS2a'
+_stats:
+  coreVersion: '12.343'
+flags:
+  core:
+    sheetClass: PF1.ActorSheetPFNPCLoot
+img: icons/tools/navigation/map-plain-green.webp
+items:
+  - _id: 3oy4YWOObvTt9sum
+    _key: '!actors.items!ZwOhRxl0b5GpxS2a.3oy4YWOObvTt9sum'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/tech/wheel.webp
+    name: Passage, Carriage
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: PRPG Core Rulebook pg.
+          159</p><p><strong>Price</strong> -; <strong>Price of Passage (per
+          mile)</strong> 3 cp</p><p><strong>Category</strong> Transport,
+          Land</p><h2>Description</h2>The price given is for a ride in a coach
+          that transports people (and light cargo) between towns. For a ride in
+          a cab that transports passengers within a city, 1 copper piece usually
+          takes you anywhere you need to go.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Transport, Land
+      price: 0.03
+    type: loot
+  - _id: Yj1pgJMl7vA2hnG9
+    _key: '!actors.items!ZwOhRxl0b5GpxS2a.Yj1pgJMl7vA2hnG9'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/settlement/ship.webp
+    name: Passage, Dog sled
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: PRPG Core Rulebook pg.
+          159</p><p><strong>Price</strong> -; <strong>Price of Passage (per
+          mile)</strong> 1 sp</p><p><strong>Category</strong> Transport,
+          Sea</p><h2>Description</h2>Most ships do not specialize in passengers,
+          but many have the capability to take a few along when transporting
+          cargo. Double the given cost for creatures larger than Medium or
+          creatures that are otherwise difficult to bring aboard a ship.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Transport, Sea
+      price: 0.1
+    type: loot
+  - _id: RjsfIM1xzc1LdNIt
+    _key: '!actors.items!ZwOhRxl0b5GpxS2a.RjsfIM1xzc1LdNIt'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/tech/wheel.webp
+    name: Passage, Sleigh
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          87</p><p><strong>Price</strong> 100 gp; <strong>Price of Passage (per
+          mile)</strong> 2 cp</p><p><strong>Category</strong> Transport,
+          Land</p><h2>Description</h2>This wagon has runners, making it an ideal
+          conveyance for snow and ice travel. In general, two horses (or other
+          beasts of burden) are needed to draw it. A sled comes with the harness
+          required to pull it.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Transport, Land
+      price: 0.02
+    type: loot
+  - _id: mlqwW1ZBLA351Xn5
+    _key: '!actors.items!ZwOhRxl0b5GpxS2a.mlqwW1ZBLA351Xn5'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/tech/wheel.webp
+    name: Passage, Wagon (heavy)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          87</p><p><strong>Price</strong> 100 gp (heavy), 50 gp (light), 75 gp
+          (medium); <strong>Weight</strong> 3 cp (heavy), 2 cp (light), 2 cp
+          (medium)</p><h2>Description</h2>This four-wheeled open vehicle is used
+          for transporting heavy loads. It includes the harness needed to pull
+          it. There are three common varieties of wagon.</p><p><em>Light
+          Wagon</em>: Wagons of this type are most commonly employed by farmers
+          and craftsmen transporting their goods short distances or by venders
+          in and around cities. A light wagon carries up to 1,000 pounds of
+          cargo and requires two Medium creatures or one Large creature to pull
+          it.</p><p><em>Medium Wagon</em>: Wagons of this type are typically
+          employed for heavy duty work, often in agricultural, mining, or
+          construction settings. A medium wagon can carry up to 2,000 pounds of
+          cargo and requires four Medium or two Large creatures to pull
+          it.</p><p><em>Heavy Wagon</em>: Wagons of this type are large,
+          fourwheeled vehicles primarily used in caravans to transport goods
+          over long stretches of territory. A heavy wagon carries up to 4,000
+          pounds of cargo, and is pulled by either eight Medium creatures or
+          four Large creatures.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Transport, Land
+      price: 0.03
+    type: loot
+  - _id: eUWbbhXSbHDVKIrm
+    _key: '!actors.items!ZwOhRxl0b5GpxS2a.eUWbbhXSbHDVKIrm'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/tech/wheel.webp
+    name: Passage, Wagon (light)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 87</em>, <em>PRPG
+          Core Rulebook pg. 159</p><p><strong>Price</strong> 100 gp (heavy), 50
+          gp (light), 75 gp (medium); <strong>Weight</strong> 3 cp (heavy), 2 cp
+          (light), 2 cp (medium)</p><h2>Description</h2>This four-wheeled open
+          vehicle is used for transporting heavy loads. It includes the harness
+          needed to pull it. There are three common varieties of
+          wagon.</p><p><em>Light Wagon</em>: Wagons of this type are most
+          commonly employed by farmers and craftsmen transporting their goods
+          short distances or by venders in and around cities. A light wagon
+          carries up to 1,000 pounds of cargo and requires two Medium creatures
+          or one Large creature to pull it.</p><p><em>Medium Wagon</em>: Wagons
+          of this type are typically employed for heavy duty work, often in
+          agricultural, mining, or construction settings. A medium wagon can
+          carry up to 2,000 pounds of cargo and requires four Medium or two
+          Large creatures to pull it.</p><p><em>Heavy Wagon</em>: Wagons of this
+          type are large, fourwheeled vehicles primarily used in caravans to
+          transport goods over long stretches of territory. A heavy wagon
+          carries up to 4,000 pounds of cargo, and is pulled by either eight
+          Medium creatures or four Large creatures.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Transport, Land
+      price: 0.02
+    type: loot
+  - _id: NE9h7knZGUPzoBwp
+    _key: '!actors.items!ZwOhRxl0b5GpxS2a.NE9h7knZGUPzoBwp'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/commodities/tech/wheel.webp
+    name: Passage, Wagon (medium)
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg.
+          87</p><p><strong>Price</strong> 100 gp (heavy), 50 gp (light), 75 gp
+          (medium); <strong>Weight</strong> 3 cp (heavy), 2 cp (light), 2 cp
+          (medium)</p><h2>Description</h2>This four-wheeled open vehicle is used
+          for transporting heavy loads. It includes the harness needed to pull
+          it. There are three common varieties of wagon.</p><p><em>Light
+          Wagon</em>: Wagons of this type are most commonly employed by farmers
+          and craftsmen transporting their goods short distances or by venders
+          in and around cities. A light wagon carries up to 1,000 pounds of
+          cargo and requires two Medium creatures or one Large creature to pull
+          it.</p><p><em>Medium Wagon</em>: Wagons of this type are typically
+          employed for heavy duty work, often in agricultural, mining, or
+          construction settings. A medium wagon can carry up to 2,000 pounds of
+          cargo and requires four Medium or two Large creatures to pull
+          it.</p><p><em>Heavy Wagon</em>: Wagons of this type are large,
+          fourwheeled vehicles primarily used in caravans to transport goods
+          over long stretches of territory. A heavy wagon carries up to 4,000
+          pounds of cargo, and is pulled by either eight Medium creatures or
+          four Large creatures.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Transport, Land
+      price: 0.02
+    type: loot
+  - _id: qFIlN4JpNRDYHrpz
+    _key: '!actors.items!ZwOhRxl0b5GpxS2a.qFIlN4JpNRDYHrpz'
+    _stats:
+      coreVersion: '12.331'
+    img: icons/environment/settlement/ship.webp
+    name: Passage, Warship
+    system:
+      description:
+        value: >-
+          <p><strong>Source</strong>: Ultimate Equipment pg. 87</em>, <em>PRPG
+          Core Rulebook pg. 159</p><p><strong>Price</strong> 25,000 gp;
+          <strong>Price of Passage (per mile)</strong> 2
+          sp</p><p><strong>Category</strong> Transport,
+          Sea</p><h2>Description</h2>This 100-foot-long ship has a single mast,
+          although oars can also propel it. It has a crew of 60 to 80 rowers.
+          This ship can carry 160 soldiers, but not for long distances, since
+          there isn't room for supplies to support that many people. A warship
+          cannot make sea voyages and sticks to the coast. It is not used for
+          cargo. It moves about 2-1/2 miles per hour when being rowed or under
+          sail.
+      equipped: false
+      flags:
+        dictionary:
+          Category: Transport, Sea
+      price: 0.2
+    type: loot
+name: Transportion
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    spells:
+      spellbooks:
+        primary:
+          name: Primary
+        secondary:
+          name: Secondary
+        spelllike:
+          name: Spell-likes
+        tertiary:
+          name: Tertiary
+type: npc

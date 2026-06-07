@@ -1,0 +1,133 @@
+_id: 6f8O1E5xEWFcLkb1
+_key: '!actors!6f8O1E5xEWFcLkb1'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: icons/tools/instruments/bell-brass-brown.webp
+items:
+  - _id: pOzX6MgN7o80Bxrg
+    _key: '!actors.items!6f8O1E5xEWFcLkb1.pOzX6MgN7o80Bxrg'
+    _stats:
+      compendiumSource: Actor.jwis5eXPdWOpkZ8f.Item.05a1TFrmIjUmkEdt
+      coreVersion: '12.331'
+    img: icons/tools/instruments/bell-brass-brown.webp
+    name: Falling Bronze Bell
+    system:
+      actions:
+        - _id: wepi2mz3fsb6vu32
+          actionType: mwak
+          activation:
+            type: standard
+            unchained:
+              cost: 2
+              type: action
+          attackBonus: '15'
+          damage:
+            parts:
+              - formula: 6d6
+                types:
+                  - bludgeoning
+          img: icons/tools/instruments/bell-brass-brown.webp
+          measureTemplate:
+            size: '10'
+            type: rect
+          name: Attack
+          notes:
+            effect:
+              - >-
+                When the bell falls it can break stairs or flooring in a 10-foot
+                long swath. A character damaged by the bell can fall through
+                broken stairs or flooring if a lower floor exists. A DC 15
+                Reflex save clings to the broken stairs or flooring.
+          range:
+            units: melee
+          save:
+            dc: '15'
+            description: Reflex; see text
+            type: ref
+          target:
+            value: >-
+              bell collides with 1d4 targets, on collision has multiple targets
+              (all targets in a 10-foot-square area)
+      proficient: true
+      subType: misc
+    type: attack
+name: Falling Bell Trap
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 5
+    disarm: 20
+    duration: Instantaneous
+    effect: >-
+      When the bell falls it can break stairs or flooring in a 10-foot long
+      swath. A character damaged by the bell can fall through broken stairs or
+      flooring if a lower floor exists. A character who falls to a lower floor
+      takes falling damage unless they make a DC 15 Reflex save to cling to the
+      broken stairs.
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 20
+    reset: Repair
+    trigger: Manual
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

@@ -1,0 +1,60 @@
+_id: MRgk75XPbdex1z4m
+_key: '!items!MRgk75XPbdex1z4m'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/sword-bastard.PNG
+name: Valor's Minion
+system:
+  actions:
+    - _id: 3eao2gtbfec119v7
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: valorsMinion
+  aura:
+    school: evo
+  baseTypes:
+    - Bastard Sword
+  cl: 15
+  description:
+    value: >-
+      <p>The blade of this +2 holy bastard sword always appears lustrous and
+      polished, with a hilt wrapped in alternating colors of deep black and
+      royal purple. Effective on its own, a valor's minion is even more potent
+      in the hands of those who dedicate their efforts to vanquishing a single
+      foe. Whenever a wielder uses either the challenge or smite evil class
+      feature, she can sacrifice one additional use of that class feature to
+      treat the smite or challenge as if she were three class levels
+      higher.</p><p><strong>Base Item</strong>:
+      holy</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, holy smite</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 41335
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 6
+type: weapon

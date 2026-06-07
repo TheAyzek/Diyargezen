@@ -1,0 +1,26 @@
+_id: wocUspgCXzsHlrN0
+_key: '!items!wocUspgCXzsHlrN0'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/coin-copper.jpg
+name: Concealment coin
+system:
+  description:
+    value: >-
+      <p>A concealment coin appears in all respects like a typical coin of the
+      realm and is often crafted from an ordinary coin-though for soft metals
+      like gold, the coin is typically made with an iron or steel interior and
+      then plated with the more valuable metal. Twisting the coin along its edge
+      unscrews the two halves, revealing a thin, hollow space inside. Such coins
+      are often used to hide small messages written on very fine paper for
+      covert delivery. Noticing a concealment coin's true nature requires a
+      successful DC 25 Perception check.</p>
+  equipped: false
+  price: 12
+  sources:
+    - id: PZO1134
+      pages: '233'
+  subType: adventuring
+  weight:
+    value: 0.1
+type: loot

@@ -1,0 +1,31 @@
+_id: 20FsHTgwfIjSLSVk
+_key: '!items!20FsHTgwfIjSLSVk'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Parting Glass
+system:
+  aura:
+    school: enc
+  cl: 12
+  description:
+    value: >-
+      <p>Not every adventurer returns to the tavern, and Cayden's Hall has seen
+      many a drink raised in remembrance of a fallen comrade. A parting glass,
+      engraved with the names of adventuring companies and their honored dead,
+      is a rare gift given by senior priests of Cayden Cailean's church to
+      survivors of quests that fit with the church's ideals but demanded a high
+      cost.  Once per day when used in a toast with at least one other creature,
+      a single creature drinking from a parting glass gains a +5 morale bonus on
+      the next saving throw it attempts within 24 hours, and one poison (other
+      than alcohol) currently affecting the drinker is targeted by neutralize
+      poison.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, greater heroism, neutralize poison</p>
+  price: 23000
+  sources:
+    - id: PZO9296
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

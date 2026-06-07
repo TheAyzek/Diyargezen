@@ -1,0 +1,28 @@
+_id: y3UTF3cIdQnt5DF8
+_key: '!items!y3UTF3cIdQnt5DF8'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of the Dark Tapestry
+system:
+  aura:
+    school: con
+  cl: 9
+  description:
+    value: >-
+      <p>This staff, constructed of dark purple crystal, allows the use of the
+      following spells: • confusion (2 charges)  • darkness (1 charge)  • fear
+      (2 charges)  • irradiate (1 charge)  • planetary adaptationDW (2 charges) 
+      The staff may be used as a weapon, functioning as a +1 impact quarterstaff
+      even when its charges are expended.</p><p><strong>Base Item</strong>:
+      impact
+      quarterstaff</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, Craft Staff, bull's strength, confusion,
+      darkness, fear, irradiate, planetary adaptation</p>
+  price: 43500
+  sources:
+    - id: PZO9088
+  subType: staff
+  weight:
+    value: 5
+type: consumable

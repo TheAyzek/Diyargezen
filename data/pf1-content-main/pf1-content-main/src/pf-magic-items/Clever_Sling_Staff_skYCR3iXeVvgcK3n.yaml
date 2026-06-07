@@ -1,0 +1,56 @@
+_id: skYCR3iXeVvgcK3n
+_key: '!items!skYCR3iXeVvgcK3n'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/sling-staff.png
+name: Clever Sling Staff
+system:
+  actions:
+    - _id: hibrpfh0i9nx2a39
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: cleverSlingStaff
+  aura:
+    school: div
+  baseTypes:
+    - Halfling Sling Staff
+  cl: 12
+  description:
+    value: >-
+      <p>The enhancement bonus of this Small +3 seeking halfling sling staff
+      applies to both ranged sling attacks and melee club attacks. A halfling
+      wielder with the warslinger racial trait can reload a clever sling staff
+      as if it were a sling.</p><p><strong>Base Item</strong>: seeking halfling
+      sling staff</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, haste, true seeing, creator must be a halfling</p>
+  enh: 3
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: wood
+  price: 60320
+  showInQuickbar: false
+  sources:
+    - id: PZO9280
+  weaponGroups:
+    - thrown
+  weight:
+    value: 3
+type: weapon

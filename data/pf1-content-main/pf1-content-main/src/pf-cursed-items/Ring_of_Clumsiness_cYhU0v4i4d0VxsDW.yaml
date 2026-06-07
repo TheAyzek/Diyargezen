@@ -1,0 +1,22 @@
+_id: cYhU0v4i4d0VxsDW
+_key: '!items!cYhU0v4i4d0VxsDW'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Ring of Clumsiness
+system:
+  aura:
+    school: trs
+  cl: 15
+  cursed: true
+  description:
+    value: >-
+      <p>This ring operates exactly like a ring of feather falling. However, it
+      also makes the wearer clumsy. She takes a -4 penalty to Dexterity and has
+      a 20% chance of spell failure when trying to cast any arcane spell that
+      has a somatic component. (This chance of spell failure stacks with other
+      arcane spell failure chances..</p>
+  sources:
+    - id: PZO1123
+  subType: other
+type: equipment

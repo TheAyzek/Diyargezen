@@ -1,0 +1,26 @@
+_id: NRRahzScXuZWj52C
+_key: '!items!NRRahzScXuZWj52C'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Gauntlets of Fumbling
+system:
+  aura:
+    school: trs
+  cl: 7
+  cursed: true
+  description:
+    value: >-
+      <p>These gauntlets perform according to their appearance until the wearer
+      finds herself under attack or in a life-and-death situation. At that time,
+      the curse is activated. The wearer becomes fumble-fingered, with a 50%
+      chance each round of dropping anything held in either hand. The gauntlets
+      also lower the wearer's Dexterity score by 2 points. Once the curse is
+      activated, the gloves can be removed only by means of a remove curse
+      spell, a wish, or a miracle.</p>
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 2
+type: equipment

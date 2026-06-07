@@ -1,0 +1,34 @@
+_id: efAjmtaZ0FcMOr0C
+_key: '!items!efAjmtaZ0FcMOr0C'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of the Weary Sky
+system:
+  aura:
+    custom: true
+    school: abjuration and enchantment
+  cl: 7
+  description:
+    value: >-
+      <p>This ancient silver ring provides a measure of control over elemental
+      creatures. The spirit of an ancient Jistkan elementalist still echoes
+      within the ring, issuing a sense of smug arrogance. The Ring of the Weary
+      Sky's special purpose is controlling or defeating elementals, and once per
+      day the wearer can attempt to charm a creature with the elemental subtype
+      (as charm monster, Will DC 15 negates).  Once per day, the ring can affect
+      its wearer with resist energy. The ring uses this ability only when the
+      wearer faces a hostile creature with the elemental subtype, making an
+      educated guess about the most applicable energy type against which to ward
+      its wearer. The ring is quick to provide this protection when the wearer
+      tries but fails to charm an elemental creature, exuding a clear impression
+      of patronizing
+      disappointment.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Forge Ring, charm monster, resist energy</p>
+  price: 14800
+  slot: ring
+  sources:
+    - id: PZO9275
+  subType: wondrous
+type: equipment

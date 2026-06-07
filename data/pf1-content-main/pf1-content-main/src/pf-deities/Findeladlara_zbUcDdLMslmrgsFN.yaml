@@ -1,0 +1,36 @@
+_id: zbUcDdLMslmrgsFN
+_key: '!journal!zbUcDdLMslmrgsFN'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Findeladlara
+pages:
+  - _id: 3ZBkc0oxJr6Wx5bl
+    _key: '!journal.pages!zbUcDdLMslmrgsFN.3ZBkc0oxJr6Wx5bl'
+    _stats:
+      coreVersion: '12.331'
+    name: Findeladlara
+    sort: 0
+    text:
+      content: >-
+        <h1> Findeladlara</h1><h2>The Guiding
+        Hand</h2>@Source[PZO9267;pages=322] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Findeladlara">Findeladlara</a><h3>Details</h3><p><strong>Alignment</strong>
+        CG<br /><strong>Pantheon</strong> Elven Deities<br /><strong>Areas of
+        Concern</strong> Architecture, art, twilight<br
+        /><strong>Domains</strong> Air, Artifice, Chaos, Community, Good<br
+        /><strong>Subdomains</strong> Azata (Chaos), Azata (Good), Cloud,
+        Construct, Friendship, Home, Whimsy<br /><em>* Requires the <u>Acolyte
+        of Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Quarterstaff<br /><strong>Symbol</strong> Finger pointing at gold
+        star<br /><strong>Sacred Animal(s)</strong> Stag<br /><strong>Sacred
+        Color(s)</strong> Blue, gold</p><h2>For Followers of
+        Findeladlara</h2><h3>Archetypes</h3><p>Twilight Speaker
+        (Skald)</p><h3>Traits</h3><p>Structural Knowledge</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

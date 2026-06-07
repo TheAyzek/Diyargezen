@@ -1,0 +1,41 @@
+_id: v1pHEufApgS8Dmwh
+_key: '!items!v1pHEufApgS8Dmwh'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Burnt othur fumes
+system:
+  actions:
+    - _id: cxy73tmdhwb20nxq
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1]] Con drain <strong>Secondary
+            Effect</strong>: [[1d3]] Con
+      save:
+        dc: '18'
+        type: fort
+      tag: burntOthurFumes
+  description:
+    value: >-
+      <p><strong>Type</strong> inhaled; <strong>Save</strong> Fortitude DC
+      18</p><p><strong>Frequency</strong> 1/round for 6
+      rounds</p><p><strong>Initial Effect</strong> 1 Con drain;
+      <strong>Secondary Effect</strong> 1d3 Con</p><p><strong>Cure</strong> 2
+      saves</p>
+  price: 2100
+  sources:
+    - id: PZO1123
+      pages: '111'
+  subType: poison
+  uses:
+    per: single
+type: consumable

@@ -1,0 +1,112 @@
+_id: c3QsrJeOFuL8hJop
+_key: '!actors!c3QsrJeOFuL8hJop'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: icons/commodities/gems/pearl-rock.webp
+items:
+  - _id: Qf3SpzdJfVppDwTm
+    _key: '!actors.items!c3QsrJeOFuL8hJop.Qf3SpzdJfVppDwTm'
+    _stats:
+      compendiumSource: Actor.zfg2I79P3G7B8LwP.Item.jsXyucp5Z8svjDQr
+      coreVersion: '12.331'
+    img: icons/commodities/gems/pearl-rock.webp
+    name: Rolling Boulder
+    system:
+      actions:
+        - _id: d9a6p1k7dqhxliy1
+          actionType: save
+          activation:
+            type: special
+            unchained:
+              type: special
+          damage:
+            parts:
+              - formula: 12d6
+                types:
+                  - bludgeoning
+          img: icons/commodities/gems/pearl-rock.webp
+          name: Attack
+          save:
+            dc: '25'
+            description: Reflex half
+            type: ref
+          target:
+            value: multiple targets (all targets on the ground in area of effect)
+      proficient: true
+      subType: misc
+    type: attack
+name: Rolling Boulder Trap
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 10
+    disarm: 25
+    duration: ''
+    effect: 'Onset Delay: 6 minutes'
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 30
+    reset: Automatic
+    trigger: Location
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

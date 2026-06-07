@@ -1,0 +1,48 @@
+_id: IX8Xif3UBwvGZoTL
+_key: '!journal!IX8Xif3UBwvGZoTL'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: CMTuXqZ6Ywxqk9Ar
+name: 7.1.4.1. Animated Objects
+pages:
+  - _id: FgVQsMpEgWAovZAQ
+    _key: '!journal.pages!IX8Xif3UBwvGZoTL.FgVQsMpEgWAovZAQ'
+    _stats:
+      coreVersion: '12.331'
+    name: 7.1.4.1. Animated Objects
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.dS0UkKOINqI2iTDX]{(Index)
+        Magic}</p><p>@Compendium[pf-content.pf-rules.zCeqoMSKdZ8r4EPd]{7.1.
+        Mastering
+        Magic}</p><ul><li><p>@Compendium[pf-content.pf-rules.3HmUAVI78JGriOJQ]{7.1.4.
+        Building and Modifying
+        Constructs}</p><ul><li><strong>@Compendium[pf-content.pf-rules.IX8Xif3UBwvGZoTL]{7.1.4.1.
+        Animated
+        Objects}</strong></li><li>@Compendium[pf-content.pf-rules.1wOUB8cMjiIMP0Ma]{7.1.4.2.
+        New Animated Object
+        Abilities}</li><li>@Compendium[pf-content.pf-rules.a0XTKDAaQ86Axg4S]{7.1.4.3.
+        Building New
+        Constructs}</li><li>@Compendium[pf-content.pf-rules.7MT0MXLxIZ9incU4]{7.1.4.4.
+        Repairing
+        Constructs}</li><li>@Compendium[pf-content.pf-rules.VGwccLk2uCxKaC57]{7.1.4.5.
+        Construct Modifications}</li></ul></li></ul><hr
+        /><p>@Source[PZO1117;pages=111]</p><p>Not all constructs are built with
+        the Craft Construct feat. Spells like animate objects allow a caster to
+        temporarily animate an existing object. These constructs are in many
+        ways weaker than manufactured constructs, as they are susceptible to
+        dispelling and antimagic.</p><p>A caster can use the animate objects
+        spell to instantly create a temporary construct. A permanency spell cast
+        upon an animated object makes the construct permanent; however, it can
+        still be dispelled or suppressed by antimagic. Craft Construct creates
+        permanent animated objects not susceptible to dispelling and antimagic.
+        The CR of a potential animated object depends on its size and abilities,
+        as explained in the animated object monster entry.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

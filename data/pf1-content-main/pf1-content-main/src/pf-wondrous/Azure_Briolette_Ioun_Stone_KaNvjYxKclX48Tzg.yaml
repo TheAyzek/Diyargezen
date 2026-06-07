@@ -1,0 +1,55 @@
+_id: KaNvjYxKclX48Tzg
+_key: '!items!KaNvjYxKclX48Tzg'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/gem-faceted-teardrop-teal.webp
+name: Azure Briolette Ioun Stone
+system:
+  aura:
+    custom: true
+    school: enchantment and necromancy
+  cl: 12
+  contextNotes:
+    - target: spellEffect
+      text: >-
+        Whenever a creature fails a saving throw against a mind-affecting spell
+        cast by you, you gain a number of temporary hit points equal to the
+        targeted creature's Charisma bonus (minimum 0), which last until the
+        start of your next turn. These temporary hit points do not stack and you
+        can't gain temporary hit points from a creature that voluntarily fails
+        its saving throw against your spells.
+  description:
+    instructions: >-
+      <p>Only 75% of normal ioun stones grant resonant powers when placed in a
+      wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: <p>This pear-shaped ioun stone sparkles in a brilliant blue color.</p>
+    value: >-
+      <h3>Effect</h3><p>Whenever a creature fails a saving throw against a
+      mind-affecting spell cast by this ioun stone's user, the user gains a
+      number of temporary hit points equal to the targeted creature's Charisma
+      bonus (minimum 0) until the start of the user's next turn. These temporary
+      hit points do not stack. The user doesn't gain temporary hit points from a
+      creature that voluntarily fails its saving throw against the
+      spell.</p><h3>Resonance</h3><p><strong>Method 1, Fixed: </strong>This
+      stone allows the user to pick up on psychic resonance from corpses. So
+      long as the user has carried the ioun stone continuously for at least 24
+      hours, the first three corpses touched by the user each day babble
+      residual psychic impressions into the bearer's mind. This functions as the
+      @UUID[Compendium.pf1.spells.Item.z3ysa1xxmzgj14sd]{grave words} spell,
+      except that only the user can hear the corpse speak.</p><p><strong>Method
+      2, Variable:
+      </strong>@Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, creator must be 12th level <strong>Cost</strong>
+      7,500 gp</p>
+  hardness: 5
+  price: 15000
+  sources:
+    - id: PZO90125
+      pages: '36'
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

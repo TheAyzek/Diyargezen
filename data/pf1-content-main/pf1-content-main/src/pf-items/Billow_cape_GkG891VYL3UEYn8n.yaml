@@ -1,0 +1,29 @@
+_id: GkG891VYL3UEYn8n
+_key: '!items!GkG891VYL3UEYn8n'
+_stats:
+  coreVersion: '12.331'
+img: icons/equipment/back/cloak-layered-green-yellow.webp
+name: Billow cape
+system:
+  description:
+    value: >-
+      <p>This silk cape is constructed of many carefully arranged overlapping
+      layers that are loosely stitched together. When exposed to a sudden influx
+      of air, like that caused by falling, the cloak unfolds like a crude
+      parachute. When falling, a creature wearing a billow cape is treated as if
+      he had deliberately jumped from the height. When worn in areas of strong
+      wind or greater, a billow cape hampers movement. In such wind conditions,
+      the wearer treats all terrain as difficult terrain and takes a -4 penalty
+      on Fly checks. Because of the strange and somewhat fragile construction of
+      this cape, only Small or smaller billow capes function properly. Larger
+      billow capes take all the penalties resulting from high winds, but grant
+      none of the benefits when the wearer falls.</p>
+  price: 100
+  slot: clothing
+  sources:
+    - id: PZO1121
+      pages: '65'
+  subType: clothing
+  weight:
+    value: 4
+type: equipment

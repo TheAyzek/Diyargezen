@@ -1,0 +1,25 @@
+_id: OXJC3oddTEsyUdEg
+_key: '!items!OXJC3oddTEsyUdEg'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Powerful Blood Magic
+system:
+  aura:
+    school: evo
+  cl: 9
+  description:
+    value: >-
+      <p>When the wearer of this ring is bloodraging and casts a spell, as a
+      swift action he can increase the save DC of the spell by 1. The wearer can
+      do this a maximum of three times per day. This has no effect on spells
+      that do not require saving
+      throws.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, Spell Focus, creator must have the bloodrage class feature</p>
+  price: 3000
+  slot: ring
+  sources:
+    - id: PZO1129
+  subType: wondrous
+type: equipment

@@ -1,0 +1,27 @@
+_id: SlwSJHGXgycdebAo
+_key: '!items!SlwSJHGXgycdebAo'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Illusion
+system:
+  aura:
+    school: ill
+  cl: 13
+  description:
+    value: >-
+      <p>This staff is made from ebony or other dark wood and carved into an
+      intricately twisted, fluted, or spiral shape. It allows use of the
+      following spells: • Disguise self (1 charge)   • Major image (1 charge)  
+      • Mirror image (1 charge)   • Persistent image (2 charges)   • Rainbow
+      pattern (2 charges)   • Mislead (3
+      charges.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, disguise self, major image, mirror image, mislead, persistent
+      image, rainbow pattern</p>
+  price: 82000
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

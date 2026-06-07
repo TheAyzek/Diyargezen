@@ -1,0 +1,30 @@
+_id: i7GVtnRsGfqPT4h3
+_key: '!items!i7GVtnRsGfqPT4h3'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Blind Helm
+system:
+  aura:
+    school: div
+  cl: 13
+  description:
+    value: >-
+      <p>This plain steel helm completely covers the face, lacking even eyeholes
+      or a slit to peer out of. Its wearer is blinded by the helm, but gains
+      blindsense with a range of 60 feet. As a swift action, the wearer can
+      expend one use of mythic power to gain blindsight with a range of 60 feet
+      for 1 minute, or instead expend two uses of mythic power to gain
+      blindsight with a range of 120 feet for 1 minute. The wearer can expend
+      three uses of mythic power to gain the effects of truesight for 1
+      minute.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Mythic Crafter, echolocation, true seeing</p>
+  price: 85000
+  slot: head
+  sources:
+    - id: PZO1126
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

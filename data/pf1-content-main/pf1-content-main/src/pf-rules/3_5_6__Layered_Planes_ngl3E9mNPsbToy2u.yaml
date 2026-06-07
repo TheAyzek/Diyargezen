@@ -1,0 +1,49 @@
+_id: ngl3E9mNPsbToy2u
+_key: '!journal!ngl3E9mNPsbToy2u'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: B3pncms1TJP9sIoG
+name: 3.5.6. Layered Planes
+pages:
+  - _id: WA2XqJ3OkXFdHRdk
+    _key: '!journal.pages!ngl3E9mNPsbToy2u.WA2XqJ3OkXFdHRdk'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.5.6. Layered Planes
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.ryIRK7CjUk9fI8TT]{3.5.
+        The
+        Planes}</p><ul><li>@Compendium[pf-content.pf-rules.Q71BilaWEOeIsfux]{3.5.1.
+        Material
+        Plane}</li><li>@Compendium[pf-content.pf-rules.PWWyAj9RxKmCOZjr]{3.5.2.
+        Transitive
+        Planes}</li><li>@Compendium[pf-content.pf-rules.9ZxtJSapPINNjxbT]{3.5.3.
+        Inner
+        Planes}</li><li>@Compendium[pf-content.pf-rules.VNXqsTp4czvUWZn3]{3.5.4.
+        Outer
+        Planes}</li><li>@Compendium[pf-content.pf-rules.XC9n0Ynwpq8C9Sm9]{3.5.5.
+        Demiplanes}</li><li><strong>@Compendium[pf-content.pf-rules.ngl3E9mNPsbToy2u]{3.5.6.
+        Layered
+        Planes}</strong></li><li>@Compendium[pf-content.pf-rules.5HeGmOWABLZ7bME7]{3.5.7.
+        How Planes Interact}</li></ul><hr
+        /><p>@Source[PZO1110;pages=441]</p><p>Infinities may be broken into
+        smaller infinities, and planes into smaller, related planes. These
+        layers are effectively separate planes of existence, and each layer can
+        have its own features and qualities. Layers are connected to each other
+        through a variety of planar gates, natural vortices, paths, and shifting
+        borders.</p><p>Access to a layered plane from elsewhere usually happens
+        on the first layer of the plane, which can be either the top or bottom
+        layer, depending on the specific plane. Most fixed access points (such
+        as portals and natural vortices) reach this layer, which makes it the
+        gateway for other layers of the plane. The plane shift spell generally
+        deposits the spellcaster on the first layer of the plane.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

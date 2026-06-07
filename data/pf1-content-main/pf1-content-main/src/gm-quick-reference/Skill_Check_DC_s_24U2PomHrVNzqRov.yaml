@@ -1,0 +1,289 @@
+_id: 24U2PomHrVNzqRov
+_key: '!journal!24U2PomHrVNzqRov'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Skill Check DC's
+pages:
+  - _id: FwfZRDWmsibc10VT
+    _key: '!journal.pages!24U2PomHrVNzqRov.FwfZRDWmsibc10VT'
+    _stats:
+      coreVersion: '12.331'
+    name: Skill Check DCs
+    sort: 100000
+    text:
+      content: >-
+        <p><strong>Contains DC tables for</strong>: Acrobatics, Bluff, Climb,
+        Diplomacy, Disable Device, Fly, Heal, Knowledge, Perception, Ride,
+        Spellcraft, Survival, Swim, and Use Magic Device. </p><p><br
+        /><strong>Other Skills</strong>: <br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.QGxoGsSIAOoe5dTW]{Appraise}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.3E8pxbjI8MD3JbfQ]{Craft}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.DTNlXXg77s3178WJ]{Escape
+        Artist}</p><p>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.IrVgSeMcAM8rAh2B]{Handle
+        Animal}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.KNn8uxHu23phKC0y]{Intimidate}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.SqLm3Deag2FpP8ty]{Linguistics}</p><p>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.emzBKDFNkNnC7N8u]{Perform}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.224EaK0K72NhCeRi]{Profession}<br
+        />@UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.joza8kAIiImrPft7]{Sleight
+        of Hand}</p><hr /><h1>Acrobatics</h1><div id="SO_Acrobatics"><p>See
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.gGfJO90ZuRT4sZ9X]{Acrobatics}.</p><table><thead><tr><td><strong>Move
+        Across a Narrow Surface</strong></td><td><strong>Acrobatics
+        DC</strong></td></tr></thead><tbody><tr><td>Greater than 3 feet
+        wide</td><td>0<sup>1</sup></td></tr><tr><td>1–3 feet
+        wide</td><td>5<sup>1</sup></td></tr><tr><td>7–11 inches
+        wide</td><td>10</td></tr><tr><td>2–6 inches
+        wide</td><td>15</td></tr><tr><td>Less than 2 inches
+        wide</td><td>20</td></tr><tr><td><strong>Move Through a Threatened
+        Area</strong></td><td><strong>Acrobatics
+        DC</strong><sup><strong>2</strong></sup></td></tr><tr><td>Move through a
+        threatened area</td><td>Opponent’s CMD</td></tr><tr><td>Move through an
+        enemy’s space</td><td>5 + opponent’s CMD</td></tr><tr><td><strong>Long
+        Jump</strong></td><td><strong>Acrobatics DC</strong></td></tr><tr><td>5
+        feet</td><td>5</td></tr><tr><td>10 feet</td><td>10</td></tr><tr><td>15
+        feet</td><td>15</td></tr><tr><td>20
+        feet</td><td>20</td></tr><tr><td>Greater than 20 feet</td><td>+5 per 5
+        feet</td></tr><tr><td><strong>High
+        Jump</strong></td><td><strong>Acrobatics DC</strong></td></tr><tr><td>1
+        foot</td><td>4</td></tr><tr><td>2 feet</td><td>8</td></tr><tr><td>3
+        feet</td><td>12</td></tr><tr><td>4
+        feet</td><td>16</td></tr><tr><td>Greater than 4 feet</td><td>+4 per
+        foot</td></tr><tr><td><strong>Acrobatics
+        Modifiers</strong></td><td><strong>DC
+        Modifier</strong></td></tr><tr><td>Slightly obstructed (gravel,
+        sand)</td><td>+2</td></tr><tr><td>Severely obstructed (cavern,
+        rubble)</td><td>+5</td></tr><tr><td>Slightly slippery
+        (wet)</td><td>+2</td></tr><tr><td>Severely slippery
+        (icy)</td><td>+5</td></tr><tr><td>Slightly sloped
+        (&lt;45°)</td><td>+2</td></tr><tr><td>Severely sloped
+        (&gt;45°)</td><td>+5</td></tr><tr><td>Slightly unsteady (boat in rough
+        water)</td><td>+2</td></tr><tr><td>Moderately unsteady (boat in a
+        storm)</td><td>+5</td></tr><tr><td>Severely unsteady
+        (earthquake)</td><td>+10</td></tr><tr><td>Move at full speed on narrow
+        or uneven
+        surfaces</td><td>+5<sup>3</sup></td></tr></tbody></table><p><br />1 No
+        check needed unless modifiers increase the DC to 10 or higher.<br />2
+        Increase the DC by 2 for each additional opp. avoided in 1 round.<br />3
+        This does not apply to checks made to jump.</p></div><h1>Bluff</h1><div
+        id="SO_Bluff"><p>See
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.kRK5XwVBvcMi35w2]{Bluff}.
+        Opposed by
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.ka0VQGItdrWw3paO]{Sense
+        Motive}.</p><table><thead><tr><td><strong>Circumstances</strong></td><td><strong>Bluff
+        Modifier</strong></td></tr></thead><tbody><tr><td>The target wants to
+        believe you</td><td>+5</td></tr><tr><td>The lie is
+        believable</td><td>+0</td></tr><tr><td>The lie is
+        unlikely</td><td>–5</td></tr><tr><td>The lie is
+        far-fetched</td><td>–10</td></tr><tr><td>The lie is
+        impossible</td><td>–20</td></tr><tr><td>The target is drunk or
+        impaired</td><td>+5</td></tr><tr><td>You possess convincing
+        proof</td><td>up to +10</td></tr></tbody></table><p><br /><strong>Feint
+        DC</strong>: Bluff check vs. "10 + your opponent’s base attack bonus +
+        your opponent’s Wisdom modifier" or "10 + your opponent’s Sense Motive
+        bonus", whichever is higher. For more information on feinting in combat,
+        see Combat.</p></div><h1>Climb</h1><div id="SO_Climb"><p>See
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.ZAwjVOTwsBpZRgw4]{Climb}.</p><table><thead><tr><td><strong>Example
+        Surface or Activity</strong></td><td><strong>Climb
+        DC</strong></td></tr></thead><tbody><tr><td>A steep slope, or a knotted
+        rope next to a wall</td><td>0</td></tr><tr><td>A rope next to a wall or
+        a knotted rope</td><td>5</td></tr><tr><td>A surface with ledges, rough
+        wall, or ship rigging</td><td>10</td></tr><tr><td>Any surface with
+        handholds, a tree, or an unknotted rope</td><td>15</td></tr><tr><td>An
+        uneven surface with narrow handholds</td><td>20</td></tr><tr><td>A rough
+        surface, such as a rock or brick wall</td><td>25</td></tr><tr><td>An
+        overhang or ceiling with handholds only</td><td>30</td></tr><tr><td>A
+        perfectly smooth vertical (or inverted) surface cannot be
+        climbed.</td></tr><tr><td><strong>Climb
+        Modifiers</strong></td><td><strong>DC
+        Modifiers</strong></td></tr><tr><td>Brace against two opposite
+        walls</td><td>–10</td></tr><tr><td>Brace against two perpendicular
+        walls</td><td>–5</td></tr><tr><td>Surface is
+        slippery</td><td>+5</td></tr></tbody></table></div><h1>Diplomacy</h1><div
+        id="SO_Diplomacy"><p>See
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.uB9Fy36RUjibxqvt]{Diplomacy}.</p><table><thead><tr><td><strong>Starting
+        Attitude</strong></td><td><strong>Diplomacy
+        DC</strong></td></tr></thead><tbody><tr><td>Hostile</td><td>25 +
+        creature's Cha modifier</td></tr><tr><td>Unfriendly</td><td>20 +
+        creature's Cha modifier</td></tr><tr><td>Indifferent</td><td>15 +
+        creature's Cha modifier</td></tr><tr><td>Friendly</td><td>10 +
+        creature's Cha modifier</td></tr><tr><td>Helpful</td><td>0 + creature's
+        Cha
+        modifier</td></tr><tr><td><strong>Request</strong></td><td><strong>DC
+        Modifier</strong></td></tr><tr><td>Give simple advice or
+        directions</td><td>–5</td></tr><tr><td>Give detailed
+        advice</td><td>+0</td></tr><tr><td>Give simple
+        aid</td><td>+0</td></tr><tr><td>Reveal an unimportant
+        secret</td><td>+5</td></tr><tr><td>Give lengthy or complicated
+        aid</td><td>+5</td></tr><tr><td>Give dangerous
+        aid</td><td>+10</td></tr><tr><td>Reveal an important secret</td><td>+10
+        or more</td></tr><tr><td>Give aid that could result in
+        punishment</td><td>+15 or more</td></tr><tr><td>Additional
+        requests</td><td>+5 per
+        request</td></tr></tbody></table></div><h1>Disable Device</h1><div
+        id="SO_DisableDevice"><p>See
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.cSdUATLHBFfw3v4s]{Disable
+        Device}.</p><table><thead><tr><td><strong>Device</strong></td><td><strong>Time</strong></td><td><strong>Disable
+        Device
+        DC*</strong></td><td><strong>Example</strong></td></tr></thead><tbody><tr><td>Simple</td><td>1
+        round</td><td>10</td><td>Jam a lock</td></tr><tr><td>Tricky</td><td>1d4
+        rounds</td><td>15</td><td>Sabotage a wagon
+        wheel</td></tr><tr><td>Difficult</td><td>2d4
+        rounds</td><td>20</td><td>Disarm a trap, reset a
+        trap</td></tr><tr><td>Extreme</td><td>2d4
+        rounds</td><td>25</td><td>Disarm a complex trap, cleverly sabotage a
+        clockwork device</td></tr></tbody></table><p><sup>* If you attempt to
+        leave behind no trace of your tampering, add 5 to the
+        DC.</sup></p></div><h1>Fly</h1><div id="SO_Fly"><p>See
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.iH69GIwm8BjecrPN]{Fly}.</p><table><thead><tr><td><strong>Flying
+        Maneuver</strong></td><td><strong>Fly
+        DC</strong></td></tr></thead><tbody><tr><td>Move less than half speed
+        and remain
+        flying</td><td>10</td></tr><tr><td>Hover</td><td>15</td></tr><tr><td>Turn
+        greater than 45° by spending 5 feet of
+        movement</td><td>15</td></tr><tr><td>Turn 180° by spending 10 feet of
+        movement</td><td>20</td></tr><tr><td>Fly up at greater than 45°
+        angle</td><td>20</td></tr></tbody></table></div><h3>Wind Effects on
+        Flight</h3><div
+        id="SO_WindEffectsonFlight"><table><thead><tr><td><strong>Wind
+        Force</strong></td><td><strong>Wind
+        Speed</strong></td><td><strong>Checked
+        Size</strong></td><td><strong>Blown Away
+        Size</strong></td><td><strong>Fly
+        Penalty</strong></td></tr></thead><tbody><tr><td>Light</td><td>0–10
+        mph</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Moderate</td><td>11–20
+        mph</td><td>—</td><td>—</td><td>—</td></tr><tr><td>Strong</td><td>21–30
+        mph</td><td>Tiny</td><td>—</td><td>–2</td></tr><tr><td>Severe</td><td>31–50
+        mph</td><td>Small</td><td>Tiny</td><td>–4</td></tr><tr><td>Windstorm</td><td>51–74
+        mph</td><td>Medium</td><td>Small</td><td>–8</td></tr><tr><td>Hurricane</td><td>75–174
+        mph</td><td>Large</td><td>Medium</td><td>–12</td></tr><tr><td>Tornado</td><td>175+
+        mph</td><td>Huge</td><td>Large</td><td>–16</td></tr></tbody></table></div><h1>Heal</h1><div
+        id="SO_Heal"><p>See
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.nHbYSOoe1SzqEO9w]{Heal}.</p><table><thead><tr><td><strong>Task</strong></td><td><strong>DC</strong></td></tr></thead><tbody><tr><td>First
+        aid</td><td>15</td></tr><tr><td>Long-term
+        care</td><td>15</td></tr><tr><td>Treat wounds from caltrops, spike
+        growth, or spike stones</td><td>15</td></tr><tr><td>Treat deadly
+        wounds</td><td>20</td></tr><tr><td>Treat poison</td><td>Poison’s save
+        DC</td></tr><tr><td>Treat disease</td><td>Disease’s save
+        DC</td></tr></tbody></table></div><h1>Knowledge</h1><div
+        id="SO_Knowledge"><p>See
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.BWeqgXSZvUQl68vt]{Knowledge}.</p><table><thead><tr><td><strong>Task</strong></td><td><strong>Knowledge
+        DC</strong></td></tr></thead><tbody><tr><td>Easy
+        question</td><td>10</td></tr><tr><td>Basic
+        question</td><td>15</td></tr><tr><td>Hard
+        question</td><td>20+</td></tr><tr><td>Identify auras using detect magic
+        (arcana)</td><td>15 + spell level</td></tr><tr><td>Identify a spell
+        effect that is in place (arcana)</td><td>20 + spell
+        level</td></tr><tr><td>Identify underground hazard
+        (dungeoneering)</td><td>15 + hazard's CR</td></tr><tr><td>Identify
+        dangerous construction
+        (engineering)</td><td>10</td></tr><tr><td>Recognize regional terrain
+        features (geography)</td><td>15</td></tr><tr><td>Know obscure or ancient
+        event (history)</td><td>20</td></tr><tr><td>Know local laws, rulers, and
+        popular locations (local)</td><td>10</td></tr><tr><td>Identify a common
+        plant or animal (nature)</td><td>10</td></tr><tr><td>Know proper
+        etiquette (nobility)</td><td>15</td></tr><tr><td>Identify a creature's
+        planar origin (planes)</td><td>20</td></tr><tr><td>Recognize a common
+        deity's symbol or clergy (religion)</td><td>10</td></tr><tr><td>Know a
+        monster's abilities or weaknesses (varies)</td><td>10 + monster's
+        CR</td></tr></tbody></table></div><h1>Perception</h1><div
+        id="SO_Perception"><p>See
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.2h6hz5AkTDxKPFxr]{Perception}.</p><table><thead><tr><td><strong>Detail</strong></td><td><strong>Perception
+        DC</strong></td></tr></thead><tbody><tr><td>Hear the sound of
+        battle</td><td>–10</td></tr><tr><td>Notice the stench of rotting
+        garbage</td><td>–10</td></tr><tr><td>Detect the smell of
+        smoke</td><td>0</td></tr><tr><td>Hear the details of a
+        conversation</td><td>0</td></tr><tr><td>Notice a visible
+        creature</td><td>0</td></tr><tr><td>Determine if food is
+        spoiled</td><td>5</td></tr><tr><td>Hear the sound of a creature
+        walking</td><td>10</td></tr><tr><td>Hear the details of a whispered
+        conversation</td><td>15</td></tr><tr><td>Find the average concealed
+        door</td><td>15</td></tr><tr><td>Hear the sound of a key being turned in
+        a lock</td><td>20</td></tr><tr><td>Find the average secret
+        door</td><td>20</td></tr><tr><td>Hear a bow being
+        drawn</td><td>25</td></tr><tr><td>Sense a burrowing creature underneath
+        you</td><td>25</td></tr><tr><td>Notice a pickpocket</td><td>Opposed by
+        Sleight of Hand</td></tr><tr><td>Notice a creature using
+        Stealth</td><td>Opposed by Stealth</td></tr><tr><td>Find a hidden
+        trap</td><td>Varies by trap</td></tr><tr><td>Identify the powers of a
+        potion through taste</td><td>15 + the potion’s caster
+        level</td></tr><tr><td><strong>Perception
+        Modifiers</strong></td><td><strong>DC
+        Modifier</strong></td></tr><tr><td>Distance to the source, object, or
+        creature</td><td>+1/10 feet</td></tr><tr><td>Through a closed
+        door</td><td>+5</td></tr><tr><td>Through a wall</td><td>+10/foot of
+        thickness</td></tr><tr><td>Favorable
+        conditions<sup>1</sup></td><td>–2</td></tr><tr><td>Unfavorable
+        conditions<sup>1</sup></td><td>+2</td></tr><tr><td>Terrible
+        conditions<sup>2</sup></td><td>+5</td></tr><tr><td>Creature making the
+        check is distracted</td><td>+5</td></tr><tr><td>Creature making the
+        check is asleep</td><td>+10</td></tr><tr><td>Creature or object is
+        invisible</td><td>+20</td></tr></tbody></table><p><br />1 Favorable and
+        unfavorable conditions depend upon the sense being used to make the
+        check.<br />2 As for unfavorable conditions, but more
+        extreme.</p></div><h1>Ride</h1><div id="SO_Ride"><p>See
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.xQbTtefpEfEaOYo7]{Ride}.</p><table><thead><tr><td><strong>Task</strong></td><td><strong>Ride
+        DC</strong></td></tr></thead><tbody><tr><td>Guide with
+        knees</td><td>5</td></tr><tr><td>Stay in
+        saddle</td><td>5</td></tr><tr><td>Fight with a combat-trained
+        mount</td><td>10</td></tr><tr><td>Cover</td><td>15</td></tr><tr><td>Soft
+        fall</td><td>15</td></tr><tr><td>Leap</td><td>15</td></tr><tr><td>Spur
+        mount</td><td>15</td></tr><tr><td>Control mount in
+        battle</td><td>20</td></tr><tr><td>Fast mount or
+        dismount</td><td>20</td></tr></tbody></table></div><h1>Spellcraft</h1><div
+        id="SO_Spellcraft"><p>See
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.VRD7jxiIAxKPt6EF]{Spellcraft}.</p><table><thead><tr><td><strong>Task</strong></td><td><strong>Spellcraft
+        DC</strong></td></tr></thead><tbody><tr><td>Identify a spell as it is
+        being cast</td><td>15 + spell level</td></tr><tr><td>Learn a spell from
+        a spellbook or scroll</td><td>15 + spell level</td></tr><tr><td>Prepare
+        a spell from a borrowed spellbook</td><td>15 + spell
+        level</td></tr><tr><td>Identify the properties of a magic item using
+        <em>detect magic</em></td><td>15 + item’s caster
+        level</td></tr><tr><td>Decipher a scroll</td><td>20 + spell
+        level</td></tr><tr><td>Craft a magic item</td><td>Varies by
+        item</td></tr></tbody></table></div><h1>Survival</h1><div
+        id="SO_Survival"><p>See
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.pLdYavy4nssLEoGV]{Survival}.</p><table><thead><tr><td><strong>Track
+        Creatures over Listed Surface</strong></td><td><strong>Survival
+        DC</strong></td></tr></thead><tbody><tr><td>Very soft
+        ground</td><td>5</td></tr><tr><td>Soft
+        ground</td><td>10</td></tr><tr><td>Firm
+        ground</td><td>15</td></tr><tr><td>Hard
+        ground</td><td>20</td></tr><tr><td><strong>Condition</strong></td><td><strong>Survival
+        DC Modifier</strong></td></tr><tr><td>Every three creatures in the group
+        being tracked</td><td>–1</td></tr><tr><td>Size of creature or creatures
+        being tracked:<sup>1</sup></td><td>
+        </td></tr><tr><td>-Fine</td><td>+8</td></tr><tr><td>-Diminutive</td><td>+4</td></tr><tr><td>-Tiny</td><td>+2</td></tr><tr><td>-Small</td><td>+1</td></tr><tr><td>-Medium</td><td>+0</td></tr><tr><td>-Large</td><td>–1</td></tr><tr><td>-Huge</td><td>–2</td></tr><tr><td>-Gargantuan</td><td>–4</td></tr><tr><td>-Colossal</td><td>–8</td></tr><tr><td>Every
+        24 hours since the trail was made</td><td>+1</td></tr><tr><td>Every hour
+        of rain since the trail was made</td><td>+1</td></tr><tr><td>Fresh snow
+        since the trail was made</td><td>+10</td></tr><tr><td>Poor
+        visibility:<sup>1</sup></td><td> </td></tr><tr><td>-Overcast or moonless
+        night</td><td>+6</td></tr><tr><td>-Moonlight</td><td>+3</td></tr><tr><td>-Fog
+        or precipitation</td><td>+3</td></tr><tr><td>Tracked party hides trail
+        (and moves at half speed)</td><td>+5</td></tr></tbody></table><p><br />1
+        Apply only the largest modifier from this
+        category.</p></div><h1>Swim</h1><div id="SO_Swim"><p>See
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.xhmDhOXuBbfVcD0Q]{Swim}.
+        Move at quarter speed.</p><table><thead><tr><td><strong>Water
+        Condition</strong></td><td><strong>Swim
+        DC</strong></td></tr></thead><tbody><tr><td>Calm
+        water</td><td>10</td></tr><tr><td>Rough
+        water</td><td>15</td></tr><tr><td>Stormy
+        water</td><td>20<sup>1</sup></td></tr></tbody></table><p>1 You can’t
+        take 10 on a Swim check in stormy water, even if you aren’t otherwise
+        being threatened or distracted</p></div><h1>Use Magic Device</h1><p>See
+        @UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.A8j7nF6qHwuGEC2E]{Use
+        Magic Device}.</p><div><table><thead><tr><td>Task</td><td>Use Magic
+        Device DC</td></tr></thead><tbody><tr><td>Activate
+        blindly</td><td>25</td></tr><tr><td>Decipher a written spell</td><td>25
+        + spell level</td></tr><tr><td>Use a scroll</td><td>20 + caster
+        level</td></tr><tr><td>Use a wand</td><td>20</td></tr><tr><td>Emulate a
+        class feature</td><td>20</td></tr><tr><td>Emulate an ability
+        score</td><td>See text</td></tr><tr><td>Emulate a
+        race</td><td>25</td></tr><tr><td>Emulate an
+        alignment</td><td>30</td></tr></tbody></table></div>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

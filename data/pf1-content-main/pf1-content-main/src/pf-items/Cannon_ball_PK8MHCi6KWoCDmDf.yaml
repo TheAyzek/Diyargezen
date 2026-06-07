@@ -1,0 +1,22 @@
+_id: PK8MHCi6KWoCDmDf
+_key: '!items!PK8MHCi6KWoCDmDf'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/bomb.jpg
+name: Cannon ball
+system:
+  description:
+    value: >-
+      <p>A cannon ball is the ammunition of a cannon and many other siege
+      firearms. Picking up or drawing a cannon ball requires a move action for
+      Medium and Small creatures, but is a free action for Large and larger
+      creatures.</p>
+  equipped: false
+  price: 30
+  sources:
+    - id: PZO9226
+      pages: '293'
+  subType: adventuring
+  weight:
+    value: 25
+type: loot

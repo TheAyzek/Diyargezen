@@ -1,0 +1,102 @@
+_id: L2awGiA4DxnPQgXM
+_key: '!tables!L2awGiA4DxnPQgXM'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/tomb-entrance.webp
+name: Sewers
+replacement: true
+results:
+  - _id: vU4P5BkGTFav5jaN
+    _key: '!tables.results!L2awGiA4DxnPQgXM.vU4P5BkGTFav5jaN'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 3
+    text: Dead Body [CR —]
+    type: text
+    weight: 1
+  - _id: q79D19xg540w5UO5
+    _key: '!tables.results!L2awGiA4DxnPQgXM.q79D19xg540w5UO5'
+    img: icons/svg/d20-black.svg
+    range:
+      - 4
+      - 10
+    text: Interesting Flotsam [CR —]
+    type: text
+    weight: 1
+  - _id: W3A70B10a9xmG77A
+    _key: '!tables.results!L2awGiA4DxnPQgXM.W3A70B10a9xmG77A'
+    img: icons/svg/d20-black.svg
+    range:
+      - 11
+      - 25
+    text: 1d4 Wererats [CR Varies]
+    type: text
+    weight: 1
+  - _id: wKMSDafcCnz417q8
+    _key: '!tables.results!L2awGiA4DxnPQgXM.wKMSDafcCnz417q8'
+    img: icons/svg/d20-black.svg
+    range:
+      - 26
+      - 35
+    text: 1d3 ([[1d3]]) Violet Fungi [AVG CR 2]
+    type: text
+    weight: 1
+  - _id: 1agBr2n7Jb3wTiFY
+    _key: '!tables.results!L2awGiA4DxnPQgXM.1agBr2n7Jb3wTiFY'
+    img: icons/svg/d20-black.svg
+    range:
+      - 36
+      - 50
+    text: 2d6 ([[2d6]]) Goblins [AVG CR 3]
+    type: text
+    weight: 1
+  - _id: KTcG9W9NPljGHuyp
+    _key: '!tables.results!L2awGiA4DxnPQgXM.KTcG9W9NPljGHuyp'
+    img: icons/svg/d20-black.svg
+    range:
+      - 51
+      - 55
+    text: 1d3 ([[1d3]]) Will-‘O-Wisp [AVG CR 6]
+    type: text
+    weight: 1
+  - _id: rrOPyYtJb7QTc1yO
+    _key: '!tables.results!L2awGiA4DxnPQgXM.rrOPyYtJb7QTc1yO'
+    img: icons/svg/d20-black.svg
+    range:
+      - 56
+      - 70
+    text: 1d3 ([[1d3]]) Otyughs [AVG CR 6]
+    type: text
+    weight: 1
+  - _id: TRMaPYqz3skU5MZn
+    _key: '!tables.results!L2awGiA4DxnPQgXM.TRMaPYqz3skU5MZn'
+    img: icons/svg/d20-black.svg
+    range:
+      - 71
+      - 78
+    text: 2d4 ([[2d4]]) Guards [AVG CR 7]
+    type: text
+    weight: 1
+  - _id: Gs3ohA02eDIQcWZk
+    _key: '!tables.results!L2awGiA4DxnPQgXM.Gs3ohA02eDIQcWZk'
+    img: icons/svg/d20-black.svg
+    range:
+      - 79
+      - 80
+    text: 1d3 ([[1d3]]) Elite Marines [AVG CR 7]
+    type: text
+    weight: 1
+  - _id: 3knI4hWWn3zyoqTY
+    _key: '!tables.results!L2awGiA4DxnPQgXM.3knI4hWWn3zyoqTY'
+    img: icons/svg/d20-black.svg
+    range:
+      - 81
+      - 100
+    text: 2d4 ([[2d4]]) Thugs [AVG CR 8]
+    type: text
+    weight: 1
+sort: 1800000

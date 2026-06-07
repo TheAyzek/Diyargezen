@@ -1,0 +1,69 @@
+_id: ZVtGF2BewFWHddKo
+_key: '!journal!ZVtGF2BewFWHddKo'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: QmrPrSntpc1ky8bJ
+name: 2.05. Big and Little Creatures in Combat
+pages:
+  - _id: iHc9X6Pce1Emeitb
+    _key: '!journal.pages!ZVtGF2BewFWHddKo.iHc9X6Pce1Emeitb'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.05. Big and Little Creatures in Combat
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><hr /><p>@Source[PZO1110;pages=194]</p><p>Creatures smaller
+        than Small or larger than Medium have special rules relating to
+        position.</p><h2>Tiny, Diminutive, and Fine Creatures</h2><p>Very small
+        creatures take up less than 1 square of space. This means that more than
+        one such creature can fit into a single square. A Tiny creature
+        typically occupies a space only 2-1/2 feet across, so four can fit into
+        a single square. 25 Diminutive creatures or 100 Fine creatures can fit
+        into a single square. Creatures that take up less than 1 square of space
+        typically have a natural reach of 0 feet, meaning they can’t reach into
+        adjacent squares. They must enter an opponent’s square to attack in
+        melee. This provokes an attack of opportunity from the opponent. You can
+        attack into your own square if you need to, so you can attack such
+        creatures normally. Since they have no natural reach, they do not
+        threaten the squares around them. You can move past them without
+        provoking attacks of opportunity. They also can’t flank an
+        enemy.</p><h2>Large, Huge, Gargantuan, and Colossal
+        Creatures</h2><p>Very large creatures take up more than 1
+        square.</p><p>Creatures that take up more than 1 square typically have a
+        natural reach of 10 feet or more, meaning that they can reach targets
+        even if they aren’t in adjacent squares.</p><p>Unlike when someone uses
+        a reach weapon, a creature with greater than normal natural reach (more
+        than 5 feet) still threatens squares adjacent to it. A creature with
+        greater than normal natural reach usually gets an attack of opportunity
+        against you if you approach it, because you must enter and move within
+        the range of its reach before you can attack it. This attack of
+        opportunity is not provoked if you take a 5-foot step.</p><p>Large or
+        larger creatures using reach weapons can strike up to double their
+        natural reach but can’t strike at their natural reach or
+        less.</p><h2>Table 8-4: Creature Size and
+        Scale</h2><table><thead><tr><td>Creature
+        Size</td><td>Space*</td><td>Natural
+        Reach*</td></tr></thead><tbody><tr><td>Fine</td><td>1/2
+        ft.</td><td>0</td></tr><tr><td>Diminutive</td><td>1
+        ft.</td><td>0</td></tr><tr><td>Tiny</td><td>2-1/2
+        ft.</td><td>0</td></tr><tr><td>Small</td><td>5 ft.</td><td>5
+        ft.</td></tr><tr><td>Medium</td><td>5 ft.</td><td>5
+        ft.</td></tr><tr><td>Large (tall)</td><td>10 ft.</td><td>10
+        ft.</td></tr><tr><td>Large (long)</td><td>10 ft.</td><td>5
+        ft.</td></tr><tr><td>Huge (tall)</td><td>15 ft.</td><td>15
+        ft.</td></tr><tr><td>Huge (long)</td><td>15 ft.</td><td>10
+        ft.</td></tr><tr><td>Gargantuan (tall)</td><td>20 ft.</td><td>20
+        ft.</td></tr><tr><td>Gargantuan (long)</td><td>20 ft.</td><td>15
+        ft.</td></tr><tr><td>Colossal (tall)</td><td>30 ft.</td><td>30
+        ft.</td></tr><tr><td>Colossal (long)</td><td>30 ft.</td><td>20
+        ft.</td></tr></tbody></table><p>* These values are typical for creatures
+        of the indicated size. Some exceptions exist.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

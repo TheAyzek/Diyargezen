@@ -1,0 +1,23 @@
+_id: KxCc9YygZ7gjRlQV
+_key: '!items!KxCc9YygZ7gjRlQV'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/nautical/steering-wheel.webp
+name: Vehicle, Warship
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 25,000 gp; <strong>Price of Passage (per
+      mile)</strong> 2 sp</p><p>This 100-foot-long ship has a single mast,
+      although oars can also propel it. It has a crew of 60 to 80 rowers. This
+      ship can carry 160 soldiers, but not for long distances, since there isn't
+      room for supplies to support that many people. A warship cannot make sea
+      voyages and sticks to the coast. It is not used for cargo. It moves about
+      2-1/2 miles per hour when being rowed or under sail.</p>
+  equipped: false
+  price: 25000
+  sources:
+    - id: PZO1123
+      pages: '87'
+  subType: vehicle
+type: loot

@@ -1,0 +1,37 @@
+_id: zLTH7LXAeKIJzGpO
+_key: '!items!zLTH7LXAeKIJzGpO'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/spells/explosion-sky-3.jpg
+name: Surge [Mythic]
+system:
+  abilityType: su
+  actions:
+    - _id: et10f2ycf7fwxplr
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      img: systems/pf1/icons/spells/explosion-sky-3.jpg
+      name: Use
+      notes:
+        effect:
+          - +[[1d6]] Surge
+      tag: surgeSuMythic
+  description:
+    value: >-
+      <p>The monster can call upon its <a>mythic power</a> to overcome difficult
+      challenges. It can expend one use of mythic power to increase any d20 roll
+      it just made by rolling 1d6 and adding the result to the d20 roll. Using
+      this ability is an immediate action taken after the original roll is made
+      and the results are revealed. The bonus die gained by using this ability
+      increases to 1d8 at 4th rank, 1d10 at 7th rank, and 1d12 at 10th rank. The
+      monster can use this ability even if it&rsquo;s mindless or of
+      animal-level intelligence. (See the Mythic Rules for more
+      information.</p><p>Surge doesn&rsquo;t have a separate entry in the
+      monster stat block&mdash;the surge die is listed in the mythic power
+      ability.</p><p><em>Usage:</em> Replace Surge die</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

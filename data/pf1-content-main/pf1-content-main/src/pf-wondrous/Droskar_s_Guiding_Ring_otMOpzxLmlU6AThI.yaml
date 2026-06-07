@@ -1,0 +1,32 @@
+_id: otMOpzxLmlU6AThI
+_key: '!items!otMOpzxLmlU6AThI'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Droskar's Guiding Ring
+system:
+  aura:
+    school: enc
+  cl: 3
+  description:
+    value: >-
+      <p>This gold ring is misshapen and uncomfortable to wear for long periods
+      of time; inscribed on it is a crude symbol of a fire burning under an
+      arch. Once per day, the wearer may use charm person. If Droskar is the
+      wearer's patron deity, any time the wearer crafts a magic item, she may
+      choose to pay half of the item's construction cost instead of the full
+      cost. The wearer spends time working on the item normally, but at the time
+      of completion there is a 50% chance that the item turns out nonmagical and
+      worthless. For example, if creating a magic bracer that normally costs
+      1,000 gp to craft, the wearer may craft it for only 500 gp, but there is a
+      50% chance the wearer's shortcuts and cheap materials result in a
+      valueless, nonfunctional
+      item.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, charm person, fabricate</p>
+  price: 2600
+  slot: ring
+  sources:
+    - id: PZO9267
+  subType: wondrous
+type: equipment

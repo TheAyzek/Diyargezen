@@ -1,0 +1,33 @@
+_id: rxZHFvl7ul4XkhJA
+_key: '!items!rxZHFvl7ul4XkhJA'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Daredevil Softpaws
+system:
+  aura:
+    school: enc
+  cl: 3
+  description:
+    value: >-
+      <p>This pair of magical softpaw boots (see above) allows the catfolk
+      wearing them to gain extra maneuverability while moving through hazardous
+      areas. As a free action, the wearer can click her heels together to grant
+      herself a +5 competence bonus on Acrobatics checks made to move through
+      threatened squares or to move through an enemy's space without provoking
+      attacks of opportunity for up to 10 rounds per day. The rounds need not be
+      consecutive. Furthermore, anytime the wearer of the boots successfully
+      moves though the space of an enemy without provoking an attack of
+      opportunity, she gains a +2 bonus on attack rolls against that enemy until
+      the end of her
+      turn.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, cat's grace</p>
+  price: 1400
+  slot: feet
+  sources:
+    - id: PZO1121
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

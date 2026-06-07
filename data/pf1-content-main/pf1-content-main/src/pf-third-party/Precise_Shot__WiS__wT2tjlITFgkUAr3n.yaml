@@ -1,0 +1,22 @@
+_id: wT2tjlITFgkUAr3n
+_key: '!items!wT2tjlITFgkUAr3n'
+_stats:
+  coreVersion: '12.331'
+folder: CQNw1H2zi4NilpKP
+img: systems/pf1/icons/feats/precise-shot.jpg
+name: Precise Shot (WiS)
+system:
+  description:
+    value: >-
+      <p><em>You are adept at firing ranged attacks into
+      melee.</em></p><p><strong>Benefits</strong>: You can shoot or throw ranged
+      weapons at an opponent engaged in melee without taking the standard
+      &ndash;4 penalty on your attack roll.</p><p>Precise Shot replaces
+      Point-Black Shot as a prerequisite for further archery feats.</p>
+  sources:
+    - publisher: https://meliogeny.net/square-world/
+      title: World is Square
+  tags:
+    - Combat
+    - World is Square
+type: feat

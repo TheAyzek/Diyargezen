@@ -1,0 +1,21 @@
+_id: rmyPq5xqvFtS2mah
+_key: '!items!rmyPq5xqvFtS2mah'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/minor-empty.jpg
+name: Rager's Aid
+system:
+  description:
+    value: >-
+      <p>This packet filled with spikey-edged leaves has a pungent scent almost
+      strong enough to make your eyes water. While you chew the leaves, you
+      ignore the effects of fatigue. The leaves last for 6 rounds, at which
+      point only a wad of pulp remains. When the effect of rager's aid wears
+      off, you are exhausted instead. </p><h2>Construction</h2><p><strong>Craft
+      (Alchemy)</strong> DC 25</p>
+  price: 25
+  sources:
+    - id: PZO1129
+      pages: '206'
+  subType: misc
+type: consumable

@@ -1,0 +1,20 @@
+_id: ODuNyMIfBGGg5pge
+_key: '!items!ODuNyMIfBGGg5pge'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/violet_05.jpg
+name: Shared Slot (2 EP)
+system:
+  abilityType: su
+  description:
+    instructions: <p>Add magic item to eidolon sheet.</p>
+    value: >-
+      <p>Select a magic item slot.</p><p>A magic item worn by the eidolon in
+      that slot remains active even if the summoner is also wearing a magic item
+      in that slot.</p><p>This evolution can be selected more than once. Each
+      time an eidolon selects this evolution, it applies to a new
+      slot.</p><p><strong>Requirements</strong></p><p>Twinned eidolon.</p>
+  subType: misc
+  tags:
+    - Eidolon Evolution
+type: feat

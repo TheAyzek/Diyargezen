@@ -1,0 +1,42 @@
+_id: 2ESpoKfm3lv92Pyc
+_key: '!items!2ESpoKfm3lv92Pyc'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-tower.PNG
+name: Spell Ward Tower Shield
+system:
+  armor:
+    acp: 10
+    dex: 2
+    material:
+      base:
+        value: wood
+    value: 4
+  aura:
+    school: abj
+  baseTypes:
+    - Tower Shield
+  cl: 15
+  description:
+    value: >-
+      <p>This +2 spell resistance (13) tower shield grants a + 4 resistance
+      bonus on Reflex saving throws against spells and spell-like abilities.
+      Once per day, when the wearer succeeds at a saving throw against a spell
+      or spell-like ability that allows a Reflex saving throw for half damage,
+      she may spend an immediate action to instead take no damage from that
+      spell or spell-like ability.</p><p><strong>Base Item</strong>: spell
+      resistance (13)</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, cat's grace, spell resistance</p>
+  enh: 2
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 25180
+  slot: shield
+  sources:
+    - id: PZO1123
+  spellFailure: 50
+  subType: shield
+  weight:
+    value: 15
+type: equipment

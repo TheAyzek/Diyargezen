@@ -1,0 +1,71 @@
+_id: dmYhJC0URfJ2NPaK
+_key: '!items!dmYhJC0URfJ2NPaK'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/guns/gun-wood.webp
+name: Depth Charger
+system:
+  actions:
+    - _id: jzo5398kxwlkpefw
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: depthCharger
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  baseTypes:
+    - Blunderbuss
+  cl: 11
+  description:
+    value: >-
+      <p>Carved to look like the bones of fish, the barrel and mechanical
+      components of this blunderbuss are made of mithral. A depth charger is a
+      +2 reliable blunderbuss that gains an additional +2 enhancement bonus on
+      attack rolls against creatures with the aquatic subtype, and deals an
+      additional 2d6 points of damage to such creatures with a successful
+      attack. All ammunition used by a depth charger is considered to have the
+      dry load weapon special ability in addition to any other magical
+      enhancements it previously contained.  When a depth charger is wielded
+      underwater, it enables its wielder to breathe normally. The wielder can
+      continue to breathe underwater for a total of 12 hours as long as she
+      continues to hold the blunderbuss. These hours do not have to be
+      consecutive but must be used in 1-hour increments. The available breathing
+      time is reset only if a depth charger is kept dry for 12 continuous
+      hours.</p><p><strong>Base Item</strong>: +2 reliable
+      blunderbuss</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, Gunsmithing, air bubble mending, summon monster I,
+      water breathing</p>
+  enh: 2
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 58800
+  properties:
+    sct: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9550
+  weaponGroups:
+    - firearms
+  weight:
+    value: 3
+type: weapon

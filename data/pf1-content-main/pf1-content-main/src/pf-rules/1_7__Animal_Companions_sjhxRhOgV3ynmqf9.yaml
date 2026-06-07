@@ -1,0 +1,137 @@
+_id: sjhxRhOgV3ynmqf9
+_key: '!journal!sjhxRhOgV3ynmqf9'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: sWur0vXI68cZozsg
+name: 1.7. Animal Companions
+pages:
+  - _id: Sxq8V3twJQgjYLcE
+    _key: '!journal.pages!sjhxRhOgV3ynmqf9.Sxq8V3twJQgjYLcE'
+    _stats:
+      coreVersion: '12.331'
+    name: 1.7. Animal Companions
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.Ic1tlF3EE1QNW3kE]{(Index)}</p><p>@Compendium[pf-content.pf-rules.8scSEgBEtJZj0suf]{(Index)
+        Basic
+        Rules}</p><ul><li><p><strong>@Compendium[pf-content.pf-rules.sjhxRhOgV3ynmqf9]{1.7.
+        Animal
+        Companions}</strong></p><ul><li>@Compendium[pf-content.pf-rules.bLW7my2JM1AWHcPt]{1.7.01.
+        Controlling Companions, Familiars, and
+        Followers}</li><li>@Compendium[pf-content.pf-rules.QrfgKKGq1a9P28cD]{1.7.02.
+        Animal
+        Options}</li><li>@Compendium[pf-content.pf-rules.751RCqF5c5cRGCVG]{1.7.03.
+        Monstrous
+        Options}</li><li>@Compendium[pf-content.pf-rules.A2INBQqsGOHfeN36]{1.7.04.
+        Plant
+        Options}</li><li>@Compendium[pf-content.pf-rules.3nO5z2V4Y5WdTxqp]{1.7.05.
+        Vermin
+        Options}</li><li>@Compendium[pf-content.pf-rules.fzg18IfdQWR57QpN]{1.7.06.
+        Advancing
+        Companions}</li><li>@Compendium[pf-content.pf-rules.EBgdBlDozsMHFm1r]{1.7.07.
+        Intelligent
+        Animals}</li><li>@Compendium[pf-content.pf-rules.MaMACE7dH6mGN9yB]{1.7.08.
+        Awakened
+        Animals}</li><li>@Compendium[pf-content.pf-rules.gxSnEAS4Jn1zHrAS]{1.7.09.
+        Tips for Remembering
+        Companions}</li><li>@Compendium[pf-content.pf-rules.S1ITgv2XUahBeROc]{1.7.10.
+        Companion Plot
+        Hooks}</li><li>@Compendium[pf-content.pf-rules.6zNHWvDTzqgtPPTd]{1.7.11.
+        Reviving and Replacing Companions}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110]</p><p>An animal companion's abilities are
+        determined by the druid's level and its animal racial traits. Table:
+        Animal Companion Base Statistics determines many of the base statistics
+        of the animal companion. They remain creatures of the animal type for
+        purposes of determining which spells can affect them.</p><table
+        border="1"><thead><tr><th>Class
+        Level</th><th>HD</th><th>BAB</th><th>Fort</th><th>Ref</th><th>Will</th><th>Skills</th><th>Feats</th><th>Natural
+        Armor Bonus</th><th>Str/Dex Bonus</th><th>Bonus
+        Tricks</th><th>Special</th></tr></thead><tbody><tr><td>1st</td><td>2</td><td>+1</td><td>+3</td><td>+3</td><td>+0</td><td>2</td><td>1</td><td>+0</td><td>+0</td><td>1</td><td>Link,
+        share
+        spells</td></tr><tr><td>2nd</td><td>3</td><td>+2</td><td>+3</td><td>+3</td><td>+1</td><td>3</td><td>2</td><td>+0</td><td>+0</td><td>1</td><td>—</td></tr><tr><td>3rd</td><td>3</td><td>+2</td><td>+3</td><td>+3</td><td>+1</td><td>3</td><td>2</td><td>+2</td><td>+1</td><td>2</td><td>Evasion</td></tr><tr><td>4th</td><td>4</td><td>+3</td><td>+4</td><td>+4</td><td>+1</td><td>4</td><td>2</td><td>+2</td><td>+1</td><td>2</td><td>Ability
+        score
+        increase</td></tr><tr><td>5th</td><td>5</td><td>+3</td><td>+4</td><td>+4</td><td>+1</td><td>5</td><td>3</td><td>+2</td><td>+1</td><td>2</td><td>—</td></tr><tr><td>6th</td><td>6</td><td>+4</td><td>+5</td><td>+5</td><td>+2</td><td>6</td><td>3</td><td>+4</td><td>+2</td><td>3</td><td>Devotion</td></tr><tr><td>7th</td><td>6</td><td>+4</td><td>+5</td><td>+5</td><td>+2</td><td>6</td><td>3</td><td>+4</td><td>+2</td><td>3</td><td>—</td></tr><tr><td>8th</td><td>7</td><td>+5</td><td>+5</td><td>+5</td><td>+2</td><td>7</td><td>4</td><td>+4</td><td>+2</td><td>3</td><td>—</td></tr><tr><td>9th</td><td>8</td><td>+6</td><td>+6</td><td>+6</td><td>+2</td><td>8</td><td>4</td><td>+6</td><td>+3</td><td>4</td><td>Ability
+        score increase,
+        Multiattack</td></tr><tr><td>10th</td><td>9</td><td>+6</td><td>+6</td><td>+6</td><td>+3</td><td>9</td><td>5</td><td>+6</td><td>+3</td><td>4</td><td>—</td></tr><tr><td>11th</td><td>9</td><td>+6</td><td>+6</td><td>+6</td><td>+3</td><td>9</td><td>5</td><td>+6</td><td>+3</td><td>4</td><td>—</td></tr><tr><td>12th</td><td>10</td><td>+7</td><td>+7</td><td>+7</td><td>+3</td><td>10</td><td>5</td><td>+8</td><td>+4</td><td>5</td><td>—</td></tr><tr><td>13th</td><td>11</td><td>+8</td><td>+7</td><td>+7</td><td>+3</td><td>11</td><td>6</td><td>+8</td><td>+4</td><td>5</td><td>—</td></tr><tr><td>14th</td><td>12</td><td>+9</td><td>+8</td><td>+8</td><td>+4</td><td>12</td><td>6</td><td>+8</td><td>+4</td><td>5</td><td>Ability
+        score
+        increase</td></tr><tr><td>15th</td><td>12</td><td>+9</td><td>+8</td><td>+8</td><td>+4</td><td>12</td><td>6</td><td>+10</td><td>+5</td><td>6</td><td>Improved
+        evasion</td></tr><tr><td>16th</td><td>13</td><td>+9</td><td>+8</td><td>+8</td><td>+4</td><td>13</td><td>7</td><td>+10</td><td>+5</td><td>6</td><td>—</td></tr><tr><td>17th</td><td>14</td><td>+10</td><td>+9</td><td>+9</td><td>+4</td><td>14</td><td>7</td><td>+10</td><td>+5</td><td>6</td><td>—</td></tr><tr><td>18th</td><td>15</td><td>+11</td><td>+9</td><td>+9</td><td>+5</td><td>15</td><td>8</td><td>+12</td><td>+6</td><td>7</td><td>—</td></tr><tr><td>19th</td><td>15</td><td>+11</td><td>+9</td><td>+9</td><td>+5</td><td>15</td><td>8</td><td>+12</td><td>+6</td><td>7</td><td>—</td></tr><tr><td>20th</td><td>16</td><td>+12</td><td>+10</td><td>+10</td><td>+5</td><td>16</td><td>8</td><td>+12</td><td>+6</td><td>7</td><td>Ability
+        score increase</td></tr></tbody></table><h2>Class Level</h2><p>This is
+        the character's druid level. The druid's class levels stack with levels
+        of any other classes that are entitled to an animal companion for the
+        purpose of determining the companion's statistics.</p><h2>HD</h2><p>This
+        is the total number of eight-sided (d8) Hit Dice the animal companion
+        possesses, each of which gains a Constitution modifier, as
+        normal.</p><h2>BAB</h2><p>This is the animal companion's base attack
+        bonus. An animal companion's base attack bonus is the same as that of a
+        druid of a level equal to the animal's HD. Animal companions do not gain
+        additional attacks using their natural weapons for a high base attack
+        bonus.</p><h2>Fort/Ref/Will</h2><p>These are the animal companion's base
+        saving throw bonuses. An animal companion has good Fortitude and Reflex
+        saves.</p><h2>Skills</h2><p>This lists the animal's total skill ranks.
+        Animal companions can assign skill ranks to any skill listed under
+        Animal Skills. If an animal companion increases its Intelligence to 10
+        or higher, it gains bonus skill ranks as normal. Animal companions with
+        an Intelligence of 3 or higher can purchase ranks in any skill. An
+        animal companion cannot have more ranks in a skill than it has Hit
+        Dice.</p><h2>Feats</h2><p>This is the total number of feats possessed by
+        an animal companion. Animal companions should select their feats from
+        those listed under Animal Feats. Animal companions can select other
+        feats, although they are unable to utilize some feats (such as Martial
+        Weapon Proficiency). Note that animal companions cannot select a feat
+        with a requirement of base attack bonus +1 until they gain their second
+        feat at 3 Hit Dice.</p><h2>Natural Armor Bonus</h2><p>The number noted
+        here is an improvement to the animal companion's existing natural armor
+        bonus.</p><h2>Str/Dex Bonus</h2><p>Add this modifier to the animal
+        companion's Strength and Dexterity scores.</p><h2>Bonus
+        Tricks</h2><p>The value given in this column is the total number of
+        “bonus” tricks that the animal knows in addition to any that the druid
+        might choose to teach it (see the Handle Animal skill for more details
+        on how to teach an animal tricks). These bonus tricks don't require any
+        training time or Handle Animal checks, and they don't count against the
+        normal limit of tricks known by the animal. The druid selects these
+        bonus tricks, and once selected, they can't be
+        changed.</p><h2>Special</h2><p>This includes a number of abilities
+        gained by animal companions as they increase in power. Each of these
+        bonuses is described below.</p><p><strong>Link (Ex)</strong>: A druid
+        can handle her animal companion as a free action, or push it as a move
+        action, even if she doesn't have any ranks in the Handle Animal skill.
+        The druid gains a +4 circumstance bonus on all wild empathy checks and
+        Handle Animal checks made regarding an animal
+        companion.</p><p><strong>Share Spells (Ex)</strong>: The druid may cast
+        a spell with a target of “You” on her animal companion (as a spell with
+        a range of touch) instead of on herself. A druid may cast spells on her
+        animal companion even if the spells normally do not affect creatures of
+        the companion's type (animal). Spells cast in this way must come from a
+        class that grants an animal companion. This ability does not allow the
+        animal to share abilities that are not spells, even if they function
+        like spells.</p><p><strong>Evasion (Ex)</strong>: If an animal companion
+        is subjected to an attack that normally allows a Reflex save for half
+        damage, it takes no damage if it makes a successful saving
+        throw.</p><p><strong>Ability Score Increase (Ex)</strong>: The animal
+        companion adds +1 to one of its ability scores.</p><p><strong>Devotion
+        (Ex)</strong>: An animal companion gains a +4 morale bonus on Will saves
+        against enchantment spells and
+        effects.</p><p><strong>Multiattack</strong>: An animal companion gains
+        Multiattack as a bonus feat if it has three or more natural attacks and
+        does not already have that feat. If it does not have the requisite three
+        or more natural attacks, the animal companion instead gains a second
+        attack with one of its natural weapons, albeit at a –5
+        penalty.</p><p><strong>Improved Evasion (Ex)</strong>: When subjected to
+        an attack that allows a Reflex saving throw for half damage, an animal
+        companion takes no damage if it makes a successful saving throw and only
+        half damage if the saving throw fails.</p><h2>Animal
+        Skills</h2><p>Animal companions can have ranks in any of the following
+        skills:</p><p>Acrobatics* (Dex), Climb* (Str), Escape Artist (Dex), Fly*
+        (Dex), Intimidate (Cha), Perception* (Wis), Stealth* (Dex), Survival
+        (Wis), and Swim* (Str). All of the skills marked with an (*) are class
+        skills for animal companions. Animal companions with an Intelligence of
+        3 or higher can put ranks into any skill.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

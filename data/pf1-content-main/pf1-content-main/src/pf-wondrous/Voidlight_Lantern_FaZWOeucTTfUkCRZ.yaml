@@ -1,0 +1,29 @@
+_id: FaZWOeucTTfUkCRZ
+_key: '!items!FaZWOeucTTfUkCRZ'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Voidlight Lantern
+system:
+  aura:
+    school: evo
+  cl: 5
+  description:
+    value: >-
+      <p>This ornately designed lantern is crafted from volcanic glass. When
+      lit, the lantern's magic creates an area of darkness in a 20-foot radius
+      and lowers the illumination level by one step for an additional 20 feet
+      beyond that area (bright light becomes normal light, normal light becomes
+      dim light, and dim light becomes darkness). If used in an area of
+      darkness, a voidlight lantern creates an area of supernatural darkness (as
+      per deeper darkness) in a 20-foot radius
+      instead.</p><h3>Requirements</h3><p>Craft Wondrous Item, deeper
+      darkness</p>
+  price: 30000
+  sources:
+    - id: PZO9466
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

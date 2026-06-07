@@ -1,0 +1,34 @@
+_id: 52W5L5yVpLboGuGw
+_key: '!items!52W5L5yVpLboGuGw'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Mockingskull
+system:
+  aura:
+    school: nec
+  cl: 5
+  description:
+    value: >-
+      <p>The tools of juvenile necromancers and bitter witches, mockingskulls
+      are immortal and sleepless guardians. Each is made from a humanoid skull
+      inlaid with a precious gem eye. Mockingskulls keep watch over an area with
+      a +8 Perception check bonus, and can be commanded to either warn away
+      intruders or raise an alarm by screaming insults and invectives. If a
+      mockingskull screams invectives, it can attempt an Intimidate check at a
+      +10 bonus each round against one creature within 30 feet.  Treat a
+      mockingskull as a single Hit Die mindless undead for the purposes of
+      spells and effects that control, damage, or hide creatures from undead. A
+      mockingskull has hardness 3 and 10 hit points; these hit points are
+      automatically restored every midnight. Although largely mindless,
+      especially old mockingskulls sometimes develop personality
+      quirks.</p><h3>Requirements</h3><p>Craft Wondrous Item, alarm, animate
+      dead</p>
+  price: 8000
+  sources:
+    - id: PZO9464
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

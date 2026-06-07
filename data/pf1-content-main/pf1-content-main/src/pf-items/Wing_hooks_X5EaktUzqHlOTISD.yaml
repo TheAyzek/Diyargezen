@@ -1,0 +1,24 @@
+_id: X5EaktUzqHlOTISD
+_key: '!items!X5EaktUzqHlOTISD'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/metal/fragments-steel-barbed.webp
+name: Wing hooks
+system:
+  description:
+    value: >-
+      <p>These wooden braces hook on to a gathlain's wings to help in clinging
+      to ivy, tree limbs, or other surfaces with significant handholds. Many
+      wing hooks are decorated with intricate carvings. A gathlain wearing wing
+      hooks can cling to a surface with a Climb DC of 10 or lower without
+      effort, and can safely sleep there. The wing hooks leave the gathlain's
+      arms free while attempting Climb checks on such surfaces.</p>
+  equipped: false
+  price: 150
+  sources:
+    - id: PZO1140
+      pages: '13'
+  subType: tool
+  weight:
+    value: 2
+type: loot

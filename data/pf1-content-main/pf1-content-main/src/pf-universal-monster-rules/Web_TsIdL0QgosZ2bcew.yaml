@@ -1,0 +1,57 @@
+_id: TsIdL0QgosZ2bcew
+_key: '!items!TsIdL0QgosZ2bcew'
+_stats:
+  coreVersion: '12.343'
+img: icons/commodities/materials/material-webbing.webp
+name: Web
+system:
+  abilityType: ex
+  actions:
+    - _id: 5q0um40zc6vjgbo6
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: icons/commodities/materials/material-webbing.webp
+      name: Use
+      range:
+        maxIncrements: 5
+        units: ft
+        value: '10'
+      save:
+        description: Strength check
+      tag: webEx
+  description:
+    value: >-
+      <p>The creature uses webs to support themselves and up to one additional
+      creature of the same size or smaller. Such creatures can throw a web up to
+      eight times per day. This is similar to an attack with a net but has a
+      maximum range of 50 feet, with a range increment of 10 feet, and it is
+      effective against targets up to one size category larger than the web
+      spinner. An <a>entangled</a> creature can escape with a successful
+      <a>Escape Artist</a> check or burst the web with a successful Strength
+      check. Both are standard actions with a DC equal to 10 + 1/2 the
+      creature’s HD + the creature’s Constitution modifier. Creatures caught in
+      a web take a –4 penalty to burst free from the web.</p><p>Web spinners can
+      create sheets of sticky webbing up to three times their size. They usually
+      position these sheets to snare flying creatures, but they can also try to
+      trap prey on the ground. Approaching creatures must succeed at a DC 20
+      <a>Perception</a> check to notice a web; otherwise, they stumble into it
+      and become trapped as though by a successful web attack. A trapped
+      creature gains a +5 bonus on attempts to escape or burst the webbing if it
+      can walk on or grab something while pulling free. Each 5-foot-square
+      section of web has a number of hit points equal to the Hit Dice of the
+      creature that created it and DR 5/—.</p><p>A creature can move across its
+      own web at its climb speed and can pinpoint the location of any creature
+      touching its web.</p><p><em>Format</em>: web (+8 ranged, DC 16, 5
+      hp)</p><p><em>Location</em>: Special Attacks.</p><section class="secret"
+      id="secret-PrLjHw0lFx0Cq9x6"><p><em>Usage:</em> Replace Atk and
+      DC</p><p><strong>DC</strong> [[10 + floor(@attributes.hd.total / 2) +
+      @abilities.con.mod]] <strong>hp</strong>
+      [[@attributes.hd.total]]</p></section>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

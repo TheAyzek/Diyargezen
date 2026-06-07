@@ -1,0 +1,33 @@
+_id: SUwDAAdgJYJNxfX4
+_key: '!journal!SUwDAAdgJYJNxfX4'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Shelyn
+pages:
+  - _id: kJ9AW9OTX0Ea4hbf
+    _key: '!journal.pages!SUwDAAdgJYJNxfX4.kJ9AW9OTX0Ea4hbf'
+    _stats:
+      coreVersion: '12.331'
+    name: Shelyn
+    sort: 0
+    text:
+      content: >-
+        <h1>Shelyn (pre-Earthfall)</h1><h2>Song of the
+        Prism</h2>@Source[PZO90123;pages=74] <br /><strong>Pathfinder
+        Wiki</strong> <a href="http://www.pathfinderwiki.com/wiki/Shelyn
+        (pre-Earthfall)">Shelyn
+        (pre-Earthfall)</a><h3>Details</h3><p><strong>Alignment</strong> NG<br
+        /><strong>Pantheon</strong> Azlanti Pantheon<br /><strong>Areas of
+        Concern</strong> Art, beauty, love, and music<br
+        /><strong>Domains</strong> Air, Charm, Good, Luck, Protection<br
+        /><strong>Subdomains</strong> Agathion, Cloud, Defense, Fate, Love,
+        Purity<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Dagger<br
+        /><strong>Symbol</strong> Songbird with a multicolored tail</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

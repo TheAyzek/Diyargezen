@@ -1,0 +1,46 @@
+_id: Cb90okxRVDl0dGav
+_key: '!items!Cb90okxRVDl0dGav'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/banded-mail.PNG
+name: Legion Armor
+system:
+  armor:
+    acp: 6
+    dex: 1
+    material:
+      base:
+        value: steel
+    value: 7
+  aura:
+    school: evo
+  baseTypes:
+    - Banded Mail
+  cl: 7
+  description:
+    value: >-
+      <p>This gilded suit of +2 banded mail is decorated with images of
+      celestial beings holding their weapons high. Legion armor is typically
+      worn by high-ranking angels and archons directly combating the forces of
+      evil on the Material Plane.  Once per day as a standard action, the wearer
+      of a suit of legion armor can cast the spell spiritual ally with a
+      duration of 1 minute. This ally typically takes on the appearance of an
+      imposing angelic warrior. At any time while the armor's spiritual ally is
+      conjured, the wearer of a suit of legion armor can dismiss the effect as a
+      standard action, causing the spiritual ally to explode with a thunderous
+      choir of voices and blaring trumpets. This effect causes each evil-aligned
+      creatures within 100 feet to become shaken unless it succeeds at a DC 20
+      Will save.</p><p><strong>Base Item</strong>: banded
+      mail</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, cause fear, spiritual ally</p>
+  enh: 2
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 13400
+  sources:
+    - id: PZO9467
+  spellFailure: 35
+  weight:
+    value: 35
+type: equipment

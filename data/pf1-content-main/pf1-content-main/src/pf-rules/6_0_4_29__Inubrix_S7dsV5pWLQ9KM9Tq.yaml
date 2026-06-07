@@ -1,0 +1,41 @@
+_id: S7dsV5pWLQ9KM9Tq
+_key: '!journal!S7dsV5pWLQ9KM9Tq'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.4.29. Inubrix
+pages:
+  - _id: x1kyQxvjB75gZXqc
+    _key: '!journal.pages!S7dsV5pWLQ9KM9Tq.x1kyQxvjB75gZXqc'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.4.29. Inubrix
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li>@Compendium[pf-content.pf-rules.TROqcNjEw3b2q2Dk]{6.0.4.
+        Special Materials}</li></ul><hr
+        /><p>@Source[PZO9061;pages=71]</p><p>This metal’s structure allows it to
+        pass through iron and steel without touching them, seemingly shifting in
+        and out of phase with reality. This quality earned the pale metal the
+        nickname “ghost iron.” Inubrix is associated with necromancy magic,
+        temperance, and gluttony. Inubrix is the softest of the solid skymetals,
+        being only slightly less malleable than lead. It doesn’t function well
+        for crafting armor as a result, and though inubrix weapons can penetrate
+        most metal armors with relative ease, the weapons tend to break easily.
+        Inubrix has 10 hit points per inch of thickness and hardness 5.</p><p>An
+        inubrix weapon deals damage as if it were one size category smaller than
+        its actual size, and is always treated as if it had the broken
+        condition. It ignores all armor or shield bonuses granted by iron or
+        steel armor or shields. Inubrix weapons cannot damage these materials at
+        all (and, by extension, cannot harm iron golems or similar creatures).
+        An inubrix weapon costs +5,000 gp.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

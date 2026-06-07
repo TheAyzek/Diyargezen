@@ -1,0 +1,39 @@
+_id: B1L7Ny3dF7FEjP7e
+_key: '!items!B1L7Ny3dF7FEjP7e'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ring of Resumption
+system:
+  aura:
+    school: con
+  cl: 11
+  description:
+    value: >-
+      <p>This adamantine ring contains a moving, notched golden circle that
+      whirs with healing energy when activated. Once per day when the wearer
+      takes hit point damage by any means, she can activate the ring as an
+      immediate action. This immediately allows a living wearer to regain 5 hit
+      points per round and recover from an equal amount of nonlethal damage. The
+      wearer regenerates a total number of hit points equal only to the damage
+      taken when the ring was activated, and only a single attack (or another
+      single instance) can activate the ring. If the wearer sustains damage from
+      multiple sources simultaneously, she must pick which source activates the
+      ring. When either all of this damage is healed or the wearer's hit points
+      reach her hit point maximum (whichever comes first), the hit point
+      regeneration ceases.  In addition, the wearer is immune to bleed damage
+      while the ring's regeneration is active. If the wearer lost a limb, an
+      organ, or any other body part as a result of the effect she used to
+      activate the ring, the ring regenerates it as per regenerate. As with the
+      spell, if the severed members are not present and touching the creature,
+      this regenerate effect takes 2d10 rounds (this may cause the regenerate
+      effect affecting a lost limb or organ to last longer than the hit point
+      regeneration).</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Forge Ring, regenerate</p>
+  price: 30800
+  slot: ring
+  sources:
+    - id: PZO9475
+  subType: wondrous
+type: equipment

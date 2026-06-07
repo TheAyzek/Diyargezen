@@ -1,0 +1,23 @@
+_id: Fht050pMJOf0kZvl
+_key: '!items!Fht050pMJOf0kZvl'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Spirit Tear
+system:
+  aura:
+    school: div
+  cl: 5
+  description:
+    value: >-
+      <p>This small glass ornament is usually molded into the shape of an eye or
+      drop. Once per day the wearer can activate the tear, gaining the ability
+      to see invisibility with a range of 10 feet for 5
+      minutes.<h3>Requirements</h3><p>Craft Wondrous Item, see invisibility</p>
+  price: 1800
+  slot: neck
+  sources:
+    - id: PZO9039
+  subType: wondrous
+type: equipment

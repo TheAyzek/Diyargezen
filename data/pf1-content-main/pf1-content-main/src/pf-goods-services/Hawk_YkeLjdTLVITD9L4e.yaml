@@ -1,0 +1,22 @@
+_id: YkeLjdTLVITD9L4e
+_key: '!items!YkeLjdTLVITD9L4e'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/claws/claw-bird-yellow.webp
+name: Hawk
+system:
+  description:
+    value: >-
+      <p>This Tiny, short-winged raptor is a popular hunting bird, but is
+      utilized more often by lower nobility than by commoners without titles.
+      Hawks are known for their sharp eyesight and powerful aerial dives. More
+      information on hawks can be found in the <em>Bestiary</em>.</p>
+  equipped: false
+  price: 18
+  sources:
+    - id: PZO1123
+      pages: '81'
+  subType: animal
+  weight:
+    value: 2
+type: loot

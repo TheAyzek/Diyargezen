@@ -1,0 +1,40 @@
+_id: 8d0ej1gXo94of2cq
+_key: '!items!8d0ej1gXo94of2cq'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/scimitar.PNG
+name: Chellan, Sword of Greed
+system:
+  artifact: true
+  aura:
+    school: trs
+  baseTypes:
+    - Scimitar
+  cl: 16
+  description:
+    value: >-
+      <p>A blade of magically hardened gold tempered to incredible durability,
+      Chellan is a +5 keen scimitar that functions as an adamantine weapon for
+      purposes of overcoming damage reduction and bypassing hardness. The ornate
+      sword is incredibly dense, causing it to deal 1d8 points of damage as
+      though it were a Large scimitar, but it can only be properly wielded by
+      characters with a Strength of 18 or higher-all other characters must
+      either wield it as a two-handed weapon or take a -2 penalty on attack
+      rolls with the weapon. Whenever Chellan strikes a foe, the target must
+      succeed at a DC 20 Fortitude save or be affected by the spell slow. If the
+      sword instead scores a critical hit, the target must make a DC 25
+      Fortitude save or be turned into a crystalline statue, as if by flesh to
+      stone. Characters turned to crystal by Chellan appear to be made of ruby,
+      diamond, or some other valuable gem, but are in fact merely colored quartz
+      of little value.</p><p><strong>Base Item</strong>: keen scimitar</p>
+  enh: 5
+  material:
+    base:
+      value: steel
+  sources:
+    - id: PZO9250
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 25
+type: weapon

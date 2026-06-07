@@ -1,0 +1,20 @@
+_id: OzaiNh3ogPpnIrLu
+_key: '!items!OzaiNh3ogPpnIrLu'
+_stats:
+  coreVersion: '12.331'
+folder: 35gUR2g8lMd073yK
+img: systems/pf1/icons/skills/shadow_17.jpg
+name: Sneaky Vagabond
+system:
+  description:
+    value: >-
+      <p><em>You have a well-practiced ability at going
+      unnoticed.</em></p><p><strong>Benefits</strong>: You get a +2 bonus on
+      Hide checks when others are actively trying to find you. In crowds, this
+      bonus increases to +4. Additionally, you gain a +2 circumstance bonus on
+      Gather Information and Knowledge (local) checks when trying to find a
+      place to hide.</p>
+  tags:
+    - General
+    - '3.5'
+type: feat

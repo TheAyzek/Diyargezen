@@ -1,0 +1,65 @@
+_id: DiKBuwjJ6XXzhUbb
+_key: '!items!DiKBuwjJ6XXzhUbb'
+_stats:
+  coreVersion: '12.331'
+folder: tt1hnzL5ZdLfPdp0
+img: icons/equipment/back/cloak-layered-white.webp
+name: Glorious Tabard, Lesser
+system:
+  actions:
+    - _id: WNuNwq1b2t32IHYY
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      duration:
+        units: minute
+        value: '10'
+      name: Use
+      notes:
+        effect:
+          - >-
+            +2 sacred bonus to you AC and on saving throws - but  only against
+            attacks made, or effects created, by outsiders with the evil subtype
+            or creatures with an evil aura.
+  aura:
+    school: abj
+  cl: 3
+  description:
+    unidentified: >-
+      <p>This is a sleeveless white tabard, suitable to be worn over armor or
+      other clothing, a symbol is prominent on the garment.</p>
+    value: >-
+      <p>This sleeveless white tabard, worn over armor or other clothing,
+      prominently bears the symbol of the Glorious Reclamation and can be used
+      as a divine focus by members of the <span data-tooltip="An order of
+      zealous Iomedaean knights in Cheliax">Glorious Reclamation</span> who are
+      followers of Iomedae.</p><h3>Effect</h3><p>Once per day, the wearer of a
+      lesser glorious tabard can activate the tabard to gain a +2 sacred bonus
+      to her AC and on saving throws for 10 minutes. Both bonuses apply only
+      against attacks made or effects created by outsiders with the evil subtype
+      or creatures with an evil aura. A glorious tabard functions only for
+      wearers who are both members of the Glorious Reclamation and followers of
+      Iomedae.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.cvym88lup9fa8sl5]{veil of heaven},
+      </em>creator must be member of Glorious Reclamation and follower of
+      Iomedae <strong>Cost</strong> 200 gp</p>
+  price: 400
+  showInQuickbar: true
+  slot: body
+  sources:
+    - id: PZO90108
+      pages: '7'
+  subType: wondrous
+  tags:
+    - Glorious Reclamation
+    - Iomedae
+  uses:
+    maxFormula: '1'
+    per: day
+    value: 1
+  weight:
+    value: 2
+type: equipment

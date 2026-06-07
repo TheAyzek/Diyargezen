@@ -1,0 +1,39 @@
+_id: R09FovuKfg50mmjM
+_key: '!items!R09FovuKfg50mmjM'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/red_09.jpg
+name: Psychic Magic
+system:
+  abilityType: sp
+  description:
+    value: >-
+      <p>A creature with this ability can use the power of its mind to cast
+      certain spells. Each spell cast using psychic magic consumes an amount of
+      psychic energy. The creature has a maximum amount of psychic energy (PE)
+      per day that refreshes after a night&rsquo;s rest. A creature with this
+      ability can cast any of the spells listed in this entry as long as it has
+      enough psychic energy remaining to pay the spell&rsquo;s PE cost. The DC
+      for any of these spells is equal to 10 + the amount of psychic energy used
+      to cast the spell + the creature&rsquo;s Charisma or Intelligence modifier
+      (whichever is higher). A creature that gains access to <a
+      href="https://www.aonprd.com/Rules.aspx?Name=Undercasting%20Spells&amp;Category=Psychic%20Magic">undercast
+      spells</a> via this ability can cast an undercast version of the spell by
+      spending 1 PE fewer for each level lower that the spell is cast. A psychic
+      magic spell with a PE cost of 0 can be cast any number of times, and can
+      be cast even if the creature has 0 PE remaining. The psychic magic granted
+      by this ability has the same thought and emotion components as psychic
+      spells. The monster can apply metamagic feats to these spells by spending
+      an amount of additional PE equal to the level increase of the metamagic
+      feat and by increasing the casting time as normal for spontaneously
+      casting a metamagic spell. Because this ability grants psychic
+      spellcasting, it also allows the creature to use occult skill unlocks
+      (Occult Adventures 194).</p><p><em>Format</em>: <strong>Psychic Magic
+      (Sp)</strong> (CL 10th; concentration +14) 12 PE&mdash;<a>charm person</a>
+      (1 PE, DC 14), <a>disguise self</a> (2 PE), <a>mind thrust III</a> (3 PE,
+      DC 16), <a>tower of iron will I</a> (5 PE)</p><p><em>Location</em>: before
+      Spell-Like Abilities.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

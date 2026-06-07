@@ -1,0 +1,113 @@
+_id: rZ89DOoy5yVYt5N9
+_key: '!actors!rZ89DOoy5yVYt5N9'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: icons/commodities/wood/log-stack-hickory-brown.webp
+items:
+  - _id: qQ3IChHUc9GQU5nW
+    _key: '!actors.items!rZ89DOoy5yVYt5N9.qQ3IChHUc9GQU5nW'
+    _stats:
+      compendiumSource: Actor.AlCDwz9Xpix8WF92.Item.Hp3VWxYfbYeXOOuf
+      coreVersion: '12.331'
+    img: icons/commodities/wood/log-stack-hickory-brown.webp
+    name: Dual Swinging Log
+    system:
+      actions:
+        - _id: 0ttonoa2275jiv3c
+          actionType: mwak
+          activation:
+            type: special
+            unchained:
+              type: special
+          attackBonus: '7'
+          damage:
+            parts:
+              - formula: 1d6+5
+                types:
+                  - bludgeoning
+          img: icons/commodities/wood/log-stack-hickory-brown.webp
+          name: Attack
+          range:
+            units: melee
+          save:
+            dc: '15'
+            description: Reflex or knocked prone
+            type: ref
+      proficient: true
+      subType: misc
+    type: attack
+name: Dual Swinging Log Trap
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 3
+    disarm: 15
+    duration: Instaneous
+    effect: Associated Terrain forests or jungles;
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 15
+    reset: Manual
+    trigger: Location
+    type: Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

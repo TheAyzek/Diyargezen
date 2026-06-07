@@ -1,0 +1,63 @@
+_id: TUQ48yjjZumfmO3a
+_key: '!items!TUQ48yjjZumfmO3a'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/guns/gun-wood.webp
+name: Withershot
+system:
+  actions:
+    - _id: nu6kkg9n0o2qn6c2
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: withershot
+  aura:
+    school: nec
+  baseTypes:
+    - Musket
+  cl: 9
+  description:
+    value: >-
+      <p>This +2 shock musket is inscribed with imagery of storms and plagues,
+      glorifying the daemonic harbinger Cixyron. When a bullet fired from a
+      withershot strikes a good- or neutral-aligned target, it burrows into the
+      target's flesh and infects the target with cackle fever (Core Rulebook
+      557). Infected creatures can resist the disease normally, but can't be
+      cured or recover lost ability damage until the cursed bullet is removed
+      (this requires a successful DC 15 Heal check or a restoration spell).
+      Additional bullet impacts do not increase the effects, but each bullet
+      must be removed before the target can be cured of its
+      disease.</p><p><strong>Base Item</strong>: shock
+      musket</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, call lightning, contagion</p>
+  enh: 2
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 34800
+  showInQuickbar: false
+  sources:
+    - id: PZO9464
+  weaponGroups:
+    - firearms
+  weight:
+    value: 9
+type: weapon

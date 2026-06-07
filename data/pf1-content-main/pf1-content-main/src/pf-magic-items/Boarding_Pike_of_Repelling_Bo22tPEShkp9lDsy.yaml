@@ -1,0 +1,66 @@
+_id: Bo22tPEShkp9lDsy
+_key: '!items!Bo22tPEShkp9lDsy'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/boarding-pike.png
+name: Boarding Pike of Repelling
+system:
+  actions:
+    - _id: g0fd7jk19vgkkbj9
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: boardingPikeOfRepelling
+  aura:
+    school: trs
+  baseTypes:
+    - Boarding Pike
+  cl: 5
+  description:
+    value: >-
+      <p>This +1 boarding pike (Pathfinder Player Companion: Pirates of the
+      Inner Sea 18) is an 8-foot-long pole topped with a tapered metal
+      spearpoint and a backward-facing hook, used to draw vessels closer
+      together or repel boarders. A metal skull caps the butt of the pike. On
+      command, a boarding pike of repelling can be extended as a swift action,
+      giving its wielder a reach of 20 feet for 1 round. While the pike is
+      extended, the wielder does not threaten adjacent creatures or creatures up
+      to 15 feet away. A boarding pike of repelling can also be extended in this
+      way to draw vessels closer together for boarding.<p><strong>Base
+      Item</strong>: boarding
+      pike</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, wood shape</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 4308
+  properties:
+    brc: true
+    rch: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9055
+  weaponGroups:
+    - spears
+  weight:
+    value: 9
+type: weapon

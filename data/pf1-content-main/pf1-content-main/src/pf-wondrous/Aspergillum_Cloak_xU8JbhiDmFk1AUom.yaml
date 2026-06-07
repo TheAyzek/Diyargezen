@@ -1,0 +1,33 @@
+_id: xU8JbhiDmFk1AUom
+_key: '!items!xU8JbhiDmFk1AUom'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Aspergillum Cloak
+system:
+  aura:
+    school: trs
+  cl: 7
+  description:
+    value: >-
+      <p>This drab brown, hooded cloak acts as a cloak of resistance +1 but also
+      quickly absorbs any liquids poured onto it, drying in moments. Three times
+      per day, the wearer can pour a vial of holy water onto the interior lining
+      of an aspergillum cloak, causing its outer surface to glisten and drip.
+      The holy water cannot be recovered once absorbed. For 7 minutes, the
+      garment is soaked in holy water, dealing 2d4 points of damage to any
+      undead or evil outsider that strikes the wearer with an unarmed strike or
+      a natural weapon. An aspergillum cloak can also absorb unholy water
+      instead, dealing damage to good outsiders instead. An aspergillum cloak
+      gains no special abilities from absorbing any other
+      liquid.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, bless water</p>
+  price: 8000
+  slot: shoulders
+  sources:
+    - id: PZO9462
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,20 @@
+_id: hlIzh8hTy4ZQJHPr
+_key: '!items!hlIzh8hTy4ZQJHPr'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Lycanthropic Empathy
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>In any form, natural lycanthropes can communicate and empathize with
+      animals related to their animal form. They can use <a>Diplomacy</a> to
+      alter such an animal&rsquo;s attitude, and when so doing gain a +4 racial
+      bonus on the check. Afflicted lycanthropes only gain this ability in
+      animal or hybrid form.</p><p><em>Format</em>: lycanthropic empathy (bears
+      and dire bears)</p><p><em>Location</em>: SQ.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

@@ -1,0 +1,39 @@
+_id: kAJexDuJ2IAXZODj
+_key: '!journal!kAJexDuJ2IAXZODj'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: (Index) Exploration
+pages:
+  - _id: TbS5rnFvmEKvzNlZ
+    _key: '!journal.pages!kAJexDuJ2IAXZODj.TbS5rnFvmEKvzNlZ'
+    _stats:
+      coreVersion: '12.331'
+    name: (Index) Exploration
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.Ic1tlF3EE1QNW3kE]{(Index)}</p><hr
+        /><h2>Movement</h2><p>@Compendium[pf-content.pf-rules.vsp6TyvvUw3KOD0b]{4.0.
+        Movement}</p><ul><li>@Compendium[pf-content.pf-rules.FsWpwLt3Qi737rne]{4.0.1.
+        Tactical
+        Movement}</li><li>@Compendium[pf-content.pf-rules.FQLGuC26f6TDZ16u]{4.0.2.
+        Local
+        Movement}</li><li>@Compendium[pf-content.pf-rules.jLbdG9bbb1MReAgk]{4.0.3.
+        Overland
+        Movement}</li><li>@Compendium[pf-content.pf-rules.fb47U9dPcy4j7rOz]{4.0.4.
+        Evasion and Pursuit}</li></ul><hr /><h2>Vision and
+        Light</h2><p>@Compendium[pf-content.pf-rules.TrYHWkJ3jiOCYufl]{4.1.
+        Vision and Light}</p><hr /><h2>Breaking and
+        Entering</h2><p>@Compendium[pf-content.pf-rules.1EvBiiUnVOT4cUbT]{4.2.
+        Breaking and
+        Entering}</p><ul><li>@Compendium[pf-content.pf-rules.rEHXXby37VzctF5p]{4.2.1.
+        Smashing an
+        Object}</li><li>@Compendium[pf-content.pf-rules.e7snRWHn5Dxl7FNp]{4.2.2.
+        Breaking Items}</li></ul>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

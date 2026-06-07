@@ -1,0 +1,22 @@
+_id: A7EiMxWzdyo3nsWY
+_key: '!items!A7EiMxWzdyo3nsWY'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/laboratory/mortar-empty-grey.webp
+name: Hand rotary quern
+system:
+  description:
+    value: >-
+      <p>This pair of small grindstones allows a user to grind a number of
+      substances into a fine powder. The amount of powder the quern produces
+      varies depending on the substance, but you can grind 8 pounds of flour in
+      an hour.</p>
+  equipped: false
+  price: 10
+  sources:
+    - id: PZO1129
+      pages: '204'
+  subType: tool
+  weight:
+    value: 20
+type: loot

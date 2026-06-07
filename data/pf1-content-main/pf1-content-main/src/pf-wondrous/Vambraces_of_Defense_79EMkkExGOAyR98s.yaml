@@ -1,0 +1,28 @@
+_id: 79EMkkExGOAyR98s
+_key: '!items!79EMkkExGOAyR98s'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Vambraces of Defense
+system:
+  aura:
+    school: abj
+  cl: 5
+  description:
+    value: >-
+      <p>These polished steel vambraces grant a +1 deflection bonus to AC. Once
+      per day, as an immediate action, if the wearer has at least one hand free,
+      when he would normally be hit with an attack from a ranged weapon, he may
+      deflect it with the bracers, taking no damage from it, as if he had the
+      Deflect Arrows
+      feat.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, shield</p>
+  price: 6000
+  slot: wrists
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

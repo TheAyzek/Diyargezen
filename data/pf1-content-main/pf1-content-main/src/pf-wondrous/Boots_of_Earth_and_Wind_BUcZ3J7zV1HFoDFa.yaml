@@ -1,0 +1,30 @@
+_id: BUcZ3J7zV1HFoDFa
+_key: '!items!BUcZ3J7zV1HFoDFa'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Boots of Earth and Wind
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>These strange, heavy, leather-and-steel boots feature a pair of
+      ever-fluttering wings on each side. These boots function like winged
+      boots, but also grant a +5 bonus to CMD against bull rush, overrun, and
+      reposition combat maneuvers as long as the wearer is standing on solid
+      ground. A mythic creature can expend one use of mythic power when
+      commanding the boots to fly to gain the bonus to CMD for as long as she
+      uses the boots to
+      fly.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, Mythic Crafter, entangle, fly</p>
+  price: 20000
+  slot: feet
+  sources:
+    - id: PZO1126
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

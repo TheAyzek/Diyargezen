@@ -1,0 +1,41 @@
+_id: j1KZwBRf9pU1Dg2C
+_key: '!journal!j1KZwBRf9pU1Dg2C'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0. Equipment
+pages:
+  - _id: Uy7E4aIvJElGxaMQ
+    _key: '!journal.pages!j1KZwBRf9pU1Dg2C.Uy7E4aIvJElGxaMQ'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0. Equipment
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p><strong>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</strong></p><ul><li>@Compendium[pf-content.pf-rules.yeIb3PW3M1QmlVNG]{6.0.1.
+        Wealth and
+        Money}</li><li>@Compendium[pf-content.pf-rules.VOAlGu4isvHXBLjm]{6.0.2.
+        Weapons}</li><li>@Compendium[pf-content.pf-rules.IcxBfkvPZ6hdWRuV]{6.0.3.
+        Armor}</li><li>@Compendium[pf-content.pf-rules.TROqcNjEw3b2q2Dk]{6.0.4.
+        Special Materials}</li></ul><hr /><p>@Source[PZO1110;pages=140]</p><p>A
+        well-equipped character can take on nearly any challenge, from surviving
+        in the wilderness to making an impression at the king’s banquet. This
+        chapter presents all manner of mundane and exotic equipment for the PCs
+        to purchase and use, from weapons to armor, alchemical items to
+        masterwork tools, fine wines to trail rations. The equipment presented
+        here should be relatively easy to find and purchase in most towns and
+        cities, although GMs might wish to restrict the availability of some of
+        the more expensive and exotic items. Magic items are much more difficult
+        to purchase (see
+        @Compendium[pf-content.pf-rules.M3XyBvOcp11YAnAL]{6.1.06. Purchasing
+        Magic Items}).</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,65 @@
+_id: qiR96F6WOHcpYMFK
+_key: '!items!qiR96F6WOHcpYMFK'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/flail-light.PNG
+name: Spine Flail
+system:
+  actions:
+    - _id: jwd722yrjt934dvd
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: spineFlail
+  aura:
+    school: nec
+  baseTypes:
+    - Light Flail
+  cl: 4
+  description:
+    value: >-
+      <p>This weapon looks like the barbed spine of a humanoid. A spine flail
+      functions as a +2 flail that deals slashing damage and has reach. Unlike
+      most weapons with reach, a spine flail can be used against adjacent foes.
+      On a critical hit from a spine flail, the victim must succeed at a DC 15
+      Fortitude save to resist being permanently blinded by the blow.  Spine
+      flails are favored by powerful dullahans, who harvest the spines from
+      their first victims. The undead riders have a particular affinity for
+      their personal spine flails, and often maintain a supernatural control
+      over their weapons, causing them to appear or disappear at
+      will.<p><strong>Base Item</strong>: 
+      flail</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Arms
+      and Armor, blindness/deafness</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 13308
+  properties:
+    dis: true
+    trp: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9063
+  weaponGroups:
+    - flails
+  weight:
+    value: 10
+type: weapon

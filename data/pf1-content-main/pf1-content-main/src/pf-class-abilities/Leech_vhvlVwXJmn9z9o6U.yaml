@@ -1,0 +1,22 @@
+_id: vhvlVwXJmn9z9o6U
+_key: '!items!vhvlVwXJmn9z9o6U'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Leech
+system:
+  associations:
+    classes:
+      - Hunter
+  description:
+    value: >-
+      <p><strong>Hunter Animal Focus</strong></p><p>The creature gains a +2
+      competence bonus on grapple combat maneuver checks, and deals 1 point of
+      bleed damage every time it succeeds at a grapple combat maneuver check to
+      damage an opponent. These benefits increase to a +4 bonus and 3 points of
+      bleed at 8th level, and a +6 bonus and 5 points of bleed at 15th level.
+      Bleed damage from this ability does not stack with itself.</p>
+  subType: classFeat
+  tags:
+    - Hunter Animal Focus
+type: feat

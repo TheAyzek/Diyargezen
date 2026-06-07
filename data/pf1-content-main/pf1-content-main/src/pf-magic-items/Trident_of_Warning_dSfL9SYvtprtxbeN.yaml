@@ -1,0 +1,61 @@
+_id: dSfL9SYvtprtxbeN
+_key: '!items!dSfL9SYvtprtxbeN'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/trident.PNG
+name: Trident of Warning
+system:
+  actions:
+    - _id: gedqdxvq1b6mzq1t
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: tridentOfWarning
+  aura:
+    school: div
+  baseTypes:
+    - Trident
+  cl: 7
+  description:
+    value: >-
+      <p>A weapon of this type enables its wielder to determine the location,
+      depth, kind, and number of aquatic predators within 680 feet. A trident of
+      warning must be grasped and pointed in order for the character using it to
+      gain such information, and scanning a hemisphere with a radius of 680 feet
+      takes 1 round. The weapon is otherwise a +2 trident.</p><p><strong>Base
+      Item</strong>: +2
+      trident</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, locate creature</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 10115
+  properties:
+    brc: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - spears
+    - thrown
+  weight:
+    value: 4
+type: weapon

@@ -1,0 +1,56 @@
+_id: Xr5HFhfdMYNHrwjM
+_key: '!actors!Xr5HFhfdMYNHrwjM'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Dissolving Vat (CR 12)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    hp:
+      max: 54
+  details:
+    alignment: CE
+    area: 60-ft. radius centered around the vat
+    biography: {}
+    cl: 1
+    cr:
+      base: 12
+    destruction: >-
+      All of the alchemist's research notes must be collected and thrown into
+      the vat.
+    effect: >-
+      The chemical vat boils and froths, and spits its contents at everyone
+      within its range each round as a ranged touch attack (+15 to hit, 4d6+6
+      points of damage). This damage ignores damage reduction and energy
+      resistance. A creature hit by the chemicals must succeed at a DC 18
+      Fortitude save or become liquefied, as its bones and muscles melt into a
+      pile of oozing flesh. The DC of this saving throw increases by 1 for each
+      chemical ball that has hit the creature in the past 24 hours. A liquefied
+      creature cannot carry, use, or wear any items, and its Dexterity score is
+      reduced to 1. It loses all physical attacks, and it cannot cast spells
+      with verbal or somatic components. It gains a slam attack appropriate for
+      a creature of one size category larger than its size (for example, 1d6
+      points of damage if Medium). Additionally, it gains immunity to critical
+      hits, flanking, paralysis, poison, polymorph, sleep, and stun. A liquefied
+      creature reverts to its normal state if the haunt is reduced to 0 hit
+      points; otherwise, only a <em>limited wish</em>, <em>miracle</em>,
+      <em>regenerate</em>, or <em>wish</em> spell can restore it.
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Horror Adventures pg. 178</p>
+        <p><strong>Haunt Templates</strong>: fast
+        persistent</p><h3>Description</h3><p>A sadistic alchemist conducted
+        experiments on test subjects within his remote laboratory. When he was
+        finished with his subjects, he threw them into a vat of harsh chemicals
+        to dissolve. His victims' spirits have permeated the vat, and they reach
+        out with their oozing spectral forms toward any who come near.</p>
+    notice: Perception DC 20 (to smell the acrid chemical tang growing stronger)
+    reset: 1 day
+    trigger: proximity
+    weakness: vulnerable to acid damage (these effects damage the haunt)
+type: haunt

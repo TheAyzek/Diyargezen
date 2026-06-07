@@ -1,0 +1,34 @@
+_id: b8wwBCNOjC7edp8S
+_key: '!items!b8wwBCNOjC7edp8S'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Tyrant's Mark
+system:
+  aura:
+    custom: true
+    school: abjuration and divination
+  cl: 7
+  description:
+    value: >-
+      <p>This macabre pin attaches to one's cloak. Tar-Baphon is said to have
+      gifted these brooches to highly favored but still untrusted minions. When
+      worn, a tyrant's mark provides a +3 deflection bonus to AC and a +3
+      resistance bonus on saving throws. As a free action after failing a saving
+      throw, the wearer can expend one use of mythic power to reduce any damage
+      resulting from the failed save by half. When a tyrant's mark is created,
+      it is keyed to a matching black diamond worth no less than 1,000 gp. The
+      creator of a tyrant's mark can expend two uses of mythic power at any
+      distance to use scrying (as the spell) on the pin's wearer while gazing
+      through the black diamond, with the pin acting as the scrying sensor. The
+      wearer of the tyrant's mark takes a -10 penalty on the Will save against
+      the scrying effect, as though the maker had possession of a portion of the
+      wearer's body.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, Mythic Crafter, resistance, scrying, shield of
+      faith</p>
+  price: 70000
+  sources:
+    - id: PZO9438
+  subType: wondrous
+type: equipment

@@ -1,0 +1,21 @@
+_id: S88H2mZbhdxAsVny
+_key: '!items!S88H2mZbhdxAsVny'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Gun Twirl
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>At 3rd level, as long as the
+      maverick has at least 1 grit point, she can use flashy gunplay to
+      intimidate her opponents. She gains the Dazzling Display feat and can use
+      it with any firearm, even if she doesn't have Weapon Focus in that
+      firearm.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

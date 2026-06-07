@@ -1,0 +1,68 @@
+_id: 0q6GTnQ8ojLIo86Q
+_key: '!journal!0q6GTnQ8ojLIo86Q'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: I2QJK0e1tzfogtkr
+name: 2.11.1.1. Firearms in Your Campaign
+pages:
+  - _id: b01QGjUntcAMBSiL
+    _key: '!journal.pages!0q6GTnQ8ojLIo86Q.b01QGjUntcAMBSiL'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.11.1.1. Firearms in Your Campaign
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.OWmmbQYIhQmw9DVg]{2.11.
+        Mastering
+        Combat}</p><ul><li><p>@Compendium[pf-content.pf-rules.ryYgy2vRvnwdlDVK]{2.11.1.
+        Firearms}</p><ul><li><strong>@Compendium[pf-content.pf-rules.0q6GTnQ8ojLIo86Q]{2.11.1.1.
+        Firearms in Your
+        Campaign}</strong></li><li>@Compendium[pf-content.pf-rules.IOq28JGPxTOVlg8S]{2.11.1.2.
+        Firearm
+        Rules}</li><li>@Compendium[pf-content.pf-rules.dQ4nFO3jS6qMr5Hf]{2.11.1.3.
+        Firearm Description}</li></ul></li></ul><hr
+        /><p>@Source[PZO1118;pages=135]</p><p>Firearms and gunslingers are not
+        for every campaign, and even if you are excited about introducing
+        firearms into your campaign, you should still make a decision about how
+        commonplace they are. The following are broad categories of firearm
+        rarity and the rules that govern them. Pathfinder’s world of Golarion
+        uses the rules for emerging guns, which is also the default category of
+        gun rarity detailed in this Pathfinder RPG supplement.</p><h2>No
+        Guns</h2><p>If you do not want guns in your campaign, simply don’t allow
+        the rules that follow. The Pathfinder Roleplaying Game plays perfectly
+        well without them. Very Rare Guns: Early firearms are rare; advanced
+        firearms, the gunslinger class, the Amateur Gunslinger feat, and
+        archetypes that use the firearm rules do not exist in this type of
+        campaign. Firearms are treated more like magic items—things of wonder
+        and mystery—rather than like things that are mass-produced. Few know the
+        strange secrets of firearm creation.</p><p>Only NPCs can take the
+        Gunsmithing feat.</p><h2>Emerging Guns</h2><p>Firearms become more
+        common. They are mass-produced by small guilds, lone gunsmiths, dwarven
+        clans, or maybe even a nation or two—the secret is slipping out, and the
+        occasional rare adventurer uses guns. The baseline gunslinger rules and
+        the prices for ammunition given in this chapter are for this type of
+        campaign. Early firearms are available, but are relatively rare.
+        Adventurers who want to use guns must take the Gunsmithing feat just to
+        make them feasible weapons. Advanced firearms may exist, but only as
+        rare and wondrous items—the stuff of high-level treasure
+        troves.</p><h2>Commonplace Guns</h2><p>While still expensive and tricky
+        to wield, early firearms are readily available. Instead of requiring the
+        Exotic Weapon Proficiency feat, all firearms are martial weapons. Early
+        firearms and their ammunition cost 25% of the amounts listed in this
+        book, but advanced firearms and their ammunition are still rare and cost
+        the full price to purchase or craft.</p><h2>Guns Everywhere</h2><p>Guns
+        are commonplace. Early firearms are seen as antiques, and advanced
+        firearms are widespread. Firearms are simple weapons, and early
+        firearms, advanced guns, and their ammunition are bought or crafted for
+        10% of the cost listed in this chapter. The gunslinger loses the
+        gunsmith class feature and instead gains the gun training class feature
+        at 1st level.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

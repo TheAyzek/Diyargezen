@@ -1,0 +1,19 @@
+_id: Lz6vAn6OmzGQdOGp
+_key: '!items!Lz6vAn6OmzGQdOGp'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_17.jpg
+name: Keen Scent (2 EP)
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>An eidolon's sense of smell becomes even more acute. The eidolon can
+      notice other creatures by scent in a 180-foot radius underwater and can
+      detect blood in the water at ranges of up to a
+      mile.</p><p><strong>Requirements</strong></p><p>The eidolon must possess
+      the gills and scent evolutions to take this evolution.</p>
+  subType: misc
+  tags:
+    - Eidolon Evolution
+type: feat

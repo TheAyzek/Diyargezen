@@ -1,0 +1,66 @@
+_id: ykoJZjZJDBQqjj3g
+_key: '!items!ykoJZjZJDBQqjj3g'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/greatsword.PNG
+name: Eroeme
+system:
+  actions:
+    - _id: lcwcgrg2fm7afrbx
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: eroeme
+  aura:
+    school: div
+  baseTypes:
+    - Greatsword
+  cl: 12
+  description:
+    value: >-
+      <p>Eroeme is a lawful-aligned intelligent +2 mithral monstrous humanoid
+      bane greatsword that can resize to fit the hands of its wielder. In the
+      days when Azlant battled the serpentfolk empire, five lesser replicas of
+      Savith's legendary magical sword were crafted for her closest allies. One
+      of these weapons was Eroeme, made for the cyclops general Aveshai with the
+      specific purpose of slaying the serpentfolk and their agents wherever they
+      might be found on or beneath Golarion. The sword's knowledge and
+      experience was invaluable to General Aveshai as he faced the serpentfolk
+      in Ilmurea, and its disappearance (along with the general) somewhere
+      beneath the Mwangi jungles was a blow to Azlanti morale.<p><strong>Base
+      Item</strong>: mithral monstrous humanoid bane
+      greatsword</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor</p>
+  enh: 2
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+    normal:
+      value: mithral
+  price: 180350
+  showInQuickbar: false
+  sources:
+    - id: PZO9042
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 4
+type: weapon

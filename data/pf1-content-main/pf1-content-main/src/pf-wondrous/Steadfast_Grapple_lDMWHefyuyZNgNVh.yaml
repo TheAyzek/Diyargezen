@@ -1,0 +1,27 @@
+_id: lDMWHefyuyZNgNVh
+_key: '!items!lDMWHefyuyZNgNVh'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Steadfast Grapple
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>This iron grappling hook is attached to a 50-foot length of silk rope.
+      When a steadfast grapple is thrown, it automatically hits and attaches to
+      any targeted object or structure within range of its rope. Against
+      creatures, the wielder must make attack rolls as normal. Once attached, a
+      steadfast grapple can only be removed with a DC 30 Strength check, the
+      command word, or magic such as dispel magic.<h3>Requirements</h3><p>Craft
+      Wondrous Item, animate rope, true strike</p>
+  price: 5000
+  sources:
+    - id: PZO9055
+  subType: wondrous
+  weight:
+    value: 9
+type: equipment

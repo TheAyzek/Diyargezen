@@ -1,0 +1,69 @@
+_id: 3EPR4zoBCEtxG2pA
+_key: '!items!3EPR4zoBCEtxG2pA'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/gem-rough-cushion-orange.webp
+name: Pale Orange Rhomboid Ioun Stone, Flawed
+system:
+  actions:
+    - _id: tWVF0xxepCg4i8D2
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: <p>@UUID[Compendium.pf1.spells.Item.8ai7fslz4zu8xe9s]{magic jar}</p>
+      duration:
+        units: hour
+        value: '12'
+      name: Magic Jar
+      range:
+        units: medium
+      save:
+        dc: 10 + 5 + 2
+        description: negates
+        type: will
+      target:
+        value: you
+  aura:
+    school: nec
+  cl: 12
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>A orange stone prism with sides of unequal widths or angles, giving it
+      a flattened cross section.  It may have irregular facets or internal
+      flaws.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone functions as a normal
+      @UUID[Compendium.pf-content.pf-wondrous.Item.kt4vegsgZAoW66CB]{pale orange
+      rhomboid}, but only once, after which it burns out and turns dull
+      gray.</p><h3>Resonance</h3><p><strong>Method 1, Fixed: </strong>A soul
+      held within the stone can remain there indefinitely as long as the
+      wayfinder remains on the soul's original body. If the wayfinder is removed
+      from the body, the ioun stone's resonant power is suppressed until the
+      wayfinder is replaced.</p><p><strong>Method 2, Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, <em>magic jar</em>, creator must be 12th level
+      <strong>Cost</strong> 6,000 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 12000
+  showInQuickbar: true
+  sources:
+    - id: PZO9435
+      pages: '23'
+  subType: wondrous
+  tags:
+    - Ioun Stone
+  uses:
+    maxFormula: '1'
+    per: charges
+    value: 1
+type: equipment

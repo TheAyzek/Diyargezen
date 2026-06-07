@@ -1,0 +1,29 @@
+_id: OEee9mef6Oyj5eiI
+_key: '!items!OEee9mef6Oyj5eiI'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Trollblood Elixir
+system:
+  aura:
+    school: con
+  cl: 13
+  description:
+    value: >-
+      <p>This rancid, bubbling tonic is mud-colored and reeks of sweat, gore,
+      and decay. Upon drinking a dose of trollblood elixir, the imbiber gains
+      fast healing 5. This fast healing is even capable of reattaching a severed
+      limb that is pressed against its stump for 1 round, as long as the limb
+      has been severed for no more than 1 hour and is essentially intact. The
+      effects of trollblood elixir last 1 minute; during this time, the imbiber
+      is nauseated. Each round, the imbiber can choose to prematurely end the
+      elixir's effects by succeeding at a DC 10 Fortitude save as a full-round
+      action. Trollblood elixir does not affect objects or nonliving creatures
+      such as constructs and undead.</p><h3>Requirements</h3><p>Craft Wondrous
+      Item, regenerate</p>
+  price: 4550
+  sources:
+    - id: PZO9453
+  subType: wondrous
+type: equipment

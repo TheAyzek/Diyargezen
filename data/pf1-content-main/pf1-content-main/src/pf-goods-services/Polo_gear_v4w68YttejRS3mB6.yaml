@@ -1,0 +1,20 @@
+_id: v4w68YttejRS3mB6
+_key: '!items!v4w68YttejRS3mB6'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/smithing/hammer-maul-steel-grey.webp
+name: Polo gear
+system:
+  description:
+    value: >-
+      <p>This includes a leather helmet, a long-handled mallet, and a wooden
+      ball.</p>
+  equipped: false
+  price: 0.5
+  sources:
+    - id: PZO1123
+      pages: '92'
+  subType: entertainment
+  weight:
+    value: 5
+type: loot

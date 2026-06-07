@@ -1,0 +1,39 @@
+_id: UTrLgEHxt63uYf6H
+_key: '!items!UTrLgEHxt63uYf6H'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Beautiful War Paint
+system:
+  aura:
+    custom: true
+    school: enchantment and transmutation
+  cl: 5
+  description:
+    value: >-
+      <p>This pot of multicolored makeup was created by warpriests of Shelyn who
+      wanted to be beautiful as well as deadly in battle. It can be used as
+      conventional makeup, stage makeup, or war paint.  It can be applied
+      quickly for a lesser effect, but its true power is revealed when it's
+      applied with great care. If the wearer applies the makeup as a full-round
+      action, she gains the effects of bless and expeditious retreat. If the
+      wearer applies the makeup over the course of 10 minutes, she gains the
+      effects of good hope and haste. Applying the makeup provokes attacks of
+      opportunity. The finished makeup has no effect until the wearer activates
+      it as a swift action, at which time its magic lasts either 5 minutes or 5
+      rounds, depending on the duration of the activated spells (thereafter, the
+      makeup lasts as long as high-quality nonmagical makeup). The magic of the
+      makeup fades after 24 hours if not activated.  The makeup uses only the
+      head magic item slot when applied (the pot does not use a magic item
+      slot). The pot contains enough makeup for three
+      uses.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, good hope, haste</p>
+  price: 6300
+  slot: head
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

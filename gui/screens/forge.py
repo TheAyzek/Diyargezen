@@ -22,28 +22,27 @@ from PySide6.QtWidgets import (
     QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton,
     QLineEdit, QComboBox, QSpinBox, QStackedWidget, QFrame,
     QGridLayout, QTextEdit, QMessageBox, QGroupBox, QFormLayout,
+    QListWidget, QListWidgetItem, QAbstractItemView,
 )
 
 from creators import CreatorFactory
 from creators.base_creator import BaseCharacterCreator
 from utils.storage import save_character, CharacterRecord
+from utils.soft_validation import (
+    validate_character_soft,
+    mark_homebrew,
+    format_warning_message,
+)
 
 logger = logging.getLogger(__name__)
 
 SYSTEM_MAP = {
     "pathfinder1e": "Pathfinder 1st Edition",
     "dnd5e": "D&D 5th Edition",
-    "vtm5e": "Vampire: The Masquerade 5e",
     "mm3e": "Mutants & Masterminds 3e",
 }
 
 D20_ABILITIES = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]
-
-VTM_ATTRS = {
-    "Physical": ["strength", "dexterity", "stamina"],
-    "Social": ["charisma", "manipulation", "composure"],
-    "Mental": ["intelligence", "wits", "resolve"],
-}
 
 
 class ForgePage(QWidget):
@@ -155,6 +154,21 @@ class ForgePage(QWidget):
         self._class_info.setReadOnly(True)
         self._class_info.setMaximumHeight(120)
         lay.addWidget(self._class_info)
+
+        self._spell_group = QGroupBox("Büyüler (opsiyonel — çoklu seçim)")
+        spell_lay = QVBoxLayout(self._spell_group)
+        self._spell_filter = QLineEdit()
+        self._spell_filter.setPlaceholderText("Büyü ara...")
+        self._spell_filter.textChanged.connect(self._filter_spells)
+        spell_lay.addWidget(self._spell_filter)
+        self._spell_list = QListWidget()
+        self._spell_list.setSelectionMode(QAbstractItemView.MultiSelection)
+        self._spell_list.setMaximumHeight(140)
+        spell_lay.addWidget(self._spell_list)
+        self._all_spell_names: list[str] = []
+        lay.addWidget(self._spell_group)
+        self._spell_group.hide()
+
         lay.addStretch()
 
         self._steps.addWidget(page)
@@ -266,25 +280,14 @@ class ForgePage(QWidget):
                 self._race_combo.addItem(r, r)
             for c in self._creator.list_available_classes():
                 self._class_combo.addItem(c, c)
+            self._populate_spell_list()
+            self._spell_group.show()
             self._roll_btn.show()
             for spin in self._ability_spins.values():
                 spin.setRange(3, 20)
 
-        elif sys_key == "vtm5e":
-            self._race_title.setText("Clan Seçimi")
-            self._class_title.setText("Predator Type")
-            clans = self._creator.data.get("clans", {})
-            for clan_name in sorted(clans.keys()):
-                self._race_combo.addItem(clan_name, clan_name)
-            pred_types = self._creator.data.get("predator_types", {})
-            for pt in sorted(pred_types.keys()):
-                self._class_combo.addItem(pt, pt)
-            self._roll_btn.hide()
-            for spin in self._ability_spins.values():
-                spin.setRange(1, 5)
-                spin.setValue(1)
-
         elif sys_key == "mm3e":
+            self._spell_group.hide()
             self._race_title.setText("Arketip Seçimi")
             self._class_title.setText("Origin (opsiyonel)")
             archetypes = self._creator.data.get("archetypes", {})
@@ -295,6 +298,27 @@ class ForgePage(QWidget):
             for spin in self._ability_spins.values():
                 spin.setRange(0, 20)
                 spin.setValue(2)
+
+    def _populate_spell_list(self) -> None:
+        """SQLite/JSON'dan büyü listesini doldur."""
+        self._spell_list.clear()
+        self._all_spell_names = []
+        if not self._creator:
+            return
+        spells = self._creator.data.get("spells", {})
+        self._all_spell_names = sorted(spells.keys())
+        for name in self._all_spell_names[:500]:
+            self._spell_list.addItem(QListWidgetItem(name))
+
+    def _filter_spells(self, text: str) -> None:
+        query = text.strip().lower()
+        self._spell_list.clear()
+        for name in self._all_spell_names:
+            if not query or query in name.lower():
+                self._spell_list.addItem(QListWidgetItem(name))
+
+    def _selected_spells(self) -> list[str]:
+        return [item.text() for item in self._spell_list.selectedItems()]
 
     def _roll_abilities(self) -> None:
         """4d6 drop lowest ile yetenek puanlarını at."""
@@ -323,6 +347,15 @@ class ForgePage(QWidget):
         for k, v in char.get("abilities", {}).items():
             mod = (v - 10) // 2 if isinstance(v, int) else 0
             lines.append(f"  {k.title():15s} {v:3d}  ({mod:+d})")
+
+        spells = char.get("spells", [])
+        if spells:
+            lines.append("")
+            lines.append(f"═══ Büyüler ({len(spells)}) ═══")
+            for sp in spells[:20]:
+                lines.append(f"  • {sp}")
+            if len(spells) > 20:
+                lines.append(f"  ... ve {len(spells) - 20} tane daha")
 
         if stats:
             lines.append("")
@@ -354,24 +387,11 @@ class ForgePage(QWidget):
                 "level": 1,
                 "abilities": abilities,
                 "modifiers": {k: (v - 10) // 2 for k, v in abilities.items()},
+                "spells": self._selected_spells(),
             }
             if sys_key == "pathfinder1e":
                 char["bab"] = 1
                 char["saves"] = {"fortitude": 2, "reflex": 0, "will": 0}
-        elif sys_key == "vtm5e":
-            phys = {k: abilities.get(k, 1) for k in ["strength", "dexterity", "stamina"]}
-            soc = {k: abilities.get(k, 1) for k in ["charisma", "manipulation", "composure"]}
-            ment = {k: abilities.get(k, 1) for k in ["intelligence", "wisdom", "charisma"]}
-            char = {
-                "system": "VTM5E",
-                "name": name,
-                "clan": self._race_combo.currentData() or "",
-                "attributes": {"physical": phys, "social": soc, "mental": ment},
-                "skills": {"physical": {}, "social": {}, "mental": {}},
-                "disciplines": {},
-                "humanity": 7,
-                "blood_potency": 1,
-            }
         elif sys_key == "mm3e":
             char = {
                 "system": "MM3E",
@@ -398,6 +418,21 @@ class ForgePage(QWidget):
 
         stats = self._creator.calculate_stats(char)
         char.update(stats)
+
+        sys_key = self._sys_combo.currentData() or ""
+        soft = validate_character_soft(char, sys_key, self._creator.data)
+        if soft.has_warnings:
+            reply = QMessageBox.question(
+                self,
+                "Uyarı — Kural Dışı Seçim",
+                format_warning_message(soft.warnings),
+                QMessageBox.Yes | QMessageBox.No,
+                QMessageBox.No,
+            )
+            if reply == QMessageBox.Yes:
+                char = mark_homebrew(char, soft.warnings)
+            elif reply == QMessageBox.No:
+                return
 
         record = CharacterRecord(
             id=None,

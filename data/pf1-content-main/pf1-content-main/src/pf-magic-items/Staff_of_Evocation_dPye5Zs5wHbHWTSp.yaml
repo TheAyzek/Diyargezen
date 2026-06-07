@@ -1,0 +1,26 @@
+_id: dPye5Zs5wHbHWTSp
+_key: '!items!dPye5Zs5wHbHWTSp'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Evocation
+system:
+  aura:
+    school: evo
+  cl: 13
+  description:
+    value: >-
+      <p>This smooth staff carved from hickory or yew allows use of the
+      following spells: • Fireball (1 charge)   • Magic missile (1 charge)   •
+      Shatter (1 charge)   • Ice storm (2 charges)   • Wall of force (2
+      charges)   • Chain lightning (3
+      charges.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, chain lightning, fireball, ice storm, magic missile, shatter, wall
+      of force</p>
+  price: 82000
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

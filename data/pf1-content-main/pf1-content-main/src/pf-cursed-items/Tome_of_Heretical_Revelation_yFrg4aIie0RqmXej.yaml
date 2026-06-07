@@ -1,0 +1,29 @@
+_id: yFrg4aIie0RqmXej
+_key: '!items!yFrg4aIie0RqmXej'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Tome of Heretical Revelation
+system:
+  aura:
+    school: abj
+  cl: 17
+  cursed: true
+  description:
+    value: >-
+      <p>This thick book appears to be an educational treatise filled with
+      philosophical insights. Anyone who reads from this cursed book and has a
+      patron deity must make a DC 20 Will save or be overcome by a crushing
+      sense of doubt and hopelessness as she loses all faith in her deity's
+      teachings. Anyone who fails this save loses all divine spellcasting
+      ability, as well as class abilities from classes that grant divine spells,
+      and she can't gain additional levels in those classes. She can regain her
+      abilities and advancement potential if she atones (see the atonement spell
+      description). Succeeding at the Will save still leaves the reader shaken
+      for 10 minutes.</p>
+  sources:
+    - id: PZO9436
+  subType: other
+  weight:
+    value: 5
+type: equipment

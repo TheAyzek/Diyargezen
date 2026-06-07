@@ -1,0 +1,38 @@
+_id: kDkIp7o79WAvdDX2
+_key: '!items!kDkIp7o79WAvdDX2'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Arrow-collecting
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate abjuration and evocation
+      <strong>CL</strong> 11th</p><p><strong>Slot</strong> armor quality;
+      <strong>Price</strong> +3 bonus;</p><p>Armor with the
+      <em>arrow-collecting</em> special ability grants the wearer a 20% miss
+      chance against ranged projectile attacks (but not thrown weapon attacks,
+      ranged spell effects such as rays, or massive ranged projectiles such as
+      those fired from siege weapons). When a projectile misses the wearer of
+      arrow-collecting armor because of this miss chance, the projectile begins
+      to orbit the wearer. <em>Arrow-collecting</em> armor can hold up to 5
+      pieces of ammunition in this fashion. Any projectiles that would be
+      collected beyond that limit drop at the wearer's feet. As a standard
+      action, the wearer of <em>arrow-collecting</em> armor can shoot all
+      collected projectiles currently floating around the armor at a single
+      target within 30 feet. Make a separate attack roll for each projectile,
+      using the wearer's ranged attack modifier and any enhancement bonus the
+      projectile might have. If the projectiles are not used in this way within
+      5 minutes, or if anyone tries to grab or move them, they break and become
+      useless. The arrow-collecting special ability can be applied only to
+      medium armor.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, <em>entropic shield, telekinesis</em>;
+      <strong>Price</strong> +3 bonus</p>
+  sources:
+    - id: PZO9467
+      pages: '26'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

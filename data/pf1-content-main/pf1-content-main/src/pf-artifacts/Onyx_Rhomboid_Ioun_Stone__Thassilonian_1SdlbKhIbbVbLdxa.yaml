@@ -1,0 +1,49 @@
+_id: 1SdlbKhIbbVbLdxa
+_key: '!items!1SdlbKhIbbVbLdxa'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/stone/ore-chunk-black.webp
+name: Onyx Rhomboid Ioun Stone, Thassilonian
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: varied
+  changes:
+    - _id: CtyrtIc2
+      formula: '2'
+      target: con
+      type: enh
+  cl: 12
+  description:
+    instructions: >-
+      <p>If you have multiple stones which stack together, edit the changes tab
+      of one to match the total allowed bonus.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>A dark colored stone in the form of a type of prism with sides of
+      unequal widths or angles, giving it a flattened cross section.</p>
+    value: >-
+      <h3>Background Details</h3><p>Whether they were invented by the Azlanti or
+      merely discovered by them, ioun stones were an important part of Azlanti
+      society-and by extension, of Thassilonian society. Many of Thassilon's
+      rulers- particularly runelords like Karzoug-took to the art of embedding
+      these stones in their flesh. An ioun stone implanted in this manner cannot
+      be sundered or stolen. Further rules on implanting ioun stones can be
+      found in Pathfinder Campaign Setting: Seekers of Secrets. Thassilonian
+      wizards perfected and enhanced many forms of ioun stones, such as the four
+      unusually powerful stones listed below. These stones are minor artifacts,
+      and methods of their creation have been lost since Thassilon's
+      fall.</p><h3>Effect</h3><p>This stone grants a +2 enhancement bonus to
+      Constitution (the bonuses from possessing multiple onyx rhomboids stack,
+      up to a maximum of +6).</p><h3>Destruction</h3><p>No details provided.</p>
+  hp:
+    base: 1
+  sources:
+    - id: PZO1002
+      pages: 421-422
+  subType: other
+  tags:
+    - Ioun Stone
+type: equipment

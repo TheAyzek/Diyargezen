@@ -1,0 +1,29 @@
+_id: Tig4sBvrgzraXdIr
+_key: '!items!Tig4sBvrgzraXdIr'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: War
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Gorum, Iomedae, Rovagug, Urgathoa.</p><p><strong>War Mind
+      (minor)</strong>: At 1st level, you can touch an ally and grant it a
+      tactical advantage for 1 minute. At the start of its turn each round, it
+      can select one of the following bonuses: +10 feet to base land speed, +1
+      dodge bonus to AC, +1 insight bonus on attack rolls, or a +1 luck bonus on
+      saving throws. Each bonus selected lasts for 1 round.</p><p><strong>Battle
+      Lust (major)</strong>: At 10th level, you can touch an ally and grant it a
+      thirst for battle. All of the ally's melee attacks are treated as if they
+      had the vicious weapon special ability, but the additional damage dealt to
+      the ally from that special ability is nonlethal. In addition, the ally
+      receives a +4 insight bonus on attack rolls made to confirm critical hits.
+      These benefits last for 1 minute.</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

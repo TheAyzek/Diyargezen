@@ -1,0 +1,54 @@
+_id: 6vavxrEXHCyahRdh
+_key: '!items!6vavxrEXHCyahRdh'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Conquering Brand, Hobbling
+system:
+  aura:
+    school: trs
+  cl: 4
+  description:
+    value: >-
+      <p>Each of these 3-foot-long branding irons ends in a distinctive,
+      cruel-looking symbol. Once per day on command, a wielder of a conquering
+      brand can cause the tip to grow red hot for 1 hour, and during this time
+      one creature can be branded. The brand's recipient is burned as normal for
+      a branding iron (see page 63) and is also affected as per brand
+      (Pathfinder RPG Advanced Player's Guide 207) or another spell the
+      conquering brand carries, as the wielder of the brand chooses. A
+      conquering brand can create only one magical brand per day.  Conformity: A
+      conquering brand of conformity can create a brand of conformity. Faint
+      transmutation; CL 1st; Craft Wondrous Item, brand, brand of conformity. 
+      Geas: A conquering brand of geas can affect the recipient as per
+      geas/quest. When the brand is used in this way, it takes 10 minutes for
+      its tip to heat up. If not used to create a brand, the mark left by the
+      branding iron is nonmagical and not tied to the spell effect, so removing
+      it doesn't remove the spell effect. Moderate enchantment; CL 11th; Craft
+      Wondrous Item, brand, geas/quest.  Hobbling: A conquering brand of
+      hobbling can create a brand of hobbling. Faint transmutation; CL 4th;
+      Craft Wondrous Item, brand, brand of hobbling.  Justice: A conquering
+      brand of justice can create a mark of justice, as per the spell. When the
+      brand is used this way, it takes 10 minutes for its tip to heat up. Faint
+      necromancy; CL 9th; Craft Wondrous Item, brand, mark of justice.  Lesser
+      Geas: A conquering brand of lesser geas allows you to affect the recipient
+      as per lesser geas. When the brand is used in this way, it takes 1 round
+      for its tip to heat up. If not used to create a brand, the mark left by
+      the branding iron is nonmagical and not tied to the spell effect, so
+      removing it doesn't remove the spell effect. Faint enchantment; CL 7th;
+      Craft Wondrous Item, brand, lesser geas.  Subjugation: This brand can
+      create a greater brand (Advanced Player's Guide 207), except it blazes
+      when brought within 30 feet of the Nail's symbol. Moderate transmutation;
+      CL 10th; Craft Wondrous Item, brand, greater brand.  Tracking: A
+      conquering brand of tracking can create a brand of tracking. Moderate
+      transmutation; CL 9th; Craft Wondrous Item, brand, brand of
+      tracking.</p><h3>Requirements</h3><p>Craft Wondrous Item, brand, brand of
+      hobbling.</p>
+  price: 2820
+  sources:
+    - id: PZO9293
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

@@ -1,0 +1,26 @@
+_id: Kvan9nl7tQ1CZd0K
+_key: '!items!Kvan9nl7tQ1CZd0K'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Linnorm's Lament
+system:
+  artifact: true
+  aura:
+    school: con
+  cl: 20
+  description:
+    value: >-
+      <p>This horn operates as a normal horn of Valhalla, save that it can be
+      blown more than once per day, with the warriors from previous soundings
+      remaining until their 1 hour has passed. When the wielder blows the horn
+      for the third time, he becomes destined to die before the next dawn, with
+      chance-based events turning against him in more and more improbable ways
+      until he's slain. The manner of this curse and any potential methods of
+      defeating it are left to the GM.</p>
+  sources:
+    - id: PZO9220
+  subType: other
+  weight:
+    value: 2
+type: equipment

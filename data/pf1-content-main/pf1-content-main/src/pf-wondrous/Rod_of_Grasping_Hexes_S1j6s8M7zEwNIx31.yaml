@@ -1,0 +1,27 @@
+_id: S1j6s8M7zEwNIx31
+_key: '!items!S1j6s8M7zEwNIx31'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Rod of Grasping Hexes
+system:
+  aura:
+    custom: true
+    school: none
+  cl: 17
+  description:
+    value: >-
+      <p>This rod is crafted from a gnarled branch covered in sharp thorns.
+      Three times per day when a wielder of this rod uses a hex (but not an
+      advanced hex or grand hex), she can use this rod's power to double the
+      range of the hex, so long as the hex has a range measured in
+      feet.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Rod,
+      Reach Spell, creator must possess the hex class feature</p>
+  price: 3000
+  sources:
+    - id: PZO1129
+  subType: other
+  weight:
+    value: 5
+type: equipment

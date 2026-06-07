@@ -1,0 +1,23 @@
+_id: DckGOnhET5NfPlsv
+_key: '!items!DckGOnhET5NfPlsv'
+_stats:
+  coreVersion: '12.331'
+img: icons/equipment/back/cloak-layered-red-orange.webp
+name: Patchwork cloak
+system:
+  description:
+    value: >-
+      <p>These cloaks are popular among traveling bards, and each patchwork
+      cloak is unique. The patches represent where the traveler has been, and
+      often the performer uses them to recall specific stories from his
+      repertoire. When a bard retires or dies, he often bequeaths his cloak to a
+      young entertainer he mentored or admired.</p>
+  price: 5
+  slot: clothing
+  sources:
+    - id: PZO1123
+      pages: '89'
+  subType: clothing
+  weight:
+    value: 1
+type: equipment

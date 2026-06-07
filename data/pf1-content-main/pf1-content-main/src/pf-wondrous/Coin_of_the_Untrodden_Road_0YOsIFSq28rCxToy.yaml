@@ -1,0 +1,27 @@
+_id: 0YOsIFSq28rCxToy
+_key: '!items!0YOsIFSq28rCxToy'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Coin of the Untrodden Road
+system:
+  aura:
+    school: trs
+  cl: 6
+  description:
+    value: >-
+      <p>When tossed into the air, this tarnished copper coin brings forth
+      potential lost by life's decisions. If a human, half-elf, or half-orc
+      flips the coin and catches it, she takes a -2 penalty to the ability score
+      modified by her +2 racial ability score bonus, but gains a +2 inherent
+      bonus to a random other ability score. The bonus and penalty last for 1
+      hour. Negating the penalty automatically negates the bonus as well. The
+      coin can be used three times per
+      day.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, alter self</p>
+  price: 6000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

@@ -1,0 +1,28 @@
+_id: 92SbQQBF62lPbG1M
+_key: '!items!92SbQQBF62lPbG1M'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Perilous Gloves
+system:
+  aura:
+    custom: true
+    school: transmutation and necromancy
+  cl: 1
+  description:
+    value: >-
+      <p>These black gloves glow slightly during combat. Once per day, if the
+      wearer's unarmed attack threatens a critical hit, the critical
+      confirmation roll gains a +2 bonus. Regardless of whether the critical is
+      confirmed, the attack does an additional 1d8 points of
+      damage.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, inflict light wounds, unerring weapon</p>
+  price: 10000
+  slot: hands
+  sources:
+    - id: PZO9434
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

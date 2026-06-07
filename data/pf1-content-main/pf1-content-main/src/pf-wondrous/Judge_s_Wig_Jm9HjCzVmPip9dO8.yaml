@@ -1,0 +1,25 @@
+_id: Jm9HjCzVmPip9dO8
+_key: '!items!Jm9HjCzVmPip9dO8'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Judge's Wig
+system:
+  aura:
+    school: div
+  cl: 7
+  description:
+    value: >-
+      <p>This flowing wig of white ringlets grants its wearer an unmistakable
+      impression of dignity and gravitas. This grants a +4 competence bonus on
+      Diplomacy and Intimidate checks.   At will, the wearer can concentrate on
+      a creature within 30 feet to scrutinize it with discern
+      lies.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, discern lies</p>
+  price: 59200
+  slot: head
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

@@ -1,0 +1,26 @@
+_id: jJdQoQddDBTDuxaP
+_key: '!items!jJdQoQddDBTDuxaP'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Horsemaster's Saddle
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>This ornate military saddle, tooled with an elaborate equine motif,
+      grants the mount a +5 competence bonus on Acrobatics checks and the
+      mount's rider a +5 competence bonus on Ride checks. In addition, the mount
+      gains the benefits of any teamwork feats possessed by the
+      rider.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, mount, creator must have 5 ranks in Ride</p>
+  price: 12000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

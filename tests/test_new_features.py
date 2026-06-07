@@ -515,7 +515,7 @@ class TestEncounterTracker(unittest.TestCase):
 
     def test_system_rules_exist_for_all(self):
         """Tum sistemlerin kurallari tanimli"""
-        for system in ["dnd5e", "pathfinder1e", "vtm5e", "mm3e"]:
+        for system in ["dnd5e", "pathfinder1e", "mm3e"]:
             self.assertIn(system, self.SYSTEM_RULES)
             self.assertIn("name", self.SYSTEM_RULES[system])
             self.assertIn("initiative_stat", self.SYSTEM_RULES[system])
@@ -596,20 +596,6 @@ class TestEncounterTracker(unittest.TestCase):
         self.assertEqual(c.initiative, 2)  # (14-10)//2 = 2
         self.assertEqual(c.system, "dnd5e")
 
-    def test_from_character_vtm(self):
-        """VtM karakterinden Combatant olusturma"""
-        char = {
-            "system": "vtm5e", "name": "Victoria",
-            "health": 9,
-            "attributes": {"Composure": 3},
-            "skills": {"Awareness": 2},
-            "hunger": 2
-        }
-        c = self.Combatant.from_character(char)
-        self.assertEqual(c.name, "Victoria")
-        self.assertEqual(c.max_hp, 9)
-        self.assertEqual(c.initiative, 5)  # 3 + 2
-
     def test_from_character_mm(self):
         """M&M karakterinden Combatant olusturma"""
         char = {
@@ -661,7 +647,7 @@ class TestHomebrew(unittest.TestCase):
     def test_templates_exist_for_all_systems(self):
         """Tum sistemler icin homebrew sablonlari var"""
         from utils.homebrew import HOMEBREW_TEMPLATES, get_homebrew_types
-        for system in ["dnd5e", "pathfinder1e", "vtm5e", "mm3e"]:
+        for system in ["dnd5e", "pathfinder1e", "mm3e"]:
             self.assertIn(system, HOMEBREW_TEMPLATES)
             types = get_homebrew_types(system)
             self.assertTrue(len(types) > 0, f"{system} icin homebrew turleri bos")
@@ -676,14 +662,6 @@ class TestHomebrew(unittest.TestCase):
         self.assertIn("feat", types)
         self.assertIn("item", types)
         self.assertIn("background", types)
-
-    def test_vtm5e_types(self):
-        """VtM 5e homebrew turleri dogru"""
-        from utils.homebrew import get_homebrew_types
-        types = get_homebrew_types("vtm5e")
-        self.assertIn("clan", types)
-        self.assertIn("discipline", types)
-        self.assertIn("predator_type", types)
 
     def test_mm3e_types(self):
         """M&M 3e homebrew turleri dogru"""
@@ -767,8 +745,8 @@ class TestPortraits(unittest.TestCase):
         """Farkli sistemler icin farkli yollar"""
         from utils.portraits import get_portrait_path
         dnd = get_portrait_path("Hero", "dnd5e")
-        vtm = get_portrait_path("Hero", "vtm5e")
-        self.assertNotEqual(dnd, vtm)
+        mm = get_portrait_path("Hero", "mm3e")
+        self.assertNotEqual(dnd, mm)
 
     def test_validate_nonexistent_file(self):
         """Olmayan dosya icin hata"""
@@ -779,7 +757,7 @@ class TestPortraits(unittest.TestCase):
     def test_display_sizes_per_system(self):
         """Her sistem icin farkli boyutlar"""
         from utils.portraits import get_display_size, get_thumbnail_size
-        for system in ["dnd5e", "pathfinder1e", "vtm5e", "mm3e"]:
+        for system in ["dnd5e", "pathfinder1e", "mm3e"]:
             size = get_display_size(system)
             self.assertEqual(len(size), 2)
             thumb = get_thumbnail_size(system)
@@ -819,13 +797,12 @@ class TestHTMLExport(unittest.TestCase):
         self.assertEqual(_normalize_system("dnd5e"), "dnd5e")
         self.assertEqual(_normalize_system("D&D"), "dnd5e")
         self.assertEqual(_normalize_system("pathfinder"), "pathfinder1e")
-        self.assertEqual(_normalize_system("VampireTheMasquerade5e"), "vtm5e")
         self.assertEqual(_normalize_system("MutantsAndMasterminds3e"), "mm3e")
 
     def test_system_themes(self):
         """Tum sistemler icin temalar tanimli"""
         from utils.export_html import SYSTEM_THEMES
-        for system in ["dnd5e", "pathfinder1e", "vtm5e", "mm3e"]:
+        for system in ["dnd5e", "pathfinder1e", "mm3e"]:
             self.assertIn(system, SYSTEM_THEMES)
             self.assertIn("accent", SYSTEM_THEMES[system])
 
@@ -845,25 +822,6 @@ class TestHTMLExport(unittest.TestCase):
         self.assertIn("Test Fighter", content)
         self.assertIn("Fighter", content)
         self.assertIn("Human", content)
-        filepath.unlink(missing_ok=True)
-
-    def test_vtm5e_export(self):
-        """VtM 5e HTML export"""
-        from utils.export_html import export_character_html
-        char = {
-            "system": "vtm5e", "name": "Test Vampire",
-            "clan": "Toreador", "generation": 13,
-            "predator_type": "Siren",
-            "attributes": {"Strength": 2, "Dexterity": 3, "Stamina": 2,
-                           "Charisma": 4, "Manipulation": 3, "Composure": 2,
-                           "Intelligence": 3, "Wits": 2, "Resolve": 3},
-            "blood_potency": 1, "hunger": 1, "humanity": 7,
-        }
-        filepath = export_character_html(char, "test_vtm5e_export")
-        self.assertTrue(filepath.exists())
-        content = filepath.read_text(encoding="utf-8")
-        self.assertIn("Test Vampire", content)
-        self.assertIn("Toreador", content)
         filepath.unlink(missing_ok=True)
 
     def test_mm3e_export(self):

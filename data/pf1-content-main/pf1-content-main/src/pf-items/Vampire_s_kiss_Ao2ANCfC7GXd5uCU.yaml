@@ -1,0 +1,46 @@
+_id: Ao2ANCfC7GXd5uCU
+_key: '!items!Ao2ANCfC7GXd5uCU'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Vampire's kiss
+system:
+  actions:
+    - _id: 54s13z8x4s8c5ek7
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1d2]] Con damage
+            <strong>Secondary Effect</strong>: bleed damage from non-poison
+            sources increases by [[1]] for [[1]] minute
+      save:
+        dc: '15'
+        type: fort
+      tag: vampiresKiss
+  description:
+    value: >-
+      <p><strong>Type</strong> injury; <strong>Save</strong> Fortitude DC
+      15</p><p><strong>Frequency</strong> 1/round for 2
+      rounds</p><p><strong>Initial Effect</strong> 1d2 Con damage;
+      <strong>Secondary Effect</strong> bleed damage from non-poison sources
+      increases by 1 for 1 minute</p><p><strong>Cure</strong> 1
+      save</p><h3>Alchemical Recipe</h3><h3><p><strong>Recipe</strong> (6 gold +
+      50 myrrh + 30 quicksilver)/distillation; <strong>Craft</strong> DC
+      15</p><p><strong>Time</strong> 1 day; <strong>Tools</strong> retort;
+      <strong>Type</strong> poison</p></h3>
+  price: 75
+  sources:
+    - id: PZO9445
+      pages: '9'
+  subType: poison
+  uses:
+    per: single
+type: consumable

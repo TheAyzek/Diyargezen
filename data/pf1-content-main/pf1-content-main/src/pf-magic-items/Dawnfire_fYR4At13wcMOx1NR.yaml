@@ -1,0 +1,64 @@
+_id: fYR4At13wcMOx1NR
+_key: '!items!fYR4At13wcMOx1NR'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/scimitar.PNG
+name: Dawnfire
+system:
+  actions:
+    - _id: ud8vrn7494k2n09l
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: dawnfire
+  aura:
+    school: evo
+  baseTypes:
+    - Scimitar
+  cl: 3
+  description:
+    value: >-
+      <p>This +1 scimitar has a twisted hilt that evokes a stylized version of
+      Sarenrae's holy symbol. The blade is etched with a prayer to the goddess
+      to redeem the repentant and consume the unremorseful. Once per day, the
+      wielder can use spell combat (as a magus) to make a full attack with the
+      scimitar in one hand (with a -2 penalty on all attacks) and project a
+      15-foot cone of flame from the other hand that deals 3d4 points of fire
+      damage to creatures in the area. This cone of fire does not provoke
+      attacks of opportunity, and is otherwise identical to burning hands,
+      except the flames are yellow-white and undead creatures in the area take 3
+      additional points of damage from the fire. The hand projecting the fire
+      must be free-not wielding a weapon or holding an object-for the wielder to
+      use this ability.</p><p><strong>Base Item</strong>: 
+      scimitar</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, burning hands, searing light</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 5315
+  showInQuickbar: false
+  sources:
+    - id: PZO9267
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 4
+type: weapon

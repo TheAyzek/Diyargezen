@@ -1,0 +1,34 @@
+_id: 7YZRKonPVX4Tq1u6
+_key: '!items!7YZRKonPVX4Tq1u6'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Curses
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>This gnarled wooden staff is bedecked with broken charms and burnt
+      fetishes that were once used to ward against bad luck, but now are in
+      shambles. The staff allows use of the following spells: •
+      Blindness/deafness (1 charge)  • Ill omen (1 charge; Advanced Player's
+      Guide)  • Baleful polymorph (2 charges)  • Bestow curse (2 charges)  In
+      addition, the staff of curses is a +1/+1 quarterstaff, and whenever the
+      wielder strikes a creature with the staff, he can expend one charge to
+      cause the creature to become cursed for a number of rounds equal to the
+      number of charges remaining in the staff. While this curse persists, the
+      creature takes a -2 penalty on saving throws from spells cast from the
+      staff and a -2 penalty to AC against any attacks made by the
+      staff.</p><p><strong>Base Item</strong>: +1/+1
+      quarterstaff</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, Craft Staff, baleful polymorph, bestow curse,
+      blindness/deafness, ill omen</p>
+  price: 43500
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

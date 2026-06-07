@@ -1,0 +1,69 @@
+_id: uiMqruVktlrmzGS3
+_key: '!items!uiMqruVktlrmzGS3'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/scythe.PNG
+name: Void Scythe
+system:
+  actions:
+    - _id: jfldnqdhthxnnmix
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: voidScythe
+  aura:
+    school: nec
+  baseTypes:
+    - Scythe
+  cl: 13
+  description:
+    value: >-
+      <p>Instead of a blade, a swathe of absolute darkness inimical to life tips
+      this scythe. It functions as a +1 brilliant energy scythe, except the
+      blade is formed of negative energy and gives off no light whatsoever. The
+      wielder can channel negative energy directly into the scythe to charge it
+      with life-destroying energy for 1 round per die of channeling. For
+      example, channeling negative energy for 5d6 points of damage fuels the
+      scythe for 5 rounds. While so charged, the void scythe bestows one
+      negative level with each hit. One day after being struck, subjects must
+      succeed at a DC 16 Fortitude save for each negative level or the negative
+      levels become permanent.  Black energy utterly consumes any creature that
+      is slain by the void scythe, leaving no body behind but leaving the
+      creature's equipment unharmed. A victim of the void scythe can be restored
+      only by true resurrection or carefully worded miracle or
+      wish.</p><p><strong>Base Item</strong>: brilliant energy
+      scythe</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, disintegrate, enervation</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 95318
+  properties:
+    trp: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 10
+type: weapon

@@ -1,0 +1,20 @@
+_id: 2cAGD9RzaM3OPROh
+_key: '!items!2cAGD9RzaM3OPROh'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_34.jpg
+name: Restoring Form
+system:
+  associations:
+    classes:
+      - Shifter
+  description:
+    value: >-
+      <p><strong>Shifter Reactive Form</strong></p><p>The adaptive shifter
+      regains 1d8 hit points. For every 4 levels she has, the number of hit
+      points she regains increases by 1d8. The adaptive shifter can assume this
+      form only as a swift action.</p>
+  subType: classFeat
+  tags:
+    - Shifter Reactive Form
+type: feat

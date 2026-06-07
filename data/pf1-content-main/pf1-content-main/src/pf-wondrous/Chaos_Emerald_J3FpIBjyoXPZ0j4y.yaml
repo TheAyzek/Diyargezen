@@ -1,0 +1,33 @@
+_id: J3FpIBjyoXPZ0j4y
+_key: '!items!J3FpIBjyoXPZ0j4y'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Chaos Emerald
+system:
+  aura:
+    school: abj
+  cl: 19
+  description:
+    value: >-
+      <p>This lustrous green gemstone is uncut and about the size of a human
+      fist. The gem grants its bearer the use of the following abilities.  •
+      entropic shield (1 charge)  • lesser confusion (1 charge)  • magic circle
+      against law (1 charge)  • chaos hammer (2 charges)  A newly created chaos
+      emerald has 1d6+2 charges. It can hold a maximum of 10 charges and
+      automatically regains 1d3-1 charges each day.  A non-chaotic creature who
+      holds or carries a chaos emerald gains one negative level. This negative
+      level persists as long as the creature holds or carries the gem and
+      disappears when the gem is dropped. This negative level cannot be overcome
+      in any way (including restoration spells) while held or
+      carried.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, chaos hammer, entropic shield, lesser confusion, magic
+      circle against law, creator must be chaotic</p>
+  price: 25000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

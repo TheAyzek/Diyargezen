@@ -1,0 +1,29 @@
+_id: 6YM9qmFayMR8fWnC
+_key: '!items!6YM9qmFayMR8fWnC'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Charm
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Calistria, Cayden Cailean, Norgorber, Shelyn.</p><p><strong>Charming
+      Presence (minor)</strong>: At 1st level, you can touch an ally and grant
+      an entrancing blessing. For 1 minute, the ally becomes mesmerizing to her
+      opponents, filling them with either abject admiration or paralyzing fear.
+      This effect functions as sanctuary, except if the ally attacks an
+      opponent, the effect ends with respect to only that opponent. This is a
+      mind-affecting effect.</p><p><strong>Dominance Aura (major)</strong>: At
+      10th level, you can surround yourself with a tangible aura of majesty for
+      1 minute. While this aura is active, once per round as a swift action you
+      can issue a command (as the command spell) to one creature within 30 feet;
+      the creature must succeed at a Will saving throw or submit for 1
+      round.</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

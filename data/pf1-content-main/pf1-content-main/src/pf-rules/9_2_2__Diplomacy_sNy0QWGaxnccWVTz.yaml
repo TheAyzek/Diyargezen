@@ -1,0 +1,41 @@
+_id: sNy0QWGaxnccWVTz
+_key: '!journal!sNy0QWGaxnccWVTz'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: lnmu98MzhpeHCLdt
+name: 9.2.2. Diplomacy
+pages:
+  - _id: a4It51WIfpQLGYi5
+    _key: '!journal.pages!sNy0QWGaxnccWVTz.a4It51WIfpQLGYi5'
+    _stats:
+      coreVersion: '12.331'
+    name: 9.2.2. Diplomacy
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.zUOuZVJH1nKufQSo]{(Index)
+        Skills}</p><p>@Compendium[pf-content.pf-rules.EJtwDpvYymcGqQZk]{9.2.
+        Skills in
+        Conflict}</p><ul><li>@Compendium[pf-content.pf-rules.biGV1a41yIiORN2A]{9.2.1.
+        Bluff}</li><li><strong>@Compendium[pf-content.pf-rules.sNy0QWGaxnccWVTz]{9.2.2.
+        Diplomacy}</strong></li><li>@Compendium[pf-content.pf-rules.NzqehppEukjnQUfy]{9.2.3.
+        Disguise}</li><li>@Compendium[pf-content.pf-rules.frhg7KrHN2tYhhkM]{9.2.4.
+        Intimidate}</li><li>@Compendium[pf-content.pf-rules.NTIduFRh5A0p0hIu]{9.2.5.
+        Perception and
+        Stealth}</li><li>@Compendium[pf-content.pf-rules.B1ULzO6COuN6ILPA]{9.2.6.
+        Sense
+        Motive}</li><li>@Compendium[pf-content.pf-rules.92nmC7Usb2puToet]{9.2.7.
+        Replacing Opposed Rolls}</li></ul><hr
+        /><p>@Source[PZO1134;pages=184]</p><p><em>@UUID[Compendium.pf1.pf1e-rules.JournalEntry.x175kVqUfLGPt8tC.JournalEntryPage.uB9Fy36RUjibxqvt]{Diplomacy}</em></p><p>Due
+        to its ability to convince people without using either deception or
+        coercion—and risking their negative consequences—the Diplomacy skill is
+        one of the most commonly used forms of persuasion in the Pathfinder RPG.
+        However, it is also difficult to adjudicate in a variety of situations
+        involving intrigue and combat.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

@@ -1,0 +1,66 @@
+_id: 9OHjwAR6Zu5Y3wJy
+_key: '!items!9OHjwAR6Zu5Y3wJy'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/dagger.PNG
+name: Brinya's Love
+system:
+  actions:
+    - _id: atxleye62jwg45vd
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: brinyasLove
+  aura:
+    custom: true
+    school: transmutation [good]
+  baseTypes:
+    - Dagger
+  cl: 7
+  description:
+    value: >-
+      <p>The fire-blackened blade of this hopeknife bears the inscription my
+      love in stark silver and glows with light equivalent to a light spell when
+      drawn. Brinya's Love is a +1 dagger infused with the soul of the fallen
+      hero Rodrik Grath and the tears of his fiancee Brinya Kelver. Once per day
+      on command, the wielder can grant the weapon the ghost touch weapon
+      special ability for 1 minute. During this time, Brinya's Love sheds light
+      equivalent to a daylight spell and the wielder gains a +3 sacred bonus to
+      his CMD against disarm and sunder attempts directed at the
+      hopeknife.</p><p><strong>Base Item</strong>: 
+      dagger</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, blade of bright victory, daylight</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 5052
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9091
+  weaponGroups:
+    - bladesLight
+    - thrown
+    - tribal
+  weight:
+    value: 1
+type: weapon

@@ -1,0 +1,27 @@
+_id: bAaMHIr7pxnW2gpc
+_key: '!items!bAaMHIr7pxnW2gpc'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Cyclops Helm
+system:
+  aura:
+    school: div
+  cl: 1
+  description:
+    value: >-
+      <p>This helm is made from the husk of a cyclops's shrunken head, and
+      grants a limited version of that creature's flash of insight ability. Once
+      per day as an immediate action, the wearer can choose the result of the
+      die roll instead of rolling her next attack roll, saving throw, skill
+      check, or ability check.</p><h3>Requirements</h3><p>Craft Wondrous Item,
+      true strike</p>
+  price: 5600
+  slot: head
+  sources:
+    - id: PZO9545
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

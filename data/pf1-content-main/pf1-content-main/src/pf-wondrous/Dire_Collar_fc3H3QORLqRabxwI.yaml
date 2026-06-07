@@ -1,0 +1,29 @@
+_id: fc3H3QORLqRabxwI
+_key: '!items!fc3H3QORLqRabxwI'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Dire Collar
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>This leather collar resizes to fit almost any size of creature. Once
+      per day on command, the creature that fastened the dire collar to the
+      animal can cause that animal to grow larger and more bestial. The collar's
+      fastener must be within 30 feet of the animal to do so. The animal gains
+      the benefits of an enlarge person spell (despite the normal targeting
+      restrictions of that spell) for 1
+      minute.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, animal growth</p>
+  price: 1000
+  slot: neck
+  sources:
+    - id: PZO1129
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

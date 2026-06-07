@@ -1,0 +1,65 @@
+_id: lWtGhRUjHQa3Wd0W
+_key: '!journal!lWtGhRUjHQa3Wd0W'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: r4RxY1n4RgAr8RO2
+name: 9.0. Acquiring Skills
+pages:
+  - _id: lNMZ517Wu3JSUWTa
+    _key: '!journal.pages!lWtGhRUjHQa3Wd0W.lNMZ517Wu3JSUWTa'
+    _stats:
+      coreVersion: '12.331'
+    name: 9.0. Acquiring Skills
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.zUOuZVJH1nKufQSo]{(Index)
+        Skills}</p><ul><li>@Compendium[pf-content.pf-rules.lWtGhRUjHQa3Wd0W]{9.0.
+        Acquiring
+        Skills}</li><li>@Compendium[pf-content.pf-rules.pArTS7fNRzpenMxa]{9.1.
+        Skill
+        Descriptions}</li><li>@Compendium[pf-content.pf-rules.EJtwDpvYymcGqQZk]{9.2.
+        Skills in Conflict}</li></ul><hr
+        /><p>@Source[PZO1110;pages=86]</p><p>Each level, your character gains a
+        number of skill ranks dependent upon your class plus your Intelligence
+        modifier. Investing a rank in a skill represents a measure of training
+        in that skill. You can never have more ranks in a skill than your total
+        number of Hit Dice.</p><p>In addition, each class has a number of
+        favored skills, called class skills. It is easier for your character to
+        become more proficient in these skills, as they represent part of his
+        professional training and constant practice. You gain a +3 bonus on all
+        class skills that you put ranks into. If you have more than one class
+        and both grant you a class skill bonus, these bonuses do not stack. The
+        number of skill ranks you gain when taking a level in one of the base
+        classes is shown on Table 4–1. Humans gain 1 additional skill rank per
+        class level.</p><p>Characters who take a level in a favored class have
+        the option of gaining 1 additional skill rank or an additional hit point
+        (see page 31). If you select a level in a new class, all of its class
+        skills are automatically added to your list of class skills, and you
+        gain a +3 bonus on these skills if you have ranks in
+        them.</p><p>@Compendium[pf-content.pf-rules.aUiz43uuVyTowC27]{9.0.1.
+        Skill
+        Checks}</p><p>@Compendium[pf-content.pf-rules.T7UJG1nOgJL3GL2z]{9.0.2.
+        Taking 10 and Taking
+        20}</p><p>@Compendium[pf-content.pf-rules.oHq025KMLI1X8ufB]{9.0.3. Aid
+        Another}</p><h2>Table 4-1: Skill
+        Ranks</h2><table><thead><tr><td>Class</td><td>Skill Ranks per
+        Level</td></tr></thead><tbody><tr><td>Barbarian</td><td>4 + Int
+        modifier</td></tr><tr><td>Bard</td><td>6 + Int
+        modifier</td></tr><tr><td>Cleric</td><td>2 + Int
+        modifier</td></tr><tr><td>Druid</td><td>4 + Int
+        modifier</td></tr><tr><td>Fighter</td><td>2 + Int
+        modifier</td></tr><tr><td>Monk</td><td>4 + Int
+        modifier</td></tr><tr><td>Paladin</td><td>2 + Int
+        modifier</td></tr><tr><td>Ranger</td><td>6 + Int
+        modifier</td></tr><tr><td>Rogue</td><td>8 + Int
+        modifier</td></tr><tr><td>Sorcerer</td><td>2 + Int
+        modifier</td></tr><tr><td>Wizard</td><td>2 + Int
+        modifier</td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

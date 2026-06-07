@@ -1,0 +1,31 @@
+_id: 5b0qeChbm07sbNTb
+_key: '!items!5b0qeChbm07sbNTb'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Altar of Zon-Kuthon
+system:
+  aura:
+    custom: true
+    school: abjuration and enchantment [evil lawful]
+  cl: 10
+  description:
+    value: >-
+      <p>This altar is a veiled box of thick steel designed to house ritual
+      implements of torture and self-mutilation in perfect darkness.  Praying at
+      the altar grants the worshiper a +2 competence bonus on attack rolls,
+      weapon damage rolls, and saving throws for 1 minute whenever the worshiper
+      takes damage or is the target of a pain effect during the next 24 hours
+      after praying at the altar. Multiple sources of damage or pain reset this
+      duration rather than
+      stack.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, magic circle against chaos, magic circle against good,
+      rage, creator must worship Zon-Kuthon</p>
+  price: 8000
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 150
+type: equipment

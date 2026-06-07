@@ -1,0 +1,25 @@
+_id: 0Kiw4m3LkLTzWJzz
+_key: '!items!0Kiw4m3LkLTzWJzz'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: systems/pf1/icons/items/weapons/sword-cane.png
+name: Snuffing Metamagic Rod
+system:
+  aura:
+    custom: true
+    school: none
+  cl: 17
+  description:
+    value: >-
+      <p>The wielder can cast up to three spells per day that extinguish magical
+      and nonmagical sources of light active on the target as though using the
+      Snuffing Spell feat (see page 25).</p><h3>Requirements</h3><p>Craft Rod,
+      Snuffing Spell</p>
+  price: 32000
+  sources:
+    - id: PZO9466
+  subType: other
+  weight:
+    value: 5
+type: equipment

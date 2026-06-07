@@ -1,0 +1,69 @@
+_id: vbpoU8Ft99bp9nOM
+_key: '!items!vbpoU8Ft99bp9nOM'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Trial of the Sixteenth Step (Occult Ritual)
+system:
+  actions:
+    - _id: 5wnfw98q2yn8duin
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        type: 'null'
+      target:
+        value: one creature; see text
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    focus: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> necromancy [evil]; <strong>Level</strong>
+      6</p><p><strong>Casting Time</strong> 60
+      minutes</p><p><strong>Components</strong> V, S, F (a ring or amulet worth
+      at least 5,000 gp), SC (up to 4)</p><p><strong>Skill Checks</strong> Bluff
+      DC 29, 3 successes; Knowledge (religion) DC 29, 3
+      successes</p><p><strong>Range</strong> close</p><p><strong>Target</strong>
+      one creature; see text</p><p><strong>Duration</strong> 1 week; see
+      text</p><p><strong>Saving Throw</strong> none; <strong>SR</strong>
+      no</p><p><strong>Backlash</strong> The primary caster takes 2d6 points of
+      damage.</p><p><strong>Failure</strong> The primary caster takes 2d6 points
+      of force damage for each use of channeled energy being siphoned. All
+      secondary casters take 1d6 points of force damage per use of channeled
+      energy being siphoned.</p><h3>Effect</h3><p>In order to enact this ritual,
+      the primary caster must interact with at least one creature capable of
+      channeling positive energy to heal living creatures. This subject must
+      have at least one use of channel energy remaining for the day. The primary
+      caster then engages in a ritual of deception, eroding the subject's faith
+      and siphoning it away into the focus item. This requires equal amounts of
+      subterfuge and religious knowledge on the part of the primary caster, who
+      ensures the subject willingly concedes matters of faith without entirely
+      forsaking her deity.</p><p>If the ritual is successful, the subject loses
+      a number of uses of channel energy equal to the primary caster's Charisma
+      modifier. These charges are stored in the focus for up to 1 week. The
+      wearer of the focus can release the channeled energy as a standard action
+      to heal living creatures in a 30-foot burst centered on the wearer. The
+      amount of damage each use of channeled heals is equal to the amount it
+      would have healed if coming from the target creature.</p>
+  flags:
+    dictionary:
+      summary: Steal some of the target's ability to channel energy
+  level: 6
+  materials:
+    focus: a ring or amulet worth at least 5,000 gp
+  school: nec
+  sources:
+    - id: PZO9286
+      pages: '58'
+  sr: false
+type: spell

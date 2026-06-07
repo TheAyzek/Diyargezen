@@ -1,0 +1,22 @@
+_id: VAbqY30oQa3GEtfv
+_key: '!items!VAbqY30oQa3GEtfv'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/metal/fragments-steel-ring.webp
+name: Ritual disk
+system:
+  description:
+    value: >-
+      <p>This simple disk, usually carved from stone or fashioned from metal, is
+      engraved with a portion of a specific religious rite or ritual. A single
+      disk details only part of a ritual, requiring multiple followers to bring
+      their disks together to obtain a complete set of instructions.</p>
+  equipped: false
+  price: 20
+  sources:
+    - id: PZO9488
+      pages: '28'
+  subType: tool
+  weight:
+    value: 1
+type: loot

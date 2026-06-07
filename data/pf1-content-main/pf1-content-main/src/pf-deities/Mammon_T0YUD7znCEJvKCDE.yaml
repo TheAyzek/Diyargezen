@@ -1,0 +1,109 @@
+_id: T0YUD7znCEJvKCDE
+_key: '!journal!T0YUD7znCEJvKCDE'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Mammon
+pages:
+  - _id: oI999WPKEFSkyGQ5
+    _key: '!journal.pages!T0YUD7znCEJvKCDE.oI999WPKEFSkyGQ5'
+    _stats:
+      coreVersion: '12.331'
+    name: Mammon
+    sort: 0
+    text:
+      content: >-
+        <h1>Mammon</h1><h2>The Argent Prince</h2>@Source[PZO9267;pages=318] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Mammon">Mammon</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Archdevils<br /><strong>Other
+        Pantheons</strong> Kobold Deities<br /><strong>Areas of Concern</strong>
+        Avarice, watchfulness, wealth<br /><strong>Domains</strong> Artifice,
+        Earth, Evil, Law<br /><strong>Subdomains</strong> Construct, Devil
+        (Evil), Devil (Law), Metal, Toil<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Shortspear<br /><strong>Symbol</strong> Devil-faced coin<br
+        /><strong>Sacred Animal(s)</strong> Rat<br /><strong>Sacred
+        Color(s)</strong> Gold, silver</p><h3>Obedience</h3><p>Shake a purse
+        containing at least six coins of any minting rhythmically while
+        recounting exactly how you earned, stole, or otherwise acquired them,
+        and declare that you have gained all of your wealth for the glory of
+        Mammon, the Argent Prince. Then, use the coins in the purse to form a
+        pentagram on top of a small mirror or any other reflective surface while
+        singing profane hymns to the Argent Prince. Gain a +2 profane bonus on
+        Appraise checks and Sleight of Hand checks to take something
+        unnoticed.</p><h2>Boons - Fiendish
+        Obedience</h2><h3>Evangelist</h3><p>@Source[PZO1139;pages=70]<br
+        /><strong>1: Dawn Vaults' Glory (Sp)</strong> <em>color spray</em>
+        3/day, <em>symbol of mirroring</em> 2/day, or <em>magic vestment</em>
+        1/day<br /><strong>2: Argent Prince's Sanctum (Sp)</strong> You have
+        seen visions of Mammon's Bier, the darkly magnificent vault where
+        Mammon's oncestunning angelic form lies entombed in a coffin of diamond,
+        and you can make a sanctum for yourself in its image. Once per day, you
+        can use <em>mage's magnificent mansion</em> as a spell-like ability.
+        When you do, the inside of the extradimensional dwelling is filled with
+        images of riches beyond imagining, including replicas of the gem-filled
+        chests in Mammon's Bier in Erebus (though this wealth is illusory and
+        cannot be removed from your sanctum or sold).<br /><strong>3: Darkly
+        Shining Majesty (Su)</strong> Three times per day as a standard action,
+        you can release a burst of overwhelming evil in the form of the searing
+        reflections of a mighty treasure vault. This is an 80-foot-radius burst
+        centered at any point within 400 feet of you. Each creature in the area
+        is permanently blinded and takes 10d6 points of damage unless it
+        succeeds at a Reflex saving throw (DC = 10 + half your Hit Dice + your
+        Charisma modifier) to negate the blindness and take half damage. Since
+        this burst is not traditional light, it does not further affect
+        creatures vulnerable to sunlight, but it does dispel darkness spells
+        lower than 9th level within its
+        area.</em></p><h3>Exalted</h3><p>@Source[PZO1139;pages=70]<br
+        /><strong>1: Erebus's Grasp (Sp)</strong> <em>grease</em> 3/day,
+        <em>pilfering hand</em> 2/day, or <em>obscure object</em> 1/day<br
+        /><strong>2: Pay in Blood (Sp)</strong> Once a vaunted champion of
+        Asmodeus's infernal armies, Mammon covets the blood and suffering of
+        those who would stand against him, and you are more than happy to bring
+        the Open Palm his due. Three times per day, you can cast empowered
+        <em>inflict critical wounds</em> as a spell-like ability with a Will
+        save DC equal to 10 + half your Hit Dice + your Charisma modifier.<br
+        /><strong>3: 13,001 Chests (Sp)</strong> Like the Argent Prince, you
+        understand the role that treasure can play when trying to persuade
+        others to join your side. Three times per day, you can show your enemies
+        visions of the 13,001 open gem-filled chests in Mammon's Bier that were
+        meant to coerce the proteans to Hell's side eons ago. This functions
+        like <em>mass suggestion</em>, except no two of the creatures can be
+        more than 60 feet apart. The DC of the Will saving throw to negate this
+        effect is equal to 10 + half your Hit Dice + your Charisma
+        modifier.</em></p><h3>Sentinel</h3><p>@Source[PZO1139;pages=70]<br
+        /><strong>1: Guardian of Infernal Vaults (Sp)</strong> <em>alarm</em>
+        3/day, <em>spiritual weapon</em> 2/day, or <em>keen edge</em> 1/day<br
+        /><strong>2: Enemy of the Light (Su)</strong> For a number of minutes
+        per day equal to your Hit Dice, you are immune to good-aligned damage,
+        and damage you deal is considered evil-aligned for the purpose of
+        overcoming damage reduction. Against good foes, your weapons gain a +3
+        profane bonus on damage rolls. Further, while this ability is in effect,
+        weapons and effects cannot deal additional damage (such as a
+        <em>holy</em> weapon would deal) to you due to your evil alignment,
+        though you still suffer from any nondamaging effects based on your evil
+        alignment as normal. Activating this ability is a standard action, and
+        dismissing it is a free action. This effect's duration need not be used
+        all at once but must be used in 1-minute increments.<br /><strong>3:
+        Flesh of Mammon's Flesh (Su)</strong> As one of Mammon's favored unholy
+        servants, you can briefly imbue your weapon as if it were a part of the
+        Argent Prince's body, granting it great power. For a number of rounds
+        equal to your Hit Dice, a single weapon that you are holding gains the
+        <em>unholy and <em>brilliant energy</em> special abilities. (This effect
+        stacks with the weapon's existing enhancement bonuses and special
+        abilities, including enemy of the light, and is not subject to the
+        normal limitations and requirements for magic weapons.) Activating this
+        ability is a move action, and dismissing it is a free action. This
+        effect's duration need not be used all at once but must be used in
+        1-round increments. While this ability is in effect, your weapon sheds
+        light as normal, but it is an eerie, black, colorless light-a mockery of
+        the light that servants of good might use.</em></p><h2>For Followers of
+        Mammon</h2><h3>Feats</h3><p><em>Hellish
+        Shackles</em></p><h3>Traits</h3><p><em>Flames of Hell</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

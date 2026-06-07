@@ -1,0 +1,31 @@
+_id: MPI9HdIVv5FMREIB
+_key: '!items!MPI9HdIVv5FMREIB'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Amulet of Dragon's Breath
+system:
+  aura:
+    school: evo
+  cl: 8
+  description:
+    value: >-
+      <p>This amulet is crafted from a dragon scale hung on a thin wire of
+      twisted mithral. There are 10 different types of amulet of dragon's
+      breath, each corresponding to one of the 10 dragon types. As a standard 
+      action, the wearer of an amulet of dragon's breath can breathe out a blast
+      of energy similar to a dragon's breath weapon. This breath weapon deals
+      8d6 points of energy damage (Reflex DC 16 for half). The breath weapon's
+      shape and energy type depend on the type of dragon scale used to craft the
+      amulet (see page 75 of the Pathfinder RPG Core Rulebook for a list of
+      dragon types, energy types, and breath shapes). A new amulet of dragon's
+      breath can be used three times before the dragon scale cracks and the
+      amulet becomes useless.</p><h3>Requirements</h3><p>Craft Wondrous Item,
+      dragon's breath</p>
+  price: 4800
+  slot: neck
+  sources:
+    - id: PZO9070
+  subType: wondrous
+type: equipment

@@ -1,0 +1,25 @@
+_id: 93KrRGm9D0NzwENp
+_key: '!items!93KrRGm9D0NzwENp'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/tech/transmission.webp
+name: Heatstone Desalinator
+system:
+  description:
+    value: >-
+      <p>Most desalination equipment is rare, slow, and energy-intensive enough
+      that magic is the preferred method for turning salt water into fresh
+      drinking water. The power provided by this device's heatstones accelerates
+      the desalination process considerably. The user of a heatstone desalinator
+      can place 1 gallon of salt water into the device and receive a gallon of
+      fresh water in 1 minute, with no additional effort required on her own
+      part.</p>
+  equipped: false
+  price: 10
+  sources:
+    - id: PZO9489
+      pages: '16'
+  subType: adventuring
+  weight:
+    value: 2
+type: loot

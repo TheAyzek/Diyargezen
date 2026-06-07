@@ -1,0 +1,29 @@
+_id: K3ElCWi0rFbNVDne
+_key: '!items!K3ElCWi0rFbNVDne'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Veil of Fleeting Glances
+system:
+  aura:
+    school: div
+  cl: 3
+  description:
+    value: >-
+      <p>In addition to hiding the face, this fine lace veil protects the wearer
+      against gaze attacks. The wearer has a 50% chance to avoid making a saving
+      throw against a gaze attack even when not averting her eyes. If the wearer
+      averts her eyes, she rolls twice (once for the veil, once for averting her
+      eyes) and uses the more favorable result.   Against patterns, visual
+      figments, and other vision-based effects and attacks that cannot affect
+      blind creatures, the veil grants the wearer a +4 circumstance bonus on
+      saving throws. The veil does not otherwise impede the wearer's vision in
+      any way.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, blindness/deafness, true strike</p>
+  price: 9000
+  slot: head
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

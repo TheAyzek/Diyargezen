@@ -1,0 +1,54 @@
+_id: gsU5taY0fBOl1cGF
+_key: '!items!gsU5taY0fBOl1cGF'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/minor-green.jpg
+name: Mineral acid
+system:
+  actions:
+    - _id: lwegb36ri78wpc31
+      ability:
+        critMult: 1
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d6
+            types:
+              - acid
+          - {}
+      img: systems/pf1/icons/items/potions/minor-green.jpg
+      name: Use
+      notes:
+        effect:
+          - see text
+      range:
+        units: ft
+        value: '10'
+      tag: mineralAcid
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Weapons</p><p>This sealed vial
+      contains a highly potent indigo liquid and is an essential item for Dongun
+      Hold miners, who often keep such vials handy for use against hostile
+      subterranean creatures. The vial can be thrown as a splash weapon with a
+      range increment of 10 feet. A direct hit deals 2d6 points of acid damage;
+      this damage is doubled against creatures made of crystal, earth, or metal.
+      Every creature within 5 feet of the impact takes 1 point of acid damage.
+      Crafting mineral acid requires a successful DC 20 Craft (alchemy)
+      check.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      20</p>
+  price: 50
+  sources:
+    - id: PZO9486
+      pages: '14'
+  subType: misc
+  tags:
+    - Alchemical Weapons
+  weight:
+    value: 1
+type: consumable

@@ -1,0 +1,34 @@
+_id: CSkGxKLzxRb3kruJ
+_key: '!items!CSkGxKLzxRb3kruJ'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Smuggler's Wayfinder
+system:
+  aura:
+    school: con
+  cl: 9
+  description:
+    value: >-
+      <p>This time-weathered wayfinder lacks any notable features. Despite its
+      routine appearance, a smuggler's wayfinder has an additional ability
+      generally known only to the person using it. When a command word is
+      spoken, the compass's interior is replaced with a small extradimensional
+      space that can hold up to 10 pounds of material occupying no more than 1
+      cubic foot of space. This material must be able to fit through the
+      3-inch-diameter opening in the compass's face (such as a thin glass vial,
+      coins, small jewelry, or a rolled-up piece of paper). While the
+      extradimensional space is accessible, all other properties of the
+      wayfinder cease to function, including any resonant ioun stone powers.
+      While the extradimensional space is hidden, the smuggler's wayfinder emits
+      an aura of faint evocation, as a standard
+      wayfinder.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, light, magic aura, secret chest</p>
+  price: 2000
+  sources:
+    - id: PZO9435
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

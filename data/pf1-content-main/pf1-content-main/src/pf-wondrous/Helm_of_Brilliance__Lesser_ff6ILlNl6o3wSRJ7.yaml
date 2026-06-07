@@ -1,0 +1,36 @@
+_id: ff6ILlNl6o3wSRJ7
+_key: '!items!ff6ILlNl6o3wSRJ7'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Helm of Brilliance, Lesser
+system:
+  aura:
+    custom: true
+    school: varied
+  cl: 5
+  description:
+    value: >-
+      <p>This helm functions like a helm of brilliance but is lower-powered.
+      Instead of the standard helm's allotment of gems, the lesser helm has 10
+      diamonds (fireball, 10d6 damage, Reflex DC 20 half), 20 corals (flaming
+      sphere), 30 garnets (scorching ray), and 40 agates (light). It still glows
+      near and harms undead, has the flaming weapon special ability, and
+      provides fire resistance (though only 20 instead of 30).  Just like the
+      standard helm, the wearer risks detonation if damaged by magical fire;
+      diamonds become fireballs centered on the wearer, corals become flaming
+      spheres in and adjacent to the wearer's space, garnets become scorching
+      rays that fire randomly at creatures in range, and the agates and the helm
+      itself are
+      destroyed.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, detect undead, fireball, flame blade, flaming sphere,
+      light, protection from energy, scorching ray</p>
+  price: 36000
+  slot: head
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

@@ -1,0 +1,31 @@
+_id: zJwGiWTlWETQOplW
+_key: '!items!zJwGiWTlWETQOplW'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Tidefinder
+system:
+  aura:
+    school: div
+  cl: 5
+  description:
+    value: >-
+      <p>This delicate spherical blood coral compass has a longer outer needle
+      and a shorter inner needle. When the holder activates it, the outer needle
+      points in the direction of the nearest tide or current within 1 mile,
+      changing color from red to violet to indicate the relative distance (red
+      meaning within 30 feet and violet meaning almost 1 mile away) and the
+      inner needle points in the direction of the tide or current, changing
+      color from red to violet based on the relative speed (red meaning
+      extremely turbulent, up to 200 feet per round, and violet meaning less
+      than 5 feet per
+      round).</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, locate object, slipstream</p>
+  price: 2000
+  sources:
+    - id: PZO92102
+  subType: wondrous
+  weight:
+    value: 0.5
+type: equipment

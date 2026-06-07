@@ -1,0 +1,56 @@
+_id: CQgsuMCjnSXQT5tK
+_key: '!journal!CQgsuMCjnSXQT5tK'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: tfgLGI205b9dxEjx
+name: 6.2.2.01. Drivers
+pages:
+  - _id: XaYUj90l4uVnxNqW
+    _key: '!journal.pages!CQgsuMCjnSXQT5tK.XaYUj90l4uVnxNqW'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.2.2.01. Drivers
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.F9hzOnUh5c0Ls2p6]{6.2.
+        Vehicles}</p><ul><li><p>@Compendium[pf-content.pf-rules.sjmHLtUHjp10PRNg]{6.2.2.
+        Full Vehicle
+        Rules}</p><ul><li><strong>@Compendium[pf-content.pf-rules.CQgsuMCjnSXQT5tK]{6.2.2.01.
+        Drivers}</strong></li><li>@Compendium[pf-content.pf-rules.n20ux7F2Gua3Henu]{6.2.2.02.
+        Occupants}</li><li>@Compendium[pf-content.pf-rules.WNrj8ktGtzmJ2idV]{6.2.2.03.
+        Propulsion and Driving
+        Checks}</li><li>@Compendium[pf-content.pf-rules.bqobhetOALHmOywu]{6.2.2.04.
+        Vehicle Size and
+        Space}</li><li>@Compendium[pf-content.pf-rules.xPL69LmsvZhMQXkI]{6.2.2.05.
+        Vehicle Facing and
+        Movement}</li><li>@Compendium[pf-content.pf-rules.wYDD2ws3dIeQaHKV]{6.2.2.06.
+        Driving
+        Vehicles}</li><li>@Compendium[pf-content.pf-rules.AoRyhHSyrQd2YNsf]{6.2.2.07.
+        Optional Rule: Wide
+        Turns}</li><li>@Compendium[pf-content.pf-rules.uCzllyIwfv6C8w51]{6.2.2.08.
+        Vehicles in
+        Combat}</li><li>@Compendium[pf-content.pf-rules.RQx3RwhdQds2znsh]{6.2.2.09.
+        Propulsion
+        Devies}</li><li>@Compendium[pf-content.pf-rules.UkducnpdR3NCcjdK]{6.2.2.10.
+        Driving Devices}</li></ul></li></ul><hr
+        /><p>@Source[PZO1118;pages=170]</p><p>A vehicle is a special movable
+        object that requires two things to keep it moving—a driver and a method
+        of propulsion. A driver is a creature with an Intelligence score of 3 or
+        more who is physically able to use the vehicle’s driving mechanism. In
+        other words, the creature needs to be the correct size and have the
+        correct anatomy to use whatever tool is used to drive the vehicle.
+        Sometimes a driving mechanism may have its own requirements for use. The
+        driver uses that mechanism and her skill (or her Wisdom) to control the
+        vehicle. Without a driver, a vehicle will not move or will continue
+        moving in a straight line, depending on the vehicle’s state when it
+        becomes driverless.</p><p>A creature must be the size of a vehicle or
+        smaller in order to drive it.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

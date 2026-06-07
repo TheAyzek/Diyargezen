@@ -1,0 +1,45 @@
+_id: ftgyfyMQrkd13wLq
+_key: '!items!ftgyfyMQrkd13wLq'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Frostspore
+system:
+  actions:
+    - _id: 6kczjp0pryt2akz3
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - cold
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1d6]] cold damage plus staggered
+            for [[1]] round
+      save:
+        dc: '13'
+        type: fort
+      tag: frostspore
+  description:
+    value: >-
+      <p><strong>Type</strong> ingested or injury; <strong>Save</strong>
+      Fortitude DC 13</p><p><strong>Frequency</strong> 1/round for 6
+      rounds</p><p><strong>Effect</strong> 1d6 cold damage plus staggered for 1
+      round</p><p><strong>Cure</strong> 2 saves</p>
+  price: 100
+  sources:
+    - id: PZO9061
+      pages: '64'
+  subType: poison
+  uses:
+    per: single
+type: consumable

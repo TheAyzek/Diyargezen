@@ -1,0 +1,56 @@
+_id: kfmYHSTF0Deneel9
+_key: '!items!kfmYHSTF0Deneel9'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/gem-rough-square-blue.webp
+name: Dark Blue Rhomboid Ioun Stone, Cracked
+system:
+  aura:
+    custom: true
+    school: varied
+  changes:
+    - _id: C7sGiU5P
+      formula: '2'
+      target: skill.per
+      type: competence
+    - _id: JPiyhT5Q
+      formula: '-1'
+      target: init
+      type: untyped
+  cl: 12
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>This dark blue stone has unequal sides and a flat cross section. A
+      crack mars its surface.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone grants a +2 competence bonus on Perception
+      checks and a -1 penalty to initiative
+      checks.</p><h3>Resonance</h3><p><strong>Method 1, Fixed: </strong>The
+      wearer no longer takes penalties on Perception checks for being distracted
+      or asleep; while asleep, the wearer can remain open-eyed and fully aware
+      of his environment, though he is still helpless against undetected threats
+      until he actually wakes up.</p><p><strong>Method 2, Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, creator must be 12th level <strong>Cost</strong> 150
+      gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  links:
+    supplements: []
+  price: 300
+  sources:
+    - id: PZO1138
+      pages: '149'
+    - id: PZO9211
+      pages: 46, 52
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

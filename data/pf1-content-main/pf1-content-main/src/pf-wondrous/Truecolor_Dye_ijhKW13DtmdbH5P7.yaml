@@ -1,0 +1,37 @@
+_id: ijhKW13DtmdbH5P7
+_key: '!items!ijhKW13DtmdbH5P7'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Truecolor Dye
+system:
+  aura:
+    school: div
+  cl: 1
+  description:
+    value: >-
+      <p>Horticulturists harvest this magical dye from the pulp of rare plants
+      found only in the lushest regions of Tian Xia. Bisby first encountered
+      this dye while visiting the royal courts of the Miracle Samurai during his
+      early adventures as a Pathfinder. He made a point of returning with
+      several bottles, and the decision served him well over the next several
+      decades. Truecolor dye produces vibrant colors, yet the actual color that
+      registers varies according to the personality and temperment of the
+      viewer-the viewer's good, neutral, or evil alignment component determines
+      the color he sees. Good viewers see a pleasing gold, while evil viewers
+      see a rich blood red. A neutral viewer sees the dye as its actual color, a
+      dull orange. Centuries ago, truecolor dye was used in the miracle courts
+      of Tian Xia as a way to trick emissaries into revealing their alignments,
+      but its secret has long since been disseminated on the eastern continent
+      and lost its hidden value. A DC 25 Knowledge (geography or nature) check
+      reveals the dye's nature. A single vial of truecolor dye is enough to coat
+      a square foot of material, or to ink 5 pages of text. Once applied,
+      truecolor dye is permanent, although it can be washed off with universal
+      solvent.<h3>Requirements</h3><p>Craft Wondrous Item, detect good or detect
+      evil</p>
+  price: 50
+  sources:
+    - id: PZO9027
+  subType: wondrous
+type: equipment

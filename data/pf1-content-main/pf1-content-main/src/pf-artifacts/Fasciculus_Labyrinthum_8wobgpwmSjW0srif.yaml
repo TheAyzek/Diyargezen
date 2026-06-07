@@ -1,0 +1,27 @@
+_id: 8wobgpwmSjW0srif
+_key: '!items!8wobgpwmSjW0srif'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Fasciculus Labyrinthum
+system:
+  artifact: true
+  aura:
+    school: abj
+  cl: 15
+  description:
+    value: >-
+      <p>The rune of Baphomet emblazons this slim, leather-bound volume. Taken
+      from a larger work, the Fasciculus Labyrinthum details many of the rituals
+      of Baphomet worship. Included in its pages are details of how to operate
+      the imago lens and incomplete instructions to constructing one. As long as
+      the book is carried (even if carried in an extradimensional space like a
+      bag of holding), it grants its carrier immunity to maze spells and a +4
+      profane bonus on all saving throws against insanity and confusion
+      effects.</p>
+  sources:
+    - id: PZO9076
+  subType: other
+  weight:
+    value: 2
+type: equipment

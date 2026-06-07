@@ -1,0 +1,34 @@
+_id: LtaQhdbdL4FMtSAV
+_key: '!items!LtaQhdbdL4FMtSAV'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Prophetic Paraphernalia
+system:
+  aura:
+    school: div
+  cl: 9
+  description:
+    value: >-
+      <p>This roll of tanned horsehide contains pockets that hold ceremonial
+      gear such as incense, candles, and tiny bells as well as a small, carved
+      stone idol in the shape of a totem spirit such as a dragon or other
+      creature known for its wisdom. Anyone who unrolls the kit and spends 10
+      minutes performing a special ritual either increases her caster level by 1
+      for any divination spell she begins casting immediately after concluding
+      the ritual, or gains a +3 insight bonus to any one skill check she makes
+      in the next hour. Alternatively, she may spend all remaining uses of the
+      kit in an hour-long ritual to cast commune, asking one question for every
+      two remaining uses in the kit.   A newly created set of prophetic
+      paraphernalia has 10 uses. When all of the uses are expended, the stone
+      idol crumbles into
+      powder.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, commune</p>
+  price: 2000
+  sources:
+    - id: PZO9436
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

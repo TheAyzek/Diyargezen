@@ -1,0 +1,30 @@
+_id: Rc5HMV8XMFKSdFlL
+_key: '!items!Rc5HMV8XMFKSdFlL'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Cauldron of Transmutation
+system:
+  aura:
+    school: trs
+  cl: 13
+  description:
+    value: >-
+      <p>This small brass cauldron is engraved with arcane runes, and its bottom
+      is blackened by fire. To function, the cauldron must be filled with pure
+      water and heated from below. When any two potions are emptied into the
+      cauldron, they are transmuted into a single potion, the spell level of
+      which must be equal to or lower than that of the component potion with the
+      lower spell level. The user of the cauldron must designate which potion is
+      to be created when the process begins. The entire process takes 1 minute
+      per spell level of the potion being
+      created.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, polymorph any object</p>
+  price: 33000
+  sources:
+    - id: PZO9273
+  subType: wondrous
+  weight:
+    value: 15
+type: equipment

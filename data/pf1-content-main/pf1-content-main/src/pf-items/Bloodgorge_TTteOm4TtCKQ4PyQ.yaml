@@ -1,0 +1,27 @@
+_id: TTteOm4TtCKQ4PyQ
+_key: '!items!TTteOm4TtCKQ4PyQ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/minor-red.jpg
+name: Bloodgorge
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Remedies</p><p>When you imbibe
+      this syrupy black serum, your blood thins dramatically and gushes forth
+      from even minor wounds. Anytime you take bleed damage, any creatures
+      adjacent to you must succeed at a Fortitude save (DC 10 + the amount of
+      bleed damage taken) or be nauseated for 1 round. A dose of bloodgorge
+      lasts for 1 hour.</p><h2>Alchemical Recipe</h2><p><strong>Recipe</strong>
+      (5 cold iron + 10 dew of lunary)/filtration; <strong>Craft</strong> 25<br
+      /><strong>Time</strong> 10 minutes; <strong>Tools</strong> filter;
+      <strong>Type</strong> alchemical remedy</p>
+  price: 40
+  sources:
+    - id: PZO9445
+      pages: '6'
+  tags:
+    - Alchemical Remedies
+  weight:
+    value: 0.5
+type: consumable

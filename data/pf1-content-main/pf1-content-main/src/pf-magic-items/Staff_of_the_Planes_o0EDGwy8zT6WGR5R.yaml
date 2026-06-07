@@ -1,0 +1,30 @@
+_id: o0EDGwy8zT6WGR5R
+_key: '!items!o0EDGwy8zT6WGR5R'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of the Planes
+system:
+  aura:
+    school: con
+  cl: 13
+  description:
+    value: >-
+      <p>This obsidian staff twinkles as if reflecting the star-filled sky at
+      night. The staff allows use of the following spells.  • Planar adaptation
+      (1 charge; Advanced Player's Guide)  • Planar binding (2 charges)  • Plane
+      shift (5 charges)  If the staff of the planes is fully charged, the
+      wielder can deliberately snap the staff, causing it do shatter into
+      thousands of pieces but opening a gate to a plane of the wielder's choice.
+      This can only be used for planar travel, and the connection lasts for 1
+      minute, without requiring the wielder's concentration. If used in this
+      way, the staff cannot be repaired or
+      restored.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, planar adaptation, planar binding, plane shift</p>
+  price: 63960
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

@@ -1,0 +1,44 @@
+_id: W2WdLvAaKrDP3xPh
+_key: '!items!W2WdLvAaKrDP3xPh'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-light-wood.png
+name: Mwangi Spirit Shield
+system:
+  armor:
+    acp: 1
+    material:
+      base:
+        value: wood
+    value: 1
+  aura:
+    school: trs
+  baseTypes:
+    - Light Wooden Shield
+  cl: 15
+  description:
+    value: >-
+      <p>This large wood-and-hide shield is similar to other Mwangi shields, but
+      the totem animal painted on the shield's face seems to move when the
+      shield is carried. Crafted by Mwangi shamans to grant its wielder the
+      power of tribal totem spirits, a Mwangi spirit shield functions as a +1
+      ghost touch light wooden shield. Once per day on command, the shield can
+      grant its bearer bull's strength for 1 minute. Other versions of the
+      Mwangi spirit shield exist; some are known to grant cat's grace or bear's
+      endurance to their wielders instead of bull's strength.</p><p><strong>Base
+      Item</strong>: ghost
+      touch</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, bull's strength, etherealness</p>
+  enh: 1
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 19393
+  slot: shield
+  sources:
+    - id: PZO9412
+  spellFailure: 5
+  subType: shield
+  weight:
+    value: 5
+type: equipment

@@ -1,0 +1,29 @@
+_id: otzNUVe4We9ZcJtY
+_key: '!items!otzNUVe4We9ZcJtY'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Animate Staff
+system:
+  aura:
+    school: trs
+  cl: 11
+  description:
+    value: >-
+      <p>Created from a number of iron rods, copper gears, and silver screws,
+      this staff constantly shifts and changes. The staff allows use of the
+      following spells: • Make whole (1 charge)  • Mending (1 charge)  • Animate
+      objects (2 charges)  In addition, once per day, the staff can become a
+      Medium animated object (Bestiary 14) with the metal special ability. It
+      can remain in this form for up to 10 minutes. If destroyed while in this
+      form, it reverts to being a staff, but it loses all of its charges and
+      this ability cannot be used again until it is fully
+      recharged.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, animate objects, make whole, mending</p>
+  price: 49800
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

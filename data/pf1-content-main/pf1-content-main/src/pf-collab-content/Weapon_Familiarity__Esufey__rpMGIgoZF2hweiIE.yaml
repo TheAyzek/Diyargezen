@@ -1,0 +1,33 @@
+_id: rpMGIgoZF2hweiIE
+_key: '!items!rpMGIgoZF2hweiIE'
+_stats:
+  coreVersion: '12.331'
+folder: wMzAd2s1DJy271wt
+img: icons/magic/fire/flame-burning-eye.webp
+name: Weapon Familiarity (Esufey)
+system:
+  description:
+    value: >-
+      <p><strong>Race</strong>: Esufey</p><hr /><p>Esufey are proficient with
+      longbows (including composite longbows), longswords, rapiers, and
+      shortbows (including composite shortbows), and treat any weapon with the
+      word "elven" in its name as a martial weapon.</p>
+  sources:
+    - date: '2019'
+      pages: '7'
+      publisher: Paizo / Stranger Comics
+      title: Niobe
+  subType: racial
+  tags:
+    - Esufey
+    - Niobe
+  traitCategory: offense
+  weaponProf:
+    - null
+    - Longbow
+    - composite longbow
+    - composite shortbow
+    - shortbow
+    - longsword
+    - rapier
+type: feat

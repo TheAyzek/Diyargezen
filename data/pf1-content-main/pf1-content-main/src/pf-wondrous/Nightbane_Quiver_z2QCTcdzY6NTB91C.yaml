@@ -1,0 +1,31 @@
+_id: z2QCTcdzY6NTB91C
+_key: '!items!z2QCTcdzY6NTB91C'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Nightbane Quiver
+system:
+  aura:
+    school: evo
+  cl: 5
+  description:
+    value: >-
+      <p>This black silk quiver bears a silver star-and-moon motif. It can
+      transform up to 20 arrows per day into tangible beams of light. When drawn
+      from the quiver, these arrows produce light as the daylight spell for 5
+      rounds, after which they disappear. Arrows enhanced in this way prove
+      particularly deadly to light-sensitive and shadowy creatures-an arrow
+      altered by a nightbane quiver bypasses the DR of any creature with light
+      sensitivity and counts as a force effect against shadows and wraiths.
+      Arrows gain these benefits only when shot by the current owner of the
+      quiver. Arrows placed in this quiver retain any magical effect already
+      placed on them.</p><h3>Requirements</h3><p>Craft Wondrous Item,
+      daylight</p>
+  price: 16000
+  sources:
+    - id: PZO9547
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

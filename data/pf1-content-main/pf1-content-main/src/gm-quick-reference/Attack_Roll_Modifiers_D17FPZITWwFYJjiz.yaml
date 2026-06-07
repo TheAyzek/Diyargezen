@@ -1,0 +1,36 @@
+_id: D17FPZITWwFYJjiz
+_key: '!journal!D17FPZITWwFYJjiz'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Attack Roll Modifiers
+pages:
+  - _id: 8WdbNG1kczqxvfif
+    _key: '!journal.pages!D17FPZITWwFYJjiz.8WdbNG1kczqxvfif'
+    _stats:
+      coreVersion: '12.331'
+    name: Attack Roll Modifiers
+    sort: 0
+    text:
+      content: >-
+        <p>See @Compendium[pf-content.pf-rules.Q8vJfOFojro5BrWO]{2.06. Combat
+        Modifiers}</p><table><tbody><tr><td><p><strong>Attacker
+        is...</strong></p></td><td><p><strong>Melee</strong></p></td><td><p><strong>Ranged</strong></p></td></tr><tr><td><p>Dazzled</p></td><td><p>-1</p></td><td><p>-1</p></td></tr><tr><td><p>Entangled</p></td><td><p>-2<sup>1</sup></p></td><td><p>-2<sup>1</sup></p></td></tr><tr><td><p>Flanking
+        defender</p></td><td><p>+2</p></td><td><p>—</p></td></tr><tr><td><p>Invisible</p></td><td><p>+2<sup>2</sup></p></td><td><p>+2<sup>2</sup></p></td></tr><tr><td><p>On
+        higher
+        ground</p></td><td><p>+1</p></td><td><p>+0</p></td></tr><tr><td><p>Prone</p></td><td><p>-4</p></td><td><p>—<sup>3</sup></p></td></tr><tr><td><p>Shaken
+        or
+        frightened</p></td><td><p>-2</p></td><td><p>-2</p></td></tr><tr><td><p>Squeezing
+        through a
+        space</p></td><td><p>-4</p></td><td><p>-4</p></td></tr></tbody></table><p>1
+        An entangled character also takes a –4 penalty to Dexterity, which may
+        affect his attack roll.<br />2 The defender loses any Dexterity bonus to
+        AC.<br />3 Most ranged weapons can’t be used while the attacker is
+        prone, but you can use a crossbow or shuriken while prone at no
+        penalty.</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

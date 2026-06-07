@@ -1,0 +1,36 @@
+_id: jgVKZvuXGPxfGXKQ
+_key: '!journal!jgVKZvuXGPxfGXKQ'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: UW4tzDX1A62qPAzr
+name: 3.0.2. Dungeon Terrain
+pages:
+  - _id: 6zk1MXEqAiNdy786
+    _key: '!journal.pages!jgVKZvuXGPxfGXKQ.6zk1MXEqAiNdy786'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.0.2. Dungeon Terrain
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.v5dHsJ6gCghRXQnL]{3.0.
+        Dungeons}</p><hr /><p>@Source[PZO1110;pages=410]</p><p>The following
+        rules cover the basics of terrain that can be found in a
+        dungeon.</p><ul><li>@Compendium[pf-content.pf-rules.oM2nAFzXnVFIS0WD]{3.0.2.1.
+        Walls}</li><li>@Compendium[pf-content.pf-rules.J0yOXyPZB6M6ZUSi]{3.0.2.2.
+        Floors}</li><li>@Compendium[pf-content.pf-rules.YwZLtJ7Z59r1fx90]{3.0.2.3.
+        Doors}</li><li>@Compendium[pf-content.pf-rules.1OzU64OdBpfa0bJR]{3.0.2.4.
+        Walls, Doors, and Detect
+        Spells}</li><li>@Compendium[pf-content.pf-rules.tEkx7SQLAENe8KM8]{3.0.2.5.
+        Stairs}</li><li>@Compendium[pf-content.pf-rules.1bkKb1E1A73Tp1IK]{3.0.2.6.
+        Cave-Ins and Collapses (CR
+        8)}</li><li>@Compendium[pf-content.pf-rules.hfI8oxi1ywlhrGfs]{3.0.2.7.
+        Slimes, Molds, and Fungi}</li></ul>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

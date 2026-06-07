@@ -1,0 +1,30 @@
+_id: 02dbG3Emek2hboTL
+_key: '!items!02dbG3Emek2hboTL'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Scope of Stormsight
+system:
+  aura:
+    school: div
+  cl: 7
+  description:
+    value: >-
+      <p>This sight can be attached to a single direct-fire siege engine. When
+      this is done, the sight becomes part of the siege engine, but can be
+      removed from that siege engine with a full-round action. A character
+      firing a siege engine that has this sight attached can look through the
+      scope to see through magical and normal fog, mist, smoke, and similar
+      obscurement, ignoring the miss chance for these obstructions. In addition,
+      a character using this scope can choose to take a full-round action to
+      either locate an invisible creature within line of sight or make a single
+      shot that ignores the invisibility of a creature that she knows is in the
+      area.</p><h3>Requirements</h3><p>Craft Wondrous Item, hunter's eye</p>
+  price: 18000
+  sources:
+    - id: PZO9096
+  subType: wondrous
+  weight:
+    value: 12
+type: equipment

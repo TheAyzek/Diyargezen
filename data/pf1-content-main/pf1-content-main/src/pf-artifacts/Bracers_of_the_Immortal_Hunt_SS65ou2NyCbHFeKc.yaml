@@ -1,0 +1,33 @@
+_id: SS65ou2NyCbHFeKc
+_key: '!items!SS65ou2NyCbHFeKc'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Bracers of the Immortal Hunt
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: all schools
+  cl: 30
+  description:
+    value: >-
+      <p>The Bracers of the Immortal Hunt claim to have been gifted by Erastil
+      to a favored Ulfen hunter millennia ago. They are stoic and steadfast in
+      their decisions, regarding only the noblest of hunters as deserving of
+      their attention. Transcendent Power: The Bracers of the Immortal Hunt seek
+      an owner dedicated to the relentless pursuit and defeat of mythic beasts
+      that pose a threat to settled lands. A non-mythic wearer deemed worthy by
+      the Bracers of the Immortal Hunt can gain great power from this noble
+      item. • The wearer gains 2 mythic tiers in the champion path (Mythic
+      Adventures 20). • The wearer gains the champion's strike (distant barrage)
+      champion feature. • The wearer gains a +2 increase to Dexterity. • The
+      wearer gains the Mythic Rapid Shot feat, or Rapid Shot if he does not
+      already have it and meets the prerequisites. • The wearer gains the
+      endless hatred and limitless range path abilities.</p>
+  sources:
+    - id: PZO9438
+  subType: other
+  weight:
+    value: 1
+type: equipment

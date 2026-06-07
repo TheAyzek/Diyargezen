@@ -1,0 +1,28 @@
+_id: JKsjlRjde0JJSdEg
+_key: '!items!JKsjlRjde0JJSdEg'
+_stats:
+  coreVersion: '12.331'
+folder: CAxOlglJyXdUOHF9
+img: systems/pf1/icons/feats/persuasive.jpg
+name: Child of the Streets (Second Darkness)
+system:
+  description:
+    value: >-
+      <p><em>You grew up on the streets of a large city, and as a result you
+      have developed a knack of knowing where to go and who to talk to when
+      you’re looking for some information.</em></p><p><strong>Benefits</strong>:
+      You gain a +1 trait bonus on Gather Information checks, and Gather
+      Information is always a class skill for you.</p><hr /><p><strong>Special
+      Note</strong>: This is the 3.5 Ruleset version of this trait. To view the
+      updated version for the Pathfinder rules click the link
+      below:</p><p>@UUID[Compendium.pf-content.pf-traits.Item.lRGmeiOsSlNDjdug]{Child
+      of the Streets}</p>
+  sources:
+    - id: PZO9401
+      pages: '13'
+  subType: trait
+  tags:
+    - '3.5'
+    - Second Darkness
+  traitType: social
+type: feat

@@ -1,0 +1,38 @@
+_id: suDHnshpVR3PXIRG
+_key: '!items!suDHnshpVR3PXIRG'
+_stats:
+  coreVersion: '12.331'
+folder: xBDkeYWwOx17NYOO
+img: icons/svg/mystery-man.svg
+name: Concealment
+system:
+  contextNotes:
+    - target: skill.ste
+      text: Can make checks due to Concealment.
+    - target: ac
+      text: Attacks have a 20% miss chance.
+  description:
+    value: >-
+      <p>To determine whether your target has concealment from your ranged
+      attack, choose a corner of your square. If any line from this corner to
+      any corner of the target’s square passes through a square or border that
+      provides concealment, the target has concealment.</p><p>When making a
+      melee attack against an adjacent target, your target has concealment if
+      his space is entirely within an effect that grants concealment. When
+      making a melee attack against a target that isn’t adjacent to you, use the
+      rules for determining concealment from ranged attacks.</p><p>In addition,
+      some magical effects provide concealment against all attacks, regardless
+      of whether any intervening concealment
+      exists.</p><hr><div><p><strong>Concealment Miss
+      Chance</strong></p><p>Concealment gives the subject of a successful attack
+      a 20% chance that the attacker missed because of the concealment. Make the
+      attack normally—if the attacker hits, the defender must make a miss chance
+      d% roll to avoid being struck. Multiple concealment conditions do not
+      stack.</p><hr><p><strong>Concealment and Stealth Checks</strong></p><p>You
+      can use concealment to make a Stealth check. Without concealment, you
+      usually need cover to make a Stealth check.</p><hr><p><strong>Varying
+      Degrees of Concealment</strong></p><p>Certain situations may provide more
+      or less than typical concealment, and modify the miss chance
+      accordingly.</p></div>
+  level: null
+type: buff

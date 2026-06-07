@@ -1,0 +1,27 @@
+_id: ixmAOY2qsL1HJYuK
+_key: '!items!ixmAOY2qsL1HJYuK'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/feather-white.jpg
+name: Air tank
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 5 sp/ gallon; <strong>Weight</strong> 1/2
+      lb./gallon</p><p>Tanks full of normal air don't last long as breathing
+      devices, but a large air tank is excellent for ensuring a character has a
+      swiftly rising buoyancy, and a savvy diver can adjust her air tank just
+      enough to give her a neutral buoyancy, making it much easier to explore
+      underwater. Every 6 gallons of air is enough to breathe for roughly 1
+      minute underwater; it takes far less air for a Medium creature to achieve
+      neutral buoyancy unless it's carrying a significant amount of metal and
+      other dense material.</p>
+  equipped: false
+  price: 0.5
+  sources:
+    - id: PZO92102
+      pages: '56'
+  subType: adventuring
+  weight:
+    value: 0.5
+type: loot

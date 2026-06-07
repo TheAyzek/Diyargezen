@@ -1,0 +1,24 @@
+_id: AMheZN9zjYhVo11X
+_key: '!items!AMheZN9zjYhVo11X'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Dweomer's Essence
+system:
+  aura:
+    school: abj
+  cl: 9
+  description:
+    value: >-
+      <p>Derived from the patient distillation of rare magical reagents, a pinch
+      of this fine white powder can be added to the casting of any spell as an
+      additional material component to give the spellcaster a +5 bonus on caster
+      level checks made to overcome spell
+      resistance.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Spell Penetration</p>
+  price: 500
+  sources:
+    - id: PZO9235
+  subType: wondrous
+type: equipment

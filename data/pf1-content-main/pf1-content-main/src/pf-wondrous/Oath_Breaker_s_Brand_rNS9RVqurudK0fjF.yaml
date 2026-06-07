@@ -1,0 +1,30 @@
+_id: rNS9RVqurudK0fjF
+_key: '!items!rNS9RVqurudK0fjF'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Oath Breaker's Brand
+system:
+  aura:
+    school: nec
+  cl: 7
+  description:
+    value: >-
+      <p>When this iron medallion is placed between the palms of two persons
+      willingly entering into an agreement via handshake, the accord is enforced
+      by the brand's enchantment. If either person breaks the word of the
+      agreement, a hideous mark appears on the top of the unfaithful creature's
+      hand. The brand marks her as an oath breaker throughout the River
+      Kingdoms, imposing upon her a -8 penalty on Diplomacy and Bluff checks
+      attempted anywhere in the region as long as the brand is visible. This
+      mark lasts for 1 year or until it is removed by break enchantment, limited
+      wish, miracle, remove curse, or wish, whichever comes
+      first.</p><h3>Requirements</h3><p>Craft Wondrous Item, mark of justice</p>
+  price: 2500
+  sources:
+    - id: PZO9448
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

@@ -1,0 +1,44 @@
+_id: fb47U9dPcy4j7rOz
+_key: '!journal!fb47U9dPcy4j7rOz'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: pqVHetlXys8NATtP
+name: 4.0.4. Evasion and Pursuit
+pages:
+  - _id: nadNVDNLmTlahu0b
+    _key: '!journal.pages!fb47U9dPcy4j7rOz.nadNVDNLmTlahu0b'
+    _stats:
+      coreVersion: '12.331'
+    name: 4.0.4. Evasion and Pursuit
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.kAJexDuJ2IAXZODj]{(Index)
+        Exploration}</p><p><strong>@Compendium[pf-content.pf-rules.vsp6TyvvUw3KOD0b]{4.0.
+        Movement}</strong></p><p>@Compendium[pf-content.pf-rules.TrYHWkJ3jiOCYufl]{4.1.
+        Vision and
+        Light}</p><p>@Compendium[pf-content.pf-rules.1EvBiiUnVOT4cUbT]{4.2.
+        Breaking and Entering}</p><hr /><p>@Source[PZO1110;pages=171]</p><p>In
+        round-by-round movement, when simply counting off squares, it’s
+        impossible for a slow character to get away from a determined fast
+        character without mitigating circumstances. Likewise, it’s no problem
+        for a fast character to get away from a slower one.</p><p>When the
+        speeds of the two concerned characters are equal, there’s a simple way
+        to resolve a chase: If one creature is pursuing another, both are moving
+        at the same speed, and the chase continues for at least a few rounds,
+        have them make opposed Dexterity checks to see who is the faster over
+        those rounds. If the creature being chased wins, it escapes. If the
+        pursuer wins, it catches the fleeing creature.</p><p>Sometimes a chase
+        occurs overland and could last all day, with the two sides only
+        occasionally getting glimpses of each other at a distance. In the case
+        of a long chase, an opposed Constitution check made by all parties
+        determines which can keep pace the longest. If the creature being chased
+        rolls the highest, it gets away. If not, the chaser runs down its prey,
+        outlasting it with stamina.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

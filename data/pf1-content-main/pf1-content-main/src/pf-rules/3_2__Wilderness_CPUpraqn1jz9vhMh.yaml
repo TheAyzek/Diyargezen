@@ -1,0 +1,48 @@
+_id: CPUpraqn1jz9vhMh
+_key: '!journal!CPUpraqn1jz9vhMh'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: br8fwJFrbgshQXJz
+name: 3.2. Wilderness
+pages:
+  - _id: MNZ8iZVQ9JqtSGiR
+    _key: '!journal.pages!CPUpraqn1jz9vhMh.MNZ8iZVQ9JqtSGiR'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.2. Wilderness
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p><strong>@Compendium[pf-content.pf-rules.CPUpraqn1jz9vhMh]{3.2.
+        Wilderness}</strong></p><hr
+        /><p>@Source[PZO1110;pages=424]</p><p>Outside the safety of city walls,
+        the wilderness is a dangerous place, and many adventurers have gotten
+        lost in its trackless wilds or fallen victim to deadly
+        weather.</p><p>The following rules give you guidelines on running
+        adventures in a wilderness
+        setting.</p><ul><li>@Compendium[pf-content.pf-rules.QrderWyxAp6RUvtz]{3.2.1.
+        Getting
+        Lost}</li><li>@Compendium[pf-content.pf-rules.pcu8vDTPaIYw82SU]{3.2.2.
+        Forest
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.zJ4qqxSB0Iufd5Be]{3.2.3.
+        Marsh
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.RVKULXygOAXTZ1WC]{3.2.4.
+        Hills
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.B5qjfHf1pFgEA7bg]{3.2.5.
+        Mountain
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.tuZEOzPezZUbz4Fj]{3.2.5.2.
+        Mountain
+        Travel}</li><li>@Compendium[pf-content.pf-rules.3YyU7Yg6wbShgOKM]{3.2.6.
+        Desert
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.QOCypcVHE6zpYlyD]{3.2.7.
+        Plains
+        Terrain}</li><li>@Compendium[pf-content.pf-rules.xiRC5p84P3tFW9mo]{3.2.8.
+        Aquatic Terrain}</li></ul>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

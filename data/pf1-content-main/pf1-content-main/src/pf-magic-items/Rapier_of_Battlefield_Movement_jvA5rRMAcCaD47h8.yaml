@@ -1,0 +1,61 @@
+_id: jvA5rRMAcCaD47h8
+_key: '!items!jvA5rRMAcCaD47h8'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/rapier.PNG
+name: Rapier of Battlefield Movement
+system:
+  actions:
+    - _id: yfmx761gr2ecoek8
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: rapierOfBattlefieldMovement
+  aura:
+    school: trs
+  baseTypes:
+    - Rapier
+  cl: 7
+  description:
+    value: >-
+      <p>This +2 rapier has elegant lines and a stylish basket hilt. The wielder
+      of this weapon gains a +5 competence bonus on Acrobatics checks made to
+      move through an enemy's threatened area or through its space. As a swift
+      action after hitting with a melee attack using this weapon, the wielder
+      can spend 1 panache point to move 10 feet without provoking attacks of
+      opportunity.</p><p><strong>Base Item</strong>: 
+      rapier</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, freedom of movement, creator must have 10 ranks in
+      Craft (weapons)</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 30320
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1129
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 2
+type: weapon

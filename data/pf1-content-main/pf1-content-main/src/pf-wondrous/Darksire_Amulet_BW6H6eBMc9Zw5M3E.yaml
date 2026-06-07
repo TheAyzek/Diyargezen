@@ -1,0 +1,29 @@
+_id: BW6H6eBMc9Zw5M3E
+_key: '!items!BW6H6eBMc9Zw5M3E'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Darksire Amulet
+system:
+  aura:
+    school: abj
+  cl: 3
+  description:
+    value: >-
+      <p>This small iron locket contains some token-a scale, a shaving of a horn
+      or claw, or lock of burning hair-from a fiend. When worn by a tiefling, if
+      he has cold, electricity, or fire resistance, this amulet increases that
+      resistance by 5. Furthermore, it provides a +4 insight bonus on Diplomacy
+      skill checks made to influence evil
+      outsiders.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, resist energy, creator must be a tiefling, half-fiend, or
+      true fiend</p>
+  price: 9000
+  slot: neck
+  sources:
+    - id: PZO1121
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -31,7 +31,6 @@ class EffectModel(BaseModel):
     Ornekler:
       D&D 5e   : target="strength",  effect_type="stat_bonus",      value=2
       PF 1e    : target="fortitude",  effect_type="save_bonus",      value=2
-      VtM 5e   : target="potence",    effect_type="add_dot",         value=1
       M&M 3e   : target="dodge",      effect_type="defense_bonus",   value=2
     """
     target: str = Field(
@@ -106,11 +105,10 @@ class RaceModel(BaseModel):
 
     D&D 5e   → "race"
     PF 1e    → "race"
-    VtM 5e   → "clan" olarak map'lenir, ability_score_increase boş kalır
     M&M 3e   → "origin" olarak map'lenir
     """
     name: str = Field(..., min_length=1, description="Irk/ancestry adı")
-    system: str = Field(..., description="Kaynak sistem: dnd5e | pathfinder1e | vtm5e | mm3e")
+    system: str = Field(..., description="Kaynak sistem: dnd5e | pathfinder1e | mm3e")
     description: str = ""
     ability_score_increase: Dict[str, int] = Field(
         default_factory=dict,
@@ -293,36 +291,6 @@ class AdvantageModel(BaseModel):
     advantage_type: str = Field(default="General", description="Combat | Fortune | General | Skill")
     ranked: bool = False
     effects: List[EffectModel] = Field(default_factory=list, description="Evrensel etki listesi")
-    source: SourceReference = Field(default_factory=SourceReference)
-
-
-# ======================================================================
-# VtM 5e — Clan / Discipline Modelleri
-# ======================================================================
-
-class ClanModel(BaseModel):
-    """VtM 5e clan semasi."""
-    name: str = Field(..., min_length=1)
-    system: str = "vtm5e"
-    description: str = ""
-    bane: str = Field(default="", description="Clan laneti")
-    compulsion: str = ""
-    disciplines: List[str] = Field(default_factory=list, description="Clan disiplinleri")
-    favored_attributes: List[str] = Field(default_factory=list)
-    clan_weakness: str = ""
-    effects: List[EffectModel] = Field(default_factory=list, description="Evrensel etki listesi")
-    source: SourceReference = Field(default_factory=SourceReference)
-
-
-class DisciplineModel(BaseModel):
-    """VtM 5e disiplin şeması."""
-    name: str = Field(..., min_length=1)
-    system: str = "vtm5e"
-    description: str = ""
-    powers: Dict[str, str] = Field(
-        default_factory=dict,
-        description="Seviyeye gore guçler: {'1': 'Bond Famulus', ...}",
-    )
     source: SourceReference = Field(default_factory=SourceReference)
 
 

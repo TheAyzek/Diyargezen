@@ -1,0 +1,32 @@
+_id: xl9n8uXLo7Sh69Cb
+_key: '!items!xl9n8uXLo7Sh69Cb'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Ranged Piton
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>This pointed metallic piton bears a ring the size of a gold piece. A
+      ranged piton is sized and designed so that it can be launched as easily as
+      an arrow. When fired from a bow as a standard action at an object or empty
+      square, the wielder makes a ranged attack against AC 5 to determine
+      whether the piton hits the intended target. Range penalties apply as
+      normal. On a hit, the piton attaches to the point struck, cleaving to
+      vertical and horizontal surfaces alike. An attached ranged piton can be
+      recovered only by speaking a command word while pulling on the piton's
+      ring. Light rope, such as silk rope, can be threaded through the piton's
+      ring before it is fired to rapidly place rope
+      lines.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, spider climb</p>
+  price: 800
+  sources:
+    - id: PZO9452
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

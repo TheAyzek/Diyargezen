@@ -1,0 +1,26 @@
+_id: uWfRXumuksErt8Vd
+_key: '!items!uWfRXumuksErt8Vd'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Wound Paste
+system:
+  aura:
+    school: con
+  cl: 1
+  description:
+    value: >-
+      <p>Prized by slavers as an affordable way to stop a captive from bleeding
+      to death, a dose of wound paste acts as a stabilize spell when slathered
+      on a dying creature. Applying wound paste is a standard action that
+      provokes an attack of opportunity. A pot of wound paste contains 5
+      doses.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, stabilize</p>
+  price: 50
+  sources:
+    - id: PZO1121
+  subType: wondrous
+  weight:
+    value: 0.5
+type: equipment

@@ -1,0 +1,45 @@
+_id: lnXKiIY11gBl0l1r
+_key: '!items!lnXKiIY11gBl0l1r'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/scale-mail.png
+name: Coat of Shells
+system:
+  armor:
+    acp: 4
+    dex: 3
+    material:
+      base:
+        value: steel
+    value: 5
+  aura:
+    school: trs
+  baseTypes:
+    - Scale Mail
+  cl: 7
+  description:
+    value: >-
+      <p>Overlapping scallop shells form this suit of +2 scale mail. While the
+      wearer is swimming in water, the coat of shells restricts her movement
+      speed as light armor instead of as medium armor. Whether worn in or out of
+      water, a coat of shells requires medium armor proficiency.  When out of
+      the water, a coat of shells keeps its wearer's skin wet and cool. This
+      provides the wearer resist fire 5 and the benefits of the endure elements
+      spell against hot temperatures only, and it doubles the amount of time a
+      wearer with the water dependent racial trait or water dependency can spend
+      out of water without harm. None of these benefits apply in
+      water.</p><p><strong>Base Item</strong>: scale
+      mail</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, create water, endure elements, freedom of movement,
+      creator must be either a gillman or a merfolk</p>
+  enh: 2
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 15350
+  sources:
+    - id: PZO9280
+  spellFailure: 25
+  weight:
+    value: 20
+type: equipment

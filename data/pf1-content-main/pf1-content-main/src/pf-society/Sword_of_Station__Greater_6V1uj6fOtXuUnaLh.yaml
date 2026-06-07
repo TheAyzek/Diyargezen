@@ -1,0 +1,85 @@
+_id: 6V1uj6fOtXuUnaLh
+_key: '!items!6V1uj6fOtXuUnaLh'
+_stats:
+  coreVersion: '12.331'
+folder: F3WRdnavDoUZjLaB
+img: icons/equipment/waist/belt-buckle-steel.webp
+name: Sword of Station, Greater
+system:
+  actions:
+    - _id: ORLbaKy2oDx3yodt
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>@UUID[Compendium.pf1.spells.Item.2p6fzj5t03oivndd]{Command}</p><p>You
+        give the subject a single command, which it obeys to the best of its
+        ability at its earliest opportunity. You may select from the following
+        options.</p><p>Approach: On its turn, the subject moves toward you as
+        quickly and directly as possible for 1 round. The creature may do
+        nothing but move during its turn, and it provokes attacks of opportunity
+        for this movement as normal.</p><p>Drop: On its turn, the subject drops
+        whatever it is holding. It can't pick up any dropped item until its next
+        turn.</p><p>Fall: On its turn, the subject falls to the ground and
+        remains prone for 1 round. It may act normally while prone but takes any
+        appropriate penalties.</p><p>Flee: On its turn, the subject moves away
+        from you as quickly as possible for 1 round. It may do nothing but move
+        during its turn, and it provokes attacks of opportunity for this
+        movement as normal.</p><p>Halt: The subject stands in place for 1 round.
+        It may not take any actions but is not considered helpless.</p><p>If the
+        subject can't carry out your command on its next turn, the spell
+        automatically fails.</p>
+      duration:
+        units: round
+        value: '1'
+      name: Command
+      range:
+        units: close
+      save:
+        dc: '11'
+        description: negates
+        type: will
+      target:
+        value: one living creature
+  aura:
+    custom: true
+    school: abjuration and enchantment
+  changes:
+    - _id: H8QK5meu
+      formula: '5'
+      target: skill.sen
+      type: competence
+  cl: 1
+  description:
+    unidentified: <p>This is an ornate sword and belt combination.</p>
+    value: >-
+      <h3>Effect</h3><p>This ornate sword and belt impart uncanny confidence and
+      insight while worn, granting a +2 competence bonus on Sense Motive checks.
+      Three times per day, the wearer may draw the sword and deliver a
+      single-word command, as per the spell. Lesser versions of swords of
+      station exist that allow the wearer to cast command only once per day, and
+      that lack the confidence-boosting enhancements. For greater swords of
+      station, the competence bonus on Sense Motive checks increases to +5. A
+      sword of station is blunted and poorly balanced, intended as a showpiece
+      rather than a weapon. If used in combat, treat it as an improvised
+      club.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.2p6fzj5t03oivndd]{command},
+      @UUID[Compendium.pf1.spells.Item.eu4u4mr1naoiqohz]{remove fear}, creator
+      must have 2 ranks in the Sense Motive skill </em><strong>Cost</strong>
+      2,060 gp</p>
+  price: 4120
+  slot: belt
+  sources:
+    - id: PZOPSS0316
+      pages: '13'
+  subType: wondrous
+  uses:
+    maxFormula: '3'
+    per: day
+    value: 3
+  weight:
+    value: 5
+type: equipment

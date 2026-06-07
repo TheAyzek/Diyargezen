@@ -1,0 +1,27 @@
+_id: gy4ZJOdodQCl5RaX
+_key: '!items!gy4ZJOdodQCl5RaX'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Steward's Iron Key
+system:
+  aura:
+    custom: true
+    school: abjuration and transmutation
+  cl: 3
+  description:
+    value: >-
+      <p>This simple iron key looks like something a castellan or majordomo
+      would carry on her key ring. When held in hand, the bearer can use
+      open/close at will. Once per day the bearer can speak a command word to
+      use either arcane lock or knock.  Though Alseta's church may use more
+      elaborate keys for important ceremonies, the goddess's humble nature means
+      most magical keys crafted by her followers are nondescript items such as
+      this one.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, arcane lock, knock, open/close</p>
+  price: 3000
+  sources:
+    - id: PZO9267
+  subType: wondrous
+type: equipment

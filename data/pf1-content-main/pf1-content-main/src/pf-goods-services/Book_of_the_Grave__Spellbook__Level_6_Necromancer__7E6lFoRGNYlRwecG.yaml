@@ -1,0 +1,44 @@
+_id: 7E6lFoRGNYlRwecG
+_key: '!items!7E6lFoRGNYlRwecG'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/books/book-worn-brown.webp
+name: Book of the Grave (Spellbook, Level 6 Necromancer)
+system:
+  description:
+    value: >-
+      <p><em>This tome reeks of decomposing f lesh or some even fouler stench.
+      Grave mold clings to the worm-eaten cover, and dirt stains the pages. Some
+      pages have been torn out.</em></p><p><strong>Opposition</strong>
+      Enchantment,transmutation</p><p><strong>Protection</strong> The edges of
+      the first three pages are coated with nitharit poison (contact;
+      <em>save</em> Fort DC 13; <em>frequency</em> 1/minute for 6 minutes;
+      <em>effect</em> 1d3 Con damage; <em>cure</em> 1 save).<br
+      /><strong>Value</strong> 815 gp (1,265 gp with the preparation
+      ritual)</p><h2>Spells</h2><p>3rd-<em>blood biography</em>, <em>ray of
+      exhaustion</em><sub>S</sub>, <em>vampiric touch</em><sub>S</sub>,
+      <em>vitriol</em></p><p>2nd-<em>command undead</em><sub>S</sub>, <em>create
+      treasure map</em>, <em>ghoul touch</em><sub>S</sub>, <em>spectral
+      hand</em><sub>S</sub>, <em>stone call</em>, <em>web</em><br
+      />1st-<em>burning hands</em>, <em>chill touch</em><sub>S</sub>,
+      <em>disguise self</em>, <em>mage armor</em>, <em>protection from
+      good</em>, <em>ray of enfeeblement</em><sub>S</sub>, <em>sculpt
+      corpse</em><sub>S</sub>, <em>shield</em>, <em>true strike</em>,
+      <em>ventriloquism</em></p><h2>Ritual</h2><p><strong>Breath of the Grave
+      (Su)</strong> As a swift action, spend this boon's effect to breathe a
+      15-foot cone of rotting stench. Creatures within the cone must succeed at
+      a Fortitude saving throw (DC 10 + your highest caster level in a class
+      that prepares spells) or be sickened for 1 round. This spends the boon.
+      After this boon has been spent, you take a -4 penalty on Diplomacy and
+      Stealth checks until you prepare spells again.</p>
+  equipped: false
+  price: 1265
+  sources:
+    - id: PZO1117
+      pages: '122'
+  subType: gear
+  tags:
+    - Spellbooks
+  weight:
+    value: 5
+type: loot

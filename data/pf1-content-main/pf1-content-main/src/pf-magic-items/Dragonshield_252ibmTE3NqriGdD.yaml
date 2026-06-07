@@ -1,0 +1,51 @@
+_id: 252ibmTE3NqriGdD
+_key: '!items!252ibmTE3NqriGdD'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-heavy-wood.png
+name: Dragonshield
+system:
+  armor:
+    acp: 2
+    material:
+      base:
+        value: wood
+    value: 2
+  aura:
+    school: abj
+  baseTypes:
+    - Heavy Wooden Shield
+  cl: 14
+  description:
+    value: >-
+      <p>This +1 heavy wooden shield is covered in stretched dragonhide and
+      reinforced with petrified plates carved from a dragon's thickest scales. A
+      dragonshield's enhancement bonus to AC increases by 1 against any creature
+      with the dragon type, or by 2 against a dragon of the specific type used
+      in the creation of the dragonshield. The enhancement bonus also applies on
+      saving throws against dragons' breath weapons. If the wielder succeeds at
+      a saving throw against a dragon's breath weapon, she takes no damage. 
+      12th Level: The shield gains the bolstering shield special ability. The
+      saving throw bonus granted by this ability is increased by 1 against
+      creatures of the dragon type and by 2 against dragons of the same type as
+      the shield's dragonhide.  14th Level: The shield gains the energy
+      resistance special ability. The type of resistance matches the breath
+      weapon energy type of the dragon whose dragonhide was used in the shield's
+      construction.  16th Level: The shield's enhancement bonus increases to +2,
+      and the wearer gains a +6 morale bonus on saving throws against a dragon's
+      frightful presence.</p><p><strong>Base Item</strong>: heavy wooden
+      shield</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, heroism, remove fear, resist energy</p>
+  enh: 1
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 28557
+  slot: shield
+  sources:
+    - id: PZO1131
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 10
+type: equipment

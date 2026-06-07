@@ -1,0 +1,33 @@
+_id: Xdm7UO7F7mAXGtUa
+_key: '!tables!Xdm7UO7F7mAXGtUa'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+folder: BZDvby6q7j80D7m7
+formula: 1d100
+img: icons/svg/d20-grey.svg
+name: Staves - Special Qualities
+replacement: true
+results:
+  - _id: CIIWlCOHK3Zzn9uh
+    _key: '!tables.results!Xdm7UO7F7mAXGtUa.CIIWlCOHK3Zzn9uh'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 30
+    text: >-
+      Something (a design, inscription, or the like) provides a clue to its
+      function
+    type: text
+    weight: 1
+  - _id: CzoEexVaUntzgrmO
+    _key: '!tables.results!Xdm7UO7F7mAXGtUa.CzoEexVaUntzgrmO'
+    img: icons/svg/d20-black.svg
+    range:
+      - 31
+      - 100
+    text: No special qualities
+    type: text
+    weight: 1
+sort: 150000

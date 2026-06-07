@@ -1,0 +1,42 @@
+_id: GXKpjdgL8zwzc0MJ
+_key: '!items!GXKpjdgL8zwzc0MJ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/half-plate.png
+name: Forgefather's Half-Plate
+system:
+  armor:
+    acp: 7
+    material:
+      base:
+        value: steel
+    value: 8
+  aura:
+    custom: true
+    school: abjuration divination evocation and transmutation
+  baseTypes:
+    - Half-plate
+  cl: 3
+  description:
+    value: >-
+      <p>This +1 half-plate is usually sized for a dwarf and decorated with one
+      or more sacred hammer symbols of Torag. Once per day, the wearer may use
+      mending, protection from evil, and spark . Once per day as a full-round
+      action, the wearer can attempt a Knowledge check (with a +10 bonus) to
+      identify a creature he is currently in combat with, even if he possesses
+      no ranks in the appropriate Knowledge skill.</p><p><strong>Base
+      Item</strong>: 
+      half-plate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, know the enemy, mending, protection from evil,
+      spark</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 4180
+  sources:
+    - id: PZO9267
+  spellFailure: 40
+  weight:
+    value: 50
+type: equipment

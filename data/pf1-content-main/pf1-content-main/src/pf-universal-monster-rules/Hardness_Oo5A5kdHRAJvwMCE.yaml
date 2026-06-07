@@ -1,0 +1,21 @@
+_id: Oo5A5kdHRAJvwMCE
+_key: '!items!Oo5A5kdHRAJvwMCE'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/stone/paver-brick-brown.webp
+name: Hardness
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>When a creature with hardness takes damage, subtract its hardness from
+      the damage. Only damage in excess of its hardness is subtracted from its
+      hit points. A creature with hardness doesn&rsquo;t further reduce damage
+      from energy attacks, ranged attacks, or other types of attacks as objects
+      typically do. Adamantine weapons bypass hardness of 20 or
+      less.</p>&nbsp;<p><em>Format</em>: hardness 10</p><p><em>Location</em>:
+      Defensive Abilities.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

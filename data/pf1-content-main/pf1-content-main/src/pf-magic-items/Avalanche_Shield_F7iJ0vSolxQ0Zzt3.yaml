@@ -1,0 +1,43 @@
+_id: F7iJ0vSolxQ0Zzt3
+_key: '!items!F7iJ0vSolxQ0Zzt3'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-heavy-metal.png
+name: Avalanche Shield
+system:
+  armor:
+    acp: 2
+    material:
+      base:
+        value: steel
+    value: 2
+  aura:
+    school: evo
+  baseTypes:
+    - Heavy Steel Shield
+  cl: 12
+  description:
+    value: >-
+      <p>The front of this +1 bashing heavy steel shield looks as though it is
+      crafted from hundreds of bits of rubble and larger stones. When used to
+      make a shield bash attack, stones fall from shield and cling to the target
+      of the shield bash. The target must succeed at a DC 14 Fortitude saving
+      throw or be entangled for 1d4 rounds. Once per day on command, the
+      target's wielder can choose to petrify the target of a shield bash
+      instead. The target must succeed at a DC 16 Fortitude saving throw or
+      become petrified for 1 minute.</p><p><strong>Base Item</strong>:
+      bashing</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, bull's strength, shape stone, flesh to stone</p>
+  enh: 1
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 19170
+  slot: shield
+  sources:
+    - id: PZO1123
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 10
+type: equipment

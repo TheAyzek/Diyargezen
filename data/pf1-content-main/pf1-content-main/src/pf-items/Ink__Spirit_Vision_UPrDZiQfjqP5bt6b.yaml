@@ -1,0 +1,24 @@
+_id: UPrDZiQfjqP5bt6b
+_key: '!items!UPrDZiQfjqP5bt6b'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/scribal/ink-quill-red.webp
+name: Ink, Spirit-Vision
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>Originally developed
+      by kami-revering priests to write prayer scrolls, this pale ink is now
+      often used by ninjas to mark locations or leave messages. Once
+      spirit-vision ink dries, it becomes completely invisible. To invisible
+      creatures, however, writing in spirit-vision ink shimmers with a rich
+      azure hue.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      30</p>
+  price: 25
+  sources:
+    - id: PZO9481
+      pages: '28'
+  subType: misc
+  tags:
+    - Alchemical Tools
+type: consumable

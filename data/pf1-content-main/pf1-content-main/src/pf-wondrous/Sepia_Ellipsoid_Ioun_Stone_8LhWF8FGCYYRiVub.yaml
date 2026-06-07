@@ -1,0 +1,77 @@
+_id: 8LhWF8FGCYYRiVub
+_key: '!items!8LhWF8FGCYYRiVub'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/consumables/eggs/egg-speckled-tan.webp
+name: Sepia Ellipsoid Ioun Stone
+system:
+  aura:
+    school: abj
+  changes:
+    - _id: hWzRaXAR
+      formula: '1'
+      target: cl
+      type: untyped
+  cl: 18
+  contextNotes:
+    - target: conChecks
+      text: You are sustained without air.
+    - target: allSavingThrows
+      text: You are sustained without air.
+  description:
+    instructions: >-
+      <p>Only 75% of normal ioun stones grant resonant powers when placed in a
+      wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>This dark stone sometimes appears to be made of transparent crystal
+      filled nearly to the brim with dark ink. Generally in the form of an
+      elongated sphere or tear-like shape.</p>
+    value: >-
+      <h3>Effect</h3><p>This dark stone sometimes appears to be made of
+      transparent crystal filled nearly to the brim with dark ink. It provides
+      the benefits of an
+      @UUID[Compendium.pf-content.pf-wondrous.Item.lqj505tVyUtVYZOU]{Iridescent
+      Spindle} (sustains you without air),
+      @UUID[Compendium.pf-content.pf-wondrous.Item.XzdXhIUkNG0c2qMk]{pearly
+      white spindle} (regenerate 1 hit point per 10 minutes), and an
+      @UUID[Compendium.pf-content.pf-wondrous.Item.HF3TIapfLdsAnQHe]{Orange
+      Prism} (+1 caster level).</p><p>However, it has two drawbacks. First, once
+      set loose to orbit your head, it dislikes being contained (including being
+      placed in a wayfinder) and frees itself to orbit again 1d4+1 hours after
+      being removed from its spinning path. Second, it drains the power out of
+      other ioun stones, rendering them dull gray and powerless at a rate of one
+      every 24 hours. Thus, it is an excellent and valuable item if you only
+      have one ioun stone, but hard to conceal and dangerous to your other
+      treasures. A remove curse or similar spell can put the stone at rest and
+      prevent it from returning to its orbit.</p><p>The Society has at least
+      three specimens of this type locked in the Vaults to prevent ignorant
+      Pathfinders from ruining perfectly good ioun stones. In theory you could
+      place one directly into a wayfinder rather than ever letting it orbit,
+      though conflicting reports suggest the sepia ellipsoid may be able to
+      drain power out of orbiting stones even when contained in this way. The
+      specimens in the Vaults are carefully locked in lead boxes to prevent them
+      from draining the powers of other stored ioun
+      stones.</p><h3>Resonance</h3><p><strong>Method 1, Fixed: </strong>Unknown.
+      See above.</p><p><strong>Method 1, Variable:
+      </strong>@UUID[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]{Ioun
+      Stone Resonance Powers Method 2} See drawback
+      above.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>mage's disjunction, regenerate, water
+      breathing</em>, <strong>Cost</strong> 34,000 gp</p><hr /><p><em>Editor's
+      Note</em>: the source book states that Craft Magic Arms and Armor is a
+      crafting requirement. This item is a wondrous item and therefore should
+      require Craft Wondrous Item instead.</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 68000
+  sources:
+    - id: PZO9211
+      pages: '57'
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

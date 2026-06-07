@@ -1,0 +1,52 @@
+_id: w3onFH92biV7hafw
+_key: '!items!w3onFH92biV7hafw'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/estoc.PNG
+name: Dust Bolt
+system:
+  actions:
+    - _id: hi5wcduftqrzfzus
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: dustBolt
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>This barbed +1 outsider (water) bane bolt is etched with runes of
+      thirst and desiccation. Any living creature struck by a dust bolt begins
+      dying of thirst, as the spell cup of dust (DC 14 Fortitude negates).
+      Creatures with the aquatic or water subtype save with a -4 penalty, and on
+      a failed save they are also sickened and staggered for 1
+      round.</p><p><strong>Base Item</strong>: outsider (water)
+      bane</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, cup of dust (Advanced Player's Guide), summon monster
+      I</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  price: 1730
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weight:
+    value: 0.1
+type: weapon

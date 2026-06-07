@@ -1,0 +1,20 @@
+_id: S198VwphGGEZ7dq1
+_key: '!items!S198VwphGGEZ7dq1'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/kunai.png
+name: Deep Cover
+system:
+  associations:
+    classes:
+      - Ninja
+  description:
+    value: >-
+      <p>A ninja with this trick gains the dual identity and seamless guise
+      class feature as a vigilante, except that the ninja can spend 1 ki point
+      to change identities as a move action. The ninja's identities are referred
+      to as social and ninja, rather than social and vigilante.</p>
+  subType: classFeat
+  tags:
+    - Ninja Trick, Master
+type: feat

@@ -1,0 +1,40 @@
+_id: G87xe5CxOxtEAUrk
+_key: '!items!G87xe5CxOxtEAUrk'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-tower.PNG
+name: Spellbane Shield
+system:
+  armor:
+    acp: 10
+    dex: 2
+    material:
+      base:
+        value: wood
+    value: 4
+  aura:
+    school: abj
+  baseTypes:
+    - Tower Shield
+  cl: 15
+  description:
+    value: >-
+      <p>This massive iron-covered +2 tower shield grants the wielder a +3
+      resistance bonus on saving throws against spells, spell-like abilities and
+      supernatural abilities, and reduces hit point damage taken from such
+      sources by 10 points.</p><p><strong>Base Item</strong>: tower
+      shield</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, spell resistance</p>
+  enh: 2
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 79180
+  slot: shield
+  sources:
+    - id: PZO9455
+  spellFailure: 50
+  subType: shield
+  weight:
+    value: 45
+type: equipment

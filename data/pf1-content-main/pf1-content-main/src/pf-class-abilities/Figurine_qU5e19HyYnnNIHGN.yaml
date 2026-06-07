@@ -1,0 +1,28 @@
+_id: qU5e19HyYnnNIHGN
+_key: '!items!qU5e19HyYnnNIHGN'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/book-purple.jpg
+name: Figurine
+system:
+  associations:
+    classes:
+      - Occultist
+  description:
+    value: >-
+      <p><strong>Occultist Sacred Implement</strong></p><p><strong>Deity
+      </strong>Rovagug; <strong>Implement </strong>figurine; <strong>Opposition
+      School </strong>abjuration</p><p><em>Footsteps of the Rough Beast (Su):
+      </em>You can expend 1 point of mental focus as a move action to cause the
+      ground in a 5-foot-radius burst centered on you to crumble and rupture,
+      becoming difficult terrain. If you remain stationary, in subsequent rounds
+      you can concentrate on this area as though concentrating on a spell by
+      expending 1 additional mental focus each round. As long as you maintain
+      concentration; the radius of the difficult terrain increases by 5 feet
+      (maximum 30-foot radius) each round. You immediately cease concentrating
+      if you move from your originating location. Difficult terrain created this
+      way remains for 24 hours before returning to its original state.</p>
+  subType: classFeat
+  tags:
+    - Occultist Sacred Implement
+type: feat

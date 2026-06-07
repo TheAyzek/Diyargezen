@@ -1,0 +1,27 @@
+_id: qeYnTua3bjxVdcXl
+_key: '!items!qeYnTua3bjxVdcXl'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/scribal/ink-quill-pink.webp
+name: Poisoned quill
+system:
+  description:
+    value: >-
+      <p>This long pen is made from a delicate feather and has a thin and
+      unusually long nib. The quill is typically white in color, though
+      variations that are crimson, onyx, or some combination of these colors
+      also exist. A hidden compartment inside the nib allows the quill to hold a
+      single dose of poison that is dispensable with a small squeeze.
+      Additionally, this provides a +2 circumstance bonus on Sleight of Hand
+      checks to conceal poisons inside the quill. If this quill is used with
+      vector ink, it increases the DC of a poison mixed with the ink by 1. This
+      quill can be used as a small shiv to deal 1d3 points of damage and deliver
+      its contained poison. However, because of the fragility of the nib, using
+      the quill in this way destroys it.</p>
+  equipped: false
+  price: 30
+  sources:
+    - id: PZO9487
+      pages: '29'
+  subType: tool
+type: loot

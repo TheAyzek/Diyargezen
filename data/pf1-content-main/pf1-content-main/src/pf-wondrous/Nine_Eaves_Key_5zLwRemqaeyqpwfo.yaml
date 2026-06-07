@@ -1,0 +1,25 @@
+_id: 5zLwRemqaeyqpwfo
+_key: '!items!5zLwRemqaeyqpwfo'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Nine-Eaves Key
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>This small iron key has the number 9 and a right triangle engraved upon
+      it. While the Nine-Eaves key is held, the bearer can use open/close at
+      will, but only to open, not to close. Once per day as a standard action,
+      the bearer can touch the Nine-Eaves key to a magic item. For the following
+      24 hours, all Use Magic Device skill checks to use or activate the touched
+      magic item gain a +4 insight bonus.<h3>Requirements</h3><p>Craft Wondrous
+      Item, identify, open/close</p>
+  price: 1500
+  sources:
+    - id: PZO90139
+  subType: wondrous
+type: equipment

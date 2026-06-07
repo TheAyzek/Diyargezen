@@ -1,0 +1,25 @@
+_id: jvlje8L2BvK3eK3S
+_key: '!items!jvlje8L2BvK3eK3S'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/biological/eye-lizard-orange-red.webp
+name: Cat (Osirian Wise-Eye)
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong>  3 cp (common),  6 gp (Osirian wise-eye);
+      <strong>Weight</strong> 8 lbs. (common), 8 lbs. (Osirian
+      wise-eye)</p><h2>Description</h2><p>These Tiny animals are often kept as
+      pets or familiars. Though small, they are excellent hunters. Grain farmers
+      usually keep cats for pest control in crop storage areas, but cats can be
+      found in most regions and strays occupy many cities. More information on
+      cats can be found in the <em>Bestiary</em>.</p>
+  equipped: false
+  price: 6
+  sources:
+    - id: PZO9410
+      pages: '19'
+  subType: animal
+  weight:
+    value: 8
+type: loot

@@ -1,0 +1,166 @@
+_id: JVfKSrNbjsGdNaC5
+_key: '!journal!JVfKSrNbjsGdNaC5'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: Xs7WZeDzdO8Jg0jZ
+name: 2.10.03.4.1. List of Poisons
+pages:
+  - _id: ksXOke0Y16RRTqwE
+    _key: '!journal.pages!JVfKSrNbjsGdNaC5.ksXOke0Y16RRTqwE'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.10.03.4.1. List of Poisons
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><ul><li><p>@Compendium[pf-content.pf-rules.gzu4LYBcxAEzhEnd]{2.10.
+        Special
+        Abilities}</p><ul><li>@Compendium[pf-content.pf-rules.kEWYsWvNyhPgjbC6]{2.10.03.4.
+        Poison}</li></ul></li></ul><hr
+        /><p>@Compendium[pf-content.pf-items.2ujs1zfbNWqGr2VL]{Aconite
+        root}</p><p>@Compendium[pf-content.pf-items.4rhsFoP31cTkJtDh]{Addlemind}</p><p>@Compendium[pf-content.pf-items.6sqVxw0WEvFQpZV8]{Alchemical
+        isolation}</p><p>@Compendium[pf-content.pf-items.h9gomuy260TG5sXg]{Arsenic}</p><p>@Compendium[pf-content.pf-items.0sce0ldOa1cVBB4L]{Azure
+        lily
+        pollen}</p><p>@Compendium[pf-content.pf-items.DGIpQvZmMxZmaE00]{Baneberry}</p><p>@UUID[Compendium.pf1.items.Item.mytdbfjvyaymjdry]{Belladonna}</p><p>@Compendium[pf-content.pf-items.iTr8mho9xvVB5lOt]{Black
+        adder
+        venom}</p><p>@Compendium[pf-content.pf-items.kwEytab0LZRLgAbz]{Black
+        lotus
+        extract}</p><p>@Compendium[pf-content.pf-items.Cvz5LHnV57tl1NCb]{Black
+        spider marsh
+        poison}</p><p>@Compendium[pf-content.pf-items.JXmQy4978YADYXLe]{Black
+        whinnis}</p><p>@Compendium[pf-content.pf-items.HDBaFWy3JrWp3j2s]{Blackfinder's
+        silence}</p><p>@Compendium[pf-content.pf-items.VXLKT4px7scZpdsN]{Blackfinger's
+        salt}</p><p>@Compendium[pf-content.pf-items.rkPyKuEK1T82lLkc]{Blackfrost}</p><p>@Compendium[pf-content.pf-items.5O3c0ZguTvUMPdqG]{Blistercap
+        spore}</p><p>@Compendium[pf-content.pf-items.Jlukul55ssPuCgJK]{Bloodbrain
+        Venom}</p><p>@Compendium[pf-content.pf-items.LNUz3DFcouYTSzad]{Bloodpyre}</p><p>@Compendium[pf-content.pf-items.5Ozuycfl17yzPt6Y]{Bloodroot}</p><p>@Compendium[pf-content.pf-items.In9ocT6O5efRZsxc]{Bloodwine}</p><p>@Compendium[pf-content.pf-items.Eco6bl5RksubMT72]{Blue
+        lily
+        extract}</p><p>@Compendium[pf-content.pf-items.pJoUsoZWDjAAf5DK]{Blue
+        star}</p><p>@UUID[Compendium.pf1.items.Item.MmrLS7XTeJdRCQcI]{Blue
+        whinnis}</p><p>@Compendium[pf-content.pf-items.UWY9sQPnybr6TzGJ]{Brain
+        blot}</p><p>@Compendium[pf-content.pf-items.crggxEyYiukzAVQC]{Breath of
+        the mantis
+        god}</p><p>@Compendium[pf-content.pf-items.XYfv7DODaSwRPmFb]{Brinestump
+        special}</p><p>@Compendium[pf-content.pf-items.v1pHEufApgS8Dmwh]{Burnt
+        othur
+        fumes}</p><p>@Compendium[pf-content.pf-items.rzdRr914ykUbJHzi]{Calistria's
+        revenge}</p><p>@Compendium[pf-content.pf-items.zBLx7pFcrv0D1KCV]{Calotropis}</p><p>@Compendium[pf-content.pf-items.CcIkOJN99bXTO0hQ]{Chelish
+        deathapple}</p><p>@Compendium[pf-content.pf-items.Jzj2ySvCHOWVuLjQ]{Cloudthorn
+        venom}</p><p>@Compendium[pf-content.pf-items.HHr90ZwZy3deMbk5]{Cockatrice
+        spit}</p><p>@Compendium[pf-content.pf-items.dZ1yMaCiZ4LOQ7Q4]{Concentrated
+        laxative}</p><p>@Compendium[pf-content.pf-items.IEZIYLrOckLAMC65]{Confabulation
+        powder}</p><p>@Compendium[pf-content.pf-items.0Zovznc8ImPmb0Zf]{Count
+        Ambras's
+        punishment}</p><p>@Compendium[pf-content.pf-items.HzEsK1H82qWS2aik]{Crone's
+        curse}</p><p>@Compendium[pf-content.pf-items.oS9L1a9AOBgnEXO5]{Cyanide}</p><p>@Compendium[pf-content.pf-items.2y7upRtKpmhNE2Vf]{Cytillesh
+        extract}</p><p>@Compendium[pf-content.pf-items.EbXyHcKuZJbGChBz]{Dark
+        reaver
+        powder}</p><p>@Compendium[pf-content.pf-items.O6aXaAdTCFd0RAuA]{Deathblade}</p><p>@Compendium[pf-content.pf-items.oC2WqnsU3gNwKGgN]{Demon
+        nettle
+        sap}</p><p>@Compendium[pf-content.pf-items.ubg1EuMqVE8JPG0O]{Dhabba
+        spittle}</p><p>@Compendium[pf-content.pf-items.9YivINziLAmxwOd7]{Diplopic
+        serum}</p><p>@Compendium[pf-content.pf-items.DtKoGS3jtmUDH6CR]{Dragon
+        bile}</p><p>@Compendium[pf-content.pf-items.SC0MphyQqPlzJMw4]{Draughtcap
+        fungus}</p><p>@Compendium[pf-content.pf-items.fFLnqwZyz6LSfKPQ]{Drow
+        poison}</p><p>@Compendium[pf-content.pf-items.8aY5I1SR7xC3sKXt]{Everwake
+        serum}</p><p>@Compendium[pf-content.pf-items.lF8qGIjSC4qVYKAx]{Fiddleback
+        venom}</p><p>@Compendium[pf-content.pf-items.8ZePNMXnzmhS8RER]{Flaming
+        doom}</p><p>@Compendium[pf-content.pf-items.V2MCy1N1gAUufQFN]{Flayleaf
+        spider
+        venom}</p><p>@Compendium[pf-content.pf-items.ZKtuvGn9kPTp14c4]{Fool's
+        Leprosy}</p><p>@Compendium[pf-content.pf-items.Wb7qNGHwLYcKHlKP]{Frightshade}</p><p>@Compendium[pf-content.pf-items.ftgyfyMQrkd13wLq]{Frostspore}</p><p>@Compendium[pf-content.pf-items.D4BbmDDfB3yGnlJ4]{Fury
+        gas}</p><p>@Compendium[pf-content.pf-items.7ZZ1Hext3wdTKIMf]{Gelidburn
+        oil}</p><p>@Compendium[pf-content.pf-items.7bjAeZzBcIbeVG3C]{Giant wasp
+        poison}</p><p>@Compendium[pf-content.pf-items.P4eUToAm66JJj4bE]{Goblin's
+        eye}</p><p>@Compendium[pf-content.pf-items.P7QxrJ0sXUH2pt5R]{Goblinvine
+        oil}</p><p>@Compendium[pf-content.pf-items.Dm4AQphEUQOiWWBf]{Gray
+        justice}</p><p>@Compendium[pf-content.pf-items.Ht7kySi6q6Gp2GjY]{Greenblood
+        oil}</p><p>@Compendium[pf-content.pf-items.yZvhDyYLnguhzOE8]{Grinding
+        joint paste}</p><p>@Compendium[pf-content.pf-items.E2falXJfxkSRrN7T]{Hag
+        spit}</p><p>@Compendium[pf-content.pf-items.HiBSndm53EIsfcs3]{Halo
+        mushroom
+        toxin}</p><p>@Compendium[pf-content.pf-items.VHIkKo8QBzbWlySV]{Hazemind
+        concentrate}</p><p>@Compendium[pf-content.pf-items.8DJsLWIoavgQiiG7]{Hazemind
+        mist}</p><p>@Compendium[pf-content.pf-items.T682LmoQOCAl1YnY]{Hemlock}</p><p>@Compendium[pf-content.pf-items.7iiEai137ji6x8Cv]{Hydrofluoric
+        acid}</p><p>@Compendium[pf-content.pf-items.s1KNjuNiNPItgvo4]{Id
+        moss}</p><p>@Compendium[pf-content.pf-items.hH7auhzVcrQ115aZ]{Indigo
+        dreams}</p><p>@Compendium[pf-content.pf-items.CVAfQL0XPghgp157]{Insanity
+        mist}</p><p>@Compendium[pf-content.pf-items.ZKYwJiHHf1c3e29E]{Insanity
+        pill}</p><p>@Compendium[pf-content.pf-items.95ex5hkOSwKAe5qf]{Insecticide}</p><p>@Compendium[pf-content.pf-items.agb1Z6Oep1s8idyn]{Jackalroot
+        essence}</p><p>@Compendium[pf-content.pf-items.n8vMEtCdb2klNoGC]{Juvebloom}</p><p>@Compendium[pf-content.pf-items.P2luXR28pHYD3dg7]{King's
+        sleep}</p><p>@Compendium[pf-content.pf-items.jQI6OMtvKIrPYDpp]{Kiss of
+        barbatos}</p><p>@Compendium[pf-content.pf-items.4aFPCh9waGLQO6lq]{Large
+        scorpion
+        venom}</p><p>@Compendium[pf-content.pf-items.9sL7YyCCP3sCdd2M]{Laughing
+        gas}</p><p>@Compendium[pf-content.pf-items.KzEMEyZWUIPZTfDo]{Leng's
+        tears}</p><p>@Compendium[pf-content.pf-items.gFLQGRUe3pdEBkj4]{Leopard's
+        bane}</p><p>@Compendium[pf-content.pf-items.KRwIQCBgFDKQeEbX]{Lethe
+        water}</p><p>@Compendium[pf-content.pf-items.mEMSR0hRyIaoexBh]{Lich
+        dust}</p><p>@Compendium[pf-content.pf-items.HJjr8SDQBQi4Px6S]{Liquid
+        leprosy}</p><p>@Compendium[pf-content.pf-items.PJO92M1MFKyUc8C4]{Liquid
+        persuasion}</p><p>@Compendium[pf-content.pf-items.bCp9DDwp34Ssq2l1]{Lungsap
+        powder}</p><p>@Compendium[pf-content.pf-items.Ks7BulmKnGIBSroa]{Lungtaker}</p><p>@Compendium[pf-content.pf-items.NrX5fmQCs6ftLzCQ]{Mage
+        bane}</p><p>@Compendium[pf-content.pf-items.Z7NWB0lyFYmYlHoH]{Maiden
+        lily
+        attar}</p><p>@Compendium[pf-content.pf-items.aRIJhGYWd3GZ0Hej]{Malyass
+        root
+        paste}</p><p>@Compendium[pf-content.pf-items.j0YpJaSFXqtmsfWv]{Marvelous
+        fear gas}</p><p>@Compendium[pf-content.pf-items.1NgVfKxavKmYufPj]{Medium
+        spider
+        venom}</p><p>@Compendium[pf-content.pf-items.aK9sSnaNx2OFbpAt]{Might
+        blight}</p><p>@Compendium[pf-content.pf-items.mO8cP0U6hUmezU2m]{Mindrust}</p><p>@Compendium[pf-content.pf-items.InjnlDLJ7tIIohIM]{Muddling
+        heresy}</p><p>@Compendium[pf-content.pf-items.qgBHKPgJRDZFS0t7]{Nerveblast}</p><p>@Compendium[pf-content.pf-items.vk02Qc9XKIb8G7U5]{Nightmare
+        vapor}</p><p>@Compendium[pf-content.pf-items.MFfWmswG51hWGPP3]{Nights-eye
+        dust}</p><p>@Compendium[pf-content.pf-items.MxUutzpsFIZIkxCF]{Nitharit}</p><p>@Compendium[pf-content.pf-items.dqJWfGKBOe8w9AeM]{Numbing
+        poison}</p><p>@Compendium[pf-content.pf-items.0MxBeNKjiftfpLAk]{Nymph's
+        lure}</p><p>@Compendium[pf-content.pf-items.AzwcpFHw6TaHbBSa]{Oil of
+        taggit}</p><p>@Compendium[pf-content.pf-items.OPzhdYyB3m112pi3]{Ossivane}</p><p>@Compendium[pf-content.pf-items.aXWAeG4CI2jit8UH]{Peasant's
+        woe}</p><p>@Compendium[pf-content.pf-items.VNWmdSHAShI5qIm7]{Pupil's
+        friend}</p><p>@Compendium[pf-content.pf-items.9ifBtxbi81HYneul]{Purple
+        pesh}</p><p>@Compendium[pf-content.pf-items.krgtUvoRcrlJFPXa]{Purple
+        worm
+        poison}</p><p>@Compendium[pf-content.pf-items.fKtwI31A6E8cKejk]{Quicklime}</p><p>@Compendium[pf-content.pf-items.osnexM4KcODBdX3X]{Ragespittle}</p><p>@Compendium[pf-content.pf-items.nWYmIZxpsaveOPSR]{Rainbow
+        jellyfish
+        toxin}</p><p>@Compendium[pf-content.pf-items.ePFWD6C9bF5nmP6e]{Rainbow
+        scarab
+        shell}</p><p>@Compendium[pf-content.pf-items.dVAbcGOUwO9JLwW9]{Red
+        bedlam}</p><p>@Compendium[pf-content.pf-items.wuhgQAWnBKCx7TZn]{Red
+        tears}</p><p>@Compendium[pf-content.pf-items.CAHJuQPwSwsR9IEQ]{Riddleport
+        tea}</p><p>@Compendium[pf-content.pf-items.E7n9AvksqHAZz9Un]{Sassone
+        leaf
+        residue}</p><p>@Compendium[pf-content.pf-items.Q7bGySE0FsySgAhM]{Scholarblight}</p><p>@Compendium[pf-content.pf-items.RIVt149FcihT1UoV]{Shadow
+        essence}</p><p>@Compendium[pf-content.pf-items.S3iOxVtJlaD4PKO8]{Shamweed}</p><p>@Compendium[pf-content.pf-items.ln6iRzYmdQLcIOkZ]{Skinsap
+        extract}</p><p>@Compendium[pf-content.pf-items.KKd2g4XP4ewdofLL]{Slaver's
+        will}</p><p>@Compendium[pf-content.pf-items.8siYeXY8DXlnko4w]{Sloth's
+        bite}</p><p>@Compendium[pf-content.pf-items.9dnfwI56sq7icVQh]{Slow
+        nectar}</p><p>@Compendium[pf-content.pf-items.LAPVOhCCZwc22uwd]{Small
+        centipede
+        poison}</p><p>@Compendium[pf-content.pf-items.rGZQRZJNf8mdoSP8]{Smell of
+        fear}</p><p>@Compendium[pf-content.pf-items.cTqz2rR33xwBLhGi]{Snap
+        will}</p><p>@Compendium[pf-content.pf-items.6u9qTSkMK3a7FFP0]{Spellscorch}</p><p>@Compendium[pf-content.pf-items.nbihFWWcWI7XifJL]{Spidervine
+        poison}</p><p>@Compendium[pf-content.pf-items.Ogtkgv2XSuPhvWLb]{Starving
+        nettle}</p><p>@Compendium[pf-content.pf-items.Vn5BfM4MwNEkVbrO]{Striped
+        toadstool}</p><p>@Compendium[pf-content.pf-items.RjYdeh1XgTbSQqvb]{Styx
+        sap}</p><p>@Compendium[pf-content.pf-items.FOvqOoO6lMYHJnHw]{Swampseer
+        poison}</p><p>@Compendium[pf-content.pf-items.52EZVOm3cJ4ON0ud]{Sweetdream}</p><p>@Compendium[pf-content.pf-items.FkImyTnsDc6uV1ka]{Tears
+        of death}</p><p>@Compendium[pf-content.pf-items.KkZa3fPdurNQYD7V]{Tears
+        of
+        perfection}</p><p>@Compendium[pf-content.pf-items.B7h8rR2OHz1gSpAg]{Terinav
+        root}</p><p>@Compendium[pf-content.pf-items.Tuf66OHb32kvnXc1]{Third
+        eye}</p><p>@Compendium[pf-content.pf-items.ijykhGVNUWpJzpBK]{Thornapple}</p><p>@Compendium[pf-content.pf-items.J8ELYSJRptNnHl0y]{Tongue
+        twist}</p><p>@Compendium[pf-content.pf-items.VWsn2PbvuH78Zn6o]{Twilight
+        illness}</p><p>@Compendium[pf-content.pf-items.OgsegPACtQmdZRau]{Ungol
+        dust}</p><p>@Compendium[pf-content.pf-items.Ao2ANCfC7GXd5uCU]{Vampire's
+        kiss}</p><p>@Compendium[pf-content.pf-items.4PLKyuW8xAbMoxnn]{Vessel
+        between}</p><p>@Compendium[pf-content.pf-items.1UeN1hbkdVag3q4N]{Violet
+        venom}</p><p>@Compendium[pf-content.pf-items.D1axDeBhR1iqacCQ]{Whisperwound}</p><p>@Compendium[pf-content.pf-items.o2GFpm5TYkbLfnuQ]{Widow's
+        kiss}</p><p>@Compendium[pf-content.pf-items.cpw9urAPU3WIzuMv]{Witch-hunter's
+        sword}</p><p>@UUID[Compendium.pf1.items.Item.ribzueaayiedcene]{Wolfsbane}</p><p>@UUID[Compendium.pf1.items.Item.eappgyqtklhrtvnx]{Woundweal}</p><p>@Compendium[pf-content.pf-items.I2aUkvmWp9Rv8lkZ]{Wyvern
+        poison}</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

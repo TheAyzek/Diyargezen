@@ -1,0 +1,30 @@
+_id: KQ3Uq7cWdKSWuNlM
+_key: '!items!KQ3Uq7cWdKSWuNlM'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Tiller's Pendant
+system:
+  aura:
+    custom: true
+    school: illusion and transmutation
+  cl: 3
+  description:
+    value: >-
+      <p>This cluster of emeralds attached to a delicate golden clasp is
+      arranged in the likeness of a five-petaled blossom. Regardless of how it
+      is worn, it does not take up an item slot. As long as the pendant is
+      visible on the wearer's person, it grants a +4 competence bonus on
+      Disguise and Stealth checks to the wearer. In addition, once per day when
+      the command word is spoken, the emeralds take on the appearance of a
+      living flower, gaining the ability to magically imbue 2d4 freshly picked
+      berries so that each can provide a meal and cure 1 point of damage when
+      eaten, as per
+      goodberry.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, disguise self, goodberry</p>
+  price: 6400
+  sources:
+    - id: PZO1138
+  subType: wondrous
+type: equipment

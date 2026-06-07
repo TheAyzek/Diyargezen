@@ -1,0 +1,61 @@
+_id: nka5hM82x8dc7LDF
+_key: '!items!nka5hM82x8dc7LDF'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/sword-bastard.PNG
+name: Teralindar's Honor
+system:
+  actions:
+    - _id: om1om2h0j7bfxj32
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: teralindarsHonor
+  aura:
+    custom: true
+    school: conjuration and divination
+  baseTypes:
+    - Bastard Sword
+  cl: 13
+  description:
+    value: >-
+      <p>This +2 aberration-bane bastard sword is made of magically hardened
+      bronze and has the special purpose of killing aberrations and creatures
+      intrinsically tied to Xhamen-Dor (including seeded undead and the dormant
+      Star Seed). Upianshe's spirit can sense such foes within 60 feet, her bane
+      enchantment applies to them, and against them her critical hit multiplier
+      increases to x3. Finally, she can attempt Knowledge (dungeoneering) checks
+      as though she had 5 ranks in the skill (total +13
+      bonus).</p><p><strong>Base Item</strong>:
+      aberration-bane</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magical Arms and Armor, detect aberration, summon monster I</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 48535
+  showInQuickbar: false
+  sources:
+    - id: PZO90113
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 6
+type: weapon

@@ -1,0 +1,44 @@
+_id: pYfVb6A6AAQx3I70
+_key: '!items!pYfVb6A6AAQx3I70'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/equipment/waist/belt-buckle-gold.webp
+name: Belt of Mighty Hurling, Lesser
+system:
+  aura:
+    school: trs
+  changes:
+    - _id: 0xHl3FVg
+      formula: '2'
+      target: str
+      type: enh
+  cl: 8
+  description:
+    instructions: >-
+      <p>You must edit each thrown weapon attack on your actor to add the range
+      modifier and to alter the attack ability to strength.</p>
+    unidentified: >-
+      <p>This thick leather belt is buckled with a bright bronze clasp in the
+      shape of a fist.</p>
+    value: >-
+      <h3>Effect</h3><p>When worn, it grants its wearer a +2 enhancement bonus
+      to Strength and allows him to apply his Strength modifier as a bonus on
+      attack rolls instead of his Dexterity modifier when making ranged attacks
+      with thrown weapons. Also, the range increment of any weapon thrown by the
+      wearer gains a +10-foot bonus. Treat this Strength bonus as a temporary
+      ability bonus for the first 24 hours the belt is
+      worn.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      @UUID[Compendium.pf1.spells.Item.05i5rxwim12hwktu]{Bull's Strength},
+      @UUID[Compendium.pf1.spells.Item.6u2h8k11z8sadrxb]{Longshot};
+      <strong>Cost</strong> 7,000 gp</p>
+  price: 14000
+  slot: belt
+  sources:
+    - id: PZO1123
+      pages: '210'
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

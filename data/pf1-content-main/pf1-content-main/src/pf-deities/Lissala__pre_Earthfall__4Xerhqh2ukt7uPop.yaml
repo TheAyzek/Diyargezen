@@ -1,0 +1,42 @@
+_id: 4Xerhqh2ukt7uPop
+_key: '!journal!4Xerhqh2ukt7uPop'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Lissala (pre-Earthfall)
+pages:
+  - _id: JEyrBullBviCvVyf
+    _key: '!journal.pages!4Xerhqh2ukt7uPop.JEyrBullBviCvVyf'
+    _stats:
+      coreVersion: '12.331'
+    name: Lissala (pre-Earthfall)
+    sort: 0
+    text:
+      content: >-
+        <h1>Lissala</h1><h2>The Sihedron Scion</h2>@Source[PZO9267;pages=316]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Lissala">Lissala</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Other Deities<br /><strong>Areas of
+        Concern</strong> Obedience, reward of service, runes<br
+        /><strong>Domains</strong> Evil, Knowledge, Law, Nobility, Rune<br
+        /><strong>Subdomains</strong> Devil (Evil), Devil (Law), Hubris
+        (Nobility)*, Language, Leadership, Legislation (Law), Legislation
+        (Rune), Memory, Soverignty, Thought, Wards<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Whip<br /><strong>Symbol</strong> Sihedron<br
+        /><strong>Sacred Animal(s)</strong> Snake<br /><strong>Sacred
+        Color(s)</strong> Gold, green</p><h2>For Followers of
+        Lissala</h2><h3>Spells</h3><p>Lissalan Snake
+        Sigil</p><h3>Traits</h3><p>Loreseeker</p><h2>Unique Spell
+        Rules</h2>@Source[PZO9065;pages=75]<p><h3>Cleric/Warpriest</h3></p><p><em>Sepia
+        Snake Sigil can be prepared as a 3rd-level spell<br /><em>Explosive
+        Runes</em> can be prepared as a 3rd-level spell</em></p><h2>Unique
+        Summon Rules</h2>@Source[PZO9065;pages=75]<br /><strong>Summon Monster
+        VI</strong>: Advanced Kyton Evangelist - LE (extraplanar)<br
+        /><strong>Summon Monster VI</strong>: Dark Naga - LE
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

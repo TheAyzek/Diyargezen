@@ -1,0 +1,28 @@
+_id: W0y4bL2Ys3j0VEwX
+_key: '!items!W0y4bL2Ys3j0VEwX'
+_stats:
+  coreVersion: '12.331'
+folder: Ah9aHaDhwaQBVNcg
+img: icons/magic/fire/flame-burning-eye.webp
+name: Languages (Galemren)
+system:
+  description:
+    value: >-
+      <p><strong>Race</strong>: Galemren</p><hr /><p>Galemren begin play
+      speaking Common and Elven. Galemren with high Intelligence scores can
+      choose from the following: Celestial, Draconic, Gnoll, Gnome, Goblin, Orc,
+      and Sylvan.</p>
+  languages:
+    - common
+    - elven
+  sources:
+    - date: '2019'
+      pages: '8'
+      publisher: Paizo / Stranger Comics
+      title: Niobe
+  subType: racial
+  tags:
+    - Galemren
+    - Niobe
+  traitCategory: other
+type: feat

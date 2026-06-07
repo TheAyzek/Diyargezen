@@ -1,7 +1,7 @@
 """
 Universal HTML/Web Character Sheet Export
 Tum TTRPG sistemleri icin karakter kagidini HTML olarak export etme
-D&D 5e, Pathfinder 1e, VtM 5e, M&M 3e destegi
+D&D 5e, Pathfinder 1e, M&M 3e destegi
 """
 
 import json
@@ -223,7 +223,6 @@ tr:hover { background: rgba(233,69,96,0.05); }
 SYSTEM_THEMES = {
     "dnd5e": {"accent": "#e94560", "accent2": "#533483", "name": "D&D 5e"},
     "pathfinder1e": {"accent": "#e4a11b", "accent2": "#6b3a2a", "name": "Pathfinder 1e"},
-    "vtm5e": {"accent": "#8b0000", "accent2": "#1a0a0a", "name": "Vampire: The Masquerade 5e"},
     "mm3e": {"accent": "#1e90ff", "accent2": "#0a2a5e", "name": "Mutants & Masterminds 3e"},
 }
 
@@ -483,95 +482,6 @@ def _generate_pathfinder1e_html(character: Dict[str, Any]) -> str:
 
 
 # ============================================================================
-# VtM 5e HTML Export
-# ============================================================================
-
-def _generate_vtm5e_html(character: Dict[str, Any]) -> str:
-    """VtM 5e karakter kagidi HTML"""
-    name = character.get("name", "Isimsiz")
-    clan = character.get("clan", "?")
-    generation = character.get("generation", 13)
-    predator = character.get("predator_type", "?")
-
-    html = f"""
-    <div class="header">
-        <h1>{name}</h1>
-        <div class="subtitle">{clan} | Nesil {generation} | {predator}</div>
-    </div>
-    """
-
-    # Temel bilgiler
-    html += """<div class="section"><h2>Temel Bilgiler</h2><div class="info-grid">"""
-    for key, val in [
-        ("Klan", clan), ("Nesil", generation),
-        ("Predator Type", predator),
-        ("Blood Potency", character.get("blood_potency", 1)),
-        ("Hunger", character.get("hunger", 1)),
-        ("Humanity", character.get("humanity", 7)),
-    ]:
-        html += f'<div class="info-item"><span class="key">{key}</span><span class="val">{val}</span></div>'
-    html += "</div></div>"
-
-    # Attributes
-    attrs = character.get("attributes", {})
-    if attrs:
-        # VtM attributes are grouped: Physical, Social, Mental
-        groups = {
-            "Fiziksel": ["Strength", "Dexterity", "Stamina"],
-            "Sosyal": ["Charisma", "Manipulation", "Composure"],
-            "Zihinsel": ["Intelligence", "Wits", "Resolve"],
-        }
-        for group_name, attr_list in groups.items():
-            html += f"""<div class="section"><h2>{group_name} Nitelikler</h2><div class="stat-grid">"""
-            for attr in attr_list:
-                val = attrs.get(attr, 0)
-                dots = "●" * val + "○" * (5 - val)
-                html += f'''<div class="stat-box">
-                    <div class="label">{attr}</div>
-                    <div class="value" style="font-size:1.2em">{dots}</div>
-                    <div class="modifier">{val}</div>
-                </div>'''
-            html += "</div></div>"
-
-    # Skills
-    skills = character.get("skills", {})
-    if skills:
-        html += """<div class="section"><h2>Beceriler</h2>
-        <table><tr><th>Beceri</th><th>Puan</th></tr>"""
-        for skill, val in sorted(skills.items()):
-            if val > 0:
-                dots = "●" * val + "○" * (5 - val)
-                html += f"<tr><td>{skill}</td><td>{dots} ({val})</td></tr>"
-        html += "</table></div>"
-
-    # Disciplines
-    disciplines = character.get("disciplines", {})
-    if disciplines:
-        html += """<div class="section"><h2>Disiplinler</h2><div class="stat-grid">"""
-        for disc, level in disciplines.items():
-            dots = "●" * level + "○" * (5 - level)
-            html += f'''<div class="stat-box">
-                <div class="label">{disc}</div>
-                <div class="value" style="font-size:1.2em">{dots}</div>
-                <div class="modifier">{level}</div>
-            </div>'''
-        html += "</div></div>"
-
-    # Health & Willpower
-    health = character.get("health", 7)
-    willpower = character.get("willpower", 0)
-    html += """<div class="section"><h2>Saglik & Irade Gucu</h2><div class="stat-grid">"""
-    for label, val in [("Health", health), ("Willpower", willpower)]:
-        html += f'''<div class="stat-box">
-            <div class="label">{label}</div>
-            <div class="value">{val}</div>
-        </div>'''
-    html += "</div></div>"
-
-    return html
-
-
-# ============================================================================
 # M&M 3e HTML Export
 # ============================================================================
 
@@ -702,7 +612,6 @@ def export_character_html(character: Dict[str, Any], filename: Optional[str] = N
     generators = {
         "dnd5e": _generate_dnd5e_html,
         "pathfinder1e": _generate_pathfinder1e_html,
-        "vtm5e": _generate_vtm5e_html,
         "mm3e": _generate_mm3e_html,
     }
     generator = generators.get(system_key, _generate_dnd5e_html)
@@ -734,8 +643,6 @@ def _normalize_system(system: str) -> str:
         return "dnd5e"
     if s in ["pathfinder1e", "pathfinder", "pf1e"]:
         return "pathfinder1e"
-    if s in ["vtm5e", "vampire", "vampirethemasquerade5e", "vampirethemasquerade"]:
-        return "vtm5e"
     if s in ["mm3e", "mutantsandmasterminds3e", "mutantsandmasterminds", "m&m"]:
         return "mm3e"
     return "dnd5e"

@@ -1,0 +1,24 @@
+_id: sqGvHcARo6pEagtx
+_key: '!items!sqGvHcARo6pEagtx'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/feats/run.jpg
+name: Linebreaker
+system:
+  contextNotes:
+    - target: attack
+      text: +[[20]] ft. bonus to base speed when charging.
+    - target: cmb
+      text: +[[2]] bonus to Bull Rush and Overrun.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.amrtqcyc53je6wbt]{Linebreaker}</p><p>You
+      gain a +20 foot bonus to your base speed when charging and a +2 bonus on
+      combat maneuver checks made to bull rush or overrun.</p>
+  duration:
+    units: minute
+    value: '@item.level'
+  level: 1
+  subType: spell
+type: buff

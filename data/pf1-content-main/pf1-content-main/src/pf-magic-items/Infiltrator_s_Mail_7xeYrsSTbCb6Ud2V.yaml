@@ -1,0 +1,42 @@
+_id: 7xeYrsSTbCb6Ud2V
+_key: '!items!7xeYrsSTbCb6Ud2V'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/scale-mail.png
+name: Infiltrator's Mail
+system:
+  armor:
+    acp: 4
+    dex: 3
+    enh: 2
+    material:
+      base:
+        value: steel
+    value: 5
+  aura:
+    custom: true
+    school: transmutation see text
+  baseTypes:
+    - Scale Mail
+  cl: 7
+  description:
+    value: >-
+      <p>This dull black suit of +2 scale mail does not impose an armor check
+      penalty on the wearer's Stealth checks, though other armor check penalties
+      apply as normal. Additionally, infiltrator's mail reacts to detect magic
+      as though it were nonmagical and, when worn, extends this effect to all
+      other magic items worn or held by the wearer unless the viewer uses
+      identify or a similar effect while examining the items.</p><p><strong>Base
+      Item</strong>: +2 scale
+      mail</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, cat's grace, magic aura</p>
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 19650
+  sources:
+    - id: PZO9440
+  spellFailure: 25
+  weight:
+    value: 30
+type: equipment

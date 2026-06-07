@@ -1,0 +1,65 @@
+_id: pVa7R9JYQujISbmQ
+_key: '!items!pVa7R9JYQujISbmQ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/quarterstaff.png
+name: Quarterstaff of Contemplation
+system:
+  actions:
+    - _id: 89rbb2yurhsuyh9x
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: quarterstaffOfContemplation
+  aura:
+    school: trs
+  baseTypes:
+    - Quarterstaff
+  cl: 12
+  description:
+    value: >-
+      <p>This wooden pole is plain, save that green dragon scales adorn to its
+      length. Treated as a +2 quarterstaff, it is a favorite of Irori's
+      wandering followers. In the hands of a worshiper of Irori, a quarterstaff
+      of contemplation gains the ki intensifying weapon special ability. If the
+      wielder is a follower of Irori and possesses the wholeness of body class
+      feature, he can spend a full-round action to meditate using the staff as a
+      focus. Treat this as using wholeness of body at the cost of 1 ki point
+      instead of 2.</p><p><strong>Base Item</strong>: 
+      quarterstaff</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, creator must be a 7th-level monk</p>
+  enh: 2
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: wood
+  price: 34800
+  properties:
+    dbl: true
+    mnk: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9268
+  weaponGroups:
+    - double
+    - monk
+  weight:
+    value: 4
+type: weapon

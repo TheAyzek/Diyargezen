@@ -1,0 +1,31 @@
+_id: zSF1UhYJp5EHyESk
+_key: '!items!zSF1UhYJp5EHyESk'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Swordlord's Cloak +2
+system:
+  aura:
+    custom: true
+    school: abjuration and divination
+  cl: 5
+  description:
+    value: >-
+      <p>This exotic, fur-trimmed cloak is decorated with golden filigree. In
+      addition to offering magical protection, the cloak guides a skilled
+      wearer's blade to block attacks. Such cloaks are often commissioned by
+      Aldori Academy graduates when they attain swordlord status. A swordlord's
+      cloak acts as a cloak of resistance. In addition, whenever the wearer is
+      benefiting from the defensive parry class feature, he receives an insight
+      bonus to his AC equal to the cloak's resistance
+      bonus.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, anticipate peril, resistance</p>
+  price: 16000
+  slot: shoulders
+  sources:
+    - id: PZO1138
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

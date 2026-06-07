@@ -1,0 +1,29 @@
+_id: HpCEFOaeHy5qdhUl
+_key: '!items!HpCEFOaeHy5qdhUl'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/minor-green.jpg
+name: Vomit Capsule
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>These small capsules
+      consist of a concentrated mix of nauseainducing herbs. To use a capsule,
+      you bite down and ingest its contents, which almost immediately cause you
+      to projectile vomit. The vomiting lasts 1 full round, during which you can
+      take no other actions. The following round you recover fully, and suffer
+      no other ill effects. These capsules are most often used by rogues working
+      in teams to create distractions and spectacles in order to draw people's
+      attention away from their activities, as well as by those interested in
+      faking illness, such as pugilists trying to throw fights or criminals
+      seeking to create chaos during an
+      arrest.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      15</p>
+  price: 12
+  sources:
+    - id: PZO1129
+      pages: '208'
+  subType: misc
+  tags:
+    - Alchemical Tools
+type: consumable

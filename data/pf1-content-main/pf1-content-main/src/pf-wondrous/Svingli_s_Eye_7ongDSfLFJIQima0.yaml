@@ -1,0 +1,36 @@
+_id: 7ongDSfLFJIQima0
+_key: '!items!7ongDSfLFJIQima0'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Svingli's Eye
+system:
+  aura:
+    school: div
+  cl: 10
+  description:
+    value: >-
+      <p>Unlike the heavy cast-brass mariner's astrolabes normally used at sea,
+      this astrolabe is of the more common type found on land (Pathfinder RPG
+      Advanced Player's Guide 185), made of flat discs of brass. The famed
+      navigator-astrologer Svingli of Morm, a drowned settlement of old Lirgen,
+      was said to have sacrificed her eye to the instrument to grant her
+      knowledge of things beyond mortal sight, thus giving the astrolabe its
+      name.  In addition to an astrolabe's normal +2 circumstance bonus, grants
+      a further +2 competence bonus on Knowledge (geography), Profession
+      (sailor), and Survival checks when used to navigate on land or sea. Once
+      per day, the user can make a DC 20 Perception check while using as a move
+      action to catch a glimpse of how things really are for 1 round, as if with
+      a true seeing spell. While using the astrolabe's true seeing ability, the
+      user can also see through concealment caused by smoke or fog and gains a
+      +10 competence bonus on Perception checks to spot hidden or disguised
+      creatures or objects.<h3>Requirements</h3><p>Craft Wondrous Item, know
+      direction, true seeing</p>
+  price: 28800
+  sources:
+    - id: PZO9056
+  subType: wondrous
+  weight:
+    value: 6
+type: equipment

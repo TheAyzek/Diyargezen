@@ -1,0 +1,282 @@
+_id: qcwDLhrlsNgpGINK
+_key: '!tables!qcwDLhrlsNgpGINK'
+_stats:
+  coreVersion: '12.331'
+description: '<p>* Unique creature: If this result is rolled a second time, roll again.</p>'
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/altar-hidden.webp
+name: Jungle City Random Encounters
+replacement: true
+results:
+  - _id: Tpd0iTFzeeG5Qd0j
+    _key: '!tables.results!qcwDLhrlsNgpGINK.Tpd0iTFzeeG5Qd0j'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 6
+    text: '[[1d4]] Dire Bats [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: 4XOwaygTZ7WKyLEl
+    _key: '!tables.results!qcwDLhrlsNgpGINK.4XOwaygTZ7WKyLEl'
+    img: icons/svg/d20-black.svg
+    range:
+      - 7
+      - 10
+    text: '[[1d4]] Leopards [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: xiveHEJ95loC0NbQ
+    _key: '!tables.results!qcwDLhrlsNgpGINK.xiveHEJ95loC0NbQ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 11
+      - 13
+    text: 1 Tiger [CR 4]
+    type: text
+    weight: 1
+  - _id: zDk2BfIod1xh6S4q
+    _key: '!tables.results!qcwDLhrlsNgpGINK.zDk2BfIod1xh6S4q'
+    img: icons/svg/d20-black.svg
+    range:
+      - 14
+      - 15
+    text: 1 Basilisk [CR 5]
+    type: text
+    weight: 1
+  - _id: ffD5xNrxndWPWlZr
+    _key: '!tables.results!qcwDLhrlsNgpGINK.ffD5xNrxndWPWlZr'
+    img: icons/svg/d20-black.svg
+    range:
+      - 16
+      - 19
+    text: '[[1d6]] Boars [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: yfmbrfEFDZl53anU
+    _key: '!tables.results!qcwDLhrlsNgpGINK.yfmbrfEFDZl53anU'
+    img: icons/svg/d20-black.svg
+    range:
+      - 20
+      - 23
+    text: '[[1d6]] Crocodiles [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: 9a8rAU7kVegNIdg3
+    _key: '!tables.results!qcwDLhrlsNgpGINK.9a8rAU7kVegNIdg3'
+    img: icons/svg/d20-black.svg
+    range:
+      - 24
+      - 27
+    text: '[[1d4]] Dire Apes [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: UviSoqBHawIqvWFR
+    _key: '!tables.results!qcwDLhrlsNgpGINK.UviSoqBHawIqvWFR'
+    img: icons/svg/d20-black.svg
+    range:
+      - 28
+      - 30
+    text: 1 Gibbering Mouther [CR 5]
+    type: text
+    weight: 1
+  - _id: FglmrX1GCxryq9ET
+    _key: '!tables.results!qcwDLhrlsNgpGINK.FglmrX1GCxryq9ET'
+    img: icons/svg/d20-black.svg
+    range:
+      - 31
+      - 32
+    text: 1 Mummy [CR 5]
+    type: text
+    weight: 1
+  - _id: WgUzEN2POwEmOyBH
+    _key: '!tables.results!qcwDLhrlsNgpGINK.WgUzEN2POwEmOyBH'
+    img: icons/svg/d20-black.svg
+    range:
+      - 33
+      - 36
+    text: Rival Adventurers [CR Varies]
+    type: text
+    weight: 1
+  - _id: c8u7bQoet73puBYw
+    _key: '!tables.results!qcwDLhrlsNgpGINK.c8u7bQoet73puBYw'
+    img: icons/svg/d20-black.svg
+    range:
+      - 37
+      - 40
+    text: '[[2d4]] Boggards [AVG CR 6]'
+    type: text
+    weight: 1
+  - _id: GwFcvNojKLmcvMIE
+    _key: '!tables.results!qcwDLhrlsNgpGINK.GwFcvNojKLmcvMIE'
+    img: icons/svg/d20-black.svg
+    range:
+      - 41
+      - 46
+    text: '[[1d6]] Keches [AVG CR 6]'
+    type: text
+    weight: 1
+  - _id: UsNolKWsVByGJM02
+    _key: '!tables.results!qcwDLhrlsNgpGINK.UsNolKWsVByGJM02'
+    img: icons/svg/d20-black.svg
+    range:
+      - 47
+      - 49
+    text: '[[1d6]] Pteranodons [AVG CR 6]'
+    type: text
+    weight: 1
+  - _id: 06lsdUxRk8CNFbjE
+    _key: '!tables.results!qcwDLhrlsNgpGINK.06lsdUxRk8CNFbjE'
+    img: icons/svg/d20-black.svg
+    range:
+      - 50
+      - 51
+    text: '[[1d6]] Shadows [AVG CR 6]'
+    type: text
+    weight: 1
+  - _id: LCy940nygN5EHlAX
+    _key: '!tables.results!qcwDLhrlsNgpGINK.LCy940nygN5EHlAX'
+    img: icons/svg/d20-black.svg
+    range:
+      - 52
+      - 55
+    text: '[[2d6]] Troglodytes [AVG CR 6]'
+    type: text
+    weight: 1
+  - _id: YpPnEvGFBLI4jJUK
+    _key: '!tables.results!qcwDLhrlsNgpGINK.YpPnEvGFBLI4jJUK'
+    img: icons/svg/d20-black.svg
+    range:
+      - 56
+      - 57
+    text: '[[1d6]] Wights [AVG CR 6]'
+    type: text
+    weight: 1
+  - _id: nu3rwROhOPK5EHW2
+    _key: '!tables.results!qcwDLhrlsNgpGINK.nu3rwROhOPK5EHW2'
+    img: icons/svg/d20-black.svg
+    range:
+      - 58
+      - 60
+    text: 1 Chimera [CR 7]
+    type: text
+    weight: 1
+  - _id: mCat7sdJXKuBwAvT
+    _key: '!tables.results!qcwDLhrlsNgpGINK.mCat7sdJXKuBwAvT'
+    img: icons/svg/d20-black.svg
+    range:
+      - 61
+      - 64
+    text: Guard Patrol [CR Varies]
+    type: text
+    weight: 1
+  - _id: geJRYpyUqAM33vuA
+    _key: '!tables.results!qcwDLhrlsNgpGINK.geJRYpyUqAM33vuA'
+    img: icons/svg/d20-black.svg
+    range:
+      - 65
+      - 67
+    text: '[[1d6]] Venomous Snake Swarm [AVG CR 7]'
+    type: text
+    weight: 1
+  - _id: 1yBOGv6P0PFy3EdU
+    _key: '!tables.results!qcwDLhrlsNgpGINK.1yBOGv6P0PFy3EdU'
+    img: icons/svg/d20-black.svg
+    range:
+      - 68
+      - 71
+    text: '[[2d4]] Charau-Ka Thugs [AVG CR 8]'
+    type: text
+    weight: 1
+  - _id: 1vHuv5RdnCCugaYM
+    _key: '!tables.results!qcwDLhrlsNgpGINK.1vHuv5RdnCCugaYM'
+    img: icons/svg/d20-black.svg
+    range:
+      - 72
+      - 73
+    text: '[[1d6]] Degenerate Serpentfolk [AVG CR 8]'
+    type: text
+    weight: 1
+  - _id: 4N5NUlSYGN7j6bpn
+    _key: '!tables.results!qcwDLhrlsNgpGINK.4N5NUlSYGN7j6bpn'
+    img: icons/svg/d20-black.svg
+    range:
+      - 74
+      - 78
+    text: '[[1d8]] Deinonychus [AVG CR 8]'
+    type: text
+    weight: 1
+  - _id: z6XJyfdw8fuzCsPE
+    _key: '!tables.results!qcwDLhrlsNgpGINK.z6XJyfdw8fuzCsPE'
+    img: icons/svg/d20-black.svg
+    range:
+      - 79
+      - 82
+    text: '[[1d4]] Girallons [AVG CR 8]'
+    type: text
+    weight: 1
+  - _id: Anr6ybxXZlK7jg0x
+    _key: '!tables.results!qcwDLhrlsNgpGINK.Anr6ybxXZlK7jg0x'
+    img: icons/svg/d20-black.svg
+    range:
+      - 83
+      - 86
+    text: '[[1d4]] Jungle Mantises [AVG CR 8]'
+    type: text
+    weight: 1
+  - _id: MKe6eIjnkfz4cjbu
+    _key: '!tables.results!qcwDLhrlsNgpGINK.MKe6eIjnkfz4cjbu'
+    img: icons/svg/d20-black.svg
+    range:
+      - 87
+      - 89
+    text: '[[1d4]] Camulatz [AVG CR 9]'
+    type: text
+    weight: 1
+  - _id: DsgpOoKDI3XUScbl
+    _key: '!tables.results!qcwDLhrlsNgpGINK.DsgpOoKDI3XUScbl'
+    img: icons/svg/d20-black.svg
+    range:
+      - 90
+      - 91
+    text: Mokele-mbembe (unique creature) [CR 9]
+    type: text
+    weight: 1
+  - _id: yM4atA27Qc1bvjDy
+    _key: '!tables.results!qcwDLhrlsNgpGINK.yM4atA27Qc1bvjDy'
+    img: icons/svg/d20-black.svg
+    range:
+      - 92
+      - 94
+    text: Sarcosuchus (unique creature) [CR 9]
+    type: text
+    weight: 1
+  - _id: soS9D0AOu4mBCTsO
+    _key: '!tables.results!qcwDLhrlsNgpGINK.soS9D0AOu4mBCTsO'
+    img: icons/svg/d20-black.svg
+    range:
+      - 95
+      - 97
+    text: '[[1d8]] Megapiranha Swarms [AVG CR 10]'
+    type: text
+    weight: 1
+  - _id: nyWRaUI7lMU9SerU
+    _key: '!tables.results!qcwDLhrlsNgpGINK.nyWRaUI7lMU9SerU'
+    img: icons/svg/d20-black.svg
+    range:
+      - 98
+      - 99
+    text: Yog’oltha (unique creature) [CR 11]
+    type: text
+    weight: 1
+  - _id: sZsYYFPDgycmUSp6
+    _key: '!tables.results!qcwDLhrlsNgpGINK.sZsYYFPDgycmUSp6'
+    img: icons/svg/d20-black.svg
+    range:
+      - 100
+      - 100
+    text: Green God (unique creature) [CR 13]
+    type: text
+    weight: 1
+sort: 4200000

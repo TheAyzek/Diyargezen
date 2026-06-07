@@ -1,0 +1,26 @@
+_id: YBkXMjJpey2TJk08
+_key: '!items!YBkXMjJpey2TJk08'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/bolt.PNG
+name: Mage Shot, Electricity
+system:
+  aura:
+    school: evo
+  cl: 6
+  description:
+    value: >-
+      <p>When propelled from a firearm, this +1 alchemical paper cartridge
+      changes the damage to electricity damage. If the target takes electricity
+      damage from the cartridge, it must succeed at a DC 14 Fortitude saving
+      throw or be dazed for 1 round.</p><p><strong>Base Item</strong>:
+      alchemical paper
+      cartridge</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, lightning bolt</p>
+  equipped: false
+  extraType: gunBullet
+  price: 178
+  sources:
+    - id: PZO1136
+  subType: ammo
+type: loot

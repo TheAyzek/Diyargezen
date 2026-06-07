@@ -1,0 +1,35 @@
+_id: K0FQ2hhAZhhCMD80
+_key: '!items!K0FQ2hhAZhhCMD80'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Flying Platform
+system:
+  aura:
+    school: trs
+  cl: 12
+  description:
+    value: >-
+      <p>This sturdy, 10-foot-by-10-foot mithral platform bears five shifting,
+      white runes of Auran incantations related to clouds and swift travel. It
+      functions identically to a carpet of flying, except it requires periodic
+      recharging to maintain power. The device can hold up to 5 charges,
+      depleting them at a rate of 1 charge for every hour or partial hour of
+      continuous use. The charges can be restored by casting overland flight
+      onto the runes, which restores 1 charge per casting.  When in operation, a
+      flying platform also reduces the effect of rushing wind upon those
+      standing on it, producing an alter winds effect to decrease the wind's
+      intensity by one step. A flying platform can normally carry 800 pounds at
+      a speed of 40 feet, but it can carry up to twice this amount with a
+      reduced speed of 30 feet. A flying platform can hover without need for a
+      Fly check, and grants a +5 bonus on any other Fly checks made to operate
+      it. It has hardness 10 and 60 hit points.</p><h3>Requirements</h3><p>Craft
+      Wondrous Item, alter winds, overland flight</p>
+  price: 38000
+  sources:
+    - id: PZO9083
+  subType: wondrous
+  weight:
+    value: 80
+type: equipment

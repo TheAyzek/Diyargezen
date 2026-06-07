@@ -1,0 +1,26 @@
+_id: fGMcUBbuNvzQgxu7
+_key: '!items!fGMcUBbuNvzQgxu7'
+_stats:
+  coreVersion: '12.331'
+folder: 52jofiLqjkyFLxLL
+img: icons/equipment/finger/ring-crown-teal-gold.webp
+name: Paper Flower
+system:
+  aura:
+    school: abj
+  cl: 3
+  description:
+    value: >-
+      <p>This delicate example of papercraft is often given to a paramour, with
+      the promise that the love of the presenter will protect the recipient. A
+      paper flower is worn behind the ear. For 24 hours, the first creature to
+      directly attack the wearer (even with a targeted spell) must succeed at a
+      DC 12 Will saving throw or be unable to follow through with the attack (as
+      per sanctuary).</p><h3>Requirements</h3><p>Craft Wondrous Item, sanctuary,
+      status</p>
+  price: 800
+  slot: headband
+  sources:
+    - id: PZO9476
+  subType: wondrous
+type: equipment

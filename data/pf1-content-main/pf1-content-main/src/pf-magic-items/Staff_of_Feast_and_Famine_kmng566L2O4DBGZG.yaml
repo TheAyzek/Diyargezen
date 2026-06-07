@@ -1,0 +1,29 @@
+_id: kmng566L2O4DBGZG
+_key: '!items!kmng566L2O4DBGZG'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Staff of Feast and Famine
+system:
+  aura:
+    school: trs
+  cl: 8
+  description:
+    value: >-
+      <p>Leaves sprout from this wooden staff, some green and some black. When
+      the wielder uses the staff, he plucks one of the leaves: a green leaf to
+      provide sustenance or a black leaf to cause hunger or thirst. The staff
+      allows the use of the following spells: • Create water (1 charge)   •
+      Goodberry (1 charge)   • Purify food and drink (1 charge)   • Cup of dust
+      (2 charges; Advanced Player's Guide)   • Feast of ashes (2 charges;
+      Advanced Player's
+      Guide.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Staff, create water, cup of dust, feast of ashes, goodberry, purify food
+      and drink</p>
+  price: 20800
+  sources:
+    - id: PZO1123
+  subType: staff
+  weight:
+    value: 5
+type: consumable

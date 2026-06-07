@@ -1,0 +1,28 @@
+_id: DkEbaomGwBA17hwu
+_key: '!items!DkEbaomGwBA17hwu'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Amulet of Primal Mastery
+system:
+  aura:
+    school: evo
+  cl: 17
+  description:
+    value: >-
+      <p>The dark green orb on this silver necklace is covered in what looks
+      like thorns, but it's not sharp or painful to the touch. While wearing
+      this amulet, whenever you cast a spell that triggers a primal magic event,
+      roll d% twice when generating the result. You may pick which of the two
+      results actually occurs. Additionally, you gain a +2 bonus on all saving
+      throws to resist primal magic events. This bonus doesn't stack with other
+      bonuses on saves to resist primal magic
+      events.</p><h3>Requirements</h3><p>Craft Wondrous Item, miracle, crafter
+      must be an oracle with the spellscar mystery</p>
+  price: 24200
+  slot: neck
+  sources:
+    - id: PZO9543
+  subType: wondrous
+type: equipment

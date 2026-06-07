@@ -1,0 +1,44 @@
+_id: YVJsIHmx7LM0vjis
+_key: '!journal!YVJsIHmx7LM0vjis'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 6xAF0VmbLWU6dblG
+name: 2.02.1.5. Total Defense
+pages:
+  - _id: hypUpWJVjbzXvbLA
+    _key: '!journal.pages!YVJsIHmx7LM0vjis.hypUpWJVjbzXvbLA'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.02.1.5. Total Defense
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.VZCpOrg3jCyNaYeg]{2.02.
+        Actions in
+        Combat}</p><ul><li><p>@Compendium[pf-content.pf-rules.rBQpOuMH0B3O44Da]{2.02.1.
+        Standard
+        Actions}</p><ul><li>@Compendium[pf-content.pf-rules.PsEv51WUo7p8GpBc]{2.02.1.1.
+        Attack}</li><li>@Compendium[pf-content.pf-rules.r0ymFTNYo4FzlMSq]{2.02.1.2.
+        Activate Magic
+        Item}</li><li>@Compendium[pf-content.pf-rules.qm7mqCXwfpA2EM6w]{2.02.1.3.
+        Cast a
+        Spell}</li><li>@Compendium[pf-content.pf-rules.QjHgjK8yLzdgS9C2]{2.02.1.4.
+        Start/Complete Full-Round
+        Action}</li><li><strong>@Compendium[pf-content.pf-rules.YVJsIHmx7LM0vjis]{2.02.1.5.
+        Total
+        Defense}</strong></li><li>@Compendium[pf-content.pf-rules.1gHRLA4nwxDAlhkT]{2.02.1.6.
+        Use Special Ability}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=185]</p><p>You can defend yourself as a
+        standard action. You get a +4 dodge bonus to your AC for 1 round. Your
+        AC improves at the start of this action. You can’t combine total defense
+        with fighting defensively or with the benefit of the Combat Expertise
+        feat. You can’t make attacks of opportunity while using total
+        defense.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

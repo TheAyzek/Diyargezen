@@ -1,0 +1,49 @@
+_id: UoLaDF5vw3JDmCwJ
+_key: '!journal!UoLaDF5vw3JDmCwJ'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Barbariccia
+pages:
+  - _id: e3l9rONq2bMRX6Qf
+    _key: '!journal.pages!UoLaDF5vw3JDmCwJ.e3l9rONq2bMRX6Qf'
+    _stats:
+      coreVersion: '12.331'
+    name: Barbariccia
+    sort: 0
+    text:
+      content: >-
+        <h1>Barbariccia</h1><h2>The Fearsome
+        Father</h2>@Source[PZO9267;pages=326] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Barbariccia">Barbariccia</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Malebranche<br /><strong>Areas of
+        Concern</strong> Fecundity, predators, slaughter<br
+        /><strong>Domains</strong> Animal, Evil, Law, Plant<br
+        /><strong>Subdomains</strong> Devil (Evil), Devil (Law), Fear, Fur,
+        Growth<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Spiked gauntlet<br
+        /><strong>Symbol</strong> Predator jaws<br /><strong>Sacred
+        Animal(s)</strong> Leopard<br /><strong>Sacred Color(s)</strong> Black,
+        orange</p><h3>Obedience</h3><p>Use the harvested teeth or claws of a
+        fearsome predator to shred the flesh of a creature you recently killed.
+        Gain a +4 profane bonus on saving throws against force
+        effects.</p><h2>Boons -
+        Malebranche</h2>@Source[PZO1139;pages=122]<p>Malebranche are horned
+        devils transformed so as to conquer a mortal world in Hell's name. Many
+        malebranche exist in Hell's ranks, and the 12 detailed below are merely
+        the best known.</p><p> Malebranche occupy a tier of power just below
+        infernal dukes. All malebranche are lawful evil and range in power from
+        CR 21 to CR 25. The boons they grant are less complex than those granted
+        by archdevils, manifesting as spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>summon nature's ally II</em><br
+        /><strong>2</strong>: <em>summon nature's ally IV</em><br
+        /><strong>3</strong>: <em>summon nature's ally VI</em></p><h2>For
+        Followers of Barbariccia</h2><h3>Feats</h3><p><em>Hellish
+        Shackles</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

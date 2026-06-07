@@ -1,0 +1,29 @@
+_id: 4WgjWAZDRIkTY9cG
+_key: '!journal!4WgjWAZDRIkTY9cG'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: ywdNAUiVSklAOMDs
+name: The Sickness
+pages:
+  - _id: 8UJbKBG94UVu7Ht0
+    _key: '!journal.pages!4WgjWAZDRIkTY9cG.8UJbKBG94UVu7Ht0'
+    _stats:
+      coreVersion: '12.331'
+    name: The Sickness
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Sickness</strong> (neutral evil, Constitution) represents
+        plague, pestilence, famine, and disease. It can also indicate corruption
+        of the soul or of a multitude of souls. If misaligned, The Sickness
+        represents either great health or a chance to stop such a
+        disaster.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Sickness.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

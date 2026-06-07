@@ -1,0 +1,28 @@
+_id: MRTYJqM9OzjnfDOH
+_key: '!journal!MRTYJqM9OzjnfDOH'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: B8yeiGCU6nhcjOzu
+name: The Carnival
+pages:
+  - _id: 9p0rkE8rf4Kn2ZQY
+    _key: '!journal.pages!MRTYJqM9OzjnfDOH.9p0rkE8rf4Kn2ZQY'
+    _stats:
+      coreVersion: '12.331'
+    name: The Carnival
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Carnival</strong> (chaotic neutral, Wisdom) is the card
+        of illusions and false dreams. This card can heighten the power of the
+        arcane, but depending on such whimsical forces can be risky. For others,
+        this card depicts imprudent plans or unrealistic ambitions.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Carnival.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

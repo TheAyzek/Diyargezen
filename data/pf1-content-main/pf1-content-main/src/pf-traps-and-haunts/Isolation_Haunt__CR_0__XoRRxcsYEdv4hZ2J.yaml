@@ -1,0 +1,39 @@
+_id: XoRRxcsYEdv4hZ2J
+_key: '!actors!XoRRxcsYEdv4hZ2J'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Isolation Haunt (CR 0)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes: null
+  details:
+    alignment: NE
+    area: 30-ft. radius
+    biography: {}
+    cl: 5
+    cr:
+      base: —
+    destruction: >-
+      A boisterous celebration of friendship lasting at least 1 hour at the site
+      of the haunt.
+    effect: >-
+      Each targets believes it is alone in the world; it cannot perceive,
+      target, nor interact with anyone it considers an ally. This is a
+      mind-affecting effect. A creature that succeeds at a DC 12 Will save
+      negates this effect.
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Construct Handbook pg.
+        49</p><h3>Description</h3><p><strong>Nethys Note</strong>: See the
+        Haunted Construct monster entry.</p>
+    notice: >-
+      Perception DC 20 (to notice ambient sound disappear and other sounds grow
+      quiet)
+    reset: 1 day
+    trigger: proximity
+type: haunt

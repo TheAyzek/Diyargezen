@@ -1,0 +1,64 @@
+_id: PeVf6sSLmjI8UABW
+_key: '!items!PeVf6sSLmjI8UABW'
+_stats:
+  coreVersion: '12.343'
+img: icons/weapons/swords/sword-katana.webp
+name: Blade of the Sword-Saint
+system:
+  actions:
+    - _id: 9byzejz7rb7iqg4h
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: bladeoftheSwordsaint
+  aura:
+    school: trs
+  baseTypes:
+    - Katana
+  cl: 8
+  description:
+    value: >-
+      <p>This exquisitely forged katana is the result of painstaking attention
+      and craftsmanship by one who is dedicated to mastering swordplay in its
+      highest form.  A blade of the sword-saint is a +3 ki intensifying katana.
+      In the hands of a monk, it becomes an instrument of deadly utility. In
+      addition to its more common properties, this weapon can be employed as
+      though the wielder were unarmed: the wielder benefits from feats such as
+      Deflect Arrows or Snatch Arrows (although he can redirect attacks but not
+      catch them if he has no hands free), and a monk treats the blade as a monk
+      weapon for use in his flurry of blows.</p><p><strong>Base Item</strong>:
+      ki intensifying
+      katana</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, creator must be a monk</p>
+  enh: 3
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 75350
+  properties:
+    dea: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 6
+type: weapon

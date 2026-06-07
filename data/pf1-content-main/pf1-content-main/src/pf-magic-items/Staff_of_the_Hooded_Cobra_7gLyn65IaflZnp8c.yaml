@@ -1,0 +1,68 @@
+_id: 7gLyn65IaflZnp8c
+_key: '!items!7gLyn65IaflZnp8c'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/quarterstaff.png
+name: Staff of the Hooded Cobra
+system:
+  actions:
+    - _id: afqkebrclhgp70k6
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: staffOfTheHoodedCobra
+  aura:
+    custom: true
+    school: abjuration and necromancy
+  baseTypes:
+    - Quarterstaff
+  cl: 7
+  description:
+    value: >-
+      <p>Carved from a single piece of darkwood and topped by the head of a
+      hooded cobra, this staff functions as a +3 defending darkwood
+      quarterstaff. Additionally, once per day when the wielder hits a creature
+      with the staff, she can cause the carved cobra head to bite her target.
+      The attack deals an additional 1d6 points of damage and injects the target
+      with a virulent poison (injury; save Fort DC 20; frequency 1/round for 6
+      rounds; effect 1d2 Str and 1d2 Con damage; cure 2 consecutive
+      saves).<p><strong>Base Item</strong>: defending darkwood
+      quarterstaff</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, poison, shield of faith</p>
+  enh: 3
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: wood
+    normal:
+      value: darkwood
+  price: 42400
+  properties:
+    dbl: true
+    mnk: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9084
+  weaponGroups:
+    - double
+    - monk
+  weight:
+    value: 2
+type: weapon

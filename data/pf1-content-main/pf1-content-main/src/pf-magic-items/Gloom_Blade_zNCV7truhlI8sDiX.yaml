@@ -1,0 +1,63 @@
+_id: zNCV7truhlI8sDiX
+_key: '!items!zNCV7truhlI8sDiX'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/sword-short.PNG
+name: Gloom Blade
+system:
+  actions:
+    - _id: botptr3yzp5vo018
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: gloomBlade
+  aura:
+    school: evo
+  baseTypes:
+    - Short Sword
+  cl: 13
+  description:
+    value: >-
+      <p>As black as coal, this short sword grows more potent the farther it is
+      kept from light. It acts as a +1 short sword when in dim light. In
+      darkness, it acts as +2 short sword. When surrounded by supernatural
+      darkness, such as in an area of deeper darkness, it acts a +2 short sword
+      and bestows the benefit of the Blind-Fight feat on its wielder. In
+      daylight or bright illumination, the sword temporarily loses all its
+      magical enhancement bonuses and acts as a masterwork weapon, though it
+      resumes its magical functions once it is no longer in the bright
+      light.</p><p><strong>Base Item</strong>: short
+      sword|+2</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, deeper darkness</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 8810
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 2
+type: weapon

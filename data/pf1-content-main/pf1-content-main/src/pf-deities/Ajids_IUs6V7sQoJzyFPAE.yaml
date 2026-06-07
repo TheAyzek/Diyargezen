@@ -1,0 +1,46 @@
+_id: IUs6V7sQoJzyFPAE
+_key: '!journal!IUs6V7sQoJzyFPAE'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Ajids
+pages:
+  - _id: EstXZd4M9gLV3HU8
+    _key: '!journal.pages!IUs6V7sQoJzyFPAE.EstXZd4M9gLV3HU8'
+    _stats:
+      coreVersion: '12.331'
+    name: Ajids
+    sort: 0
+    text:
+      content: >-
+        <h1>Ajids</h1><h2>Father Flense</h2>@Source[PZO9267;pages=318] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Ajids">Ajids</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Daemon Harbingers<br /><strong>Areas
+        of Concern</strong> Mutilation, skinning, trophy taking<br
+        /><strong>Domains</strong> Death, Evil, Madness, War<br
+        /><strong>Subdomains</strong> Blood, Daemon, Insanity, Murder<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> War razor<br /><strong>Symbol</strong>
+        Detached human face<br /><strong>Sacred Animal(s)</strong> Ape<br
+        /><strong>Sacred Color(s)</strong> Brown,
+        red</p><h3>Obedience</h3><p>Mutilate the corpse of a defeated enemy.
+        Gain a +4 profane bonus on saving throws against effects that cause
+        fatigue or exhaustion.</p><h2>Boons - Daemon
+        Harbingers</h2><p>@Source[PZO1139;pages=112]</p><p>Abaddon's unique
+        daemons take on a host of titles, customized to their methods and
+        vanity. These harbingers enjoy sweeping influence among daemons as
+        favored advisors, and they work to cultivate their own cults on Abaddon
+        and beyond.</p><p> Daemon harbingers are neutral evil demigods that
+        range in power from CR 21 to CR 25. The boons they grant are less
+        complex than those granted by the Horsemen themselves, manifesting as
+        spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>blood armor</em><br
+        /><strong>2</strong>: <em>hunger for flesh</em><br /><strong>3</strong>:
+        <em>decapitate</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

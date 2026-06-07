@@ -1,0 +1,47 @@
+_id: p2JgcKLVXMawO3uL
+_key: '!items!p2JgcKLVXMawO3uL'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: icons/magic/defensive/shield-barrier-glowing-triangle-teal.webp
+name: Protection From Energy (Type)
+system:
+  contextNotes:
+    - target: ac
+      text: >-
+        Protection From Energy vs type: [[@item.uses.value]] /
+        [[@item.uses.max]]
+    - target: allSavingThrows
+      text: >-
+        Protection From Energy vs type: [[@item.uses.value]] /
+        [[@item.uses.max]]
+  description:
+    instructions: >-
+      <p>Change the energy type in the context note on the Changes tab and the
+      buff name.</p>
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.1vh2ewwvzvxunoxk]{Protection From
+      Energy}</p><p>This spell grants you temporary immunity to the type of
+      energy specified when cast (acid, cold, electricity, fire, or sonic). When
+      the spell absorbs 12 points per caster level of energy damage (to a
+      maximum of 120 points at 10th level), it is discharged.</p><p>Protection
+      from energy overlaps (and does not stack with)
+      @UUID[Compendium.pf1.spells.Item.tkjnm3lw7ni82tag]{resist energy}. If a
+      character is warded by protection from energy and resist energy, the
+      protection spell absorbs damage until its power is exhausted.</p><hr>
+  duration:
+    units: minute
+    value: '@item.level * 10'
+  level: 5
+  scriptCalls:
+    - _id: SPAJBz2XoYY24afP
+      category: toggle
+      hidden: false
+      img: icons/svg/dice-target.svg
+      name: Refill
+      type: script
+      value: 'item.update({ "system.uses.value": state ? item.system.uses.max : 0 });'
+  subType: spell
+  uses:
+    autoDeductChargesCost: '0'
+type: buff

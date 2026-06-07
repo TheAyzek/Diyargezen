@@ -1,0 +1,34 @@
+_id: 3L8Jg3aZlqw1mDTN
+_key: '!items!3L8Jg3aZlqw1mDTN'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/books/book-worn-brown.webp
+name: Calamaes Fragment (Spellbook, Level 7 Transmuter)
+system:
+  description:
+    value: >-
+      <p><em>Two gold-plated bronze covers bind this gaudy tome. Several
+      synonyms for 'wealth' are neatly chiseled in different languages on the
+      cover.</em></p><p><strong>Value</strong> 1,565 gp ( gp with the
+      preparation ritual)</p><h2>Spells</h2><p>4th-<em>dimension door</em>,
+      <em>lesser age resistance</em><sup>UM</sup>, <em>liquefy</em></p><p>
+      3rd-<em>deft digits</em>, <em>dispel magic</em>, <em>greater magic
+      weapon</em>, <em>haste</em>, <em>hostile levitation</em><sup>UC</sup>,
+      <em>rags to riches</em></p><p> 2nd-<em>alter self</em>,
+      <em>darkvision</em>, <em>fool's gold</em>, <em>glide</em><sup>APG</sup>,
+      <em>glitterdust</em>, <em>scorching ray</em>, <em>touch of
+      idiocy</em></p><p> 1st-<em>ant haul</em><sup>APG</sup>,
+      <em>jury-rig</em><sup>UC</sup>, <em>mage armor</em>, <em>magic
+      missile</em>, <em>polypurpose panacea</em><sup>UM</sup>, <em>shocking
+      grasp</em>, <em>sleep</em>, <em>tears to wine</em></p>
+  equipped: false
+  price: 1565
+  sources:
+    - id: PZO9465
+      pages: '18'
+  subType: gear
+  tags:
+    - Spellbooks
+  weight:
+    value: 5
+type: loot

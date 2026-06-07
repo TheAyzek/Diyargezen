@@ -1,0 +1,33 @@
+_id: YRoTTPWrIn94S7WS
+_key: '!items!YRoTTPWrIn94S7WS'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Deadly Returns Throwing Axe
+system:
+  armor:
+    enh: 2
+  aura:
+    school: evo
+  baseTypes:
+    - Axe
+  cl: 8
+  cursed: true
+  description:
+    value: >-
+      <p>This weapon appears to be a +2 returning throwing axe. Instead of the
+      normal returning ability, this axe only returns when the wielder misses
+      her target. When it does return, it attacks the wielder. It uses the
+      wielder's full base attack bonus with this attack. If it hits, it sticks
+      in the wielder, and the wielder can pull out the axe with a swift action.
+      If it misses the wielder, it falls to a random unoccupied square adjacent
+      to the wielder and must be picked up as soon as possible. The wielder of
+      the deadly returns throwing axe always uses it as her primary weapon until
+      subject to a remove curse spell or similar effect.</p><p><strong>Base
+      Item</strong>: +2 returning throwing axe</p>
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 2
+type: equipment

@@ -1,0 +1,67 @@
+_id: 5JGpxSg0IVdJlSpw
+_key: '!journal!5JGpxSg0IVdJlSpw'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 3GAmKByTM8rM7ryv
+name: 1.2.7.03. Dhampir Subraces
+pages:
+  - _id: Z0MlVjjfh9mZbVUf
+    _key: '!journal.pages!5JGpxSg0IVdJlSpw.Z0MlVjjfh9mZbVUf'
+    _stats:
+      coreVersion: '12.331'
+    name: 1.2.7.03. Dhampir Subraces
+    sort: 0
+    text:
+      content: >-
+        <h2>Jiang-Shi-Born (Ru-Shi)</h2><p>@Source[PZO9280;pages=241],
+        @Source[PZO9427;pages=20]</p><p>The ru-shi are dhampirs who descend from
+        the jiang-shi of Tian Xia. They generally lack any interest in physical
+        contact, and their movements are stiff and
+        awkward.</p><p><strong>Alternate Ability Modifiers</strong>: +2
+        Strength, +2 Intelligence, –2 Dexterity.<strong><br />Alternate Skill
+        Modifiers</strong>: Acrobatics, Knowledge (engineering).<strong><br
+        />Alternate Spell-Like Ability</strong>: <em>Erase</em>.<strong><br
+        />Alternate Weakness</strong>: Ru-shi take a –1 penalty on saves against
+        sonic effects and spells.</p><h2>Moroi-Born
+        (Svetocher)</h2><p>@Source[PZO9280;pages=241],
+        @Source[PZO9427;pages=20]</p><p>These dhampirs are blessed with
+        unnatural grace, beauty, and charm, and they often feel most at home
+        among a region's aristocracy.</p><p><strong>Alternate Ability
+        Modifiers</strong>: +2 Strength, +2 Charisma, –2
+        Constitution.<strong><br />Alternate Skill Modifiers</strong>:
+        Diplomacy, Knowledge (nobility).<strong><br />Alternate Spell-Like
+        Ability</strong>: <em>Obscuring mist</em>.<strong><br />Alternate
+        Weakness</strong>: Svetochers take a –1 penalty on saves against effects
+        that deal positive energy damage.</p><h2>Nosferatu-Born
+        (Ancient-Born)</h2><p>@Source[PZO9280;pages=241],
+        @Source[PZO9427;pages=21]</p><p>Many of the ancient-born dhampirs
+        possess a deep hatred for humanity—a hatred most humans return in
+        kind.</p><p><strong>Alternate Ability Modifiers</strong>: +2 Strength,
+        +2 Wisdom, –2 Constitution.<strong><br />Alternate Skill
+        Modifiers</strong>: Climb, Survival.<strong><br />Alternate Spell-Like
+        Ability</strong>: <em>Doom</em>.<strong><br />Alternate
+        Weakness</strong>: Ancient-born take a –1 penalty on saves against
+        effects that damage, drain, or reduce physical ability
+        scores.</p><h2>Vetala-Born
+        (Ajibachana)</h2><p>@Source[PZO9280;pages=241],
+        @Source[PZO9427;pages=21]</p><p><span
+        id="MainContent_DataListTypes_LabelName_0">These dhampirs are more often
+        the result of magical experiments than mating.</span></p><p><span
+        id="MainContent_DataListTypes_LabelName_0"><strong>Alternate Ability
+        Modifiers</strong>: +2 Dexterity, +2 Intelligence, –2 Wisdom. <br
+        /><strong>Alternate Skill Modifiers</strong>: Escape Artist, Use Magic
+        Device. <br /><strong>Alternate Spell-Like Ability</strong>:
+        </span><em>Comprehend languages</em><span
+        id="MainContent_DataListTypes_LabelName_0">. <br /><strong>Alternate
+        Weakness</strong>: Ajibachanas take a –1 penalty to their caster levels
+        when they're in an area affected by </span><em>consecrate</em><span
+        id="MainContent_DataListTypes_LabelName_0">, </span><em>hallow</em><span
+        id="MainContent_DataListTypes_LabelName_0">, or a similar spell that
+        makes an area holy.</span></p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

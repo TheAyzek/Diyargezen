@@ -1,0 +1,56 @@
+_id: f5apE8JxrzABtHnK
+_key: '!items!f5apE8JxrzABtHnK'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/sling-staff.png
+name: Avalanche Sling Staff
+system:
+  actions:
+    - _id: nqt5rkrlbmfubcy5
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: avalancheSlingStaff
+  aura:
+    school: con
+  baseTypes:
+    - Halfling Sling Staff
+  cl: 9
+  description:
+    value: >-
+      <p>Three times per day, the wielder of this +3 halfling sling staff can
+      launch a stone (not a sling bullet) that explodes in mid-flight to create
+      a stone call effect centered on the target square.</p><p><strong>Base
+      Item</strong>: +3 halfling sling
+      staff</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, stone call</p>
+  enh: 3
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: wood
+  price: 36320
+  showInQuickbar: false
+  sources:
+    - id: PZO9452
+  weaponGroups:
+    - thrown
+  weight:
+    value: 3
+type: weapon

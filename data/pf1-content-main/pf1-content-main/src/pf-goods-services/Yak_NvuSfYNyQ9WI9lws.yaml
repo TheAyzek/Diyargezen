@@ -1,0 +1,21 @@
+_id: NvuSfYNyQ9WI9lws
+_key: '!items!NvuSfYNyQ9WI9lws'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/red_23.jpg
+name: Yak
+system:
+  description:
+    value: >-
+      <p>These shaggy-haired relatives to cows are more at home in mountainous
+      terrain where they are frequently used as pack animals and to pull plows.
+      Yaks have the same statistics as bison (see the <em>Bestiary</em>).</p>
+  equipped: false
+  price: 24
+  sources:
+    - id: PZO1123
+      pages: '81'
+  subType: animal
+  weight:
+    value: 1000
+type: loot

@@ -1,0 +1,28 @@
+_id: VktkDAtzYJHWeEUF
+_key: '!items!VktkDAtzYJHWeEUF'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Map of the High Ice
+system:
+  aura:
+    school: div
+  cl: 11
+  description:
+    value: >-
+      <p>This vellum map depicts the Crown of the World, and delineates a path
+      across the High Ice. Studying the map provides a +2 competence bonus on
+      Survival checks to avoid getting lost and to avoid hazards in the High Ice
+      region of the Crown of the World, as well as a +5 bonus on caravan
+      Security checks while on the High Ice (with the exception of checks made
+      to avoid the effects of altitude, extreme cold, or severe
+      weather).<h3>Requirements</h3><p>Craft Wondrous Item, creator must have 5
+      ranks in Survival, find the path</p>
+  price: 3000
+  sources:
+    - id: PZO9051
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,61 @@
+_id: 1gHRLA4nwxDAlhkT
+_key: '!journal!1gHRLA4nwxDAlhkT'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 6xAF0VmbLWU6dblG
+name: 2.02.1.6. Use Special Ability
+pages:
+  - _id: qreQe060NAu3pnpE
+    _key: '!journal.pages!1gHRLA4nwxDAlhkT.qreQe060NAu3pnpE'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.02.1.6. Use Special Ability
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.VZCpOrg3jCyNaYeg]{2.02.
+        Actions in
+        Combat}</p><ul><li><p>@Compendium[pf-content.pf-rules.rBQpOuMH0B3O44Da]{2.02.1.
+        Standard
+        Actions}</p><ul><li>@Compendium[pf-content.pf-rules.PsEv51WUo7p8GpBc]{2.02.1.1.
+        Attack}</li><li>@Compendium[pf-content.pf-rules.r0ymFTNYo4FzlMSq]{2.02.1.2.
+        Activate Magic
+        Item}</li><li>@Compendium[pf-content.pf-rules.qm7mqCXwfpA2EM6w]{2.02.1.3.
+        Cast a
+        Spell}</li><li>@Compendium[pf-content.pf-rules.QjHgjK8yLzdgS9C2]{2.02.1.4.
+        Start/Complete Full-Round
+        Action}</li><li>@Compendium[pf-content.pf-rules.YVJsIHmx7LM0vjis]{2.02.1.5.
+        Total
+        Defense}</li><li><strong>@Compendium[pf-content.pf-rules.1gHRLA4nwxDAlhkT]{2.02.1.6.
+        Use Special Ability}</strong></li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=186]</p><p>Using a special ability is usually
+        a standard action, but whether it is a standard action, a full-round
+        action, or not an action at all is defined by the
+        ability.</p><h2>Spell-Like Abilities (Sp)</h2><p>Using a spell-like
+        ability works like casting a spell in that it requires concentration and
+        provokes attacks of opportunity. Spell-like abilities can be disrupted.
+        If your concentration is broken, the attempt to use the ability fails,
+        but the attempt counts as if you had used the ability. The casting time
+        of a spell-like ability is 1 standard action, unless the ability
+        description notes otherwise.</p><h2>Using a Spell-Like Ability on the
+        Defensive</h2><p>You may attempt to use a spell-like ability on the
+        defensive, just as with casting a spell. If the concentration check (DC
+        15 + double the spell’s level) fails, you can’t use the ability, but the
+        attempt counts as if you had used the ability.</p><h2>Supernatural
+        Abilities (Su)</h2><p>Using a supernatural ability is usually a standard
+        action (unless defined otherwise by the ability’s description). Its use
+        cannot be disrupted, does not require concentration, and does not
+        provoke attacks of opportunity.</p><h2>Extraordinary Abilities
+        (Ex)</h2><p>Using an extraordinary ability is usually not an action
+        because most extraordinary abilities automatically happen in a reactive
+        fashion. Those extraordinary abilities that are actions are usually
+        standard actions that cannot be disrupted, do not require concentration,
+        and do not provoke attacks of opportunity.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

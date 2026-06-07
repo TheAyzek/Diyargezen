@@ -1,0 +1,67 @@
+_id: o035hhk87SaFekNz
+_key: '!items!o035hhk87SaFekNz'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/earthbreaker.PNG
+name: Judicial Hammer
+system:
+  actions:
+    - _id: bs0nilkxnw4w3uu5
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: judicialHammer
+  aura:
+    school: enc
+  baseTypes:
+    - Earth Breaker
+  cl: 4
+  description:
+    value: >-
+      <p>The head of this +1 earth breaker (Pathfinder RPG Ultimate Equipment
+      27) is shaped like a massive version of the gavel one might see in a court
+      of law-the weapon is nearly 4 feet long from end to end. The Hellknights
+      of Citadel Vraid are attributed with crafting the first judicial hammers,
+      having adopted their form from the weapons of the same Shoanti tribes they
+      used the judicial hammers against. Once per day, the wielder may speak the
+      judicial hammer's command word and name a specific crime he believes an
+      individual within 30 feet has committed. Whenever the designated target
+      takes damage from the judicial hammer, the target must succeed at a DC 13
+      Will save or immediately and truthfully confess its innocence or guilt in
+      the named crime (if the target can speak the same language as the wielder
+      of the judicial hammer, it must confess in this language). This effect
+      lasts for 24 hours or until the creature fails its Will save, whichever
+      comes first.</p><p><strong>Base Item</strong>: earth
+      breaker</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, confess</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 5220
+  showInQuickbar: false
+  sources:
+    - id: PZO9443
+  weaponGroups:
+    - hammers
+  weight:
+    value: 14
+type: weapon

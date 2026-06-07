@@ -1,0 +1,38 @@
+_id: 4aFPCh9waGLQO6lq
+_key: '!items!4aFPCh9waGLQO6lq'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Large scorpion venom
+system:
+  actions:
+    - _id: vtv9tha21mdnj8y1
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - '<strong>Primary Effect</strong: [[1d2]] Str'
+      save:
+        dc: '17'
+        type: fort
+      tag: largeScorpionVenom
+  description:
+    value: >-
+      <p><strong>Type</strong> injury; <strong>Save</strong> Fortitude DC
+      17</p><p><strong>Frequency</strong> 1/round for 6
+      rounds</p><p><strong>Effect</strong> 1d2 Str</p><p><strong>Cure</strong> 1
+      save</p>
+  price: 200
+  sources:
+    - id: PZO1123
+      pages: '111'
+  subType: poison
+  uses:
+    per: single
+type: consumable

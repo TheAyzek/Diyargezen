@@ -1,0 +1,68 @@
+_id: ZO96NLH2TxUnrMpK
+_key: '!items!ZO96NLH2TxUnrMpK'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/flail-heavy.png
+name: Leng Flail, Lesser
+system:
+  actions:
+    - _id: rrunerb3h6hwfwbp
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: lengFlailLesser
+  aura:
+    school: trs
+  baseTypes:
+    - Heavy Flail
+  cl: 6
+  description:
+    value: >-
+      <p>The immense and inscrutable Leng spiders are known to construct
+      makeshift flails by linking nearby debris, such as rocks or skulls, with
+      their own extruded web fibers. Although this organic webbing typically
+      degrades over time, skillful alchemy can preserve one of these weapons
+      indefinitely.  A lesser Leng flail is a +1 heavy flail that allows its
+      wielder to use spider climb at will. Much less common are greater Leng
+      flails, which are +2 throwing heavy flails that have the same spider climb
+      ability of the lesser flail. In addition, when the wielder of a greater
+      Leng flail confirms a critical hit against a creature, the target suffers
+      horrific hallucinations for 1d4 rounds, becoming confused (Will DC 19
+      negates). This is a mind-affecting effect.</p><p><strong>Base
+      Item</strong>: heavy
+      flail</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor; spider climb</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 8315
+  properties:
+    dis: true
+    trp: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9455
+  weaponGroups:
+    - flails
+  weight:
+    value: 10
+type: weapon

@@ -1,0 +1,58 @@
+_id: i0K5tovEux6NjJsW
+_key: '!items!i0K5tovEux6NjJsW'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/sling.png
+name: Frostbite Sling
+system:
+  actions:
+    - _id: vftl0cvmptf41tt2
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: frostbiteSling
+  aura:
+    school: evo
+  baseTypes:
+    - Sling
+  cl: 6
+  description:
+    value: >-
+      <p>This +1 frost sling is crafted of blue-dyed leather. In lieu of adding
+      cold damage to normal ammunition, three times per day wielder may create
+      and hurl a magical snowball with the sling instead. This ranged touch
+      attack has a maximum range of 40 feet, deals 1d6+6 points of nonlethal
+      cold damage, and leaves the target fatigued. The fatigued condition ends
+      when the target recovers from the nonlethal damage. This effect cannot
+      make the target exhausted even if it is already
+      fatigued.</p><p><strong>Base Item</strong>: +1 frost
+      sling</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, frostbite (Ultimate Magic)</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: leather
+  price: 9380
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - thrown
+type: weapon

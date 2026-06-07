@@ -1,0 +1,41 @@
+_id: TNtv3YrmErWAEFtu
+_key: '!items!TNtv3YrmErWAEFtu'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Cap of Darkest Dreams
+system:
+  aura:
+    custom: true
+    school: illusion and necromancy
+  cl: 14
+  description:
+    value: >-
+      <p>This black gossamer cap is woven from ethereal moonbeams and
+      nightmares. Whenever the wearer would experience a nightmare, whether
+      magical or mundane (including the dream haunting ability of a night hag),
+      the cap absorbs it without effect.  Once per day, when a changeling wearer
+      sleeps with her face covered by the cap, she can send a nightmare (DC 17).
+      If the victim fails his saving throw against the nightmare, the wearer can
+      target him with major curse as well, but must describe to the victim a
+      condition under which the curse will be lifted. The victim automatically
+      understands the terms of the curse even if he does not share a language
+      with the wearer. The condition must be possible to the wearer's knowledge
+      given what she knows of the victim's resources, but may be extremely
+      difficult to achieve and may require significant luck or assistance (at
+      the GM's discretion). A cap of darkest dreams can maintain only one curse
+      at a time; if the wearer uses the cap to curse a new victim, any previous
+      curse ends. Once per day by uttering the command word, a changeling wearer
+      can unleash the vile essence of nightmares upon all creatures around her.
+      She emanates a cloak of dreams as per the spell. Any creature sent to
+      sleep by this aura automatically suffers a nightmare (DC 17) evoking its
+      deepest fears.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, cloak of dreams, major curse, nightmare, creator must
+      be a changeling</p>
+  price: 90000
+  slot: head
+  sources:
+    - id: PZO9280
+  subType: wondrous
+type: equipment

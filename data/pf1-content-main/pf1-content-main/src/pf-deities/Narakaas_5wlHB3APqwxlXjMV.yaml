@@ -1,0 +1,53 @@
+_id: 5wlHB3APqwxlXjMV
+_key: '!journal!5wlHB3APqwxlXjMV'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Narakaas
+pages:
+  - _id: 8SXFssfggFW8fAMg
+    _key: '!journal.pages!5wlHB3APqwxlXjMV.8SXFssfggFW8fAMg'
+    _stats:
+      coreVersion: '12.331'
+    name: Narakaas
+    sort: 0
+    text:
+      content: >-
+        <h1>Narakaas</h1><h2>The Cleansing
+        Sentence</h2>@Source[PZO92114;pages=13] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Narakaas">Narakaas</a><h3>Details</h3><p><strong>Alignment</strong>
+        N<br /><strong>Pantheon</strong> Psychopomp Usher<br /><strong>Areas of
+        Concern</strong> Atonement, difficult choices, and pain<br
+        /><strong>Domains</strong> Death, Magic, Repose, Rune<br
+        /><strong>Subdomains</strong> N/A<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Greataxe<br /><strong>Symbol</strong> A vertical line intersected by two
+        diagonal lines and capped with a
+        circle</p><h3>Obedience</h3><p>Flagellate yourself while reflecting on
+        your personal failings or harm you have done to others, dealing 1d6
+        points of damage to yourself. You gain DR 2/-. If the damage you took
+        from this obedience is healed, this damage reduction immediately
+        ends.</p><h2>Boons - Monitor
+        Obedience</h2><h3>None</h3><p>@Source[PZO92114;pages=13]<br /><strong>1:
+        Clarity in Pain (Sp)</strong> <em>invigorate</em> 3/day, <em>delay
+        pain</em> 2/day, or <em>blood biography</em> 1/day<br /><strong>2:
+        Stronger Tomorrow (Sp)</strong> You can increase the damage inflicted by
+        your obedience to 4d6 points. If you do so, you can cast one of the
+        following spells three times per day as a spell-like ability: <em>bear's
+        endurance</em>, <em>eagle's splendor, <em>fox's cunning</em>, or
+        <em>owl's wisdom</em>.<br /><strong>3: Empathy (Su)</strong> You can
+        grant any weapon you wield the <em>brilliant energy and
+        <em>merciful</em> special abilities as a single move action. You can
+        only grant these abilities together, not separately, and the weapon
+        immediately loses both properties if it leaves your possession. The
+        weapon maintains these properties for a number of rounds equal to your
+        Hit Dice. This duration does not need to be consecutive.</em></p><h2>For
+        Followers of Narakaas</h2><h3>Prestige Classes</h3><p><em>Mortal
+        Usher</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

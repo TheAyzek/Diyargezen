@@ -1,0 +1,59 @@
+_id: GiftUNKJHstqRaRu
+_key: '!journal!GiftUNKJHstqRaRu'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: zcCMo97bY7HQ8cns
+name: 7.0.1.1. Choosing a Spell
+pages:
+  - _id: wJTCuyzrhtkvDBZo
+    _key: '!journal.pages!GiftUNKJHstqRaRu.wJTCuyzrhtkvDBZo'
+    _stats:
+      coreVersion: '12.331'
+    name: 7.0.1.1. Choosing a Spell
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.dS0UkKOINqI2iTDX]{(Index)
+        Magic}</p><p>@Compendium[pf-content.pf-rules.VqmfepmRULVzQGwS]{7.0.
+        Magic
+        Basics}</p><ul><li><p>@Compendium[pf-content.pf-rules.QsXwV60ztDqlXSwM]{7.0.1.
+        Casting
+        Spells}</p><ul><li><strong>@Compendium[pf-content.pf-rules.GiftUNKJHstqRaRu]{7.0.1.1.
+        Choosing a
+        Spell}</strong></li><li>@Compendium[pf-content.pf-rules.DcA0BhlzGBOmJlBR]{7.0.1.2.
+        Concentration}</li><li>@Compendium[pf-content.pf-rules.jcWzZxyQlFAl4ovj]{7.0.1.3.
+        Counterspells}</li><li>@Compendium[pf-content.pf-rules.zsULaA3W562EQNNZ]{7.0.1.4.
+        Caster
+        Level}</li><li>@Compendium[pf-content.pf-rules.6BXjv5dKzNBoeF6f]{7.0.1.5.
+        Spell
+        Failure}</li><li>@Compendium[pf-content.pf-rules.uHbJduQkQNwTE2jw]{7.0.1.6.
+        The Spell's
+        Results}</li><li>@Compendium[pf-content.pf-rules.uoVKBPwOgPq2F1Ie]{7.0.1.7.
+        Special Spell
+        Effects}</li><li>@Compendium[pf-content.pf-rules.1YlpjJunlELz8Wga]{7.0.1.8.
+        Combining Magic Effects}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=206]</p><p>First you must choose which spell
+        to cast. If you’re a cleric, druid, experienced paladin, experienced
+        ranger, or wizard, you select from among spells prepared earlier in the
+        day and not yet cast (see Preparing Wizard Spells and Preparing Divine
+        Spells).</p><p>If you’re a bard or sorcerer, you can select any spell
+        you know, provided you are capable of casting spells of that level or
+        higher.</p><p>To cast a spell, you must be able to speak (if the spell
+        has a verbal component), gesture (if it has a somatic component), and
+        manipulate the material components or focus (if any). Additionally, you
+        must concentrate to cast a spell.</p><p>If a spell has multiple
+        versions, you choose which version to use when you cast it. You don’t
+        have to prepare (or learn, in the case of a bard or sorcerer) a specific
+        version of the spell.</p><p>Once you’ve cast a prepared spell, you can’t
+        cast it again until you prepare it again. (If you’ve prepared multiple
+        copies of a single spell, you can cast each copy once.) If you’re a bard
+        or sorcerer, casting a spell counts against your daily limit for spells
+        of that spell level, but you can cast the same spell again if you
+        haven’t reached your limit.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

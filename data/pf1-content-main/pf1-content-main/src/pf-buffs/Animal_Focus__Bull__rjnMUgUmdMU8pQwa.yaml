@@ -1,0 +1,27 @@
+_id: rjnMUgUmdMU8pQwa
+_key: '!items!rjnMUgUmdMU8pQwa'
+_stats:
+  coreVersion: '12.331'
+folder: Hwm6pYlpMW9YOTO8
+img: systems/pf1/icons/feats/greater-bull-rush.jpg
+name: Animal Focus (Bull)
+system:
+  changes:
+    - _id: vtwg8row
+      formula: floor(((@item.level)-1)/7)*2+2
+      target: str
+      type: enh
+  description:
+    instructions: >-
+      <p>Set this buff's level equal to the total class level granting the
+      Animal Focus feature.</p>
+    value: >-
+      <p>The creature gains a +2 enhancement bonus to Constitution. This bonus
+      increases to +4 at 8th level and +6 at 15th level.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '1'
+  level: 7
+  subType: spell
+type: buff

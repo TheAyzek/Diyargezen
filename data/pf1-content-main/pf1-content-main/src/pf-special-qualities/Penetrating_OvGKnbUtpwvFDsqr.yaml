@@ -1,0 +1,29 @@
+_id: OvGKnbUtpwvFDsqr
+_key: '!items!OvGKnbUtpwvFDsqr'
+_stats:
+  coreVersion: '12.331'
+folder: YaC0PDBdquBGbbsG
+img: systems/pf1/icons/skills/violet_04.jpg
+name: Penetrating
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate evocation <strong>CL</strong>
+      9th</p><p><strong>Slot</strong> none; <strong>Price</strong> +2 bonus;
+      <p>This weapon special ability can only be placed on ammunition. A
+      creature struck by a piece of <em>penetrating </em>ammunition must succeed
+      at a DC 17 Fortitude save or the ammunition proceeds to travel into
+      another creature in line. The attacker must be able to trace a line
+      starting at her space and passing through both targets to make this
+      additional attack. The second attack is made at a -4 penalty, in addition
+      to any modifiers for added
+      range.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, <em>mirror strike</em><sup>UC</sup>; <strong>Price</strong>
+      -</p>
+  sources:
+    - id: PZO9440
+      pages: '23'
+  subType: misc
+  tags:
+    - Melee Qualities
+type: feat

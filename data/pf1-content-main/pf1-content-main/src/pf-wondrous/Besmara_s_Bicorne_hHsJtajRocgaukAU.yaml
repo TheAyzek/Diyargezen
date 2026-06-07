@@ -1,0 +1,30 @@
+_id: hHsJtajRocgaukAU
+_key: '!items!hHsJtajRocgaukAU'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Besmara's Bicorne
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>This large pirate hat bears a skull-and-crossbones on the front. The
+      wearer gains a +2 competence bonus on Acrobatics and Climb checks.  If
+      Besmara is the wearer's patron, the wearer automatically floats to the
+      surface of any body of water (at a speed of 30 feet) unless she desires
+      otherwise; this does not prevent the wearer from falling safely into water
+      or interacting with water in any other
+      way.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, levitate, creator must have 5 ranks in Acrobatics and
+      Climb</p>
+  price: 1700
+  slot: head
+  sources:
+    - id: PZO9267
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

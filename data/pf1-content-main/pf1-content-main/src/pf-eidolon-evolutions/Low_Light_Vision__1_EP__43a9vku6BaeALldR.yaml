@@ -1,0 +1,17 @@
+_id: 43a9vku6BaeALldR
+_key: '!items!43a9vku6BaeALldR'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/biological/eye-lizard-orange-red.webp
+name: Low-Light Vision (1 EP)
+system:
+  abilityType: ex
+  description:
+    instructions: <p>Add low-light vision to the character and token.&nbsp;</p>
+    value: >-
+      <p>An eidolon gains low-light vision, enabling it to see twice as far as a
+      human in conditions of dim light.</p>
+  subType: misc
+  tags:
+    - Eidolon Evolution
+type: feat

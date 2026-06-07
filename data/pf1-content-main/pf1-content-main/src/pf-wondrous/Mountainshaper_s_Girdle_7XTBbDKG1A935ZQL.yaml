@@ -1,0 +1,65 @@
+_id: 7XTBbDKG1A935ZQL
+_key: '!items!7XTBbDKG1A935ZQL'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/equipment/wrist/bracer-belted-leather-brown.webp
+name: Mountainshaper's Girdle
+system:
+  actions:
+    - _id: wRwvX7G8eNjua1Gt
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>The wearer can spend 1 ki point to use stone shape. When he uses this
+        ability, he can instead choose to shape metal, but he can affect only
+        one-tenth as much material. To shape a usable weapon out of metal or
+        stone, the wearer must succeed at a Craft (weapons) check. Items created
+        in this way can never be of masterwork
+        quality.</p><p>@UUID[Compendium.pf1.spells.Item.g1evszmk8wfgnsv5]{Stone
+        Shape}</p><p><em>You can form an existing piece of stone into any shape
+        that suits your purpose. While it's possible to make crude coffers,
+        doors, and so forth with stone shape, fine detail isn't possible. There
+        is a 30% chance that any shape including moving parts simply doesn't
+        work.</em></p><p></p>
+      duration:
+        units: inst
+      name: Stone or Metal shape 1 Ki point
+      target:
+        value: 18 cubic feet of stone or 1.8 cubic feet of metal
+  aura:
+    school: trs
+  changes:
+    - _id: v6oMVKhy
+      formula: '4'
+      target: str
+      type: enh
+  cl: 8
+  description:
+    unidentified: <p>This is a wide but otherwise unremarkable belt.</p>
+    value: >-
+      <h3>Effect</h3><p>This wide belt grants the wearer a +4 enhancement bonus
+      to Strength. In addition, the wearer can spend 1 ki point to use stone
+      shape. When he uses this ability, he can instead choose to shape metal,
+      but he can affect only one-tenth as much material. To shape a usable
+      weapon out of metal or stone, the wearer must succeed at a Craft (weapons)
+      check. Items created in this way can never be of masterwork
+      quality.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.usdv1eqvibmxun6x]{bear's endurance}, 
+      @UUID[Compendium.pf1.spells.Item.g1evszmk8wfgnsv5]{stone shape}
+      </em><strong>Cost</strong> 12,500 gp</p>
+  price: 25000
+  slot: belt
+  sources:
+    - id: PZO1138
+      pages: '107'
+  subType: wondrous
+  tags:
+    - Ki
+  weight:
+    value: 1
+type: equipment

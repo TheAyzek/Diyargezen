@@ -1,0 +1,40 @@
+_id: Z7ywno9tL24mXcHa
+_key: '!items!Z7ywno9tL24mXcHa'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Steadfast Gut-stone
+system:
+  aura:
+    school: abj
+  cl: 3
+  description:
+    value: >-
+      <p>This fist sized chunk of off-white stone seems too large to fit inside
+      a human's mouth, but may be swallowed with ease as a standard action. Once
+      ingested, the gut-stone remains active for up to a week, maneuvering
+      itself within the body to protect its bearer's vital organs. Any time an
+      attack would subject the bearer to precision-based damage (such as a
+      critical hit or sneak attack), that damage is instead directed to the
+      gut-stone. All other damage from the triggering attack, as well as damage
+      that surpasses the gut-stone's hit points, is applied to the character
+      normally. A gut-stone has 10 hit points and hardness 0.   When a gut-stone
+      is damaged by a melee weapon attack, as a free action its owner may
+      sacrifice the stone to damage the attacker's weapon. Treat this as the
+      bearer making a free sunder combat maneuver against the weapon, except
+      that it does not provoke an attack of opportunity, bypasses the weapon's
+      hardness, and deals 1d4 points of damage.   Only one gut-stone may be in a
+      creature's body at a time. Any attempt to swallow a second destroys both
+      stones and forces the creature to make a DC 15 Fortitude save or be
+      sickened for 1 round. If a gut-stone is not used within a week of being
+      swallowed or is destroyed it crumbles apart and is passed harmlessly out
+      of the body.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, magic stone, shield other</p>
+  price: 800
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

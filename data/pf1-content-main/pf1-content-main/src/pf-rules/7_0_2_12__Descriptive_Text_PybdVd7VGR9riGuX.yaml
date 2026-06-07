@@ -1,0 +1,49 @@
+_id: PybdVd7VGR9riGuX
+_key: '!journal!PybdVd7VGR9riGuX'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: zcCMo97bY7HQ8cns
+name: 7.0.2.12. Descriptive Text
+pages:
+  - _id: TwxxifQZMZJ8ou1G
+    _key: '!journal.pages!PybdVd7VGR9riGuX.TwxxifQZMZJ8ou1G'
+    _stats:
+      coreVersion: '12.331'
+    name: 7.0.2.12. Descriptive Text
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.dS0UkKOINqI2iTDX]{(Index)
+        Magic}</p><p>@Compendium[pf-content.pf-rules.VqmfepmRULVzQGwS]{7.0.
+        Magic
+        Basics}</p><ul><li><p>@Compendium[pf-content.pf-rules.JrvOGuTDYfoiaCZf]{7.0.2.
+        Spell
+        Descriptions}</p><ul><li>@Compendium[pf-content.pf-rules.pPk4zIniRiNT8bkZ]{7.0.2.01.
+        Name}</li><li>@Compendium[pf-content.pf-rules.elUkRwtMDJnpBUbt]{7.0.2.02.
+        School
+        (Subschool)}</li><li>@Compendium[pf-content.pf-rules.uHFbrzKIeTHMBW89]{7.0.2.03.
+        Descriptor}</li><li>@Compendium[pf-content.pf-rules.BK6acSa2umnwCvYo]{7.0.2.04.
+        Level}</li><li>@Compendium[pf-content.pf-rules.85G4EAPyKRDKdp4F]{7.0.2.05.
+        Components}</li><li>@Compendium[pf-content.pf-rules.kJ9Y6R0EmdWvWAYS]{7.0.2.06.
+        Casting
+        Time}</li><li>@Compendium[pf-content.pf-rules.eoicSkLMiuBmRsJG]{7.0.2.07.
+        Range}</li><li>@Compendium[pf-content.pf-rules.CObmMzf1HCwePOdv]{7.0.2.08.
+        Aiming a
+        Spell}</li><li>@Compendium[pf-content.pf-rules.IoLudXWL9DLU1p9l]{7.0.2.09.
+        Duration}</li><li>@Compendium[pf-content.pf-rules.osoMkDti3clgURz9]{7.0.2.10.
+        Saving
+        Throw}</li><li>@Compendium[pf-content.pf-rules.iqCQcMGmm0pmWqUf]{7.0.2.11.
+        Spell
+        Resistance}</li><li><strong>@Compendium[pf-content.pf-rules.PybdVd7VGR9riGuX]{7.0.2.12.
+        Descriptive Text}</strong></li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=218]</p><p>This portion of a spell
+        description details what the spell does and how it works. If one of the
+        previous entries in the description includes “see text,” this is where
+        the explanation is found.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

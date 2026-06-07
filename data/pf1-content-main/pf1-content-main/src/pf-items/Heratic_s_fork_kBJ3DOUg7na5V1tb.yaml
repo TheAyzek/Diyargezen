@@ -1,0 +1,31 @@
+_id: kBJ3DOUg7na5V1tb
+_key: '!items!kBJ3DOUg7na5V1tb'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/fasteners/pin-spiked.webp
+name: Heratic's fork
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Torture Implements</p><p>This device is a
+      sharp, double-ended prong that is approximately 9 inches in length and
+      fitted with a stout leather neckband. This nefarious device is secured on
+      a helpless target's neck so the prongs pierce both the underside of the
+      victim's chin and the victim's chest, dealing 1d6 points of nonlethal
+      damage when the device is attached and an additional 1d6 points of
+      nonlethal damage if the victim begins to fall asleep, effectively keeping
+      the victim awake indefinitely and subjecting the victim to fatigue and
+      exhaustion through sleep deprivation. A successful DC 22 Escape Artist
+      check allows the victim to get free of the prongs without using his arms,
+      though the heretic's fork remains strapped to his neck.</p>
+  equipped: false
+  price: 10
+  sources:
+    - id: PZO1135
+      pages: '212'
+  subType: gear
+  tags:
+    - Torture Implements
+  weight:
+    value: 1
+type: loot

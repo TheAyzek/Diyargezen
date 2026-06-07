@@ -1,0 +1,49 @@
+_id: VqmfepmRULVzQGwS
+_key: '!journal!VqmfepmRULVzQGwS'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: zcCMo97bY7HQ8cns
+name: 7.0. Magic Basics
+pages:
+  - _id: k3ING80RyvGWxV1X
+    _key: '!journal.pages!VqmfepmRULVzQGwS.k3ING80RyvGWxV1X'
+    _stats:
+      coreVersion: '12.331'
+    name: 7.0. Magic Basics
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.dS0UkKOINqI2iTDX]{(Index)
+        Magic}</p><p><strong>@Compendium[pf-content.pf-rules.VqmfepmRULVzQGwS]{7.0.
+        Magic
+        Basics}</strong></p><ul><li>@Compendium[pf-content.pf-rules.QsXwV60ztDqlXSwM]{7.0.1.
+        Casting
+        Spells}</li><li>@Compendium[pf-content.pf-rules.JrvOGuTDYfoiaCZf]{7.0.2.
+        Spell
+        Descriptions}</li><li>@Compendium[pf-content.pf-rules.7sbu7PG3Re7FkQos]{7.0.3.
+        Arcane
+        Spells}</li><li>@Compendium[pf-content.pf-rules.TgfOtwBEW0OmFbJT]{7.0.4.
+        Divine
+        Spells}</li><li>@Compendium[pf-content.pf-rules.dk6hyT5yIVDVTlU5]{7.0.5.
+        Psychic
+        Magic}</li><li>@Compendium[pf-content.pf-rules.aZIvW09CvYzzWDmy]{7.0.6.
+        Special Abilities}</li></ul><hr
+        /><p>@Source[PZO1110;pages=206]</p><p>From creating a wisp of light to
+        causing the ground itself to shatter and break, spells are a source of
+        immense power. A spell is a one-time magical effect. Spells come in two
+        types: arcane (cast by bards, sorcerers, and wizards) and divine (cast
+        by clerics, druids, and experienced paladins and rangers). Some
+        spellcasters select their spells from a limited list of spells known,
+        while others have access to a wide variety of options.</p><p>Most
+        spellcasters prepare spells in advance—whether from a spellbook or
+        through prayers—while some cast spells spontaneously without
+        preparation. Despite these different ways characters use to learn or
+        prepare their spells, when it comes to casting them, the spells are very
+        much alike.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

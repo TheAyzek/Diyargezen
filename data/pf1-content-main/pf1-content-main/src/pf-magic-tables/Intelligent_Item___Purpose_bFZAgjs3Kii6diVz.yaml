@@ -1,0 +1,121 @@
+_id: bFZAgjs3Kii6diVz
+_key: '!tables!bFZAgjs3Kii6diVz'
+_stats:
+  coreVersion: '12.331'
+description: >-
+  <p>* The purpose of the neutral (N) version of this item is to preserve the
+  balance by defeating/slaying powerful beings of the extreme alignments (LG,
+  LE, CG, CE).</p>
+displayRoll: true
+folder: gdjI5M6P4HDragbS
+formula: 1d100
+img: icons/svg/d20-grey.svg
+name: Intelligent Item - Purpose
+replacement: true
+results:
+  - _id: upZSOYwbi0p2CGyq
+    _key: '!tables.results!bFZAgjs3Kii6diVz.upZSOYwbi0p2CGyq'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 20
+    text: Defeat/slay diametrically opposed alignment* [+2 Ego]
+    type: text
+    weight: 1
+  - _id: vWLuHjv6aZLZ8BPm
+    _key: '!tables.results!bFZAgjs3Kii6diVz.vWLuHjv6aZLZ8BPm'
+    img: icons/svg/d20-black.svg
+    range:
+      - 21
+      - 30
+    text: >-
+      Defeat/slay arcane spellcasters (including spellcasting monsers and those
+      that use spell-like abilities) [+2 Ego]
+    type: text
+    weight: 1
+  - _id: DDmCvlDcUxdB2onD
+    _key: '!tables.results!bFZAgjs3Kii6diVz.DDmCvlDcUxdB2onD'
+    img: icons/svg/d20-black.svg
+    range:
+      - 31
+      - 40
+    text: >-
+      Defeat/slay divine spellcasters (including divine entities and servitors)
+      [+2 Ego]
+    type: text
+    weight: 1
+  - _id: wc7HQL3wgf7jCcLJ
+    _key: '!tables.results!bFZAgjs3Kii6diVz.wc7HQL3wgf7jCcLJ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 41
+      - 50
+    text: Defeat/slay nonspellcasters [+2 Ego]
+    type: text
+    weight: 1
+  - _id: NsOd2jHO3I8tnSTj
+    _key: '!tables.results!bFZAgjs3Kii6diVz.NsOd2jHO3I8tnSTj'
+    img: icons/svg/d20-black.svg
+    range:
+      - 51
+      - 55
+    text: >-
+      Defeat/slay a particular creature type (see the bane special ability for
+      choices) [+2 Ego]
+    type: text
+    weight: 1
+  - _id: PW99MYamDpX1nZTu
+    _key: '!tables.results!bFZAgjs3Kii6diVz.PW99MYamDpX1nZTu'
+    img: icons/svg/d20-black.svg
+    range:
+      - 56
+      - 60
+    text: Defeat/slay a particular race or kind of creature [+2 Ego]
+    type: text
+    weight: 1
+  - _id: BuYT0J4NkJOhgoqZ
+    _key: '!tables.results!bFZAgjs3Kii6diVz.BuYT0J4NkJOhgoqZ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 61
+      - 70
+    text: Defend a particular race or kind of creature [+2 Ego]
+    type: text
+    weight: 1
+  - _id: aZGAcfaUvykRtcUp
+    _key: '!tables.results!bFZAgjs3Kii6diVz.aZGAcfaUvykRtcUp'
+    img: icons/svg/d20-black.svg
+    range:
+      - 71
+      - 80
+    text: Defeat/slay the servants of a specific deity [+2 Ego]
+    type: text
+    weight: 1
+  - _id: mKnRFfu2vQtChsoc
+    _key: '!tables.results!bFZAgjs3Kii6diVz.mKnRFfu2vQtChsoc'
+    img: icons/svg/d20-black.svg
+    range:
+      - 81
+      - 90
+    text: Defend the servants and interests of a specific deity [+2 Ego]
+    type: text
+    weight: 1
+  - _id: vzHumYmon3OMFYdu
+    _key: '!tables.results!bFZAgjs3Kii6diVz.vzHumYmon3OMFYdu'
+    img: icons/svg/d20-black.svg
+    range:
+      - 91
+      - 95
+    text: Defeat/slay all (other than the item and the wielder) [+2 Ego]
+    type: text
+    weight: 1
+  - _id: gNDZRaKu34fK3Hnf
+    _key: '!tables.results!bFZAgjs3Kii6diVz.gNDZRaKu34fK3Hnf'
+    img: icons/svg/d20-black.svg
+    range:
+      - 96
+      - 100
+    text: Choose one [+2 Ego]
+    type: text
+    weight: 1
+sort: 400000

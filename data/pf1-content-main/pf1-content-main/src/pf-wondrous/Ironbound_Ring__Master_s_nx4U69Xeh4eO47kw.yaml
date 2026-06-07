@@ -1,0 +1,32 @@
+_id: nx4U69Xeh4eO47kw
+_key: '!items!nx4U69Xeh4eO47kw'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Ironbound Ring, Master's
+system:
+  aura:
+    custom: true
+    school: abjuration and enchantment
+  cl: 5
+  description:
+    value: >-
+      <p>While holding one or more minion's ironbound rings, the wearer of a
+      master's ironbound ring can impart instructions of 50 words or fewer to
+      each minion's ironbound ring. The wearer of a minion's ironbound ring can
+      recall the instructions at will and is aware of any action that would
+      cause him to act against those instructions. The DC of any skill check
+      attempted to force the wearer to abandon, misinterpret, or consciously
+      fail the instructions increases by 5, such as for Bluff checks to trick
+      the wearer or Intimidate checks to interrogate him. The wearer gains a +3
+      resistance bonus on Will saves to resist spells and effects that would
+      force him to act against the instructions, such as dominate person and
+      suggestion.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge
+      Ring, resistance, suggestion</p>
+  price: 8000
+  slot: ring
+  sources:
+    - id: PZO1138
+  subType: wondrous
+type: equipment

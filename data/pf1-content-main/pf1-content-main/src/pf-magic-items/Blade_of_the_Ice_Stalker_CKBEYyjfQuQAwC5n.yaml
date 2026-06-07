@@ -1,0 +1,65 @@
+_id: CKBEYyjfQuQAwC5n
+_key: '!items!CKBEYyjfQuQAwC5n'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/sword-short.PNG
+name: Blade of the Ice Stalker
+system:
+  actions:
+    - _id: pz5lksnz61m7tpdz
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: bladeOfTheIceStalker
+  aura:
+    school: evo
+  baseTypes:
+    - Short Sword
+  cl: 12
+  description:
+    value: >-
+      <p>An unnaturally cold, razor-thin blade of magically-hardened ice juts
+      from the pommel of this +1 frost keen short sword. On a confirmed critical
+      hit, an ice shard breaks off into the wound and inflicts numbing cold. For
+      the next 5 rounds, the victim takes 2 points of cold damage and is
+      staggered for that round if he takes this damage. This is a bleed effect.
+      The shard can be removed as a standard action with a successful DC 15 Heal
+      check or with the application of any magical healing, and is destroyed
+      instantly if the victim takes at least 5 points of fire damage from any
+      attack. The shard lasts for only 1 round when inflicted on a creature with
+      the fire subtype. A blade of the ice stalker can implant an ice shard once
+      per minute.</p><p><strong>Base Item</strong>: frost
+      keen</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, bleed, chill metal, keen edge</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 32310
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9553
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 2
+type: weapon

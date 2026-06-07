@@ -1,0 +1,34 @@
+_id: 30xSLW60DmusspQc
+_key: '!items!30xSLW60DmusspQc'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Poet's Cloak
+system:
+  aura:
+    school: enc
+  cl: 7
+  description:
+    value: >-
+      <p>Even after cleaning and mending, this traveler's cloak appears worn and
+      weathered. For wearers with the bardic performance class feature, it
+      grants the use of raging song as a 4th-level skald by spending rounds of
+      bardic performance. For wearers with the raging song class feature, it
+      grants the use of inspire courage and inspire competence as a 4th-level
+      bard by spending rounds of raging song.  In addition, each poet's cloak
+      allows its wearer to grant one specific rage power when using raging song
+      in place of his own rage powers (if any). The specific rage power varies
+      by cloak. It must be usable by a 4th-level skald, and can't have any
+      prerequisites other than
+      level.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, good hope, rage, creator must have the bardic performance
+      or raging song class feature</p>
+  price: 9750
+  slot: shoulders
+  sources:
+    - id: PZO1129
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

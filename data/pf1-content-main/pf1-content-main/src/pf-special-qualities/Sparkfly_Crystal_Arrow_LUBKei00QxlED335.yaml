@@ -1,0 +1,31 @@
+_id: LUBKei00QxlED335
+_key: '!items!LUBKei00QxlED335'
+_stats:
+  coreVersion: '12.331'
+folder: 4DXOvYyjpcciEjGL
+img: icons/skills/ranged/arrow-strike-glowing-teal.webp
+name: Sparkfly Crystal Arrow
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> weak evocation <strong>CL</strong>
+      3rd</p><p><strong>Slot</strong> weapon quality; <strong>Price</strong> +1
+      bonus;</p><p>The fat crystal head of this arrow contains tiny motes of
+      light; on closer scrutiny, they are actually tiny glowing insects similar
+      to fireflies, held in stasis. When the arrow hits a target, it shatters
+      the crystal and releases the insects, which distract the target with their
+      aggressive flight. The creature takes a -1 penalty on attacks and checks
+      for the next minute or until they rid themselves of the flying pests (such
+      as by diving into water, suffering a damaging area attack, and so on). The
+      lights reduce a target's concealment by one step (turning a 50% miss
+      chance from total concealment into a 20% miss chance from concealment, and
+      concealment into no concealment at
+      all).</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, <em>faerie fire</em>; <strong>Price</strong> -</p>
+  sources:
+    - id: PZO9402
+      pages: '23'
+  subType: misc
+  tags:
+    - Ranged Qualities
+type: feat

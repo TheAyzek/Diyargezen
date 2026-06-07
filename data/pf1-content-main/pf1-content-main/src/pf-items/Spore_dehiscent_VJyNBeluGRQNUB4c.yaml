@@ -1,0 +1,54 @@
+_id: VJyNBeluGRQNUB4c
+_key: '!items!VJyNBeluGRQNUB4c'
+_stats:
+  coreVersion: '12.343'
+img: icons/commodities/materials/bowl-liquid-white.webp
+name: Spore dehiscent
+system:
+  actions:
+    - _id: h6hn9dobcvmrgj9g
+      ability:
+        critMult: 1
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - {}
+          - {}
+      img: icons/commodities/materials/bowl-liquid-white.webp
+      name: Use
+      range:
+        units: ft
+        value: '0'
+      save:
+        dc: '14'
+        type: fort
+      tag: sporeDehiscent
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Weapons</p><p>This pungent
+      concoction can be thrown as a splash weapon to trigger unsustainable spore
+      or pollen release in fungi and plants. Any plant creature in the square
+      where the spore dehiscent lands must succeed at a DC 14 Fortitude save or
+      immediately activate any of its effects based on spores or pollen,
+      treating itself as the target or center of the effect. Fungal hazards like
+      russet mold or yellow mold are activated automatically with no saving
+      throw. Plant creatures or hazards in squares adjacent to the square of
+      impact must each succeed at a DC 10 Fortitude save or suffer the same
+      effect. Once the effect is triggered, the creature or hazard cannot
+      activate the effect again for 1d4 rounds or until the effect could
+      normally be used again, whichever is longer.</p>
+  price: 30
+  sources:
+    - id: PZO9479
+      pages: '31'
+  subType: misc
+  tags:
+    - Alchemical Weapons
+  weight:
+    value: 1
+type: consumable

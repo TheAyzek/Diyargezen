@@ -1,0 +1,44 @@
+_id: Fu86LqgNRdybqUEq
+_key: '!items!Fu86LqgNRdybqUEq'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/studded-leather.PNG
+name: Howling Skull Armor
+system:
+  armor:
+    acp: 1
+    dex: 5
+    material:
+      base:
+        value: leather
+    value: 3
+  aura:
+    school: nec
+  baseTypes:
+    - Studded Leather Armor
+  cl: 7
+  description:
+    value: >-
+      <p>This suit of +3 studded leather armor is decorated with metal skulls.
+      Once per day as a standard action, the wearer can command the skulls to
+      unleash a cacophonous chorus of howls, causing all creatures within a
+      30-foot spread to make a DC 16 Will save to avoid becoming frightened for
+      1d4 rounds. The wearer can choose up to three targets (plus himself) in
+      the area of effect to be exempt from the effect. The wearer of a suit of
+      howling skull armor gains a +4 bonus on all saving throws against fear
+      effects. Each time the wearer of howling skull armor succeeds at a saving
+      throw against a fear effect created by someone other than himself, he
+      gains a +2 bonus on Will saves for 1
+      round.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, fear</p>
+  enh: 3
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 20375
+  sources:
+    - id: PZO9059
+  spellFailure: 15
+  weight:
+    value: 20
+type: equipment

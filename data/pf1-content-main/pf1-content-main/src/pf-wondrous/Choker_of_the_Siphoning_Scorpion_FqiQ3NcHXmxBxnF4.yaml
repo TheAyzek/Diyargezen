@@ -1,0 +1,35 @@
+_id: FqiQ3NcHXmxBxnF4
+_key: '!items!FqiQ3NcHXmxBxnF4'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Choker of the Siphoning Scorpion
+system:
+  aura:
+    school: nec
+  cl: 9
+  description:
+    value: >-
+      <p>This choker consists of a thin gold chain with a small scorpion charm
+      that presses snugly against the neck when worn. Once per day as an
+      immediate action, the wearer of this item can forgo her saving throw
+      against a poison effect, and instead let the scorpion charm siphon the
+      poison, filling to its maximum capacity of 1 dose. The wearer suffers no
+      effects from the poison in this manner. While filled, the charm doesn't
+      protect against poison.  As a full-round action, the wearer can remove the
+      choker and affix it to her melee weapon by pressing the scorpion against
+      the weapon and allowing the chain to automatically secure itself around
+      the weapon's hilt or handle. If the weapon hits, the wearer can choose to
+      dose the target with the poison (in addition to any effects the attack
+      would normally have) as though the weapon were coated with a dose of the
+      poison. This drains the scorpion of its stored dose. The target can
+      attempt a Fortitude save as normal (using the poison's original DC) to
+      resist the effect.</p><h3>Requirements</h3><p>Craft Wondrous Item, absorb
+      toxicity, greater magic weapon</p>
+  price: 8000
+  slot: neck
+  sources:
+    - id: PZO9547
+  subType: wondrous
+type: equipment

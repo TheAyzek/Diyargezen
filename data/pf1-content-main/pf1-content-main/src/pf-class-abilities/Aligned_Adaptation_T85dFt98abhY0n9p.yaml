@@ -1,0 +1,23 @@
+_id: T85dFt98abhY0n9p
+_key: '!items!T85dFt98abhY0n9p'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_34.jpg
+name: Aligned Adaptation
+system:
+  associations:
+    classes:
+      - Shifter
+  description:
+    value: >-
+      <p><strong>Shifter Reactive Form</strong></p><p>When assuming this form,
+      the adaptive shifter chooses one alignment within one step of her own
+      alignment on either the law/chaos axis or the good/evil axis. All spells,
+      effects, and magic items affect the adaptive shifter as though that were
+      her actual alignment. If she is at least 10th level, her natural weapon
+      attacks overcome damage reduction as if they were weapons of her assumed
+      alignment.</p>
+  subType: classFeat
+  tags:
+    - Shifter Reactive Form
+type: feat

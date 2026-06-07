@@ -1,0 +1,183 @@
+_id: mcmGgleRdRPlQN7Z
+_key: '!tables!mcmGgleRdRPlQN7Z'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/settlement/watchtower-lit-orange.webp
+name: Ruined Underground City
+replacement: true
+results:
+  - _id: WfAL5huuyyfjSW8W
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.WfAL5huuyyfjSW8W'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 6
+    text: 1 Cloaker [CR 9]
+    type: text
+    weight: 1
+  - _id: n7cWSmAIj2mEKLIo
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.n7cWSmAIj2mEKLIo'
+    img: icons/svg/d20-black.svg
+    range:
+      - 7
+      - 16
+    text: 4d6 ([[4d6]]) Morlocks [AVG CR 9]
+    type: text
+    weight: 1
+  - _id: mToxWR6n5y4HsMP1
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.mToxWR6n5y4HsMP1'
+    img: icons/svg/d20-black.svg
+    range:
+      - 17
+      - 21
+    text: 1 Bebilith [CR 10]
+    type: text
+    weight: 1
+  - _id: KaX6BqoHBpxtg1pF
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.KaX6BqoHBpxtg1pF'
+    img: icons/svg/d20-black.svg
+    range:
+      - 22
+      - 29
+    text: 6d6 ([[6d6]]) Morlocks [AVG CR 10]
+    type: text
+    weight: 1
+  - _id: vWIkHpreo1AkTgxr
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.vWIkHpreo1AkTgxr'
+    img: icons/svg/d20-black.svg
+    range:
+      - 30
+      - 36
+    text: 2d6 ([[2d6]]) Skavelings [AVG CR 10]
+    type: text
+    weight: 1
+  - _id: Phy4dF2seTlpcuLS
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.Phy4dF2seTlpcuLS'
+    img: icons/svg/d20-black.svg
+    range:
+      - 37
+      - 42
+    text: 1d4 ([[1d4]]) Urdefhan Guards [AVG CR 10]
+    type: text
+    weight: 1
+  - _id: umLrQfkTXKLzCkj8
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.umLrQfkTXKLzCkj8'
+    img: icons/svg/d20-black.svg
+    range:
+      - 43
+      - 46
+    text: 1d4 ([[1d4]]) Black Puddings [AVG CR 11]
+    type: text
+    weight: 1
+  - _id: XEgSFlnUF5L2qrVQ
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.XEgSFlnUF5L2qrVQ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 47
+      - 52
+    text: 1 Vagabond Spider [CR 11]
+    type: text
+    weight: 1
+  - _id: 7e0OjI84y9j30enu
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.7e0OjI84y9j30enu'
+    img: icons/svg/d20-black.svg
+    range:
+      - 53
+      - 57
+    text: 2 Morlock Vessels [CR 12]
+    type: text
+    weight: 1
+  - _id: wCRZ06b8RkbAs5IO
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.wCRZ06b8RkbAs5IO'
+    img: icons/svg/d20-black.svg
+    range:
+      - 58
+      - 64
+    text: 1 Roper [CR 12]
+    type: text
+    weight: 1
+  - _id: uwfZd8IDpkZdwu0b
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.uwfZd8IDpkZdwu0b'
+    img: icons/svg/d20-black.svg
+    range:
+      - 65
+      - 69
+    text: 1 Iron Golem [CR 13]
+    type: text
+    weight: 1
+  - _id: s3XJYnURO7LAgsMJ
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.s3XJYnURO7LAgsMJ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 70
+      - 74
+    text: Urdefhan Air Patrol (4 Members) [CR 13]
+    type: text
+    weight: 1
+  - _id: XpodFmE6IdygTiVy
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.XpodFmE6IdygTiVy'
+    img: icons/svg/d20-black.svg
+    range:
+      - 75
+      - 78
+    text: 1d8 ([[1d8]]) Gugs [AVG CR 14]
+    type: text
+    weight: 1
+  - _id: gEjD4pLmbwpdr16R
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.gEjD4pLmbwpdr16R'
+    img: icons/svg/d20-black.svg
+    range:
+      - 79
+      - 82
+    text: 1d8 ([[1d8]]) Giant Morlocks [AVG CR 14]
+    type: text
+    weight: 1
+  - _id: Dz9eXtcIXMnUfY7C
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.Dz9eXtcIXMnUfY7C'
+    img: icons/svg/d20-black.svg
+    range:
+      - 83
+      - 86
+    text: Urdefhan Air Patrol (6 Members) [CR 14]
+    type: text
+    weight: 1
+  - _id: fLxiCUybohd4PWcF
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.fLxiCUybohd4PWcF'
+    img: icons/svg/d20-black.svg
+    range:
+      - 87
+      - 90
+    text: 6 Serpentfolk Guards [CR 14]
+    type: text
+    weight: 1
+  - _id: Rdc3EJa7w7r5ro95
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.Rdc3EJa7w7r5ro95'
+    img: icons/svg/d20-black.svg
+    range:
+      - 91
+      - 95
+    text: 1 Vemerak [CR 14]
+    type: text
+    weight: 1
+  - _id: b8E0ngoWZ0l6Z2UM
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.b8E0ngoWZ0l6Z2UM'
+    img: icons/svg/d20-black.svg
+    range:
+      - 96
+      - 98
+    text: 1 Neothelid [CR 15]
+    type: text
+    weight: 1
+  - _id: Uai7RTNJAyjnpXVp
+    _key: '!tables.results!mcmGgleRdRPlQN7Z.Uai7RTNJAyjnpXVp'
+    img: icons/svg/d20-black.svg
+    range:
+      - 99
+      - 100
+    text: 8 Serpentfolk Guards [CR 15]
+    type: text
+    weight: 1
+sort: 100000

@@ -1,0 +1,73 @@
+_id: 3hfotawkTcS4XXPV
+_key: '!items!3hfotawkTcS4XXPV'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/consumables/eggs/egg-spotted-cyan.webp
+name: Agate Ellipsoid Ioun Stone, Flawed
+system:
+  actions:
+    - _id: JmEmHZxynfY6fNp7
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      description: >-
+        <p>An augury can tell you whether a particular action will bring good or
+        bad results for you in the immediate future.</p><p><s>The base chance
+        for receiving a meaningful reply is 70% + 1% per caster level, to a
+        maximum of 90%; this roll is made secretly. A question may be so
+        straightforward that a successful result is automatic, or so vague as to
+        have no chance of success</s>. If the augury succeeds, you get one of
+        four results:</p><p>Weal (if the action will probably bring good
+        results).</p><p>Woe (for bad results).</p><p>Weal and woe (for
+        both).</p><p>Nothing (for actions that don't have especially good or bad
+        results).</p><p>If the spell fails, you get the "nothing" result. A
+        cleric who gets the "nothing" result has no way to tell whether it was
+        the consequence of a failed or successful augury.</p><p>The augury can
+        see into the future only about half an hour, so anything that might
+        happen after that does not affect the result. Thus, the result might not
+        take into account the long-term consequences of a contemplated action.
+        All auguries cast by the same person about the same topic use the same
+        die result as the first casting.</p>
+      name: Augury 100%
+      range:
+        units: personal
+  aura:
+    school: div
+  cl: 12
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>An elongated spherical stone tapering into a tear-like shape. It may
+      appear in a wide variety of colors. It may have irregular facets or
+      internal flaws.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone functions as a normal
+      @UUID[Compendium.pf-content.pf-wondrous.Item.KSRNhVhcf57sEuyp]{agate
+      ellipsoid ioun stone}, but you lose any abilities to reroll ability
+      checks, skill checks, or saving throws for 24 hours after equipping
+      it.</p><h3>Resonance</h3><p><strong>Method 1, Fixed: </strong>Increases
+      the caster level of divination spells by 1.</p><p><strong>Method 2,
+      Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, <em>augury</em>, creator must be 12th level
+      <strong>Cost</strong> 400 gp</p><p></p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 800
+  sources:
+    - id: PZO9435
+      pages: '23'
+  subType: wondrous
+  tags:
+    - Ioun Stone
+  uses:
+    per: single
+type: equipment

@@ -1,0 +1,25 @@
+_id: OEk7paFrWXqY2AOe
+_key: '!items!OEk7paFrWXqY2AOe'
+_stats:
+  coreVersion: '12.343'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Adamant
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate conjuration <strong>CL</strong>
+      9th</p><p><strong>Price</strong> +2 bonus;</p><p>Once per day as a swift
+      action, the wearer can harden armor possessing this special ability to the
+      strength of adamantine, giving it DR 3/- for 9 rounds. The
+      <em>adamant</em> special ability can be placed on only heavy
+      armor.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>mage armor</em>, <em>major creation</em>;
+      <strong>Price</strong> +2 bonus</p>
+  sources:
+    - id: PZO9459
+      pages: '24'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

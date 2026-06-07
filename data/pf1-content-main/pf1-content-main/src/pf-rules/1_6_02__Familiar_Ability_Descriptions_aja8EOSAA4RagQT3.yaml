@@ -1,0 +1,94 @@
+_id: aja8EOSAA4RagQT3
+_key: '!journal!aja8EOSAA4RagQT3'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: p0mBpSImsQVg3MX0
+name: 1.6.02. Familiar Ability Descriptions
+pages:
+  - _id: cs3cWjBhpTkAVetG
+    _key: '!journal.pages!aja8EOSAA4RagQT3.cs3cWjBhpTkAVetG'
+    _stats:
+      coreVersion: '12.331'
+    name: 1.6.02. Familiar Ability Descriptions
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.Ic1tlF3EE1QNW3kE]{(Index)}</p><p>@Compendium[pf-content.pf-rules.8scSEgBEtJZj0suf]{(Index)
+        Basic
+        Rules}</p><ul><li><p>@Compendium[pf-content.pf-rules.KTAUEzhZCUioQdqK]{1.6.
+        Familiars}</p><ul><li>@Compendium[pf-content.pf-rules.veGCPC3JzsxR5MnQ]{1.6.01.
+        Familiar
+        Basics}</li><li><strong>@Compendium[pf-content.pf-rules.aja8EOSAA4RagQT3]{1.6.02.
+        Familiar Ability
+        Descriptions}</strong></li><li>@Compendium[pf-content.pf-rules.ObzGkbjtwZP7ZJtr]{1.6.03.
+        Familiar
+        List}</li><li>@Compendium[pf-content.pf-rules.iO98MfTiAuGYTEYV]{1.6.04.
+        Improved Familiar
+        List}</li><li>@Compendium[pf-content.pf-rules.1M5KD9yy2yLQ9RVo]{1.6.05.
+        Small and Vermin
+        Familiars}</li><li>@Compendium[pf-content.pf-rules.ORtPnTEJdt3O9xHf]{1.6.06.
+        Approximating Familiars}</li></ul></li></ul><hr /><p>All familiars have
+        special abilities (or impart abilities to their masters) depending on
+        the master's combined level in classes that grant familiars, as shown on
+        the table below. The abilities are
+        cumulative.</p><table><thead><tr><td>Master Class Level</td><td>Natural
+        Armor
+        Adj.</td><td>Int</td><td>Special</td></tr></thead><tbody><tr><td>1st–2nd</td><td>+1</td><td>6</td><td>Alertness,
+        improved evasion, share spells, empathic
+        link</td></tr><tr><td>3rd–4th</td><td>+2</td><td>7</td><td>Deliver touch
+        spells</td></tr><tr><td>5th–6th</td><td>+3</td><td>8</td><td>Speak with
+        master</td></tr><tr><td>7th–8th</td><td>+4</td><td>9</td><td>Speak with
+        animals of its
+        kind</td></tr><tr><td>9th–10th</td><td>+5</td><td>10</td><td>—</td></tr><tr><td>11th–12th</td><td>+6</td><td>11</td><td>Spell
+        resistance</td></tr><tr><td>13th–14th</td><td>+7</td><td>12</td><td>Scry
+        on
+        familiar</td></tr><tr><td>15th–16th</td><td>+8</td><td>13</td><td>—</td></tr><tr><td>17th–18th</td><td>+9</td><td>14</td><td>—</td></tr><tr><td>19th–20th</td><td>+10</td><td>15</td><td>—</td></tr></tbody></table><p><strong>Natural
+        Armor Adj.</strong>: The number noted here is in addition to the
+        familiar's existing natural armor bonus.</p><p><strong>Int</strong>: The
+        familiar's Intelligence score.</p><p><strong>Alertness (Ex)</strong>:
+        While a familiar is within arm's reach, the master gains the Alertness
+        feat.</p><p><strong>Improved Evasion (Ex)</strong>: When subjected to an
+        attack that normally allows a Reflex saving throw for half damage, a
+        familiar takes no damage if it makes a successful saving throw and half
+        damage even if the saving throw fails.</p><p><strong>Share
+        Spells</strong>: The wizard may cast a spell with a target of “You” on
+        his familiar (as a touch spell) instead of on himself. A wizard may cast
+        spells on his familiar even if the spells do not normally affect
+        creatures of the familiar's type (magical beast).</p><p><strong>Empathic
+        Link (Su)</strong>: The master has an empathic link with his familiar to
+        a 1 mile distance. The master can communicate empathically with the
+        familiar, but cannot see through its eyes. Because of the link's limited
+        nature, only general emotions can be shared. The master has the same
+        connection to an item or place that his familiar
+        does.</p><p><strong>Deliver Touch Spells (Su)</strong>: If the master is
+        3rd level or higher, a familiar can deliver touch spells for him. If the
+        master and the familiar are in contact at the time the master casts a
+        touch spell, he can designate his familiar as the “toucher.” The
+        familiar can then deliver the touch spell just as the master would. As
+        usual, if the master casts another spell before the touch is delivered,
+        the touch spell dissipates.</p><p><strong>Speak with Master
+        (Ex)</strong>: If the master is 5th level or higher, a familiar and the
+        master can communicate verbally as if they were using a common language.
+        Other creatures do not understand the communication without magical
+        help.</p><p><strong>Speak with Animals of Its Kind (Ex)</strong>: If the
+        master is 7th level or higher, a familiar can communicate with animals
+        of approximately the same kind as itself (including dire varieties):
+        bats with bats, cats with felines, hawks and owls and ravens with birds,
+        lizards and snakes with reptiles, monkeys with other simians, rats with
+        rodents, toads with amphibians, and weasels with ermines and minks. Such
+        communication is limited by the Intelligence of the conversing
+        creatures.</p><p><strong>Spell Resistance (Ex)</strong>: If the master
+        is 11th level or higher, a familiar gains spell resistance equal to the
+        master's level + 5. To affect the familiar with a spell, another
+        spellcaster must get a result on a caster level check (1d20 + caster
+        level) that equals or exceeds the familiar's spell
+        resistance.</p><p><strong>Scry on Familiar (Sp)</strong>: If the master
+        is 13th level or higher, he may scry on his familiar (as if casting the
+        scrying spell) once per day.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

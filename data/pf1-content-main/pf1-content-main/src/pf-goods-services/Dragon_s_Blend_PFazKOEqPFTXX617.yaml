@@ -1,0 +1,20 @@
+_id: PFazKOEqPFTXX617
+_key: '!items!PFazKOEqPFTXX617'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/kitchenware/goblet-wood-engraved-brown.webp
+name: Dragon's Blend
+system:
+  description:
+    value: >-
+      <p>This aromatic blend fills the belly with the sensation of fire, warming
+      the drinker's body. By drinking two cups of dragon's blend coffee, you
+      gain cold resistance 5 for 1 hour. Once the coffee has prevented 5 points
+      of cold damage, the effect ends. You can benefit from dragon's blend
+      coffee only once per day.</p>
+  price: 1
+  sources:
+    - id: PZO9489
+      pages: '27'
+  subType: food
+type: loot

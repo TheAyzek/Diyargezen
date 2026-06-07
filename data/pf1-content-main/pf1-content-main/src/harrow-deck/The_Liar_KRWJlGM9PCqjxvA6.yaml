@@ -1,0 +1,30 @@
+_id: KRWJlGM9PCqjxvA6
+_key: '!journal!KRWJlGM9PCqjxvA6'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: slmqizDyyiaJyP1N
+name: The Liar
+pages:
+  - _id: Ulx16o6LT4ujJWNA
+    _key: '!journal.pages!KRWJlGM9PCqjxvA6.Ulx16o6LT4ujJWNA'
+    _stats:
+      coreVersion: '12.331'
+    name: The Liar
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Liar</strong> (chaotic evil, Charisma) is love at its
+        most treacherous. This is not the love that moves mountains - this is
+        the love that rips the heart in two and causes lovers to leap to their
+        deaths. This lamia can mean obsession, unrequited passion, or doomed
+        love. Misaligned, the card can indicate a new relationship beginning,
+        although disguised as something much less beautiful.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Liar.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

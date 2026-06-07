@@ -1,0 +1,33 @@
+_id: 8KTAmY97QgCX5GpG
+_key: '!journal!8KTAmY97QgCX5GpG'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Erecura
+pages:
+  - _id: KcSnmVRvh1jn4Uye
+    _key: '!journal.pages!8KTAmY97QgCX5GpG.KcSnmVRvh1jn4Uye'
+    _stats:
+      coreVersion: '12.331'
+    name: Erecura
+    sort: 0
+    text:
+      content: >-
+        <h1>Erecura</h1><h2>Queen of Dis</h2>@Source[PZO9267;pages=316] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Erecura">Erecura</a><h3>Details</h3><p><strong>Alignment</strong>
+        LN<br /><strong>Pantheon</strong> Other Deities<br /><strong>Areas of
+        Concern</strong> Deduction, mind reading, subtlety<br
+        /><strong>Domains</strong> Knowledge, Law, Nobility, Trickery<br
+        /><strong>Subdomains</strong> Deception, Espionage (Knowledge),
+        Espionage (Trickery), Leadership, Memory, Thought<br /><em>* Requires
+        the <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Light mace<br /><strong>Symbol</strong> Halo of runes<br
+        /><strong>Sacred Animal(s)</strong> Deer<br /><strong>Sacred
+        Color(s)</strong> Green, tan</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

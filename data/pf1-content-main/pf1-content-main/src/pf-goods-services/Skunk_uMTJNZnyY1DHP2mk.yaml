@@ -1,0 +1,22 @@
+_id: uMTJNZnyY1DHP2mk
+_key: '!items!uMTJNZnyY1DHP2mk'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/misc/pet-collar-blue.webp
+name: Skunk
+system:
+  description:
+    value: >-
+      <p>These creatures are infamous for the overwhelmingly foul odor they
+      produce to ward off predators. Skunks are sometimes kept as pets, though
+      usually only after their scent glands have been removed. More information
+      on skunks can be found in <em>Bestiary 3</em>.</p>
+  equipped: false
+  price: 10
+  sources:
+    - id: PZO1123
+      pages: '80'
+  subType: animal
+  weight:
+    value: 10
+type: loot

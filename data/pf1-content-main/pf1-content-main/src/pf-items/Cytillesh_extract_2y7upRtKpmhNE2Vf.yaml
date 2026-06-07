@@ -1,0 +1,57 @@
+_id: 2y7upRtKpmhNE2Vf
+_key: '!items!2y7upRtKpmhNE2Vf'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Cytillesh extract
+system:
+  actions:
+    - _id: jkd1dijee2cl64pt
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: The victim loses all memory of
+            events that took place in the previous hour and can’t form new
+            memories for [[8]] hours. These lost and prevented memories might
+            return later in the form of dreams, and can be returned with a
+            restoration or heal spell
+      save:
+        dc: '18'
+        type: fort
+      tag: cytilleshExtract
+  description:
+    value: >-
+      <p><em><strong>Price</strong> 800 gp; <strong>Weight</strong>
+      0</em></p><p><em><strong>Type</strong> ingested; <strong>Save</strong>
+      Fortitude DC 18</em></p><p><em><strong>Frequency</strong> 1/hour for 8
+      hours</em></p><p><em><strong>Effect</strong> The victim loses all memory
+      of events that took place in the previous hour and can’t form new memories
+      for 8 hours. These lost and prevented memories might return later in the
+      form of dreams, and can be returned with a <em>restoration </em>or
+      <em>heal </em>spell</em></p><p><em><strong>Cure</strong> 2
+      saves</em></p><h3><em>Alchemical Recipe<h3><p><strong>Recipe</strong> (115
+      realgar + 115 cytillesh spores)/calcination; <strong>Craft</strong> DC
+      18</p><p><strong>Time</strong> 1 hour; <strong>Tools</strong> crucible;
+      <strong>Type</strong> poison</p></h3></em></h3>
+  price: 800
+  sources:
+    - id: PZO9445
+      pages: '11'
+    - id: PZO9216
+      pages: '8'
+    - id: PZO9061
+      pages: '64'
+    - id: PZO9536
+      pages: '21'
+  subType: poison
+  uses:
+    per: single
+type: consumable

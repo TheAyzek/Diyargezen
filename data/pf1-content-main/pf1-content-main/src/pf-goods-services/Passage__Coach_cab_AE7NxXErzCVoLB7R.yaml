@@ -1,0 +1,21 @@
+_id: AE7NxXErzCVoLB7R
+_key: '!items!AE7NxXErzCVoLB7R'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/tech/wheel.webp
+name: Passage, Coach cab
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> -; <strong>Price of Passage (per mile)</strong>
+      3 cp</p><p>The price given is for a ride in a coach that transports people
+      (and light cargo) between towns. For a ride in a cab that transports
+      passengers within a city, 1 copper piece usually takes you anywhere you
+      need to go.</p>
+  equipped: false
+  price: 0.03
+  sources:
+    - id: PZO1110
+      pages: '159'
+  subType: vehicle
+type: loot

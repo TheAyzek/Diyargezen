@@ -1,0 +1,32 @@
+_id: DFIi3JMe6eZrZuhe
+_key: '!items!DFIi3JMe6eZrZuhe'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_13.jpg
+name: Bubonic Plague
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> disease (injury or inhaled);
+      <strong>Save</strong>&nbsp;Fortitude DC
+      17;</p><p><strong>Onset</strong>&nbsp;1
+      day;&nbsp;<strong>Frequency</strong>&nbsp;1/day</p><p><strong>Effect</strong>&nbsp;1d4
+      Con damage and 1 Cha damage and target
+      is&nbsp;<a>fatigued</a></p><p><strong>Cure</strong>&nbsp;2 consecutive
+      saves</p><hr /><p>Infected vermin and parasites spread this disease, also
+      known as Daemon&rsquo;s Touch or the Black Death, through their bites.
+      Once contracted, the disease spreads quickly, polluting the victim&rsquo;s
+      body with toxins. As the disease reaches the lymph nodes, the victim
+      suffers extreme inflammation of glands, and his skin might take on a black
+      pallor. Symptoms include fever, headaches, nausea, fatigue, and swelling
+      of the lymph nodes (called buboes) on the neck, underarms, and inner thigh
+      areas, and eventually bleeding beneath the skin. A victim who takes any
+      Constitution damage from the disease must immediately make a successful
+      Fortitude save or become fatigued until all his Constitution damage is
+      healed. Each time a victim takes 2 points of Constitution damage from
+      Black Death, he also takes 1 point of Charisma damage.</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

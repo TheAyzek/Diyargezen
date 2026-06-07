@@ -1,0 +1,41 @@
+_id: DKGODlPENtzko1DN
+_key: '!items!DKGODlPENtzko1DN'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/hide-armor.PNG
+name: Powerhouse Pelt
+system:
+  armor:
+    acp: 3
+    dex: 4
+    material:
+      base:
+        value: leather
+    value: 4
+  aura:
+    school: trs
+  baseTypes:
+    - Hide Armor
+  cl: 5
+  description:
+    value: >-
+      <p>Crafted from the skin of a great cat, this +1 hide armor provides its
+      wearer a +2 competence bonus on all ability checks to perform feats of
+      strength, such as bending bars, and forcing doors. This bonus doesn't
+      apply on any other Strength-related rolls (including Strength-based skill
+      checks and melee attack and damage rolls). The wearer also treats her
+      Strength score as if it were 8 higher than normal for the purpose of
+      determining her carrying capacity.</p><p><strong>Base Item</strong>: hide
+      armor</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magical Arms and Armor, ant haul, bull's strength</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 3515
+  sources:
+    - id: PZO1136
+  spellFailure: 20
+  weight:
+    value: 20
+type: equipment

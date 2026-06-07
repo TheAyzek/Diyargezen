@@ -1,0 +1,33 @@
+_id: KnqSgtTewl3DPu66
+_key: '!items!KnqSgtTewl3DPu66'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Patternward Spectacles
+system:
+  aura:
+    school: abj
+  cl: 7
+  description:
+    value: >-
+      <p>These spectacles fit firmly over eyes and are held in place by two
+      crystalline stems. The lenses are initially clear and don't hinder the
+      wearer's vision. When the wearer is targeted with an illusion spell or
+      spell-like ability of the pattern subschool (such as color spray), the
+      spectacles absorb the magic and darken, protecting the wearer from the
+      pattern effect. Once the spectacles absorb a spell and become opaque, the
+      wearer becomes blinded until the spectacles are removed (a swift action).
+      Patternward spectacles protect against spells or spell-like abilities of
+      only 3rd level or lower; higher-level effects affect the wearer as normal.
+      Once the spectacles absorb an effect, they lose their
+      magic.</p><h3>Requirements</h3><p>Craft Wondrous Item, minor globe of
+      invulnerability</p>
+  price: 750
+  slot: eyes
+  sources:
+    - id: PZO9547
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

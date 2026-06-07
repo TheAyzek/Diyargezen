@@ -1,0 +1,44 @@
+_id: 8siYeXY8DXlnko4w
+_key: '!items!8siYeXY8DXlnko4w'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Sloth's bite
+system:
+  actions:
+    - _id: bqh5d1opq9rv245y
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: This poison causes the affected
+            creature to be sluggish and slow to react. The target takes [[1d2]]
+            points of Dexterity damage and is flat-footed until the beginning of
+            her next turn
+      save:
+        dc: '18'
+        type: fort
+      tag: slothsBite
+  description:
+    value: >-
+      <p><strong>Type</strong> injury; <strong>Save</strong> Fortitude DC
+      18</p><p><strong>Frequency</strong> 1/round for 6
+      rounds</p><p><strong>Effect</strong> This poison causes the affected
+      creature to be sluggish and slow to react. The target takes 1d2 points of
+      Dexterity damage and is flat-footed until the beginning of her next
+      turn</p><p><strong>Cure</strong> 1 save</p>
+  price: 300
+  sources:
+    - id: PZO9484
+      pages: '29'
+  subType: poison
+  uses:
+    per: single
+type: consumable

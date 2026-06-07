@@ -1,0 +1,42 @@
+_id: RBedPhfXcy7H0cDT
+_key: '!journal!RBedPhfXcy7H0cDT'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Substance Hardness & Hit Points
+pages:
+  - _id: GcG6O5aDAxs1Fny5
+    _key: '!journal.pages!RBedPhfXcy7H0cDT.GcG6O5aDAxs1Fny5'
+    _stats:
+      coreVersion: '12.331'
+    name: Substance Hardness & Hit Points
+    sort: 0
+    text:
+      content: >-
+        <p>See @Compendium[pf-content.pf-rules.rEHXXby37VzctF5p]{4.2.1. Smashing
+        an
+        Object}</p><table><tbody><tr><td><p><strong>Object</strong></p></td><td><p><strong>Hardness</strong></p></td><td><p><strong>Hit
+        Points</strong></p></td><td><p><strong>DC</strong></p></td></tr><tr><td><p>Rope
+        (1 in.
+        diameter)</p></td><td><p>0</p></td><td><p>2</p></td><td><p>23</p></td></tr><tr><td><p>Simple
+        wooden
+        door</p></td><td><p>5</p></td><td><p>10</p></td><td><p>13</p></td></tr><tr><td><p>Small
+        chest</p></td><td><p>5</p></td><td><p>1</p></td><td><p>17</p></td></tr><tr><td><p>Good
+        wooden
+        door</p></td><td><p>5</p></td><td><p>15</p></td><td><p>18</p></td></tr><tr><td><p>Treasure
+        chest</p></td><td><p>5</p></td><td><p>15</p></td><td><p>23</p></td></tr><tr><td><p>Strong
+        wooden
+        door</p></td><td><p>5</p></td><td><p>20</p></td><td><p>23</p></td></tr><tr><td><p>Masonry
+        wall (1 ft.
+        thick)</p></td><td><p>8</p></td><td><p>90</p></td><td><p>35</p></td></tr><tr><td><p>Hewn
+        stone (3 ft.
+        thick)</p></td><td><p>8</p></td><td><p>540</p></td><td><p>50</p></td></tr><tr><td><p>Chain</p></td><td><p>10</p></td><td><p>5</p></td><td><p>26</p></td></tr><tr><td><p>Manacles</p></td><td><p>10</p></td><td><p>10</p></td><td><p>26</p></td></tr><tr><td><p>Masterwork
+        manacles</p></td><td><p>10</p></td><td><p>10</p></td><td><p>28</p></td></tr><tr><td><p>Iron
+        door (2 in.
+        thick)</p></td><td><p>10</p></td><td><p>60</p></td><td><p>28</p></td></tr></tbody></table>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

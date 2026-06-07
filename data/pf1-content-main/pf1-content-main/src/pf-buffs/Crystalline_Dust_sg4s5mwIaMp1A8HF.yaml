@@ -1,0 +1,30 @@
+_id: sg4s5mwIaMp1A8HF
+_key: '!items!sg4s5mwIaMp1A8HF'
+_stats:
+  coreVersion: '12.331'
+folder: Qpty4Od7cOU5vY3R
+img: systems/pf1/icons/races/aphorite.png
+name: Crystalline Dust
+system:
+  contextNotes:
+    - target: ac
+      text: >-
+        A 20% miss chance ([[/r 1d100 # Miss Chance]]) vs melee and ranged
+        attacks.
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf-content.pf-racial-traits.Item.dXEb2y6woAp0MpCO]{Crystalline
+      Dust}</p><p>The aphorite's crystal dust grants them a 20% miss chance vs
+      melee and ranged attacks for 1 round.</p>
+  duration:
+    end: turnStart
+    units: round
+    value: '1'
+  level: null
+  sources:
+    - id: PZO1141
+      pages: '224'
+  subType: feat
+  tags:
+    - Aphorite
+type: buff

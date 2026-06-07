@@ -1,0 +1,19 @@
+_id: Yc2gRHZV8nrwAObO
+_key: '!items!Yc2gRHZV8nrwAObO'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_29.jpg
+name: Bear
+system:
+  associations:
+    classes:
+      - Hunter
+  description:
+    value: >-
+      <p><strong>Hunter Animal Focus</strong></p><p>The creature gains a +2
+      enhancement bonus to Constitution. This bonus increases to +4 at 8th level
+      and +6 at 15th level.</p>
+  subType: classFeat
+  tags:
+    - Hunter Animal Focus
+type: feat

@@ -1,0 +1,73 @@
+_id: PuNjl94o3vG0pAep
+_key: '!items!PuNjl94o3vG0pAep'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/whip.png
+name: Rythius, the Kyton Scourge
+system:
+  actions:
+    - _id: y2o6fbvapojp8m32
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: rythiusTheKytonScourge
+  aura:
+    custom: true
+    school: abjuration and evocation
+  baseTypes:
+    - Whip
+  cl: 12
+  description:
+    value: >-
+      <p>Once possessed by a brijidine azata dedicated to ending the
+      depredations of kytons, this potent magic weapon now holds a portion of
+      her essence. This +1 shock whip is woven from green leather and crackles
+      with electricity, seemingly writhing of its own volition. Three times per
+      day, when the wielder uses Rythius to successfully trip a creature, the
+      target of the trip attack is subject to a dimensional anchor effect. The
+      wielder can choose to suppress this ability as a swift action. 
+      Furthermore, in the hands of a wielder with a good alignment, the weapon
+      becomes a +1 kyton bane shock whip. Rythius is infused with good, and as a
+      result it bestows 1 negative level on any nongood creature wielding it.
+      This negative level persists as long as the weapon is wielded and
+      disappears when the item is put away. The negative level cannot be
+      overcome in any way (including by means of restoration spells) while it is
+      wielded.</p><p><strong>Base Item</strong>: kyton bane shock
+      whip</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, dimensional anchor, holy smite, creator must be good</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: leather
+  price: 53000
+  properties:
+    dis: true
+    fin: true
+    nnl: true
+    rch: true
+    trp: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9431
+  weaponGroups:
+    - flails
+  weight:
+    value: 2
+type: weapon

@@ -1,0 +1,32 @@
+_id: ChwqQGI6imHdLaUM
+_key: '!items!ChwqQGI6imHdLaUM'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Devil's Spit
+system:
+  aura:
+    school: nec
+  cl: 3
+  description:
+    value: >-
+      <p>Devil's spit is a more potent form of unholy water, and acts in most
+      ways like a vial of that substance. However, a direct hit by a flask of
+      devil's spit deals 4d4 points of damage to good outsiders and lawful good
+      creatures, 6d4 points of damage to lawful good outsiders, and 2d4 points
+      of damage to all other good-aligned creatures. All creatures within 5 feet
+      of the point where the flask hits take 2 points of damage if they are good
+      outsiders or lawful good creatures, 3 points of damage if they are lawful
+      good outsiders, and 1 point of damage if they are chaotic good or neutral
+      good.  Devil's spit can also be used to charge a rod of burning blood (see
+      below). A single vial of devil's spit provides 5 charges to that item.
+      Charging a rod of burning blood with devil's spit is a standard action
+      that provokes attacks of
+      opportunity.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Items, curse water</p>
+  price: 60
+  sources:
+    - id: PZO1136
+  subType: wondrous
+type: equipment

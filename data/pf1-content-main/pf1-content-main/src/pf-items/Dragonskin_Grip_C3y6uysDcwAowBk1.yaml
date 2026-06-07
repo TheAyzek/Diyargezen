@@ -1,0 +1,25 @@
+_id: C3y6uysDcwAowBk1
+_key: '!items!C3y6uysDcwAowBk1'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/magic-purple.jpg
+name: Dragonskin Grip
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Dragoncraft</p><p>Made using the choicest,
+      most malleable skin from a dragon's underbelly, this specialized weapon
+      grip can be added to any weapon with a hilt or handle. Dragonskin grips
+      may be added to an existing weapon, or incorporated into a new weapon
+      during crafting. The skin provides extra grip, granting the wielder a +2
+      bonus to CMD against disarm attempts.</p><p>Producing a dragonskin grip
+      requires the Dragoncrafting feat and a successful DC 15 Craft (bows or
+      weapons) check.</p>
+  price: 250
+  sources:
+    - id: PZO9434
+      pages: '19'
+  subType: other
+  tags:
+    - Dragoncraft
+type: consumable

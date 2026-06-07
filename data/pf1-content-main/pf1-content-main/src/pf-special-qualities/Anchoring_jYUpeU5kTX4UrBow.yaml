@@ -1,0 +1,36 @@
+_id: jYUpeU5kTX4UrBow
+_key: '!items!jYUpeU5kTX4UrBow'
+_stats:
+  coreVersion: '12.343'
+folder: AqjqWFWInPuTJU1V
+img: icons/skills/melee/strike-polearm-light-orange.webp
+name: Anchoring
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> moderate transmutation <strong>CL</strong>
+      10th</p><p><strong>Slot</strong> weapon quality; <strong>Price</strong> +2
+      bonus;</p><p>This special ability can only be added to a melee weapon or a
+      thrown weapon. An <em>anchoring </em>weapon pins a target in place and
+      prevents it from moving. As a swift action, the weapon can be fixed in
+      place in a point in space, functioning as an <em>immovable rod</em>. This
+      ability can also be used when the wielder hits a creature with a melee
+      attack using an <em>anchoring </em>weapon. This anchors the target to the
+      weapon, preventing it from moving away from the weapon. The target is not
+      entangled or paralyzed; it simply cannot move from its location without
+      first destroying the weapon or making a successful DC 30 Strength check as
+      a full-round action to move with the weapon up to 10 feet. An
+      <em>anchoring </em>weapon remains motionless and cannot be used to attack
+      while it is anchoring a creature. An <em>anchoring</em> weapon has no
+      effect on amorphous creatures, including elementals, oozes, and creatures
+      in gaseous or liquid form. It also cannot anchor incorporeal creatures
+      unless the weapon also has the <em>ghost touch </em>special
+      ability.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>levitate</em>; <strong>Price</strong> -</p>
+  sources:
+    - id: PZO1123
+      pages: '135'
+  subType: misc
+  tags:
+    - Universal Weapon Qualities
+type: feat

@@ -1,0 +1,48 @@
+_id: osnexM4KcODBdX3X
+_key: '!items!osnexM4KcODBdX3X'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Ragespittle
+system:
+  actions:
+    - _id: vg3d80u5mf7tw83u
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - '<strong>Primary Effect</strong: [[1d2]] Dex, see text'
+      save:
+        dc: '17'
+        type: fort
+      tag: ragespittle
+  description:
+    value: >-
+      <p><strong>Type</strong> contact; <strong>Save</strong> Fortitude DC
+      17</p><p><strong>Onset</strong> 1 minute; <strong>Frequency</strong>
+      1/minute for 6 minutes</p><p><strong>Effect</strong> 1d2 Dex, see
+      text</p><p><strong>Cure</strong> 2 saves</p><p>Imported from Casmaron, the
+      substance also known as Rovagug’s spittle is employed by cults of the
+      Rough Beast. The toxin is used to foment unrest by causing muscle tremors
+      and aggression. Any creature that fails a Fortitude save against
+      ragespittle is subjected to an uncontrollable rage. A rage-afflicted
+      victim must succeed at a DC 17 Will save each round or attack the nearest
+      creature, whether friend or foe. Effects that suppress confusion or
+      emotional conditions suppress ragespittle’s rage effect for their
+      duration, but not the poison’s ability damage. Effects that end confusion
+      or emotional conditions suppress the urge for only 1d10 rounds while the
+      poison remains in the victim’s system.</p>
+  price: 1000
+  sources:
+    - id: PZO9464
+      pages: '22'
+  subType: poison
+  uses:
+    per: single
+type: consumable

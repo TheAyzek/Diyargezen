@@ -1,0 +1,30 @@
+_id: 2hCTS5gRpvJ14RH4
+_key: '!items!2hCTS5gRpvJ14RH4'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Cauldron of Overwhelming Allies
+system:
+  aura:
+    school: con
+  cl: 8
+  description:
+    value: >-
+      <p>The artistic scrawls on the dark surface of this small bronze cauldron
+      depict an array of exotic animals, legendary beasts, leering fiends, and
+      hosts of elementals. Once per day, if used as the focus or divine focus
+      for a summon monster or summon nature's ally spell, the cauldron
+      automatically conjures 1d3 additional creatures of the same kind from the
+      next lower level list. For example, if a user casts summon monster III to
+      summon 1d3 wolves, he could also summon 1d3 additional wolves (or other
+      creatures from the 2nd-level list).<h3>Requirements</h3><p>Craft Wondrous
+      Item, Spell Focus (conjuration), summon monster IV or summon nature's ally
+      IV</p>
+  price: 4500
+  sources:
+    - id: PZO9067
+  subType: wondrous
+  weight:
+    value: 5
+type: equipment

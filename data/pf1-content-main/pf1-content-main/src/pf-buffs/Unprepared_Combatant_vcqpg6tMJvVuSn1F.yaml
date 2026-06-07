@@ -1,0 +1,29 @@
+_id: vcqpg6tMJvVuSn1F
+_key: '!items!vcqpg6tMJvVuSn1F'
+_stats:
+  coreVersion: '12.331'
+folder: agexB4nQIEpe1NP2
+img: systems/pf1/icons/skills/yellow_08.jpg
+name: Unprepared Combatant
+system:
+  changes:
+    - _id: hgykkcbg
+      formula: '-4'
+      target: init
+      type: untyped
+    - _id: t5c9wq18
+      formula: '-4'
+      target: ref
+      type: untyped
+  description:
+    value: >-
+      <p>@UUID[Compendium.pf1.spells.Item.7g4aczondf7igvyd]{Unprepared
+      Combatant}</p><p>The target takes a –4 penalty on initiative checks and
+      Reflex saves.</p>
+  duration:
+    end: turnStart
+    units: minute
+    value: '@item.level'
+  level: 1
+  subType: spell
+type: buff

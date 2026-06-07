@@ -1,0 +1,31 @@
+_id: meSI5igDtER7aVBn
+_key: '!journal!meSI5igDtER7aVBn'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: br8fwJFrbgshQXJz
+name: 3.2.6.1. Sandstorms
+pages:
+  - _id: VWm7cbaOlDIV0Adi
+    _key: '!journal.pages!meSI5igDtER7aVBn.VWm7cbaOlDIV0Adi'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.2.6.1. Sandstorms
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.CPUpraqn1jz9vhMh]{3.2.
+        Wilderness}</p><ul><li>@Compendium[pf-content.pf-rules.3YyU7Yg6wbShgOKM]{3.2.6.
+        Desert Terrain}</li></ul><hr /><p>@Source[PZO1110;pages=431]</p><p>A
+        sandstorm reduces visibility to 1d10 × 5 feet and provides a –4 penalty
+        on Perception checks. A sandstorm deals 1d3 points of nonlethal damage
+        per hour to any creatures caught in the open, and leaves a thin coating
+        of sand in its wake. Driving sand creeps in through all but the most
+        secure seals and seams, chafing skin and contaminating carried gear.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

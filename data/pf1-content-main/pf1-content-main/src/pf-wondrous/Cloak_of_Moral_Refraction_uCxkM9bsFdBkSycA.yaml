@@ -1,0 +1,43 @@
+_id: uCxkM9bsFdBkSycA
+_key: '!items!uCxkM9bsFdBkSycA'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Cloak of Moral Refraction
+system:
+  aura:
+    school: abj
+  cl: 13
+  description:
+    value: >-
+      <p>The cloak of moral refraction has long been a tool of the
+      riftwardens-mystics who charge themselves with maintaining cosmic balance
+      and closing extraplanar portals throughout the multiverse. The shimmering
+      fabric of this light silver-and-red cloak never dirties or wrinkles, and
+      when laid out flat, the cloak reflects light nearly as well as a mirror. 
+      A fully charged cloak of moral refraction has 3 charges-charges used are
+      automatically renewed at a rate of 1 charge per day at dawn. The wearer
+      may use the cloak to expend these charges and create the following
+      effects.  • 1 charge: Dispel an ongoing spell with an alignment
+      descriptor, as the third function of dispel chaos/evil/good/law.  • 2
+      charges: Ready an action to counter a spell or spell-like ability with an
+      alignment descriptor. The effect is automatically countered, and no caster
+      level check is required. The charges are expended only after countering a
+      spell or spell-like ability. If you ready this action but it is not
+      triggered, the charges are not expended.  • 3 charges: As an immediate
+      action, counter a spell or spell-like ability cast by an outsider with an
+      alignment subtype. The effect is automatically countered, and no caster
+      level check is required. In addition, the outsider must succeed at a DC 20
+      Will save or be banished back to its home plane, as banishment. An
+      outsider with more than 26 Hit Dice is unaffected by the banishment
+      effect.</p><h3>Requirements</h3><p>Craft Wondrous Item; banishment; dispel
+      chaos, evil, good, and law; dispel magic; creator must be neutral</p>
+  price: 54200
+  slot: shoulders
+  sources:
+    - id: PZO9443
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

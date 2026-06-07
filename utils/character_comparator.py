@@ -29,8 +29,6 @@ def compare_characters(char1: Dict[str, Any], char2: Dict[str, Any]) -> Dict[str
         return _compare_dnd(char1, char2)
     elif system == "MUTANTS_AND_MASTERMINDS":
         return _compare_mm(char1, char2)
-    elif system == "VTM5E":
-        return _compare_vtm(char1, char2)
     else:
         return {
             "error": f"Bilinmeyen sistem: {system}",
@@ -275,110 +273,4 @@ def _compare_mm(char1: Dict[str, Any], char2: Dict[str, Any]) -> Dict[str, Any]:
         }
     }
 
-
-def _compare_vtm(char1: Dict[str, Any], char2: Dict[str, Any]) -> Dict[str, Any]:
-    """VtM karakterlerini karşılaştır"""
-    differences = []
-    similarities = []
-    
-    # Temel bilgiler
-    basic_fields = ["name", "player", "chronicle", "concept", "clan"]
-    for field in basic_fields:
-        val1 = char1.get(field, "")
-        val2 = char2.get(field, "")
-        if val1 != val2:
-            differences.append({
-                "field": field,
-                "char1": val1,
-                "char2": val2,
-                "type": "basic"
-            })
-        else:
-            similarities.append({
-                "field": field,
-                "value": val1,
-                "type": "basic"
-            })
-    
-    # Attributes
-    attrs1 = char1.get("attributes", {})
-    attrs2 = char2.get("attributes", {})
-    all_attrs = set(attrs1.keys()) | set(attrs2.keys())
-    
-    for attr in all_attrs:
-        val1 = attrs1.get(attr, 0)
-        val2 = attrs2.get(attr, 0)
-        diff = val1 - val2
-        if diff != 0:
-            differences.append({
-                "field": f"attribute_{attr}",
-                "char1": val1,
-                "char2": val2,
-                "difference": diff,
-                "type": "attribute"
-            })
-    
-    # Skills
-    skills1 = char1.get("skills", {})
-    skills2 = char2.get("skills", {})
-    all_skill_cats = set(skills1.keys()) | set(skills2.keys())
-    
-    for cat in all_skill_cats:
-        skills_cat1 = skills1.get(cat, {})
-        skills_cat2 = skills2.get(cat, {})
-        all_skills = set(skills_cat1.keys()) | set(skills_cat2.keys())
-        
-        for skill in all_skills:
-            val1 = skills_cat1.get(skill, 0)
-            val2 = skills_cat2.get(skill, 0)
-            diff = val1 - val2
-            if diff != 0:
-                differences.append({
-                    "field": f"skill_{cat}_{skill}",
-                    "char1": val1,
-                    "char2": val2,
-                    "difference": diff,
-                    "type": "skill"
-                })
-    
-    # Disciplines
-    disc1 = set(char1.get("disciplines", []))
-    disc2 = set(char2.get("disciplines", []))
-    disc_diff = {
-        "only_char1": list(disc1 - disc2),
-        "only_char2": list(disc2 - disc1),
-        "common": list(disc1 & disc2)
-    }
-    
-    if disc_diff["only_char1"] or disc_diff["only_char2"]:
-        differences.append({
-            "field": "disciplines",
-            "differences": disc_diff,
-            "type": "disciplines"
-        })
-    
-    # Humanity, Health, Willpower
-    for field in ["humanity", "health", "willpower"]:
-        val1 = char1.get(field, 0)
-        val2 = char2.get(field, 0)
-        if val1 != val2:
-            differences.append({
-                "field": field,
-                "char1": val1,
-                "char2": val2,
-                "difference": val1 - val2,
-                "type": field
-            })
-    
-    return {
-        "system": "VTM5E",
-        "char1_name": char1.get("name", "Unknown"),
-        "char2_name": char2.get("name", "Unknown"),
-        "differences": differences,
-        "similarities": similarities,
-        "summary": {
-            "total_differences": len(differences),
-            "total_similarities": len(similarities)
-        }
-    }
 

@@ -1,0 +1,42 @@
+_id: z87AmuqQYUWKsgBH
+_key: '!items!z87AmuqQYUWKsgBH'
+_stats:
+  coreVersion: '12.331'
+folder: xBDkeYWwOx17NYOO
+img: systems/pf1/icons/feats/greater-shield-focus.jpg
+name: Cover
+system:
+  changes:
+    - _id: 3b9czjnt
+      formula: '4'
+      target: ac
+      type: circumstance
+    - _id: imc615os
+      formula: '2'
+      target: ref
+      type: circumstance
+  contextNotes:
+    - target: skill.ste
+      text: Can make checks due to Cover.
+    - target: attack
+      text: Can't make AoOs vs opponents that have cover from you.
+  description:
+    value: >-
+      <p>Cover grants you a +2 bonus on Reflex saves against attacks that
+      originate or burst out from a point on the other side of the cover from
+      you. Note that spread effects can extend around corners and thus negate
+      this cover bonus.</p><hr><p><strong>Cover and Attacks of
+      Opportunity</strong></p><p>You can’t execute an attack of opportunity
+      against an opponent with cover relative to
+      you.</p><hr><div><p><strong>Cover and Stealth Checks</strong></p><p>You
+      can use cover to make a Stealth check. Without cover, you usually need
+      concealment (see below) to make a Stealth check.</p><hr><p><strong>Big
+      Creatures and Cover</strong></p><p>Any creature with a space larger than 5
+      feet (1 square) determines cover against melee attacks slightly
+      differently than smaller creatures do. Such a creature can choose any
+      square that it occupies to determine if an opponent has cover against its
+      melee attacks. Similarly, when making a melee attack against such a
+      creature, you can pick any of the squares it occupies to determine if it
+      has cover against you.</p></div>
+  level: null
+type: buff

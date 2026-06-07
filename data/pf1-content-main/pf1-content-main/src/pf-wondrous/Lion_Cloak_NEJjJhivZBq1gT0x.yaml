@@ -1,0 +1,33 @@
+_id: NEJjJhivZBq1gT0x
+_key: '!items!NEJjJhivZBq1gT0x'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Lion Cloak
+system:
+  aura:
+    school: trs
+  cl: 10
+  description:
+    value: >-
+      <p>Made from a single male lion's coat with the mane surrounding its hood,
+      the lion cloak is an impressive sight. A creature wearing the cloak gains
+      a +2 resistance bonus on saving throws made against mind-affecting and
+      fear effects and a +2 circumstance bonus on Intimidate checks. Once per
+      day, the wearer can pull the hood over her head, assuming the form of a
+      lion (as the beast shape II spell, except that it allows only lion form)
+      for up to 10 minutes. If the wearer has the smite class feature, she can
+      use this power more than once per day by expending uses of her smite; at
+      most she can take the lion form as many times as she has smites plus one
+      additional time. While in this lion form the wearer cannot use its normal
+      smite ability.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, beast shape II</p>
+  price: 12000
+  slot: shoulders
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

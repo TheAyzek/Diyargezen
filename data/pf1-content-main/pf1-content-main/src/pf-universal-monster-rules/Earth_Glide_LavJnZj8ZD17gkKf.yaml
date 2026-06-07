@@ -1,0 +1,23 @@
+_id: LavJnZj8ZD17gkKf
+_key: '!items!LavJnZj8ZD17gkKf'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/stone/ore-chunk-magma-brown.webp
+name: Earth Glide
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>When the creature burrows, it can pass through stone, dirt, or almost
+      any other nonmetal earth as easily as a fish swims through water. If
+      protected against fire damage, it can even glide through lava. Its
+      burrowing leaves behind no tunnel or hole, nor does it create any ripple
+      or other sign of its presence. A <a>move earth</a> spell cast on an area
+      containing the burrowing creature flings it back 30 feet, stunning it for
+      1 round unless it succeeds at a DC 15 Fortitude
+      save.</p><p><em>Format</em>: earth glide</p><p><em>Location</em>:
+      Speed.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

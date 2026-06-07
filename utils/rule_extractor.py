@@ -161,31 +161,6 @@ def extract_power_level_rules(text: str) -> Optional[Dict[str, Dict[str, int]]]:
     return pl_rules if pl_rules else None
 
 
-def extract_vtm_rules(text: str) -> Optional[Dict[str, Any]]:
-    """
-    VtM kurallarını çıkar
-    Örnek: "Health = 3 + Stamina", "Willpower = Resolve + Composure"
-    """
-    rules = {}
-    
-    # Health kuralı
-    health_match = re.search(r'Health\s*=\s*(\d+)\s*\+\s*(\w+)', text, re.IGNORECASE)
-    if health_match:
-        rules['health'] = {
-            'base': int(health_match.group(1)),
-            'attribute': health_match.group(2)
-        }
-    
-    # Willpower kuralı
-    willpower_match = re.search(r'Willpower\s*=\s*(\w+)\s*\+\s*(\w+)', text, re.IGNORECASE)
-    if willpower_match:
-        rules['willpower'] = {
-            'attributes': [willpower_match.group(1), willpower_match.group(2)]
-        }
-    
-    return rules if rules else None
-
-
 def extract_rules_from_text(text: str, system: str) -> Dict[str, Any]:
     """
     Metinden tüm kuralları çıkar
@@ -228,12 +203,6 @@ def extract_rules_from_text(text: str, system: str) -> Dict[str, Any]:
                 'type': 'table',
                 'data': pl_rules
             }
-    
-    # VtM kuralları
-    elif system == 'VTM5E':
-        vtm_rules = extract_vtm_rules(text)
-        if vtm_rules:
-            rules['rules'].update(vtm_rules)
     
     return rules
 

@@ -1,0 +1,55 @@
+_id: O03VgIc9WSMYSjTD
+_key: '!journal!O03VgIc9WSMYSjTD'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Lymnieris
+pages:
+  - _id: x2SeucoSUBs1d79T
+    _key: '!journal.pages!O03VgIc9WSMYSjTD.x2SeucoSUBs1d79T'
+    _stats:
+      coreVersion: '12.331'
+    name: Lymnieris
+    sort: 0
+    text:
+      content: >-
+        <h1>Lymnieris</h1><h2>The Auroral Tower</h2>@Source[PZO9267;pages=322]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Lymnieris">Lymnieris</a><h3>Details</h3><p><strong>Alignment</strong>
+        LG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Prostitution, rites of passage, virginity<br
+        /><strong>Domains</strong> Community, Good, Law, Protection<br
+        /><strong>Subdomains</strong> Archon (Good), Archon (Law), Friendship,
+        Lust, Purity<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Longsword<br
+        /><strong>Symbol</strong> White-hooded profile<br /><strong>Sacred
+        Animal(s)</strong> Rabbit<br /><strong>Sacred Color(s)</strong> Red,
+        white</p><h3>Obedience</h3><p>Lie on a hard, flat surface wearing
+        nothing but a cowl. Concentrate on the feeling of the surface and the
+        air while achieving sexual release without touching yourself. Healing
+        spells you cast heal 1 more point of damage per die.</p><h2>Boons -
+        Celestial Obedience</h2><h3>Mystery
+        Cultist</h3><p>@Source[PZO9255;pages=18]<br /><strong>1: Tower's Boons
+        (Sp)</strong> <em>sanctuary</em> 3/day, <em>eagle's splendor </em>2/day,
+        or <em>archon's aura</em><sup>UM</sup> 1/day<br /><strong>2: Rite of
+        Passage (Sp)</strong> You gain the power to usher others into a new
+        state of being. Once per day, you can cast <em>greater polymorph </em>on
+        a willing creature. The duration of this effect is permanent until you
+        or the target dismiss the effect or you use this ability again.<br
+        /><strong>3: Undo Maturation (Su)</strong> Once per day with a
+        successful touch attack, you can rewind the sands of time for a single
+        creature, causing the target to revert to the previous age category,
+        taking all the appropriate penalties to mental ability scores without
+        any of the benefits to physical ability scores. If the target is an
+        adult, it gains the simple young creature template. If the target
+        already has the simple young creature template, it rejuvenates even
+        further, reducing all its ability scores by 2 (to a minimum score of 1)
+        and decreasing its size by an additional step.</em></p><h2>For Followers
+        of Lymnieris</h2><h3>Feats</h3><p><em>Heroic
+        Interposition</em></p><h3>Traits</h3><p><em>Empyreal Focus</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

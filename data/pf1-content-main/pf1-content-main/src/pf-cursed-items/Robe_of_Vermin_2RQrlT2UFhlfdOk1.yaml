@@ -1,0 +1,30 @@
+_id: 2RQrlT2UFhlfdOk1
+_key: '!items!2RQrlT2UFhlfdOk1'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Robe of Vermin
+system:
+  aura:
+    school: abj
+  cl: 13
+  cursed: true
+  description:
+    value: >-
+      <p>The wearer notices nothing unusual when the robe is donned, and it
+      functions normally. However, as soon as he is in a situation requiring
+      concentration and action against hostile opponents, the true nature of the
+      garment is revealed: the wearer immediately suffers a multitude of bites
+      from the insects that magically infest the garment. He must cease all
+      other activities in order to scratch, shift the robe, and generally show
+      signs of the extreme discomfort caused by the bites and movement of these
+      pests.   The wearer takes a -5 penalty on initiative checks and a -2
+      penalty on all attack rolls, saves, and skill checks. If he tries to cast
+      a spell, he must make a concentration check (DC 20 + spell level) or lose
+      the spell.</p>
+  sources:
+    - id: PZO1123
+  subType: other
+  weight:
+    value: 1
+type: equipment

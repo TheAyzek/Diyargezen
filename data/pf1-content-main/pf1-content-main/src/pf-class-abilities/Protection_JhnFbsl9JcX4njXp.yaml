@@ -1,0 +1,25 @@
+_id: JhnFbsl9JcX4njXp
+_key: '!items!JhnFbsl9JcX4njXp'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Protection
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Abadar, Nethys, Shelyn, Torag.</p><p><strong>Increased Defense
+      (minor)</strong>: At 1st level, you can gain a +1 sacred bonus on saving
+      throws and a +1 sacred bonus to AC for 1 minute. The bonus increases to +2
+      at 10th level and +3 at 20th level.</p><p><strong>Aura of Protection
+      (major)</strong>: At 10th level, you can emit a 30-foot aura of protection
+      for 1 minute. You and your allies within this aura gain resistance 10
+      against acid, cold, electricity, fire, and sonic. At 15th level, the
+      energy resistance increases to 20.</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

@@ -1,0 +1,22 @@
+_id: d2PiI8lNT7FjJhUx
+_key: '!items!d2PiI8lNT7FjJhUx'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/red_09.jpg
+name: Telepathy
+system:
+  abilityType: su
+  description:
+    value: >-
+      <p>A creature with this ability can mentally communicate with any other
+      creature within a certain range (specified in the creature&rsquo;s entry,
+      usually 100 feet) that has a language. It is possible to address multiple
+      creatures at once telepathically, although maintaining a telepathic
+      conversation with more than one creature at a time is just as difficult as
+      simultaneously speaking and listening to multiple people at the same
+      time.</p>&nbsp;<p><em>Format</em>: telepathy 100
+      ft.</p><p><em>Location</em>: Languages.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

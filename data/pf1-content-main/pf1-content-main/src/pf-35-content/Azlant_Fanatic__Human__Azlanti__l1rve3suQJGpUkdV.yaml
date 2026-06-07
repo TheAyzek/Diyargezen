@@ -1,0 +1,40 @@
+_id: l1rve3suQJGpUkdV
+_key: '!items!l1rve3suQJGpUkdV'
+_stats:
+  coreVersion: '12.343'
+folder: CAxOlglJyXdUOHF9
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Azlant Fanatic (Human; Azlanti)
+system:
+  changes:
+    - _id: HjyNYPJr
+      formula: '1'
+      target: skill.kar
+      type: trait
+    - _id: eK3Ml91V
+      formula: '1'
+      target: skill.khi
+      type: trait
+  description:
+    instructions: >-
+      <p>Select Knowledge (arcana) or Knowledge (history) when you take this
+      trait.</p><p>Update the Class skills section of the Details tab of this
+      trait to reflect your choice.</p>
+    value: >-
+      <p><em>Your years spent in libraries reading every musty tome you could
+      find about the ancient lost civilization of Azlant have given you insight
+      into the subjects of history and the
+      arcane.</em></p><p><strong>Requirements</strong>: Azlanti Human
+      Heritage</p><p><strong>Benefits</strong>: You gain a +1 trait bonus to
+      Knowledge (arcana) and Knowledge (history) checks. One of these skills
+      (your choice) is always a class skill for you.</p>
+  sources:
+    - id: PZO9405
+      pages: '14'
+  subType: trait
+  tags:
+    - '3.5'
+    - Human
+    - Azlanti
+  traitType: race
+type: feat

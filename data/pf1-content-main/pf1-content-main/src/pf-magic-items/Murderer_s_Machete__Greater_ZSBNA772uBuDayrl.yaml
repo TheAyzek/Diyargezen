@@ -1,0 +1,58 @@
+_id: ZSBNA772uBuDayrl
+_key: '!items!ZSBNA772uBuDayrl'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/sword-short.PNG
+name: Murderer's Machete, Greater
+system:
+  actions:
+    - _id: zhz352nvcnium5xm
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: murderersMacheteGreater
+  aura:
+    custom: true
+    school: conjuration [evil]
+  baseTypes:
+    - Short Sword
+  cl: 13
+  description:
+    value: >-
+      <p>This item functions like a murderer's machete, but is a +2 keen
+      wounding short sword.</p><p><strong>Base Item</strong>: keen
+      wounding</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, bleed, cruel jaunt (see page 114), keen edge,
+      creator must sacrifice a sentient living creature</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 78310
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1135
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 3
+type: weapon

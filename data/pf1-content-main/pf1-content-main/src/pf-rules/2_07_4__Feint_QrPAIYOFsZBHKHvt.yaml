@@ -1,0 +1,50 @@
+_id: QrPAIYOFsZBHKHvt
+_key: '!journal!QrPAIYOFsZBHKHvt'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: mJGgfLDxjMpNAoek
+name: 2.07.4. Feint
+pages:
+  - _id: kcwRoVMmodV7dnlX
+    _key: '!journal.pages!QrPAIYOFsZBHKHvt.kcwRoVMmodV7dnlX'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.07.4. Feint
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.u7ymeeQewjTXVrlW]{2.07.
+        Special
+        Attacks}</p><ul><li>@Compendium[pf-content.pf-rules.vuTQH6gykORoSCUE]{2.07.1.
+        Aid
+        Another}</li><li>@Compendium[pf-content.pf-rules.o0Ufwyu65bmusBhM]{2.07.2.
+        Charge}</li><li>@Compendium[pf-content.pf-rules.CK4ZYweM6IifrrV0]{2.07.3.
+        Combat
+        Maneuvers}</li><li><strong>@Compendium[pf-content.pf-rules.QrPAIYOFsZBHKHvt]{2.07.4.
+        Feint}</strong></li><li>@Compendium[pf-content.pf-rules.uR2lQHLIAn5HhlfT]{2.07.5.
+        Mounted
+        Combat}</li><li>@Compendium[pf-content.pf-rules.KrSwE6n4UyxJfYPB]{2.07.6.
+        Throw Splash
+        Weapon}</li><li>@Compendium[pf-content.pf-rules.jLQbe8GmyB470OIJ]{2.07.7.
+        Two-Weapon Fighting}</li></ul><hr
+        /><p>@Source[PZO1110;pages=201]</p><p>Feinting is a standard action. To
+        feint, make a Bluff skill check. The DC of this check is equal to 10 +
+        your opponent’s base attack bonus + your opponent’s Wisdom modifier. If
+        your opponent is trained in Sense Motive, the DC is instead equal to 10
+        + your opponent’s Sense Motive bonus, if higher. If successful, the next
+        melee attack you make against the target does not allow him to use his
+        Dexterity bonus to AC (if any). This attack must be made on or before
+        your next turn.</p><p>When feinting against a nonhumanoid you take a –4
+        penalty. Against a creature of animal Intelligence (1 or 2), you take a
+        –8 penalty. Against a creature lacking an Intelligence score, it’s
+        impossible.</p><p>Feinting in combat does not provoke attacks of
+        opportunity.</p><h2>Feinting as a Move Action</h2><p>With the Improved
+        Feint feat, you can attempt a feint as a move action.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

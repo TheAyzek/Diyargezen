@@ -1,0 +1,22 @@
+_id: FAIe7wMsumvlruDd
+_key: '!items!FAIe7wMsumvlruDd'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/minor-blue.jpg
+name: Liquid Breeze
+system:
+  description:
+    value: >-
+      <p>Developed in ancient times to ease travels across the harsh deserts of
+      Kelesh, liquid breeze is a common ware in markets catering to travelers,
+      adventurers, and explorers. This soothing liquid grants the benefits of
+      endure elements for 8 hours, but only against hot environments. This
+      effect is nonmagical and can't be
+      dispelled.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      20</p>
+  price: 30
+  sources:
+    - id: PZO9481
+      pages: '29'
+  subType: misc
+type: consumable

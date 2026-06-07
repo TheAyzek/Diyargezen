@@ -1,0 +1,56 @@
+_id: zMmfoLzjryBQtFrg
+_key: '!journal!zMmfoLzjryBQtFrg'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: CMTuXqZ6Ywxqk9Ar
+name: 7.1.3.4.13. Other Outsiders
+pages:
+  - _id: XNWjx0CKFF0lyZFH
+    _key: '!journal.pages!zMmfoLzjryBQtFrg.XNWjx0CKFF0lyZFH'
+    _stats:
+      coreVersion: '12.331'
+    name: 7.1.3.4.13. Other Outsiders
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.dS0UkKOINqI2iTDX]{(Index)
+        Magic}</p><p>@Compendium[pf-content.pf-rules.zCeqoMSKdZ8r4EPd]{7.1.
+        Mastering
+        Magic}</p><ul><li><p>@Compendium[pf-content.pf-rules.Sz0GZaZV3zxb9UTY]{7.1.3.
+        Binding
+        Outsiders}</p><ul><li><p>@Compendium[pf-content.pf-rules.M5p2I9If5lZHg5iI]{7.1.3.4.
+        Outsider
+        Categories}</p><ul><li>@Compendium[pf-content.pf-rules.7ajO1mDHRnt1zwri]{7.1.3.4.01.
+        Aeon}</li><li>@Compendium[pf-content.pf-rules.CQQmNNUsLaq64ISd]{7.1.3.4.02.
+        Agathion}</li><li>@Compendium[pf-content.pf-rules.doRTEmrFcb3Jpd6H]{7.1.3.4.03.
+        Angels}</li><li>@Compendium[pf-content.pf-rules.vWKMVgMS2JLVFhSW]{7.1.3.4.04.
+        Archons}</li><li>@Compendium[pf-content.pf-rules.ALU8fOwwjVflaV63]{7.1.3.4.05.
+        Azata}</li><li>@Compendium[pf-content.pf-rules.Jc9NeIDhX4EJy4NY]{7.1.3.4.06.
+        Daemons}</li><li>@Compendium[pf-content.pf-rules.rlk3otEreOuYoI8n]{7.1.3.4.07.
+        Demons}</li><li>@Compendium[pf-content.pf-rules.iNa7owekV9rX5NlO]{7.1.3.4.08.
+        Devils}</li><li>@Compendium[pf-content.pf-rules.pJMFHXBSpUdPcgW2]{7.1.3.4.09.
+        Elementals and
+        Genies}</li><li>@Compendium[pf-content.pf-rules.bxArpGfr07tVDIL4]{7.1.3.4.10.
+        Inevitables}</li><li>@Compendium[pf-content.pf-rules.rA6iR7Xbug6TMgZk]{7.1.3.4.11.
+        Proteans}</li><li>@Compendium[pf-content.pf-rules.J4sDwQBfloYeVUD2]{7.1.3.4.12.
+        Qlippoth}</li><li><strong>@Compendium[pf-content.pf-rules.zMmfoLzjryBQtFrg]{7.1.3.4.13.
+        Other Outsiders}</strong></li></ul></li></ul></li></ul><hr
+        /><p>@Source[PZO1117;pages=110]</p><p>While the groups above detail all
+        the major types of outsiders, the Great Beyond is called great for a
+        reason, and there are countless other outsiders that a potential binder
+        can call. In theory, any outsider can be called and a binder can attempt
+        to press that creature into service, though the proper strategy for
+        doing so is contingent on the abilities, desires, and goals of the
+        particular outsider.</p><p>There is one group of outsiders that it is
+        more difficult to bind: the native outsider. A native outsider cannot be
+        called and bound from the Material Plane. In order to call any outsider,
+        it must be on a different plane from the binder. Native outsiders (or
+        other outsiders currently manifesting on the Material Plane) can only be
+        called and bound by spellcasters on a different plane.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

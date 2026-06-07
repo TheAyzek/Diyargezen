@@ -1,0 +1,30 @@
+_id: j64wSaJvDn75IHOz
+_key: '!items!j64wSaJvDn75IHOz'
+_stats:
+  coreVersion: '12.331'
+folder: 5HPDAAtypP5m41CK
+img: icons/svg/item-bag.svg
+name: Banana of Holding
+system:
+  aura:
+    school: con
+  cl: 9
+  description:
+    value: >-
+      <p>This dried and leathery banana peel is stitched up the sides, with an
+      opening at the top about the diameter of a coin. Only something small
+      enough to fit through the opening can be placed into the banana of
+      holding, because if the side-stitching is torn the item's magic will be
+      lost. The banana holds a maximum of 40 pounds of such small items, and
+      always weighs the same as a banana peel. It is also quite slippery, as
+      most banana peels are.</p><h3>Requirements</h3><p>Craft Wondrous Item,
+      secret chest</p>
+  price: 1200
+  sources:
+    - date: '2012'
+      publisher: Necromancer Games & Frog God Games
+      title: Rappan Athuk
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

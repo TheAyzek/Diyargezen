@@ -1,0 +1,39 @@
+_id: GDkV0zdd9DRzHgOU
+_key: '!items!GDkV0zdd9DRzHgOU'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/mace-heavy.PNG
+name: Saint Cuthbert's Mace
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: abjuration conjuration and transmutation
+  baseTypes:
+    - Heavy Mace
+  cl: 20
+  description:
+    value: >-
+      <p>Despite its ragged appearance, Saint Cuthbert's Mace is a +5 axiomatic
+      holy disruption heavy mace that allows the bearer to cast the spell
+      searing light at will. Any evil creature that attempts to wield the Mace
+      is damaged as though it were struck by the weapon's searing light ability
+      every round it wields the artifact.  On the 20th of Pharast every year,
+      the mace makes use of greater teleport, interplanetary teleport (The Inner
+      Sea World Guide), or plane shift to instantly travel to a location
+      anywhere in the multiverse where it is needed, typically appearing where a
+      worthy lawful good wielder will soon pass. The mace's bearer has no
+      control over this effect and is not included in the artifact's
+      teleportation.</p><p><strong>Base Item</strong>: axiomatic holy disruption
+      heavy mace</p>
+  enh: 5
+  material:
+    base:
+      value: steel
+  sources:
+    - id: PZO9250
+  weaponGroups:
+    - hammers
+  weight:
+    value: 8
+type: weapon

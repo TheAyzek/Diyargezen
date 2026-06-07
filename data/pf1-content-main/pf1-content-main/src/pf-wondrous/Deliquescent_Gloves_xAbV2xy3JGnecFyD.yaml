@@ -1,0 +1,32 @@
+_id: xAbV2xy3JGnecFyD
+_key: '!items!xAbV2xy3JGnecFyD'
+_stats:
+  coreVersion: '12.331'
+folder: QFbgvmtImUY40xbH
+img: icons/equipment/hand/glove-cuffed-leather-grey.webp
+name: Deliquescent Gloves
+system:
+  aura:
+    school: con
+  cl: 7
+  description:
+    value: >-
+      <p>These heavy leather gloves ripple and flows at the wearer's command,
+      reshaping to fit any hand, claw, tentacle, or alien limb. The wearer's
+      melee touch attacks with that hand deal 1d6 points of acid damage. If the
+      wearer uses that hand to wield a weapon or make an attack with an unarmed
+      strike or natural weapon, that attack gains the corrosive weapon special
+      ability.   The wearer's gloved hand is protected from the acid ability of
+      oozes, allowing him to use that hand to attack oozes with unarmed strikes
+      or natural attacks without risk of harm from contact with the ooze. These
+      unarmed strikes and natural attacks never cause an ooze to
+      split.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, acid arrow, summon monster V</p>
+  price: 8000
+  slot: hands
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

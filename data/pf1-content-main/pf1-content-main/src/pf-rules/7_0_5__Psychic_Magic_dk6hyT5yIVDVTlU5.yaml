@@ -1,0 +1,56 @@
+_id: dk6hyT5yIVDVTlU5
+_key: '!journal!dk6hyT5yIVDVTlU5'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: zcCMo97bY7HQ8cns
+name: 7.0.5. Psychic Magic
+pages:
+  - _id: khRdZSMo5bCZCAyo
+    _key: '!journal.pages!dk6hyT5yIVDVTlU5.khRdZSMo5bCZCAyo'
+    _stats:
+      coreVersion: '12.331'
+    name: 7.0.5. Psychic Magic
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.dS0UkKOINqI2iTDX]{(Index)
+        Magic}</p><p>@Compendium[pf-content.pf-rules.VqmfepmRULVzQGwS]{7.0.
+        Magic
+        Basics}</p><ul><li>@Compendium[pf-content.pf-rules.QsXwV60ztDqlXSwM]{7.0.1.
+        Casting
+        Spells}</li><li>@Compendium[pf-content.pf-rules.JrvOGuTDYfoiaCZf]{7.0.2.
+        Spell
+        Descriptions}</li><li>@Compendium[pf-content.pf-rules.7sbu7PG3Re7FkQos]{7.0.3.
+        Arcane
+        Spells}</li><li>@Compendium[pf-content.pf-rules.TgfOtwBEW0OmFbJT]{7.0.4.
+        Divine
+        Spells}</li><li><strong>@Compendium[pf-content.pf-rules.dk6hyT5yIVDVTlU5]{7.0.5.
+        Psychic
+        Magic}</strong></li><li>@Compendium[pf-content.pf-rules.aZIvW09CvYzzWDmy]{7.0.6.
+        Special Abilities}</li></ul><hr
+        /><p>@Source[PZO1132;pages=144]</p><p>Wizards study ancient tomes to
+        unlock arcane secrets of the universe, and clerics pray to distant
+        deities to grant them divine power. Yet there is a third, more esoteric
+        kind of magic, connected to every creature’s composite being, from the
+        conscious mind to the deepest desire, from the life force to the spirit,
+        from the very soul to the cosmic self. This third type of magic is
+        psychic magic.</p><p>A psychic spell largely functions like any other
+        spell. It’s another type of magic, similar to arcane or divine magic—in
+        fact, those who use psychic magic are easily mistaken for practitioners
+        of arcane and divine traditions. Metamagic feats and any other rules
+        that alter or trigger from spells can usually be used with psychic
+        spells (though see the Components section below for a few exceptions).
+        Psychic spellcasters aren’t affected by effects that target only arcane
+        or divine spellcasters, nor can they use arcane or divine scrolls or
+        other items or feats that state they can be utilized by only arcane or
+        divine
+        spellcasters.</p><p>@Compendium[pf-content.pf-rules.U5kuu9Bq7kqY3mpK]{7.0.5.1.
+        Components}</p><p>@Compendium[pf-content.pf-rules.THcPcBnf09tYljUa]{7.0.5.2.
+        Undercasting Spells}</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

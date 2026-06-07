@@ -1,0 +1,49 @@
+_id: 0HnlCOwebh8yQzcJ
+_key: '!tables!0HnlCOwebh8yQzcJ'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+folder: 7ZeWJj7eKXb88Mo9
+formula: 1d8
+img: icons/svg/d20-grey.svg
+name: Moon Phase
+replacement: true
+results:
+  - _id: AC6NZtGzcxTzB9Qg
+    _key: '!tables.results!0HnlCOwebh8yQzcJ.AC6NZtGzcxTzB9Qg'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 1
+    text: New Moon
+    type: text
+    weight: 1
+  - _id: pGIb97uLsJfrkRgO
+    _key: '!tables.results!0HnlCOwebh8yQzcJ.pGIb97uLsJfrkRgO'
+    img: icons/svg/d20-black.svg
+    range:
+      - 2
+      - 5
+    text: Other
+    type: text
+    weight: 1
+  - _id: eaaqbUeY4CxhYuQh
+    _key: '!tables.results!0HnlCOwebh8yQzcJ.eaaqbUeY4CxhYuQh'
+    img: icons/svg/d20-black.svg
+    range:
+      - 6
+      - 7
+    text: Nearly Full
+    type: text
+    weight: 1
+  - _id: ay07MZQCc00LrB3M
+    _key: '!tables.results!0HnlCOwebh8yQzcJ.ay07MZQCc00LrB3M'
+    img: icons/svg/d20-black.svg
+    range:
+      - 8
+      - 8
+    text: Full
+    type: text
+    weight: 1
+sort: 200000

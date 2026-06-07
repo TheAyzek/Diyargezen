@@ -1,0 +1,29 @@
+_id: hXDlqIbxi2Svep2w
+_key: '!items!hXDlqIbxi2Svep2w'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Imploding Stone
+system:
+  aura:
+    school: trs
+  cl: 11
+  description:
+    value: >-
+      <p>When activated, this black pebble acts as a limited gravitational
+      singularity. Once the command word is spoken, the pebble delays for 1
+      round, then pulls all stone or earth within a 5-foot-diameter sphere
+      toward it with irresistible force. This causes small tunnels to collapse
+      inward, creating localized cave-ins. Imploding stones do not affect living
+      creatures, though any creature in the same square as an activated
+      imploding stone is caught in the bury zone of the collapse (Core Rulebook
+      415). Imploding stones are destroyed when used. Activating an imploding
+      stone is a standard action that doesn't provoke attacks of
+      opportunity.</p><h3>Requirements</h3><p>Craft Wondrous Item, move
+      earth</p>
+  price: 3300
+  sources:
+    - id: PZO9432
+  subType: wondrous
+type: equipment

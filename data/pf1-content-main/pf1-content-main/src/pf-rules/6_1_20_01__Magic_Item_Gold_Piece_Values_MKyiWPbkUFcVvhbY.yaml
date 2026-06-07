@@ -1,0 +1,140 @@
+_id: MKyiWPbkUFcVvhbY
+_key: '!journal!MKyiWPbkUFcVvhbY'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 1SBSobU6ZnbSTMmG
+name: 6.1.20.01. Magic Item Gold Piece Values
+pages:
+  - _id: BRHzKbhSThMCntDL
+    _key: '!journal.pages!MKyiWPbkUFcVvhbY.BRHzKbhSThMCntDL'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.1.20.01. Magic Item Gold Piece Values
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.s3ene84nkQAyhCrW]{6.1.
+        Magic
+        Items}</p><ul><li><p>@Compendium[pf-content.pf-rules.X6hkpqXjE3T3jRy2]{6.1.20.
+        Magic Item
+        Creation}</p><ul><li><strong>@Compendium[pf-content.pf-rules.MKyiWPbkUFcVvhbY]{6.1.20.01.
+        Magic Item Gold Piece
+        Values}</strong></li><li>@Compendium[pf-content.pf-rules.iNnOJ9140oED1qrh]{6.1.20.02.
+        Creating Magic
+        Armor}</li><li>@Compendium[pf-content.pf-rules.eqJGh3BnP3n72Lrw]{6.1.20.03.
+        Creating Magic
+        Weapons}</li><li>@Compendium[pf-content.pf-rules.ckOP5mdpe4WV1qFU]{6.1.20.04.
+        Creating
+        Potions}</li><li>@Compendium[pf-content.pf-rules.yhRnmIAGnV2LhC91]{6.1.20.05.
+        Creating
+        Rings}</li><li>@Compendium[pf-content.pf-rules.i87q7N8kBH0ztizC]{6.1.20.06.
+        Creating
+        Rods}</li><li>@Compendium[pf-content.pf-rules.ycZUll4iVfFtobWL]{6.1.20.07.
+        Creating
+        Scrolls}</li><li>@Compendium[pf-content.pf-rules.St9hpjjACPQqzFMn]{6.1.20.08.
+        Creating
+        Staves}</li><li>@Compendium[pf-content.pf-rules.T5CscckFyyiebamM]{6.1.20.09.
+        Creating
+        Wands}</li><li>@Compendium[pf-content.pf-rules.LIXx5H71BJ1OxJw9]{6.1.20.10.
+        Creating Wondrous
+        Items}</li><li>@Compendium[pf-content.pf-rules.dX8eAXiO1h6yKNVo]{6.1.20.11.
+        Adding New Abilities}</li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=549]</p><p>Many factors must be considered
+        when determining the price of new magic items. The easiest way to come
+        up with a price is to compare the new item to an item that is already
+        priced, using that price as a guide. Otherwise, use the guidelines
+        summarized on Table 15–29.</p><p>Multiple Similar Abilities</p><p>For
+        items with multiple similar abilities that don’t take up space on a
+        character’s body, use the following formula: Calculate the price of the
+        single most costly ability, then add 75% of the value of the next most
+        costly ability, plus 1/2 the value of any other
+        abilities.</p><p>Multiple Different Abilities</p><p>Abilities such as an
+        attack roll bonus or saving throw bonus and a spell-like function are
+        not similar, and their values are simply added together to determine the
+        cost. For items that take up a space on a character’s body, each
+        additional power not only has no discount but instead has a 50% increase
+        in price.</p><p>0-Level Spells</p><p>When multiplying spell levels to
+        determine value, 0-level spells should be treated as 1/2
+        level.</p><p>Other Considerations</p><p>Once you have a cost figure,
+        reduce that number if either of the following conditions
+        applies:</p><p>Item Requires Skill to Use</p><p>Some items require a
+        specific skill to get them to function. This factor should reduce the
+        cost about 10%.</p><p>Item Requires Specific Class or Alignment to
+        Use</p><p>Even more restrictive than requiring a skill, this limitation
+        cuts the price by 30%.</p><p>Prices presented in the magic item
+        descriptions (the gold piece value following the item’s slot) are the
+        market value, which is generally twice what it costs the creator to make
+        the item. Since different classes get access to certain spells at
+        different levels, the prices for two characters to make the same item
+        might actually be different. An item is only worth two times what the
+        caster of the lowest possible level can make it for. Calculate the
+        market price based on the lowest possible level caster, no matter who
+        makes the item.</p><p>Not all items adhere to these formulas. First and
+        foremost, these few formulas aren’t enough to truly gauge the exact
+        differences between items. The price of a magic item may be modified
+        based on its actual worth. The formulas only provide a starting point.
+        The pricing of scrolls assumes that, whenever possible, a wizard or
+        cleric created it. Potions and wands follow the formulas exactly. Staves
+        follow the formulas closely, and other items require at least some
+        judgment calls.</p><h2>Table 15-29: Estimating Magic Item Gold Piece
+        Values</h2><table border="1"><thead><tr><td>Effect</td><td>Base
+        Price</td><td>Example</td></tr></thead><tbody><tr><td>Ability bonus
+        (enhancement)</td><td>Bonus squared × 1,000 gp</td><td>Belt of
+        incredible dexterity +2</td></tr><tr><td>Armor bonus
+        (enhancement)</td><td>Bonus squared × 1,000 gp</td><td>+1
+        chainmail</td></tr><tr><td>Bonus spell</td><td>Spell level squared ×
+        1,000 gp</td><td>Pearl of power</td></tr><tr><td>AC bonus
+        (deflection)</td><td>bonus squared × 2,000 gp</td><td>Ring of protection
+        +3</td></tr><tr><td>AC bonus (other)1</td><td>bonus squared × 2,500
+        gp</td><td>Ioun stone (dusty rose prism)</td></tr><tr><td>Natural armor
+        bonus (enhancement)</td><td>bonus squared × 2,000 gp</td><td>Amulet of
+        natural armor +1</td></tr><tr><td>Save bonus (resistance)</td><td>bonus
+        squared × 1,000 gp</td><td>Cloak of resistance +5</td></tr><tr><td>Save
+        bonus (other)1</td><td>bonus squared × 2,000 gp</td><td>Stone of good
+        luck</td></tr><tr><td>Skill bonus (competence)</td><td>bonus squared ×
+        100 gp</td><td>Cloak of elvenkind</td></tr><tr><td>Spell
+        resistance</td><td>10,000 gp per point over SR 12; SR 13
+        minimum</td><td>Mantle of spell resistance</td></tr><tr><td>Weapon bonus
+        (enhancement)</td><td>bonus squared × 2,000 gp</td><td>+1
+        longsword</td></tr><tr><td>Spell Effect</td><td>Base
+        Price</td><td>Example</td></tr><tr><td>Single use, spell
+        completion</td><td>Spell level × caster level × 25 gp</td><td>Scroll of
+        haste</td></tr><tr><td>Single use, use-activated</td><td>Spell level ×
+        caster level × 50 gp</td><td>Potion of cure light
+        wounds</td></tr><tr><td>50 charges, spell trigger</td><td>Spell level ×
+        caster level × 750 gp</td><td>Wand of fireball</td></tr><tr><td>Command
+        word</td><td>Spell level × caster level × 1,800 gp</td><td>Cape of the
+        mountebank</td></tr><tr><td>Use-activated or continuous</td><td>Spell
+        level × caster level × 2,000 gp2</td><td>Lantern of
+        revealing</td></tr><tr><td>Special</td><td>Base Price
+        Adjustment</td><td>Example</td></tr><tr><td>Charges per
+        day</td><td>Divide by (5 divided by charges per day)</td><td>Boots of
+        teleportation</td></tr><tr><td>No space limitation3</td><td>Multiply
+        entire cost by 2</td><td>Ioun stone</td></tr><tr><td>Multiple different
+        abilities</td><td>Multiply lower item cost by 1.5</td><td>Helm of
+        brilliance</td></tr><tr><td>Charged (50 charges)</td><td>1/2 unlimited
+        use base price</td><td>Ring of the
+        ram</td></tr><tr><td>Component</td><td>Extra
+        Cost</td><td>Example</td></tr><tr><td>Armor, shield, or
+        weapon</td><td>Add cost of masterwork item</td><td>+1 composite
+        longbow</td></tr><tr><td>Spell has material component cost</td><td>Add
+        directly into price of item per charge4</td><td>Wand of
+        stoneskin</td></tr></tbody></table><p>Spell Level: A 0-level spell is
+        half the value of a 1st-level spell for determining price.<br />1 Such
+        as a luck, insight, sacred, or profane bonus.<br />2 If a continuous
+        item has an effect based on a spell with a duration measured in rounds,
+        multiply the cost by 4. If the duration of the spell is 1 minute/level,
+        multiply the cost by 2, and if the duration is 10 minutes/level,
+        multiply the cost by 1.5. If the spell has a 24-hour duration or
+        greater, divide the cost in half.<br />3 An item that does not take up
+        one of the spaces on a body costs double.<br />4 If item is continuous
+        or unlimited, not charged, determine cost as if it had 100 charges. If
+        it has some daily limit, determine as if it had 50 charges.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

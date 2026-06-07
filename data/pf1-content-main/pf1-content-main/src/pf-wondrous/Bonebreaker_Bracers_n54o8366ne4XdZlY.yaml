@@ -1,0 +1,33 @@
+_id: n54o8366ne4XdZlY
+_key: '!items!n54o8366ne4XdZlY'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Bonebreaker Bracers
+system:
+  aura:
+    school: nec
+  cl: 5
+  description:
+    value: >-
+      <p>These thick brass and leather bracers allow the wearer to tear through
+      bone and muscle like paper. Once per day, as part of a melee attack, the
+      wearer can activate the bracers to inflict a horrific injury on an
+      opponent. If the attack hits, the target must make a DC 14 Will save. If
+      the save fails, the bracers reduce the target's Strength, Dexterity, or
+      Constitution (wearer's choice) by -6. This penalty cannot reduce the
+      target's ability score below 1. The injury heals over time, reducing the
+      penalty by 1 for each day that passes since the time of the injury, and is
+      immediately removed by heal, regenerate, restoration, or any magic that
+      can break a
+      curse.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, bestow curse</p>
+  price: 6000
+  slot: wrists
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

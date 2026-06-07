@@ -1,0 +1,28 @@
+_id: ik5nnwMLPTQ7WmBB
+_key: '!items!ik5nnwMLPTQ7WmBB'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Pantheistic Clasp
+system:
+  aura:
+    school: abj
+  cl: 3
+  description:
+    value: >-
+      <p>A simple clasp dangles from this fine brass chain. As a standard
+      action, the wearer can attach a single holy symbol to the clasp. The
+      wearer gains a +2 sacred bonus on saving throws against spells and effects
+      with an alignment descriptor that matches the alignment of the deity
+      represented by the attached holy
+      symbol.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, corruption resistance</p>
+  price: 3000
+  slot: neck
+  sources:
+    - id: PZO9436
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

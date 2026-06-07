@@ -1,0 +1,20 @@
+_id: qv37nqWZuXUYw2A8
+_key: '!items!qv37nqWZuXUYw2A8'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blood_13.jpg
+name: Blood Rage
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>When the creature takes damage in combat, on its next turn it can fly
+      into a rage as a free action. It gains +2 Constitution and +2 Strength,
+      but takes a &ndash;2 penalty to its AC. The rage lasts as long as the
+      battle or 1 minute, whichever is shorter. It cannot end its rage
+      voluntarily.</p><p><em>Format</em>: blood rage</p><p><em>Location</em>:
+      Special Attacks.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

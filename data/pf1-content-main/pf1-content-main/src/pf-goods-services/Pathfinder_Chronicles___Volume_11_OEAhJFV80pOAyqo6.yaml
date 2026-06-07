@@ -1,0 +1,30 @@
+_id: OEAhJFV80pOAyqo6
+_key: '!items!OEAhJFV80pOAyqo6'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/books/book-rounded-red.webp
+name: Pathfinder Chronicles - Volume 11
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Pathfinder
+      Chronicles</p><h2>Description</h2><p>This volume, when originally
+      published, contained a trove of misinformation on dragons, penned by
+      Pathfinder Dalania Pontius. After these errors precipitated numerous
+      deaths and countless injuries among Pathfinders confronting dragons of all
+      types, the Decemvirate investigated Pontius's sources (namely the brass
+      dragon who had provided her with much of the false info) and found them
+      suspect. The volume was eventually corrected, though some unaltered copies
+      could still remain in obscure collections.</p><h2>Skill
+      Bonuses</h2><ul><li>Better understand the nature and ways of dragons
+      (Knowledge [arcana] +2) </li><li>Distinguish between true statements and
+      exaggeration regarding esoteric topics (Sense Motive +2)</li></ul>
+  equipped: false
+  price: 100
+  sources:
+    - id: PZO9435
+      pages: '27'
+  subType: tradeGoods
+  tags:
+    - Pathfinder Chronicles
+type: loot

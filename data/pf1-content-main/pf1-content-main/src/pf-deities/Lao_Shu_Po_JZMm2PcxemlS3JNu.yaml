@@ -1,0 +1,36 @@
+_id: JZMm2PcxemlS3JNu
+_key: '!journal!JZMm2PcxemlS3JNu'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Lao Shu Po
+pages:
+  - _id: vIUg0xRhJndqmkUX
+    _key: '!journal.pages!JZMm2PcxemlS3JNu.vIUg0xRhJndqmkUX'
+    _stats:
+      coreVersion: '12.331'
+    name: Lao Shu Po
+    sort: 0
+    text:
+      content: >-
+        <h1>Lao Shu Po</h1><h2>Old Rat Woman</h2>@Source[PZO9240;pages=58] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Lao Shu Po">Lao Shu
+        Po</a><h3>Details</h3><p><strong>Alignment</strong> NE<br
+        /><strong>Pantheon</strong> Deities of Tian Xia<br /><strong>Areas of
+        Concern</strong> Night, rats, thieves<br /><strong>Domains</strong>
+        Animal, Darkness, Evil, Luck, Trickery<br /><strong>Subdomains</strong>
+        Curse, Daemon, Fur, Greed, Loss, Night, Thievery<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Dagger<br /><strong>Symbol</strong> Curled and emaciated
+        rat<br /><strong>Sacred Animal(s)</strong> Rat</p><h3>On
+        Golarion</h3><p><strong>Centers of Worship</strong> Darklands, Goka,
+        Kwanlai, Minata, Shenmen, Wanshou<br /><strong>Nationality</strong>
+        Rat</p><h2>For Followers of Lao Shu Po</h2><h3>Magic Items -
+        Weapons</h3><p>Feast of Rats</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

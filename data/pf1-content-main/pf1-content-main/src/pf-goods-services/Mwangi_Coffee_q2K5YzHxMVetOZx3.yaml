@@ -1,0 +1,21 @@
+_id: q2K5YzHxMVetOZx3
+_key: '!items!q2K5YzHxMVetOZx3'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/kitchenware/goblet-wood-engraved-brown.webp
+name: Mwangi Coffee
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 3 cp/cup; <strong>Weight</strong> 1/2 lb.<br
+      /><strong>Category</strong> Food/Drink</p><h2>Description</h2><p>Coffee
+      brewed 'Mwangi style' has a wine-like acid taste that is too strong for a
+      novice palate.</p>
+  price: 0.03
+  sources:
+    - id: PZO9410
+      pages: '19'
+  subType: food
+  weight:
+    value: 0.5
+type: consumable

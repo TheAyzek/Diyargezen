@@ -1,0 +1,694 @@
+_id: mRf6CmgMCEVQS3hh
+_key: '!tables!mRf6CmgMCEVQS3hh'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d62
+img: systems/pf1/icons/skills/affliction_11.jpg
+name: Random Disease
+replacement: true
+results:
+  - _id: vJQUzHzEVoyQjeU5
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.vJQUzHzEVoyQjeU5'
+    documentCollection: pf-content.pf-maladies
+    documentId: 99Qlvbp7r6VUcahy
+    img: icons/commodities/biological/organ-intestines-red.webp
+    range:
+      - 1
+      - 1
+    text: Athrakitis
+    type: pack
+    weight: 1
+  - _id: iaHG3VfUPSIhPgtl
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.iaHG3VfUPSIhPgtl'
+    documentCollection: pf-content.pf-maladies
+    documentId: ovsc9iD1lwbtQL79
+    img: icons/commodities/biological/tentacle-yellow.webp
+    range:
+      - 2
+      - 2
+    text: Basidirond Spores
+    type: pack
+    weight: 1
+  - _id: FJLG3vGuKzrUriPe
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.FJLG3vGuKzrUriPe'
+    documentCollection: pf-content.pf-maladies
+    documentId: qWDLEtXn9W11tgA5
+    img: icons/commodities/stone/ore-pile-green.webp
+    range:
+      - 3
+      - 3
+    text: Blightburn Sickness
+    type: pack
+    weight: 1
+  - _id: AWuFjODe6tLpJa0O
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.AWuFjODe6tLpJa0O'
+    documentCollection: pf-content.pf-maladies
+    documentId: b8tatXkCkLt3ubBU
+    img: systems/pf1/icons/feats/blinding-critical.jpg
+    range:
+      - 4
+      - 4
+    text: Blinding Sickness
+    type: pack
+    weight: 1
+  - _id: mUtaDkaKkThu0QFC
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.mUtaDkaKkThu0QFC'
+    documentCollection: pf-content.pf-maladies
+    documentId: mh0137k391vRajqg
+    img: icons/commodities/biological/pustules-brown.webp
+    range:
+      - 5
+      - 5
+    text: Blister Phage
+    type: pack
+    weight: 1
+  - _id: wBOfZ1I72GHjlfcm
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.wBOfZ1I72GHjlfcm'
+    documentCollection: pf-content.pf-maladies
+    documentId: IBXkxTo62AHQyySg
+    img: systems/pf1/icons/skills/blood_05.jpg
+    range:
+      - 6
+      - 6
+    text: Blood Veil
+    type: pack
+    weight: 1
+  - _id: lDYUvWYRJRVxPJps
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.lDYUvWYRJRVxPJps'
+    documentCollection: pf-content.pf-maladies
+    documentId: 6FLA7zA14rA6WpG5
+    img: systems/pf1/icons/skills/blood_02.jpg
+    range:
+      - 7
+      - 7
+    text: Bloody End (Horrific)
+    type: pack
+    weight: 1
+  - _id: SxdQHgr91RxU33ac
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.SxdQHgr91RxU33ac'
+    documentCollection: pf-content.pf-maladies
+    documentId: cy7wEc5TsozQEXlz
+    img: icons/commodities/biological/tongue-blue.webp
+    range:
+      - 8
+      - 8
+    text: Bluespit
+    type: pack
+    weight: 1
+  - _id: OmG6D9M4cRrUlthD
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.OmG6D9M4cRrUlthD'
+    documentCollection: pf-content.pf-maladies
+    documentId: lAxyQ2HB1ji9ZyRq
+    img: icons/commodities/biological/suckers-green.webp
+    range:
+      - 9
+      - 9
+    text: Bog Rot
+    type: pack
+    weight: 1
+  - _id: wKY9yLjwxky6Ttkt
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.wKY9yLjwxky6Ttkt'
+    documentCollection: pf-content.pf-maladies
+    documentId: 94osu7eckXvhYNbZ
+    img: systems/pf1/icons/skills/ice_17.jpg
+    range:
+      - 10
+      - 10
+    text: Bonechill
+    type: pack
+    weight: 1
+  - _id: MsEAkjw1EdemKWwL
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.MsEAkjw1EdemKWwL'
+    documentCollection: pf-content.pf-maladies
+    documentId: vRPjY9jdyh1FxQJJ
+    img: systems/pf1/icons/skills/yellow_03.jpg
+    range:
+      - 11
+      - 11
+    text: Bonecrusher (Dengue) Fever
+    type: pack
+    weight: 1
+  - _id: QCrBt3xiHKJssta9
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.QCrBt3xiHKJssta9'
+    documentCollection: pf-content.pf-maladies
+    documentId: enC3KC5qw9CFM67t
+    img: systems/pf1/icons/skills/green_16.jpg
+    range:
+      - 12
+      - 12
+    text: Boot Soup
+    type: pack
+    weight: 1
+  - _id: QBRvrJTWlBXN9cwB
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.QBRvrJTWlBXN9cwB'
+    documentCollection: pf-content.pf-maladies
+    documentId: jTbG3MEUawUHXDtf
+    img: systems/pf1/icons/skills/beast_04.jpg
+    range:
+      - 13
+      - 13
+    text: Brain Moss (Horrific)
+    type: pack
+    weight: 1
+  - _id: 3D3oHj3wugy0hkc9
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.3D3oHj3wugy0hkc9'
+    documentCollection: pf-content.pf-maladies
+    documentId: 9GfUF7ooAQHTjyUz
+    img: icons/commodities/biological/organ-brain-red.webp
+    range:
+      - 14
+      - 14
+    text: Brainworms
+    type: pack
+    weight: 1
+  - _id: srzgO3ymaSIu0XXo
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.srzgO3ymaSIu0XXo'
+    documentCollection: pf-content.pf-maladies
+    documentId: DFIi3JMe6eZrZuhe
+    img: systems/pf1/icons/skills/affliction_13.jpg
+    range:
+      - 15
+      - 15
+    text: Bubonic Plague
+    type: pack
+    weight: 1
+  - _id: BUSFqDwoysfPUAjr
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.BUSFqDwoysfPUAjr'
+    documentCollection: pf-content.pf-maladies
+    documentId: vyX4fUWtp7XpD3XY
+    img: systems/pf1/icons/skills/shadow_20.jpg
+    range:
+      - 16
+      - 16
+    text: Cackle Fever
+    type: pack
+    weight: 1
+  - _id: UttWk7nLCCsqT8qQ
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.UttWk7nLCCsqT8qQ'
+    documentCollection: pf-content.pf-maladies
+    documentId: CRvjsxFvhSB35RkY
+    img: systems/pf1/icons/skills/ice_15.jpg
+    range:
+      - 17
+      - 17
+    text: Chillbane Fever
+    type: pack
+    weight: 1
+  - _id: dlK2zuroZ3XZUUKl
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.dlK2zuroZ3XZUUKl'
+    documentCollection: pf-content.pf-maladies
+    documentId: xCk4sLr365zRFS9x
+    img: icons/environment/creatures/golem-stone-purple.webp
+    range:
+      - 18
+      - 18
+    text: Cholera
+    type: pack
+    weight: 1
+  - _id: C2D2yihRDnoGtsWi
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.C2D2yihRDnoGtsWi'
+    documentCollection: pf-content.pf-maladies
+    documentId: ukTJHpl6BQZIgZdR
+    img: systems/pf1/icons/feats/deafening-critical.jpg
+    range:
+      - 19
+      - 19
+    text: Coward's Mark
+    type: pack
+    weight: 1
+  - _id: 6yHIlx9vxn02GkaV
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.6yHIlx9vxn02GkaV'
+    documentCollection: pf-content.pf-maladies
+    documentId: KNMGIPchEGo7VjxH
+    img: systems/pf1/icons/skills/green_12.jpg
+    range:
+      - 20
+      - 20
+    text: Crypt Fever
+    type: pack
+    weight: 1
+  - _id: lpSp4B6NKHB4NDUi
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.lpSp4B6NKHB4NDUi'
+    documentCollection: pf-content.pf-maladies
+    documentId: sE8pNmcBwR6CXI7H
+    img: systems/pf1/icons/skills/violet_11.jpg
+    range:
+      - 21
+      - 21
+    text: Daemonic Wasting
+    type: pack
+    weight: 1
+  - _id: zLHsYzo5aDV8nUci
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.zLHsYzo5aDV8nUci'
+    documentCollection: pf-content.pf-maladies
+    documentId: e17LSqxAyki6Rhg5
+    img: systems/pf1/icons/feats/shatter-defenses.jpg
+    range:
+      - 22
+      - 22
+    text: Demon Fever
+    type: pack
+    weight: 1
+  - _id: ALub3nwFJLIX6upM
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.ALub3nwFJLIX6upM'
+    documentCollection: pf-content.pf-maladies
+    documentId: Lno75KvnrT4Ked5O
+    img: systems/pf1/icons/skills/yellow_25.jpg
+    range:
+      - 23
+      - 23
+    text: Demonplague
+    type: pack
+    weight: 1
+  - _id: geZy0gZ6bciCLfe8
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.geZy0gZ6bciCLfe8'
+    documentCollection: pf-content.pf-maladies
+    documentId: CXQXdyuEpopPBoeB
+    img: systems/pf1/icons/skills/yellow_20.jpg
+    range:
+      - 24
+      - 24
+    text: Devil Chills
+    type: pack
+    weight: 1
+  - _id: 2kxvBVsxMdj912PN
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.2kxvBVsxMdj912PN'
+    documentCollection: pf-content.pf-maladies
+    documentId: seGEx0gymT7zJ755
+    img: systems/pf1/icons/skills/blood_09.jpg
+    range:
+      - 25
+      - 25
+    text: Dvezda Plague
+    type: pack
+    weight: 1
+  - _id: 2v8iTA1b5dXmavEp
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.2v8iTA1b5dXmavEp'
+    documentCollection: pf-content.pf-maladies
+    documentId: FIKghixfP8jUKkNx
+    img: icons/commodities/biological/organ-stomach.webp
+    range:
+      - 26
+      - 26
+    text: Dysentery
+    type: pack
+    weight: 1
+  - _id: Sw4AivVG2VtvT3BH
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.Sw4AivVG2VtvT3BH'
+    documentCollection: pf-content.pf-maladies
+    documentId: ce6BPD0ZolEAjyZT
+    img: systems/pf1/icons/items/inventory/meat.jpg
+    range:
+      - 27
+      - 27
+    text: Enteric Fever
+    type: pack
+    weight: 1
+  - _id: CUtKnANQIGPOew5Z
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.CUtKnANQIGPOew5Z'
+    documentCollection: pf-content.pf-maladies
+    documentId: jEHylQsGGjbQXRt2
+    img: systems/pf1/icons/skills/blue_06.jpg
+    range:
+      - 28
+      - 28
+    text: Ergia
+    type: pack
+    weight: 1
+  - _id: spp81vUxBrmurh04
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.spp81vUxBrmurh04'
+    documentCollection: pf-content.pf-maladies
+    documentId: HdH7elHEyir9ckZ4
+    img: systems/pf1/icons/races/ratfolk.png
+    range:
+      - 29
+      - 29
+    text: Filth Fever
+    type: pack
+    weight: 1
+  - _id: DO5gAQiQfLU3CDqk
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.DO5gAQiQfLU3CDqk'
+    documentCollection: pf-content.pf-maladies
+    documentId: qEtdAsgPezYwz2fJ
+    img: systems/pf1/icons/skills/affliction_08.jpg
+    range:
+      - 30
+      - 30
+    text: Final Rest
+    type: pack
+    weight: 1
+  - _id: z983b79urqWbBkbI
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.z983b79urqWbBkbI'
+    documentCollection: pf-content.pf-maladies
+    documentId: KEBeNYO3Tz7IYMhA
+    img: systems/pf1/icons/skills/red_30.jpg
+    range:
+      - 31
+      - 31
+    text: Firegut
+    type: pack
+    weight: 1
+  - _id: QJJBAObZKG9CeOWf
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.QJJBAObZKG9CeOWf'
+    documentCollection: pf-content.pf-maladies
+    documentId: xOyJzYLJOMHh4140
+    img: icons/commodities/biological/hand-gnarled-green.webp
+    range:
+      - 32
+      - 32
+    text: Fungal Flu
+    type: pack
+    weight: 1
+  - _id: QXvb7B5kgMGOhOb8
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.QXvb7B5kgMGOhOb8'
+    documentCollection: pf-content.pf-maladies
+    documentId: 69lzgZKyWbd1oDpH
+    img: systems/pf1/icons/skills/shadow_01.jpg
+    range:
+      - 33
+      - 33
+    text: Ghoul Distemper (Horrific)
+    type: pack
+    weight: 1
+  - _id: xWuFcWJryipoFOvf
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.xWuFcWJryipoFOvf'
+    documentCollection: pf-content.pf-maladies
+    documentId: KgnVoEaY5ft7lfZ2
+    img: systems/pf1/icons/skills/shadow_01.jpg
+    range:
+      - 34
+      - 34
+    text: Ghoul Fever
+    type: pack
+    weight: 1
+  - _id: xVFt40B2Qh02doAd
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.xVFt40B2Qh02doAd'
+    documentCollection: pf-content.pf-maladies
+    documentId: fE6mDRHdIH1a5SWG
+    img: systems/pf1/icons/skills/ice_05.jpg
+    range:
+      - 35
+      - 35
+    text: Glacier Plague
+    type: pack
+    weight: 1
+  - _id: 3Tpxk9l26hwYn53b
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.3Tpxk9l26hwYn53b'
+    documentCollection: pf-content.pf-maladies
+    documentId: 2sVsKBze0qXl0LQ5
+    img: icons/environment/creatures/bug-worm-pincer-pink.webp
+    range:
+      - 36
+      - 36
+    text: Gore Worms (Horrific)
+    type: pack
+    weight: 1
+  - _id: eGrxFC9wKJ11ETbl
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.eGrxFC9wKJ11ETbl'
+    documentCollection: pf-content.pf-maladies
+    documentId: kZcU0aRWIzP19ZIQ
+    img: systems/pf1/icons/feats/blind-fight.jpg
+    range:
+      - 37
+      - 37
+    text: Green Haze
+    type: pack
+    weight: 1
+  - _id: J4NJC0WkGr1MN2lv
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.J4NJC0WkGr1MN2lv'
+    documentCollection: pf-content.pf-maladies
+    documentId: Gn4sYgrI6e63OVrx
+    img: icons/commodities/biological/tail-scaled-green.webp
+    range:
+      - 38
+      - 38
+    text: Greenscale
+    type: pack
+    weight: 1
+  - _id: FGmlURMSuQJKtDzQ
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.FGmlURMSuQJKtDzQ'
+    documentCollection: pf-content.pf-maladies
+    documentId: HUqSnso0kdSoRryI
+    img: icons/commodities/biological/hand-clawed-brown.webp
+    range:
+      - 39
+      - 39
+    text: Leprosy
+    type: pack
+    weight: 1
+  - _id: C3GvCWqgHIlsc8AB
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.C3GvCWqgHIlsc8AB'
+    documentCollection: pf-content.pf-maladies
+    documentId: 105mZ5GngYwG2WjJ
+    img: systems/pf1/icons/skills/green_05.jpg
+    range:
+      - 40
+      - 40
+    text: Malaria (Jungle Fever)
+    type: pack
+    weight: 1
+  - _id: MwoSeRiQ4G1GeA89
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.MwoSeRiQ4G1GeA89'
+    documentCollection: pf-content.pf-maladies
+    documentId: zw1id0psmxL1zBpK
+    img: icons/commodities/biological/organ-brain-pink-purple.webp
+    range:
+      - 41
+      - 41
+    text: Mindfire
+    type: pack
+    weight: 1
+  - _id: iI6lI78PkZUgsHRq
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.iI6lI78PkZUgsHRq'
+    documentCollection: pf-content.pf-maladies
+    documentId: o7TuBE2zVD3nMF8W
+    img: systems/pf1/icons/skills/affliction_03.jpg
+    range:
+      - 42
+      - 42
+    text: Moxix's Delectation
+    type: pack
+    weight: 1
+  - _id: 3aS8RpRR48ijpSDL
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.3aS8RpRR48ijpSDL'
+    documentCollection: pf-content.pf-maladies
+    documentId: XISyG4G83uL0lzVD
+    img: icons/commodities/gems/gem-rough-pendeloque-blue.webp
+    range:
+      - 43
+      - 43
+    text: Pulsing Puffs
+    type: pack
+    weight: 1
+  - _id: n8oWNouLasfiNTy7
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.n8oWNouLasfiNTy7'
+    documentCollection: pf-content.pf-maladies
+    documentId: DLbOk2kVRdsra9on
+    img: systems/pf1/icons/skills/blue_29.jpg
+    range:
+      - 44
+      - 44
+    text: Rabies
+    type: pack
+    weight: 1
+  - _id: rWJqgRzxLpfC606f
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.rWJqgRzxLpfC606f'
+    documentCollection: pf-content.pf-maladies
+    documentId: S33nE6AMcjAlEE3a
+    img: icons/commodities/biological/pustules-pink.webp
+    range:
+      - 45
+      - 45
+    text: Rapture Pox
+    type: pack
+    weight: 1
+  - _id: YyFyO2PRWH6hzgqd
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.YyFyO2PRWH6hzgqd'
+    documentCollection: pf-content.pf-maladies
+    documentId: H1w9JvUPoZKNfxd7
+    img: icons/commodities/biological/pustules-red.webp
+    range:
+      - 46
+      - 46
+    text: Red Ache
+    type: pack
+    weight: 1
+  - _id: Xyalx8EfaWEIvxAz
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.Xyalx8EfaWEIvxAz'
+    documentCollection: pf-content.pf-maladies
+    documentId: GRkEN6nEhwZTW8pk
+    img: icons/commodities/biological/hand-green-red.webp
+    range:
+      - 47
+      - 47
+    text: Red Drip
+    type: pack
+    weight: 1
+  - _id: YBGrLzBNOz5vA5hH
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.YBGrLzBNOz5vA5hH'
+    documentCollection: pf-content.pf-maladies
+    documentId: Ojb0pR3nLGfJVbj1
+    img: icons/commodities/biological/hand-clawed-scale-grey.webp
+    range:
+      - 48
+      - 48
+    text: Scarlet Leprosy
+    type: pack
+    weight: 1
+  - _id: RspRssRDwOLSe24w
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.RspRssRDwOLSe24w'
+    documentCollection: pf-content.pf-maladies
+    documentId: vH6gESSv7zuT86AQ
+    img: icons/tools/nautical/anchor.webp
+    range:
+      - 49
+      - 49
+    text: Seasickness
+    type: pack
+    weight: 1
+  - _id: HEUiOwtJu0juG6tz
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.HEUiOwtJu0juG6tz'
+    documentCollection: pf-content.pf-maladies
+    documentId: Nx798UF6uHLnMdnR
+    img: systems/pf1/icons/skills/emerald_11.jpg
+    range:
+      - 50
+      - 50
+    text: Shakes
+    type: pack
+    weight: 1
+  - _id: TrXuJ2bLEwWBpu5q
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.TrXuJ2bLEwWBpu5q'
+    documentCollection: pf-content.pf-maladies
+    documentId: 6P62VZcA2Q2Vk1Lo
+    img: icons/commodities/biological/organ-brain-pink.webp
+    range:
+      - 51
+      - 51
+    text: Shattermind
+    type: pack
+    weight: 1
+  - _id: aHyZXHoaZvpIdIbw
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.aHyZXHoaZvpIdIbw'
+    documentCollection: pf-content.pf-maladies
+    documentId: 4i11yYXOHoOUj6ux
+    img: icons/commodities/bones/skull-hollow-worn-white.webp
+    range:
+      - 52
+      - 52
+    text: Skin Wastes (Horrific)
+    type: pack
+    weight: 1
+  - _id: efnlROILleXGslvM
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.efnlROILleXGslvM'
+    documentCollection: pf-content.pf-maladies
+    documentId: b5LwxVAqswhMknZc
+    img: systems/pf1/icons/skills/affliction_02.jpg
+    range:
+      - 53
+      - 53
+    text: Sleeping Sickness
+    type: pack
+    weight: 1
+  - _id: eiGZwCSUSsO9jNi1
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.eiGZwCSUSsO9jNi1'
+    documentCollection: pf-content.pf-maladies
+    documentId: mmijPqbro33qoVXV
+    img: icons/commodities/materials/liquid-green.webp
+    range:
+      - 54
+      - 54
+    text: Slimy Doom
+    type: pack
+    weight: 1
+  - _id: FkihUO0T8YdNDeUp
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.FkihUO0T8YdNDeUp'
+    documentCollection: pf-content.pf-maladies
+    documentId: BPBJRXHJAAH8cpEt
+    img: systems/pf1/icons/skills/affliction_11.jpg
+    range:
+      - 55
+      - 55
+    text: Spellscar Fever
+    type: pack
+    weight: 1
+  - _id: pkjYQmLCJP0PvlEZ
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.pkjYQmLCJP0PvlEZ'
+    documentCollection: pf-content.pf-maladies
+    documentId: K1iWaoeYPh6CwgCm
+    img: systems/pf1/icons/feats/persuasive.jpg
+    range:
+      - 56
+      - 56
+    text: Tetanus
+    type: pack
+    weight: 1
+  - _id: 8PmP8CYvb8M9VV55
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.8PmP8CYvb8M9VV55'
+    documentCollection: pf-content.pf-maladies
+    documentId: UqTUdFCIwyrXZeAg
+    img: systems/pf1/icons/skills/blue_17.jpg
+    range:
+      - 57
+      - 57
+    text: The Scales
+    type: pack
+    weight: 1
+  - _id: YWYWWjCQsWlCGII9
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.YWYWWjCQsWlCGII9'
+    documentCollection: pf-content.pf-maladies
+    documentId: WEADlIXa6BNkcJ6a
+    img: systems/pf1/icons/skills/violet_19.jpg
+    range:
+      - 58
+      - 58
+    text: The Tainted Plague
+    type: pack
+    weight: 1
+  - _id: 5xdDW6usRLL3SyM1
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.5xdDW6usRLL3SyM1'
+    documentCollection: pf-content.pf-maladies
+    documentId: iW4XMifERDUGbR5W
+    img: icons/commodities/biological/organ-heart-black.webp
+    range:
+      - 59
+      - 59
+    text: Tuberculosis
+    type: pack
+    weight: 1
+  - _id: K16V3ILqB3rMg4KK
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.K16V3ILqB3rMg4KK'
+    documentCollection: pf-content.pf-maladies
+    documentId: cfkFCfwnjHktvwS8
+    img: systems/pf1/icons/skills/affliction_24.jpg
+    range:
+      - 60
+      - 60
+    text: Typhoid Fever
+    type: pack
+    weight: 1
+  - _id: CXOvsOlnxcCHGj5F
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.CXOvsOlnxcCHGj5F'
+    documentCollection: pf-content.pf-maladies
+    documentId: PLheQNd8P8bHQb6a
+    img: systems/pf1/icons/skills/blood_13.jpg
+    range:
+      - 61
+      - 61
+    text: Vorel's Phage
+    type: pack
+    weight: 1
+  - _id: aS2oK6dloYd0s5Ot
+    _key: '!tables.results!mRf6CmgMCEVQS3hh.aS2oK6dloYd0s5Ot'
+    documentCollection: pf-content.pf-maladies
+    documentId: nyKZ6XfskikDjyxk
+    img: systems/pf1/icons/skills/affliction_21.jpg
+    range:
+      - 62
+      - 62
+    text: Zombie Rot
+    type: pack
+    weight: 1
+sort: 1200000

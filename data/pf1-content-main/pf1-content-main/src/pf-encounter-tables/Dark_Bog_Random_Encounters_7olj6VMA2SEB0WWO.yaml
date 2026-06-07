@@ -1,0 +1,435 @@
+_id: 7olj6VMA2SEB0WWO
+_key: '!tables!7olj6VMA2SEB0WWO'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/altar-hidden.webp
+name: Dark Bog Random Encounters
+replacement: true
+results:
+  - _id: HOMOn4WmKU4aoC67
+    _key: '!tables.results!7olj6VMA2SEB0WWO.HOMOn4WmKU4aoC67'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 3
+    text: '1 Bat Swarm [CR 2]'
+    type: text
+    weight: 1
+  - _id: wHAlpk61oJV7vj0b
+    _key: '!tables.results!7olj6VMA2SEB0WWO.wHAlpk61oJV7vj0b'
+    img: icons/svg/d20-black.svg
+    range:
+      - 4
+      - 8
+    text: '[[2d6]] Goblins [AVG CR 2]'
+    type: text
+    weight: 1
+  - _id: dPEKmm17u8Kf5Zw5
+    _key: '!tables.results!7olj6VMA2SEB0WWO.dPEKmm17u8Kf5Zw5'
+    img: icons/svg/d20-black.svg
+    range:
+      - 9
+      - 9
+    text: '[[1d4]] Land Lampreys [AVG CR 2]'
+    type: text
+    weight: 1
+  - _id: JKq8cQKNiWbVJH4P
+    _key: '!tables.results!7olj6VMA2SEB0WWO.JKq8cQKNiWbVJH4P'
+    img: icons/svg/d20-black.svg
+    range:
+      - 10
+      - 11
+    text: '1 Large Monstrous Spider [CR 2]'
+    type: text
+    weight: 1
+  - _id: CyOH9eKNipIz5GPB
+    _key: '!tables.results!7olj6VMA2SEB0WWO.CyOH9eKNipIz5GPB'
+    img: icons/svg/d20-black.svg
+    range:
+      - 12
+      - 13
+    text: '[[1d4]] Bonesnappers [AVG CR 3]'
+    type: text
+    weight: 1
+  - _id: LowTzotxUMPMkYYY
+    _key: '!tables.results!7olj6VMA2SEB0WWO.LowTzotxUMPMkYYY'
+    img: icons/svg/d20-black.svg
+    range:
+      - 14
+      - 16
+    text: '[[1d6]] Giant Geckos [AVG CR 3]'
+    type: text
+    weight: 1
+  - _id: i3n0QbOHnv9OyN0C
+    _key: '!tables.results!7olj6VMA2SEB0WWO.i3n0QbOHnv9OyN0C'
+    img: icons/svg/d20-black.svg
+    range:
+      - 17
+      - 18
+    text: '[[1d4]] Assassin Vines [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: KNHYymTJA90NPbJr
+    _key: '!tables.results!7olj6VMA2SEB0WWO.KNHYymTJA90NPbJr'
+    img: icons/svg/d20-black.svg
+    range:
+      - 19
+      - 19
+    text: '1 Bunyip [CR 4]'
+    type: text
+    weight: 1
+  - _id: 0EXWv1JxkAvtq5LX
+    _key: '!tables.results!7olj6VMA2SEB0WWO.0EXWv1JxkAvtq5LX'
+    img: icons/svg/d20-black.svg
+    range:
+      - 20
+      - 20
+    text: '1 Devilfish [CR 4]'
+    type: text
+    weight: 1
+  - _id: W8qhIVCUjbRu7jiX
+    _key: '!tables.results!7olj6VMA2SEB0WWO.W8qhIVCUjbRu7jiX'
+    img: icons/svg/d20-black.svg
+    range:
+      - 21
+      - 22
+    text: '[[1d12]] Giant Flies [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: IroubeZoCWzYctw8
+    _key: '!tables.results!7olj6VMA2SEB0WWO.IroubeZoCWzYctw8'
+    img: icons/svg/d20-black.svg
+    range:
+      - 23
+      - 23
+    text: '[[1d12]] Human Zombies [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: GiZblj7MLGZhrBXo
+    _key: '!tables.results!7olj6VMA2SEB0WWO.GiZblj7MLGZhrBXo'
+    img: icons/svg/d20-black.svg
+    range:
+      - 24
+      - 27
+    text: '[[1d4]] Wild Pigs (use Boar) [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: bAVxHad3JqxmC7Lx
+    _key: '!tables.results!7olj6VMA2SEB0WWO.bAVxHad3JqxmC7Lx'
+    img: icons/svg/d20-black.svg
+    range:
+      - 28
+      - 28
+    text: '1 Kelpie [CR 4]'
+    type: text
+    weight: 1
+  - _id: yiZlvYK9f6SaFwfB
+    _key: '!tables.results!7olj6VMA2SEB0WWO.yiZlvYK9f6SaFwfB'
+    img: icons/svg/d20-black.svg
+    range:
+      - 29
+      - 30
+    text: '[[1d6]] Giant Leeches [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: 27c3WqcAxftjSQLi
+    _key: '!tables.results!7olj6VMA2SEB0WWO.27c3WqcAxftjSQLi'
+    img: icons/svg/d20-black.svg
+    range:
+      - 31
+      - 31
+    text: '[[2d6]] Goblin Dogs [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: WNWR3Vvllyj5Slp1
+    _key: '!tables.results!7olj6VMA2SEB0WWO.WNWR3Vvllyj5Slp1'
+    img: icons/svg/d20-black.svg
+    range:
+      - 32
+      - 32
+    text: "1 Forester's Bane [CR 5]"
+    type: text
+    weight: 1
+  - _id: 8bCuwlWEWpBPoqUg
+    _key: '!tables.results!7olj6VMA2SEB0WWO.8bCuwlWEWpBPoqUg'
+    img: icons/svg/d20-black.svg
+    range:
+      - 33
+      - 35
+    text: '[[1d4]] Mosquito Swarms [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: NZLtK3rwVf6tcSxy
+    _key: '!tables.results!7olj6VMA2SEB0WWO.NZLtK3rwVf6tcSxy'
+    img: icons/svg/d20-black.svg
+    range:
+      - 36
+      - 39
+    text: '1 Giant Constrictor Snake [CR 5]'
+    type: text
+    weight: 1
+  - _id: pTPYsQW70r0sxafW
+    _key: '!tables.results!7olj6VMA2SEB0WWO.pTPYsQW70r0sxafW'
+    img: icons/svg/d20-black.svg
+    range:
+      - 40
+      - 43
+    text: '[[2d12]] Stirges [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: Mhcphq2Z6yxQLJPX
+    _key: '!tables.results!7olj6VMA2SEB0WWO.Mhcphq2Z6yxQLJPX'
+    img: icons/svg/d20-black.svg
+    range:
+      - 44
+      - 44
+    text: '[[1d4]] Amphisbaenas [AVG CR 6]'
+    type: text
+    weight: 1
+  - _id: SSmRzvoBFxGtplpm
+    _key: '!tables.results!7olj6VMA2SEB0WWO.SSmRzvoBFxGtplpm'
+    img: icons/svg/d20-black.svg
+    range:
+      - 45
+      - 46
+    text: '[[1d4]] Otyughs [AVG CR 6]'
+    type: text
+    weight: 1
+  - _id: 6PMNDXvGyt8ZcbXm
+    _key: '!tables.results!7olj6VMA2SEB0WWO.6PMNDXvGyt8ZcbXm'
+    img: icons/svg/d20-black.svg
+    range:
+      - 47
+      - 48
+    text: '1 Shambling Mound [CR 6]'
+    type: text
+    weight: 1
+  - _id: apdiBAbDm44j5dCR
+    _key: '!tables.results!7olj6VMA2SEB0WWO.apdiBAbDm44j5dCR'
+    img: icons/svg/d20-black.svg
+    range:
+      - 49
+      - 49
+    text: '[[1d4]] Tentamorts [AVG CR 6]'
+    type: text
+    weight: 1
+  - _id: XI39VD0RFOMYHgPN
+    _key: '!tables.results!7olj6VMA2SEB0WWO.XI39VD0RFOMYHgPN'
+    img: icons/svg/d20-black.svg
+    range:
+      - 50
+      - 54
+    text: '[[1d12]] Alligators or Crocodiles (as appropriate, by terrain) [AVG CR 7]'
+    type: text
+    weight: 1
+  - _id: bhbxsBg7jnUM5cSV
+    _key: '!tables.results!7olj6VMA2SEB0WWO.bhbxsBg7jnUM5cSV'
+    img: icons/svg/d20-black.svg
+    range:
+      - 55
+      - 55
+    text: '1 Black Pudding [CR 7]'
+    type: text
+    weight: 1
+  - _id: y9L3HGpU9YUapmi0
+    _key: '!tables.results!7olj6VMA2SEB0WWO.y9L3HGpU9YUapmi0'
+    img: icons/svg/d20-black.svg
+    range:
+      - 56
+      - 56
+    text: '[[1d6]] Faceless Stalkers [AVG CR 7]'
+    type: text
+    weight: 1
+  - _id: HjxAr7gATFZ0YHQe
+    _key: '!tables.results!7olj6VMA2SEB0WWO.HjxAr7gATFZ0YHQe'
+    img: icons/svg/d20-black.svg
+    range:
+      - 57
+      - 58
+    text: '[[1d4]] Scrags [AVG CR 7]'
+    type: text
+    weight: 1
+  - _id: XSLEwDS1yRcXyBfs
+    _key: '!tables.results!7olj6VMA2SEB0WWO.XSLEwDS1yRcXyBfs'
+    img: icons/svg/d20-black.svg
+    range:
+      - 59
+      - 60
+    text: '[[1d12]] Shocker Lizards [AVG CR 7]'
+    type: text
+    weight: 1
+  - _id: aZp3EB4o2f7BL3e5
+    _key: '!tables.results!7olj6VMA2SEB0WWO.aZp3EB4o2f7BL3e5'
+    img: icons/svg/d20-black.svg
+    range:
+      - 61
+      - 62
+    text: '1 Giant Slug [CR 8]'
+    type: text
+    weight: 1
+  - _id: SmTQ52PeyzLaEkTa
+    _key: '!tables.results!7olj6VMA2SEB0WWO.SmTQ52PeyzLaEkTa'
+    img: icons/svg/d20-black.svg
+    range:
+      - 63
+      - 63
+    text: '3 Green Hags [CR 8]'
+    type: text
+    weight: 1
+  - _id: IoAj8PLsXWx6luY5
+    _key: '!tables.results!7olj6VMA2SEB0WWO.IoAj8PLsXWx6luY5'
+    img: icons/svg/d20-black.svg
+    range:
+      - 64
+      - 64
+    text: '[[1d4]] Tendriculoses [AVG CR 8]'
+    type: text
+    weight: 1
+  - _id: lk6yAh0ajTF5MRTD
+    _key: '!tables.results!7olj6VMA2SEB0WWO.lk6yAh0ajTF5MRTD'
+    img: icons/svg/d20-black.svg
+    range:
+      - 65
+      - 67
+    text: '[[1d6]] Trolls [AVG CR 8]'
+    type: text
+    weight: 1
+  - _id: Da6ulGoxUhbt8QNK
+    _key: '!tables.results!7olj6VMA2SEB0WWO.Da6ulGoxUhbt8QNK'
+    img: icons/svg/d20-black.svg
+    range:
+      - 68
+      - 69
+    text: "[[1d4]] Will-o'-wisps [AVG CR 8]"
+    type: text
+    weight: 1
+  - _id: yeRHp0O03iRkjo1S
+    _key: '!tables.results!7olj6VMA2SEB0WWO.yeRHp0O03iRkjo1S'
+    img: icons/svg/d20-black.svg
+    range:
+      - 70
+      - 70
+    text: "1 Wolf-in-sheep's-clothing [CR 8]"
+    type: text
+    weight: 1
+  - _id: TLdA1aPRe3uAYXOQ
+    _key: '!tables.results!7olj6VMA2SEB0WWO.TLdA1aPRe3uAYXOQ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 71
+      - 73
+    text: '[[1d12]] Giant Alligators (or Crocodiles, as appropriate for terrain) [AVG CR 9]'
+    type: text
+    weight: 1
+  - _id: cHLZIV5YqJUA1hmQ
+    _key: '!tables.results!7olj6VMA2SEB0WWO.cHLZIV5YqJUA1hmQ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 74
+      - 76
+    text: '[[1d12]] Giant Dire Frogs [AVG CR 9]'
+    type: text
+    weight: 1
+  - _id: qdqlwT7GxaSkCRbY
+    _key: '!tables.results!7olj6VMA2SEB0WWO.qdqlwT7GxaSkCRbY'
+    img: icons/svg/d20-black.svg
+    range:
+      - 77
+      - 78
+    text: '[[1d12]] Harpies [AVG CR 9]'
+    type: text
+    weight: 1
+  - _id: tPvSKrYMAaHflFVH
+    _key: '!tables.results!7olj6VMA2SEB0WWO.tPvSKrYMAaHflFVH'
+    img: icons/svg/d20-black.svg
+    range:
+      - 79
+      - 80
+    text: '[[1d4]] Dark Nagas [AVG CR 10]'
+    type: text
+    weight: 1
+  - _id: ZxqmNYD2yaXCyJKD
+    _key: '!tables.results!7olj6VMA2SEB0WWO.ZxqmNYD2yaXCyJKD'
+    img: icons/svg/d20-black.svg
+    range:
+      - 81
+      - 81
+    text: '[[1d6]] Dracolisks [AVG CR 10]'
+    type: text
+    weight: 1
+  - _id: WJ8nmn9XDDXhYHZN
+    _key: '!tables.results!7olj6VMA2SEB0WWO.WJ8nmn9XDDXhYHZN'
+    img: icons/svg/d20-black.svg
+    range:
+      - 82
+      - 82
+    text: '1 Mobogo [CR 10]'
+    type: text
+    weight: 1
+  - _id: vv3SlyhN6PGVIJUi
+    _key: '!tables.results!7olj6VMA2SEB0WWO.vv3SlyhN6PGVIJUi'
+    img: icons/svg/d20-black.svg
+    range:
+      - 83
+      - 86
+    text: '[[1d6]] Marsh Giants [AVG CR 11]'
+    type: text
+    weight: 1
+  - _id: nbSd0YRGTFdKLQzW
+    _key: '!tables.results!7olj6VMA2SEB0WWO.nbSd0YRGTFdKLQzW'
+    img: icons/svg/d20-black.svg
+    range:
+      - 87
+      - 87
+    text: '1 Elder Black Pudding [CR 12]'
+    type: text
+    weight: 1
+  - _id: b1kndwUhheLzgEc1
+    _key: '!tables.results!7olj6VMA2SEB0WWO.b1kndwUhheLzgEc1'
+    img: icons/svg/d20-black.svg
+    range:
+      - 88
+      - 88
+    text: '1 Froghemoth [CR 13]'
+    type: text
+    weight: 1
+  - _id: HRd8vKdb9INdA6ZA
+    _key: '!tables.results!7olj6VMA2SEB0WWO.HRd8vKdb9INdA6ZA'
+    img: icons/svg/d20-black.svg
+    range:
+      - 89
+      - 90
+    text: '[[1d4]] Ten-headed Hydras [AVG CR 13]'
+    type: text
+    weight: 1
+  - _id: gmaTVE1kVJuI551N
+    _key: '!tables.results!7olj6VMA2SEB0WWO.gmaTVE1kVJuI551N'
+    img: icons/svg/d20-black.svg
+    range:
+      - 91
+      - 94
+    text: 'Quicksand'
+    type: text
+    weight: 1
+  - _id: OZ3kMu72lFONQUis
+    _key: '!tables.results!7olj6VMA2SEB0WWO.OZ3kMu72lFONQUis'
+    img: icons/svg/d20-black.svg
+    range:
+      - 95
+      - 99
+    text: 'Boggards'
+    type: text
+    weight: 1
+  - _id: dcPYJaGJtWWzK8Wr
+    _key: '!tables.results!7olj6VMA2SEB0WWO.dcPYJaGJtWWzK8Wr'
+    img: icons/svg/d20-black.svg
+    range:
+      - 100
+      - 100
+    text: 'Dragon'
+    type: text
+    weight: 1
+sort: 400000

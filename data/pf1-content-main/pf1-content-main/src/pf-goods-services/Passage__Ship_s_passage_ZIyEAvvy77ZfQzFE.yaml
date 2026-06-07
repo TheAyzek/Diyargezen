@@ -1,0 +1,21 @@
+_id: ZIyEAvvy77ZfQzFE
+_key: '!items!ZIyEAvvy77ZfQzFE'
+_stats:
+  coreVersion: '12.331'
+img: icons/environment/settlement/ship.webp
+name: Passage, Ship's passage
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> -; <strong>Price of Passage (per mile)</strong>
+      1 sp</p><p>Most ships do not specialize in passengers, but many have the
+      capability to take a few along when transporting cargo. Double the given
+      cost for creatures larger than Medium or creatures that are otherwise
+      difficult to bring aboard a ship.</p>
+  equipped: false
+  price: 0.1
+  sources:
+    - id: PZO1110
+      pages: '159'
+  subType: vehicle
+type: loot

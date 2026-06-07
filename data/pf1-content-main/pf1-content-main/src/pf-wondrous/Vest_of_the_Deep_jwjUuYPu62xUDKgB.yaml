@@ -1,0 +1,27 @@
+_id: jwjUuYPu62xUDKgB
+_key: '!items!jwjUuYPu62xUDKgB'
+_stats:
+  coreVersion: '12.331'
+folder: KOT1geWrUrAU083b
+img: icons/equipment/chest/vest-leather-pink.webp
+name: Vest of the Deep
+system:
+  aura:
+    school: abj
+  cl: 7
+  description:
+    value: >-
+      <p>A vest of the deep creates a constant shell of magical energy that
+      protects the wearer from extreme environmental pressure, such as that
+      inflicted by water at a depth of over 100 feet. It does not provide any
+      protection from constriction or other forms of direct crushing damage, nor
+      does it grant water breathing.<h3>Requirements</h3><p>Craft Wondrous Item,
+      life bubble</p>
+  price: 2000
+  slot: chest
+  sources:
+    - id: PZO9099
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,34 @@
+_id: PC83TGdy3I6ZDfxn
+_key: '!items!PC83TGdy3I6ZDfxn'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Death Mask
+system:
+  aura:
+    school: nec
+  cl: 6
+  description:
+    value: >-
+      <p>This elaborate wooden mask is carved in the image of Pharasma. The
+      owner of a death mask can place the mask upon a corpse to ask the corpse
+      up to three questions as if by speak with dead, except the corpse does not
+      get a Will saving throw if the mask's owner is of a different alignment
+      than the corpse had in life. This effect works as long as the head of the
+      corpse is intact enough to fit the mask onto, no matter how damaged the
+      corpse is otherwise. A death mask functions on a given corpse only once in
+      this way; additional attempts to ask the corpse questions fail.  If a
+      living person dons the death mask, her appearance changes to that of the
+      last person whose corpse was spoken with using the mask, as alter self.
+      The wearer resembles the deceased person as she looked in
+      life.</p><h3>Requirements</h3><p>Craft Wondrous Item, alter self, speak
+      with dead</p>
+  price: 16000
+  slot: head
+  sources:
+    - id: PZO9547
+  subType: wondrous
+  weight:
+    value: 4
+type: equipment

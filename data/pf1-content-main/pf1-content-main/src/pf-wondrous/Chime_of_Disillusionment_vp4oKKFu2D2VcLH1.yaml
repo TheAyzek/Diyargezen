@@ -1,0 +1,34 @@
+_id: vp4oKKFu2D2VcLH1
+_key: '!items!vp4oKKFu2D2VcLH1'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Chime of Disillusionment
+system:
+  aura:
+    school: enc
+  cl: 9
+  description:
+    value: >-
+      <p>When struck, this heavy iron tube produces a discordant tone and draws
+      the surrounding light in on itself. Within a 60-foot-radius burst centered
+      on the point where the chime was struck, the illumination level drops one
+      step, to a minimum of dim light. The echoes of the chime resonate for 1
+      minute, during which creatures in the area can't benefit from morale
+      bonuses and gain a +4 bonus on Will saves made to disbelieve. After this
+      period, the suppression of morale bonuses ends and the ambient light level
+      returns to normal. If the bearer expends one use of mythic power while
+      striking the chime, the area increases to a 120-foot-radius burst, and
+      each mythic enemy within it loses one use of mythic power, in addition to
+      the chime's normal effects. The chime can be struck three times per day.
+      Additional strikes produce no sound or
+      effect.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Mythic Crafter, calm emotions, darkness</p>
+  price: 35000
+  sources:
+    - id: PZO1126
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

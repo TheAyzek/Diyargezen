@@ -1,0 +1,31 @@
+_id: s6J0kUlmKsLjXH3f
+_key: '!items!s6J0kUlmKsLjXH3f'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/potions/minor-blue.jpg
+name: Tunnel Creeper
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><p>This fist-sized
+      cluster of aggressive fungus grows rapidly when placed against a solid
+      surface and exposed to water, and can quietly bore a 5-foot-tall,
+      10-foot-deep tunnel in a straight line. The tunnel is supported by sturdy
+      fungal tubes. A tunnel creeper cannot eat through metal or any material
+      denser than common stone. A tunnel creeper takes 10 minutes to carve a
+      tunnel through stone, or 5 minutes to carve through wood, after which the
+      fungus withers and falls to the ground.</p><h2>Alchemical
+      Recipe</h2><p><strong>Recipe</strong> (100 brimstone + 90 magnesium + 35
+      cytillesh spores)/fermentation; <strong>Craft</strong>
+      25</p><p><strong>Time</strong> 1 day; <strong>Tools</strong> heat source;
+      <strong>Type</strong> alchemical tool</p>
+  price: 280
+  sources:
+    - id: PZO9445
+      pages: '11'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 1
+type: consumable

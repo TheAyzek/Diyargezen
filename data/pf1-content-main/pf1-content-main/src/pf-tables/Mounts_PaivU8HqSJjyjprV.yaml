@@ -1,0 +1,640 @@
+_id: PaivU8HqSJjyjprV
+_key: '!tables!PaivU8HqSJjyjprV'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+folder: WRIhxGMO1MKw7Mne
+formula: ''
+img: icons/environment/creatures/horse-brown.webp
+name: Mounts
+replacement: true
+results:
+  - _id: ly5liMAJgQRk7rpW
+    _key: '!tables.results!PaivU8HqSJjyjprV.ly5liMAJgQRk7rpW'
+    documentCollection: pf-content.pf-goods-services
+    documentId: MhpF8WXU5JBYcwtA
+    img: modules/pf-content/icons/spell218.png
+    range:
+      - 1
+      - 1
+    text: Aurochs
+    type: pack
+    weight: 1
+  - _id: Z0RCgUPsuecOqojk
+    _key: '!tables.results!PaivU8HqSJjyjprV.Z0RCgUPsuecOqojk'
+    documentCollection: pf-content.pf-goods-services
+    documentId: ivFQQtEhIrE8pWcS
+    img: modules/pf-content/icons/spell218.png
+    range:
+      - 2
+      - 2
+    text: Aurochs (Combat-Trained)
+    type: pack
+    weight: 1
+  - _id: 5bIexOybquvWdJ93
+    _key: '!tables.results!PaivU8HqSJjyjprV.5bIexOybquvWdJ93'
+    documentCollection: pf-content.pf-goods-services
+    documentId: Kpy6Hvo1j8xn0sDf
+    img: icons/commodities/biological/wing-bat-pink.webp
+    range:
+      - 3
+      - 3
+    text: Bat, Dire (Riding, Combat Trained)
+    type: pack
+    weight: 1
+  - _id: ZwFt306DmkV6zUz1
+    _key: '!tables.results!PaivU8HqSJjyjprV.ZwFt306DmkV6zUz1'
+    documentCollection: pf-content.pf-goods-services
+    documentId: 4BvoSMh7UqLrFWfs
+    img: icons/commodities/biological/wing-bat-pink.webp
+    range:
+      - 4
+      - 4
+    text: Bat, Dire (Riding)
+    type: pack
+    weight: 1
+  - _id: OyWaehm5WQQu7n1m
+    _key: '!tables.results!PaivU8HqSJjyjprV.OyWaehm5WQQu7n1m'
+    documentCollection: pf-content.pf-goods-services
+    documentId: IRy8b7xPh70gtZtf
+    img: systems/pf1/icons/skills/red_23.jpg
+    range:
+      - 5
+      - 5
+    text: Bison
+    type: pack
+    weight: 1
+  - _id: MHc7uOeZFxLOljSN
+    _key: '!tables.results!PaivU8HqSJjyjprV.MHc7uOeZFxLOljSN'
+    documentCollection: pf-content.pf-goods-services
+    documentId: Dme0vC4Opz92iPJS
+    img: systems/pf1/icons/skills/red_23.jpg
+    range:
+      - 6
+      - 6
+    text: Bison (Combat-Trained)
+    type: pack
+    weight: 1
+  - _id: UQZhwGfI376VOGQB
+    _key: '!tables.results!PaivU8HqSJjyjprV.UQZhwGfI376VOGQB'
+    documentCollection: pf-content.pf-goods-services
+    documentId: 2fVesihnx0PZKvlb
+    img: icons/commodities/bones/hooves-cloven-brown.webp
+    range:
+      - 7
+      - 7
+    text: Camel
+    type: pack
+    weight: 1
+  - _id: ybt3T3MfjQmOdWNe
+    _key: '!tables.results!PaivU8HqSJjyjprV.ybt3T3MfjQmOdWNe'
+    documentCollection: pf-content.pf-goods-services
+    documentId: 9UG29w9BPFAqFCOI
+    img: modules/pf-content/icons/spell226.png
+    range:
+      - 8
+      - 8
+    text: Chameleon, Giant
+    type: pack
+    weight: 1
+  - _id: kuKqq655bKBUBoM1
+    _key: '!tables.results!PaivU8HqSJjyjprV.kuKqq655bKBUBoM1'
+    documentCollection: pf-content.pf-goods-services
+    documentId: hE45ImubgE0RM1MG
+    img: modules/pf-content/icons/spell226.png
+    range:
+      - 9
+      - 9
+    text: Chameleon, Giant (Combat-Trained)
+    type: pack
+    weight: 1
+  - _id: j4VFNS7Ji8CuAvbG
+    _key: '!tables.results!PaivU8HqSJjyjprV.j4VFNS7Ji8CuAvbG'
+    documentCollection: pf-content.pf-goods-services
+    documentId: 5IlVNrRgZYjVxSh6
+    img: icons/commodities/bones/bone-jaw-teeth-white.webp
+    range:
+      - 10
+      - 10
+    text: Dog, Riding
+    type: pack
+    weight: 1
+  - _id: KEgZR4UXaJ2tEF5f
+    _key: '!tables.results!PaivU8HqSJjyjprV.KEgZR4UXaJ2tEF5f'
+    documentCollection: pf-content.pf-goods-services
+    documentId: O0vh2km5rgo5cZVV
+    img: icons/commodities/bones/hooves-cloven-brown.webp
+    range:
+      - 11
+      - 11
+    text: Donkey/Mule
+    type: pack
+    weight: 1
+  - _id: MN0LhWyM0rRVlbvm
+    _key: '!tables.results!PaivU8HqSJjyjprV.MN0LhWyM0rRVlbvm'
+    documentCollection: pf-content.pf-goods-services
+    documentId: jWeKKU3uEe2uOu3R
+    img: icons/commodities/biological/foot-black-grey.webp
+    range:
+      - 12
+      - 12
+    text: Elephant
+    type: pack
+    weight: 1
+  - _id: ay0iJotnsV8YyRIu
+    _key: '!tables.results!PaivU8HqSJjyjprV.ay0iJotnsV8YyRIu'
+    documentCollection: pf-content.pf-goods-services
+    documentId: Bi4u8uDxMQZ9Sq43
+    img: icons/commodities/bones/horn-antler-tan.webp
+    range:
+      - 13
+      - 13
+    text: Elk
+    type: pack
+    weight: 1
+  - _id: aUFjx8vX3McRelLQ
+    _key: '!tables.results!PaivU8HqSJjyjprV.aUFjx8vX3McRelLQ'
+    documentCollection: pf-content.pf-goods-services
+    documentId: 3fodIIuqy3NvW9GG
+    img: icons/commodities/bones/horn-antler-tan.webp
+    range:
+      - 14
+      - 14
+    text: Elk (Combat-Trained)
+    type: pack
+    weight: 1
+  - _id: JYk0yBmbcRdESbOI
+    _key: '!tables.results!PaivU8HqSJjyjprV.JYk0yBmbcRdESbOI'
+    documentCollection: pf-content.pf-goods-services
+    documentId: Ps2YKbdXa2OaCbzw
+    img: systems/pf1/icons/skills/red_20.jpg
+    range:
+      - 15
+      - 15
+    text: Frilled Lizard, Giant
+    type: pack
+    weight: 1
+  - _id: zmnnBhQ18h0SLDxq
+    _key: '!tables.results!PaivU8HqSJjyjprV.zmnnBhQ18h0SLDxq'
+    documentCollection: pf-content.pf-goods-services
+    documentId: tsssKxqSKYtdQ4Le
+    img: systems/pf1/icons/skills/red_20.jpg
+    range:
+      - 16
+      - 16
+    text: Frilled Lizard, Giant (Combat-Trained)
+    type: pack
+    weight: 1
+  - _id: w38fnjK7z6bVZP0z
+    _key: '!tables.results!PaivU8HqSJjyjprV.w38fnjK7z6bVZP0z'
+    documentCollection: pf-content.pf-goods-services
+    documentId: O6F281rK8spLCj9X
+    img: icons/commodities/biological/foot-amphibian-green.webp
+    range:
+      - 17
+      - 17
+    text: Gecko, Riding
+    type: pack
+    weight: 1
+  - _id: Un5aoUBY6fmgoQEd
+    _key: '!tables.results!PaivU8HqSJjyjprV.Un5aoUBY6fmgoQEd'
+    documentCollection: pf-content.pf-goods-services
+    documentId: G5rQNDiESqNFqcOe
+    img: icons/commodities/biological/foot-amphibian-green.webp
+    range:
+      - 18
+      - 18
+    text: Gecko, Riding (Combat Trained)
+    type: pack
+    weight: 1
+  - _id: E8ObPXC8zOHOQVds
+    _key: '!tables.results!PaivU8HqSJjyjprV.E8ObPXC8zOHOQVds'
+    documentCollection: pf-content.pf-goods-services
+    documentId: jPOFJwoy44D7IFkL
+    img: icons/commodities/materials/feather-orange.webp
+    range:
+      - 19
+      - 19
+    text: Griffon (Combat Trained)
+    type: pack
+    weight: 1
+  - _id: krAFHklW5rV2PUj9
+    _key: '!tables.results!PaivU8HqSJjyjprV.krAFHklW5rV2PUj9'
+    documentCollection: pf-content.pf-goods-services
+    documentId: MB4WhAX4lVi7A5AC
+    img: icons/environment/creatures/starfish-red.webp
+    range:
+      - 20
+      - 20
+    text: Hippocampus
+    type: pack
+    weight: 1
+  - _id: L5JQkcTXpUO3mUPS
+    _key: '!tables.results!PaivU8HqSJjyjprV.L5JQkcTXpUO3mUPS'
+    documentCollection: pf-content.pf-goods-services
+    documentId: HJHCdar7mfd2GDTP
+    img: icons/environment/creatures/starfish-red.webp
+    range:
+      - 21
+      - 21
+    text: Hippocampus (Combat-Trained)
+    type: pack
+    weight: 1
+  - _id: qaBvSw6DnIkUiGwO
+    _key: '!tables.results!PaivU8HqSJjyjprV.qaBvSw6DnIkUiGwO'
+    documentCollection: pf-content.pf-goods-services
+    documentId: 70z50p214dE4LQW3
+    img: icons/commodities/materials/feather-yellow.webp
+    range:
+      - 22
+      - 22
+    text: Hippogriff (Combat Trained)
+    type: pack
+    weight: 1
+  - _id: N3a943Oq9y3RIlT4
+    _key: '!tables.results!PaivU8HqSJjyjprV.N3a943Oq9y3RIlT4'
+    documentCollection: pf-content.pf-goods-services
+    documentId: JZdn5vUoAMGkBC3h
+    img: icons/environment/creatures/horse-brown.webp
+    range:
+      - 23
+      - 23
+    text: Horse (Heavy, Combat Trained)
+    type: pack
+    weight: 1
+  - _id: eHqiLOGtvjD2pLtJ
+    _key: '!tables.results!PaivU8HqSJjyjprV.eHqiLOGtvjD2pLtJ'
+    documentCollection: pf-content.pf-goods-services
+    documentId: TUqTCv7m0AoV0ahx
+    img: icons/environment/creatures/horse-brown.webp
+    range:
+      - 24
+      - 24
+    text: Horse (Heavy)
+    type: pack
+    weight: 1
+  - _id: 4iJeqy985FanMHKL
+    _key: '!tables.results!PaivU8HqSJjyjprV.4iJeqy985FanMHKL'
+    documentCollection: pf-content.pf-goods-services
+    documentId: 8F44JDOlGCevqFuN
+    img: icons/environment/creatures/horse-brown.webp
+    range:
+      - 25
+      - 25
+    text: Horse (Light, Combat Trained)
+    type: pack
+    weight: 1
+  - _id: NHKWRxlfDupPxHBw
+    _key: '!tables.results!PaivU8HqSJjyjprV.NHKWRxlfDupPxHBw'
+    documentCollection: pf-content.pf-goods-services
+    documentId: NFafBpbIMEXHQyt0
+    img: icons/environment/creatures/horse-brown.webp
+    range:
+      - 26
+      - 26
+    text: Horse (Light)
+    type: pack
+    weight: 1
+  - _id: WHlrgXVAEUofYtl6
+    _key: '!tables.results!PaivU8HqSJjyjprV.WHlrgXVAEUofYtl6'
+    documentCollection: pf-content.pf-goods-services
+    documentId: KrqEoPn1H1dZ8ntY
+    img: icons/environment/creatures/horse-brown.webp
+    range:
+      - 27
+      - 27
+    text: Horse (Pony, Combat Trained)
+    type: pack
+    weight: 1
+  - _id: HpA6bBxaghwSZ5qF
+    _key: '!tables.results!PaivU8HqSJjyjprV.HpA6bBxaghwSZ5qF'
+    documentCollection: pf-content.pf-goods-services
+    documentId: Q7qPMmboBtFuSPfv
+    img: icons/environment/creatures/horse-brown.webp
+    range:
+      - 28
+      - 28
+    text: Horse (Pony)
+    type: pack
+    weight: 1
+  - _id: lnEf4SxLuNCVmbcO
+    _key: '!tables.results!PaivU8HqSJjyjprV.lnEf4SxLuNCVmbcO'
+    documentCollection: pf-content.pf-goods-services
+    documentId: Je07p65xkzDxOthv
+    img: modules/pf-content/icons/spell251.png
+    range:
+      - 29
+      - 29
+    text: Lion
+    type: pack
+    weight: 1
+  - _id: 1UvhTbv6GVKV2rrk
+    _key: '!tables.results!PaivU8HqSJjyjprV.1UvhTbv6GVKV2rrk'
+    documentCollection: pf-content.pf-goods-services
+    documentId: 3Veba3Ca1Ga7ifZE
+    img: modules/pf-content/icons/spell251.png
+    range:
+      - 30
+      - 30
+    text: Lion (Combat-Trained)
+    type: pack
+    weight: 1
+  - _id: WaIqMBoGcb431LbI
+    _key: '!tables.results!PaivU8HqSJjyjprV.WaIqMBoGcb431LbI'
+    documentCollection: pf-content.pf-goods-services
+    documentId: zoFDignMFdj80KCP
+    img: icons/commodities/bones/hooves-cloven-brown.webp
+    range:
+      - 31
+      - 31
+    text: Mammoth
+    type: pack
+    weight: 1
+  - _id: 64Fbl6UWe1CkucCI
+    _key: '!tables.results!PaivU8HqSJjyjprV.64Fbl6UWe1CkucCI'
+    documentCollection: pf-content.pf-goods-services
+    documentId: ZFirHI3NUgZmeLhk
+    img: icons/commodities/bones/hooves-cloven-brown.webp
+    range:
+      - 32
+      - 32
+    text: Mammoth (Combat-Trained)
+    type: pack
+    weight: 1
+  - _id: VgTjaTYHQB6FqtSR
+    _key: '!tables.results!PaivU8HqSJjyjprV.VgTjaTYHQB6FqtSR'
+    documentCollection: pf-content.pf-goods-services
+    documentId: wjGsWjv8IKimBwoU
+    img: icons/commodities/bones/hooves-cloven-brown.webp
+    range:
+      - 33
+      - 33
+    text: Mammoth, Wholly (Combat-Trained)
+    type: pack
+    weight: 1
+  - _id: ptmOMTmOjDAUSfjH
+    _key: '!tables.results!PaivU8HqSJjyjprV.ptmOMTmOjDAUSfjH'
+    documentCollection: pf-content.pf-goods-services
+    documentId: x7BZ6tuQaU3UcGrB
+    img: icons/commodities/bones/skull-lizard-brown.webp
+    range:
+      - 34
+      - 34
+    text: Mastodon
+    type: pack
+    weight: 1
+  - _id: 6pUTOvAsg52G29vU
+    _key: '!tables.results!PaivU8HqSJjyjprV.6pUTOvAsg52G29vU'
+    documentCollection: pf-content.pf-goods-services
+    documentId: oPbTtW8IU6i4pbIg
+    img: systems/pf1/icons/skills/red_23.jpg
+    range:
+      - 35
+      - 35
+    text: Pack Animal (Musk Ox)
+    type: pack
+    weight: 1
+  - _id: HUA02lFJhkDiIzZo
+    _key: '!tables.results!PaivU8HqSJjyjprV.HUA02lFJhkDiIzZo'
+    documentCollection: pf-content.pf-goods-services
+    documentId: Pk76uliGS82zV99G
+    img: systems/pf1/icons/skills/red_23.jpg
+    range:
+      - 36
+      - 36
+    text: Pack Animal (Ox)
+    type: pack
+    weight: 1
+  - _id: JQPBIPeU9RpuTL9G
+    _key: '!tables.results!PaivU8HqSJjyjprV.JQPBIPeU9RpuTL9G'
+    documentCollection: pf-content.pf-goods-services
+    documentId: k5lD8eZAp7zXEEnk
+    img: icons/commodities/bones/horn-curved-brown.webp
+    range:
+      - 37
+      - 37
+    text: Ram
+    type: pack
+    weight: 1
+  - _id: x8nMJKwX2DyaIQs9
+    _key: '!tables.results!PaivU8HqSJjyjprV.x8nMJKwX2DyaIQs9'
+    documentCollection: pf-content.pf-goods-services
+    documentId: YI7dpHF6nUbfR7Qz
+    img: icons/commodities/bones/horn-curved-brown.webp
+    range:
+      - 38
+      - 38
+    text: Ram (Combat-Trained)
+    type: pack
+    weight: 1
+  - _id: SpZWlxrYAtumUtU3
+    _key: '!tables.results!PaivU8HqSJjyjprV.SpZWlxrYAtumUtU3'
+    documentCollection: pf-content.pf-goods-services
+    documentId: Nty8J2BGqPAnbxn2
+    img: systems/pf1/icons/races/ratfolk.png
+    range:
+      - 39
+      - 39
+    text: Rat, Riding
+    type: pack
+    weight: 1
+  - _id: cDJ9pNPm5iGWalQQ
+    _key: '!tables.results!PaivU8HqSJjyjprV.cDJ9pNPm5iGWalQQ'
+    documentCollection: pf-content.pf-goods-services
+    documentId: z8HsdcmsluYg9pOM
+    img: systems/pf1/icons/races/ratfolk.png
+    range:
+      - 40
+      - 40
+    text: Rat, Riding (Combat Trained)
+    type: pack
+    weight: 1
+  - _id: OWYEmuxeDAOuvRic
+    _key: '!tables.results!PaivU8HqSJjyjprV.OWYEmuxeDAOuvRic'
+    documentCollection: pf-content.pf-goods-services
+    documentId: OYYumgYwN9cunV9E
+    img: icons/commodities/biological/foot-black-grey.webp
+    range:
+      - 41
+      - 41
+    text: Rhinoceros
+    type: pack
+    weight: 1
+  - _id: Q5dtVBCXkBVkmAu8
+    _key: '!tables.results!PaivU8HqSJjyjprV.Q5dtVBCXkBVkmAu8'
+    documentCollection: pf-content.pf-goods-services
+    documentId: SD2zKV6YnigaYbXQ
+    img: icons/commodities/biological/foot-black-grey.webp
+    range:
+      - 42
+      - 42
+    text: Rhinoceros (Combat-Trained)
+    type: pack
+    weight: 1
+  - _id: jLgWiEAcnhBvIttq
+    _key: '!tables.results!PaivU8HqSJjyjprV.jLgWiEAcnhBvIttq'
+    documentCollection: pf-content.pf-goods-services
+    documentId: UDqUiWrZ0a4W18rq
+    img: icons/commodities/bones/hooves-cloven-brown.webp
+    range:
+      - 43
+      - 43
+    text: Rhinoceros, Wholly
+    type: pack
+    weight: 1
+  - _id: IKmQCZajoQGNBhQQ
+    _key: '!tables.results!PaivU8HqSJjyjprV.IKmQCZajoQGNBhQQ'
+    documentCollection: pf-content.pf-goods-services
+    documentId: TPdbrFyVEK4fLavt
+    img: systems/pf1/icons/skills/green_05.jpg
+    range:
+      - 44
+      - 44
+    text: Riding Bee (Combat-Trained Queen)
+    type: pack
+    weight: 1
+  - _id: YYgzUzTDWjVVWE9c
+    _key: '!tables.results!PaivU8HqSJjyjprV.YYgzUzTDWjVVWE9c'
+    documentCollection: pf-content.pf-goods-services
+    documentId: oVrUOa6EN84LxZTh
+    img: systems/pf1/icons/skills/green_05.jpg
+    range:
+      - 45
+      - 45
+    text: Riding Bee (Worker)
+    type: pack
+    weight: 1
+  - _id: 8Jw79NCL02r8tca4
+    _key: '!tables.results!PaivU8HqSJjyjprV.8Jw79NCL02r8tca4'
+    documentCollection: pf-content.pf-goods-services
+    documentId: v417At3rRv0Gtcqi
+    img: systems/pf1/icons/skills/green_05.jpg
+    range:
+      - 46
+      - 46
+    text: Riding Bee (Combat-Trained Worker)
+    type: pack
+    weight: 1
+  - _id: Flo2FSsilQvgzsna
+    _key: '!tables.results!PaivU8HqSJjyjprV.Flo2FSsilQvgzsna'
+    documentCollection: pf-content.pf-goods-services
+    documentId: VF5QgLwIYS1YGh4G
+    img: systems/pf1/icons/skills/green_05.jpg
+    range:
+      - 47
+      - 47
+    text: Riding Bee (Queen)
+    type: pack
+    weight: 1
+  - _id: zPCTvVSOVc5eK6bW
+    _key: '!tables.results!PaivU8HqSJjyjprV.zPCTvVSOVc5eK6bW'
+    documentCollection: pf-content.pf-goods-services
+    documentId: IILSTTrOFkxqFygt
+    img: icons/commodities/claws/claw-bird-pink.webp
+    range:
+      - 48
+      - 48
+    text: Roc
+    type: pack
+    weight: 1
+  - _id: nsJT7lVgAZrwcQvR
+    _key: '!tables.results!PaivU8HqSJjyjprV.nsJT7lVgAZrwcQvR'
+    documentCollection: pf-content.pf-goods-services
+    documentId: Xd3PojCipTIOjfkp
+    img: icons/commodities/claws/claw-bird-pink.webp
+    range:
+      - 49
+      - 49
+    text: Roc (Combat-Trained)
+    type: pack
+    weight: 1
+  - _id: OImg6AmkDyPN1pFT
+    _key: '!tables.results!PaivU8HqSJjyjprV.OImg6AmkDyPN1pFT'
+    documentCollection: pf-content.pf-goods-services
+    documentId: a9p7SJbRfC3vISKX
+    img: modules/pf-content/icons/spell780.png
+    range:
+      - 50
+      - 50
+    text: Seahorse, Giant (Combat Trained)
+    type: pack
+    weight: 1
+  - _id: SEFoKIlaGdVtndHO
+    _key: '!tables.results!PaivU8HqSJjyjprV.SEFoKIlaGdVtndHO'
+    documentCollection: pf-content.pf-goods-services
+    documentId: nVtyYRH8S7TFzifh
+    img: modules/pf-content/icons/spell780.png
+    range:
+      - 50
+      - 50
+    text: Seahorse, Giant
+    type: pack
+    weight: 1
+  - _id: XDDCn8E2R3kVpleT
+    _key: '!tables.results!PaivU8HqSJjyjprV.XDDCn8E2R3kVpleT'
+    documentCollection: pf-content.pf-goods-services
+    documentId: TBEpFQvIoKShuOUx
+    img: modules/pf-content/icons/spell251.png
+    range:
+      - 51
+      - 51
+    text: Tiger
+    type: pack
+    weight: 1
+  - _id: KgueLEXy26QrjOX0
+    _key: '!tables.results!PaivU8HqSJjyjprV.KgueLEXy26QrjOX0'
+    documentCollection: pf-content.pf-goods-services
+    documentId: 3ZMognTv48sKAGT6
+    img: modules/pf-content/icons/spell251.png
+    range:
+      - 52
+      - 52
+    text: Tiger (Combat-Trained)
+    type: pack
+    weight: 1
+  - _id: N5JDT1Gp0lwu3InP
+    _key: '!tables.results!PaivU8HqSJjyjprV.N5JDT1Gp0lwu3InP'
+    documentCollection: pf-content.pf-goods-services
+    documentId: BZ9LKORAi5kuuaKk
+    img: systems/pf1/icons/skills/blue_29.jpg
+    range:
+      - 53
+      - 53
+    text: Wolf
+    type: pack
+    weight: 1
+  - _id: eUaqVqBhModm9yX2
+    _key: '!tables.results!PaivU8HqSJjyjprV.eUaqVqBhModm9yX2'
+    documentCollection: pf-content.pf-goods-services
+    documentId: h3qkGHahz3jvbLGY
+    img: systems/pf1/icons/skills/blue_29.jpg
+    range:
+      - 54
+      - 54
+    text: Wolf, Dire
+    type: pack
+    weight: 1
+  - _id: GNErvA9Ac4e3onEV
+    _key: '!tables.results!PaivU8HqSJjyjprV.GNErvA9Ac4e3onEV'
+    documentCollection: pf-content.pf-goods-services
+    documentId: use45enjNOGY7bbw
+    img: icons/commodities/bones/beak-hooked-red.webp
+    range:
+      - 55
+      - 55
+    text: Vulture, Giant (Combat-Trained)
+    type: pack
+    weight: 1
+  - _id: SDyxBtoGIP5pqTBS
+    _key: '!tables.results!PaivU8HqSJjyjprV.SDyxBtoGIP5pqTBS'
+    documentCollection: pf-content.pf-goods-services
+    documentId: 4IjoGSKIAm8yWli7
+    img: icons/commodities/bones/beak-hooked-red.webp
+    range:
+      - 55
+      - 55
+    text: Vulture, Giant
+    type: pack
+    weight: 1
+sort: 700000

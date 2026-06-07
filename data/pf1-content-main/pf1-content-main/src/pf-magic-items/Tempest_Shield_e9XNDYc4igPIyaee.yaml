@@ -1,0 +1,42 @@
+_id: e9XNDYc4igPIyaee
+_key: '!items!e9XNDYc4igPIyaee'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/shield-heavy-metal.png
+name: Tempest Shield
+system:
+  armor:
+    acp: 2
+    material:
+      base:
+        value: steel
+    value: 2
+  aura:
+    school: evo
+  baseTypes:
+    - Heavy Steel Shield
+  cl: 6
+  description:
+    value: >-
+      <p>The face of this +1 bashing heavy steel shield swirls with the image of
+      swirling clouds, driving rain, or falling snow. When used to make a shield
+      bash attack, the shield's wielder can make a bull rush maneuver as a free
+      action against her target without provoking an attack of opportunity from
+      the creature being bull rushed. Once per day on command, the wielder can
+      cause the tempest shield to emit a stream of high-powered air as the gust
+      of wind spell.</p><p><strong>Base Item</strong>:
+      bashing</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, bull's strength, gust of wind</p>
+  enh: 1
+  equipmentSubtype: ''
+  hardness: 10
+  masterwork: true
+  price: 15170
+  slot: shield
+  sources:
+    - id: PZO1123
+  spellFailure: 15
+  subType: shield
+  weight:
+    value: 10
+type: equipment

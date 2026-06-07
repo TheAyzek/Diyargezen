@@ -1,0 +1,22 @@
+_id: 7BL6tlsxnygq9eFi
+_key: '!items!7BL6tlsxnygq9eFi'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/bones/hooves-cloven-brown.webp
+name: Cattle
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 10-50 gp; <strong>Weight</strong> 1,500 lbs.<br
+      /><strong>Category</strong> Mounts/Pets</p><h2>Description</h2><p>Cattle
+      are kept for milk and meat, and used as beasts of burden. A bull is used
+      primarily for mating. Other males are castrated and become oxen, which are
+      used to carry loads and plow fields.</p>
+  equipped: false
+  sources:
+    - id: PZO1123
+      pages: '81'
+  subType: animal
+  weight:
+    value: 1500
+type: loot

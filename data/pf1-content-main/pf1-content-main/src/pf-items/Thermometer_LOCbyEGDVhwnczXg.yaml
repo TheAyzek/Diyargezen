@@ -1,0 +1,22 @@
+_id: LOCbyEGDVhwnczXg
+_key: '!items!LOCbyEGDVhwnczXg'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/tech/watch.webp
+name: Thermometer
+system:
+  description:
+    value: >-
+      <p>This foot-long tube has marks for the freezing temperature of seawater,
+      a moderate spring day in Absalom, and the boiling temperature of melted
+      ice. Temperatures much below the freezing point or above the boiling point
+      break the device.</p>
+  equipped: false
+  price: 25
+  sources:
+    - id: PZO9410
+      pages: '19'
+  subType: tool
+  weight:
+    value: 1
+type: loot

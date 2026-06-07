@@ -1,0 +1,21 @@
+_id: Er5BcupUE0jZmOeK
+_key: '!items!Er5BcupUE0jZmOeK'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_34.jpg
+name: Scouting Form*
+system:
+  associations:
+    classes:
+      - Shifter
+  description:
+    value: >-
+      <p><strong>Shifter Reactive Form</strong></p><p>The adaptive shifter gains
+      a competence bonus equal to her Wisdom modifier on Stealth checks, and she
+      gains the benefits of the shifter's trackless step ability. At 12th level,
+      she can use Stealth to hide, even if she does not have cover or
+      concealment (but not if observed).</p>
+  subType: classFeat
+  tags:
+    - Shifter Reactive Form
+type: feat

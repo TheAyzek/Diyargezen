@@ -1,0 +1,32 @@
+_id: OVbPbOf6BNU5adVp
+_key: '!items!OVbPbOf6BNU5adVp'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Hivebrain Symbiote
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>This red maggot constantly writhes and distends, snapping a small pair
+      of pincers. A combination of hellwasp and worm, the hivebrain symbiote
+      grants an echo of a hive mind when attached to an intelligent creature.
+      When placed on the back of a host's neck as a standard action, the
+      hivebrain symbiote attaches painlessly and immediately boosts the host's
+      mental faculties. While having a hivebrain symbiote attached, as an
+      immediate action the host can reroll a concentration check or an
+      Intelligence-based check. The host must take the second roll, even if it
+      is worse. An attached hivebrain symbiote continues to function for a
+      number of hours equal to the host's Intelligence modifier (minimum 1 hour)
+      before falling off and dying. A hivebrain symbiote dies immediately if
+      removed before this time elapses.<h3>Requirements</h3><p>Craft Wondrous
+      Item, mnemonic enhancement</p>
+  price: 1000
+  slot: neck
+  sources:
+    - id: PZO9087
+  subType: wondrous
+type: equipment

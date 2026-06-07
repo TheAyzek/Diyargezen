@@ -1,0 +1,46 @@
+_id: d7bGbdgTE9Oy9U36
+_key: '!items!d7bGbdgTE9Oy9U36'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/magic/earth/projectile-spiked-stone-boulder-orange.webp
+name: Orange Thorny Ioun Stone, Cracked
+system:
+  aura:
+    custom: true
+    school: Varies
+  cl: 12
+  contextNotes:
+    - target: cmb
+      text: +[[1]] Competence bonus on sunder attempts.
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>An orange spherical stone with needle-like points jutting out from all
+      sides. A crack mars its surface.</p>
+    value: >-
+      <h3>Effect</h3><p>A cracked thorny ioun stone provides a +1 competence
+      bonus on its corresponding type of combat maneuver check.</p><p>+1
+      competence bonus on sunder
+      attempts.</p><h3>Resonance</h3><p><strong>Method 1, Fixed: </strong>Grants
+      the bearer the benefit of either the Acrobatic or the Athletic feat. The
+      feat varies by individual ioun stone, and each is equally likely (50%
+      chance).</p><p><strong>Method 2, Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, creator must be 12th level <strong>Cost</strong>
+      1,600 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 3200
+  sources:
+    - id: PZO9268
+      pages: 60-61
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

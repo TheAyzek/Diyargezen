@@ -1,0 +1,38 @@
+_id: 2YFLAgOtyleYCQxe
+_key: '!journal!2YFLAgOtyleYCQxe'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: GvRXJrNElDk9KwJW
+name: 3.1.3.4. Spell Trap Cost
+pages:
+  - _id: CYfmzO3zEqUDPvYL
+    _key: '!journal.pages!2YFLAgOtyleYCQxe.CYfmzO3zEqUDPvYL'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.1.3.4. Spell Trap Cost
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.mmx5KJLX4vsGZ7vz]{3.1.
+        Traps}</p><p>@Compendium[pf-content.pf-rules.IYnf1w2TjcHO2ExM]{3.1.3.
+        Designing a
+        Trap}</p><ul><li>@Compendium[pf-content.pf-rules.6cDhoB5fNw8e7LF3]{3.1.3.1.
+        Challenge Rating of a
+        Trap}</li><li>@Compendium[pf-content.pf-rules.CRcJbYvgkm6DXdQl]{3.1.3.2.
+        Mechanical Trap
+        Cost}</li><li>@Compendium[pf-content.pf-rules.HfHYbleSpRiYyq5o]{3.1.3.3.
+        Magic Device Trap
+        Cost}</li><li><strong>@Compendium[pf-content.pf-rules.2YFLAgOtyleYCQxe]{3.1.3.4.
+        Spell Trap
+        Cost}</strong></li><li>@Compendium[pf-content.pf-rules.47DJOElNsrdRkBxn]{3.1.3.5.
+        Craft DCs for Mechanical Traps}</li></ul><hr
+        /><p>@Source[PZO1110;pages=423]</p><p>A spell trap has a cost only if
+        the builder must hire an NPC spellcaster to cast it.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

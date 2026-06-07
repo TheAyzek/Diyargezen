@@ -1,0 +1,118 @@
+_id: k8fC3JKD5sBRU9CV
+_key: '!actors!k8fC3JKD5sBRU9CV'
+_stats:
+  coreVersion: '12.343'
+folder: gSjqIp1FXk0A8hQl
+img: icons/commodities/biological/stinger-insect-yellow.webp
+items:
+  - _id: N2ID7yHyiOMPp4Dn
+    _key: '!actors.items!k8fC3JKD5sBRU9CV.N2ID7yHyiOMPp4Dn'
+    _stats:
+      compendiumSource: Actor.mBakbs73rZLjwIc7.Item.iJdslP9AVHw9fDEy
+      coreVersion: '12.331'
+    img: icons/commodities/biological/stinger-insect-yellow.webp
+    name: Stinging Wasps
+    system:
+      actions:
+        - _id: in59m6bvsoia5cx1
+          actionType: msak
+          activation:
+            type: special
+            unchained:
+              type: special
+          attackBonus: '5'
+          damage:
+            parts:
+              - formula: 1d6
+                types:
+                  - piercing
+          img: icons/commodities/biological/stinger-insect-yellow.webp
+          name: Attack
+          notes:
+            effect:
+              - plus [[2]] Dexterity damage.
+          range:
+            units: melee
+          target:
+            value: >-
+              multiple targets (all creatures in contact with walls, floor, or
+              ceiling)
+      proficient: true
+      subType: misc
+    type: attack
+name: Stinging Wasps
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  abilities:
+    str: {}
+  altCurrency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  attributes:
+    ac:
+      normal:
+        ability: dex
+      touch:
+        ability: dex
+    attack:
+      meleeAbility: str
+      rangedAbility: dex
+    cmbAbility: str
+    cmd:
+      dexAbility: dex
+      strAbility: str
+    hp:
+      offset: 0
+    hpAbility: con
+    init:
+      ability: dex
+    savingThrows:
+      fort:
+        ability: con
+      ref:
+        ability: dex
+      will:
+        ability: wis
+    speed:
+      fly:
+        maneuverability: average
+    vigor:
+      offset: 0
+    wounds:
+      offset: 0
+  cr:
+    base: 1
+  currency:
+    cp: 0
+    gp: 0
+    pp: 0
+    sp: 0
+  details:
+    biography: {}
+    cr:
+      base: 7
+    disarm: 25
+    duration: Instantaneous
+    effect: |-
+      Bypass: hidden switch (Perception DC 30)
+      Onset Delay: 1 round
+    level:
+      max: 0
+      min: 0
+      value: 0
+    mythicTier: 0
+    notes:
+      value: ''
+    perception: 25
+    reset: Automatic
+    trigger: Location
+    type: Magical and Mechanical
+    xp:
+      value: 0
+  traits:
+    stature: tall
+type: trap

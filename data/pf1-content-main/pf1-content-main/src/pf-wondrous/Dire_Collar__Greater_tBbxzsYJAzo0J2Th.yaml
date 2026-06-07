@@ -1,0 +1,25 @@
+_id: tBbxzsYJAzo0J2Th
+_key: '!items!tBbxzsYJAzo0J2Th'
+_stats:
+  coreVersion: '12.331'
+folder: UOuor7GoT1uy5XOV
+img: icons/equipment/neck/pendant-rough-gold-purple.webp
+name: Dire Collar, Greater
+system:
+  aura:
+    school: trs
+  cl: 9
+  description:
+    value: >-
+      <p>This collar functions as a dire collar, except that the animal wearing
+      it gains the benefit of an animal growth spell for 1
+      minute.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, animal growth</p>
+  price: 14000
+  slot: neck
+  sources:
+    - id: PZO1129
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

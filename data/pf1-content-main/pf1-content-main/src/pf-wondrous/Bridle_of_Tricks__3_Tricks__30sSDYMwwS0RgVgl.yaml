@@ -1,0 +1,34 @@
+_id: 30sSDYMwwS0RgVgl
+_key: '!items!30sSDYMwwS0RgVgl'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Bridle of Tricks (3 Tricks)
+system:
+  aura:
+    school: div
+  cl: 5
+  description:
+    value: >-
+      <p>Appearing to be a finely crafted bridle of polished steel and blue-dyed
+      leather, a bridle of tricks can be placed on any animal or magical beast
+      with an appropriate shape to wear a bridle (creatures with unusual
+      anatomies may be affected with GM discretion). While wearing the bridle, a
+      creature is treated as knowing three, four, or five additional tricks, as
+      if it had been taught the tricks with the Handle Animal skill. The tricks
+      granted by a bridle of tricks are set when it is created, and cannot be
+      changed. The most common tricks found in a bridle of tricks are attack,
+      defend, fetch, guard, and heel. See the Handle Animal description on page
+      97 of the Core Rulebook for more information on tricks, and Pathfinder
+      Player Companion: Animal Archive for new additional
+      tricks.</p><h3>Requirements</h3><p>Craft Wondrous Item, speak with
+      animals, creator must have 5 ranks in the Handle Animal skill</p>
+  price: 900
+  slot: head
+  sources:
+    - id: PZO9426
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

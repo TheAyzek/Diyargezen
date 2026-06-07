@@ -1,0 +1,40 @@
+_id: Tr8at4TsCCJ581Co
+_key: '!items!Tr8at4TsCCJ581Co'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/bowl-powder-grey.webp
+name: Heathensnuff
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Black Market</p><p>Others lacking the will to
+      harden themselves appropriately turn to alchemical methods to endure. This
+      purplish paste is made from sea urchin toxins and numbs the user's ability
+      to sense pain. Illegal in Nidal, the drug is used mostly by those
+      attempting to emulate true belief in Zon-Kuthon or who anticipate great
+      pain. A dose gives the user the Endure Pain feat for 1 hour, though it
+      also has debilitating side effects and leaves telltale reddish-purple
+      stains around the nostrils for up to one day, easily identified by those
+      familiar with the symptoms. Followers of the Midnight Lord believe using
+      heathensnuff is a sure sign that an individual lacks faith.</p><p>Anyone
+      who takes the drug must make a DC 10 saving throw or become addicted. A
+      snuff addict can stave off withdrawal for 5 days by taking a dose; failure
+      means he must save or take 1d4 Dex and 1d4 Wis damage. This save DC
+      increases by +5 for every 5 days since the last time the addict had a
+      dose. If the addict makes two of these saves in a row, he is no longer
+      addicted. <em>Remove disease</em> can cure an addict if the caster's
+      caster level check succeeds against a DC equal to the addict's current
+      withdrawal DC. <em>Greater restoration</em> or heal cures the addiction
+      without requiring a roll.</p><p><strong>Type</strong> poison, ingested;
+      <strong>Save</strong> Fortitude DC 13<br /><strong>Frequency</strong>
+      1/hour for 4 hours</p><p><strong>Initial Effect</strong> Endure Pain feat
+      for 1 hour (see above);<br /><strong>Secondary Effect</strong> 1 Con
+      damage; <strong>Cure</strong> 1 save</p><p><strong>Cost</strong> 10 gp</p>
+  price: 10
+  sources:
+    - id: PZO9214
+      pages: '42'
+  subType: drug
+  tags:
+    - Black Market
+type: consumable

@@ -1,0 +1,67 @@
+_id: 7lBBbfONckQBNZ0d
+_key: '!items!7lBBbfONckQBNZ0d'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/dagger.PNG
+name: Daggermark Blade
+system:
+  actions:
+    - _id: 0af6hgk9qiiar9i1
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: daggermarkBlade
+  aura:
+    custom: true
+    school: divination and enchantment
+  baseTypes:
+    - Dagger
+  cl: 10
+  description:
+    value: >-
+      <p>This +1 dagger is forged for Daggermark assassins by Lady Smilos's
+      orders alone. It allows slayers, rogues, and assassins who work for the
+      Daggermark Assassins' Guild the chance to finish the job if their initial
+      strikes prove less than successful. If the wielder of this blade studies
+      his target for 3 rounds (which can be the same 3 rounds of study for a
+      death attack) either unseen or without being recognized as an enemy, he
+      can sneak attack with all attacks he makes with this dagger against that
+      target for the next 3 rounds. If his target has improved uncanny dodge,
+      the wielder of the Daggermark blade must be 4 levels higher than the
+      target in order to sneak attack.</p><p><strong>Base Item</strong>: 
+      dagger</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, guidance, instant enemy</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 8302
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO9451
+  weaponGroups:
+    - bladesLight
+    - thrown
+    - tribal
+  weight:
+    value: 2
+type: weapon

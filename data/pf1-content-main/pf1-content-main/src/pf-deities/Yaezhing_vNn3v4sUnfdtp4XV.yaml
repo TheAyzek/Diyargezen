@@ -1,0 +1,34 @@
+_id: vNn3v4sUnfdtp4XV
+_key: '!journal!vNn3v4sUnfdtp4XV'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Yaezhing
+pages:
+  - _id: BNtWGNdbwPK5Gmxr
+    _key: '!journal.pages!vNn3v4sUnfdtp4XV.BNtWGNdbwPK5Gmxr'
+    _stats:
+      coreVersion: '12.331'
+    name: Yaezhing
+    sort: 0
+    text:
+      content: >-
+        <h1> Yaezhing</h1><h2>Minister of Blood</h2>@Source[PZO9240;pages=58]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Yaezhing">Yaezhing</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Deities of Tian Xia<br /><strong>Areas
+        of Concern</strong> Harsh justice, murder, punishment<br
+        /><strong>Domains</strong> Artifice, Death, Evil, Law, Trickery<br
+        /><strong>Subdomains</strong> Construct, Deception, Demodand (Evil),
+        Devil (Evil), Devil (Law), Murder, Toil, Undead<br /><em>* Requires the
+        <u>Acolyte of Apocrypha</u> trait.</em><br /><strong>Favored
+        Weapon</strong> Shuriken<br /><strong>Symbol</strong> Bloody shuriken<br
+        /><strong>Sacred Animal(s)</strong> Tiger</p><h3>On
+        Golarion</h3><p><strong>Centers of Worship</strong> Goka, Kaoling,
+        Lingshen, Nagajor<br /><strong>Nationality</strong> Tian-Shu</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

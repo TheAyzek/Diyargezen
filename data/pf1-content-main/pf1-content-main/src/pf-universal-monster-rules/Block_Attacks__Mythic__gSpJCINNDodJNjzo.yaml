@@ -1,0 +1,20 @@
+_id: gSpJCINNDodJNjzo
+_key: '!items!gSpJCINNDodJNjzo'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/feats/improved-shield-bash.jpg
+name: Block Attacks [Mythic]
+system:
+  abilityType: ex
+  description:
+    value: >-
+      <p>Once per round, when the creature is hit by a melee or ranged attack,
+      it can attempt a melee attack using its highest attack bonus. If this
+      result exceeds the result from the attack against it, the creature is
+      unaffected by the attack (as if the attack had
+      missed).</p><p><em>Format</em>: block attacks</p><p><em>Location</em>:
+      Defensive Abilities.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

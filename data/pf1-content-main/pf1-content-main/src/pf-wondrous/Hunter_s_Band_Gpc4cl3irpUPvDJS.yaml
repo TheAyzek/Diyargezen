@@ -1,0 +1,31 @@
+_id: Gpc4cl3irpUPvDJS
+_key: '!items!Gpc4cl3irpUPvDJS'
+_stats:
+  coreVersion: '12.331'
+folder: 52jofiLqjkyFLxLL
+img: icons/equipment/finger/ring-crown-teal-gold.webp
+name: Hunter's Band
+system:
+  aura:
+    school: trs
+  cl: 4
+  description:
+    value: >-
+      <p>This simple headband of braided hide grants a +5 competence bonus on
+      Survival checks and inures the wearer to the strain of long travel, as the
+      tireless pursuit spell (Advanced Player's Guide). If the wearer is a
+      ranger, the hunter's band increases his favored enemy bonus on attack
+      rolls by +1 for all his favored enemies. If the ranger has the hunter's
+      bond (companions) class feature, this increase also applies to the attack
+      roll bonus his allies gain from that
+      ability.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, instant enemy (Advanced Player's Guide), tireless pursuit,
+      creator must have 5 ranks in Survival</p>
+  price: 11000
+  slot: headband
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,30 @@
+_id: SjCdCUuQDJHsviMz
+_key: '!items!SjCdCUuQDJHsviMz'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/slime-white.webp
+name: Ooze Grease
+system:
+  description:
+    value: >-
+      <p><strong>Category</strong> Alchemical Tools</p><h2><img
+      src="modules/pf-content/assets/ThreeFiveSymbol.gif">Description</h2><p>This
+      alchemical concoction can be spread over a Medium or Small creature's body
+      as a full-round action. It provides a +5 alchemical bonus on Escape Artist
+      checks, grapple checks to avoid a grapple, and Reflex saves to avoid an
+      ooze's improved grab or engulf abilities, but gives a -5 penalty to disarm
+      checks, grapple checks to start or maintain a grapple or pin, and other
+      checks that may be hindered by a loose grip (such as Climb). One
+      application lasts for up to 1 hour and can be removed with soap and
+      water.</p><h2>Construction</h2><p><strong>Craft (Alchemy)</strong> DC
+      25</p>
+  price: 50
+  sources:
+    - id: PZO9210
+      pages: '19'
+  subType: misc
+  tags:
+    - Alchemical Tools
+  weight:
+    value: 1
+type: consumable

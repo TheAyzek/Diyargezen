@@ -1,0 +1,27 @@
+_id: ENADYcVp8S8bT4Ac
+_key: '!items!ENADYcVp8S8bT4Ac'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/stakes.jpg
+name: Display stand
+system:
+  description:
+    value: >-
+      <p>This is a freestanding rack with several hooks for holding decoratively
+      arranged hunting trophies. A creature with the Grisly Ornament feat (see
+      page 24) can hang one ornament from a display stand, causing it to emanate
+      a fear effect that affects all creatures of that creature's specific
+      variety within 30 feet (DC 15 Will negates). This imposes a -1 penalty (-2
+      if the trophy creature's CR was 8 or higher) to the same statistic the
+      ornament would otherwise enhance, but the ornament lasts for only 24 hours
+      before decaying. Setting up a stand is a full-round action, while hanging
+      an ornament from one is a move action.</p>
+  equipped: false
+  price: 40
+  sources:
+    - id: PZO9478
+      pages: '26'
+  subType: adventuring
+  weight:
+    value: 16
+type: loot

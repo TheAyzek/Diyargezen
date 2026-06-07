@@ -1,0 +1,45 @@
+_id: z7kARFYkXWUq3OCH
+_key: '!items!z7kARFYkXWUq3OCH'
+_stats:
+  coreVersion: '12.331'
+folder: F67okLRkjA0WtaMc
+img: icons/equipment/waist/belt-buckle-skull.webp
+name: Belt of Teeth
+system:
+  aura:
+    school: trs
+  cl: 1
+  description:
+    instructions: >-
+      <p>This item adds a Bite attack to your actor.  You must modify that
+      attack to match the details above.</p>
+    unidentified: >-
+      <p>This stout leather belt has a brass buckle that is fashioned to
+      resemble three demonic faces. </p>
+    value: >-
+      <p>The brass buckle on this stout leather belt is fashioned to resemble
+      three demonic faces.</p><h3>Effect</h3><p>Once each round, this belt's
+      buckle can animate, lashing out at a creature that provokes an attack of
+      opportunity within 5 feet. This attack uses its wearer's base attack bonus
+      and Strength modifier, with a +4 competence bonus. It deals damage as a
+      bite attack made by a creature of its wearer's size (1d6 for a Medium
+      wearer; see Table 3-1: Natural Attacks by Size, Bestiary 302) plus the
+      wearer's Strength modifier. This belt does not add to the normal number of
+      attacks the wearer can make in a round; it offers another way in which to
+      make attacks of
+      opportunity.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.cfzk3vkv1c7ncaug]{magic fang}
+      </em><strong>Cost</strong> 2,000 gp</p>
+  links:
+    supplements:
+      - uuid: Compendium.pf1.monster-abilities.Item.szjeStouwI3F3WdP
+  price: 4000
+  slot: belt
+  sources:
+    - id: PZO1123
+      pages: '210'
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

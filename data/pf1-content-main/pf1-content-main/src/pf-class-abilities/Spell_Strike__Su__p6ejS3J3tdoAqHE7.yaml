@@ -1,0 +1,19 @@
+_id: p6ejS3J3tdoAqHE7
+_key: '!items!p6ejS3J3tdoAqHE7'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/spells/runes-blue-2.jpg
+name: Spell Strike (Su)
+system:
+  associations:
+    classes:
+      - Arcanist
+  description:
+    value: >-
+      <p><strong>Arcanist Exploit - Adept</strong></p><p>The blade adept can
+      deliver touch spells with her bonded weapon. This works as the magus
+      ability of the same name.</p>
+  subType: classFeat
+  tags:
+    - Arcanist Exploit - Adept
+type: feat

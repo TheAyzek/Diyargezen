@@ -1,0 +1,28 @@
+_id: 7fZG9chjc9xBBnSU
+_key: '!items!7fZG9chjc9xBBnSU'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Whispering Shell
+system:
+  aura:
+    school: ill
+  cl: 3
+  description:
+    value: >-
+      <p>This striped conch shell appears to be nothing more than a piece of
+      flotsam idly picked up by a beachcomber. Once per day when held to the
+      lips, the conch shell absorbs a whispered message of 25 words or fewer and
+      stores the spoken words indefinitely. When pressed to the ear and prompted
+      by the command word, the shell repeats its message as a whisper that
+      cannot be heard by anyone except the creature holding the conch shell. A
+      whispering shell can only hold one such message at a time, but can replay
+      its message as often as a creature issues the command to do
+      so.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, whispering wind</p>
+  price: 3000
+  sources:
+    - id: PZO1138
+  subType: wondrous
+type: equipment

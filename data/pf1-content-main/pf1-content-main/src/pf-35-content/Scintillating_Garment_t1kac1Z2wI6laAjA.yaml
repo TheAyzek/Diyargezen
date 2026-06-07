@@ -1,0 +1,55 @@
+_id: t1kac1Z2wI6laAjA
+_key: '!items!t1kac1Z2wI6laAjA'
+_stats:
+  coreVersion: '12.331'
+folder: DUvAErukOZVAdUq6
+img: icons/equipment/chest/robe-layered-red.webp
+name: Scintillating Garment
+system:
+  aura:
+    school: enc
+  cl: 7
+  contextNotes:
+    - target: skill.dip
+      text: >-
+        On a successful check, you may choose one target who must make a DC 13
+        Will save. If the target fails, their attitude improves by one step
+        above the attitude indicated by the check. If the target succeeds, he is
+        unaffected by the garment but his attitude is still adjusted by the
+        successful Diplomacy check as normal. Any target that successfully saves
+        against the garment’s effects is immune to its magic for 24 hours. A
+        scintillating garment has no affect on a failed Diplomacy check.
+  description:
+    unidentified: <p>This garment appears to be made of mist and shimmering silks.</p>
+    value: >-
+      <p>A scintillating garment can become either a tight-fitting tunic of any
+      style or a long, tight dress of any cut. It appears to be made of mist and
+      shimmering silks, hinting at the form and color of the skin beneath
+      without revealing it.</p><h3>Effect</h3><p>When worn, it gives any
+      successful Diplomacy check made by the wearer the chance to increase one
+      target’s attitude by one additional step (PH 72). The wearer chooses a
+      single target affected by her Diplomacy check to make a DC 13 Will save.
+      If the target fails, his attitude improves by one step above the attitude
+      indicated by the check. If the target succeeds, he is unaffected by the
+      garment but his attitude is still adjusted by the successful Diplomacy
+      check as normal. Any target that successfully saves against the garment’s
+      effects is immune to its magic for 24 hours. A scintillating garment has
+      no affect on a failed Diplomacy
+      check.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      @UUID[Compendium.pf1.feats.Item.tD76K8QGco9scT0r]{Craft Wondrous Item},
+      <em>@UUID[Compendium.pf1.spells.Item.d4oubr5bdoo8w1ev]{eagle's
+      splendor};</em> <strong>Cost</strong>7,000 gp, 560 XP</p>
+  hp:
+    base: 10
+  price: 14000
+  slot: body
+  sources:
+    - date: 1/1/2008
+      id: https://paizo.com/community/blog/v5748dyo5la2f
+      pages: 3-4
+      publisher: Paizo
+      title: Magic of Thassilon (Web Enhancement)
+  subType: wondrous
+  tags:
+    - '3.5'
+type: equipment

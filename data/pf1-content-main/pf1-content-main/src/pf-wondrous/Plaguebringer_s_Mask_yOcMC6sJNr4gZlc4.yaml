@@ -1,0 +1,29 @@
+_id: yOcMC6sJNr4gZlc4
+_key: '!items!yOcMC6sJNr4gZlc4'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Plaguebringer's Mask
+system:
+  aura:
+    school: con
+  cl: 5
+  description:
+    value: >-
+      <p>Resembling the more common nonmagical doctor's mask, a plaguebringer's
+      mask grants a +2 resistance bonus on saving throws against nauseating
+      scents and immunity to one specific disease (the disease must be chosen at
+      the time of the mask's creation-the ones in this adventure grant immunity
+      to blood veil). The mask also veils the wearer's alignment, making her
+      aura register as neutral to alignment-detecting
+      effects.</p><h3>Requirements</h3><p>Craft Wondrous Item, misdirection,
+      remove disease</p>
+  price: 2000
+  slot: head
+  sources:
+    - id: PZO1021
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

@@ -1,0 +1,31 @@
+_id: 5skllaVOGrg91rXn
+_key: '!items!5skllaVOGrg91rXn'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Volatile Vaporizer 2nd-level
+system:
+  aura:
+    school: trs
+  cl: 4
+  description:
+    value: >-
+      <p>This lime green pill is inedible but turns a potion into a cloud of
+      mist that can be shared by multiple creatures. When placed inside a potion
+      flask, the potion bubbles and froths itself into a pungent 10-foot-radius
+      cloud. Any creature within the cloud when it appears gains the full effect
+      of the potion. The cloud has no effect on creatures that cannot breathe. A
+      creature may automatically resist the effects of the potion cloud by
+      momentarily holding its breath. Using the pill destroys it and the potion.
+      Each pill can only be used on potions of a particular spell level; using
+      it on a potion of a different spell level has no effect (neither the
+      potion nor the pill are consumed). The vaporizer also works on alchemist
+      infusions, but not mutagens, extracts, or magical
+      oils.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, alchemical allocation (Advanced Player's Guide)</p>
+  price: 3000
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

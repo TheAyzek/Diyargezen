@@ -1,0 +1,46 @@
+_id: J8tSGDC3peyzFYiA
+_key: '!journal!J8tSGDC3peyzFYiA'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: H8yLkZMDQ53BcEsK
+name: 2.04.2. Measuring Distance
+pages:
+  - _id: oB8EI4Ywap5VIUrE
+    _key: '!journal.pages!J8tSGDC3peyzFYiA.oB8EI4Ywap5VIUrE'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.04.2. Measuring Distance
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.81IOxJPcLqhxdvGi]{2.04.
+        Movement, Position, and
+        Distance}</p><ul><li>@Compendium[pf-content.pf-rules.xXq8OELXwLhAwOtV]{2.04.1.
+        Tactical
+        Movement}</li><li><strong>@Compendium[pf-content.pf-rules.J8tSGDC3peyzFYiA]{2.04.2.
+        Measuring
+        Distance}</strong></li><li>@Compendium[pf-content.pf-rules.TH46eU2rw2eDReNM]{2.04.3.
+        Moving Through a
+        Square}</li><li>@Compendium[pf-content.pf-rules.SZsIKZQOiMhMKE5c]{2.04.4.
+        Terrain and
+        Obstacles}</li><li>@Compendium[pf-content.pf-rules.l4flosvpm7JUQjHC]{2.04.5.
+        Special Movement Rules}</li></ul><hr
+        /><p>@Source[PZO1110;pages=192]</p><p>As a general rule, distance is
+        measured assuming that 1 square equals 5
+        feet.</p><h2>Diagonals</h2><p>When measuring distance, the first
+        diagonal counts as 1 square, the second counts as 2 squares, the third
+        counts as 1, the fourth as 2, and so on. You can’t move diagonally past
+        a corner (even by taking a 5-foot step). You can move diagonally past a
+        creature, even an opponent.</p><p>You can also move diagonally past
+        other impassable obstacles, such as pits.</p><h2>Closest
+        Creature</h2><p>When it’s important to determine the closest square or
+        creature to a location, if two squares or creatures are equally close,
+        randomly determine which one counts as closest by rolling a die.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

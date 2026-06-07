@@ -1,0 +1,22 @@
+_id: yswCOkKyIkvaYBBF
+_key: '!items!yswCOkKyIkvaYBBF'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/horn.jpg
+name: Clay whippoorwill
+system:
+  description:
+    value: >-
+      <p>In addition to being an instrument suitable for Perform (wind
+      instruments) checks, this elaborately crafted whippoorwill-shaped clay
+      ocarina also doubles the effective range of the secret whistled Nightsong
+      language (see page 37) to a distance of 1,000 feet.</p>
+  equipped: false
+  price: 5
+  sources:
+    - id: PZO9296
+      pages: '42'
+  subType: adventuring
+  weight:
+    value: 0.5
+type: loot

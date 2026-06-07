@@ -1,0 +1,69 @@
+_id: l2MdVsQnzuFHX5cx
+_key: '!items!l2MdVsQnzuFHX5cx'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/whip.png
+name: Sadist's Lash
+system:
+  actions:
+    - _id: 77p71mnx999xsvcb
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: sadistsLash
+  aura:
+    custom: true
+    school: abjuration and conjuration
+  baseTypes:
+    - Whip
+  cl: 11
+  description:
+    value: >-
+      <p>A sadist's lash is a long whip of thin strips of leather. Created
+      originally by a special sect of wizards who served under Runelord Sorshen,
+      sadist's lashes swiftly became quite popular throughout Thassilon. The
+      lash acts as a +1 wounding whip, and also aids enchantment spells in two
+      ways. First, it can deliver enchantment spells with a range of touch as if
+      the wielder had touched the creature struck. Additionally, any creature
+      that takes damage from a sadist's lash takes a -5 penalty on Will saves
+      against all enchantment effects created by the wielder of the lash for 1
+      minute unless it succeeds at a DC 15 Will save.<p><strong>Base
+      Item</strong>: wounding
+      whip</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, dominate person</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: leather
+  price: 22301
+  properties:
+    dis: true
+    fin: true
+    nnl: true
+    rch: true
+    trp: true
+  showInQuickbar: false
+  sources:
+    - id: PZO1002
+  weaponGroups:
+    - flails
+  weight:
+    value: 1
+type: weapon

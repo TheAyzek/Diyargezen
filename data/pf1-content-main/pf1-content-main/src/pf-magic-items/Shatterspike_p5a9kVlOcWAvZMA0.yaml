@@ -1,0 +1,59 @@
+_id: p5a9kVlOcWAvZMA0
+_key: '!items!p5a9kVlOcWAvZMA0'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/longsword.png
+name: Shatterspike
+system:
+  actions:
+    - _id: 6liftnao4cvyx3yt
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: shatterspike
+  aura:
+    school: evo
+  baseTypes:
+    - Longsword
+  cl: 13
+  description:
+    value: >-
+      <p>This intimidating weapon appears to be a longsword with multiple hooks,
+      barbs, and serrations along the blade, excellent for catching and
+      sundering a foe's weapon. Wielders without the Improved Sunder feat use a
+      shatterspike as a +1 longsword only. Wielders with the Improved Sunder
+      feat instead use shatterspike as a +4 longsword when attempting to sunder
+      an opponent's weapon. Shatterspike can damage weapons with an enhancement
+      bonus of +4 or lower.</p><p><strong>Base Item</strong>: longsword|+4
+      longsword</p><h3>Construction</h3><p><strong>Requirements</strong> Str 13,
+      Craft Arms and Armor, Improved Sunder, Power Attack, shatter</p>
+  enh: 1
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 4315
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - bladesHeavy
+  weight:
+    value: 4
+type: weapon

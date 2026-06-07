@@ -1,0 +1,32 @@
+_id: 4xBeETxaMnLr1OpN
+_key: '!items!4xBeETxaMnLr1OpN'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/hellknight-leather.PNG
+name: Arachnid Harness
+system:
+  aura:
+    school: trs
+  cl: 4
+  description:
+    value: >-
+      <p>This formfitting black +1 leather features eight ridged support ribs
+      along the back. On command, the arachnid harness sprouts eight enormous
+      spidery legs from these ribs. These legs allow the armor's wearer to
+      attempt Climb checks at full speed without needing to use her hands or
+      feet. Additionally, while the legs are deployed, the armor's wearer
+      doesn't lose her Dexterity bonus to AC while climbing, and need not
+      succeed at a Climb check to avoid falling if she takes damage while
+      climbing.</p><p><strong>Base Item</strong>: 
+      leather</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, spider climb</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 6160
+  sources:
+    - id: PZO9467
+  weight:
+    value: 15
+type: equipment

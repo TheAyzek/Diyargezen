@@ -1,0 +1,36 @@
+_id: okGB6WAq2i3Ct8XX
+_key: '!items!okGB6WAq2i3Ct8XX'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/feats/bleeding-critical.jpg
+name: Bleed
+system:
+  abilityType: ex
+  actions:
+    - _id: h667w2rjssh7xjuy
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      damage:
+        parts:
+          - formula: 1d6
+            types:
+              - bleed
+      img: systems/pf1/icons/feats/bleeding-critical.jpg
+      name: Use
+      tag: bleed
+  description:
+    value: >-
+      <p>A creature with this ability causes wounds that continue to
+      <a>bleed</a>, dealing additional damage each round at the start of the
+      affected creature&rsquo;s turn. This bleeding can be stopped with a
+      successful DC 15 <a>Heal</a> skill check or through the application of any
+      magical healing. The amount of damage each round is specified in the
+      creature&rsquo;s entry.</p><p><em>Format</em>: bleed
+      (2d6)</p><p><em>Location</em>: Special Attacks and individual
+      attacks.</p><p><em>Usage:</em> Replace bleed damage formula</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

@@ -1,0 +1,51 @@
+_id: Fo9C0ibQR3hUWa7M
+_key: '!items!Fo9C0ibQR3hUWa7M'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_08.jpg
+name: Energy Drain
+system:
+  abilityType: su
+  actions:
+    - _id: ryx9iaq5a9jdjivi
+      actionType: save
+      activation:
+        type: nonaction
+        unchained:
+          type: nonaction
+      img: systems/pf1/icons/skills/affliction_08.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            DC = 10 + 1/2 draining creature’s racial HD + draining creature’s
+            Charisma modifier
+      save:
+        dc: '18'
+        type: fort
+      tag: energyDrainSu
+  description:
+    value: >-
+      <p>This attack happens automatically when a melee or ranged attack hits.
+      Each successful <a>energy drain</a> bestows one or more negative levels
+      (the creature&rsquo;s description specifies how many). If the creature
+      confirms a critical hit with an attack that includes energy drain, it
+      inflicts twice the listed number of negative levels. Unless otherwise
+      specified in the creature&rsquo;s description, a draining creature gains 5
+      temporary hit points for each negative level it inflicts on an opponent.
+      These temporary hit points last for a maximum of 1 hour. Negative levels
+      remain until 24 hours have passed or until they are removed with a spell
+      such as <a>restoration</a><em>.</em>&nbsp;If a negative level is not
+      removed before 24 hours have passed, the affected creature must attempt a
+      Fortitude save (DC = 10 + 1/2 draining creature&rsquo;s racial HD +
+      draining creature&rsquo;s Charisma modifier; the exact DC is given in the
+      creature&rsquo;s descriptive text). On a success, the negative level goes
+      away with no harm to the creature. On a failure, the negative level
+      becomes permanent. A separate saving throw is required for each negative
+      level.</p><p><em>Format</em>: energy drain (2 levels, DC
+      18)</p><p><em>Location</em>: Special Attacks and individual
+      attacks.</p><p><em>Usage:</em> Replace DC</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

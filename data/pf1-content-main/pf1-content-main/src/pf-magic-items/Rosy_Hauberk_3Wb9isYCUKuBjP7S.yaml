@@ -1,0 +1,40 @@
+_id: 3Wb9isYCUKuBjP7S
+_key: '!items!3Wb9isYCUKuBjP7S'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/chain-shirt.png
+name: Rosy Hauberk
+system:
+  armor:
+    acp: 2
+    dex: 4
+    material:
+      base:
+        value: steel
+    value: 4
+  aura:
+    custom: true
+    school: conjuration and transmutation
+  baseTypes:
+    - Chain Shirt
+  cl: 3
+  description:
+    value: >-
+      <p>This metallic +1 chain shirt is woven with the petals, buds, and stalks
+      of numerous kinds of beautiful flowers, and the garment is so finely cut
+      that it makes even unsightly wearers appear to have flattering
+      proportions. The wearer can use aspect of the nightingale* and summon
+      instrument each once per day.</p><p><strong>Base Item</strong>: chain
+      shirt</p><h3>Construction</h3><p><strong>Requirements</strong> Craft Magic
+      Arms and Armor, aspect of the nightingale*, summon instrument</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 3035
+  sources:
+    - id: PZO9267
+  spellFailure: 20
+  weight:
+    value: 25
+type: equipment

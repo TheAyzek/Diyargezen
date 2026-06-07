@@ -1,0 +1,17 @@
+_id: p2ZbD5K5moOT6sda
+_key: '!items!p2ZbD5K5moOT6sda'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_01.jpg
+name: Ability Damage and Drain
+system:
+  description:
+    value: >-
+      <p>Some attacks or special abilities cause ability damage or drain. While
+      ability damage can be healed naturally, ability drain is permanent and can
+      be restored only through magic.</p><p><em>Format</em>: 1d4 Str
+      drain</p><p><em>Location</em>: Special Attacks and individual attacks.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

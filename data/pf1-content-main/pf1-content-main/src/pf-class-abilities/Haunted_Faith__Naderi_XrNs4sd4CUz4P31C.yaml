@@ -1,0 +1,38 @@
+_id: XrNs4sd4CUz4P31C
+_key: '!items!XrNs4sd4CUz4P31C'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: 'Haunted Faith: Naderi'
+system:
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p><strong >Associated Deity</strong>: Naderi</p><p><strong>Associated
+      Domain(s)</strong>:
+      @UUID[Compendium.pf1.class-abilities.Item.zd4J4rCdY6cAZdJK]{Nobility}</p><p><em>As
+      worshipers of the goddess of drowning, romantic tragedy, and suicide,
+      Naderi's faithful are often fraught with encounters of the supernatural
+      variety. Her followers contend more with undead than they do outsiders or
+      magical possession, more as a matter of her portfolio than because of any
+      actual training against such forces. Her divine worshipers use
+      conventional means of defeating haunts or possessing spirits, but have
+      additional power over those tied to means of death in Naderi's
+      portfolio.</em></p><p><strong>Replacement Powers</strong>: A cleric (or
+      any other character capable of selecting a domain) who worships Naderi can
+      choose to gain the variant domain power upon first gaining the domain in
+      question, but the choice to replace the domain power must be made
+      immediately upon gaining access to that domain and cannot be changed
+      thereafter.</p><table><thead><tr><th>Replaced Power</th><th>Replacement
+      Power</th></tr></thead><tbody><tr><td>@UUID[Compendium.pf1.class-abilities.Item.hd6MiVc69RyEuDpU]{Leadership
+      (Ex)}</td><td>@UUID[Compendium.pf-content.pf-class-abilities.Item.VAIz3BK2kcNpNqHB]{Romance
+      Beyond Death (Su)}</td></tr></tbody></table>
+  sources:
+    - id: PZO9471
+      pages: '8'
+  subType: classFeat
+  tags:
+    - Naderi
+type: feat

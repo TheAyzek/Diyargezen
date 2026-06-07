@@ -1,0 +1,29 @@
+_id: tM9Q09nLVTxXMYry
+_key: '!items!tM9Q09nLVTxXMYry'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Hexing Doll
+system:
+  aura:
+    school: enc
+  cl: 5
+  description:
+    value: >-
+      <p>This malevolent-looking doll is made out of cheap rags and embroidery
+      thread and is stuffed with straw or sawdust. A creature holding or
+      carrying the doll takes a -4 penalty on saving throws against witch hexes.
+      Alternatively, if the doll is stuffed with the hair of a creature, any
+      witch holding the doll increases the DC of her hexes by +2 when using the
+      hexes against that creature. A doll used in this way does not cause the
+      witch to take a penalty on her saving
+      throws.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, bestow curse</p>
+  price: 2500
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

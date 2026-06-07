@@ -1,0 +1,48 @@
+_id: VGwccLk2uCxKaC57
+_key: '!journal!VGwccLk2uCxKaC57'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: CMTuXqZ6Ywxqk9Ar
+name: 7.1.4.5. Construct Modifications
+pages:
+  - _id: fbtURZK8bz5hh7WI
+    _key: '!journal.pages!VGwccLk2uCxKaC57.fbtURZK8bz5hh7WI'
+    _stats:
+      coreVersion: '12.331'
+    name: 7.1.4.5. Construct Modifications
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.dS0UkKOINqI2iTDX]{(Index)
+        Magic}</p><p>@Compendium[pf-content.pf-rules.zCeqoMSKdZ8r4EPd]{7.1.
+        Mastering
+        Magic}</p><ul><li><p>@Compendium[pf-content.pf-rules.3HmUAVI78JGriOJQ]{7.1.4.
+        Building and Modifying
+        Constructs}</p><ul><li>@Compendium[pf-content.pf-rules.IX8Xif3UBwvGZoTL]{7.1.4.1.
+        Animated
+        Objects}</li><li>@Compendium[pf-content.pf-rules.1wOUB8cMjiIMP0Ma]{7.1.4.2.
+        New Animated Object
+        Abilities}</li><li>@Compendium[pf-content.pf-rules.a0XTKDAaQ86Axg4S]{7.1.4.3.
+        Building New
+        Constructs}</li><li>@Compendium[pf-content.pf-rules.7MT0MXLxIZ9incU4]{7.1.4.4.
+        Repairing
+        Constructs}</li><li><strong>@Compendium[pf-content.pf-rules.VGwccLk2uCxKaC57]{7.1.4.5.
+        Construct Modifications}</strong></li></ul></li></ul><hr
+        /><p>@Source[PZO1117;pages=113]</p><p>Standard constructs can be
+        modified to enhance their base abilities, alter their appearance or
+        function, or perform a variety of tasks beyond the intentions of their
+        basic designs. Performing a modification provides a construct's creator
+        with a simple way to create a unique construct. A modification can only
+        be performed while the construct is inanimate or
+        nonfunctioning.</p><p>Performing modifications on one's own construct
+        requires the Craft Construct feat, and the creator must pay any
+        additional crafting requirements and/or costs associated with the
+        modification. Completing a modification requires 1 day per 1,000 gp of
+        the modification's base price (minimum 1 day).</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

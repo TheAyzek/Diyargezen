@@ -1,0 +1,39 @@
+_id: go9G26vKIW8NfOpi
+_key: '!items!go9G26vKIW8NfOpi'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Fate-Woven Braid of the Norns
+system:
+  aura:
+    custom: true
+    school: abjuration and evocation
+  cl: 16
+  description:
+    value: >-
+      <p>At first glance, this circlet of plaited hair interwoven with a single
+      gold thread appears to be nothing more than a personal memento or a
+      lover's token. Closer examination reveals that each strand of hair seems
+      to have neither a beginning nor an end. Most of these braids are blonde in
+      color, but other hues are not unknown.  Up to three times per day, the
+      wearer of a fate-woven braid of the norns can potentially negate a
+      disastrous turn of fortune. Upon rolling a natural 1 on a saving throw or
+      after failing a saving throw against a death effect, the wearer can
+      activate the braid as a free action to reroll the saving throw.  The
+      golden thread is vulnerable to severe twists of fate, though. If the
+      result of any reroll obtained by the braid is ever a natural 20, the
+      golden thread frays, permanently reducing the braid's daily reroll uses by
+      one. If all three daily uses are eliminated in this manner, the golden
+      thread snaps and the fate-woven braid of the norns falls apart into a
+      nonmagical pile of wispy gray hair.  A fate-woven braid of the norns uses
+      up the entire wrists slot, even though the user wears only one at a time.
+      The user can't use another item (even another fate-woven braid of the
+      norns) that also uses the wrists slot.</p><h3>Requirements</h3><p>Craft
+      Wondrous Item, death ward</p>
+  price: 9000
+  slot: wrists
+  sources:
+    - id: PZO9553
+  subType: wondrous
+type: equipment

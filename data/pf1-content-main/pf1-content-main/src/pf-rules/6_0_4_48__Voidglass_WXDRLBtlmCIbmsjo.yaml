@@ -1,0 +1,42 @@
+_id: WXDRLBtlmCIbmsjo
+_key: '!journal!WXDRLBtlmCIbmsjo'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: spdOaGzVyyvtp3lH
+name: 6.0.4.48. Voidglass
+pages:
+  - _id: kcS4HtYfQunBDwuC
+    _key: '!journal.pages!WXDRLBtlmCIbmsjo.kcS4HtYfQunBDwuC'
+    _stats:
+      coreVersion: '12.331'
+    name: 6.0.4.48. Voidglass
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.4TX2Q1MaWt1B8298]{(Index)
+        Items}</p><p>@Compendium[pf-content.pf-rules.j1KZwBRf9pU1Dg2C]{6.0.
+        Equipment}</p><ul><li>@Compendium[pf-content.pf-rules.TROqcNjEw3b2q2Dk]{6.0.4.
+        Special Materials}</li></ul><hr /><p>@Source[PZO9467;pages=31],
+        @Source[PZO9542;pages=35]</p><p>Voidglass originates on an unknown world
+        beyond Golarion. It is brought to Golarion in small quantities by
+        grioths (Pathfinder RPG Bestiary 5 137), a race of psychic
+        extraterrestrials. Voidglass resonates with a creature’s mind,
+        bolstering thought and mental defenses. Any suit of armor normally made
+        from metal can be made of voidglass. A suit of light voidglass armor or
+        a voidglass shield grants a +1 resistance bonus on all saving throws
+        against mind-affecting magic. This bonus increases to +2 for medium
+        voidglass armor, and to +3 for heavy voidglass armor. A voidglass
+        piercing or slashing weapon deals 1 additional point of damage on a hit;
+        bludgeoning weapons gain no benefit.</p><p>Voidglass has 30 hit points
+        per inch of thickness and hardness 10. A pound of raw, unworked
+        voidglass is worth 100 gp. Light armor made from voidglass costs an
+        additional 1,000 gp, medium armor costs an additional 2,000 gp, heavy
+        armor costs an additional 4,500 gp, and shields cost an additional 3,000
+        gp. Weapons made from voidglass cost an additional 1,000 gp.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

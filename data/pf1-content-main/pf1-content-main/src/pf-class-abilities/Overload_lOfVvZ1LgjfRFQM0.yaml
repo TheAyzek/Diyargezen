@@ -1,0 +1,26 @@
+_id: lOfVvZ1LgjfRFQM0
+_key: '!items!lOfVvZ1LgjfRFQM0'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Overload
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>At 7th level, a scatter gunner
+      knows just how to hold his weapon to maximize its devastating scattering
+      effects. As a full-round action, a scatter gunner can make a scattering
+      shot to fire a concentrated payload of pellets that strains his firearm.
+      This doubles the area affected by the scattering shot (a 30-foot cone for
+      most early firearms), increases the firearm's misfire value by 2, and
+      causes each successful attack to deal an additional 1d6 points of damage
+      that is not multiplied on a critical hit. This additional damage increases
+      to 2d6 at 13th level and 3d6 at 19th level. The scatter gunner must spend
+      1 grit point to perform this deed.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

@@ -1,0 +1,31 @@
+_id: BLMEPkOHYNp2BRck
+_key: '!journal!BLMEPkOHYNp2BRck'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Sicva
+pages:
+  - _id: FHpRztOVLUR7t8nT
+    _key: '!journal.pages!BLMEPkOHYNp2BRck.FHpRztOVLUR7t8nT'
+    _stats:
+      coreVersion: '12.331'
+    name: Sicva
+    sort: 0
+    text:
+      content: >-
+        <h1>Sicva</h1><h2>Mistress of All</h2>@Source[PZO90123;pages=74] <br
+        /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Sicva">Sicva</a><h3>Details</h3><p><strong>Alignment</strong>
+        LE<br /><strong>Pantheon</strong> Azlanti Pantheon<br /><strong>Areas of
+        Concern</strong> Domination, invasive species, and oppression<br
+        /><strong>Domains</strong> Animal, Evil, Law, Nobility, Strength<br
+        /><strong>Subdomains</strong> Devil (Evil), Devil (Law), Ferocity,
+        Leadership, Loyalty, Tyranny<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Lasso<br
+        /><strong>Symbol</strong> Virus</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

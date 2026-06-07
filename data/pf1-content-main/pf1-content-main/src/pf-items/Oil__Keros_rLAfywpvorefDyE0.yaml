@@ -1,0 +1,61 @@
+_id: rLAfywpvorefDyE0
+_key: '!items!rLAfywpvorefDyE0'
+_stats:
+  coreVersion: '12.343'
+img: icons/tools/laboratory/bowl-liquid-black.webp
+name: Oil, Keros
+system:
+  actions:
+    - _id: n3io0ky2u8b1wpy3
+      ability:
+        critMult: 1
+      actionType: rsak
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 1d3
+            types:
+              - fire
+          - {}
+      img: icons/tools/laboratory/bowl-liquid-black.webp
+      name: Use
+      notes:
+        effect:
+          - see text
+      range:
+        units: ft
+        value: '5'
+      tag: kerosOil
+  description:
+    value: >-
+      <p><em><strong>Price</strong> 5 gp; <strong>Weight</strong>
+      -</em></p><p><em><strong>Category</strong> Alchemical
+      Weapons</em></p><p><em>Also known as firebreather's oil, this bitter
+      liquid is harder to ignite than common oil but burns quickly at a low
+      temperature, making it ideal for exotic performers such as fire-spinners
+      and flame-spitters. You may spit a mouthful of keros oil past an open
+      flame (such as a candle, tindertwig, or torch) to ignite it, creating a
+      brief burst of fire. If you use it to attack, the attack is a ranged touch
+      attack with a maximum range of 5 feet that deals 1d3 points of fire
+      damage. If you roll a 1 on your attack roll, you accidentally inhale or
+      swallow some of the burning fuel; you take 1d6 points of fire damage and
+      are nauseated for 1 round. A bottle of keros oil holds enough for 10
+      mouthfuls; taking a mouthful from the bottle is a standard action (the
+      Rapid Reload feat reduces this to a move action). Crafting this item is a
+      DC 15 Craft (alchemy)
+      check.</em></p><h2>Construction</h2><p><em><strong>Craft
+      (Alchemy)</strong> DC 15</em></p>
+  price: 5
+  sources:
+    - id: PZO1123
+      pages: '107'
+    - id: PZO9410
+      pages: '19'
+  subType: misc
+  tags:
+    - Alchemical Weapons
+type: consumable

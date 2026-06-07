@@ -1,0 +1,32 @@
+_id: ipgn9Uxo2R1YPKdi
+_key: '!items!ipgn9Uxo2R1YPKdi'
+_stats:
+  coreVersion: '12.331'
+folder: CAxOlglJyXdUOHF9
+img: icons/creatures/eyes/lizard-single-slit-blue.webp
+name: Spirits in the Stone (Human; Mwangi)
+system:
+  contextNotes:
+    - target: init
+      text: +[[2]] Trait bonus whenever you’re in ruins.
+    - target: allSavingThrows
+      text: >-
+        +[[1]] Trait bonus against traps and natural hazards whenever you’re in
+        ruins.
+  description:
+    value: >-
+      <p><em>You have an almost instinctive ability to sense danger and peril in
+      ruined structures.</em></p><p><strong>Requirements</strong>: Mwangi Human
+      Heritage</p><p><strong>Benefits</strong>: Whenever you’re in ruins, you
+      gain a +2 trait bonus on Initiative checks and a +1 trait bonus on saving
+      throws against traps and natural hazards.</p>
+  sources:
+    - id: PZO9404
+      pages: '8'
+  subType: trait
+  tags:
+    - '3.5'
+    - Human
+    - Mwangi
+  traitType: race
+type: feat

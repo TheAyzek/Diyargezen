@@ -1,0 +1,31 @@
+_id: aaU945KRfxvysTkt
+_key: '!items!aaU945KRfxvysTkt'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_30.jpg
+name: Shredskin
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: divination and illusion
+  cl: 20
+  description:
+    value: >-
+      <p>Kazavon's shattered ribs were twisted into a mantle of bone fragments
+      known as the Shredskin. The mantle grants its wearer a +6 enhancement
+      bonus to Wisdom, a +5 resistance bonus on all saving throws, and the
+      ability to hide in plain sight as per the shadowdancer class feature. The
+      wearer can speak with any shadow, in a way similar to the effects of the
+      spell stone tell. Shadows willingly tell the wearer what dangers they
+      obscure and what creatures have come in contact with them in the past 24
+      hours. The shadows can only relate information about creatures they've
+      enshrouded. Creatures bearing a light source are not usually touched by
+      shadows, though shadows can tell when they've been disrupted by passing
+      light.</p>
+  sources:
+    - id: PZO9250
+  subType: other
+  weight:
+    value: 20
+type: equipment

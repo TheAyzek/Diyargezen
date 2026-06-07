@@ -1,0 +1,23 @@
+_id: U0RIsWWVeWRrIRA3
+_key: '!items!U0RIsWWVeWRrIRA3'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/fish.jpg
+name: Badger plush
+system:
+  description:
+    value: >-
+      <p>This stuffed badger-a well-loved and legally protected animal in
+      Absalom-is realistic enough to fool most other animals into thinking it is
+      real. As a move action, a wielder can use a free hand to present the
+      plush; any Small or smaller animal with an Intelligence score of 1 or 2
+      that can see it takes a -2 penalty on initiative checks.</p>
+  equipped: false
+  price: 45
+  sources:
+    - id: PZO9489
+      pages: '4'
+  subType: adventuring
+  weight:
+    value: 2
+type: loot

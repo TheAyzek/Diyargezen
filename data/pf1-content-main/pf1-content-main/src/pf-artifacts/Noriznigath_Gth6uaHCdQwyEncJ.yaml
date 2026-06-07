@@ -1,0 +1,30 @@
+_id: Gth6uaHCdQwyEncJ
+_key: '!items!Gth6uaHCdQwyEncJ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/longsword.png
+name: Noriznigath
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: evocation evil
+  baseTypes:
+    - Longsword
+  cl: 20
+  description:
+    value: >-
+      <p>The favored blade of the Storm King, Noriznigath is named for the first
+      nascent demon lord it was used to behead, and is a Large +6 unholy
+      longsword-as with all slashing weapons, Noriznigath becomes a vorpal
+      weapon in the hands of a balor. The body of a creature decapitated by
+      Noriznigath i s d isintegrated i f t he decapitation results in death, and
+      heals the wielder of 100 points of damage.<p><strong>Base Item</strong>:
+      unholy longsword</p>
+  enh: 6
+  sources:
+    - id: PZO9078
+  subType: wondrous
+  weight:
+    value: 10
+type: equipment

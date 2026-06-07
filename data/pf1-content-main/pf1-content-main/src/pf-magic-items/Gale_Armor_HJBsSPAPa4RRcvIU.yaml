@@ -1,0 +1,37 @@
+_id: HJBsSPAPa4RRcvIU
+_key: '!items!HJBsSPAPa4RRcvIU'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/silken-ceremonial.png
+name: Gale Armor
+system:
+  armor:
+    material:
+      base:
+        value: cloth
+    value: 1
+  aura:
+    school: trs
+  baseTypes:
+    - Silken Ceremonial
+  cl: 7
+  description:
+    value: >-
+      <p>Gale armor is a suit of +3 silken ceremonial armor that floats
+      weightlessly when not worn. Gale armor has no weight of its own and
+      confers limited weightlessness on its wearer. The wearer of a suit of gale
+      armor can use air walk up to 10 rounds per day. Activating or deactivating
+      this ability is a free action, and these rounds need not be consecutive.
+      Additionally, the wearer of a suit of gale armor is permanently under the
+      effect of glide, and if he's capable of flying, the armor increases his
+      maneuverability by one category.</p><p><strong>Base Item</strong>: silken
+      ceremonial armor</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, air walk, glide</p>
+  enh: 3
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 15180
+  sources:
+    - id: PZO9467
+type: equipment

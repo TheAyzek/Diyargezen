@@ -1,0 +1,35 @@
+_id: Vb7bW3H1pcUpd6aA
+_key: '!items!Vb7bW3H1pcUpd6aA'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Faithful Lantern
+system:
+  aura:
+    custom: true
+    school: abjuration and conjuration
+  cl: 9
+  description:
+    value: >-
+      <p>This fine, silver bullseye lantern is embossed with the image of a
+      stoic sentinel. It functions as a bullseye lantern that doesn't require
+      oil to function. On command, the lantern floats alongside its user,
+      shedding its light in whichever direction the user is looking.  Once per
+      day on command, the lantern can be designated to stand guard for up to 8
+      hours. The lantern ceases to shed light and keeps watch over a
+      30-foot-radius area centered on itself. The lantern acts as the alarm
+      spell, except it is activated only by creatures that are Small or larger,
+      and it cannot see invisible creatures. If the lantern detects a creature,
+      it notifies the user that commanded the lantern with a mental alarm,
+      waking the user if necessary. Once the lantern notifies its user, it
+      shines its light on the intruder until commanded to
+      stop.</p><h3>Requirements</h3><p>Craft Wondrous Item, alarm, light, mage's
+      faithful hound, unseen servant</p>
+  price: 2500
+  sources:
+    - id: PZO9466
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

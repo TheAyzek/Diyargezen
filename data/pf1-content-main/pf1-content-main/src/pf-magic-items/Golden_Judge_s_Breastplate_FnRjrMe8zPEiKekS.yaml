@@ -1,0 +1,39 @@
+_id: FnRjrMe8zPEiKekS
+_key: '!items!FnRjrMe8zPEiKekS'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/breastplate.PNG
+name: Golden Judge's Breastplate
+system:
+  armor:
+    acp: 4
+    dex: 3
+    material:
+      base:
+        value: steel
+    value: 6
+  aura:
+    custom: true
+    school: abjuration enchantment and transmutation
+  baseTypes:
+    - Breastplate
+  cl: 3
+  description:
+    value: >-
+      <p>This gold-colored +1 breastplate has a large, ornate symbol of a vault
+      key on one side of the chest. The wearer gains a +4 competence bonus on
+      Sense Motive checks. The wearer can use command and peacebond each once
+      per day.</p><p><strong>Base Item</strong>: 
+      breastplate</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, command, owl's wisdom, peacebond</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 5110
+  sources:
+    - id: PZO9267
+  spellFailure: 25
+  weight:
+    value: 30
+type: equipment

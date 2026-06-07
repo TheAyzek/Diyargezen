@@ -1,0 +1,30 @@
+_id: y3BuPwp7LdqROhMl
+_key: '!items!y3BuPwp7LdqROhMl'
+_stats:
+  coreVersion: '12.331'
+folder: Gsng247WkpbOTnas
+img: systems/pf1/icons/items/jewelry/ring-red.jpg
+name: Decoy Ring
+system:
+  aura:
+    school: ill
+  cl: 11
+  description:
+    value: >-
+      <p>This ring is a thick loop of mirrorlike metal. Whenever the wearer of
+      this ring takes the withdraw action or becomes helpless (including falling
+      unconscious), it instantly makes her invisible for 3 rounds and creates
+      four illusory duplicates that either run off in opposite directions or
+      perform other plausible actions that could draw enemy attention away from
+      her. The duplicates last for 3 rounds before disappearing, but they
+      instantly pop out of existence if struck by an attack (AC 10) and can be
+      disbelieved (Will DC 19). Allies of the wearer always know her true
+      location and can freely provide aid or assistance to
+      her.</p><h3>Construction</h3><p><strong>Requirements</strong> Forge Ring,
+      mislead</p>
+  price: 12000
+  slot: ring
+  sources:
+    - id: PZO1123
+  subType: wondrous
+type: equipment

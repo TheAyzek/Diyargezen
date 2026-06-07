@@ -1,0 +1,44 @@
+_id: unFE5hPWfHuCsIVt
+_key: '!items!unFE5hPWfHuCsIVt'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/commodities/gems/gem-rough-navette-purple-pink.webp
+name: Amethyst Pyramid Ioun Stone, Cracked
+system:
+  aura:
+    school: abj
+  cl: 12
+  contextNotes:
+    - target: skill.kre
+      text: +[[2]] Competence bonus to identify undead and their special abilities.
+  description:
+    instructions: >-
+      <p>Only 25% of cracked or flawed ioun stones grant resonant powers when
+      placed in a wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: >-
+      <p>A purple stone in cone shape with a flat base. In addition to the base,
+      there are typically three or four sides but some have a dozen or more. A
+      crack mars its surface.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone grants a +2 competence bonus on Knowledge
+      (religion) checks to identify undead and their special
+      abilities.</p><h3>Resonance</h3><p><strong>Method 1, Fixed: </strong>+2
+      circumstance bonus on Stealth checks against undead.</p><p><strong>Method
+      2, Variable:
+      </strong>@Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, <em>hide from undead,</em> creator must be 12th level
+      <strong>Cost</strong> 75 gp</p>
+  hardness: 5
+  hp:
+    base: 10
+  price: 150
+  sources:
+    - id: PZO9435
+      pages: '23'
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

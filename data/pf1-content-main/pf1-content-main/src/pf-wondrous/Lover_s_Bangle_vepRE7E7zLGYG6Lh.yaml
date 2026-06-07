@@ -1,0 +1,30 @@
+_id: vepRE7E7zLGYG6Lh
+_key: '!items!vepRE7E7zLGYG6Lh'
+_stats:
+  coreVersion: '12.331'
+folder: I9qLwBDbmvaCsL3h
+img: icons/equipment/wrist/bracer-orange-fancy.webp
+name: Lover's Bangle
+system:
+  aura:
+    school: div
+  cl: 3
+  description:
+    value: >-
+      <p>This thick copper bracelet bears rows of lightly engraved hearts. Once
+      per week, when the bracelet is worn and touched to another worn lover's
+      bangle, the two become attuned and remain attuned until one of the bangles
+      is removed or attuned to a different lover's bangle, or until a bangle's
+      wearer is reduced below 0 hit points, is slain, or travels to a different
+      plane. The wearer of the attuned lover's bangle immediately knows that the
+      attunement has ended, but doesn't receive any indication about the event
+      that broke the attunement.<h3>Requirements</h3><p>Craft Wondrous Item,
+      status</p>
+  price: 750
+  slot: wrists
+  sources:
+    - id: PZO90129
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

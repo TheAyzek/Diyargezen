@@ -1,0 +1,44 @@
+_id: E7n9AvksqHAZz9Un
+_key: '!items!E7n9AvksqHAZz9Un'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Sassone leaf residue
+system:
+  actions:
+    - _id: 1qwl97dl6vyg4ic4
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      damage:
+        parts:
+          - formula: 2d12
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[2d12]] hp <strong>Secondary
+            Effect</strong>: [[1]] Con
+      save:
+        dc: '16'
+        type: fort
+      tag: sassoneLeafResidue
+  description:
+    value: >-
+      <p><strong>Type</strong> contact; <strong>Save</strong> Fortitude DC
+      16</p><p><strong>Onset</strong> 1 minute; <strong>Frequency</strong>
+      1/minute for 6 minutes</p><p><strong>Initial Effect</strong> 2d12 hp;
+      <strong>Secondary Effect</strong> 1 Con</p><p><strong>Cure</strong> 1
+      save</p>
+  price: 300
+  sources:
+    - id: PZO1123
+      pages: '111'
+  subType: poison
+  uses:
+    per: single
+type: consumable

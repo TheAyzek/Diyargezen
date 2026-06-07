@@ -1,0 +1,33 @@
+_id: MK9maGPlUgZoxkjy
+_key: '!journal!MK9maGPlUgZoxkjy'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Abhoth
+pages:
+  - _id: MqD1KKzkrEYJlo89
+    _key: '!journal.pages!MK9maGPlUgZoxkjy.MqD1KKzkrEYJlo89'
+    _stats:
+      coreVersion: '12.331'
+    name: Abhoth
+    sort: 0
+    text:
+      content: >-
+        <h1>Abhoth</h1><h2>Source of Uncleanness</h2>@Source[PZO90109;pages=64]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Abhoth">Abhoth</a><h3>Details</h3><p><strong>Alignment</strong>
+        CN<br /><strong>Pantheon</strong> Outer Gods<br /><strong>Areas of
+        Concern</strong> Disease, fercundity, oozes<br
+        /><strong>Domains</strong> Chaos, Darkness, Earth, Madness, Strength<br
+        /><strong>Subdomains</strong> Caves, Ferocity, Insanity, Night,
+        Nightmare, Resolve<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Whip<br
+        /><strong>Symbol</strong> Tentacle coiled around a disemboided
+        eye</p><h2>For Followers of Abhoth</h2><h3>Feats</h3><p>Dreamed
+        Secrets</p><h3>Traits</h3><p>Unspeakable Bond</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,40 @@
+_id: MXmX8k8motOf98dp
+_key: '!journal!MXmX8k8motOf98dp'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: 6xAF0VmbLWU6dblG
+name: 2.02.6. Immediate Actions
+pages:
+  - _id: 59yYCZ8rPsc9zQnd
+    _key: '!journal.pages!MXmX8k8motOf98dp.59yYCZ8rPsc9zQnd'
+    _stats:
+      coreVersion: '12.331'
+    name: 2.02.6. Immediate Actions
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.OiNttXSDW598DIEs]{(Index) Combat
+        Rules}</p><p>@Compendium[pf-content.pf-rules.VZCpOrg3jCyNaYeg]{2.02.
+        Actions in
+        Combat}</p><ul><li>@Compendium[pf-content.pf-rules.MXmX8k8motOf98dp]{2.02.6.
+        Immediate Actions}</li></ul><hr
+        /><p>@Source[PZO1110;pages=189]</p><p>Much like a swift action, an
+        immediate action consumes a very small amount of time but represents a
+        larger expenditure of effort and energy than a free action. However,
+        unlike a swift action, an immediate action can be performed at any
+        time—even if it’s not your turn. Casting feather fall is an immediate
+        action, since the spell can be cast at any time.</p><p>Using an
+        immediate action on your turn is the same as using a swift action and
+        counts as your swift action for that turn. You cannot use another
+        immediate action or a swift action until after your next turn if you
+        have used an immediate action when it is not currently your turn
+        (effectively, using an immediate action before your turn is equivalent
+        to using your swift action for the coming turn). You also cannot use an
+        immediate action if you are flat-footed.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

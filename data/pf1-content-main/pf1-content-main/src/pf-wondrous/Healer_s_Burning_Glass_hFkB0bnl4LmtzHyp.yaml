@@ -1,0 +1,27 @@
+_id: hFkB0bnl4LmtzHyp
+_key: '!items!hFkB0bnl4LmtzHyp'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Healer's Burning Glass
+system:
+  aura:
+    school: con
+  cl: 13
+  description:
+    value: >-
+      <p>The handle of this magnifying glass is shaped like a holy symbol of
+      Sarenrae. When used to treat deadly wounds, the glass provides a +4
+      circumstance bonus on Heal checks. Once per day, it can be used to affect
+      a touched creature with regenerate (as the spell). The user must be in an
+      area of bright light to use either
+      function.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, regenerate</p>
+  price: 32400
+  sources:
+    - id: PZO9440
+  subType: wondrous
+  weight:
+    value: 0.5
+type: equipment

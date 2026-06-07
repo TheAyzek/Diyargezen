@@ -1,0 +1,33 @@
+_id: x18mvkxNlbuMNnmT
+_key: '!items!x18mvkxNlbuMNnmT'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Standard of the Celestial Heir
+system:
+  aura:
+    school: enc
+  cl: 10
+  description:
+    value: >-
+      <p>A command word causes this bright white flag to change its emblem to
+      match the deity worshiped by the bearer. Creatures loyal to that deity
+      gain a +1 morale bonus on attack rolls, weapon damage rolls, and saving
+      throws against fear and charm effects as long as they can see the
+      standard, which must be held by an ally within 60 feet. This bonus is
+      increased by 1 if the bearer has the Flagbearer feat (The Inner Sea World
+      Guide 286).  As long as the standard of the celestial heir is held by an
+      aasimar bearer, evil foes within 60 feet that see the standard are dazzled
+      while in the area and must succeed at a DC 14 Will saving throw or become
+      shaken for as long as they remain in the area. Once a foe succeeds at her
+      save against the standard, she is immune to being shaken by that standard
+      for 1 day.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, archon's aura, bless, creator must be an aasimar</p>
+  price: 33000
+  sources:
+    - id: PZO9280
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

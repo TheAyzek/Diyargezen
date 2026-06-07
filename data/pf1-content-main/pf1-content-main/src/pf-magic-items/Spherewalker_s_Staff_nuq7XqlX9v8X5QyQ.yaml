@@ -1,0 +1,28 @@
+_id: nuq7XqlX9v8X5QyQ
+_key: '!items!nuq7XqlX9v8X5QyQ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/blue_23.jpg
+name: Spherewalker's Staff
+system:
+  aura:
+    school: con
+  cl: 9
+  description:
+    value: >-
+      <p>This slender darkwood staff is topped either with a star-shaped crystal
+      or a butterfly-like silver head. Sacred to the faith of Desna, a
+      spherewalker's staff allows use of the following spells: • ant haul (1
+      charge)  • water walk (1 charge)  • air walk (2 charges)  • dimension door
+      (2 charges)  • freedom of movement (2 charges)  • plane shift (3 charges) 
+      When carried (even when stowed), a spherewalker's staff increases the
+      wielder's base land speed by 10 feet.</p><h3>Requirements</h3><p>Craft
+      Staff, air walk, ant haul, dimension door, freedom of movement, plane
+      shift, water walk, creator must worship Desna</p>
+  price: 43400
+  sources:
+    - id: PZO9075
+  subType: staff
+  weight:
+    value: 3
+type: consumable

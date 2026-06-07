@@ -1,0 +1,18 @@
+_id: Aku5JKCVJMW4gtDn
+_key: '!items!Aku5JKCVJMW4gtDn'
+_stats:
+  coreVersion: '12.331'
+folder: 35gUR2g8lMd073yK
+img: icons/commodities/biological/pustules-brown.webp
+name: Indigestible
+system:
+  description:
+    value: >-
+      <em>You have acquired a resistance to the acids of
+      oozes.</em></p><p><strong>Prerequisites</strong><br/>Favored enemy (ooze)
+      or survived engulfing by an ooze.</p><p><strong>Benefits</strong><br/>You
+      gain acid resistance 5.
+  tags:
+    - General
+    - '3.5'
+type: feat

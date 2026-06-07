@@ -1,0 +1,128 @@
+_id: sMnyP1B0qwKVkExb
+_key: '!journal!sMnyP1B0qwKVkExb'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Cyth-V'sug
+pages:
+  - _id: sXyWTTTtuMW3l6Wt
+    _key: '!journal.pages!sMnyP1B0qwKVkExb.sXyWTTTtuMW3l6Wt'
+    _stats:
+      coreVersion: '12.331'
+    name: Cyth-V'sug
+    sort: 0
+    text:
+      content: >-
+        <h1> Cyth-V'sug</h1><h2>Prince of the Blasted
+        Heath</h2>@Source[PZO90119;pages=71] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Cyth-V'sug">Cyth-V'sug</a><h3>Details</h3><p><strong>Alignment</strong>
+        CE<br /><strong>Pantheon</strong> Demon Lords<br /><strong>Areas of
+        Concern</strong> Disease, fungus, parasites<br
+        /><strong>Domains</strong> Chaos, Earth, Evil, Plant<br
+        /><strong>Subdomains</strong> Caves, Decay, Demon (Chaos), Demon (Evil),
+        Growth<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Scimitar<br
+        /><strong>Symbol</strong> Moldy spiraling tentacle<br /><strong>Sacred
+        Animal(s)</strong> Centipede<br /><strong>Sacred Color(s)</strong>
+        Green, yellow</p><h3>Obedience</h3><p>Eat moldering flesh rife with
+        parasitic worms and drink putrid alcohol distilled from strange fungi
+        during a 1-hour feast. You gain a +4 profane bonus on saving throws
+        against diseases and effects that cause the nauseated
+        condition.</p><h2>Boons - Demonic
+        Obedience</h2><h3>Demoniac</h3><p>@Source[PZO9225;pages=13]<br
+        /><strong>1: Sickness Within (Sp)</strong> <em>ray of enfeeblement
+         </em> 3/day, <em>warp wood</em> 2/ day, or <em>contagion</em> 1/day<br
+        /><strong>2: Parasitic Link (Su)</strong> Once per day with a successful
+        touch attack, you can infest a living creature with tiny worms and
+        gnawing mites unless the target makes a Fortitude save (DC 10 + 1/2 your
+        HD + your Constitution modifier). These parasites retain an unholy link
+        to you, draining that creature's energy and transferring it to you. This
+        infestation persists for 10 rounds, during which you act as if hasted
+        and the infested victim is staggered. As a swift action, you can quicken
+        the parasitic infestation-this reduces the remaining duration by 1
+        round, but causes the parasites to chew and feed at an accelerated rate,
+        dealing 1d2 points of Constitution damage to the target. You can only
+        maintain a parasitic link with one creature at a time. These parasites
+        count as a disease effect.<br /><strong>3: Fungal Ruin (Sp)</strong>
+        Once per day, you may target a creature with a <em>destruction
+        </em>spell. A creature slain by this effect crumbles into a mound of
+        russet mold (<em>Pathfinder RPG Bestiary</em> 273) that immediately
+        releases a cloud of spores in a 20-foot-radius burst. This ability
+        functions as a 9th-level spell.</em></p><h2>Boons - Fiendish
+        Obedience</h2><h3>Evangelist</h3><p>@Source[PZO1139;pages=38]<br
+        /><strong>1: Contamination (Sp)</strong> <em>ray of sickening</em>
+        3/day, <em>pox pustules</em> 2/day, or <em>fungal infestation</em>
+        1/day<br /><strong>2: Cloud of Toxicity (Su)</strong> As a standard
+        action, you can exhale a 20-foot cone of a disgusting miasma that
+        exacerbates disease. Each diseased creature in the cone must attempt a
+        Fortitude saving throw (DC = 10 + half your Hit Dice + your Charisma
+        modifier); if it fails, it immediately takes damage as though it had
+        failed its Fortitude saves against all of its diseases, and any
+        remaining onset times for these diseases end. You can use this ability a
+        number of times per day equal to your Charisma modifier.<br /><strong>3:
+        Ravaging Harm (Su)</strong> Three times per day with a successful touch
+        attack, you can weaken a living creature's immune system unless the
+        target succeeds at a Fortitude saving throw (DC = 10 + half your Hit
+        Dice + your Charisma modifier). For the next 24 hours, when a creature
+        that failed its save takes ability damage, 1 point of that damage
+        becomes permanent ability drain instead. This is a curse effect, and it
+        can be removed with a <em>remove curse</em> spell (treat your total Hit
+        Dice as the caster
+        level).</em></p><h3>Exalted</h3><p>@Source[PZO1139;pages=38]<br
+        /><strong>1: Sickness Within (Sp)</strong> <em>ray of enfeeblement</em>
+        3/day, <em>warp wood</em> 2/day, or <em>contagion</em> 1/day<br
+        /><strong>2: Parasitic Link (Su)</strong> Once per day with a successful
+        touch attack, you can infest a living creature with tiny, gnawing,
+        parasitic worms unless the target succeeds at a Fortitude save (DC = 10
+        + half your Hit Dice + your Constitution modifier). These parasites
+        retain an unholy link to you, draining the target creature's energy and
+        transferring it to you. This infestation persists for 10 rounds, during
+        which you act as if under the effects of a <em>haste</em> spell and the
+        infested victim is staggered. As a swift action, you can quicken the
+        parasitic infestation-this reduces the remaining duration by 1 round,
+        but the target takes 1d3 points of Charisma damage as the parasites feed
+        at an accelerated rate. You can maintain a parasitic link with only one
+        creature at a time. These parasites count as a disease effect.<br
+        /><strong>3: Fungal Ruin (Sp)</strong> Once per day, you can target a
+        creature with a <em>destruction</em> spell. A creature slain by this
+        effect crumbles into a mound of russet mold that immediately releases a
+        cloud of spores in a 20-foot-radius
+        burst.</em></p><h3>Sentinel</h3><p>@Source[PZO1139;pages=38]<br
+        /><strong>1: Deadly Nature (Sp)</strong> <em>thorn javelin</em> 3/day,
+        <em>sickening entanglement</em> 2/day, or <em>command plants</em>
+        1/day<br /><strong>2: Vicious Thorns (Su)</strong> As a standard action,
+        you can cause the ground in a 5-foot-radius burst centered on you to
+        sprout twisting, thorny vines. Creatures moving through the area must
+        travel at half speed or take bleed damage equal to half your character
+        level; if you activate this ability in an area with numerous plants
+        (grass, trees, weeds, etc.), the area also becomes difficult terrain.
+        These effects last for 1 minute, after which the vines crumble to dust.
+        Creatures able to move through natural undergrowth unhindered ignore the
+        effects of this ability. You can use this ability a number of times per
+        day equal to 3 + your Charisma modifier.<br /><strong>3: Shambling Form
+        (Su)</strong> Once per day as a move action, you can assume the form of
+        a Huge shambling mound. You gain a +8 size bonus to Strength, a -2
+        penalty to Dexterity, a +4 size bonus to Constitution, and a +6 natural
+        armor bonus. You gain a constrict special attack and two slam attacks
+        that each deal 2d8 points of damage plus your Strength modifier and have
+        the grab special attack. You gain darkvision (60 feet) and resistance 20
+        to electricity and fire. In addition, if you are struck with an attack
+        that deals an amount of electricity damage that is less than your
+        resistance, you gain temporary hit points equal to your level. You lose
+        these temporary hit points after 1 hour. You return to your true form
+        after 10 minutes or when you take a free action to dismiss this ability,
+        whichever comes first.</em></p><h2>For Followers of
+        Cyth-V'sug</h2><h3>Feats</h3><p><em>Channel Discord</em></p><h3>Magic
+        Items - Wondrous Items</h3><p><em>Dagon's
+        Eye</em></p><h3>Spells</h3><p><em>Fungal Blisters, Sebaceous
+        Twin</em></p><h3>Traits</h3><p><em>Demonic Persuasion</em></p><h2>Unique
+        Summon Rules</h2>@Source[PZO90119;pages=71]<br /><strong>Summon Monster
+        IV</strong>: Mandragora<br /><strong>Summon Monster V</strong>:
+        Tendriculos
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

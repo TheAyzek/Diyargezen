@@ -1,0 +1,28 @@
+_id: zt5yJRbBdkurlnqj
+_key: '!items!zt5yJRbBdkurlnqj'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Side Arm
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>At 3rd level, as a full-round
+      action, a gunner squire can spend 1 grit point to reload a one-handed or
+      two-handed firearm she is holding. If the firearm has multiple barrels,
+      she can reload a number of barrels per round equal to her Dexterity
+      modifier (minimum 1). A gunner squire equipped with alchemical cartridges
+      (see Ultimate Equipment) can use this deed to reload multiple firearms at
+      once, dividing the number of barrels she's able to reload among the
+      firearms she is carrying however she wishes, even if this would mean
+      stowing and retrieving multiple firearms from her equipment with one
+      action. Abilities, deeds, and feats that decrease reloading time (such as
+      Rapid Reload) do not improve this deed. This deed replaces gunslinger
+      initiative.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

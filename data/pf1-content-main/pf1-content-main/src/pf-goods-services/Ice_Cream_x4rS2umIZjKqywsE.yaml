@@ -1,0 +1,21 @@
+_id: x4rS2umIZjKqywsE
+_key: '!items!x4rS2umIZjKqywsE'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/inventory/soup.jpg
+name: Ice Cream
+system:
+  description:
+    value: >-
+      <p>This exotic dessert is made with milk and cream, often flavored with
+      fruit or mint. Because it quickly melts at room temperature, it must be
+      made fresh from snow or ice, or maintained at a low temperature, such as
+      in a cold cellar or with alchemy or magic. This limitation means it is
+      expensive and in most lands it is only available during certain seasons.
+      The listed price is for a large scoop (1 cup).</p>
+  price: 0.1
+  sources:
+    - id: PZO1123
+      pages: '95'
+  subType: food
+type: loot

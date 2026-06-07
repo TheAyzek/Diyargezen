@@ -1,0 +1,31 @@
+_id: aAfW8G6AWBV2ZP6X
+_key: '!items!aAfW8G6AWBV2ZP6X'
+_stats:
+  coreVersion: '12.331'
+folder: rasdJf3aELQxqSwG
+img: icons/skills/melee/weapons-crossed-swords-yellow.webp
+name: Performer’s Surprise
+system:
+  contextNotes:
+    - target: attack
+      text: >-
+        +[[1]] Trait bonus on damage rolls with improvised, exotic, and thrown
+        weapons against foes denied their Dexterity bonus to AC.
+  description:
+    value: >-
+      <p><em>Varisian wanderers take pride in out-thinking and surprising any
+      foes they encounter, and often specialize in easily concealed weapons like
+      daggers or unconventional and symbolic weapons such as the
+      @UUID[Compendium.pf1.weapons-and-ammo.Item.vkUakr0V4RE9CAyk]{bladed
+      scarf}</em></p><p><em>You are practiced at surprising combat
+      tricks.</em></p><p><strong>Benefits</strong>: Against foes denied their
+      Dexterity bonus to AC, you gain a +1 trait bonus on damage rolls with
+      improvised weapons, exotic weapons, and thrown weapons.</p>
+  sources:
+    - id: PZO9463
+      pages: '5'
+  subType: trait
+  tags:
+    - Varisian Wanderers
+  traitType: combat
+type: feat

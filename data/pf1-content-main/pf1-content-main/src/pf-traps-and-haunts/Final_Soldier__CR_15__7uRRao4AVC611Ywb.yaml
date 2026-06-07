@@ -1,0 +1,47 @@
+_id: 7uRRao4AVC611Ywb
+_key: '!actors!7uRRao4AVC611Ywb'
+_stats:
+  coreVersion: '12.343'
+folder: Fjyq717GA2Gt5LRz
+img: systems/pf1/icons/skills/affliction_08.jpg
+items: []
+name: Final Soldier (CR 15)
+prototypeToken:
+  texture:
+    src: icons/svg/mystery-man.svg
+system:
+  attributes:
+    hp:
+      max: 202
+  details:
+    alignment: NE
+    area: 60-ft. radius
+    biography: {}
+    cl: 5
+    cr:
+      base: 15
+    destruction: >-
+      The final soldier will rest only once the ancient general, who has risen
+      as a graveknight antipaladin, is permanently destroyed.
+    effect: >-
+      A horde of armor-clad spectral soldiers rises from all sides. On the
+      haunt's initiative count, five soldiers beset each creature in the area,
+      and each soldier makes a single incorporeal touch attack with a spectral
+      sword (+12 to hit, 2d6+9 points of damage/19-20). Creatures in the haunt's
+      area can attack the soldiers, but even if they destroy an individual
+      soldier, five soldiers continue to attack each of the creatures each round
+      until they disperse the haunt.
+    notes:
+      value: >-
+        <p><strong>Source</strong>: Horror Adventures pg. 179</p>
+        <p><strong>Haunt Templates</strong>: belligerent chained fast persistent
+        tenacious vaporous</p><h3>Description</h3><p>The ancient antipaladin
+        general responsible for this haunt ruled through fear, and forbade his
+        soldiers from accepting surrender or showing mercy. His favorite way to
+        end a battle was to order his soldiers to kill everyone but the opposing
+        army's commander, then offer a rich reward to whichever of his soldiers
+        could produce the opposing commander's head.</p>
+    notice: Perception DC 20 (to hear the muted sounds of battle)
+    reset: 1 day
+    trigger: proximity
+type: haunt

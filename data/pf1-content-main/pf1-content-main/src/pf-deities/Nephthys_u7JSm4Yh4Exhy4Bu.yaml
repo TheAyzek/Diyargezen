@@ -1,0 +1,33 @@
+_id: u7JSm4Yh4Exhy4Bu
+_key: '!journal!u7JSm4Yh4Exhy4Bu'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Nephthys
+pages:
+  - _id: cWkRKEKBk59RWnKz
+    _key: '!journal.pages!u7JSm4Yh4Exhy4Bu.cWkRKEKBk59RWnKz'
+    _stats:
+      coreVersion: '12.331'
+    name: Nephthys
+    sort: 0
+    text:
+      content: >-
+        <h1> Nephthys</h1><h2>Mistress of the
+        Mansion</h2>@Source[PZO9080;pages=65] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Nephthys">Nephthys</a><h3>Details</h3><p><strong>Alignment</strong>
+        CN<br /><strong>Pantheon</strong> Deities of Ancient Osirion<br
+        /><strong>Areas of Concern</strong> Mourning, night, protection of the
+        dead<br /><strong>Domains</strong> Chaos, Charm, Community, Darkness,
+        Protection<br /><strong>Subdomains</strong> Cooperation, Defense, Lust,
+        Night, Protean, Purity<br /><em>* Requires the <u>Acolyte of
+        Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong> Light
+        mace<br /><strong>Symbol</strong> A basket atop a palace<br
+        /><strong>Sacred Animal(s)</strong> Kite</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

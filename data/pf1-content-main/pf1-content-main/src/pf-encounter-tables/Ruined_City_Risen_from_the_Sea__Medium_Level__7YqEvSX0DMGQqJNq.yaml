@@ -1,0 +1,86 @@
+_id: 7YqEvSX0DMGQqJNq
+_key: '!tables!7YqEvSX0DMGQqJNq'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/settlement/stone-stairs.webp
+name: Ruined City Risen from the Sea (Medium Level)
+replacement: true
+results:
+  - _id: gSZ8E0jr3QcFDe1s
+    _key: '!tables.results!7YqEvSX0DMGQqJNq.gSZ8E0jr3QcFDe1s'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 12
+    text: 1 Ghost [CR 7]
+    type: text
+    weight: 1
+  - _id: DaobA1nZlL2VW5qn
+    _key: '!tables.results!7YqEvSX0DMGQqJNq.DaobA1nZlL2VW5qn'
+    img: icons/svg/d20-black.svg
+    range:
+      - 13
+      - 26
+    text: >-
+      2d6 ([[2d6]]) Ooze-Possessed Human Adepts 3, With 1 Tear Of Nuruu’Gal [AVG
+      CR 7]
+    type: text
+    weight: 1
+  - _id: t3Bgqxx7TGBQJK98
+    _key: '!tables.results!7YqEvSX0DMGQqJNq.t3Bgqxx7TGBQJK98'
+    img: icons/svg/d20-black.svg
+    range:
+      - 27
+      - 39
+    text: 1d6 ([[1d6]]) Black Puddings (Gibbering Hosts) [AVG CR 8]
+    type: text
+    weight: 1
+  - _id: aoiFm2jqaF91OaRe
+    _key: '!tables.results!7YqEvSX0DMGQqJNq.aoiFm2jqaF91OaRe'
+    img: icons/svg/d20-black.svg
+    range:
+      - 40
+      - 51
+    text: 1d4 ([[1d4]]) Chuuls [AVG CR 9]
+    type: text
+    weight: 1
+  - _id: X5DdhbFQ5Km5GrKj
+    _key: '!tables.results!7YqEvSX0DMGQqJNq.X5DdhbFQ5Km5GrKj'
+    img: icons/svg/d20-black.svg
+    range:
+      - 52
+      - 62
+    text: 1d4 ([[1d4]]) Black Puddings (Fire Puddings) [AVG CR 9]
+    type: text
+    weight: 1
+  - _id: qYcL6X49Xy9sk5BJ
+    _key: '!tables.results!7YqEvSX0DMGQqJNq.qYcL6X49Xy9sk5BJ'
+    img: icons/svg/d20-black.svg
+    range:
+      - 63
+      - 74
+    text: 1d4 ([[1d4]]) Greater Fire Elementals [AVG CR 11]
+    type: text
+    weight: 1
+  - _id: cw3DO9QIXoE6opyE
+    _key: '!tables.results!7YqEvSX0DMGQqJNq.cw3DO9QIXoE6opyE'
+    img: icons/svg/d20-black.svg
+    range:
+      - 75
+      - 87
+    text: 1 Shining Child [CR 12]
+    type: text
+    weight: 1
+  - _id: FNGUJo8NSuS2nFd3
+    _key: '!tables.results!7YqEvSX0DMGQqJNq.FNGUJo8NSuS2nFd3'
+    img: icons/svg/d20-black.svg
+    range:
+      - 88
+      - 100
+    text: 3d6 ([[3d6]]) Will-O’-Wisps [AVG CR 13]
+    type: text
+    weight: 1
+sort: 2500000

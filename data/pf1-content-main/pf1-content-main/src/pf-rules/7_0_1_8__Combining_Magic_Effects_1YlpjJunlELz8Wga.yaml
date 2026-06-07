@@ -1,0 +1,83 @@
+_id: 1YlpjJunlELz8Wga
+_key: '!journal!1YlpjJunlELz8Wga'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: zcCMo97bY7HQ8cns
+name: 7.0.1.8. Combining Magic Effects
+pages:
+  - _id: 6kZTuZNGjYmnGMoi
+    _key: '!journal.pages!1YlpjJunlELz8Wga.6kZTuZNGjYmnGMoi'
+    _stats:
+      coreVersion: '12.331'
+    name: 7.0.1.8. Combining Magic Effects
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.dS0UkKOINqI2iTDX]{(Index)
+        Magic}</p><p>@Compendium[pf-content.pf-rules.VqmfepmRULVzQGwS]{7.0.
+        Magic
+        Basics}</p><ul><li><p>@Compendium[pf-content.pf-rules.QsXwV60ztDqlXSwM]{7.0.1.
+        Casting
+        Spells}</p><ul><li>@Compendium[pf-content.pf-rules.GiftUNKJHstqRaRu]{7.0.1.1.
+        Choosing a
+        Spell}</li><li>@Compendium[pf-content.pf-rules.DcA0BhlzGBOmJlBR]{7.0.1.2.
+        Concentration}</li><li>@Compendium[pf-content.pf-rules.jcWzZxyQlFAl4ovj]{7.0.1.3.
+        Counterspells}</li><li>@Compendium[pf-content.pf-rules.zsULaA3W562EQNNZ]{7.0.1.4.
+        Caster
+        Level}</li><li>@Compendium[pf-content.pf-rules.6BXjv5dKzNBoeF6f]{7.0.1.5.
+        Spell
+        Failure}</li><li>@Compendium[pf-content.pf-rules.uHbJduQkQNwTE2jw]{7.0.1.6.
+        The Spell's
+        Results}</li><li>@Compendium[pf-content.pf-rules.uoVKBPwOgPq2F1Ie]{7.0.1.7.
+        Special Spell
+        Effects}</li><li><strong>@Compendium[pf-content.pf-rules.1YlpjJunlELz8Wga]{7.0.1.8.
+        Combining Magic Effects}</strong></li></ul></li></ul><hr
+        /><p>@Source[PZO1110;pages=208]</p><p>Spells or magical effects usually
+        work as described, no matter how many other spells or magical effects
+        happen to be operating in the same area or on the same recipient. Except
+        in special cases, a spell does not affect the way another spell
+        operates. Whenever a spell has a specif ic effect on other spells, the
+        spell description explains that effect. Several other general rules
+        apply when spells or magical effects operate in the same
+        place:</p><h2>Stacking Effects</h2><p>Spells that provide bonuses or
+        penalties on attack rolls, damage rolls, saving throws, and other
+        attributes usually do not stack with themselves. More generally, two
+        bonuses of the same type don’t stack even if they come from different
+        spells (or from effects other than spells; see Bonus Types,
+        above).</p><h2>Different Bonus Types</h2><p>The bonuses or penalties
+        from two different spells stack if the modifiers are of different types.
+        A bonus that doesn’t have a type stacks with any bonus.</p><h2>Same
+        Effect More than Once in Different Strengths</h2><p>In cases when two or
+        more identical spells are operating in the same area or on the same
+        target, but at different strengths, only the one with the highest
+        strength applies.</p><h2>Same Effect with Differing Results</h2><p>The
+        same spell can sometimes produce varying effects if applied to the same
+        recipient more than once. Usually the last spell in the series trumps
+        the others. None of the previous spells are actually removed or
+        dispelled, but their effects become irrelevant while the final spell in
+        the series lasts.</p><h2>One Effect Makes Another
+        Irrelevant</h2><p>Sometimes, one spell can render a later spell
+        irrelevant. Both spells are still active, but one has rendered the other
+        useless in some fashion.</p><h2>Multiple Mental Control
+        Effects</h2><p>Sometimes magical effects that establish mental control
+        render each other irrelevant, such as spells that remove the subject’s
+        ability to act. Mental controls that don’t remove the recipient’s
+        ability to act usually do not interfere with each other. If a creature
+        is under the mental control of two or more creatures, it tends to obey
+        each to the best of its ability, and to the extent of the control each
+        effect allows. If the controlled creature receives conflicting orders
+        simultaneously, the competing controllers must make opposed Charisma
+        checks to determine which one the creature obeys.</p><h2>Spells with
+        Opposite Effects</h2><p>Spells with opposite effects apply normally,
+        with all bonuses, penalties, or changes accruing in the order that they
+        apply. Some spells negate or counter each other. This is a special
+        effect that is noted in a spell’s description.</p><h2>Instantaneous
+        Effects</h2><p>Two or more spells with instantaneous durations work
+        cumulatively when they affect the same target.</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

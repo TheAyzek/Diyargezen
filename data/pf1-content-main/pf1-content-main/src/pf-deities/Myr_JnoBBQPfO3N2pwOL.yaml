@@ -1,0 +1,33 @@
+_id: JnoBBQPfO3N2pwOL
+_key: '!journal!JnoBBQPfO3N2pwOL'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Myr
+pages:
+  - _id: x11oNG5l09B0itwo
+    _key: '!journal.pages!JnoBBQPfO3N2pwOL.x11oNG5l09B0itwo'
+    _stats:
+      coreVersion: '12.331'
+    name: Myr
+    sort: 0
+    text:
+      content: >-
+        <h1>Myr</h1><h2>The Guide of Perfection</h2>@Source[PZO90123;pages=71]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Myr">Myr</a><h3>Details</h3><p><strong>Alignment</strong>
+        LG<br /><strong>Pantheon</strong> Azlanti Pantheon<br /><strong>Areas of
+        Concern</strong> Charity, lineage, and physical perfection<br
+        /><strong>Domains</strong> Glory, Good, Law, Nobility, Strength<br
+        /><strong>Subdomains</strong> Ancestors, Archon (Good), Archon (Law),
+        Heroism, Honor, Leadership, Resolve<br /><em>* Requires the <u>Acolyte
+        of Apocrypha</u> trait.</em><br /><strong>Favored Weapon</strong>
+        Longsword<br /><strong>Symbol</strong> Branching tree and its
+        roots</p><h2>For Followers of Myr</h2><h3>Traits</h3><p>Shared
+        Ancestors</p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

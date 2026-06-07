@@ -1,0 +1,28 @@
+_id: uZpc1gp5PCQX6yYt
+_key: '!items!uZpc1gp5PCQX6yYt'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/leather/leather-buckle-steel-tan.webp
+name: Second-Story Harness
+system:
+  description:
+    value: >-
+      <p>A second-story harness is a series of straps, trusses, and buckles that
+      can be worn over clothing or armor. A second-story harness allows the
+      wearer to, as a move action, secure herself in place on a vertical surface
+      so that both her hands are free. The wearer can remain in this position
+      without needing to make additional Climb checks, and does not lose her
+      Dexterity bonus to AC as long as she remains anchored. As long as the
+      wearer is anchored in this way, she cannot move and gains a +5
+      circumstance bonus on Climb checks made to avoid falling whenever she
+      takes damage. The wearer can release herself to start moving again as a
+      move action. A second-story harness costs 55 gp and weighs 3 pounds.</p>
+  equipped: false
+  price: 55
+  sources:
+    - id: PZO9061
+      pages: '65'
+  subType: adventuring
+  weight:
+    value: 3
+type: loot

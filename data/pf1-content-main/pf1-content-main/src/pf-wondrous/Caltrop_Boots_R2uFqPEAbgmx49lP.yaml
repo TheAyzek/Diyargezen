@@ -1,0 +1,34 @@
+_id: R2uFqPEAbgmx49lP
+_key: '!items!R2uFqPEAbgmx49lP'
+_stats:
+  coreVersion: '12.331'
+folder: U3JhxkkoBUI6OEme
+img: icons/equipment/feet/boots-armored-steel-purple.webp
+name: Caltrop Boots
+system:
+  aura:
+    school: trs
+  cl: 5
+  description:
+    value: >-
+      <p>These knee-high black leather boots have prominent and irregularly
+      shaped heels which seem to bulge from the rest of the shoe. As a swift
+      action, the boots' wearer can cause the boots to let loose a spray of
+      caltrops through the back of the heels as he moves during the remainder of
+      his round. These caltrops fill each square the wearer moves into during
+      that round. Any creature, including the wearer, occupying or who steps
+      into one of these squares suffers the normal effects of coming into
+      contact with caltrops (Core Rulebook 155). Once produced, these caltrops
+      remain in existence until removed from their square, at which point they
+      immediately disappear. The shoes can be used for 10 rounds per day. These
+      rounds need not be
+      consecutive.</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, spike growth</p>
+  price: 10000
+  slot: feet
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 2
+type: equipment

@@ -1,0 +1,20 @@
+_id: sRAycZ3QeW2iZzKi
+_key: '!items!sRAycZ3QeW2iZzKi'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/kitchenware/goblet-wood-engraved-brown.webp
+name: Yenchaburian Hybrid
+system:
+  description:
+    value: >-
+      <p>This bitter coffee cultivar increases the drinker's alertness to nearby
+      threats. For 1 hour after drinking two cups of Yenchaburian hybrid coffee,
+      you gain a +2 competence bonus on Perception checks to notice a creature
+      that is using Stealth. You can benefit from yenchaburian hybrid coffee
+      only once per day.</p>
+  price: 1
+  sources:
+    - id: PZO9489
+      pages: '27'
+  subType: food
+type: loot

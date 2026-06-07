@@ -1,0 +1,21 @@
+_id: cadtnQMuuULyRXNZ
+_key: '!items!cadtnQMuuULyRXNZ'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/leather/leather-buckle-steel-tan.webp
+name: Training harness
+system:
+  description:
+    value: >-
+      <p></p><h2>Description</h2><p>This specialized gear must be tailored to a
+      specific type of animal. A training harness provides a +2 bonus on Handle
+      Animal checks made with an animal wearing it.</p>
+  equipped: false
+  price: 10
+  sources:
+    - id: PZO1121
+      pages: '76'
+  subType: animalGear
+  weight:
+    value: 10
+type: loot

@@ -1,0 +1,27 @@
+_id: rq1xtPIrFuHkptUa
+_key: '!items!rq1xtPIrFuHkptUa'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/yellow_21.jpg
+name: Glory
+system:
+  associations:
+    classes:
+      - Warpriest
+  description:
+    value: >-
+      <p><strong>Warpriest Blessing</strong></p><p><strong>Deities</strong>:
+      Gorum, Iomedae, Sarenrae.</p><p><strong>Glorious Presence
+      (minor)</strong>: At 1st level, you can touch an ally and grant it a
+      glorious blessing. For 1 minute, the ally becomes mesmerizing to her foes.
+      This functions as sanctuary, except if the ally attacks an opponent, this
+      effect ends with respect to only that opponent. This is a mind-affecting
+      effect.</p><p><strong>Demoralizing Glory (major)</strong>: At 10th level,
+      when you successfully damage an opponent with a melee attack or attack
+      spell, as a swift action you can attempt to demoralize that opponent with
+      the Intimidate skill using your ranks in Intimidate or your warpriest
+      level, whichever is higher.</p>
+  subType: classFeat
+  tags:
+    - Warpriest Blessing
+type: feat

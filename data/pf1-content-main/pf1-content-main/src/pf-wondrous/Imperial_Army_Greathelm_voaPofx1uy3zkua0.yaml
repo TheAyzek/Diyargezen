@@ -1,0 +1,30 @@
+_id: voaPofx1uy3zkua0
+_key: '!items!voaPofx1uy3zkua0'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Imperial Army Greathelm
+system:
+  aura:
+    school: enc
+  cl: 9
+  description:
+    value: >-
+      <p>Many seasoned military commanders in Molthune wear this style of silver
+      helmet adorned with a single oversized red plume. If the wearer of an
+      Imperial Army greathelm has the Leadership feat, he gains a +3 bonus to
+      his Leadership score, and any of his followers or cohorts gain a +1 bonus
+      on attack rolls and on saving throws against fear effects while they're
+      within line of sight of him.  If the wearer possesses the tactician class
+      feature, the range of that ability increases to 60
+      feet.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Leadership, eagle's splendor, greater command</p>
+  price: 29000
+  slot: head
+  sources:
+    - id: PZO9268
+  subType: wondrous
+  weight:
+    value: 6
+type: equipment

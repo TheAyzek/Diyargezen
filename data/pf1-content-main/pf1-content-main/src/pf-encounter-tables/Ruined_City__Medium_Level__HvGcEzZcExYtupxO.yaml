@@ -1,0 +1,156 @@
+_id: HvGcEzZcExYtupxO
+_key: '!tables!HvGcEzZcExYtupxO'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/altar-hidden.webp
+name: Ruined City (Medium Level)
+replacement: true
+results:
+  - _id: XvownYeK8JpySrLo
+    _key: '!tables.results!HvGcEzZcExYtupxO.XvownYeK8JpySrLo'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 6
+    text: 1 Hadi Tafen* And 1d6 Rat Swarms [CR 6]
+    type: text
+    weight: 1
+  - _id: wTSa2TmpQfeUnLBH
+    _key: '!tables.results!HvGcEzZcExYtupxO.wTSa2TmpQfeUnLBH'
+    img: icons/svg/d20-black.svg
+    range:
+      - 7
+      - 12
+    text: 1 Umber Jelly (Use Some Sort Of CR 6 Jelly) [CR 6]
+    type: text
+    weight: 1
+  - _id: BsoSlkFYVQQC179J
+    _key: '!tables.results!HvGcEzZcExYtupxO.BsoSlkFYVQQC179J'
+    img: icons/svg/d20-black.svg
+    range:
+      - 13
+      - 18
+    text: 1d6 ([[1d6]]) Monitor Lizards [AVG CR 6]
+    type: text
+    weight: 1
+  - _id: MX1wKJOvT9oCyKF5
+    _key: '!tables.results!HvGcEzZcExYtupxO.MX1wKJOvT9oCyKF5'
+    img: icons/svg/d20-black.svg
+    range:
+      - 19
+      - 24
+    text: 1d6 ([[1d6]]) Morlocks [AVG CR 6]
+    type: text
+    weight: 1
+  - _id: gH1HAmyNxS6qMDOl
+    _key: '!tables.results!HvGcEzZcExYtupxO.gH1HAmyNxS6qMDOl'
+    img: icons/svg/d20-black.svg
+    range:
+      - 25
+      - 30
+    text: 1d6 ([[1d6]]) Shadows [AVG CR 6]
+    type: text
+    weight: 1
+  - _id: WLTGgzuolrVQnz4j
+    _key: '!tables.results!HvGcEzZcExYtupxO.WLTGgzuolrVQnz4j'
+    img: icons/svg/d20-black.svg
+    range:
+      - 31
+      - 36
+    text: 2d6 ([[2d6]]) Hadi Rajwans* [AVG CR 7]
+    type: text
+    weight: 1
+  - _id: x6AfnckvLyImKDqt
+    _key: '!tables.results!HvGcEzZcExYtupxO.x6AfnckvLyImKDqt'
+    img: icons/svg/d20-black.svg
+    range:
+      - 37
+      - 42
+    text: 1 Crystal Xorn (Xorn With Crystal Creature Template) [CR 7]
+    type: text
+    weight: 1
+  - _id: nuWCn1aKx8IY8EJX
+    _key: '!tables.results!HvGcEzZcExYtupxO.nuWCn1aKx8IY8EJX'
+    img: icons/svg/d20-black.svg
+    range:
+      - 43
+      - 48
+    text: 1d4 ([[1d4]]) Manticores [AVG CR 7]
+    type: text
+    weight: 1
+  - _id: SIw5FixrjvQZtff1
+    _key: '!tables.results!HvGcEzZcExYtupxO.SIw5FixrjvQZtff1'
+    img: icons/svg/d20-black.svg
+    range:
+      - 49
+      - 54
+    text: 1d4 ([[1d4]]) Large Animated Objects [AVG CR 7]
+    type: text
+    weight: 1
+  - _id: RtzedUocMLDtcsRC
+    _key: '!tables.results!HvGcEzZcExYtupxO.RtzedUocMLDtcsRC'
+    img: icons/svg/d20-black.svg
+    range:
+      - 55
+      - 60
+    text: 1d8 ([[1d8]]) Centipede Swarms [AVG CR 8]
+    type: text
+    weight: 1
+  - _id: GDUYzUwJNS7lwP4j
+    _key: '!tables.results!HvGcEzZcExYtupxO.GDUYzUwJNS7lwP4j'
+    img: icons/svg/d20-black.svg
+    range:
+      - 61
+      - 66
+    text: 1 Deadfall Scorpion [CR 8]
+    type: text
+    weight: 1
+  - _id: rJaXqakHLLaB0iqf
+    _key: '!tables.results!HvGcEzZcExYtupxO.rJaXqakHLLaB0iqf'
+    img: icons/svg/d20-black.svg
+    range:
+      - 67
+      - 72
+    text: 3d4 ([[3d4]]) Medium Animated Objects [AVG CR 8]
+    type: text
+    weight: 1
+  - _id: FYh6DelHYCmglGsN
+    _key: '!tables.results!HvGcEzZcExYtupxO.FYh6DelHYCmglGsN'
+    img: icons/svg/d20-black.svg
+    range:
+      - 73
+      - 78
+    text: 1 Leukodaemon [CR 9]
+    type: text
+    weight: 1
+  - _id: LUeG10ma7lO5QLNc
+    _key: '!tables.results!HvGcEzZcExYtupxO.LUeG10ma7lO5QLNc'
+    img: icons/svg/d20-black.svg
+    range:
+      - 79
+      - 84
+    text: 1 Marid And 1d6 ([[1d6]]) Water Mephits [CR 10]
+    type: text
+    weight: 1
+  - _id: k6LBrEEuNUKTmAS9
+    _key: '!tables.results!HvGcEzZcExYtupxO.k6LBrEEuNUKTmAS9'
+    img: icons/svg/d20-black.svg
+    range:
+      - 85
+      - 90
+    text: 1 Marid And 2 Derhii [CR 10]
+    type: text
+    weight: 1
+  - _id: C8QDOELnrndBzgLd
+    _key: '!tables.results!HvGcEzZcExYtupxO.C8QDOELnrndBzgLd'
+    img: icons/svg/d20-black.svg
+    range:
+      - 91
+      - 100
+    text: 1 Greater Shadow And 3d6 Shadows [CR 11]
+    type: text
+    weight: 1
+sort: 3600000

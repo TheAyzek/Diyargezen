@@ -1,0 +1,24 @@
+_id: m9eyCNTseKbX6uwE
+_key: '!items!m9eyCNTseKbX6uwE'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/materials/slime-white.webp
+name: Grappler's grease
+system:
+  description:
+    value: >-
+      <p>When applied to your body, this pale grease made from animal fat makes
+      you more difficult to grapple. While covered in the grease, you gain a +4
+      bonus to CMD against grapple combat maneuvers. Applying the grease takes 1
+      minute, and once applied, its effects last for 10 minutes. You can't be
+      wearing armor to gain the benefit of grappler's grease. Grappler's grease
+      is usually sold in small clay jars that hold five applications.</p>
+  equipped: false
+  price: 5
+  sources:
+    - id: PZO1129
+      pages: '204'
+  subType: tool
+  weight:
+    value: 0.5
+type: loot

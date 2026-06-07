@@ -1,0 +1,96 @@
+_id: KNJxP0HI7YMegmrM
+_key: '!tables!KNJxP0HI7YMegmrM'
+_stats:
+  coreVersion: '12.331'
+description: >-
+  <p>* The item can also be used by any character whose alignment corresponds to
+  the non-neutral portion of the item’s alignment.</p>
+displayRoll: true
+folder: gdjI5M6P4HDragbS
+formula: 1d100
+img: icons/svg/d20-grey.svg
+name: Intelligent Item - Alignment
+replacement: true
+results:
+  - _id: P4R3rFNCEKsmPtKA
+    _key: '!tables.results!KNJxP0HI7YMegmrM.P4R3rFNCEKsmPtKA'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 10
+    text: Chaotic Good
+    type: text
+    weight: 1
+  - _id: 0A30a6fbVskLDCOV
+    _key: '!tables.results!KNJxP0HI7YMegmrM.0A30a6fbVskLDCOV'
+    img: icons/svg/d20-black.svg
+    range:
+      - 11
+      - 20
+    text: Chaotic Neutral*
+    type: text
+    weight: 1
+  - _id: vndwBqD9xnTJLFn4
+    _key: '!tables.results!KNJxP0HI7YMegmrM.vndwBqD9xnTJLFn4'
+    img: icons/svg/d20-black.svg
+    range:
+      - 21
+      - 35
+    text: Chaotic Evil
+    type: text
+    weight: 1
+  - _id: wrhdnCLFp7mJWjEz
+    _key: '!tables.results!KNJxP0HI7YMegmrM.wrhdnCLFp7mJWjEz'
+    img: icons/svg/d20-black.svg
+    range:
+      - 36
+      - 45
+    text: Neutral Evil*
+    type: text
+    weight: 1
+  - _id: Kv3jRFQ8l2Rzosnh
+    _key: '!tables.results!KNJxP0HI7YMegmrM.Kv3jRFQ8l2Rzosnh'
+    img: icons/svg/d20-black.svg
+    range:
+      - 46
+      - 55
+    text: Lawful Evil
+    type: text
+    weight: 1
+  - _id: uETDpkuQkUsPJcJf
+    _key: '!tables.results!KNJxP0HI7YMegmrM.uETDpkuQkUsPJcJf'
+    img: icons/svg/d20-black.svg
+    range:
+      - 56
+      - 70
+    text: Lawful Good
+    type: text
+    weight: 1
+  - _id: iQieNB0rKrcdfHWM
+    _key: '!tables.results!KNJxP0HI7YMegmrM.iQieNB0rKrcdfHWM'
+    img: icons/svg/d20-black.svg
+    range:
+      - 71
+      - 80
+    text: Lawful Neutral*
+    type: text
+    weight: 1
+  - _id: ezbSSIfohR3pGGr0
+    _key: '!tables.results!KNJxP0HI7YMegmrM.ezbSSIfohR3pGGr0'
+    img: icons/svg/d20-black.svg
+    range:
+      - 81
+      - 90
+    text: Neutral Good*
+    type: text
+    weight: 1
+  - _id: x5eVR61r1a2KwKfb
+    _key: '!tables.results!KNJxP0HI7YMegmrM.x5eVR61r1a2KwKfb'
+    img: icons/svg/d20-black.svg
+    range:
+      - 91
+      - 100
+    text: Neutral
+    type: text
+    weight: 1
+sort: 100000

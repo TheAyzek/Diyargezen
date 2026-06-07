@@ -1,0 +1,34 @@
+_id: Ns8tP3Ug7MVZiRct
+_key: '!items!Ns8tP3Ug7MVZiRct'
+_stats:
+  coreVersion: '12.331'
+folder: zIQHadanJNoLThCP
+img: icons/equipment/back/mantle-collared-brown.webp
+name: Cloak of Heavenly Fire
+system:
+  aura:
+    school: con
+  cl: 5
+  description:
+    value: >-
+      <p>This white silk cloak shimmers with divine energy. Once per day as an
+      immediate action, the wearer of a cloak of heavenly fire can cause it to
+      flash with flames as another creature touches the wearer or strikes the
+      wearer with a melee attack. These flames deal 1d8+5 points of fire damage
+      to the creature that touched the wearer. If the creature subjected to this
+      damage is evil, it takes an additional 1d8+5 points of damage as the fire
+      glows with golden light-this additional damage is divine in nature and not
+      subject to energy resistance or immunity. A target that succeeds at a DC
+      15 Reflex save takes half the total damage. Once per day as a standard
+      action, the wearer of a cloak of heavenly fire can also use the magic to
+      cure wounds, restoring 2d8+5 hit points to a touched
+      creature.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, cure moderate wounds, fire shield</p>
+  price: 6000
+  slot: shoulders
+  sources:
+    - id: PZO1138
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

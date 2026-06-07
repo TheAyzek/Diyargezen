@@ -1,0 +1,23 @@
+_id: o7TuBE2zVD3nMF8W
+_key: '!items!o7TuBE2zVD3nMF8W'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/affliction_03.jpg
+name: Moxix's Delectation
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> disease (injury); <strong>Save</strong> Fortitude
+      DC 15;</p><p><strong>Onset</strong>&nbsp;1
+      day;&nbsp;<strong>Frequency</strong>&nbsp;1/day</p><p><strong>Effect</strong>
+      1d3 Con damage and 1d3 Wis damage</p><p><strong>Cure</strong> 2
+      consecutive saves</p><hr /><p>A humanoid afflicted with Moxix&rsquo;s
+      delectation must attempt a new Will save each day. If the humanoid fails,
+      it attacks and attempts to eat the weakest humanoid nearby. If the save is
+      successful, it resists. A humanoid who dies or is killed while afflicted
+      rises as a ghast at the next midnight. The save DC is Charisma-based.</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

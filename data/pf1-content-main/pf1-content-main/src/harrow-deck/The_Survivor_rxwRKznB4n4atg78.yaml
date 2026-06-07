@@ -1,0 +1,29 @@
+_id: rxwRKznB4n4atg78
+_key: '!journal!rxwRKznB4n4atg78'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: ywdNAUiVSklAOMDs
+name: The Survivor
+pages:
+  - _id: vj7dXCvDhv9EmJ1S
+    _key: '!journal.pages!rxwRKznB4n4atg78.vj7dXCvDhv9EmJ1S'
+    _stats:
+      coreVersion: '12.331'
+    name: The Survivor
+    sort: 0
+    text:
+      content: >-
+        <p><strong>The Survivor</strong> (neutral good, Constitution) represents
+        a person who has been through an ordeal of some kind. Surrounded by his
+        fallen comrades, the man represents someone or something thought lost
+        forever, but found once more. It can also represent rebirth. Misaligned,
+        The Survivor can evoke terrible news or a profound loss.</p><img
+        src="modules/pf-content/assets/Harrow%20Deck/The%20Survivor.webp"
+        width="300" height="494" />
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

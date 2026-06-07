@@ -1,0 +1,25 @@
+_id: PA6F9pl4OAS5MhSW
+_key: '!items!PA6F9pl4OAS5MhSW'
+_stats:
+  coreVersion: '12.331'
+folder: smFwjExH4wrQSPfv
+img: icons/equipment/chest/breastplate-cuirass-steel-grey.webp
+name: Buoyant (medium/heavy armor)
+system:
+  description:
+    value: >-
+      <p><strong>Aura</strong> faint transmutation <strong>CL</strong>
+      5th</p><p><strong>Slot</strong> armor; <strong>Price</strong> light armor
+      (+1,000 gp), shield (+1,000 gp), medium/heavy armor (+2,000 gp);
+      <em>Buoyant </em>armor and shields bestow no armor check penalty on Swim
+      checks attempted by the wearer. All other armor check penalties apply as
+      normal.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, <em>water walk</em>; <strong>Price</strong> 500 gp
+      (light armor or shield), 1,000 gp (medium or heavy armor)</p>
+  sources:
+    - id: PZO9440
+      pages: '9'
+  subType: misc
+  tags:
+    - Armor Qualities
+type: feat

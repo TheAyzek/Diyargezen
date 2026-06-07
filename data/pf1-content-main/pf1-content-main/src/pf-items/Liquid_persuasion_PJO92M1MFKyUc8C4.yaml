@@ -1,0 +1,56 @@
+_id: PJO92M1MFKyUc8C4
+_key: '!items!PJO92M1MFKyUc8C4'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/potions/unique-9.jpg
+name: Liquid persuasion
+system:
+  actions:
+    - _id: uc3gva9rpbuguq3r
+      actionType: save
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/items/potions/unique-9.jpg
+      name: Use
+      notes:
+        effect:
+          - >-
+            <strong>Primary Effect</strong>: [[1]] Wis damage, and for the
+            duration of the poison, the next time the victim’s attitude toward
+            another creature would shift one or more steps toward helpful as a
+            result of a successful Diplomacy or Intimidate check or other
+            effect, the victim’s attitude also shifts one additional step. For
+            example, if the victim’s attitude would shift from indifferent to
+            friendly (one step better), it shifts to helpful instead (two steps
+            better)
+      save:
+        dc: '11'
+        type: fort
+      tag: liquidPersuasion
+  description:
+    value: >-
+      <p><strong>Type</strong> ingested; <strong>Save</strong> Fortitude DC
+      11</p><p><strong>Onset</strong> 10 minutes; <strong>Frequency</strong>
+      1/minute for 5 minutes</p><p><strong>Effect</strong> 1 Wis damage, and for
+      the duration of the poison, the next time the victim’s attitude toward
+      another creature would shift one or more steps toward helpful as a result
+      of a successful Diplomacy or Intimidate check or other effect, the
+      victim’s attitude also shifts one additional step. For example, if the
+      victim’s attitude would shift from indifferent to friendly (one step
+      better), it shifts to helpful instead (two steps
+      better)</p><p><strong>Cure</strong> 1 save</p><h3>Alchemical
+      Recipe</h3><h3><p><strong>Recipe</strong> (20 dew of lunary + 20
+      quicksilver + 80 spirit of wine)/distillation; <strong>Craft</strong> DC
+      11</p><p><strong>Time</strong> 1 day; <strong>Tools</strong> retort;
+      <strong>Type</strong> poison</p></h3>
+  price: 120
+  sources:
+    - id: PZO9445
+      pages: '9'
+  subType: poison
+  uses:
+    per: single
+type: consumable

@@ -1,0 +1,63 @@
+_id: NyykhGMeLy0RdPzS
+_key: '!items!NyykhGMeLy0RdPzS'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/rapier.PNG
+name: Red Crusader's Quill
+system:
+  actions:
+    - _id: de8cdttqb3r29rht
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: redCrusadersQuill
+  aura:
+    custom: true
+    school: necromancy and transmutation
+  baseTypes:
+    - Rapier
+  cl: 10
+  description:
+    value: >-
+      <p>The tip of this narrow +3 rapier can be used as a mundane writing
+      instrument, producing any color of ink the wielder desires. Once per day
+      as a free action when the wielder confirms a critical hit against a
+      creature with the Red Crusader's quill, she can inscribe an arcane mark on
+      the creature. Once per month, the wielder can instead inscribe a mark of
+      justice; this mark ends immediately if the wielder inscribes another mark
+      of justice with the Red Crusader's quill.<p><strong>Base Item</strong>: 
+      rapier</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, arcane mark, mark of justice, creator must worship
+      Arazni</p>
+  enh: 3
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 25320
+  properties:
+    fin: true
+  showInQuickbar: false
+  sources:
+    - id: PZO90141
+  weaponGroups:
+    - bladesLight
+  weight:
+    value: 2
+type: weapon

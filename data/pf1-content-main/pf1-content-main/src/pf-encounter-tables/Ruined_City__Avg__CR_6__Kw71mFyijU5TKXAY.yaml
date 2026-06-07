@@ -1,0 +1,229 @@
+_id: Kw71mFyijU5TKXAY
+_key: '!tables!Kw71mFyijU5TKXAY'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/environment/wilderness/camp-improvised.webp
+name: Ruined City (Avg. CR 6)
+replacement: true
+results:
+  - _id: 6dS5GdJ1yIt4aBhb
+    _key: '!tables.results!Kw71mFyijU5TKXAY.6dS5GdJ1yIt4aBhb'
+    img: systems/pf1/icons/races/creature-types/vermin.png
+    range:
+      - 1
+      - 4
+    text: '@Compendium[pf1.bestiary_4.jFLVObBcDzqa9FYu]{Spider Swarm}'
+    type: text
+    weight: 4
+  - _id: r1M7JJXbIKw2mULC
+    _key: '!tables.results!Kw71mFyijU5TKXAY.r1M7JJXbIKw2mULC'
+    img: systems/pf1/icons/races/creature-types/animal.png
+    range:
+      - 5
+      - 8
+    text: '@Compendium[pf1.bestiary_2.HLFOPyNAkZApyPcb]{Rat Swarm}'
+    type: text
+    weight: 4
+  - _id: tHH5MntxFIDo4w3s
+    _key: '!tables.results!Kw71mFyijU5TKXAY.tHH5MntxFIDo4w3s'
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 9
+      - 16
+    text: '[[2d6]] @Compendium[pf1.bestiary_2.KWfx7YvFXxEbNd9V]{Human Skeleton}'
+    type: text
+    weight: 8
+  - _id: pZMYAj5hugHNaJFh
+    _key: '!tables.results!Kw71mFyijU5TKXAY.pZMYAj5hugHNaJFh'
+    img: systems/pf1/icons/races/creature-types/magical-beast.png
+    range:
+      - 17
+      - 24
+    text: '[[1d6]] @Compendium[pf1.bestiary_2.Gt0YJ7LvKSXwfgoI]{Stirge}'
+    type: text
+    weight: 8
+  - _id: dBq21jv9vn1gDRzF
+    _key: '!tables.results!Kw71mFyijU5TKXAY.dBq21jv9vn1gDRzF'
+    img: systems/pf1/icons/races/creature-types/plant.png
+    range:
+      - 25
+      - 28
+    text: '@Compendium[pf1.bestiary_3.RsOtiJGjsYQNuczz]{Assassin Vine}'
+    type: text
+    weight: 4
+  - _id: C7O3PkSNp2lqGUQU
+    _key: '!tables.results!Kw71mFyijU5TKXAY.C7O3PkSNp2lqGUQU'
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 29
+      - 36
+    text: '[[1d6]] @Compendium[pf1.bestiary_4.hdtp42CUJz5SIP3q]{Ghoul}'
+    type: text
+    weight: 8
+  - _id: qOvOdnPcg0AbL0Lh
+    _key: '!tables.results!Kw71mFyijU5TKXAY.qOvOdnPcg0AbL0Lh'
+    img: systems/pf1/icons/races/creature-types/outsider.png
+    range:
+      - 37
+      - 38
+    text: '@Compendium[pf1.bestiary_3.RIdpe1RnDXaeCpIU]{Barghest}'
+    type: text
+    weight: 2
+  - _id: a19Cxp5bIMCYeIny
+    _key: '!tables.results!Kw71mFyijU5TKXAY.a19Cxp5bIMCYeIny'
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 39
+      - 44
+    text: '[[1d6]] @Compendium[pf1.bestiary_1.8keCLW4lGsSGUZLE]{Skeletal Champion}'
+    type: text
+    weight: 6
+  - _id: Eu7pnZlVPV3POzrg
+    _key: '!tables.results!Kw71mFyijU5TKXAY.Eu7pnZlVPV3POzrg'
+    img: systems/pf1/icons/races/creature-types/outsider.png
+    range:
+      - 45
+      - 48
+    text: '[[1d4]] @Compendium[pf1.bestiary_1.8rRqr4nNnWKWW9ax]{Yeth Hound}'
+    type: text
+    weight: 4
+  - _id: IiIDH8j7wN5AJM3m
+    _key: '!tables.results!Kw71mFyijU5TKXAY.IiIDH8j7wN5AJM3m'
+    img: systems/pf1/icons/races/human.jpg
+    range:
+      - 49
+      - 54
+    text: '[[1d6]] @Compendium[pf1.bestiary_1.97B7sc43ADLF6bnR]{Ogre}'
+    type: text
+    weight: 6
+  - _id: SkIEeM5oB9AfjFyv
+    _key: '!tables.results!Kw71mFyijU5TKXAY.SkIEeM5oB9AfjFyv'
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 55
+      - 58
+    text: '[[1d6]] @Compendium[pf1.bestiary_1.9KJIbVd6LHQFKUmr]{Shadow}'
+    type: text
+    weight: 4
+  - _id: tDP6xdHGcVJUxuqe
+    _key: '!tables.results!Kw71mFyijU5TKXAY.tDP6xdHGcVJUxuqe'
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 59
+      - 62
+    text: '[[1d6]] @Compendium[pf1.bestiary_3.ZVXXiNRKNuqNnrsR]{Wight}'
+    type: text
+    weight: 4
+  - _id: Mho3AqvaDLxW8XMB
+    _key: '!tables.results!Kw71mFyijU5TKXAY.Mho3AqvaDLxW8XMB'
+    img: systems/pf1/icons/races/creature-types/monstrous-humanoid.png
+    range:
+      - 63
+      - 64
+    text: '@Compendium[pf1.bestiary_1.2H490OGo1Ladbmpm]{Lamia}'
+    type: text
+    weight: 2
+  - _id: k23UdaN4XeFXPWSJ
+    _key: '!tables.results!Kw71mFyijU5TKXAY.k23UdaN4XeFXPWSJ'
+    img: systems/pf1/icons/races/creature-types/monstrous-humanoid.png
+    range:
+      - 65
+      - 70
+    text: '[[1d6]] @Compendium[pf1.bestiary_3.d4AgZH27fsi8b103]{Harpy}'
+    type: text
+    weight: 6
+  - _id: VAUxcD0hezlpmPwg
+    _key: '!tables.results!Kw71mFyijU5TKXAY.VAUxcD0hezlpmPwg'
+    img: systems/pf1/icons/races/creature-types/monstrous-humanoid.png
+    range:
+      - 71
+      - 72
+    text: '@Compendium[pf1.bestiary_2.DTFDYegwLNphIYeJ]{Medusa}'
+    type: text
+    weight: 2
+  - _id: SiLEy2jl12SlsC0A
+    _key: '!tables.results!Kw71mFyijU5TKXAY.SiLEy2jl12SlsC0A'
+    img: systems/pf1/icons/races/creature-types/outsider.png
+    range:
+      - 73
+      - 74
+    text: '@Compendium[pf1.bestiary_3.VgOb7jcxzK0bli3A]{Nabasu}'
+    type: text
+    weight: 2
+  - _id: 2trT1t0HXv3Lde3h
+    _key: '!tables.results!Kw71mFyijU5TKXAY.2trT1t0HXv3Lde3h'
+    img: systems/pf1/icons/races/creature-types/abberation.png
+    range:
+      - 75
+      - 76
+    text: '@Compendium[pf1.bestiary_3.W93pq6Kbp4RitgFU]{Dark Naga}'
+    type: text
+    weight: 2
+  - _id: ZQ0JpuVcIH6zFi2v
+    _key: '!tables.results!Kw71mFyijU5TKXAY.ZQ0JpuVcIH6zFi2v'
+    img: systems/pf1/icons/races/creature-types/monstrous-humanoid.png
+    range:
+      - 77
+      - 84
+    text: '[[1d8]] @Compendium[pf1.bestiary_4.lUcRyyoeQpUH15lj]{Gargoyle}'
+    type: text
+    weight: 8
+  - _id: sGgdxwWRd6oO4Ml7
+    _key: '!tables.results!Kw71mFyijU5TKXAY.sGgdxwWRd6oO4Ml7'
+    img: systems/pf1/icons/races/human.jpg
+    range:
+      - 85
+      - 88
+    text: '[[1d6]] @Compendium[pf1.bestiary_2.I44hFS2FS1Cnu9PF]{Cyclops}'
+    type: text
+    weight: 4
+  - _id: yfYS0Mky7zCk5Mgd
+    _key: '!tables.results!Kw71mFyijU5TKXAY.yfYS0Mky7zCk5Mgd'
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 89
+      - 92
+    text: '[[1d6]] @Compendium[pf1.bestiary_1.A66QI6OuAvrqRsvU]{Wraith}'
+    type: text
+    weight: 4
+  - _id: zgJ4F0ywkAJJBgZl
+    _key: '!tables.results!Kw71mFyijU5TKXAY.zgJ4F0ywkAJJBgZl'
+    img: systems/pf1/icons/races/creature-types/magical-beast.png
+    range:
+      - 93
+      - 94
+    text: '@Compendium[pf1.bestiary_3.WiMuHPuT1IDcmJ8B]{Behir}'
+    type: text
+    weight: 2
+  - _id: sGvrZUCkv9SfULK5
+    _key: '!tables.results!Kw71mFyijU5TKXAY.sGvrZUCkv9SfULK5'
+    documentId: 6kHL2QF6pLPZetZQ
+    img: systems/pf1/icons/races/creature-types/magical-beast.png
+    range:
+      - 95
+      - 96
+    text: '@Compendium[pf1.bestiary_1.6kHL2QF6pLPZetZQ]{Gynosphinx}'
+    type: text
+    weight: 2
+  - _id: s4ejW4QBjAbPG4J1
+    _key: '!tables.results!Kw71mFyijU5TKXAY.s4ejW4QBjAbPG4J1'
+    img: systems/pf1/icons/races/creature-types/abberation.png
+    range:
+      - 97
+      - 98
+    text: '@Compendium[pf1.bestiary_2.GQ0rdoROPDfkLLX7]{Spirit Naga}'
+    type: text
+    weight: 2
+  - _id: VsIgHkk9dkQAwYpx
+    _key: '!tables.results!Kw71mFyijU5TKXAY.VsIgHkk9dkQAwYpx'
+    img: systems/pf1/icons/races/creature-types/undead.png
+    range:
+      - 99
+      - 100
+    text: '[[1d4]] @Compendium[pf1.bestiary_4.qyG5GxJRo3y6K5x9]{Spectre}'
+    type: text
+    weight: 2
+sort: 600000

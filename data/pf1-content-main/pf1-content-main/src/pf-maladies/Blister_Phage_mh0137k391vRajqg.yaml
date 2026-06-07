@@ -1,0 +1,23 @@
+_id: mh0137k391vRajqg
+_key: '!items!mh0137k391vRajqg'
+_stats:
+  coreVersion: '12.331'
+img: icons/commodities/biological/pustules-brown.webp
+name: Blister Phage
+system:
+  description:
+    value: >-
+      <p><strong>Type</strong> disease (contact or ingested);
+      <strong>Save</strong>&nbsp;Fortitude DC
+      20;</p><p><strong>Onset</strong>&nbsp;1
+      day;&nbsp;<strong>Frequency</strong>&nbsp;1/day</p><p><strong>Effect</strong>&nbsp;1d4
+      Cha damage and 1d4 Con
+      Damage</p><p><strong>Cure</strong>&nbsp;&ndash;</p><hr /><p>This disease
+      causes a painful and hideous outbreak of facial tumors and a sickening
+      deterioration of the skin across the entire body, and also works on the
+      minds of some, slowly driving them insane.</p>
+  subType: misc
+  tags:
+    - Maladies
+    - Disease
+type: feat

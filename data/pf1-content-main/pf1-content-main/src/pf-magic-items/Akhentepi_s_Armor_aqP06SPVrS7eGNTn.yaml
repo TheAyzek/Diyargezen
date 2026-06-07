@@ -1,0 +1,41 @@
+_id: aqP06SPVrS7eGNTn
+_key: '!items!aqP06SPVrS7eGNTn'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/padded.png
+name: Akhentepi's Armor
+system:
+  armor:
+    dex: 8
+    enh: 1
+    material:
+      base:
+        value: cloth
+    value: 1
+  aura:
+    school: trs
+  baseTypes:
+    - Padded Armor
+  cl: 7
+  description:
+    value: >-
+      <p>This suit of +1 stanching padded armor is of traditional Osirian
+      design, consisting of a quilted cuirass of lightweight, breathable linen;
+      a linen kilt; and a teardrop-shaped groin guard of stiffened linen.
+      Besides its anti-bleeding properties, Akhentepi's armor grants its wearer
+      a sense of impending danger. Once per day as a free action when the wearer
+      attempts an initiative check, the wearer can add a +3 insight bonus on
+      that initiative check.</p><p><strong>Base Item</strong>: +1 stanching
+      padded armor</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Magic Arms and Armor, anticipate peril, stabilize, cure critical
+      wounds or lesser restoration</p>
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 5235
+  sources:
+    - id: PZO9079
+  spellFailure: 5
+  weight:
+    value: 10
+type: equipment

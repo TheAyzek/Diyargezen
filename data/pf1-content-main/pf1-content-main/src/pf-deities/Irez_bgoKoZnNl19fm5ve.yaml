@@ -1,0 +1,59 @@
+_id: bgoKoZnNl19fm5ve
+_key: '!journal!bgoKoZnNl19fm5ve'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Irez
+pages:
+  - _id: 8TBqiydZUIdT0cSN
+    _key: '!journal.pages!bgoKoZnNl19fm5ve.8TBqiydZUIdT0cSN'
+    _stats:
+      coreVersion: '12.331'
+    name: Irez
+    sort: 0
+    text:
+      content: >-
+        <h1>Irez</h1><h2>Lady of Inscribed Wonder</h2>@Source[PZO9267;pages=322]
+        <br /><strong>Pathfinder Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Irez">Irez</a><h3>Details</h3><p><strong>Alignment</strong>
+        NG<br /><strong>Pantheon</strong> Empyreal Lords<br /><strong>Areas of
+        Concern</strong> Cards, scribes, spells<br /><strong>Domains</strong>
+        Good, Luck, Magic, Rune<br /><strong>Subdomains</strong> Agathion, Fate,
+        Language, Wards<br /><em>* Requires the <u>Acolyte of Apocrypha</u>
+        trait.</em><br /><strong>Favored Weapon</strong> Dart<br
+        /><strong>Symbol</strong> Fan of parchment strips<br /><strong>Sacred
+        Animal(s)</strong> Roc<br /><strong>Sacred Color(s)</strong> Red,
+        white</p><h3>Obedience</h3><p>Neatly inscribe six identical pairs of
+        runes on 12 separate cards or squares of paper. Shuffle the cards
+        facedown and draw two. On a match, gain a +4 sacred bonus on saves
+        against spells cast from two schools of magic of your choice. On a
+        mismatch, gain a +4 sacred bonus on saves against spells cast from
+        scrolls. (Alternatively, draw two cards from a harrow deck, gaining one
+        benefit for matching suits and the other if not.)</p><h2>Boons -
+        Celestial Obedience</h2><h3>Mystery
+        Cultist</h3><p>@Source[PZO9255;pages=15]<br /><strong>1: Calligrapher's
+        Talent (Sp)</strong> <em>divine favor</em> 3/day, <em>augury</em> 2/day,
+        or <em>glyph of warding</em> 1/day<br /><strong>2: Divine Inscription
+        (Su)</strong> Three times per day, when using a scroll to cast a spell
+        that deals hit point damage, you can change half the spell's damage to
+        holy damage. If you lack the ability to cast a particular spell from a
+        scroll, you may attempt a Use Magic Device check with a bonus equal to
+        your HD plus your Charisma modifier (or your regular Use Magic Device
+        bonus, whichever is better).<br /><strong>3: Lucky Cards (Su)</strong>
+        Once per day, you can summon 2d6 shimmering cards that trail in your
+        wake. The cards dart around you during combat, intercepting deadly
+        attacks. At your discretion, each card can absorb a single damage die
+        from either a sneak attack or a critical hit that would normally hit
+        you. For example, if you would be hit by a sneak attack dealing an extra
+        3d6 points of damage and you had two cards remaining, you could reduce
+        the sneak attack damage to 1d6 (these dice are removed before being
+        rolled). Once a card absorbs a damage die, it disappears. Unused cards
+        disappear at the end of each day.</em></p><h2>For Followers of
+        Irez</h2><h3>Feats</h3><p><em>Heroic
+        Interposition</em></p><h3>Traits</h3><p><em>Empyreal Focus</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

@@ -1,0 +1,46 @@
+_id: L42bvhsDGLrlnuZW
+_key: '!items!L42bvhsDGLrlnuZW'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/magic/symbols/runes-star-pentagon-magenta.webp
+name: Mulberry Pentacle Ioun Stone
+system:
+  aura:
+    school: trs
+  changes:
+    - _id: 2ta60rbH
+      formula: '5'
+      target: skill.blf
+      type: competence
+    - _id: qmUTkKkk
+      formula: '5'
+      target: skill.dip
+      type: competence
+  cl: 12
+  description:
+    instructions: >-
+      <p>Only 75% of normal ioun stones grant resonant powers when placed in a
+      wayfinder.
+      @UUID[Compendium.pf-content.pf-rules.JournalEntry.HYNbOvjpMu4OZlfs.JournalEntryPage.pTSudwbTyH0lmjPU]{Rules
+      about Ioun Stones}</p>
+    unidentified: <p>This pink stone is in the shape of a five-sided disk.</p>
+    value: >-
+      <h3>Effect</h3><p>This stone grants you a +5 competence bonus on Bluff and
+      Diplomacy checks.</p><h3>Resonance</h3><p><strong>Method 1, Fixed:
+      </strong>+2 competence bonus on Sense Motive checks.</p><p><strong>Method
+      2, Variable:</strong>
+      @Draw[Compendium.pf-content.pf-tables.RollTable.PTr7AMWWOFwEcd98]</p><h3>Construction</h3><p><strong>Requirements</strong>
+      Craft Wondrous Item, <em>eagle's splendor</em>, creator must be 12th level
+      <strong>Cost</strong> 5,000 gp</p><hr /><p><strong>Editor's note</strong>:
+      the sourcebook indicates a moderate strength aura despite the item's
+      Caster Level of 12</p>
+  hardness: 5
+  price: 10000
+  sources:
+    - id: PZO9211
+      pages: 45, 52
+  subType: wondrous
+  tags:
+    - Ioun Stone
+type: equipment

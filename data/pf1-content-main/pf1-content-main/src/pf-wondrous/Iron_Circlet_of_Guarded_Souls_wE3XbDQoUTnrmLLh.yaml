@@ -1,0 +1,31 @@
+_id: wE3XbDQoUTnrmLLh
+_key: '!items!wE3XbDQoUTnrmLLh'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Iron Circlet of Guarded Souls
+system:
+  aura:
+    school: abj
+  cl: 11
+  description:
+    value: >-
+      <p>This simple cold iron circle has no markings or ornamentation upon it,
+      and is always slightly cool to the touch. The circle shields both the
+      wearer's soul and his identity from mystic intrusion. The wearer is immune
+      to effects that target souls (such as trap the soul) or that would be
+      foiled by a nondetection spell (unlike nondetection, the diviner's caster
+      cannot attempt a spell resistance check to overcome this effect). If the
+      wearer is slain, he cannot be restored to life by magic (save by a
+      miracle, wish, or divine intervention) until the circlet is
+      removed.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, nondetection, trap the soul</p>
+  price: 30000
+  slot: head
+  sources:
+    - id: PZO1123
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

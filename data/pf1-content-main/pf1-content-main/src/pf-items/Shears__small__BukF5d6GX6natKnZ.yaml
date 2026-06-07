@@ -1,0 +1,34 @@
+_id: BukF5d6GX6natKnZ
+_key: '!items!BukF5d6GX6natKnZ'
+_stats:
+  coreVersion: '12.331'
+img: icons/tools/hand/wrench-steel-grey.webp
+name: Shears (small)
+system:
+  description:
+    value: >-
+      <p><strong>Price</strong> 3,003 gp (adamantine), 3 gp (lopping), 5 sp
+      (small); <strong>Weight</strong> 8 lbs. (adamantine), 8 lbs. (lopping),
+      1/2 lb. (small)</p><p>Shears are used to quickly cut through items by
+      snipping them between two sharp blades fitted with a spring to allow the
+      jaws to open again after closing. Small shears can be used in one hand and
+      are often used to trim hair, cut cloth, or perform other delicate cutting
+      work. Lopping shears are 3 feet long and must be used in two hands; they
+      are commonly used by farmers or gardeners to cut hedges and
+      branches.</p><p>Adamantine shears are lopping shears with sharpened
+      adamantine blades that can snip through nearly any material. You can use
+      adamantine shears to cut through bars, chains, grates, or similar items,
+      dealing damage to such objects as though using a scimitar and bypassing
+      hardness less than 20. On any item the adamantine shears can fit around
+      (such as a chain or iron bar, but not an iron door), using adamantine
+      shears provides a +10 bonus on your Strength check to break or burst
+      it.</p>
+  equipped: false
+  price: 0.5
+  sources:
+    - id: PZO9481
+      pages: '17'
+  subType: tool
+  weight:
+    value: 0.5
+type: loot

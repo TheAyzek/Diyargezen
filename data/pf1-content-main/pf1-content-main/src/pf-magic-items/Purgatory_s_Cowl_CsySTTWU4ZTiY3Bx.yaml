@@ -1,0 +1,45 @@
+_id: CsySTTWU4ZTiY3Bx
+_key: '!items!CsySTTWU4ZTiY3Bx'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/armor/studded-leather.PNG
+name: Purgatory's Cowl
+system:
+  armor:
+    acp: 1
+    dex: 5
+    material:
+      base:
+        value: leather
+    value: 3
+  aura:
+    custom: true
+    school: abjuration and necromancy
+  baseTypes:
+    - Studded Leather Armor
+  cl: 11
+  description:
+    value: >-
+      <p>This tattered suit of +1 deathless studded leather has a black leather
+      hood attached to the neck. Although the face of the hood is open and
+      doesn't impair the wearer's senses, the wearer's face is always hidden in
+      deep shadow regardless of the ambient light level. Once per day as an
+      immediate action, when the wearer reduces an undead creature to 0 or fewer
+      hit points, the wearer can draw upon the departed creature's essence to
+      gain treat her level as 2 higher spells and spell-like abilities with the
+      death descriptor and spells and spell-like abilities from the Death and
+      Repose domains. This effect lasts for 1 hour.</p><p><strong>Base
+      Item</strong>: deathless studded
+      leather</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, death ward, undeath to death</p>
+  enh: 1
+  equipmentSubtype: mediumArmor
+  hardness: 10
+  masterwork: true
+  price: 24175
+  sources:
+    - id: PZO1141
+  spellFailure: 15
+  weight:
+    value: 30
+type: equipment

@@ -1,0 +1,23 @@
+_id: 3gYMicyRl6JqMriJ
+_key: '!items!3gYMicyRl6JqMriJ'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/skills/weapon_36.jpg
+name: Focused Aim
+system:
+  associations:
+    classes:
+      - Gunslinger
+  description:
+    value: >-
+      <p><strong>Gunslinger Deeds</strong></p><p>At 1st level, as a swift
+      action, the mysterious stranger can spend 1 grit point to gain a bonus on
+      all firearm damage rolls equal to her Charisma modifier (minimum 1) with
+      all firearm attacks she makes until the end of her turn. At 7th level,
+      when she uses the dead shot deed, she multiplies this bonus by the number
+      of hits she made while rolling the Dead Shot attack. This deed replaces
+      the quick clear deed.</p>
+  subType: classFeat
+  tags:
+    - Gunslinger Deeds
+type: feat

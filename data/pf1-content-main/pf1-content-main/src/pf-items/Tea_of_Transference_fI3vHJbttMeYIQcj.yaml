@@ -1,0 +1,29 @@
+_id: fI3vHJbttMeYIQcj
+_key: '!items!fI3vHJbttMeYIQcj'
+_stats:
+  coreVersion: '12.331'
+img: icons/containers/kitchenware/goblet-simple-grey.webp
+name: Tea of Transference
+system:
+  description:
+    value: >-
+      <p>This foul-tasting green tea allows monks to focus their ki on improving
+      abilities they've gained through other training. By drinking a cup of tea
+      of transference, you can expend 1 point from your ki pool to regain 1
+      point from your arcane pool, 2 rounds of barbarian rage, 2 rounds of
+      bardic performance, one use of channel energy, 1 grit point, one use of
+      smite evil, one expended extract slot at least 1 level lower than the
+      highest-level extract you can create, or one expended spell slot at least
+      2 levels lower than the highest-level spell you can cast. You must have
+      the ki pool class feature and the class feature you want to regain uses of
+      in order to benefit from tea of transference.</p><h2>Alchemical
+      Recipe</h2><p><strong>Recipe</strong> (5 gold + 5 realgar + 15 spirit of
+      wine)/sublimation; <strong>Craft</strong> 20</p><p><strong>Time</strong> 1
+      day; <strong>Tools</strong> retort; <strong>Type</strong> alchemical
+      remedy</p>
+  price: 40
+  sources:
+    - id: PZO9445
+      pages: '25'
+  subType: misc
+type: consumable

@@ -1,0 +1,41 @@
+_id: fwkTc0ZhsRtbcaSj
+_key: '!journal!fwkTc0ZhsRtbcaSj'
+_stats:
+  coreVersion: '12.331'
+categories: []
+folder: GvRXJrNElDk9KwJW
+name: 3.1.1.4. Duration
+pages:
+  - _id: TnKOWRRoqO4ogSL5
+    _key: '!journal.pages!fwkTc0ZhsRtbcaSj.TnKOWRRoqO4ogSL5'
+    _stats:
+      coreVersion: '12.331'
+    name: 3.1.1.4. Duration
+    sort: 0
+    text:
+      content: >-
+        <p>@Compendium[pf-content.pf-rules.XOJpjqmBzwE4R4n0]{(Index)
+        Environment}</p><p>@Compendium[pf-content.pf-rules.mmx5KJLX4vsGZ7vz]{3.1.
+        Traps}</p><ul><li>@Compendium[pf-content.pf-rules.NCntK4F0WJ0fxRKN]{3.1.1.1.
+        Type}</li><li>@Compendium[pf-content.pf-rules.7JjjQNXWzDZkRXba]{3.1.1.2.
+        Perception and Disable Device
+        DCs}</li><li>@Compendium[pf-content.pf-rules.CP118HxlOiIRbggm]{3.1.1.3.
+        Trigger}</li><li><strong>@Compendium[pf-content.pf-rules.fwkTc0ZhsRtbcaSj]{3.1.1.4.
+        Duration}</strong></li><li>@Compendium[pf-content.pf-rules.iYDeV3slpPALRRGC]{3.1.1.5.
+        Reset}</li><li>@Compendium[pf-content.pf-rules.KSmSTYX5p3S6Gc63]{3.1.1.6.
+        Bypass (Optional
+        Element)}</li><li>@Compendium[pf-content.pf-rules.IBBymgXvfGa0vOW8]{3.1.1.7.
+        Effect}</li><li>@Compendium[pf-content.pf-rules.MtjTOLIqTJtVOZtw]{3.1.1.8.
+        Miscellaneous Trap Features}</li></ul><hr
+        /><p>@Source[PZO1110;pages=417]</p><p>Unless otherwise stated, most
+        traps have a duration of instantaneous; once triggered, they have their
+        effect and then stop functioning. Some traps have a duration measured in
+        rounds. Such traps continue to have their listed effect each round at
+        the top of the initiative order (or whenever they were activated, if
+        they were triggered during combat).</p>
+      format: 1
+    title:
+      level: 1
+      show: true
+    type: text
+sort: 0

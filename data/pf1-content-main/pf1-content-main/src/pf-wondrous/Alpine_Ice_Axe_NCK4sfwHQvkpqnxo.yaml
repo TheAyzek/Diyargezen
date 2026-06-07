@@ -1,0 +1,40 @@
+_id: NCK4sfwHQvkpqnxo
+_key: '!items!NCK4sfwHQvkpqnxo'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Alpine Ice Axe
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>This sturdy tool has a wooden haft topped with a curved pick head
+      backed with a sharp adze blade at one end and capped with an iron spike on
+      the other. When used as a climbing aid, an alpine ice axe grants a +2
+      circumstance bonus on Climb checks to scale rock or ice walls. In
+      addition, an alpine ice axe negates any Climb DC modifiers for climbing a
+      slippery surface. Three times per day as a standard action, the wielder
+      can strike an area of ice or snow with the ice axe to instantly create a
+      series of sturdy handholds in the ice covering a distance of up to 40
+      feet. An ice wall with these handholds has a Climb DC of 15.   An alpine
+      ice axe is a tool, not a weapon, but it may be used as an improvised
+      weapon with the usual -4 penalty on attack rolls made with it. An alpine
+      ice axe wielded as a weapon functions either as a +1 light pick when
+      striking with the pick spike or as a +1 hand axe when striking with the
+      adze blade. The ice axe uses the standard threat range and critical
+      modifier for those weapons. An alpine ice axe deals double damage against
+      inanimate ice or snow, and if used as a weapon against a creature made
+      mostly of ice (such as an ice elemental or ice golem), an alpine ice axe
+      bypasses that creature's damage reduction.<h3>Requirements</h3><p>Craft
+      Wondrous Item, shatter, snow shapeHOG, creator must have 5 ranks in the
+      Climb skill</p>
+  price: 8000
+  sources:
+    - id: PZO9070
+  subType: wondrous
+  weight:
+    value: 3
+type: equipment

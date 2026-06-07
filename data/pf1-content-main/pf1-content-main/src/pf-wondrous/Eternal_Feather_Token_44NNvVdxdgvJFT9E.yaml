@@ -1,0 +1,34 @@
+_id: 44NNvVdxdgvJFT9E
+_key: '!items!44NNvVdxdgvJFT9E'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Eternal Feather Token
+system:
+  aura:
+    school: con
+  cl: 4
+  description:
+    value: >-
+      <p>This small, colorful feather waves gently as if blown by a constant
+      breeze. As a standard action, the feather's owner can change its form into
+      another variety of feather token. Any owner can use an eternal feather
+      token to duplicate the effects of an anchor feather token. Higher-level
+      owners have additional options. The token remains transformed until its
+      owner commands it to change again, or until it is activated in that form
+      like a normal feather token. Once activated, the token reverts to the
+      appearance of a normal feather of a dingy gray color. Over the next week,
+      it slowly regains its color. A week after its last activation, it can be
+      used again.  7th Level: The feather can become a fan feather token.  9th
+      Level: The feather can become a bird feather token.  11th Level: The
+      feather can become a tree feather token.  13th Level: The feather can
+      become a swan boat feather token or whip feather token.  15th Level: The
+      feather recharges its color and is usable after 1 day instead of 1
+      week.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, major creation, make whole</p>
+  price: 2650
+  sources:
+    - id: PZO1131
+  subType: wondrous
+type: equipment

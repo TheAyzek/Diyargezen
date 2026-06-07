@@ -1,0 +1,62 @@
+_id: GY6FDcu0eEmEfVd2
+_key: '!items!GY6FDcu0eEmEfVd2'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/greataxe.png
+name: Life-drinker
+system:
+  actions:
+    - _id: 6nms1jl5bukwynbv
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: lifedrinker
+  aura:
+    school: nec
+  baseTypes:
+    - Greataxe
+  cl: 13
+  description:
+    value: >-
+      <p>This +1 greataxe is favored by undead and constructs, who do not suffer
+      its drawbacks. A life-drinker bestows two negative levels on its target
+      whenever it deals damage, just as if its target had been struck by an
+      undead creature. One day after being struck, subjects must succeed at a DC
+      16 Fortitude save for each negative level or the negative levels become
+      permanent.  Each time a life-drinker deals damage to a foe, it also
+      bestows one negative level on the wielder. Any negative levels gained by
+      the wielder in this fashion lasts for 1 hour.</p><p><strong>Base
+      Item</strong>: 
+      greataxe</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, enervation</p>
+  enh: 1
+  hardness: 10
+  held: 2h
+  masterwork: true
+  material:
+    base:
+      value: steel
+  price: 40320
+  showInQuickbar: false
+  sources:
+    - id: PZO1123
+  weaponGroups:
+    - axes
+  weight:
+    value: 12
+type: weapon

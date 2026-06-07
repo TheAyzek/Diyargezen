@@ -1,0 +1,85 @@
+_id: meQxOUsdF3wi8yaJ
+_key: '!items!meQxOUsdF3wi8yaJ'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/skills/affliction_05.jpg
+name: Exorcise Haunt (Occult Ritual)
+system:
+  actions:
+    - _id: sqy9b27xipi40htb
+      activation:
+        type: standard
+        unchained:
+          cost: 2
+          type: action
+      img: systems/pf1/icons/skills/affliction_05.jpg
+      name: Use
+      save:
+        dc: '0'
+        description: negatess
+        type: will
+      target:
+        value: one persistent vaporous haunt
+      uses:
+        autoDeductChargesCost: 1 + @sl
+  components:
+    focus: true
+    material: true
+    somatic: true
+    value: components
+    verbal: true
+  description:
+    value: >-
+      <p><strong>School</strong> necromancy; <strong>Level</strong>
+      4</p><p><strong>Casting Time</strong> 40
+      minutes</p><p><strong>Components</strong> V, S, M (a glass of wine, nine
+      candles, and rare incense worth 500 gp), F (a lexicon on the exorcism of
+      spirits worth 750 gp).</p><p><strong>Skill Checks</strong> Diplomacy DC
+      31, 1 success; Knowledge (religion) DC 31, 2 successes; Sense Motive, DC
+      31, 1 success</p><p><strong>Range</strong>
+      touch</p><p><strong>Target</strong> one persistent vaporous
+      haunt</p><p><strong>Duration</strong> 1 minute/character level of the
+      primary caster</p><p><strong>Saving Throw</strong> Will negates;
+      <strong>SR</strong> yess</p><p><strong>Backlash</strong> The primary
+      caster becomes helpless for the ritual's duration and the target haunt's
+      hit points are fully healed to its total maximum. If the target haunt has
+      been neutralized, it immediately
+      reactivates.</p><p><strong>Failure</strong> The primary caster takes 2d6
+      points of Wisdom drain. A caster whose Wisdom drain equals or exceeds her
+      Wisdom score dies, her spirit becoming conjoined with that of the haunt to
+      create a more powerful haunt (subject to GM discretion but typically
+      increasing the haunt's CR by 1).</p><h3>Effect</h3><p>The caster reads
+      aloud from her chosen lexicon while standing amid a circle of candles,
+      reciting passages that fill her with dedication and conviction. Upon the
+      completion of the ritual's casting time, she steps into the target haunt's
+      area, causing her to forge a psychic connection with the haunt that pulls
+      her mind into a binary mindscape (Occult Adventures 235) of the haunt's
+      creation and that is strongly reminiscent of the haunt's anguish and
+      themed along the lines of the haunt's destruction method.</p><p>This
+      ritual allows the caster to instigate a psychic duel with the target haunt
+      (Occult Adventures 202), functioning like <em>instigate psychic duel</em>.
+      Unlike with instigating a duel with another creature, a haunt remains
+      responsive in the real world during the psychic duel; it is able to act
+      during its normal initiative. The haunt counts as a psychic spellcaster
+      with a caster level equal to the haunt's caster level for all purposes and
+      can generate an unlimited number of manifestation points, though it can
+      spend only a number of manifestation points equal to 1/2 its caster level
+      (minimum 1st) per psychic manifestation. In the mindscape, the haunt's
+      saving throw bonuses are equal to its CR + 2, and its melee and ranged
+      attack bonuses are equal to 1-1/2 its CR + 2. In addition, the haunt has
+      an amount of temporary hit points equal to its normal hit point total. If
+      these temporary hit points are reduced to 0, the haunt is destroyed as if
+      its specific destruction action had been performed.</p>
+  flags:
+    dictionary:
+      summary: Destroy a haunt through a psychic duel
+  level: 4
+  materials:
+    focus: a lexicon on the exorcism of spirits worth 750 gp.
+    gpValue: 500
+    value: a glass of wine, nine candles and rare incense worth 500 gp
+  school: nec
+  sources:
+    - id: PZO9471
+      pages: '16'
+type: spell

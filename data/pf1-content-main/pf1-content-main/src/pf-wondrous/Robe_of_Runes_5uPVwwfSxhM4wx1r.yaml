@@ -1,0 +1,33 @@
+_id: 5uPVwwfSxhM4wx1r
+_key: '!items!5uPVwwfSxhM4wx1r'
+_stats:
+  coreVersion: '12.331'
+folder: tt1hnzL5ZdLfPdp0
+img: icons/equipment/chest/coat-collared-red-gold.webp
+name: Robe of Runes
+system:
+  aura:
+    school: trs
+  cl: 13
+  description:
+    value: >-
+      <p>This robe is made of crimson silk and emblazoned with dozens of spindly
+      Thassilonian runes, each symbolizing a different type of magical effect or
+      syllable of power. Though favored by wizards, this robe can provide some
+      benefit to any spellcasting creature. While worn, it grants a +4
+      enhancement bonus to Intelligence and allows the wearer to recall, as a
+      free action, up to four levels of spells per day that he had prepared and
+      then cast. Each time a spell is recalled and prepared again in this
+      manner, the sudden rush of magical energy infuses the wearer with power.
+      For 1 round after recalling a spell, the wearer's spell save DCs and
+      attack rolls made with spells gain a +2 enhancement
+      bonus.<h3>Requirements</h3><p>Craft Wondrous Item, fox's cunning, limited
+      wish</p>
+  price: 44000
+  slot: body
+  sources:
+    - id: PZO1002
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment

@@ -1,0 +1,27 @@
+_id: 6htCNoUtgNHIgK9Q
+_key: '!items!6htCNoUtgNHIgK9Q'
+_stats:
+  coreVersion: '12.331'
+img: icons/environment/creatures/fish-jellyfish-teal.webp
+name: Jellyfish, Luminous
+system:
+  description:
+    value: >-
+      <p>This tiny jellyfish has a crown roughly 4 inches in diameter, and it
+      glows with bioluminescence as brightly as a candle, typically in a blue or
+      green color, but various species allow an array of possible colors (though
+      generally this commands greater prices). When trapped in a container with
+      small holes to allow in the plankton the creature eats, these creatures
+      can serve as living lanterns, especially for creatures with lowlight
+      vision. In some places, like Talasantri, they drift freely as mobile light
+      sources. A luminous jellyfish lives up to 1 year in this stage of its life
+      cycle before dying.</p>
+  equipped: false
+  price: 2
+  sources:
+    - id: PZO92102
+      pages: '56'
+  subType: animal
+  weight:
+    value: 1
+type: loot

@@ -1,0 +1,48 @@
+_id: QXyUVVF8KntGjWIC
+_key: '!tables!QXyUVVF8KntGjWIC'
+_stats:
+  coreVersion: '12.331'
+description: >-
+  Pop: 2,001–5,000 <br /> Reroll items worth &lt; 2,000 gp. <br /> Add Spells as
+  Potion, Scroll, or Wand.
+displayRoll: true
+folder: CLExzzcA4kPYvya7
+formula: 1d1
+img: icons/environment/settlement/house-farmland.webp
+name: 'Magic Shop: Town, Large'
+replacement: true
+results:
+  - _id: 6GBPK1ACa672LjTN
+    _key: '!tables.results!QXyUVVF8KntGjWIC.6GBPK1ACa672LjTN'
+    documentCollection: pf1.ultimate-equipment
+    documentId: 9zpuDLaD6gHAbRul
+    img: systems/pf1/icons/spells/enchant-sky-3.jpg
+    range:
+      - 1
+      - 1
+    text: Generate Minor Magic Item
+    type: pack
+    weight: 1
+  - _id: rpc2rBfaW5gZxpjF
+    _key: '!tables.results!QXyUVVF8KntGjWIC.rpc2rBfaW5gZxpjF'
+    documentCollection: pf1.ultimate-equipment
+    documentId: 61ZKmAr0lryZAHOn
+    img: systems/pf1/icons/spells/enchant-eerie-3.jpg
+    range:
+      - 1
+      - 1
+    text: Generate Medium Magic Item
+    type: pack
+    weight: 1
+  - _id: VFi8hdrdJtqkoyrw
+    _key: '!tables.results!QXyUVVF8KntGjWIC.VFi8hdrdJtqkoyrw'
+    documentCollection: pf1.ultimate-equipment
+    documentId: 1At0v38dODMSHJvX
+    img: systems/pf1/icons/spells/enchant-blue-3.jpg
+    range:
+      - 1
+      - 1
+    text: Generate Major Magic Item
+    type: pack
+    weight: 1
+sort: 1400000

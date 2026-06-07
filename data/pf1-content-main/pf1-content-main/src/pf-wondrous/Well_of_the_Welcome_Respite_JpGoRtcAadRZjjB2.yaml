@@ -1,0 +1,28 @@
+_id: JpGoRtcAadRZjjB2
+_key: '!items!JpGoRtcAadRZjjB2'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Well of the Welcome Respite
+system:
+  aura:
+    school: con
+  cl: 17
+  description:
+    value: >-
+      <p>While normally functioning as a standard well of many worlds, this well
+      possesses a command word that supersedes its normal placement-based
+      destination, and it instead opens up onto a single location designated by
+      its maker during the well's creation (often the creator's home or a
+      private, warded demiplane). Those finding the well are not immediately
+      aware of this command word unless a spell more powerful than a simple
+      identify spell is used, and the well's secret destination, whatever it
+      might be, may or may not still be
+      occupied.</p><h3>Requirements</h3><p>Craft Wondrous Item, gate, mage's
+      magnificent mansion</p>
+  price: 122000
+  sources:
+    - id: PZO9220
+  subType: wondrous
+type: equipment

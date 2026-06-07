@@ -1,0 +1,30 @@
+_id: yuW0rOLw1HwaHDbV
+_key: '!items!yuW0rOLw1HwaHDbV'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Charmer's Kiss
+system:
+  aura:
+    school: enc
+  cl: 7
+  description:
+    value: >-
+      <p>This small stick of colored wax is encased in a wooden cylinder to
+      allow for easier application to the lips. As a standard action, a dose of
+      charmer's kiss can be applied to the user's lips; this dose lasts for 4
+      hours or until discharged. During that time, the user can deliver the
+      lipstick to one target creature as a standard action (for willing targets)
+      or a melee touch attack. The target of this attack must succeed at a DC 16
+      Will saving throw or be affected by charm monster for 7 minutes. A target
+      of a creature type different from the wearer receives a +2 bonus on this
+      saving throw. One stick of charmer's kiss has enough wax for 3 doses. This
+      is a mind-affecting charm and poison
+      effect.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, charm monster</p>
+  price: 750
+  sources:
+    - id: PZO9292
+  subType: wondrous
+type: equipment

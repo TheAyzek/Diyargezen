@@ -1,0 +1,41 @@
+_id: 7OrHhhdChD0KKnSS
+_key: '!items!7OrHhhdChD0KKnSS'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/quarterstaff.png
+name: Magi Staff of the Scholar
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: all schools
+  baseTypes:
+    - Quarterstaff
+  cl: 20
+  description:
+    value: >-
+      <p>This shepherd's crook is formed of alternating bands of ivory and
+      obsidian around a sycamore shaft. Golden runes run the length of the
+      staff, twisting into new configurations as its various powers are used.
+      The staff of the scholar has all the powers of a regular staff of the magi
+      plus the following abilities: contact other plane (2 charges), legend lore
+      (2 charges), and scrying (2 charges). If the wielder of the staff of the
+      scholar uses its retributive strike ability and successfully travels to
+      another plane of existence, he always arrives in the abode of a god of
+      knowledge (though not necessarily a friendly one).</p><p><strong>Base
+      Item</strong>: quarterstaff</p>
+  held: 2h
+  material:
+    base:
+      value: wood
+  properties:
+    dbl: true
+    mnk: true
+  sources:
+    - id: PZO9220
+  weaponGroups:
+    - double
+    - monk
+  weight:
+    value: 5
+type: weapon

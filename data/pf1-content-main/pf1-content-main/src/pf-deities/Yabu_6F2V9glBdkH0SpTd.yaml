@@ -1,0 +1,46 @@
+_id: 6F2V9glBdkH0SpTd
+_key: '!journal!6F2V9glBdkH0SpTd'
+_stats:
+  coreVersion: '12.331'
+categories: []
+name: Yabu
+pages:
+  - _id: 9asIv5WatHGCL5fy
+    _key: '!journal.pages!6F2V9glBdkH0SpTd.9asIv5WatHGCL5fy'
+    _stats:
+      coreVersion: '12.331'
+    name: Yabu
+    sort: 0
+    text:
+      content: >-
+        <h1>Yabu</h1><h2>Lord of the Kazan
+        Caldera</h2>@Source[PZO1139;pages=126] <br /><strong>Pathfinder
+        Wiki</strong> <a
+        href="http://www.pathfinderwiki.com/wiki/Yabu">Yabu</a><h3>Details</h3><p><strong>Alignment</strong>
+        NE<br /><strong>Pantheon</strong> Oni Daimyo<br /><strong>Areas of
+        Concern</strong> Curses, promises, volcanoes<br
+        /><strong>Domains</strong> Destruction, Evil, Fire, Luck<br
+        /><strong>Subdomains</strong> Ash, Catastrophe, Curse, Smoke<br /><em>*
+        Requires the <u>Acolyte of Apocrypha</u> trait.</em><br
+        /><strong>Favored Weapon</strong> Meteor
+        hammer</p><h3>Obedience</h3><p>Burn a small model of a building, and
+        meditate on the smoke. Gain a +4 profane bonus on saving throws against
+        fire effects.</p><h2>Boons - Oni
+        Daimyo</h2><p>@Source[PZO1139;pages=127]</p><p>The most powerful oni,
+        the oni daimyo, hold their domains in isolated regions of the Material
+        Plane. While they have transcended their lesser incarnations to become
+        something close to demigods in stature, they do not flaunt their power
+        and prefer to dwell in remote corners of the massive land of Tian
+        Xia.</p><p> Oni daimyo are always evil in alignment but can be chaotic,
+        lawful, or neutral. They range in power from CR 21 to CR 25. The boons
+        they grant are less complex than those granted by fiendish demigods,
+        manifesting as spell-like abilities usable twice per day
+        each.</p><p><strong>1</strong>: <em>augury</em><br /><strong>2</strong>:
+        <em>volcanic storm</em><br /><strong>3</strong>: <em>major
+        curse</em></p>
+      format: 1
+    title:
+      level: 1
+      show: false
+    type: text
+sort: 0

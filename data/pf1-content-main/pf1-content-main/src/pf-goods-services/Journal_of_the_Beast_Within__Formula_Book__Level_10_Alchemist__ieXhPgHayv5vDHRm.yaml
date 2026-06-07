@@ -1,0 +1,38 @@
+_id: ieXhPgHayv5vDHRm
+_key: '!items!ieXhPgHayv5vDHRm'
+_stats:
+  coreVersion: '12.331'
+img: icons/sundries/books/book-worn-brown.webp
+name: Journal of the Beast Within (Formula Book, Level 10 Alchemist)
+system:
+  description:
+    value: >-
+      <p><em>This ragged collection of scorched and stained notes is tied with
+      cheap twine between wooden covers. A few formulae appear to have been
+      deliberately obliterated, scratched through so thoroughly that the paper
+      is torn in places.</em></p><p><strong>Value</strong> 915 gp (2,165 gp with
+      the preparation ritual)</p><h2>Spells</h2><p>4th-<em>dragon's
+      breath</em></p><p>3rd-<em>beast shape I</em>, <em>rage</em>,
+      <em>tongues</em>, <em>water breathing</em></p><p>2nd-<em>barkskin</em>,
+      <em>bull's strength</em>, <em>cure moderate wounds</em>, <em>elemental
+      touch</em>, <em>resist energy</em></p><p>1st-<em>bomber's eye</em>,
+      <em>comprehend languages</em>, <em>crafter's fortune</em>, <em>cure light
+      wounds</em>, <em>disguise self</em>, <em>enlarge person</em>,
+      <em>identify</em>, <em>shield</em></p><h2>Ritual</h2><p><strong>Beastly
+      Concoction (Su)</strong> This journal grants you the ability to make an
+      extremely potent and savage mutagen. Spend this boon when you imbibe your
+      mutagen. The mutagen grants you a +6 alchemical bonus to your selected
+      ability score instead of the normal +4; you take a -2 penalty to all of
+      your mental ability scores (Intelligence, Wisdom, and Charisma) while the
+      mutagen is in effect.</p>
+  equipped: false
+  price: 2165
+  sources:
+    - id: PZO1117
+      pages: '123'
+  subType: gear
+  tags:
+    - Spellbooks
+  weight:
+    value: 5
+type: loot

@@ -1,0 +1,28 @@
+_id: AkDzMLABttLBvsMM
+_key: '!items!AkDzMLABttLBvsMM'
+_stats:
+  coreVersion: '12.331'
+folder: pGIRv4hL7BJC1Mjg
+img: icons/equipment/head/goggles-leather-blue.webp
+name: Storm Goggles
+system:
+  aura:
+    school: trs
+  cl: 3
+  description:
+    value: >-
+      <p>These goggles, made from a pair of smoky crystal lenses set in an
+      adjustable leather strap, help the wearer see through storms of rain,
+      snow, or even dust. A pair of storm goggles fully negates any Perception
+      penalties imposed by a natural storm or atmospheric condition. Also, once
+      per round when the wearer makes an attack against a target that has
+      concealment from him because of natural or magical fog, mist, clouds, or
+      vapor, the wearer can choose to roll the miss chance percentile twice and
+      take the better of the two results.</p><h3>Requirements</h3><p>Craft
+      Wondrous Item, Skill Focus (Perception), acute senses</p>
+  price: 6000
+  slot: eyes
+  sources:
+    - id: PZO9456
+  subType: wondrous
+type: equipment

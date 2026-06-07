@@ -1,0 +1,52 @@
+_id: VaEKrdtYkhibC8lC
+_key: '!items!VaEKrdtYkhibC8lC'
+_stats:
+  coreVersion: '12.331'
+img: systems/pf1/icons/items/weapons/dagger.PNG
+name: Visineir
+system:
+  artifact: true
+  aura:
+    custom: true
+    school: all
+  baseTypes:
+    - Dagger
+  cl: 30
+  description:
+    value: >-
+      <p>This adamantine quill pen is the greatest weapon Mephistopheles has in
+      the corruption of souls. As a full-round action that does not provoke
+      attacks of opportunity, he can use it to inscribe a magic circle against
+      good (or chaos), place a mark of justice, or pen an infernal contract.
+      These contracts can grant any number of boons, but typically do so in the
+      form of a wish spell or the devilbound template (Pathfinder RPG Bestiary 4
+      56).  Visineir can be wielded as a +1 adamantine keen wounding dagger, but
+      Mephistopheles rarely does so, preferring his trident in battle. The quill
+      can store a sample of blood from every creature it strikes, storing up to
+      33 blood samples at a time. The quill gains the bane special ability
+      against any creature whose blood it stores, and it marks the target as if
+      Mephistopheles had used a witch's scar hex on it, allowing him to use his
+      spell-like abilities on that creature with a range of 1 mile (or with
+      unlimited range, if the creature is in Caina). Mephistopheles can expend
+      one stored blood sample as a full-round action to inscribe a symbol spell
+      of any type he wishes, or to call the creature to him as if he had cast
+      greater planar binding (regardless of the creature's actual type-this is
+      not limited to calling outsiders).</p><p><strong>Base Item</strong>:
+      adamantine keen wounding dagger</p>
+  enh: 1
+  material:
+    base:
+      value: steel
+    normal:
+      value: adamantine
+  properties:
+    fin: true
+  sources:
+    - id: PZO1137
+  weaponGroups:
+    - bladesLight
+    - thrown
+    - tribal
+  weight:
+    value: 1
+type: weapon

@@ -1,0 +1,34 @@
+_id: XY4k2vKPNWZ1Q9TT
+_key: '!items!XY4k2vKPNWZ1Q9TT'
+_stats:
+  coreVersion: '12.331'
+folder: HybCViV0sMJVngGT
+img: icons/svg/item-bag.svg
+name: Essence of Wandering Dreams
+system:
+  aura:
+    custom: true
+    school: conjuration and divination
+  cl: 9
+  description:
+    value: >-
+      <p>This minute crystal vial contains a single drop distilled from the
+      captured dreams of a hundred different worlds. The drop can be poured into
+      a vessel of water, wine, or other drink, and shared between as many as
+      nine recipients. If not drunk within an hour of mixing, it loses potency.
+      The imbibers drift into sleep for at least 2d6 x 5 minutes (Will DC 17
+      negates). Anyone who sleeps for at least 2 hours receives a +2 insight
+      bonus on Intelligence, Wisdom, and Charisma-based skill checks for the
+      next 24 hours. If an imbiber expends two uses of mythic power and
+      envisions a destination as she falls asleep, she gains the benefits above
+      and sleeps for 2 hours before waking on a plane of her choice as though
+      using plane shift. Each imbiber who expends the uses of mythic power can
+      travel to a different plane. All imbibers traveling to the same plane wake
+      up at the same location on that
+      plane.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, Mythic Crafter, contact other plane, plane shift</p>
+  price: 5000
+  sources:
+    - id: PZO9438
+  subType: wondrous
+type: equipment

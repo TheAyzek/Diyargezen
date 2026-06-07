@@ -1,0 +1,37 @@
+_id: mpBvgTQGi0KX13tF
+_key: '!items!mpBvgTQGi0KX13tF'
+_stats:
+  coreVersion: '12.343'
+img: icons/commodities/biological/tentacle-purple-white.webp
+name: Pull
+system:
+  abilityType: ex
+  actions:
+    - _id: sczwucqhtlor19se
+      actionType: mcman
+      activation:
+        type: free
+        unchained:
+          type: free
+      img: icons/commodities/biological/tentacle-purple-white.webp
+      name: Use
+      notes:
+        footer:
+          - Pulls 5 feet.
+      tag: pullEx
+  description:
+    value: >-
+      <p>A creature with this ability can choose to attempt a free combat
+      maneuver check with a successful attack. If successful, this check pulls a
+      creature closer. The distance pulled is set by this ability. The type of
+      attack that causes the pull and the distance pulled are included in the
+      creature&rsquo;s description. This ability works only on creatures of a
+      size equal to or smaller than the pulling creature. Creatures pulled in
+      this way do not provoke attacks of opportunity and stop if the pull would
+      move them into a solid object or creature.</p><p><em>Format</em>: pull
+      (tentacle, 5 feet)</p><p><em>Location</em>: Special Attacks and individual
+      attacks.</p><p><em>Usage:</em> Replace range.</p>
+  subType: misc
+  tags:
+    - Universal Monster Rules
+type: feat

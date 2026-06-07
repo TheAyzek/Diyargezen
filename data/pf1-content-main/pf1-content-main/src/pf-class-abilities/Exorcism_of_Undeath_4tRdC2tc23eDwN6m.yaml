@@ -1,0 +1,61 @@
+_id: 4tRdC2tc23eDwN6m
+_key: '!items!4tRdC2tc23eDwN6m'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/inventory/badge-cross.jpg
+name: Exorcism of Undeath
+system:
+  abilityType: sp
+  actions:
+    - _id: ScGFOBJN7clNoeD5
+      ability:
+        attack: _default
+      actionType: mwak
+      activation:
+        type: full
+        unchained:
+          cost: 3
+          type: action
+      img: systems/pf1/icons/items/inventory/badge-cross.jpg
+      name: Use
+      notes:
+        footer:
+          - Consumes one vial of holy water
+      range:
+        units: touch
+      touch: true
+  associations:
+    classes:
+      - Cleric
+  description:
+    value: >-
+      <p><strong>Associated
+      Faith</strong>:@UUID[Compendium.pf-content.pf-class-abilities.Item.P6XoNhfPYdGk9EmW]{Haunted
+      Faith: Pharasma}</p><p>Once per day as a full-round action, you can try to
+      end any possession spells or effects, or effects that directly exercise
+      mental control over a creature, as long as the effect was caused by an
+      undead creature. You must touch the affected creature (this requires a
+      melee touch attack if the target is neither willing nor helpless) and use
+      a vial of @UUID[Compendium.pf1.items.Item.CmjSKOVJuQnV8o3S]{holy water} as
+      a material component that is consumed as part of using this ability. The
+      target must immediately attempt a new Will save against the original save
+      DC of the controlling effect. If the save is successful, the possession
+      effect immediately ends, as if the target had succeeded at its original
+      saving throw. If the possessing force is a ghost or similar undead, it
+      manifests adjacent to the target and is staggered for 1 round.</p><p>This
+      replaces the
+      @UUID[Compendium.pf1.class-abilities.Item.KF3SgIKeBACJhSZ1]{ward against
+      death} domain power of the
+      @UUID[Compendium.pf1.class-abilities.Item.eROVW8PzBztdcMd6]{Repose}
+      domain.</p>
+  sources:
+    - id: PZO9471
+      pages: '8'
+  subType: classFeat
+  tags:
+    - Variant Domain Power
+    - Pharasma
+  uses:
+    maxFormula: '1'
+    per: day
+type: feat

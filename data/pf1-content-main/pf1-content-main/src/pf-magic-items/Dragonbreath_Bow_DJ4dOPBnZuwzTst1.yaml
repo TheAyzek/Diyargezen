@@ -1,0 +1,60 @@
+_id: DJ4dOPBnZuwzTst1
+_key: '!items!DJ4dOPBnZuwzTst1'
+_stats:
+  coreVersion: '12.343'
+img: systems/pf1/icons/items/weapons/longbow.PNG
+name: Dragonbreath Bow
+system:
+  actions:
+    - _id: ov50xrzzwbmse4h4
+      ability:
+        attack: _default
+        damage: str
+      actionType: mwak
+      activation:
+        type: attack
+        unchained:
+          type: attack
+      damage:
+        parts:
+          - formula: sizeRoll(1, 4, @size)
+      duration:
+        units: inst
+      extraAttacks:
+        type: standard
+      name: Attack
+      range:
+        units: melee
+      tag: dragonbreathBow
+  aura:
+    school: evo
+  baseTypes:
+    - Longbow
+  cl: 14
+  description:
+    value: >-
+      <p>This +2 flaming burst longbow's arrow rest is shaped like a dragon's
+      head with its mouth agape-as if about to unleash its breath weapon. A
+      mythic wielder can expend one use of mythic power when drawing back the
+      bow to create an arrow of pure flame. This flame arrow acts as a ranged
+      touch attack that can target only creatures within the first range
+      increment of the bow. When it hits its target, this flame arrow deals
+      3d10+2 points of fire damage. This damage stacks with the bow's flaming
+      burst special ability.</p><p><strong>Base Item</strong>: flaming burst
+      longbow</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Magic Arms and Armor, Mythic Crafter, flame strike, scorching ray</p>
+  enh: 2
+  hardness: 10
+  masterwork: true
+  material:
+    base:
+      value: wood
+  price: 50375
+  showInQuickbar: false
+  sources:
+    - id: PZO1126
+  weaponGroups:
+    - bows
+  weight:
+    value: 3
+type: weapon

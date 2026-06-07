@@ -1,0 +1,156 @@
+_id: qUGcklOFFs6kdoGU
+_key: '!tables!qUGcklOFFs6kdoGU'
+_stats:
+  coreVersion: '12.331'
+description: ''
+displayRoll: true
+formula: 1d100
+img: icons/tools/nautical/anchor.webp
+name: Deep Sea (AVG CR 9)
+replacement: true
+results:
+  - _id: ZCU4BGcU1ds0Ogga
+    _key: '!tables.results!qUGcklOFFs6kdoGU.ZCU4BGcU1ds0Ogga'
+    img: icons/svg/d20-black.svg
+    range:
+      - 1
+      - 4
+    text: 1 Giant Sea Anemone [CR 2]
+    type: text
+    weight: 1
+  - _id: mwEONAaixnjgvKNc
+    _key: '!tables.results!qUGcklOFFs6kdoGU.mwEONAaixnjgvKNc'
+    img: icons/svg/d20-black.svg
+    range:
+      - 5
+      - 7
+    text: "[[1d4]] Death's Head Jellyfish [AVG CR 3]"
+    type: text
+    weight: 1
+  - _id: U4g4JCIe1DBBYp1p
+    _key: '!tables.results!qUGcklOFFs6kdoGU.U4g4JCIe1DBBYp1p'
+    img: icons/svg/d20-black.svg
+    range:
+      - 8
+      - 14
+    text: '[[1d4]] Sharks [AVG CR 4]'
+    type: text
+    weight: 1
+  - _id: aeUIa88TuheM4jt2
+    _key: '!tables.results!qUGcklOFFs6kdoGU.aeUIa88TuheM4jt2'
+    img: icons/svg/d20-black.svg
+    range:
+      - 15
+      - 22
+    text: '[[1d8]] Tritons [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: MhspdJP1MOqOxn7i
+    _key: '!tables.results!qUGcklOFFs6kdoGU.MhspdJP1MOqOxn7i'
+    img: icons/svg/d20-black.svg
+    range:
+      - 32
+      - 37
+    text: '[[1d4]] Weresharks [AVG CR 5]'
+    type: text
+    weight: 1
+  - _id: odHkMSboh5ap4LoG
+    _key: '!tables.results!qUGcklOFFs6kdoGU.odHkMSboh5ap4LoG'
+    img: icons/svg/d20-black.svg
+    range:
+      - 38
+      - 43
+    text: '[[1d4]] Devilfish [AVG CR 6]'
+    type: text
+    weight: 1
+  - _id: nQmsyweAL0aSmnTx
+    _key: '!tables.results!qUGcklOFFs6kdoGU.nQmsyweAL0aSmnTx'
+    img: icons/svg/d20-black.svg
+    range:
+      - 44
+      - 51
+    text: 1 Sea Scourge [CR 6]
+    type: text
+    weight: 1
+  - _id: uFCJJioMQhQpZSCS
+    _key: '!tables.results!qUGcklOFFs6kdoGU.uFCJJioMQhQpZSCS'
+    img: icons/svg/d20-black.svg
+    range:
+      - 52
+      - 61
+    text: '[[1d6]] Jellyfish Swarms [AVG CR 9]'
+    type: text
+    weight: 1
+  - _id: I9vROglVGrEFttRI
+    _key: '!tables.results!qUGcklOFFs6kdoGU.I9vROglVGrEFttRI'
+    img: icons/svg/d20-black.svg
+    range:
+      - 62
+      - 67
+    text: '[[1d6]] Giant Jellyfish [AVG CR 10]'
+    type: text
+    weight: 1
+  - _id: deVTjfkBrtty30hv
+    _key: '!tables.results!qUGcklOFFs6kdoGU.deVTjfkBrtty30hv'
+    img: icons/svg/d20-black.svg
+    range:
+      - 68
+      - 75
+    text: 1 Charybdis [CR 13]
+    type: text
+    weight: 1
+  - _id: VCYV1nMq3wTMOSvG
+    _key: '!tables.results!qUGcklOFFs6kdoGU.VCYV1nMq3wTMOSvG'
+    img: icons/svg/d20-black.svg
+    range:
+      - 76
+      - 82
+    text: 1 Shipwrecker Crab [CR 13]
+    type: text
+    weight: 1
+  - _id: kClQ7JfFyzEqJdHq
+    _key: '!tables.results!qUGcklOFFs6kdoGU.kClQ7JfFyzEqJdHq'
+    img: icons/svg/d20-black.svg
+    range:
+      - 83
+      - 88
+    text: 1 Great White Whale [CR 14]
+    type: text
+    weight: 1
+  - _id: gL4miPudEB3bJiRE
+    _key: '!tables.results!qUGcklOFFs6kdoGU.gL4miPudEB3bJiRE'
+    img: icons/svg/d20-black.svg
+    range:
+      - 89
+      - 94
+    text: 1 Lusca [CR17]
+    type: text
+    weight: 1
+  - _id: OzgivcAFNNYTQv5Y
+    _key: '!tables.results!qUGcklOFFs6kdoGU.OzgivcAFNNYTQv5Y'
+    img: icons/svg/d20-black.svg
+    range:
+      - 95
+      - 97
+    text: 1 Kraken [CR 18]
+    type: text
+    weight: 1
+  - _id: 9HBKIAwLy2oLxrda
+    _key: '!tables.results!qUGcklOFFs6kdoGU.9HBKIAwLy2oLxrda'
+    img: icons/svg/d20-black.svg
+    range:
+      - 98
+      - 100
+    text: 1 Deep Sea Serpent [CR 19]
+    type: text
+    weight: 1
+  - _id: F2mer6Viy0bJUlg6
+    _key: '!tables.results!qUGcklOFFs6kdoGU.F2mer6Viy0bJUlg6'
+    img: icons/svg/d20-black.svg
+    range:
+      - 23
+      - 31
+    text: '[[1d4]] Ceratioidi [AVG CR 5]'
+    type: text
+    weight: 1
+sort: 4100000

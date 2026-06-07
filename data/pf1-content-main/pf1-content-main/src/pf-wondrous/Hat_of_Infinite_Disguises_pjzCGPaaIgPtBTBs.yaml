@@ -1,0 +1,28 @@
+_id: pjzCGPaaIgPtBTBs
+_key: '!items!pjzCGPaaIgPtBTBs'
+_stats:
+  coreVersion: '12.331'
+folder: NeiW5erw7zH3zTi5
+img: icons/equipment/head/hood-cloth-blue-white.webp
+name: Hat of Infinite Disguises
+system:
+  aura:
+    school: ill
+  cl: 11
+  description:
+    value: >-
+      <p>This large, elaborate, and colorful hat is festooned with trinkets from
+      at least a dozen different cultures. The wearer can disguise herself (but
+      not other creatures) at will with a command word, as per veil. A second
+      command word removes the disguise. When part of a disguise, the hat can be
+      changed to appear as any appropriate
+      accessory.</p><h3>Construction</h3><p><strong>Requirements</strong> Craft
+      Wondrous Item, veil</p>
+  price: 25000
+  slot: head
+  sources:
+    - id: PZO9292
+  subType: wondrous
+  weight:
+    value: 1
+type: equipment
