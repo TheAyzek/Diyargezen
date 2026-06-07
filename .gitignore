@@ -19,10 +19,12 @@ dist/
 .idea/
 .vscode/
 .cursor/
+.gemini/
 
-# Caches
+# Caches & test output
 .pytest_cache/
 .ruff_cache/
+*.log
 
 # Character data (user generated)
 characters/
@@ -33,3 +35,14 @@ data/cache/
 data/logs/
 data/homebrew/
 data/portraits/
+
+# ─── Generated database (rebuilt by ETL on first run) ───────────────────
+# Do NOT commit — it is auto-generated from source .db / .json files.
+data/characters.db
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
