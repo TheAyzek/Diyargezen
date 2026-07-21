@@ -45,6 +45,8 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Diyargezer — TTRPG Karakter Yöneticisi")
         self.resize(1100, 720)
         self.setMinimumSize(900, 600)
+        # Sunum modu: ekranı kaplayan pencere (taskbar ve X butonu korunur)
+        self.setWindowState(Qt.WindowMaximized)
 
         if LOGO_PATH.exists():
             self.setWindowIcon(QIcon(str(LOGO_PATH)))
@@ -177,6 +179,6 @@ def run_app() -> None:
     app.setStyleSheet(DARK_FANTASY_QSS)
 
     window = MainWindow()
-    window.show()
+    window.showMaximized()  # Tam ekran kaplayan, güvenli başlangıç
 
     sys.exit(app.exec())

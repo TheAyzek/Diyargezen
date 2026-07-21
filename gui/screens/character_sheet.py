@@ -248,10 +248,24 @@ class CharacterSheetPage(QWidget):
             val = c.get(key, "—")
             lbl.setText(str(val) if val is not None else "—")
 
+        # Dinamik Saving Throws (Sisteme Duyarlı)
+        while self._saves_form.rowCount() > 0:
+            self._saves_form.removeRow(0)
+        self._save_labels.clear()
+        
+        sys_key = c.get("system", "").lower()
+        if "pathfinder" in sys_key or "pf1e" in sys_key:
+            save_keys = ["Fortitude", "Reflex", "Will"]
+        else:
+            save_keys = ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"]
+            
         saves = c.get("saving_throws", {})
-        for ab, lbl in self._save_labels.items():
+        for ab in save_keys:
+            lbl = QLabel("—")
             val = saves.get(ab, "—")
             lbl.setText(f"{val:+d}" if isinstance(val, int) else str(val))
+            self._save_labels[ab] = lbl
+            self._saves_form.addRow(f"{ab}:", lbl)
 
         skills = c.get("skills", {})
         if isinstance(skills, dict) and all(isinstance(v, (int, float)) for v in skills.values()):

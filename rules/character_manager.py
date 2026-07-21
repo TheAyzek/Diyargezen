@@ -100,28 +100,90 @@ class CharacterManager:
             # on feat entities.  Used for PF1e where the data pack only has racial
             # trait feats — no standalone race entries exist.
             if not results:
-                cursor.execute(
-                    "SELECT DISTINCT json_extract(sistem_verisi, '$.parent_race') "
-                    "FROM entities "
-                    "WHERE sistem = ? AND kategori = 'feat' "
-                    "AND json_extract(sistem_verisi, '$.parent_race') IS NOT NULL "
-                    "AND json_extract(sistem_verisi, '$.parent_race') != '' "
-                    "ORDER BY json_extract(sistem_verisi, '$.parent_race') COLLATE NOCASE",
-                    (sys_norm,)
-                )
+                if "pathfinder" in sys_norm or "pf" in sys_norm:
+                    cursor.execute("""
+                        SELECT DISTINCT json_extract(sistem_verisi, '$.parent_race') 
+                        FROM entities 
+                        WHERE sistem = ? AND kategori = 'feat' 
+                        AND TRIM(LOWER(json_extract(sistem_verisi, '$.parent_race'))) IN (
+                            'human', 'elf', 'dwarf', 'gnome', 'halfling', 'half-elf', 'half-orc',
+                            'aasimar', 'tiefling', 'ifrit', 'oread', 'sylph', 'undine',
+                            'catfolk', 'tengu', 'ratfolk', 'fetchling', 'dhampir', 'drow',
+                            'goblin', 'hobgoblin', 'kobold', 'orc', 'kitsune', 'changeling',
+                            'wayang', 'nagaji', 'samsaran', 'vishkanya', 'grippli', 'merfolk',
+                            'strix', 'svirfneblin', 'vanara'
+                        )
+                        ORDER BY json_extract(sistem_verisi, '$.parent_race') COLLATE NOCASE
+                    """, (sys_norm,))
+                else:
+                    cursor.execute(
+                        "SELECT DISTINCT json_extract(sistem_verisi, '$.parent_race') "
+                        "FROM entities "
+                        "WHERE sistem = ? AND kategori = 'feat' "
+                        "AND json_extract(sistem_verisi, '$.parent_race') IS NOT NULL "
+                        "AND json_extract(sistem_verisi, '$.parent_race') != '' "
+                        "ORDER BY json_extract(sistem_verisi, '$.parent_race') COLLATE NOCASE",
+                        (sys_norm,)
+                    )
+                # Load PF1e full race data from JSON
+                import json
+                from pathlib import Path
+                pf1e_data = {}
+                try:
+                    j_path = Path(__file__).parent.parent / "data" / "pathfinder_1e_data.json"
+                    if j_path.exists():
+                        with open(j_path, "r", encoding="utf-8") as f:
+                            pf1e_data = json.load(f).get("races", {})
+                except Exception:
+                    pass
+
                 for (parent_name,) in cursor.fetchall():
                     if parent_name and not any(parent_name.startswith(p) for p in CREATURE_TYPE_PREFIXES):
+                        race_info = pf1e_data.get(parent_name, {})
+                        
+                        desc = race_info.get("description", f"{parent_name} ırkı (Pathfinder 1e)")
+                        if "speed" in race_info:
+                            desc += f"<br><br><b>Hız:</b> {race_info['speed']} ft"
+                        if "size" in race_info:
+                            desc += f" | <b>Boyut:</b> {race_info['size']}"
+                        if "ability_score_increase_text" in race_info:
+                            desc += f"<br><b>Yetenek Bonusu:</b> {race_info['ability_score_increase_text']}"
+                        if "traits" in race_info and race_info["traits"]:
+                            desc += f"<br><br><b>Özellikler:</b> {', '.join(race_info['traits'])}"
+                            
+                        sistem_verisi = {"synthesised": True}
+                        if race_info:
+                            sistem_verisi.update(race_info)
+                            
                         results.append(DiyargezenEntity(
                             isim=parent_name,
                             sistem=sys_norm,
                             kategori="race",
-                            aciklama=f"{parent_name} ırkı (Pathfinder 1e)",
-                            sistem_verisi={"synthesised": True}
+                            aciklama=desc,
+                            sistem_verisi=sistem_verisi
                         ))
 
             conn.close()
         except Exception:
             pass
+        if not results and ("pathfinder" in sys_norm or "pf" in sys_norm):
+            fallback_race_names = [
+                "Human", "Elf", "Dwarf", "Gnome", "Halfling", "Half-Elf", "Half-Orc",
+                "Aasimar", "Tiefling", "Ifrit", "Oread", "Sylph", "Undine", "Catfolk",
+                "Tengu", "Ratfolk", "Fetchling", "Dhampir", "Drow", "Goblin", "Hobgoblin",
+                "Kobold", "Orc", "Kitsune", "Changeling", "Wayang", "Nagaji", "Samsaran",
+                "Vishkanya", "Grippli", "Merfolk", "Strix", "Svirfneblin", "Vanara"
+            ]
+            for r_name in fallback_race_names:
+                results.append(
+                    DiyargezenEntity(
+                        isim=r_name,
+                        sistem="pathfinder1e",
+                        kategori="race",
+                        aciklama=f"{r_name} (PF1e Brute-Force Fallback)",
+                        sistem_verisi={"synthesised": True}
+                    )
+                )
         return results
 
     def search_entities(self, system: str, category: str, query: str) -> List[DiyargezenEntity]:
@@ -171,35 +233,38 @@ class CharacterManager:
     # Strict filtered queries
     # ------------------------------------------------------------------
 
-    # NPC / creature-type / pseudo-class names that must never appear in the
-    # playable class dropdown.
-    _NPC_CLASS_KEYWORDS = (
-        # Generic creature types
-        "outsider", "humanoid", "aberration", "animal", "construct",
-        "dragon", "fey", "magical beast", "monstrous humanoid", "ooze",
-        "plant", "undead", "vermin",
-        # PF1e NPC-only base classes
-        "adept", "aristocrat", "commoner", "expert", "warrior",
-        # PF1e companion/familiar/summon pseudo-classes
-        "eidolon", "familiar", "companion", "drake", "phantom",
-        # Class ability sub-entries incorrectly stored as classes
-        "rage",        # Barbarian class ability
-        # Fragments / suffixes (e.g. "alchemist's familiar", "alchemist\u2019s")
-        "'s", "\u2019s",
-        # Bloodline/archetype sub-entries stored as class
-        "bloodline",
-        # Generic NPC marker
-        "npc",
-        # Leftover race prefixes
+    # PF1e iin oynanabilir sınıflar (Whitelist) — sadece bunlar UI'a gösterilir.
+    # Canavar türleri (Outsider, Dragon vb.) ve NPC sınıfları (Adept, Expert vb.)
+    # ne kadar sürüm veya suffix farklılığı olursa olsun engellenir.
+    # "Unchained" ve "Unchained-equivalent" versiyonlar tercih edilir.
+    _PF1E_PLAYABLE_CLASSES = {
+        "alchemist", "antipaladin", "arcanist", "barbarian", "bard",
+        "bloodrager", "brawler", "cavalier", "cleric", "druid",
+        "fighter", "gunslinger", "hunter", "inquisitor", "investigator",
+        "kineticist", "magus", "medium", "mesmerist", "monk",
+        "ninja", "occultist", "oracle", "paladin", "psychic",
+        "ranger", "rogue", "samurai", "shaman", "shifter",
+        "skald", "slayer", "sorcerer", "spiritualist", "summoner",
+        "swashbuckler", "vigilante", "warpriest", "witch", "wizard",
+    }
+
+    # DND5e için NPC/canavar filtresi — bu sistem için sadece
+    # aşağıdaki çok açık NPC girişleri engellenir (DND5e'de bu nadiren gerekir).
+    _DND5E_BLOCK_KEYWORDS = (
+        "outsider", "humanoid", "aberration", "construct",
+        "dragon", "fey", "undead", "vermin",
         "race:",
     )
 
     def get_clean_classes(self, system: str) -> List[DiyargezenEntity]:
         """Return only playable classes, stripping NPC/creature-type entries.
 
-        Filters both by SQL (name NOT LIKE patterns) and by a Python-side
-        keyword blocklist so that entries like 'Humanoid', 'Undead', etc.
-        are never presented to the user.
+        Sistem-spesifik filtreleme:
+        - DND5e: minimal blocklist; mevcut 14 sınıf doğrudan dönür.
+        - PF1e: Whitelist tabanlı; sadece _PF1E_PLAYABLE_CLASSES listesindeki
+          isimler (prefix eşleşmesi) kabul edilir. Böylece Outsider/Dragon/
+          NPC seri girdi hiçbir keyword kara listesi olmadan temizlenir.
+        - MM3e: minimal filtreleme (kategori='class' yeterli).
         """
         sys_norm = system.lower().replace("_", "").replace("-", "")
         results: List[DiyargezenEntity] = []
@@ -210,20 +275,24 @@ class CharacterManager:
                 "SELECT isim, sistem, kategori, aciklama, sistem_verisi "
                 "FROM entities "
                 "WHERE sistem = ? AND kategori = 'class' "
-                # SQL-level name sanitisation
-                "AND isim NOT LIKE '(%)%' "
-                "AND isim NOT LIKE '#%' "
-                "AND isim NOT LIKE '[%' "
-                "AND isim NOT LIKE '*%' "
-                "AND isim NOT LIKE 'Race:%' "
                 "ORDER BY isim COLLATE NOCASE",
                 (sys_norm,)
             )
             for row in cursor.fetchall():
-                name_lower = row[0].lower()
-                # Python-side blocklist for NPC/creature-type names
-                if any(kw in name_lower for kw in self._NPC_CLASS_KEYWORDS):
-                    continue
+                name: str = row[0]
+                name_lower = name.lower()
+
+                if "pathfinder" in sys_norm or "pf" in sys_norm:
+                    # PF1e: Whitelist tabanlı — isim beyaz listede bir kelimeyle başlıyorsa kabul
+                    prefix = name_lower.split("(")[0].strip()  # "Monk (Unchained)" -> "monk"
+                    if prefix not in self._PF1E_PLAYABLE_CLASSES:
+                        continue
+                elif "dnd" in sys_norm:
+                    # DND5e: sadece açık NPC/canavar marker'larını engelle
+                    if any(kw in name_lower for kw in self._DND5E_BLOCK_KEYWORDS):
+                        continue
+                # MM3e ve diğerleri: SQL sanitisasyonu yeterli
+
                 try:
                     payload = json.loads(row[4]) if row[4] else {}
                     results.append(DiyargezenEntity(
@@ -313,39 +382,65 @@ class CharacterManager:
         with kategori='trait' after the parser fix.
         """
         sys_norm = system.lower().replace("_", "").replace("-", "")
-        return list_entities(self.db_path, sys_norm, "trait")
+        results = list_entities(self.db_path, sys_norm, "trait")
+        if not results and ("pathfinder" in sys_norm or "pf" in sys_norm):
+            fallback_trait_names = [
+                "Reactionary (Combat)", "Armor Expert (Combat)", "Courageous (Combat)",
+                "Magical Knack (Magic)", "Focused Mind (Magic)", "Student of Philosophy (Social)",
+                "Fast-Talker (Social)", "Fate's Favored (Faith)", "Birthmark (Faith)",
+                "Deft Dodger (Combat)", "Resilient (Combat)"
+            ]
+            for t_name in fallback_trait_names:
+                results.append(
+                    DiyargezenEntity(
+                        isim=t_name,
+                        sistem="pathfinder1e",
+                        kategori="trait",
+                        aciklama=f"{t_name} (PF1e Brute-Force Fallback)",
+                        sistem_verisi={}
+                    )
+                )
+        return results
 
 
     def add_item_to_inventory(self, item_entity: DiyargezenEntity) -> Dict[str, Any]:
         """Add an item to character inventory and automatically recalculate statistics (such as AC)."""
         inventory = self.active_character.setdefault("equipment", [])
-        
-        # Formulate item data
+
+        sv = item_entity.sistem_verisi or {}
         item_data = {
-            "name": item_entity.isim,
-            "type": item_entity.kategori,
-            "description": item_entity.aciklama,
-            "sistem_verisi": item_entity.sistem_verisi
+            "name":         item_entity.isim,
+            "type":         item_entity.kategori,
+            "description":  item_entity.aciklama,
+            "sistem_verisi": sv,
         }
-        
-        # Automatically update armor bonuses if armor is added
+
+        # Otomatik armor bonus güncelleme — sistem_verisi içindeki gerçek değeri kullan
         name_lower = item_entity.isim.lower()
-        if "armor" in name_lower or "shield" in name_lower:
-            # Basic parsing of armor class value from description/metadata
-            ac_base = item_entity.sistem_verisi.get("armor_class", {}).get("base", 10)
-            if "shield" in name_lower:
-                self.active_character["shield_bonus"] = item_entity.sistem_verisi.get("shield_bonus", 2)
+        if "shield" in name_lower:
+            sb = sv.get("shield_bonus", sv.get("armor_class", {}).get("value", 2) if isinstance(sv.get("armor_class"), dict) else 2)
+            self.active_character["shield_bonus"] = max(int(sb), 0)
+        elif "armor" in name_lower or item_entity.kategori in ("armor", "equipment"):
+            ac_data = sv.get("armor_class", sv.get("armorClass", {}))
+            if isinstance(ac_data, dict):
+                ab = int(ac_data.get("value", ac_data.get("base", 0)))
+            elif isinstance(ac_data, (int, float)):
+                ab = int(ac_data)
             else:
-                self.active_character["armor_bonus"] = ac_base - 10
-            
+                ab = 0
+            if ab > 0:
+                self.active_character["armor_bonus"] = ab
+
         inventory.append(item_data)
         self.recalculate_character()
         return self.active_character
 
     def recalculate_character(self) -> Dict[str, Any]:
-        """Runs the calculation engines to update all derived statistics live."""
+        """Runs the calculation pipeline to update all derived statistics live.
+        Prefers update_all_stats() (5-step pipeline) when available on the calculator.
+        """
         sys_key = self.active_character.get("system", "").lower().replace("_", "").replace("-", "")
-        
+
         if "dnd" in sys_key:
             from rules.calculators import DND5e_Calculator
             calc = DND5e_Calculator()
@@ -358,6 +453,11 @@ class CharacterManager:
         else:
             return self.active_character
 
-        derived = calc.calculate(self.active_character)
+        # Tercih: update_all_stats() (pipeline) varsa onu çağır
+        if hasattr(calc, "update_all_stats"):
+            derived = calc.update_all_stats(self.active_character)
+        else:
+            derived = calc.calculate(self.active_character)
+
         self.active_character.update(derived)
         return self.active_character

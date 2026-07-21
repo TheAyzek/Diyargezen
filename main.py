@@ -24,10 +24,10 @@ logging.basicConfig(
 
 
 def main() -> None:
-    print("═" * 50)
-    print("  Diyargezer — TTRPG Karakter Yöneticisi")
-    print("  D&D 5e  •  Pathfinder 1e  •  M&M 3e")
-    print("═" * 50)
+    print("-" * 50)
+    print("  Diyargezer - TTRPG Karakter Yoneticisi")
+    print("  D&D 5e  |  Pathfinder 1e  |  M&M 3e")
+    print("-" * 50)
 
     try:
         from gui.main_window import run_app

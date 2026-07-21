@@ -6,9 +6,9 @@ Tüm sistemlerdeki ırk, sınıf, büyü, feat vb. kayıtlar için ortak şema.
 
 from __future__ import annotations
 
-from typing import Any, Dict
+from typing import Any, Dict, List, Optional
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 
 
 class DiyargezenEntity(BaseModel):
@@ -22,6 +22,19 @@ class DiyargezenEntity(BaseModel):
         default_factory=dict,
         description="Sisteme özgü ham/normalize edilmiş JSON",
     )
+    parsed_modifiers: Optional[List[Dict[str, Any]]] = Field(
+        default=None,
+        description="Açıklama metninden dinamik olarak ayrıştırılan mekanik etkiler"
+    )
+
+    @model_validator(mode="after")
+    def _parse_modifiers(self) -> DiyargezenEntity:
+        from rules.rule_parser import RuleParser
+        if self.parsed_modifiers is None:
+            self.parsed_modifiers = RuleParser.parse_description(
+                self.aciklama, self.sistem, self.isim, self.kategori
+            )
+        return self
 
     @field_validator("isim")
     @classmethod

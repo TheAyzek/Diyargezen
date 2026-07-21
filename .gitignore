@@ -15,6 +15,12 @@ dist/
 *.spec
 *.exe
 
+# Node.js (Frontend)
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.eslintrc.cjs
+
 # IDE
 .idea/
 .vscode/

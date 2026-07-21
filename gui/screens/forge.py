@@ -104,6 +104,7 @@ class ForgePage(QWidget):
         self._build_block4_skills()
         self._build_block5_feats_powers()
         self._build_block6_inventory()
+        self._build_block7_spellbook()   # ADIM 3: Büyü Kitabı
 
         # Save Button at the bottom
         self._save_btn = QPushButton("Karakteri Kaydet")
@@ -113,6 +114,7 @@ class ForgePage(QWidget):
         self.container_layout.addWidget(self._save_btn)
 
         # Sub-blocks to hide/show for progressive disclosure
+        # NOT: _block7_group burada YOK — sadece büyücü sınıflarda gösterilir
         self._sub_blocks = [
             self._block1b_details_group,
             self._block2_group,
@@ -393,6 +395,88 @@ class ForgePage(QWidget):
         self.container_layout.addWidget(self._block6_group)
 
     # ------------------------------------------------------------------
+    # BLOCK 7: Büyü Kitabı (Spellbook) — sadece büyücü sınıflarda görünür
+    # ------------------------------------------------------------------
+    def _build_block7_spellbook(self) -> None:
+        self._block7_group = QGroupBox("Blok 7: Büyü Kitabı (Spellcasting)")
+        lay = QVBoxLayout(self._block7_group)
+        lay.setSpacing(10)
+
+        # Üst satır: Büyü istatistikleri (DC, Attack Bonus, CL/Concentration)
+        stats_frame = QFrame()
+        stats_frame.setFrameShape(QFrame.StyledPanel)
+        stats_layout = QHBoxLayout(stats_frame)
+        stats_layout.setSpacing(20)
+
+        def _make_stat_pair(label_text: str) -> tuple:
+            col = QVBoxLayout()
+            lbl = QLabel(label_text)
+            lbl.setAlignment(Qt.AlignCenter)
+            lbl.setStyleSheet("color: #888; font-size: 10px;")
+            val = QLabel("—")
+            val.setObjectName("StatValue")
+            val.setAlignment(Qt.AlignCenter)
+            val.setStyleSheet("font-size: 18px; font-weight: bold; color: #c09b5a;")
+            col.addWidget(lbl)
+            col.addWidget(val)
+            stats_layout.addLayout(col)
+            return val
+
+        self._spell_dc_lbl        = _make_stat_pair("Büyü Zorluğu (DC)")
+        self._spell_atk_lbl       = _make_stat_pair("Büyü Atk Bonus")
+        self._spell_cl_lbl        = _make_stat_pair("Büyücü Seviyesi (CL)")
+        self._spell_conc_lbl      = _make_stat_pair("Konsantrasyon")
+        self._spell_ability_lbl   = _make_stat_pair("Büyü Yeteneği")
+        lay.addWidget(stats_frame)
+
+        # Slot tablosu
+        lay.addWidget(QLabel("Büyü Slotları:"))
+        self._spell_slots_table = QTableWidget()
+        self._spell_slots_table.setColumnCount(2)
+        self._spell_slots_table.setHorizontalHeaderLabels(["Büyü Seviyesi", "Slot Sayısı"])
+        self._spell_slots_table.horizontalHeader().setSectionResizeMode(0, QHeaderView.Stretch)
+        self._spell_slots_table.horizontalHeader().setSectionResizeMode(1, QHeaderView.ResizeToContents)
+        self._spell_slots_table.setMaximumHeight(220)
+        self._spell_slots_table.setEditTriggers(QTableWidget.NoEditTriggers)
+        lay.addWidget(self._spell_slots_table)
+
+        # Bonus slot bilgisi (PF1e)
+        self._bonus_slots_lbl = QLabel("")
+        self._bonus_slots_lbl.setWordWrap(True)
+        self._bonus_slots_lbl.setStyleSheet("color: #a9c4ff; font-size: 11px;")
+        self._bonus_slots_lbl.hide()
+        lay.addWidget(self._bonus_slots_lbl)
+
+        # Büyü listesi
+        lay.addWidget(QLabel("Sınıf Büyü Listesi (ilk 30):"))
+        self._spell_list_widget = QListWidget()
+        self._spell_list_widget.setMaximumHeight(180)
+        self._spell_list_widget.setToolTip("Büyüye tıklayarak açıklamasını görebilirsiniz.")
+        self._spell_list_widget.currentTextChanged.connect(self._on_spell_selected)
+        lay.addWidget(self._spell_list_widget)
+
+        # Büyü açıklama kutusu
+        self._spell_desc_box = QTextEdit()
+        self._spell_desc_box.setReadOnly(True)
+        self._spell_desc_box.setPlaceholderText("Bir büyüye tıklayarak açıklamasını görüntüleyin...")
+        self._spell_desc_box.setVerticalScrollBarPolicy(Qt.ScrollBarAsNeeded)
+        lay.addWidget(self._spell_desc_box)
+
+        # 1. UI Eklemesi (Büyü Öğrenme Bloğu)
+        self._add_spell_btn = QPushButton("Seçili Büyüyü Öğren")
+        self._add_spell_btn.clicked.connect(self.add_spell_to_book)
+        lay.addWidget(self._add_spell_btn)
+
+        lay.addWidget(QLabel("Öğrenilen Büyüler:"))
+        self._learned_spells_list = QListWidget()
+        self._learned_spells_list.setMaximumHeight(100)
+        lay.addWidget(self._learned_spells_list)
+
+        self.container_layout.addWidget(self._block7_group)
+        self._block7_group.hide()   # Başlangıçta gizli — büyücü sınıf seçilince açılır
+        self._spell_data_cache: list = []  # Açıklama araması için önbellek
+
+    # ------------------------------------------------------------------
     # Signal Listeners & Database Triggers
     # ------------------------------------------------------------------
 
@@ -454,6 +538,25 @@ class ForgePage(QWidget):
         else:
             self._race_combo.setEnabled(True)
             races = self.manager.get_top_level_races(sys_key)
+            if not races and sys_key == "pathfinder1e":
+                from models.entity import DiyargezenEntity
+                fallback_race_names = [
+                    "Human", "Elf", "Dwarf", "Gnome", "Halfling", "Half-Elf", "Half-Orc",
+                    "Aasimar", "Tiefling", "Ifrit", "Oread", "Sylph", "Undine", "Catfolk",
+                    "Tengu", "Ratfolk", "Fetchling", "Dhampir", "Drow", "Goblin", "Hobgoblin",
+                    "Kobold", "Orc", "Kitsune", "Changeling", "Wayang", "Nagaji", "Samsaran",
+                    "Vishkanya", "Grippli", "Merfolk", "Strix", "Svirfneblin", "Vanara"
+                ]
+                races = [
+                    DiyargezenEntity(
+                        isim=r_name,
+                        sistem="pathfinder1e",
+                        kategori="race",
+                        aciklama=f"{r_name} (PF1e Brute-Force Fallback)",
+                        sistem_verisi={"synthesised": True}
+                    )
+                    for r_name in fallback_race_names
+                ]
             self._race_combo.clear()
             self._race_combo.addItem("— Irk Seçiniz —", None)
             for r in races:
@@ -476,11 +579,30 @@ class ForgePage(QWidget):
         # ── Traits (PF1e only) ───────────────────────────────────────────
         if sys_key == "pathfinder1e":
             traits = self.manager.get_traits(sys_key)
+            if not traits:
+                from models.entity import DiyargezenEntity
+                fallback_trait_names = [
+                    "Reactionary (Combat)", "Armor Expert (Combat)", "Courageous (Combat)",
+                    "Magical Knack (Magic)", "Focused Mind (Magic)", "Student of Philosophy (Social)",
+                    "Fast-Talker (Social)", "Fate's Favored (Faith)", "Birthmark (Faith)",
+                    "Deft Dodger (Combat)", "Resilient (Combat)"
+                ]
+                traits = [
+                    DiyargezenEntity(
+                        isim=t_name,
+                        sistem="pathfinder1e",
+                        kategori="trait",
+                        aciklama=f"{t_name} (PF1e Brute-Force Fallback)",
+                        sistem_verisi={}
+                    )
+                    for t_name in fallback_trait_names
+                ]
             self._trait_combo.clear()
             self._trait_combo.addItem("— Trait Seçiniz —", None)
             for t in traits:
                 self._trait_combo.addItem(t.isim, t)
             self._block5b_group.show()
+            self._block5b_group.setEnabled(True)
         else:
             self._trait_combo.clear()
             self._block5b_group.hide()
@@ -618,6 +740,7 @@ class ForgePage(QWidget):
         entity = self._race_combo.currentData()
         race_name = self._race_combo.currentText() if entity else ""
         self.manager.active_character["race"] = race_name
+        self.manager.active_character["race_data"] = entity.sistem_verisi if entity and hasattr(entity, "sistem_verisi") else {}
         # Clear subrace when race changes
         self.manager.active_character["subrace"] = ""
 
@@ -684,6 +807,17 @@ class ForgePage(QWidget):
             self._style_lbl.hide()
             self._style_combo.hide()
 
+        # ADIM 3: Büyücü sınıf tespiti — Progressive disclosure
+        is_caster = bool(class_data.get("spellcasting_ability", ""))
+        if is_caster:
+            self._block7_group.show()
+        else:
+            self._block7_group.hide()
+            self._spell_slots_table.setRowCount(0)
+            self._spell_list_widget.clear()
+            self._spell_desc_box.clear()
+            self._bonus_slots_lbl.hide()
+
         self._recalculate_and_refresh()
 
     def _on_ability_changed(self) -> None:
@@ -724,7 +858,9 @@ class ForgePage(QWidget):
         entity = self._feat_combo.currentData()
         feat_name = self._feat_combo.currentText()
         if feat_name and feat_name != "— Yetenek Seçiniz —":
-            self.manager.active_character["feats"] = [feat_name]
+            current_feats = self.manager.active_character.get("feats", [])
+            if feat_name not in current_feats:
+                self.manager.active_character["feats"] = current_feats + [feat_name]
             if entity and hasattr(entity, "aciklama") and entity.aciklama:
                 self._desc_box.setHtml(entity.aciklama)
 
@@ -788,8 +924,13 @@ class ForgePage(QWidget):
         self._skills_table.setRowCount(0)
         self._skills_table.setRowCount(len(skills))
         for row, (sk, bonus) in enumerate(sorted(skills.items())):
-            self._skills_table.setItem(row, 0, QTableWidgetItem(sk))
+            # snake_case → Title Case (acrobatics → Acrobatics, sleight_of_hand → Sleight Of Hand)
+            display_name = sk.replace("_", " ").title()
+            self._skills_table.setItem(row, 0, QTableWidgetItem(display_name))
             self._skills_table.setItem(row, 1, QTableWidgetItem(f"{bonus:+d}" if isinstance(bonus, int) else str(bonus)))
+
+        # ADIM 3: Büyü Kitabı UI güncellemesi (Graceful Fail — hata fırlatmaz)
+        self._refresh_spellbook_ui(char, sys_key)
 
     def _refresh_inventory_ui(self) -> None:
         inventory = self.manager.active_character.get("equipment", [])
@@ -800,6 +941,135 @@ class ForgePage(QWidget):
             itype = item.get("type", "")
             self._inventory_table.setItem(row, 0, QTableWidgetItem(name))
             self._inventory_table.setItem(row, 1, QTableWidgetItem(itype))
+
+    def _refresh_spellbook_ui(self, char: Dict[str, Any], sys_key: Optional[str]) -> None:
+        """Blok 7 UI'ını calculate_spells() sonucuyla günceller.
+        Graceful Fail: herhangi bir hata sessizce yutulur, mevcut UI bozulmaz."""
+        try:
+            if self._block7_group.isHidden():
+                return  # Büyücü değil — hiç dokunma
+
+            from rules.calculators import DND5e_Calculator, PF1e_Calculator
+
+            active_char = self.manager.active_character
+            if sys_key == "pathfinder1e":
+                spell_data = PF1e_Calculator(self._db_path).calculate_spells(active_char)
+            else:
+                spell_data = DND5e_Calculator(self._db_path).calculate_spells(active_char)
+
+            if not spell_data.get("is_spellcaster"):
+                return
+
+            # -- İstatistik etiketleri --
+            ability_str = spell_data.get("spellcasting_ability", "—")
+            self._spell_ability_lbl.setText(ability_str)
+
+            if sys_key == "pathfinder1e":
+                self._spell_dc_lbl.setText(
+                    f"{spell_data.get('spell_save_dc_base', 0)} + büyü seviyesi"
+                )
+                self._spell_atk_lbl.setText("—")  # PF1e'de saldırı rulları farklı
+                self._spell_cl_lbl.setText(str(spell_data.get("caster_level", "—")))
+                self._spell_conc_lbl.setText(
+                    f"+{spell_data.get('concentration_bonus', 0)}"
+                )
+                # Bonus slot bilgisi
+                bonus = spell_data.get("bonus_slots", {})
+                if bonus:
+                    bonus_text = "  |  ".join(
+                        f"Seviye {k}: +{v} slot" for k, v in sorted(bonus.items())
+                    )
+                    self._bonus_slots_lbl.setText(
+                        f"Yüksek {ability_str} bonusu: {bonus_text}"
+                    )
+                    self._bonus_slots_lbl.show()
+                else:
+                    self._bonus_slots_lbl.hide()
+            else:
+                self._spell_dc_lbl.setText(str(spell_data.get("spell_save_dc", "—")))
+                atk = spell_data.get("spell_attack_bonus", 0)
+                self._spell_atk_lbl.setText(f"+{atk}" if atk >= 0 else str(atk))
+                self._spell_cl_lbl.setText(str(active_char.get("level", 1)))
+                self._spell_conc_lbl.setText("—")  # 5e'de Concentration farklı
+                self._bonus_slots_lbl.hide()
+
+            # -- Slot tablosu --
+            slots = spell_data.get("slots", {})
+            self._spell_slots_table.setRowCount(0)
+
+            if "pact_slots" in slots:  # Warlock: Pact Magic
+                self._spell_slots_table.setRowCount(1)
+                self._spell_slots_table.setItem(
+                    0, 0,
+                    QTableWidgetItem(
+                        f"Pakt Slotu (Seviye {slots['pact_slot_level']})"
+                    )
+                )
+                self._spell_slots_table.setItem(
+                    0, 1, QTableWidgetItem(str(slots["pact_slots"]))
+                )
+            else:
+                self._spell_slots_table.setRowCount(len(slots))
+                for row, (lv, count) in enumerate(
+                    sorted(slots.items(), key=lambda x: int(x[0]))
+                ):
+                    self._spell_slots_table.setItem(
+                        row, 0, QTableWidgetItem(f"{lv}. Seviye")
+                    )
+                    self._spell_slots_table.setItem(
+                        row, 1, QTableWidgetItem(str(count))
+                    )
+
+            # -- Büyü listesi --
+            known = spell_data.get("known_spells", [])
+            self._spell_data_cache = known
+            self._spell_list_widget.clear()
+            for sp in known:
+                lv_tag = f"[{sp['level']}]" if sp.get("level") else ""
+                self._spell_list_widget.addItem(f"{lv_tag} {sp['name']}")
+            if not known:
+                self._spell_list_widget.addItem("(Bu sınıf için büyü bulunamadı)")
+
+        except Exception as exc:
+            # Graceful fail — büyü bloğu bozulsa bile geri kalan UI sağlamlığını korur
+            logger.warning("Spellbook UI refresh failed (graceful): %s", exc)
+
+    def _on_spell_selected(self, text: str) -> None:
+        """Listedeki bir büyüye tıklandığında açıklamasını gösterir."""
+        import re
+        try:
+            idx = self._spell_list_widget.currentRow()
+            if 0 <= idx < len(self._spell_data_cache):
+                desc = self._spell_data_cache[idx].get("description", "")
+                
+                if desc:
+                    desc = desc.replace("<br>", "\n").replace("<br/>", "\n").replace("<p>", "\n").replace("</p>", "\n")
+                    desc = re.sub(r'<[^>]+>', '', desc)
+                    desc = desc.strip()
+                    
+                self._spell_desc_box.setPlainText(desc or "Açıklama mevcut değil.")
+                
+                # Dinamik boyutlandırma (Min 50px, Max 250px)
+                doc_height = int(self._spell_desc_box.document().size().height()) + 15
+                new_height = max(50, min(doc_height, 250))
+                self._spell_desc_box.setMinimumHeight(new_height)
+                self._spell_desc_box.setMaximumHeight(new_height)
+        except Exception:
+            pass
+
+    def add_spell_to_book(self) -> None:
+        idx = self._spell_list_widget.currentRow()
+        if 0 <= idx < len(self._spell_data_cache):
+            spell = self._spell_data_cache[idx]
+            spell_name = spell.get("name", "")
+            
+            # Use active_character state from manager directly since we use manager.active_character
+            if "spells" not in self.manager.active_character:
+                self.manager.active_character["spells"] = []
+                
+            if spell_name not in self.manager.active_character["spells"]:
+                self.manager.active_character["spells"].append(spell_name)
+                self._learned_spells_list.addItem(f"Lvl {spell.get('level', 0)} - {spell_name}")
 
     def reset(self) -> None:
         """Reset the scrollable creation layout."""
@@ -815,6 +1085,13 @@ class ForgePage(QWidget):
         self._subrace_combo.clear()
         self._subrace_label.hide()
         self._subrace_combo.hide()
+        # Hide and clear spellbook block
+        self._block7_group.hide()
+        self._spell_slots_table.setRowCount(0)
+        self._spell_list_widget.clear()
+        self._spell_desc_box.clear()
+        self._bonus_slots_lbl.hide()
+        self._spell_data_cache = []
         self._sys_combo.setCurrentIndex(0)
         self._on_system_changed()
 

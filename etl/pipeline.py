@@ -18,6 +18,7 @@ from db.entity_store import (
     init_game_schema,
     needs_rebuild,
     set_etl_meta,
+    _source_fingerprint,
 )
 from parsers import PARSERS
 
@@ -35,17 +36,11 @@ SYSTEM_FILES: Dict[str, List[str]] = {
 
 
 def _fingerprint(data_dir: Path) -> str:
-    parts = []
-    for sys, files in SYSTEM_FILES.items():
-        for fn in files:
-            fp = data_dir / fn
-            if fp.exists():
-                parts.append(f"{fn}:{os.path.getmtime(fp)}")
-    bg = data_dir / "backgrounds"
-    if bg.exists():
-        for fp in sorted(bg.glob("*.json")):
-            parts.append(f"bg/{fp.name}:{os.path.getmtime(fp)}")
-    return "|".join(parts)
+    """entity_store._source_fingerprint ile aynı mantığı kullan — tutarlılık için."""
+    all_files = []
+    for files in SYSTEM_FILES.values():
+        all_files.extend(files)
+    return _source_fingerprint(data_dir, all_files)
 
 
 def run_etl(
