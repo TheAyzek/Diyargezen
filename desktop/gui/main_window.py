@@ -32,7 +32,13 @@ from etl.pipeline import run_etl_if_needed
 
 logger = logging.getLogger(__name__)
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+desktop_dir = Path(__file__).resolve().parent.parent
+if str(desktop_dir) not in sys.path:
+    sys.path.insert(0, str(desktop_dir))
+
 DB_PATH = BASE_DIR / "data" / "characters.db"
 LOGO_PATH = BASE_DIR / "assets" / "diyargezer_logo.png"
 

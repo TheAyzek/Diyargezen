@@ -12,9 +12,12 @@ import sys
 import logging
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
+desktop_dir = Path(__file__).resolve().parent
+if str(desktop_dir) not in sys.path:
+    sys.path.insert(0, str(desktop_dir))
 
 logging.basicConfig(
     level=logging.INFO,
@@ -25,7 +28,7 @@ logging.basicConfig(
 
 def main() -> None:
     print("-" * 50)
-    print("  Diyargezer - TTRPG Karakter Yoneticisi")
+    print("  Diyargezer - TTRPG Karakter Yoneticisi (Masaüstü)")
     print("  D&D 5e  |  Pathfinder 1e  |  M&M 3e")
     print("-" * 50)
 

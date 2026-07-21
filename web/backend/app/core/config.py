@@ -3,7 +3,7 @@ from pathlib import Path
 
 # Resolve workspace root
 BACKEND_DIR = Path(__file__).resolve().parent.parent.parent
-WORKSPACE_ROOT = BACKEND_DIR.parent
+WORKSPACE_ROOT = BACKEND_DIR.parent.parent
 
 # Add workspace root to sys.path to allow importing existing modules (rules, db, utils, models)
 if str(WORKSPACE_ROOT) not in sys.path:
