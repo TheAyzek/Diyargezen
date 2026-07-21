@@ -1096,6 +1096,7 @@ class ForgePage(QWidget):
         self._on_system_changed()
 
     def _save_character(self) -> None:
+        from desktop.api_client import api_client
         char = self.manager.active_character
         sys_key = self._sys_combo.currentData()
         
@@ -1123,17 +1124,26 @@ class ForgePage(QWidget):
             elif reply == QMessageBox.No:
                 return
 
-        record = CharacterRecord(
-            id=None,
-            system=char.get("system", "UNKNOWN"),
-            name=char.get("name", "İsimsiz"),
-            data=char,
-        )
-        try:
-            new_id = save_character(self._db_path, record)
-            QMessageBox.information(self, "Başarılı", f"'{record.name}' kaydedildi! (ID: {new_id})")
+        new_id = None
+        if api_client.is_authenticated():
+            try:
+                res = api_client.save_character(char)
+                new_id = res.get("id")
+                QMessageBox.information(self, "Başarılı (Bulut)", f"'{char.get('name')}' buluta kaydedildi! (ID: {new_id})")
+            except Exception as exc:
+                logger.warning(f"Bulut kaydı başarısız, lokale yazılıyor: {exc}")
+                record = CharacterRecord(id=None, system=char.get("system", "UNKNOWN"), name=char.get("name", "İsimsiz"), data=char)
+                new_id = save_character(self._db_path, record)
+                QMessageBox.information(self, "Başarılı (Lokal)", f"'{record.name}' locale kaydedildi! (ID: {new_id})")
+        else:
+            record = CharacterRecord(id=None, system=char.get("system", "UNKNOWN"), name=char.get("name", "İsimsiz"), data=char)
+            try:
+                new_id = save_character(self._db_path, record)
+                QMessageBox.information(self, "Başarılı", f"'{record.name}' kaydedildi! (ID: {new_id})")
+            except Exception as exc:
+                logger.exception("Karakter kayıt hatası")
+                QMessageBox.critical(self, "Hata", str(exc))
+
+        if new_id:
             self.character_created.emit(new_id)
             self.reset()
-        except Exception as exc:
-            logger.exception("Karakter kayıt hatası")
-            QMessageBox.critical(self, "Hata", str(exc))

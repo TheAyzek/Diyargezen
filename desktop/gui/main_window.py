@@ -126,7 +126,13 @@ class MainWindow(QMainWindow):
 
         sb_lay.addStretch()
 
-        version_lbl = QLabel("v2.0  •  PySide6")
+        self._cloud_btn = QPushButton("☁️ Bulut Girişi (Sync)")
+        self._cloud_btn.setCursor(Qt.PointingHandCursor)
+        self._cloud_btn.setStyleSheet("background-color: rgba(201, 168, 76, 0.15); color: #c9a84c; border: 1px solid #c9a84c; border-radius: 4px; padding: 6px; font-weight: bold;")
+        self._cloud_btn.clicked.connect(self._open_login_dialog)
+        sb_lay.addWidget(self._cloud_btn)
+
+        version_lbl = QLabel("v2.0  •  PySide6 + Cloud")
         version_lbl.setObjectName("SidebarSubtitle")
         version_lbl.setAlignment(Qt.AlignCenter)
         sb_lay.addWidget(version_lbl)
@@ -173,6 +179,14 @@ class MainWindow(QMainWindow):
     def _on_character_created(self, record_id: int) -> None:
         self._sheet.load_character(record_id)
         self._navigate(2)
+
+    def _open_login_dialog(self) -> None:
+        from desktop.gui.dialogs.login_dialog import LoginDialog
+        from desktop.api_client import api_client
+        dlg = LoginDialog(self)
+        if dlg.exec() == LoginDialog.Accepted and api_client.is_authenticated():
+            self._cloud_btn.setText(f"☁️ {api_client.username}")
+            self._tavern.refresh()
 
 
 # ======================================================================
