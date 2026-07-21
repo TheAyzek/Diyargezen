@@ -1,9 +1,15 @@
-from __future__ import annotations
-
+import sys
 from pathlib import Path
 
-from cli import CharacterContext, CharacterWizard
-from cli.steps import (
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
+if str(BASE_DIR) not in sys.path:
+    sys.path.insert(0, str(BASE_DIR))
+desktop_dir = Path(__file__).resolve().parent.parent
+if str(desktop_dir) not in sys.path:
+    sys.path.insert(0, str(desktop_dir))
+
+from desktop.cli import CharacterContext, CharacterWizard
+from desktop.cli.steps import (
     AbilityStep,
     BackgroundStep,
     ClassSkillsStep,
