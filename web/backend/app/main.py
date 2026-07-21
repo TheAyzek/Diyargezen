@@ -2,7 +2,7 @@ import logging
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.routers import systems, rules, characters, auth
+from app.routers import systems, rules, characters, auth, sync
 from app.core.database import check_db_exists
 from app.core.config import DB_PATH
 
@@ -61,3 +61,4 @@ app.include_router(auth.router, prefix="/api")
 app.include_router(systems.router, prefix="/api")
 app.include_router(rules.router, prefix="/api")
 app.include_router(characters.router, prefix="/api")
+app.include_router(sync.router, prefix="/api")
