@@ -136,6 +136,23 @@ class BaseCalculator(ABC):
                     "description": m.get("description") or f"+{val} bonus ({name})"
                 })
                 explicit_targets.add(m.get("target", ""))
+
+            # Process ability score increases (e.g. for races)
+            asi = sys_ver.get("ability_score_increase") or sys_ver.get("modifiers")
+            if isinstance(asi, dict):
+                for ab_name, b_val in asi.items():
+                    try:
+                        val_int = int(b_val)
+                        if val_int != 0:
+                            applied_modifiers.append({
+                                "target": f"abilities.{ab_name.title()}",
+                                "value": val_int,
+                                "type": category,
+                                "source": name,
+                                "description": f"+{val_int} {ab_name.title()} ({name})"
+                            })
+                    except (ValueError, TypeError):
+                        pass
             
             # Dynamic parsing for missing targets
             parsed = RuleParser.parse_description(desc, sys_db, name, category)
@@ -415,6 +432,7 @@ class DND5e_Calculator(BaseCalculator):
         scores = self.get_adjusted_abilities(character)
         abilities = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]
         mods = {ab: (scores.get(ab, 10) - 10) // 2 for ab in abilities}
+        derived["ability_scores"] = {ab.title(): scores.get(ab, 10) for ab in abilities}
         derived["ability_modifiers"] = {ab.title(): m for ab, m in mods.items()}
 
         # Proficiency
