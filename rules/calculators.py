@@ -706,14 +706,6 @@ class DND5e_Calculator(BaseCalculator):
 
 
 class PF1e_Calculator(BaseCalculator):
-    """Calculations engine for Pathfinder 1st Edition."""
-
-    def calculate(self, character: Dict[str, Any]) -> Dict[str, Any]:
-        derived = {}
-        level = int(character.get("level", 1))
-
-        # Modifiers
-        scores = self.get_adjusted_abilities(character)
     """Calculations engine for Pathfinder 1st Edition ONLY.
     PF2e is explicitly NOT supported — all rules follow PF1e (d20 PFRPG).
     """
