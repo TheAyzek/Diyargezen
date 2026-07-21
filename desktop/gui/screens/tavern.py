@@ -154,31 +154,18 @@ class TavernPage(QWidget):
         self.refresh()
 
     def _on_filter(self) -> None:
-        from desktop.api_client import api_client
+        from desktop import local_db
         search_text = self._search.text().strip()
         system_key = self._system_filter.currentData() or None
 
+        local_recs = local_db.list_local_characters(self._db_path, system=system_key)
         records = []
-        if api_client.is_authenticated():
-            try:
-                raw_list = api_client.list_characters(system=system_key)
-                for item in raw_list:
-                    rec_id = item.get("id")
-                    sys_code = item.get("system", "").upper()
-                    name = item.get("name", "İsimsiz")
-                    c_data = item.get("data") or {}
-                    if isinstance(c_data, str):
-                        import json
-                        try: c_data = json.loads(c_data)
-                        except: c_data = {}
-                    records.append(CharacterRecord(
-                        id=rec_id, system=sys_code, name=name, data=c_data,
-                        created_at=item.get("created_at", ""), updated_at=item.get("updated_at", "")
-                    ))
-            except Exception as exc:
-                records = list_characters(self._db_path, system=system_key)
-        else:
-            records = list_characters(self._db_path, system=system_key)
+        for lr in local_recs:
+            dirty_badge = " 🔄" if lr.is_dirty else ""
+            records.append(CharacterRecord(
+                id=lr.id, system=lr.system, name=f"{lr.name}{dirty_badge}", data=lr.data,
+                created_at=lr.created_at, updated_at=lr.updated_at
+            ))
 
         if search_text:
             search_lower = search_text.lower()
@@ -200,17 +187,11 @@ class TavernPage(QWidget):
 
     def _on_delete(self, record_id: int) -> None:
         from PySide6.QtWidgets import QMessageBox
-        from desktop.api_client import api_client
+        from desktop import local_db
         reply = QMessageBox.question(
             self, "Onay", "Bu karakter kalıcı olarak silinecek. Emin misin?",
             QMessageBox.Yes | QMessageBox.No, QMessageBox.No,
         )
         if reply == QMessageBox.Yes:
-            if api_client.is_authenticated():
-                try:
-                    api_client.delete_character(record_id)
-                except Exception:
-                    delete_character(self._db_path, record_id)
-            else:
-                delete_character(self._db_path, record_id)
+            local_db.delete_local_character(self._db_path, record_id)
             self.refresh()

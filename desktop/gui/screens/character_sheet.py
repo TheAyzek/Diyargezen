@@ -51,26 +51,16 @@ class CharacterSheetPage(QWidget):
     # ------------------------------------------------------------------
 
     def load_character(self, record_id: int) -> None:
-        """Bir karakteri yükle ve göster (Bulut Sync veya Lokal)."""
-        from desktop.api_client import api_client
-        rec = None
-        if api_client.is_authenticated():
-            try:
-                raw_rec = api_client.get_character(record_id)
-                c_data = raw_rec.get("data") or {}
-                if isinstance(c_data, str):
-                    import json
-                    try: c_data = json.loads(c_data)
-                    except: c_data = {}
-                rec = CharacterRecord(
-                    id=raw_rec.get("id"), system=raw_rec.get("system", "").upper(),
-                    name=raw_rec.get("name", "İsimsiz"), data=c_data,
-                    created_at=raw_rec.get("created_at", ""), updated_at=raw_rec.get("updated_at", "")
-                )
-            except Exception:
-                rec = load_character(self._db_path, record_id)
-        else:
+        """Bir karakteri yerel veritabanından yükle ve göster (Offline-First)."""
+        from desktop import local_db
+        lr = local_db.get_local_character(self._db_path, record_id)
+        if not lr:
             rec = load_character(self._db_path, record_id)
+        else:
+            rec = CharacterRecord(
+                id=lr.id, system=lr.system, name=lr.name, data=lr.data,
+                created_at=lr.created_at, updated_at=lr.updated_at
+            )
 
         if not rec:
             return

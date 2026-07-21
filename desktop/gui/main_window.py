@@ -58,13 +58,27 @@ class MainWindow(QMainWindow):
             self.setWindowIcon(QIcon(str(LOGO_PATH)))
 
         init_db(DB_PATH)
+        from desktop import local_db
+        from desktop.api_client import api_client
+        from desktop.sync_engine import BackgroundSyncThread
+        local_db.init_local_db(DB_PATH)
+
+        auth_info = local_db.get_local_auth(DB_PATH)
+        if auth_info:
+            api_client.set_token(auth_info[1], auth_info[0])
+
         try:
             totals = run_etl_if_needed(DB_PATH)
             logger.info("Oyun verisi hazır: %s", totals)
         except Exception as exc:
             logger.warning("ETL başlatılamadı (JSON fallback aktif): %s", exc)
+
         self._build_ui()
         self._navigate(0)
+
+        # Arka plan otomatik senkronizasyon servisi
+        self._sync_thread = BackgroundSyncThread(DB_PATH, parent=self)
+        self._sync_thread.start()
 
     # ------------------------------------------------------------------
     # UI
@@ -183,8 +197,10 @@ class MainWindow(QMainWindow):
     def _open_login_dialog(self) -> None:
         from desktop.gui.dialogs.login_dialog import LoginDialog
         from desktop.api_client import api_client
+        from desktop import local_db
         dlg = LoginDialog(self)
         if dlg.exec() == LoginDialog.Accepted and api_client.is_authenticated():
+            local_db.save_local_auth(DB_PATH, api_client.username, api_client.token)
             self._cloud_btn.setText(f"☁️ {api_client.username}")
             self._tavern.refresh()
 
