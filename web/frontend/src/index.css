@@ -12,12 +12,16 @@
   --bg-glass-card: rgba(26, 26, 46, 0.7);
   --bg-glass-input: rgba(34, 34, 59, 0.6);
   
-  /* Gold / Bronze Accents */
+  /* Gold / Bronze Accents (60%) */
   --accent-gold: #c9a84c;
   --accent-gold-glow: rgba(201, 168, 76, 0.4);
   --accent-bronze: #8b7355;
   
-  /* Status Colors */
+  /* Arcane Violet Accent (30% Spells & Magic) */
+  --color-violet: #7c6ef7;
+  --color-violet-glow: rgba(124, 110, 247, 0.4);
+  
+  /* Semantic & Highlight Colors (10%) */
   --color-text-primary: #f0e6d2;
   --color-text-secondary: #d4c5a9;
   --color-text-muted: #8b949e;
@@ -25,6 +29,8 @@
   --color-ruby-glow: rgba(233, 69, 96, 0.4);
   --color-emerald: #3fb950;
   --color-emerald-glow: rgba(63, 185, 80, 0.4);
+  --color-sky: #38bdf8;
+  --color-sky-glow: rgba(56, 189, 248, 0.4);
   
   /* Transitions and Effects */
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

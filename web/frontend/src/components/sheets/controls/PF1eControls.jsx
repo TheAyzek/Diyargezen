@@ -198,18 +198,18 @@ export default function PF1eControls() {
       </div>
 
       {/* Feats Selection Card */}
-      <div className="glass-card" style={{ border: '1px solid rgba(201,168,76,0.2)' }}>
+      <div className="glass-card" style={{ border: '1px solid rgba(56,189,248,0.25)' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '10px' }}>
           <h3 style={{ fontSize: '1.1rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Award size={16} style={{ color: '#c9a84c' }} />
+            <Award size={16} style={{ color: '#38bdf8' }} />
             Feat Seçimi & Hücreleri
           </h3>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <span style={{
               fontSize: '11px', padding: '2px 8px', borderRadius: '10px',
-              background: (feats?.length || 0) >= maxFeatSlots ? 'rgba(233,69,96,0.15)' : 'rgba(201,168,76,0.1)',
-              color: (feats?.length || 0) >= maxFeatSlots ? '#e94560' : '#c9a84c',
-              border: `1px solid ${(feats?.length || 0) >= maxFeatSlots ? 'rgba(233,69,96,0.3)' : 'rgba(201,168,76,0.2)'}`,
+              background: (feats?.length || 0) >= maxFeatSlots ? 'rgba(233,69,96,0.15)' : 'rgba(56,189,248,0.15)',
+              color: (feats?.length || 0) >= maxFeatSlots ? '#e94560' : '#38bdf8',
+              border: `1px solid ${(feats?.length || 0) >= maxFeatSlots ? 'rgba(233,69,96,0.3)' : 'rgba(56,189,248,0.3)'}`,
               fontWeight: 'bold'
             }}>
               {feats?.length || 0} / {maxFeatSlots}
@@ -217,7 +217,7 @@ export default function PF1eControls() {
             {(feats?.length || 0) < maxFeatSlots && (
               <button
                 className="btn btn-primary"
-                style={{ padding: '5px 10px', fontSize: '11px', minHeight: 'unset' }}
+                style={{ padding: '5px 10px', fontSize: '11px', minHeight: 'unset', backgroundColor: '#38bdf8', borderColor: '#38bdf8', color: '#0f0f1a' }}
                 onClick={() => setFeatModalOpen(true)}
               >
                 <Plus size={12} /> Feat Ekle
@@ -228,7 +228,7 @@ export default function PF1eControls() {
 
         {/* Rule hint */}
         <div style={{ fontSize: '11px', color: '#8b949e', marginBottom: '12px' }}>
-          Mevcut Seviye (<b style={{ color: '#c9a84c' }}>{level}</b>) ve Sınıf/Irk bonuslarına göre toplam <b style={{ color: '#c9a84c' }}>{maxFeatSlots} feat</b> hakkınız var.
+          Mevcut Seviye (<b style={{ color: '#38bdf8' }}>{level}</b>) ve Sınıf/Irk bonuslarına göre toplam <b style={{ color: '#38bdf8' }}>{maxFeatSlots} feat</b> hakkınız var.
         </div>
 
         {/* Feat Error */}
@@ -256,15 +256,15 @@ export default function PF1eControls() {
                 <div key={idx} style={{
                   display: 'flex', justifyContent: 'space-between', alignItems: 'center',
                   padding: '10px 14px', borderRadius: '8px',
-                  background: 'rgba(201,168,76,0.06)',
-                  border: '1px solid rgba(201,168,76,0.2)'
+                  background: 'rgba(56,189,248,0.06)',
+                  border: '1px solid rgba(56,189,248,0.2)'
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Award size={14} style={{ color: '#c9a84c' }} />
+                    <Award size={14} style={{ color: '#38bdf8' }} />
                     <span style={{ fontWeight: 'bold', color: '#f0e6d2', fontSize: '13px' }}>{fname}</span>
                     <span style={{
                       fontSize: '10px', padding: '1px 6px', borderRadius: '10px',
-                      background: 'rgba(201,168,76,0.15)', color: '#c9a84c', fontWeight: 'bold'
+                      background: 'rgba(56,189,248,0.15)', color: '#38bdf8', fontWeight: 'bold'
                     }}>{cat}</span>
                   </div>
                   <button
@@ -284,18 +284,18 @@ export default function PF1eControls() {
       </div>
 
       {/* Trait Selection Card */}
-      <div className="glass-card" style={{ border: '1px solid rgba(201,168,76,0.2)' }}>
+      <div className="glass-card" style={{ border: '1px solid rgba(63,185,80,0.25)' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '10px' }}>
           <h3 style={{ fontSize: '1.1rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Shield size={16} style={{ color: '#c9a84c' }} />
+            <Shield size={16} style={{ color: '#3fb950' }} />
             Karakter Traitler (Özellikler)
           </h3>
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
             <span style={{
               fontSize: '11px', padding: '2px 8px', borderRadius: '10px',
-              background: (traits?.length || 0) >= 2 ? 'rgba(233,69,96,0.15)' : 'rgba(201,168,76,0.1)',
-              color: (traits?.length || 0) >= 2 ? '#e94560' : '#c9a84c',
-              border: `1px solid ${(traits?.length || 0) >= 2 ? 'rgba(233,69,96,0.3)' : 'rgba(201,168,76,0.2)'}`,
+              background: (traits?.length || 0) >= 2 ? 'rgba(233,69,96,0.15)' : 'rgba(63,185,80,0.15)',
+              color: (traits?.length || 0) >= 2 ? '#e94560' : '#3fb950',
+              border: `1px solid ${(traits?.length || 0) >= 2 ? 'rgba(233,69,96,0.3)' : 'rgba(63,185,80,0.3)'}`,
               fontWeight: 'bold'
             }}>
               {traits?.length || 0} / 2
@@ -303,7 +303,7 @@ export default function PF1eControls() {
             {(traits?.length || 0) < 2 && (
               <button
                 className="btn btn-primary"
-                style={{ padding: '5px 10px', fontSize: '11px', minHeight: 'unset' }}
+                style={{ padding: '5px 10px', fontSize: '11px', minHeight: 'unset', backgroundColor: '#3fb950', borderColor: '#3fb950', color: '#0f0f1a' }}
                 onClick={() => setTraitModalOpen(true)}
               >
                 <Plus size={12} /> Trait Ekle
@@ -314,7 +314,7 @@ export default function PF1eControls() {
 
         {/* Rule hint */}
         <div style={{ fontSize: '11px', color: '#8b949e', marginBottom: '12px' }}>
-          Aynı kategoriden olmamak koşuluyla <b style={{ color: '#c9a84c' }}>en fazla 2</b> trait seçebilirsiniz.
+          Aynı kategoriden olmamak koşuluyla <b style={{ color: '#3fb950' }}>en fazla 2</b> trait seçebilirsiniz.
         </div>
 
         {/* Trait error */}
