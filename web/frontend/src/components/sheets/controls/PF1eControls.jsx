@@ -244,8 +244,16 @@ export default function PF1eControls() {
 
         {/* Selected Feats List */}
         {(!feats || feats.length === 0) ? (
-          <div style={{ textAlign: 'center', padding: '16px 0', color: '#8b949e', fontSize: '13px' }}>
-            Henüz feat seçilmedi. Feat eklemek için yukarıdaki butonu kullanın.
+          <div style={{ textAlign: 'center', padding: '20px 16px', background: 'rgba(56,189,248,0.03)', borderRadius: '8px', border: '1px dashed rgba(56,189,248,0.2)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+            <span style={{ color: '#8b949e', fontSize: '13px' }}>Henüz feat seçilmedi.</span>
+            <button
+              type="button"
+              className="btn btn-primary"
+              style={{ padding: '6px 14px', fontSize: '12px', minHeight: 'unset', backgroundColor: '#38bdf8', borderColor: '#38bdf8', color: '#0f0f1a' }}
+              onClick={() => setFeatModalOpen(true)}
+            >
+              <Plus size={14} /> Feat Kataloğunu Aç
+            </button>
           </div>
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -330,8 +338,16 @@ export default function PF1eControls() {
 
         {/* Selected traits */}
         {(!traits || traits.length === 0) ? (
-          <div style={{ textAlign: 'center', padding: '16px 0', color: '#8b949e', fontSize: '13px' }}>
-            Henüz trait seçilmedi. Trait eklemek için yukarıdaki butonu kullanın.
+          <div style={{ textAlign: 'center', padding: '20px 16px', background: 'rgba(63,185,80,0.03)', borderRadius: '8px', border: '1px dashed rgba(63,185,80,0.2)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+            <span style={{ color: '#8b949e', fontSize: '13px' }}>Henüz trait seçilmedi.</span>
+            <button
+              type="button"
+              className="btn btn-primary"
+              style={{ padding: '6px 14px', fontSize: '12px', minHeight: 'unset', backgroundColor: '#3fb950', borderColor: '#3fb950', color: '#0f0f1a' }}
+              onClick={() => setTraitModalOpen(true)}
+            >
+              <Plus size={14} /> Trait Kataloğunu Aç
+            </button>
           </div>
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
@@ -642,8 +658,16 @@ export default function PF1eControls() {
 
         {/* Selected Spells List */}
         {(!spells || spells.length === 0) ? (
-          <div style={{ textAlign: 'center', padding: '16px 0', color: '#8b949e', fontSize: '13px' }}>
-            Henüz büyü eklenmedi. Kataloğdan aratıp eklemek için yukarıdaki <b>Büyü Ekle</b> butonunu kullanın.
+          <div style={{ textAlign: 'center', padding: '20px 16px', background: 'rgba(124,110,247,0.03)', borderRadius: '8px', border: '1px dashed rgba(124,110,247,0.2)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+            <span style={{ color: '#8b949e', fontSize: '13px' }}>Henüz büyü eklenmedi.</span>
+            <button
+              type="button"
+              className="btn btn-primary"
+              style={{ padding: '6px 14px', fontSize: '12px', minHeight: 'unset', backgroundColor: '#7c6ef7', borderColor: '#7c6ef7', color: '#ffffff' }}
+              onClick={() => setSpellModalOpen(true)}
+            >
+              <Wand2 size={14} /> Büyü Kataloğunu Aç
+            </button>
           </div>
         ) : (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
