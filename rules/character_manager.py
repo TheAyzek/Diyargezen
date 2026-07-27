@@ -235,6 +235,8 @@ class CharacterManager:
                     continue
         except Exception:
             pass
+        return results
+
     def get_spells(
         self,
         system: str,

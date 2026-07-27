@@ -576,6 +576,10 @@ def parse_raw_file(path: Path, system: str) -> List[DiyargezenEntity]:
             "container":  "equipment",
             "backpack":   "equipment",
             "item":       "equipment",
+            "buff":       "buff",
+            "character":  "npc",
+            "npc":        "npc",
+            "attack":     "feat",
         }
         if item_type:
             kategori = TYPE_MAP.get(item_type)
@@ -595,7 +599,7 @@ def parse_raw_file(path: Path, system: str) -> List[DiyargezenEntity]:
                 kategori = "feat"
             elif "spell" in name_and_parent or "magic" in name_and_parent:
                 kategori = "spell"
-            elif "item" in name_and_parent or "equipment" in name_and_parent or "wondrous" in name_and_parent or "goods" in name_and_parent or "technology" in name_and_parent:
+            elif "item" in name_and_parent or "equipment" in name_and_parent or "wondrous" in name_and_parent or "goods" in name_and_parent or "technology" in name_and_parent or "artifact" in name_and_parent:
                 kategori = "equipment"
             elif "power" in name_and_parent:
                 kategori = "power"
@@ -603,9 +607,16 @@ def parse_raw_file(path: Path, system: str) -> List[DiyargezenEntity]:
                 kategori = "advantage"
             elif "skill" in name_and_parent:
                 kategori = "skill"
+            elif "rule" in name_and_parent or "reference" in name_and_parent or "table" in name_and_parent or "kingdom" in name_and_parent or "harrow" in name_and_parent or "trap" in name_and_parent or "malad" in name_and_parent or "deit" in name_and_parent or "ritual" in name_and_parent:
+                kategori = "rule"
+            elif "special" in name_and_parent or "monster" in name_and_parent or "companion" in name_and_parent or "eidolon" in name_and_parent:
+                kategori = "feat"
             else:
-                # Unknown type — skip rather than storing as spurious 'item'
-                kategori = None
+                # Default rule fallback for raw content entries (like pf-rules.db)
+                if "content" in item or "description" in item:
+                    kategori = "rule"
+                else:
+                    kategori = None
 
         if not kategori:
             continue
