@@ -8,97 +8,112 @@
 
 ## Proje
 - **Ad**: Diyargezer FRP Karakter Yaratıcısı
-- **Konu**: Üç farklı FRP sistemi için detaylı karakter oluşturma, düzenleme ve kaydetme
-- **Platform**: Masaüstü (Windows/macOS/Linux)
-- **Teknolojiler**: Python, CustomTkinter, JSON, ReportLab
+- **Konu**: TTRPG karakter oluşturma, düzenleme, kaydetme ve bulut senkronizasyonu
+- **Platform**: Masaüstü (PySide6) + Web (React + FastAPI)
+- **Teknolojiler**: Python, React, FastAPI, SQLite, Zustand, ReportLab
 
 ## Desteklenen Sistemler
 
-| Sistem | Özellikler |
-|--------|-----------|
-| **D&D 5e** | 23 ırk, 14 sınıf, 60+ subclass, multiclassing, 4000+ büyü, equipment, level up |
-| **Pathfinder 1e** | 77 ırk, 73 sınıf, 421 feat, 500+ büyü, BAB/saves, skill ranks |
-| **Mutants & Masterminds 3e** | Power Level sistemi, PL limit validasyonu, power points economy |
+| Sistem | Masaüstü | Web | Durum |
+|--------|----------|-----|-------|
+| **Pathfinder 1e** | Evet | Evet (tam destek) | Aktif |
+| **D&D 5e** | Evet | Donduruldu | Yakında Gelecek (web) |
+| **Mutants & Masterminds 3e** | Evet | Donduruldu | Yakında Gelecek (web) |
 
 ## Özellikler
 
-### Karakter Yönetimi
-- Adım adım karakter oluşturma sihirbazı
-- Level up sistemi (HP, ASI/Feat, class features, spell slots, subclass seçimi)
-- Multiclassing (prerequisite kontrolü, spell slot birleştirme, hit dice)
-- Condition/Status Effect takibi (15 standart D&D condition + ekstra)
+### Web Platformu (PF1e Odaklı)
+- JWT kimlik doğrulama ve kullanıcı oturumu
+- Karakter CRUD (oluştur, oku, güncelle, sil)
+- Canlı kural hesaplama (BAB, saves, AC, skills)
+- Seviye atlama sihirbazı ve geri alma
+- Trait seçimi (80+ kategorize trait)
+- Portre yükleme
+- PDF export (pdf-lib)
+- Masaüstü ile bulut senkronizasyonu (`POST /api/sync`)
 
-### Araçlar (Tüm 3 Sistemde)
-- **Encounter Tracker**: Savaş sırası, initiative, HP takibi, tur sayacı, hasar/şifa
-- **Homebrew İçerik Yöneticisi**: Özel sınıf/ırk/büyü/güç ekleme
-- **Karakter Portreleri**: Resim ekleme/görüntüleme, çoklu format desteği
-- **HTML/Web Export**: Responsive karakter kağıdı, sistem bazlı temalar
+### Masaüstü Uygulaması
+- PySide6 Dark Fantasy GUI (The Tavern / The Forge / Character Sheet)
+- Offline-first yerel SQLite veritabanı
+- Arka plan bulut senkronizasyonu (JWT)
+- Üç TTRPG sistemi desteği
+- Encounter Tracker, Homebrew Yöneticisi, Portre Yönetimi
+- PDF ve HTML export
 
-### Export
-- **PDF Export**: Çoklu template (standart, detaylı, kompakt, minimal)
-- **HTML Export**: Responsive web sayfası, tarayıcıda açma
-- **JSON**: Karakter verisi kaydetme/yükleme
-
-### Teknik
-- Modern CustomTkinter GUI (dark blue tema)
-- Factory Pattern ile modüler mimari
-- 50+ unit test
-- Spell browser (Pathfinder 1e)
-- Karakter doğrulama ve karşılaştırma
+### Paylaşılan Çekirdek
+- `rules/` — Kural motoru ve doğrulama
+- `data/characters.db` — SQLite entity veritabanı
+- `utils/` — Export, hesaplama, homebrew, portre yardımcıları
 
 ## Kurulum
 
+### Backend (FastAPI)
 ```bash
+cd web/backend
 pip install -r requirements.txt
+python run.py
 ```
 
-## Çalıştırma
-
+### Frontend (React + Vite)
 ```bash
-# GUI (Önerilen)
-python main.py
+cd web/frontend
+npm install
+npm run dev
+```
 
-# Doğrudan GUI
-python -m gui.modern_gui
+### Masaüstü (PySide6)
+```bash
+pip install -r requirements.txt
+python desktop/main_desktop.py
 ```
 
 ## Proje Yapısı
 
 ```
-Diyargezer/
-├── main.py                    # Ana giriş noktası
-├── gui/
-│   └── modern_gui.py          # Ana GUI uygulaması (CustomTkinter)
-├── creators/
-│   ├── base_creator.py        # Abstract base class
-│   ├── dnd5e_creator.py       # D&D 5e
-│   ├── pathfinder1e_creator.py # Pathfinder 1e
-│   └── mm3e_creator.py        # M&M 3e
-├── utils/
-│   ├── calculations.py        # D&D hesaplamalar
-│   ├── multiclass.py          # Multiclass sistemi
-│   ├── subclass_data.py       # Subclass verileri
-│   ├── conditions.py          # Durum efektleri
-│   ├── encounter_tracker.py   # Savaş takip
-│   ├── homebrew.py            # Homebrew içerik
-│   ├── portraits.py           # Karakter portreleri
-│   ├── export_pdf.py          # PDF export
-│   ├── export_html.py         # HTML export
-│   ├── data_loader.py         # Veri yükleme
-│   └── pathfinder_scraper.py  # PF1e spell scraper
+Diyargezenweb/
+├── rules/                     # Paylaşılan kural motoru
+│   ├── pf1e_rules.py
+│   ├── character_manager.py
+│   └── calculators.py
 ├── data/
-│   ├── dnd_data.json          # D&D 5e verileri
-│   ├── pathfinder_1e_data.json # Pathfinder verileri
-│   └── mm_data.json           # M&M verileri
-├── tests/
-│   ├── test_creators.py       # Creator testleri
-│   └── test_new_features.py   # Özellik testleri (50+)
-├── docs/                      # Dokümantasyon
-└── requirements.txt           # Bağımlılıklar
+│   ├── characters.db          # SQLite entity DB
+│   └── pathfinder_1e_data.json
+├── desktop/                   # PySide6 masaüstü uygulaması
+│   ├── main_desktop.py
+│   ├── gui/
+│   ├── sync_engine.py
+│   └── local_db.py
+├── web/
+│   ├── backend/               # FastAPI REST API
+│   │   ├── app/
+│   │   └── tests/
+│   └── frontend/              # React karakter kağıdı
+│       └── src/
+├── creators/                  # Karakter oluşturucu factory
+├── utils/                     # Export, hesaplama, homebrew
+├── scraper/                   # PF1e veri toplama scriptleri
+├── tests/                     # Kök seviye unit testler
+└── docs/                      # Dokümantasyon
 ```
 
 ## Testler
 
 ```bash
-python -m pytest tests/ -v
+# Tüm testler (kök + backend)
+python -m pytest tests/ web/backend/tests/ -v
+
+# Yalnızca backend API testleri
+python -m pytest web/backend/tests/ -v
 ```
+
+## API Özeti
+
+| Endpoint | Açıklama |
+|----------|----------|
+| `POST /api/auth/login` | JWT giriş |
+| `GET /api/systems` | Desteklenen sistemler |
+| `GET /api/characters` | Karakter listesi |
+| `POST /api/characters` | Yeni karakter |
+| `POST /api/characters/recalculate` | Canlı hesaplama |
+| `GET /api/rules/{system}/traits` | PF1e trait listesi |
+| `POST /api/sync` | Masaüstü bulut senk |

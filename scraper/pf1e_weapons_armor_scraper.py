@@ -25,7 +25,8 @@ logger = logging.getLogger("pf1e_scraper")
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
-FOUNDRY_PACKS_DIR = DATA_DIR / "pf1e-content-main" / "src" / "packs"
+FOUNDRY_PACKS_DIR = DATA_DIR / "pf1e-content-main" / "packs"
+FOUNDRY_SRC_PACKS_DIR = DATA_DIR / "pf1e-content-main" / "src" / "packs"
 DB_PATH = DATA_DIR / "characters.db"
 OUTPUT_JSON = DATA_DIR / "pf1e_scraped_items.json"
 
@@ -74,50 +75,56 @@ STANDARD_PF1E_ARMOR = [
 
 
 def extract_foundry_items() -> List[Dict[str, Any]]:
-    """Foundry VTT JSON paketlerinden tüm eşyaları çıkarır ve formatlar."""
-    logger.info("Foundry VTT paketleri taranıyor...")
+    """Foundry VTT NeDB ve JSON paketlerinden tüm eşyaları ve varlıkları çıkarır."""
+    logger.info("Foundry VTT NeDB paketleri taranıyor...")
     extracted_items = []
     
-    if not FOUNDRY_PACKS_DIR.exists():
-        logger.warning(f"Foundry klasörü bulunamadı: {FOUNDRY_PACKS_DIR}")
-        return extracted_items
-
-    pack_dirs = [d for d in FOUNDRY_PACKS_DIR.iterdir() if d.is_dir()]
-    for p_dir in pack_dirs:
-        json_files = list(p_dir.glob("*.json"))
-        for jf in json_files:
+    # 1. Parse NeDB .db files in packs/
+    if FOUNDRY_PACKS_DIR.exists():
+        db_files = list(FOUNDRY_PACKS_DIR.glob("*.db"))
+        for db_file in db_files:
             try:
-                with open(jf, "r", encoding="utf-8") as f:
-                    data = json.load(f)
-                
-                itype = data.get("type", "")
-                name = data.get("name", "")
-                if not name or itype not in ("weapon", "equipment", "consumable", "loot"):
-                    continue
+                lines = db_file.read_text(encoding="utf-8").splitlines()
+                for line in lines:
+                    if not line.strip():
+                        continue
+                    try:
+                        data = json.loads(line)
+                        itype = data.get("type", "")
+                        name = data.get("name", "")
+                        if not name:
+                            continue
 
-                sys_obj = data.get("system", {})
-                desc = sys_obj.get("description", {}).get("value", "")
-                weight = sys_obj.get("weight", {}).get("value", 0.0) if isinstance(sys_obj.get("weight"), dict) else 0.0
-                price = sys_obj.get("price", 0)
+                        # Determine category mapping
+                        category = "item"
+                        if itype in ("feat", "class", "race", "spell", "trait"):
+                            category = itype
 
-                item_record = {
-                    "isim": name,
-                    "kategori": "item",
-                    "sistem": "pathfinder1e",
-                    "aciklama": desc,
-                    "sistem_verisi": {
-                        "type": itype,
-                        "weight": {"value": weight},
-                        "price": price,
-                        "system": sys_obj,
-                        "foundry_id": data.get("_id")
-                    }
-                }
-                extracted_items.append(item_record)
+                        sys_obj = data.get("system", {})
+                        desc = sys_obj.get("description", {}).get("value", "") if isinstance(sys_obj.get("description"), dict) else ""
+                        weight = sys_obj.get("weight", {}).get("value", 0.0) if isinstance(sys_obj.get("weight"), dict) else 0.0
+                        price = sys_obj.get("price", 0)
+
+                        item_record = {
+                            "isim": name,
+                            "kategori": category,
+                            "sistem": "pathfinder1e",
+                            "aciklama": desc,
+                            "sistem_verisi": {
+                                "type": itype,
+                                "weight": {"value": weight},
+                                "price": price,
+                                "system": sys_obj,
+                                "foundry_id": data.get("_id")
+                            }
+                        }
+                        extracted_items.append(item_record)
+                    except Exception:
+                        continue
             except Exception as e:
-                continue
+                logger.error(f"Hata db okunurken ({db_file.name}): {e}")
 
-    logger.info(f"Foundry paketlerinden toplam {len(extracted_items)} adet item ayıklandı.")
+    logger.info(f"Foundry paketlerinden toplam {len(extracted_items)} adet nesne ve varlık ayıklandı.")
     return extracted_items
 
 

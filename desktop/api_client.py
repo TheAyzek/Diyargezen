@@ -108,6 +108,31 @@ class ApiClient:
         resp.raise_for_status()
         return resp.json()
 
+    def sync_characters(
+        self,
+        dirty_characters: List[Dict[str, Any]],
+        last_sync_timestamp: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """Offline-First senkronizasyonu çalıştırır.
+        
+        dirty_characters: Yüklenecek değiştirilmiş kayıtlar listesi.
+        last_sync_timestamp: Son başarılı sync zamanı (ISO 8601).
+        
+        Döndürür: {
+            'status', 'synced_at',
+            'updated_characters': [...],
+            'deleted_server_ids': [...]
+        }
+        """
+        url = f"{self.base_url}/sync"
+        payload = {
+            "last_sync_timestamp": last_sync_timestamp,
+            "dirty_characters": dirty_characters
+        }
+        resp = requests.post(url, json=payload, headers=self._headers(), timeout=15)
+        resp.raise_for_status()
+        return resp.json()
+
     def export_pdf(self, character_id: int, save_path: Path) -> bool:
         """Karakterin PDF belgesini indirir."""
         url = f"{self.base_url}/characters/{character_id}/pdf"
@@ -116,6 +141,7 @@ class ApiClient:
         with open(save_path, "wb") as f:
             f.write(resp.content)
         return True
+
 
 
 # Global singleton instance for desktop application

@@ -25,9 +25,13 @@ def get_classes(system: str):
     return [EntityResponseSchema.model_validate(c, from_attributes=True) for c in classes]
 
 @router.get("/{system}/feats", response_model=List[EntityResponseSchema])
-def search_feats(system: str, query: str = Query("", description="Search query")):
-    """Retrieve and search feats, traits, or advantages."""
-    feats = service.get_feats_or_advantages(system, query)
+def search_feats(
+    system: str,
+    query: str = Query("", description="Search query"),
+    category: str = Query("", description="Feat category filter: Combat, Teamwork, Metamagic, etc.")
+):
+    """Retrieve and search feats with optional category filtering."""
+    feats = service.get_feats(system, query, category)
     return [EntityResponseSchema.model_validate(f, from_attributes=True) for f in feats]
 
 @router.get("/{system}/equipment", response_model=List[EntityResponseSchema])
@@ -47,6 +51,12 @@ def search_powers(system: str, query: str = Query("", description="Search query"
     """Retrieve and search superpower descriptions (Mutants & Masterminds)."""
     powers = service.get_powers(system, query)
     return [EntityResponseSchema.model_validate(p, from_attributes=True) for p in powers]
+
+@router.get("/{system}/traits", response_model=List[EntityResponseSchema])
+def search_traits(system: str, query: str = Query("", description="Search query"), category: str = Query("", description="Trait category filter")):
+    """Retrieve and search character traits for PF1e (grouped by category)."""
+    traits = service.get_traits(system, query, category)
+    return [EntityResponseSchema.model_validate(t, from_attributes=True) for t in traits]
 
 @router.get("/{system}/search", response_model=List[EntityResponseSchema])
 def search_all_entities(

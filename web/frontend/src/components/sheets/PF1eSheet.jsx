@@ -3,11 +3,11 @@ import { useCharacterStore } from '../../store/characterStore';
 import PF1eControls from './controls/PF1eControls';
 import PF1eLiveSheet from './displays/PF1eLiveSheet';
 import LevelUpWizard from './LevelUpWizard';
-import { AlertTriangle, Sparkles, History } from 'lucide-react';
+import { AlertTriangle, Sparkles, History, FileDown } from 'lucide-react';
 
 export default function PF1eSheet({ character, onSave, onCancel }) {
   const { 
-    id, initCharacter, name, system, level, abilities, recalcedData, warnings, loading, levelUndo 
+    id, initCharacter, name, system, level, abilities, recalcedData, warnings, loading, levelUndo, exportPdf 
   } = useCharacterStore();
 
   const [wizardOpen, setWizardOpen] = useState(false);
@@ -57,7 +57,7 @@ export default function PF1eSheet({ character, onSave, onCancel }) {
           </h2>
           <p style={{ color: '#8b949e', fontSize: '13px' }}>Pathfinder 1st Edition Kuralları</p>
         </div>
-        <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
           {id && (
             <>
               <button 
@@ -76,6 +76,15 @@ export default function PF1eSheet({ character, onSave, onCancel }) {
                 disabled={level >= 20 || loading}
               >
                 <Sparkles size={14} /> Seviye Atla
+              </button>
+              <button 
+                className="btn btn-secondary"
+                onClick={exportPdf}
+                disabled={loading}
+                title="Karakter sayfasını PDF olarak indir"
+                style={{ borderColor: 'rgba(63, 185, 80, 0.4)', color: '#3fb950', display: 'flex', alignItems: 'center', gap: '4px' }}
+              >
+                <FileDown size={14} /> PDF İndir
               </button>
             </>
           )}

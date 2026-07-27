@@ -70,6 +70,48 @@ def categorize_items(equipment_list: List[Dict[str, Any]]) -> Dict[str, List[Dic
             
     return categories
 
+def _extract_mechanics_from_payload(sys_ver: Dict[str, Any]) -> List[Dict[str, Any]]:
+    mechs = list(sys_ver.get("standard_mechanics", []))
+    bonuses = sys_ver.get("bonuses", [])
+    if isinstance(bonuses, list):
+        for b in bonuses:
+            if not isinstance(b, dict):
+                continue
+            b_type = b.get("type")
+            val = b.get("value", 0)
+            try:
+                val = int(val)
+            except (ValueError, TypeError):
+                val = 0
+
+            if b_type == "initiative":
+                mechs.append({"target": "initiative", "value": val})
+            elif b_type == "save_fortitude":
+                mechs.append({"target": "saving_throws.Fortitude", "value": val})
+            elif b_type == "save_reflex":
+                mechs.append({"target": "saving_throws.Reflex", "value": val})
+            elif b_type == "save_will":
+                mechs.append({"target": "saving_throws.Will", "value": val})
+            elif b_type == "save_all":
+                mechs.append({"target": "saving_throws.All", "value": val})
+            elif b_type == "skill":
+                sk = b.get("skill")
+                if sk:
+                    m = {"target": f"skills.{sk}", "value": val}
+                    if b.get("makes_class_skill"):
+                        m["makes_class_skill"] = True
+                        m["skill_name"] = sk
+                    mechs.append(m)
+            elif b_type == "armor_check_penalty":
+                mechs.append({"target": "armor_check_penalty", "value": val})
+            elif b_type in ("armor_class", "ac"):
+                mechs.append({"target": "ac", "value": val})
+            elif b_type == "hp":
+                mechs.append({"target": "hp", "value": val})
+            elif b_type == "bab":
+                mechs.append({"target": "bab", "value": val})
+    return mechs
+
 class BaseCalculator(ABC):
     """Base class for TTRPG derived statistics calculators."""
 
@@ -83,8 +125,8 @@ class BaseCalculator(ABC):
 
     def get_active_mechanics(self, character: Dict[str, Any]) -> Dict[str, List[Dict[str, Any]]]:
         """
-        Query SQLite for active entities (Race, Class, Feats, Equipment)
-        and fetch their 'standard_mechanics', 'prerequisites', or parse descriptions.
+        Query SQLite for active entities (Race, Class, Feats, Equipment, Traits)
+        and fetch their 'standard_mechanics', 'bonuses', 'prerequisites', or parse descriptions.
         Checks in-memory entity dicts first.
         """
         import sqlite3
@@ -115,7 +157,7 @@ class BaseCalculator(ABC):
                 
             active_prerequisites.extend(sys_ver.get("prerequisites", []))
             
-            explicit_mechs = sys_ver.get("standard_mechanics", [])
+            explicit_mechs = _extract_mechanics_from_payload(sys_ver)
             explicit_targets = set()
             for m in explicit_mechs:
                 m_copy = m.copy()
@@ -198,6 +240,17 @@ class BaseCalculator(ABC):
                 elif isinstance(item, str) and item:
                     names_to_query.append((item, "equipment"))
 
+        # 5. Traits
+        raw_traits = character.get("traits", [])
+        if isinstance(raw_traits, list):
+            for t in raw_traits:
+                if isinstance(t, dict):
+                    t_name = t.get("name") or t.get("isim")
+                    if not process_entity(t_name, t, "trait") and t_name:
+                        names_to_query.append((t_name, "trait"))
+                elif isinstance(t, str) and t:
+                    names_to_query.append((t, "trait"))
+
         # Query database for entities without in-memory detailed data
         if names_to_query:
             try:
@@ -220,7 +273,7 @@ class BaseCalculator(ABC):
                         
                         active_prerequisites.extend(payload.get("prerequisites", []))
                         
-                        explicit_mechs = payload.get("standard_mechanics", [])
+                        explicit_mechs = _extract_mechanics_from_payload(payload)
                         explicit_targets = set()
                         for m in explicit_mechs:
                             m_copy = m.copy()
@@ -776,6 +829,15 @@ class PF1e_Calculator(BaseCalculator):
         bab_prog     = str(class_data.get("bab_progression", "medium")).lower()
         class_skills = class_data.get("class_skills", []) or []
 
+        # ── ADIM 3 Pre-fetch: Fetch mechanics early to find extra class skills ──
+        active    = self.get_active_mechanics(character)
+        mechanics = active.get("mechanics", [])
+
+        class_skills_set = set(class_skills)
+        for m in mechanics:
+            if m.get("makes_class_skill") and m.get("skill_name"):
+                class_skills_set.add(m.get("skill_name"))
+
         # BAB (PF1e Core: Full=level, Medium=3/4*level, Poor=1/2*level)
         if bab_prog == "full":
             bab = level
@@ -805,7 +867,7 @@ class PF1e_Calculator(BaseCalculator):
         derived["hit_points"] = max(1, hp)
 
         # Skill Ranks (each level: class_int_modifier + int_mod ranks; default rank source = character)
-        skill_ranks = character.get("skill_ranks", {}) or {}
+        skill_ranks = character.get("skill_ranks") or character.get("skills") or {}
 
         # ── ADIM 2b: Skill base values (Rank + Ability Mod + Class Skill +3) ────
         # PF1e Class Skill rule: +3 bonus ONLY if rank >= 1 AND skill is a class skill
@@ -813,17 +875,16 @@ class PF1e_Calculator(BaseCalculator):
         for sk in self.PF_SKILL_LIST:
             ranks      = max(0, int(skill_ranks.get(sk, 0)))
             ab         = self.PF_SKILL_AB.get(sk, "intelligence")
-            class_bonus = 3 if (sk in class_skills and ranks > 0) else 0
+            class_bonus = 3 if (sk in class_skills_set and ranks > 0) else 0
             raw_skills[sk] = ranks + mods.get(ab, 0) + class_bonus
         derived["skills"] = raw_skills
 
         # ── ADIM 3: Feat/Trait/Race mekanikleri uygula ──────────────────────────
-        # (standard_mechanics JSON'dan gelen dogrudan bonus'lar)
-        active    = self.get_active_mechanics(character)
-        mechanics = active.get("mechanics", [])
+        # (standard_mechanics JSON'dan ve traits'den gelen dogrudan bonus'lar)
         misc_ac_bonus  = 0
         deflect_bonus  = 0
         feat_bab_bonus = 0
+        acp_reduction  = 0
         for m in mechanics:
             target = m.get("target", "")
             try:
@@ -842,6 +903,8 @@ class PF1e_Calculator(BaseCalculator):
                     deflect_bonus += val
                 elif mode not in ("armor", "shield", "natural_armor"):
                     misc_ac_bonus += val
+            elif target == "armor_check_penalty":
+                acp_reduction += val
             elif target.startswith("saving_throws."):
                 save_type = target.split(".")[1].capitalize()
                 if save_type == "All":
@@ -850,7 +913,7 @@ class PF1e_Calculator(BaseCalculator):
                 elif save_type in derived["saving_throws"]:
                     derived["saving_throws"][save_type] += val
             elif target.startswith("skills."):
-                sk_name = target.split(".")[1].title()
+                sk_name = target[len("skills."):]
                 if sk_name in derived["skills"]:
                     derived["skills"][sk_name] += val
 
@@ -870,11 +933,14 @@ class PF1e_Calculator(BaseCalculator):
 
         # Armor Check Penalty → fiziksel becerilere uygula (sadece rank>0 olanlar)
         if acp < 0:
+            if acp_reduction != 0:
+                acp_adj = abs(acp_reduction) if acp_reduction < 0 else acp_reduction
+                acp = min(0, acp + acp_adj)
             for sk in self.ACP_SKILLS:
                 if sk in derived["skills"]:
                     ranks = max(0, int(skill_ranks.get(sk, 0)))
                     if ranks > 0:
-                        derived["skills"][sk] += acp  # acp zaten negatif
+                        derived["skills"][sk] += acp  # acp zaten negatif veya 0
 
         derived["armor_check_penalty"] = acp
 

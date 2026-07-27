@@ -4,6 +4,11 @@ from typing import Dict, Any, List
 class PF1EValidator(BaseValidator):
     """Pathfinder 1e rule validator implementation."""
 
+    CORE_ABILITIES = {
+        "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma",
+        "str", "dex", "con", "int", "wis", "cha"
+    }
+
     def __init__(self):
         super().__init__("Pathfinder 1e")
 
@@ -15,7 +20,7 @@ class PF1EValidator(BaseValidator):
         if level == 1:
             abilities = character.get("abilities", {})
             for ability, score in abilities.items():
-                if isinstance(score, int) and not (7 <= score <= 18):
+                if ability.lower() in self.CORE_ABILITIES and isinstance(score, int) and not (7 <= score <= 18):
                     warnings.append(f"PF1e başlangıç kurallarına göre yetenek puanları 7-18 arasında olmalıdır: {ability.title()} = {score}.")
                     
         # Rule 2: Skill rank allocation warning (cannot allocate more ranks in a skill than character level)

@@ -72,7 +72,12 @@ def initialize_orm_schemas() -> None:
             columns = [col[1] for col in cursor.fetchall()]
             if "user_id" not in columns:
                 cursor.execute("ALTER TABLE characters ADD COLUMN user_id INTEGER REFERENCES users(id) ON DELETE CASCADE")
-                conn.commit()
+            if "server_id" not in columns:
+                cursor.execute("ALTER TABLE characters ADD COLUMN server_id TEXT")
+            if "is_deleted" not in columns:
+                cursor.execute("ALTER TABLE characters ADD COLUMN is_deleted INTEGER DEFAULT 0")
+            conn.commit()
     except Exception as e:
-        logging.getLogger(__name__).error(f"Error altering characters table to add user_id: {e}")
+        logging.getLogger(__name__).error(f"Error altering characters table schema: {e}")
+
 

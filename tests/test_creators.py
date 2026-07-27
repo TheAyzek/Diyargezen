@@ -181,7 +181,18 @@ class TestBaseCreatorAndFactory(unittest.TestCase):
 
 class TestDataLoader(unittest.TestCase):
 
+    @staticmethod
+    def _data_file(system_key: str) -> Path:
+        filenames = {
+            "dnd": "dnd_data.json",
+            "pathfinder_1e": "pathfinder_1e_data.json",
+            "mm": "mm_data.json",
+        }
+        return BASE_DIR / "data" / filenames[system_key]
+
     def test_loads_dnd_with_expected_keys(self):
+        if not self._data_file("dnd").exists():
+            self.skipTest("dnd_data.json mevcut değil (PF1e odaklı pivot)")
         from utils.data_loader import DataLoader
         loader = DataLoader(base_dir=BASE_DIR)
         data = loader.load("dnd")
@@ -193,6 +204,8 @@ class TestDataLoader(unittest.TestCase):
         loader = DataLoader(base_dir=BASE_DIR)
         for sys_key in ("dnd", "pathfinder_1e", "mm"):
             with self.subTest(system=sys_key):
+                if not self._data_file(sys_key).exists():
+                    self.skipTest(f"{sys_key} veri dosyası mevcut değil")
                 data = loader.load(sys_key)
                 self.assertIsInstance(data, dict)
                 self.assertGreater(len(data), 0)
@@ -200,14 +213,14 @@ class TestDataLoader(unittest.TestCase):
     def test_cache_returns_same_object(self):
         from utils.data_loader import DataLoader
         loader = DataLoader(base_dir=BASE_DIR)
-        first = loader.load("mm")
-        second = loader.load("mm")
+        first = loader.load("pathfinder_1e")
+        second = loader.load("pathfinder_1e")
         self.assertIs(first, second)
 
     def test_clear_cache_invalidates(self):
         from utils.data_loader import DataLoader
         loader = DataLoader(base_dir=BASE_DIR)
-        loader.load("mm")
+        loader.load("pathfinder_1e")
         self.assertGreater(loader.cache_size, 0)
         loader.clear_cache()
         self.assertEqual(loader.cache_size, 0)
@@ -219,6 +232,8 @@ class TestDataLoader(unittest.TestCase):
             loader.load("nonexistent")
 
     def test_dnd_normalization_name_fields(self):
+        if not self._data_file("dnd").exists():
+            self.skipTest("dnd_data.json mevcut değil (PF1e odaklı pivot)")
         from utils.data_loader import DataLoader
         loader = DataLoader(base_dir=BASE_DIR)
         data = loader.load("dnd")
@@ -234,8 +249,10 @@ class TestDataLoader(unittest.TestCase):
 
     def test_convenience_functions_return_data(self):
         from utils.data_loader import load_dnd_data, load_mm_data, load_pathfinder_1e_data
-        self.assertIn("races", load_dnd_data(BASE_DIR))
-        self.assertIsInstance(load_mm_data(BASE_DIR), dict)
+        if self._data_file("dnd").exists():
+            self.assertIn("races", load_dnd_data(BASE_DIR))
+        if self._data_file("mm").exists():
+            self.assertIsInstance(load_mm_data(BASE_DIR), dict)
         self.assertIsInstance(load_pathfinder_1e_data(BASE_DIR), dict)
 
 

@@ -4,9 +4,7 @@ import { Sparkles, LogOut } from 'lucide-react';
 import diyargezerLogo from './diyargezer_logo.png';
 import Dashboard from './components/Dashboard';
 import SystemSelector from './components/SystemSelector';
-import DND5eSheet from './components/sheets/DND5eSheet';
 import PF1eSheet from './components/sheets/PF1eSheet';
-import MM3eSheet from './components/sheets/MM3eSheet';
 import Auth from './components/Auth';
 
 export default function App() {
@@ -14,7 +12,7 @@ export default function App() {
   const [username, setUsername] = useState(localStorage.getItem('username') || '');
   const [view, setView] = useState('dashboard'); // 'dashboard', 'select-system', 'edit-character'
   const [selectedCharacter, setSelectedCharacter] = useState(null);
-  const [selectedSystem, setSelectedSystem] = useState('');
+  const [selectedSystem, setSelectedSystem] = useState('pf1e');
 
   useEffect(() => {
     if (token) {
@@ -79,41 +77,12 @@ export default function App() {
   };
 
   const renderActiveSheet = () => {
-    const sys = selectedSystem.toLowerCase();
-    
-    if (sys.includes('dnd') || sys.includes('dragon')) {
-      return (
-        <DND5eSheet 
-          character={selectedCharacter} 
-          onSave={handleSaveCharacter} 
-          onCancel={() => setView('dashboard')} 
-        />
-      );
-    } else if (sys.includes('pf') || sys.includes('pathfinder')) {
-      return (
-        <PF1eSheet 
-          character={selectedCharacter} 
-          onSave={handleSaveCharacter} 
-          onCancel={() => setView('dashboard')} 
-        />
-      );
-    } else if (sys.includes('mm') || sys.includes('mnm') || sys.includes('mastermind')) {
-      return (
-        <MM3eSheet 
-          character={selectedCharacter} 
-          onSave={handleSaveCharacter} 
-          onCancel={() => setView('dashboard')} 
-        />
-      );
-    }
-
     return (
-      <div className="glass-card" style={{ textAlign: 'center', padding: '40px' }}>
-        <p style={{ color: '#e94560' }}>Desteklenmeyen Sistem Tipi: {selectedSystem}</p>
-        <button className="btn btn-secondary" style={{ marginTop: '20px' }} onClick={() => setView('dashboard')}>
-          Panele Dön
-        </button>
-      </div>
+      <PF1eSheet 
+        character={selectedCharacter} 
+        onSave={handleSaveCharacter} 
+        onCancel={() => setView('dashboard')} 
+      />
     );
   };
 
@@ -125,7 +94,7 @@ export default function App() {
             <img src={diyargezerLogo} alt="Diyargezen Logo" style={{ height: '32px', width: 'auto', marginRight: '10px' }} /> DİYARGEZEN
           </div>
           <div style={{ fontSize: '13px', color: '#8b949e', letterSpacing: '0.5px' }}>
-            TTRPG Multiverse Sheet Manager
+            Pathfinder 1st Edition TTRPG Web Platform
           </div>
         </header>
         <main className="main-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 1 }}>

@@ -45,50 +45,40 @@ class SyncWorker(QObject):
         try:
             # 1. Yereldeki dirty karakterleri çek
             dirty_records = local_db.get_dirty_characters(self.db_path)
-            dirty_payload = []
-            for r in dirty_records:
-                dirty_payload.append({
+            dirty_payload = [
+                {
                     "server_id": r.server_id,
                     "system": r.system,
                     "name": r.name,
                     "data": r.data,
                     "updated_at": r.updated_at,
-                    "is_deleted": r.is_deleted
-                })
+                    "is_deleted": r.is_deleted,
+                    "created_at": getattr(r, "created_at", None)
+                }
+                for r in dirty_records
+            ]
 
-            # 2. FastAPI /api/sync endpoint'ini çağır
-            sync_url = f"{api_client.base_url}/sync"
-            headers = api_client._headers()
-            import requests
-
-            resp = requests.post(
-                sync_url,
-                json={
-                    "last_sync_timestamp": self._last_sync_timestamp,
-                    "dirty_characters": dirty_payload
-                },
-                headers=headers,
-                timeout=10
+            # 2. api_client üzerinden /api/sync endpoint'ini çağır
+            data = api_client.sync_characters(
+                dirty_characters=dirty_payload,
+                last_sync_timestamp=self._last_sync_timestamp
             )
 
-            if resp.status_code == 200:
-                data = resp.json()
-                synced_at = data.get("synced_at")
-                updated_chars = data.get("updated_characters", [])
-                deleted_ids = data.get("deleted_server_ids", [])
+            synced_at = data.get("synced_at")
+            updated_chars = data.get("updated_characters", [])
+            deleted_ids = data.get("deleted_server_ids", [])
 
-                # 3. Yerel SQLite veritabanına yanıtı uygula
-                local_db.apply_sync_response(self.db_path, updated_chars, deleted_ids)
-                self._last_sync_timestamp = synced_at
+            # 3. Yerel SQLite veritabanına yanıtı uygula
+            local_db.apply_sync_response(self.db_path, updated_chars, deleted_ids)
+            self._last_sync_timestamp = synced_at
 
-                count = len(updated_chars) + len(dirty_payload)
-                self.sync_finished.emit(count, f"Senkronize edildi ({count} kayıt)")
-            else:
-                self.sync_failed.emit(f"Sunucu hatası: HTTP {resp.status_code}")
+            count = len(updated_chars) + len(dirty_payload)
+            self.sync_finished.emit(count, f"Senkronize edildi ({count} kayıt)")
 
         except Exception as exc:
             logger.debug("Senkronizasyon pas geçildi (Çevrimdışı mod): %s", exc)
             self.sync_failed.emit("Çevrimdışı mod (Sunucuya ulaşılamadı)")
+
 
 
 class BackgroundSyncThread(QThread):

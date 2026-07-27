@@ -10,9 +10,7 @@ from app.core.config import DB_PATH, SYSTEM_MAPPING
 from app.models.user import Character, User
 from app.models.progression import LevelProgression
 from rules.character_manager import CharacterManager
-from rules.dnd5e_rules import DND5EValidator
 from rules.pf1e_rules import PF1EValidator
-from rules.mnm3e_rules import MM3EValidator
 
 logger = logging.getLogger(__name__)
 
@@ -24,11 +22,7 @@ class CharacterService:
         """Map client keys to keys recognized by calculators/validators."""
         sys_lower = system.lower()
         mapped = SYSTEM_MAPPING.get(sys_lower, sys_lower)
-        if mapped == "mm3e":
-            return "mm3e"
-        if mapped == "pathfinder1e":
-            return "pathfinder1e"
-        return mapped
+        return mapped if mapped else "pathfinder1e"
 
     def recalculate(self, character_data: Dict[str, Any]) -> Dict[str, Any]:
         """Runs the TTRPG derived statistics calculator pipeline."""
@@ -47,19 +41,8 @@ class CharacterService:
         return recalculated_char
 
     def validate(self, character_data: Dict[str, Any]) -> List[str]:
-        """Runs rule validators for the specific TTRPG system."""
-        system = character_data.get("system", "").lower()
-        normalized_system = SYSTEM_MAPPING.get(system, system)
-        
-        if "dnd5e" in normalized_system:
-            validator = DND5EValidator()
-        elif "pathfinder1e" in normalized_system or "pf1e" in normalized_system:
-            validator = PF1EValidator()
-        elif "mm3e" in normalized_system or "mnm" in normalized_system:
-            validator = MM3EValidator()
-        else:
-            return [f"Bilinmeyen sistem tipi için doğrulama yapılamadı: {system}"]
-            
+        """Runs rule validators for Pathfinder 1st Edition."""
+        validator = PF1EValidator()
         try:
             warnings = validator.validate(character_data, {})
             return warnings

@@ -208,3 +208,60 @@ class TestMultiSystemRules(unittest.TestCase):
         res = validate_character_soft(char, "dnd5e")
         self.assertTrue(res.has_warnings)
         self.assertTrue(any("gereksinimi karşılanamadı" in w for w in res.warnings))
+
+    def test_pf1e_trait_bonuses(self):
+        calc = PF1e_Calculator(db_path=self.db_path)
+        char = {
+            "system": "pathfinder1e",
+            "level": 1,
+            "abilities": {
+                "strength": 10,
+                "dexterity": 14,    # Mod +2
+                "constitution": 12, # Mod +1
+                "intelligence": 10, # Mod 0
+                "wisdom": 10,       # Mod 0
+                "charisma": 14      # Mod +2
+            },
+            "class_data": {
+                "name": "Wizard",   # Class skills do not normally include Diplomacy
+                "class_skills": ["Spellcraft", "Knowledge (Arcana)"],
+                "saving_throws": {"fortitude": "poor", "reflex": "poor", "will": "good"},
+                "hit_die": "d6"
+            },
+            "skill_ranks": {
+                "Diplomacy": 1
+            },
+            "traits": [
+                {
+                    "name": "Reactionary",
+                    "sistem_verisi": {
+                        "trait_category": "Combat",
+                        "bonuses": [{"type": "initiative", "value": 2, "bonus_type": "untyped"}]
+                    }
+                },
+                {
+                    "name": "Resilient",
+                    "sistem_verisi": {
+                        "trait_category": "Combat",
+                        "bonuses": [{"type": "save_fortitude", "value": 1, "bonus_type": "trait"}]
+                    }
+                },
+                {
+                    "name": "Ease of Faith",
+                    "sistem_verisi": {
+                        "trait_category": "Faith",
+                        "bonuses": [{"type": "skill", "skill": "Diplomacy", "value": 1, "makes_class_skill": True, "bonus_type": "trait"}]
+                    }
+                }
+            ]
+        }
+        derived = calc.update_all_stats(char)
+        # Initiative: Dex mod (+2) + Reactionary (+2) = 4
+        self.assertEqual(derived["initiative"], 4)
+
+        # Fortitude Save: Wizard Lvl 1 Poor (0) + Con mod (+1) + Resilient (+1) = 2
+        self.assertEqual(derived["saving_throws"]["Fortitude"], 2)
+
+        # Diplomacy Skill: 1 rank + Cha mod (+2) + Class skill bonus (+3, granted by Ease of Faith) + Trait bonus (+1) = 7
+        self.assertEqual(derived["skills"]["diplomacy"], 7)
+

@@ -1,9 +1,9 @@
 import sys
 from pathlib import Path
 
-# Resolve workspace root
-BACKEND_DIR = Path(__file__).resolve().parent.parent.parent
-WORKSPACE_ROOT = BACKEND_DIR.parent.parent
+# Resolve workspace root (Diyargezenweb)
+CONFIG_FILE = Path(__file__).resolve()
+WORKSPACE_ROOT = CONFIG_FILE.parents[4]  # .../Diyargezenweb
 
 # Add workspace root to sys.path to allow importing existing modules (rules, db, utils, models)
 if str(WORKSPACE_ROOT) not in sys.path:

@@ -501,17 +501,30 @@ PDF_MAPPINGS["pathfinder1e"] = PDF_MAPPINGS["pf1e"]
 PDF_MAPPINGS["dnd5e_alias"] = PDF_MAPPINGS["dnd5e"]  # kept for completeness
 
 
+def _resolve_pdf_template(template_name: str) -> Path:
+    """Locate a PDF template in legacy or web public directories."""
+    root = Path(__file__).resolve().parent.parent
+    search_dirs = [
+        root / "templates",
+        root / "web" / "frontend" / "public" / "templates",
+    ]
+    candidates = [template_name]
+    if template_name == "mnm3e_sheet.pdf":
+        candidates.append("mnm3e_sheet.pdf.pdf")
+
+    for template_dir in search_dirs:
+        for name in candidates:
+            path = template_dir / name
+            if path.exists():
+                return path
+
+    searched = ", ".join(str(d / template_name) for d in search_dirs)
+    raise FileNotFoundError(f"PDF şablonu bulunamadı: {template_name} (aranan: {searched})")
+
+
 def _fill_pdf_form(character: dict, template_name: str, mapping: dict, output_path: Path) -> None:
     """Helper function to load template, fill AcroForm fields, and save to output_path."""
-    template_dir = Path(__file__).resolve().parent.parent / "templates"
-    template_path = template_dir / template_name
-    
-    # Handle mnm3e double extension on disk if needed
-    if template_name == "mnm3e_sheet.pdf" and not template_path.exists():
-        template_path = template_dir / "mnm3e_sheet.pdf.pdf"
-        
-    if not template_path.exists():
-        raise FileNotFoundError(f"PDF şablonu bulunamadı: {template_path}")
+    template_path = _resolve_pdf_template(template_name)
         
     reader = PdfReader(template_path)
     writer = PdfWriter()
