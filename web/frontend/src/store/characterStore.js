@@ -88,15 +88,6 @@ export const useCharacterStore = create((set, get) => ({
 
   traits: [],
 
-  alignment: '',
-  gender: '',
-  age: '',
-  height: '',
-  weight: '',
-  deity: '',
-  homeland: '',
-  hair: '',
-  eyes: '',
 
   // Actions
   initCharacter: (system, char = null) => {
