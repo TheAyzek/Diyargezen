@@ -328,6 +328,10 @@ export const useCharacterStore = create((set, get) => ({
     }));
     get().recalculate();
   },
+
+  toggleDndSkill: (skill) => {
+    set(state => {
+      const currentProfs = state.recalcedData.proficient_skills || [];
       const newProfs = currentProfs.includes(skill)
         ? currentProfs.filter(s => s !== skill)
         : [...currentProfs, skill];
