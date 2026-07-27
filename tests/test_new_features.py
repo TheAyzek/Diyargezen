@@ -400,8 +400,8 @@ class TestValidation(unittest.TestCase):
     """Karakter validasyon testleri"""
 
     def setUp(self):
-        from creators.dnd5e_creator import DND5ECreator
-        self.creator = DND5ECreator()
+        from creators.pathfinder1e_creator import Pathfinder1ECreator
+        self.creator = Pathfinder1ECreator()
 
     def test_valid_character(self):
         """Gecerli karakter hatasiz donmeli"""
@@ -410,11 +410,10 @@ class TestValidation(unittest.TestCase):
             "race": "Human",
             "class": "Fighter",
             "level": 5,
-            "abilities": {"Strength": 16, "Dexterity": 14, "Constitution": 15,
-                          "Intelligence": 10, "Wisdom": 12, "Charisma": 8},
-            "hit_points": 44,
-            "armor_class": 18,
-            "proficiency_bonus": 3
+            "abilities": {"strength": 16, "dexterity": 14, "constitution": 15,
+                          "intelligence": 10, "wisdom": 12, "charisma": 8},
+            "bab": 5,
+            "saves": {"fortitude": 4, "reflex": 1, "will": 1}
         }
         errors = self.creator.validate_character(char)
         # Sadece warning'ler olabilir, error olmamali
@@ -430,11 +429,10 @@ class TestValidation(unittest.TestCase):
             "level": 8,
             "is_multiclass": True,
             "class_levels": {"Fighter": 5, "Wizard": 3},
-            "abilities": {"Strength": 16, "Dexterity": 14, "Constitution": 15,
-                          "Intelligence": 13, "Wisdom": 10, "Charisma": 8},
-            "hit_points": 55,
-            "armor_class": 18,
-            "proficiency_bonus": 3
+            "abilities": {"strength": 16, "dexterity": 14, "constitution": 15,
+                          "intelligence": 13, "wisdom": 10, "charisma": 8},
+            "bab": 6,
+            "saves": {"fortitude": 5, "reflex": 2, "will": 4}
         }
         errors = self.creator.validate_character(char)
         # Multiclass tutarli - class_levels toplami = level
@@ -450,8 +448,8 @@ class TestValidation(unittest.TestCase):
             "level": 10,  # Toplam 10 ama class_levels 8
             "is_multiclass": True,
             "class_levels": {"Fighter": 5, "Wizard": 3},
-            "abilities": {"Strength": 16, "Dexterity": 14, "Constitution": 15,
-                          "Intelligence": 13, "Wisdom": 10, "Charisma": 8},
+            "abilities": {"strength": 16, "dexterity": 14, "constitution": 15,
+                          "intelligence": 13, "wisdom": 10, "charisma": 8},
         }
         errors = self.creator.validate_character(char)
         mc_warnings = [e for e in errors if "Multiclass toplam seviye" in e]

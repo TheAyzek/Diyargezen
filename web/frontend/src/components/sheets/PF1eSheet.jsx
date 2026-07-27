@@ -36,6 +36,7 @@ export default function PF1eSheet({ character, onSave, onCancel }) {
       skill_ranks: state.skills,
       feat: state.feat,
       equipment: state.equipment,
+      custom_modifiers: state.customModifiers,
       portrait: state.portrait
     };
     

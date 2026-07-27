@@ -12,12 +12,15 @@ from utils.export_pdf import export_pdf
 from app.core.database import get_db
 from app.services.auth_service import get_current_user
 from app.models.user import User, Character
+from app.models.gm import CharacterModifier, GMOverride, LevelUpSession
 from app.schemas.character import (
     CharacterCreateUpdate,
     CharacterResponse,
     RecalculateRequest,
     RecalculateResponse,
     ValidationResponse
+    ,PrerequisiteCheckRequest, PrerequisiteCheckResponse, CustomModifierPayload,
+    OverridePayload, LevelUpSessionPayload
 )
 from app.services.character_service import CharacterService
 
@@ -134,7 +137,8 @@ def recalculate_stats(payload: RecalculateRequest):
     try:
         recalced_data = service.recalculate(payload.data)
         warnings = service.validate(recalced_data)
-        return RecalculateResponse(data=recalced_data, warnings=warnings)
+        diagnostics = service.gm_diagnostics(recalced_data)
+        return RecalculateResponse(data=recalced_data, warnings=warnings, diagnostics=diagnostics)
     except Exception as exc:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
@@ -152,6 +156,91 @@ def validate_rules(payload: RecalculateRequest):
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
             detail=f"Rule validation failed: {str(exc)}"
         )
+
+@router.post("/check-prerequisites", response_model=PrerequisiteCheckResponse)
+def check_prerequisites(payload: PrerequisiteCheckRequest):
+    """Soft-block check for feat/spell/item choices; never prevents a GM override."""
+    from app.services.pf1e_gm_engine import PF1eGMEngine
+    diagnostics = PF1eGMEngine().check_prerequisites(
+        payload.data, payload.prerequisites, payload.is_overridden
+    )
+    result = [item.__dict__ for item in diagnostics]
+    return PrerequisiteCheckResponse(
+        valid=not any(item["severity"] == "warning" and not item["overridden"] for item in result),
+        diagnostics=result,
+    )
+
+def _owned_character(db: Session, character_id: int, user_id: int) -> Character:
+    record = service.get_character(db, character_id)
+    if not record:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Karakter bulunamadı.")
+    if record.user_id != user_id:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Bu karakter için yetkiniz yok.")
+    if record.system.lower() not in {"pf1e", "pathfinder1e"}:
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Yalnızca PF1e desteklenir.")
+    return record
+
+@router.post("/{character_id}/gm/modifiers", status_code=status.HTTP_201_CREATED)
+def add_custom_modifier(character_id: int, payload: CustomModifierPayload, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    """Persist an explainable +X/-X GM adjustment and mirror it into sheet data."""
+    record = _owned_character(db, character_id, current_user.id)
+    now = __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat()
+    modifier = CharacterModifier(character_id=character_id, **payload.model_dump(), created_at=now, updated_at=now)
+    data = json.loads(record.data)
+    data.setdefault("custom_modifiers", []).append({**payload.model_dump(), "id": None})
+    recalculated = service.recalculate(data)
+    record.data = json.dumps(recalculated, ensure_ascii=False)
+    record.updated_at = now
+    db.add(modifier)
+    db.commit()
+    db.refresh(modifier)
+    return {"id": modifier.id, "data": recalculated}
+
+@router.post("/{character_id}/gm/overrides", status_code=status.HTTP_201_CREATED)
+def record_override(character_id: int, payload: OverridePayload, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    """Record a GM-approved exception; this is audit data, never a silent bypass."""
+    _owned_character(db, character_id, current_user.id)
+    now = __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat()
+    override = GMOverride(
+        character_id=character_id, selection_type=payload.selection_type,
+        selection_key=payload.selection_key, violated_rules=json.dumps(payload.violated_rules, ensure_ascii=False),
+        reason=payload.reason, is_overridden=True, created_at=now,
+    )
+    db.add(override)
+    db.commit()
+    db.refresh(override)
+    return {"id": override.id, "is_overridden": True}
+
+@router.put("/{character_id}/level-up-session")
+def save_level_up_session(character_id: int, payload: LevelUpSessionPayload, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
+    """Save a resumable state-machine checkpoint; commit still uses the level-up endpoint."""
+    record = _owned_character(db, character_id, current_user.id)
+    current_level = int(json.loads(record.data).get("level", 1))
+    if payload.target_level != current_level + 1:
+        raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Hedef seviye tam olarak sonraki seviye olmalıdır.")
+    now = __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat()
+    session = db.query(LevelUpSession).filter(
+        LevelUpSession.character_id == character_id, LevelUpSession.target_level == payload.target_level
+    ).first()
+    if session is None:
+        session = LevelUpSession(
+            character_id=character_id,
+            target_level=payload.target_level,
+            state=payload.state,
+            choices=json.dumps(payload.choices, ensure_ascii=False),
+            is_overridden=payload.is_overridden,
+            created_at=now,
+            updated_at=now,
+        )
+        db.add(session)
+    else:
+        session.state = payload.state
+        session.choices = json.dumps(payload.choices, ensure_ascii=False)
+        session.is_overridden = payload.is_overridden
+        session.updated_at = now
+    db.commit()
+    db.refresh(session)
+    return {"id": session.id, "state": session.state, "target_level": session.target_level}
 
 @router.get("/{character_id}/pdf")
 def export_character_to_pdf(character_id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):

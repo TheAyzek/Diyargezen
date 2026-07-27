@@ -1,7 +1,9 @@
 from fastapi import APIRouter, Query, HTTPException
 from typing import List, Optional
+from pydantic import BaseModel
 from app.schemas.entity import EntityResponseSchema
 from app.services.rules_service import RulesService
+
 
 router = APIRouter(prefix="/rules", tags=["Rules"])
 service = RulesService()
@@ -67,3 +69,17 @@ def search_all_entities(
     """Generic search endpoint for any rulebook entity category."""
     entities = service.search_entities(system, category, query)
     return [EntityResponseSchema.model_validate(e, from_attributes=True) for e in entities]
+
+
+class PrereqCheckRequest(BaseModel):
+    character: dict
+    entity_data: dict
+    is_overridden: bool = False
+
+@router.post("/validate-prerequisites")
+def validate_prerequisites(payload: PrereqCheckRequest):
+    """Validate entity prerequisites with GM soft-block & override capability."""
+    from rules.calculators import PF1e_Calculator
+    calc = PF1e_Calculator()
+    return calc.check_prerequisites(payload.character, payload.entity_data, payload.is_overridden)
+

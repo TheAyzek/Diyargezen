@@ -234,7 +234,13 @@ export default function FeatSelectorModal({
 
               const sys = feat.sistem_verisi || {};
               const prereqs = sys.prerequisites || sys.prereqs;
-              const benefit = sys.benefit || feat.aciklama;
+              const isDummy = (str) => !str || ['benefit', 'benefit(s)', 'prerequisites', 'special', 'normal', 'description'].includes(String(str).trim().toLowerCase());
+              const rawDesc = feat.aciklama && !isDummy(feat.aciklama) ? feat.aciklama : null;
+              const rawSysBenefit = sys.benefit && !isDummy(sys.benefit) ? sys.benefit : null;
+              const rawSysDesc = (sys.description?.value || sys.description) && !isDummy(sys.description?.value || sys.description) ? (sys.description?.value || sys.description) : null;
+              const benefit = rawDesc || rawSysBenefit || rawSysDesc || feat.aciklama || '';
+
+
 
               return (
                 <div

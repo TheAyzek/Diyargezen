@@ -30,7 +30,7 @@ class SyncWorker(QObject):
     def __init__(self, db_path: Path):
         super().__init__()
         self.db_path = db_path
-        self._last_sync_timestamp: Optional[str] = None
+        self._last_sync_timestamp: Optional[str] = local_db.get_sync_checkpoint(db_path)
 
     def perform_sync(self) -> None:
         """Çevrimdışı öncelikli senkronizasyon adımını tetikler."""
@@ -44,7 +44,10 @@ class SyncWorker(QObject):
 
         try:
             # 1. Yereldeki dirty karakterleri çek
-            dirty_records = local_db.get_dirty_characters(self.db_path)
+            dirty_records = [
+                record for record in local_db.get_dirty_characters(self.db_path)
+                if record.system.lower() in {"pf1e", "pathfinder1e"}
+            ]
             dirty_payload = [
                 {
                     "server_id": r.server_id,
@@ -71,6 +74,8 @@ class SyncWorker(QObject):
             # 3. Yerel SQLite veritabanına yanıtı uygula
             local_db.apply_sync_response(self.db_path, updated_chars, deleted_ids)
             self._last_sync_timestamp = synced_at
+            if synced_at:
+                local_db.set_sync_checkpoint(self.db_path, synced_at)
 
             count = len(updated_chars) + len(dirty_payload)
             self.sync_finished.emit(count, f"Senkronize edildi ({count} kayıt)")

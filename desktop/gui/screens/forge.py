@@ -44,15 +44,12 @@ def roll_4d6_drop_lowest() -> int:
 
 
 from rules.character_manager import CharacterManager
-from utils.storage import CharacterRecord, save_character
 from utils.soft_validation import validate_character_soft, mark_homebrew, format_warning_message
 
 logger = logging.getLogger(__name__)
 
 SYSTEM_MAP = {
-    "dnd5e": "D&D 5th Edition",
     "pathfinder1e": "Pathfinder 1st Edition",
-    "mm3e": "Mutants & Masterminds 3e",
 }
 
 D20_ABILITIES = ["Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma"]

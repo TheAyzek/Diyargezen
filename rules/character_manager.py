@@ -208,11 +208,8 @@ class CharacterManager:
                 sql += "AND isim LIKE ? "
                 params.append(f"%{query}%")
 
-            if category and category != "General":
-                sql += "AND isim LIKE ? "
-                params.append(f"%{category}%")
+            sql += "ORDER BY isim COLLATE NOCASE ASC LIMIT 300"
 
-            sql += "ORDER BY isim COLLATE NOCASE ASC LIMIT 200"
 
             cursor.execute(sql, params)
             rows = cursor.fetchall()

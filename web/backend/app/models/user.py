@@ -27,3 +27,6 @@ class Character(Base):
 
     owner = relationship("User", back_populates="characters")
     progressions = relationship("LevelProgression", back_populates="character", cascade="all, delete-orphan")
+    gm_overrides = relationship("GMOverride", back_populates="character", cascade="all, delete-orphan")
+    gm_modifiers = relationship("CharacterModifier", back_populates="character", cascade="all, delete-orphan")
+    level_up_sessions = relationship("LevelUpSession", back_populates="character", cascade="all, delete-orphan")

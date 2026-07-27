@@ -55,7 +55,11 @@ def extract_description(payload: Any) -> str:
             if key in payload:
                 val = payload[key]
                 if isinstance(val, str) and val.strip():
-                    return val.strip()
+                    txt = val.strip()
+                    if txt.lower() in ("benefit", "benefit(s)", "prerequisites", "special", "normal", "description"):
+                        continue
+                    return txt
+
                 elif isinstance(val, list):
                     parts = []
                     for item in val:

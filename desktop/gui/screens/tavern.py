@@ -16,12 +16,9 @@ from PySide6.QtWidgets import (
     QScrollArea, QFrame, QGridLayout, QLineEdit, QComboBox,
 )
 
-from utils.storage import list_characters, delete_character, CharacterRecord
+from utils.storage import CharacterRecord
 
-SYSTEM_BADGES = {
-    "DND5E": "D&D 5e", "PATHFINDER_1E": "PF 1e", "PATHFINDER1E": "PF 1e",
-    "MM3E": "M&M 3e",
-}
+SYSTEM_BADGES = {"PF1E": "PF 1e", "PATHFINDER_1E": "PF 1e", "PATHFINDER1E": "PF 1e"}
 
 
 class CharacterCard(QFrame):

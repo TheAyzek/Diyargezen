@@ -29,9 +29,7 @@ DEFAULT_DB = BASE_DIR / "data" / "characters.db"
 DATA_DIR = BASE_DIR / "data"
 
 SYSTEM_FILES: Dict[str, List[str]] = {
-    "dnd5e": ["dnd_data.json"],
     "pathfinder1e": ["pathfinder_1e_data.json"],
-    "mm3e": ["mm_data.json"],
 }
 
 

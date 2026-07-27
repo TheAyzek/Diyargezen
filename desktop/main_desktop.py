@@ -29,7 +29,7 @@ logging.basicConfig(
 def main() -> None:
     print("-" * 50)
     print("  Diyargezer - TTRPG Karakter Yoneticisi (Masaüstü)")
-    print("  D&D 5e  |  Pathfinder 1e  |  M&M 3e")
+    print("  Pathfinder 1e — Offline-First istemci")
     print("-" * 50)
 
     try:

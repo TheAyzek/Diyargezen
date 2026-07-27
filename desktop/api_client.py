@@ -76,8 +76,13 @@ class ApiClient:
     def save_character(self, character_data: Dict[str, Any], character_id: Optional[int] = None) -> Dict[str, Any]:
         """Karakteri sunucuda yeni oluşturur veya günceller."""
         name = character_data.get("name", "İsimsiz Kahraman")
-        system = character_data.get("system", "pathfinder1e")
+        system = character_data.get("system", "pathfinder1e").lower()
+        if system not in {"pf1e", "pathfinder1e"}:
+            raise ValueError("Masaüstü istemcisi yalnızca Pathfinder 1e karakterlerini senkronize eder.")
 
+        invalid_systems = [item.get("system") for item in dirty_characters if item.get("system", "").lower() not in {"pf1e", "pathfinder1e"}]
+        if invalid_systems:
+            raise ValueError("PF1e dışı karakterler senkronize edilemez.")
         payload = {
             "system": system,
             "name": name,

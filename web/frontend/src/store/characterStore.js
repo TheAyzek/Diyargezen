@@ -55,6 +55,7 @@ export const useCharacterStore = create((set, get) => ({
   advantages: [],
   powers: {},
   equipment: [],
+  customModifiers: [],
   raceData: {},
   classData: {},
   archetype: '',
@@ -147,6 +148,7 @@ export const useCharacterStore = create((set, get) => ({
         advantages: char.data?.advantages || [],
         powers: char.data?.powers || {},
         equipment: char.data?.equipment || [],
+        customModifiers: char.data?.custom_modifiers || [],
         raceData: char.data?.race_data || {},
         classData: char.data?.class_data || {},
         archetype: char.data?.archetype || '',
@@ -187,6 +189,7 @@ export const useCharacterStore = create((set, get) => ({
         advantages: [],
         powers: {},
         equipment: [],
+        customModifiers: [],
         raceData: {},
         classData: {},
         archetype: sys.includes('mm') || sys.includes('mnm') ? 'Özel (Custom)' : '',
@@ -245,6 +248,16 @@ export const useCharacterStore = create((set, get) => ({
     set(state => ({
       equipment: state.equipment.filter((_, i) => i !== index)
     }));
+    get().recalculate();
+  },
+
+  addCustomModifier: (modifier) => {
+    set(state => ({ customModifiers: [...state.customModifiers, modifier] }));
+    get().recalculate();
+  },
+
+  removeCustomModifier: (index) => {
+    set(state => ({ customModifiers: state.customModifiers.filter((_, itemIndex) => itemIndex !== index) }));
     get().recalculate();
   },
 
@@ -410,6 +423,7 @@ export const useCharacterStore = create((set, get) => ({
         Will: state.defenses.will || 0
       } : undefined,
       equipment: state.equipment,
+      custom_modifiers: state.customModifiers,
       feats: (state.feats || []).map(f => f.isim || f),
       traits: (state.traits || []).map(t => ({ isim: t.isim, kategori: t.sistem_verisi?.trait_category })),
       proficient_skills: state.recalcedData.proficient_skills || [],

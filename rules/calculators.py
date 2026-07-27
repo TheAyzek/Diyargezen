@@ -335,11 +335,53 @@ class BaseCalculator(ABC):
         subrace_data: Dict = character.get("subrace_data") or {}
         has_subrace = bool(character.get("subrace", ""))
 
+        # PF1e Core & Standard Races built-in ASI map fallback
+        PF1E_RACE_ASI = {
+            "dwarf": {"constitution": 2, "wisdom": 2, "charisma": -2},
+            "elf": {"dexterity": 2, "intelligence": 2, "constitution": -2},
+            "gnome": {"constitution": 2, "charisma": 2, "strength": -2},
+            "halfling": {"dexterity": 2, "charisma": 2, "strength": -2},
+            "human": {"strength": 2},
+            "half-elf": {"strength": 2},
+            "half-orc": {"strength": 2},
+            "aasimar": {"wisdom": 2, "charisma": 2},
+            "tiefling": {"dexterity": 2, "intelligence": 2, "charisma": -2},
+            "drow": {"dexterity": 2, "charisma": 2, "constitution": -2},
+            "goblin": {"dexterity": 4, "strength": -2, "charisma": -2},
+            "orc": {"strength": 4, "intelligence": -2, "wisdom": -2, "charisma": -2},
+            "kitsune": {"dexterity": 2, "charisma": 2, "strength": -2},
+            "nagaji": {"strength": 2, "charisma": 2, "intelligence": -2},
+            "catfolk": {"dexterity": 2, "charisma": 2, "wisdom": -2},
+            "dhampir": {"dexterity": 2, "charisma": 2, "constitution": -2},
+            "ifrit": {"dexterity": 2, "charisma": 2, "wisdom": -2},
+            "oread": {"strength": 2, "wisdom": 2, "charisma": -2},
+            "sylph": {"dexterity": 2, "intelligence": 2, "constitution": -2},
+            "undine": {"dexterity": 2, "wisdom": 2, "charisma": -2},
+            "kobold": {"dexterity": 2, "strength": -4, "constitution": -2},
+            "merfolk": {"dexterity": 2, "constitution": 2, "charisma": 2},
+        }
+
         # Helper: extract ASI dict from a data dict (entity.sistem_verisi or similar)
-        def extract_asi(data: Any) -> Dict[str, int]:
+        def extract_asi(data: Any, race_name: str = "") -> Dict[str, int]:
+            r_name = (race_name or (data.get("name") if isinstance(data, dict) else "") or (data.get("isim") if isinstance(data, dict) else "")).lower().strip()
+            
+            # Check for Human / Half-Elf / Half-Orc user-selected stat choice
+            user_choice = character.get("racial_ability_choice", "").lower().strip()
+            if r_name in ("human", "half-elf", "half-orc") and user_choice:
+                return {user_choice: 2}
+
+            # Check built-in PF1e core race table first
+            if r_name in PF1E_RACE_ASI:
+                return PF1E_RACE_ASI[r_name].copy()
+
             if not isinstance(data, dict):
                 return {}
-            raw = data.get("ability_score_increase") or data.get("modifiers") or {}
+
+            sv = data.get("sistem_verisi") or data.get("system") or data.get("system_data") or data
+            if not isinstance(sv, dict):
+                sv = data
+
+            raw = sv.get("ability_score_increase") or sv.get("modifiers") or data.get("ability_score_increase") or data.get("modifiers") or {}
             if isinstance(raw, dict):
                 result = {}
                 for k, v in raw.items():
@@ -347,14 +389,17 @@ class BaseCalculator(ABC):
                         result[k.lower()] = int(v)
                     except (ValueError, TypeError):
                         pass
-                return result
+                if result:
+                    return result
+
             return {}
 
         # --- Parent race ASI ---
         parent_asi: Dict[str, int] = {}
+        race_name = character.get("race", "")
         race_entity = self._get_entity_data(character, "race")
-        if race_entity:
-            parent_asi = extract_asi(race_entity)
+        parent_asi = extract_asi(race_entity, race_name=race_name)
+
 
         # If subrace is selected and system is D&D 5e, the subrace entity stores
         # the COMBINED ASI (parent + subrace bonus). Compute net subrace delta.
@@ -1087,7 +1132,112 @@ class PF1e_Calculator(BaseCalculator):
 
         derived["applied_modifiers"] = self.get_active_mechanics(character).get("applied_modifiers", [])
 
+        # ── ADIM 6: GM Custom Modifiers (Manuel Müdahaleler +X / -X) ─────────
+        custom_mods = character.get("custom_modifiers", [])
+        if isinstance(custom_mods, dict):
+            for stat_key, val in custom_mods.items():
+                try:
+                    val_int = int(val)
+                except (ValueError, TypeError):
+                    continue
+                k_lower = stat_key.lower().strip()
+                if k_lower in ("ac", "armor_class"):
+                    derived["armor_class"] += val_int
+                    derived["touch_ac"] += val_int
+                    derived["flat_footed_ac"] += val_int
+                elif k_lower in ("hp", "hit_points"):
+                    derived["hit_points"] += val_int
+                elif k_lower in ("bab", "base_attack_bonus"):
+                    derived["bab"] += val_int
+                    derived["cmb"] += val_int
+                    derived["cmd"] += val_int
+                elif k_lower in ("init", "initiative"):
+                    derived["initiative"] += val_int
+                elif k_lower in ("fort", "fortitude"):
+                    if "Fortitude" in derived.get("saving_throws", {}):
+                        derived["saving_throws"]["Fortitude"] += val_int
+                elif k_lower in ("ref", "reflex"):
+                    if "Reflex" in derived.get("saving_throws", {}):
+                        derived["saving_throws"]["Reflex"] += val_int
+                elif k_lower in ("will",):
+                    if "Will" in derived.get("saving_throws", {}):
+                        derived["saving_throws"]["Will"] += val_int
+        elif isinstance(custom_mods, list):
+            for m in custom_mods:
+                if not isinstance(m, dict) or not m.get("is_active", True):
+                    continue
+                stat_key = str(m.get("stat", "")).lower().strip()
+                try:
+                    val_int = int(m.get("value", 0))
+                except (ValueError, TypeError):
+                    continue
+                if stat_key in ("ac", "armor_class"):
+                    derived["armor_class"] += val_int
+                    derived["touch_ac"] += val_int
+                    derived["flat_footed_ac"] += val_int
+                elif stat_key in ("hp", "hit_points"):
+                    derived["hit_points"] += val_int
+                elif stat_key in ("bab", "base_attack_bonus"):
+                    derived["bab"] += val_int
+                    derived["cmb"] += val_int
+                    derived["cmd"] += val_int
+                elif stat_key in ("init", "initiative"):
+                    derived["initiative"] += val_int
+                elif stat_key in ("fort", "fortitude"):
+                    if "Fortitude" in derived.get("saving_throws", {}):
+                        derived["saving_throws"]["Fortitude"] += val_int
+                elif stat_key in ("ref", "reflex"):
+                    if "Reflex" in derived.get("saving_throws", {}):
+                        derived["saving_throws"]["Reflex"] += val_int
+                elif stat_key in ("will",):
+                    if "Will" in derived.get("saving_throws", {}):
+                        derived["saving_throws"]["Will"] += val_int
+
         return derived
+
+    def check_prerequisites(self, character: Dict[str, Any], entity_data: Dict[str, Any], is_overridden: bool = False) -> Dict[str, Any]:
+        """
+        Check Prerequisites for Feats/Spells/Classes (Soft-Block logic).
+        Returns status dict with validation state and warnings.
+        If is_overridden is True, GM bypasses hard blocks.
+        """
+        warnings = []
+        prereqs = entity_data.get("prerequisites") or entity_data.get("sistem_verisi", {}).get("prerequisites", [])
+        if isinstance(prereqs, str):
+            prereqs = [prereqs]
+        elif not isinstance(prereqs, list):
+            prereqs = []
+
+        scores = self.get_adjusted_abilities(character)
+
+        for p in prereqs:
+            p_str = str(p).strip()
+            # Check ability score prereq e.g., "Str 13", "Dex 15"
+            m_ab = re.search(r'(Str|Dex|Con|Int|Wis|Cha)\s*(\d+)', p_str, re.I)
+            if m_ab:
+                ab_map = {"str": "strength", "dex": "dexterity", "con": "constitution", "int": "intelligence", "wis": "wisdom", "cha": "charisma"}
+                ab_key = ab_map.get(m_ab.group(1).lower())
+                req_val = int(m_ab.group(2))
+                curr_val = scores.get(ab_key, 10)
+                if curr_val < req_val:
+                    warnings.append(f"Gereksinim Karşılanmadı: {m_ab.group(1).upper()} >= {req_val} (Mevcut: {curr_val})")
+
+            # Check BAB prereq e.g., "Base attack bonus +1"
+            m_bab = re.search(r'Base attack bonus\s*\+?(\d+)', p_str, re.I)
+            if m_bab:
+                req_bab = int(m_bab.group(1))
+                curr_bab = int(character.get("bab", 0))
+                if curr_bab < req_bab:
+                    warnings.append(f"Gereksinim Karşılanmadı: BAB >= +{req_bab} (Mevcut: +{curr_bab})")
+
+        is_valid = len(warnings) == 0 or is_overridden
+        return {
+            "valid": is_valid,
+            "overridden": is_overridden,
+            "warnings": warnings,
+            "can_override": len(warnings) > 0
+        }
+
 
     def _extract_armor(self, character: Dict[str, Any]):
         armor_bonus, shield_bonus, natural_armor, acp, dex_max = 0, 0, 0, 0, 999

@@ -2,9 +2,11 @@ import logging
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+# Importing config first registers the workspace root for shared PF1e modules
+# when the backend is started from web/backend.
+from app.core.config import DB_PATH
 from app.routers import systems, rules, characters, auth, sync
 from app.core.database import check_db_exists
-from app.core.config import DB_PATH
 
 # Configure logging
 logging.basicConfig(

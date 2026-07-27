@@ -39,7 +39,7 @@ class TestBaseCreatorAndFactory(unittest.TestCase):
 
     def test_factory_all_aliases_registered(self):
         available = CreatorFactory.get_available_systems()
-        for key in ['dnd5e', 'd&d', 'pathfinder1e', 'pf1e', 'mm3e', 'm&m']:
+        for key in ['pathfinder1e', 'pf1e', 'pathfinder']:
             self.assertIn(key, available)
 
     def test_factory_unknown_system_raises(self):
@@ -53,30 +53,24 @@ class TestBaseCreatorAndFactory(unittest.TestCase):
             self.assertIn("Mevcut:", str(e))
 
     def test_creators_are_subclasses(self):
-        for key in ['dnd5e', 'pathfinder1e', 'mm3e']:
+        for key in ['pathfinder1e', 'pf1e']:
             creator = CreatorFactory.create(key)
             self.assertIsInstance(creator, BaseCharacterCreator)
 
     def test_get_system_name_non_empty(self):
-        for key in ['dnd5e', 'pathfinder1e', 'mm3e']:
+        for key in ['pathfinder1e', 'pf1e']:
             creator = CreatorFactory.create(key)
             self.assertTrue(len(creator.get_system_name()) > 0)
 
     def test_backward_compat_character_factory(self):
         """CharacterFactory alias still works."""
-        creator = CharacterFactory.create_creator("dnd5e")
+        creator = CharacterFactory.create_creator("pathfinder1e")
         self.assertIsInstance(creator, BaseCharacterCreator)
 
     # ---- Dice System meta-data ----
 
     def test_dice_system_d20(self):
-        creator = CreatorFactory.create("dnd5e")
-        self.assertEqual(creator.DICE_SYSTEM.name, "d20")
-        self.assertEqual(creator.DICE_SYSTEM.base_die, 20)
-        self.assertFalse(creator.DICE_SYSTEM.pool_based)
-
-    def test_dice_system_mm3e_uses_d20(self):
-        creator = CreatorFactory.create("mm3e")
+        creator = CreatorFactory.create("pathfinder1e")
         self.assertEqual(creator.DICE_SYSTEM.name, "d20")
         self.assertEqual(creator.DICE_SYSTEM.base_die, 20)
         self.assertFalse(creator.DICE_SYSTEM.pool_based)
@@ -88,8 +82,8 @@ class TestBaseCreatorAndFactory(unittest.TestCase):
 
     def test_get_system_info(self):
         info = CreatorFactory.get_system_info()
-        self.assertIn("dnd5e", info)
-        self.assertEqual(info["dnd5e"]["dice_system"], "d20")
+        self.assertIn("pathfinder1e", info)
+        self.assertEqual(info["pathfinder1e"]["dice_system"], "d20")
 
     # ---- Dice helpers ----
 
@@ -127,7 +121,7 @@ class TestBaseCreatorAndFactory(unittest.TestCase):
     # ---- Ability bonus ----
 
     def test_add_ability_bonus(self):
-        creator = CreatorFactory.create('dnd5e')
+        creator = CreatorFactory.create('pathfinder1e')
         abilities = {"strength": 14, "dexterity": 10}
         updated = creator.add_ability_bonus(abilities, "strength", 2)
         self.assertEqual(updated["strength"], 16)
@@ -137,17 +131,17 @@ class TestBaseCreatorAndFactory(unittest.TestCase):
     # ---- Data query helpers ----
 
     def test_list_races_and_classes(self):
-        creator = CreatorFactory.create('dnd5e')
+        creator = CreatorFactory.create('pathfinder1e')
         self.assertIn("Human", creator.list_available_races())
         self.assertIn("Fighter", creator.list_available_classes())
 
     def test_get_race_data_found_and_not_found(self):
-        creator = CreatorFactory.create('dnd5e')
+        creator = CreatorFactory.create('pathfinder1e')
         self.assertIsNotNone(creator.get_race_data("Human"))
         self.assertIsNone(creator.get_race_data("Alien"))
 
     def test_save_and_load_roundtrip(self):
-        char = {"name": "RoundtripChar", "system": "DND5E", "level": 1}
+        char = {"name": "RoundtripChar", "system": "PATHFINDER1E", "level": 1}
         with tempfile.TemporaryDirectory() as tmpdir:
             fpath = Path(tmpdir) / "test.json"
             with fpath.open("w", encoding="utf-8") as f:
@@ -159,12 +153,12 @@ class TestBaseCreatorAndFactory(unittest.TestCase):
 
     def test_cannot_instantiate_abc_directly(self):
         with self.assertRaises(TypeError):
-            BaseCharacterCreator("test", "dnd_data.json")
+            BaseCharacterCreator("test", "pathfinder_1e_data.json")
 
     # ---- calculate_derived_stats backward compat ----
 
     def test_calculate_derived_stats_calls_calculate_stats(self):
-        creator = CreatorFactory.create('dnd5e')
+        creator = CreatorFactory.create('pathfinder1e')
         char = {
             'name': 'T', 'race': 'Human', 'class': 'Fighter', 'level': 1,
             'abilities': {'strength': 16, 'dexterity': 14, 'constitution': 15,
@@ -364,59 +358,8 @@ class TestStorage(unittest.TestCase):
 # ======================================================================
 # 4. Individual Creator Tests
 # ======================================================================
-
-class TestDND5ECreator(unittest.TestCase):
-
-    def setUp(self):
-        self.creator = CreatorFactory.create('dnd5e')
-
-    def test_data_has_required_sections(self):
-        for key in ("races", "classes", "backgrounds"):
-            self.assertIn(key, self.creator.data)
-
-    def test_validate_valid_character(self):
-        char = {
-            'name': 'Test Fighter', 'race': 'Human', 'class': 'Fighter',
-            'background': 'Soldier', 'level': 1,
-            'abilities': {'strength': 16, 'dexterity': 14, 'constitution': 15,
-                          'intelligence': 10, 'wisdom': 12, 'charisma': 8},
-        }
-        errors = self.creator.validate_character(char)
-        self.assertEqual(len(errors), 0, f"Errors: {errors}")
-
-    def test_validate_detects_missing_name(self):
-        char = {'race': 'Human', 'class': 'Fighter', 'level': 1,
-                'abilities': {'strength': 10}}
-        errors = self.creator.validate_character(char)
-        self.assertTrue(any("name" in e.lower() for e in errors))
-
-    def test_calculate_stats_for_wizard(self):
-        char = {
-            'name': 'Tester', 'race': 'Human', 'class': 'Wizard',
-            'level': 5,
-            'abilities': {'strength': 8, 'dexterity': 14, 'constitution': 13,
-                          'intelligence': 18, 'wisdom': 12, 'charisma': 10},
-        }
-        stats = self.creator.calculate_stats(char)
-        self.assertEqual(stats['proficiency_bonus'], 3)
-        self.assertIn('spell_slots', stats)
-        self.assertIn('saving_throws', stats)
-        self.assertIn('skills', stats)
-
-    def test_export_data_contains_system(self):
-        char = {
-            'name': 'ExportTest', 'race': 'Human', 'class': 'Fighter', 'level': 1,
-            'abilities': {'strength': 16, 'dexterity': 14, 'constitution': 15,
-                          'intelligence': 10, 'wisdom': 12, 'charisma': 8},
-        }
-        exported = self.creator.export_data(char)
-        self.assertEqual(exported['system'], 'DND5E')
-        self.assertEqual(exported['dice_system'], 'd20')
-        self.assertIn('name', exported)
-
-    def test_dice_system_is_d20(self):
-        self.assertEqual(self.creator.DICE_SYSTEM, DICE_D20)
-
+# 4. Individual Creator Tests (PF1e)
+# ======================================================================
 
 class TestPathfinder1ECreator(unittest.TestCase):
 
@@ -450,45 +393,6 @@ class TestPathfinder1ECreator(unittest.TestCase):
 
     def test_dice_system_is_d20(self):
         self.assertEqual(self.creator.DICE_SYSTEM, DICE_D20)
-
-
-class TestMM3ECreator(unittest.TestCase):
-
-    def setUp(self):
-        self.creator = CreatorFactory.create('mm3e')
-
-    def test_data_loaded(self):
-        self.assertGreater(len(self.creator.data), 0)
-
-    def test_validate_valid(self):
-        char = {
-            'power_level': 'PL10', 'pl_value': 10,
-            'abilities': {'strength': 8, 'stamina': 6, 'agility': 4,
-                          'dexterity': 4, 'fighting': 6, 'intellect': 2,
-                          'awareness': 2, 'presence': 2},
-            'powers': {}, 'remaining_power_points': 50,
-        }
-        self.assertEqual(len(self.creator.validate_character(char)), 0)
-
-    def test_validate_pl_exceeded(self):
-        char = {
-            'power_level': 'PL10', 'pl_value': 10,
-            'abilities': {'strength': 15},
-            'powers': {}, 'remaining_power_points': 50,
-        }
-        self.assertGreater(len(self.creator.validate_character(char)), 0)
-
-    def test_export_data_mm(self):
-        char = {
-            'name': 'Sentinel', 'power_level': 'PL10', 'pl_value': 10,
-            'abilities': {'strength': 8, 'stamina': 6, 'agility': 4,
-                          'dexterity': 4, 'fighting': 6, 'intellect': 2,
-                          'awareness': 2, 'presence': 2},
-            'powers': {}, 'defenses': {},
-        }
-        exported = self.creator.export_data(char)
-        self.assertEqual(exported['system'], 'MM3E')
-        self.assertIn('initiative', exported)
 
 
 if __name__ == '__main__':

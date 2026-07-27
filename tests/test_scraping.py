@@ -319,70 +319,6 @@ class TestPF1eSpiderParsing(unittest.TestCase):
 
 
 # ======================================================================
-# D&D 5e Spider Testleri
-# ======================================================================
-
-class TestDnD5eSpider(unittest.TestCase):
-
-    def test_extract_ability_bonuses(self):
-        from scraping.spiders.dnd5e_spider import DnD5eSpider
-        bonuses = DnD5eSpider._extract_ability_bonuses([
-            {"ability_score": {"name": "DEX"}, "bonus": 2},
-            {"ability_score": {"name": "INT"}, "bonus": 1},
-        ])
-        self.assertEqual(bonuses["dexterity"], 2)
-        self.assertEqual(bonuses["intelligence"], 1)
-
-    def test_extract_empty_bonuses(self):
-        from scraping.spiders.dnd5e_spider import DnD5eSpider
-        self.assertEqual(DnD5eSpider._extract_ability_bonuses([]), {})
-
-    def test_map_spell(self):
-        from scraping.spiders.dnd5e_spider import DnD5eSpider
-        spider = DnD5eSpider.__new__(DnD5eSpider)
-        result = spider._map_spell({
-            "name": "Fireball",
-            "level": 3,
-            "school": {"name": "Evocation"},
-            "casting_time": "1 action",
-            "range": "150 feet",
-            "duration": "Instantaneous",
-            "concentration": False,
-            "ritual": False,
-            "desc": ["A bright streak flashes..."],
-            "components": ["V", "S", "M"],
-            "material": "bat guano",
-            "classes": [{"name": "Sorcerer"}, {"name": "Wizard"}],
-            "index": "fireball",
-        })
-        self.assertEqual(result["name"], "Fireball")
-        self.assertEqual(result["level"], 3)
-        self.assertEqual(result["school"], "evocation")
-        self.assertIn("Sorcerer", result["levels_by_class"])
-        self.assertIn("bat guano", result["components"])
-
-
-# ======================================================================
-# M&M 3e Spider Testleri
-# ======================================================================
-
-class TestMM3eSpider(unittest.TestCase):
-
-    def test_spider_instantiation(self):
-        from scraping.spiders.mm3e_spider import MM3eSpider
-        spider = MM3eSpider.__new__(MM3eSpider)
-        self.assertEqual(spider.SYSTEM_KEY, "mm3e")
-        self.assertEqual(spider.OUTPUT_FILE, "mm_data.json")
-
-    def test_scrape_classes_returns_empty(self):
-        """M&M 3e'de geleneksel 'class' yok."""
-        from scraping.spiders.mm3e_spider import MM3eSpider
-        spider = MM3eSpider.__new__(MM3eSpider)
-        self.assertEqual(spider.scrape_classes(), {})
-        self.assertEqual(spider.scrape_races(), {})
-
-
-# ======================================================================
 # Pipeline Runner Testleri
 # ======================================================================
 
@@ -397,9 +333,7 @@ class TestPipelineRunner(unittest.TestCase):
     def test_all_spiders_registered(self):
         from scraping.run_scraper import SPIDER_REGISTRY
         self.assertIn("pathfinder1e", SPIDER_REGISTRY)
-        self.assertIn("dnd5e", SPIDER_REGISTRY)
-        self.assertIn("mm3e", SPIDER_REGISTRY)
-        self.assertEqual(len(SPIDER_REGISTRY), 3)
+        self.assertEqual(len(SPIDER_REGISTRY), 1)
 
     def test_system_labels_match_registry(self):
         from scraping.run_scraper import SPIDER_REGISTRY, SYSTEM_LABELS

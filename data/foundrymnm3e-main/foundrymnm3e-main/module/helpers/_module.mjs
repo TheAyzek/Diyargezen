@@ -1,1 +1,0 @@
-export {default as ActiveEffectMnm3e} from "./effects.mjs";

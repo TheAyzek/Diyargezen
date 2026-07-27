@@ -250,6 +250,30 @@ export default function PF1eLiveSheet() {
         setField(`WT ${idx + 1}`, `${item.sistem_verisi?.weight?.value || 0} lb`);
       });
 
+      // Embed Character Portrait image onto Page 1 if available
+      if (portrait && typeof portrait === 'string') {
+        try {
+          let image;
+          if (portrait.startsWith('data:image/png')) {
+            image = await pdfDoc.embedPng(portrait);
+          } else if (portrait.startsWith('data:image/jpeg') || portrait.startsWith('data:image/jpg')) {
+            image = await pdfDoc.embedJpg(portrait);
+          }
+          if (image) {
+            const page = pdfDoc.getPages()[0];
+            // Draw image on Page 1 top-right portrait area of Pathfinder 1e sheet
+            page.drawImage(image, {
+              x: 430,
+              y: 635,
+              width: 125,
+              height: 135
+            });
+          }
+        } catch (e) {
+          console.warn('PDF portrait image embedding note:', e);
+        }
+      }
+
       // Update appearance streams so entered text is rendered visually without needing to click on fields
       try {
         form.updateFieldAppearances(font);
@@ -259,6 +283,7 @@ export default function PF1eLiveSheet() {
 
       const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: true, updateFieldAppearances: false });
       setPdfUrl(pdfDataUri);
+
     } catch (err) {
       console.error('pdf-lib Canlı PDF Oluşturma Hatası:', err);
     } finally {

@@ -27,7 +27,6 @@ from gui.theme import DARK_FANTASY_QSS
 from gui.screens.tavern import TavernPage
 from gui.screens.forge import ForgePage
 from gui.screens.character_sheet import CharacterSheetPage
-from utils.storage import init_db
 from etl.pipeline import run_etl_if_needed
 
 logger = logging.getLogger(__name__)
@@ -39,7 +38,7 @@ desktop_dir = Path(__file__).resolve().parent.parent
 if str(desktop_dir) not in sys.path:
     sys.path.insert(0, str(desktop_dir))
 
-DB_PATH = BASE_DIR / "data" / "characters.db"
+DB_PATH = BASE_DIR / "desktop" / "data" / "offline_pf1e.db"
 LOGO_PATH = BASE_DIR / "assets" / "diyargezer_logo.png"
 
 
@@ -57,7 +56,6 @@ class MainWindow(QMainWindow):
         if LOGO_PATH.exists():
             self.setWindowIcon(QIcon(str(LOGO_PATH)))
 
-        init_db(DB_PATH)
         from desktop import local_db
         from desktop.api_client import api_client
         from desktop.sync_engine import BackgroundSyncThread
@@ -203,6 +201,13 @@ class MainWindow(QMainWindow):
             local_db.save_local_auth(DB_PATH, api_client.username, api_client.token)
             self._cloud_btn.setText(f"☁️ {api_client.username}")
             self._tavern.refresh()
+
+
+    def closeEvent(self, event) -> None:
+        """Stop background network work before Qt shuts down."""
+        if hasattr(self, "_sync_thread"):
+            self._sync_thread.stop()
+        event.accept()
 
 
 # ======================================================================

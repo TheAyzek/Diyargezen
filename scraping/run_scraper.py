@@ -36,8 +36,6 @@ if str(BASE_DIR) not in sys.path:
 
 from scraping.base_scraper import BaseScraper
 from scraping.spiders.pf1e_d20pfsrd_spider import PF1eD20pfsrdSpider
-from scraping.spiders.dnd5e_spider import DnD5eSpider
-from scraping.spiders.mm3e_spider import MM3eSpider
 
 logger = logging.getLogger("scraping")
 
@@ -47,14 +45,10 @@ logger = logging.getLogger("scraping")
 
 SPIDER_REGISTRY: Dict[str, Type[BaseScraper]] = {
     "pathfinder1e": PF1eD20pfsrdSpider,
-    "dnd5e":        DnD5eSpider,
-    "mm3e":         MM3eSpider,
 }
 
 SYSTEM_LABELS: Dict[str, str] = {
     "pathfinder1e": "Pathfinder 1e",
-    "dnd5e":        "D&D 5e",
-    "mm3e":         "M&M 3e",
 }
 
 

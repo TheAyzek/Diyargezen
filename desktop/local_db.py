@@ -77,6 +77,11 @@ def init_local_db(db_path: Path) -> None:
 
         CREATE INDEX IF NOT EXISTS idx_local_chars_server_id ON local_characters(server_id);
         CREATE INDEX IF NOT EXISTS idx_local_chars_is_dirty  ON local_characters(is_dirty);
+
+        CREATE TABLE IF NOT EXISTS sync_state (
+            key TEXT PRIMARY KEY,
+            value TEXT NOT NULL
+        );
         """)
 
 
@@ -107,6 +112,22 @@ def clear_local_auth(db_path: Path) -> None:
     """Yerel oturum bilgilerini siler."""
     with _connect(db_path) as conn:
         conn.execute("DELETE FROM local_auth WHERE id=1")
+
+
+def get_sync_checkpoint(db_path: Path) -> Optional[str]:
+    """Return the server cursor persisted across desktop restarts."""
+    with _connect(db_path) as conn:
+        row = conn.execute("SELECT value FROM sync_state WHERE key='last_sync_timestamp'").fetchone()
+    return row[0] if row else None
+
+
+def set_sync_checkpoint(db_path: Path, timestamp: str) -> None:
+    with _connect(db_path) as conn:
+        conn.execute(
+            "INSERT INTO sync_state (key, value) VALUES ('last_sync_timestamp', ?) "
+            "ON CONFLICT(key) DO UPDATE SET value=excluded.value",
+            (timestamp,),
+        )
 
 
 def list_local_characters(db_path: Path, system: Optional[str] = None) -> List[LocalCharacterRecord]:
@@ -151,6 +172,8 @@ def save_local_character(db_path: Path, character_data: dict, record_id: Optiona
     now_str = datetime.now(timezone.utc).isoformat()
     name = character_data.get("name", "İsimsiz Kahraman")
     system = character_data.get("system", "pathfinder1e")
+    if str(system).lower() not in {"pf1e", "pathfinder1e"}:
+        raise ValueError("Yerel Offline-First istemci yalnızca PF1e karakterlerini saklar.")
 
     with _connect(db_path) as conn:
         if record_id:

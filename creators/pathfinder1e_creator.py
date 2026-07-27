@@ -275,6 +275,13 @@ class Pathfinder1ECreator(BaseCharacterCreator):
         if "level" in character and not (1 <= character["level"] <= 20):
             errors.append(f"Geçersiz seviye: {character['level']} (1-20 arası olmalı)")
 
+        # Multiclass level check
+        if character.get("is_multiclass"):
+            class_levels = character.get("class_levels", {})
+            total_mc_level = sum(class_levels.values())
+            if "level" in character and total_mc_level != character["level"]:
+                errors.append(f"[UYARI] Multiclass toplam seviye ({total_mc_level}) ile karakter seviyesi ({character['level']}) eşleşmiyor.")
+
         # BAB validation
         if "bab" in character and character["bab"] < 0:
             errors.append("BAB negatif olamaz")

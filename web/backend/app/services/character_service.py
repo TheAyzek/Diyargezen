@@ -11,6 +11,7 @@ from app.models.user import Character, User
 from app.models.progression import LevelProgression
 from rules.character_manager import CharacterManager
 from rules.pf1e_rules import PF1EValidator
+from app.services.pf1e_gm_engine import PF1eGMEngine
 
 logger = logging.getLogger(__name__)
 
@@ -26,7 +27,9 @@ class CharacterService:
 
     def recalculate(self, character_data: Dict[str, Any]) -> Dict[str, Any]:
         """Runs the TTRPG derived statistics calculator pipeline."""
-        system = character_data.get("system", "")
+        system = character_data.get("system", "pf1e")
+        if self._normalize_system_for_recalc(system) != "pathfinder1e":
+            raise ValueError("Diyargezen web API yalnızca Pathfinder 1e karakterlerini destekler.")
         normalized_system = self._normalize_system_for_recalc(system)
         
         char_copy = character_data.copy()
@@ -39,6 +42,10 @@ class CharacterService:
         
         recalculated_char["system"] = system
         return recalculated_char
+
+    def gm_diagnostics(self, character_data: Dict[str, Any]) -> List[Dict[str, Any]]:
+        """Return soft-block decisions independently from legacy text warnings."""
+        return PF1eGMEngine().evaluate_character(character_data)
 
     def validate(self, character_data: Dict[str, Any]) -> List[str]:
         """Runs rule validators for Pathfinder 1st Edition."""

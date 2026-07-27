@@ -5,6 +5,7 @@ import EntitySelectorModal from '../../EntitySelectorModal';
 import TraitSelectorModal from '../../TraitSelectorModal';
 import FeatSelectorModal from '../../FeatSelectorModal';
 import PortraitUpload from './PortraitUpload';
+import GMModifierPanel from './GMModifierPanel';
 
 export default function PF1eControls() {
   const {
@@ -584,6 +585,7 @@ export default function PF1eControls() {
       </div>
 
       {/* Equipment Selection */}
+      <GMModifierPanel />
       <div className="glass-card">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '8px' }}>
           <h3 style={{ fontSize: '1.2rem' }}>Zırh & Ekipman</h3>
