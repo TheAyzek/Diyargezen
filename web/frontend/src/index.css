@@ -50,11 +50,6 @@ body {
   line-height: 1.5;
   overflow-x: hidden;
   min-height: 100vh;
-  /* Glowing background effect */
-  background-image: 
-    radial-gradient(circle at 10% 20%, rgba(105, 34, 219, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(201, 168, 76, 0.08) 0%, transparent 40%);
-  background-attachment: fixed;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -70,7 +65,7 @@ a {
 }
 
 a:hover {
-  text-shadow: 0 0 8px var(--accent-gold-glow);
+  color: #e0be5a;
 }
 
 /* Custom Scrollbar */
@@ -94,23 +89,20 @@ a:hover {
 }
 
 /* ==========================================================================
-   Reusable UI Components (Glassmorphism & Flex layouts)
+   Reusable UI Components (Clean Cards & Flex layouts)
    ========================================================================== */
 
 .glass-card {
-  background: var(--bg-glass-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: var(--glass-border);
-  border-radius: 12px;
-  box-shadow: var(--glass-shadow);
+  background: #141424;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
   padding: 24px;
   transition: var(--transition-smooth);
 }
 
 .glass-card:hover {
-  border-color: rgba(201, 168, 76, 0.35);
-  box-shadow: 0 12px 40px 0 rgba(201, 168, 76, 0.05), var(--glass-shadow);
+  border-color: rgba(201, 168, 76, 0.3);
 }
 
 /* Inputs & Forms */
@@ -130,8 +122,8 @@ a:hover {
 }
 
 .form-input, .form-select, .form-textarea {
-  background: var(--bg-glass-input);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #1e1e36;
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 8px;
   color: var(--color-text-primary);
   font-family: var(--font-family);
@@ -144,8 +136,7 @@ a:hover {
 
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   border-color: var(--accent-gold);
-  box-shadow: 0 0 10px var(--accent-gold-glow);
-  background: var(--bg-ink);
+  background: #252542;
 }
 
 .form-input:disabled {
@@ -153,7 +144,7 @@ a:hover {
   cursor: not-allowed;
 }
 
-/* Buttons with RPG micro-animations */
+/* Buttons with clear hierarchy */
 .btn {
   font-family: var(--font-family);
   font-weight: 700;
@@ -172,12 +163,15 @@ a:hover {
 }
 
 .btn-primary {
-  background: transparent;
-  color: var(--color-text-primary);
-  border: 2px solid var(--accent-gold);
+  background: var(--accent-gold);
+  color: #0f0f1a;
+  border: 1px solid var(--accent-gold);
 }
 
 .btn-primary:hover:not(:disabled) {
+  background: #d4af37;
+  border-color: #d4af37;
+}
   background: var(--accent-gold);
   color: var(--bg-midnight);
   box-shadow: 0 0 15px var(--accent-gold-glow);

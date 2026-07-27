@@ -31,3 +31,9 @@ Görevimiz: Mevcut masaüstü uygulamasını, SADECE PF1e sistemine odaklanarak 
 Her yeni işe başlarken şu adımları izle:
 1. MİMARİ DENETİM: Dosyaları, DB şemasını ve Offline Senkronizasyon/Live PDF planını analiz et.
 2. RAPORLAMA: Bana kod yazmadan önce mutlaka planını sun ve onay bekle.
+
+## 8. ÖZEL YETENEKLER (SKILLS)
+Sana terminal üzerinden kullanabilmen için bazı özel araçlar tanımlanmıştır. İhtiyaç duyduğunda terminalde bu araçları çalıştır:
+
+- **Kural Çekici (Scraper Skill):** Aonprd'den kural çekmen gerektiğinde `python tools/scraper.py <URL>` komutunu kullan. Bu betik sana kuralın JSON formatını döndürecektir.
+- **Zar ve Modifikatör Test Aracı:** Kurduğun modifier motorunu test etmek için `python tools/dice_tester.py <STAT_DEĞERİ>` komutunu çalıştır.

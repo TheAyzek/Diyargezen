@@ -103,64 +103,23 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter }) {
   }, null);
 
   return (
-    <div className="animate-fade-in" style={{ maxWidth: '1100px', margin: '0 auto', paddingBottom: '40px' }}>
+    <div className="animate-fade-in" style={{ maxWidth: '1000px', margin: '0 auto', paddingBottom: '40px' }}>
       
-      {/* Title section */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px', flexWrap: 'wrap', gap: '16px' }}>
+      {/* Title & Primary Action */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', flexWrap: 'wrap', gap: '16px' }}>
         <div>
-          <h2 style={{ fontSize: '2rem', margin: 0, fontWeight: '800', background: 'linear-gradient(45deg, #f0e6d2, var(--accent-gold))', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-            Gezgin Paneli
+          <h2 style={{ fontSize: '1.8rem', margin: 0, fontWeight: '700', color: 'var(--accent-gold)' }}>
+            Karakter Kataloğu
           </h2>
-          <p style={{ color: '#8b949e', fontSize: '0.95rem', margin: '4px 0 0 0' }}>Diyarlar arası gezginlerinizin listesi ve istatistikleri.</p>
+          <p style={{ color: '#8b949e', fontSize: '0.9rem', margin: '4px 0 0 0' }}>Diyarlar arası gezginlerinizin listesi.</p>
         </div>
         <button className="btn btn-primary" onClick={onNewCharacter}>
           <UserPlus size={16} /> Yeni Karakter Yarat
         </button>
       </div>
 
-      {/* Stats Cards Section */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px', marginBottom: '32px' }}>
-        
-        {/* Stat 1: Total characters */}
-        <div className="glass-card" style={{ display: 'flex', alignItems: 'center', gap: '20px', padding: '20px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-          <div style={{ padding: '12px', borderRadius: '10px', backgroundColor: 'rgba(201, 168, 76, 0.1)', color: 'var(--accent-gold)' }}>
-            <Users size={24} />
-          </div>
-          <div>
-            <span style={{ fontSize: '12px', color: '#8b949e', display: 'block', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Toplam Gezgin</span>
-            <span style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#f0e6d2' }}>{totalCount}</span>
-          </div>
-        </div>
-
-        {/* Stat 2: Active Systems */}
-        <div className="glass-card" style={{ display: 'flex', alignItems: 'center', gap: '20px', padding: '20px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-          <div style={{ padding: '12px', borderRadius: '10px', backgroundColor: 'rgba(63, 185, 80, 0.1)', color: '#3fb950' }}>
-            <BookOpen size={24} />
-          </div>
-          <div>
-            <span style={{ fontSize: '12px', color: '#8b949e', display: 'block', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Sistem Dağılımı</span>
-            <span style={{ fontSize: '12px', color: '#f0e6d2', fontWeight: '600', marginTop: '4px', display: 'block' }}>
-              PF1e: <span style={{ color: '#3fb950' }}>{systemCounts.pf}</span> | D&D 5e: <span style={{ color: '#e94560' }}>{systemCounts.dnd}</span> | M&M: <span style={{ color: '#c9a84c' }}>{systemCounts.mnm}</span>
-            </span>
-          </div>
-        </div>
-
-        {/* Stat 3: Strongest character */}
-        <div className="glass-card" style={{ display: 'flex', alignItems: 'center', gap: '20px', padding: '20px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-          <div style={{ padding: '12px', borderRadius: '10px', backgroundColor: 'rgba(233, 69, 96, 0.1)', color: '#e94560' }}>
-            <Award size={24} />
-          </div>
-          <div>
-            <span style={{ fontSize: '12px', color: '#8b949e', display: 'block', textTransform: 'uppercase', letterSpacing: '0.5px' }}>En Yüksek Seviye</span>
-            <span style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#f0e6d2', display: 'block', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap', maxWidth: '180px' }}>
-              {highestLevelChar ? `${highestLevelChar.name} (Seviye ${highestLevelChar.data?.level || 1})` : 'Karakter Yok'}
-            </span>
-          </div>
-        </div>
-      </div>
-
       {/* Search Bar */}
-      <div className="glass-card" style={{ padding: '12px 20px', display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
+      <div className="glass-card" style={{ padding: '10px 16px', display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
         <Search size={18} style={{ color: '#8b949e' }} />
         <input 
           type="text" 

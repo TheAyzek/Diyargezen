@@ -361,9 +361,18 @@ export default function PF1eLiveSheet() {
             <h3 style={{ fontSize: '1.4rem', color: '#f0e6d2', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
               <FileText size={20} style={{ color: 'var(--accent-gold)' }} />
               Canlı Karakter Kağıdı (PDF AcroForm)
+              {rendering ? (
+                <span style={{ fontSize: '11px', background: 'rgba(201,168,76,0.2)', color: 'var(--accent-gold)', padding: '2px 8px', borderRadius: '10px', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                  <RefreshCw size={10} className="animate-spin" /> Güncelleniyor...
+                </span>
+              ) : (
+                <span style={{ fontSize: '11px', background: 'rgba(63,185,80,0.15)', color: '#3fb950', border: '1px solid rgba(63,185,80,0.3)', padding: '2px 8px', borderRadius: '10px', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                  ● Canlı Senkronize
+                </span>
+              )}
             </h3>
             <span style={{ fontSize: '11px', color: 'var(--color-text-muted)' }}>
-              Reaktif `pdf-lib` Form Görselleştirici (300ms Debounce)
+              Reaktif `pdf-lib` Form Görselleştirici
             </span>
           </div>
         </div>
