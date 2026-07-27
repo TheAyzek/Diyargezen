@@ -687,6 +687,34 @@ export default function LevelUpWizard({ isOpen, onClose }) {
           {currentScreen === 'confirm' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               
+              {/* Celebration Banner */}
+              <div className="delight-celebration" style={{
+                background: 'linear-gradient(135deg, rgba(201,168,76,0.15) 0%, rgba(26,26,46,0.8) 100%)',
+                border: '1px solid rgba(201,168,76,0.4)',
+                borderRadius: '10px',
+                padding: '16px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '14px'
+              }}>
+                <div style={{
+                  padding: '10px',
+                  borderRadius: '50%',
+                  background: 'rgba(201,168,76,0.2)',
+                  color: 'var(--accent-gold)'
+                }}>
+                  <Sparkles size={24} />
+                </div>
+                <div>
+                  <h3 style={{ margin: 0, fontSize: '1.1rem', color: '#f0e6d2' }}>
+                    Kahramanın Yükselişi: Seviye {targetLevel}!
+                  </h3>
+                  <p style={{ margin: '2px 0 0 0', fontSize: '0.82rem', color: '#8b949e' }}>
+                    Pathfinder 1e kurallarına göre karakterinizin istatistikleri ve nitelikleri güncelleniyor.
+                  </p>
+                </div>
+              </div>
+              
               {/* Spells Selection (only if spellcaster in D&D/PF and not confirm for M&M) */}
               {system !== 'mnm' && isSpellcaster && (
                 <div>

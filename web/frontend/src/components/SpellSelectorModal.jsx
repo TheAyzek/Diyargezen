@@ -287,7 +287,8 @@ export default function SpellSelectorModal({
           {loading ? (
             <div style={{ textAlign: 'center', padding: '3rem', color: '#94a3b8' }}>
               <Sparkles className="animate-spin" size={32} color="#7c6ef7" style={{ margin: '0 auto 1rem auto' }} />
-              Büyüler yükleniyor...
+              <div style={{ color: '#a594ff', fontWeight: 600, fontSize: '0.9rem' }}>Kadim Büyü Tomarları Açılıyor...</div>
+              <div style={{ color: '#64748b', fontSize: '0.75rem', marginTop: '4px' }}>Pathfinder 1e grimoire veritabanı taranıyor</div>
             </div>
           ) : spells.length === 0 ? (
             <div style={{ textAlign: 'center', padding: '3rem', color: '#64748b' }}>
