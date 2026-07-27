@@ -43,51 +43,6 @@ export const useCharacterStore = create((set, get) => ({
   id: null,
   name: 'İsimsiz Kahraman',
   system: '',
-import { create } from 'zustand';
-import axios from 'axios';
-
-// ---------------------------------------------------------------------------
-// PF1e Feat Slot Calculator
-// ---------------------------------------------------------------------------
-// PF1e gives 1 feat at every odd level: 1,3,5,7,9,11,13,15,17,19
-// Plus class bonus feats at level 1 (and beyond for Fighter etc.)
-// Plus +1 if Human race
-export function computeFeatSlots(className = '', race = '', level = 1) {
-  const lvl = parseInt(level) || 1;
-  const cls = (className || '').toLowerCase();
-  const raceL = (race || '').toLowerCase();
-
-  // Normal feats: 1 at level 1, then every odd level after
-  const normalFeats = Math.ceil(lvl / 2);
-
-  // Human racial bonus feat (+1 at level 1)
-  const humanBonus = raceL.includes('human') && !raceL.includes('half') ? 1 : 0;
-
-  // Class bonus feats at level 1
-  let classBonus = 0;
-  if (cls.includes('fighter')) {
-    // Fighter: bonus feat at 1, then every even level
-    classBonus = 1 + Math.floor(lvl / 2);
-  } else if (cls.includes('wizard')) {
-    classBonus = 1; // Scribe Scroll at level 1 (always)
-  } else if (cls.includes('monk')) {
-    // Monk: 2 bonus feats at level 1 (Improved Unarmed Strike + one style)
-    classBonus = cls.includes('unchained') ? 1 : 2;
-  } else if (cls.includes('gunslinger')) {
-    classBonus = 1; // Gunsmithing at level 1
-  } else if (cls.includes('cavalier')) {
-    classBonus = 1; // Order's Challenge
-  } else if (cls.includes('magus')) {
-    classBonus = 0; // Arcana, not technically a feat slot
-  }
-
-  return normalFeats + humanBonus + classBonus;
-}
-
-export const useCharacterStore = create((set, get) => ({
-  id: null,
-  name: 'İsimsiz Kahraman',
-  system: '',
   level: 1,
   pl_value: 10,
   race: '',
