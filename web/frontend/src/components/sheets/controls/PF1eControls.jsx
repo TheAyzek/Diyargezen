@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Plus, Trash, Search, Shield, X, Award } from 'lucide-react';
+import { Plus, Trash, Search, Shield, X, Award, Wand2 } from 'lucide-react';
 import { useCharacterStore, computeFeatSlots } from '../../../store/characterStore';
 import EntitySelectorModal from '../../EntitySelectorModal';
 import TraitSelectorModal from '../../TraitSelectorModal';
 import FeatSelectorModal from '../../FeatSelectorModal';
+import SpellSelectorModal from '../../SpellSelectorModal';
 import PortraitUpload from './PortraitUpload';
 import GMModifierPanel from './GMModifierPanel';
 
@@ -11,9 +12,9 @@ export default function PF1eControls() {
   const {
     id, name, level, race, class: charClass, feat, abilities, skills, recalcedData,
     alignment, gender, age, height, weight, deity, homeland, hair, eyes,
-    traits, feats,
+    traits, feats, spells = [],
     updateField, updateAbility, updateSkillRank, addEquipment, removeEquipment,
-    addTrait, removeTrait, addFeat, removeFeat
+    addTrait, removeTrait, addFeat, removeFeat, addSpell, removeSpell
   } = useCharacterStore();
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -23,6 +24,7 @@ export default function PF1eControls() {
   const [traitError, setTraitError] = useState(null);
   const [featModalOpen, setFeatModalOpen] = useState(false);
   const [featError, setFeatError] = useState(null);
+  const [spellModalOpen, setSpellModalOpen] = useState(false);
 
   const maxFeatSlots = computeFeatSlots(charClass, race, level);
 
@@ -613,6 +615,78 @@ export default function PF1eControls() {
         </div>
       </div>
 
+      {/* Spells & Spellbook Selection Card */}
+      <div className="glass-card" style={{ border: '1px solid rgba(124,110,247,0.3)' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '10px' }}>
+          <h3 style={{ fontSize: '1.1rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Wand2 size={16} style={{ color: '#7c6ef7' }} />
+            Büyüler & Büyü Defteri (PF1e Spells)
+          </h3>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <span style={{
+              fontSize: '11px', padding: '2px 8px', borderRadius: '10px',
+              background: 'rgba(124,110,247,0.15)', color: '#a594ff',
+              border: '1px solid rgba(124,110,247,0.3)', fontWeight: 'bold'
+            }}>
+              {spells?.length || 0} Büyü Seçili
+            </span>
+            <button
+              className="btn btn-primary"
+              style={{ padding: '5px 10px', fontSize: '11px', minHeight: 'unset', backgroundColor: '#7c6ef7' }}
+              onClick={() => setSpellModalOpen(true)}
+            >
+              <Plus size={12} /> Büyü Ekle
+            </button>
+          </div>
+        </div>
+
+        {/* Selected Spells List */}
+        {(!spells || spells.length === 0) ? (
+          <div style={{ textAlign: 'center', padding: '16px 0', color: '#8b949e', fontSize: '13px' }}>
+            Henüz büyü eklenmedi. Kataloğdan aratıp eklemek için yukarıdaki <b>Büyü Ekle</b> butonunu kullanın.
+          </div>
+        ) : (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {spells.map((sp, idx) => {
+              const sname = sp.isim || sp.name;
+              const lvl = sp.level ?? sp.sistem_verisi?.level ?? 0;
+              const school = sp.school || sp.sistem_verisi?.school || 'Universal';
+              return (
+                <div key={idx} style={{
+                  display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+                  padding: '10px 14px', borderRadius: '8px',
+                  background: 'rgba(124,110,247,0.06)',
+                  border: '1px solid rgba(124,110,247,0.2)'
+                }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <Wand2 size={14} style={{ color: '#7c6ef7' }} />
+                    <span style={{ fontWeight: 'bold', color: '#f0e6d2', fontSize: '13px' }}>{sname}</span>
+                    <span style={{
+                      fontSize: '10px', padding: '1px 6px', borderRadius: '10px',
+                      background: 'rgba(124,110,247,0.2)', color: '#a594ff', fontWeight: 'bold'
+                    }}>Lvl {lvl} • {school}</span>
+                    {sp.is_overridden && (
+                      <span style={{ fontSize: '9px', background: 'rgba(233,69,96,0.2)', color: '#ff6b81', padding: '1px 4px', borderRadius: '4px' }}>
+                        GM Override
+                      </span>
+                    )}
+                  </div>
+                  <button
+                    onClick={() => removeSpell(sname)}
+                    style={{ background: 'transparent', border: 'none', color: '#8b949e', cursor: 'pointer', padding: '4px' }}
+                    onMouseOver={e => e.currentTarget.style.color = '#e94560'}
+                    onMouseOut={e => e.currentTarget.style.color = '#8b949e'}
+                    title="Büyüyü kaldır"
+                  >
+                    <X size={14} />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+
       <EntitySelectorModal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
@@ -637,6 +711,18 @@ export default function PF1eControls() {
         selectedFeats={feats || []}
         maxFeats={maxFeatSlots}
         onAddFeat={handleAddFeat}
+      />
+
+      <SpellSelectorModal
+        isOpen={spellModalOpen}
+        onClose={() => setSpellModalOpen(false)}
+        system="pf1e"
+        characterClass={charClass}
+        characterLevel={level}
+        selectedSpells={spells || []}
+        onAddSpell={(spellObj) => {
+          addSpell(spellObj);
+        }}
       />
     </div>
   );

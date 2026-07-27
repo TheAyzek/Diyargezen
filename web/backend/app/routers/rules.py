@@ -43,9 +43,15 @@ def search_equipment(system: str, query: str = Query("", description="Search que
     return [EntityResponseSchema.model_validate(i, from_attributes=True) for i in items]
 
 @router.get("/{system}/spells", response_model=List[EntityResponseSchema])
-def search_spells(system: str, query: str = Query("", description="Search query")):
-    """Retrieve and search magic spells."""
-    spells = service.get_spells(system, query)
+def search_spells(
+    system: str,
+    query: str = Query("", description="Search query"),
+    level: Optional[int] = Query(None, description="Filter by spell level (0-9)"),
+    caster_class: str = Query("", description="Filter by spellcaster class (e.g. Wizard, Cleric, Sorcerer)"),
+    school: str = Query("", description="Filter by magic school (e.g. Evocation, Abjuration)")
+):
+    """Retrieve and search magic spells with level, class, and school filtering."""
+    spells = service.get_spells(system, query=query, level=level, caster_class=caster_class, school=school)
     return [EntityResponseSchema.model_validate(s, from_attributes=True) for s in spells]
 
 @router.get("/{system}/powers", response_model=List[EntityResponseSchema])

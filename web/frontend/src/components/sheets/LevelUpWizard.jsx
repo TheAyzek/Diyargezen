@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useCharacterStore } from '../../store/characterStore';
-import { ArrowRight, ArrowLeft, Check, Sparkles, AlertCircle, Plus, Minus } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Check, Sparkles, AlertCircle, Plus, Minus, Wand2 } from 'lucide-react';
+import SpellSelectorModal from '../SpellSelectorModal';
 
 export default function LevelUpWizard({ isOpen, onClose }) {
   const { 
@@ -13,8 +14,12 @@ export default function LevelUpWizard({ isOpen, onClose }) {
   const isFighterBonusFeat = isFighter && (targetLevel % 2 === 0);
   const isAbilityIncreaseLevel = targetLevel % 4 === 0;
 
-  // Spellcaster check
-  const isSpellcaster = ['wizard', 'sorcerer', 'cleric', 'druid', 'bard', 'warlock'].includes(currentClass?.toLowerCase());
+  // Spellcaster check for PF1e & fantasy classes
+  const isSpellcaster = [
+    'wizard', 'sorcerer', 'cleric', 'druid', 'bard', 'paladin',
+    'ranger', 'magus', 'alchemist', 'witch', 'oracle', 'inquisitor',
+    'summoner', 'arcanist', 'bloodrager', 'shaman'
+  ].includes(currentClass?.toLowerCase());
 
   // Dynamic screens based on TTRPG system
   let screens = [];
@@ -71,6 +76,7 @@ export default function LevelUpWizard({ isOpen, onClose }) {
   const [abilityIncrease, setAbilityIncrease] = useState('');
   const [spellsLearned, setSpellsLearned] = useState([]);
   const [customSpellText, setCustomSpellText] = useState('');
+  const [isSpellModalOpen, setIsSpellModalOpen] = useState(false);
   
   // DND5e specific states
   const [dndChoiceType, setDndChoiceType] = useState('asi'); // 'asi' or 'feat'
@@ -690,7 +696,7 @@ export default function LevelUpWizard({ isOpen, onClose }) {
                   <div style={{ display: 'flex', gap: '8px', marginBottom: '10px' }}>
                     <input 
                       type="text" 
-                      placeholder="Büyü adı girin"
+                      placeholder="Büyü adı girin veya kataloğdan seçin"
                       value={customSpellText}
                       onChange={(e) => setCustomSpellText(e.target.value)}
                       className="form-input"
@@ -703,7 +709,30 @@ export default function LevelUpWizard({ isOpen, onClose }) {
                     >
                       Ekle
                     </button>
+                    <button 
+                      type="button" 
+                      className="btn btn-secondary"
+                      onClick={() => setIsSpellModalOpen(true)}
+                      style={{ minHeight: 'unset', padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '6px' }}
+                    >
+                      <Wand2 size={16} /> Kataloğdan Seç
+                    </button>
                   </div>
+
+                  <SpellSelectorModal
+                    isOpen={isSpellModalOpen}
+                    onClose={() => setIsSpellModalOpen(false)}
+                    system={system || 'pathfinder1e'}
+                    characterClass={currentClass}
+                    characterLevel={targetLevel}
+                    selectedSpells={spellsLearned}
+                    onAddSpell={(spellObj) => {
+                      const name = spellObj.isim || spellObj.name;
+                      if (name && !spellsLearned.includes(name)) {
+                        setSpellsLearned([...spellsLearned, name]);
+                      }
+                    }}
+                  />
 
                   {spellsLearned.length > 0 && (
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>

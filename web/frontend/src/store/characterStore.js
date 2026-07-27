@@ -43,6 +43,51 @@ export const useCharacterStore = create((set, get) => ({
   id: null,
   name: 'İsimsiz Kahraman',
   system: '',
+import { create } from 'zustand';
+import axios from 'axios';
+
+// ---------------------------------------------------------------------------
+// PF1e Feat Slot Calculator
+// ---------------------------------------------------------------------------
+// PF1e gives 1 feat at every odd level: 1,3,5,7,9,11,13,15,17,19
+// Plus class bonus feats at level 1 (and beyond for Fighter etc.)
+// Plus +1 if Human race
+export function computeFeatSlots(className = '', race = '', level = 1) {
+  const lvl = parseInt(level) || 1;
+  const cls = (className || '').toLowerCase();
+  const raceL = (race || '').toLowerCase();
+
+  // Normal feats: 1 at level 1, then every odd level after
+  const normalFeats = Math.ceil(lvl / 2);
+
+  // Human racial bonus feat (+1 at level 1)
+  const humanBonus = raceL.includes('human') && !raceL.includes('half') ? 1 : 0;
+
+  // Class bonus feats at level 1
+  let classBonus = 0;
+  if (cls.includes('fighter')) {
+    // Fighter: bonus feat at 1, then every even level
+    classBonus = 1 + Math.floor(lvl / 2);
+  } else if (cls.includes('wizard')) {
+    classBonus = 1; // Scribe Scroll at level 1 (always)
+  } else if (cls.includes('monk')) {
+    // Monk: 2 bonus feats at level 1 (Improved Unarmed Strike + one style)
+    classBonus = cls.includes('unchained') ? 1 : 2;
+  } else if (cls.includes('gunslinger')) {
+    classBonus = 1; // Gunsmithing at level 1
+  } else if (cls.includes('cavalier')) {
+    classBonus = 1; // Order's Challenge
+  } else if (cls.includes('magus')) {
+    classBonus = 0; // Arcana, not technically a feat slot
+  }
+
+  return normalFeats + humanBonus + classBonus;
+}
+
+export const useCharacterStore = create((set, get) => ({
+  id: null,
+  name: 'İsimsiz Kahraman',
+  system: '',
   level: 1,
   pl_value: 10,
   race: '',
@@ -50,6 +95,7 @@ export const useCharacterStore = create((set, get) => ({
   background: '',
   // PF1e feats stored as array of entity objects
   feats: [],
+  spells: [],
   abilities: {},
   skills: {},
   advantages: [],
@@ -290,18 +336,15 @@ export const useCharacterStore = create((set, get) => ({
     const currentTraits = state.traits || [];
     const traitCategory = traitEntity.sistem_verisi?.trait_category || 'Unknown';
 
-    // Rule: max 2 traits total
     if (currentTraits.length >= MAX_TRAITS) {
       return { error: 'max_traits', message: `Maksimum ${MAX_TRAITS} trait seçebilirsiniz.` };
     }
-    // Rule: no two from same category
     const sameCategory = currentTraits.find(
       t => (t.sistem_verisi?.trait_category || 'Unknown') === traitCategory
     );
     if (sameCategory) {
       return { error: 'same_category', message: `"${traitCategory}" kategorisinden zaten bir trait seçtiniz.` };
     }
-    // Rule: no duplicates
     if (currentTraits.find(t => t.isim === traitEntity.isim)) {
       return { error: 'duplicate', message: 'Bu trait zaten seçili.' };
     }
@@ -318,45 +361,27 @@ export const useCharacterStore = create((set, get) => ({
     get().recalculate();
   },
 
-  addAdvantage: (adv) => {
-    set(state => {
-      if (!state.advantages.includes(adv)) {
-        return { advantages: [...state.advantages, adv] };
-      }
-      return {};
-    });
+  // PF1e Spell Actions
+  addSpell: (spellObj) => {
+    const state = get();
+    const currentSpells = state.spells || [];
+    const name = spellObj.isim || spellObj.name;
+
+    if (currentSpells.some(s => (s.isim || s.name || s) === name)) {
+      return { error: 'duplicate', message: 'Bu büyü zaten seçili.' };
+    }
+
+    set(state => ({ spells: [...(state.spells || []), spellObj] }));
     get().recalculate();
+    return { error: null };
   },
 
-  removeAdvantage: (advName) => {
+  removeSpell: (spellName) => {
     set(state => ({
-      advantages: state.advantages.filter(a => a !== advName)
+      spells: (state.spells || []).filter(s => (s.isim || s.name || s) !== spellName)
     }));
     get().recalculate();
   },
-
-  addPower: (powerName, powerData) => {
-    set(state => ({
-      powers: {
-        ...state.powers,
-        [powerName]: powerData
-      }
-    }));
-    get().recalculate();
-  },
-
-  removePower: (powerName) => {
-    set(state => {
-      const nextPowers = { ...state.powers };
-      delete nextPowers[powerName];
-      return { powers: nextPowers };
-    });
-    get().recalculate();
-  },
-
-  toggleDndSkill: (skill) => {
-    set(state => {
-      const currentProfs = state.recalcedData.proficient_skills || [];
       const newProfs = currentProfs.includes(skill)
         ? currentProfs.filter(s => s !== skill)
         : [...currentProfs, skill];

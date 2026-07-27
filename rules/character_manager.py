@@ -235,6 +235,72 @@ class CharacterManager:
                     continue
         except Exception:
             pass
+    def get_spells(
+        self,
+        system: str,
+        query: str = "",
+        level: Optional[int] = None,
+        caster_class: str = "",
+        school: str = ""
+    ) -> List[DiyargezenEntity]:
+        """Fetch spells filtered by query, spell level, caster class, and magic school."""
+        sys_norm = system.lower().replace("_", "").replace("-", "")
+        results: List[DiyargezenEntity] = []
+        try:
+            conn = sqlite3.connect(str(self.db_path))
+            cursor = conn.cursor()
+
+            sql = (
+                "SELECT isim, sistem, kategori, aciklama, sistem_verisi "
+                "FROM entities "
+                "WHERE sistem = ? AND kategori = 'spell' "
+            )
+            params: list = [sys_norm]
+
+            if query:
+                sql += "AND isim LIKE ? "
+                params.append(f"%{query}%")
+
+            sql += "ORDER BY isim COLLATE NOCASE ASC LIMIT 300"
+            cursor.execute(sql, params)
+            rows = cursor.fetchall()
+            conn.close()
+
+            for row in rows:
+                try:
+                    payload = json.loads(row[4]) if row[4] else {}
+                    spell_lvl = payload.get("level")
+                    spell_school = str(payload.get("school", "")).lower()
+                    levels_by_class = payload.get("levels_by_class", {})
+
+                    # Level filter
+                    if level is not None:
+                        matched = False
+                        if isinstance(levels_by_class, dict) and caster_class:
+                            for cname, clvl in levels_by_class.items():
+                                if cname.lower() == caster_class.lower() and clvl == level:
+                                    matched = True
+                                    break
+                        if not matched and spell_lvl != level:
+                            continue
+
+                    # Class filter
+                    if caster_class and isinstance(levels_by_class, dict) and levels_by_class:
+                        if not any(cname.lower() == caster_class.lower() for cname in levels_by_class.keys()):
+                            continue
+
+                    # School filter
+                    if school and school.lower() not in spell_school:
+                        continue
+
+                    results.append(DiyargezenEntity(
+                        isim=row[0], sistem=row[1], kategori=row[2],
+                        aciklama=row[3] or "", sistem_verisi=payload
+                    ))
+                except Exception:
+                    continue
+        except Exception:
+            pass
         return results
 
     def search_entities(self, system: str, category: str, query: str) -> List[DiyargezenEntity]:

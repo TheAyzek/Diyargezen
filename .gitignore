@@ -45,8 +45,9 @@ data/portraits/
 # ─── Generated database (rebuilt by ETL on first run) ───────────────────
 # Do NOT commit — it is auto-generated from source .db / .json files.
 data/characters.db
-data/characters.db-shm
-data/characters.db-wal
+data/diyargezen_unified.db
+data/*.db-shm
+data/*.db-wal
 diyargezen.db
 scratch/
 data/pf1e_scraped_items.json

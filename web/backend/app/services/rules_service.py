@@ -1,4 +1,4 @@
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from app.core.config import DB_PATH, SYSTEM_MAPPING
 from rules.character_manager import CharacterManager
 from models.entity import DiyargezenEntity
@@ -45,9 +45,18 @@ class RulesService:
         db_system = self._normalize_system(system)
         return self.manager.get_feats(db_system, query, category)
 
-    def get_spells(self, system: str, query: str = "") -> List[DiyargezenEntity]:
+    def get_spells(
+        self,
+        system: str,
+        query: str = "",
+        level: Optional[int] = None,
+        caster_class: str = "",
+        school: str = ""
+    ) -> List[DiyargezenEntity]:
         db_system = self._normalize_system(system)
-        return self.manager.search_entities(db_system, "spell", query)
+        return self.manager.get_spells(
+            db_system, query=query, level=level, caster_class=caster_class, school=school
+        )
 
     def get_powers(self, system: str, query: str = "") -> List[DiyargezenEntity]:
         db_system = self._normalize_system(system)
