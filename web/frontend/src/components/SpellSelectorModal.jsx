@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Search, X, Wand2, BookOpen, Shield, Flame, Zap, AlertTriangle, CheckCircle2, Sparkles, Plus } from 'lucide-react';
+import { getMaxSpellLevel, getMaxSpellsAllowed } from '../utils/spellLimitCalculator';
 
 const SCHOOL_COLORS = {
   evocation: '#e94560',
@@ -37,6 +38,10 @@ export default function SpellSelectorModal({
   const [loading, setLoading] = useState(false);
   const [isOverridden, setIsOverridden] = useState(false);
   const [customSpellText, setCustomSpellText] = useState('');
+
+  const maxSpellLevel = getMaxSpellLevel(characterClass || selectedClass, characterLevel);
+  const maxAllowedSpells = Math.min(maxSpells, getMaxSpellsAllowed(characterClass || selectedClass, characterLevel));
+  const isLimitReached = selectedSpells.length >= maxAllowedSpells;
 
   useEffect(() => {
     if (isOpen) {
@@ -136,11 +141,16 @@ export default function SpellSelectorModal({
               <Wand2 size={22} color="#7c6ef7" />
             </div>
             <div>
-              <h2 style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 700, margin: 0 }}>
-                Büyü Seçimi (PF1e Spells)
-              </h2>
-              <p style={{ color: '#94a3b8', fontSize: '0.8rem', margin: 0 }}>
-                Sınıfınıza ve büyü seviyenize uygun büyüleri arayın, filtreleyin ve ekleyin.
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <h2 style={{ color: '#fff', fontSize: '1.25rem', fontWeight: 700, margin: 0 }}>
+                  Büyü Seçimi (PF1e Spells)
+                </h2>
+                <span style={{ fontSize: '0.72rem', background: 'rgba(201,168,76,0.15)', color: 'var(--gold-bright)', border: '1px solid rgba(201,168,76,0.3)', padding: '2px 8px', borderRadius: '10px', fontWeight: 'bold' }}>
+                  Kural Limiti: {selectedSpells.length} / {maxAllowedSpells} Büyü (Max Lv {maxSpellLevel})
+                </span>
+              </div>
+              <p style={{ color: '#94a3b8', fontSize: '0.8rem', margin: '2px 0 0 0' }}>
+                {characterClass || 'Büyücü'} Sınıfı için Seviye {characterLevel} büyü sınırı ve bilinen büyü kontrolleri.
               </p>
             </div>
           </div>
@@ -353,28 +363,49 @@ export default function SpellSelectorModal({
                     </div>
 
                     {/* Action Button */}
-                    <button
-                      onClick={() => handleSelectSpell(spell)}
-                      disabled={alreadySelected}
-                      style={{
-                        width: '100%', padding: '0.5rem', borderRadius: '8px', border: 'none',
-                        backgroundColor: alreadySelected ? '#1e293b' : '#7c6ef7',
-                        color: alreadySelected ? '#64748b' : '#fff',
-                        fontSize: '0.8rem', fontWeight: 600, cursor: alreadySelected ? 'default' : 'pointer',
-                        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem',
-                        transition: 'background-color 0.2s ease'
-                      }}
-                    >
-                      {alreadySelected ? (
-                        <>
-                          <CheckCircle2 size={15} color="#4ec9b0" /> Seçildi
-                        </>
-                      ) : (
-                        <>
-                          <Plus size={15} /> Büyü Defterine Ekle
-                        </>
-                      )}
-                    </button>
+                    {(() => {
+                      const isLevelTooHigh = level > maxSpellLevel;
+                      const isRuleBlocked = (isLimitReached || isLevelTooHigh) && !isOverridden && !alreadySelected;
+
+                      return (
+                        <button
+                          onClick={() => {
+                            if (isRuleBlocked) {
+                              if (window.confirm(`⚠️ Kural Uyarısı: ${isLevelTooHigh ? `Karakteriniz için Max Büyü Seviyesi ${maxSpellLevel}.` : `Büyü hakkı limiti (${maxAllowedSpells}) doldu.`}\n\nGM izniyle kuralı ezerek (Override) eklemek istiyor musunuz?`)) {
+                                setIsOverridden(true);
+                                handleSelectSpell(spell);
+                              }
+                            } else {
+                              handleSelectSpell(spell);
+                            }
+                          }}
+                          disabled={alreadySelected}
+                          style={{
+                            width: '100%', padding: '0.5rem', borderRadius: '8px',
+                            backgroundColor: alreadySelected ? '#1e293b' : isRuleBlocked ? 'rgba(233,69,96,0.2)' : '#7c6ef7',
+                            border: isRuleBlocked ? '1px solid #e94560' : 'none',
+                            color: alreadySelected ? '#64748b' : isRuleBlocked ? '#ff6b81' : '#fff',
+                            fontSize: '0.8rem', fontWeight: 600, cursor: alreadySelected ? 'default' : 'pointer',
+                            display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.4rem',
+                            transition: 'all 0.2s ease'
+                          }}
+                        >
+                          {alreadySelected ? (
+                            <>
+                              <CheckCircle2 size={15} color="#4ec9b0" /> Seçildi
+                            </>
+                          ) : isRuleBlocked ? (
+                            <>
+                              <AlertTriangle size={15} color="#e94560" /> ⚠️ {isLevelTooHigh ? `Seviye Lv ${level} High` : 'Limit Doldu'} (Override)
+                            </>
+                          ) : (
+                            <>
+                              <Plus size={15} /> Büyü Defterine Ekle
+                            </>
+                          )}
+                        </button>
+                      );
+                    })()}
                   </div>
                 );
               })}

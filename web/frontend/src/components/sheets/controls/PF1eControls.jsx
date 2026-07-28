@@ -1,21 +1,110 @@
-import React, { useState } from 'react';
-import { Plus, Trash, Search, Shield, X, Award, Wand2 } from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
+import { Plus, Trash, Shield, X, Award, Wand2, Sparkles, User, Activity, Sword, BookOpen, Package, FileText, Download, Copy, AlertTriangle } from 'lucide-react';
 import { useCharacterStore, computeFeatSlots } from '../../../store/characterStore';
+import { exportCharacterPDF } from '../../../utils/pdfExportUtil';
+import { exportCharacterJSON, copyCharacterJSONToClipboard } from '../../../utils/jsonExportUtil';
 import EntitySelectorModal from '../../EntitySelectorModal';
 import TraitSelectorModal from '../../TraitSelectorModal';
 import FeatSelectorModal from '../../FeatSelectorModal';
 import SpellSelectorModal from '../../SpellSelectorModal';
+import LevelUpWizardModal from '../../LevelUpWizardModal';
+import SpellCard from '../../SpellCard';
 import PortraitUpload from './PortraitUpload';
+import CompanionPanel from './CompanionPanel';
 import GMModifierPanel from './GMModifierPanel';
+import RuneField from '../../common/RuneField';
+
+const ABILITY_KEYS = ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma'];
+const ABILITY_LABELS = { strength: 'STR', dexterity: 'DEX', constitution: 'CON', intelligence: 'INT', wisdom: 'WIS', charisma: 'CHA' };
+const ABILITY_FULL = { strength: 'Strength', dexterity: 'Dexterity', constitution: 'Constitution', intelligence: 'Intelligence', wisdom: 'Wisdom', charisma: 'Charisma' };
+const ABILITY_RUNES = { strength: 'ᚠ', dexterity: 'ᚢ', constitution: 'ᚦ', intelligence: 'ᚨ', wisdom: 'ᚱ', charisma: 'ᚲ' };
+
+const TABS = [
+  { id: 'identity', icon: '⚜', label: 'Kimlik' },
+  { id: 'abilities', icon: 'ᛟ', label: 'Skorlar' },
+  { id: 'combat', icon: '⚔', label: 'Dövüş' },
+  { id: 'skills', icon: '✦', label: 'Beceriler' },
+  { id: 'gear', icon: '⚗', label: 'Ekipman' },
+  { id: 'backstory', icon: '📜', label: 'Hikaye' },
+  { id: 'companion', icon: '🐾', label: 'Yoldaş' },
+];
+
+function FieldLabel({ children }) {
+  return (
+    <div style={{ fontFamily: 'Cinzel, serif', fontSize: '0.52rem', letterSpacing: '0.13em', color: 'var(--gold-pale)', textTransform: 'uppercase', marginBottom: 4, fontWeight: 600 }}>
+      {children}
+    </div>
+  );
+}
+
+function SectionHeader({ icon, title }) {
+  return (
+    <div className="section-header">
+      <div className="line" />
+      <div style={{ display: 'flex', alignItems: 'center', gap: 7, whiteSpace: 'nowrap' }}>
+        <span style={{ color: 'var(--gold)', fontSize: '0.75rem' }}>{icon}</span>
+        <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.52rem', letterSpacing: '0.18em', color: 'var(--gold-pale)', textTransform: 'uppercase' }}>{title}</span>
+      </div>
+      <div className="line" />
+    </div>
+  );
+}
+
+const fmtMod = (n) => (n >= 0 ? `+${n}` : `${n}`);
 
 export default function PF1eControls() {
+  const store = useCharacterStore();
   const {
     id, name, level, race, class: charClass, feat, abilities, skills, recalcedData,
     alignment, gender, age, height, weight, deity, homeland, hair, eyes,
-    traits, feats, spells = [],
+    backstory, personality, allies, notes, usedSpellSlots = {}, preparedSpells = {}, gold = 150,
+    traits, feats, spells = [], raceData = {},
+    racialAbilityChoice = 'strength', secondaryRacialAbilityChoice = 'dexterity', selectedRacialTraits = [],
     updateField, updateAbility, updateSkillRank, addEquipment, removeEquipment,
-    addTrait, removeTrait, addFeat, removeFeat, addSpell, removeSpell
-  } = useCharacterStore();
+    addTrait, removeTrait, addFeat, removeFeat, addSpell, removeSpell, toggleRacialTrait, applyLevelUp,
+    toggleSpellSlotUsed, setPreparedSpell, togglePreparedSpellCast, restCharacter, deductGold
+  } = store;
+
+  const [tab, setTab] = useState('identity');
+  const scrollRef = useRef(null);
+
+  const SPELLCASTING_CLASSES = [
+    'wizard', 'sorcerer', 'cleric', 'druid', 'bard', 'paladin',
+    'ranger', 'magus', 'alchemist', 'witch', 'oracle', 'inquisitor',
+    'summoner', 'arcanist', 'bloodrager', 'hunter', 'investigator',
+    'warpriest', 'kineticist', 'occultist', 'psychic', 'shaman',
+    'skald', 'spiritualist', 'medium', 'mesmerist'
+  ];
+
+  const PREPARED_SPELLCASTERS = ['wizard', 'cleric', 'druid', 'paladin', 'ranger', 'magus', 'witch', 'inquisitor', 'warpriest', 'shaman', 'alchemist'];
+  const isPreparedSpellcaster = PREPARED_SPELLCASTERS.includes((charClass || '').toLowerCase());
+
+  const COMPANION_CLASSES = [
+    'druid', 'ranger', 'hunter', 'summoner', 'wizard', 'witch',
+    'sorcerer', 'cavalier', 'paladin', 'samurai', 'arcanist',
+    'magus', 'cleric', 'oracle', 'inquisitor', 'spiritualist', 'alchemist'
+  ];
+
+  const clsLower = (charClass || '').toLowerCase().trim();
+  const hasSpellcasting = SPELLCASTING_CLASSES.some(c => clsLower.includes(c));
+  const hasCompanion = COMPANION_CLASSES.some(c => clsLower.includes(c));
+
+  useEffect(() => {
+    if (scrollRef.current) scrollRef.current.scrollTop = 0;
+  }, [tab]);
+
+  useEffect(() => {
+    if (tab === 'companion' && !hasCompanion) {
+      setTab('identity');
+    }
+  }, [charClass, hasCompanion, tab]);
+
+  const isFlexibleRace = ['human', 'half-elf', 'half-orc'].includes((race || '').toLowerCase().trim()) ||
+    JSON.stringify(raceData.sistem_verisi || {}).toLowerCase().includes('any');
+
+  const rawRacialTraits = raceData.sistem_verisi?.traits ||
+    (raceData.sistem_verisi?.traits_detailed ? Object.keys(raceData.sistem_verisi.traits_detailed) : []);
+  const availableRacialTraits = Array.isArray(rawRacialTraits) ? rawRacialTraits : [];
 
   const [modalOpen, setModalOpen] = useState(false);
   const [modalCategory, setModalCategory] = useState('races');
@@ -25,9 +114,9 @@ export default function PF1eControls() {
   const [featModalOpen, setFeatModalOpen] = useState(false);
   const [featError, setFeatError] = useState(null);
   const [spellModalOpen, setSpellModalOpen] = useState(false);
+  const [levelUpModalOpen, setLevelUpModalOpen] = useState(false);
 
   const maxFeatSlots = computeFeatSlots(charClass, race, level);
-
   const costMap = { 7: -4, 8: -2, 9: -1, 10: 0, 11: 1, 12: 2, 13: 3, 14: 5, 15: 7, 16: 10, 17: 13, 18: 17 };
 
   const getRemainingPoints = () => {
@@ -42,26 +131,9 @@ export default function PF1eControls() {
     const intMod = Math.floor(((abilities.intelligence || 10) - 10) / 2);
     const ranksPerLevel = recalcedData.class_data?.skill_ranks_per_level || 2;
     const total = Math.max(1, ranksPerLevel + intMod) * level;
-    
     let spent = 0;
-    Object.values(skills).forEach(val => {
-      spent += parseInt(val) || 0;
-    });
-    
+    Object.values(skills).forEach(val => { spent += parseInt(val) || 0; });
     return total - spent;
-  };
-
-  const adjustScore = (ab, delta) => {
-    const current = abilities[ab] || 10;
-    const next = current + delta;
-    if (next < 7 || next > 18) return;
-    
-    const currentCost = costMap[current];
-    const nextCost = costMap[next];
-    const pointsLeft = getRemainingPoints();
-    if (delta > 0 && (nextCost - currentCost) > pointsLeft) return;
-
-    updateAbility(ab, next);
   };
 
   const handleAdjustSkillRank = (skillName, delta) => {
@@ -69,7 +141,6 @@ export default function PF1eControls() {
     const next = current + delta;
     if (next < 0 || next > level) return;
     if (delta > 0 && getAvailableSkillRanks() <= 0) return;
-
     updateSkillRank(skillName, next);
   };
 
@@ -114,603 +185,855 @@ export default function PF1eControls() {
     }
   };
 
-  const abilitiesList = [
-    { key: 'strength', label: 'Strength' },
-    { key: 'dexterity', label: 'Dexterity' },
-    { key: 'constitution', label: 'Constitution' },
-    { key: 'intelligence', label: 'Intelligence' },
-    { key: 'wisdom', label: 'Wisdom' },
-    { key: 'charisma', label: 'Charisma' }
-  ];
-
   const pfSkillsList = [
     "Acrobatics", "Appraise", "Bluff", "Climb", "Craft", "Diplomacy", "Disable Device",
     "Disguise", "Escape Artist", "Fly", "Handle Animal", "Heal", "Intimidate", "Linguistics",
     "Perception", "Perform", "Profession", "Ride", "Sense Motive", "Sleight of Hand",
     "Spellcraft", "Stealth", "Survival", "Swim", "Use Magic Device",
-    "Knowledge (Arcana)", "Knowledge (Dungeoneering)", "Knowledge (Engineering)",
-    "Knowledge (Geography)", "Knowledge (History)", "Knowledge (Local)",
-    "Knowledge (Nature)", "Knowledge (Nobility)", "Knowledge (Planes)", "Knowledge (Religion)"
+    "Knowledge (arcana)", "Knowledge (dungeoneering)", "Knowledge (engineering)",
+    "Knowledge (geography)", "Knowledge (history)", "Knowledge (local)",
+    "Knowledge (nature)", "Knowledge (nobility)", "Knowledge (planes)", "Knowledge (religion)"
   ];
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-      
-      {/* Character Setup Card */}
-      <div className="glass-card">
-        <h3 style={{ fontSize: '1.2rem', marginBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '8px' }}>
-          Karakter Kurulumu
-        </h3>
-        
-        <PortraitUpload />
-        
-        <div className="form-group">
-          <label htmlFor="pf1e-char-name" className="form-label">Karakter Adı</label>
-          <input 
-            id="pf1e-char-name"
-            name="character_name"
-            type="text" 
-            value={name || ''} 
-            onChange={(e) => updateField('name', e.target.value)} 
-            className="form-input"
-          />
+    <div style={{
+      background: 'var(--obsidian-mid)',
+      border: '1px solid rgba(201,168,76,0.25)',
+      borderRadius: '8px',
+      display: 'flex',
+      flexDirection: 'column',
+      overflow: 'hidden',
+      position: 'relative',
+      boxShadow: '0 8px 32px rgba(0,0,0,0.6)'
+    }}>
+      {/* Floating Rune Background */}
+      <RuneField />
+
+      {/* Hero Header Card */}
+      <div style={{
+        position: 'relative', zIndex: 2, padding: '16px 20px 14px',
+        borderBottom: '1px solid rgba(201,168,76,0.18)',
+        background: 'linear-gradient(180deg, rgba(16,14,28,0.97) 0%, rgba(10,8,20,0.93) 100%)',
+        flexShrink: 0
+      }}>
+        <div style={{ position: 'absolute', top: 0, left: 0, width: 14, height: 14, borderTop: '1px solid var(--gold)', borderLeft: '1px solid var(--gold)', opacity: 0.6 }} />
+        <div style={{ position: 'absolute', top: 0, right: 0, width: 14, height: 14, borderTop: '1px solid var(--gold)', borderRight: '1px solid var(--gold)', opacity: 0.6 }} />
+
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 12, alignItems: 'center', marginBottom: 10 }}>
+          <div>
+            <FieldLabel>Karakter İsmi</FieldLabel>
+            <input className="rune-input" value={name || ''} onChange={e => updateField('name', e.target.value)}
+              placeholder="Kahramanınızın ismi..."
+              style={{ fontSize: '1rem', fontFamily: 'Cinzel, serif', letterSpacing: '0.04em', padding: '8px 12px' }} />
+          </div>
+          <PortraitUpload />
         </div>
 
-        <div className="form-group">
-          <label htmlFor="pf1e-char-level" className="form-label">Seviye (Level)</label>
-          <input 
-            id="pf1e-char-level"
-            name="character_level"
-            type="number" 
-            min={1} 
-            max={20} 
-            value={level || 1} 
-            onChange={(e) => updateField('level', Math.max(1, Math.min(20, parseInt(e.target.value) || 1)))}
-            className="form-input"
-            disabled={id !== null}
-          />
-          {id !== null && (
-            <span style={{ fontSize: '11px', color: 'var(--accent-gold)' }}>
-              Seviye için sağ üstteki <b>Seviye Atla</b> veya <b>Geri Al</b> işlemlerini kullanın.
-            </span>
-          )}
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="pf1e-char-race" className="form-label">Irk (Race)</label>
-          <div style={{ display: 'flex', gap: '8px' }}>
-            <input id="pf1e-char-race" name="character_race" type="text" value={race || ''} readOnly className="form-input" placeholder="Irk seçin" />
-            <button className="btn btn-secondary" style={{ padding: '8px 12px' }} onClick={() => handleOpenSelector('races', 'Irk Seçin')}>
-              Seç
-            </button>
+        <div style={{ display: 'grid', gridTemplateColumns: '56px auto auto auto auto 1fr 1fr', gap: 8, alignItems: 'end' }}>
+          <div>
+            <FieldLabel>Seviye</FieldLabel>
+            <input type="number" min={1} max={20} className="stat-input" value={level || 1}
+              onChange={e => updateField('level', Math.max(1, Math.min(20, parseInt(e.target.value) || 1)))}
+              style={{ fontSize: '1.15rem', height: 36 }}
+              disabled={id !== null} />
           </div>
-        </div>
 
-        <div className="form-group">
-          <label htmlFor="pf1e-char-class" className="form-label">Sınıf (Class)</label>
-          <div style={{ display: 'flex', gap: '8px' }}>
-            <input id="pf1e-char-class" name="character_class" type="text" value={charClass || ''} readOnly className="form-input" placeholder="Sınıf seçin" />
-            <button className="btn btn-secondary" style={{ padding: '8px 12px' }} onClick={() => handleOpenSelector('classes', 'Sınıf Seçin')}>
-              Seç
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Feats Selection Card */}
-      <div className="glass-card" style={{ border: '1px solid rgba(56,189,248,0.25)' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '10px' }}>
-          <h3 style={{ fontSize: '1.1rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Award size={16} style={{ color: '#38bdf8' }} />
-            Feat Seçimi & Hücreleri
-          </h3>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span style={{
-              fontSize: '11px', padding: '2px 8px', borderRadius: '10px',
-              background: (feats?.length || 0) >= maxFeatSlots ? 'rgba(233,69,96,0.15)' : 'rgba(56,189,248,0.15)',
-              color: (feats?.length || 0) >= maxFeatSlots ? '#e94560' : '#38bdf8',
-              border: `1px solid ${(feats?.length || 0) >= maxFeatSlots ? 'rgba(233,69,96,0.3)' : 'rgba(56,189,248,0.3)'}`,
-              fontWeight: 'bold'
-            }}>
-              {feats?.length || 0} / {maxFeatSlots}
-            </span>
-            {(feats?.length || 0) < maxFeatSlots && (
-              <button
-                className="btn btn-primary"
-                style={{ padding: '5px 10px', fontSize: '11px', minHeight: 'unset', backgroundColor: '#38bdf8', borderColor: '#38bdf8', color: '#0f0f1a' }}
-                onClick={() => setFeatModalOpen(true)}
-              >
-                <Plus size={12} /> Feat Ekle
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Rule hint */}
-        <div style={{ fontSize: '11px', color: '#8b949e', marginBottom: '12px' }}>
-          Mevcut Seviye (<b style={{ color: '#38bdf8' }}>{level}</b>) ve Sınıf/Irk bonuslarına göre toplam <b style={{ color: '#38bdf8' }}>{maxFeatSlots} feat</b> hakkınız var.
-        </div>
-
-        {/* Feat Error */}
-        {featError && (
-          <div style={{
-            background: 'rgba(233,69,96,0.12)', border: '1px solid rgba(233,69,96,0.35)',
-            borderRadius: '6px', padding: '8px 12px', marginBottom: '10px',
-            fontSize: '12px', color: '#e94560'
-          }}>
-            ⚠ {featError}
-          </div>
-        )}
-
-        {/* Selected Feats List */}
-        {(!feats || feats.length === 0) ? (
-          <div style={{ textAlign: 'center', padding: '20px 16px', background: 'rgba(56,189,248,0.03)', borderRadius: '8px', border: '1px dashed rgba(56,189,248,0.2)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
-            <span style={{ color: '#8b949e', fontSize: '13px' }}>Henüz feat seçilmedi.</span>
-            <button
-              type="button"
-              className="btn btn-primary"
-              style={{ padding: '6px 14px', fontSize: '12px', minHeight: 'unset', backgroundColor: '#38bdf8', borderColor: '#38bdf8', color: '#0f0f1a' }}
-              onClick={() => setFeatModalOpen(true)}
-            >
-              <Plus size={14} /> Feat Kataloğunu Aç
-            </button>
-          </div>
-        ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {feats.map((f, idx) => {
-              const fname = f.isim || f;
-              const cat = f.sistem_verisi?.feat_category || 'General';
-              return (
-                <div key={idx} style={{
-                  display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                  padding: '10px 14px', borderRadius: '8px',
-                  background: 'rgba(56,189,248,0.06)',
-                  border: '1px solid rgba(56,189,248,0.2)'
-                }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Award size={14} style={{ color: '#38bdf8' }} />
-                    <span style={{ fontWeight: 'bold', color: '#f0e6d2', fontSize: '13px' }}>{fname}</span>
-                    <span style={{
-                      fontSize: '10px', padding: '1px 6px', borderRadius: '10px',
-                      background: 'rgba(56,189,248,0.15)', color: '#38bdf8', fontWeight: 'bold'
-                    }}>{cat}</span>
-                  </div>
-                  <button
-                    onClick={() => removeFeat(fname)}
-                    style={{ background: 'transparent', border: 'none', color: '#8b949e', cursor: 'pointer', padding: '4px' }}
-                    onMouseOver={e => e.currentTarget.style.color = '#e94560'}
-                    onMouseOut={e => e.currentTarget.style.color = '#8b949e'}
-                    title="Feati kaldır"
-                  >
-                    <X size={14} />
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-        )}
-      </div>
-
-      {/* Trait Selection Card */}
-      <div className="glass-card" style={{ border: '1px solid rgba(63,185,80,0.25)' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '10px' }}>
-          <h3 style={{ fontSize: '1.1rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Shield size={16} style={{ color: '#3fb950' }} />
-            Karakter Traitler (Özellikler)
-          </h3>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span style={{
-              fontSize: '11px', padding: '2px 8px', borderRadius: '10px',
-              background: (traits?.length || 0) >= 2 ? 'rgba(233,69,96,0.15)' : 'rgba(63,185,80,0.15)',
-              color: (traits?.length || 0) >= 2 ? '#e94560' : '#3fb950',
-              border: `1px solid ${(traits?.length || 0) >= 2 ? 'rgba(233,69,96,0.3)' : 'rgba(63,185,80,0.3)'}`,
-              fontWeight: 'bold'
-            }}>
-              {traits?.length || 0} / 2
-            </span>
-            {(traits?.length || 0) < 2 && (
-              <button
-                className="btn btn-primary"
-                style={{ padding: '5px 10px', fontSize: '11px', minHeight: 'unset', backgroundColor: '#3fb950', borderColor: '#3fb950', color: '#0f0f1a' }}
-                onClick={() => setTraitModalOpen(true)}
-              >
-                <Plus size={12} /> Trait Ekle
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Rule hint */}
-        <div style={{ fontSize: '11px', color: '#8b949e', marginBottom: '12px' }}>
-          Aynı kategoriden olmamak koşuluyla <b style={{ color: '#3fb950' }}>en fazla 2</b> trait seçebilirsiniz.
-        </div>
-
-        {/* Trait error */}
-        {traitError && (
-          <div style={{
-            background: 'rgba(233,69,96,0.12)', border: '1px solid rgba(233,69,96,0.35)',
-            borderRadius: '6px', padding: '8px 12px', marginBottom: '10px',
-            fontSize: '12px', color: '#e94560'
-          }}>
-            ⚠ {traitError}
-          </div>
-        )}
-
-        {/* Selected traits */}
-        {(!traits || traits.length === 0) ? (
-          <div style={{ textAlign: 'center', padding: '20px 16px', background: 'rgba(63,185,80,0.03)', borderRadius: '8px', border: '1px dashed rgba(63,185,80,0.2)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
-            <span style={{ color: '#8b949e', fontSize: '13px' }}>Henüz trait seçilmedi.</span>
-            <button
-              type="button"
-              className="btn btn-primary"
-              style={{ padding: '6px 14px', fontSize: '12px', minHeight: 'unset', backgroundColor: '#3fb950', borderColor: '#3fb950', color: '#0f0f1a' }}
-              onClick={() => setTraitModalOpen(true)}
-            >
-              <Plus size={14} /> Trait Kataloğunu Aç
-            </button>
-          </div>
-        ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {traits.map((trait, idx) => {
-              const cat = trait.sistem_verisi?.trait_category || 'Unknown';
-              const catColors = {
-                Combat: '#e94560', Faith: '#c9a84c', Magic: '#7c6ef7',
-                Social: '#4ec9b0', Race: '#ce9178', Regional: '#6a9955',
-                Religion: '#d7ba7d', Campaign: '#9cdcfe'
-              };
-              const catColor = catColors[cat] || '#8b949e';
-              return (
-                <div key={idx} style={{
-                  display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start',
-                  padding: '10px 14px', borderRadius: '8px',
-                  background: `${catColor}10`,
-                  border: `1px solid ${catColor}35`
-                }}>
-                  <div style={{ flex: 1 }}>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '3px' }}>
-                      <span style={{ fontWeight: 'bold', color: '#f0e6d2', fontSize: '13px' }}>{trait.isim}</span>
-                      <span style={{
-                        fontSize: '10px', padding: '1px 6px', borderRadius: '10px',
-                        background: `${catColor}20`, color: catColor, fontWeight: 'bold'
-                      }}>{cat}</span>
-                    </div>
-                    {trait.aciklama && (
-                      <div
-                        style={{ fontSize: '11px', color: '#8b949e', lineHeight: '1.4' }}
-                        dangerouslySetInnerHTML={{ __html: trait.aciklama }}
-                      />
-                    )}
-                  </div>
-                  <button
-                    onClick={() => removeTrait(trait.isim)}
-                    style={{ background: 'transparent', border: 'none', color: '#8b949e', cursor: 'pointer', padding: '4px', marginLeft: '8px', flexShrink: 0 }}
-                    onMouseOver={e => e.currentTarget.style.color = '#e94560'}
-                    onMouseOut={e => e.currentTarget.style.color = '#8b949e'}
-                    title="Traiti kaldır"
-                  >
-                    <X size={14} />
-                  </button>
-                </div>
-              );
-            })}
-          </div>
-        )}
-      </div>
-      {/* Personal Identity Details Card */}
-      <div className="glass-card">
-        <h3 style={{ fontSize: '1.2rem', marginBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '8px' }}>
-          Kişisel Bilgiler & Kimlik
-        </h3>
-
-        <div className="form-group">
-          <label htmlFor="pf1e-char-alignment" className="form-label">Hizalama (Alignment)</label>
-          <select
-            id="pf1e-char-alignment"
-            name="character_alignment"
-            value={alignment || 'TN'}
-            onChange={(e) => updateField('alignment', e.target.value)}
-            className="form-input"
-            style={{ background: '#0f0f1a', color: '#f0e6d2' }}
+          <button
+            className="gold-btn primary"
+            onClick={() => setLevelUpModalOpen(true)}
+            style={{ padding: '0 10px', height: 36, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4, background: 'linear-gradient(135deg, #c9a84c 0%, #ffd700 100%)', color: '#121218', fontWeight: 800 }}
           >
-            <option value="LG">Lawful Good (LG)</option>
-            <option value="NG">Neutral Good (NG)</option>
-            <option value="CG">Chaotic Good (CG)</option>
-            <option value="LN">Lawful Neutral (LN)</option>
-            <option value="TN">True Neutral (TN)</option>
-            <option value="CN">Chaotic Neutral (CN)</option>
-            <option value="LE">Lawful Evil (LE)</option>
-            <option value="NE">Neutral Evil (NE)</option>
-            <option value="CE">Chaotic Evil (CE)</option>
-          </select>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
-          <div className="form-group">
-            <label htmlFor="pf1e-char-gender" className="form-label">Cinsiyet</label>
-            <input
-              id="pf1e-char-gender"
-              name="character_gender"
-              type="text"
-              placeholder="Örn: Kadın"
-              value={gender || ''}
-              onChange={(e) => updateField('gender', e.target.value)}
-              className="form-input"
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="pf1e-char-age" className="form-label">Yaş</label>
-            <input
-              id="pf1e-char-age"
-              name="character_age"
-              type="text"
-              placeholder="Örn: 25"
-              value={age || ''}
-              onChange={(e) => updateField('age', e.target.value)}
-              className="form-input"
-            />
-          </div>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
-          <div className="form-group">
-            <label htmlFor="pf1e-char-height" className="form-label">Boy</label>
-            <input
-              id="pf1e-char-height"
-              name="character_height"
-              type="text"
-              placeholder="Örn: 5'10&quot;"
-              value={height || ''}
-              onChange={(e) => updateField('height', e.target.value)}
-              className="form-input"
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="pf1e-char-weight" className="form-label">Kilo</label>
-            <input
-              id="pf1e-char-weight"
-              name="character_weight"
-              type="text"
-              placeholder="Örn: 160 lbs"
-              value={weight || ''}
-              onChange={(e) => updateField('weight', e.target.value)}
-              className="form-input"
-            />
-          </div>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
-          <div className="form-group">
-            <label htmlFor="pf1e-char-deity" className="form-label">Tanrı / İnanç</label>
-            <input
-              id="pf1e-char-deity"
-              name="character_deity"
-              type="text"
-              placeholder="Örn: Sarenrae"
-              value={deity || ''}
-              onChange={(e) => updateField('deity', e.target.value)}
-              className="form-input"
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="pf1e-char-homeland" className="form-label">Memleket</label>
-            <input
-              id="pf1e-char-homeland"
-              name="character_homeland"
-              type="text"
-              placeholder="Örn: Varisia"
-              value={homeland || ''}
-              onChange={(e) => updateField('homeland', e.target.value)}
-              className="form-input"
-            />
-          </div>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
-          <div className="form-group">
-            <label htmlFor="pf1e-char-hair" className="form-label">Saç</label>
-            <input
-              id="pf1e-char-hair"
-              name="character_hair"
-              type="text"
-              placeholder="Örn: Siyah"
-              value={hair || ''}
-              onChange={(e) => updateField('hair', e.target.value)}
-              className="form-input"
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="pf1e-char-eyes" className="form-label">Göz</label>
-            <input
-              id="pf1e-char-eyes"
-              name="character_eyes"
-              type="text"
-              placeholder="Örn: Kehribar"
-              value={eyes || ''}
-              onChange={(e) => updateField('eyes', e.target.value)}
-              className="form-input"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Point Buy Card */}
-      <div className="glass-card">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-          <h3 style={{ fontSize: '1.2rem' }}>Yetenek Puan Satın Alma</h3>
-          <span style={{ 
-            fontSize: '12px', 
-            background: getRemainingPoints() >= 0 ? '#22223b' : 'rgba(233,69,96,0.15)', 
-            color: getRemainingPoints() >= 0 ? '#c9a84c' : '#e94560',
-            padding: '4px 8px', 
-            borderRadius: '4px',
-            fontWeight: 'bold'
-          }}>
-            Kalan Puan: {getRemainingPoints()} / 15
-          </span>
-        </div>
-        
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-          {abilitiesList.map(ab => {
-            const val = abilities[ab.key] || 10;
-            return (
-              <div key={ab.key} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(255,255,255,0.02)', padding: '8px 16px', borderRadius: '8px' }}>
-                <span style={{ fontWeight: '600', color: '#d4c5a9' }}>{ab.label}</span>
-                <div className="ability-value-row">
-                  <button className="ability-btn" style={{ width: '24px', height: '24px' }} onClick={() => adjustScore(ab.key, -1)}>-</button>
-                  <span className="ability-score" style={{ fontSize: '1.2rem' }}>{val}</span>
-                  <button className="ability-btn" style={{ width: '24px', height: '24px' }} onClick={() => adjustScore(ab.key, 1)}>+</button>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Skill ranks allocation */}
-      <div className="glass-card">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '8px' }}>
-          <h3 style={{ fontSize: '1.2rem' }}>Beceri Rütbeleri (Skills)</h3>
-          <span style={{ fontSize: '12px', background: '#22223b', padding: '3px 8px', borderRadius: '4px', color: '#c9a84c', fontWeight: 'bold' }}>
-            Boş Rütbe: {getAvailableSkillRanks()}
-          </span>
-        </div>
-        
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', maxHeight: '250px', overflowY: 'auto', paddingRight: '4px' }}>
-          {pfSkillsList.map(skillName => {
-            const ranks = skills[skillName] || 0;
-            const classSkills = recalcedData.class_data?.class_skills || [];
-            const isClassSkill = classSkills.includes(skillName);
-
-            return (
-              <div key={skillName} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 12px', background: 'rgba(255,255,255,0.01)', border: '1px solid rgba(255,255,255,0.03)', borderRadius: '6px' }}>
-                <span style={{ fontSize: '13px', color: '#d4c5a9', fontWeight: isClassSkill ? 'bold' : 'normal' }}>
-                  {skillName} {isClassSkill && <span style={{ color: '#c9a84c', fontSize: '10px' }}>(Sınıf)</span>}
-                </span>
-                
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <button className="ability-btn" style={{ width: '22px', height: '22px', fontSize: '12px' }} onClick={() => handleAdjustSkillRank(skillName, -1)}>-</button>
-                  <span style={{ fontSize: '14px', fontWeight: 'bold', minWidth: '16px', textAlign: 'center' }}>{ranks}</span>
-                  <button className="ability-btn" style={{ width: '22px', height: '22px', fontSize: '12px' }} onClick={() => handleAdjustSkillRank(skillName, 1)}>+</button>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Equipment Selection */}
-      <GMModifierPanel />
-      <div className="glass-card">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '8px' }}>
-          <h3 style={{ fontSize: '1.2rem' }}>Zırh & Ekipman</h3>
-          <button className="btn btn-secondary" style={{ padding: '4px 8px', fontSize: '11px', minHeight: 'unset' }} onClick={() => handleOpenSelector('equipment', 'Zırh/Ekipman Ekle')}>
-            <Plus size={12} /> Ekle
+            <Sparkles size={14} /> ⬆ Seviye Atla
           </button>
-        </div>
-        
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', maxHeight: '180px', overflowY: 'auto' }}>
-          {recalcedData.equipment?.length === 0 ? (
-            <div style={{ fontSize: '13px', color: '#8b949e', textAlign: 'center', padding: '12px' }}>Envanter boş.</div>
-          ) : (
-            recalcedData.equipment?.map((item, index) => (
-              <div key={index} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 12px', background: '#16213e', borderRadius: '6px' }}>
-                <div>
-                  <div style={{ fontSize: '13px', fontWeight: 'bold' }}>{item.name}</div>
-                  <div style={{ fontSize: '11px', color: '#8b949e' }}>{item.type} - {item.sistem_verisi?.weight?.value || 0} lb</div>
-                </div>
-                <button className="btn btn-secondary" style={{ padding: '4px', minHeight: 'unset', color: '#e94560' }} onClick={() => removeEquipment(index)}>
-                  <Trash size={12} />
-                </button>
-              </div>
-            ))
-          )}
+
+          <button
+            className="gold-btn"
+            onClick={() => exportCharacterPDF(store)}
+            style={{ padding: '0 10px', height: 36, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(201,168,76,0.15)', border: '1px solid var(--border-gold)', color: 'var(--gold-bright)', fontWeight: 700 }}
+          >
+            <FileText size={14} /> 📄 PDF
+          </button>
+
+          <button
+            className="gold-btn"
+            onClick={() => exportCharacterJSON(store)}
+            style={{ padding: '0 10px', height: 36, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(78, 201, 176, 0.15)', border: '1px solid #4ec9b0', color: '#4ec9b0', fontWeight: 700 }}
+          >
+            <Download size={14} /> 📤 JSON
+          </button>
+
+          <button
+            className="gold-btn"
+            onClick={() => copyCharacterJSONToClipboard(store)}
+            style={{ padding: '0 10px', height: 36, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(165, 148, 255, 0.15)', border: '1px solid #a594ff', color: '#a594ff', fontWeight: 700 }}
+          >
+            <Copy size={14} /> 📋 Kopyala
+          </button>
+
+          <div>
+            <FieldLabel>Irk (Race)</FieldLabel>
+            <div style={{ display: 'flex', gap: 4 }}>
+              <input className="rune-input" value={race || ''} readOnly placeholder="Irk..." style={{ padding: '7px 8px' }} />
+              <button className="gold-btn" style={{ padding: '6px 10px', flexShrink: 0 }} onClick={() => handleOpenSelector('races', 'Irk Seçin')}>
+                Seç
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <FieldLabel>Sınıf (Class)</FieldLabel>
+            <div style={{ display: 'flex', gap: 4 }}>
+              <input className="rune-input" value={charClass || ''} readOnly placeholder="Sınıf..." style={{ padding: '7px 8px' }} />
+              <button className="gold-btn" style={{ padding: '6px 10px', flexShrink: 0 }} onClick={() => handleOpenSelector('classes', 'Sınıf Seçin')}>
+                Seç
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Spells & Spellbook Selection Card */}
-      <div className="glass-card" style={{ border: '1px solid rgba(124,110,247,0.3)' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '10px' }}>
-          <h3 style={{ fontSize: '1.1rem', margin: 0, display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <Wand2 size={16} style={{ color: '#7c6ef7' }} />
-            Büyüler & Büyü Defteri (PF1e Spells)
-          </h3>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span style={{
-              fontSize: '11px', padding: '2px 8px', borderRadius: '10px',
-              background: 'rgba(124,110,247,0.15)', color: '#a594ff',
-              border: '1px solid rgba(124,110,247,0.3)', fontWeight: 'bold'
-            }}>
-              {spells?.length || 0} Büyü Seçili
-            </span>
-            <button
-              className="btn btn-primary"
-              style={{ padding: '5px 10px', fontSize: '11px', minHeight: 'unset', backgroundColor: '#7c6ef7' }}
-              onClick={() => setSpellModalOpen(true)}
-            >
-              <Plus size={12} /> Büyü Ekle
-            </button>
-          </div>
-        </div>
+      {/* Tabs Header */}
+      <div style={{ position: 'relative', zIndex: 2, display: 'flex', borderBottom: '1px solid rgba(201,168,76,0.18)', background: 'rgba(4,3,10,0.6)', flexShrink: 0 }}>
+        {TABS.filter(t => (t.id === 'companion' ? hasCompanion : true)).map(t => (
+          <button key={t.id} onClick={() => setTab(t.id)}
+            className={`epic-tab ${tab === t.id ? 'active' : ''}`}
+            style={{ flex: 1 }}>
+            <span style={{ fontSize: '0.85rem', color: tab === t.id ? 'var(--gold-light)' : 'var(--gold-dim)', fontFamily: 'Cinzel, serif' }}>{t.icon}</span>
+            <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.45rem', letterSpacing: '0.1em', textTransform: 'uppercase', color: tab === t.id ? 'var(--gold)' : 'var(--gold-dim)' }}>{t.label}</span>
+          </button>
+        ))}
+      </div>
 
-        {/* Selected Spells List */}
-        {(!spells || spells.length === 0) ? (
-          <div style={{ textAlign: 'center', padding: '20px 16px', background: 'rgba(124,110,247,0.03)', borderRadius: '8px', border: '1px dashed rgba(124,110,247,0.2)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
-            <span style={{ color: '#8b949e', fontSize: '13px' }}>Henüz büyü eklenmedi.</span>
-            <button
-              type="button"
-              className="btn btn-primary"
-              style={{ padding: '6px 14px', fontSize: '12px', minHeight: 'unset', backgroundColor: '#7c6ef7', borderColor: '#7c6ef7', color: '#ffffff' }}
-              onClick={() => setSpellModalOpen(true)}
-            >
-              <Wand2 size={14} /> Büyü Kataloğunu Aç
-            </button>
-          </div>
-        ) : (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {spells.map((sp, idx) => {
-              const sname = sp.isim || sp.name;
-              const lvl = sp.level ?? sp.sistem_verisi?.level ?? 0;
-              const school = sp.school || sp.sistem_verisi?.school || 'Universal';
-              return (
-                <div key={idx} style={{
-                  display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                  padding: '10px 14px', borderRadius: '8px',
-                  background: 'rgba(124,110,247,0.06)',
-                  border: '1px solid rgba(124,110,247,0.2)'
-                }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Wand2 size={14} style={{ color: '#7c6ef7' }} />
-                    <span style={{ fontWeight: 'bold', color: '#f0e6d2', fontSize: '13px' }}>{sname}</span>
-                    <span style={{
-                      fontSize: '10px', padding: '1px 6px', borderRadius: '10px',
-                      background: 'rgba(124,110,247,0.2)', color: '#a594ff', fontWeight: 'bold'
-                    }}>Lvl {lvl} • {school}</span>
-                    {sp.is_overridden && (
-                      <span style={{ fontSize: '9px', background: 'rgba(233,69,96,0.2)', color: '#ff6b81', padding: '1px 4px', borderRadius: '4px' }}>
-                        GM Override
-                      </span>
-                    )}
-                  </div>
-                  <button
-                    onClick={() => removeSpell(sname)}
-                    style={{ background: 'transparent', border: 'none', color: '#8b949e', cursor: 'pointer', padding: '4px' }}
-                    onMouseOver={e => e.currentTarget.style.color = '#e94560'}
-                    onMouseOut={e => e.currentTarget.style.color = '#8b949e'}
-                    title="Büyüyü kaldır"
-                  >
-                    <X size={14} />
-                  </button>
+      {/* Tab Content Area */}
+      <div ref={scrollRef} key={tab}
+        style={{ position: 'relative', zIndex: 2, flex: 1, minHeight: 480, maxHeight: 680, overflowY: 'auto', padding: '16px 18px 22px', background: 'rgba(10,8,18,0.55)' }}>
+
+        {/* ── TAB 1: IDENTITY ── */}
+        {tab === 'identity' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <SectionHeader icon="⚜" title="Karakter Kimliği & Detayları" />
+
+            {/* Selected Race Summary & Ability Bonus Display */}
+            {race && (
+              <div style={{
+                background: 'linear-gradient(135deg, rgba(201,168,76,0.12) 0%, rgba(63,185,80,0.08) 100%)',
+                border: '1px solid var(--border-gold)',
+                borderRadius: '4px',
+                padding: '10px 14px',
+                marginBottom: '4px'
+              }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
+                  <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.55rem', letterSpacing: '0.12em', color: 'var(--gold-bright)', textTransform: 'uppercase' }}>
+                    👑 {race} Irk Bonusları & Özellikleri
+                  </span>
+                  <span style={{ fontSize: '0.7rem', color: '#38bdf8', fontFamily: 'DM Mono, monospace' }}>
+                    {raceData.sistem_verisi?.size || 'Medium'} · {raceData.sistem_verisi?.speed || 30} ft.
+                  </span>
                 </div>
-              );
-            })}
+
+                {/* Bonus text display */}
+                <div style={{ fontSize: '0.82rem', color: '#3fb950', fontWeight: 'bold', fontFamily: 'DM Mono, monospace', marginBottom: 4 }}>
+                  ✨ Status Bonusu: {(() => {
+                    const sv = raceData.sistem_verisi || {};
+                    let txt = sv.ability_score_increase_text;
+                    if (!txt && sv.ability_score_increase && typeof sv.ability_score_increase === 'object') {
+                      const parts = Object.entries(sv.ability_score_increase).map(([k, v]) => `${v >= 0 ? '+' : ''}${v} ${k.slice(0, 3).toUpperCase()}`);
+                      if (parts.length > 0) txt = parts.join(', ');
+                    }
+                    if (isFlexibleRace) {
+                      txt = `+2 ${racialAbilityChoice.toUpperCase()} (Esnek Puan)`;
+                      if (selectedRacialTraits.includes('Dual Talent')) {
+                        txt += ` & +2 ${secondaryRacialAbilityChoice.toUpperCase()} (Dual Talent)`;
+                      }
+                    }
+                    return txt || 'Standart Irksal Skorlar';
+                  })()}
+                </div>
+
+                {/* Core Racial Vision / Features */}
+                {raceData.sistem_verisi?.vision && (
+                  <div style={{ fontSize: '0.72rem', color: '#a594ff', fontFamily: 'EB Garamond, serif' }}>
+                    👁 Görüş: {raceData.sistem_verisi.vision} {raceData.sistem_verisi.vision_range ? `(${raceData.sistem_verisi.vision_range} ft)` : ''}
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Flexible Racial Bonuses */}
+            {isFlexibleRace && (
+              <div style={{ background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.3)', borderRadius: 2, padding: 10, marginBottom: 6 }}>
+                <FieldLabel>Irksal +2 Puan Seçimi (Floating Bonus)</FieldLabel>
+                <select className="rune-select" value={racialAbilityChoice} onChange={e => updateField('racialAbilityChoice', e.target.value)}>
+                  <option value="strength">💪 Strength (+2)</option>
+                  <option value="dexterity">⚡ Dexterity (+2)</option>
+                  <option value="constitution">🛡️ Constitution (+2)</option>
+                  <option value="intelligence">🧠 Intelligence (+2)</option>
+                  <option value="wisdom">👁️ Wisdom (+2)</option>
+                  <option value="charisma">✨ Charisma (+2)</option>
+                </select>
+
+                {selectedRacialTraits.includes('Dual Talent') && (
+                  <div style={{ marginTop: 8 }}>
+                    <FieldLabel>Dual Talent İkinci +2 Puan Seçimi</FieldLabel>
+                    <select className="rune-select" value={secondaryRacialAbilityChoice} onChange={e => updateField('secondaryRacialAbilityChoice', e.target.value)}>
+                      <option value="strength">💪 Strength (+2)</option>
+                      <option value="dexterity">⚡ Dexterity (+2)</option>
+                      <option value="constitution">🛡️ Constitution (+2)</option>
+                      <option value="intelligence">🧠 Intelligence (+2)</option>
+                      <option value="wisdom">👁️ Wisdom (+2)</option>
+                      <option value="charisma">✨ Charisma (+2)</option>
+                    </select>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Optional Racial Traits */}
+            {race && availableRacialTraits.length > 0 && (
+              <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(201,168,76,0.15)', borderRadius: 2, padding: 10, marginBottom: 6 }}>
+                <FieldLabel>Alternatif Irksal Özellikler ({race})</FieldLabel>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 5, maxHeight: 140, overflowY: 'auto' }}>
+                  {availableRacialTraits.map((tName, tIdx) => {
+                    const isChecked = selectedRacialTraits.includes(tName);
+                    return (
+                      <label key={tIdx} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '0.8rem', color: isChecked ? 'var(--gold-bright)' : 'var(--gold-light)', cursor: 'pointer' }}>
+                        <input type="checkbox" checked={isChecked} onChange={() => toggleRacialTrait(tName)} style={{ accentColor: 'var(--gold)' }} />
+                        <span>{tName}</span>
+                      </label>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
+              <div>
+                <FieldLabel>Hizalama (Alignment)</FieldLabel>
+                <select className="rune-select" value={alignment || 'TN'} onChange={e => updateField('alignment', e.target.value)}>
+                  <option value="LG">Lawful Good (LG)</option>
+                  <option value="NG">Neutral Good (NG)</option>
+                  <option value="CG">Chaotic Good (CG)</option>
+                  <option value="LN">Lawful Neutral (LN)</option>
+                  <option value="TN">True Neutral (TN)</option>
+                  <option value="CN">Chaotic Neutral (CN)</option>
+                  <option value="LE">Lawful Evil (LE)</option>
+                  <option value="NE">Neutral Evil (NE)</option>
+                  <option value="CE">Chaotic Evil (CE)</option>
+                </select>
+              </div>
+
+              <div>
+                <FieldLabel>Tanrı / İnanç</FieldLabel>
+                <input className="rune-input" value={deity || ''} onChange={e => updateField('deity', e.target.value)} placeholder="Iomedae, Sarenrae..." />
+              </div>
+
+              <div>
+                <FieldLabel>Cinsiyet</FieldLabel>
+                <input className="rune-input" value={gender || ''} onChange={e => updateField('gender', e.target.value)} placeholder="Kadın, Erkek..." />
+              </div>
+
+              <div>
+                <FieldLabel>Yaş</FieldLabel>
+                <input className="rune-input" value={age || ''} onChange={e => updateField('age', e.target.value)} placeholder="25..." />
+              </div>
+
+              <div>
+                <FieldLabel>Boy</FieldLabel>
+                <input className="rune-input" value={height || ''} onChange={e => updateField('height', e.target.value)} placeholder="5'10&quot;..." />
+              </div>
+
+              <div>
+                <FieldLabel>Kilo</FieldLabel>
+                <input className="rune-input" value={weight || ''} onChange={e => updateField('weight', e.target.value)} placeholder="160 lbs..." />
+              </div>
+
+              <div>
+                <FieldLabel>Saç</FieldLabel>
+                <input className="rune-input" value={hair || ''} onChange={e => updateField('hair', e.target.value)} placeholder="Siyah..." />
+              </div>
+
+              <div>
+                <FieldLabel>Göz</FieldLabel>
+                <input className="rune-input" value={eyes || ''} onChange={e => updateField('eyes', e.target.value)} placeholder="Kehribar..." />
+              </div>
+
+              <div style={{ gridColumn: 'span 2' }}>
+                <FieldLabel>Memleket</FieldLabel>
+                <input className="rune-input" value={homeland || ''} onChange={e => updateField('homeland', e.target.value)} placeholder="Varisia..." />
+              </div>
+            </div>
           </div>
         )}
+
+        {/* ── TAB 2: ABILITIES ── */}
+        {tab === 'abilities' && (
+          <div>
+            <SectionHeader icon="ᛟ" title="Yetenek Skorları & Point Buy" />
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12, padding: '6px 10px', background: 'rgba(201,168,76,0.06)', border: '1px solid var(--border-gold)' }}>
+              <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.52rem', color: 'var(--gold-pale)', textTransform: 'uppercase' }}>Kalan Satın Alma Puanı</span>
+              <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '1rem', color: getRemainingPoints() >= 0 ? 'var(--gold-bright)' : '#e87070', fontWeight: 600 }}>
+                {getRemainingPoints()} / 15
+              </span>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10, marginBottom: 18 }}>
+              {ABILITY_KEYS.map(k => {
+                const normKey = k.charAt(0).toUpperCase() + k.slice(1);
+                const derivedVal = recalcedData.ability_scores?.[normKey] || abilities[k] || 10;
+                const m = recalcedData.ability_modifiers?.[normKey] ?? Math.floor((derivedVal - 10) / 2);
+                return (
+                  <div key={k} className="ability-box corner-ornament corner-ornament-bottom">
+                    <div style={{ position: 'absolute', top: 2, right: 4, fontSize: '1rem', color: 'var(--gold)', opacity: 0.12, fontFamily: 'Cinzel, serif' }}>{ABILITY_RUNES[k]}</div>
+                    <div style={{ fontFamily: 'Cinzel, serif', fontSize: '0.48rem', letterSpacing: '0.14em', color: 'var(--gold-pale)', textTransform: 'uppercase' }}>
+                      {ABILITY_LABELS[k]}
+                    </div>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+                      <button className="gold-btn" style={{ padding: '2px 6px', fontSize: '0.8rem' }} onClick={() => updateAbility(k, Math.max(7, (abilities[k] || 10) - 1))}>-</button>
+                      <input className="stat-input" style={{ width: 44, fontSize: '1.4rem', border: 'none', background: 'transparent' }} value={abilities[k] || 10} readOnly />
+                      <button className="gold-btn" style={{ padding: '2px 6px', fontSize: '0.8rem' }} onClick={() => updateAbility(k, Math.min(18, (abilities[k] || 10) + 1))}>+</button>
+                    </div>
+                    <div style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.75rem', color: m >= 0 ? 'var(--gold-light)' : '#d46060', background: 'rgba(201,168,76,0.12)', border: '1px solid rgba(201,168,76,0.3)', borderRadius: 1, padding: '1px 8px', minWidth: 36, textAlign: 'center' }}>
+                      {fmtMod(m)}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* ── TAB 3: COMBAT ── */}
+        {tab === 'combat' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            <GMModifierPanel />
+            <SectionHeader icon="⚔" title="Hit Points & AC" />
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 8 }}>
+              <div className="dark-panel corner-ornament" style={{ padding: 8, textAlign: 'center' }}>
+                <FieldLabel>Zırh Sınıfı (AC)</FieldLabel>
+                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: '1.4rem', color: 'var(--gold-bright)', fontWeight: 600 }}>{recalcedData.armor_class || 10}</div>
+              </div>
+              <div className="dark-panel corner-ornament" style={{ padding: 8, textAlign: 'center' }}>
+                <FieldLabel>Touch AC</FieldLabel>
+                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: '1.4rem', color: 'var(--gold-bright)', fontWeight: 600 }}>{recalcedData.touch_ac || 10}</div>
+              </div>
+              <div className="dark-panel corner-ornament" style={{ padding: 8, textAlign: 'center' }}>
+                <FieldLabel>Flat-Footed</FieldLabel>
+                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: '1.4rem', color: 'var(--gold-bright)', fontWeight: 600 }}>{recalcedData.flat_footed_ac || 10}</div>
+              </div>
+            </div>
+
+            <SectionHeader icon="⚔" title="Kuşanılan Silahlar & Saldırı Zarları" />
+            {recalcedData.weapons && recalcedData.weapons.length > 0 ? (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                {recalcedData.weapons.map((w, idx) => (
+                  <div key={idx} className="dark-panel corner-ornament" style={{ padding: '8px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <div>
+                      <div style={{ fontFamily: 'EB Garamond, serif', fontSize: '0.95rem', fontWeight: 600, color: 'var(--gold-bright)' }}>
+                        {w.name || w.isim}
+                      </div>
+                      <div style={{ fontSize: '0.72rem', color: '#94a3b8' }}>
+                        Kritik: {w.crit_range || '20/x2'}
+                      </div>
+                    </div>
+                    <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+                      <div style={{ textAlign: 'center' }}>
+                        <span style={{ fontSize: '0.6rem', color: 'var(--gold-dim)', display: 'block' }}>ATAK</span>
+                        <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '1.1rem', fontWeight: 'bold', color: '#4ec9b0' }}>
+                          {w.calculated_attack || '+0'}
+                        </span>
+                      </div>
+                      <div style={{ textAlign: 'center' }}>
+                        <span style={{ fontSize: '0.6rem', color: 'var(--gold-dim)', display: 'block' }}>HASAR</span>
+                        <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '1rem', fontWeight: 'bold', color: '#ff6b81' }}>
+                          {w.calculated_damage || '1d6'}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div style={{ fontSize: '0.75rem', color: '#64748b', fontStyle: 'italic', textAlign: 'center', padding: '8px' }}>
+                Envanterinizde henüz silah bulunmuyor (Ekipman sekmesinden ekleyebilirsiniz).
+              </div>
+            )}
+
+            <SectionHeader icon="🛡" title="Saldırı & Kurtarma Zarları" />
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 6 }}>
+              {[
+                ['BAB', fmtMod(recalcedData.bab || 0)],
+                ['İnisiyatif', fmtMod(recalcedData.initiative || 0)],
+                ['CMB', fmtMod(recalcedData.cmb || 0)],
+                ['CMD', recalcedData.cmd || 10]
+              ].map(([l, v]) => (
+                <div key={l} className="dark-panel" style={{ padding: '6px 4px', textAlign: 'center' }}>
+                  <FieldLabel>{l}</FieldLabel>
+                  <div style={{ fontFamily: 'DM Mono, monospace', fontSize: '1.1rem', color: 'var(--gold-bright)' }}>{v}</div>
+                </div>
+              ))}
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 6, marginTop: 4 }}>
+              <div className="dark-panel" style={{ padding: 6, textAlign: 'center' }}>
+                <FieldLabel>Hareket Hızı</FieldLabel>
+                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: '1.1rem', color: '#9cdcfe' }}>{recalcedData.speed || 30} ft</div>
+              </div>
+              <div className="dark-panel" style={{ padding: 6, textAlign: 'center' }}>
+                <FieldLabel>Yakın Atak</FieldLabel>
+                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: '1.1rem', color: 'var(--gold-bright)' }}>{fmtMod(recalcedData.melee_attack_bonus || 0)}</div>
+              </div>
+              <div className="dark-panel" style={{ padding: 6, textAlign: 'center' }}>
+                <FieldLabel>Menzilli Atak</FieldLabel>
+                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: '1.1rem', color: 'var(--gold-bright)' }}>{fmtMod(recalcedData.ranged_attack_bonus || 0)}</div>
+              </div>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 4, marginTop: 4 }}>
+              {[
+                ['Fortitude', recalcedData.saving_throws?.Fortitude ?? recalcedData.saving_throws?.fortitude ?? 0],
+                ['Reflex', recalcedData.saving_throws?.Reflex ?? recalcedData.saving_throws?.reflex ?? 0],
+                ['Will', recalcedData.saving_throws?.Will ?? recalcedData.saving_throws?.will ?? 0]
+              ].map(([label, val]) => (
+                <div key={label} className="dark-panel" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 12px' }}>
+                  <span style={{ fontFamily: 'EB Garamond, serif', fontSize: '0.88rem', color: 'var(--gold-light)' }}>{label}</span>
+                  <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '1rem', color: 'var(--gold-bright)', fontWeight: 600 }}>{fmtMod(val)}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* ── TAB 4: SKILLS ── */}
+        {tab === 'skills' && (
+          <div>
+            <SectionHeader icon="✦" title="Beceri Rütbeleri (Skills)" />
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10, padding: '5px 10px', background: 'rgba(201,168,76,0.06)', border: '1px solid var(--border-gold)' }}>
+              <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.5rem', color: 'var(--gold-pale)', textTransform: 'uppercase' }}>Kullanılabilir Rütbe</span>
+              <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.95rem', color: 'var(--gold-bright)', fontWeight: 600 }}>{getAvailableSkillRanks()}</span>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 24px 42px 36px', gap: 4, padding: '4px 8px 6px', fontFamily: 'Cinzel, serif', fontSize: '0.42rem', letterSpacing: '0.1em', color: 'var(--gold-dim)', textTransform: 'uppercase', borderBottom: '1px solid rgba(201,168,76,0.12)', marginBottom: 4 }}>
+              <span>Skill</span><span style={{ textAlign: 'center' }}>CS</span><span style={{ textAlign: 'center' }}>Ranks</span><span style={{ textAlign: 'center' }}>Total</span>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 2, maxHeight: 440, overflowY: 'auto' }}>
+              {pfSkillsList.map(skillName => {
+                const ranks = skills[skillName] || 0;
+                const classSkills = recalcedData.class_data?.class_skills || [];
+                const isClassSkill = classSkills.includes(skillName);
+                const total = ranks + (isClassSkill && ranks > 0 ? 3 : 0);
+
+                return (
+                  <div key={skillName} className="skill-row">
+                    <div style={{ fontFamily: 'EB Garamond, serif', fontSize: '0.82rem', color: ranks > 0 ? 'var(--gold-light)' : 'var(--gold-dim)', display: 'flex', alignItems: 'center', gap: 5 }}>
+                      {skillName} {isClassSkill && <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.42rem', color: 'var(--gold-bright)' }}>★</span>}
+                    </div>
+                    <input type="checkbox" checked={isClassSkill} readOnly style={{ accentColor: 'var(--gold)', justifySelf: 'center' }} />
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                      <button className="gold-btn" style={{ padding: '1px 4px', fontSize: '0.65rem' }} onClick={() => handleAdjustSkillRank(skillName, -1)}>-</button>
+                      <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.8rem', width: 16, textAlign: 'center' }}>{ranks}</span>
+                      <button className="gold-btn" style={{ padding: '1px 4px', fontSize: '0.65rem' }} onClick={() => handleAdjustSkillRank(skillName, 1)}>+</button>
+                    </div>
+                    <div style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.8rem', textAlign: 'center', color: total > 0 ? 'var(--gold-bright)' : 'var(--gold-dim)' }}>
+                      {fmtMod(total)}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* ── TAB 5: GEAR, FEATS, TRAITS & SPELLS ── */}
+        {tab === 'gear' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            
+            {/* Feats Section */}
+            <SectionHeader icon="✧" title="Feat & Hücre Seçimi" />
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+              <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.52rem', color: 'var(--gold-dim)' }}>{feats?.length || 0} / {maxFeatSlots} Feat Seçildi</span>
+              <button className="gold-btn primary" style={{ padding: '4px 10px' }} onClick={() => setFeatModalOpen(true)}>
+                + Feat Ekle
+              </button>
+            </div>
+            {featError && <div style={{ color: '#e87070', fontSize: '0.75rem' }}>{featError}</div>}
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginBottom: 8 }}>
+              {(feats || []).map((f, i) => (
+                <span key={i} style={{ border: '1px solid var(--border-gold)', background: 'rgba(201,168,76,0.08)', padding: '3px 8px', borderRadius: 1, fontSize: '0.75rem', color: 'var(--gold-light)', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                  {f.isim || f} <X size={10} style={{ cursor: 'pointer' }} onClick={() => removeFeat(f.isim || f)} />
+                </span>
+              ))}
+            </div>
+
+            {/* Traits Section */}
+            <SectionHeader icon="🛡" title="Traitler (Karakter Özellikleri)" />
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+              <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.52rem', color: 'var(--gold-dim)' }}>{traits?.length || 0} / 2 Trait Seçildi</span>
+              <button className="gold-btn" style={{ padding: '4px 10px' }} onClick={() => setTraitModalOpen(true)}>
+                + Trait Ekle
+              </button>
+            </div>
+            {traitError && <div style={{ color: '#e87070', fontSize: '0.75rem' }}>{traitError}</div>}
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginBottom: 8 }}>
+              {(traits || []).map((t, i) => (
+                <span key={i} style={{ border: '1px solid rgba(63,185,80,0.3)', background: 'rgba(63,185,80,0.08)', padding: '3px 8px', borderRadius: 1, fontSize: '0.75rem', color: '#3fb950', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                  {t.isim || t} <X size={10} style={{ cursor: 'pointer' }} onClick={() => removeTrait(t.isim || t)} />
+                </span>
+              ))}
+            </div>
+
+            {/* Equipment Section */}
+            <SectionHeader icon="⚗" title="Zırh & Ekipman" />
+
+            {/* Encumbrance & Carrying Capacity Meter */}
+            {(() => {
+              const totalW = recalcedData.total_weight || 0;
+              const cap = recalcedData.carrying_capacity || { light: 33, medium: 66, heavy: 100 };
+              const status = recalcedData.encumbrance_status || 'Light';
+              const percent = Math.min(100, Math.round((totalW / (cap.heavy || 100)) * 100));
+
+              const statusColor = status === 'Light' ? '#4ec9b0' : status === 'Medium' ? '#ffd700' : status === 'Heavy' ? '#ff9f43' : '#e94560';
+
+              return (
+                <div style={{ backgroundColor: '#161622', border: `1px solid ${statusColor}`, borderRadius: '10px', padding: '10px', marginBottom: '12px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+                    <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#fff' }}>
+                      📦 Taşıma Kapasitesi: <b style={{ color: statusColor }}>{totalW} lbs</b> ({status})
+                    </span>
+                    <span style={{ fontSize: '0.7rem', color: '#94a3b8' }}>
+                      Max: {cap.heavy} lbs
+                    </span>
+                  </div>
+
+                  {/* Progress Meter Bar */}
+                  <div style={{ height: '8px', backgroundColor: '#0f0f15', borderRadius: '4px', overflow: 'hidden', border: '1px solid #2a2a3a' }}>
+                    <div style={{ width: `${percent}%`, height: '100%', backgroundColor: statusColor, transition: 'width 0.3s ease' }} />
+                  </div>
+
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.68rem', color: '#64748b', marginTop: '4px' }}>
+                    <span>Hafif: {cap.light} lbs</span>
+                    <span>Orta: {cap.medium} lbs</span>
+                    <span>Ağır: {cap.heavy} lbs</span>
+                  </div>
+
+                  {/* Encumbrance Warning Banner */}
+                  {status !== 'Light' && (
+                    <div style={{
+                      marginTop: '8px', padding: '6px 10px', borderRadius: '6px', fontSize: '0.75rem',
+                      backgroundColor: `${statusColor}15`, border: `1px solid ${statusColor}40`, color: statusColor,
+                      display: 'flex', alignItems: 'center', gap: '6px'
+                    }}>
+                      <AlertTriangle size={14} />
+                      {status === 'Medium' && '⚠️ Orta Yük Uyarısı: Hareket hızı 20 ft\'e düşer, Max DEX sınırı +3.'}
+                      {status === 'Heavy' && '⚠️ Ağır Yük Uyarısı: Hareket hızı 20 ft\'e düşer, Max DEX sınırı +1, ACP -6.'}
+                      {status === 'Overloaded' && '🚨 KRİTİK AŞIRI YÜK: Karakter eşyaları taşıyamıyor! Hareket 0 ft.'}
+                    </div>
+                  )}
+                </div>
+              );
+            })()}
+
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+              <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.52rem', color: 'var(--gold-dim)' }}>Envanter Listesi</span>
+              <button className="gold-btn" style={{ padding: '4px 10px' }} onClick={() => handleOpenSelector('equipment', 'Ekipman Ekle')}>
+                + Ekle
+              </button>
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 4, marginBottom: 8 }}>
+              {(recalcedData.equipment || []).map((item, index) => (
+                <div key={index} className="dark-panel" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 10px' }}>
+                  <span style={{ fontFamily: 'EB Garamond, serif', fontSize: '0.85rem', color: 'var(--gold-light)' }}>{item.name}</span>
+                  <Trash size={12} style={{ color: '#e87070', cursor: 'pointer' }} onClick={() => removeEquipment(index)} />
+                </div>
+              ))}
+            </div>
+
+            {/* Spells & Spell Slots Section */}
+            {hasSpellcasting && (
+              <>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+                  <SectionHeader icon="✦" title="Günlük Büyü Slotları & Defter" />
+                  <button
+                    className="gold-btn"
+                    onClick={() => restCharacter()}
+                    style={{ padding: '3px 8px', fontSize: '0.72rem', display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(124,110,247,0.15)', border: '1px solid #7c6ef7', color: '#a594ff' }}
+                  >
+                    🌙 Uzun Dinlenme Yap
+                  </button>
+                </div>
+
+                {/* Spell Slots per Day Tracker */}
+                {recalcedData.spell_slots && Object.keys(recalcedData.spell_slots).length > 0 && (
+                  <div style={{ backgroundColor: '#161622', border: '1px solid var(--border-gold)', borderRadius: '8px', padding: '10px', marginBottom: '10px' }}>
+                    <FieldLabel>Günlük Büyü Hakkı Takibi (Tıklayarak Harcayın)</FieldLabel>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
+                      {Object.entries(recalcedData.spell_slots).map(([lvlStr, totalSlots]) => {
+                        const lvl = parseInt(lvlStr);
+                        const usedCount = usedSpellSlots[lvlStr] || 0;
+                        const remaining = Math.max(0, totalSlots - usedCount);
+
+                        return (
+                          <div key={lvlStr} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.8rem', backgroundColor: '#0f0f15', padding: '4px 8px', borderRadius: '6px' }}>
+                            <span style={{ color: 'var(--gold-bright)', fontWeight: 600 }}>
+                              {lvl === 0 ? 'Cantrips (0. Seviye)' : `Seviye ${lvl} Büyüler`}
+                            </span>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                              <span style={{ fontSize: '0.72rem', color: '#94a3b8' }}>
+                                {remaining} / {totalSlots} Kalan
+                              </span>
+                              <div style={{ display: 'flex', gap: '3px' }}>
+                                {Array.from({ length: totalSlots }).map((_, i) => {
+                                  const isUsed = i < usedCount;
+                                  return (
+                                    <div
+                                      key={i}
+                                      onClick={() => toggleSpellSlotUsed(lvlStr, totalSlots)}
+                                      style={{
+                                        width: '16px', height: '16px', borderRadius: '4px', cursor: 'pointer',
+                                        backgroundColor: isUsed ? '#e94560' : 'rgba(78, 201, 176, 0.2)',
+                                        border: `1px solid ${isUsed ? '#ff6b81' : '#4ec9b0'}`,
+                                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                        fontSize: '0.6rem', color: isUsed ? '#fff' : '#4ec9b0', fontWeight: 'bold'
+                                      }}
+                                    >
+                                      {isUsed ? '✕' : '✓'}
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Prepared Spells Manager for Prepared Spellcasters */}
+                {isPreparedSpellcaster && recalcedData.spell_slots && (
+                  <div style={{ backgroundColor: '#161622', border: '1px solid #7c6ef7', borderRadius: '8px', padding: '10px', marginBottom: '10px' }}>
+                    <FieldLabel>🔮 Günlük Büyü Hazırlama Paneli (Prepared Spells)</FieldLabel>
+                    <div style={{ fontSize: '0.7rem', color: '#a594ff', marginBottom: '8px' }}>
+                      {charClass} sınıfı hazırlamalı büyücüdür. Günlük slotlarınıza defterinizdeki büyüleri seçip bağlayabilirsiniz:
+                    </div>
+
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {Object.entries(recalcedData.spell_slots).map(([lvlStr, totalSlots]) => {
+                        const lvl = parseInt(lvlStr);
+                        if (lvl === 0) return null;
+
+                        const currentPrepared = preparedSpells[lvlStr] || [];
+
+                        return (
+                          <div key={lvlStr} style={{ backgroundColor: '#0f0f15', border: '1px solid #2a2a3a', borderRadius: '6px', padding: '8px' }}>
+                            <div style={{ fontSize: '0.78rem', color: 'var(--gold-bright)', fontWeight: 700, marginBottom: '6px' }}>
+                              Seviye {lvl} Büyü Slotları ({totalSlots} Slot Hak)
+                            </div>
+
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                              {Array.from({ length: totalSlots }).map((_, slotIdx) => {
+                                const preparedItem = currentPrepared[slotIdx] || { name: '', cast: false };
+                                const isCast = preparedItem.cast;
+
+                                return (
+                                  <div key={slotIdx} style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                    <span style={{ fontSize: '0.7rem', color: '#64748b', width: '42px', flexShrink: 0 }}>
+                                      Slot #{slotIdx + 1}:
+                                    </span>
+                                    <select
+                                      className="rune-input"
+                                      value={preparedItem.name || ''}
+                                      onChange={e => setPreparedSpell(lvlStr, slotIdx, e.target.value)}
+                                      style={{ flex: 1, padding: '4px 6px', fontSize: '0.78rem' }}
+                                    >
+                                      <option value="">-- Büyü Hazırla --</option>
+                                      {spells.map((sp, sIdx) => {
+                                        const spName = sp.isim || sp.name;
+                                        return <option key={sIdx} value={spName}>{spName}</option>;
+                                      })}
+                                    </select>
+                                    <button
+                                      onClick={() => togglePreparedSpellCast(lvlStr, slotIdx)}
+                                      style={{
+                                        padding: '3px 8px', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 'bold', cursor: 'pointer',
+                                        backgroundColor: isCast ? '#e94560' : 'rgba(78, 201, 176, 0.2)',
+                                        border: `1px solid ${isCast ? '#ff6b81' : '#4ec9b0'}`,
+                                        color: isCast ? '#fff' : '#4ec9b0'
+                                      }}
+                                    >
+                                      {isCast ? '✕ Atıldı' : '✓ Hazır'}
+                                    </button>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+                  <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.52rem', color: 'var(--gold-dim)' }}>{spells?.length || 0} Büyü Seçildi</span>
+                  <button className="gold-btn primary" style={{ padding: '4px 10px' }} onClick={() => setSpellModalOpen(true)}>
+                    + Büyü Ekle
+                  </button>
+                </div>
+
+                {/* Spell Components & Focus Equipment Tracker */}
+                {(() => {
+                  const equipNames = (recalcedData.equipment || []).map(e => (e.name || e.isim || '').toLowerCase());
+                  const hasPouch = equipNames.some(e => e.includes('pouch') || e.includes('torba') || e.includes('component'));
+                  const hasHolySymbol = equipNames.some(e => e.includes('holy') || e.includes('symbol') || e.includes('sembol') || e.includes('mistletoe'));
+
+                  return (
+                    <div style={{ backgroundColor: '#161622', border: '1px solid var(--border-gold)', borderRadius: '8px', padding: '10px', marginBottom: '10px' }}>
+                      <FieldLabel>💎 Büyü Malzemesi & Kutsal Odak Ekipmanı</FieldLabel>
+                      <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginTop: '6px', fontSize: '0.72rem' }}>
+                        <span style={{
+                          padding: '3px 8px', borderRadius: '4px', fontWeight: 600,
+                          backgroundColor: hasPouch ? 'rgba(78, 201, 176, 0.15)' : 'rgba(233, 69, 96, 0.15)',
+                          border: `1px solid ${hasPouch ? '#4ec9b0' : '#e94560'}`,
+                          color: hasPouch ? '#4ec9b0' : '#ff6b81'
+                        }}>
+                          {hasPouch ? '✓ Büyü Torbası Var (Pouch)' : '⚠️ Büyü Torbası Eksik'}
+                        </span>
+
+                        <span style={{
+                          padding: '3px 8px', borderRadius: '4px', fontWeight: 600,
+                          backgroundColor: hasHolySymbol ? 'rgba(78, 201, 176, 0.15)' : 'rgba(201, 168, 76, 0.15)',
+                          border: `1px solid ${hasHolySymbol ? '#4ec9b0' : 'var(--border-gold)'}`,
+                          color: hasHolySymbol ? '#4ec9b0' : 'var(--gold-bright)'
+                        }}>
+                          {hasHolySymbol ? '✓ Kutsal Sembol Var (Holy Symbol)' : '⚜ Kutsal Odak (Divine Focus)'}
+                        </span>
+
+                        <span style={{
+                          padding: '3px 8px', borderRadius: '4px', fontWeight: 600,
+                          backgroundColor: 'rgba(255, 215, 0, 0.15)', border: '1px solid #ffd700', color: '#ffd700'
+                        }}>
+                          💰 Altın Stok: {gold} gp
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })()}
+
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                  {spells.map((sp, idx) => {
+                    const sName = sp.isim || sp.name || '';
+                    let costInfo = null;
+                    if (sName.includes('Stoneskin')) costInfo = { cost: 250, item: '250 gp Elmas Tozu' };
+                    else if (sName.includes('Identify')) costInfo = { cost: 100, item: '100 gp İnci' };
+                    else if (sName.includes('Raise Dead')) costInfo = { cost: 5000, item: '5,000 gp Elmas' };
+                    else if (sName.includes('Resurrection')) costInfo = { cost: 10000, item: '10,000 gp Elmas' };
+                    else if (sName.includes('Animate Dead')) costInfo = { cost: 25, item: '25 gp Oniks' };
+
+                    const canAfford = costInfo ? gold >= costInfo.cost : true;
+
+                    return (
+                      <div key={idx} className="dark-panel" style={{ display: 'flex', flexDirection: 'column', gap: 4, padding: '6px 10px' }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                          <span style={{ fontFamily: 'EB Garamond, serif', fontSize: '0.85rem', color: 'var(--gold-bright)' }}>{sName}</span>
+                          <X size={12} style={{ color: '#e87070', cursor: 'pointer' }} onClick={() => removeSpell(sName)} />
+                        </div>
+
+                        {costInfo && (
+                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: '2px', backgroundColor: '#0f0f15', padding: '4px 6px', borderRadius: '4px' }}>
+                            <span style={{ fontSize: '0.68rem', color: canAfford ? '#ffd700' : '#ff6b81' }}>
+                              💎 Malzeme: {costInfo.item}
+                            </span>
+                            <button
+                              onClick={() => deductGold(costInfo.cost)}
+                              disabled={!canAfford}
+                              style={{
+                                padding: '2px 8px', fontSize: '0.65rem', borderRadius: '4px', cursor: canAfford ? 'pointer' : 'not-allowed',
+                                backgroundColor: canAfford ? 'rgba(255, 215, 0, 0.2)' : 'rgba(100,100,100,0.2)',
+                                border: `1px solid ${canAfford ? '#ffd700' : '#555'}`, color: canAfford ? '#ffd700' : '#888', fontWeight: 'bold'
+                              }}
+                            >
+                              ⚡ Malzemeyi Tüket (-{costInfo.cost} gp)
+                            </button>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </>
+            )}
+
+          </div>
+        )}
+
+        {/* ── TAB 6: BACKSTORY ── */}
+        {tab === 'backstory' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <SectionHeader icon="📜" title="Arka Plan & Köken Hikayesi" />
+            <div>
+              <FieldLabel>Köken & Arka Plan Hikayesi (Backstory & Origin)</FieldLabel>
+              <textarea
+                className="rune-input"
+                rows={6}
+                value={backstory || ''}
+                onChange={e => updateField('backstory', e.target.value)}
+                placeholder="Kahramanınızın nerede doğduğu, maceracı olma nedeni, geçmişteki dönüm noktaları..."
+                style={{ width: '100%', resize: 'vertical', lineHeight: '1.5', fontFamily: 'EB Garamond, serif', fontSize: '0.95rem' }}
+              />
+            </div>
+
+            <SectionHeader icon="🎭" title="Kişilik & Görünüş Notları" />
+            <div>
+              <FieldLabel>Kişilik Özellikleri, Mizaç & Zaaflar</FieldLabel>
+              <textarea
+                className="rune-input"
+                rows={4}
+                value={personality || ''}
+                onChange={e => updateField('personality', e.target.value)}
+                placeholder="Dış görünüş notları (dövmeler, yara izleri), davranış biçimleri, idealleri..."
+                style={{ width: '100%', resize: 'vertical', lineHeight: '1.5', fontFamily: 'EB Garamond, serif', fontSize: '0.95rem' }}
+              />
+            </div>
+
+            <SectionHeader icon="⚜" title="Müttefikler & Teşkilatlar" />
+            <div>
+              <FieldLabel>Bağlı Olduğu Loncalar, Klanlar & Müttefikler</FieldLabel>
+              <textarea
+                className="rune-input"
+                rows={3}
+                value={allies || ''}
+                onChange={e => updateField('allies', e.target.value)}
+                placeholder="Üye olduğu lonca, klan, müttefik NPC'ler ve düşmanlar..."
+                style={{ width: '100%', resize: 'vertical', lineHeight: '1.5', fontFamily: 'EB Garamond, serif', fontSize: '0.95rem' }}
+              />
+            </div>
+
+            <SectionHeader icon="📖" title="Macera & Oturum Notları" />
+            <div>
+              <FieldLabel>Oturum Notları & Görev Günlüğü</FieldLabel>
+              <textarea
+                className="rune-input"
+                rows={4}
+                value={notes || ''}
+                onChange={e => updateField('notes', e.target.value)}
+                placeholder="Oturum sırasında tutulan notlar, keşfedilen gizemler, görev günlüğü..."
+                style={{ width: '100%', resize: 'vertical', lineHeight: '1.5', fontFamily: 'EB Garamond, serif', fontSize: '0.95rem' }}
+              />
+            </div>
+          </div>
+        )}
+
+        {tab === 'companion' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <CompanionPanel />
+          </div>
+        )}
+
       </div>
 
+      {/* Selector Modals */}
       <EntitySelectorModal
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
@@ -724,6 +1047,7 @@ export default function PF1eControls() {
         isOpen={traitModalOpen}
         onClose={() => setTraitModalOpen(false)}
         system="pf1e"
+        character={store}
         selectedTraits={traits || []}
         onAddTrait={handleAddTrait}
       />
@@ -732,6 +1056,7 @@ export default function PF1eControls() {
         isOpen={featModalOpen}
         onClose={() => setFeatModalOpen(false)}
         system="pf1e"
+        character={store}
         selectedFeats={feats || []}
         maxFeats={maxFeatSlots}
         onAddFeat={handleAddFeat}
@@ -744,9 +1069,14 @@ export default function PF1eControls() {
         characterClass={charClass}
         characterLevel={level}
         selectedSpells={spells || []}
-        onAddSpell={(spellObj) => {
-          addSpell(spellObj);
-        }}
+        onAddSpell={(sp) => addSpell(sp)}
+      />
+
+      <LevelUpWizardModal
+        isOpen={levelUpModalOpen}
+        onClose={() => setLevelUpModalOpen(false)}
+        character={store}
+        onApplyLevelUp={(payload) => applyLevelUp(payload)}
       />
     </div>
   );

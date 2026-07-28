@@ -1,0 +1,18 @@
+{
+  "short_name": "Diyargezen",
+  "name": "Diyargezen TTRPG Karakter Yöneticisi",
+  "description": "Pathfinder 1st Edition Karakter Kağıdı, Level-Up ve Kural Motoru Platformu",
+  "icons": [
+    {
+      "src": "/diyargezer_logo.png",
+      "type": "image/png",
+      "sizes": "192x192 512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f0f1a",
+  "theme_color": "#0f0f1a",
+  "display": "standalone",
+  "orientation": "any"
+}

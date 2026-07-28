@@ -22,7 +22,7 @@ SYSTEM_BADGES = {"PF1E": "PF 1e", "PATHFINDER_1E": "PF 1e", "PATHFINDER1E": "PF 
 
 
 class CharacterCard(QFrame):
-    """Tek bir karakter için görsel kart."""
+    """Tek bir karakter için görsel glassmorphism kart."""
 
     load_requested = Signal(int)
     delete_requested = Signal(int)
@@ -30,36 +30,36 @@ class CharacterCard(QFrame):
     def __init__(self, record: CharacterRecord, parent: Optional[QWidget] = None):
         super().__init__(parent)
         self.setObjectName("Card")
-        self.setFixedHeight(160)
+        self.setFixedHeight(170)
         self._record = record
         self._build()
 
     def _build(self) -> None:
         layout = QVBoxLayout(self)
-        layout.setSpacing(4)
+        layout.setSpacing(6)
 
         data = self._record.data
         system_label = SYSTEM_BADGES.get(self._record.system, self._record.system)
 
         badge = QLabel(system_label)
         badge.setStyleSheet(
-            "background-color: #c9a84c; color: #0f0f1a; font-weight: bold; "
-            "font-size: 10px; padding: 2px 8px; border-radius: 4px;"
+            "background-color: #e6c567; color: #0f0f1a; font-weight: bold; "
+            "font-family: 'Cinzel', serif; font-size: 11px; padding: 3px 10px; border-radius: 4px;"
         )
-        badge.setFixedWidth(badge.fontMetrics().horizontalAdvance(system_label) + 20)
+        badge.setFixedWidth(badge.fontMetrics().horizontalAdvance(system_label) + 24)
 
         name_lbl = QLabel(self._record.name)
-        name_lbl.setStyleSheet("font-size: 16px; font-weight: bold; color: #c9a84c;")
+        name_lbl.setStyleSheet("font-size: 18px; font-weight: bold; color: #fced88; font-family: 'Cinzel', serif;")
 
         race = data.get("race", data.get("clan", ""))
         cls = data.get("class", data.get("archetype", ""))
         level = data.get("level", data.get("pl_value", ""))
         detail_text = " | ".join(filter(None, [race, cls, f"Lv {level}" if level else ""]))
         detail_lbl = QLabel(detail_text)
-        detail_lbl.setStyleSheet("color: #d4c5a9; font-size: 12px;")
+        detail_lbl.setStyleSheet("color: #e8dbbf; font-size: 13px;")
 
         date_lbl = QLabel(f"Son güncelleme: {(self._record.updated_at or '')[:16]}")
-        date_lbl.setStyleSheet("color: #8b949e; font-size: 10px;")
+        date_lbl.setStyleSheet("color: #a8b3cf; font-size: 11px;")
 
         btn_row = QHBoxLayout()
         btn_row.setSpacing(8)
@@ -133,7 +133,7 @@ class TavernPage(QWidget):
         scroll.setWidget(self._grid_widget)
 
         self._empty_label = QLabel("Henüz karakter yok. The Forge'a gidip ilk karakterini oluştur!")
-        self._empty_label.setStyleSheet("color: #8b949e; font-size: 14px; padding: 40px;")
+        self._empty_label.setStyleSheet("color: #a8b3cf; font-size: 14px; padding: 40px;")
         self._empty_label.setAlignment(Qt.AlignCenter)
         self._empty_label.hide()
 

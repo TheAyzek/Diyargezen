@@ -61,6 +61,7 @@ export const useCharacterStore = create((set, get) => ({
   classData: {},
   archetype: '',
   portrait: '',
+  companion: null,
   
   // Custom defenses state for M&M
   defenses: {
@@ -85,9 +86,134 @@ export const useCharacterStore = create((set, get) => ({
   homeland: '',
   hair: '',
   eyes: '',
+  backstory: '',
+  personality: '',
+  allies: '',
+  notes: '',
 
   traits: [],
+  gold: 150,
 
+  deductGold: (amount) => {
+    set(state => ({
+      gold: Math.max(0, (state.gold || 0) - amount)
+    }));
+    get().recalculate();
+  },
+
+  // Spell slot tracking & rest state
+  usedSpellSlots: {},
+  usedDailyResources: {},
+  preparedSpells: {},
+
+  setPreparedSpell: (spellLevel, slotIndex, spellName) => {
+    set(state => {
+      const levelSlots = [...(state.preparedSpells[spellLevel] || [])];
+      levelSlots[slotIndex] = { name: spellName, cast: false };
+      return {
+        preparedSpells: {
+          ...state.preparedSpells,
+          [spellLevel]: levelSlots
+        }
+      };
+    });
+    get().recalculate();
+  },
+
+  togglePreparedSpellCast: (spellLevel, slotIndex) => {
+    set(state => {
+      const levelSlots = [...(state.preparedSpells[spellLevel] || [])];
+      if (levelSlots[slotIndex]) {
+        levelSlots[slotIndex] = {
+          ...levelSlots[slotIndex],
+          cast: !levelSlots[slotIndex].cast
+        };
+      }
+      return {
+        preparedSpells: {
+          ...state.preparedSpells,
+          [spellLevel]: levelSlots
+        }
+      };
+    });
+    get().recalculate();
+  },
+
+  toggleSpellSlotUsed: (spellLevel, maxSlots) => {
+    set(state => {
+      const currentUsed = state.usedSpellSlots[spellLevel] || 0;
+      const nextUsed = currentUsed >= maxSlots ? 0 : currentUsed + 1;
+      return {
+        usedSpellSlots: {
+          ...state.usedSpellSlots,
+          [spellLevel]: nextUsed
+        }
+      };
+    });
+    get().recalculate();
+  },
+
+  restCharacter: () => {
+    set(state => {
+      const resetPrepared = {};
+      Object.entries(state.preparedSpells || {}).forEach(([lvl, slots]) => {
+        resetPrepared[lvl] = (slots || []).map(s => s ? { ...s, cast: false } : s);
+      });
+      return {
+        usedSpellSlots: {},
+        usedDailyResources: {},
+        preparedSpells: resetPrepared
+      };
+    });
+    get().recalculate();
+  },
+
+  loadPresetCharacter: (preset) => {
+    set({
+      id: null,
+      name: preset.name || 'İsimsiz Kahraman',
+      system: 'pf1e',
+      level: 1,
+      race: preset.race || 'Human',
+      class: preset.class || 'Fighter',
+      alignment: preset.alignment || 'Neutral Good',
+      gender: preset.gender || '',
+      age: preset.age || '25',
+      height: preset.height || '',
+      weight: preset.weight || '',
+      deity: preset.deity || '',
+      homeland: preset.homeland || '',
+      hair: preset.hair || '',
+      eyes: preset.eyes || '',
+      abilities: preset.abilities || { strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10 },
+      skills: preset.skills || {},
+      feats: preset.feats || [],
+      traits: preset.traits || [],
+      equipment: preset.equipment || [],
+      spells: preset.spells || [],
+      backstory: preset.backstory || '',
+      personality: preset.personality || '',
+      allies: preset.allies || '',
+      notes: preset.notes || '',
+      portrait: preset.portrait || '',
+      usedSpellSlots: {},
+      preparedSpells: {},
+      recalcedData: {},
+      warnings: []
+    });
+    get().recalculate();
+  },
+
+  // Offline-First & Sync state
+  isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true,
+  syncStatus: typeof navigator !== 'undefined' && !navigator.onLine ? 'offline_pending' : 'synced',
+
+  setOnlineStatus: (status) => set({
+    isOnline: status,
+    syncStatus: status ? 'synced' : 'offline_pending'
+  }),
+
+  setSyncStatus: (status) => set({ syncStatus: status }),
 
   // Actions
   initCharacter: (system, char = null) => {
@@ -144,7 +270,17 @@ export const useCharacterStore = create((set, get) => ({
         raceData: char.data?.race_data || {},
         classData: char.data?.class_data || {},
         archetype: char.data?.archetype || '',
+        racialAbilityChoice: char.data?.racial_ability_choice || 'strength',
+        secondaryRacialAbilityChoice: char.data?.secondary_racial_ability_choice || 'dexterity',
+        selectedRacialTraits: char.data?.selected_racial_traits || [],
         portrait: char.data?.portrait || char.portrait || '',
+        companion: char.data?.companion || null,
+        backstory: char.data?.backstory || char.backstory || '',
+        personality: char.data?.personality || char.personality || '',
+        allies: char.data?.allies || char.allies || '',
+        notes: char.data?.notes || char.notes || '',
+        preparedSpells: char.data?.preparedSpells || char.preparedSpells || {},
+        usedSpellSlots: char.data?.usedSpellSlots || {},
         defenses: defState,
         recalcedData: char.data || {},
         warnings: []
@@ -185,7 +321,11 @@ export const useCharacterStore = create((set, get) => ({
         raceData: {},
         classData: {},
         archetype: sys.includes('mm') || sys.includes('mnm') ? 'Özel (Custom)' : '',
+        racialAbilityChoice: 'strength',
+        secondaryRacialAbilityChoice: 'dexterity',
+        selectedRacialTraits: [],
         portrait: '',
+        companion: null,
         defenses: { dodge: 0, parry: 0, fortitude: 0, toughness: 0, will: 0 },
         recalcedData: {},
         warnings: []
@@ -194,8 +334,67 @@ export const useCharacterStore = create((set, get) => ({
     get().recalculate();
   },
 
+  toggleRacialTrait: (traitName) => {
+    set(state => {
+      const current = state.selectedRacialTraits || [];
+      const exists = current.includes(traitName);
+      const next = exists ? current.filter(t => t !== traitName) : [...current, traitName];
+      return { selectedRacialTraits: next };
+    });
+    get().recalculate();
+  },
+
+  applyLevelUp: (levelUpData) => {
+    const { newLevel, hpGained, skillRanksGained, newFeat, abilityIncrease } = levelUpData;
+    set(state => {
+      const nextSkills = { ...(state.skills || {}) };
+      if (skillRanksGained && typeof skillRanksGained === 'object') {
+        Object.entries(skillRanksGained).forEach(([sk, addRanks]) => {
+          nextSkills[sk] = (parseInt(nextSkills[sk]) || 0) + (parseInt(addRanks) || 0);
+        });
+      }
+
+      const nextFeats = [...(state.feats || [])];
+      if (newFeat) {
+        nextFeats.push(newFeat);
+      }
+
+      const nextAbilities = { ...(state.abilities || {}) };
+      if (abilityIncrease) {
+        const abKey = abilityIncrease.toLowerCase();
+        nextAbilities[abKey] = (parseInt(nextAbilities[abKey]) || 10) + 1;
+      }
+
+      const currentHp = state.recalcedData?.hit_points || 10;
+
+      return {
+        level: newLevel,
+        skills: nextSkills,
+        feats: nextFeats,
+        abilities: nextAbilities,
+        hit_points: currentHp + (hpGained || 0)
+      };
+    });
+    get().recalculate();
+  },
+
   updateField: (field, value) => {
     set({ [field]: value });
+    get().recalculate();
+  },
+
+  updateCompanion: (companionData) => {
+    set(state => ({
+      companion: companionData ? {
+        ...(state.companion || {}),
+        ...companionData
+      } : null
+    }));
+    get().recalculate();
+  },
+
+  resetCompanion: () => {
+    set({ companion: null });
     get().recalculate();
   },
 
@@ -259,13 +458,16 @@ export const useCharacterStore = create((set, get) => ({
     const currentFeats = state.feats || [];
     const maxFeats = computeFeatSlots(state.class, state.race, parseInt(state.level) || 1);
 
+    const featObj = typeof featEntity === 'string' ? { isim: featEntity } : featEntity;
+    const featName = featObj.isim || featObj.name || featEntity;
+
     if (currentFeats.length >= maxFeats) {
       return { error: 'max_feats', message: `Bu seviyede en fazla ${maxFeats} feat seçebilirsiniz.` };
     }
-    if (currentFeats.find(f => f.isim === featEntity.isim)) {
+    if (currentFeats.find(f => (f.isim || f.name || f) === featName)) {
       return { error: 'duplicate', message: 'Bu feat zaten seçili.' };
     }
-    set(state => ({ feats: [...(state.feats || []), featEntity] }));
+    set(state => ({ feats: [...(state.feats || []), featObj] }));
     get().recalculate();
     return { error: null };
   },
@@ -403,6 +605,9 @@ export const useCharacterStore = create((set, get) => ({
       traits: (state.traits || []).map(t => ({ isim: t.isim, kategori: t.sistem_verisi?.trait_category })),
       proficient_skills: state.recalcedData.proficient_skills || [],
       archetype: state.archetype,
+      racial_ability_choice: state.racialAbilityChoice || 'strength',
+      secondary_racial_ability_choice: state.secondaryRacialAbilityChoice || 'dexterity',
+      selected_racial_traits: state.selectedRacialTraits || [],
       race_data: state.raceData,
       class_data: state.classData,
       pl_value: parseInt(state.pl_value),

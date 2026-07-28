@@ -1,0 +1,32 @@
+# Version control
+.git
+.gitignore
+
+# Python
+.venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.coverage
+htmlcov
+
+# Node / Frontend
+web/frontend/node_modules
+web/frontend/dist
+web/frontend/.vite
+
+# IDE & OS
+.idea
+.vscode
+.gemini
+.agent
+.cursor
+*.log
+
+# Build & Scratch
+build/
+dist/
+scratch/
+desktop/data/

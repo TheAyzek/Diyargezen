@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
-import { Upload, X, Image as ImageIcon } from 'lucide-react';
+import { Upload, X, Image as ImageIcon, Wand2 } from 'lucide-react';
 import { useCharacterStore } from '../../../store/characterStore';
+import PortraitGeneratorModal from '../../PortraitGeneratorModal';
 
 export default function PortraitUpload() {
   const { portrait, updateField } = useCharacterStore();
   const [isDragOver, setIsDragOver] = useState(false);
   const [error, setError] = useState('');
+  const [aiModalOpen, setAiModalOpen] = useState(false);
 
   const processFile = (file) => {
     setError('');
     
-    // Check if it's an image
     if (!file.type.startsWith('image/')) {
       setError('Lütfen geçerli bir görsel dosyası seçin (PNG, JPG, WEBP).');
       return;
     }
 
-    // Max size 5MB
     const maxSize = 5 * 1024 * 1024;
     if (file.size > maxSize) {
       setError('Görsel boyutu 5MB\'tan küçük olmalıdır.');
@@ -67,7 +67,25 @@ export default function PortraitUpload() {
 
   return (
     <div className="form-group" style={{ marginBottom: '16px' }}>
-      <label className="form-label">Karakter Portresi (Avatar)</label>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <label className="form-label">Karakter Portresi (Avatar)</label>
+        <button
+          type="button"
+          onClick={() => setAiModalOpen(true)}
+          style={{
+            background: 'rgba(78, 201, 176, 0.15)', border: '1px solid #4ec9b0',
+            color: '#4ec9b0', fontSize: '0.7rem', padding: '2px 8px', borderRadius: '4px',
+            cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 'bold'
+          }}
+        >
+          <Wand2 size={12} /> 🎨 AI Portre Üret
+        </button>
+      </div>
+
+      <PortraitGeneratorModal
+        isOpen={aiModalOpen}
+        onClose={() => setAiModalOpen(false)}
+      />
       
       {portrait ? (
         <div style={{

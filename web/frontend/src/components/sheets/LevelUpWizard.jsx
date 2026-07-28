@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useCharacterStore } from '../../store/characterStore';
-import { ArrowRight, ArrowLeft, Check, Sparkles, AlertCircle, Plus, Minus, Wand2 } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Check, Sparkles, AlertCircle, Plus, Minus, Wand2, Award, BookOpen } from 'lucide-react';
 import SpellSelectorModal from '../SpellSelectorModal';
+import FeatSelectorModal from '../FeatSelectorModal';
 
 export default function LevelUpWizard({ isOpen, onClose }) {
   const { 
-    id, name, level, class: currentClass, abilities, skills, recalcedData, levelUp, system 
+    id, name, level, class: currentClass, abilities, skills, recalcedData, levelUp, system, portrait 
   } = useCharacterStore();
 
   const targetLevel = level + 1;
@@ -35,34 +36,29 @@ export default function LevelUpWizard({ isOpen, onClose }) {
   const [step, setStep] = useState(1);
   const [error, setError] = useState('');
 
-  // Class configuration mapping
+  // Class configuration mapping for ALL Pathfinder 1e & Fantasy classes
   const hitDieMap = {
-    fighter: 10,
     barbarian: 12,
-    paladin: 10,
-    ranger: 10,
-    cleric: 8,
-    druid: 8,
-    rogue: 8,
-    monk: 8,
-    bard: 8,
-    wizard: 6,
-    sorcerer: 6,
-    warlock: 8
+    fighter: 10, paladin: 10, ranger: 10, cavalier: 10, gunslinger: 10, bloodrager: 10, brawler: 10, samurai: 10, slayer: 10, swashbuckler: 10, antipaladin: 10,
+    cleric: 8, druid: 8, rogue: 8, monk: 8, bard: 8, alchemist: 8, inquisitor: 8, investigator: 8, magus: 8, medium: 8, mesmerist: 8, occultist: 8, oracle: 8, shaman: 8, shifter: 8, skald: 8, spiritualist: 8, summoner: 8, vigilante: 8, warpriest: 8, ninja: 8, hunter: 8,
+    wizard: 6, sorcerer: 6, arcanist: 6, kineticist: 8, psychic: 6, witch: 6, warlock: 8
   };
 
   const skillBaseMap = {
-    fighter: 2,
-    wizard: 2,
-    sorcerer: 2,
-    cleric: 2,
-    paladin: 2,
-    barbarian: 4,
-    druid: 4,
-    monk: 4,
-    ranger: 6,
-    bard: 6,
-    rogue: 8
+    rogue: 8, investigator: 8, ninja: 8,
+    bard: 6, ranger: 6, inquisitor: 6, cavalier: 6, gunslinger: 6, skald: 6, vigilante: 6,
+    barbarian: 4, druid: 4, monk: 4, alchemist: 4, brawler: 4, hunter: 4, medium: 4, mesmerist: 4, occultist: 4, oracle: 4, shaman: 4, shifter: 4, slayer: 4, spiritualist: 4, summoner: 4, swashbuckler: 4,
+    fighter: 2, wizard: 2, sorcerer: 2, cleric: 2, paladin: 2, antipaladin: 2, arcanist: 2, bloodrager: 2, kineticist: 2, magus: 2, psychic: 2, warpriest: 2, witch: 2
+  };
+
+  const getClassBonusFeatCount = (clsName, tgtLevel) => {
+    if (!clsName) return 0;
+    const c = clsName.toLowerCase();
+    if (c.includes('fighter')) return (tgtLevel === 1 || tgtLevel % 2 === 0) ? 1 : 0;
+    if (c.includes('wizard')) return [5, 10, 15, 20].includes(tgtLevel) ? 1 : 0;
+    if (c.includes('monk') || c.includes('ranger')) return [1, 2, 6, 10, 14, 18].includes(tgtLevel) ? 1 : 0;
+    if (c.includes('rogue')) return [2, 4, 6, 8, 10, 12, 14, 16, 18, 20].includes(tgtLevel) ? 1 : 0;
+    return 0;
   };
 
   const classHitDie = hitDieMap[currentClass?.toLowerCase()] || 8;
@@ -77,6 +73,8 @@ export default function LevelUpWizard({ isOpen, onClose }) {
   const [spellsLearned, setSpellsLearned] = useState([]);
   const [customSpellText, setCustomSpellText] = useState('');
   const [isSpellModalOpen, setIsSpellModalOpen] = useState(false);
+  const [isFeatModalOpen, setIsFeatModalOpen] = useState(false);
+  const [featModalCategory, setFeatModalCategory] = useState('All');
   
   // DND5e specific states
   const [dndChoiceType, setDndChoiceType] = useState('asi'); // 'asi' or 'feat'
@@ -119,6 +117,21 @@ export default function LevelUpWizard({ isOpen, onClose }) {
 
   if (!isOpen) return null;
 
+  if (level >= 20) {
+    return (
+      <div style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(15, 15, 26, 0.88)', backdropFilter: 'blur(8px)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 99999, padding: '16px' }}>
+        <div className="glass-card" style={{ maxWidth: '500px', width: '100%', textAlign: 'center', padding: '32px', border: '1px solid rgba(201,168,76,0.4)' }}>
+          <Sparkles size={40} style={{ color: 'var(--accent-gold)', marginBottom: '16px' }} />
+          <h3 style={{ color: '#f0e6d2', marginBottom: '12px' }}>Maksimum Seviyeye Ulaşıldı!</h3>
+          <p style={{ color: '#8b949e', fontSize: '14px', marginBottom: '24px' }}>
+            Karakteriniz {name} zaten Pathfinder 1e kurallarına göre maksimum seviye olan <b>Level 20</b>'ye ulaşmıştır.
+          </p>
+          <button className="btn btn-primary" onClick={onClose}>Tamam</button>
+        </div>
+      </div>
+    );
+  }
+
   const totalAllocatedRanks = Object.values(allocatedRanks).reduce((sum, val) => sum + val, 0);
   const remainingRanks = allowedRanksThisLevel - totalAllocatedRanks;
 
@@ -142,20 +155,16 @@ export default function LevelUpWizard({ isOpen, onClose }) {
     }));
   };
 
+  const classBonusFeatCount = getClassBonusFeatCount(currentClass, targetLevel);
+  const requiredFeatsCount = system === 'dnd5e' ? (isDndASILevel && dndChoiceType === 'feat' ? 1 : 0) : ((isOddLevel ? 1 : 0) + classBonusFeatCount);
+
   const handleAddFeat = (featName) => {
     const clean = featName.trim();
     if (!clean) return;
     if (selectedFeats.includes(clean)) return;
 
-    let limit = 0;
-    if (system === 'dnd5e') {
-      limit = isDndASILevel ? 1 : 0;
-    } else { // pf1e
-      limit = (isOddLevel ? 1 : 0) + (isFighterBonusFeat ? 1 : 0);
-    }
-
-    if (selectedFeats.length >= limit) {
-      setError(`Bu seviyede en fazla ${limit} yetenek (feat) seçebilirsiniz.`);
+    if (selectedFeats.length >= requiredFeatsCount) {
+      setError(`Bu seviyede en fazla ${requiredFeatsCount} yetenek (feat) seçebilirsiniz.`);
       return;
     }
 
@@ -210,7 +219,6 @@ export default function LevelUpWizard({ isOpen, onClose }) {
           }
         }
       } else { // pf1e
-        const requiredFeatsCount = (isOddLevel ? 1 : 0) + (isFighterBonusFeat ? 1 : 0);
         if (selectedFeats.length < requiredFeatsCount) {
           setError(`Bu seviyede ${requiredFeatsCount} adet Feat seçmelisiniz.`);
           return;
@@ -300,13 +308,29 @@ export default function LevelUpWizard({ isOpen, onClose }) {
           justifyContent: 'space-between',
           alignItems: 'center'
         }}>
-          <div>
-            <h3 style={{ fontSize: '1.4rem', color: 'var(--accent-gold)', margin: 0 }}>
-              🚀 {system === 'mnm' ? 'Güç Seviyesi Yükseltme' : 'Seviye Atlama Sihirbazı'}
-            </h3>
-            <span style={{ fontSize: '12px', color: '#8b949e' }}>
-              {name} • {system === 'mnm' ? `PL ${level}` : `Seviye ${level}`} → <b style={{ color: 'var(--accent-gold)' }}>{system === 'mnm' ? `PL ${targetLevel}` : `Seviye ${targetLevel}`}</b>
-            </span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            {portrait && (
+              <div style={{
+                width: '48px',
+                height: '48px',
+                borderRadius: '10px',
+                overflow: 'hidden',
+                border: '2px solid var(--accent-gold)',
+                boxShadow: '0 0 10px rgba(201, 168, 76, 0.3)',
+                flexShrink: 0,
+                background: '#0a0814'
+              }}>
+                <img src={portrait} alt="Avatar" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              </div>
+            )}
+            <div>
+              <h3 style={{ fontSize: '1.4rem', color: 'var(--accent-gold)', margin: 0 }}>
+                🚀 {system === 'mnm' ? 'Güç Seviyesi Yükseltme' : 'Seviye Atlama Sihirbazı'}
+              </h3>
+              <span style={{ fontSize: '12px', color: '#8b949e' }}>
+                {name} • {system === 'mnm' ? `PL ${level}` : `Seviye ${level}`} → <b style={{ color: 'var(--accent-gold)' }}>{system === 'mnm' ? `PL ${targetLevel}` : `Seviye ${targetLevel}`}</b>
+              </span>
+            </div>
           </div>
           <button 
             onClick={onClose}
@@ -550,29 +574,61 @@ export default function LevelUpWizard({ isOpen, onClose }) {
                 </div>
               )}
 
-              {/* Feats Selection */}
-              {((system === 'pf1e' && (isOddLevel || isFighterBonusFeat)) || (system === 'dnd5e' && isDndASILevel && dndChoiceType === 'feat')) && (
+              {/* Feats & Class Features Selection */}
+              {((system === 'pf1e' && requiredFeatsCount > 0) || (system === 'dnd5e' && isDndASILevel && dndChoiceType === 'feat')) && (
                 <div>
-                  <h4 style={{ fontSize: '1.1rem', color: 'var(--accent-gold)', marginBottom: '8px' }}>
-                    Feat (Yetenek) Seçimi
+                  <h4 style={{ fontSize: '1.1rem', color: 'var(--accent-gold)', marginBottom: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <Award size={18} />
+                    Feat & Sınıf Özelliği Seçimi
                   </h4>
                   
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                    <div style={{ fontSize: '12px', color: '#8b949e' }}>
-                      Kazanılan Feat Limitiniz: <b>1</b> adet. 
+                    <div style={{ fontSize: '12px', color: '#8b949e', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span>Kazanılan Yetenek / Sınıf Özelliği Limitiniz:</span>
+                      <b style={{ color: 'var(--accent-gold)', background: 'rgba(201,168,76,0.1)', padding: '2px 8px', borderRadius: '10px' }}>
+                        {selectedFeats.length} / {requiredFeatsCount}
+                      </b>
+                    </div>
+
+                    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+                      <button
+                        type="button"
+                        className="btn btn-primary"
+                        style={{ padding: '8px 14px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '6px', background: 'linear-gradient(135deg, #f39c12 0%, #d35400 100%)', borderColor: '#f39c12' }}
+                        onClick={() => {
+                          setFeatModalCategory('ClassFeature');
+                          setIsFeatModalOpen(true);
+                        }}
+                      >
+                        <Wand2 size={15} />
+                        🎯 {currentClass || 'Sınıf'} Özel Yetenek Seç (Rage Power / Hex / Discovery)
+                      </button>
+
+                      <button
+                        type="button"
+                        className="btn btn-secondary"
+                        style={{ padding: '8px 14px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '6px' }}
+                        onClick={() => {
+                          setFeatModalCategory('All');
+                          setIsFeatModalOpen(true);
+                        }}
+                      >
+                        <BookOpen size={15} />
+                        📚 Tüm Feat'lerde Ara
+                      </button>
                     </div>
 
                     <div style={{ display: 'flex', gap: '8px' }}>
                       <input 
                         type="text" 
-                        placeholder="Feat ismi yazın veya önerilerden seçin"
+                        placeholder="Veya manuel feat/yetenek ismi yazın"
                         value={customFeatText}
                         onChange={(e) => setCustomFeatText(e.target.value)}
                         className="form-input"
                       />
                       <button 
                         type="button" 
-                        className="btn btn-primary"
+                        className="btn btn-secondary"
                         onClick={() => handleAddFeat(customFeatText)}
                         style={{ minHeight: 'unset', padding: '8px 16px' }}
                       >
@@ -580,46 +636,35 @@ export default function LevelUpWizard({ isOpen, onClose }) {
                       </button>
                     </div>
 
-                    {/* Popular recommendations list */}
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '6px' }}>
-                      {popularFeats.map(f => (
-                        <button 
-                          key={f}
-                          type="button"
-                          className="btn btn-secondary"
-                          style={{ padding: '4px 8px', fontSize: '11px', minHeight: 'unset', textTransform: 'none' }}
-                          onClick={() => handleAddFeat(f)}
-                        >
-                          +{f}
-                        </button>
-                      ))}
-                    </div>
-
                     {/* Selected Feats List */}
                     <div style={{ marginTop: '10px' }}>
-                      <div style={{ fontSize: '12px', fontWeight: 'bold', marginBottom: '6px' }}>Bu Seviyede Seçilen Feat'ler:</div>
+                      <div style={{ fontSize: '12px', fontWeight: 'bold', marginBottom: '6px', color: '#f0e6d2' }}>
+                        Bu Seviyede Seçilen Yetenekler:
+                      </div>
                       {selectedFeats.length === 0 ? (
-                        <div style={{ fontStyle: 'italic', fontSize: '12px', color: '#8b949e' }}>Henüz feat seçilmedi.</div>
+                        <div style={{ fontStyle: 'italic', fontSize: '12px', color: '#8b949e' }}>Henüz yetenek seçilmedi.</div>
                       ) : (
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                           {selectedFeats.map((f, i) => (
                             <span 
                               key={i} 
                               style={{ 
-                                background: '#16213e', 
+                                background: 'rgba(201,168,76,0.15)', 
                                 border: '1px solid var(--accent-gold)', 
                                 padding: '4px 10px', 
                                 borderRadius: '6px',
                                 fontSize: '12px',
                                 display: 'inline-flex',
                                 alignItems: 'center',
-                                gap: '6px'
+                                gap: '6px',
+                                color: '#f0e6d2'
                               }}
                             >
+                              <Wand2 size={12} style={{ color: 'var(--accent-gold)' }} />
                               {f}
                               <button 
                                 type="button" 
-                                style={{ background: 'none', border: 'none', color: 'var(--color-ruby)', cursor: 'pointer', fontSize: '12px' }}
+                                style={{ background: 'none', border: 'none', color: 'var(--color-ruby)', cursor: 'pointer', fontSize: '14px', lineHeight: 1 }}
                                 onClick={() => handleRemoveFeat(i)}
                               >
                                 &times;
@@ -863,6 +908,25 @@ export default function LevelUpWizard({ isOpen, onClose }) {
         </div>
 
       </div>
+
+      {/* Feat & Class Feature Selector Modal */}
+      <FeatSelectorModal
+        isOpen={isFeatModalOpen}
+        onClose={() => setIsFeatModalOpen(false)}
+        system={system || 'pf1e'}
+        character={{ level, class: currentClass, abilities, skills, recalcedData }}
+        className={currentClass || ''}
+        initialCategory={featModalCategory}
+        selectedFeats={selectedFeats}
+        maxFeats={requiredFeatsCount}
+        onAddFeat={(featEntity) => {
+          const featName = featEntity.isim || featEntity.name || featEntity;
+          handleAddFeat(featName);
+          if (selectedFeats.length + 1 >= requiredFeatsCount) {
+            setIsFeatModalOpen(false);
+          }
+        }}
+      />
     </div>
   );
 }

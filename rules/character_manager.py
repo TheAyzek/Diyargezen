@@ -91,12 +91,34 @@ class CharacterManager:
 
         return results
 
-    def get_traits(self, system: str, query: str = "", category: str = "") -> List[DiyargezenEntity]:
-        """Fetch character traits, filtered by optional search query and/or trait category.
+    @classmethod
+    def _parse_entity_category(cls, name: str, payload: dict) -> str:
+        """Derive category (Combat, Metamagic, Racial, Social, Faith, etc.) from JSON tags, name, and description."""
+        data = payload.get('system', payload.get('data', payload)) if isinstance(payload, dict) else {}
+        tags = data.get('tags', []) or payload.get('tags', [])
+        tag_strs = []
+        for t in tags:
+            if isinstance(t, list):
+                tag_strs.extend([str(x).lower() for x in t])
+            else:
+                tag_strs.append(str(t).lower())
+        
+        n_lower = name.lower()
+        full_str = ' '.join(tag_strs) + ' ' + n_lower
+        
+        if 'combat' in full_str or '(combat)' in n_lower: return 'Combat'
+        if 'teamwork' in full_str or '(teamwork)' in n_lower: return 'Teamwork'
+        if 'metamagic' in full_str or '(metamagic)' in n_lower: return 'Metamagic'
+        if 'item creation' in full_str or 'creation' in full_str: return 'Item Creation'
+        if 'mythic' in full_str or '(mythic)' in n_lower: return 'Mythic'
+        if 'social' in full_str: return 'Social'
+        if 'faith' in full_str or 'religion' in full_str: return 'Faith'
+        if 'magic' in full_str or 'spell' in full_str: return 'Magic'
+        if 'race' in full_str or 'racial' in full_str or 'regional' in full_str: return 'Racial'
+        return 'General'
 
-        Returns only traits that have an explicit trait_category set (our curated list).
-        Results are sorted alphabetically within each category.
-        """
+    def get_traits(self, system: str, query: str = "", category: str = "") -> List[DiyargezenEntity]:
+        """Fetch character traits, filtered by optional search query and/or trait category."""
         sys_norm = system.lower().replace("_", "").replace("-", "")
         results: List[DiyargezenEntity] = []
         try:
@@ -107,7 +129,6 @@ class CharacterManager:
                 "SELECT isim, sistem, kategori, aciklama, sistem_verisi "
                 "FROM entities "
                 "WHERE sistem = ? AND kategori = 'trait' "
-                "AND json_extract(sistem_verisi, '$.trait_category') IS NOT NULL "
             )
             params = [sys_norm]
 
@@ -115,16 +136,18 @@ class CharacterManager:
                 base_sql += "AND (isim LIKE ? OR aciklama LIKE ?) "
                 params.extend([f"%{query}%", f"%{query}%"])
 
-            if category:
-                base_sql += "AND json_extract(sistem_verisi, '$.trait_category') = ? "
-                params.append(category)
-
-            base_sql += "ORDER BY json_extract(sistem_verisi, '$.trait_category') ASC, isim COLLATE NOCASE ASC LIMIT 200"
+            base_sql += "ORDER BY isim COLLATE NOCASE ASC LIMIT 1000"
 
             cursor.execute(base_sql, params)
             for row in cursor.fetchall():
                 try:
                     payload = json.loads(row[4]) if row[4] else {}
+                    t_cat = payload.get('trait_category') or self._parse_entity_category(row[0], payload)
+                    payload['trait_category'] = t_cat
+
+                    if category and category != 'All' and t_cat.lower() != category.lower():
+                        continue
+
                     results.append(DiyargezenEntity(
                         isim=row[0], sistem=row[1], kategori=row[2],
                         aciklama=row[3] or "", sistem_verisi=payload
@@ -136,63 +159,14 @@ class CharacterManager:
             pass
         return results
 
-    # Map of PF1e feat types found in name suffixes
-    _FEAT_CATEGORY_SUFFIXES = {
-        "Combat": ["(Combat)"],
-        "Teamwork": ["(Teamwork)"],
-        "Metamagic": ["(Metamagic)"],
-        "Item Creation": ["(Item Creation)"],
-        "Mythic": ["(Mythic)"],
-        "Performance": ["(Performance)"],
-        "Grit": ["(Grit)"],
-        "Racial": [
-            "(Dwarf)", "(Elf)", "(Gnome)", "(Half-Elf)", "(Half-Orc)", "(Half-Orc, Orc)",
-            "(Halfling)", "(Human)", "(Aasimar)", "(Tiefling)", "(Goblin)", "(Drow)",
-            "(Changeling)", "(Kitsune)", "(Nagaji)", "(Orc)", "(Samsaran)",
-        ],
-        "General": [],  # catch-all
-    }
-
-    @classmethod
-    def _parse_feat_category(cls, feat_name: str) -> str:
-        """Derive feat category from the name, checking parenthesized tags like (Combat), (Teamwork), etc."""
-        import re
-        name = feat_name.strip()
-        m = re.search(r'\(([^)]+)\)', name)
-        if m:
-            tag = m.group(1).lower()
-            if "combat" in tag:
-                return "Combat"
-            if "teamwork" in tag:
-                return "Teamwork"
-            if "metamagic" in tag:
-                return "Metamagic"
-            if "item creation" in tag:
-                return "Item Creation"
-            if "mythic" in tag:
-                return "Mythic"
-            if "performance" in tag:
-                return "Performance"
-            if "grit" in tag:
-                return "Grit"
-            races = ["dwarf", "elf", "gnome", "half-elf", "half-orc", "halfling", "human", "aasimar", "tiefling", "goblin", "drow", "kitsune", "orc"]
-            if any(r in tag for r in races):
-                return "Racial"
-        return "General"
-
     def get_feats(self, system: str, query: str = "", category: str = "") -> List[DiyargezenEntity]:
-        """Retrieve feats filtered by search query and/or category.
-
-        Categories are derived from name tags: (Combat), (Teamwork), (Metamagic), etc.
-        Template/index entries are excluded (names starting with #, (, [, *).
-        """
+        """Retrieve feats filtered by search query and/or category."""
         sys_norm = system.lower().replace("_", "").replace("-", "")
         results: List[DiyargezenEntity] = []
         try:
             conn = sqlite3.connect(str(self.db_path))
             cursor = conn.cursor()
 
-            # Base query — exclude junk entries
             sql = (
                 "SELECT isim, sistem, kategori, aciklama, sistem_verisi "
                 "FROM entities "
@@ -205,11 +179,10 @@ class CharacterManager:
             params: list = [sys_norm]
 
             if query:
-                sql += "AND isim LIKE ? "
-                params.append(f"%{query}%")
+                sql += "AND (isim LIKE ? OR aciklama LIKE ?) "
+                params.extend([f"%{query}%", f"%{query}%"])
 
-            sql += "ORDER BY isim COLLATE NOCASE ASC LIMIT 300"
-
+            sql += "ORDER BY isim COLLATE NOCASE ASC LIMIT 1500"
 
             cursor.execute(sql, params)
             rows = cursor.fetchall()
@@ -218,14 +191,12 @@ class CharacterManager:
             for row in rows:
                 try:
                     feat_name = row[0]
-                    feat_cat = self._parse_feat_category(feat_name)
-
-                    # Apply strict category filter if specified
-                    if category and feat_cat != category and category != "General":
-                        continue
-
                     payload = json.loads(row[4]) if row[4] else {}
+                    feat_cat = payload.get('feat_category') or self._parse_entity_category(feat_name, payload)
                     payload["feat_category"] = feat_cat
+
+                    if category and category != 'All' and feat_cat.lower() != category.lower():
+                        continue
 
                     results.append(DiyargezenEntity(
                         isim=feat_name, sistem=row[1], kategori=row[2],
@@ -305,6 +276,67 @@ class CharacterManager:
             pass
         return results
 
+    def get_class_features(self, system: str, class_name: str = "", query: str = "") -> List[DiyargezenEntity]:
+        """Return class-specific talents and features (Rage Powers, Rogue Talents, Discoveries, Hexes, Arcana, etc.)."""
+        sys_norm = system.lower().replace("_", "").replace("-", "")
+        results: List[DiyargezenEntity] = []
+        
+        CLASS_KEYWORDS = {
+            "barbarian": ["Rage Power", "Rage power", "Totem"],
+            "rogue": ["Rogue Talent", "Rogue talent", "Advanced Rogue Talent"],
+            "ninja": ["Ninja Trick", "Master Trick", "Rogue Talent"],
+            "alchemist": ["Discovery", "Alchemist Discovery", "Grand Discovery"],
+            "witch": ["Hex", "Witch Hex", "Major Hex", "Grand Hex"],
+            "magus": ["Magus Arcana", "Arcana"],
+            "arcanist": ["Exploit", "Arcanist Exploit", "Greater Exploit"],
+            "slayer": ["Slayer Talent", "Rogue Talent"],
+            "oracle": ["Revelation", "Mystery"],
+            "cleric": ["Domain Power", "Domain"],
+            "paladin": ["Mercy", "Paladin Mercy"],
+            "bloodrager": ["Bloodline Power", "Bloodline"],
+            "sorcerer": ["Bloodline Power", "Bloodline"],
+            "cavalier": ["Order", "Challenge"],
+            "inquisitor": ["Inquisition", "Judgment"],
+            "investigator": ["Investigator Talent"],
+            "shaman": ["Hex", "Shaman Hex", "Spirit"],
+            "vigilante": ["Vigilante Talent", "Social Talent"]
+        }
+        
+        c_lower = class_name.lower().strip()
+        kws = CLASS_KEYWORDS.get(c_lower, [class_name]) if (c_lower and c_lower in CLASS_KEYWORDS) else ["Power", "Talent", "Discovery", "Hex", "Arcana", "Exploit", "Revelation", "Mercy", "Bloodline", "Domain", "Inquisition"]
+        if c_lower and c_lower not in CLASS_KEYWORDS:
+            kws = [class_name, "Talent", "Power"]
+
+        try:
+            conn = sqlite3.connect(str(self.db_path))
+            cursor = conn.cursor()
+            
+            kw_clauses = " OR ".join(["isim LIKE ? OR aciklama LIKE ?" for _ in kws])
+            params = [sys_norm]
+            for kw in kws:
+                params.extend([f"%{kw}%", f"%{kw}%"])
+            
+            sql = f"SELECT isim, sistem, kategori, aciklama, sistem_verisi FROM entities WHERE sistem = ? AND kategori IN ('class_feature', 'feat', 'rule') AND ({kw_clauses})"
+            if query:
+                sql += " AND (isim LIKE ? OR aciklama LIKE ?)"
+                params.extend([f"%{query}%", f"%{query}%"])
+            sql += " ORDER BY isim COLLATE NOCASE LIMIT 500"
+            
+            cursor.execute(sql, tuple(params))
+            for row in cursor.fetchall():
+                try:
+                    payload = json.loads(row[4]) if row[4] else {}
+                    results.append(DiyargezenEntity(
+                        isim=row[0], sistem=row[1], kategori="class_feature",
+                        aciklama=row[3] or "", sistem_verisi=payload
+                    ))
+                except Exception:
+                    continue
+            conn.close()
+        except Exception:
+            pass
+        return results
+
     def search_entities(self, system: str, category: str, query: str) -> List[DiyargezenEntity]:
         """Search database entities using standard LIKE search on name/isim.
 
@@ -367,33 +399,27 @@ class CharacterManager:
         "swashbuckler", "vigilante", "warpriest", "witch", "wizard",
     }
 
-    # DND5e için NPC/canavar filtresi — bu sistem için sadece
-    # aşağıdaki çok açık NPC girişleri engellenir (DND5e'de bu nadiren gerekir).
     _DND5E_BLOCK_KEYWORDS = (
         "outsider", "humanoid", "aberration", "construct",
-        "dragon", "fey", "undead", "vermin",
-        "race:",
+        "dragon", "fey", "undead", "vermin", "race:"
     )
 
     def get_clean_classes(self, system: str) -> List[DiyargezenEntity]:
-        """Return only playable classes, stripping NPC/creature-type entries.
-
-        Sistem-spesifik filtreleme:
-        - DND5e: minimal blocklist; mevcut 14 sınıf doğrudan dönür.
-        - PF1e: Whitelist tabanlı; sadece _PF1E_PLAYABLE_CLASSES listesindeki
-          isimler (prefix eşleşmesi) kabul edilir. Böylece Outsider/Dragon/
-          NPC seri girdi hiçbir keyword kara listesi olmadan temizlenir.
-        - MM3e: minimal filtreleme (kategori='class' yeterli).
-        """
+        """Return only playable classes and archetypes, stripping NPC/creature-type entries."""
         sys_norm = system.lower().replace("_", "").replace("-", "")
         results: List[DiyargezenEntity] = []
+        MONSTER_BLOCKLIST = {
+            "outsider", "dragon", "construct", "animal companion", "vermin",
+            "undead", "plant", "fey", "magical beast", "adept", "aristocrat",
+            "commoner", "expert", "warrior"
+        }
         try:
             conn = sqlite3.connect(str(self.db_path))
             cursor = conn.cursor()
             cursor.execute(
                 "SELECT isim, sistem, kategori, aciklama, sistem_verisi "
                 "FROM entities "
-                "WHERE sistem = ? AND kategori = 'class' "
+                "WHERE sistem = ? AND kategori IN ('class', 'archetype') "
                 "ORDER BY isim COLLATE NOCASE",
                 (sys_norm,)
             )
@@ -401,22 +427,35 @@ class CharacterManager:
                 name: str = row[0]
                 name_lower = name.lower()
 
+                # Block obvious NPC / monster creature-type classes
+                if any(m in name_lower for m in MONSTER_BLOCKLIST):
+                    continue
+
                 if "pathfinder" in sys_norm or "pf" in sys_norm:
-                    # PF1e: Whitelist tabanlı — isim beyaz listede bir kelimeyle başlıyorsa kabul
-                    prefix = name_lower.split("(")[0].strip()  # "Monk (Unchained)" -> "monk"
-                    if prefix not in self._PF1E_PLAYABLE_CLASSES:
+                    prefix = name_lower.split("(")[0].strip()
+                    is_base = prefix in self._PF1E_PLAYABLE_CLASSES or any(b in name_lower for b in self._PF1E_PLAYABLE_CLASSES)
+                    is_arch = row[2] == 'archetype'
+                    if not (is_base or is_arch):
                         continue
                 elif "dnd" in sys_norm:
-                    # DND5e: sadece açık NPC/canavar marker'larını engelle
                     if any(kw in name_lower for kw in self._DND5E_BLOCK_KEYWORDS):
                         continue
-                # MM3e ve diğerleri: SQL sanitisasyonu yeterli
 
                 try:
                     payload = json.loads(row[4]) if row[4] else {}
+                    desc = row[3] or ""
+
+                    # Fallback to system_verisi description if main aciklama is dummy
+                    if not desc or desc.startswith("Contents") or desc.startswith("Skill:") or len(desc) < 20:
+                        sv_desc = payload.get("description") or payload.get("system", {}).get("description") or ""
+                        if isinstance(sv_desc, dict):
+                            sv_desc = sv_desc.get("value", "")
+                        if isinstance(sv_desc, str) and sv_desc and not sv_desc.startswith("Contents"):
+                            desc = sv_desc
+
                     results.append(DiyargezenEntity(
                         isim=row[0], sistem=row[1], kategori=row[2],
-                        aciklama=row[3] or "", sistem_verisi=payload
+                        aciklama=desc, sistem_verisi=payload
                     ))
                 except Exception:
                     continue

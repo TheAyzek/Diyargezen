@@ -1,6 +1,6 @@
 """
-Sync Router for FastApi Backend
-===============================
+Sync Router for FastAPI Backend
+==============================
 Masaüstü ve Web istemcileri için çevrimdışı öncelikli (Offline-First)
 karakter senkronizasyon endpoint'i (`POST /api/sync`).
 """
@@ -29,22 +29,26 @@ from app.services.character_service import CharacterService
 
 logger = logging.getLogger(__name__)
 
-router = APIRouter(prefix="/sync", tags=["Sync Engine"])
+router = APIRouter(prefix="/sync", tags=["Sync"])
 char_service = CharacterService()
 
 
-@router.post("", response_model=SyncResponse)
+@router.post(
+    "",
+    response_model=SyncResponse,
+    summary="Masaüstü & Bulut Karakter Senkronizasyonu",
+    description="""
+Çevrimdışı öncelikli (Offline-First) çift yönlü senkronizasyon endpoint'i:
+- Masaüstü istemcisinde internetsiz değiştirilen (`is_dirty=True`) karakterler buluta aktarılır (**PUSH**).
+- Çakışmalar zaman damgası (**Last-Write-Wins**) mantığıyla çözülür.
+- Sunucudaki en güncel karakter değişiklikleri masaüstüne indirilir (**PULL**).
+"""
+)
 def sync_characters(
     payload: SyncRequest,
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user)
 ):
-    """
-    Çevrimdışı öncelikli karakter senkronizasyon endpoint'i.
-    - Masaüstü is_dirty=True olan karakterlerini PUSH eder.
-    - Sunucu Last-Write-Wins (updated_at karşılaştırması) ile çakışmayı çözer.
-    - Sunucudaki yenilenen tüm karakterleri masaüstüne PULL için yanıt döner.
-    """
     now_str = datetime.now(timezone.utc).isoformat()
 
     # 1. Process dirty characters pushed from client

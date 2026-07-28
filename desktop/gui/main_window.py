@@ -23,20 +23,27 @@ from PySide6.QtWidgets import (
     QLabel, QPushButton, QStackedWidget, QFrame, QSizePolicy,
 )
 
-from gui.theme import DARK_FANTASY_QSS
-from gui.screens.tavern import TavernPage
-from gui.screens.forge import ForgePage
-from gui.screens.character_sheet import CharacterSheetPage
-from etl.pipeline import run_etl_if_needed
-
-logger = logging.getLogger(__name__)
-
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
 desktop_dir = Path(__file__).resolve().parent.parent
 if str(desktop_dir) not in sys.path:
     sys.path.insert(0, str(desktop_dir))
+
+try:
+    from gui.theme import DARK_FANTASY_QSS, load_custom_fonts
+    from gui.screens.tavern import TavernPage
+    from gui.screens.forge import ForgePage
+    from gui.screens.character_sheet import CharacterSheetPage
+except ImportError:
+    from desktop.gui.theme import DARK_FANTASY_QSS, load_custom_fonts
+    from desktop.gui.screens.tavern import TavernPage
+    from desktop.gui.screens.forge import ForgePage
+    from desktop.gui.screens.character_sheet import CharacterSheetPage
+
+from etl.pipeline import run_etl_if_needed
+
+logger = logging.getLogger(__name__)
 
 DB_PATH = BASE_DIR / "desktop" / "data" / "offline_pf1e.db"
 LOGO_PATH = BASE_DIR / "assets" / "diyargezer_logo.png"
@@ -50,7 +57,6 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Diyargezer — TTRPG Karakter Yöneticisi")
         self.resize(1100, 720)
         self.setMinimumSize(900, 600)
-        # Sunum modu: ekranı kaplayan pencere (taskbar ve X butonu korunur)
         self.setWindowState(Qt.WindowMaximized)
 
         if LOGO_PATH.exists():
@@ -140,7 +146,7 @@ class MainWindow(QMainWindow):
 
         self._cloud_btn = QPushButton("☁️ Bulut Girişi (Sync)")
         self._cloud_btn.setCursor(Qt.PointingHandCursor)
-        self._cloud_btn.setStyleSheet("background-color: rgba(201, 168, 76, 0.15); color: #c9a84c; border: 1px solid #c9a84c; border-radius: 4px; padding: 6px; font-weight: bold;")
+        self._cloud_btn.setStyleSheet("background-color: rgba(230, 197, 103, 0.15); color: #e6c567; border: 1px solid #e6c567; border-radius: 6px; padding: 6px; font-weight: bold;")
         self._cloud_btn.clicked.connect(self._open_login_dialog)
         sb_lay.addWidget(self._cloud_btn)
 
@@ -172,7 +178,7 @@ class MainWindow(QMainWindow):
         status.setObjectName("StatusBar")
         self.statusBar().addPermanentWidget(status, stretch=1)
         self.statusBar().setStyleSheet(
-            "QStatusBar { background: #0d0d18; border-top: 1px solid #30363d; }"
+            "QStatusBar { background: #1a1a2e; border-top: 1px solid rgba(230, 197, 103, 0.2); }"
         )
 
     # ------------------------------------------------------------------
@@ -217,6 +223,7 @@ class MainWindow(QMainWindow):
 def run_app() -> None:
     """PySide6 uygulamasını başlat."""
     app = QApplication.instance() or QApplication(sys.argv)
+    load_custom_fonts()
     app.setStyleSheet(DARK_FANTASY_QSS)
 
     window = MainWindow()

@@ -92,6 +92,17 @@ class CharacterSheetPage(QWidget):
         self._tabs = QTabWidget()
         root.addWidget(self._tabs, stretch=1)
 
+        # Live High-Fantasy Web View Tab (QWebEngineView)
+        try:
+            from PySide6.QtWebEngineWidgets import QWebEngineView
+            from PySide6.QtCore import QUrl
+            self._web_view = QWebEngineView()
+            self._web_view.setUrl(QUrl("http://localhost:5173/"))
+            self._tabs.addTab(self._web_view, "✨ Canlı High-Fantasy Arayüzü")
+        except Exception as err:
+            logger.warning("Could not initialize QWebEngineView: %s", err)
+            self._web_view = None
+
         self._overview_tab = QWidget()
         self._combat_tab = QWidget()
         self._skills_tab = QWidget()
@@ -112,7 +123,7 @@ class CharacterSheetPage(QWidget):
 
         self._empty = QLabel("Tavern'den bir karakter seçin veya Forge'da yeni bir karakter oluşturun.")
         self._empty.setAlignment(Qt.AlignCenter)
-        self._empty.setStyleSheet("color: #8b949e; font-size: 14px; padding: 40px;")
+        self._empty.setStyleSheet("color: #a8b3cf; font-size: 14px; padding: 40px;")
         root.addWidget(self._empty)
         self._tabs.hide()
 
@@ -138,7 +149,7 @@ class CharacterSheetPage(QWidget):
             score_lbl = QLabel("—")
             score_lbl.setObjectName("StatValue")
             mod_lbl = QLabel("")
-            mod_lbl.setStyleSheet("color: #d4c5a9;")
+            mod_lbl.setStyleSheet("color: #e8dbbf;")
             col = (i % 3) * 3
             row = i // 3
             self._ability_grid.addWidget(name_lbl, row, col)
@@ -161,7 +172,7 @@ class CharacterSheetPage(QWidget):
         ]
         for i, (key, label_text) in enumerate(combat_fields):
             title_lbl = QLabel(label_text)
-            title_lbl.setStyleSheet("font-weight: bold; color: #d4c5a9;")
+            title_lbl.setStyleSheet("font-weight: bold; color: #e8dbbf;")
             val_lbl = QLabel("—")
             val_lbl.setObjectName("StatValue")
             self._combat_labels[key] = val_lbl
@@ -205,7 +216,7 @@ class CharacterSheetPage(QWidget):
         lay.setSpacing(16)
 
         info = QLabel("Karakterini farklı formatlarda dışa aktar.")
-        info.setStyleSheet("color: #d4c5a9; font-size: 13px;")
+        info.setStyleSheet("color: #e8dbbf; font-size: 13px;")
         lay.addWidget(info)
 
         pdf_btn = QPushButton("PDF Karakter Kağıdı")

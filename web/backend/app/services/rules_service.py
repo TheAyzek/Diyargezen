@@ -65,3 +65,16 @@ class RulesService:
     def get_traits(self, system: str, query: str = "", category: str = "") -> List[DiyargezenEntity]:
         db_system = self._normalize_system(system)
         return self.manager.get_traits(db_system, query, category)
+
+    def get_class_features(self, system: str, class_name: str = "", query: str = "") -> List[DiyargezenEntity]:
+        db_system = self._normalize_system(system)
+        return self.manager.get_class_features(db_system, class_name=class_name, query=query)
+
+    def get_mechanics(self, system: str, query: str = "", category: str = "") -> List[DiyargezenEntity]:
+        db_system = self._normalize_system(system)
+        # Search for rules, mechanics, or conditions in db, or return curated mechanics if query matches
+        mechanics = self.manager.search_entities(db_system, "rule", query)
+        if not mechanics:
+            mechanics = self.manager.search_entities(db_system, "condition", query)
+        return mechanics
+

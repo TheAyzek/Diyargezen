@@ -1,14 +1,30 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { 
   UserPlus, Trash, ChevronRight, Search, Shield, Sword, Sparkles, 
-  TrendingUp, Users, Award, BookOpen 
+  TrendingUp, Users, Award, BookOpen, Download
 } from 'lucide-react';
+import PresetCharactersModal from './PresetCharactersModal';
+import { importCharacterJSONFile } from '../utils/jsonExportUtil';
+import { useCharacterStore } from '../store/characterStore';
 
 export default function Dashboard({ onSelectCharacter, onNewCharacter }) {
   const [characters, setCharacters] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(true);
+  const [presetModalOpen, setPresetModalOpen] = useState(false);
+  const fileInputRef = useRef(null);
+  const { loadPresetCharacter } = useCharacterStore();
+
+  const handleImportFile = (e) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      importCharacterJSONFile(file, (parsed) => {
+        loadPresetCharacter(parsed);
+        onSelectCharacter({ ...parsed, system: 'pf1e' });
+      });
+    }
+  };
 
   useEffect(() => {
     loadCharacters();
@@ -113,10 +129,52 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter }) {
           </h2>
           <p style={{ color: '#8b949e', fontSize: '0.9rem', margin: '4px 0 0 0' }}>Diyarlar arası gezginlerinizin listesi.</p>
         </div>
-        <button className="btn btn-primary" onClick={onNewCharacter}>
-          <UserPlus size={16} /> Yeni Karakter Yarat
-        </button>
+        <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+          <input
+            type="file"
+            accept=".json"
+            ref={fileInputRef}
+            onChange={handleImportFile}
+            style={{ display: 'none' }}
+          />
+
+          <button
+            className="btn"
+            onClick={() => fileInputRef.current?.click()}
+            style={{
+              backgroundColor: 'rgba(78, 201, 176, 0.15)', border: '1px solid #4ec9b0',
+              color: '#4ec9b0', fontSize: '0.85rem', fontWeight: 700,
+              display: 'flex', alignItems: 'center', gap: '6px'
+            }}
+          >
+            <Download size={16} /> 📥 Karakter Yükle (.json)
+          </button>
+
+          <button
+            className="btn"
+            onClick={() => setPresetModalOpen(true)}
+            style={{
+              backgroundColor: 'rgba(201,168,76,0.15)', border: '1px solid var(--border-gold)',
+              color: 'var(--gold-bright)', fontSize: '0.85rem', fontWeight: 700,
+              display: 'flex', alignItems: 'center', gap: '6px'
+            }}
+          >
+            <Sparkles size={16} /> ✨ Hazır Şablon İle Başla
+          </button>
+
+          <button className="btn btn-primary" onClick={onNewCharacter}>
+            <UserPlus size={16} /> Yeni Karakter Yarat
+          </button>
+        </div>
       </div>
+
+      <PresetCharactersModal
+        isOpen={presetModalOpen}
+        onClose={() => setPresetModalOpen(false)}
+        onSelectPreset={(preset) => {
+          onSelectCharacter({ ...preset, system: 'pf1e' });
+        }}
+      />
 
       {/* Search Bar */}
       <div className="glass-card" style={{ padding: '10px 16px', display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>

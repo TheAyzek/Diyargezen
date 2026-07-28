@@ -2,6 +2,7 @@ import logging
 from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
 # Importing config first registers the workspace root for shared PF1e modules
 # when the backend is started from web/backend.
 from app.core.config import DB_PATH
@@ -15,6 +16,43 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 logger = logging.getLogger(__name__)
+
+tags_metadata = [
+    {
+        "name": "Auth",
+        "description": "🔑 **Kimlik Doğrulama & Oturum Yönetimi**: Kullanıcı kaydı (`register`), JWT login (`token`) ve yetkilendirme kontrolü.",
+    },
+    {
+        "name": "Characters",
+        "description": "🧙‍♂️ **Karakter Yönetimi & Canlı Hesaplama**: Pathfinder 1e karakter kağıdı CRUD işlemleri, soft-block kural denetimi ve GM override mekanizması.",
+    },
+    {
+        "name": "Rules",
+        "description": "📜 **PF1e Kural Motoru & Veri Arama**: Trait, Feat, Spellbook, Irk ve Sınıf kural arama ve filtreleme API'leri.",
+    },
+    {
+        "name": "Systems",
+        "description": "⚙️ **TTRPG Sistem Kataloğu**: Desteklenen masaüstü ve web TTRPG kural sistemleri kataloğu.",
+    },
+    {
+        "name": "Sync",
+        "description": "☁️ **Offline-First Masaüstü Senkronizasyonu**: Masaüstü PySide6 istemcisi ile bulut veritabanı arasında otomatik arka plan senkronizasyonu.",
+    },
+]
+
+API_DESCRIPTION = """
+# 🛡️ Diyargezen TTRPG Rules & Character Management API
+
+**Diyargezen**, Pathfinder 1st Edition (PF1e) kuralları odaklı, offline-first masaüstü istemcisine ve ayrık mimarili web platformuna sahip bir TTRPG karakter yönetim servisidir.
+
+### 🌟 Öne Çıkan Özellikler:
+- **Fast & Stateless Stat Calculation:** Karakter istatistikleri, BAB, AC, saves ve beceri modifikatörleri anlık ve dinamik hesaplanır.
+- **Game Master Rule Override (`is_overridden`):** Sert engeller ("hard-block") yerine akıllı soft-validation uyarıları ve GM izin bayrağı sunar.
+- **Combined Rules Database (Unified DB):** Foundry VTT veri setleri ile Scraper (Aonprd/d20pfsrd) verilerini birleştirerek eksiksiz kural fallback'i sağlar.
+- **Offline-First Synchronization:** Masaüstü istemcisinde internetsiz yerel SQLite'a kaydeder, internet bağlantısı sağlandığında JWT ile buluta aktarır.
+
+---
+"""
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -34,8 +72,16 @@ async def lifespan(app: FastAPI):
 # Initialize FastAPI App
 app = FastAPI(
     title="Diyargezen TTRPG Web API",
-    description="Stateless rules calculation and persistent character sheet management for D&D 5e, PF1e, and M&M 3e.",
+    description=API_DESCRIPTION,
     version="2.0.0",
+    openapi_tags=tags_metadata,
+    contact={
+        "name": "Diyargezen Core Architecture Team",
+        "url": "https://github.com/KullaniciAdi/Diyargezenweb",
+    },
+    license_info={
+        "name": "Open Gaming License (OGL) & MIT",
+    },
     lifespan=lifespan,
 )
 
@@ -50,12 +96,12 @@ app.add_middleware(
 
 
 # Root probe endpoint
-@app.get("/")
+@app.get("/", tags=["Systems"], summary="Sistem Sağlık Durumu & Probe", description="API sunucusunun sağlık durumunu ve aktif desteklenen TTRPG sistemlerini döndürür.")
 def read_root():
     return {
         "status": "healthy",
         "app": "Diyargezen TTRPG Web Backend",
-        "supported_systems": ["dnd5e", "pf1e", "mnm3e"]
+        "supported_systems": ["pathfinder1e"]
     }
 
 # Include Routers

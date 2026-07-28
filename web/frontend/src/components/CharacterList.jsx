@@ -123,50 +123,79 @@ export default function CharacterList({ onSelectCharacter, onNewCharacter }) {
         </div>
       ) : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-          {filteredCharacters.map(char => (
-            <div 
-              key={char.id} 
-              className="glass-card" 
-              onClick={() => onSelectCharacter(char)}
-              style={{ 
-                display: 'flex', 
-                justifyContent: 'space-between', 
-                alignItems: 'center', 
-                padding: '16px 24px', 
-                borderRadius: '8px', 
-                cursor: 'pointer',
-                transition: 'all 0.2s ease',
-              }}
-            >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                <div style={{ 
-                  width: '40px', 
-                  height: '40px', 
-                  borderRadius: '8px', 
-                  backgroundColor: '#22223b', 
+          {filteredCharacters.map(char => {
+            const charData = char.data || char.character_data || char;
+            const portrait = charData.portrait || charData.avatar || charData.portrait_url || charData.image || char.portrait || char.avatar;
+
+            return (
+              <div 
+                key={char.id} 
+                className="glass-card hover-glow" 
+                onClick={() => onSelectCharacter(char)}
+                style={{ 
                   display: 'flex', 
+                  justifyContent: 'space-between', 
                   alignItems: 'center', 
-                  justifyContent: 'center',
-                  border: '1px solid rgba(255, 255, 255, 0.05)'
-                }}>
-                  {char.system.toLowerCase().includes('dnd') ? <Sword size={18} style={{ color: '#e94560' }} /> :
-                   char.system.toLowerCase().includes('pf') ? <Shield size={18} style={{ color: '#3fb950' }} /> :
-                   <Sparkles size={18} style={{ color: '#c9a84c' }} />}
-                </div>
-                <div>
-                  <h3 style={{ fontSize: '1.2rem', color: '#f0e6d2', fontWeight: 'bold', marginBottom: '4px' }}>
-                    {char.name}
-                  </h3>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                    {getSystemBadge(char.system)}
-                    <span style={{ fontSize: '12px', color: '#8b949e' }}>
-                      {char.data.race || char.data.archetype || 'Özel Sınıf'} 
-                      {char.data.level && ` • Seviye ${char.data.level}`}
-                      {char.data.pl_value && ` • PL ${char.data.pl_value}`}
-                    </span>
+                  padding: '14px 20px', 
+                  borderRadius: '10px', 
+                  cursor: 'pointer',
+                  transition: 'all 0.2s ease',
+                  border: '1px solid rgba(201,168,76,0.2)'
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+                  {portrait ? (
+                    <div style={{ 
+                      width: '52px', 
+                      height: '52px', 
+                      borderRadius: '10px', 
+                      overflow: 'hidden',
+                      border: '2px solid var(--gold-bright)', 
+                      boxShadow: '0 0 12px rgba(201,168,76,0.3)',
+                      flexShrink: 0,
+                      background: '#0a0814'
+                    }}>
+                      <img 
+                        src={portrait} 
+                        alt={char.name} 
+                        style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                      />
+                    </div>
+                  ) : (
+                    <div style={{ 
+                      width: '52px', 
+                      height: '52px', 
+                      borderRadius: '10px', 
+                      backgroundColor: '#1b172c', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center',
+                      border: '1px solid rgba(201,168,76,0.3)',
+                      boxShadow: '0 0 8px rgba(0,0,0,0.4)',
+                      flexShrink: 0
+                    }}>
+                      {char.system.toLowerCase().includes('dnd') ? <Sword size={22} style={{ color: '#e94560' }} /> :
+                       char.system.toLowerCase().includes('pf') ? <Shield size={22} style={{ color: '#3fb950' }} /> :
+                       <Sparkles size={22} style={{ color: '#c9a84c' }} />}
+                    </div>
+                  )}
+
+                  <div>
+                    <h3 style={{ fontSize: '1.2rem', color: 'var(--gold-light)', fontFamily: 'Cinzel, serif', fontWeight: 'bold', marginBottom: '4px' }}>
+                      {char.name}
+                    </h3>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap' }}>
+                      {getSystemBadge(char.system)}
+                      <span style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>
+                        {charData.race || 'Irk Belirtilmedi'} 
+                        {charData.class && ` • ${charData.class}`}
+                        {charData.archetype && ` (${charData.archetype})`}
+                        {charData.level && ` • Seviye ${charData.level}`}
+                        {charData.pl_value && ` • PL ${charData.pl_value}`}
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </div>
 
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                 <button 

@@ -1,7 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { PDFDocument, StandardFonts } from 'pdf-lib';
-import { FileText, RefreshCw, Download, Shield, Heart, Sword, Sparkles, Activity } from 'lucide-react';
+import { FileText, RefreshCw, Download, Shield, Heart, Sword, Sparkles, Activity, Wand2, Scroll } from 'lucide-react';
 import { useCharacterStore } from '../../../store/characterStore';
+import SpellCard from '../../SpellCard';
+import ParchmentSheetDisplay from './ParchmentSheetDisplay';
 
 export default function PF1eLiveSheet() {
   const store = useCharacterStore();
@@ -11,7 +13,7 @@ export default function PF1eLiveSheet() {
   
   const [pdfUrl, setPdfUrl] = useState(null);
   const [rendering, setRendering] = useState(false);
-  const [viewMode, setViewMode] = useState('pdf'); // 'pdf' or 'summary'
+  const [viewMode, setViewMode] = useState('pdf'); // 'pdf', 'summary', 'spells'
   const [activeEqTab, setActiveEqTab] = useState('weapons');
   const debounceTimerRef = useRef(null);
 
@@ -55,32 +57,109 @@ export default function PF1eLiveSheet() {
       setField('Deity', store.deity || '');
       setField('Homeland', store.homeland || '');
 
-      // Ability Scores (exact pf1e_sheet.pdf AcroForm field names)
+      // Ability Scores & Modifiers (exact pf1e_sheet.pdf AcroForm field names)
       const derivedScores = recalcedData.ability_scores || {};
       const derivedMods = recalcedData.ability_modifiers || {};
+      const formatMod = (val) => (val >= 0 ? `+${val}` : `${val}`);
 
       setField('strength', derivedScores.Strength || 10);
-      setField('dexterity', derivedScores.Dexterity || 10);
-      setField('constitution', derivedScores.Constitution || 10);
-      setField('intelligence', derivedScores.Intelligence || 10);
-      setField('WIS', derivedScores.Wisdom || 10);
-      setField('charisma', derivedScores.Charisma || 10);
+      setField('modifier', formatMod(derivedMods.Strength || 0));
 
-      // Armor Class & Combat Stats
+      setField('dexterity', derivedScores.Dexterity || 10);
+      setField('undefined', formatMod(derivedMods.Dexterity || 0));
+
+      setField('constitution', derivedScores.Constitution || 10);
+      setField('undefined_4', formatMod(derivedMods.Constitution || 0));
+
+      setField('intelligence', derivedScores.Intelligence || 10);
+      setField('undefined_7', formatMod(derivedMods.Intelligence || 0));
+
+      setField('WIS', derivedScores.Wisdom || 10);
+      setField('undefined_10', formatMod(derivedMods.Wisdom || 0));
+
+      setField('charisma', derivedScores.Charisma || 10);
+      setField('undefined_15', formatMod(derivedMods.Charisma || 0));
+
+      // Initiative & Breakdown Fields
+      const totalInit = recalcedData.initiative || 0;
+      const dexInitMod = derivedMods.Dexterity || 0;
+      const miscInitMod = totalInit - dexInitMod;
+      setField('INITIATIVE', formatMod(totalInit));
+      setField('undefined_18', formatMod(dexInitMod));
+      setField('undefined_19', miscInitMod !== 0 ? formatMod(miscInitMod) : '');
+
+      // Armor Class & Breakdown Fields
+      const totalAC = recalcedData.armor_class || 10;
+      const dexAcMod = derivedMods.Dexterity || 0;
+      const armorBonus = recalcedData.armor_bonus || 0;
+      const shieldBonus = recalcedData.shield_bonus || 0;
+      const miscAcMod = totalAC - 10 - dexAcMod - armorBonus - shieldBonus;
+
       setField('hit points', recalcedData.hit_points || 8);
-      setField('armor class', recalcedData.armor_class || 10);
+      setField('armor class', totalAC);
+      setField('10', '10');
+      setField('undefined_22', armorBonus || '');
+      setField('undefined_23', shieldBonus || '');
+      setField('undefined_24', formatMod(dexAcMod));
+      setField('undefined_25', '');
+      setField('undefined_26', '');
+      setField('undefined_27', miscAcMod !== 0 ? formatMod(miscAcMod) : '');
+
       setField('TOUCH', recalcedData.touch_ac || 10);
       setField('FLATFOOTED', recalcedData.flat_footed_ac || 10);
+      setField('SPEED', `${recalcedData.speed || 30} ft`);
       setField('BASE ATTACK BONUS', recalcedData.bab >= 0 ? `+${recalcedData.bab}` : recalcedData.bab || 0);
-      setField('CMB', recalcedData.cmb >= 0 ? `+${recalcedData.cmb}` : recalcedData.cmb || 0);
-      setField('CMD', recalcedData.cmd || 10);
-      setField('INITIATIVE', recalcedData.initiative >= 0 ? `+${recalcedData.initiative}` : recalcedData.initiative || 0);
 
-      // Saves
+      // Saves Breakdown Fields
       const saves = recalcedData.saving_throws || {};
-      setField('FORTITUDE', saves.fortitude >= 0 ? `+${saves.fortitude}` : saves.fortitude || 0);
-      setField('REFLEX', saves.reflex >= 0 ? `+${saves.reflex}` : saves.reflex || 0);
-      setField('WILL', saves.will >= 0 ? `+${saves.will}` : saves.will || 0);
+      const baseFort = recalcedData.class_data?.base_saves?.fortitude || 0;
+      const baseRef = recalcedData.class_data?.base_saves?.reflex || 0;
+      const baseWill = recalcedData.class_data?.base_saves?.will || 0;
+
+      const fortTotal = saves.Fortitude ?? saves.fortitude ?? 0;
+      const refTotal = saves.Reflex ?? saves.reflex ?? 0;
+      const willTotal = saves.Will ?? saves.will ?? 0;
+
+      const fortConMod = derivedMods.Constitution || 0;
+      const refDexMod = derivedMods.Dexterity || 0;
+      const willWisMod = derivedMods.Wisdom || 0;
+
+      const fortMiscMod = fortTotal - baseFort - fortConMod;
+      const refMiscMod = refTotal - baseRef - refDexMod;
+      const willMiscMod = willTotal - baseWill - willWisMod;
+
+      setField('FORTITUDE', formatMod(fortTotal));
+      setField('undefined_40', formatMod(baseFort));
+      setField('undefined_41', formatMod(fortConMod));
+      setField('undefined_43', fortMiscMod !== 0 ? formatMod(fortMiscMod) : '');
+
+      setField('REFLEX', formatMod(refTotal));
+      setField('undefined_45', formatMod(baseRef));
+      setField('undefined_46', formatMod(refDexMod));
+      setField('undefined_48', refMiscMod !== 0 ? formatMod(refMiscMod) : '');
+
+      setField('WILL', formatMod(willTotal));
+      setField('undefined_50', formatMod(baseWill));
+      setField('undefined_51', formatMod(willWisMod));
+      setField('undefined_53', willMiscMod !== 0 ? formatMod(willMiscMod) : '');
+
+      // CMB & CMD Breakdown Fields
+      const totalCmb = recalcedData.cmb || 0;
+      const totalCmd = recalcedData.cmd || 10;
+      const babVal = recalcedData.bab || 0;
+      const strModVal = derivedMods.Strength || 0;
+      const dexModVal = derivedMods.Dexterity || 0;
+
+      setField('CMB', formatMod(totalCmb));
+      setField('undefined_69', formatMod(babVal));
+      setField('undefined_70', formatMod(strModVal));
+      setField('undefined_71', '');
+
+      setField('CMD', totalCmd);
+      setField('undefined_78', formatMod(babVal));
+      setField('undefined_79', formatMod(strModVal));
+      setField('undefined_80', formatMod(dexModVal));
+      setField('undefined_81', '');
 
       // Encumbrance & Capacity
       const totalWeight = recalcedData.total_weight || 0;
@@ -409,6 +488,24 @@ export default function PF1eLiveSheet() {
             📊 Özet Görünüm
           </button>
           <button 
+            onClick={() => setViewMode('spells')}
+            style={{
+              padding: '6px 12px',
+              fontSize: '12px',
+              borderRadius: '6px',
+              border: '1px solid #7c6ef7',
+              background: viewMode === 'spells' ? '#7c6ef7' : 'transparent',
+              color: viewMode === 'spells' ? '#ffffff' : '#a594ff',
+              fontWeight: '600',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px'
+            }}
+          >
+            <Wand2 size={13} /> Büyü Kitabı ({(store.spells || []).length})
+          </button>
+          <button 
             onClick={handleDownloadPdf}
             className="btn btn-secondary"
             style={{ padding: '6px 10px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '4px' }}
@@ -455,33 +552,167 @@ export default function PF1eLiveSheet() {
             </div>
           )}
         </div>
-      ) : (
-        /* Summary view alternative */
+      ) : viewMode === 'summary' ? (
+        /* Summary view alternative with detailed mathematical stat breakdowns */
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
           
-          {/* Combat Summary Grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(100px, 1fr))', gap: '12px' }}>
-            <div style={{ background: '#16213e', padding: '12px', borderRadius: '8px', textAlign: 'center' }}>
-              <Heart size={18} style={{ color: '#e94560' }} />
-              <div style={{ fontSize: '10px', color: '#8b949e' }}>HP</div>
-              <div style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>{recalcedData.hit_points || 8}</div>
-            </div>
-            <div style={{ background: '#16213e', padding: '12px', borderRadius: '8px', textAlign: 'center' }}>
-              <Shield size={18} style={{ color: '#3fb950' }} />
-              <div style={{ fontSize: '10px', color: '#8b949e' }}>AC</div>
-              <div style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>{recalcedData.armor_class || 10}</div>
-            </div>
-            <div style={{ background: '#16213e', padding: '12px', borderRadius: '8px', textAlign: 'center' }}>
-              <Sword size={18} style={{ color: 'var(--accent-gold)' }} />
-              <div style={{ fontSize: '10px', color: '#8b949e' }}>BAB</div>
-              <div style={{ fontSize: '1.4rem', fontWeight: 'bold' }}>+{recalcedData.bab || 0}</div>
-            </div>
-            <div style={{ background: '#16213e', padding: '12px', borderRadius: '8px', textAlign: 'center' }}>
-              <Sparkles size={18} style={{ color: 'var(--accent-gold)' }} />
-              <div style={{ fontSize: '10px', color: '#8b949e' }}>CMB / CMD</div>
-              <div style={{ fontSize: '1.2rem', fontWeight: 'bold' }}>+{recalcedData.cmb || 0} / {recalcedData.cmd || 10}</div>
+          {/* Ability Scores Breakdown Grid */}
+          <div>
+            <h4 style={{ color: 'var(--accent-gold)', fontSize: '1.1rem', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Activity size={16} /> Yetenek Puanları ve Katkıları (Ability Breakdown)
+            </h4>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '10px' }}>
+              {Object.entries(recalcedData.ability_scores || store.abilities || {}).map(([abName, totalScore]) => {
+                if (abName === 'power_points') return null;
+                const normName = abName.charAt(0).toUpperCase() + abName.slice(1);
+                const baseScore = store.abilities[normName.toLowerCase()] || store.abilities[abName] || totalScore;
+                const mod = recalcedData.ability_modifiers?.[normName] ?? Math.floor((totalScore - 10) / 2);
+                const diff = totalScore - baseScore;
+                const modSign = mod >= 0 ? `+${mod}` : `${mod}`;
+                return (
+                  <div key={abName} style={{ background: '#141426', border: '1px solid rgba(201,168,76,0.2)', padding: '10px', borderRadius: '8px', textAlign: 'center' }}>
+                    <div style={{ fontSize: '11px', color: 'var(--color-text-secondary)', fontWeight: 'bold', textTransform: 'uppercase' }}>{normName}</div>
+                    <div style={{ fontSize: '1.5rem', fontWeight: '800', color: 'var(--accent-gold)', margin: '2px 0' }}>
+                      {totalScore} <span style={{ fontSize: '13px', color: '#3fb950' }}>({modSign})</span>
+                    </div>
+                    <div style={{ fontSize: '10px', color: '#8b949e' }}>
+                      {baseScore} Taban {diff !== 0 ? `${diff >= 0 ? '+' : ''}${diff} Bonusu` : ''}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
+
+          {/* Combat Summary Grid with Math Breakdown */}
+          <div>
+            <h4 style={{ color: 'var(--accent-gold)', fontSize: '1.1rem', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Shield size={16} /> Dövüş ve Savunma Detayları (Stat Breakdown)
+            </h4>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '12px' }}>
+              
+              {/* HP Breakdown */}
+              <div style={{ background: '#141426', border: '1px solid rgba(233,69,96,0.3)', padding: '12px', borderRadius: '8px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '12px', color: '#8b949e', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <Heart size={14} style={{ color: '#e94560' }} /> CAN PUANI (HP)
+                  </span>
+                  <span style={{ fontSize: '1.4rem', fontWeight: 'bold', color: '#f0e6d2' }}>{recalcedData.hit_points || 8}</span>
+                </div>
+                <div style={{ fontSize: '11px', color: '#d4c5a9', marginTop: '6px', borderTop: '1px dashed rgba(255,255,255,0.08)', paddingTop: '6px' }}>
+                  Formül: <b>{recalcedData.class_data?.hit_die ? `d${recalcedData.class_data.hit_die}` : 'd10'} Taban</b> + <b>{(recalcedData.ability_modifiers?.Constitution || 0) * level} Con Mod</b>
+                  {(recalcedData.applied_modifiers || []).filter(m => m.target === 'hp' && m.value > 0).map((m, i) => (
+                    <span key={i} style={{ color: '#3fb950' }}> + {m.value} ({m.source})</span>
+                  ))}
+                </div>
+              </div>
+
+              {/* AC Breakdown */}
+              <div style={{ background: '#141426', border: '1px solid rgba(63,185,80,0.3)', padding: '12px', borderRadius: '8px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '12px', color: '#8b949e', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <Shield size={14} style={{ color: '#3fb950' }} /> ZIRH SINIFI (AC)
+                  </span>
+                  <span style={{ fontSize: '1.4rem', fontWeight: 'bold', color: '#f0e6d2' }}>{recalcedData.armor_class || 10}</span>
+                </div>
+                <div style={{ fontSize: '11px', color: '#d4c5a9', marginTop: '6px', borderTop: '1px dashed rgba(255,255,255,0.08)', paddingTop: '6px' }}>
+                  Formül: <b>10 Taban</b> + <b>{recalcedData.ability_modifiers?.Dexterity || 0} Dex Mod</b>
+                  {(recalcedData.applied_modifiers || []).filter(m => m.target === 'ac' && m.value > 0).map((m, i) => (
+                    <span key={i} style={{ color: '#3fb950' }}> + {m.value} ({m.source})</span>
+                  ))}
+                  <div style={{ fontSize: '10px', color: '#8b949e', marginTop: '4px' }}>
+                    Touch AC: <b>{recalcedData.touch_ac || 10}</b> | Flat-Footed: <b>{recalcedData.flat_footed_ac || 10}</b>
+                  </div>
+                </div>
+              </div>
+
+              {/* Initiative Breakdown */}
+              <div style={{ background: '#141426', border: '1px solid rgba(201,168,76,0.3)', padding: '12px', borderRadius: '8px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '12px', color: '#8b949e', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <Sparkles size={14} style={{ color: 'var(--accent-gold)' }} /> İNİSİYATİF
+                  </span>
+                  <span style={{ fontSize: '1.4rem', fontWeight: 'bold', color: 'var(--accent-gold)' }}>
+                    {recalcedData.initiative >= 0 ? `+${recalcedData.initiative}` : recalcedData.initiative || 0}
+                  </span>
+                </div>
+                <div style={{ fontSize: '11px', color: '#d4c5a9', marginTop: '6px', borderTop: '1px dashed rgba(255,255,255,0.08)', paddingTop: '6px' }}>
+                  Formül: <b>{recalcedData.ability_modifiers?.Dexterity >= 0 ? `+${recalcedData.ability_modifiers?.Dexterity}` : recalcedData.ability_modifiers?.Dexterity || 0} Dex Mod</b>
+                  {(recalcedData.applied_modifiers || []).filter(m => m.target === 'initiative' && m.value !== 0).map((m, i) => (
+                    <span key={i} style={{ color: '#38bdf8' }}> + {m.value} ({m.source})</span>
+                  ))}
+                </div>
+              </div>
+
+              {/* BAB & Combat Attacks Breakdown */}
+              <div style={{ background: '#141426', border: '1px solid rgba(124,110,247,0.3)', padding: '12px', borderRadius: '8px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '12px', color: '#8b949e', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                    <Sword size={14} style={{ color: '#7c6ef7' }} /> BAB & SALDIRI
+                  </span>
+                  <span style={{ fontSize: '1.4rem', fontWeight: 'bold', color: '#7c6ef7' }}>+{recalcedData.bab || 0}</span>
+                </div>
+                <div style={{ fontSize: '11px', color: '#d4c5a9', marginTop: '6px', borderTop: '1px dashed rgba(255,255,255,0.08)', paddingTop: '6px' }}>
+                  Yakın Dövüş (Melee): <b>+{(recalcedData.melee_attack_bonus ?? (recalcedData.bab || 0) + (recalcedData.ability_modifiers?.Strength || 0))}</b> (+{recalcedData.bab || 0} BAB + {recalcedData.ability_modifiers?.Strength || 0} Str)
+                  <br />
+                  Menzilli (Ranged): <b>+{(recalcedData.ranged_attack_bonus ?? (recalcedData.bab || 0) + (recalcedData.ability_modifiers?.Dexterity || 0))}</b> (+{recalcedData.bab || 0} BAB + {recalcedData.ability_modifiers?.Dexterity || 0} Dex)
+                  <div style={{ fontSize: '10px', color: '#8b949e', marginTop: '4px' }}>
+                    CMB: <b>+{recalcedData.cmb || 0}</b> | CMD: <b>{recalcedData.cmd || 10}</b>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Saving Throws Math Breakdown */}
+          <div style={{ background: '#141426', border: '1px solid rgba(255,255,255,0.08)', padding: '14px', borderRadius: '8px' }}>
+            <h4 style={{ color: 'var(--accent-gold)', fontSize: '1rem', marginBottom: '10px' }}>Kurtarma Zarları Detayı (Saving Throws)</h4>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', gap: '10px' }}>
+              {['Fortitude', 'Reflex', 'Will'].map(saveKey => {
+                const totalSave = recalcedData.saving_throws?.[saveKey] || 0;
+                const abKey = saveKey === 'Fortitude' ? 'Constitution' : saveKey === 'Reflex' ? 'Dexterity' : 'Wisdom';
+                const abMod = recalcedData.ability_modifiers?.[abKey] || 0;
+                const featSaveMods = (recalcedData.applied_modifiers || []).filter(m => m.target === `saving_throws.${saveKey}` || m.target === 'saving_throws.All');
+                return (
+                  <div key={saveKey} style={{ background: '#1a1a2e', padding: '10px', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', fontWeight: 'bold' }}>
+                      <span>{saveKey}</span>
+                      <span style={{ color: 'var(--accent-gold)' }}>{totalSave >= 0 ? `+${totalSave}` : totalSave}</span>
+                    </div>
+                    <div style={{ fontSize: '10px', color: '#8b949e', marginTop: '4px' }}>
+                      Mod: {abMod >= 0 ? `+${abMod}` : abMod} ({abKey.slice(0, 3)})
+                      {featSaveMods.map((m, i) => (
+                        <span key={i} style={{ color: '#38bdf8' }}> +{m.value} ({m.source})</span>
+                      ))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Applied Modifiers Breakdown List */}
+          {(recalcedData.applied_modifiers || []).length > 0 && (
+            <div style={{ background: 'rgba(201,168,76,0.04)', border: '1px solid rgba(201,168,76,0.2)', padding: '14px', borderRadius: '8px' }}>
+              <h4 style={{ color: 'var(--accent-gold)', fontSize: '1rem', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <Sparkles size={16} /> Aktif Modifikatörler ve Kaynakları ({recalcedData.applied_modifiers.length})
+              </h4>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '8px' }}>
+                {recalcedData.applied_modifiers.map((mod, idx) => (
+                  <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#141426', padding: '6px 10px', borderRadius: '6px', fontSize: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                    <span>
+                      <b style={{ color: '#f0e6d2' }}>{mod.source}</b>
+                      <span style={{ fontSize: '10px', color: '#8b949e', marginLeft: '6px' }}>({mod.type})</span>
+                    </span>
+                    <span style={{ fontWeight: 'bold', color: mod.value >= 0 ? '#3fb950' : '#e94560' }}>
+                      {mod.description || `${mod.value >= 0 ? '+' : ''}${mod.value} to ${mod.target}`}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Encumbrance */}
           <div style={{ background: 'rgba(255, 255, 255, 0.02)', padding: '12px', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
@@ -495,7 +726,7 @@ export default function PF1eLiveSheet() {
 
           {/* Categorized Equipment List */}
           <div>
-            <h4 style={{ color: 'var(--accent-gold)', fontSize: '1.1rem', marginBottom: '10px' }}>Categorized Inventory</h4>
+            <h4 style={{ color: 'var(--accent-gold)', fontSize: '1.1rem', marginBottom: '10px' }}>Kategorize Envanter (Inventory)</h4>
             <div style={{ display: 'flex', gap: '4px', background: 'rgba(0,0,0,0.3)', padding: '4px', borderRadius: '8px', marginBottom: '12px' }}>
               {['weapons', 'armor_shields', 'consumables', 'gear'].map(cat => (
                 <button
@@ -532,6 +763,118 @@ export default function PF1eLiveSheet() {
             </div>
           </div>
 
+        </div>
+      ) : (
+        /* Spellbook & Interactive Spell Cards View Area */
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: 'rgba(124,110,247,0.08)', padding: '14px 18px', borderRadius: '10px', border: '1px solid rgba(124,110,247,0.3)' }}>
+            <div>
+              <h3 style={{ margin: 0, fontSize: '1.2rem', color: '#a594ff', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <Wand2 size={20} />
+                Büyü Kitabı & Etkileşimli Büyü Kartları ({name})
+              </h3>
+              <p style={{ margin: '4px 0 0', fontSize: '12px', color: '#8b949e' }}>
+                Hazırlanan veya bilinen büyüleri kart şeklinde görüntüleyin, zar atın veya büyü etkisi uygulayın.
+              </p>
+            </div>
+            <div style={{ fontSize: '12px', fontWeight: 'bold', color: '#a594ff', background: 'rgba(124,110,247,0.2)', padding: '4px 12px', borderRadius: '12px', border: '1px solid rgba(124,110,247,0.4)' }}>
+              Seviye {level || 1} {charClass || 'Büyücü'}
+            </div>
+          </div>
+
+          {(!store.spells || store.spells.length === 0) ? (
+            <div style={{ textAlign: 'center', padding: '40px 20px', background: 'rgba(0,0,0,0.25)', borderRadius: '10px', border: '1px dashed rgba(124,110,247,0.3)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
+              <Wand2 size={40} style={{ color: '#7c6ef7' }} />
+              <div style={{ fontSize: '15px', color: '#f0e6d2', fontWeight: 'bold' }}>Henüz Büyü Eklemediniz</div>
+              <p style={{ fontSize: '13px', color: '#8b949e', maxWidth: '400px', margin: 0 }}>
+                Sol paneldeki <b>Büyü Seçimi</b> alanından Pathfinder 1e veritabanındaki 3.000+ büyü arasından karakterinize büyü ekleyebilirsiniz.
+              </p>
+            </div>
+          ) : (
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '16px' }}>
+              {store.spells.map((sp, idx) => (
+                <SpellCard
+                  key={idx}
+                  spell={sp}
+                  characterLevel={level}
+                  characterClass={charClass}
+                  onRemoveSpell={(spellNameToRemove) => store.removeSpell(spellNameToRemove)}
+                  compact={false}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Companion Live Stat Block Card */}
+      {store.companion && (
+        <div style={{ marginTop: '20px', padding: '20px', background: 'linear-gradient(135deg, rgba(201,168,76,0.08) 0%, rgba(10,8,20,0.9) 100%)', border: '2px solid var(--accent-gold)', borderRadius: '12px', boxShadow: '0 0 20px rgba(0,0,0,0.5)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span style={{ fontSize: '1.4rem' }}>🐾</span>
+              <div>
+                <h4 style={{ margin: 0, color: 'var(--accent-gold)', fontFamily: 'Cinzel, serif', fontSize: '1.2rem' }}>
+                  {store.companion.name || 'Yoldaş'} ({store.companion.species})
+                </h4>
+                <span style={{ fontSize: '12px', color: '#8b949e' }}>
+                  {store.companion.type === 'animal_companion' ? 'Hayvan Yoldaş (Animal Companion)' :
+                   store.companion.type === 'eidolon' ? 'Summoner Eidolon' :
+                   store.companion.type === 'familiar' ? 'Sihirli Familiar' : 'Binek (Mount)'}
+                </span>
+              </div>
+            </div>
+            <div style={{ fontSize: '12px', background: 'rgba(201,168,76,0.15)', color: 'var(--accent-gold)', padding: '4px 12px', borderRadius: '12px', border: '1px solid rgba(201,168,76,0.3)', fontWeight: 'bold' }}>
+              Seviye {store.companion.level || 1} Stat Bloğu
+            </div>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '10px', marginBottom: '12px' }}>
+            <div style={{ padding: '8px 12px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '6px' }}>
+              <div style={{ fontSize: '10px', color: '#8b949e', textTransform: 'uppercase' }}>Can Puanı (HP)</div>
+              <div style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#3fb950' }}>{store.companion.hp} HP</div>
+              <div style={{ fontSize: '10px', color: '#8b949e' }}>{store.companion.hd}d8 HD</div>
+            </div>
+
+            <div style={{ padding: '8px 12px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '6px' }}>
+              <div style={{ fontSize: '10px', color: '#8b949e', textTransform: 'uppercase' }}>Zırh Sınıfı (AC)</div>
+              <div style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#e94560' }}>{store.companion.ac} AC</div>
+              <div style={{ fontSize: '10px', color: '#8b949e' }}>Doğal Zırh</div>
+            </div>
+
+            <div style={{ padding: '8px 12px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '6px' }}>
+              <div style={{ fontSize: '10px', color: '#8b949e', textTransform: 'uppercase' }}>Saldırı (Attacks)</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: 'bold', color: 'var(--accent-gold)' }}>{store.companion.attacks}</div>
+              <div style={{ fontSize: '10px', color: '#8b949e' }}>BAB: {store.companion.bab}</div>
+            </div>
+          </div>
+
+          {store.companion.tricks && store.companion.tricks.length > 0 && (
+            <div style={{ marginTop: '8px' }}>
+              <span style={{ fontSize: '12px', color: 'var(--accent-gold)', fontWeight: 'bold' }}>Komut Numaraları (Tricks): </span>
+              <span style={{ fontSize: '12px', color: '#f0e6d2' }}>{store.companion.tricks.join(', ')}</span>
+            </div>
+          )}
+
+          {store.companion.evolutions && store.companion.evolutions.length > 0 && (
+            <div style={{ marginTop: '8px' }}>
+              <span style={{ fontSize: '12px', color: '#c4beff', fontWeight: 'bold' }}>Eidolon Evrimleri: </span>
+              <span style={{ fontSize: '12px', color: '#f0e6d2' }}>{store.companion.evolutions.join(', ')}</span>
+            </div>
+          )}
+
+          {store.companion.masterBonus && (
+            <div style={{ marginTop: '8px' }}>
+              <span style={{ fontSize: '12px', color: '#52b788', fontWeight: 'bold' }}>Efendi Bonusu: </span>
+              <span style={{ fontSize: '12px', color: '#ffffff', fontWeight: 'bold' }}>{store.companion.masterBonus}</span>
+            </div>
+          )}
+
+          {store.companion.notes && (
+            <div style={{ marginTop: '8px', fontSize: '11px', color: '#8b949e', fontStyle: 'italic' }}>
+              Notlar: {store.companion.notes}
+            </div>
+          )}
         </div>
       )}
 

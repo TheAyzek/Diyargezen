@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Search, X, ChevronDown, ChevronRight, Sparkles } from 'lucide-react';
+import { cleanText } from '../utils/textSanitizer';
 
 export default function EntitySelectorModal({ isOpen, onClose, system, category, title, onSelect }) {
   const [entities, setEntities] = useState([]);
@@ -179,8 +180,8 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
             <div style={{ textAlign: 'center', padding: '40px 0', color: '#c9a84c' }}>Aranıyor...</div>
           ) : entities.length === 0 ? (
             <div style={{ textAlign: 'center', padding: '40px 0', color: '#8b949e' }}>Sonuç bulunamadı.</div>
-          ) : isClassCategory ? (
-            /* Class Category Accordion Grouping */
+          ) : isClassCategory && !searchQuery && mainClasses.length > 0 ? (
+            /* Class Category Accordion Grouping when browsing */
             mainClasses.map((cls, idx) => {
               const archetypes = archetypesMap[cls.isim] || [];
               const isExpanded = !!expandedClasses[cls.isim];
@@ -240,7 +241,7 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
                   </div>
 
                   {/* Expanded Archetypes Section */}
-                  {isExpanded && archetypes.length > 0 && (
+                  {(isExpanded || searchQuery) && archetypes.length > 0 && (
                     <div style={{ 
                       marginTop: '10px', 
                       paddingTop: '10px', 
@@ -271,10 +272,9 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
                               {arch.isim}
                             </div>
                             {arch.aciklama && (
-                              <div 
-                                style={{ fontSize: '12px', color: '#94a3b8', marginTop: '2px' }}
-                                dangerouslySetInnerHTML={{ __html: arch.aciklama }}
-                              />
+                              <div style={{ fontSize: '12px', color: '#94a3b8', marginTop: '2px' }}>
+                                {cleanText(arch.aciklama)}
+                              </div>
                             )}
                           </div>
                           <button
@@ -296,42 +296,112 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
             })
           ) : (
             /* Generic Categories (Races, Feats, Equipment, Spells) */
-            entities.map((ent, idx) => (
-              <div 
-                key={idx}
-                onClick={() => {
-                  onSelect(ent);
-                  onClose();
-                }}
-                style={{
-                  background: 'rgba(255, 255, 255, 0.03)',
-                  border: '1px solid rgba(255, 255, 255, 0.05)',
-                  borderRadius: '8px',
-                  padding: '14px 18px',
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease',
-                  textAlign: 'left'
-                }}
-                onMouseOver={(e) => {
-                  e.currentTarget.style.background = 'rgba(201, 168, 76, 0.05)';
-                  e.currentTarget.style.borderColor = 'rgba(201, 168, 76, 0.3)';
-                }}
-                onMouseOut={(e) => {
-                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.05)';
-                }}
-              >
-                <div style={{ fontWeight: 'bold', color: '#f0e6d2', marginBottom: '6px', fontSize: '15px' }}>
-                  {ent.isim}
+            entities.map((ent, idx) => {
+              const isRaceCategory = category === 'races';
+              const sv = ent.sistem_verisi || {};
+
+              // Extract racial ability bonus text
+              let racialBonusText = sv.ability_score_increase_text;
+              if (!racialBonusText && sv.ability_score_increase && typeof sv.ability_score_increase === 'object') {
+                const parts = Object.entries(sv.ability_score_increase).map(([k, v]) => `${v >= 0 ? '+' : ''}${v} ${k.charAt(0).toUpperCase() + k.slice(1)}`);
+                if (parts.length > 0) racialBonusText = parts.join(', ');
+              }
+              const nameL = (ent.isim || ent.name || '').toLowerCase();
+              if (!racialBonusText && (nameL.includes('human') || nameL.includes('half-elf') || nameL.includes('half-orc'))) {
+                racialBonusText = '+2 Herhangi Bir Yetenek Puanı (Esnek Puan)';
+              }
+
+              const sizeText = sv.size || 'Medium';
+              const speedText = sv.speed ? `${sv.speed} ft.` : null;
+              const visionText = sv.vision ? `${sv.vision} ${sv.vision_range ? sv.vision_range + 'ft' : ''}` : null;
+              const traitsList = Array.isArray(sv.traits) ? sv.traits.slice(0, 6) : [];
+
+              return (
+                <div 
+                  key={idx}
+                  onClick={() => {
+                    onSelect(ent);
+                    onClose();
+                  }}
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.03)',
+                    border: '1px solid rgba(201, 168, 76, 0.18)',
+                    borderRadius: '8px',
+                    padding: '14px 18px',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease',
+                    textAlign: 'left'
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.background = 'rgba(201, 168, 76, 0.06)';
+                    e.currentTarget.style.borderColor = 'rgba(201, 168, 76, 0.4)';
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)';
+                    e.currentTarget.style.borderColor = 'rgba(201, 168, 76, 0.18)';
+                  }}
+                >
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+                    <div style={{ fontWeight: 'bold', color: '#f0e6d2', fontSize: '16px' }}>
+                      {ent.isim}
+                    </div>
+                    {isRaceCategory && (
+                      <div style={{ display: 'flex', gap: '6px' }}>
+                        <span style={{ fontSize: '11px', background: 'rgba(201,168,76,0.15)', color: '#c9a84c', border: '1px solid rgba(201,168,76,0.3)', padding: '2px 8px', borderRadius: '4px', fontWeight: 'bold' }}>
+                          {sizeText}
+                        </span>
+                        {speedText && (
+                          <span style={{ fontSize: '11px', background: 'rgba(56,189,248,0.15)', color: '#38bdf8', border: '1px solid rgba(56,189,248,0.3)', padding: '2px 8px', borderRadius: '4px' }}>
+                            {speedText}
+                          </span>
+                        )}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Highlighted Racial Bonus Box */}
+                  {isRaceCategory && racialBonusText && (
+                    <div style={{
+                      background: 'linear-gradient(90deg, rgba(201,168,76,0.12) 0%, rgba(63,185,80,0.08) 100%)',
+                      border: '1px solid rgba(201,168,76,0.35)',
+                      borderRadius: '6px',
+                      padding: '6px 12px',
+                      marginBottom: '8px',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px'
+                    }}>
+                      <span style={{ fontSize: '13px', color: '#f0e6d2' }}>✨ <b>Irk Bonusları:</b></span>
+                      <span style={{ fontSize: '13px', fontWeight: 'bold', color: '#3fb950' }}>
+                        {racialBonusText}
+                      </span>
+                    </div>
+                  )}
+
+                  {/* Racial Traits Chips */}
+                  {isRaceCategory && (traitsList.length > 0 || visionText) && (
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', marginBottom: '8px' }}>
+                      {visionText && (
+                        <span style={{ fontSize: '10px', background: 'rgba(124,110,247,0.15)', color: '#a594ff', border: '1px solid rgba(124,110,247,0.3)', padding: '1px 6px', borderRadius: '3px' }}>
+                          👁 {visionText}
+                        </span>
+                      )}
+                      {traitsList.map((t, ti) => (
+                        <span key={ti} style={{ fontSize: '10px', background: 'rgba(255,255,255,0.05)', color: '#d4c5a9', border: '1px solid rgba(255,255,255,0.1)', padding: '1px 6px', borderRadius: '3px' }}>
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  {ent.aciklama && (
+                    <div style={{ fontSize: '13px', color: '#8b949e', lineHeight: '1.4' }}>
+                      {cleanText(ent.aciklama.slice(0, 220)) + (ent.aciklama.length > 220 ? '...' : '')}
+                    </div>
+                  )}
                 </div>
-                {ent.aciklama && (
-                  <div 
-                    style={{ fontSize: '13px', color: '#8b949e', lineHeight: '1.4' }}
-                    dangerouslySetInnerHTML={{ __html: ent.aciklama }}
-                  />
-                )}
-              </div>
-            ))
+              );
+            })
           )}
         </div>
       </div>

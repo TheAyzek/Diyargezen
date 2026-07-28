@@ -3,6 +3,8 @@ from typing import Dict, Any, List, Optional
 from pathlib import Path
 import re
 
+_GLOBAL_ENTITY_CACHE: Dict[tuple, tuple] = {}
+
 def extract_weight_and_qty(item: Dict[str, Any]) -> tuple[float, int]:
     # Quantity extraction
     qty = item.get("quantity")
@@ -202,6 +204,12 @@ class BaseCalculator(ABC):
                 if p["target"] not in explicit_targets:
                     active_mechanics.append(p)
                     applied_modifiers.append(p)
+
+            # If payload was a stub without description or mechanics, return False
+            # so names_to_query will fetch the full entity from SQLite DB.
+            if not explicit_mechs and not parsed and len(desc) < 15:
+                return False
+
             return True
 
         names_to_query = []
@@ -251,58 +259,63 @@ class BaseCalculator(ABC):
                 elif isinstance(t, str) and t:
                     names_to_query.append((t, "trait"))
 
-        # Query database for entities without in-memory detailed data
-        if names_to_query:
+        # Query database for entities without in-memory detailed data (with global in-memory cache)
+        db_key = str(self.db_path)
+        uncached_names = [n for n in names_to_query if (db_key, sys_db, n[0]) not in _GLOBAL_ENTITY_CACHE]
+
+        if uncached_names:
             try:
-                conn = sqlite3.connect(str(self.db_path))
+                conn = sqlite3.connect(db_key)
                 cursor = conn.cursor()
                 
-                placeholders = ",".join("?" for _ in names_to_query)
-                query_names = [n[0] for n in names_to_query]
+                placeholders = ",".join("?" for _ in uncached_names)
+                query_names = [n[0] for n in uncached_names]
                 cursor.execute(
                     f"SELECT isim, aciklama, sistem_verisi FROM entities WHERE sistem = ? AND isim IN ({placeholders})",
                     [sys_db] + query_names
                 )
                 
                 rows = cursor.fetchall()
-                db_entities = {row[0]: (row[1] or "", json.loads(row[2]) if row[2] else {}) for row in rows}
-                
-                for name, category in names_to_query:
-                    if name in db_entities:
-                        desc, payload = db_entities[name]
-                        
-                        active_prerequisites.extend(payload.get("prerequisites", []))
-                        
-                        explicit_mechs = _extract_mechanics_from_payload(payload)
-                        explicit_targets = set()
-                        for m in explicit_mechs:
-                            m_copy = m.copy()
-                            m_copy["source"] = name
-                            m_copy["type"] = category
-                            active_mechanics.append(m_copy)
-                            
-                            val = m.get("value", 0)
-                            try:
-                                val = int(str(val).replace("+", ""))
-                            except:
-                                val = 0
-                            applied_modifiers.append({
-                                "target": m.get("target", ""),
-                                "value": val,
-                                "type": category,
-                                "source": name,
-                                "description": m.get("description") or f"+{val} bonus ({name})"
-                            })
-                            explicit_targets.add(m.get("target", ""))
-                        
-                        parsed = RuleParser.parse_description(desc, sys_db, name, category)
-                        for p in parsed:
-                            if p["target"] not in explicit_targets:
-                                active_mechanics.append(p)
-                                applied_modifiers.append(p)
-                                
+                for row in rows:
+                    name_key = row[0]
+                    desc_val = row[1] or ""
+                    payload_val = json.loads(row[2]) if row[2] else {}
+                    _GLOBAL_ENTITY_CACHE[(db_key, sys_db, name_key)] = (desc_val, payload_val)
                 conn.close()
-            except Exception:
+            except Exception as e:
+                logger.warning(f"Error querying entities for mechanics: {e}")
+
+        for name, category in names_to_query:
+            if (db_key, sys_db, name) in _GLOBAL_ENTITY_CACHE:
+                desc, payload = _GLOBAL_ENTITY_CACHE[(db_key, sys_db, name)]
+                
+                active_prerequisites.extend(payload.get("prerequisites", []))
+                
+                explicit_mechs = _extract_mechanics_from_payload(payload)
+                explicit_targets = set()
+                for m in explicit_mechs:
+                    m_copy = m.copy()
+                    m_copy["source"] = name
+                    m_copy["type"] = category
+                    active_mechanics.append(m_copy)
+                    
+                    val = m.get("value", 0)
+                    try: val = int(str(val).replace("+", ""))
+                    except: val = 0
+                    applied_modifiers.append({
+                        "target": m.get("target", ""),
+                        "value": val,
+                        "type": category,
+                        "source": name,
+                        "description": m.get("description") or f"+{val} bonus ({name})"
+                    })
+                    explicit_targets.add(m.get("target", ""))
+                
+                parsed = RuleParser.parse_description(desc, sys_db, name, category)
+                for p in parsed:
+                    if p["target"] not in explicit_targets:
+                        active_mechanics.append(p)
+                        applied_modifiers.append(p)
                 pass
                 
         return {
@@ -445,11 +458,20 @@ class BaseCalculator(ABC):
         }
         active = self.get_active_mechanics(character)
         for m in active["mechanics"]:
-            target = m.get("target", "")
-            if target in ABILITY_SCORE_NAMES:
-                # These are handled by ability_score_increase above — skip
-                continue
-            if target in scores:
+            target = m.get("target", "").lower()
+            if target in ABILITY_SCORE_NAMES or target.replace("abilities.", "") in ABILITY_SCORE_NAMES:
+                clean_target = target.replace("abilities.", "")
+                # Skip race ASI to avoid double counting with extract_asi
+                if m.get("type") == "race":
+                    continue
+                if clean_target in scores:
+                    val = m.get("value", 0)
+                    try:
+                        val_int = int(val)
+                        scores[clean_target] += val_int
+                    except (ValueError, TypeError):
+                        pass
+            elif target in scores:
                 val = m.get("value", 0)
                 if isinstance(val, int):
                     scores[target] += val
@@ -964,20 +986,69 @@ class PF1e_Calculator(BaseCalculator):
 
         derived["bab"] += feat_bab_bonus
 
-        # ── ADIM 4: Envanter → Armor bilesenler + ACP + Max Dex siniri ──────────
+        # ── ADIM 4: Feat/Trait & Envanter → Weapon Attack, Damage, Armor, ACP, Speed ──────────
+        feat_names = set()
+        for f in character.get("feats", []):
+            fn = f.get("isim") or f.get("name") if isinstance(f, dict) else str(f)
+            if fn: feat_names.add(fn.lower())
+
+        trait_names = set()
+        for t in character.get("traits", []):
+            tn = t.get("isim") or t.get("name") if isinstance(t, dict) else str(t)
+            if tn: trait_names.add(tn.lower())
+
+        has_weapon_finesse = any("finesse" in f for f in feat_names)
+        has_weapon_focus = any("weapon focus" in f for f in feat_names)
+        has_point_blank = any("point-blank" in f or "point blank" in f for f in feat_names)
+        has_dodge = any("dodge" in f for f in feat_names)
+        has_fleet = any("fleet" in f for f in feat_names)
+        has_armor_expert = any("armor expert" in t for t in trait_names)
+        has_reactionary = any("reactionary" in t for t in trait_names)
+
+        # Dodge Feat (+1 Dodge AC)
+        if has_dodge:
+            misc_ac_bonus += 1
+
+        # Fleet Feat (+5 ft Speed)
+        base_speed = 30
+        if has_fleet:
+            base_speed += 5
+
         armor_bonus, shield_bonus, natural_armor, acp, dex_max = self._extract_armor(character)
 
-        # Character-level overrides (dogrudan set edilmis degerler her zaman kazanir)
+        # Character-level overrides
         armor_bonus   = max(armor_bonus, int(character.get("armor_bonus", 0)))
         shield_bonus  = max(shield_bonus, int(character.get("shield_bonus", 0)))
         natural_armor = int(character.get("natural_armor", 0))
         size_ac       = int(character.get("size_modifier_ac", 0))
 
-        # Max Dex kısıtlamasını uygula
-        dex_contrib = min(mods["dexterity"], dex_max) if dex_max < 999 else mods["dexterity"]
+        # Categorize equipment
+        categorized = categorize_items(character.get("equipment", []))
+        derived["armor_shields"] = categorized["armor_shields"]
+        derived["consumables"] = categorized["consumables"]
+        derived["gear"] = categorized["gear"]
 
-        # Armor Check Penalty → fiziksel becerilere uygula (sadece rank>0 olanlar)
+        # Speed Penalty from Medium/Heavy Armor
+        is_dwarf = "dwarf" in str(character.get("race", "")).lower()
+        armor_type = "light"
+        for arm in categorized["armor_shields"]:
+            sv_arm = arm.get("sistem_verisi") or {}
+            a_category = str(sv_arm.get("category") or sv_arm.get("armor_type") or "").lower()
+            a_name = str(arm.get("name") or arm.get("isim") or "").lower()
+            if "heavy" in a_category or "plate" in a_name or "full plate" in a_name:
+                armor_type = "heavy"
+            elif "medium" in a_category or "breastplate" in a_name or "chainmail" in a_name or "scale" in a_name:
+                armor_type = "medium"
+
+        if armor_type in ("medium", "heavy") and not is_dwarf:
+            derived["speed"] = max(15, base_speed - 10)
+        else:
+            derived["speed"] = base_speed
+
+        # Armor Check Penalty (ACP) adjustment with Armor Expert trait (-1 ACP)
         if acp < 0:
+            if has_armor_expert:
+                acp = min(0, acp + 1)
             if acp_reduction != 0:
                 acp_adj = abs(acp_reduction) if acp_reduction < 0 else acp_reduction
                 acp = min(0, acp + acp_adj)
@@ -985,11 +1056,14 @@ class PF1e_Calculator(BaseCalculator):
                 if sk in derived["skills"]:
                     ranks = max(0, int(skill_ranks.get(sk, 0)))
                     if ranks > 0:
-                        derived["skills"][sk] += acp  # acp zaten negatif veya 0
+                        derived["skills"][sk] += acp
 
         derived["armor_check_penalty"] = acp
 
-        # ── ADIM 5: Nihai AC, CMB, CMD, Inisiyatif ──────────────────────────────
+        # Max Dex kısıtlamasını uygula
+        dex_contrib = min(mods["dexterity"], dex_max) if dex_max < 999 else mods["dexterity"]
+
+        # ── ADIM 5: Nihai AC, CMB, CMD, Inisiyatif ve Silah Atak/Hasar Bloğu ────────
         size_cmb = int(character.get("size_modifier", 0))
 
         derived["armor_class"]    = 10 + dex_contrib + armor_bonus + shield_bonus + natural_armor + deflect_bonus + misc_ac_bonus + size_ac
@@ -999,28 +1073,69 @@ class PF1e_Calculator(BaseCalculator):
         derived["cmd"]            = 10 + derived["bab"] + mods["strength"] + dex_contrib - size_cmb + deflect_bonus
         derived["melee_attack_bonus"]  = derived["bab"] + mods["strength"]
         derived["ranged_attack_bonus"] = derived["bab"] + mods["dexterity"]
-        derived.setdefault("initiative", mods["dexterity"])
 
-        # Envanter Ağırlık Hesabı
+        # Calculate Weapon Cards (Attacks & Damage)
+        calculated_weapons = []
+        for w in categorized["weapons"]:
+            w_name = w.get("name") or w.get("isim") or "Silah"
+            w_name_lower = w_name.lower()
+            sv_w = w.get("sistem_verisi") or {}
+            
+            is_ranged = any(r in w_name_lower for r in ("bow", "crossbow", "sling", "dart", "javelin", "shuriken", "gun", "pistol", "rifle"))
+            is_finesseable = any(f in w_name_lower for f in ("dagger", "rapier", "shortsword", "kama", "nunchaku", "sai", "whip")) or ("light" in str(sv_w.get("weapon_type", "")).lower())
+            
+            if is_ranged:
+                atk_stat_mod = mods["dexterity"]
+            elif is_finesseable and has_weapon_finesse:
+                atk_stat_mod = mods["dexterity"]
+            else:
+                atk_stat_mod = mods["strength"]
+                
+            enhancement = 0
+            enh_match = re.search(r'\+([1-5])\b', w_name)
+            if enh_match:
+                enhancement = int(enh_match.group(1))
+            else:
+                enhancement = int(sv_w.get("enhancement") or 0)
+                
+            wf_bonus = 1 if has_weapon_focus else 0
+            pbs_atk = 1 if (is_ranged and has_point_blank) else 0
+            pbs_dmg = 1 if (is_ranged and has_point_blank) else 0
+            
+            total_atk = derived["bab"] + atk_stat_mod + enhancement + wf_bonus + pbs_atk
+            atk_str = f"+{total_atk}" if total_atk >= 0 else str(total_atk)
+            
+            base_damage = sv_w.get("damage") or "1d8"
+            if "dagger" in w_name_lower: base_damage = "1d4"
+            elif "shortsword" in w_name_lower or "scimitar" in w_name_lower or "club" in w_name_lower: base_damage = "1d6"
+            elif "greatsword" in w_name_lower or "greataxe" in w_name_lower: base_damage = "2d6"
+            
+            is_two_handed = any(t in w_name_lower for t in ("greatsword", "greataxe", "spear", "halberd", "scythe", "quarterstaff"))
+            if is_two_handed and not is_ranged:
+                dmg_stat_mod = int(mods["strength"] * 1.5)
+            elif is_ranged:
+                dmg_stat_mod = 0
+            else:
+                dmg_stat_mod = mods["strength"]
+                
+            total_dmg_mod = dmg_stat_mod + enhancement + pbs_dmg
+            dmg_str = f"{base_damage} + {total_dmg_mod}" if total_dmg_mod > 0 else (f"{base_damage} - {abs(total_dmg_mod)}" if total_dmg_mod < 0 else base_damage)
+            
+            w_copy = dict(w)
+            w_copy["calculated_attack"] = atk_str
+            w_copy["calculated_damage"] = dmg_str
+            w_copy["crit_range"] = sv_w.get("crit_range") or ("19-20/x2" if ("rapier" in w_name_lower or "scimitar" in w_name_lower) else "20/x2")
+            calculated_weapons.append(w_copy)
+
+        derived["weapons"] = calculated_weapons
+
+        # Envanter Ağıralık Hesabı
         total_weight = 0.0
         for item in character.get("equipment", []):
             if isinstance(item, dict):
                 w_val, qty = extract_weight_and_qty(item)
                 total_weight += w_val * qty
-        if total_weight == 0.0:
-            for cat in ("weapons", "armor_shields", "consumables", "gear"):
-                for item in character.get(cat, []):
-                    if isinstance(item, dict):
-                        w_val, qty = extract_weight_and_qty(item)
-                        total_weight += w_val * qty
         derived["total_weight"] = round(total_weight, 2)
-
-        # Categorize equipment lists for display
-        categorized = categorize_items(character.get("equipment", []))
-        derived["weapons"] = categorized["weapons"]
-        derived["armor_shields"] = categorized["armor_shields"]
-        derived["consumables"] = categorized["consumables"]
-        derived["gear"] = categorized["gear"]
         
         # Strength'e göre PF1e Carrying Capacity limitleri
         str_score = derived["ability_scores"].get("Strength", 10)
@@ -1052,10 +1167,17 @@ class PF1e_Calculator(BaseCalculator):
             derived["encumbrance_status"] = "Light"
         elif total_weight <= med:
             derived["encumbrance_status"] = "Medium"
+            dex_max = min(dex_max, 3)
+            if not is_dwarf:
+                derived["speed"] = min(derived["speed"], 20 if base_speed >= 30 else 15)
         elif total_weight <= heavy:
             derived["encumbrance_status"] = "Heavy"
+            dex_max = min(dex_max, 1)
+            if not is_dwarf:
+                derived["speed"] = min(derived["speed"], 20 if base_speed >= 30 else 15)
         else:
             derived["encumbrance_status"] = "Overloaded"
+            derived["speed"] = 0
 
         # PF1e Büyü Slotları
         spell_slots = {}
@@ -1210,9 +1332,24 @@ class PF1e_Calculator(BaseCalculator):
 
         scores = self.get_adjusted_abilities(character)
 
+        # Gather current feats and traits names
+        curr_feats = set()
+        for f in character.get("feats", []):
+            fname = f.get("isim") if isinstance(f, dict) else str(f)
+            if fname: curr_feats.add(fname.lower())
+
+        curr_traits = set()
+        for t in character.get("traits", []):
+            tname = t.get("isim") if isinstance(t, dict) else str(t)
+            if tname: curr_traits.add(tname.lower())
+
+        total_level = int(character.get("level", 1))
+
         for p in prereqs:
             p_str = str(p).strip()
-            # Check ability score prereq e.g., "Str 13", "Dex 15"
+            if not p_str: continue
+
+            # 1. Ability Score requirement e.g., "Str 13", "Dex 15", "Int 13"
             m_ab = re.search(r'(Str|Dex|Con|Int|Wis|Cha)\s*(\d+)', p_str, re.I)
             if m_ab:
                 ab_map = {"str": "strength", "dex": "dexterity", "con": "constitution", "int": "intelligence", "wis": "wisdom", "cha": "charisma"}
@@ -1220,15 +1357,28 @@ class PF1e_Calculator(BaseCalculator):
                 req_val = int(m_ab.group(2))
                 curr_val = scores.get(ab_key, 10)
                 if curr_val < req_val:
-                    warnings.append(f"Gereksinim Karşılanmadı: {m_ab.group(1).upper()} >= {req_val} (Mevcut: {curr_val})")
+                    warnings.append(f"{m_ab.group(1).upper()} >= {req_val} gerekli (Mevcut: {curr_val})")
 
-            # Check BAB prereq e.g., "Base attack bonus +1"
-            m_bab = re.search(r'Base attack bonus\s*\+?(\d+)', p_str, re.I)
+            # 2. BAB requirement e.g., "Base attack bonus +1" or "BAB +6"
+            m_bab = re.search(r'(?:Base attack bonus|BAB)\s*\+?(\d+)', p_str, re.I)
             if m_bab:
                 req_bab = int(m_bab.group(1))
                 curr_bab = int(character.get("bab", 0))
                 if curr_bab < req_bab:
-                    warnings.append(f"Gereksinim Karşılanmadı: BAB >= +{req_bab} (Mevcut: +{curr_bab})")
+                    warnings.append(f"BAB >= +{req_bab} gerekli (Mevcut: +{curr_bab})")
+
+            # 3. Level requirement e.g., "Character level 3rd", "Level 5"
+            m_lvl = re.search(r'(?:Character level|Level)\s*(\d+)', p_str, re.I)
+            if m_lvl:
+                req_lvl = int(m_lvl.group(1))
+                if total_level < req_lvl:
+                    warnings.append(f"Karakter Seviyesi >= {req_lvl} gerekli (Mevcut: {total_level})")
+
+            # 4. Prerequisite Feat check (e.g. "Power Attack", "Dodge", "Point-Blank Shot")
+            # If string mentions common feats
+            for known_feat in ["Power Attack", "Dodge", "Point-Blank Shot", "Precise Shot", "Combat Expertise", "Weapon Focus", "Mobility"]:
+                if known_feat.lower() in p_str.lower() and known_feat.lower() not in curr_feats:
+                    warnings.append(f"Ön Feat Gerekli: {known_feat}")
 
         is_valid = len(warnings) == 0 or is_overridden
         return {
@@ -1237,6 +1387,7 @@ class PF1e_Calculator(BaseCalculator):
             "warnings": warnings,
             "can_override": len(warnings) > 0
         }
+
 
 
     def _extract_armor(self, character: Dict[str, Any]):
@@ -1384,6 +1535,12 @@ class PF1e_Calculator(BaseCalculator):
                 derived["initiative"] += val
             elif target == "bab":
                 derived["bab"] += val
+            elif target in ("attack_bonus", "attack"):
+                derived["attack_bonus"] = derived.get("attack_bonus", 0) + val
+                derived["melee_attack"] = derived.get("melee_attack", 0) + val
+                derived["ranged_attack"] = derived.get("ranged_attack", 0) + val
+            elif target == "speed":
+                derived["speed"] = derived.get("speed", 30) + val
             elif target == "cmb":
                 derived["cmb"] += val
             elif target == "cmd":

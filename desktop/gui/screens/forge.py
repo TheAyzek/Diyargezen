@@ -73,19 +73,16 @@ class ForgePage(QWidget):
         main_layout = QVBoxLayout(self)
         main_layout.setContentsMargins(0, 0, 0, 0)
 
-        # Header Title
-        title_lbl = QLabel("  The Forge — Character Creator")
+        title_lbl = QLabel("  The Forge — Karakter Oluşturucu")
         title_lbl.setObjectName("PageTitle")
-        title_lbl.setStyleSheet("font-size: 24px; font-weight: bold; padding: 12px; color: #d4c5a9;")
+        title_lbl.setStyleSheet("font-size: 24px; font-weight: bold; padding: 12px; color: #fced88;")
         main_layout.addWidget(title_lbl)
 
-        # Scroll Area Setup
         scroll = QScrollArea()
         scroll.setWidgetResizable(True)
         scroll.setFrameShape(QFrame.NoFrame)
         main_layout.addWidget(scroll)
 
-        # Container Widget inside Scroll
         container = QWidget()
         container.setObjectName("ForgeContainer")
         self.container_layout = QVBoxLayout(container)
@@ -93,7 +90,6 @@ class ForgePage(QWidget):
         self.container_layout.setContentsMargins(24, 16, 24, 24)
         scroll.setWidget(container)
 
-        # Build blocks
         self._build_block1_identity()
         self._build_block1b_flavor_portrait()
         self._build_block2_race_class()
@@ -101,17 +97,14 @@ class ForgePage(QWidget):
         self._build_block4_skills()
         self._build_block5_feats_powers()
         self._build_block6_inventory()
-        self._build_block7_spellbook()   # ADIM 3: Büyü Kitabı
+        self._build_block7_spellbook()
 
-        # Save Button at the bottom
         self._save_btn = QPushButton("Karakteri Kaydet")
         self._save_btn.setObjectName("SuccessButton")
         self._save_btn.setMinimumHeight(45)
         self._save_btn.clicked.connect(self._save_character)
         self.container_layout.addWidget(self._save_btn)
 
-        # Sub-blocks to hide/show for progressive disclosure
-        # NOT: _block7_group burada YOK — sadece büyücü sınıflarda gösterilir
         self._sub_blocks = [
             self._block1b_details_group,
             self._block2_group,
@@ -409,11 +402,11 @@ class ForgePage(QWidget):
             col = QVBoxLayout()
             lbl = QLabel(label_text)
             lbl.setAlignment(Qt.AlignCenter)
-            lbl.setStyleSheet("color: #888; font-size: 10px;")
+            lbl.setStyleSheet("color: #a8b3cf; font-size: 11px;")
             val = QLabel("—")
             val.setObjectName("StatValue")
             val.setAlignment(Qt.AlignCenter)
-            val.setStyleSheet("font-size: 18px; font-weight: bold; color: #c09b5a;")
+            val.setStyleSheet("font-size: 18px; font-weight: bold; color: #fced88;")
             col.addWidget(lbl)
             col.addWidget(val)
             stats_layout.addLayout(col)
@@ -728,9 +721,9 @@ class ForgePage(QWidget):
         remaining = budget - total_cost
         self._point_buy_label.setText(f"Kalan Puan: {remaining} / {budget}")
         if remaining < 0:
-            self._point_buy_label.setStyleSheet("color: #ff6b6b; font-weight: bold;")
+            self._point_buy_label.setStyleSheet("color: #ff5270; font-weight: bold;")
         else:
-            self._point_buy_label.setStyleSheet("color: #a9ffb4; font-weight: bold;")
+            self._point_buy_label.setStyleSheet("color: #47d159; font-weight: bold;")
 
     def _on_race_selected(self) -> None:
         """Handles race selection: updates character state and populates subrace dropdown."""

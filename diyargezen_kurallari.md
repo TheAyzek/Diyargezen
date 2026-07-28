@@ -6,6 +6,7 @@ Görevimiz: Mevcut masaüstü uygulamasını, SADECE PF1e sistemine odaklanarak 
 
 ## 2. KAPSAM VE DOSYA TEMİZLİĞİ
 - Kapsam SADECE Pathfinder 1st Edition'dır. D&D 5e vb. sistemler "Yakında Gelecek" statüsüne alınmıştır.
+- **PROJE ODAĞI (KESİN KURAL):** Diyargezen SADECE bir Karakter Oluşturucu ve Yönetici (Character Builder & Manager) platformudur. VTT/Savaş zarı simülasyonu yapılmayacaktır. Tüm odak karakter yaratımı, stat hesabı, kurallara uyum ve canlı PDF yönetimidir.
 - PF1e dışındaki diğer sistemlere ait atıl dosyaları temizle.
 - TOKEN TASARRUFU: Tüm sistemi tek seferde yazma. Her aşamada dur ve benden "Devam" onayı bekle.
 
