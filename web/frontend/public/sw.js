@@ -1,4 +1,4 @@
-const CACHE_NAME = 'diyargezen-cache-v1';
+const CACHE_NAME = 'diyargezen-cache-v2';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -36,8 +36,13 @@ self.addEventListener('fetch', (event) => {
   const request = event.request;
   const url = new URL(request.url);
 
-  // Skip non-GET requests or browser extensions
-  if (request.method !== 'GET' || !url.protocol.startsWith('http')) {
+  // Skip non-GET requests, browser extensions, or Vite dev server internal scripts
+  if (
+    request.method !== 'GET' ||
+    !url.protocol.startsWith('http') ||
+    url.pathname.includes('/@vite/') ||
+    url.pathname.includes('/@fs/')
+  ) {
     return;
   }
 
