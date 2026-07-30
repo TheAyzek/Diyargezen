@@ -148,7 +148,7 @@ def test_progression_workflow():
         level=3,
         class_name="Fighter",
         choices="{}",
-        created_at=datetime.datetime.utcnow().isoformat()
+        created_at=datetime.datetime.now(datetime.timezone.utc).isoformat()
     ))
     db.commit()
     db.close()

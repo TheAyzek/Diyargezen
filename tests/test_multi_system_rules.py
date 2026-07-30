@@ -163,6 +163,30 @@ class TestMultiSystemRules(unittest.TestCase):
         # Dex mod is 4, Str mod is 2. Formula resolves to 2. Base AC is 10 + 4 (Dex) + 2 (formula) = 16.
         self.assertEqual(derived["armor_class"], 16)
 
+    def test_pf1e_encumbrance_and_carrying_capacity(self):
+        calc = PF1e_Calculator(db_path=self.db_path)
+        # Str 14: Light <= 58 lbs, Medium 59..116 lbs, Heavy 117..175 lbs
+        char_light = {
+            "system": "pathfinder1e",
+            "abilities": {"strength": 14, "dexterity": 14},
+            "equipment": [{"name": "Light Pack", "weight": 30.0, "quantity": 1}]
+        }
+        derived_light = calc.calculate(char_light)
+        self.assertEqual(derived_light["encumbrance"]["status"], "Light Load")
+        self.assertEqual(derived_light["total_weight"], 30.0)
+        self.assertEqual(derived_light["speed"], 30)
+
+        char_medium = {
+            "system": "pathfinder1e",
+            "abilities": {"strength": 14, "dexterity": 18},
+            "equipment": [{"name": "Heavy Gear", "weight": 80.0, "quantity": 1}]
+        }
+        derived_medium = calc.calculate(char_medium)
+        self.assertEqual(derived_medium["encumbrance"]["status"], "Medium Load")
+        self.assertEqual(derived_medium["speed"], 20)
+        self.assertEqual(derived_medium["armor_check_penalty"], -3)
+
+
     def test_mm3e_calculator_defense_caps(self):
         calc = MnM3e_Calculator(db_path=self.db_path)
         # Power level 10 -> Cap is 20

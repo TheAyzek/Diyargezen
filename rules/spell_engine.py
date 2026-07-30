@@ -1,7 +1,20 @@
 """
-Pathfinder 1st Edition (PF1e) Spellcasting Engine
-===================================================
-PF1e büyü mekanikleri, bonus slotlar, DC hesaplamaları ve sınıf büyü yönetimi.
+Diyargezen Pathfinder 1st Edition (PF1e) Spellcasting & Magic Engine
+
+Architecture & Mathematical Foundations:
+----------------------------------------
+This engine manages Pathfinder 1e spell slots per day, bonus spell slot progression from high ability scores,
+and dynamic Spell Save Difficulty Class (DC) calculations across full/hybrid spellcaster classes.
+
+Mathematical Formulas:
+1. Bonus Spell Slots per Day:
+   For spell level L (1..9) and Ability Score A with Modifier M = floor((A - 10) / 2):
+   - Minimum required modifier to receive at least 1 bonus slot at level L: M >= L
+   - Additional bonus slots for higher modifiers: floor((M - L) / 4) + 1 (if M >= L, else 0).
+2. Spell Save DC Formula:
+   `Spell DC = 10 + Spell Level + Casting Ability Modifier + Custom GM Modifiers / Feats (e.g., Spell Focus)`.
+3. Caster Level (CL) & Concentration Checks:
+   `Concentration = Caster Level + Casting Ability Modifier + Miscellaneous Bonuses`.
 """
 
 import math
@@ -200,3 +213,102 @@ def validate_spell_prerequisites(
 
     valid = len(reasons) == 0
     return {"valid": valid, "reasons": reasons, "is_overridden": False}
+
+
+# ---------------------------------------------------------------------- #
+# Pathfinder 1st Edition Metamagic Engine                               #
+# Reference: PF1e Core Rulebook Chapter 5 (Metamagic Feats)             #
+# ---------------------------------------------------------------------- #
+
+METAMAGIC_FEATS_MATRIX: Dict[str, Dict[str, Any]] = {
+    "empower spell": {"slot_increase": 2, "description": "Tüm değişken sayısal etkiler (hasar, iyileştirme) %50 artar."},
+    "maximize spell": {"slot_increase": 3, "description": "Tüm değişken sayısal etkiler maksimum değerine ulaşır."},
+    "extend spell": {"slot_increase": 1, "description": "Büyü etki süresi (duration) 2 katına çıkar."},
+    "quicken spell": {"slot_increase": 4, "description": "Büyü yapma süresi Hızlı Eyleme (Swift Action) düşer."},
+    "silent spell": {"slot_increase": 1, "description": "Sözlü bileşen (Verbal) olmadan büyü atılır."},
+    "still spell": {"slot_increase": 1, "description": "Hareket bileşeni (Somatic) olmadan büyü atılır."},
+    "enlarge spell": {"slot_increase": 1, "description": "Büyü menzili (range) 2 katına çıkar."},
+    "widen spell": {"slot_increase": 3, "description": "Büyü etki alanı (area) %50 genişler."},
+    "heighten spell": {"slot_increase": 1, "description": "Büyü seviyesini kullanılan slot seviyesine yükseltir (Kurtarma DC artar)."}
+}
+
+def calculate_metamagic_spell_slot(
+    base_spell_level: int,
+    applied_metamagic: List[str]
+) -> Dict[str, Any]:
+    """Calculate the effective spell slot level required after applying Metamagic feats.
+    
+    Academic Architecture Strategy:
+    -------------------------------
+    Reference: PF1e Core Rulebook Chapter 5 (Feats: Metamagic).
+    Increases effective slot cost linearly while tracking feat descriptions and slot limits (Max 9th level).
+    """
+    total_increase = 0
+    applied_details = []
+
+    for meta in applied_metamagic:
+        meta_norm = str(meta).strip().lower()
+        feat_data = METAMAGIC_FEATS_MATRIX.get(meta_norm)
+        if feat_data:
+            inc = feat_data["slot_increase"]
+            total_increase += inc
+            applied_details.append({
+                "name": meta,
+                "slot_increase": inc,
+                "description": feat_data["description"]
+            })
+        else:
+            total_increase += 1
+            applied_details.append({
+                "name": meta,
+                "slot_increase": 1,
+                "description": "Özel Metamagic Yeteneği (+1 Slot)"
+            })
+
+    effective_level = base_spell_level + total_increase
+    return {
+        "base_spell_level": base_spell_level,
+        "effective_spell_level": effective_level,
+        "total_slot_increase": total_increase,
+        "applied_details": applied_details,
+        "exceeds_9th_level": effective_level > 9
+    }
+
+def validate_metamagic_application(
+    base_spell_level: int,
+    applied_metamagic: List[str],
+    character: Dict[str, Any],
+    is_overridden: bool = False
+) -> Dict[str, Any]:
+    """Validate if a character can cast a Metamagic-enhanced spell in their available spell slots."""
+    if is_overridden:
+        return {"valid": True, "reasons": ["[GM İZNİ] Metamagic kuralı ezildi (Override)"], "is_overridden": True}
+
+    reasons: List[str] = []
+    char_class = character.get("class", "").strip()
+    char_level = character.get("level", 1)
+    abilities = character.get("abilities", {})
+
+    casting_ability = get_casting_ability_for_class(char_class) or "intelligence"
+    ability_score = abilities.get(casting_ability) or abilities.get(casting_ability.title(), 10)
+
+    meta_res = calculate_metamagic_spell_slot(base_spell_level, applied_metamagic)
+    effective_lvl = meta_res["effective_spell_level"]
+
+    if effective_lvl > 9:
+        reasons.append(f"Metamagic sonrasındaki büyü seviyesi ({effective_lvl}. Seviye) 9. seviye azami büyü sınırını aşıyor.")
+
+    total_slots = calculate_total_spell_slots(char_class, char_level, ability_score)
+    max_accessible_lvl = max(total_slots.keys(), default=0) if total_slots else 0
+
+    if effective_lvl > max_accessible_lvl:
+        reasons.append(f"{char_level}. seviye {char_class} için Metamagic sonrası gerekli {effective_lvl}. seviye büyü slotu mevcut değil (Maksimum: {max_accessible_lvl}. Seviye).")
+
+    valid = len(reasons) == 0
+    return {
+        "valid": valid,
+        "reasons": reasons,
+        "effective_spell_level": effective_lvl,
+        "is_overridden": False
+    }
+

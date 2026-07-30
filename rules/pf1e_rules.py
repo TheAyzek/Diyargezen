@@ -1,8 +1,30 @@
+"""
+Diyargezen Pathfinder 1st Edition (PF1e) Rule Engine Validator
+
+Architecture Overview:
+----------------------
+This module implements the core validation engine for Pathfinder 1e character sheets.
+Following the project's 'Soft-Block / Game Master Override' philosophy (Rule 3), the validator
+evaluates character parameters (Base Ability Scores, Skill Ranks, Base Attack Bonus, Save Matrices)
+against official PF1e OGL rulesets.
+
+Key Architectural Guarantees:
+1. Non-blocking Soft Warnings: The validator produces structured diagnostic warnings rather than throwing
+   hard runtime exceptions, allowing Game Masters (GMs) and players to override constraints (`is_overridden=True`).
+2. Point Buy & Statutory Boundaries: Validates level 1 statutory ability score ranges (7-18 before racial modifiers)
+   and ensures skill rank distribution does not exceed total character Hit Dice/level.
+3. Fallback Integrity: Operates seamlessly with both local SQLite entities and JSON fallback caches.
+"""
+
 from .base_validator import BaseValidator
 from typing import Dict, Any, List
 
 class PF1EValidator(BaseValidator):
-    """Pathfinder 1e rule validator implementation."""
+    """Pathfinder 1e rule validator implementation.
+    
+    Performs deterministic rule verification across character attributes,
+    returning a collection of non-fatal warnings for UI/UX highlight.
+    """
 
     CORE_ABILITIES = {
         "strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma",

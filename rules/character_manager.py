@@ -1,5 +1,22 @@
+"""
+Diyargezen Character State Manager & Rules Compendium Interface
+
+Architecture & Data Access Layer:
+---------------------------------
+This module serves as the primary data query broker and active state coordinator for Pathfinder 1e entities.
+It acts as the bridge between SQLite persistent entity stores (`data/characters.db` / `entities`)
+and the real-time rule calculation engine.
+
+Design Patterns & Capabilities:
+1. Unified Compendium Access: Queries races, classes, subraces, feats, traits, items, and spells with high performance.
+2. Dynamic Categorization: Categorizes feats into Combat, Teamwork, Metamagic, Racial, General, and Class Features.
+3. Resilience & Fallback Handling: Safely handles corrupted JSON payloads in entity storage without halting application execution.
+4. Active Character Lifecycle: Maintains the state of active characters during session creation and level-up wizard steps.
+"""
+
 import sqlite3
 import json
+import re
 from pathlib import Path
 from typing import Dict, Any, List, Optional
 from db.entity_store import list_entities
@@ -93,28 +110,53 @@ class CharacterManager:
 
     @classmethod
     def _parse_entity_category(cls, name: str, payload: dict) -> str:
-        """Derive category (Combat, Metamagic, Racial, Social, Faith, etc.) from JSON tags, name, and description."""
-        data = payload.get('system', payload.get('data', payload)) if isinstance(payload, dict) else {}
-        tags = data.get('tags', []) or payload.get('tags', [])
+        """Derive feat category from featType field, tags, and name patterns.
+
+        Priority:
+          1. system.featType / data.featType  (classFeat → ClassFeature, misc → General)
+          2. Flattened tags list                (Combat, Teamwork, Metamagic, Mythic, Racial…)
+          3. Name keyword heuristics
+        """
+        inner = payload.get('system', payload.get('data', {}))
+        if not isinstance(inner, dict):
+            inner = {}
+
+        feat_type = inner.get('featType', payload.get('feat_type', ''))
+
+        if feat_type == 'classFeat':
+            return 'ClassFeature'
+        if feat_type == 'misc':
+            return 'General'
+
+        # Flatten nested tags e.g. [['PFS'], ['Combat']]
+        tags_raw = inner.get('tags', payload.get('tags', []))
         tag_strs = []
-        for t in tags:
+        for t in tags_raw:
             if isinstance(t, list):
-                tag_strs.extend([str(x).lower() for x in t])
+                tag_strs.extend([str(x).strip().lower() for x in t])
             else:
-                tag_strs.append(str(t).lower())
-        
+                tag_strs.append(str(t).strip().lower())
+
         n_lower = name.lower()
         full_str = ' '.join(tag_strs) + ' ' + n_lower
-        
-        if 'combat' in full_str or '(combat)' in n_lower: return 'Combat'
-        if 'teamwork' in full_str or '(teamwork)' in n_lower: return 'Teamwork'
-        if 'metamagic' in full_str or '(metamagic)' in n_lower: return 'Metamagic'
-        if 'item creation' in full_str or 'creation' in full_str: return 'Item Creation'
-        if 'mythic' in full_str or '(mythic)' in n_lower: return 'Mythic'
-        if 'social' in full_str: return 'Social'
-        if 'faith' in full_str or 'religion' in full_str: return 'Faith'
-        if 'magic' in full_str or 'spell' in full_str: return 'Magic'
-        if 'race' in full_str or 'racial' in full_str or 'regional' in full_str: return 'Racial'
+
+        if 'combat' in tag_strs or 'combat' in n_lower: return 'Combat'
+        if 'teamwork' in tag_strs or 'teamwork' in n_lower: return 'Teamwork'
+        if 'metamagic' in tag_strs or 'metamagic' in n_lower: return 'Metamagic'
+        if 'item creation' in full_str or 'itemcreation' in full_str: return 'Item Creation'
+        if 'mythic' in tag_strs or 'mythic' in n_lower: return 'Mythic'
+        if 'racial' in tag_strs or 'race' in tag_strs or 'racial' in n_lower: return 'Racial'
+        if 'regional' in tag_strs or 'region' in tag_strs or 'regional' in n_lower: return 'Regional'
+        if 'campaign' in tag_strs or 'campaign' in n_lower: return 'Campaign'
+        if 'performance' in tag_strs or 'performance' in n_lower: return 'Performance'
+        if 'style' in tag_strs or 'style' in n_lower: return 'Style'
+        if 'critical' in tag_strs or 'critical' in n_lower: return 'Critical'
+        if 'grit' in tag_strs or 'grit' in n_lower: return 'Grit'
+        if 'panache' in tag_strs or 'panache' in n_lower: return 'Panache'
+        if 'social' in tag_strs or 'social' in full_str: return 'Social'
+        if 'faith' in tag_strs or 'religion' in tag_strs or 'faith' in full_str or 'religion' in full_str: return 'Faith'
+        if 'magic' in tag_strs or 'spell' in tag_strs or 'magic' in full_str: return 'Magic'
+        if 'equipment' in tag_strs or 'gear' in tag_strs: return 'Equipment'
         return 'General'
 
     def get_traits(self, system: str, query: str = "", category: str = "") -> List[DiyargezenEntity]:
@@ -272,6 +314,42 @@ class CharacterManager:
                     ))
                 except Exception:
                     continue
+
+            # Fallback/supplement from dedicated spells table if needed
+            if len(results) < 50:
+                seen_names = {e.isim.lower() for e in results}
+                sp_sql = "SELECT isim, sistem, seviye, siniflar, aciklama FROM spells WHERE (sistem = ? OR sistem = 'pf1e')"
+                sp_params = [sys_norm]
+                if query:
+                    sp_sql += " AND isim LIKE ?"
+                    sp_params.append(f"%{query}%")
+                if level is not None:
+                    sp_sql += " AND seviye = ?"
+                    sp_params.append(level)
+                sp_sql += " ORDER BY isim COLLATE NOCASE ASC LIMIT 300"
+
+                conn = sqlite3.connect(str(self.db_path))
+                cursor = conn.cursor()
+                cursor.execute(sp_sql, sp_params)
+                for r_name, r_sys, r_lvl, r_classes, r_desc in cursor.fetchall():
+                    if r_name.lower() not in seen_names:
+                        seen_names.add(r_name.lower())
+                        try:
+                            classes_dict = json.loads(r_classes) if r_classes and r_classes.startswith("{") else {}
+                        except Exception:
+                            classes_dict = {}
+                        
+                        if caster_class and classes_dict and not any(c.lower() == caster_class.lower() for c in classes_dict.keys()):
+                            continue
+
+                        results.append(DiyargezenEntity(
+                            isim=r_name,
+                            sistem=r_sys,
+                            kategori="spell",
+                            aciklama=r_desc or "",
+                            sistem_verisi={"level": r_lvl, "levels_by_class": classes_dict}
+                        ))
+                conn.close()
         except Exception:
             pass
         return results
@@ -399,6 +477,49 @@ class CharacterManager:
         "swashbuckler", "vigilante", "warpriest", "witch", "wizard",
     }
 
+    _PF1E_CLASS_DESCRIPTIONS = {
+        "alchemist": "Simyacılar, iksirler, patlayıcı bombalar ve fiziksel güçlerini artıran iksir karışımları (mutagens) üreten gizemli zanaatkarlardır.",
+        "antipaladin": "Antipaladinler, yıkım, kaos ve kötülüğün şampiyonlarıdır. Kutsal düzeni yıkmak ve korku salmak için kara büyü ve ağır silahlar kullanırlar.",
+        "arcanist": "Arcanist'ler, büyücü (Wizard) araştırmacılığı ile büyücü soyu (Sorcerer) yeteneklerini birleştiren esnek büyü ustalarıdır.",
+        "barbarian": "Barbarlar, savaş alanında kabile öfkesiyle (Rage) coşan, muazzam fiziksel güce ve dayanıklılığa sahip durdurulamaz savaşçılardır.",
+        "bard": "Ozanlar, müzik, şiir ve büyü ilmiyle dostlarını ruhlandıran, zihinsel büyüler atan ve çok yönlü becerilere sahip macera ustalarıdır.",
+        "bloodrager": "Bloodrager'lar, hatlarındaki ejderha veya fey kanının büyülü gücünü savaş öfkesiyle birleştiren yıkıcı dövüşçülerdir.",
+        "brawler": "Brawler'lar, silahsız dövüşte ve yakın dövüş manevralarında ustalaşmış, savaş sırasında hızlıca esnek yetenekler kazanabilen dövüşçülerdir.",
+        "cavalier": "Süvariler, sadık binekleri üstünde savaşa liderlik eden, belirli bir şövalyelik yemini (Order) doğrultusunda meydan okuyan soylu savaşçılardır.",
+        "cleric": "Rahipler, inandıkları tanrıların ve inanç alanlarının (Domains) ilahi gücünü yönlendiren, iyileştirme ve ilahi koruma sağlayan kutsal büyülü savaşçılardır.",
+        "druid": "Druid'ler, doğanın dengesini koruyan, vahşi hayvan biçimlerine (Wild Shape) bürünebilen ve doğa elementlerini yöneten ilahi büyücülerdir.",
+        "fighter": "Dövüşçüler, tüm silah ve zırh türlerinde ustalaşmış, en geniş yetenek (Feat) çeşitliliğine sahip savaş alanı stratejistleridir.",
+        "gunslinger": "Gunslinger'lar, barut, tabanca ve tüfek teknolojisini cesaret (Grit) ve ölümcül nişancılıkla birleştiren ateşli silah ustalarıdır.",
+        "hunter": "Avcılar, doğadaki vahşi hayvan yoldaşlarıyla (Animal Companion) kusursuz bir uyum içinde savaşan esnek doğa koruyucularıdır.",
+        "inquisitor": "Engizisyoncular, inançlarının düşmanlarını avlayan, yargı (Judgments) yeteneğiyle dövüşen ve gizli ilimleri ortaya çıkaranı ajanlardır.",
+        "investigator": "Dedektifler, simyasal formüller ile keskin zekalarını (Inspiration) birleştirerek zindan çözümlerinde ve kritik vuruşlarda ustalaşmış araştırmacılardır.",
+        "kineticist": "Kineticist'ler, vücutlarındaki element enerjilerini (Ateş, Su, Hava, Toprak) saf yıkıcı saldırılara dönüştüren psiyonik ustalarıdır.",
+        "magus": "Magus'lar, bir elinde kılıç diğer elinde büyü tutarak kılıç darbelerini ölümcül büyülerle (Spellstrike) birleştiren hibrit savaşçılardır.",
+        "medium": "Medyumlar, geçmiş efsanelerin ruhlarını (Spirits) çağırarak ruhların güçlerini kendi bedenlerine yükleyen gizemli aracılardır.",
+        "mesmerist": "Mesmerist'ler, hipnoz, zihin oyunları ve illüzyonel büyülerle düşmanlarının zihnini felç eden psikolojik manipülatörlerdir.",
+        "monk": "Keşişler, bedenlerini ve zihinlerini kusursuzlaştırarak silah kullanmadan ölümcül Ki enerjisi saldırıları yapan içsel güç ustalarıdır.",
+        "ninja": "Ninjalar, gölgelerde saklanan, zehirler ve gizli Ki teknikleriyle düşmanlarını tek hamlede gafil avlayan suikastçılardır.",
+        "occultist": "Occultist'ler, antik kalıntılara ve büyülü nesnelere (Focus Implements) güç yükleyerek gizli ilimleri yönlendiren toplayıcılardır.",
+        "oracle": "Kahinler, tanrılar tarafından seçilmiş fakat ilahi bir lanetle (Curse) mühürlenmiş, tanrısal gizemleri (Mysteries) doğrudan yönlendiren büyücülerdir.",
+        "paladin": "Paladinler, adalet, onur ve doğruluğun kutsal muhafızlarıdır. Kötülüğü cezalandırma (Smite Evil) ve ilahi şifa verme gücüne sahiptirler.",
+        "psychic": "Psychic'ler, kelimeler veya hareketler yerine doğrudan zihin gücüyle (Psychic Magic) büyü üreten zihinsel büyü ustalarıdır.",
+        "ranger": "Korucular, uzmanlaştığı düşman türlerini (Favored Enemy) ve arazi koşullarını (Favored Terrain) avlayan, okçuluk ve iz sürme ustası savaşçılardır.",
+        "rogue": "Haydutlar/Hırsızlar, tuzakları etkisiz hale getiren, gafil avlama saldırılarıyla (Sneak Attack) yüksek hasar veren ve beceri ustası kıvrak karakterlerdir.",
+        "samurai": "Samuraylar, sadakat, onur ve Bushido ilkelerine bağlı, binek üstünde veya tek kılıçla ölümcül kararlılıkla (Resolve) savaşan onurlu savaşçılardır.",
+        "shaman": "Şamanlar, doğa ruhlarıyla (Spirits) bağlantı kurarak gizemli büyüler ve cadı büyüsü üreten ilahi arancılardır.",
+        "shifter": "Shifter'lar, vahşi hayvanların özünü bedenlerine yansıtarak pençeler ve hayvan formlarıyla savaşan dönüşüm ustalarıdır.",
+        "skald": "Skald'lar, kuzey efsanelerini şarkılarla ilham ederek tüm grubuna Barbar Öfkesi (Inspired Rage) kazandıran savaşçı ozanlardır.",
+        "slayer": "Slayer'lar, Barbar ve Rogue tekniklerini birleştirerek hedefini inceleyen (Studied Target) ve acımasızca avlayan profesyonel avcılardır.",
+        "sorcerer": "Büyücüler (Sorcerer), büyü yeteneğini kitaplardan değil, kanlarındaki ejderha veya fey soyundan alan doğuştan yetenekli büyücülerdir.",
+        "spiritualist": "Spiritualist'ler, kendilerine sadık hayalet yoldaşlar (Phantom) çağırarak ruhani alem ile maddi alem arasında savaşan mistiklerdir.",
+        "summoner": "Çağırıcılar, boyutlar arası özel olarak şekillendirdikleri Eidolon varlıklarıyla bağ kurup onları yanlarında savaştıran büyücülerdir.",
+        "swashbuckler": "Silahşörler, rapier ve kılıç dövüşünde zarafet, cesaret (Panache) ve muazzam savuşturma (Parry) teknikleri sergileyen dövüşçülerdir.",
+        "vigilante": "Vigilante'ler, gündüzleri halk adamı geceleri ise gizli kimliğiyle (Secret Identity) adalet dağıtan çifte yaşamlı kahramanlardır.",
+        "warpriest": "Savaş Rahipleri, katanalarını veya kutsal silahlarını ilahi lütuflarla (Blessings) donatarak savaş alanında en ön safta dövüşen din adamlarıdır.",
+        "witch": "Cadılar, patronlarından (Patrons) aldıkları kararsız büyüler ve lanetlerle (Hexes) düşmanlarını zayıflatan gizemli büyü ustalarıdır.",
+        "wizard": "Büyücüler (Wizard), yıllarca süren kadim kitap araştırmalarıyla büyünün teorik yapısını çözen ve en geniş büyü defterine sahip büyü üstatlarıdır."
+    }
+
     _DND5E_BLOCK_KEYWORDS = (
         "outsider", "humanoid", "aberration", "construct",
         "dragon", "fey", "undead", "vermin", "race:"
@@ -413,6 +534,9 @@ class CharacterManager:
             "undead", "plant", "fey", "magical beast", "adept", "aristocrat",
             "commoner", "expert", "warrior"
         }
+        BAD_CLASS_NAME_SUFFIXES = ("'s", "’s")
+        BAD_EXACT_NAMES = {"bloodline", "rage"}
+
         try:
             conn = sqlite3.connect(str(self.db_path))
             cursor = conn.cursor()
@@ -425,15 +549,20 @@ class CharacterManager:
             )
             for row in cursor.fetchall():
                 name: str = row[0]
-                name_lower = name.lower()
+                name_lower = name.lower().strip()
 
-                # Block obvious NPC / monster creature-type classes
+                # Block obvious NPC / monster creature-type classes or fragment entries
                 if any(m in name_lower for m in MONSTER_BLOCKLIST):
                     continue
+                if any(name_lower.endswith(sfx) for sfx in BAD_CLASS_NAME_SUFFIXES) or name_lower in BAD_EXACT_NAMES:
+                    continue
+                if "\ufffd" in name_lower or "'s" in name_lower or "’s" in name_lower or "&rsquo;s" in name_lower:
+                    continue
+
+                clean_prefix = name_lower.split("(")[0].replace("'s", "").replace("’s", "").strip()
 
                 if "pathfinder" in sys_norm or "pf" in sys_norm:
-                    prefix = name_lower.split("(")[0].strip()
-                    is_base = prefix in self._PF1E_PLAYABLE_CLASSES or any(b in name_lower for b in self._PF1E_PLAYABLE_CLASSES)
+                    is_base = clean_prefix in self._PF1E_PLAYABLE_CLASSES
                     is_arch = row[2] == 'archetype'
                     if not (is_base or is_arch):
                         continue
@@ -443,15 +572,36 @@ class CharacterManager:
 
                 try:
                     payload = json.loads(row[4]) if row[4] else {}
-                    desc = row[3] or ""
+                    raw_desc = (row[3] or "").strip()
 
-                    # Fallback to system_verisi description if main aciklama is dummy
-                    if not desc or desc.startswith("Contents") or desc.startswith("Skill:") or len(desc) < 20:
-                        sv_desc = payload.get("description") or payload.get("system", {}).get("description") or ""
-                        if isinstance(sv_desc, dict):
-                            sv_desc = sv_desc.get("value", "")
-                        if isinstance(sv_desc, str) and sv_desc and not sv_desc.startswith("Contents"):
+                    def _is_dummy_desc(d: str) -> bool:
+                        if not d:
+                            return True
+                        plain = re.sub(r'<[^>]*>', '', str(d)).strip()
+                        if len(plain) < 30:
+                            return True
+                        plain_lower = plain.lower()
+                        if plain_lower == 'contents' or plain_lower.startswith('contents') or plain_lower.startswith('class skills') or plain_lower.startswith('subpages') or plain_lower.startswith('skill:') or plain_lower.startswith('fatigued:') or plain_lower.startswith('shaken:') or plain_lower.startswith('sbc |'):
+                            return True
+                        if 'pathfinder products' in plain_lower or 'open gaming store' in plain_lower:
+                            return True
+                        return False
+
+                    desc = raw_desc
+                    if _is_dummy_desc(desc):
+                        sv_desc = ""
+                        if isinstance(payload, dict):
+                            sv_desc = payload.get("description") or ""
+                            sv_sys = payload.get("system")
+                            if isinstance(sv_sys, dict):
+                                sv_desc = sv_desc or sv_sys.get("description") or ""
+                            if isinstance(sv_desc, dict):
+                                sv_desc = sv_desc.get("value", "")
+                        if isinstance(sv_desc, str) and not _is_dummy_desc(sv_desc):
                             desc = sv_desc
+
+                    if _is_dummy_desc(desc):
+                        desc = self._PF1E_CLASS_DESCRIPTIONS.get(clean_prefix, f"{name} sınıfı kural detayları ve yetenek şablonu.")
 
                     results.append(DiyargezenEntity(
                         isim=row[0], sistem=row[1], kategori=row[2],

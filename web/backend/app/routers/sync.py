@@ -1,8 +1,18 @@
 """
-Sync Router for FastAPI Backend
-==============================
-Masaüstü ve Web istemcileri için çevrimdışı öncelikli (Offline-First)
-karakter senkronizasyon endpoint'i (`POST /api/sync`).
+Diyargezen Distributed Offline-First Synchronization Router
+
+Architecture & Replication Paradigm:
+------------------------------------
+This router provides the RESTful synchronization gateway (`POST /api/sync`) for the desktop PySide6 client
+and web frontend applications.
+
+Replication Protocol:
+1. PUSH Phase (Client -> Cloud): Ingests local dirty records (`is_dirty=True`) edited while offline.
+2. Conflict Resolution (Last-Write-Wins): Compares client `updated_at` timestamps against cloud database records.
+   If `client_updated >= server_updated`, the cloud state is updated.
+3. Live Recalculation: Runs the Pathfinder 1e stat pipeline on incoming payloads to ensure data consistency.
+4. PULL Phase (Cloud -> Client): Queries all records updated since `last_sync_timestamp` and streams them back to the client.
+5. Checkpoint Management: Returns an authoritative ISO-8601 `synced_at` timestamp for client checkpointing.
 """
 
 from __future__ import annotations

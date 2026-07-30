@@ -1,7 +1,38 @@
+"""
+Diyargezen Pathfinder 1st Edition (PF1e) Stat Calculation Engine
+
+Architecture & Algorithmic Design:
+----------------------------------
+This module serves as the primary stateless mathematical engine for Pathfinder 1e character sheets.
+It processes raw character data (Abilities, Classes, Feats, Traits, Items, Custom GM Modifiers)
+and computes full character stats in real time.
+
+Algorithmic Pipeline:
+1. Ability Score Pipeline: Calculates base scores + racial bonuses + level-up increments + item/buff bonuses.
+2. Ability Modifiers: Standard PF1e formula `floor((score - 10) / 2)`.
+3. Combat Metrics (BAB & Iterative Attacks):
+   - Fast progression (Full BAB: Level * 1.0 e.g. Fighter)
+   - Medium progression (3/4 BAB: floor(Level * 0.75) e.g. Rogue/Cleric)
+   - Slow progression (1/2 BAB: floor(Level * 0.50) e.g. Wizard)
+   - Multi-attack iterations generated at BAB >= 6 (+6/+1, +11/+6/+1, +16/+11/+6/+1).
+4. Save Matrices (Fortitude, Reflex, Will):
+   - Good progression: 2 + floor(Level / 2)
+   - Poor progression: floor(Level / 3)
+5. Armor Class (AC) & Touch/Flat-Footed AC:
+   - AC = 10 + Armor + Shield + Dex Mod + Size Mod + Dodge + Natural + Deflection + GM Custom Modifiers.
+6. Encumbrance & Weight Accumulation:
+   - Aggregates item weight * quantity against Strength-based Carrying Capacity thresholds (Light, Medium, Heavy).
+7. Soft-Block Override Support:
+   - Integrates `is_overridden` flags and custom (+X/-X) manual GM stat overrides without breaking pipeline calculation.
+"""
+
+import logging
 from abc import ABC, abstractmethod
 from typing import Dict, Any, List, Optional
 from pathlib import Path
 import re
+
+logger = logging.getLogger(__name__)
 
 _GLOBAL_ENTITY_CACHE: Dict[tuple, tuple] = {}
 
@@ -20,25 +51,22 @@ def extract_weight_and_qty(item: Dict[str, Any]) -> tuple[float, int]:
         qty = 1
 
     # Weight extraction
-    weight_val = 0.0
-    sv = item.get("sistem_verisi") or item.get("system_data") or {}
-    if isinstance(sv, dict):
-        w_obj = sv.get("weight")
-        if w_obj is None:
-            w_obj = sv.get("system", {}).get("weight") if isinstance(sv.get("system"), dict) else None
-        
-        if isinstance(w_obj, dict):
-            weight_val = w_obj.get("value", 0.0)
-        elif isinstance(w_obj, (int, float)):
-            weight_val = w_obj
-        elif isinstance(w_obj, str):
-            try:
-                weight_val = float(w_obj)
-            except:
-                weight_val = 0.0
+    weight_val = item.get("weight") or item.get("agirlik")
+    if weight_val is None:
+        sv = item.get("sistem_verisi") or item.get("system_data") or {}
+        if isinstance(sv, dict):
+            w_obj = sv.get("weight") or sv.get("agirlik")
+            if w_obj is None:
+                w_obj = sv.get("system", {}).get("weight") if isinstance(sv.get("system"), dict) else None
+            
+            if isinstance(w_obj, dict):
+                weight_val = w_obj.get("value", 0.0)
+            elif isinstance(w_obj, (int, float, str)):
+                weight_val = w_obj
+
     try:
-        weight_val = float(weight_val)
-    except:
+        weight_val = float(weight_val) if weight_val is not None else 0.0
+    except (ValueError, TypeError):
         weight_val = 0.0
         
     return weight_val, qty
@@ -71,6 +99,84 @@ def categorize_items(equipment_list: List[Dict[str, Any]]) -> Dict[str, List[Dic
             categories["gear"].append(item)
             
     return categories
+
+HEAVY_MAX_TABLE: Dict[int, int] = {
+    1: 10, 2: 20, 3: 30, 4: 40, 5: 50, 6: 60, 7: 70, 8: 80, 9: 90, 10: 100,
+    11: 115, 12: 130, 13: 150, 14: 175, 15: 200, 16: 230, 17: 260, 18: 300, 19: 350, 20: 400
+}
+
+def calculate_carrying_capacity(strength_score: int, size: str = "Medium") -> Dict[str, float]:
+    """Calculate Pathfinder 1e carrying capacity thresholds (Light, Medium, Heavy Max) in lbs.
+    
+    Academic Architecture:
+    ----------------------
+    Reference: PF1e Core Rulebook, Chapter 7 (Carrying Capacity).
+    Calculates capacity limits based on Strength score and creature Size category.
+    For Strength > 20, Heavy Max doubles for every +5 Strength (+10 multiplies by 4).
+    """
+    str_val = max(1, int(strength_score or 10))
+    if str_val <= 20:
+        heavy_max = float(HEAVY_MAX_TABLE.get(str_val, 100))
+    else:
+        remainder = (str_val - 10) % 10 + 10
+        multiplier_pow = (str_val - 10) // 10
+        base_heavy = HEAVY_MAX_TABLE.get(remainder, 400)
+        heavy_max = float(base_heavy * (4 ** multiplier_pow))
+
+    size_norm = str(size or "Medium").capitalize()
+    size_mult = {
+        "Fine": 0.125, "Diminutive": 0.25, "Tiny": 0.5, "Small": 0.75,
+        "Medium": 1.0, "Large": 2.0, "Huge": 4.0, "Gargantuan": 8.0, "Colossal": 16.0
+    }.get(size_norm, 1.0)
+
+    heavy_max = float(heavy_max * size_mult)
+    light_max = round(heavy_max / 3.0, 1)
+    medium_max = round((heavy_max * 2.0) / 3.0, 1)
+    heavy_max = round(heavy_max, 1)
+
+    return {
+        "light_max": light_max,
+        "medium_max": medium_max,
+        "heavy_max": heavy_max
+    }
+
+def calculate_encumbrance_status(total_weight: float, capacity: Dict[str, float]) -> Dict[str, Any]:
+    """Determine Pathfinder 1e encumbrance load status and stat penalties."""
+    wt = max(0.0, float(total_weight or 0.0))
+    light = capacity.get("light_max", 33.0)
+    medium = capacity.get("medium_max", 66.0)
+    heavy = capacity.get("heavy_max", 100.0)
+
+    if wt <= light:
+        status = "Light Load"
+        max_dex = None
+        acp_penalty = 0
+        speed_penalty = 0
+    elif wt <= medium:
+        status = "Medium Load"
+        max_dex = 3
+        acp_penalty = -3
+        speed_penalty = -10
+    elif wt <= heavy:
+        status = "Heavy Load"
+        max_dex = 1
+        acp_penalty = -6
+        speed_penalty = -10
+    else:
+        status = "Overloaded"
+        max_dex = 0
+        acp_penalty = -10
+        speed_penalty = -20
+
+    return {
+        "status": status,
+        "total_weight": round(wt, 1),
+        "max_dex_bonus": max_dex,
+        "encumbrance_acp": acp_penalty,
+        "speed_penalty": speed_penalty,
+        "carrying_capacity": capacity
+    }
+
 
 def _extract_mechanics_from_payload(sys_ver: Dict[str, Any]) -> List[Dict[str, Any]]:
     mechs = list(sys_ver.get("standard_mechanics", []))
@@ -1022,13 +1128,30 @@ class PF1e_Calculator(BaseCalculator):
         natural_armor = int(character.get("natural_armor", 0))
         size_ac       = int(character.get("size_modifier_ac", 0))
 
-        # Categorize equipment
-        categorized = categorize_items(character.get("equipment", []))
+        # Categorize equipment & calculate total weight
+        eq_list = character.get("equipment", [])
+        categorized = categorize_items(eq_list)
         derived["armor_shields"] = categorized["armor_shields"]
         derived["consumables"] = categorized["consumables"]
         derived["gear"] = categorized["gear"]
 
-        # Speed Penalty from Medium/Heavy Armor
+        # Calculate Total Equipment Weight & Carrying Capacity
+        total_weight = 0.0
+        for item in eq_list:
+            if isinstance(item, dict):
+                w, q = extract_weight_and_qty(item)
+                total_weight += w * q
+
+        str_score = scores.get("strength", 10)
+        char_size = str(character.get("size") or character.get("raceData", {}).get("size") or "Medium")
+        capacity = calculate_carrying_capacity(str_score, char_size)
+        encumbrance = calculate_encumbrance_status(total_weight, capacity)
+
+        derived["total_weight"] = encumbrance["total_weight"]
+        derived["carrying_capacity"] = capacity
+        derived["encumbrance"] = encumbrance
+
+        # Speed Penalty from Medium/Heavy Armor or Encumbrance Load
         is_dwarf = "dwarf" in str(character.get("race", "")).lower()
         armor_type = "light"
         for arm in categorized["armor_shields"]:
@@ -1040,10 +1163,13 @@ class PF1e_Calculator(BaseCalculator):
             elif "medium" in a_category or "breastplate" in a_name or "chainmail" in a_name or "scale" in a_name:
                 armor_type = "medium"
 
-        if armor_type in ("medium", "heavy") and not is_dwarf:
+        if (armor_type in ("medium", "heavy") or encumbrance["status"] in ("Medium Load", "Heavy Load", "Overloaded")) and not is_dwarf:
             derived["speed"] = max(15, base_speed - 10)
         else:
             derived["speed"] = base_speed
+
+        # Apply Encumbrance Armor Check Penalty (ACP)
+        acp += encumbrance["encumbrance_acp"]
 
         # Armor Check Penalty (ACP) adjustment with Armor Expert trait (-1 ACP)
         if acp < 0:
@@ -1060,8 +1186,12 @@ class PF1e_Calculator(BaseCalculator):
 
         derived["armor_check_penalty"] = acp
 
-        # Max Dex kısıtlamasını uygula
+        # Max Dex kısıtlamasını uygula (Armor & Encumbrance)
+        if encumbrance["max_dex_bonus"] is not None:
+            dex_max = min(dex_max, encumbrance["max_dex_bonus"])
+
         dex_contrib = min(mods["dexterity"], dex_max) if dex_max < 999 else mods["dexterity"]
+
 
         # ── ADIM 5: Nihai AC, CMB, CMD, Inisiyatif ve Silah Atak/Hasar Bloğu ────────
         size_cmb = int(character.get("size_modifier", 0))

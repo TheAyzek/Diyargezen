@@ -18,7 +18,7 @@ def main() -> None:
     parser.add_argument(
         "--systems",
         nargs="+",
-        default=["dnd5e", "pathfinder1e", "mm3e"],
+        default=["pathfinder1e"],
         help="Yüklenecek sistemler",
     )
     args = parser.parse_args()

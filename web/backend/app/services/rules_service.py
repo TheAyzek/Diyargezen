@@ -12,17 +12,25 @@ class RulesService:
         sys_lower = system.lower()
         return SYSTEM_MAPPING.get(sys_lower, sys_lower)
 
-    def get_races(self, system: str) -> List[DiyargezenEntity]:
+    def get_races(self, system: str, query: str = "") -> List[DiyargezenEntity]:
         db_system = self._normalize_system(system)
-        return self.manager.get_top_level_races(db_system)
+        races = self.manager.get_top_level_races(db_system)
+        if query:
+            q_lower = query.lower().strip()
+            races = [r for r in races if q_lower in r.isim.lower() or q_lower in r.aciklama.lower()]
+        return races
 
     def get_subraces(self, system: str, parent_race: str) -> List[DiyargezenEntity]:
         db_system = self._normalize_system(system)
         return self.manager.get_subraces_for_race(db_system, parent_race)
 
-    def get_classes(self, system: str) -> List[DiyargezenEntity]:
+    def get_classes(self, system: str, query: str = "") -> List[DiyargezenEntity]:
         db_system = self._normalize_system(system)
-        return self.manager.get_clean_classes(db_system)
+        classes = self.manager.get_clean_classes(db_system)
+        if query:
+            q_lower = query.lower().strip()
+            classes = [c for c in classes if q_lower in c.isim.lower() or q_lower in c.aciklama.lower()]
+        return classes
 
     def search_entities(self, system: str, category: str, query: str) -> List[DiyargezenEntity]:
         db_system = self._normalize_system(system)

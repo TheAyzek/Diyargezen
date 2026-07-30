@@ -1,40 +1,36 @@
-# DİYARGEZEN PROJESİ ANA MİMARİ VE OYUN YÖNETİCİSİ (GM) KURALLARI
+# DİYARGEZEN: ANA MİMARİ, GÜVENLİK VE GM KURALLARI
 
-## 1. GÖREV BAĞLAMI VE ROLÜN
-Sen "Diyargezen" projesinin Baş Mimarı ve Pathfinder 1st Edition (PF1e) kurallarını ezbere bilen, adil ancak esnek bir "Game Master"sın.
-Görevimiz: Mevcut masaüstü uygulamasını, SADECE PF1e sistemine odaklanarak ayrık mimarili (FastAPI Backend + React/Next.js Frontend) bir web platformuna dönüştürmek ve masaüstü uygulamasını "Offline-First" (Çevrimdışı Öncelikli) bir istemciye çevirmektir.
+## 1. ROL, KAPSAM VE TOKEN EKONOMİSİ
+- **Rol:** Sen Diyargezen projesinin Baş Mimarı ve Pathfinder 1e (PF1e) kurallarını işleten "Esnek Game Master"sın. Projeyi profesyonel bir yazılım mühendisliği standardında, yüksek kod kalitesiyle inşa edeceksin.
+- **Kapsam:** SADECE PF1e. Diğer tüm FRP sistemleri "Yakında Gelecek" statüsündedir. PF1e dışındaki atıl dosyaları tespit et ve temizle.
+- **Token Ekonomisi:** Açıklamaları kısa tut. Tüm projeyi tek seferde yazma. Her majör adımda dur ve onay bekle.
 
-## 2. KAPSAM VE DOSYA TEMİZLİĞİ
-- Kapsam SADECE Pathfinder 1st Edition'dır. D&D 5e vb. sistemler "Yakında Gelecek" statüsüne alınmıştır.
-- **PROJE ODAĞI (KESİN KURAL):** Diyargezen SADECE bir Karakter Oluşturucu ve Yönetici (Character Builder & Manager) platformudur. VTT/Savaş zarı simülasyonu yapılmayacaktır. Tüm odak karakter yaratımı, stat hesabı, kurallara uyum ve canlı PDF yönetimidir.
-- PF1e dışındaki diğer sistemlere ait atıl dosyaları temizle.
-- TOKEN TASARRUFU: Tüm sistemi tek seferde yazma. Her aşamada dur ve benden "Devam" onayı bekle.
+## 2. KARARLILIK VE GÜVENLİK (SEC-OPS)
+- **Regresyon Yasası (Çalışanı Bozma):** Önceden doğru yapılmış, stabil çalışan mimariyi GEREKMEDİKÇE değiştirme. Yeni özellik eklerken mevcut sistemleri kırma.
+- **Güvenlik:** FastAPI ve JWT auth altyapısında güvenlik standartlarına katı şekilde uy. SQL Injection, XSS ve IDOR (kullanıcıların yalnızca kendi karakter kasasına erişebilmesi) zafiyetlerini önlemek için Pydantic validasyonlarını zorunlu tut.
 
-## 3. BİRLEŞTİRİLMİŞ VERİTABANI VE VERİ KAYNAKLARI (KRİTİK)
-- PF1e Foundry VTT veri dosyaları ile Scraper (Aonprd/d20pfsrd) verilerini BİRLEŞTİRİK (Unified DB) bir şemada topla. 
-- Hesaplama yaparken Foundry verisinde eksik varsa, ZORUNLU OLARAK scraper verilerini kullan (Fallback) ve kullanıcıya yansıt. Veriler atıl duramaz.
+## 3. VERİ MİMARİSİ VE "ESNEK GM" MOTORU
+- **Bütünleşik Veri (Unified DB):** PF1e Foundry VTT verileri ile Scraper verilerini birleştir. Hesaplamalarda Foundry verisi eksikse ZORUNLU olarak Scraper verisine başvur (Fallback).
+- **Esnek Denetim (Soft-Block):** Feat ve Büyü seçimlerinde ön koşulları (STR >= 13 vb.) denetle. Sistemi kilitleme (Hard-block KULLANMA); "GM İzniyle Ez (Override)" bayrağı ve her stat için manuel (+X/-X) özel modifikatör alanı sun.
+- **Level-Up:** State machine mantığıyla çalışır (HP zarı, Skill, Feat, Stat artışı). Oyuncuyu kurallara göre yönlendir ama nihai kararı masaya (esnekliğe) bırak.
 
-## 4. ESNEK "GAME MASTER" KURAL VE LEVEL-UP MOTORU
-- **Ön Koşul ve Soft-Block:** Sistem Feat/Büyü seçimlerinde ön koşulları (Örn: Power Attack için STR >= 13) denetlemelidir. "Hard-block" kullanma; "GM İzniyle Kuralı Ez (Override)" seçeneği sun ('is_overridden' flag).
-- **Manuel Modifikatörler:** Otomatik AC, HP, BAB hesaplamalarına ek olarak, GM'in özel durumları için her stata "+X" / "-X" manuel müdahale (Custom Modifier) alanı ekle.
-- **Level-Up:** Bir "State Machine" gibi çalışmalı. Oyuncuya HP zarı, Skill Rank, Feat ve Ability Score artışı adımlarını sunmalı ancak esnek bırakmalıdır.
+## 4. PROFESYONEL UI/UX VE CANLI PDF
+- **Tasarım Sistemi:** "Dark Fantasy SaaS" teması. SADECE Tailwind CSS ve `shadcn/ui` (veya Radix) kullanılacaktır. "Inline style" YASAKTIR. Koyu arka planlar (slate-900) ve büyücü mavisi/bronz vurgular kullan.
+- **Tipografi ve Durumlar:** Başlıklarda Serif, statlar ve tablolarda modern Sans-serif font kullan. Tüm interaktif öğelerde (hover/focus/disabled) CSS durumlarını tanımla.
+- **Canlı PDF:** Sağ panel, `pdf-lib` kullanılarak sol paneldeki verilerin (Debounce ile) anlık yazıldığı orijinal PF1e doldurulabilir PDF (AcroForm) olmalıdır. <iframe> ile render et. HTML tablo çizme.
+- **Envanter:** Silah/Zırh kategorize edilecek, hesaplanan ağırlık anlık olarak PDF'e yansıyacaktır.
 
-## 5. GÖRSEL, ARAYÜZ VE CANLI PDF
-- Navbar'da "Diyargezen" yazısı ve mevcut logo dosyası yer alacak.
-- "Canlı Karakter Kağıdı", Frontend'de `pdf-lib` kullanılarak sol paneldeki girdilerin (Debounce ile) anlık yazıldığı orijinal PF1e doldurulabilir PDF (AcroForm) olmalıdır. <iframe> içinde render edilecektir.
-- Envanter sol panelde kategorize (Weapons, Armor, Consumables, Gear) yönetilmeli, toplam ağırlık PDF'e yansımalıdır.
+## 5. OFFLINE-FIRST (ÇEVRİMDIŞI) SENKRONİZASYON
+- **Tek Gerçeklik Kaynağı:** FastAPI JWT tabanlı Backend.
+- **Masaüstü İstemci:** Lokal SQLite kullan. İnternet yokken veriyi lokale yaz (dirty state). İnternet bağlantısı sağlandığında arka planda sunucuyla otomatik senkronize et (Background Sync).
 
-## 6. ÜYELİK VE MASAÜSTÜ SENKRONİZASYONU (OFFLINE-FIRST)
-- FastAPI tarafında JWT tabanlı güvenli bir Kayıt/Giriş altyapısı kur.
-- Masaüstü uygulamasında lokal save mantığını devredışı bırak. Yerine, JWT ile sunucuya bağlanan ve yerel bir SQLite barındıran "Offline-First API Client" entegre et. İnternet yokken yerel SQLite'a kaydet, internet varken Background Sync yap.
+## 6. HARİCİ YETENEKLER (SKILLS / MCP)
+- Sana bağlanan dış araçları (örneğin veri doğrulama için "impeccable" MCP'si veya projedeki özel scraper betikleri) ihtiyaç duyduğunda terminalden veya MCP protokolünden tereddüt etmeden çağır ve sonuçlarına göre hareket et.
 
-## 7. ÇALIŞMA AKIŞI (STANDART PROSEDÜR)
-Her yeni işe başlarken şu adımları izle:
-1. MİMARİ DENETİM: Dosyaları, DB şemasını ve Offline Senkronizasyon/Live PDF planını analiz et.
-2. RAPORLAMA: Bana kod yazmadan önce mutlaka planını sun ve onay bekle.
+## 7. STANDART İŞ AKIŞI
+1. **DENETİM:** İstenen görevle ilgili mevcut dosyaları oku ve çalışan mantığı analiz et.
+2. **RAPORLAMA:** Kod yazmadan önce mimari planını, güvenlik adımlarını ve veri şemasını kısa maddelerle sun ve benden ONAY BEKLE.
 
-## 8. ÖZEL YETENEKLER (SKILLS)
-Sana terminal üzerinden kullanabilmen için bazı özel araçlar tanımlanmıştır. İhtiyaç duyduğunda terminalde bu araçları çalıştır:
-
-- **Kural Çekici (Scraper Skill):** Aonprd'den kural çekmen gerektiğinde `python tools/scraper.py <URL>` komutunu kullan. Bu betik sana kuralın JSON formatını döndürecektir.
-- **Zar ve Modifikatör Test Aracı:** Kurduğun modifier motorunu test etmek için `python tools/dice_tester.py <STAT_DEĞERİ>` komutunu çalıştır.
+## 8. MÜHENDİSLİK DOKÜMANTASYONU VE AKADEMİK STANDARTLAR
+- **Temiz Kod (Clean Code):** Proje, üst düzey bir bilgisayar mühendisliği bitirme/mezuniyet projesi kalitesinde inşa edilmelidir. Modüler yapıya sadık kalınmalı, spagetti koddan kesinlikle kaçınılmalıdır.
+- **Mimari Yorum Satırları (Docstrings):** Özellikle Kural Motoru, Canlı PDF (`pdf-lib`) işlemleri ve Offline-First senkronizasyon motoru gibi karmaşık algoritmaların başına, arka plandaki mantığı ve veri akışını açıklayan akademik düzeyde yorum satırları eklenmelidir. Kodu inceleyecek bir akademisyenin veya farklı bir geliştiricinin mimari kararları anında kavrayabilmesi sağlanmalıdır.

@@ -1,18 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import { Search, X, Swords, Users, Sparkles, Hammer, Star, Shield, Award, Wand2, AlertTriangle, CheckCircle2, ShieldAlert } from 'lucide-react';
+import { Search, X, Swords, Users, Sparkles, Hammer, Star, Shield, Award, Wand2, AlertTriangle, CheckCircle2, ShieldAlert, Music, Zap, Heart, Flame, BookOpen } from 'lucide-react';
 import { cleanText } from '../utils/textSanitizer';
 
 const CATEGORY_CONFIG = {
-  ClassFeature:  { icon: Wand2,     color: '#f39c12', label: 'Sınıf Özelliği (Rage Power/Talent/Hex)' },
-  Combat:        { icon: Swords,    color: '#e94560', label: 'Savaş (Combat)' },
-  Teamwork:      { icon: Users,     color: '#4ec9b0', label: 'İşbirliği (Teamwork)' },
-  Metamagic:     { icon: Sparkles,  color: '#7c6ef7', label: 'Metamagic' },
-  'Item Creation': { icon: Hammer,  color: '#c9a84c', label: 'Eşya Üretimi (Item Creation)' },
-  Racial:        { icon: Star,      color: '#ce9178', label: 'Irk (Racial)' },
-  Mythic:        { icon: Award,     color: '#f39c12', label: 'Mythic' },
-  General:       { icon: Shield,    color: '#9cdcfe', label: 'Genel (General)' },
+  ClassFeature:  { icon: Wand2,     color: '#f39c12', label: 'Sınıf Özelliği',       short: 'Sınıf' },
+  Combat:        { icon: Swords,    color: '#e94560', label: 'Savaş (Combat)',         short: 'Savaş' },
+  Teamwork:      { icon: Users,     color: '#4ec9b0', label: 'İşbirliği (Teamwork)',  short: 'Teamwork' },
+  Metamagic:     { icon: Sparkles,  color: '#7c6ef7', label: 'Metamagic',             short: 'Metamagic' },
+  'Item Creation': { icon: Hammer,  color: '#c9a84c', label: 'Eşya Üretimi',          short: 'Üretim' },
+  Racial:        { icon: Star,      color: '#ce9178', label: 'Irk (Racial)',           short: 'Irk' },
+  Mythic:        { icon: Award,     color: '#d4af37', label: 'Mythic',                 short: 'Mythic' },
+  Performance:   { icon: Music,     color: '#c678dd', label: 'Performans',             short: 'Perf.' },
+  Grit:          { icon: Flame,     color: '#e5844a', label: 'Grit (Cesaret)',         short: 'Grit' },
+  Panache:       { icon: Zap,       color: '#56b6c2', label: 'Panache (Zarafet)',      short: 'Panache' },
+  Social:        { icon: BookOpen,  color: '#98c379', label: 'Sosyal (Social)',        short: 'Sosyal' },
+  Faith:         { icon: Heart,     color: '#e06c75', label: 'İnanç (Faith)',          short: 'İnanç' },
+  Magic:         { icon: Sparkles,  color: '#a594ff', label: 'Sihir (Magic)',          short: 'Sihir' },
+  General:       { icon: Shield,    color: '#9cdcfe', label: 'Genel (General)',        short: 'Genel' },
 };
 
 // Frontend prerequisite evaluator helper
@@ -115,37 +121,34 @@ export default function FeatSelectorModal({
 
   const fetchFeats = () => {
     setLoading(true);
-    if (activeCategory === 'ClassFeature') {
-      axios.get(`/api/rules/${system}/class-features`, {
-        params: { query: searchQuery, class_name: className || '' }
+    const cat = activeCategory === 'All' ? '' : activeCategory;
+    axios.get(`/api/rules/${system}/feats`, {
+      params: { query: searchQuery, category: cat }
+    })
+      .then(res => {
+        setFeats(res.data);
+        setLoading(false);
       })
-        .then(res => {
-          setFeats(res.data);
-          setLoading(false);
-        })
-        .catch(err => {
-          console.error('Class features fetch error:', err);
-          setLoading(false);
-        });
-    } else {
-      const cat = activeCategory === 'All' ? '' : activeCategory;
-      axios.get(`/api/rules/${system}/feats`, {
-        params: { query: searchQuery, category: cat }
-      })
-        .then(res => {
-          setFeats(res.data);
-          setLoading(false);
-        })
-        .catch(err => {
-          console.error('Feats fetch error:', err);
-          setLoading(false);
-        });
-    }
+      .catch(err => {
+        console.error('Feats fetch error:', err);
+        setFeats([]);
+        setLoading(false);
+      });
   };
 
-  if (!isOpen) return null;
-
+  // Hook'lar her zaman early return'den ÖNCE çağrılmalı (React Rules of Hooks)
   const categories = ['All', ...Object.keys(CATEGORY_CONFIG)];
+
+  const catCounts = useMemo(() => {
+    const counts = { All: feats.length };
+    feats.forEach(f => {
+      const c = f.sistem_verisi?.feat_category || 'General';
+      counts[c] = (counts[c] || 0) + 1;
+    });
+    return counts;
+  }, [feats]);
+
+  if (!isOpen) return null;
 
   const isSelected = (featName) => selectedFeats.some(f => (f.isim || f.name || f) === featName);
 
@@ -310,6 +313,7 @@ export default function FeatSelectorModal({
             const cfg = CATEGORY_CONFIG[cat];
             const Icon = cfg?.icon || Award;
             const isActive = activeCategory === cat;
+            const count = catCounts[cat] || 0;
 
             return (
               <button
@@ -317,16 +321,24 @@ export default function FeatSelectorModal({
                 onClick={() => setActiveCategory(cat)}
                 style={{
                   display: 'flex', alignItems: 'center', gap: '5px',
-                  padding: '8px 14px', fontSize: '12px', fontWeight: isActive ? 'bold' : 'normal',
-                  background: isActive ? 'rgba(201,168,76,0.15)' : 'transparent',
+                  padding: '8px 12px 10px', fontSize: '11px', fontWeight: isActive ? 'bold' : 'normal',
+                  background: isActive ? `${cfg?.color || '#c9a84c'}18` : 'transparent',
                   border: 'none', borderBottom: isActive ? `2px solid ${cfg?.color || '#c9a84c'}` : '2px solid transparent',
                   color: isActive ? (cfg?.color || '#c9a84c') : '#8b949e',
                   cursor: 'pointer', whiteSpace: 'nowrap', flexShrink: 0, transition: 'all 0.15s',
-                  borderRadius: '4px 4px 0 0', paddingBottom: '10px'
+                  borderRadius: '4px 4px 0 0'
                 }}
               >
-                {cat !== 'All' && <Icon size={14} />}
-                {cat === 'All' ? 'Tümü' : (cfg?.label?.split(' ')[0] || cat)}
+                {cat !== 'All' && <Icon size={13} style={{ flexShrink: 0 }} />}
+                <span>{cat === 'All' ? 'Tümü' : (cfg?.short || cat)}</span>
+                {count > 0 && (
+                  <span style={{
+                    background: isActive ? (cfg?.color || '#c9a84c') : 'rgba(255,255,255,0.1)',
+                    color: isActive ? '#0d0d17' : '#8b949e',
+                    fontSize: '9px', fontWeight: 'bold',
+                    padding: '1px 5px', borderRadius: '8px', minWidth: '16px', textAlign: 'center'
+                  }}>{count}</span>
+                )}
               </button>
             );
           })}

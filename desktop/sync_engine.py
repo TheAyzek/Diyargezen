@@ -1,9 +1,17 @@
 """
-Masaüstü Arka Plan Senkronizasyon Motoru (Background Sync Engine)
-================================================================
-PySide6 QThread tabanlı servis. Arka planda periodik olarak internet
-bağlantısını ve FastAPI sunucusunu kontrol eder; `is_dirty=1` olan
-karakterleri sunucuya iletip buluttaki güncellemeleri yerel SQLite'a çeker.
+Diyargezen Desktop Background Synchronization Engine
+
+Architecture & Threading Model:
+-------------------------------
+Implements an asynchronous, non-blocking background synchronization engine using PySide6 (`QThread` & `QObject`).
+The thread operates independently of the main PySide6 GUI thread to ensure zero UI freezes during network operations.
+
+Threading Architecture:
+1. `BackgroundSyncThread`: Periodically executes an asynchronous loop (default 15-second interval).
+2. `SyncWorker`: Executes local SQLite query for `is_dirty=True` records, invokes REST API `POST /api/sync`,
+   and applies atomic local updates upon successful cloud handshake.
+3. Network Failure Fallback: Catch network disconnects gracefully, maintaining dirty state flags in local SQLite
+   until internet connectivity is restored.
 """
 
 from __future__ import annotations

@@ -1,13 +1,37 @@
-import { PDFDocument } from 'pdf-lib';
+/**
+ * Diyargezen Pathfinder 1st Edition (PF1e) PDF Export Engine
+ * 
+ * Architecture & Data Pipeline:
+ * -----------------------------
+ * This utility handles browser-side rendering and export of official fillable AcroForm PDF character sheets.
+ * Utilizing the `pdf-lib` web assembly & pure JS library, it maps active Zustand character store state
+ * and server-calculated statistics into canonical PF1e AcroForm fields.
+ * 
+ * Pipeline Phases:
+ * 1. Template Resolution: Attempts fetching official `/templates/pf1e_sheet.pdf` with fallback to `/sheets/pf1e_sheet.pdf`.
+ * 2. Form Field Ingestion: Loads AcroForm field dictionary and maps core attributes, ability scores, combat stats,
+ *    and encumbrance totals.
+ * 3. Typography & Appearance Stream Updates: Updates field appearances to ensure visual fidelity without user edit focus.
+ * 4. Blob Stream Generation: Serializes PDF array buffer into a downloadable MIME `application/pdf` Blob URL.
+ */
+
+import { PDFDocument, StandardFonts } from 'pdf-lib';
 
 export async function exportCharacterPDF(store) {
   try {
-    const existingPdfBytes = await fetch('/sheets/pf1e_sheet.pdf').then(res => {
-      if (!res.ok) throw new Error('PDF şablonu (pf1e_sheet.pdf) bulunamadı.');
-      return res.arrayBuffer();
-    });
+    // Phase 1: Template Fetch with Fallback
+    let response = await fetch('/templates/pf1e_sheet.pdf');
+    if (!response.ok) {
+      response = await fetch('/sheets/pf1e_sheet.pdf');
+    }
+    if (!response.ok) {
+      throw new Error('PDF şablonu (/templates/pf1e_sheet.pdf) sunucuda bulunamadı.');
+    }
+    const existingPdfBytes = await response.arrayBuffer();
 
-    const pdfDoc = await PDFDocument.load(existingPdfBytes);
+    // Phase 2: PDF Document Loading & AcroForm Mapping
+    const pdfDoc = await PDFDocument.load(existingPdfBytes, { ignoreEncryption: true });
+    const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
     const form = pdfDoc.getForm();
 
     const setField = (fieldName, val) => {
@@ -17,15 +41,17 @@ export async function exportCharacterPDF(store) {
           field.setText(String(val ?? ''));
         }
       } catch (e) {
-        // Field not present in AcroForm schema
+        // Field not present in template dictionary
       }
     };
 
     const recalcedData = store.recalcedData || {};
     const formatMod = (val) => (val >= 0 ? `+${val}` : `${val}`);
 
+    // General Header
     setField('Character Name', store.name || 'İsimsiz Kahraman');
     setField('Class', store.class || '');
+    setField('Classes & Levels', `${store.class || 'Bilinmiyor'} (Seviye ${store.level || 1})`);
     setField('Level', store.level || 1);
     setField('Race', store.race || '');
     setField('Gender', store.gender || '');
@@ -38,6 +64,7 @@ export async function exportCharacterPDF(store) {
     setField('Deity', store.deity || '');
     setField('Homeland', store.homeland || '');
 
+    // Ability Scores & Modifiers
     const derivedScores = recalcedData.ability_scores || {};
     const derivedMods = recalcedData.ability_modifiers || {};
 
@@ -59,6 +86,7 @@ export async function exportCharacterPDF(store) {
     setField('charisma', derivedScores.Charisma || 10);
     setField('undefined_15', formatMod(derivedMods.Charisma || 0));
 
+    // Combat Stats
     setField('INITIATIVE', formatMod(recalcedData.initiative || 0));
     setField('hit points', recalcedData.hit_points || 8);
     setField('armor class', recalcedData.armor_class || 10);
@@ -74,7 +102,26 @@ export async function exportCharacterPDF(store) {
     setField('REFLEX', formatMod(saves.Reflex ?? saves.reflex ?? 0));
     setField('WILL', formatMod(saves.Will ?? saves.will ?? 0));
 
+    // Equipment Weight & Feats/Traits Summary
+    const totalWeight = store.equipment ? store.equipment.reduce((sum, item) => sum + (parseFloat(item.weight || 0) * (parseInt(item.quantity || 1, 10))), 0) : 0;
+    setField('TOTAL WEIGHT', `${totalWeight.toFixed(1)} lbs`);
+
+    const featsList = store.feats ? store.feats.map(f => typeof f === 'string' ? f : f.isim).join(', ') : (store.feat || '');
+    setField('FEATS', featsList);
+
+    const traitsList = store.traits ? store.traits.map(t => typeof t === 'string' ? t : t.isim).join(', ') : '';
+    setField('SPECIAL ABILITIES', traitsList);
+
+    // Phase 3: Appearance Stream Updates & Save
+    try {
+      form.updateFieldAppearances(font);
+    } catch (e) {
+      // Graceful fallback for custom PDF field definitions
+    }
+
     const pdfBytes = await pdfDoc.save();
+
+    // Phase 4: Download Blob URL Creation
     const blob = new Blob([pdfBytes], { type: 'application/pdf' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
@@ -91,3 +138,4 @@ export async function exportCharacterPDF(store) {
     return false;
   }
 }
+

@@ -13,6 +13,7 @@ import PortraitUpload from './PortraitUpload';
 import CompanionPanel from './CompanionPanel';
 import GMModifierPanel from './GMModifierPanel';
 import RuneField from '../../common/RuneField';
+import { getEquipmentCategory, EQUIPMENT_CATEGORIES } from '../../../utils/equipmentClassifier';
 
 const ABILITY_KEYS = ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma'];
 const ABILITY_LABELS = { strength: 'STR', dexterity: 'DEX', constitution: 'CON', intelligence: 'INT', wisdom: 'WIS', charisma: 'CHA' };
@@ -214,82 +215,126 @@ export default function PF1eControls() {
         position: 'relative', zIndex: 2, padding: '16px 20px 14px',
         borderBottom: '1px solid rgba(201,168,76,0.18)',
         background: 'linear-gradient(180deg, rgba(16,14,28,0.97) 0%, rgba(10,8,20,0.93) 100%)',
-        flexShrink: 0
+        flexShrink: 0,
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 12
       }}>
         <div style={{ position: 'absolute', top: 0, left: 0, width: 14, height: 14, borderTop: '1px solid var(--gold)', borderLeft: '1px solid var(--gold)', opacity: 0.6 }} />
         <div style={{ position: 'absolute', top: 0, right: 0, width: 14, height: 14, borderTop: '1px solid var(--gold)', borderRight: '1px solid var(--gold)', opacity: 0.6 }} />
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr auto', gap: 12, alignItems: 'center', marginBottom: 10 }}>
-          <div>
-            <FieldLabel>Karakter İsmi</FieldLabel>
-            <input className="rune-input" value={name || ''} onChange={e => updateField('name', e.target.value)}
-              placeholder="Kahramanınızın ismi..."
-              style={{ fontSize: '1rem', fontFamily: 'Cinzel, serif', letterSpacing: '0.04em', padding: '8px 12px' }} />
+        {/* Row 1: Left Identity Controls (Name, Race, Class) + Right Compact Portrait */}
+        <div style={{ display: 'flex', gap: 16, alignItems: 'stretch', flexWrap: 'wrap' }}>
+          {/* Left Block: Name, Race, Class */}
+          <div style={{ flex: '1 1 360px', display: 'flex', flexDirection: 'column', gap: 10, justifyContent: 'center' }}>
+            <div>
+              <FieldLabel>Karakter İsmi</FieldLabel>
+              <input className="rune-input" value={name || ''} onChange={e => updateField('name', e.target.value)}
+                placeholder="Kahramanınızın ismi..."
+                style={{ fontSize: '1.05rem', fontFamily: 'Cinzel, serif', letterSpacing: '0.04em', padding: '8px 12px', width: '100%' }} />
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+              <div>
+                <FieldLabel>Irk (Race)</FieldLabel>
+                <div style={{ display: 'flex', gap: 4 }}>
+                  <input className="rune-input" value={race || ''} readOnly placeholder="Irk..." style={{ padding: '7px 10px', width: '100%' }} />
+                  <button className="gold-btn" style={{ padding: '6px 14px', flexShrink: 0 }} onClick={() => handleOpenSelector('races', 'Irk Seçin')}>
+                    Seç
+                  </button>
+                </div>
+              </div>
+
+              <div>
+                <FieldLabel>Sınıf (Class)</FieldLabel>
+                <div style={{ display: 'flex', gap: 4 }}>
+                  <input className="rune-input" value={charClass || ''} readOnly placeholder="Sınıf..." style={{ padding: '7px 10px', width: '100%' }} />
+                  <button className="gold-btn" style={{ padding: '6px 14px', flexShrink: 0 }} onClick={() => handleOpenSelector('classes', 'Sınıf Seçin')}>
+                    Seç
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
-          <PortraitUpload />
+
+          {/* Right Block: Portrait Upload */}
+          <div style={{ flexShrink: 0, minWidth: 260 }}>
+            <PortraitUpload />
+          </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '56px auto auto auto auto 1fr 1fr', gap: 8, alignItems: 'end' }}>
-          <div>
-            <FieldLabel>Seviye</FieldLabel>
+        {/* Row 2: Seviye & Dışa Aktarım İşlem Butonları */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'center', background: 'rgba(0,0,0,0.25)', padding: '8px 12px', borderRadius: 6, border: '1px solid rgba(255,255,255,0.06)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+            <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.75rem', color: 'var(--gold-pale)', textTransform: 'uppercase', fontWeight: 600 }}>Seviye:</span>
             <input type="number" min={1} max={20} className="stat-input" value={level || 1}
               onChange={e => updateField('level', Math.max(1, Math.min(20, parseInt(e.target.value) || 1)))}
-              style={{ fontSize: '1.15rem', height: 36 }}
+              style={{ fontSize: '0.95rem', height: 32, width: 46, textAlign: 'center' }}
               disabled={id !== null} />
           </div>
 
           <button
             className="gold-btn primary"
             onClick={() => setLevelUpModalOpen(true)}
-            style={{ padding: '0 10px', height: 36, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4, background: 'linear-gradient(135deg, #c9a84c 0%, #ffd700 100%)', color: '#121218', fontWeight: 800 }}
+            style={{ padding: '0 12px', height: 32, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4, background: 'linear-gradient(135deg, #c9a84c 0%, #ffd700 100%)', color: '#121218', fontWeight: 800, fontSize: '0.8rem' }}
           >
             <Sparkles size={14} /> ⬆ Seviye Atla
           </button>
 
-          <button
-            className="gold-btn"
-            onClick={() => exportCharacterPDF(store)}
-            style={{ padding: '0 10px', height: 36, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(201,168,76,0.15)', border: '1px solid var(--border-gold)', color: 'var(--gold-bright)', fontWeight: 700 }}
-          >
-            <FileText size={14} /> 📄 PDF
-          </button>
+          <div style={{ marginLeft: 'auto', display: 'flex', gap: 8 }}>
+            <button
+              className="gold-btn"
+              onClick={() => exportCharacterPDF(store)}
+              style={{ padding: '0 10px', height: 32, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(201,168,76,0.15)', border: '1px solid var(--border-gold)', color: 'var(--gold-bright)', fontWeight: 700, fontSize: '0.78rem' }}
+            >
+              <FileText size={14} /> 📄 PDF
+            </button>
 
-          <button
-            className="gold-btn"
-            onClick={() => exportCharacterJSON(store)}
-            style={{ padding: '0 10px', height: 36, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(78, 201, 176, 0.15)', border: '1px solid #4ec9b0', color: '#4ec9b0', fontWeight: 700 }}
-          >
-            <Download size={14} /> 📤 JSON
-          </button>
+            <button
+              className="gold-btn"
+              onClick={() => exportCharacterJSON(store)}
+              style={{ padding: '0 10px', height: 32, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(78, 201, 176, 0.15)', border: '1px solid #4ec9b0', color: '#4ec9b0', fontWeight: 700, fontSize: '0.78rem' }}
+            >
+              <Download size={14} /> 📤 JSON
+            </button>
 
-          <button
-            className="gold-btn"
-            onClick={() => copyCharacterJSONToClipboard(store)}
-            style={{ padding: '0 10px', height: 36, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(165, 148, 255, 0.15)', border: '1px solid #a594ff', color: '#a594ff', fontWeight: 700 }}
-          >
-            <Copy size={14} /> 📋 Kopyala
-          </button>
-
-          <div>
-            <FieldLabel>Irk (Race)</FieldLabel>
-            <div style={{ display: 'flex', gap: 4 }}>
-              <input className="rune-input" value={race || ''} readOnly placeholder="Irk..." style={{ padding: '7px 8px' }} />
-              <button className="gold-btn" style={{ padding: '6px 10px', flexShrink: 0 }} onClick={() => handleOpenSelector('races', 'Irk Seçin')}>
-                Seç
-              </button>
-            </div>
-          </div>
-
-          <div>
-            <FieldLabel>Sınıf (Class)</FieldLabel>
-            <div style={{ display: 'flex', gap: 4 }}>
-              <input className="rune-input" value={charClass || ''} readOnly placeholder="Sınıf..." style={{ padding: '7px 8px' }} />
-              <button className="gold-btn" style={{ padding: '6px 10px', flexShrink: 0 }} onClick={() => handleOpenSelector('classes', 'Sınıf Seçin')}>
-                Seç
-              </button>
-            </div>
+            <button
+              className="gold-btn"
+              onClick={() => copyCharacterJSONToClipboard(store)}
+              style={{ padding: '0 10px', height: 32, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(165, 148, 255, 0.15)', border: '1px solid #a594ff', color: '#a594ff', fontWeight: 700, fontSize: '0.78rem' }}
+            >
+              <Copy size={14} /> 📋 Kopyala
+            </button>
           </div>
         </div>
+
+        {/* Selected Class Description Banner */}
+        {charClass && (
+          <div style={{
+            marginTop: '10px',
+            padding: '10px 14px',
+            borderRadius: '6px',
+            background: 'rgba(201, 168, 76, 0.08)',
+            border: '1px solid rgba(201, 168, 76, 0.25)',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '6px'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <span style={{ fontFamily: 'Cinzel, serif', fontWeight: 'bold', color: 'var(--accent-gold)', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <Sparkles size={14} /> {charClass} Sınıf Tanımı & Kuralları
+              </span>
+              {classData?.sistem_verisi?.hit_die && (
+                <span style={{ fontSize: '0.72rem', background: 'rgba(15,15,26,0.8)', padding: '2px 8px', borderRadius: '4px', border: '1px solid var(--accent-gold)', color: '#f0e6d2', fontWeight: 'bold' }}>
+                  Can Zarı: {classData.sistem_verisi.hit_die}
+                </span>
+              )}
+            </div>
+            <p style={{ margin: 0, fontSize: '0.8rem', color: '#d4c5a9', lineHeight: '1.45' }}>
+              {cleanText(classData?.aciklama || classData?.description) || `${charClass} sınıfı Pathfinder 1e yetenek ve kural şablonu.`}
+            </p>
+          </div>
+        )}
       </div>
 
       {/* Tabs Header */}
@@ -688,21 +733,27 @@ export default function PF1eControls() {
 
             {/* Encumbrance & Carrying Capacity Meter */}
             {(() => {
-              const totalW = recalcedData.total_weight || 0;
-              const cap = recalcedData.carrying_capacity || { light: 33, medium: 66, heavy: 100 };
-              const status = recalcedData.encumbrance_status || 'Light';
-              const percent = Math.min(100, Math.round((totalW / (cap.heavy || 100)) * 100));
+              const enc = recalcedData.encumbrance || {};
+              const cap = recalcedData.carrying_capacity || enc.carrying_capacity || {};
+              const totalW = recalcedData.total_weight ?? enc.total_weight ?? 0;
+              const lightMax = cap.light_max ?? cap.light ?? 33;
+              const mediumMax = cap.medium_max ?? cap.medium ?? 66;
+              const heavyMax = cap.heavy_max ?? cap.heavy ?? 100;
+              
+              const statusRaw = enc.status || recalcedData.encumbrance_status || 'Light Load';
+              const status = statusRaw.includes('Light') ? 'Light' : statusRaw.includes('Medium') ? 'Medium' : statusRaw.includes('Heavy') ? 'Heavy' : 'Overloaded';
 
+              const percent = Math.min(100, Math.round((totalW / (heavyMax || 100)) * 100));
               const statusColor = status === 'Light' ? '#4ec9b0' : status === 'Medium' ? '#ffd700' : status === 'Heavy' ? '#ff9f43' : '#e94560';
 
               return (
                 <div style={{ backgroundColor: '#161622', border: `1px solid ${statusColor}`, borderRadius: '10px', padding: '10px', marginBottom: '12px' }}>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
                     <span style={{ fontSize: '0.78rem', fontWeight: 700, color: '#fff' }}>
-                      📦 Taşıma Kapasitesi: <b style={{ color: statusColor }}>{totalW} lbs</b> ({status})
+                      📦 Taşıma Kapasitesi: <b style={{ color: statusColor }}>{totalW} lbs</b> ({statusRaw})
                     </span>
                     <span style={{ fontSize: '0.7rem', color: '#94a3b8' }}>
-                      Max: {cap.heavy} lbs
+                      Max: {heavyMax} lbs
                     </span>
                   </div>
 
@@ -712,9 +763,9 @@ export default function PF1eControls() {
                   </div>
 
                   <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.68rem', color: '#64748b', marginTop: '4px' }}>
-                    <span>Hafif: {cap.light} lbs</span>
-                    <span>Orta: {cap.medium} lbs</span>
-                    <span>Ağır: {cap.heavy} lbs</span>
+                    <span>Hafif: {lightMax} lbs</span>
+                    <span>Orta: {mediumMax} lbs</span>
+                    <span>Ağır: {heavyMax} lbs</span>
                   </div>
 
                   {/* Encumbrance Warning Banner */}
@@ -725,9 +776,9 @@ export default function PF1eControls() {
                       display: 'flex', alignItems: 'center', gap: '6px'
                     }}>
                       <AlertTriangle size={14} />
-                      {status === 'Medium' && '⚠️ Orta Yük Uyarısı: Hareket hızı 20 ft\'e düşer, Max DEX sınırı +3.'}
+                      {status === 'Medium' && '⚠️ Orta Yük Uyarısı: Hareket hızı 20 ft\'e düşer, Max DEX sınırı +3, ACP -3.'}
                       {status === 'Heavy' && '⚠️ Ağır Yük Uyarısı: Hareket hızı 20 ft\'e düşer, Max DEX sınırı +1, ACP -6.'}
-                      {status === 'Overloaded' && '🚨 KRİTİK AŞIRI YÜK: Karakter eşyaları taşıyamıyor! Hareket 0 ft.'}
+                      {status === 'Overloaded' && '🚨 KRİTİK AŞIRI YÜK: Karakter eşyaları taşıyamıyor! Hareket engellenir.'}
                     </div>
                   )}
                 </div>
@@ -735,19 +786,50 @@ export default function PF1eControls() {
             })()}
 
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
-              <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.52rem', color: 'var(--gold-dim)' }}>Envanter Listesi</span>
+              <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.52rem', color: 'var(--gold-dim)' }}>Kategorize Envanter Listesi</span>
               <button className="gold-btn" style={{ padding: '4px 10px' }} onClick={() => handleOpenSelector('equipment', 'Ekipman Ekle')}>
                 + Ekle
               </button>
             </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 4, marginBottom: 8 }}>
-              {(recalcedData.equipment || []).map((item, index) => (
-                <div key={index} className="dark-panel" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 10px' }}>
-                  <span style={{ fontFamily: 'EB Garamond, serif', fontSize: '0.85rem', color: 'var(--gold-light)' }}>{item.name}</span>
-                  <Trash size={12} style={{ color: '#e87070', cursor: 'pointer' }} onClick={() => removeEquipment(index)} />
+
+            {/* Grouped Equipment Inventory */}
+            {(() => {
+              const eqList = recalcedData.equipment || [];
+              if (eqList.length === 0) {
+                return (
+                  <div style={{ fontSize: '0.8rem', color: 'var(--gold-dim)', fontStyle: 'italic', padding: '8px 0', marginBottom: 8 }}>
+                    Henüz envanterinize ekipman eklenmedi. Eşya eklemek için yukarıdaki "+ Ekle" butonunu kullanın.
+                  </div>
+                );
+              }
+
+              const grouped = {};
+              eqList.forEach((item, index) => {
+                const catId = getEquipmentCategory(item);
+                if (!grouped[catId]) grouped[catId] = [];
+                grouped[catId].push({ item, index });
+              });
+
+              return (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 12 }}>
+                  {EQUIPMENT_CATEGORIES.filter(c => c.id !== 'all' && grouped[c.id]?.length > 0).map(cat => (
+                    <div key={cat.id} style={{ background: 'rgba(15,12,28,0.6)', border: '1px solid rgba(201,168,76,0.18)', borderRadius: 6, padding: '8px 10px' }}>
+                      <div style={{ fontSize: '0.72rem', fontFamily: 'Cinzel, serif', color: 'var(--gold-bright)', fontWeight: 'bold', marginBottom: 6 }}>
+                        {cat.label} ({grouped[cat.id].length})
+                      </div>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                        {grouped[cat.id].map(({ item, index }) => (
+                          <div key={index} className="dark-panel" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 10px' }}>
+                            <span style={{ fontFamily: 'EB Garamond, serif', fontSize: '0.88rem', color: 'var(--gold-light)' }}>{item.name || item.isim}</span>
+                            <Trash size={13} style={{ color: '#e87070', cursor: 'pointer', opacity: 0.8 }} onClick={() => removeEquipment(index)} />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
-            </div>
+              );
+            })()}
 
             {/* Spells & Spell Slots Section */}
             {hasSpellcasting && (

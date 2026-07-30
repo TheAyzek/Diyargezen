@@ -14,8 +14,13 @@ service = RulesService()
     summary="Oynanabilir Irkları Getir",
     description="Belirtilen kural sistemi (örn: pathfinder1e) için oynanabilir tüm ana ırkları getirir."
 )
-def get_races(system: str):
-    races = service.get_races(system)
+@router.get(
+    "/{system}/race",
+    response_model=List[EntityResponseSchema],
+    include_in_schema=False
+)
+def get_races(system: str, query: str = Query("", description="Irk adı veya açıklama arama filtresi")):
+    races = service.get_races(system, query=query)
     return [EntityResponseSchema.model_validate(r, from_attributes=True) for r in races]
 
 @router.get(
@@ -34,8 +39,13 @@ def get_subraces(system: str, parent_race: str):
     summary="Sınıf ve Arketip Kataloğunu Getir",
     description="Sistemde tanımlı tüm temel sınıfları ve arketipleri getirir."
 )
-def get_classes(system: str):
-    classes = service.get_classes(system)
+@router.get(
+    "/{system}/class",
+    response_model=List[EntityResponseSchema],
+    include_in_schema=False
+)
+def get_classes(system: str, query: str = Query("", description="Sınıf adı veya arketip arama filtresi")):
+    classes = service.get_classes(system, query=query)
     return [EntityResponseSchema.model_validate(c, from_attributes=True) for c in classes]
 
 @router.get(

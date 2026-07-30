@@ -5,7 +5,8 @@ import {
   Layers, ChevronRight, X, Info, Filter, ArrowLeft, Crosshair, Sword,
   Dices, Star, Award, Heart, CheckCircle2
 } from 'lucide-react';
-import { cleanText } from '../utils/textSanitizer';
+import { cleanText, formatTitle, toSentenceCase, parseTraitsDetailed } from '../utils/textSanitizer';
+import { getEquipmentCategory, EQUIPMENT_CATEGORIES } from '../utils/equipmentClassifier';
 
 const CATEGORIES = [
   { id: 'races', label: 'Irklar & Miraslar', icon: UserCheck, endpoint: '/api/rules/pf1e/races' },
@@ -203,6 +204,7 @@ export default function RulesCompendium({ onBack }) {
   const [query, setQuery] = useState('');
   const [subFilter, setSubFilter] = useState('');
   const [spellLevel, setSpellLevel] = useState('');
+  const [sortBy, setSortBy] = useState('level_asc');
   const [entities, setEntities] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedEntity, setSelectedEntity] = useState(null);
@@ -225,7 +227,15 @@ export default function RulesCompendium({ onBack }) {
           setEntities(CURATED_MECHANICS);
         }
       } else {
-        const res = await axios.get(catObj.endpoint);
+        const params = {};
+        if (activeTab === 'spells' && spellLevel !== '') {
+          params.level = spellLevel;
+        }
+        if (subFilter) {
+          if (activeTab === 'spells') params.school = subFilter;
+          else params.category = subFilter;
+        }
+        const res = await axios.get(catObj.endpoint, { params });
         setEntities(res.data || []);
       }
     } catch (err) {
@@ -240,22 +250,50 @@ export default function RulesCompendium({ onBack }) {
     }
   };
 
+  const getItemLevel = (item) => {
+    const sv = item.sistem_verisi || {};
+    if (sv.level !== undefined && sv.level !== null) return parseInt(sv.level);
+    if (sv.spell_level !== undefined && sv.spell_level !== null) return parseInt(sv.spell_level);
+    if (item.seviye !== undefined && item.seviye !== null) return parseInt(item.seviye);
+    if (item.level !== undefined && item.level !== null) return parseInt(item.level);
+    if (sv.levels && typeof sv.levels === 'object') {
+      const vals = Object.values(sv.levels).map(v => parseInt(v)).filter(n => !isNaN(n));
+      if (vals.length > 0) return Math.min(...vals);
+    }
+    return null;
+  };
+
+  const isGarbageEntity = (item) => {
+    const name = (item.isim || item.name || '').trim();
+    if (name.startsWith('#') || name.startsWith('*') || name.startsWith('[CF_') || name.startsWith('†')) return true;
+    if (name.includes('TEMPENTITY') || name.includes('GENERATE') || name.includes('MAJOR MAGIC') || name.includes('MINOR MAGIC')) return true;
+    return false;
+  };
+
   const filteredEntities = entities.filter(item => {
+    if (isGarbageEntity(item)) return false;
+
     const nameMatch = (item.isim && item.isim.toLowerCase().includes(query.toLowerCase())) ||
                       (item.aciklama && item.aciklama.toLowerCase().includes(query.toLowerCase()));
     
     if (!nameMatch) return false;
 
     if (activeTab === 'spells') {
-      if (spellLevel !== '' && item.sistem_verisi?.level !== undefined) {
-        if (String(item.sistem_verisi.level) !== String(spellLevel)) return false;
+      if (spellLevel !== '') {
+        const itemLvl = getItemLevel(item);
+        if (itemLvl === null || itemLvl !== parseInt(spellLevel)) return false;
       }
       if (subFilter && item.sistem_verisi?.school) {
         if (!item.sistem_verisi.school.toLowerCase().includes(subFilter.toLowerCase())) return false;
       }
+    } else if (activeTab === 'equipment') {
+      if (subFilter && subFilter !== 'all') {
+        const cat = getEquipmentCategory(item);
+        if (cat !== subFilter) return false;
+      }
     } else if (activeTab === 'feats' || activeTab === 'traits' || activeTab === 'mechanics') {
       if (subFilter) {
-        const featCat = item.sistem_verisi?.category || item.kategori || '';
+        const featCat = item.sistem_verisi?.feat_category || item.sistem_verisi?.trait_category || item.sistem_verisi?.category || item.kategori || '';
         if (!featCat.toLowerCase().includes(subFilter.toLowerCase())) return false;
       }
     }
@@ -263,13 +301,34 @@ export default function RulesCompendium({ onBack }) {
     return true;
   });
 
+  const sortedEntities = [...filteredEntities].sort((a, b) => {
+    if (sortBy === 'level_asc' || sortBy === 'level_desc') {
+      const lvlA = getItemLevel(a) ?? (sortBy === 'level_asc' ? 99 : -1);
+      const lvlB = getItemLevel(b) ?? (sortBy === 'level_asc' ? 99 : -1);
+      if (lvlA !== lvlB) {
+        return sortBy === 'level_asc' ? lvlA - lvlB : lvlB - lvlA;
+      }
+    }
+    if (sortBy === 'name_desc') {
+      return (b.isim || b.name || '').localeCompare(a.isim || a.name || '');
+    }
+    return (a.isim || a.name || '').localeCompare(b.isim || b.name || '');
+  });
+
   const renderEntityBadges = (item) => {
     const data = item.sistem_verisi || {};
+    const catBadge = data.feat_category || data.trait_category || (data.category !== item.kategori ? data.category : null);
+
     return (
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '8px' }}>
         {item.kategori && (
           <span style={{ fontSize: '0.65rem', padding: '2px 8px', borderRadius: '4px', background: 'rgba(201,168,76,0.15)', border: '1px solid rgba(201,168,76,0.3)', color: 'var(--gold-light)' }}>
             {item.kategori.toUpperCase()}
+          </span>
+        )}
+        {catBadge && (
+          <span style={{ fontSize: '0.65rem', padding: '2px 8px', borderRadius: '4px', background: 'rgba(78,201,176,0.15)', border: '1px solid rgba(78,201,176,0.4)', color: '#7ee787' }}>
+            {catBadge.toUpperCase()}
           </span>
         )}
         {data.level !== undefined && (
@@ -292,7 +351,7 @@ export default function RulesCompendium({ onBack }) {
   };
 
   const renderDetailContent = (item) => {
-    const isClass = item.kategori === 'class' || item.kategori === 'archetype' || activeTab === 'classes';
+    const isClass = (activeTab === 'classes' || item.kategori === 'class' || item.kategori === 'archetype') && activeTab !== 'races';
     const sv = item.sistem_verisi || {};
 
     if (isClass) {
@@ -343,6 +402,25 @@ export default function RulesCompendium({ onBack }) {
       return (
         <div style={{ marginTop: '16px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
           
+          {/* Class Overview Description Banner */}
+          {item.aciklama && (
+            <div style={{
+              padding: '14px 16px',
+              background: 'rgba(201,168,76,0.06)',
+              border: '1px solid rgba(201,168,76,0.25)',
+              borderRadius: '6px',
+              fontSize: '0.88rem',
+              color: '#f0e6d2',
+              lineHeight: '1.55',
+              fontFamily: 'Outfit, sans-serif'
+            }}>
+              <h4 style={{ margin: '0 0 6px 0', fontFamily: 'Cinzel, serif', color: 'var(--gold-bright)', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <BookOpen size={16} /> {item.isim} Sınıf Tanımı & Genel Bakış
+              </h4>
+              {cleanText(item.aciklama)}
+            </div>
+          )}
+
           {/* Core Stat Grid */}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '12px' }}>
             <div style={{ padding: '12px', background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.25)', borderRadius: '6px', display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -505,25 +583,237 @@ export default function RulesCompendium({ onBack }) {
       );
     }
 
-    // Generic detail view for non-classes (Feats, Items, Mechanics)
-    const filteredEntries = Object.entries(sv).filter(([k]) => !VTT_INTERNAL_KEYS.has(k.toLowerCase()));
+    // Clean Helper to check if a value is non-empty
+    const isNotEmpty = (val) => {
+      if (val === null || val === undefined) return false;
+      if (typeof val === 'string') {
+        const s = val.trim().toLowerCase();
+        return s !== '' && s !== 'none' && s !== 'null' && s !== '[]' && s !== '{}';
+      }
+      if (Array.isArray(val)) return val.length > 0;
+      if (typeof val === 'object') return Object.keys(val).length > 0;
+      return true;
+    };
 
-    if (filteredEntries.length === 0) return null;
+    const IGNORED_KEYS = new Set([
+      'description', 'name', 'system', 'aciklama', 'flags', 'data', 'img', '_id',
+      'chat', 'unidentified', 'tags', 'actions', 'uses', 'per', 'maxformula',
+      'autodeductchargescost', 'attacknotes', 'effectnotes', 'changes', 'changeflags',
+      'losedextoac', 'noencumbrance', 'mediumarmorfullspeed', 'heavyarmorfullspeed',
+      'links', 'charges', 'tag', 'usecustomtag', 'armorprof', 'weaponprof',
+      'scriptcalls', 'feattype', 'associations', 'classes', 'showinquickbar',
+      'abilitytype', 'croffset', 'disabled', 'classskills', 'activation',
+      'unchainedaction', 'actiontype', 'ability', 'damagemult', 'critmult',
+      'maxincrements', 'standard_mechanics', 'source_ref', 'schema_version',
+      'data_source', 'ability_score_increase_text', 'languages_bonus',
+      'weapon_proficiencies', 'armor_proficiencies', 'racial_spells', 'favored_classes', 'skill_bonuses'
+    ]);
+
+    // Normalize all keys of sv to lowercase for seamless casing support
+    const normSv = {};
+    Object.entries(sv).forEach(([k, v]) => {
+      normSv[k.toLowerCase()] = v;
+    });
+
+    const parsedTraitsObj = parseTraitsDetailed(normSv.traits_detailed);
+    const hasTraitsDetailed = isNotEmpty(parsedTraitsObj);
+
+    const validEntries = Object.entries(normSv).filter(([k, v]) => {
+      const kLower = k.toLowerCase();
+      if (IGNORED_KEYS.has(kLower)) return false;
+      if (kLower === 'traits' && hasTraitsDetailed) return false; // Avoid duplicating traits title array when detailed traits exist
+      if (kLower === 'speed_special' && hasTraitsDetailed) return false; // Avoid repeating trait text wall in speed_special
+      return isNotEmpty(v);
+    });
+
+    if (validEntries.length === 0) return null;
+
+    const renderFieldValue = (key, val) => {
+      const kLower = key.toLowerCase();
+
+      // Ability score increase badges
+      if (kLower === 'ability_score_increase') {
+        let entries = [];
+        if (typeof val === 'object' && !Array.isArray(val)) {
+          entries = Object.entries(val).map(([st, n]) => `${n >= 0 ? '+' : ''}${n} ${st.charAt(0).toUpperCase() + st.slice(1).toLowerCase()}`);
+        } else if (typeof val === 'string') {
+          entries = [val];
+        }
+        return (
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '4px' }}>
+            {entries.map((txt, i) => (
+              <span key={i} style={{
+                fontSize: '0.78rem', fontWeight: 'bold',
+                background: 'linear-gradient(135deg, rgba(201,168,76,0.2) 0%, rgba(130,95,25,0.3) 100%)',
+                color: 'var(--gold-bright)', border: '1px solid var(--border-gold)',
+                padding: '3px 10px', borderRadius: '12px'
+              }}>
+                ⚡ {txt}
+              </span>
+            ))}
+          </div>
+        );
+      }
+
+      // Languages badges
+      if (kLower === 'languages' || kLower === 'languages_automatic') {
+        let list = Array.isArray(val) ? val : String(val).split(',').map(s => s.trim());
+        return (
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '4px' }}>
+            {list.map((lang, i) => (
+              <span key={i} style={{
+                fontSize: '0.75rem', background: 'rgba(124,110,247,0.15)',
+                color: '#a594ff', border: '1px solid rgba(124,110,247,0.3)',
+                padding: '2px 8px', borderRadius: '10px'
+              }}>
+                🗣️ {lang}
+              </span>
+            ))}
+          </div>
+        );
+      }
+
+      // Traits list badges (fallback when traits_detailed absent)
+      if (kLower === 'traits' && Array.isArray(val)) {
+        return (
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '4px' }}>
+            {val.map((tr, i) => (
+              <span key={i} style={{
+                fontSize: '0.75rem', background: 'rgba(201,168,76,0.1)',
+                color: 'var(--gold-light)', border: '1px solid rgba(201,168,76,0.2)',
+                padding: '2px 8px', borderRadius: '8px'
+              }}>
+                ✦ {formatTitle(tr)}
+              </span>
+            ))}
+          </div>
+        );
+      }
+
+      // Traits detailed cards in a multi-column responsive grid
+      if (kLower === 'traits_detailed') {
+        const traitsObj = parseTraitsDetailed(val) || parsedTraitsObj;
+        if (!traitsObj) return null;
+        const entries = Object.entries(traitsObj);
+        return (
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gap: '12px',
+            marginTop: '10px',
+            gridColumn: '1 / -1'
+          }}>
+            {entries.map(([title, desc], i) => (
+              <div key={i} style={{
+                background: 'linear-gradient(135deg, rgba(20,16,35,0.9) 0%, rgba(12,10,22,0.95) 100%)',
+                border: '1px solid rgba(201,168,76,0.25)',
+                borderLeft: '4px solid var(--gold-bright)',
+                borderRadius: '8px',
+                padding: '12px 14px',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '6px'
+              }}>
+                <div style={{
+                  fontSize: '0.88rem',
+                  fontFamily: 'Cinzel, serif',
+                  fontWeight: 'bold',
+                  color: 'var(--gold-bright)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  borderBottom: '1px dashed rgba(201,168,76,0.2)',
+                  paddingBottom: '6px'
+                }}>
+                  <span style={{ color: 'var(--gold)', fontSize: '0.8rem' }}>✦</span>
+                  {formatTitle(title)}
+                </div>
+                <div style={{
+                  fontSize: '0.82rem',
+                  color: '#f0e6d2',
+                  lineHeight: '1.5',
+                  fontFamily: 'Outfit, sans-serif'
+                }}>
+                  {toSentenceCase(cleanText(String(desc)))}
+                </div>
+              </div>
+            ))}
+          </div>
+        );
+      }
+
+      // Source URL link
+      if (kLower === 'source' && typeof val === 'string' && val.startsWith('http')) {
+        return (
+          <div style={{ marginTop: '4px' }}>
+            <a href={val} target="_blank" rel="noreferrer" style={{ fontSize: '0.78rem', color: 'var(--gold-bright)', textDecoration: 'underline' }}>
+              🔗 AonPRD Kaynak Sayfası ↗
+            </a>
+          </div>
+        );
+      }
+
+      // Default string/number
+      if (typeof val === 'string' || typeof val === 'number' || typeof val === 'boolean') {
+        return <div style={{ color: 'var(--text-main)', fontSize: '0.82rem', marginTop: '2px', lineHeight: '1.4' }}>{toSentenceCase(cleanText(String(val)))}</div>;
+      }
+
+      // Array fallback
+      if (Array.isArray(val)) {
+        return <div style={{ color: 'var(--text-main)', fontSize: '0.82rem', marginTop: '2px' }}>{val.join(', ')}</div>;
+      }
+
+      // Object fallback
+      return <div style={{ color: 'var(--text-main)', fontSize: '0.8rem', marginTop: '2px' }}>{JSON.stringify(val)}</div>;
+    };
+
+    const FIELD_LABELS = {
+      ability_score_increase: 'Yetenek Puanı Artışları',
+      speed: 'Hareket Hızı',
+      speed_special: 'Özel Hareket Yetenekleri',
+      traits: 'Irksal Özellikler',
+      traits_detailed: 'Irksal Özellik Detayları',
+      languages: 'Diller',
+      languages_automatic: 'Otomatik Diller',
+      size: 'Boyut',
+      type: 'Tür (Type)',
+      subtype: 'Alt Tür (Subtype)',
+      vision: 'Görüş Yeteneği',
+      vision_range: 'Görüş Menzili (ft)',
+      spell_resistance: 'Büyü Direnci (SR)',
+      source: 'Kural Kaynağı',
+      favored_class_bonus: 'Favori Sınıf Bonusu'
+    };
 
     return (
-      <div style={{ marginTop: '20px', padding: '14px', background: 'rgba(10,8,20,0.6)', border: '1px solid rgba(201,168,76,0.2)', borderRadius: '6px' }}>
-        <h4 style={{ margin: '0 0 10px 0', fontFamily: 'Cinzel, serif', color: 'var(--gold-light)', fontSize: '0.9rem' }}>
-          Sistem & İstatistik Verileri
+      <div style={{ marginTop: '20px', padding: '16px', background: 'rgba(10,8,20,0.7)', border: '1px solid rgba(201,168,76,0.25)', borderRadius: '8px' }}>
+        <h4 style={{ margin: '0 0 12px 0', fontFamily: 'Cinzel, serif', color: 'var(--gold-light)', fontSize: '0.95rem', letterSpacing: '0.05em' }}>
+          🛡️ Sistem & İstatistik Verileri
         </h4>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '8px' }}>
-          {filteredEntries.map(([key, val]) => (
-            <div key={key} style={{ fontSize: '0.8rem' }}>
-              <span style={{ color: 'var(--gold-pale)', fontWeight: 'bold' }}>{key.toUpperCase()}: </span>
-              <span style={{ color: 'var(--text-main)' }}>
-                {typeof val === 'object' ? JSON.stringify(val) : String(val)}
-              </span>
-            </div>
-          ))}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '12px' }}>
+          {validEntries.map(([key, val]) => {
+            const label = FIELD_LABELS[key.toLowerCase()] || key.replace(/_/g, ' ').toUpperCase();
+            const isFullWidth = key.toLowerCase() === 'traits_detailed' || key.toLowerCase() === 'speed_special';
+
+            return (
+              <div
+                key={key}
+                style={{
+                  gridColumn: isFullWidth ? '1 / -1' : 'auto',
+                  background: 'rgba(20,16,35,0.6)',
+                  border: '1px solid rgba(255,255,255,0.06)',
+                  padding: '10px 12px',
+                  borderRadius: '6px'
+                }}
+              >
+                <div style={{ fontSize: '0.7rem', color: 'var(--gold-pale)', textTransform: 'uppercase', fontFamily: 'Cinzel, serif', fontWeight: 'bold' }}>
+                  {label}
+                </div>
+                {renderFieldValue(key, val)}
+              </div>
+            );
+          })}
         </div>
       </div>
     );
@@ -643,25 +933,73 @@ export default function RulesCompendium({ onBack }) {
           </>
         )}
 
-        {(activeTab === 'feats' || activeTab === 'traits') && (
+        {activeTab === 'equipment' && (
           <select
             className="sheet-input"
             value={subFilter}
             onChange={(e) => setSubFilter(e.target.value)}
-            style={{ width: '160px', fontSize: '0.82rem' }}
+            style={{ width: '180px', fontSize: '0.82rem' }}
           >
-            <option value="">Tüm Kategoriler</option>
-            <option value="Combat">Combat</option>
-            <option value="Metamagic">Metamagic</option>
-            <option value="Teamwork">Teamwork</option>
-            <option value="General">General</option>
-            <option value="Social">Social</option>
-            <option value="Faith">Faith</option>
+            {EQUIPMENT_CATEGORIES.map(cat => (
+              <option key={cat.id} value={cat.id}>{cat.label}</option>
+            ))}
           </select>
         )}
 
+        {activeTab === 'feats' && (
+          <select
+            className="sheet-input"
+            value={subFilter}
+            onChange={(e) => setSubFilter(e.target.value)}
+            style={{ width: '170px', fontSize: '0.82rem' }}
+          >
+            <option value="">Tüm Feat Türleri</option>
+            <option value="Combat">Combat (Savaş)</option>
+            <option value="Metamagic">Metamagic (Büyü)</option>
+            <option value="Teamwork">Teamwork (Takım)</option>
+            <option value="Item Creation">Item Creation (Zanaat)</option>
+            <option value="Racial">Racial (Irksal)</option>
+            <option value="General">General (Genel)</option>
+            <option value="Mythic">Mythic (Efsanevi)</option>
+            <option value="Style">Style (Stil)</option>
+            <option value="Critical">Critical (Kritik)</option>
+          </select>
+        )}
+
+        {activeTab === 'traits' && (
+          <select
+            className="sheet-input"
+            value={subFilter}
+            onChange={(e) => setSubFilter(e.target.value)}
+            style={{ width: '170px', fontSize: '0.82rem' }}
+          >
+            <option value="">Tüm Trait Türleri</option>
+            <option value="Combat">Combat (Savaş)</option>
+            <option value="Social">Social (Sosyal)</option>
+            <option value="Faith">Faith (İnanç / Din)</option>
+            <option value="Magic">Magic (Büyü)</option>
+            <option value="Racial">Racial (Irksal)</option>
+            <option value="Regional">Regional (Bölgesel)</option>
+            <option value="Campaign">Campaign (Hikaye)</option>
+            <option value="Equipment">Equipment (Ekipman)</option>
+          </select>
+        )}
+
+        {/* Sort By Dropdown */}
+        <select
+          className="sheet-input"
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+          style={{ width: '180px', fontSize: '0.82rem' }}
+        >
+          <option value="level_asc">📊 Seviye: 0 ➜ 9 (Artan)</option>
+          <option value="level_desc">📊 Seviye: 9 ➜ 0 (Azalan)</option>
+          <option value="name_asc">🔤 İsim: A ➜ Z</option>
+          <option value="name_desc">🔤 İsim: Z ➜ A</option>
+        </select>
+
         <div style={{ fontSize: '0.8rem', color: 'var(--gold-pale)', marginLeft: 'auto' }}>
-          Toplam <b>{filteredEntities.length}</b> kayıt listelendi
+          Toplam <b>{sortedEntities.length}</b> kayıt listelendi
         </div>
       </div>
 
@@ -671,14 +1009,14 @@ export default function RulesCompendium({ onBack }) {
           <Sparkles className="spin" size={32} style={{ marginBottom: '12px' }} />
           <p style={{ fontFamily: 'Cinzel, serif' }}>Kural Kütüphanesi Yükleniyor...</p>
         </div>
-      ) : filteredEntities.length === 0 ? (
+      ) : sortedEntities.length === 0 ? (
         <div className="sheet-card" style={{ padding: '40px', textAlign: 'center', color: 'var(--text-muted)' }}>
           <Info size={32} style={{ color: 'var(--border-gold)', marginBottom: '8px' }} />
           <p>Aradığınız kritere uygun kural varlığı bulunamadı.</p>
         </div>
       ) : (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '16px', marginBottom: '30px' }}>
-          {filteredEntities.map((item, idx) => (
+          {sortedEntities.map((item, idx) => (
             <div
               key={idx}
               className="sheet-card hover-glow"
@@ -713,7 +1051,14 @@ export default function RulesCompendium({ onBack }) {
                   WebkitBoxOrient: 'vertical',
                   overflow: 'hidden'
                 }}>
-                  {cleanText(item.aciklama) || 'Detaylı açıklama ve kural verisini görüntülemek için tıklayın.'}
+                  {(() => {
+                    const rawText = item.aciklama || item.description || (item.sistem_verisi?.description);
+                    const cleaned = cleanText(rawText);
+                    if (cleaned && cleaned.toLowerCase() !== 'contents' && !cleaned.toLowerCase().startsWith('subpages')) {
+                      return cleaned;
+                    }
+                    return `${item.isim || item.name} sınıfı Pathfinder 1e temel kural ve yetenek şablonu.`;
+                  })()}
                 </p>
               </div>
 
@@ -775,9 +1120,11 @@ export default function RulesCompendium({ onBack }) {
 
             <hr style={{ borderColor: 'rgba(201,168,76,0.2)', margin: '16px 0' }} />
 
-            <div style={{ fontSize: '0.9rem', lineHeight: '1.65', color: 'var(--text-main)', whiteSpace: 'pre-line', fontFamily: 'var(--font-body)', wordBreak: 'break-word' }}>
-              {cleanText(selectedEntity.aciklama) || 'Açıklama mevcut değil.'}
-            </div>
+            {!(activeTab === 'classes' || selectedEntity.kategori === 'class' || selectedEntity.kategori === 'archetype') && (
+              <div style={{ fontSize: '0.9rem', lineHeight: '1.65', color: 'var(--text-main)', whiteSpace: 'pre-line', fontFamily: 'var(--font-body)', wordBreak: 'break-word' }}>
+                {cleanText(selectedEntity.aciklama) || `${selectedEntity.isim} kural detayları ve yetenek bilgisi.`}
+              </div>
+            )}
 
             {renderDetailContent(selectedEntity)}
 

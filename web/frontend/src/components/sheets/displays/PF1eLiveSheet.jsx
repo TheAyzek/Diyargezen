@@ -1,3 +1,20 @@
+/**
+ * Diyargezen Pathfinder 1st Edition Live PDF View & Form Synchronizer
+ * 
+ * Architecture & Performance Design:
+ * ----------------------------------
+ * This component handles real-time rendering of active Pathfinder 1e character sheets using `pdf-lib`.
+ * It embeds an interactive `<iframe src={pdfDataUri}>` container alongside tabbed HTML displays
+ * for parchment sheet summary and spellbook management.
+ * 
+ * Performance Loop:
+ * 1. Debounced Re-render (300ms): Reacts to Zustand store mutations (attributes, equipment, skills, feats, traits)
+ *    and throttles PDF generation to prevent main thread rendering bottlenecks.
+ * 2. Embedded Font Stream: Embeds standard Helvetica typefaces for AcroForm field appearance generation.
+ * 3. Reactive Data URI Streaming: Encodes filled PDF bytes into Base64 Data URI streams for instant `<iframe />` rendering.
+ * 4. Image Canvas Embedding: Scales character portraits into PDF canvas coordinate space if portrait Data URI exists.
+ */
+
 import React, { useEffect, useState, useRef } from 'react';
 import { PDFDocument, StandardFonts } from 'pdf-lib';
 import { FileText, RefreshCw, Download, Shield, Heart, Sword, Sparkles, Activity, Wand2, Scroll } from 'lucide-react';

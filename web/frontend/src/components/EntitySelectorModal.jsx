@@ -2,16 +2,21 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Search, X, ChevronDown, ChevronRight, Sparkles } from 'lucide-react';
-import { cleanText } from '../utils/textSanitizer';
+import { cleanText, formatTitle, toSentenceCase } from '../utils/textSanitizer';
+import { getEquipmentCategory, EQUIPMENT_CATEGORIES } from '../utils/equipmentClassifier';
 
 export default function EntitySelectorModal({ isOpen, onClose, system, category, title, onSelect }) {
   const [entities, setEntities] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [equipmentTypeFilter, setEquipmentTypeFilter] = useState('all');
   const [loading, setLoading] = useState(false);
   const [expandedClasses, setExpandedClasses] = useState({});
 
   useEffect(() => {
     if (isOpen) {
+      setEntities([]);
+      setSearchQuery('');
+      setExpandedClasses({});
       loadEntities();
     }
   }, [isOpen, category, system]);
@@ -19,12 +24,12 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
   const loadEntities = () => {
     setLoading(true);
     let endpointCategory = category;
-    if (category === 'equipment') endpointCategory = 'equipment';
-    else if (category === 'feats') endpointCategory = 'feats';
-    else if (category === 'races') endpointCategory = 'races';
-    else if (category === 'classes') endpointCategory = 'classes';
-    else if (category === 'spells') endpointCategory = 'spells';
-    else if (category === 'powers') endpointCategory = 'powers';
+    if (category === 'equipment' || category === 'item') endpointCategory = 'equipment';
+    else if (category === 'feats' || category === 'feat') endpointCategory = 'feats';
+    else if (category === 'races' || category === 'race') endpointCategory = 'races';
+    else if (category === 'classes' || category === 'class') endpointCategory = 'classes';
+    else if (category === 'spells' || category === 'spell') endpointCategory = 'spells';
+    else if (category === 'powers' || category === 'power') endpointCategory = 'powers';
 
     axios.get(`/api/rules/${system}/${endpointCategory}`, {
       params: { query: searchQuery }
@@ -40,7 +45,7 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
   };
 
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen && searchQuery !== '') {
       const delayDebounce = setTimeout(() => {
         loadEntities();
       }, 300);
@@ -57,7 +62,7 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
 
   if (!isOpen) return null;
 
-  const isClassCategory = category === 'classes';
+  const isClassCategory = category === 'classes' || category === 'class';
 
   // Helper to group classes and archetypes
   const groupClasses = () => {
@@ -99,6 +104,19 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
   };
 
   const { mainClasses, archetypesMap } = isClassCategory ? groupClasses() : { mainClasses: [], archetypesMap: {} };
+
+  const filteredGenericEntities = entities.filter(ent => {
+    if (category === 'equipment' && equipmentTypeFilter !== 'all') {
+      if (getEquipmentCategory(ent) !== equipmentTypeFilter) return false;
+    }
+    if (searchQuery) {
+      const q = searchQuery.trim().toLowerCase();
+      const n = (ent.isim || ent.name || '').toLowerCase();
+      const d = (ent.aciklama || ent.description || '').toLowerCase();
+      return n.includes(q) || d.includes(q);
+    }
+    return true;
+  });
 
   const modalJSX = (
     <div 
@@ -174,6 +192,35 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
           />
         </div>
 
+        {/* Equipment Category Filter Pills */}
+        {category === 'equipment' && (
+          <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '8px', marginBottom: '12px' }}>
+            {EQUIPMENT_CATEGORIES.map(cat => {
+              const isActive = equipmentTypeFilter === cat.id;
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setEquipmentTypeFilter(cat.id)}
+                  style={{
+                    fontSize: '11px',
+                    padding: '6px 12px',
+                    borderRadius: '4px',
+                    cursor: 'pointer',
+                    whiteSpace: 'nowrap',
+                    background: isActive ? 'rgba(201,168,76,0.25)' : 'rgba(255,255,255,0.04)',
+                    border: isActive ? '1px solid #c9a84c' : '1px solid rgba(255,255,255,0.1)',
+                    color: isActive ? '#ffd700' : '#8b949e',
+                    fontWeight: isActive ? 'bold' : 'normal',
+                    transition: 'all 0.2s ease'
+                  }}
+                >
+                  {cat.label}
+                </button>
+              );
+            })}
+          </div>
+        )}
+
         {/* Entities / Accordion List */}
         <div style={{ flex: 1, overflowY: 'auto', paddingRight: '4px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
           {loading ? (
@@ -207,12 +254,22 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
                           Sınıf
                         </span>
                       </div>
-                      {cls.aciklama && (
-                        <div 
-                          style={{ fontSize: '13px', color: '#8b949e', marginTop: '6px', lineHeight: '1.4' }}
-                          dangerouslySetInnerHTML={{ __html: cls.aciklama }}
-                        />
-                      )}
+                      {(() => {
+                        const cleanDesc = cleanText(cls.aciklama || cls.description);
+                        const sys = cls.sistem_verisi || {};
+                        return (
+                          <div style={{ marginTop: '6px', display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            <div style={{ fontSize: '13px', color: '#d4c5a9', lineHeight: '1.45' }}>
+                              {cleanDesc || `${cls.isim} sınıfı kural detayları ve yetenek şablonu.`}
+                            </div>
+                            {sys.hit_die && (
+                              <div style={{ fontSize: '11px', color: '#c9a84c', fontWeight: 'bold' }}>
+                                Can Zarı: {sys.hit_die}
+                              </div>
+                            )}
+                          </div>
+                        );
+                      })()}
                     </div>
 
                     <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexShrink: 0 }}>
@@ -296,8 +353,8 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
             })
           ) : (
             /* Generic Categories (Races, Feats, Equipment, Spells) */
-            entities.map((ent, idx) => {
-              const isRaceCategory = category === 'races';
+            filteredGenericEntities.map((ent, idx) => {
+              const isRaceCategory = category === 'races' || category === 'race';
               const sv = ent.sistem_verisi || {};
 
               // Extract racial ability bonus text
@@ -388,7 +445,7 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
                       )}
                       {traitsList.map((t, ti) => (
                         <span key={ti} style={{ fontSize: '10px', background: 'rgba(255,255,255,0.05)', color: '#d4c5a9', border: '1px solid rgba(255,255,255,0.1)', padding: '1px 6px', borderRadius: '3px' }}>
-                          {t}
+                          ✦ {formatTitle(t)}
                         </span>
                       ))}
                     </div>

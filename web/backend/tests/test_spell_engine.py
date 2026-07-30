@@ -77,3 +77,26 @@ def test_validate_spell_prerequisites():
     }
     res_capable = validate_spell_prerequisites(spell_fireball, char_capable)
     assert res_capable["valid"]
+
+
+def test_metamagic_spell_slot_calculation():
+    from rules.spell_engine import calculate_metamagic_spell_slot, validate_metamagic_application
+    
+    # Empower (+2) + Extend (+1) on 3rd level Fireball -> Effective 6th level slot
+    res = calculate_metamagic_spell_slot(3, ["Empower Spell", "Extend Spell"])
+    assert res["effective_spell_level"] == 6
+    assert res["total_slot_increase"] == 3
+    assert not res["exceeds_9th_level"]
+
+    # Level 5 wizard (Max slot: Level 3) attempting Empowered Fireball (Effective Level 5) -> Fails validation
+    char_wizard = {"class": "Wizard", "level": 5, "abilities": {"intelligence": 16}}
+    val_res = validate_metamagic_application(3, ["Empower Spell"], char_wizard)
+    assert not val_res["valid"]
+    assert val_res["effective_spell_level"] == 5
+
+    # Level 9 wizard (Max slot: Level 5) can cast Empowered Fireball (Level 5 slot)
+    char_high_wizard = {"class": "Wizard", "level": 9, "abilities": {"intelligence": 18}}
+    val_high_res = validate_metamagic_application(3, ["Empower Spell"], char_high_wizard)
+    assert val_high_res["valid"]
+    assert val_high_res["effective_spell_level"] == 5
+

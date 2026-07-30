@@ -4,6 +4,13 @@ Unit Tests for Sync Engine API
 FastAPI /api/sync ve JWT Auth entegrasyon birim testleri.
 """
 
+import sys
+from pathlib import Path
+
+backend_dir = Path(__file__).resolve().parent.parent
+if str(backend_dir) not in sys.path:
+    sys.path.insert(0, str(backend_dir))
+
 from fastapi.testclient import TestClient
 from app.main import app
 
