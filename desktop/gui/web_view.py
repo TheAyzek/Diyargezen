@@ -28,9 +28,16 @@ from PySide6.QtWidgets import (
 )
 from PySide6.QtWebEngineWidgets import QWebEngineView
 
+import sys
+import time
+
 logger = logging.getLogger(__name__)
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+if getattr(sys, 'frozen', False):
+    BASE_DIR = Path(getattr(sys, '_MEIPASS', ''))
+else:
+    BASE_DIR = Path(__file__).resolve().parent.parent.parent
+
 FRONTEND_DIST = BASE_DIR / "web" / "frontend" / "dist"
 
 
@@ -49,27 +56,29 @@ class DiyargezerWebView(QWidget):
     def _determine_target_url(self) -> str:
         """
         Web uygulamasının sunulduğu aktif adresi tespit eder.
-        1. Dev Server: http://127.0.0.1:5173
-        2. Backend Sunucusu: http://127.0.0.1:8000
+        1. Backend Sunucusu: http://127.0.0.1:8000
+        2. Dev Server: http://127.0.0.1:5173
         3. Local Dist Fallback: file://.../dist/index.html
         """
-        # 1. Dev Server dene
-        try:
-            req = urllib.request.urlopen("http://127.0.0.1:5173/", timeout=0.8)
-            if req.status == 200:
-                logger.info("WebView dev server tespit edildi: http://127.0.0.1:5173/")
-                return "http://127.0.0.1:5173/"
-        except Exception:
-            pass
+        # Sunucu açılışı için kısa deneme döngüsü (Retry Loop)
+        for attempt in range(5):
+            try:
+                req = urllib.request.urlopen("http://127.0.0.1:8000/", timeout=0.5)
+                if req.status == 200:
+                    logger.info("WebView backend sunucusu tespit edildi: http://127.0.0.1:8000/")
+                    return "http://127.0.0.1:8000/"
+            except Exception:
+                pass
 
-        # 2. Backend Sunucusu dene
-        try:
-            req = urllib.request.urlopen("http://127.0.0.1:8000/", timeout=0.8)
-            if req.status == 200:
-                logger.info("WebView backend sunucusu tespit edildi: http://127.0.0.1:8000/")
-                return "http://127.0.0.1:8000/"
-        except Exception:
-            pass
+            try:
+                req = urllib.request.urlopen("http://127.0.0.1:5173/", timeout=0.5)
+                if req.status == 200:
+                    logger.info("WebView dev server tespit edildi: http://127.0.0.1:5173/")
+                    return "http://127.0.0.1:5173/"
+            except Exception:
+                pass
+
+            time.sleep(0.3)
 
         # 3. Static Dist Fallback
         if FRONTEND_DIST.exists() and (FRONTEND_DIST / "index.html").exists():
@@ -78,7 +87,8 @@ class DiyargezerWebView(QWidget):
             return dist_index
 
         # Fallback to default local address
-        return "http://127.0.0.1:5173/"
+        return "http://127.0.0.1:8000/"
+
 
     def _build_ui(self) -> None:
         layout = QVBoxLayout(self)

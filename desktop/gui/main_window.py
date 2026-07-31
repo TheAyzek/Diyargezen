@@ -51,6 +51,35 @@ DB_PATH = BASE_DIR / "desktop" / "data" / "offline_pf1e.db"
 LOGO_PATH = BASE_DIR / "assets" / "diyargezer_logo.png"
 
 
+def ensure_local_server_running() -> None:
+    """Arka planda port 8000 veya 5173 aktif değilse gömülü FastAPI/Uvicorn sunucu thread'ini başlatır."""
+    import urllib.request
+    for port in (5173, 8000):
+        try:
+            req = urllib.request.urlopen(f"http://127.0.0.1:{port}/", timeout=0.4)
+            if req.status == 200:
+                logger.info("Aktif yerel sunucu bulundu: http://127.0.0.1:%s/", port)
+                return
+        except Exception:
+            pass
+
+    logger.info("Port 8000 sunucusu kapalı. Arka planda gömülü Uvicorn/FastAPI sunucu thread'i başlatılıyor...")
+    import threading
+    import time
+    try:
+        import uvicorn
+        from web.backend.app.main import app as fastapi_app
+
+        def _start_uvicorn():
+            uvicorn.run(fastapi_app, host="127.0.0.1", port=8000, log_level="error")
+
+        server_thread = threading.Thread(target=_start_uvicorn, daemon=True)
+        server_thread.start()
+        time.sleep(0.4)
+    except Exception as exc:
+        logger.error("Gömülü Uvicorn sunucusu başlatılamadı: %s", exc)
+
+
 class MainWindow(QMainWindow):
     """Uygulamanın ana penceresi: QWebEngineView ile Web frontend render eder."""
 
@@ -63,6 +92,8 @@ class MainWindow(QMainWindow):
 
         if LOGO_PATH.exists():
             self.setWindowIcon(QIcon(str(LOGO_PATH)))
+
+        ensure_local_server_running()
 
         from desktop import local_db
         from desktop.api_client import api_client
@@ -80,6 +111,7 @@ class MainWindow(QMainWindow):
             logger.warning("ETL başlatılamadı (JSON fallback aktif): %s", exc)
 
         self._build_ui()
+
 
         # Arka plan otomatik senkronizasyon servisi
         self._sync_thread = BackgroundSyncThread(DB_PATH, parent=self)
