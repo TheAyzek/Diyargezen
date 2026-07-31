@@ -13,12 +13,10 @@ import os
 import logging
 from pathlib import Path
 
-# ── QWebEngineView GPU beyaz ekran düzeltmesi ──
-# Windows'ta bazı GPU sürücüleri QWebEngineView'ın beyaz ekran göstermesine
-# neden olur. Bu ayarlar Qt/Chromium'u yazılım tabanlı render'a zorlar.
-# Bu satırlar QApplication oluşturulmadan ÖNCE çalışmalıdır.
-os.environ["QTWEBENGINE_CHROMIUM_FLAGS"] = "--disable-gpu --disable-gpu-compositing"
-os.environ["QT_OPENGL"] = "software"
+from PySide6.QtCore import Qt, QCoreApplication
+
+# Enable OpenGL context sharing for QWebEngineView on Windows
+QCoreApplication.setAttribute(Qt.AA_ShareOpenGLContexts)
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 if str(BASE_DIR) not in sys.path:
@@ -26,6 +24,7 @@ if str(BASE_DIR) not in sys.path:
 desktop_dir = Path(__file__).resolve().parent
 if str(desktop_dir) not in sys.path:
     sys.path.insert(0, str(desktop_dir))
+
 
 logging.basicConfig(
     level=logging.INFO,

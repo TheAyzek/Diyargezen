@@ -56,7 +56,7 @@ def ensure_local_server_running() -> None:
     import urllib.request
     for port in (5173, 8000):
         try:
-            req = urllib.request.urlopen(f"http://127.0.0.1:{port}/", timeout=0.4)
+            req = urllib.request.urlopen(f"http://127.0.0.1:{port}/", timeout=0.2)
             if req.status == 200:
                 logger.info("Aktif yerel sunucu bulundu: http://127.0.0.1:%s/", port)
                 return
@@ -65,7 +65,6 @@ def ensure_local_server_running() -> None:
 
     logger.info("Port 8000 sunucusu kapalı. Arka planda gömülü Uvicorn/FastAPI sunucu thread'i başlatılıyor...")
     import threading
-    import time
     try:
         backend_path = BASE_DIR / "web" / "backend"
         if str(backend_path) not in sys.path:
@@ -81,10 +80,8 @@ def ensure_local_server_running() -> None:
 
         server_thread = threading.Thread(target=_start_uvicorn, daemon=True)
         server_thread.start()
-        time.sleep(0.4)
     except Exception as exc:
         logger.error("Gömülü Uvicorn sunucusu başlatılamadı: %s", exc)
-
 
 
 class MainWindow(QMainWindow):
@@ -111,18 +108,23 @@ class MainWindow(QMainWindow):
         if auth_info:
             api_client.set_token(auth_info[1], auth_info[0])
 
-        try:
-            totals = run_etl_if_needed(DB_PATH)
-            logger.info("Oyun verisi hazır: %s", totals)
-        except Exception as exc:
-            logger.warning("ETL başlatılamadı (JSON fallback aktif): %s", exc)
+        # Run ETL in background thread so GUI launches instantly without freezing
+        import threading
+        def _bg_etl():
+            try:
+                totals = run_etl_if_needed(DB_PATH)
+                logger.info("Oyun verisi hazır: %s", totals)
+            except Exception as exc:
+                logger.warning("ETL başlatılamadı (JSON fallback aktif): %s", exc)
+
+        threading.Thread(target=_bg_etl, daemon=True).start()
 
         self._build_ui()
-
 
         # Arka plan otomatik senkronizasyon servisi
         self._sync_thread = BackgroundSyncThread(DB_PATH, parent=self)
         self._sync_thread.start()
+
 
     # ------------------------------------------------------------------
     # UI
@@ -222,13 +224,13 @@ class MainWindow(QMainWindow):
 
 def run_app() -> None:
     """PySide6 uygulamasını başlat."""
-    import os
-    os.environ["QTWEBENGINE_CHROMIUM_FLAGS"] = "--disable-gpu --disable-gpu-compositing"
-    os.environ["QT_OPENGL"] = "software"
+    from PySide6.QtCore import Qt, QCoreApplication
+    QCoreApplication.setAttribute(Qt.AA_ShareOpenGLContexts)
 
     app = QApplication.instance() or QApplication(sys.argv)
     load_custom_fonts()
     app.setStyleSheet(DARK_FANTASY_QSS)
+
 
 
     window = MainWindow()
