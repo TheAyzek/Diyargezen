@@ -32,11 +32,13 @@ if str(desktop_dir) not in sys.path:
 
 try:
     from gui.theme import DARK_FANTASY_QSS, load_custom_fonts
+    from gui.web_view import DiyargezerWebView
     from gui.screens.tavern import TavernPage
     from gui.screens.forge import ForgePage
     from gui.screens.character_sheet import CharacterSheetPage
 except ImportError:
     from desktop.gui.theme import DARK_FANTASY_QSS, load_custom_fonts
+    from desktop.gui.web_view import DiyargezerWebView
     from desktop.gui.screens.tavern import TavernPage
     from desktop.gui.screens.forge import ForgePage
     from desktop.gui.screens.character_sheet import CharacterSheetPage
@@ -50,13 +52,13 @@ LOGO_PATH = BASE_DIR / "assets" / "diyargezer_logo.png"
 
 
 class MainWindow(QMainWindow):
-    """Uygulamanın ana penceresi."""
+    """Uygulamanın ana penceresi: QWebEngineView ile Web frontend render eder."""
 
     def __init__(self) -> None:
         super().__init__()
-        self.setWindowTitle("Diyargezer — TTRPG Karakter Yöneticisi")
-        self.resize(1100, 720)
-        self.setMinimumSize(900, 600)
+        self.setWindowTitle("Diyargezer — High-Fantasy TTRPG Karakter Yöneticisi")
+        self.resize(1280, 800)
+        self.setMinimumSize(960, 640)
         self.setWindowState(Qt.WindowMaximized)
 
         if LOGO_PATH.exists():
@@ -78,7 +80,6 @@ class MainWindow(QMainWindow):
             logger.warning("ETL başlatılamadı (JSON fallback aktif): %s", exc)
 
         self._build_ui()
-        self._navigate(0)
 
         # Arka plan otomatik senkronizasyon servisi
         self._sync_thread = BackgroundSyncThread(DB_PATH, parent=self)
@@ -91,112 +92,73 @@ class MainWindow(QMainWindow):
     def _build_ui(self) -> None:
         central = QWidget()
         self.setCentralWidget(central)
-        root = QHBoxLayout(central)
+        root = QVBoxLayout(central)
         root.setContentsMargins(0, 0, 0, 0)
         root.setSpacing(0)
 
-        # ---- Sidebar ----
-        sidebar = QFrame()
-        sidebar.setObjectName("Sidebar")
-        sidebar.setFixedWidth(220)
-        sb_lay = QVBoxLayout(sidebar)
-        sb_lay.setContentsMargins(12, 16, 12, 16)
-        sb_lay.setSpacing(4)
+        # ---- Top Control Strip ----
+        top_bar = QFrame()
+        top_bar.setStyleSheet(
+            "QFrame { background-color: #0b0b14; border-bottom: 1px solid rgba(223, 190, 94, 0.3); min-height: 38px; max-height: 38px; }"
+        )
+        tb_lay = QHBoxLayout(top_bar)
+        tb_lay.setContentsMargins(12, 0, 12, 0)
+        tb_lay.setSpacing(12)
 
         if LOGO_PATH.exists():
             logo_lbl = QLabel()
             pm = QPixmap(str(LOGO_PATH)).scaled(
-                72, 72, Qt.KeepAspectRatio, Qt.SmoothTransformation,
+                22, 22, Qt.KeepAspectRatio, Qt.SmoothTransformation,
             )
             logo_lbl.setPixmap(pm)
-            logo_lbl.setAlignment(Qt.AlignCenter)
-            sb_lay.addWidget(logo_lbl)
+            tb_lay.addWidget(logo_lbl)
 
-        brand = QLabel("Diyargezer")
-        brand.setObjectName("SidebarTitle")
-        brand.setAlignment(Qt.AlignCenter)
-        sb_lay.addWidget(brand)
+        brand = QLabel("Diyargezer Desktop")
+        brand.setStyleSheet("font-family: 'Cinzel', serif; font-size: 14px; font-weight: bold; color: #fced88;")
+        tb_lay.addWidget(brand)
 
-        subtitle = QLabel("TTRPG Karakter Yönetimi")
-        subtitle.setObjectName("SidebarSubtitle")
-        subtitle.setAlignment(Qt.AlignCenter)
-        sb_lay.addWidget(subtitle)
+        badge = QLabel("✨ High-Fantasy Web Engine")
+        badge.setStyleSheet("background-color: rgba(223, 190, 94, 0.15); color: #dfbe5e; border: 1px solid rgba(223, 190, 94, 0.4); border-radius: 4px; padding: 2px 8px; font-size: 11px; font-weight: bold;")
+        tb_lay.addWidget(badge)
 
-        sb_lay.addSpacing(24)
+        tb_lay.addStretch()
 
-        self._nav_buttons: list[QPushButton] = []
-        nav_items = [
-            ("The Tavern", "Kayıtlı karakterler"),
-            ("The Forge", "Yeni karakter oluştur"),
-            ("Character Sheet", "Karakter detayları"),
-        ]
-        for i, (text, tooltip) in enumerate(nav_items):
-            btn = QPushButton(f"  {text}")
-            btn.setObjectName("NavButton")
-            btn.setCheckable(True)
-            btn.setToolTip(tooltip)
-            btn.setCursor(Qt.PointingHandCursor)
-            btn.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
-            btn.setMinimumHeight(40)
-            btn.clicked.connect(lambda checked, idx=i: self._navigate(idx))
-            sb_lay.addWidget(btn)
-            self._nav_buttons.append(btn)
-
-        sb_lay.addStretch()
+        reload_btn = QPushButton("🔄 Yenile (F5)")
+        reload_btn.setStyleSheet("background: transparent; color: #e8dbbf; border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; padding: 3px 10px; font-size: 11px; text-transform: none;")
+        reload_btn.setCursor(Qt.PointingHandCursor)
+        reload_btn.clicked.connect(self._reload_web_view)
+        tb_lay.addWidget(reload_btn)
 
         self._cloud_btn = QPushButton("☁️ Bulut Girişi (Sync)")
         self._cloud_btn.setCursor(Qt.PointingHandCursor)
-        self._cloud_btn.setStyleSheet("background-color: rgba(230, 197, 103, 0.15); color: #e6c567; border: 1px solid #e6c567; border-radius: 6px; padding: 6px; font-weight: bold;")
+        self._cloud_btn.setStyleSheet("background-color: rgba(230, 197, 103, 0.15); color: #e6c567; border: 1px solid #e6c567; border-radius: 4px; padding: 3px 10px; font-weight: bold; font-size: 11px; text-transform: none;")
         self._cloud_btn.clicked.connect(self._open_login_dialog)
-        sb_lay.addWidget(self._cloud_btn)
+        tb_lay.addWidget(self._cloud_btn)
 
-        version_lbl = QLabel("v2.0  •  PySide6 + Cloud")
-        version_lbl.setObjectName("SidebarSubtitle")
-        version_lbl.setAlignment(Qt.AlignCenter)
-        sb_lay.addWidget(version_lbl)
+        root.addWidget(top_bar)
 
-        root.addWidget(sidebar)
-
-        # ---- Content area ----
-        self._stack = QStackedWidget()
-        root.addWidget(self._stack, stretch=1)
-
-        self._tavern = TavernPage(DB_PATH)
-        self._forge = ForgePage(DB_PATH)
-        self._sheet = CharacterSheetPage(DB_PATH)
-
-        self._stack.addWidget(self._tavern)
-        self._stack.addWidget(self._forge)
-        self._stack.addWidget(self._sheet)
-
-        # ---- Signals ----
-        self._tavern.character_selected.connect(self._on_character_selected)
-        self._forge.character_created.connect(self._on_character_created)
+        # ---- Main Content: QWebEngineView ----
+        self._web_view = DiyargezerWebView(self)
+        root.addWidget(self._web_view, stretch=1)
 
         # ---- Status bar ----
-        status = QLabel("Hazır")
+        status = QLabel("Hazır  •  PF1e Offline-First SQLite Sync Aktif")
         status.setObjectName("StatusBar")
         self.statusBar().addPermanentWidget(status, stretch=1)
         self.statusBar().setStyleSheet(
-            "QStatusBar { background: #1a1a2e; border-top: 1px solid rgba(230, 197, 103, 0.2); }"
+            "QStatusBar { background: #0b0b14; border-top: 1px solid rgba(230, 197, 103, 0.2); color: #a8b3cf; font-size: 11px; }"
         )
 
-    # ------------------------------------------------------------------
-    # Navigation
-    # ------------------------------------------------------------------
+    def keyPressEvent(self, event) -> None:
+        """F5 kısayolu ile sayfayı yenileme."""
+        if event.key() == Qt.Key_F5:
+            self._reload_web_view()
+        else:
+            super().keyPressEvent(event)
 
-    def _navigate(self, index: int) -> None:
-        self._stack.setCurrentIndex(index)
-        for i, btn in enumerate(self._nav_buttons):
-            btn.setChecked(i == index)
-
-    def _on_character_selected(self, record_id: int) -> None:
-        self._sheet.load_character(record_id)
-        self._navigate(2)
-
-    def _on_character_created(self, record_id: int) -> None:
-        self._sheet.load_character(record_id)
-        self._navigate(2)
+    def _reload_web_view(self) -> None:
+        if hasattr(self, "_web_view"):
+            self._web_view.reload_page()
 
     def _open_login_dialog(self) -> None:
         from desktop.gui.dialogs.login_dialog import LoginDialog
@@ -206,11 +168,10 @@ class MainWindow(QMainWindow):
         if dlg.exec() == LoginDialog.Accepted and api_client.is_authenticated():
             local_db.save_local_auth(DB_PATH, api_client.username, api_client.token)
             self._cloud_btn.setText(f"☁️ {api_client.username}")
-            self._tavern.refresh()
 
 
     def closeEvent(self, event) -> None:
-        """Stop background network work before Qt shuts down."""
+        """Qt kapanırken arka plan iş parçacıklarını güvenle durdur."""
         if hasattr(self, "_sync_thread"):
             self._sync_thread.stop()
         event.accept()
@@ -227,6 +188,7 @@ def run_app() -> None:
     app.setStyleSheet(DARK_FANTASY_QSS)
 
     window = MainWindow()
-    window.showMaximized()  # Tam ekran kaplayan, güvenli başlangıç
+    window.showMaximized()
 
     sys.exit(app.exec())
+

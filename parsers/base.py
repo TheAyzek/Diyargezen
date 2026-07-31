@@ -581,8 +581,21 @@ def parse_raw_file(path: Path, system: str) -> List[DiyargezenEntity]:
             "npc":        "npc",
             "attack":     "feat",
         }
-        if item_type:
+        path_str = str(path).replace("\\", "/").lower()
+        feat_type_val = ""
+        sys_data_obj = item.get("system") or item.get("data") or {}
+        if isinstance(sys_data_obj, dict):
+            ft_obj = sys_data_obj.get("featType")
+            if isinstance(ft_obj, dict):
+                feat_type_val = safe_str(ft_obj.get("value")).lower()
+            else:
+                feat_type_val = safe_str(ft_obj).lower()
+
+        if "pf-class-abilities" in path_str or "class-features" in path_str or "class-abilities" in path_str or feat_type_val == "classfeature":
+            kategori = "class_feature"
+        elif item_type:
             kategori = TYPE_MAP.get(item_type)
+
 
             
         if not kategori:

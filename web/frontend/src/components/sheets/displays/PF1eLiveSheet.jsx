@@ -502,8 +502,27 @@ export default function PF1eLiveSheet() {
               cursor: 'pointer'
             }}
           >
-            📊 Özet Görünüm
+            📊 Midnight Obsidian
           </button>
+          <button 
+            onClick={() => setViewMode('parchment')}
+            style={{
+              padding: '6px 12px',
+              fontSize: '12px',
+              borderRadius: '6px',
+              border: '1px solid #d4c5a9',
+              background: viewMode === 'parchment' ? '#d4c5a9' : 'transparent',
+              color: viewMode === 'parchment' ? '#2a1f0e' : '#d4c5a9',
+              fontWeight: '600',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px'
+            }}
+          >
+            <Scroll size={13} /> 📜 Eskiz Parşömen
+          </button>
+
           <button 
             onClick={() => setViewMode('spells')}
             style={{
@@ -569,7 +588,10 @@ export default function PF1eLiveSheet() {
             </div>
           )}
         </div>
+      ) : viewMode === 'parchment' ? (
+        <ParchmentSheetDisplay />
       ) : viewMode === 'summary' ? (
+
         /* Summary view alternative with detailed mathematical stat breakdowns */
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
           

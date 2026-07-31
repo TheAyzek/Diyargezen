@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { LogOut, BookOpen, User, FileText, Wifi, WifiOff } from 'lucide-react';
+import { LogOut, BookOpen, User, FileText, Wifi, WifiOff, RefreshCw } from 'lucide-react';
+
 import diyargezerLogo from './diyargezer_logo.png';
 import Dashboard from './components/Dashboard';
 import SystemSelector from './components/SystemSelector';
@@ -179,16 +180,34 @@ export default function App() {
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           {/* Sync Status Badge */}
-          <div style={{
-            display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.72rem',
-            padding: '3px 10px', borderRadius: '12px',
-            backgroundColor: isOnline ? 'rgba(78, 201, 176, 0.15)' : 'rgba(233, 69, 96, 0.15)',
-            border: `1px solid ${isOnline ? '#4ec9b0' : '#e94560'}`,
-            color: isOnline ? '#4ec9b0' : '#ff6b81', fontWeight: 600
-          }}>
-            {isOnline ? <Wifi size={13} color="#4ec9b0" /> : <WifiOff size={13} color="#e94560" />}
-            <span>{isOnline ? '🟢 Senkronize' : '🟡 Çevrimdışı (Yerel Kayıt)'}</span>
+          <div 
+            title={isOnline ? 'Sunucu ve yerel veritabanı ile senkronize' : 'İnternet bağlantısı yok - Tüm değişiklikler yerel SQLite/IndexedDB kasanıza kaydediliyor'}
+            style={{
+              display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.72rem',
+              padding: '4px 10px', borderRadius: '12px', cursor: 'help',
+              backgroundColor: isOnline ? (syncStatus === 'syncing' ? 'rgba(201, 168, 76, 0.15)' : 'rgba(78, 201, 176, 0.15)') : 'rgba(233, 69, 96, 0.15)',
+              border: `1px solid ${isOnline ? (syncStatus === 'syncing' ? '#ffd700' : '#4ec9b0') : '#e94560'}`,
+              color: isOnline ? (syncStatus === 'syncing' ? '#ffd700' : '#4ec9b0') : '#ff6b81', fontWeight: 600,
+              transition: 'all 0.3s ease'
+            }}
+          >
+            {isOnline ? (
+              syncStatus === 'syncing' ? (
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                  <RefreshCw size={12} className="animate-spin" color="#ffd700" /> Senkronize Ediliyor...
+                </span>
+              ) : (
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                  <Wifi size={12} color="#4ec9b0" /> 🟢 Senkronize (Yerel + Bulut)
+                </span>
+              )
+            ) : (
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                <WifiOff size={12} color="#e94560" /> 🟡 Çevrimdışı (Yerel Kasa Aktif)
+              </span>
+            )}
           </div>
+
 
           {/* Quick PDF Export when editing */}
           {view === 'edit-character' && (

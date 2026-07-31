@@ -102,15 +102,42 @@ export async function exportCharacterPDF(store) {
     setField('REFLEX', formatMod(saves.Reflex ?? saves.reflex ?? 0));
     setField('WILL', formatMod(saves.Will ?? saves.will ?? 0));
 
-    // Equipment Weight & Feats/Traits Summary
-    const totalWeight = store.equipment ? store.equipment.reduce((sum, item) => sum + (parseFloat(item.weight || 0) * (parseInt(item.quantity || 1, 10))), 0) : 0;
+    // Equipment Weight, Encumbrance & Carrying Capacity Breakdown
+    const totalWeight = recalcedData.total_weight ?? (store.equipment ? store.equipment.reduce((sum, item) => sum + (parseFloat(item.weight || 0) * (parseInt(item.quantity || 1, 10))), 0) : 0);
     setField('TOTAL WEIGHT', `${totalWeight.toFixed(1)} lbs`);
 
-    const featsList = store.feats ? store.feats.map(f => typeof f === 'string' ? f : f.isim).join(', ') : (store.feat || '');
+    const enc = recalcedData.encumbrance || {};
+    const cap = recalcedData.carrying_capacity || enc.carrying_capacity || {};
+    setField('LIGHT LOAD', `${cap.light_max ?? 33} lbs`);
+    setField('MEDIUM LOAD', `${cap.medium_max ?? 66} lbs`);
+    setField('HEAVY LOAD', `${cap.heavy_max ?? 100} lbs`);
+    setField('ARMOR CHECK PENALTY', recalcedData.armor_check_penalty ?? enc.encumbrance_acp ?? 0);
+    setField('MAX DEX', recalcedData.max_dex_bonus ?? enc.max_dex_bonus ?? 'None');
+
+    const featsList = store.feats ? store.feats.map(f => typeof f === 'string' ? f : (f.isim || f.name)).join(', ') : (store.feat || '');
     setField('FEATS', featsList);
 
-    const traitsList = store.traits ? store.traits.map(t => typeof t === 'string' ? t : t.isim).join(', ') : '';
+    const traitsList = store.traits ? store.traits.map(t => typeof t === 'string' ? t : (t.isim || t.name)).join(', ') : '';
     setField('SPECIAL ABILITIES', traitsList);
+
+
+    // Languages & Spells Known
+    if (store.languages) {
+      const langText = Array.isArray(store.languages) ? store.languages.join(', ') : store.languages;
+      setField('LANGUAGES', langText);
+    }
+    if (store.spells) {
+      const spellText = store.spells.map(s => typeof s === 'string' ? s : (s.name || s.isim)).join(', ');
+      setField('SPELLS KNOWN', spellText);
+    }
+
+    // Skills Mapping
+    if (recalcedData.skills) {
+      Object.entries(recalcedData.skills).forEach(([skillName, bonus]) => {
+        setField(skillName.toUpperCase(), formatMod(bonus));
+      });
+    }
+
 
     // Phase 3: Appearance Stream Updates & Save
     try {

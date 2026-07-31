@@ -360,8 +360,8 @@ class CharacterManager:
         results: List[DiyargezenEntity] = []
         
         CLASS_KEYWORDS = {
-            "barbarian": ["Rage Power", "Rage power", "Totem"],
-            "rogue": ["Rogue Talent", "Rogue talent", "Advanced Rogue Talent"],
+            "barbarian": ["Rage Power", "Totem"],
+            "rogue": ["Rogue Talent", "Advanced Rogue Talent"],
             "ninja": ["Ninja Trick", "Master Trick", "Rogue Talent"],
             "alchemist": ["Discovery", "Alchemist Discovery", "Grand Discovery"],
             "witch": ["Hex", "Witch Hex", "Major Hex", "Grand Hex"],
@@ -381,27 +381,33 @@ class CharacterManager:
         }
         
         c_lower = class_name.lower().strip()
-        kws = CLASS_KEYWORDS.get(c_lower, [class_name]) if (c_lower and c_lower in CLASS_KEYWORDS) else ["Power", "Talent", "Discovery", "Hex", "Arcana", "Exploit", "Revelation", "Mercy", "Bloodline", "Domain", "Inquisition"]
-        if c_lower and c_lower not in CLASS_KEYWORDS:
-            kws = [class_name, "Talent", "Power"]
-
+        
         try:
             conn = sqlite3.connect(str(self.db_path))
             cursor = conn.cursor()
             
-            kw_clauses = " OR ".join(["isim LIKE ? OR aciklama LIKE ?" for _ in kws])
+            sql = "SELECT isim, sistem, kategori, aciklama, sistem_verisi FROM entities WHERE sistem = ? AND kategori = 'class_feature'"
             params = [sys_norm]
-            for kw in kws:
-                params.extend([f"%{kw}%", f"%{kw}%"])
-            
-            sql = f"SELECT isim, sistem, kategori, aciklama, sistem_verisi FROM entities WHERE sistem = ? AND kategori IN ('class_feature', 'feat', 'rule') AND ({kw_clauses})"
+
+            if c_lower:
+                kws = CLASS_KEYWORDS.get(c_lower, [class_name])
+                kw_clauses = " OR ".join(["isim LIKE ? OR aciklama LIKE ?" for _ in kws])
+                sql += f" AND ({kw_clauses})"
+                for kw in kws:
+                    params.extend([f"%{kw}%", f"%{kw}%"])
+
             if query:
                 sql += " AND (isim LIKE ? OR aciklama LIKE ?)"
                 params.extend([f"%{query}%", f"%{query}%"])
+
             sql += " ORDER BY isim COLLATE NOCASE LIMIT 500"
             
             cursor.execute(sql, tuple(params))
             for row in cursor.fetchall():
+                name: str = row[0]
+                # Filter out any non-feature rule index entries if any
+                if name.startswith("(") or name.startswith("*") or name.startswith("-") or name[0].isdigit():
+                    continue
                 try:
                     payload = json.loads(row[4]) if row[4] else {}
                     results.append(DiyargezenEntity(
@@ -413,7 +419,46 @@ class CharacterManager:
             conn.close()
         except Exception:
             pass
+
+        # Fallback to general feat search if class_feature count is empty (for legacy DBs without re-indexing)
+        if not results:
+            try:
+                conn = sqlite3.connect(str(self.db_path))
+                cursor = conn.cursor()
+                if c_lower:
+                    kws = CLASS_KEYWORDS.get(c_lower, [class_name])
+                else:
+                    kws = ["Rage Power", "Rogue Talent", "Discovery", "Hex", "Arcana", "Exploit", "Revelation", "Mercy", "Bloodline", "Domain", "Inquisition", "Trick"]
+                
+                kw_clauses = " OR ".join(["isim LIKE ?" for _ in kws])
+                params = [sys_norm]
+                for kw in kws:
+                    params.append(f"%{kw}%")
+                sql = f"SELECT isim, sistem, kategori, aciklama, sistem_verisi FROM entities WHERE sistem = ? AND kategori = 'feat' AND ({kw_clauses})"
+                if query:
+                    sql += " AND (isim LIKE ? OR aciklama LIKE ?)"
+                    params.extend([f"%{query}%", f"%{query}%"])
+                sql += " ORDER BY isim COLLATE NOCASE LIMIT 300"
+                cursor.execute(sql, tuple(params))
+                for row in cursor.fetchall():
+                    name: str = row[0]
+                    if name.startswith("(") or name.startswith("*") or name.startswith("-") or name[0].isdigit():
+                        continue
+                    try:
+                        payload = json.loads(row[4]) if row[4] else {}
+                        results.append(DiyargezenEntity(
+                            isim=row[0], sistem=row[1], kategori="class_feature",
+                            aciklama=row[3] or "", sistem_verisi=payload
+                        ))
+                    except Exception:
+                        continue
+                conn.close()
+            except Exception:
+                pass
+
         return results
+
+
 
     def search_entities(self, system: str, category: str, query: str) -> List[DiyargezenEntity]:
         """Search database entities using standard LIKE search on name/isim.

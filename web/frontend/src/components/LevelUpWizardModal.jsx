@@ -81,10 +81,16 @@ export default function LevelUpWizardModal({
   }, [isOpen, newLevel]);
 
   const fetchFeats = () => {
-    axios.get('/api/rules/pf1e/feats')
-      .then(res => setAvailableFeats(res.data || []))
-      .catch(err => console.error('Error fetching feats for level up:', err));
+    Promise.all([
+      axios.get('/api/rules/pf1e/feats').catch(() => ({ data: [] })),
+      axios.get(`/api/rules/pf1e/class-features?class_name=${encodeURIComponent(className)}`).catch(() => ({ data: [] }))
+    ]).then(([featsRes, classFeaturesRes]) => {
+      const featList = (featsRes.data || []).map(f => ({ ...f, type_badge: 'Feat' }));
+      const cfList = (classFeaturesRes.data || []).map(c => ({ ...c, type_badge: `${className.toUpperCase()} Yeteneği` }));
+      setAvailableFeats([...cfList, ...featList]);
+    }).catch(err => console.error('Error fetching features for level up:', err));
   };
+
 
   if (!isOpen) return null;
 
@@ -415,14 +421,28 @@ export default function LevelUpWizardModal({
                         style={{
                           backgroundColor: isPicked ? 'rgba(255,215,0,0.1)' : '#161622',
                           border: `1px solid ${isPicked ? '#ffd700' : '#2a2a3a'}`,
-                          borderRadius: '8px', padding: '0.75rem', cursor: 'pointer'
+                          borderRadius: '8px', padding: '0.75rem', cursor: 'pointer', position: 'relative'
                         }}
                       >
-                        <div style={{ color: isPicked ? '#ffd700' : '#fff', fontWeight: 700, fontSize: '0.85rem' }}>{fName}</div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '6px' }}>
+                          <div style={{ color: isPicked ? '#ffd700' : '#fff', fontWeight: 700, fontSize: '0.85rem' }}>{fName}</div>
+                          {feat.type_badge && (
+                            <span style={{
+                              fontSize: '0.65rem', fontWeight: 700, padding: '2px 6px', borderRadius: '4px',
+                              backgroundColor: feat.type_badge.includes('Feat') ? 'rgba(124,110,247,0.2)' : 'rgba(255,215,0,0.2)',
+                              color: feat.type_badge.includes('Feat') ? '#7c6ef7' : '#ffd700',
+                              border: `1px solid ${feat.type_badge.includes('Feat') ? 'rgba(124,110,247,0.4)' : 'rgba(255,215,0,0.4)'}`,
+                              whiteSpace: 'nowrap'
+                            }}>
+                              {feat.type_badge}
+                            </span>
+                          )}
+                        </div>
                         <p style={{ color: '#94a3b8', fontSize: '0.72rem', margin: '4px 0 0 0', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                           {feat.aciklama || feat.sistem_verisi?.description || 'Feat açıklaması.'}
                         </p>
                       </div>
+
                     );
                   })}
               </div>

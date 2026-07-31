@@ -110,3 +110,13 @@ app.include_router(systems.router, prefix="/api")
 app.include_router(rules.router, prefix="/api")
 app.include_router(characters.router, prefix="/api")
 app.include_router(sync.router, prefix="/api")
+
+# Serve static frontend SPA build if dist directory exists
+from pathlib import Path
+from fastapi.staticfiles import StaticFiles
+
+frontend_dist = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
+if frontend_dist.exists() and (frontend_dist / "index.html").exists():
+    logger.info("Mounting built frontend static files from: %s", frontend_dist)
+    app.mount("/", StaticFiles(directory=str(frontend_dist), html=True), name="frontend")
+

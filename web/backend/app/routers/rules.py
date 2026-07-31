@@ -1,3 +1,17 @@
+"""
+Diyargezen Rules Engine API Router
+==================================
+Pathfinder 1st Edition (PF1e) kural verilerini ve soft-block denetimlerini sunan API rotaları.
+
+Akademik Mimari Notu:
+---------------------
+Bu servis, d20pfsrd/aonprd scraper verileri ile Foundry VTT veri setlerini birleştiren
+Unified Rules DB mimarisini kullanır. Arama sorgularında öncelikle Foundry VTT şemalarına
+başvurulur; eksik veri veya özel alan bulunması durumunda Scraper fallback katmanı devreye girer.
+Prerequisite (ön koşul) denetimlerinde sert engeller yerine soft-validation uyarısı ve
+'is_overridden' (GM İzniyle Ez) bayrağı sunulur.
+"""
+
 from fastapi import APIRouter, Query, HTTPException
 from typing import List, Optional
 from pydantic import BaseModel
@@ -7,6 +21,7 @@ from app.services.rules_service import RulesService
 
 router = APIRouter(prefix="/rules", tags=["Rules"])
 service = RulesService()
+
 
 @router.get(
     "/{system}/races",

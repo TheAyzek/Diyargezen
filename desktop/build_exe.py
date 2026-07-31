@@ -14,7 +14,11 @@ import shutil
 import subprocess
 from pathlib import Path
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 WORKSPACE_ROOT = Path(__file__).resolve().parent.parent
+
 SPEC_FILE = WORKSPACE_ROOT / "desktop" / "Diyargezen.spec"
 DIST_DIR = WORKSPACE_ROOT / "dist"
 BUILD_DIR = WORKSPACE_ROOT / "build"

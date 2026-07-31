@@ -1,4 +1,4 @@
-const CACHE_NAME = 'diyargezen-cache-v2';
+const CACHE_NAME = 'diyargezen-cache-v3';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -31,20 +31,20 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Fetch Event: Cache-first for static assets, network-first for API
+// Fetch Event: Cache-first for static assets & fonts, network-first for API
 self.addEventListener('fetch', (event) => {
   const request = event.request;
   const url = new URL(request.url);
 
-  // Skip non-GET requests, browser extensions, or Vite dev server internal scripts
+  // Skip non-GET requests or Vite dev server internal scripts
   if (
     request.method !== 'GET' ||
-    !url.protocol.startsWith('http') ||
     url.pathname.includes('/@vite/') ||
     url.pathname.includes('/@fs/')
   ) {
     return;
   }
+
 
   // API Requests: Network-first with cache fallback
   if (url.pathname.startsWith('/api/')) {
