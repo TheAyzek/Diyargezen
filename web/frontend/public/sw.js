@@ -1,4 +1,4 @@
-const CACHE_NAME = 'diyargezen-cache-v3';
+const CACHE_NAME = 'diyargezen-cache-v4';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
@@ -31,7 +31,7 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Fetch Event: Cache-first for static assets & fonts, network-first for API
+// Fetch Event: Network-first for HTML & JS/CSS, cache-first for images/fonts, network-first for API
 self.addEventListener('fetch', (event) => {
   const request = event.request;
   const url = new URL(request.url);
@@ -44,7 +44,6 @@ self.addEventListener('fetch', (event) => {
   ) {
     return;
   }
-
 
   // API Requests: Network-first with cache fallback
   if (url.pathname.startsWith('/api/')) {
@@ -75,7 +74,34 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Static Assets: Cache-first with Network Fallback
+  // HTML, JS, CSS: Network-first (her zaman güncel dosyayı al, eskimiş cache beyaz ekrana neden olabilir)
+  if (
+    request.destination === 'document' ||
+    request.destination === 'script' ||
+    request.destination === 'style' ||
+    url.pathname === '/' ||
+    url.pathname.endsWith('.html') ||
+    url.pathname.endsWith('.js') ||
+    url.pathname.endsWith('.css')
+  ) {
+    event.respondWith(
+      fetch(request)
+        .then((networkResponse) => {
+          if (networkResponse.ok) {
+            const responseClone = networkResponse.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, responseClone));
+          }
+          return networkResponse;
+        })
+        .catch(async () => {
+          const cachedResponse = await caches.match(request);
+          return cachedResponse || new Response('Offline', { status: 503 });
+        })
+    );
+    return;
+  }
+
+  // Images, fonts, other static assets: Cache-first with Network Fallback
   event.respondWith(
     caches.match(request).then((cachedResponse) => {
       if (cachedResponse) {

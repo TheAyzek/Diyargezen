@@ -12,9 +12,13 @@ from app.main import app
 client = TestClient(app)
 
 def test_read_root():
-    response = client.get("/")
+    response = client.get("/api/health")
     assert response.status_code == 200
     assert response.json()["status"] == "healthy"
+
+    html_resp = client.get("/")
+    assert html_resp.status_code == 200
+
 
 def test_list_systems():
     response = client.get("/api/systems")

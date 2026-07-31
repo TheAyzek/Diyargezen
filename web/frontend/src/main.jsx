@@ -4,7 +4,12 @@ import axios from 'axios'
 import App from './App.jsx'
 import './index.css'
 
-// Configure Axios default base URL if needed, and interceptor for JWT Auth
+// Configure Axios default base URL for desktop / file:// environments
+if (typeof window !== 'undefined' && !window.location.origin.startsWith('http')) {
+  axios.defaults.baseURL = 'http://127.0.0.1:8000';
+}
+
+// Configure Axios request interceptor for JWT Auth
 axios.interceptors.request.use(config => {
   const token = localStorage.getItem('token');
   if (token) {
@@ -15,16 +20,15 @@ axios.interceptors.request.use(config => {
   return Promise.reject(error);
 });
 
-// Configure Axios response interceptor to handle unauthorized access
+// Configure Axios response interceptor to handle unauthorized access cleanly without reloading
 axios.interceptors.response.use(response => response, error => {
   if (error.response && error.response.status === 401) {
     localStorage.removeItem('token');
     localStorage.removeItem('username');
-    // Force reload to trigger auth redirection if necessary
-    window.location.reload();
   }
   return Promise.reject(error);
 });
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

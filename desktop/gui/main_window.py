@@ -222,9 +222,14 @@ class MainWindow(QMainWindow):
 
 def run_app() -> None:
     """PySide6 uygulamasını başlat."""
+    import os
+    os.environ["QTWEBENGINE_CHROMIUM_FLAGS"] = "--disable-gpu --disable-gpu-compositing"
+    os.environ["QT_OPENGL"] = "software"
+
     app = QApplication.instance() or QApplication(sys.argv)
     load_custom_fonts()
     app.setStyleSheet(DARK_FANTASY_QSS)
+
 
     window = MainWindow()
     window.showMaximized()
