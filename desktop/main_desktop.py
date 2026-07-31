@@ -30,6 +30,10 @@ if str(BASE_DIR) not in sys.path:
 desktop_dir = BASE_DIR / "desktop"
 if str(desktop_dir) not in sys.path:
     sys.path.insert(0, str(desktop_dir))
+backend_dir = BASE_DIR / "web" / "backend"
+if str(backend_dir) not in sys.path:
+    sys.path.insert(0, str(backend_dir))
+
 
 try:
     log_file = EXEC_DIR / "Diyargezen_desktop.log"
