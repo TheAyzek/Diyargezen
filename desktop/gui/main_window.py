@@ -67,6 +67,12 @@ def ensure_local_server_running() -> None:
     import threading
     import time
     try:
+        backend_path = BASE_DIR / "web" / "backend"
+        if str(backend_path) not in sys.path:
+            sys.path.insert(0, str(backend_path))
+        if str(BASE_DIR) not in sys.path:
+            sys.path.insert(0, str(BASE_DIR))
+
         import uvicorn
         from web.backend.app.main import app as fastapi_app
 
@@ -78,6 +84,7 @@ def ensure_local_server_running() -> None:
         time.sleep(0.4)
     except Exception as exc:
         logger.error("Gömülü Uvicorn sunucusu başlatılamadı: %s", exc)
+
 
 
 class MainWindow(QMainWindow):

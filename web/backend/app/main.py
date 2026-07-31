@@ -95,8 +95,13 @@ app.add_middleware(
 )
 
 
+import sys
+from pathlib import Path
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
 # Root probe endpoint
-@app.get("/", tags=["Systems"], summary="Sistem Sağlık Durumu & Probe", description="API sunucusunun sağlık durumunu ve aktif desteklenen TTRPG sistemlerini döndürür.")
+@app.get("/api/health", tags=["Systems"], summary="Sistem Sağlık Durumu & Probe", description="API sunucusunun sağlık durumunu ve aktif desteklenen TTRPG sistemlerini döndürür.")
 def read_root():
     return {
         "status": "healthy",
@@ -111,10 +116,6 @@ app.include_router(rules.router, prefix="/api")
 app.include_router(characters.router, prefix="/api")
 app.include_router(sync.router, prefix="/api")
 
-import sys
-from pathlib import Path
-from fastapi.staticfiles import StaticFiles
-
 frontend_dist = None
 if getattr(sys, 'frozen', False):
     candidate = Path(getattr(sys, '_MEIPASS', '')) / "web" / "frontend" / "dist"
@@ -128,6 +129,12 @@ if not frontend_dist:
 
 if frontend_dist:
     logger.info("Mounting built frontend static files from: %s", frontend_dist)
+
+    @app.get("/")
+    def serve_spa():
+        return FileResponse(frontend_dist / "index.html")
+
     app.mount("/", StaticFiles(directory=str(frontend_dist), html=True), name="frontend")
+
 
 
