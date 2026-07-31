@@ -18,19 +18,39 @@ from PySide6.QtCore import Qt, QCoreApplication
 # Enable OpenGL context sharing for QWebEngineView on Windows
 QCoreApplication.setAttribute(Qt.AA_ShareOpenGLContexts)
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+if getattr(sys, 'frozen', False):
+    BASE_DIR = Path(getattr(sys, '_MEIPASS', ''))
+    EXEC_DIR = Path(sys.executable).parent
+else:
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    EXEC_DIR = BASE_DIR
+
 if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
-desktop_dir = Path(__file__).resolve().parent
+desktop_dir = BASE_DIR / "desktop"
 if str(desktop_dir) not in sys.path:
     sys.path.insert(0, str(desktop_dir))
 
+try:
+    log_file = EXEC_DIR / "Diyargezen_desktop.log"
+    handler = logging.FileHandler(str(log_file), mode="w", encoding="utf-8")
+except Exception:
+    log_file = Path.home() / "Diyargezen_desktop.log"
+    handler = logging.FileHandler(str(log_file), mode="w", encoding="utf-8")
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
     datefmt="%H:%M:%S",
+    handlers=[
+        handler,
+        logging.StreamHandler(sys.stdout)
+    ]
 )
+logger = logging.getLogger("main_desktop")
+
+
+
 
 
 def main() -> None:

@@ -14,6 +14,8 @@ import CompanionPanel from './CompanionPanel';
 import GMModifierPanel from './GMModifierPanel';
 import RuneField from '../../common/RuneField';
 import { getEquipmentCategory, EQUIPMENT_CATEGORIES } from '../../../utils/equipmentClassifier';
+import { cleanText } from '../../../utils/textSanitizer';
+
 
 const ABILITY_KEYS = ['strength', 'dexterity', 'constitution', 'intelligence', 'wisdom', 'charisma'];
 const ABILITY_LABELS = { strength: 'STR', dexterity: 'DEX', constitution: 'CON', intelligence: 'INT', wisdom: 'WIS', charisma: 'CHA' };
@@ -59,11 +61,12 @@ export default function PF1eControls() {
     id, name, level, race, class: charClass, feat, abilities, skills, recalcedData,
     alignment, gender, age, height, weight, deity, homeland, hair, eyes,
     backstory, personality, allies, notes, usedSpellSlots = {}, preparedSpells = {}, gold = 150,
-    traits, feats, spells = [], raceData = {},
+    traits, feats, spells = [], raceData = {}, classData = {},
     racialAbilityChoice = 'strength', secondaryRacialAbilityChoice = 'dexterity', selectedRacialTraits = [],
     updateField, updateAbility, updateSkillRank, addEquipment, removeEquipment,
     addTrait, removeTrait, addFeat, removeFeat, addSpell, removeSpell, toggleRacialTrait, applyLevelUp,
     toggleSpellSlotUsed, setPreparedSpell, togglePreparedSpellCast, restCharacter, deductGold
+
   } = store;
 
   const [tab, setTab] = useState('identity');
