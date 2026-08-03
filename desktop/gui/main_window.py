@@ -52,16 +52,15 @@ LOGO_PATH = BASE_DIR / "assets" / "diyargezer_logo.png"
 
 
 def ensure_local_server_running() -> None:
-    """Arka planda port 8000 veya 5173 aktif değilse gömülü FastAPI/Uvicorn sunucu thread'ini başlatır."""
+    """Arka planda port 8000 aktif değilse gömülü FastAPI/Uvicorn sunucu thread'ini başlatır."""
     import urllib.request
-    for port in (5173, 8000):
-        try:
-            req = urllib.request.urlopen(f"http://127.0.0.1:{port}/", timeout=0.2)
-            if req.status == 200:
-                logger.info("Aktif yerel sunucu bulundu: http://127.0.0.1:%s/", port)
-                return
-        except Exception:
-            pass
+    try:
+        req = urllib.request.urlopen("http://127.0.0.1:8000/api/health", timeout=0.3)
+        if req.status == 200:
+            logger.info("Aktif yerel FastAPI sunucusu bulundu: http://127.0.0.1:8000/")
+            return
+    except Exception:
+        pass
 
     logger.info("Port 8000 sunucusu kapalı. Arka planda gömülü Uvicorn/FastAPI sunucu thread'i başlatılıyor...")
     import threading
