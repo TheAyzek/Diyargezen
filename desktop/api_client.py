@@ -41,15 +41,18 @@ class ApiClient:
     def register(self, username: str, password: str) -> Dict[str, Any]:
         """Yeni kullanıcı kaydı oluşturur."""
         url = f"{self.base_url}/auth/register"
+        logger.info("API_CLIENT REGISTER isteği gönderiliyor: %s (kullanıcı: %s)", url, username)
         try:
             resp = requests.post(url, json={"username": username, "password": password}, timeout=10)
+            logger.info("API_CLIENT REGISTER yanıtı alındı: Status %s", resp.status_code)
             if resp.status_code >= 400:
+                logger.error("API_CLIENT REGISTER Hatası (%s): %s", resp.status_code, resp.text)
                 try:
                     err_json = resp.json()
                     detail = err_json.get("detail", "")
                     if isinstance(detail, list) and len(detail) > 0:
                         detail = detail[0].get("msg", str(detail))
-                    if "already registered" in str(detail).lower():
+                    if "already registered" in str(detail).lower() or "zaten" in str(detail).lower():
                         msg = "Bu kullanıcı adı zaten alınmış. Lütfen farklı bir kullanıcı adı deneyin."
                     elif "at least" in str(detail).lower() or "min_length" in str(detail).lower():
                         msg = "Kullanıcı adı en az 3, şifre en az 4 karakter olmalıdır."
@@ -63,7 +66,8 @@ class ApiClient:
             if "access_token" in data:
                 self.set_token(data["access_token"], username)
             return data
-        except requests.exceptions.ConnectionError:
+        except requests.exceptions.ConnectionError as exc:
+            logger.error("API_CLIENT REGISTER Bağlantı Hatası: %s", exc)
             raise ConnectionError("Bulut sunucusuna bağlanılamadı. Lütfen sunucunun çalıştığından ve internet bağlantınızdan emin olun.")
 
     def login(self, username: str, password: str) -> Dict[str, Any]:

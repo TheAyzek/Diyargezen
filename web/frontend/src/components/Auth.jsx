@@ -69,20 +69,20 @@ export default function Auth({ onLoginSuccess }) {
         onLoginSuccess(token, username);
       }
     } catch (err) {
-      console.error('Auth error:', err);
+      console.error('Auth error detail:', err);
       if (!err.response) {
-        setError('Sunucuya bağlanılamadı. Lütfen backend sunucusunun (port 8000) çalıştığından ve aktif olduğundan emin olun.');
+        setError(`Sunucuya bağlanılamadı (${err.message || 'Network Error'}). Lütfen backend sunucusunun (port 8000) çalıştığından emin olun.`);
       } else if (err.response?.data?.detail) {
         const detail = err.response.data.detail;
         if (typeof detail === 'string') {
           setError(detail === 'Username already registered.' ? 'Bu kullanıcı adı zaten alınmış. Lütfen farklı bir ad deneyin.' : detail);
         } else if (Array.isArray(detail) && detail.length > 0) {
-          setError(detail[0].msg || 'Girdi doğrulaması başarısız oldu.');
+          setError(`Doğrulama Hatası: ${detail[0].msg || JSON.stringify(detail[0])}`);
         } else {
-          setError(isLogin ? 'Giriş başarısız. Lütfen bilgilerinizi kontrol edin.' : 'Kayıt işlemi başarısız oldu.');
+          setError(`Hata (${err.response.status}): ${JSON.stringify(detail)}`);
         }
       } else {
-        setError(isLogin ? 'Giriş başarısız. Lütfen bilgilerinizi kontrol edin.' : 'Kayıt işlemi başarısız oldu.');
+        setError(`Hata (${err.response.status}): ${err.response.statusText || 'İşlem başarısız oldu'}`);
       }
     } finally {
       setLoading(false);

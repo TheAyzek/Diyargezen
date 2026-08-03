@@ -79,7 +79,7 @@ def ensure_local_server_running() -> None:
 
         def _start_uvicorn():
             try:
-                config = uvicorn.Config(fastapi_app, host="127.0.0.1", port=8000, log_level="error")
+                config = uvicorn.Config(fastapi_app, host="127.0.0.1", port=8000, log_level="info")
                 server = uvicorn.Server(config)
                 server.install_signal_handlers = lambda: None
                 server.run()

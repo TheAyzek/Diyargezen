@@ -97,18 +97,28 @@ app.add_middleware(
 from fastapi import Request
 from fastapi.responses import JSONResponse
 
+@app.middleware("http")
+async def log_requests_middleware(request: Request, call_next):
+    logger.info("--> [API REQUEST] %s %s", request.method, request.url.path)
+    try:
+        response = await call_next(request)
+        logger.info("<-- [API RESPONSE] %s %s -> Status %s", request.method, request.url.path, response.status_code)
+        return response
+    except Exception as exc:
+        logger.error("x-- [API ERROR] %s %s -> Exception: %s", request.method, request.url.path, exc, exc_info=True)
+        raise
+
 @app.exception_handler(Exception)
 async def global_exception_handler(request: Request, exc: Exception):
     """
     Tüm yakalanmamış iç sunucu hatalarını (500 Internal Server Error) yakalar.
-    Üretim ortamında hassas sunucu dosya yolları veya kod izlerinin (stack trace)
-    sızmasını engeller ve hatayı güvenle log kaydı olarak saklar.
+    Üretim ortamında hatanın tam detayını loglar.
     """
     logger.error("Dahili Sunucu Hatası (%s): %s", request.url.path, exc, exc_info=True)
     return JSONResponse(
         status_code=500,
         content={
-            "detail": "Sunucu tarafında beklenmeyen bir hata oluştu. Lütfen tekrar deneyiniz."
+            "detail": f"Dahili Sunucu Hatası: {str(exc)}"
         }
     )
 
