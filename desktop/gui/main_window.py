@@ -83,6 +83,17 @@ def ensure_local_server_running() -> None:
 
         server_thread = threading.Thread(target=_start_uvicorn, daemon=True)
         server_thread.start()
+
+        # Gömülü Uvicorn sunucusunun port 8000 üzerinde dinlemeye başlamasını bekle (max 3 saniye)
+        import time
+        for _ in range(30):
+            try:
+                req = urllib.request.urlopen("http://127.0.0.1:8000/api/health", timeout=0.2)
+                if req.status == 200:
+                    logger.info("Gömülü FastAPI sunucusu başarıyla hazır hale geldi: http://127.0.0.1:8000/")
+                    break
+            except Exception:
+                time.sleep(0.1)
     except Exception as exc:
         logger.error("Gömülü Uvicorn sunucusu başlatılamadı: %s", exc)
 

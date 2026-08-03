@@ -102,11 +102,16 @@ class LoginDialog(QDialog):
             return
 
         try:
+            from desktop.gui.main_window import ensure_local_server_running
+            ensure_local_server_running()
             api_client.login(user, pwd)
             QMessageBox.information(self, "Başarılı", f"Hoş geldin {user}! Bulut senkronizasyonu aktif.")
             self.accept()
         except Exception as exc:
-            QMessageBox.critical(self, "Giriş Hatası", f"Giriş başarısız: {exc}")
+            msg = str(exc)
+            if "Max retries exceeded" in msg or "Connection refused" in msg or "10061" in msg:
+                msg = "Gömülü sunucu henüz başlatılıyor veya port 8000 bağlantısı reddedildi. Lütfen 2 saniye bekleyip tekrar deneyin."
+            QMessageBox.critical(self, "Giriş Hatası", f"{msg}")
 
     def _handle_register(self) -> None:
         user = self.reg_user.text().strip()
@@ -116,9 +121,18 @@ class LoginDialog(QDialog):
             QMessageBox.warning(self, "Hata", "Lütfen kullanıcı adı ve şifre girin.")
             return
 
+        if len(user) < 3 or len(pwd) < 4:
+            QMessageBox.warning(self, "Hata", "Kullanıcı adı en az 3, şifre en az 4 karakter olmalıdır.")
+            return
+
         try:
+            from desktop.gui.main_window import ensure_local_server_running
+            ensure_local_server_running()
             api_client.register(user, pwd)
             QMessageBox.information(self, "Başarılı", f"Hesap oluşturuldu! Hoş geldin {user}.")
             self.accept()
         except Exception as exc:
-            QMessageBox.critical(self, "Kayıt Hatası", f"Kayıt başarısız: {exc}")
+            msg = str(exc)
+            if "Max retries exceeded" in msg or "Connection refused" in msg or "10061" in msg:
+                msg = "Gömülü sunucu henüz başlatılıyor veya port 8000 bağlantısı reddedildi. Lütfen 2 saniye bekleyip tekrar deneyin."
+            QMessageBox.critical(self, "Kayıt Hatası", f"{msg}")
