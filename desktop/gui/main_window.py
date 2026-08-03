@@ -73,7 +73,10 @@ def ensure_local_server_running() -> None:
             sys.path.insert(0, str(BASE_DIR))
 
         import uvicorn
-        from web.backend.app.main import app as fastapi_app
+        try:
+            from app.main import app as fastapi_app
+        except ImportError:
+            from web.backend.app.main import app as fastapi_app
 
         def _start_uvicorn():
             uvicorn.run(fastapi_app, host="127.0.0.1", port=8000, log_level="error")

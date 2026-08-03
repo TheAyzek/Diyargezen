@@ -785,3 +785,106 @@ class CharacterManager:
 
         self.active_character.update(derived)
         return self.active_character
+
+    def calculate_level_up_slots(self, character: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        """
+        PF1e Seviye Atlatma Sihirbazı (Level-Up Wizard) için gerekli kazanım yuvalarını hesaplar.
+        
+        Algoritma Kuralları:
+        1. Seviye Artışı: Mevcut seviyeye +1 ekler (maksimum 20).
+        2. Nitelik Puanı Artışı (Ability Score Increase): 4, 8, 12, 16 ve 20. seviyelerde +1 stat puanı kazanılır.
+        3. Başarım (Feat) Slotu: Tekli seviyelerde (1, 3, 5, 7, 9, 11, 13, 15, 17, 19) Genel Feat slotu açılır.
+        4. Can Puanı (HP) Artışı: Ortalama HP `floor(HD / 2) + 1 + CON_mod` (Minimum 1 HP).
+        5. Beceri Puanları (Skill Ranks): `Class_Skill_Base + INT_mod` (Minimum 1 rank, Irk bonusu eklenebilir).
+        
+        Args:
+            character (Optional[Dict[str, Any]]): Denetlenecek karakter verisi (Varsayılan: active_character).
+            
+        Returns:
+            Dict[str, Any]: Seviye atlama adımındaki kazanım yuvaları sözlüğü.
+        """
+        char = character or self.active_character
+        curr_level = char.get("level", 1)
+        new_level = min(curr_level + 1, 20)
+
+        # 1. Ability Score Increase check
+        has_stat_increase = (new_level in {4, 8, 12, 16, 20})
+
+        # 2. Feat Slot check
+        has_new_feat = (new_level % 2 == 1)
+
+        # 3. CON modifier for HP gain
+        abilities = char.get("abilities", {})
+        con_score = abilities.get("constitution", abilities.get("con", 10))
+        con_mod = (con_score - 10) // 2
+
+        # Hit die default 10 for Fighter/Paladin/Ranger if not explicitly passed
+        hit_die = char.get("hit_die", 10)
+        hp_average_gain = max(1, (hit_die // 2) + 1 + con_mod)
+
+        # 4. Intelligence modifier for Skill Ranks
+        int_score = abilities.get("intelligence", abilities.get("int", 10))
+        int_mod = (int_score - 10) // 2
+
+        class_skill_base = char.get("class_skill_points", 4)
+        is_human = str(char.get("race", "")).lower() == "human"
+        skill_ranks_available = max(1, class_skill_base + int_mod + (1 if is_human else 0))
+
+        return {
+            "current_level": curr_level,
+            "new_level": new_level,
+            "has_stat_increase": has_stat_increase,
+            "stat_increase_points": 1 if has_stat_increase else 0,
+            "has_new_feat": has_new_feat,
+            "hp_average_gain": hp_average_gain,
+            "skill_ranks_available": skill_ranks_available
+        }
+
+    def apply_level_up(self, choices: Dict[str, Any], character: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        """
+        Seviye atlama sihirbazı seçimlerini karaktere uygular ve stat boru hattını yeniden tetikler.
+        
+        Args:
+            choices (Dict[str, Any]): Seviye atlama sırasında oyuncunun seçtiği kararlar (stat_increase, hp_gain, skill_ranks, feats).
+            character (Optional[Dict[str, Any]]): Güncellenecek karakter (Varsayılan: active_character).
+            
+        Returns:
+            Dict[str, Any]: Güncellenmiş ve yeniden hesaplanmış karakter verisi.
+        """
+        char = character or self.active_character
+        slots = self.calculate_level_up_slots(char)
+        new_level = slots["new_level"]
+
+        char["level"] = new_level
+
+        # Apply HP gain
+        hp_gained = choices.get("hp_gain", slots["hp_average_gain"])
+        curr_max_hp = char.get("max_hp", 10)
+        char["max_hp"] = curr_max_hp + hp_gained
+
+        # Apply stat increase if applicable
+        if slots["has_stat_increase"] and "stat_increase" in choices:
+            stat_name = choices["stat_increase"]
+            abilities = char.setdefault("abilities", {})
+            curr_val = abilities.get(stat_name, abilities.get(stat_name[:3], 10))
+            abilities[stat_name] = curr_val + 1
+
+        # Apply new skill ranks
+        new_skills = choices.get("skill_ranks", {})
+        if new_skills:
+            curr_skills = char.setdefault("skill_ranks", {})
+            for sk, ranks in new_skills.items():
+                curr_skills[sk] = curr_skills.get(sk, 0) + ranks
+
+        # Apply new feats
+        new_feats = choices.get("feats", [])
+        if new_feats:
+            curr_feats = char.setdefault("feats", [])
+            for ft in new_feats:
+                curr_feats.append(ft)
+
+        # Recalculate derived statistics
+        self.active_character = char
+        self.recalculate_character()
+        return self.active_character
+

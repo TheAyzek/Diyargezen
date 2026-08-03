@@ -4,15 +4,22 @@ Diyargezen Distributed Offline-First Synchronization Router
 Architecture & Replication Paradigm:
 ------------------------------------
 This router provides the RESTful synchronization gateway (`POST /api/sync`) for the desktop PySide6 client
-and web frontend applications.
+and web frontend applications in an Offline-First, Eventually Consistent distributed system.
 
-Replication Protocol:
-1. PUSH Phase (Client -> Cloud): Ingests local dirty records (`is_dirty=True`) edited while offline.
-2. Conflict Resolution (Last-Write-Wins): Compares client `updated_at` timestamps against cloud database records.
-   If `client_updated >= server_updated`, the cloud state is updated.
-3. Live Recalculation: Runs the Pathfinder 1e stat pipeline on incoming payloads to ensure data consistency.
-4. PULL Phase (Cloud -> Client): Queries all records updated since `last_sync_timestamp` and streams them back to the client.
-5. Checkpoint Management: Returns an authoritative ISO-8601 `synced_at` timestamp for client checkpointing.
+Replication Protocol & Algorithmic State Transitions:
+1. PUSH Phase (Client -> Cloud):
+   - Ingests local dirty records (`is_dirty=True`) modified while offline.
+   - Handles both newly created entities and soft-deleted (`is_deleted=True`) tombstone records.
+2. Conflict Resolution (Last-Write-Wins / LWW):
+   - Converts ISO-8601 string timestamps to UTC `datetime` objects to prevent ISO-format string comparison discrepancies.
+   - Evaluates `client_updated >= server_updated`. If True, updates cloud state; otherwise retains authoritative cloud record.
+3. Tombstone & Soft-Delete Protocol:
+   - Soft-deleted entities retain their `server_id` and timestamp in the database to guarantee idempotent replication across multi-device sync topologies.
+4. PULL Phase (Cloud -> Client):
+   - Queries all user records updated on or after `last_sync_timestamp`.
+   - Streams active entities in `updated_characters` and soft-deleted entity keys in `deleted_server_ids`.
+5. Authoritative Checkpoint Management:
+   - Yields a synchronized ISO-8601 `synced_at` timestamp used by the client for incremental checkpointing.
 """
 
 from __future__ import annotations
@@ -43,6 +50,28 @@ router = APIRouter(prefix="/sync", tags=["Sync"])
 char_service = CharacterService()
 
 
+def parse_iso_timestamp(ts_str: Optional[str]) -> datetime:
+    """
+    ISO-8601 zaman damgası dizesini UTC datetime objesine dönüştürür.
+    Zaman dilimi bilgisi yoksa varsayılan olarak UTC kabul eder.
+    
+    Args:
+        ts_str: ISO-8601 formatında zaman damgası dizesi.
+        
+    Returns:
+        datetime: UTC zaman diliminde datetime nesnesi.
+    """
+    if not ts_str:
+        return datetime.min.replace(tzinfo=timezone.utc)
+    try:
+        dt = datetime.fromisoformat(ts_str.replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+    except (ValueError, TypeError):
+        return datetime.min.replace(tzinfo=timezone.utc)
+
+
 @router.post(
     "",
     response_model=SyncResponse,
@@ -59,9 +88,19 @@ def sync_characters(
     db: Session = Depends(get_db),
     current_user: User = Depends(get_current_user)
 ):
-    now_str = datetime.now(timezone.utc).isoformat()
+    """
+    Çevrimdışı öncelikli (Offline-First) senkronizasyon iş mantığı.
+    
+    İşlem Adımları:
+    1. İstemciden gelen `dirty_characters` dizisini dönerek PUSH aşamasını yürütür.
+    2. Karakter bulutta yoksa oluşturur; varsa Last-Write-Wins (LWW) algoritmasıyla günceller.
+    3. `last_sync_timestamp` değerinden daha yeni olan sunucu kayıtlarını PULL aşaması için sorgular.
+    4. Silinmiş kayıtları `deleted_server_ids` dizisine, aktif kayıtları `updated_characters` dizisine ekleyerek yanıt döner.
+    """
+    now = datetime.now(timezone.utc)
+    now_str = now.isoformat()
 
-    # 1. Process dirty characters pushed from client
+    # 1. PUSH Phase: Process dirty characters pushed from client
     for item in payload.dirty_characters:
         server_id = item.server_id or str(uuid.uuid4())
         
@@ -73,40 +112,48 @@ def sync_characters(
 
         data_json = json.dumps(item.data, ensure_ascii=False) if isinstance(item.data, dict) else item.data
 
-        if not db_char:
-            # Create new character in Cloud DB if not deleted
-            if not item.is_deleted:
-                db_char = Character(
-                    user_id=current_user.id,
-                    server_id=server_id,
-                    system=item.system,
-                    name=item.name,
-                    data=data_json,
-                    created_at=item.created_at or now_str,
-                    updated_at=item.updated_at or now_str,
-                    is_deleted=False
-                )
-                db.add(db_char)
-        else:
-            # Conflict resolution: Compare updated_at timestamps
-            client_updated = item.updated_at or ""
-            server_updated = db_char.updated_at or ""
+        client_dt = parse_iso_timestamp(item.updated_at or now_str)
 
-            if client_updated >= server_updated:
+        if not db_char:
+            # Create new character record (even if tombstoned to propagate deletion to other clients)
+            db_char = Character(
+                user_id=current_user.id,
+                server_id=server_id,
+                system=item.system,
+                name=item.name,
+                data=data_json,
+                created_at=item.created_at or now_str,
+                updated_at=item.updated_at or now_str,
+                is_deleted=item.is_deleted or False
+            )
+            db.add(db_char)
+        else:
+            # Conflict resolution: Compare updated_at timestamps (LWW)
+            server_dt = parse_iso_timestamp(db_char.updated_at)
+
+            if client_dt >= server_dt:
                 db_char.system = item.system
                 db_char.name = item.name
                 db_char.data = data_json
-                db_char.updated_at = client_updated
-                db_char.is_deleted = item.is_deleted
+                db_char.updated_at = item.updated_at or now_str
+                db_char.is_deleted = item.is_deleted or False
 
     db.commit()
 
-    # 2. Fetch updated characters for client PULL
+    # 2. PULL Phase: Fetch updated characters for client
     query = db.query(Character).filter(Character.user_id == current_user.id)
     if payload.last_sync_timestamp:
-        query = query.filter(Character.updated_at >= payload.last_sync_timestamp)
-
-    all_records = query.all()
+        last_sync_dt = parse_iso_timestamp(payload.last_sync_timestamp)
+        # Compare timestamps safely
+        all_user_chars = query.all()
+        filtered_records = []
+        for rec in all_user_chars:
+            rec_dt = parse_iso_timestamp(rec.updated_at)
+            if rec_dt >= last_sync_dt:
+                filtered_records.append(rec)
+        all_records = filtered_records
+    else:
+        all_records = query.all()
 
     updated_chars: List[CharacterResponse] = []
     deleted_ids: List[str] = []
@@ -136,3 +183,4 @@ def sync_characters(
         updated_characters=updated_chars,
         deleted_server_ids=deleted_ids
     )
+

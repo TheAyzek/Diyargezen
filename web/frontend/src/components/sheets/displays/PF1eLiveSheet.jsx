@@ -326,24 +326,51 @@ export default function PF1eLiveSheet() {
       if (traitNames.length > 0) {
         setField('Special Attacks', traitNames.join(', '));
       }
-      // Weapons Mapping
+      
+      // Weapons AcroForm Detailed Mapping (Weapon 1..5)
       const weapons = recalcedData.weapons || [];
+      const babValue = recalcedData.bab || 0;
+      const strMod = derivedMods.Strength || 0;
+      const dexMod = derivedMods.Dexterity || 0;
+
       weapons.slice(0, 5).forEach((w, idx) => {
         const sys = w.sistem_verisi?.system || {};
-        const dmg = sys.actions?.[0]?.damage?.parts?.[0]?.[0] || w.sistem_verisi?.damage?.parts?.[0]?.[0] || '-';
+        const isRanged = str(w.type || sys.weaponType || '').toLowerCase().includes('ranged') || str(w.name).toLowerCase().includes('bow');
+        const attackBonus = babValue + (isRanged ? dexMod : strMod);
+        const dmg = sys.actions?.[0]?.damage?.parts?.[0]?.[0] || w.sistem_verisi?.damage?.parts?.[0]?.[0] || sys.damage || '-';
+        const crit = sys.critRange ? `${sys.critRange}/${sys.critMult || 'x2'}` : (sys.critical || '20/x2');
+        const dmgType = sys.damageType || sys.damage_type || 'Physical';
+        const rangeInc = sys.range || sys.range_increment || '-';
+
         setField(`Weapon ${idx + 1}`, w.name);
+        setField(`Attack Bonus ${idx + 1}`, formatMod(attackBonus));
         setField(`Damage ${idx + 1}`, dmg);
+        setField(`Critical ${idx + 1}`, crit);
+        setField(`Type ${idx + 1}`, dmgType);
+        setField(`Range ${idx + 1}`, rangeInc);
       });
 
-      // General Equipment Mapping
+      // Armor & Protective Items Mapping
+      const armorItems = recalcedData.armor_shields || [];
+      armorItems.slice(0, 3).forEach((item, idx) => {
+        const sys = item.sistem_verisi?.system || item.sistem_verisi || {};
+        const armorName = item.name;
+        const ab = sys.armor_bonus || sys.armorClass?.value || 0;
+        const acp = sys.armorCheckPenalty || sys.armor_check_penalty || 0;
+        setField(`Armor/Protective Item ${idx + 1}`, armorName);
+        setField(`Armor Bonus ${idx + 1}`, ab ? `+${ab}` : '');
+        setField(`Armor Check Penalty ${idx + 1}`, acp ? `${acp}` : '');
+      });
+
+      // General Equipment Mapping (Gear & Consumables)
       const items = [
-        ...(recalcedData.armor_shields || []),
         ...(recalcedData.consumables || []),
         ...(recalcedData.gear || [])
       ];
       items.slice(0, 26).forEach((item, idx) => {
         setField(`Item ${idx + 1}`, item.name);
-        setField(`WT ${idx + 1}`, `${item.sistem_verisi?.weight?.value || 0} lb`);
+        const wVal = item.sistem_verisi?.weight?.value || item.weight || item.agirlik || 0;
+        setField(`WT ${idx + 1}`, `${wVal} lb`);
       });
 
       // Embed Character Portrait image onto Page 1 if available

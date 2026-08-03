@@ -1,8 +1,17 @@
 """
-Masaüstü Yerel SQLite Veritabanı Modülü (Offline-First)
-======================================================
-İnternet olsun ya da olmasın masaüstü uygulamasının yerelde anında
-çalışmasını ve arka planda `is_dirty` kuyruğu yönetmesini sağlar.
+Diyargezen Masaüstü Yerel SQLite Veritabanı Modülü (Offline-First)
+
+Mimari ve Veri Yönetimi Prensipleri:
+------------------------------------
+Bu modül, masaüstü uygulamasının ağ bağlantısından tamamen bağımsız olarak (Offline-First)
+yerel SQLite veritabanı üzerinde kesintisiz çalışmasını ve arka planda `is_dirty` kuyruğu
+aracılığıyla sunucuyla senkronize olmasını sağlar.
+
+Temel Sorumluluklar:
+1. ACID Uyumluluğu: WAL (Write-Ahead Logging) modunda çalışan SQLite bağlantı yönetimi (`_connect`).
+2. Kirli Kayıt Yönetimi (Dirty State Queue): Değiştirilen veya yeni eklenen karakterlerin `is_dirty=1` bayrağı ile işaretlenmesi.
+3. Çevrimdışı Silme (Soft-Delete): Yerelde silinen kayıtların `is_deleted=1` ve `is_dirty=1` durumuna geçirilmesi, senkronizasyon tamamlandığında temizlenmesi.
+4. Senkronizasyon Yanıtı Entegrasyonu (`apply_sync_response`): Sunucudan dönen PULL güncellemelerinin yerel veritabanına atomik olarak işlenmesi.
 """
 
 from __future__ import annotations
@@ -22,7 +31,21 @@ logger = logging.getLogger(__name__)
 
 @dataclass
 class LocalCharacterRecord:
-    """Yerel SQLite veritabanındaki karakter kaydı."""
+    """
+    Yerel SQLite veritabanındaki karakter veri yapısı.
+    
+    Attributes:
+        id (Optional[int]): Yerel veritabanı birincil anahtarı (AUTOINCREMENT).
+        server_id (str): Sunucu tarafındaki evrensel benzersiz kimlik (UUID).
+        user_id (Optional[int]): Karakter sahibi kullanıcı kimliği.
+        system (str): FRP sistemi (varsayılan: pathfinder1e).
+        name (str): Karakter adı.
+        data (dict): Karakter özellikleri, statları ve ekipman JSON verisi.
+        is_dirty (bool): Karakterin yerelde değiştirildiğini ve PUSH edilmeyi beklediğini gösterir.
+        is_deleted (bool): Karakterin soft-delete ile silindiğini işaretler.
+        created_at (str): Oluşturulma UTC ISO-8601 zaman damgası.
+        updated_at (str): Son güncelleme UTC ISO-8601 zaman damgası.
+    """
     id: Optional[int]
     server_id: str
     user_id: Optional[int]
@@ -37,6 +60,15 @@ class LocalCharacterRecord:
 
 @contextmanager
 def _connect(db_path: Path) -> Iterator[sqlite3.Connection]:
+    """
+    Thread-safe SQLite bağlantısı oluşturan ve WAL modunu etkinleştiren context manager.
+    
+    Args:
+        db_path (Path): SQLite veritabanı dosya yolu.
+        
+    Yields:
+        sqlite3.Connection: Etkin SQLite bağlantısı.
+    """
     conn = sqlite3.connect(str(db_path), timeout=10)
     conn.execute("PRAGMA journal_mode=WAL")
     conn.execute("PRAGMA foreign_keys=ON")
@@ -115,13 +147,14 @@ def clear_local_auth(db_path: Path) -> None:
 
 
 def get_sync_checkpoint(db_path: Path) -> Optional[str]:
-    """Return the server cursor persisted across desktop restarts."""
+    """Son başarılı senkronizasyon zaman damgasını döner."""
     with _connect(db_path) as conn:
         row = conn.execute("SELECT value FROM sync_state WHERE key='last_sync_timestamp'").fetchone()
     return row[0] if row else None
 
 
 def set_sync_checkpoint(db_path: Path, timestamp: str) -> None:
+    """Son senkronizasyon checkpoint zaman damgasını günceller."""
     with _connect(db_path) as conn:
         conn.execute(
             "INSERT INTO sync_state (key, value) VALUES ('last_sync_timestamp', ?) "
@@ -231,14 +264,21 @@ def get_dirty_characters(db_path: Path) -> List[LocalCharacterRecord]:
 
 
 def apply_sync_response(db_path: Path, updated_characters: List[dict], deleted_server_ids: List[str]) -> None:
-    """FastAPI sunucusundan gelen senkronizasyon paketini yerel veritabanına uygular."""
+    """
+    FastAPI sunucusundan dönen senkronizasyon paketini atomik olarak yerel SQLite veritabanına uygular.
+    
+    Args:
+        db_path (Path): Yerel SQLite veritabanı dosya yolu.
+        updated_characters (List[dict]): Sunucudan indirilen güncel karakter verileri (PULL).
+        deleted_server_ids (List[str]): Sunucuda silinmiş olan karakter kimlikleri.
+    """
     now_str = datetime.now(timezone.utc).isoformat()
     with _connect(db_path) as conn:
-        # 1. Silinen kayıtları temizle
+        # 1. Sunucuda silinen kayıtları yerel veritabanından tamamen kaldır
         for s_id in deleted_server_ids:
             conn.execute("DELETE FROM local_characters WHERE server_id=?", (s_id,))
 
-        # 2. Güncellenen karakterleri yaz (is_dirty=0 yap)
+        # 2. Sunucudan gelen güncel karakterleri yaz ve is_dirty=0 yap
         for char in updated_characters:
             s_id = char.get("server_id") or str(uuid.uuid4())
             sys_code = char.get("system", "")
@@ -260,6 +300,7 @@ def apply_sync_response(db_path: Path, updated_characters: List[dict], deleted_s
                 updated_at=excluded.updated_at
             """, (s_id, sys_code, name, data_str, created_at, updated_at))
 
-        # 3. PUSH edilen dirty kayıtların dirty bayrağını indir
+        # 3. PUSH edilen kirli kayıtların kirli bayrağını temizle ve silinenleri kaldır
         conn.execute("UPDATE local_characters SET is_dirty=0 WHERE is_deleted=0")
         conn.execute("DELETE FROM local_characters WHERE is_deleted=1")
+

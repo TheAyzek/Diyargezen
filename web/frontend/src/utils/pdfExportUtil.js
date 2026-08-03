@@ -10,7 +10,7 @@
  * Pipeline Phases:
  * 1. Template Resolution: Attempts fetching official `/templates/pf1e_sheet.pdf` with fallback to `/sheets/pf1e_sheet.pdf`.
  * 2. Form Field Ingestion: Loads AcroForm field dictionary and maps core attributes, ability scores, combat stats,
- *    and encumbrance totals.
+ *    weapons, armor breakdown, skills, and encumbrance totals.
  * 3. Typography & Appearance Stream Updates: Updates field appearances to ensure visual fidelity without user edit focus.
  * 4. Blob Stream Generation: Serializes PDF array buffer into a downloadable MIME `application/pdf` Blob URL.
  */
@@ -48,7 +48,7 @@ export async function exportCharacterPDF(store) {
     const recalcedData = store.recalcedData || {};
     const formatMod = (val) => (val >= 0 ? `+${val}` : `${val}`);
 
-    // General Header
+    // General Header Info
     setField('Character Name', store.name || 'İsimsiz Kahraman');
     setField('Class', store.class || '');
     setField('Classes & Levels', `${store.class || 'Bilinmiyor'} (Seviye ${store.level || 1})`);
@@ -102,15 +102,53 @@ export async function exportCharacterPDF(store) {
     setField('REFLEX', formatMod(saves.Reflex ?? saves.reflex ?? 0));
     setField('WILL', formatMod(saves.Will ?? saves.will ?? 0));
 
-    // Equipment Weight, Encumbrance & Carrying Capacity Breakdown
+    // Detailed Weapons Mapping (Weapon 1..5)
+    const weapons = recalcedData.weapons || [];
+    const babValue = recalcedData.bab || 0;
+    const strMod = derivedMods.Strength || 0;
+    const dexMod = derivedMods.Dexterity || 0;
+
+    weapons.slice(0, 5).forEach((w, idx) => {
+      const sys = w.sistem_verisi?.system || {};
+      const isRanged = String(w.type || sys.weaponType || '').toLowerCase().includes('ranged') || String(w.name).toLowerCase().includes('bow');
+      const attackBonus = babValue + (isRanged ? dexMod : strMod);
+      const dmg = sys.actions?.[0]?.damage?.parts?.[0]?.[0] || w.sistem_verisi?.damage?.parts?.[0]?.[0] || sys.damage || '-';
+      const crit = sys.critRange ? `${sys.critRange}/${sys.critMult || 'x2'}` : (sys.critical || '20/x2');
+      const dmgType = sys.damageType || sys.damage_type || 'Physical';
+      const rangeInc = sys.range || sys.range_increment || '-';
+
+      setField(`Weapon ${idx + 1}`, w.name);
+      setField(`Attack Bonus ${idx + 1}`, formatMod(attackBonus));
+      setField(`Damage ${idx + 1}`, dmg);
+      setField(`Critical ${idx + 1}`, crit);
+      setField(`Type ${idx + 1}`, dmgType);
+      setField(`Range ${idx + 1}`, rangeInc);
+    });
+
+    // Detailed Armor & Protective Items Mapping
+    const armorItems = recalcedData.armor_shields || [];
+    armorItems.slice(0, 3).forEach((item, idx) => {
+      const sys = item.sistem_verisi?.system || item.sistem_verisi || {};
+      const armorName = item.name;
+      const ab = sys.armor_bonus || sys.armorClass?.value || 0;
+      const acp = sys.armorCheckPenalty || sys.armor_check_penalty || 0;
+      setField(`Armor/Protective Item ${idx + 1}`, armorName);
+      setField(`Armor Bonus ${idx + 1}`, ab ? `+${ab}` : '');
+      setField(`Armor Check Penalty ${idx + 1}`, acp ? `${acp}` : '');
+    });
+
+    // Equipment Weight, Encumbrance & Carrying Capacity
     const totalWeight = recalcedData.total_weight ?? (store.equipment ? store.equipment.reduce((sum, item) => sum + (parseFloat(item.weight || 0) * (parseInt(item.quantity || 1, 10))), 0) : 0);
     setField('TOTAL WEIGHT', `${totalWeight.toFixed(1)} lbs`);
 
     const enc = recalcedData.encumbrance || {};
     const cap = recalcedData.carrying_capacity || enc.carrying_capacity || {};
-    setField('LIGHT LOAD', `${cap.light_max ?? 33} lbs`);
-    setField('MEDIUM LOAD', `${cap.medium_max ?? 66} lbs`);
-    setField('HEAVY LOAD', `${cap.heavy_max ?? 100} lbs`);
+    setField('Light', `${cap.light ?? cap.light_max ?? 33} lbs`);
+    setField('Medium', `${cap.medium ?? cap.medium_max ?? 66} lbs`);
+    setField('Heavy', `${cap.heavy ?? cap.heavy_max ?? 100} lbs`);
+    setField('LIGHT LOAD', `${cap.light ?? cap.light_max ?? 33} lbs`);
+    setField('MEDIUM LOAD', `${cap.medium ?? cap.medium_max ?? 66} lbs`);
+    setField('HEAVY LOAD', `${cap.heavy ?? cap.heavy_max ?? 100} lbs`);
     setField('ARMOR CHECK PENALTY', recalcedData.armor_check_penalty ?? enc.encumbrance_acp ?? 0);
     setField('MAX DEX', recalcedData.max_dex_bonus ?? enc.max_dex_bonus ?? 'None');
 
@@ -119,7 +157,6 @@ export async function exportCharacterPDF(store) {
 
     const traitsList = store.traits ? store.traits.map(t => typeof t === 'string' ? t : (t.isim || t.name)).join(', ') : '';
     setField('SPECIAL ABILITIES', traitsList);
-
 
     // Languages & Spells Known
     if (store.languages) {
@@ -137,7 +174,6 @@ export async function exportCharacterPDF(store) {
         setField(skillName.toUpperCase(), formatMod(bonus));
       });
     }
-
 
     // Phase 3: Appearance Stream Updates & Save
     try {
@@ -165,4 +201,5 @@ export async function exportCharacterPDF(store) {
     return false;
   }
 }
+
 

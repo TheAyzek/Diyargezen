@@ -94,6 +94,25 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from fastapi import Request
+from fastapi.responses import JSONResponse
+
+@app.exception_handler(Exception)
+async def global_exception_handler(request: Request, exc: Exception):
+    """
+    Tüm yakalanmamış iç sunucu hatalarını (500 Internal Server Error) yakalar.
+    Üretim ortamında hassas sunucu dosya yolları veya kod izlerinin (stack trace)
+    sızmasını engeller ve hatayı güvenle log kaydı olarak saklar.
+    """
+    logger.error("Dahili Sunucu Hatası (%s): %s", request.url.path, exc, exc_info=True)
+    return JSONResponse(
+        status_code=500,
+        content={
+            "detail": "Sunucu tarafında beklenmeyen bir hata oluştu. Lütfen tekrar deneyiniz."
+        }
+    )
+
+
 
 import sys
 from pathlib import Path

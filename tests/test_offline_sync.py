@@ -67,3 +67,33 @@ def test_local_auth_persistence(tmp_path: Path):
 
     local_db.clear_local_auth(db_path)
     assert local_db.get_local_auth(db_path) is None
+
+
+def test_local_db_offline_soft_delete(tmp_path: Path):
+    db_path = tmp_path / "test_delete.db"
+    local_db.init_local_db(db_path)
+
+    # 1. Create character locally
+    char_data = {"system": "PF1E", "name": "Seelah", "class": "Paladin"}
+    rec = local_db.save_local_character(db_path, char_data)
+    assert rec.id is not None
+
+    # 2. Soft-delete character locally
+    local_db.delete_local_character(db_path, rec.id)
+
+    # Listed characters should not include deleted
+    active_chars = local_db.list_local_characters(db_path)
+    assert len(active_chars) == 0
+
+    # Dirty characters should contain the tombstone record
+    dirty_chars = local_db.get_dirty_characters(db_path)
+    assert len(dirty_chars) == 1
+    assert dirty_chars[0].is_deleted is True
+
+    # 3. Apply sync response for soft deletion handshake
+    local_db.apply_sync_response(db_path, [], [rec.server_id])
+
+    # Dirty queue and local records should be purged
+    assert len(local_db.get_dirty_characters(db_path)) == 0
+    assert len(local_db.list_local_characters(db_path)) == 0
+

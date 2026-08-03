@@ -242,6 +242,16 @@ def save_level_up_session(character_id: int, payload: LevelUpSessionPayload, db:
     db.refresh(session)
     return {"id": session.id, "state": session.state, "target_level": session.target_level}
 
+import re
+
+def _sanitize_filename(name: str) -> str:
+    """
+    Kullanıcı tarafından girilen karakter isimlerini CRLF Header Injection ve 
+    dosya sistemi yol sızması (Path Traversal) zafiyetlerine karşı dezenfekte eder.
+    """
+    cleaned = re.sub(r'[^a-zA-Z0-9_\-]', '_', str(name or "character"))
+    return cleaned[:64] or "character"
+
 @router.get("/{character_id}/pdf")
 def export_character_to_pdf(character_id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     """Retrieve character, compute derived statistics, check ownership, and export as filled PDF."""
@@ -261,7 +271,8 @@ def export_character_to_pdf(character_id: int, db: Session = Depends(get_db), cu
     recalced_data = service.recalculate(char_data)
     
     temp_dir = tempfile.gettempdir()
-    pdf_path = Path(temp_dir) / f"character_{character_id}.pdf"
+    safe_file_key = _sanitize_filename(record.name)
+    pdf_path = Path(temp_dir) / f"character_{character_id}_{safe_file_key}.pdf"
     
     try:
         char_dict = recalced_data.copy()
@@ -271,7 +282,7 @@ def export_character_to_pdf(character_id: int, db: Session = Depends(get_db), cu
         export_pdf(char_dict, pdf_path)
         return FileResponse(
             path=str(pdf_path),
-            filename=f"{record.name.replace(' ', '_')}_sheet.pdf",
+            filename=f"{safe_file_key}_sheet.pdf",
             media_type="application/pdf"
         )
     except Exception as exc:
@@ -287,15 +298,16 @@ def export_raw_data_to_pdf(payload: RecalculateRequest):
         recalced_data = service.recalculate(payload.data)
         
         temp_dir = tempfile.gettempdir()
-        name_clean = recalced_data.get("name", "character").replace(" ", "_")
-        pdf_path = Path(temp_dir) / f"{name_clean}_temp.pdf"
+        raw_name = recalced_data.get("name", "character")
+        safe_file_key = _sanitize_filename(raw_name)
+        pdf_path = Path(temp_dir) / f"{safe_file_key}_temp.pdf"
         
         char_dict = recalced_data.copy()
         
         export_pdf(char_dict, pdf_path)
         return FileResponse(
             path=str(pdf_path),
-            filename=f"{name_clean}_sheet.pdf",
+            filename=f"{safe_file_key}_sheet.pdf",
             media_type="application/pdf"
         )
     except Exception as exc:

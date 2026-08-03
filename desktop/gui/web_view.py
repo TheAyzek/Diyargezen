@@ -27,6 +27,7 @@ from PySide6.QtWidgets import (
     QProgressBar, QFrame, QMenu,
 )
 from PySide6.QtWebEngineWidgets import QWebEngineView
+from PySide6.QtWebEngineCore import QWebEnginePage
 
 import sys
 import time
@@ -39,6 +40,20 @@ else:
     BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 FRONTEND_DIST = BASE_DIR / "web" / "frontend" / "dist"
+
+
+class DebugWebPage(QWebEnginePage):
+    """JavaScript konsol mesajlarını Python loglarına yönlendiren QWebEnginePage."""
+
+    _JS_LEVELS = {
+        QWebEnginePage.JavaScriptConsoleMessageLevel.InfoMessageLevel: "JS:INFO",
+        QWebEnginePage.JavaScriptConsoleMessageLevel.WarningMessageLevel: "JS:WARN",
+        QWebEnginePage.JavaScriptConsoleMessageLevel.ErrorMessageLevel: "JS:ERROR",
+    }
+
+    def javaScriptConsoleMessage(self, level, message, line, source_id):
+        tag = self._JS_LEVELS.get(level, "JS")
+        logger.info("[%s] %s (line %s) — %s", tag, message, line, source_id)
 
 
 class DiyargezerWebView(QWidget):
@@ -105,8 +120,10 @@ class DiyargezerWebView(QWidget):
         )
         layout.addWidget(self._progress_bar)
 
-        # QWebEngineView Ana Görünümü
+        # QWebEngineView Ana Görünümü — DebugWebPage ile JS hataları yakalanıyor
         self._web_view = QWebEngineView()
+        self._debug_page = DebugWebPage(self._web_view)
+        self._web_view.setPage(self._debug_page)
         self._web_view.setContextMenuPolicy(Qt.CustomContextMenu)
         self._web_view.customContextMenuRequested.connect(self._show_context_menu)
 
@@ -118,6 +135,7 @@ class DiyargezerWebView(QWidget):
 
         # Sayfayı yükle
         self.reload_page()
+
 
     def reload_page(self) -> None:
         """Hedef adresi yeniden tespit et ve yükle."""
@@ -142,7 +160,32 @@ class DiyargezerWebView(QWidget):
             logger.warning("WebView sayfa yükleme başarısız: %s", self._target_url)
         else:
             logger.info("WebView sayfa başarıyla yüklendi: %s", self._target_url)
+            # DOM durumunu kontrol et — beyaz ekran teşhisi
+            self._web_view.page().runJavaScript(
+                """
+                (function() {
+                    var root = document.getElementById('root');
+                    var info = {
+                        rootExists: !!root,
+                        childCount: root ? root.childElementCount : -1,
+                        innerHTMLLen: root ? root.innerHTML.length : 0,
+                        bodyBg: getComputedStyle(document.body).backgroundColor,
+                        title: document.title,
+                        url: window.location.href,
+                        preview: root ? root.innerHTML.substring(0, 300) : 'NO ROOT'
+                    };
+                    console.log('[DOM-DEBUG] ' + JSON.stringify(info));
+                    return JSON.stringify(info);
+                })()
+                """,
+                self._on_dom_debug
+            )
         self.page_loaded.emit(success)
+
+    def _on_dom_debug(self, result: str) -> None:
+        """DOM debug sonucunu logla."""
+        logger.info("DOM Debug: %s", result)
+
 
     def _show_context_menu(self, pos) -> None:
         """Geliştirici ve gezinme bağlam menüsü."""

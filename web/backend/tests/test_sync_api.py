@@ -2,6 +2,7 @@
 Unit Tests for Sync Engine API
 ==============================
 FastAPI /api/sync ve JWT Auth entegrasyon birim testleri.
+Çevrimdışı senkronizasyon, LWW çakışma çözümü ve Soft Delete doğrulamaları.
 """
 
 import sys
@@ -60,3 +61,80 @@ def test_auth_and_sync_pipeline():
     matched = [c for c in sync_data["updated_characters"] if c.get("server_id") == "test-uuid-9999"]
     assert len(matched) == 1
     assert matched[0]["name"] == "Sync Test Valeros"
+
+
+def test_sync_lww_and_soft_delete():
+    # 1. Register/login test user
+    username = "sync_lww_user"
+    password = "lww_password_123"
+
+    client.post("/api/auth/register", json={"username": username, "password": password})
+    login_resp = client.post("/api/auth/token", data={"username": username, "password": password})
+    token = login_resp.json()["access_token"]
+    headers = {"Authorization": f"Bearer {token}"}
+
+    server_id = "test-uuid-lww-100"
+
+    # Step A: Push initial version (v1) with timestamp T1
+    p1 = {
+        "last_sync_timestamp": None,
+        "dirty_characters": [
+            {
+                "server_id": server_id,
+                "system": "pathfinder1e",
+                "name": "Initial Ezren",
+                "data": {"class": "Wizard", "level": 1},
+                "updated_at": "2026-08-01T10:00:00Z",
+                "is_deleted": False
+            }
+        ]
+    }
+    res1 = client.post("/api/sync", json=p1, headers=headers)
+    assert res1.status_code == 200
+
+    # Step B: Push older version (v0) with timestamp T0 < T1 -> LWW should ignore update
+    p_old = {
+        "last_sync_timestamp": None,
+        "dirty_characters": [
+            {
+                "server_id": server_id,
+                "system": "pathfinder1e",
+                "name": "Older Ezren",
+                "data": {"class": "Wizard", "level": 1},
+                "updated_at": "2026-07-01T10:00:00Z",
+                "is_deleted": False
+            }
+        ]
+    }
+    res_old = client.post("/api/sync", json=p_old, headers=headers)
+    assert res_old.status_code == 200
+    m_old = [c for c in res_old.json()["updated_characters"] if c.get("server_id") == server_id]
+    assert m_old[0]["name"] == "Initial Ezren"  # Retains T1 state
+
+    # Step C: Push Soft Delete with timestamp T2 > T1
+    p_del = {
+        "last_sync_timestamp": None,
+        "dirty_characters": [
+            {
+                "server_id": server_id,
+                "system": "pathfinder1e",
+                "name": "Initial Ezren",
+                "data": {"class": "Wizard", "level": 1},
+                "updated_at": "2026-08-02T10:00:00Z",
+                "is_deleted": True
+            }
+        ]
+    }
+    res_del = client.post("/api/sync", json=p_del, headers=headers)
+    assert res_del.status_code == 200
+
+    # PULL since T1 should list server_id in deleted_server_ids
+    pull_payload = {
+        "last_sync_timestamp": "2026-08-01T12:00:00Z",
+        "dirty_characters": []
+    }
+    res_pull = client.post("/api/sync", json=pull_payload, headers=headers)
+    assert res_pull.status_code == 200
+    pull_data = res_pull.json()
+    assert server_id in pull_data["deleted_server_ids"]
+

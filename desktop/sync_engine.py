@@ -10,7 +10,7 @@ Threading Architecture:
 1. `BackgroundSyncThread`: Periodically executes an asynchronous loop (default 15-second interval).
 2. `SyncWorker`: Executes local SQLite query for `is_dirty=True` records, invokes REST API `POST /api/sync`,
    and applies atomic local updates upon successful cloud handshake.
-3. Network Failure Fallback: Catch network disconnects gracefully, maintaining dirty state flags in local SQLite
+3. Network Failure Fallback: Catches network disconnects gracefully, maintaining dirty state flags in local SQLite
    until internet connectivity is restored.
 """
 
@@ -30,7 +30,16 @@ logger = logging.getLogger(__name__)
 
 
 class SyncWorker(QObject):
-    """Arka planda senkronizasyon mantığını çalıştıran worker objesi."""
+    """
+    Masaüstü istemcisinde arka planda çevrimdışı senkronizasyon mantığını yürüten iş parçacığı bileşeni.
+    
+    PySide6 Signal/Slot mimarisini kullanarak ana kullanıcı arayüzü (UI) iş parçacığını
+    bloklamadan (non-blocking) ağ isteklerini ve yerel veritabanı güncellemelerini yönetir.
+    
+    Signals:
+        sync_finished (Signal[int, str]): Senkronize edilen kayıt sayısı ve durum mesajı.
+        sync_failed (Signal[str]): Ağ hatası veya yetkilendirme başarısızlık mesajı.
+    """
 
     sync_finished = Signal(int, str)  # (synced_count, status_message)
     sync_failed = Signal(str)
@@ -41,7 +50,15 @@ class SyncWorker(QObject):
         self._last_sync_timestamp: Optional[str] = local_db.get_sync_checkpoint(db_path)
 
     def perform_sync(self) -> None:
-        """Çevrimdışı öncelikli senkronizasyon adımını tetikler."""
+        """
+        Çevrimdışı öncelikli senkronizasyon adımını tetikler.
+        
+        Adımlar:
+        1. Oturum durumunu denetler; geçerli JWT token varsa `api_client` yetkilendirilir.
+        2. Yerel veritabanından `is_dirty=1` bayrağı taşıyan PF1e karakterlerini sorgular.
+        3. `POST /api/sync` uç noktasına PUSH yükü gönderir ve PULL yanıtı alır.
+        4. Gelen güncellemeleri yerel SQLite veritabanına uygular ve checkpoint zaman damgasını kaydeder.
+        """
         if not api_client.is_authenticated():
             auth_info = local_db.get_local_auth(self.db_path)
             if auth_info:
@@ -93,9 +110,13 @@ class SyncWorker(QObject):
             self.sync_failed.emit("Çevrimdışı mod (Sunucuya ulaşılamadı)")
 
 
-
 class BackgroundSyncThread(QThread):
-    """Her 15 saniyede bir otomatik senkronizasyon yapan PySide6 Thread."""
+    """
+    Belirli periyotlarla (varsayılan 15 sn) otomatik senkronizasyon yürüten PySide6 QThread bileşeni.
+    
+    Uygulama yaşam döngüsü boyunca arka planda çalışarak ağ bağlantısı sağlandığında
+    kullanıcı müdahalesi gerektirmeden verileri eşzamanlar.
+    """
 
     sync_completed = Signal(int, str)
     status_changed = Signal(str)
@@ -107,6 +128,7 @@ class BackgroundSyncThread(QThread):
         self._interval = 15
 
     def run(self) -> None:
+        """İş parçacığının ana çalıştırma döngüsü."""
         logger.info("Masaüstü Arka Plan Senkronizasyon Motoru başlatıldı.")
         worker = SyncWorker(self.db_path)
 
@@ -116,12 +138,14 @@ class BackgroundSyncThread(QThread):
             except Exception as exc:
                 logger.debug("Sync döngüsü hatası: %s", exc)
 
-            # 15 saniye bekle
+            # 15 saniye bekle (güvenli durdurma kontrolü ile)
             for _ in range(self._interval * 2):
                 if not self._running:
                     break
                 time.sleep(0.5)
 
     def stop(self) -> None:
+        """İş parçacığını güvenli bir şekilde sonlandırır."""
         self._running = False
         self.wait()
+
