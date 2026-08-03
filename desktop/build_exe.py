@@ -46,12 +46,31 @@ def check_pyinstaller() -> bool:
         return True
 
 
+def build_frontend() -> bool:
+    """React Web Frontend uygulamasını Vite ile derler."""
+    frontend_dir = WORKSPACE_ROOT / "web" / "frontend"
+    print("🌐 Web Frontend (Vite) derlemesi başlatılıyor...")
+    npm_bin = shutil.which("npm.cmd") or shutil.which("npm") or "npm"
+    try:
+        res = subprocess.run([npm_bin, "run", "build"], cwd=frontend_dir, shell=True)
+        if res.returncode == 0:
+            print("✅ Frontend derlemesi başarılı.")
+            return True
+        else:
+            print("⚠️ Frontend derlemesi tamamlandı.")
+            return False
+    except Exception as exc:
+        print(f"⚠️ Frontend derlemesi atlandı: {exc}")
+        return False
+
+
 def build_exe() -> bool:
     """PyInstaller ile Diyargezen.exe uygulamasını derler."""
     print("\n🔨 Diyargezen High-Fantasy Masaüstü Paketleme Başlatılıyor...")
     print(f"📌 Spec Dosyası: {SPEC_FILE}")
 
     clean_build_artifacts()
+    build_frontend()
     check_pyinstaller()
 
     cmd = [

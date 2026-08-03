@@ -4,9 +4,14 @@ import axios from 'axios'
 import App from './App.jsx'
 import './index.css'
 
-// Configure Axios default base URL for desktop / file:// environments
-if (typeof window !== 'undefined' && !window.location.origin.startsWith('http')) {
-  axios.defaults.baseURL = 'http://127.0.0.1:8000';
+// Configure Axios default base URL for desktop / file:// / web environments
+if (typeof window !== 'undefined') {
+  const origin = window.location.origin || '';
+  if (origin.startsWith('http://127.0.0.1:8000') || origin.startsWith('http://localhost:8000')) {
+    axios.defaults.baseURL = '';
+  } else {
+    axios.defaults.baseURL = 'http://127.0.0.1:8000';
+  }
 }
 
 // Configure Axios request interceptor for JWT Auth
