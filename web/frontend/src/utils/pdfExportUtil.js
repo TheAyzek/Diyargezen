@@ -19,13 +19,27 @@ import { PDFDocument, StandardFonts } from 'pdf-lib';
 
 export async function exportCharacterPDF(store) {
   try {
-    // Phase 1: Template Fetch with Fallback
-    let response = await fetch('/templates/pf1e_sheet.pdf');
-    if (!response.ok) {
-      response = await fetch('/sheets/pf1e_sheet.pdf');
+    // Phase 1: Robust Multi-Path Template Fetching
+    let response;
+    const fetchPaths = [
+      '/templates/pf1e_sheet.pdf',
+      'http://127.0.0.1:8000/templates/pf1e_sheet.pdf',
+      '/public/templates/pf1e_sheet.pdf',
+      '/sheets/pf1e_sheet.pdf'
+    ];
+    for (const pathUrl of fetchPaths) {
+      try {
+        const res = await fetch(pathUrl);
+        if (res.ok) {
+          response = res;
+          break;
+        }
+      } catch (e) {
+        // Try next fallback path
+      }
     }
-    if (!response.ok) {
-      throw new Error('PDF şablonu (/templates/pf1e_sheet.pdf) sunucuda bulunamadı.');
+    if (!response || !response.ok) {
+      throw new Error('PDF şablonu (/templates/pf1e_sheet.pdf) sunucuda veya yerel dizinde bulunamadı.');
     }
     const existingPdfBytes = await response.arrayBuffer();
 

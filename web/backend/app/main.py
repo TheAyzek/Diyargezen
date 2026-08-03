@@ -145,6 +145,21 @@ app.include_router(rules.router, prefix="/api")
 app.include_router(characters.router, prefix="/api")
 app.include_router(sync.router, prefix="/api")
 
+# Mount templates directory for PDF downloads
+templates_dir = None
+if getattr(sys, 'frozen', False):
+    t_candidate = Path(getattr(sys, '_MEIPASS', '')) / "templates"
+    if t_candidate.exists():
+        templates_dir = t_candidate
+if not templates_dir:
+    t_candidate = Path(__file__).resolve().parent.parent.parent.parent / "templates"
+    if t_candidate.exists():
+        templates_dir = t_candidate
+
+if templates_dir and templates_dir.exists():
+    logger.info("Mounting PDF templates static directory from: %s", templates_dir)
+    app.mount("/templates", StaticFiles(directory=str(templates_dir)), name="templates")
+
 frontend_dist = None
 if getattr(sys, 'frozen', False):
     candidate = Path(getattr(sys, '_MEIPASS', '')) / "web" / "frontend" / "dist"

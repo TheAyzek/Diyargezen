@@ -38,9 +38,26 @@ export default function PF1eLiveSheet() {
   const renderLivePdf = async () => {
     try {
       setRendering(true);
-      const response = await fetch('/templates/pf1e_sheet.pdf');
-      if (!response.ok) {
-        throw new Error(`PDF template loading failed: HTTP ${response.status}`);
+      let response;
+      const fetchPaths = [
+        '/templates/pf1e_sheet.pdf',
+        'http://127.0.0.1:8000/templates/pf1e_sheet.pdf',
+        '/public/templates/pf1e_sheet.pdf',
+        '/sheets/pf1e_sheet.pdf'
+      ];
+      for (const pathUrl of fetchPaths) {
+        try {
+          const res = await fetch(pathUrl);
+          if (res.ok) {
+            response = res;
+            break;
+          }
+        } catch (e) {
+          // Try next fallback path
+        }
+      }
+      if (!response || !response.ok) {
+        throw new Error('PDF şablonu (/templates/pf1e_sheet.pdf) bulunamadı.');
       }
       const existingPdfBytes = await response.arrayBuffer();
 
@@ -404,8 +421,15 @@ export default function PF1eLiveSheet() {
         // Fallback gracefully if any individual field has unsupported appearance properties
       }
 
-      const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: true, updateFieldAppearances: false });
-      setPdfUrl(pdfDataUri);
+      const pdfBytes = await pdfDoc.save();
+      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+      const blobUrl = URL.createObjectURL(blob);
+      setPdfUrl((prevUrl) => {
+        if (prevUrl && prevUrl.startsWith('blob:')) {
+          URL.revokeObjectURL(prevUrl);
+        }
+        return blobUrl;
+      });
 
     } catch (err) {
       console.error('pdf-lib Canlı PDF Oluşturma Hatası:', err);
