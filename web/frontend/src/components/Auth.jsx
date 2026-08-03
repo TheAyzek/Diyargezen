@@ -81,8 +81,17 @@ export default function Auth({ onLoginSuccess }) {
       }
     } catch (err) {
       console.error('Auth error:', err);
-      if (err.response?.data?.detail) {
-        setError(err.response.data.detail);
+      if (!err.response) {
+        setError('Sunucuya bağlanılamadı. Lütfen backend sunucusunun (port 8000) çalıştığından ve aktif olduğundan emin olun.');
+      } else if (err.response?.data?.detail) {
+        const detail = err.response.data.detail;
+        if (typeof detail === 'string') {
+          setError(detail === 'Username already registered.' ? 'Bu kullanıcı adı zaten alınmış. Lütfen farklı bir ad deneyin.' : detail);
+        } else if (Array.isArray(detail) && detail.length > 0) {
+          setError(detail[0].msg || 'Girdi doğrulaması başarısız oldu.');
+        } else {
+          setError(isLogin ? 'Giriş başarısız. Lütfen bilgilerinizi kontrol edin.' : 'Kayıt işlemi başarısız oldu.');
+        }
       } else {
         setError(isLogin ? 'Giriş başarısız. Lütfen bilgilerinizi kontrol edin.' : 'Kayıt işlemi başarısız oldu.');
       }
