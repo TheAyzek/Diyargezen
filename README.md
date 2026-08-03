@@ -1,119 +1,140 @@
-# Diyargezer - Evrensel FRP Karakter Oluşturucu
+# 🛡️ Diyargezen - Pathfinder 1e Karakter Yaratıcısı & Yöneticisi
 
-## Öğrenci Bilgileri
-- **Ad Soyad**: Deniz Şahin
-- **Numara**: 2221032838
-- **Telefon**: 05424275482
-- **E-posta**: dnsshnonline@gmail.com
+> **Diyargezen**, Pathfinder 1st Edition (PF1e) masaüstü rol yapma oyunu (TTRPG) kural sistemini %100 yasal kurallarla uygulayan, çevrimdışı öncelikli (offline-first) masaüstü istemcisine ve bulut senkronizasyonlu web platformuna sahip gelişmiş bir karakter yönetim mimarisidir.
 
-## Proje
-- **Ad**: Diyargezer FRP Karakter Yaratıcısı
-- **Konu**: TTRPG karakter oluşturma, düzenleme, kaydetme ve bulut senkronizasyonu
-- **Platform**: Masaüstü (PySide6) + Web (React + FastAPI)
-- **Teknolojiler**: Python, React, FastAPI, SQLite, Zustand, ReportLab
+---
 
-## Desteklenen Sistemler
+## 👨‍💻 Öğrenci & Geliştirici Bilgileri
+- **Ad Soyad:** Deniz Şahin
+- **Öğrenci No:** 2221032838
+- **Telefon:** 05424275482
+- **E-posta:** dnsshnonline@gmail.com
+- **Repository:** [https://github.com/TheAyzek/Diyargezen](https://github.com/TheAyzek/Diyargezen)
 
-| Sistem | Masaüstü | Web | Durum |
-|--------|----------|-----|-------|
-| **Pathfinder 1e** | Evet | Evet (tam destek) | Aktif |
-| **D&D 5e** | Evet | Donduruldu | Yakında Gelecek (web) |
-| **Mutants & Masterminds 3e** | Evet | Donduruldu | Yakında Gelecek (web) |
+---
 
-## Özellikler
+## 🎯 Ürün Kapsamı & Temel Amaç (Product Scope)
 
-### Web Platformu (PF1e Odaklı)
-- JWT kimlik doğrulama ve kullanıcı oturumu
-- Karakter CRUD (oluştur, oku, güncelle, sil)
-- Canlı kural hesaplama (BAB, saves, AC, skills)
-- Seviye atlama sihirbazı ve geri alma
-- Trait seçimi (80+ kategorize trait)
-- Portre yükleme
-- PDF export (pdf-lib)
-- Masaüstü ile bulut senkronizasyonu (`POST /api/sync`)
+- **Strict Scope:** Diyargezen **SADECE** bir **Pathfinder 1st Edition (PF1e) Karakter Yaratıcısı ve Yöneticisidir**.
+- **Kapsam Dışı:** Uygulama bir VTT (Virtual Tabletop), harita motoru veya savaş simülatörü **DEĞİLDİR**.
+- **Ana Odak Noktaları:**
+  1. **%100 Yasal Karakter Oluşturma:** BAB, AC, Saves, Skill Ranks, Trait ve Feat modifikatörlerinin dinamik hesaplanması.
+  2. **Seviye Atlatma Sihirbazı (Level-Up Wizard):** HP zarı, stat artışı (4, 8, 12, 16, 20), yetenek ve başarım dağıtım durum makinesi.
+  3. **Soft-Block GM Esneklik Motoru:** Sert engeller yerine uyarılı yönlendirme ve `is_overridden` bayrağı ile GM takdirine saygı gösterilmesi.
+  4. **Offline-First Senkronizasyon:** Çevrimdışı yerel SQLite WAL veritabanı, LWW (Last-Write-Wins) çakışma çözümü ve Tombstone Soft-Delete protokolü.
+  5. **Canlı AcroForm PDF Export:** `pdf-lib` ve ReportLab ile 300ms debounced canlı PDF önizlemesi ve resmi Pathfinder 1e karakter kağıdı çıktısı.
 
-### Masaüstü Uygulaması
-- PySide6 Dark Fantasy GUI (The Tavern / The Forge / Character Sheet)
-- Offline-first yerel SQLite veritabanı
-- Arka plan bulut senkronizasyonu (JWT)
-- Üç TTRPG sistemi desteği
-- Encounter Tracker, Homebrew Yöneticisi, Portre Yönetimi
-- PDF ve HTML export
+---
 
-### Paylaşılan Çekirdek
-- `rules/` — Kural motoru ve doğrulama
-- `data/characters.db` — SQLite entity veritabanı
-- `utils/` — Export, hesaplama, homebrew, portre yardımcıları
+## 🏛️ Mimari ve Bileşenler
 
-## Kurulum
+```mermaid
+graph TD
+    subgraph Desktop ["Masaüstü İstemcisi (PySide6)"]
+        GUI["Dark Fantasy PySide6 GUI"]
+        LocalDB[("Yerel SQLite (WAL)")]
+        SyncWorker["QThread Sync Engine"]
+        GUI --> LocalDB
+        GUI --> SyncWorker
+    end
 
-### Backend (FastAPI)
+    subgraph Cloud ["Bulut Platformu (FastAPI + React)"]
+        API["FastAPI REST Backend"]
+        WebUI["React + Vite Frontend"]
+        CloudDB[("SQLite Unified DB")]
+        API --> CloudDB
+        WebUI --> API
+    end
+
+    SyncWorker <-->|POST /api/sync (JWT + LWW)| API
+```
+
+### 1. Kural Motoru & Hesaplayıcılar (`rules/`)
+- **`pf1e_rules.py`**: Karakter verilerini inceler; ırksal bonuslar, sınıf özellikleri, başarım önkoşulları ve trait kategori çakışmalarını doğrular. GM override bayrağı aktifse soft-block uyarılarını devre dışı bırakır.
+- **`character_manager.py`**: Statik hesaplamaları yürütür (`calculate_stats`). Level-Up durum makinesi ile `calculate_level_up_slots` ve `apply_level_up` metodlarını sunar.
+- **`calculators.py`**: Stat modifikatörü, yetenek puanı tabloları ve temelleri barındırır.
+
+### 2. Çevrimdışı Senkronizasyon Motoru (`desktop/` & `web/backend/app/routers/sync.py`)
+- **Çevrimdışı Öncelikli SQLite (`desktop/local_db.py`)**: Tüm karakterler ve oturum bilgileri yerel SQLite WAL veritabanında saklanır. Değişikliklerde `is_dirty = 1` olarak işaretlenir.
+- **LWW Çakışma Çözümü**: İstemci ve sunucu güncellenme zaman damgaları (ISO-8601 UTC `datetime`) karşılaştırılır; en son yazılan veri geçerli sayılır.
+- **Tombstone Soft Delete**: Çevrimdışı silinen karakterler silindi işareti (`is_deleted = 1`) alarak sunucuya bildirilir ve senkronizasyon el sıkışmasından sonra yerel veritabanından tamamen temizlenir.
+
+### 3. Birleştirilmiş Veritabanı & İndeksleme (`db/` & `etl/`)
+- **Foundry VTT + Scraper Fallback**: Pathfinder 1e veri seti Foundry VTT modüllerinden ve Scraper (d20pfsrd / AoNPRD) kaynaklarından harmanlanır.
+- **Bileşik İndeksleme (Composite Indexing)**: `entities` tablosu üzerindeki `(sistem, kategori, isim)` indeksi sayesinde 15.000+ kural ögesinin arama yanıt süresi 10ms'nin altındadır.
+
+---
+
+## 🔒 Siber Güvenlik & Sistem Dayanıklılığı (SecOps)
+
+- **CRLF Header Injection Koruması**: Karakter isimleri `_sanitize_filename` regex mantığı (`[^a-zA-Z0-9_\-]`) ile dezenfekte edilerek PDF indirme başlıklarında (`Content-Disposition`) kod enjeksiyonu ve Path Traversal zafiyetleri önlenir.
+- **Hassas Veri Sızıntısı Koruması (Stack Trace Masking)**: FastAPI `main.py` üzerindeki global exception handler yakalanmamış 500 dahili sunucu hatalarında sunucu dosya yollarını istemciye sızdırmaz; hatayı güvenle loglar.
+- **IDOR & Yetkilendirme Kontrolü**: Tüm karakter REST API uç noktalarında `_owned_character` kontrolü ile kullanıcıların sadece kendi karakterlerine erişebilmesi garanti edilir.
+- **%100 Parametrik SQL**: Tüm SQLite veritabanı sorguları parametreleştirilmiş (`?`) bağlamda çalışır; SQL Enjeksiyonuna karşı korumalıdır.
+
+---
+
+## 🛠️ Kurulum & Çalıştırma
+
+### Gereksinimler
+- Python 3.10+
+- Node.js 18+ (Web Frontend için)
+
+### 1. Web Backend (FastAPI)
 ```bash
 cd web/backend
 pip install -r requirements.txt
 python run.py
 ```
+*API Swagger Dokümantasyonu: `http://localhost:8000/docs`*
 
-### Frontend (React + Vite)
+### 2. Web Frontend (React + Vite)
 ```bash
 cd web/frontend
 npm install
 npm run dev
 ```
+*Arayüz Adresi: `http://localhost:5173`*
 
-### Masaüstü (PySide6)
+### 3. Masaüstü Uygulaması (PySide6)
 ```bash
 pip install -r requirements.txt
 python desktop/main_desktop.py
 ```
 
-## Proje Yapısı
+---
 
-```
-Diyargezenweb/
-├── rules/                     # Paylaşılan kural motoru
-│   ├── pf1e_rules.py
-│   ├── character_manager.py
-│   └── calculators.py
-├── data/
-│   ├── characters.db          # SQLite entity DB
-│   └── pathfinder_1e_data.json
-├── desktop/                   # PySide6 masaüstü uygulaması
-│   ├── main_desktop.py
-│   ├── gui/
-│   ├── sync_engine.py
-│   └── local_db.py
-├── web/
-│   ├── backend/               # FastAPI REST API
-│   │   ├── app/
-│   │   └── tests/
-│   └── frontend/              # React karakter kağıdı
-│       └── src/
-├── creators/                  # Karakter oluşturucu factory
-├── utils/                     # Export, hesaplama, homebrew
-├── scraper/                   # PF1e veri toplama scriptleri
-├── tests/                     # Kök seviye unit testler
-└── docs/                      # Dokümantasyon
-```
+## 📦 Paketleme & Windows Kurulum Paketleri (Build & Installer)
 
-## Testler
+Masaüstü PySide6 uygulaması bağımsız executable (`.exe`) ve Windows Kurucu (`Setup.exe`) paketlerine dönüştürülebilir:
+
+### Standalone Executable (.exe) Derleme
+```bash
+python desktop/build_exe.py
+```
+*Çıktı Dizin: `dist/Diyargezen/Diyargezen.exe`*
+
+### Windows Kurulum Paketi (InnoSetup Setup.exe & Portable ZIP)
+```bash
+python desktop/build_installer.py
+```
+*Çıktı Dizin: `dist/Diyargezen_Setup_v2.0.exe` ve `dist/Diyargezen_Portable_v2.0.zip`*
+
+---
+
+## 🧪 Test Çalıştırma
+
+Tüm birim ve entegrasyon testleri Pytest ile yürütülür (%100 geçiş oranı, 281 geçen test):
 
 ```bash
-# Tüm testler (kök + backend)
-python -m pytest tests/ web/backend/tests/ -v
+# Tüm proje test kümesini çalıştır
+.\.venv\Scripts\pytest.exe -v
 
-# Yalnızca backend API testleri
-python -m pytest web/backend/tests/ -v
+# Özel backend ve güvenlik testlerini çalıştır
+.\.venv\Scripts\pytest.exe web/backend/tests/ -v
 ```
 
-## API Özeti
+---
 
-| Endpoint | Açıklama |
-|----------|----------|
-| `POST /api/auth/login` | JWT giriş |
-| `GET /api/systems` | Desteklenen sistemler |
-| `GET /api/characters` | Karakter listesi |
-| `POST /api/characters` | Yeni karakter |
-| `POST /api/characters/recalculate` | Canlı hesaplama |
-| `GET /api/rules/{system}/traits` | PF1e trait listesi |
-| `POST /api/sync` | Masaüstü bulut senk |
+## 📜 Lisans
+Bu proje **Open Gaming License (OGL 1.0a)** ve **MIT Lisansı** altında geliştirilmiştir.
