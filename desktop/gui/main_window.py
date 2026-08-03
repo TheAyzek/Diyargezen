@@ -79,7 +79,13 @@ def ensure_local_server_running() -> None:
             from web.backend.app.main import app as fastapi_app
 
         def _start_uvicorn():
-            uvicorn.run(fastapi_app, host="127.0.0.1", port=8000, log_level="error")
+            try:
+                config = uvicorn.Config(fastapi_app, host="127.0.0.1", port=8000, log_level="error")
+                server = uvicorn.Server(config)
+                server.install_signal_handlers = lambda: None
+                server.run()
+            except Exception as e:
+                logger.error("Gömülü Uvicorn sunucusu başlatılırken hata: %s", e)
 
         server_thread = threading.Thread(target=_start_uvicorn, daemon=True)
         server_thread.start()
