@@ -54,21 +54,10 @@ export default function Auth({ onLoginSuccess }) {
         
         onLoginSuccess(token, username);
       } else {
-        // Register endpoint
-        await axios.post('/api/auth/register', {
+        // Register endpoint directly returns access_token in response
+        const response = await axios.post('/api/auth/register', {
           username,
           password
-        });
-        
-        // After successful registration, auto-login
-        const formData = new URLSearchParams();
-        formData.append('username', username);
-        formData.append('password', password);
-
-        const response = await axios.post('/api/auth/token', formData, {
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-          }
         });
 
         const token = response.data.access_token;
