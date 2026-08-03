@@ -71,37 +71,23 @@ class DiyargezerWebView(QWidget):
     def _determine_target_url(self) -> str:
         """
         Web uygulamasının sunulduğu aktif adresi tespit eder.
-        1. Backend Sunucusu: http://127.0.0.1:8000
-        2. Dev Server: http://127.0.0.1:5173
-        3. Local Dist Fallback: file://.../dist/index.html
+        Öncelik: FastAPI Üretim Sunucusu (http://127.0.0.1:8000)
         """
-        # Sunucu açılışı için kısa deneme döngüsü (Retry Loop)
-        for attempt in range(5):
+        for _ in range(10):
             try:
-                req = urllib.request.urlopen("http://127.0.0.1:8000/", timeout=0.5)
+                req = urllib.request.urlopen("http://127.0.0.1:8000/api/health", timeout=0.2)
                 if req.status == 200:
-                    logger.info("WebView backend sunucusu tespit edildi: http://127.0.0.1:8000/")
+                    logger.info("WebView yerel FastAPI sunucusuna bağlandı: http://127.0.0.1:8000/")
                     return "http://127.0.0.1:8000/"
             except Exception:
                 pass
+            time.sleep(0.1)
 
-            try:
-                req = urllib.request.urlopen("http://127.0.0.1:5173/", timeout=0.5)
-                if req.status == 200:
-                    logger.info("WebView dev server tespit edildi: http://127.0.0.1:5173/")
-                    return "http://127.0.0.1:5173/"
-            except Exception:
-                pass
-
-            time.sleep(0.3)
-
-        # 3. Static Dist Fallback
         if FRONTEND_DIST.exists() and (FRONTEND_DIST / "index.html").exists():
             dist_index = (FRONTEND_DIST / "index.html").as_uri()
             logger.info("WebView yerel static dist kullanıyor: %s", dist_index)
             return dist_index
 
-        # Fallback to default local address
         return "http://127.0.0.1:8000/"
 
 
