@@ -41,22 +41,54 @@ class ApiClient:
     def register(self, username: str, password: str) -> Dict[str, Any]:
         """Yeni kullanıcı kaydı oluşturur."""
         url = f"{self.base_url}/auth/register"
-        resp = requests.post(url, json={"username": username, "password": password}, timeout=10)
-        resp.raise_for_status()
-        data = resp.json()
-        if "access_token" in data:
-            self.set_token(data["access_token"], username)
-        return data
+        try:
+            resp = requests.post(url, json={"username": username, "password": password}, timeout=10)
+            if resp.status_code >= 400:
+                try:
+                    err_json = resp.json()
+                    detail = err_json.get("detail", "")
+                    if isinstance(detail, list) and len(detail) > 0:
+                        detail = detail[0].get("msg", str(detail))
+                    if "already registered" in str(detail).lower():
+                        msg = "Bu kullanıcı adı zaten alınmış. Lütfen farklı bir kullanıcı adı deneyin."
+                    elif "at least" in str(detail).lower() or "min_length" in str(detail).lower():
+                        msg = "Kullanıcı adı en az 3, şifre en az 4 karakter olmalıdır."
+                    else:
+                        msg = str(detail) or f"Sunucu hatası ({resp.status_code})"
+                except Exception:
+                    msg = f"Sunucu yanıt vermedi ({resp.status_code})"
+                raise ValueError(msg)
+
+            data = resp.json()
+            if "access_token" in data:
+                self.set_token(data["access_token"], username)
+            return data
+        except requests.exceptions.ConnectionError:
+            raise ConnectionError("Bulut sunucusuna bağlanılamadı. Lütfen sunucunun çalıştığından ve internet bağlantınızdan emin olun.")
 
     def login(self, username: str, password: str) -> Dict[str, Any]:
         """Kullanıcı girişi yapar ve JWT token alır."""
         url = f"{self.base_url}/auth/token"
-        resp = requests.post(url, data={"username": username, "password": password}, timeout=10)
-        resp.raise_for_status()
-        data = resp.json()
-        if "access_token" in data:
-            self.set_token(data["access_token"], username)
-        return data
+        try:
+            resp = requests.post(url, data={"username": username, "password": password}, timeout=10)
+            if resp.status_code >= 400:
+                try:
+                    err_json = resp.json()
+                    detail = err_json.get("detail", "")
+                    if "incorrect" in str(detail).lower() or "unauthorized" in str(detail).lower():
+                        msg = "Kullanıcı adı veya şifre hatalı!"
+                    else:
+                        msg = str(detail) or "Giriş başarısız."
+                except Exception:
+                    msg = "Giriş işlemi başarısız oldu."
+                raise ValueError(msg)
+
+            data = resp.json()
+            if "access_token" in data:
+                self.set_token(data["access_token"], username)
+            return data
+        except requests.exceptions.ConnectionError:
+            raise ConnectionError("Bulut sunucusuna bağlanılamadı. Lütfen sunucunun çalıştığından emin olun.")
 
     def list_characters(self, system: Optional[str] = None) -> List[Dict[str, Any]]:
         """Sunucudaki kayıtlı karakterleri çeker."""
