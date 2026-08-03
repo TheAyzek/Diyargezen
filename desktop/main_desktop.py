@@ -35,12 +35,17 @@ if str(backend_dir) not in sys.path:
     sys.path.insert(0, str(backend_dir))
 
 
+class FlushFileHandler(logging.FileHandler):
+    def emit(self, record):
+        super().emit(record)
+        self.flush()
+
 try:
     log_file = EXEC_DIR / "Diyargezen_desktop.log"
-    handler = logging.FileHandler(str(log_file), mode="w", encoding="utf-8")
+    handler = FlushFileHandler(str(log_file), mode="w", encoding="utf-8")
 except Exception:
     log_file = Path.home() / "Diyargezen_desktop.log"
-    handler = logging.FileHandler(str(log_file), mode="w", encoding="utf-8")
+    handler = FlushFileHandler(str(log_file), mode="w", encoding="utf-8")
 
 logging.basicConfig(
     level=logging.INFO,
