@@ -23,10 +23,16 @@ from PySide6.QtWidgets import (
     QLabel, QPushButton, QStackedWidget, QFrame, QSizePolicy,
 )
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+if getattr(sys, 'frozen', False):
+    BASE_DIR = Path(getattr(sys, '_MEIPASS', ''))
+    EXEC_DIR = Path(sys.executable).parent
+else:
+    BASE_DIR = Path(__file__).resolve().parent.parent.parent
+    EXEC_DIR = BASE_DIR
+
 if str(BASE_DIR) not in sys.path:
     sys.path.insert(0, str(BASE_DIR))
-desktop_dir = Path(__file__).resolve().parent.parent
+desktop_dir = BASE_DIR / "desktop"
 if str(desktop_dir) not in sys.path:
     sys.path.insert(0, str(desktop_dir))
 
@@ -47,7 +53,12 @@ from etl.pipeline import run_etl_if_needed
 
 logger = logging.getLogger(__name__)
 
-DB_PATH = BASE_DIR / "desktop" / "data" / "offline_pf1e.db"
+try:
+    from web.backend.app.core.config import DB_PATH
+except ImportError:
+    from app.core.config import DB_PATH
+
+DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 LOGO_PATH = BASE_DIR / "assets" / "diyargezer_logo.png"
 
 
@@ -73,25 +84,29 @@ def ensure_local_server_running() -> None:
 
         import uvicorn
         try:
-            from app.main import app as fastapi_app
-        except ImportError:
             from web.backend.app.main import app as fastapi_app
+        except ImportError:
+            import importlib
+            fastapi_app = importlib.import_module("app.main").app
 
         def _start_uvicorn():
             try:
-                config = uvicorn.Config(fastapi_app, host="127.0.0.1", port=8000, log_level="info")
+                import asyncio
+                loop = asyncio.new_event_loop()
+                asyncio.set_event_loop(loop)
+                config = uvicorn.Config(fastapi_app, host="127.0.0.1", port=8000, log_level="info", loop="asyncio")
                 server = uvicorn.Server(config)
                 server.install_signal_handlers = lambda: None
                 server.run()
             except Exception as e:
-                logger.error("Gömülü Uvicorn sunucusu başlatılırken hata: %s", e)
+                logger.error("Gömülü Uvicorn sunucusu başlatılırken hata: %s", e, exc_info=True)
 
         server_thread = threading.Thread(target=_start_uvicorn, daemon=True)
         server_thread.start()
 
-        # Gömülü Uvicorn sunucusunun port 8000 üzerinde dinlemeye başlamasını bekle (max 3 saniye)
+        # Gömülü Uvicorn sunucusunun port 8000 üzerinde dinlemeye başlamasını bekle (max 8 saniye)
         import time
-        for _ in range(30):
+        for _ in range(80):
             try:
                 req = urllib.request.urlopen("http://127.0.0.1:8000/api/health", timeout=0.2)
                 if req.status == 200:
@@ -108,7 +123,7 @@ class MainWindow(QMainWindow):
 
     def __init__(self) -> None:
         super().__init__()
-        self.setWindowTitle("Diyargezer — High-Fantasy TTRPG Karakter Yöneticisi")
+        self.setWindowTitle("Diyargezen — Pathfinder 1e Karakter Yöneticisi")
         self.resize(1280, 800)
         self.setMinimumSize(960, 640)
         self.setWindowState(Qt.WindowMaximized)
@@ -120,7 +135,6 @@ class MainWindow(QMainWindow):
 
         from desktop import local_db
         from desktop.api_client import api_client
-        from desktop.sync_engine import BackgroundSyncThread
         local_db.init_local_db(DB_PATH)
 
         auth_info = local_db.get_local_auth(DB_PATH)
@@ -140,11 +154,6 @@ class MainWindow(QMainWindow):
 
         self._build_ui()
 
-        # Arka plan otomatik senkronizasyon servisi
-        self._sync_thread = BackgroundSyncThread(DB_PATH, parent=self)
-        self._sync_thread.start()
-
-
     # ------------------------------------------------------------------
     # UI
     # ------------------------------------------------------------------
@@ -155,47 +164,6 @@ class MainWindow(QMainWindow):
         root = QVBoxLayout(central)
         root.setContentsMargins(0, 0, 0, 0)
         root.setSpacing(0)
-
-        # ---- Top Control Strip ----
-        top_bar = QFrame()
-        top_bar.setStyleSheet(
-            "QFrame { background-color: #0b0b14; border-bottom: 1px solid rgba(223, 190, 94, 0.3); min-height: 38px; max-height: 38px; }"
-        )
-        tb_lay = QHBoxLayout(top_bar)
-        tb_lay.setContentsMargins(12, 0, 12, 0)
-        tb_lay.setSpacing(12)
-
-        if LOGO_PATH.exists():
-            logo_lbl = QLabel()
-            pm = QPixmap(str(LOGO_PATH)).scaled(
-                22, 22, Qt.KeepAspectRatio, Qt.SmoothTransformation,
-            )
-            logo_lbl.setPixmap(pm)
-            tb_lay.addWidget(logo_lbl)
-
-        brand = QLabel("Diyargezer Desktop")
-        brand.setStyleSheet("font-family: 'Cinzel', serif; font-size: 14px; font-weight: bold; color: #fced88;")
-        tb_lay.addWidget(brand)
-
-        badge = QLabel("✨ High-Fantasy Web Engine")
-        badge.setStyleSheet("background-color: rgba(223, 190, 94, 0.15); color: #dfbe5e; border: 1px solid rgba(223, 190, 94, 0.4); border-radius: 4px; padding: 2px 8px; font-size: 11px; font-weight: bold;")
-        tb_lay.addWidget(badge)
-
-        tb_lay.addStretch()
-
-        reload_btn = QPushButton("🔄 Yenile (F5)")
-        reload_btn.setStyleSheet("background: transparent; color: #e8dbbf; border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; padding: 3px 10px; font-size: 11px; text-transform: none;")
-        reload_btn.setCursor(Qt.PointingHandCursor)
-        reload_btn.clicked.connect(self._reload_web_view)
-        tb_lay.addWidget(reload_btn)
-
-        self._cloud_btn = QPushButton("☁️ Bulut Girişi (Sync)")
-        self._cloud_btn.setCursor(Qt.PointingHandCursor)
-        self._cloud_btn.setStyleSheet("background-color: rgba(230, 197, 103, 0.15); color: #e6c567; border: 1px solid #e6c567; border-radius: 4px; padding: 3px 10px; font-weight: bold; font-size: 11px; text-transform: none;")
-        self._cloud_btn.clicked.connect(self._open_login_dialog)
-        tb_lay.addWidget(self._cloud_btn)
-
-        root.addWidget(top_bar)
 
         # ---- Main Content: QWebEngineView ----
         self._web_view = DiyargezerWebView(self)

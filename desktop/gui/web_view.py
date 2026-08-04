@@ -73,7 +73,7 @@ class DiyargezerWebView(QWidget):
         Web uygulamasının sunulduğu aktif adresi tespit eder.
         Öncelik: FastAPI Üretim Sunucusu (http://127.0.0.1:8000)
         """
-        for _ in range(10):
+        for _ in range(60):
             try:
                 req = urllib.request.urlopen("http://127.0.0.1:8000/api/health", timeout=0.2)
                 if req.status == 200:
@@ -108,6 +108,12 @@ class DiyargezerWebView(QWidget):
 
         # QWebEngineView Ana Görünümü — DebugWebPage ile JS hataları yakalanıyor
         self._web_view = QWebEngineView()
+        from PySide6.QtWebEngineCore import QWebEngineSettings
+        settings = self._web_view.settings()
+        settings.setAttribute(QWebEngineSettings.WebAttribute.LocalContentCanAccessRemoteUrls, True)
+        settings.setAttribute(QWebEngineSettings.WebAttribute.LocalContentCanAccessFileUrls, True)
+        settings.setAttribute(QWebEngineSettings.WebAttribute.LocalStorageEnabled, True)
+
         self._debug_page = DebugWebPage(self._web_view)
         self._web_view.setPage(self._debug_page)
         self._web_view.setContextMenuPolicy(Qt.CustomContextMenu)

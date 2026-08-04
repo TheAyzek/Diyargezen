@@ -69,8 +69,12 @@ def _connect(db_path: Path) -> Iterator[sqlite3.Connection]:
     Yields:
         sqlite3.Connection: Etkin SQLite bağlantısı.
     """
+    db_path.parent.mkdir(parents=True, exist_ok=True)
     conn = sqlite3.connect(str(db_path), timeout=10)
-    conn.execute("PRAGMA journal_mode=WAL")
+    try:
+        conn.execute("PRAGMA journal_mode=WAL")
+    except Exception:
+        pass
     conn.execute("PRAGMA foreign_keys=ON")
     try:
         yield conn

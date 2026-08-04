@@ -99,6 +99,14 @@ def needs_rebuild(db_path: Path, data_dir: Path, systems: List[str]) -> bool:
     """JSON dosyaları değiştiyse veya DB boşsa True."""
     if not db_path.exists():
         return True
+    try:
+        with _connect(db_path) as conn:
+            count = conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
+        if count == 0:
+            return True
+    except Exception:
+        return True
+
     file_map = {
         "dnd5e": ["dnd_data.json"],
         "pathfinder1e": ["pathfinder_1e_data.json"],
@@ -110,11 +118,7 @@ def needs_rebuild(db_path: Path, data_dir: Path, systems: List[str]) -> bool:
             expected_parts.append(fn)
     fingerprint = _source_fingerprint(data_dir, expected_parts)
     stored = get_etl_meta(db_path, "source_fingerprint")
-    if stored != fingerprint:
-        return True
-    with _connect(db_path) as conn:
-        count = conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
-    return count == 0
+    return stored != fingerprint
 
 
 def bulk_upsert_entities(db_path: Path, entities: List[DiyargezenEntity], sistem: str) -> int:

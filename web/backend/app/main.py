@@ -66,6 +66,14 @@ async def lifespan(app: FastAPI):
     from app.core.database import initialize_orm_schemas
     initialize_orm_schemas()
     logger.info("ORM schemas initialized and checked.")
+
+    try:
+        from etl.pipeline import run_etl_if_needed
+        etl_res = run_etl_if_needed(DB_PATH)
+        logger.info("ETL pipeline checked during startup: %s", etl_res)
+    except Exception as exc:
+        logger.warning("Startup ETL failed: %s", exc)
+
     yield
 
 

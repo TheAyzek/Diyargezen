@@ -12,8 +12,8 @@ import { useCharacterStore } from './store/characterStore';
 import { exportCharacterPDF } from './utils/pdfExportUtil';
 
 export default function App() {
-  const [token, setToken] = useState(localStorage.getItem('token'));
-  const [username, setUsername] = useState(localStorage.getItem('username') || '');
+  const [token, setToken] = useState(localStorage.getItem('token') || 'offline-guest-token');
+  const [username, setUsername] = useState(localStorage.getItem('username') || 'Yerel Gezgin');
   const [view, setView] = useState('dashboard'); // 'dashboard', 'select-system', 'edit-character', 'rules-compendium'
   const [selectedCharacter, setSelectedCharacter] = useState(null);
   const [selectedSystem, setSelectedSystem] = useState('pf1e');
@@ -37,7 +37,7 @@ export default function App() {
     if (token) {
       axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
     } else {
-      delete axios.defaults.headers.common['Authorization'];
+      axios.defaults.headers.common['Authorization'] = `Bearer offline-guest-token`;
     }
   }, [token]);
 
@@ -50,8 +50,8 @@ export default function App() {
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('username');
-    setToken(null);
-    setUsername('');
+    setToken('offline-guest-token');
+    setUsername('Yerel Gezgin');
     setView('dashboard');
   };
 

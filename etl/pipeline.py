@@ -24,9 +24,18 @@ from parsers import PARSERS
 
 logger = logging.getLogger(__name__)
 
-BASE_DIR = Path(__file__).resolve().parent.parent
-DEFAULT_DB = BASE_DIR / "data" / "characters.db"
-DATA_DIR = BASE_DIR / "data"
+import sys
+
+if getattr(sys, 'frozen', False):
+    BASE_DIR = Path(getattr(sys, '_MEIPASS', ''))
+    EXEC_DIR = Path(sys.executable).parent
+    DEFAULT_DB = EXEC_DIR / "data" / "characters.db"
+    DATA_DIR = BASE_DIR / "data"
+else:
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    EXEC_DIR = BASE_DIR
+    DEFAULT_DB = BASE_DIR / "data" / "characters.db"
+    DATA_DIR = BASE_DIR / "data"
 
 SYSTEM_FILES: Dict[str, List[str]] = {
     "pathfinder1e": ["pathfinder_1e_data.json"],
@@ -50,7 +59,7 @@ def run_etl(
     ETL çalıştır. Dönen dict: {sistem: entity_sayısı}.
     """
     db_path = db_path or DEFAULT_DB
-    data_dir = db_path.parent
+    data_dir = DATA_DIR
     systems = systems or list(PARSERS.keys())
 
     init_game_schema(db_path)

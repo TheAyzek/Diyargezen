@@ -64,12 +64,50 @@ def build_frontend() -> bool:
         return False
 
 
+def prepopulate_database() -> bool:
+    """Derleme öncesi tüm 15.000+ kural verisini (Feats, Traits, Spells, Classes, Items) SQLite veritabanına önceden işler."""
+    print("📚 Kural veritabanı önceden işleniyor (Pre-populating 15,000+ Pathfinder 1e entities)...")
+    try:
+        if str(WORKSPACE_ROOT) not in sys.path:
+            sys.path.insert(0, str(WORKSPACE_ROOT))
+        from etl.pipeline import run_etl
+        db_file = WORKSPACE_ROOT / "data" / "characters.db"
+        db_file.parent.mkdir(parents=True, exist_ok=True)
+        totals = run_etl(db_path=db_file, force=True)
+        print(f"✅ Veritabanı ön işleme tamamlandı: {totals}")
+        return True
+    except Exception as exc:
+        print(f"⚠️ Kural veritabanı ön işleme hatası: {exc}")
+        return False
+
+
+def create_portable_zip() -> bool:
+    """Derlenmiş masaüstü uygulamasını tek tıkla paylaşılabilir ZIP arşivine dönüştürür."""
+    exe_dir = DIST_DIR / "Diyargezen"
+    zip_path = DIST_DIR / "Diyargezen_Portable.zip"
+    if not exe_dir.exists():
+        return False
+
+    print("\n📦 Taşınabilir Taşınabilir ZIP paketi oluşturuluyor...")
+    if zip_path.exists():
+        zip_path.unlink()
+
+    try:
+        shutil.make_archive(str(DIST_DIR / "Diyargezen_Portable"), 'zip', root_dir=DIST_DIR, base_dir="Diyargezen")
+        print(f"🎉 Taşınabilir Paket Hazır: {zip_path}")
+        return True
+    except Exception as exc:
+        print(f"⚠️ ZIP paketi oluşturulamadı: {exc}")
+        return False
+
+
 def build_exe() -> bool:
     """PyInstaller ile Diyargezen.exe uygulamasını derler."""
     print("\n🔨 Diyargezen High-Fantasy Masaüstü Paketleme Başlatılıyor...")
     print(f"📌 Spec Dosyası: {SPEC_FILE}")
 
     clean_build_artifacts()
+    prepopulate_database()
     build_frontend()
     check_pyinstaller()
 
@@ -85,13 +123,24 @@ def build_exe() -> bool:
     result = subprocess.run(cmd, cwd=WORKSPACE_ROOT)
 
     if result.returncode == 0 and EXE_PATH.exists():
-        print("\n" + "=" * 60)
-        print("🎉 Diyargezen Standalone Windows .exe Derlemesi Başarılı!")
-        print("=" * 60)
-        print(f"📂 Çıktı Dizin: {DIST_DIR / 'Diyargezen'}")
+        # Ensure 159MB characters.db is placed directly in dist/Diyargezen/data/characters.db
+        dist_db = DIST_DIR / "Diyargezen" / "data" / "characters.db"
+        dist_db.parent.mkdir(parents=True, exist_ok=True)
+        src_db = WORKSPACE_ROOT / "data" / "characters.db"
+        if src_db.exists():
+            print(f"📋 Veritabanı kopyalanıyor: {src_db} -> {dist_db}")
+            shutil.copy2(src_db, dist_db)
+
+        create_portable_zip()
+        print("\n" + "=" * 65)
+        print("🎉 Diyargezen Standalone Windows Masaüstü Paket Derlemesi Başarılı!")
+        print("=" * 65)
+        print(f"📂 Çıktı Klasörü: {DIST_DIR / 'Diyargezen'}")
         print(f"🎮 Çalıştırılabilir Dosya: {EXE_PATH}")
-        print("💡 Bu klasörü herhangi bir Windows bilgisayara kopyalayarak")
-        print("   Python kurulumuna gerek kalmadan doğrudan çalıştırabilirsiniz.")
+        print(f"📦 Arkadaşınızla Paylaşabileceğiniz Tek Dosya: {DIST_DIR / 'Diyargezen_Portable.zip'}")
+        print("💡 Bu ZIP dosyasını arkadaşınıza attığınızda, zip'i açıp")
+        print("   Diyargezen.exe'ye tıklamaları yeterlidir. Python, internet")
+        print("   veya ek kurulum gerekmeden TÜM kural verisi ve karakter sistemi hazır çalışacaktır.")
         return True
     else:
         print("\n❌ Paketleme hatası! PyInstaller derlemesi başarısız oldu.")
