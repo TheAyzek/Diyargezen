@@ -111,6 +111,10 @@ def validate_mm3e_soft(char: Dict[str, Any], data: Optional[Dict[str, Any]] = No
 
 
 def validate_prerequisites(char: Dict[str, Any], db_path: Path) -> List[str]:
+    # GM Override Bypass: If GM override is enabled, suppress all prerequisite warnings
+    if char.get("is_overridden") is True or char.get("gm_override") is True:
+        return []
+
     import sqlite3
     import json
     

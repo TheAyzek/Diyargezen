@@ -122,3 +122,60 @@ def test_pf1e_validator_trait_category_conflict():
     warnings = validator.validate(conflict_char)
     assert len(warnings) >= 1
     assert any("aynı kategoriden (Combat)" in w for w in warnings)
+
+
+def test_retroactive_con_hp_gain(tmp_path: Path):
+    """PF1e CRB p. 16: Increasing CON score at Level 4/8/12/16/20 grants +1 HP per previous level retroactively."""
+    db_path = tmp_path / "dummy.db"
+    cm = CharacterManager(db_path)
+
+    # Level 3 Fighter with CON 13 (+1 mod), Max HP = 27
+    char = {
+        "name": "Amiri",
+        "system": "pathfinder1e",
+        "level": 3,
+        "max_hp": 27,
+        "hit_die": 10,
+        "abilities": {"str": 16, "dex": 13, "con": 13, "int": 10, "wis": 12, "cha": 8},
+    }
+    cm.set_active_character(char)
+
+    # Level up to 4, choosing CON increase (13 -> 14, mod goes +1 -> +2)
+    # Base HP gain = 6 (average) + 2 (new CON mod) = 8
+    # Retroactive HP gain = 3 (previous levels) * 1 (new CON mod - old CON mod) = 3
+    # Total HP gain = 8 (base) + 3 (retroactive) = 11. Max HP should become 27 + 11 = 38
+    choices = {
+        "stat_increase": "con",
+        "hp_gain": 8,
+    }
+
+    updated = cm.apply_level_up(choices)
+    assert updated["level"] == 4
+    assert updated["abilities"]["con"] == 14
+    assert updated["max_hp"] == 38
+
+
+def test_favored_class_bonus_hp(tmp_path: Path):
+    """Testing Favored Class Bonus +1 HP choice during level up."""
+    db_path = tmp_path / "dummy.db"
+    cm = CharacterManager(db_path)
+
+    char = {
+        "name": "Kyra",
+        "system": "pathfinder1e",
+        "level": 1,
+        "max_hp": 10,
+        "hit_die": 8,
+        "abilities": {"str": 14, "dex": 10, "con": 12, "int": 10, "wis": 16, "cha": 12},
+    }
+    cm.set_active_character(char)
+
+    # Level up 1 -> 2 with FCB choice = "hp" (+1 extra HP)
+    choices = {
+        "hp_gain": 6,
+        "favored_class_bonus": "hp"
+    }
+
+    updated = cm.apply_level_up(choices)
+    assert updated["level"] == 2
+    assert updated["max_hp"] == 10 + 6 + 1  # 17

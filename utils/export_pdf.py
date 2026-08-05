@@ -84,16 +84,14 @@ def _stamp_portrait_on_pdf(pdf_path: Path, portrait_path: Path, system: str) -> 
         overlay_reader = PdfReader(overlay_path)
         
         writer = PdfWriter()
-        if reader.pages:
-            first_page = reader.pages[0]
-            if overlay_reader.pages:
-                first_page.merge_page(overlay_reader.pages[0])
-            writer.add_page(first_page)
-            for page in reader.pages[1:]:
-                writer.add_page(page)
+        for page in reader.pages:
+            writer.add_page(page)
+            
+        if writer.pages and overlay_reader.pages:
+            writer.pages[0].merge_page(overlay_reader.pages[0])
                 
-            with open(pdf_path, "wb") as f:
-                writer.write(f)
+        with open(pdf_path, "wb") as f:
+            writer.write(f)
     except Exception as e:
         logger.error(f"Error stamping portrait overlay on PDF: {e}")
     finally:

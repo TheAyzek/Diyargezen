@@ -20,6 +20,9 @@ else:
 if str(WORKSPACE_ROOT) not in sys.path:
     sys.path.insert(0, str(WORKSPACE_ROOT))
 
+import stat
+import shutil
+
 DB_PATH = WORKSPACE_ROOT / "data" / "characters.db"
 DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 
@@ -29,11 +32,25 @@ if getattr(sys, 'frozen', False):
         bundled_db = EXEC_DIR / "data" / "characters.db"
 
     if bundled_db.exists() and (not DB_PATH.exists() or DB_PATH.stat().st_size < 1000000):
-        import shutil
         try:
-            shutil.copy2(bundled_db, DB_PATH)
+            if DB_PATH.exists():
+                try:
+                    os.chmod(DB_PATH, stat.S_IWRITE | stat.S_IREAD)
+                except Exception:
+                    pass
+            shutil.copyfile(bundled_db, DB_PATH)
+            try:
+                os.chmod(DB_PATH, stat.S_IWRITE | stat.S_IREAD)
+            except Exception:
+                pass
         except Exception as exc:
             print(f"Error copying pre-populated database to LocalAppData: {exc}")
+
+if DB_PATH.exists():
+    try:
+        os.chmod(DB_PATH, stat.S_IWRITE | stat.S_IREAD)
+    except Exception:
+        pass
 
 # These values must be supplied by the deployment environment.  The fallback is
 # deliberately only suitable for local development, so an accidental production

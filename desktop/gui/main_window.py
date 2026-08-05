@@ -35,6 +35,9 @@ if str(BASE_DIR) not in sys.path:
 desktop_dir = BASE_DIR / "desktop"
 if str(desktop_dir) not in sys.path:
     sys.path.insert(0, str(desktop_dir))
+backend_dir = BASE_DIR / "web" / "backend"
+if str(backend_dir) not in sys.path:
+    sys.path.insert(0, str(backend_dir))
 
 try:
     from gui.theme import DARK_FANTASY_QSS, load_custom_fonts
@@ -54,9 +57,9 @@ from etl.pipeline import run_etl_if_needed
 logger = logging.getLogger(__name__)
 
 try:
-    from web.backend.app.core.config import DB_PATH
+    from web.backend.app.core.config import DB_PATH  # type: ignore[import-not-found] # pyright: ignore[reportMissingImports]
 except ImportError:
-    from app.core.config import DB_PATH
+    from app.core.config import DB_PATH  # type: ignore[import-not-found] # pyright: ignore[reportMissingImports]
 
 DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 LOGO_PATH = BASE_DIR / "assets" / "diyargezer_logo.png"

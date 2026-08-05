@@ -36,12 +36,23 @@ class PF1EValidator(BaseValidator):
     # Iconic Feat prerequisite dictionary
     FEAT_PREREQUISITES: Dict[str, Dict[str, Any]] = {
         "power attack": {"str": 13, "bab": 1},
+        "cleave": {"str": 13, "bab": 1, "feats": ["power attack"]},
+        "great cleave": {"str": 13, "bab": 4, "feats": ["power attack", "cleave"]},
         "dodge": {"dex": 13},
         "mobility": {"dex": 13, "feats": ["dodge"]},
+        "spring attack": {"dex": 13, "bab": 4, "feats": ["dodge", "mobility"]},
         "combat expertise": {"int": 13},
+        "improved trip": {"int": 13, "feats": ["combat expertise"]},
+        "improved disarm": {"int": 13, "feats": ["combat expertise"]},
         "deadly aim": {"dex": 13, "bab": 1},
         "weapon finesse": {"bab": 1},
-        "cleave": {"str": 13, "bab": 1, "feats": ["power attack"]}
+        "point-blank shot": {},
+        "precise shot": {"feats": ["point-blank shot"]},
+        "rapid shot": {"dex": 13, "feats": ["point-blank shot"]},
+        "manyshot": {"dex": 17, "bab": 6, "feats": ["point-blank shot", "rapid shot"]},
+        "vital strike": {"bab": 6},
+        "improved vital strike": {"bab": 11, "feats": ["vital strike"]},
+        "greater vital strike": {"bab": 16, "feats": ["vital strike", "improved vital strike"]},
     }
 
     def __init__(self):

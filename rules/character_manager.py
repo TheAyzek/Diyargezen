@@ -837,7 +837,8 @@ class CharacterManager:
             "stat_increase_points": 1 if has_stat_increase else 0,
             "has_new_feat": has_new_feat,
             "hp_average_gain": hp_average_gain,
-            "skill_ranks_available": skill_ranks_available
+            "skill_ranks_available": skill_ranks_available,
+            "favored_class_bonus_options": ["hp", "skill_rank"],
         }
 
     def apply_level_up(self, choices: Dict[str, Any], character: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
@@ -845,7 +846,8 @@ class CharacterManager:
         Seviye atlama sihirbazı seçimlerini karaktere uygular ve stat boru hattını yeniden tetikler.
         
         Args:
-            choices (Dict[str, Any]): Seviye atlama sırasında oyuncunun seçtiği kararlar (stat_increase, hp_gain, skill_ranks, feats).
+            choices (Dict[str, Any]): Seviye atlama sırasında oyuncunun seçtiği kararlar
+                (stat_increase, hp_gain, skill_ranks, feats, favored_class_bonus).
             character (Optional[Dict[str, Any]]): Güncellenecek karakter (Varsayılan: active_character).
             
         Returns:
@@ -853,21 +855,44 @@ class CharacterManager:
         """
         char = character or self.active_character
         slots = self.calculate_level_up_slots(char)
+        curr_level = slots["current_level"]
         new_level = slots["new_level"]
 
-        char["level"] = new_level
+        # Track old CON modifier prior to stat increase
+        abilities = char.setdefault("abilities", {})
+        old_con_score = abilities.get("constitution", abilities.get("con", 10))
+        old_con_mod = (old_con_score - 10) // 2
 
-        # Apply HP gain
-        hp_gained = choices.get("hp_gain", slots["hp_average_gain"])
-        curr_max_hp = char.get("max_hp", 10)
-        char["max_hp"] = curr_max_hp + hp_gained
+        char["level"] = new_level
 
         # Apply stat increase if applicable
         if slots["has_stat_increase"] and "stat_increase" in choices:
             stat_name = choices["stat_increase"]
-            abilities = char.setdefault("abilities", {})
-            curr_val = abilities.get(stat_name, abilities.get(stat_name[:3], 10))
-            abilities[stat_name] = curr_val + 1
+            target_key = stat_name
+            for k in abilities.keys():
+                if k.lower() in (stat_name.lower(), stat_name[:3].lower()):
+                    target_key = k
+                    break
+            curr_val = abilities.get(target_key, 10)
+            abilities[target_key] = curr_val + 1
+
+        # Check retroactive CON modifier HP increase (PF1e CRB p. 16)
+        new_con_score = abilities.get("constitution", abilities.get("con", 10))
+        new_con_mod = (new_con_score - 10) // 2
+        retroactive_hp = 0
+        if new_con_mod > old_con_mod:
+            # Retroactive +1 HP per previous level
+            retroactive_hp = curr_level * (new_con_mod - old_con_mod)
+
+        # Apply Base HP gain + Retroactive CON HP
+        hp_gained = choices.get("hp_gain", slots["hp_average_gain"])
+        curr_max_hp = char.get("max_hp", 10)
+        
+        # Favored Class Bonus (FCB) HP choice
+        fcb_choice = choices.get("favored_class_bonus", "")
+        fcb_hp = 1 if fcb_choice == "hp" else 0
+
+        char["max_hp"] = curr_max_hp + hp_gained + retroactive_hp + fcb_hp
 
         # Apply new skill ranks
         new_skills = choices.get("skill_ranks", {})
@@ -881,10 +906,22 @@ class CharacterManager:
         if new_feats:
             curr_feats = char.setdefault("feats", [])
             for ft in new_feats:
-                curr_feats.append(ft)
+                if ft not in curr_feats:
+                    curr_feats.append(ft)
 
         # Recalculate derived statistics
         self.active_character = char
         self.recalculate_character()
+
+        # Validate soft-block rules & store warnings on character
+        sys_key = char.get("system", "").lower()
+        if "pf" in sys_key or "pathfinder" in sys_key:
+            try:
+                from rules.pf1e_rules import PF1EValidator
+                validator = PF1EValidator()
+                char["validation_warnings"] = validator.validate(char)
+            except Exception:
+                pass
+
         return self.active_character
 

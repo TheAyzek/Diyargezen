@@ -1,94 +1,89 @@
-# Diyargezen - Proje Yapısı
+# Diyargezen - Proje Yapısı ve Mimari Rapor
 
-**Son Güncelleme:** 2026-07-22
+**Son Güncelleme:** 5 Ağustos 2026  
+**Durum:** Üretim Modu (Production Ready) — %100 Yasal PF1e Karakter Yaratıcısı & Standalone Masaüstü Paket Derlemesi Tamamlandı.  
+**Test Durumu:** 284 Geçti (284 passed, 2 skipped in 412s).
 
 ```
 Diyargezenweb/
 │
-├── rules/                         # Paylaşılan kural motoru (desktop + web)
-│   ├── pf1e_rules.py              # Pathfinder 1e doğrulama
-│   ├── character_manager.py       # SQLite entity sorguları
-│   ├── calculators.py             # İstatistik hesaplama
-│   ├── rule_parser.py             # Kural ifadesi ayrıştırıcı
-│   └── base_validator.py          # Abstract validator
+├── rules/                         # Paylaşılan kural ve doğrulama motoru (desktop + web)
+│   ├── pf1e_rules.py              # Pathfinder 1e doğrulama (Genişletilmiş ikonik feat zincirleri)
+│   ├── character_manager.py       # Seviye atlatma sihirbazı (FCB & Retroaktif CON HP, state machine)
+│   ├── calculators.py             # 5 adımlı bağımlı stat ve bonus hesaplama boru hattı
+│   ├── rule_parser.py             # Kural ifadesi ve açıklama ayrıştırıcı
+│   └── base_validator.py          # Soyut validator taban sınıfı
 │
 ├── models/
-│   └── entity.py                  # DiyargezenEntity modeli
+│   └── entity.py                  # DiyargezenEntity veri modeli
 │
 ├── data/
-│   ├── characters.db              # Ana SQLite veritabanı (entities, users, characters)
-│   ├── pathfinder_1e_data.json    # PF1e JSON verisi
-│   ├── pf1e_scraped_items.json    # Scrape edilmiş ekipman/zırh
-│   └── backgrounds/               # D&D background örnekleri
+│   ├── characters.db              # 22.307 ön işlenmiş kural varlığı (159 MB SQLite)
+│   ├── pathfinder_1e_data.json    # PF1e JSON varlık verisi
+│   ├── pf1e_scraped_items.json    # Scrape edilmiş zırh, silah ve ekipmanlar
+│   └── backgrounds/               # Karakter geçmiş şablonları
 │
 ├── desktop/                       # Masaüstü uygulaması (PySide6)
-│   ├── main_desktop.py            # Giriş noktası
-│   ├── local_db.py                # Offline SQLite
-│   ├── sync_engine.py             # Bulut senkronizasyon motoru
+│   ├── main_desktop.py            # Masaüstü giriş noktası
+│   ├── build_exe.py               # Standalone PyInstaller & Portable ZIP derleyici
+│   ├── Diyargezen.spec            # PyInstaller paketleme spesifikasyonu
+│   ├── local_db.py                # Çevrimdışı SQLite (WAL modu, dirty state, tombstone)
+│   ├── sync_engine.py             # Arka plan QThread senkronizasyon motoru
 │   ├── api_client.py              # JWT REST istemcisi
 │   ├── gui/
-│   │   ├── main_window.py
-│   │   ├── screens/               # Tavern, Forge, Character Sheet
-│   │   └── dialogs/               # Login, subclass vb.
-│   └── cli/                       # CLI karakter sihirbazı
+│   │   ├── main_window.py         # QStackedWidget + Gömülü FastAPI/Uvicorn yönetimi
+│   │   ├── screens/               # Tavern (Dashboard), Forge (Wizard), Character Sheet
+│   │   └── dialogs/               # Login, Subclass, Feat/Trait seçim diyaloğu
+│   └── cli/                       # CLI karakter oluşturucu
 │
 ├── web/
 │   ├── backend/                   # FastAPI REST API
 │   │   ├── run.py
-│   │   ├── requirements.txt
 │   │   ├── app/
 │   │   │   ├── main.py
-│   │   │   ├── core/              # config, database
+│   │   │   ├── core/              # config (AppData/Local çözümlenmesi), database
 │   │   │   ├── routers/           # auth, characters, rules, sync, systems
-│   │   │   ├── services/          # character, rules, auth
-│   │   │   └── schemas/
-│   │   └── tests/                 # 22 API testi
+│   │   │   ├── services/          # character, rules, auth, gm_engine
+│   │   │   └── schemas/           # Pydantic v2 validasyon şemaları
+│   │   └── tests/                 # API & Senkronizasyon entegrasyon testleri
 │   │
-│   └── frontend/                  # React + Vite
+│   └── frontend/                  # React + Vite (Dark Fantasy SaaS Teması)
 │       ├── package.json
-│       ├── public/templates/      # PDF şablonları (pf1e, dnd5e, mnm3e)
+│       ├── public/templates/      # AcroForm PDF şablonları (pf1e_sheet.pdf)
 │       └── src/
 │           ├── App.jsx
 │           ├── store/characterStore.js
-│           └── components/
-│               ├── Dashboard.jsx
-│               ├── Auth.jsx
-│               ├── TraitSelectorModal.jsx
-│               └── sheets/        # PF1eSheet, controls, displays
+│           └── components/        # Trait, Feat, Spell seçicileri ve PF1eSheet
 │
-├── creators/                      # Factory Pattern karakter oluşturucular
+├── creators/                      # Karakter Fabrika Katmanı (Factory Pattern)
 │   ├── base_creator.py
-│   ├── dnd5e_creator.py
-│   ├── pathfinder1e_creator.py
-│   └── mm3e_creator.py
+│   └── pathfinder1e_creator.py    # %100 Yasal PF1e Karakter Üretici
 │
-├── utils/                         # Paylaşılan yardımcılar
-│   ├── data_loader.py             # JSON veri yükleme (cache)
-│   ├── export_pdf.py              # PDF export (çoklu template dizini)
-│   ├── export_html.py
-│   ├── encounter_tracker.py
-│   ├── homebrew.py
-│   └── portraits.py
+├── utils/                         # Yardımcı Sürücüler
+│   ├── data_loader.py             # Bellek içi kural varlık önbelleği
+│   ├── export_pdf.py              # Canlı AcroForm PDF doldurma & portre damgalama (pypdf 7.0 uyumlu)
+│   ├── soft_validation.py         # Soft-block esnek doğrulama ve homebrew işaretleyici
+│   └── portraits.py               # Base64 portre kod çözücü
 │
-├── scraper/                       # Veri toplama
-│   ├── pf1e_weapons_armor_scraper.py
-│   └── seed_pf1e_traits.py        # 80+ kategorize trait seeder
+├── dist/                          # Derlenmiş Dağıtım Çıktıları
+│   ├── Diyargezen/                # Diyargezen.exe Standalone Masaüstü Uygulaması
+│   └── Diyargezen_Portable.zip    # Tek tıkla çalıştırılabilir taşınabilir ZIP paketi
 │
-├── templates/                     # Legacy PDF şablonları (pf1e_sheet.pdf)
+├── templates/                     # Orijinal Pathfinder 1e AcroForm PDF Şablonu (pf1e_sheet.pdf)
 │
-├── tests/                         # Kök seviye unit testler (250+)
+├── tests/                         # Kök seviye birim ve entegrasyon testleri (284 test)
 │
-└── docs/
+└── docs/                          # Mühendislik Dokümantasyonu
     ├── README.md
-    ├── NEXT_STEPS.md
+    ├── DEPLOYMENT.md
     ├── PROJE_YAPISI.md            # Bu dosya
     └── SIRADAKI_GOREVLER.md
 ```
 
-## Veri Akışı
+## Veri Akışı ve Senkronizasyon Mimarisi
 
 ```
-Scraper/JSON ──► characters.db (SQLite entities)
+Scraper/JSON ──► characters.db (22.307 SQLite kural varlığı)
                       │
                       ▼
               CharacterManager (rules/)
@@ -98,5 +93,5 @@ Scraper/JSON ──► characters.db (SQLite entities)
    FastAPI (web/backend)    PySide6 (desktop/)
           │                       │
           ▼                       ▼
-   React Frontend          Local SQLite + Sync
+   React Frontend          Local SQLite (WAL) + Background Sync (LWW)
 ```

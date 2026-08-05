@@ -16,6 +16,8 @@ Temel Sorumluluklar:
 
 from __future__ import annotations
 
+import os
+import stat
 import json
 import uuid
 import sqlite3
@@ -70,6 +72,11 @@ def _connect(db_path: Path) -> Iterator[sqlite3.Connection]:
         sqlite3.Connection: Etkin SQLite bağlantısı.
     """
     db_path.parent.mkdir(parents=True, exist_ok=True)
+    if db_path.exists():
+        try:
+            os.chmod(db_path, stat.S_IWRITE | stat.S_IREAD)
+        except Exception:
+            pass
     conn = sqlite3.connect(str(db_path), timeout=10)
     try:
         conn.execute("PRAGMA journal_mode=WAL")
