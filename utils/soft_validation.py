@@ -263,27 +263,12 @@ def validate_character_soft(
 
     # 3. Run modular validators from /rules
     try:
-        if key in ("dnd5e", "dnd", "dungeonsanddragons"):
-            from rules.dnd5e_rules import DND5EValidator
-            validator = DND5EValidator()
-            new_warnings = validator.validate(char, data or {})
-            for w in new_warnings:
-                if w not in result.warnings:
-                    result.warnings.append(w)
-        elif key in ("pathfinder1e", "pathfinder", "pf1e"):
-            from rules.pf1e_rules import PF1EValidator
-            validator = PF1EValidator()
-            new_warnings = validator.validate(char, data or {})
-            for w in new_warnings:
-                if w not in result.warnings:
-                    result.warnings.append(w)
-        elif key in ("mm3e", "mm", "mutantsandmasterminds"):
-            from rules.mnm3e_rules import MM3EValidator
-            validator = MM3EValidator()
-            new_warnings = validator.validate(char, data or {})
-            for w in new_warnings:
-                if w not in result.warnings:
-                    result.warnings.append(w)
+        from rules.pf1e_rules import PF1EValidator
+        validator = PF1EValidator()
+        new_warnings = validator.validate(char, data or {})
+        for w in new_warnings:
+            if w not in result.warnings:
+                result.warnings.append(w)
     except Exception as e:
         logger.warning(f"Error running modular rules: {e}")
 
