@@ -131,6 +131,15 @@ def build_exe() -> bool:
             print(f"📋 Veritabanı kopyalanıyor: {src_db} -> {dist_db}")
             shutil.copy2(src_db, dist_db)
 
+        # Ensure PDF templates are placed directly in dist/Diyargezen/templates
+        src_templates = WORKSPACE_ROOT / "templates"
+        dist_templates = DIST_DIR / "Diyargezen" / "templates"
+        dist_templates.mkdir(parents=True, exist_ok=True)
+        if src_templates.exists():
+            for pdf_f in src_templates.glob("*.pdf"):
+                print(f"📄 PDF Şablonu kopyalanıyor: {pdf_f.name}")
+                shutil.copy2(pdf_f, dist_templates / pdf_f.name)
+
         create_portable_zip()
         print("\n" + "=" * 65)
         print("🎉 Diyargezen Standalone Windows Masaüstü Paket Derlemesi Başarılı!")

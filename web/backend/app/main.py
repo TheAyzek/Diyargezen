@@ -153,6 +153,28 @@ app.include_router(rules.router, prefix="/api")
 app.include_router(characters.router, prefix="/api")
 app.include_router(sync.router, prefix="/api")
 
+@app.get("/api/pdf-template/pf1e", tags=["Characters"], summary="PF1e AcroForm PDF Şablonunu Sunar")
+@app.get("/templates/pf1e_sheet.pdf", tags=["Characters"])
+def serve_pf1e_pdf_template():
+    """Explicitly serve the pf1e_sheet.pdf binary template with application/pdf header."""
+    candidates = []
+    if getattr(sys, 'frozen', False):
+        candidates.append(Path(getattr(sys, '_MEIPASS', '')) / "templates" / "pf1e_sheet.pdf")
+        candidates.append(Path(sys.executable).parent / "templates" / "pf1e_sheet.pdf")
+
+    root_dir = Path(__file__).resolve().parent.parent.parent.parent
+    candidates.extend([
+        root_dir / "templates" / "pf1e_sheet.pdf",
+        root_dir / "web" / "frontend" / "public" / "templates" / "pf1e_sheet.pdf",
+        root_dir / "web" / "frontend" / "dist" / "templates" / "pf1e_sheet.pdf"
+    ])
+
+    for pdf_path in candidates:
+        if pdf_path.exists():
+            return FileResponse(str(pdf_path), media_type="application/pdf", filename="pf1e_sheet.pdf")
+
+    raise HTTPException(status_code=404, detail="PDF template pf1e_sheet.pdf not found.")
+
 # Mount templates directory for PDF downloads
 templates_dir = None
 if getattr(sys, 'frozen', False):

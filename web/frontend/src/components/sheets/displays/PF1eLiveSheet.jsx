@@ -38,9 +38,11 @@ export default function PF1eLiveSheet() {
   const renderLivePdf = async () => {
     try {
       setRendering(true);
-      let response;
+      let existingPdfBytes = null;
       const fetchPaths = [
+        '/api/pdf-template/pf1e',
         '/templates/pf1e_sheet.pdf',
+        'http://127.0.0.1:8000/api/pdf-template/pf1e',
         'http://127.0.0.1:8000/templates/pf1e_sheet.pdf',
         '/public/templates/pf1e_sheet.pdf',
         '/sheets/pf1e_sheet.pdf'
@@ -49,17 +51,20 @@ export default function PF1eLiveSheet() {
         try {
           const res = await fetch(pathUrl);
           if (res.ok) {
-            response = res;
-            break;
+            const buf = await res.arrayBuffer();
+            const header = new TextDecoder().decode(buf.slice(0, 4));
+            if (header === '%PDF') {
+              existingPdfBytes = buf;
+              break;
+            }
           }
         } catch (e) {
           // Try next fallback path
         }
       }
-      if (!response || !response.ok) {
-        throw new Error('PDF şablonu (/templates/pf1e_sheet.pdf) bulunamadı.');
+      if (!existingPdfBytes) {
+        throw new Error('PDF şablonu (/api/pdf-template/pf1e) yüklenemedi.');
       }
-      const existingPdfBytes = await response.arrayBuffer();
 
       const pdfDoc = await PDFDocument.load(existingPdfBytes, { ignoreEncryption: true });
       const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
