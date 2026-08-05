@@ -291,6 +291,14 @@ export default function RulesCompendium({ onBack }) {
         const cat = getEquipmentCategory(item);
         if (cat !== subFilter) return false;
       }
+    } else if (activeTab === 'class-features') {
+      if (subFilter) {
+        const sv = item.sistem_verisi || {};
+        const cfClass = (sv.class || sv.class_name || sv.assoc_class || item.kategori || '').toLowerCase();
+        const cfText = `${item.isim || ''} ${item.aciklama || ''}`.toLowerCase();
+        const searchCls = subFilter.toLowerCase();
+        if (!cfClass.includes(searchCls) && !cfText.includes(searchCls)) return false;
+      }
     } else if (activeTab === 'feats' || activeTab === 'traits' || activeTab === 'mechanics') {
       if (subFilter) {
         const featCat = item.sistem_verisi?.feat_category || item.sistem_verisi?.trait_category || item.sistem_verisi?.category || item.kategori || '';
@@ -982,6 +990,36 @@ export default function RulesCompendium({ onBack }) {
             <option value="Regional">Regional (Bölgesel)</option>
             <option value="Campaign">Campaign (Hikaye)</option>
             <option value="Equipment">Equipment (Ekipman)</option>
+          </select>
+        )}
+
+        {activeTab === 'class-features' && (
+          <select
+            className="sheet-input"
+            value={subFilter}
+            onChange={(e) => setSubFilter(e.target.value)}
+            style={{ width: '180px', fontSize: '0.82rem' }}
+          >
+            <option value="">Tüm Sınıflar</option>
+            <option value="Barbarian">Barbarian</option>
+            <option value="Bard">Bard</option>
+            <option value="Cleric">Cleric</option>
+            <option value="Druid">Druid</option>
+            <option value="Fighter">Fighter</option>
+            <option value="Monk">Monk</option>
+            <option value="Paladin">Paladin</option>
+            <option value="Ranger">Ranger</option>
+            <option value="Rogue">Rogue</option>
+            <option value="Sorcerer">Sorcerer</option>
+            <option value="Wizard">Wizard</option>
+            <option value="Alchemist">Alchemist</option>
+            <option value="Cavalier">Cavalier</option>
+            <option value="Gunslinger">Gunslinger</option>
+            <option value="Inquisitor">Inquisitor</option>
+            <option value="Magus">Magus</option>
+            <option value="Oracle">Oracle</option>
+            <option value="Summoner">Summoner</option>
+            <option value="Witch">Witch</option>
           </select>
         )}
 
