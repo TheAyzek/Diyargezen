@@ -6,7 +6,7 @@ import {
   Dices, Star, Award, Heart, CheckCircle2
 } from 'lucide-react';
 import { cleanText, formatTitle, toSentenceCase, parseTraitsDetailed } from '../utils/textSanitizer';
-import { getEquipmentCategory, EQUIPMENT_CATEGORIES } from '../utils/equipmentClassifier';
+import { getEquipmentCategory, EQUIPMENT_CATEGORIES, matchesEquipmentSubfilter } from '../utils/equipmentClassifier';
 
 const CATEGORIES = [
   { id: 'races', label: 'Irklar & Miraslar', icon: UserCheck, endpoint: '/api/rules/pf1e/races' },
@@ -302,7 +302,7 @@ export default function RulesCompendium({ onBack }) {
     } else if (activeTab === 'equipment') {
       if (subFilter && subFilter !== 'all') {
         const cat = getEquipmentCategory(item);
-        if (cat !== subFilter) return false;
+        if (!matchesEquipmentSubfilter(cat, subFilter)) return false;
       }
     } else if (activeTab === 'class-features') {
       if (subFilter) {

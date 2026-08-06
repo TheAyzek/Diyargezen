@@ -669,6 +669,8 @@ class CharacterManager:
         - Items whose inner type is empty AND name looks like a text/index entry
         """
         sys_norm = system.lower().replace("_", "").replace("-", "")
+        if sys_norm in ("pf1e", "pf1"):
+            sys_norm = "pathfinder1e"
         results: List[DiyargezenEntity] = []
         VALID_TYPES = {"weapon", "armor", "equipment", "consumable", "gear", "shield", "loot"}
 
