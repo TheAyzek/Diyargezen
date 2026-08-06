@@ -1019,22 +1019,7 @@ export default function RulesCompendium({ onBack }) {
         )}
       </div>
 
-        {/* Sort By Dropdown */}
-        <select
-          className="sheet-input"
-          value={sortBy}
-          onChange={(e) => { setSortBy(e.target.value); e.target.blur(); }}
-          style={{ width: '180px', fontSize: '0.82rem' }}
-        >
-          <option value="level_asc">📊 Seviye: 0 ➜ 9 (Artan)</option>
-          <option value="level_desc">📊 Seviye: 9 ➜ 0 (Azalan)</option>
-          <option value="name_asc">🔤 İsim: A ➜ Z</option>
-          <option value="name_desc">🔤 İsim: Z ➜ A</option>
-        </select>
 
-        <div style={{ fontSize: '0.8rem', color: 'var(--gold-pale)', marginLeft: 'auto' }}>
-          Toplam <b>{sortedEntities.length}</b> kayıt listelendi
-        </div>
       </div>
 
       {/* Main Grid */}
