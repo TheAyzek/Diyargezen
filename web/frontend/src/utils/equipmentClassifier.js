@@ -80,32 +80,34 @@ export function getEquipmentCategory(item) {
   const kat = (item.kategori || '').toLowerCase();
   const sv = item.sistem_verisi || {};
   const sys = sv.system || {};
+  const flags = sv.flags || {};
+  const dictCat = (flags.dictionary && flags.dictionary.Category) ? flags.dictionary.Category : '';
 
   const eqType = (sys.equipmentType || sys.type || sv.equipment_type || sv.type || '').toLowerCase();
   const eqSubtype = (sys.equipmentSubtype || sys.weaponSubtype || sys.slot || sv.subType || '').toLowerCase();
-  const prof = (sv.proficiency || sv.category || '').toLowerCase();
-  const catText = (sv.category || '').toLowerCase();
+  const prof = (sv.proficiency || sv.category || dictCat || '').toLowerCase();
+  const catText = (sv.category || sv.proficiency || dictCat || '').toLowerCase();
 
-  // 1. Weapons & Weapon Subcategories
+  // 1. Weapons & Subcategories
   if (kat === 'weapon' || eqType === 'weapon' || eqSubtype === 'martial' || eqSubtype === 'simple' || eqSubtype === 'exotic' ||
       /\b(weapon|sword|greatsword|longsword|shortsword|rapier|scimitar|dagger|knife|axe|greataxe|handaxe|halberd|spear|lance|bow|longbow|shortbow|crossbow|mace|hammer|warhammer|flail|scythe|club|staff|blade|glaive|trident|katana|musket|pistol|blunderbuss|rifle|bullet|bolt|arrow)\b/i.test(name)) {
     
-    if (prof.includes('firearm') || prof.includes('ammo') || catText.includes('firearm') || /\b(musket|pistol|blunderbuss|rifle|bullet|powder|ammo)\b/i.test(name)) {
+    if (prof.includes('firearm') || prof.includes('ammo') || catText.includes('firearm') || catText.includes('ammunition') || /\b(musket|pistol|blunderbuss|rifle|bullet|powder|ammo)\b/i.test(name)) {
       return 'weapons_firearm';
     }
     if (prof.includes('siege') || catText.includes('siege')) {
       return 'weapons_siege';
     }
-    if (prof.includes('simple') || catText.includes('simple') || eqSubtype === 'simple') {
+    if (prof.includes('simple') || catText.includes('simple') || eqSubtype === 'simple' || /\b(dagger|club|mace|sickle|spear|quarterstaff|javelin|dart|sling|crossbow)\b/i.test(name)) {
       return 'weapons_simple';
     }
-    if (prof.includes('martial') || catText.includes('martial') || eqSubtype === 'martial') {
+    if (prof.includes('martial') || catText.includes('martial') || eqSubtype === 'martial' || /\b(longsword|greatsword|shortsword|rapier|scimitar|falchion|greataxe|battleaxe|handaxe|halberd|lance|longbow|shortbow|warhammer|flail|glaive|trident|ranseur|guisarme|bardiche|scythe)\b/i.test(name)) {
       return 'weapons_martial';
     }
-    if (prof.includes('exotic') || catText.includes('exotic') || eqSubtype === 'exotic') {
+    if (prof.includes('exotic') || catText.includes('exotic') || eqSubtype === 'exotic' || /\b(katana|whip|nunchaku|shuriken|bolas|kama|sai|urumi|katar|elven curve blade|dwarven waraxe|orc double axe|bastard sword)\b/i.test(name)) {
       return 'weapons_exotic';
     }
-    return 'weapons';
+    return 'weapons_martial';
   }
 
   // 2. Armor & Shields Subcategories
@@ -115,19 +117,19 @@ export function getEquipmentCategory(item) {
     if (eqSubtype === 'shield' || catText.includes('shield') || /\b(shield|buckler)\b/i.test(name)) {
       return 'armor_shield';
     }
-    if (catText.includes('light') || eqSubtype === 'light' || /\b(padded|leather|chain shirt)\b/i.test(name)) {
+    if (catText.includes('light') || eqSubtype === 'light' || /\b(padded|leather|chain shirt|stud)\b/i.test(name)) {
       return 'armor_light';
     }
-    if (catText.includes('medium') || eqSubtype === 'medium' || /\b(breastplate|hide|scale mail)\b/i.test(name)) {
+    if (catText.includes('medium') || eqSubtype === 'medium' || /\b(breastplate|hide|scale mail|chainmail)\b/i.test(name)) {
       return 'armor_medium';
     }
-    if (catText.includes('heavy') || eqSubtype === 'heavy' || /\b(full plate|chainmail|splint mail|half-plate)\b/i.test(name)) {
+    if (catText.includes('heavy') || eqSubtype === 'heavy' || /\b(full plate|splint mail|half-plate|banded mail)\b/i.test(name)) {
       return 'armor_heavy';
     }
-    return 'armor';
+    return 'armor_medium';
   }
 
-  // 3. Potions & Alchemy Subcategories
+  // 3. Potions & Alchemy
   if (eqType === 'potion' || catText.includes('alchem') || catText.includes('remedy') || /\b(potion|elixir|oil|flask|vial|alchemist|antitoxin|brew|tonic|salve|tincture|concoction)\b/i.test(name)) {
     if (catText.includes('weapon') || /\b(alchemist's fire|acid|bomb|tanglefoot|holy water|thunderstone)\b/i.test(name)) {
       return 'potions_weapons';
@@ -138,13 +140,13 @@ export function getEquipmentCategory(item) {
     return 'potions_remedies';
   }
 
-  // 4. Scrolls, Wands, Rods & Tomes Subcategories
+  // 4. Scrolls, Wands, Rods & Tomes
   if (eqType === 'scroll' || eqType === 'wand' || eqType === 'rod' || eqType === 'staff' || catText.includes('scroll') || catText.includes('wand') ||
       /\b(scroll|wand|rod|scepter|staff|grimoire|tome|spellbook|journal)\b/i.test(name)) {
     if (eqType === 'scroll' || /\b(scroll)\b/i.test(name)) return 'scrolls_scroll';
     if (eqType === 'wand' || eqType === 'rod' || /\b(wand|rod|scepter)\b/i.test(name)) return 'scrolls_wand';
     if (/\b(tome|grimoire|spellbook|book|journal)\b/i.test(name)) return 'scrolls_tome';
-    return 'scrolls_wands';
+    return 'scrolls_scroll';
   }
 
   // 5. Rings & Wondrous Accessories
@@ -161,7 +163,7 @@ export function getEquipmentCategory(item) {
     if (/\b(lute|flute|harp|drum|horn|instrument|lyre|pipe)\b/i.test(name)) return 'tools_instruments';
     if (/\b(symbol|focus|foci|holy symbol)\b/i.test(name)) return 'tools_foci';
     if (catText.includes('kit') || /\b(kit|pouch|set|tools)\b/i.test(name)) return 'tools_kits';
-    return 'tools';
+    return 'tools_kits';
   }
 
   // 7. Mounts, Pets & Vehicles
@@ -190,12 +192,11 @@ export function matchesEquipmentSubfilter(itemCategory, selectedFilter) {
   if (!selectedFilter || selectedFilter === 'all') return true;
   if (selectedFilter === itemCategory) return true;
   
-  // Parent category matching
   if (selectedFilter === 'weapons' && itemCategory.startsWith('weapons')) return true;
   if (selectedFilter === 'armor' && itemCategory.startsWith('armor')) return true;
   if (selectedFilter === 'potions' && itemCategory.startsWith('potions')) return true;
   if (selectedFilter === 'scrolls_wands' && itemCategory.startsWith('scrolls')) return true;
-  if (selectedFilter === 'rings_wondrous' && (itemCategory.startsWith('rings') || itemCategory.startsWith('wondrous'))) return true;
+  if (selectedFilter === 'rings_wondrous' && (itemCategory.startsWith('rings') || itemCategory.startsWith('wondrous') || itemCategory.startsWith('rings_'))) return true;
   if (selectedFilter === 'tools' && itemCategory.startsWith('tools')) return true;
   if (selectedFilter === 'mounts' && itemCategory.startsWith('mounts')) return true;
   if (selectedFilter === 'gear' && itemCategory.startsWith('gear')) return true;
