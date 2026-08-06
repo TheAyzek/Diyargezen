@@ -35,3 +35,43 @@
 ## 8. MÜHENDİSLİK DOKÜMANTASYONU VE AKADEMİK STANDARTLAR
 - **Temiz Kod (Clean Code):** Proje, üst düzey bir bilgisayar mühendisliği bitirme/mezuniyet projesi kalitesinde inşa edilmelidir. Modüler yapıya sadık kalınmalı, spagetti koddan kesinlikle kaçınılmalıdır.
 - **Mimari Yorum Satırları (Docstrings):** Özellikle Kural Motoru, Canlı PDF (`pdf-lib`) işlemleri ve Offline-First senkronizasyon motoru gibi karmaşık algoritmaların başına, arka plandaki mantığı ve veri akışını açıklayan akademik düzeyde yorum satırları eklenmelidir. Kodu inceleyecek bir akademisyenin veya farklı bir geliştiricinin mimari kararları anında kavrayabilmesi sağlanmalıdır.
+
+
+## 9. STANDART TERİMLER SÖZLÜĞÜ VE KOD-İSİMLENDİRME STANDARDI
+
+Aşağıdaki terimler ve kod karşılıkları tüm projede (UI metinleri, API parametreleri, SQLite kolonları ve AI yanıtlarında) BİREBİR referans alınacaktır:
+
+### A. Sistem ve Kod Karşılıkları
+- **Pathfinder 1st Edition:** UI Metni: `Pathfinder 1e`. Backend DB Kodu: `pathfinder1e`. API Client Kodu: `pf1e`.
+
+### B. Silah Kategorileri ve Subtype Karşılıkları
+- **Basit Silahlar:** UI: `Basit Silahlar (Simple)`. API/DB Subcategory: `weapons_simple`. Subtype: `simple`.
+- **Savaş Silahları:** UI: `Savaş Silahları (Martial)`. API/DB Subcategory: `weapons_martial`. Subtype: `martial`.
+- **Ezoterik / Özel Silahlar:** UI: `Ezoterik / Özel Silahlar (Exotic)`. API/DB Subcategory: `weapons_exotic`. Subtype: `exotic`.
+- **Ateşli Silahlar ve Mühimmat:** UI: `Ateşli Silahlar & Mühimmat`. API/DB Subcategory: `weapons_firearm`. Subtype: `firearm` / `ammo`.
+- **Kuşatma Silahları:** UI: `Kuşatma Silahları (Siege Engines)`. API/DB Subcategory: `weapons_siege`. Subtype: `siege`.
+
+### C. Zırh ve Koruma Kategorileri
+- **Hafif Zırhlar:** UI: `Hafif Zırhlar (Light)`. API/DB Subcategory: `armor_light`. Subtype: `light`.
+- **Orta Zırhlar:** UI: `Orta Zırhlar (Medium)`. API/DB Subcategory: `armor_medium`. Subtype: `medium`.
+- **Ağır Zırhlar:** UI: `Ağır Zırhlar (Heavy)`. API/DB Subcategory: `armor_heavy`. Subtype: `heavy`.
+- **Kalkanlar:** UI: `Kalkanlar (Shields)`. API/DB Subcategory: `armor_shield`. Subtype: `shield`.
+
+### D. Ekipman ve Teçhizat Kategorileri
+- **Maceracı Teçhizatı:** UI: `Maceracı Teçhizatı (Adventuring Gear)`. Subcategory: `gear`.
+- **Simya Eşyaları ve İlaçlar:** UI: `İksirler & Simya (Alchemical Goods)`. Subcategory: `potions`.
+- **Parşömenler ve Asalar:** UI: `Parşömenler & Asalar (Scrolls & Wands)`. Subcategory: `scrolls_wands`.
+- **Yüzükler ve Büyülü Takılar:** UI: `Yüzükler & Takılar (Rings & Wondrous)`. Subcategory: `rings_wondrous`.
+
+### E. Nitelikler, Kurtulma Zarları ve Savaş İstatistikleri
+- **Nitelikler (Ability Scores):** Strength (`STR` / `Güç`), Dexterity (`DEX` / `Çeviklik`), Constitution (`CON` / `Dayanıklılık`), Intelligence (`INT` / `Zeka`), Wisdom (`WIS` / `Bilgelik`), Charisma (`CHA` / `Karizma`).
+- **Kurtulma Zarları (Saving Throws):** Fortitude (`FORT` / `Dayanıklılık`), Reflex (`REF` / `Refleks`), Will (`WILL` / `İrade`).
+- **Savaş Manevraları:** Combat Maneuver Bonus (`CMB`), Combat Maneuver Defense (`CMD`).
+- **Zırh Sınıfı:** Armor Class (`AC`), Touch AC (`Dokunma AC`), Flat-Footed AC (`Hazırlıksız AC`).
+- **Saldırı Bonusu:** Base Attack Bonus (`BAB`), Melee Attack (`Yakın Dövüş`), Ranged Attack (`Menzilli Saldırı`).
+
+### F. Kural Varlıkları (Rule Entities)
+- **Feat (Hüner / Yetenek):** Entity Kategori: `feat`. Alt Türler: `Combat`, `Metamagic`, `Teamwork`, `Item Creation`, `Racial`, `General`, `Mythic`, `Style`, `Critical`.
+- **Trait (Karakter / Soy Özelliği):** Entity Kategori: `trait`. Alt Türler: `Combat`, `Social`, `Faith`, `Magic`, `Racial`, `Regional`, `Campaign`, `Equipment`.
+- **Class Feature (Sınıf Yeteneği):** Entity Kategori: `class-feature`.
+- **Spell (Büyü):** Entity Kategori: `spell`.
