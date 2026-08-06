@@ -51,8 +51,7 @@ desktop/data/*.db
 data/*.db-shm
 data/*.db-wal
 diyargezen.db
-scratch/
-data/pf1e_scraped_items.json
+
 
 # ─── 3rd-party FoundryVTT source data ───────────────────────────────────
 # Not committed — users download pf1e-content-main from FoundryVTT packages.

@@ -46,7 +46,7 @@ except ImportError:
 
 
 SYSTEM_FILES: Dict[str, List[str]] = {
-    "pathfinder1e": ["pathfinder_1e_data.json"],
+    "pathfinder1e": ["pathfinder_1e_data.json", "pf1e_scraped_items.json"],
 }
 
 
