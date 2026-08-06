@@ -907,121 +907,104 @@ export default function RulesCompendium({ onBack }) {
           />
         </div>
 
-        {/* Category-Specific Filters */}
+      {/* Subcategory Pills Bar (Replaces Dropdown Selects) */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '16px' }}>
         {activeTab === 'spells' && (
           <>
-            <select
-              className="sheet-input"
-              value={spellLevel}
-              onChange={(e) => { setSpellLevel(e.target.value); e.target.blur(); }}
-              style={{ width: '140px', fontSize: '0.82rem' }}
-            >
-              <option value="">Tüm Seviyeler</option>
-              {[0,1,2,3,4,5,6,7,8,9].map(lvl => (
-                <option key={lvl} value={lvl}>Seviye {lvl}</option>
+            {/* Spell Levels Pills */}
+            <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '4px', alignItems: 'center' }}>
+              <span style={{ fontSize: '0.72rem', color: 'var(--gold-pale)', fontFamily: 'Cinzel, serif', fontWeight: 'bold', whiteSpace: 'nowrap', marginRight: '4px' }}>Seviye:</span>
+              <button
+                onClick={() => setSpellLevel('')}
+                style={{
+                  padding: '4px 12px', borderRadius: '12px', fontSize: '0.75rem', fontFamily: 'Cinzel, serif', cursor: 'pointer', whiteSpace: 'nowrap',
+                  background: spellLevel === '' ? 'linear-gradient(135deg, rgba(201,168,76,0.3) 0%, rgba(130,95,25,0.4) 100%)' : 'rgba(15,12,28,0.7)',
+                  border: spellLevel === '' ? '1px solid var(--gold-bright)' : '1px solid rgba(201,168,76,0.2)',
+                  color: spellLevel === '' ? 'var(--gold-bright)' : 'var(--text-muted)'
+                }}>Tüm Seviyeler</button>
+              {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(lvl => (
+                <button key={lvl} onClick={() => setSpellLevel(String(lvl))}
+                  style={{
+                    padding: '4px 10px', borderRadius: '12px', fontSize: '0.75rem', fontFamily: 'Cinzel, serif', cursor: 'pointer', whiteSpace: 'nowrap',
+                    background: spellLevel === String(lvl) ? 'linear-gradient(135deg, rgba(201,168,76,0.3) 0%, rgba(130,95,25,0.4) 100%)' : 'rgba(15,12,28,0.7)',
+                    border: spellLevel === String(lvl) ? '1px solid var(--gold-bright)' : '1px solid rgba(201,168,76,0.2)',
+                    color: spellLevel === String(lvl) ? 'var(--gold-bright)' : 'var(--text-muted)'
+                  }}>Lvl {lvl}</button>
               ))}
-            </select>
+            </div>
 
-            <select
-              className="sheet-input"
-              value={subFilter}
-              onChange={(e) => { setSubFilter(e.target.value); e.target.blur(); }}
-              style={{ width: '160px', fontSize: '0.82rem' }}
-            >
-              <option value="">Tüm Büyü Okulları</option>
-              <option value="Abjuration">Abjuration</option>
-              <option value="Conjuration">Conjuration</option>
-              <option value="Divination">Divination</option>
-              <option value="Enchantment">Enchantment</option>
-              <option value="Evocation">Evocation</option>
-              <option value="Illusion">Illusion</option>
-              <option value="Necromancy">Necromancy</option>
-              <option value="Transmutation">Transmutation</option>
-            </select>
+            {/* Spell Schools Pills */}
+            <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '4px', alignItems: 'center' }}>
+              <span style={{ fontSize: '0.72rem', color: 'var(--gold-pale)', fontFamily: 'Cinzel, serif', fontWeight: 'bold', whiteSpace: 'nowrap', marginRight: '4px' }}>Okul:</span>
+              {['', 'Abjuration', 'Conjuration', 'Divination', 'Enchantment', 'Evocation', 'Illusion', 'Necromancy', 'Transmutation'].map(sch => (
+                <button key={sch} onClick={() => setSubFilter(sch)}
+                  style={{
+                    padding: '4px 12px', borderRadius: '12px', fontSize: '0.75rem', fontFamily: 'Cinzel, serif', cursor: 'pointer', whiteSpace: 'nowrap',
+                    background: subFilter === sch ? 'linear-gradient(135deg, rgba(78,201,176,0.25) 0%, rgba(30,100,90,0.35) 100%)' : 'rgba(15,12,28,0.7)',
+                    border: subFilter === sch ? '1px solid #4ec9b0' : '1px solid rgba(78,201,176,0.2)',
+                    color: subFilter === sch ? '#7ee787' : 'var(--text-muted)'
+                  }}>{sch || 'Tüm Okullar'}</button>
+              ))}
+            </div>
           </>
         )}
 
         {activeTab === 'equipment' && (
-          <select
-            className="sheet-input"
-            value={subFilter}
-            onChange={(e) => { setSubFilter(e.target.value); e.target.blur(); }}
-            style={{ width: '180px', fontSize: '0.82rem' }}
-          >
+          <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '4px', alignItems: 'center' }}>
             {EQUIPMENT_CATEGORIES.map(cat => (
-              <option key={cat.id} value={cat.id}>{cat.label}</option>
+              <button key={cat.id} onClick={() => setSubFilter(cat.id)}
+                style={{
+                  padding: '5px 14px', borderRadius: '12px', fontSize: '0.78rem', fontFamily: 'Cinzel, serif', cursor: 'pointer', whiteSpace: 'nowrap',
+                  background: (subFilter === cat.id || (!subFilter && cat.id === 'all')) ? 'linear-gradient(135deg, rgba(201,168,76,0.3) 0%, rgba(130,95,25,0.4) 100%)' : 'rgba(15,12,28,0.7)',
+                  border: (subFilter === cat.id || (!subFilter && cat.id === 'all')) ? '1px solid var(--gold-bright)' : '1px solid rgba(201,168,76,0.2)',
+                  color: (subFilter === cat.id || (!subFilter && cat.id === 'all')) ? 'var(--gold-bright)' : 'var(--text-muted)'
+                }}>{cat.label}</button>
             ))}
-          </select>
+          </div>
         )}
 
         {activeTab === 'feats' && (
-          <select
-            className="sheet-input"
-            value={subFilter}
-            onChange={(e) => { setSubFilter(e.target.value); e.target.blur(); }}
-            style={{ width: '170px', fontSize: '0.82rem' }}
-          >
-            <option value="">Tüm Feat Türleri</option>
-            <option value="Combat">Combat (Savaş)</option>
-            <option value="Metamagic">Metamagic (Büyü)</option>
-            <option value="Teamwork">Teamwork (Takım)</option>
-            <option value="Item Creation">Item Creation (Zanaat)</option>
-            <option value="Racial">Racial (Irksal)</option>
-            <option value="General">General (Genel)</option>
-            <option value="Mythic">Mythic (Efsanevi)</option>
-            <option value="Style">Style (Stil)</option>
-            <option value="Critical">Critical (Kritik)</option>
-          </select>
+          <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '4px', alignItems: 'center' }}>
+            {['', 'Combat', 'Metamagic', 'Teamwork', 'Item Creation', 'Racial', 'General', 'Mythic', 'Style', 'Critical'].map(fCat => (
+              <button key={fCat} onClick={() => setSubFilter(fCat)}
+                style={{
+                  padding: '5px 14px', borderRadius: '12px', fontSize: '0.78rem', fontFamily: 'Cinzel, serif', cursor: 'pointer', whiteSpace: 'nowrap',
+                  background: subFilter === fCat ? 'linear-gradient(135deg, rgba(201,168,76,0.3) 0%, rgba(130,95,25,0.4) 100%)' : 'rgba(15,12,28,0.7)',
+                  border: subFilter === fCat ? '1px solid var(--gold-bright)' : '1px solid rgba(201,168,76,0.2)',
+                  color: subFilter === fCat ? 'var(--gold-bright)' : 'var(--text-muted)'
+                }}>{fCat ? fCat : 'Tüm Featler'}</button>
+            ))}
+          </div>
         )}
 
         {activeTab === 'traits' && (
-          <select
-            className="sheet-input"
-            value={subFilter}
-            onChange={(e) => { setSubFilter(e.target.value); e.target.blur(); }}
-            style={{ width: '170px', fontSize: '0.82rem' }}
-          >
-            <option value="">Tüm Trait Türleri</option>
-            <option value="Combat">Combat (Savaş)</option>
-            <option value="Social">Social (Sosyal)</option>
-            <option value="Faith">Faith (İnanç / Din)</option>
-            <option value="Magic">Magic (Büyü)</option>
-            <option value="Racial">Racial (Irksal)</option>
-            <option value="Regional">Regional (Bölgesel)</option>
-            <option value="Campaign">Campaign (Hikaye)</option>
-            <option value="Equipment">Equipment (Ekipman)</option>
-          </select>
+          <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '4px', alignItems: 'center' }}>
+            {['', 'Combat', 'Social', 'Faith', 'Magic', 'Racial', 'Regional', 'Campaign', 'Equipment'].map(tCat => (
+              <button key={tCat} onClick={() => setSubFilter(tCat)}
+                style={{
+                  padding: '5px 14px', borderRadius: '12px', fontSize: '0.78rem', fontFamily: 'Cinzel, serif', cursor: 'pointer', whiteSpace: 'nowrap',
+                  background: subFilter === tCat ? 'linear-gradient(135deg, rgba(201,168,76,0.3) 0%, rgba(130,95,25,0.4) 100%)' : 'rgba(15,12,28,0.7)',
+                  border: subFilter === tCat ? '1px solid var(--gold-bright)' : '1px solid rgba(201,168,76,0.2)',
+                  color: subFilter === tCat ? 'var(--gold-bright)' : 'var(--text-muted)'
+                }}>{tCat ? tCat : 'Tüm Traitler'}</button>
+            ))}
+          </div>
         )}
 
         {activeTab === 'class-features' && (
-          <select
-            className="sheet-input"
-            value={subFilter}
-            onChange={(e) => { setSubFilter(e.target.value); e.target.blur(); }}
-            style={{ width: '180px', fontSize: '0.82rem' }}
-          >
-            <option value="">Tüm Sınıflar</option>
-            <option value="Barbarian">Barbarian</option>
-            <option value="Bard">Bard</option>
-            <option value="Cleric">Cleric</option>
-            <option value="Druid">Druid</option>
-            <option value="Fighter">Fighter</option>
-            <option value="Monk">Monk</option>
-            <option value="Paladin">Paladin</option>
-            <option value="Ranger">Ranger</option>
-            <option value="Rogue">Rogue</option>
-            <option value="Sorcerer">Sorcerer</option>
-            <option value="Wizard">Wizard</option>
-            <option value="Alchemist">Alchemist</option>
-            <option value="Cavalier">Cavalier</option>
-            <option value="Gunslinger">Gunslinger</option>
-            <option value="Inquisitor">Inquisitor</option>
-            <option value="Magus">Magus</option>
-            <option value="Oracle">Oracle</option>
-            <option value="Summoner">Summoner</option>
-            <option value="Witch">Witch</option>
-          </select>
+          <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '4px', alignItems: 'center' }}>
+            {['', 'Barbarian', 'Bard', 'Cleric', 'Druid', 'Fighter', 'Monk', 'Paladin', 'Ranger', 'Rogue', 'Sorcerer', 'Wizard', 'Alchemist', 'Inquisitor', 'Magus', 'Oracle', 'Summoner', 'Witch'].map(cls => (
+              <button key={cls} onClick={() => setSubFilter(cls)}
+                style={{
+                  padding: '5px 14px', borderRadius: '12px', fontSize: '0.78rem', fontFamily: 'Cinzel, serif', cursor: 'pointer', whiteSpace: 'nowrap',
+                  background: subFilter === cls ? 'linear-gradient(135deg, rgba(201,168,76,0.3) 0%, rgba(130,95,25,0.4) 100%)' : 'rgba(15,12,28,0.7)',
+                  border: subFilter === cls ? '1px solid var(--gold-bright)' : '1px solid rgba(201,168,76,0.2)',
+                  color: subFilter === cls ? 'var(--gold-bright)' : 'var(--text-muted)'
+                }}>{cls ? cls : 'Tüm Sınıflar'}</button>
+            ))}
+          </div>
         )}
+      </div>
 
         {/* Sort By Dropdown */}
         <select
