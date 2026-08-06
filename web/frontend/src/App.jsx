@@ -226,16 +226,42 @@ export default function App() {
           <div style={{ border: '1px solid var(--border-crimson)', borderRadius: 1, padding: '4px 12px', background: 'rgba(110,16,16,0.15)' }}>
             <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.55rem', letterSpacing: '0.14em', color: '#e87070', textTransform: 'uppercase' }}>Pathfinder 1e</span>
           </div>
-          <span style={{ fontSize: '0.85rem', fontFamily: 'Cinzel, serif', color: 'var(--gold-light)', display: 'flex', alignItems: 'center', gap: '6px' }}>
-            Gezgin: <b className="shimmer-text">{username}</b>
-          </span>
-          <button 
-            className="crimson-btn" 
-            onClick={handleLogout}
-            style={{ padding: '5px 10px', fontSize: '0.65rem' }}
-          >
-            <LogOut size={12} /> Çıkış
-          </button>
+
+          {(token && token !== 'offline-guest-token') ? (
+            <>
+              <span style={{ fontSize: '0.85rem', fontFamily: 'Cinzel, serif', color: 'var(--gold-light)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                Gezgin: <b className="shimmer-text">{username}</b>
+              </span>
+              <button 
+                className="crimson-btn" 
+                onClick={handleLogout}
+                style={{ padding: '5px 10px', fontSize: '0.65rem' }}
+              >
+                <LogOut size={12} /> Çıkış
+              </button>
+            </>
+          ) : (
+            <button
+              onClick={() => setView('auth')}
+              style={{
+                padding: '5px 14px',
+                background: 'linear-gradient(135deg, rgba(201,168,76,0.3) 0%, rgba(130,95,25,0.4) 100%)',
+                border: '1px solid var(--gold-bright)',
+                borderRadius: '6px',
+                color: 'var(--gold-bright)',
+                fontSize: '0.75rem',
+                fontFamily: 'Cinzel, serif',
+                fontWeight: 'bold',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '6px',
+                boxShadow: '0 0 10px rgba(201,168,76,0.2)'
+              }}
+            >
+              🔐 Giriş Yap / Kayıt Ol
+            </button>
+          )}
         </div>
 
         <div className="header-border-bottom" />
@@ -243,6 +269,10 @@ export default function App() {
 
       {/* Main Container */}
       <main className="main-content" style={{ marginTop: '16px', marginBottom: '24px' }}>
+        {view === 'auth' && (
+          <Auth onLoginSuccess={handleLoginSuccess} />
+        )}
+
         {view === 'dashboard' && (
           <Dashboard 
             onSelectCharacter={handleSelectCharacter} 

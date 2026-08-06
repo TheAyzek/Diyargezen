@@ -20,7 +20,7 @@ export default function Auth({ onLoginSuccess }) {
     }
 
     if (!isLogin && password !== confirmPassword) {
-      setError('Şifreler uyuşmuyor.');
+      setError('Şifreler eşleşmiyor. Lütfen şifrenizi tekrar kontrol edin.');
       return;
     }
 
@@ -28,61 +28,51 @@ export default function Auth({ onLoginSuccess }) {
 
     try {
       if (isLogin) {
-        // Login using form data (OAuth2PasswordRequestForm expects username/password as form-data or JSON depends on implementation)
-        // Let's first try sending as json. In auth.py, we have:
-        // @router.post("/token")
-        // def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
-        // OAuth2PasswordRequestForm expects application/x-www-form-urlencoded!
-        // Wait, let's check auth.py to see if there is another endpoint or if token endpoint uses form-data.
-        // Let's use urlencoded or form-data for /api/auth/token.
-        const formData = new URLSearchParams();
-        formData.append('username', username);
-        formData.append('password', password);
-
-        const response = await axios.post('/api/auth/token', formData, {
-          headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
-          }
+        const response = await axios.post('/api/auth/login-json', {
+          username: username.trim(),
+          password: password.trim()
         });
 
         const token = response.data.access_token;
+        const uname = response.data.username || username;
         localStorage.setItem('token', token);
-        localStorage.setItem('username', username);
-        
-        // Setup axios default authorization header
+        localStorage.setItem('username', uname);
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-        
-        onLoginSuccess(token, username);
+        onLoginSuccess(token, uname);
       } else {
-        // Register endpoint directly returns access_token in response
         const response = await axios.post('/api/auth/register', {
-          username,
-          password
+          username: username.trim(),
+          password: password.trim()
         });
 
         const token = response.data.access_token;
+        const uname = response.data.username || username;
         localStorage.setItem('token', token);
-        localStorage.setItem('username', username);
-        
+        localStorage.setItem('username', uname);
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-        
-        onLoginSuccess(token, username);
+        onLoginSuccess(token, uname);
       }
     } catch (err) {
       console.error('Auth error detail:', err);
       if (!err.response) {
-        setError(`Sunucuya bağlanılamadı (${err.message || 'Network Error'}). Lütfen backend sunucusunun (port 8000) çalıştığından emin olun.`);
+        setError(`Sunucuya bağlanılamadı. Lütfen internet bağlantınızı ve Render backend durumunu kontrol edin.`);
       } else if (err.response?.data?.detail) {
         const detail = err.response.data.detail;
         if (typeof detail === 'string') {
-          setError(detail === 'Username already registered.' ? 'Bu kullanıcı adı zaten alınmış. Lütfen farklı bir ad deneyin.' : detail);
+          if (detail.includes('already registered') || detail.includes('zaten var')) {
+            setError('Bu kullanıcı adı zaten alınmış. Lütfen farklı bir kullanıcı adı seçin.');
+          } else if (detail.includes('Incorrect username or password')) {
+            setError('Kullanıcı adı veya şifre hatalı!');
+          } else {
+            setError(detail);
+          }
         } else if (Array.isArray(detail) && detail.length > 0) {
           setError(`Doğrulama Hatası: ${detail[0].msg || JSON.stringify(detail[0])}`);
         } else {
-          setError(`Hata (${err.response.status}): ${JSON.stringify(detail)}`);
+          setError(`Hata: ${JSON.stringify(detail)}`);
         }
       } else {
-        setError(`Hata (${err.response.status}): ${err.response.statusText || 'İşlem başarısız oldu'}`);
+        setError(`Hata (${err.response.status}): İşlem gerçekleştirilemedi.`);
       }
     } finally {
       setLoading(false);
@@ -102,19 +92,70 @@ export default function Auth({ onLoginSuccess }) {
         boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.6), 0 0 15px rgba(201, 168, 76, 0.1)',
         border: '1px solid rgba(201, 168, 76, 0.25)'
       }}>
-        <div style={{ textAlign: 'center', marginBottom: '30px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '24px' }}>
           <h1 style={{ 
             fontSize: '2.2rem', 
-            marginBottom: '10px', 
+            marginBottom: '6px', 
             background: 'linear-gradient(135deg, #f0e6d2, var(--accent-gold))',
             WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent'
+            WebkitTextFillColor: 'transparent',
+            fontFamily: 'Cinzel, serif'
           }}>
             🎲 DİYARGEZEN
           </h1>
-          <p style={{ color: 'var(--color-text-secondary)', fontSize: '14px' }}>
-            {isLogin ? 'Karakter Mahzenine Giriş Yapın' : 'Yeni Bir Gezgin Hesabı Oluşturun'}
+          <p style={{ color: 'var(--color-text-secondary)', fontSize: '13px', margin: 0 }}>
+            {isLogin ? 'Karakter Mahzeninize Giriş Yapın' : 'Yeni Bir Gezgin Üyeliği Oluşturun'}
           </p>
+        </div>
+
+        {/* Tab Switcher */}
+        <div style={{ display: 'flex', gap: '8px', marginBottom: '24px', background: 'rgba(10,8,20,0.6)', padding: '4px', borderRadius: '8px', border: '1px solid rgba(201,168,76,0.2)' }}>
+          <button
+            type="button"
+            onClick={() => { setIsLogin(true); setError(''); }}
+            style={{
+              flex: 1,
+              padding: '10px',
+              borderRadius: '6px',
+              fontFamily: 'Cinzel, serif',
+              fontSize: '0.82rem',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              background: isLogin ? 'linear-gradient(180deg, rgba(201,168,76,0.25) 0%, rgba(130,95,25,0.3) 100%)' : 'transparent',
+              border: isLogin ? '1px solid var(--gold-bright)' : '1px solid transparent',
+              color: isLogin ? 'var(--gold-bright)' : 'var(--text-muted)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '6px'
+            }}
+          >
+            <LogIn size={15} /> Giriş Yap
+          </button>
+          <button
+            type="button"
+            onClick={() => { setIsLogin(false); setError(''); }}
+            style={{
+              flex: 1,
+              padding: '10px',
+              borderRadius: '6px',
+              fontFamily: 'Cinzel, serif',
+              fontSize: '0.82rem',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              transition: 'all 0.2s ease',
+              background: !isLogin ? 'linear-gradient(180deg, rgba(78,201,176,0.25) 0%, rgba(30,100,90,0.3) 100%)' : 'transparent',
+              border: !isLogin ? '1px solid #4ec9b0' : '1px solid transparent',
+              color: !isLogin ? '#7ee787' : 'var(--text-muted)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '6px'
+            }}
+          >
+            <UserPlus size={15} /> Yeni Üyelik
+          </button>
         </div>
 
         {error && (
