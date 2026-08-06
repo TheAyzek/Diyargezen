@@ -4,6 +4,14 @@
   "outputDirectory": "web/frontend/dist",
   "rewrites": [
     {
+      "source": "/api/:path*",
+      "destination": "https://diyargezen-web.onrender.com/api/:path*"
+    },
+    {
+      "source": "/templates/:path*",
+      "destination": "https://diyargezen-web.onrender.com/templates/:path*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
