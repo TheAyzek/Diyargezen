@@ -8,13 +8,17 @@ import PresetCharactersModal from './PresetCharactersModal';
 import { importCharacterJSONFile } from '../utils/jsonExportUtil';
 import { useCharacterStore } from '../store/characterStore';
 
-export default function Dashboard({ onSelectCharacter, onNewCharacter }) {
+export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAuth }) {
   const [characters, setCharacters] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(true);
   const [presetModalOpen, setPresetModalOpen] = useState(false);
   const fileInputRef = useRef(null);
   const { loadPresetCharacter } = useCharacterStore();
+
+  const token = localStorage.getItem('token');
+  const username = localStorage.getItem('username');
+  const isLoggedIn = token && token !== 'offline-guest-token';
 
   const handleImportFile = (e) => {
     const file = e.target.files?.[0];
@@ -121,6 +125,71 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter }) {
   return (
     <div className="animate-fade-in" style={{ maxWidth: '1000px', margin: '0 auto', paddingBottom: '40px' }}>
       
+      {/* Member Account / Guest Status Banner */}
+      {isLoggedIn ? (
+        <div style={{
+          padding: '12px 18px',
+          marginBottom: '20px',
+          borderRadius: '8px',
+          background: 'linear-gradient(135deg, rgba(63,185,80,0.12) 0%, rgba(30,90,40,0.18) 100%)',
+          border: '1px solid rgba(63,185,80,0.3)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          gap: '10px'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <Shield size={20} style={{ color: '#3fb950' }} />
+            <span style={{ fontSize: '0.88rem', color: '#f0e6d2' }}>
+              Üye Hesabı: <b style={{ color: '#3fb950', fontFamily: 'Cinzel, serif' }}>{username}</b> — Tüm karakterleriniz şifrelenmiş üye alanınızda saklanıyor.
+            </span>
+          </div>
+          <span style={{ fontSize: '0.75rem', padding: '3px 10px', borderRadius: '12px', background: 'rgba(63,185,80,0.2)', border: '1px solid rgba(63,185,80,0.4)', color: '#3fb950', fontWeight: 'bold' }}>
+            🔒 Üye Kasanız Aktif
+          </span>
+        </div>
+      ) : (
+        <div style={{
+          padding: '14px 18px',
+          marginBottom: '20px',
+          borderRadius: '8px',
+          background: 'linear-gradient(135deg, rgba(201,168,76,0.12) 0%, rgba(130,95,25,0.18) 100%)',
+          border: '1px solid rgba(201,168,76,0.3)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap',
+          gap: '12px'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <Sparkles size={20} style={{ color: 'var(--gold-bright)' }} />
+            <span style={{ fontSize: '0.85rem', color: '#f0e6d2' }}>
+              <b>Misafir Modundasınız:</b> Oluşturduğunuz karakterlerin üye hesabınıza kaydolması ve tüm cihazlarınızdan erişilmesi için ücretsiz üye olun!
+            </span>
+          </div>
+          {onOpenAuth && (
+            <button
+              onClick={onOpenAuth}
+              style={{
+                padding: '6px 14px',
+                borderRadius: '6px',
+                background: 'linear-gradient(135deg, rgba(201,168,76,0.3) 0%, rgba(130,95,25,0.4) 100%)',
+                border: '1px solid var(--gold-bright)',
+                color: 'var(--gold-bright)',
+                fontSize: '0.8rem',
+                fontFamily: 'Cinzel, serif',
+                fontWeight: 'bold',
+                cursor: 'pointer',
+                whiteSpace: 'nowrap'
+              }}
+            >
+              🔐 Üye Ol / Giriş Yap
+            </button>
+          )}
+        </div>
+      )}
+
       {/* Title & Primary Action */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px', flexWrap: 'wrap', gap: '16px' }}>
         <div>

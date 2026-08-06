@@ -277,6 +277,7 @@ export default function App() {
           <Dashboard 
             onSelectCharacter={handleSelectCharacter} 
             onNewCharacter={handleNewCharacter} 
+            onOpenAuth={() => setView('auth')}
           />
         )}
 
