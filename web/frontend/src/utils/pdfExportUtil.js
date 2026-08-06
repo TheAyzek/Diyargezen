@@ -17,6 +17,25 @@
 
 import { PDFDocument, StandardFonts } from 'pdf-lib';
 
+/**
+ * Transliterates Turkish special characters to their closest WinAnsi (Latin-1)
+ * equivalents. pdf-lib's StandardFonts use WinAnsi encoding which cannot
+ * represent İ (0x0130), ı (0x0131), Ş, ş, Ğ, ğ, etc.
+ */
+function sanitizeTurkishForPDF(text) {
+  if (text == null) return '';
+  const str = String(text);
+  const map = {
+    'İ': 'I', 'ı': 'i',
+    'Ş': 'S', 'ş': 's',
+    'Ğ': 'G', 'ğ': 'g',
+    'Ü': 'U', 'ü': 'u',
+    'Ö': 'O', 'ö': 'o',
+    'Ç': 'C', 'ç': 'c',
+  };
+  return str.replace(/[İıŞşĞğÜüÖöÇç]/g, ch => map[ch] || ch);
+}
+
 export async function exportCharacterPDF(store) {
   try {
     // Phase 1: Robust Multi-Path Template Fetching
@@ -52,7 +71,7 @@ export async function exportCharacterPDF(store) {
       try {
         const field = form.getField(fieldName);
         if (field && typeof field.setText === 'function') {
-          field.setText(String(val ?? ''));
+          field.setText(sanitizeTurkishForPDF(val));
         }
       } catch (e) {
         // Field not present in template dictionary
@@ -192,8 +211,9 @@ export async function exportCharacterPDF(store) {
     // Phase 3: Appearance Stream Updates & Save
     try {
       form.updateFieldAppearances(font);
-    } catch (e) {
-      // Graceful fallback for custom PDF field definitions
+    } catch (appearanceErr) {
+      console.warn('PDF appearance update partially failed (likely unsupported glyph):', appearanceErr.message);
+      // Still attempt to save — fields will have values even without updated appearances
     }
 
     const pdfBytes = await pdfDoc.save();

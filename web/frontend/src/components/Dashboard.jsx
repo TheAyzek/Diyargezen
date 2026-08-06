@@ -36,13 +36,21 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
 
   const loadCharacters = () => {
     setLoading(true);
+    // Guest users (no valid JWT) can't fetch from server — show empty list
+    if (!isLoggedIn) {
+      setCharacters([]);
+      setLoading(false);
+      return;
+    }
     axios.get('/api/characters')
       .then(res => {
-        setCharacters(res.data);
+        setCharacters(Array.isArray(res.data) ? res.data : []);
         setLoading(false);
       })
       .catch(err => {
         console.error('Error fetching characters:', err);
+        // On 401/403 (invalid or expired token), show empty list gracefully
+        setCharacters([]);
         setLoading(false);
       });
   };

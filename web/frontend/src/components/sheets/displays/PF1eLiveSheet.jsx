@@ -18,6 +18,25 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { PDFDocument, StandardFonts } from 'pdf-lib';
 import { FileText, RefreshCw, Download, Shield, Heart, Sword, Sparkles, Activity, Wand2, Scroll } from 'lucide-react';
+
+/**
+ * Transliterates Turkish special characters to WinAnsi-safe equivalents.
+ * pdf-lib StandardFonts cannot encode İ (0x0130), ı (0x0131), Ş, ş, Ğ, ğ, etc.
+ */
+function sanitizeTurkishForPDF(text) {
+  if (text == null) return '';
+  const str = String(text);
+  const map = {
+    'İ': 'I', 'ı': 'i',
+    'Ş': 'S', 'ş': 's',
+    'Ğ': 'G', 'ğ': 'g',
+    'Ü': 'U', 'ü': 'u',
+    'Ö': 'O', 'ö': 'o',
+    'Ç': 'C', 'ç': 'c',
+  };
+  return str.replace(/[İıŞşĞğÜüÖöÇç]/g, ch => map[ch] || ch);
+}
+
 import { useCharacterStore } from '../../../store/characterStore';
 import SpellCard from '../../SpellCard';
 import ParchmentSheetDisplay from './ParchmentSheetDisplay';
@@ -74,7 +93,7 @@ export default function PF1eLiveSheet() {
         try {
           const field = form.getField(fieldName);
           if (field && typeof field.setText === 'function') {
-            field.setText(String(textValue ?? ''));
+            field.setText(sanitizeTurkishForPDF(textValue));
           }
         } catch (e) {
           // Ignore missing or non-text fields gracefully
@@ -419,11 +438,11 @@ export default function PF1eLiveSheet() {
         }
       }
 
-      // Update appearance streams so entered text is rendered visually without needing to click on fields
       try {
         form.updateFieldAppearances(font);
-      } catch (e) {
-        // Fallback gracefully if any individual field has unsupported appearance properties
+      } catch (appearanceErr) {
+        console.warn('PDF appearance update partially failed:', appearanceErr.message);
+        // Still attempt to save — fields will have values even without updated appearances
       }
 
       const pdfBytes = await pdfDoc.save();
