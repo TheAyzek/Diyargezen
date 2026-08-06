@@ -691,7 +691,7 @@ class CharacterManager:
                 "AND isim NOT LIKE '- %' "     # - bullet entries
                 "AND isim NOT LIKE '--%' "     # -- separator lines
                 "AND isim NOT GLOB '[0-9]*' "  # digit-prefixed chapter titles
-                "ORDER BY isim COLLATE NOCASE LIMIT 300",
+                "ORDER BY isim COLLATE NOCASE LIMIT 2500",
                 (sys_norm, like_q)
             )
             for row in cursor.fetchall():

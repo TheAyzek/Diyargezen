@@ -124,30 +124,41 @@ def scrape_item_details(item_name: str, rel_href: str, session: requests.Session
             return None
         
         soup = BeautifulSoup(r.text, "html.parser")
-        spans = soup.find_all("span")
-        
-        target_text = None
-        for s in spans:
-            txt = s.text.strip()
-            if "Source" in txt and ("Price" in txt or "Description" in txt):
-                target_text = txt
-                break
-        
-        if not target_text:
+        span = soup.find('span', id=lambda i: i and 'MainContent_DataListTypes_LabelName' in i)
+        if not span:
             return None
         
-        # Extract fields via regex
-        name_match = re.search(r'^(.*?)\s*Source', target_text)
-        price_match = re.search(r'Price\s*(.*?);', target_text)
-        weight_match = re.search(r'Weight\s*(.*?)(Category|Description|$)', target_text)
-        cat_match = re.search(r'Category\s*(.*?)(Description|$)', target_text)
-        desc_match = re.search(r'Description\s*(.*)', target_text, re.DOTALL)
+        # Item title
+        h1 = span.find('h1')
+        raw_name = h1.text.strip() if h1 else item_name
         
-        raw_name = name_match.group(1).strip() if name_match else item_name
-        price_raw = price_match.group(1).strip() if price_match else "0 gp"
-        weight_raw = weight_match.group(1).strip() if weight_match else "0 lb."
-        category_raw = cat_match.group(1).strip() if cat_match else "General Equipment"
-        description_raw = desc_match.group(1).strip() if desc_match else f"{raw_name} - Archives of Nethys PF1e Equipment."
+        # Extract bold meta fields (Source, Price, Weight, Category, Recipe, etc.)
+        meta = {}
+        for b in span.find_all('b'):
+            key = b.text.strip()
+            next_node = b.next_sibling
+            val_parts = []
+            while next_node and next_node.name not in ('b', 'h3'):
+                val_parts.append(next_node.text if hasattr(next_node, 'text') else str(next_node))
+                next_node = next_node.next_sibling
+            meta[key] = ''.join(val_parts).strip().rstrip(';')
+
+        # Extract description text after Description H3
+        desc_h3 = span.find('h3', class_='framing')
+        if desc_h3:
+            desc_parts = []
+            for sibling in desc_h3.next_siblings:
+                if hasattr(sibling, 'text'):
+                    desc_parts.append(sibling.text)
+                elif isinstance(sibling, str):
+                    desc_parts.append(sibling)
+            description_raw = ''.join(desc_parts).strip()
+        else:
+            description_raw = f"{raw_name} - Pathfinder 1e Equipment item."
+
+        price_raw = meta.get("Price", "0 gp")
+        weight_raw = meta.get("Weight", "0 lb.")
+        category_raw = meta.get("Category", "Adventuring Gear")
         
         price_gp = parse_price_gp(price_raw)
         weight_lbs = parse_weight_lbs(weight_raw)
@@ -156,7 +167,7 @@ def scrape_item_details(item_name: str, rel_href: str, session: requests.Session
             "isim": raw_name,
             "sistem": "pathfinder1e",
             "kategori": "item",
-            "aciklama": description_raw,
+            "aciklama": description_raw or f"{raw_name} - Pathfinder 1e Equipment.",
             "sistem_verisi": {
                 "type": "equipment",
                 "subType": "gear",
@@ -166,7 +177,7 @@ def scrape_item_details(item_name: str, rel_href: str, session: requests.Session
                     "value": weight_lbs
                 },
                 "category": category_raw,
-                "source": "Archives of Nethys (aonprd.com)",
+                "source": meta.get("Source", "Archives of Nethys (aonprd.com)"),
                 "source_url": full_url,
                 "data_source": "aon_scraper"
             }
@@ -217,8 +228,8 @@ def run_aon_equipment_scraper(max_per_category: Optional[int] = None):
                 if count_cat % 20 == 0:
                     logger.info(f"[{cat}] {count_cat} eşya çekildi ve işlendi.")
             
-            # Etik rate-limiting (0.2sn gecikme)
-            time.sleep(0.25)
+            # Etik rate-limiting (0.05sn hızlı & etik gecikme)
+            time.sleep(0.05)
 
         logger.info(f"Kategori [{cat}] tamamlandı. Toplam {count_cat} yeni eşya eklendi.")
 
