@@ -354,7 +354,7 @@ export default function PF1eLiveSheet() {
         Object.entries(traitSkillBonuses).forEach(([skillName, bonus]) => {
           const pdfFields = skillPdfMapping[skillName];
           if (!pdfFields) return;
-          const ranks = parseInt(userSkills[skillName]) || 0;
+          const ranks = parseInt(skills[skillName]) || 0;
           const abMod = derivedMods[pdfFields.ab] || 0;
           const isClassSkill = mergedClassSkills.includes(skillName);
           const classSkillBonus = (isClassSkill && ranks > 0) ? 3 : 0;

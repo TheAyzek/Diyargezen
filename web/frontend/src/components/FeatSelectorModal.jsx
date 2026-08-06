@@ -123,7 +123,7 @@ export default function FeatSelectorModal({
     setLoading(true);
     const sys = (system || 'pf1e').toLowerCase();
     axios.get(`/api/rules/${sys}/feats`, {
-      params: { query: searchQuery, category: cat }
+      params: { query: searchQuery, category: activeCategory }
     })
       .then(res => {
         setFeats(res.data);
