@@ -121,8 +121,8 @@ export default function FeatSelectorModal({
 
   const fetchFeats = () => {
     setLoading(true);
-    const cat = activeCategory === 'All' ? '' : activeCategory;
-    axios.get(`/api/rules/${system}/feats`, {
+    const sys = (system || 'pf1e').toLowerCase();
+    axios.get(`/api/rules/${sys}/feats`, {
       params: { query: searchQuery, category: cat }
     })
       .then(res => {

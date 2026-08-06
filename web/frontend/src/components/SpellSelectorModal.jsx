@@ -58,7 +58,8 @@ export default function SpellSelectorModal({
     const classParam = selectedClass === 'All' ? '' : selectedClass;
     const schoolParam = selectedSchool === 'All' ? '' : selectedSchool;
 
-    axios.get(`/api/rules/${system}/spells`, {
+    const sys = (system || 'pf1e').toLowerCase();
+    axios.get(`/api/rules/${sys}/spells`, {
       params: {
         query: searchQuery,
         level: lvlParam,

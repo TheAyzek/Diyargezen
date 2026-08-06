@@ -31,7 +31,8 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
     else if (category === 'spells' || category === 'spell') endpointCategory = 'spells';
     else if (category === 'powers' || category === 'power') endpointCategory = 'powers';
 
-    axios.get(`/api/rules/${system}/${endpointCategory}`, {
+    const sys = (system || 'pf1e').toLowerCase();
+    axios.get(`/api/rules/${sys}/${endpointCategory}`, {
       params: { query: searchQuery }
     })
       .then(res => {

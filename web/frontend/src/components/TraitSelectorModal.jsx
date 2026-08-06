@@ -52,8 +52,8 @@ export default function TraitSelectorModal({ isOpen, onClose, system, character,
 
   useEffect(() => {
     if (isOpen) {
-      setLoading(true);
-      axios.get(`/api/rules/${system}/traits`)
+      const sys = (system || 'pf1e').toLowerCase();
+      axios.get(`/api/rules/${sys}/traits`)
         .then(res => {
           setAllTraits(res.data);
           setLoading(false);
