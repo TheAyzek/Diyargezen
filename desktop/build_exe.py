@@ -123,11 +123,12 @@ def build_exe() -> bool:
     result = subprocess.run(cmd, cwd=WORKSPACE_ROOT)
 
     if result.returncode == 0 and EXE_PATH.exists():
-        # Ensure 159MB characters.db is placed directly in dist/Diyargezen/data/characters.db
+        # Ensure characters.db exists in dist bundle (either _internal/data or data)
+        internal_db = DIST_DIR / "Diyargezen" / "_internal" / "data" / "characters.db"
         dist_db = DIST_DIR / "Diyargezen" / "data" / "characters.db"
-        dist_db.parent.mkdir(parents=True, exist_ok=True)
         src_db = WORKSPACE_ROOT / "data" / "characters.db"
-        if src_db.exists():
+        if not internal_db.exists() and not dist_db.exists() and src_db.exists():
+            dist_db.parent.mkdir(parents=True, exist_ok=True)
             print(f"📋 Veritabanı kopyalanıyor: {src_db} -> {dist_db}")
             shutil.copy2(src_db, dist_db)
 

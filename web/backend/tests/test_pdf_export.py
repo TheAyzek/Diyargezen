@@ -153,3 +153,58 @@ def test_export_pdf_with_portrait():
     pdf_path.unlink()
     if portrait_file.exists():
         portrait_file.unlink()
+
+
+def test_export_pdf_pf1e_inventory_and_weapon_cards():
+    """Test exporting PF1e character with inventory item weights, carrying capacity, AC breakdown, and weapon cards."""
+    from rules.calculators import PF1e_Calculator
+    
+    raw_character = {
+        "name": "Kyra the Cleric",
+        "system": "pathfinder1e",
+        "class": "Cleric",
+        "level": 3,
+        "race": "Human",
+        "abilities": {"strength": 14, "dexterity": 10, "constitution": 14, "intelligence": 10, "wisdom": 16, "charisma": 12},
+        "equipment": [
+            {"name": "Scimitar +1", "type": "Weapon", "quantity": 1, "weight": 4.0},
+            {"name": "Chainmail", "type": "Armor", "quantity": 1, "weight": 40.0},
+            {"name": "Heavy Steel Shield", "type": "Shield", "quantity": 1, "weight": 15.0}
+        ],
+        "armor_bonus": 6,
+        "shield_bonus": 2
+    }
+    
+    # Run calculator
+    calc = PF1e_Calculator()
+    recalced = calc.update_all_stats(raw_character)
+    raw_character.update(recalced)
+    raw_character["derived"] = recalced
+    
+    temp_dir = tempfile.gettempdir()
+    pdf_path = Path(temp_dir) / "test_pf1e_weapons_inventory.pdf"
+
+    export_pdf(raw_character, pdf_path)
+
+    assert pdf_path.exists()
+    assert pdf_path.stat().st_size > 500
+
+    reader = PdfReader(pdf_path)
+    fields = reader.get_fields() or {}
+
+    # Verify form values populated
+    assert fields.get("Item 1", {}).get("/V") == "Scimitar +1"
+    assert fields.get("WT 1", {}).get("/V") == "4.0"
+    assert fields.get("TOTAL WEIGHT", {}).get("/V") == "59.0"
+    assert fields.get("Light", {}).get("/V") in ("76", "76.0", "58", "58.0")
+    assert fields.get("armor class", {}).get("/V") == "18"
+    assert fields.get("TOUCH", {}).get("/V") == "10"
+    assert fields.get("FLATFOOTED", {}).get("/V") == "18"
+
+    # Weapon cards
+    assert fields.get("Weapon 1", {}).get("/V") == "Scimitar +1"
+    assert fields.get("Bonus 1", {}).get("/V") == "+6"
+    assert fields.get("Damage 1", {}).get("/V") == "1d6 + 4"
+
+    pdf_path.unlink()
+

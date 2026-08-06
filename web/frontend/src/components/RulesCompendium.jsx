@@ -913,7 +913,7 @@ export default function RulesCompendium({ onBack }) {
             <select
               className="sheet-input"
               value={spellLevel}
-              onChange={(e) => setSpellLevel(e.target.value)}
+              onChange={(e) => { setSpellLevel(e.target.value); e.target.blur(); }}
               style={{ width: '140px', fontSize: '0.82rem' }}
             >
               <option value="">Tüm Seviyeler</option>
@@ -925,7 +925,7 @@ export default function RulesCompendium({ onBack }) {
             <select
               className="sheet-input"
               value={subFilter}
-              onChange={(e) => setSubFilter(e.target.value)}
+              onChange={(e) => { setSubFilter(e.target.value); e.target.blur(); }}
               style={{ width: '160px', fontSize: '0.82rem' }}
             >
               <option value="">Tüm Büyü Okulları</option>
@@ -945,7 +945,7 @@ export default function RulesCompendium({ onBack }) {
           <select
             className="sheet-input"
             value={subFilter}
-            onChange={(e) => setSubFilter(e.target.value)}
+            onChange={(e) => { setSubFilter(e.target.value); e.target.blur(); }}
             style={{ width: '180px', fontSize: '0.82rem' }}
           >
             {EQUIPMENT_CATEGORIES.map(cat => (
@@ -958,7 +958,7 @@ export default function RulesCompendium({ onBack }) {
           <select
             className="sheet-input"
             value={subFilter}
-            onChange={(e) => setSubFilter(e.target.value)}
+            onChange={(e) => { setSubFilter(e.target.value); e.target.blur(); }}
             style={{ width: '170px', fontSize: '0.82rem' }}
           >
             <option value="">Tüm Feat Türleri</option>
@@ -978,7 +978,7 @@ export default function RulesCompendium({ onBack }) {
           <select
             className="sheet-input"
             value={subFilter}
-            onChange={(e) => setSubFilter(e.target.value)}
+            onChange={(e) => { setSubFilter(e.target.value); e.target.blur(); }}
             style={{ width: '170px', fontSize: '0.82rem' }}
           >
             <option value="">Tüm Trait Türleri</option>
@@ -997,7 +997,7 @@ export default function RulesCompendium({ onBack }) {
           <select
             className="sheet-input"
             value={subFilter}
-            onChange={(e) => setSubFilter(e.target.value)}
+            onChange={(e) => { setSubFilter(e.target.value); e.target.blur(); }}
             style={{ width: '180px', fontSize: '0.82rem' }}
           >
             <option value="">Tüm Sınıflar</option>
@@ -1027,7 +1027,7 @@ export default function RulesCompendium({ onBack }) {
         <select
           className="sheet-input"
           value={sortBy}
-          onChange={(e) => setSortBy(e.target.value)}
+          onChange={(e) => { setSortBy(e.target.value); e.target.blur(); }}
           style={{ width: '180px', fontSize: '0.82rem' }}
         >
           <option value="level_asc">📊 Seviye: 0 ➜ 9 (Artan)</option>

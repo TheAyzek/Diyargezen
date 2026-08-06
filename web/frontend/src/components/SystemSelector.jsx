@@ -2,91 +2,115 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Sword, Sparkles, Activity, Lock, CheckCircle } from 'lucide-react';
 
+const DEFAULT_SYSTEMS = [
+  {
+    key: 'pf1e',
+    name: 'Pathfinder 1st Edition',
+    dice_system: 'd20',
+    description: 'Pathfinder 1st Edition Core ruleset, class-and-level modular progression (Aktif & Tam Destek).',
+    is_active: true,
+    badge: 'Aktif (Tam Destek)'
+  },
+  {
+    key: 'dnd5e',
+    name: 'D&D 5th Edition',
+    dice_system: 'd20',
+    description: 'Dungeons & Dragons 5e SRD ruleset (Donduruldu).',
+    is_active: false,
+    badge: 'Yakında Gelecek'
+  },
+  {
+    key: 'mnm',
+    name: 'Mutants & Masterminds 3e',
+    dice_system: 'd20',
+    description: 'Mutants & Masterminds 3rd Edition point-buy system (Donduruldu).',
+    is_active: false,
+    badge: 'Yakında Gelecek'
+  }
+];
+
 export default function SystemSelector({ onSelect, onBack }) {
-  const [systems, setSystems] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [systems, setSystems] = useState(DEFAULT_SYSTEMS);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     axios.get('/api/systems')
       .then(res => {
-        setSystems(res.data);
-        setLoading(false);
+        if (Array.isArray(res.data) && res.data.length > 0) {
+          setSystems(res.data);
+        }
       })
       .catch(err => {
-        console.error('Error fetching systems:', err);
-        setLoading(false);
+        console.warn('Backend systems endpoint unreachable, using offline fallback systems list:', err);
       });
   }, []);
 
   const getSystemIcon = (key) => {
     switch (key.toLowerCase()) {
       case 'dnd5e':
-        return <Sword className="w-12 h-12" style={{ color: '#6c757d' }} />;
+        return <Sword className="w-12 h-12 text-slate-500" />;
       case 'pf1e':
       case 'pathfinder1e':
-        return <Activity className="w-12 h-12" style={{ color: '#c9a84c' }} />;
+        return <Activity className="w-12 h-12 text-amber-400" />;
       default:
-        return <Sparkles className="w-12 h-12" style={{ color: '#6c757d' }} />;
+        return <Sparkles className="w-12 h-12 text-slate-500" />;
     }
   };
 
   if (loading) {
     return (
-      <div style={{ display: 'flex', justifyContent: 'center', margin: '100px 0' }}>
-        <div className="animate-fade-in" style={{ fontSize: '20px', color: '#c9a84c' }}>Sistemler Yükleniyor...</div>
+      <div className="flex justify-center my-24">
+        <div className="animate-fade-in text-xl text-amber-400 font-serif">Sistemler Yükleniyor...</div>
       </div>
     );
   }
 
   return (
-    <div className="animate-fade-in" style={{ maxWidth: '900px', margin: '0 auto' }}>
-      <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-        <h2 style={{ fontSize: '2.5rem', marginBottom: '12px' }}>Oyun Sistemi Seçin</h2>
-        <p style={{ color: '#8b949e', fontSize: '1.1rem' }}>
-          Şu anda platform **Pathfinder 1st Edition (PF1e)** kural motoruna tam destek sunmaktadır.
+    <div className="animate-fade-in max-w-4xl mx-auto my-8 px-4">
+      <div className="text-center mb-10">
+        <h2 className="text-4xl font-serif font-bold text-amber-300 mb-3 tracking-wide">Oyun Sistemi Seçin</h2>
+        <p className="text-slate-400 text-lg">
+          Şu anda platform <strong className="text-amber-400">Pathfinder 1st Edition (PF1e)</strong> kural motoruna tam destek sunmaktadır.
         </p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px', marginBottom: '32px' }}>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
         {systems.map(sys => {
           const isActive = sys.is_active !== false && sys.key === 'pf1e';
           return (
             <div 
               key={sys.key} 
-              className={`glass-card system-card ${!isActive ? 'disabled-card' : ''}`}
+              className={`glass-card system-card relative transition-all duration-300 p-6 flex flex-col justify-between rounded-xl border ${
+                isActive 
+                  ? 'border-amber-500/60 shadow-lg shadow-amber-500/10 cursor-pointer hover:border-amber-400 hover:shadow-amber-500/20' 
+                  : 'border-slate-800 opacity-50 cursor-not-allowed'
+              }`}
               onClick={() => isActive && onSelect(sys.key)}
-              style={{ 
-                transition: 'all 0.3s ease',
-                opacity: isActive ? 1 : 0.5,
-                cursor: isActive ? 'pointer' : 'not-allowed',
-                position: 'relative',
-                border: isActive ? '2px solid var(--accent-gold)' : '1px solid rgba(255,255,255,0.08)'
-              }}
             >
-              <div style={{ position: 'absolute', top: '16px', right: '16px' }}>
+              <div className="absolute top-4 right-4">
                 {isActive ? (
-                  <span style={{ fontSize: '11px', background: '#1b4332', color: '#52b788', padding: '4px 10px', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 'bold' }}>
+                  <span className="text-xs bg-emerald-950/80 text-emerald-400 border border-emerald-800/60 px-2.5 py-1 rounded-full flex items-center gap-1 font-bold">
                     <CheckCircle size={12} /> Aktif
                   </span>
                 ) : (
-                  <span style={{ fontSize: '11px', background: '#343a40', color: '#adb5bd', padding: '4px 10px', borderRadius: '12px', display: 'flex', alignItems: 'center', gap: '4px', fontWeight: 'bold' }}>
+                  <span className="text-xs bg-slate-900 text-slate-400 border border-slate-700/50 px-2.5 py-1 rounded-full flex items-center gap-1 font-bold">
                     <Lock size={12} /> Yakında Gelecek
                   </span>
                 )}
               </div>
 
               <div>
-                <div style={{ marginBottom: '16px' }}>{getSystemIcon(sys.key)}</div>
-                <h3 className="sys-title" style={{ fontSize: '1.5rem', marginBottom: '12px', color: isActive ? '#f0e6d2' : '#8b949e' }}>
+                <div className="mb-4">{getSystemIcon(sys.key)}</div>
+                <h3 className={`sys-title text-2xl font-serif font-bold mb-3 ${isActive ? 'text-amber-200' : 'text-slate-500'}`}>
                   {sys.name}
                 </h3>
-                <p style={{ color: isActive ? '#d4c5a9' : '#6c757d', fontSize: '0.95rem', lineHeight: '1.4' }}>
+                <p className={`text-sm leading-relaxed ${isActive ? 'text-amber-100/70' : 'text-slate-500'}`}>
                   {sys.description}
                 </p>
               </div>
 
-              <div style={{ marginTop: '24px', alignSelf: 'flex-start' }}>
-                <span style={{ fontSize: '12px', background: '#22223b', padding: '4px 8px', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.05)' }}>
+              <div className="mt-6 self-start">
+                <span className="text-xs bg-slate-900/90 text-amber-200/80 px-2.5 py-1 rounded border border-amber-500/20 font-mono">
                   Zar: {sys.dice_system ? sys.dice_system.toUpperCase() : 'D20'}
                 </span>
               </div>
@@ -95,9 +119,10 @@ export default function SystemSelector({ onSelect, onBack }) {
         })}
       </div>
 
-      <div style={{ textAlign: 'center' }}>
-        <button className="btn btn-secondary" onClick={onBack}>İptal Et</button>
+      <div className="text-center">
+        <button className="btn btn-secondary px-6 py-2.5 rounded-lg border border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-amber-300 transition-colors" onClick={onBack}>İptal Et</button>
       </div>
     </div>
   );
 }
+

@@ -13,6 +13,9 @@ import os
 import logging
 from pathlib import Path
 
+# Configure Chromium flags to prevent GPU composite layer flickering on Windows
+os.environ["QTWEBENGINE_CHROMIUM_FLAGS"] = "--disable-gpu-compositing --disable-gpu-rasterization --enable-begin-frame-scheduling"
+
 from PySide6.QtCore import Qt, QCoreApplication
 
 # Enable OpenGL context sharing for QWebEngineView on Windows

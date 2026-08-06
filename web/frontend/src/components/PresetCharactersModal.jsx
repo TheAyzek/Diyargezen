@@ -412,7 +412,7 @@ export default function PresetCharactersModal({ isOpen, onClose, onSelectPreset 
   return (
     <div style={{
       position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-      backgroundColor: 'rgba(5, 4, 10, 0.88)', backdropFilter: 'blur(8px)',
+      backgroundColor: 'rgba(7, 6, 15, 0.96)',
       display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999, padding: '20px'
     }}>
       <div style={{

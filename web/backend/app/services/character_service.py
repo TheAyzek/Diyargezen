@@ -145,48 +145,28 @@ class CharacterService:
         if existing_prog:
             raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"Karakter zaten seviye {target_level} geçmişine sahip.")
 
-        # Apply choices
-        is_mnm = any(s in db_char.system.lower() for s in ["mnm", "mm3e", "mastermind"])
+        # Apply choices using CharacterManager to compute PF1e retroactive CON HP & FCB rules
+        manager = CharacterManager(DB_PATH)
+        manager.set_active_character(char_data)
 
-        # 1. Update level
-        char_data["level"] = target_level
-        char_data["class"] = class_name  # Set current/multiclass name
-        if is_mnm:
-            char_data["pl_value"] = target_level
+        cm_choices = {
+            "hp_gain": int(choices.get("hp_added", 6)),
+            "stat_increase": choices.get("ability_increase"),
+            "skill_ranks": choices.get("skill_ranks", {}),
+            "feats": choices.get("feats", []),
+            "favored_class_bonus": choices.get("favored_class_bonus", "hp")
+        }
+        recalculated_char = manager.apply_level_up(cm_choices)
+        recalculated_char["class"] = class_name
 
-        # 2. HP added
-        if not is_mnm:
-            con_score = int(char_data.get("abilities", {}).get("constitution", 10))
-            con_modifier = (con_score - 10) // 2
-            hp_base_added = int(choices.get("hp_added", 6))
-            total_hp_increase = hp_base_added + con_modifier
-            char_data["hit_points"] = int(char_data.get("hit_points", 10)) + total_hp_increase
-
-        # 3. Skills allocated
-        skill_ranks = char_data.setdefault("skill_ranks", {})
-        for skill, ranks in choices.get("skill_ranks", {}).items():
-            skill_ranks[skill] = int(skill_ranks.get(skill, 0)) + int(ranks)
-
-        # 4. Feats selected
-        feats = char_data.setdefault("feats", [])
-        for feat in choices.get("feats", []):
-            if feat not in feats:
-                feats.append(feat)
-
-        # 5. Ability score increase
-        ability_increase = choices.get("ability_increase")
-        if ability_increase:
-            abilities = char_data.setdefault("abilities", {})
-            abilities[ability_increase] = int(abilities.get(ability_increase, 10)) + 1
-
-        # 6. Spells learned
-        spells = char_data.setdefault("spells", [])
+        # Spells learned
+        spells = recalculated_char.setdefault("spells", [])
         for spell in choices.get("spells_learned", []):
             if spell not in spells:
                 spells.append(spell)
 
         # Recalculate derived statistics
-        recalced_data = self.recalculate(char_data)
+        recalced_data = self.recalculate(recalculated_char)
 
         # Save progression record
         prog = LevelProgression(
@@ -232,12 +212,15 @@ class CharacterService:
         if is_mnm:
             char_data["pl_value"] = char_data["level"]
 
-        # 2. Subtract HP
+        # 2. Subtract HP (including FCB HP)
         if not is_mnm:
             con_score = int(char_data.get("abilities", {}).get("constitution", 10))
             con_modifier = (con_score - 10) // 2
             hp_base_added = int(choices.get("hp_added", 6))
-            total_hp_increase = hp_base_added + con_modifier
+            fcb_hp = 1 if choices.get("favored_class_bonus") == "hp" else 0
+            total_hp_increase = hp_base_added + con_modifier + fcb_hp
+            if "max_hp" in char_data:
+                char_data["max_hp"] = max(1, int(char_data.get("max_hp", 10)) - total_hp_increase)
             char_data["hit_points"] = max(1, int(char_data.get("hit_points", 10)) - total_hp_increase)
 
         # 3. Revert skills
@@ -251,11 +234,25 @@ class CharacterService:
             if feat in feats:
                 feats.remove(feat)
 
-        # 5. Revert ability score increase
+        # 5. Revert ability score increase & retroactive CON HP
         ability_increase = choices.get("ability_increase")
         if ability_increase:
+            ab_key = ability_increase.lower()
             abilities = char_data.get("abilities", {})
-            abilities[ability_increase] = max(1, int(abilities.get(ability_increase, 11)) - 1)
+            target_key = next((k for k in abilities.keys() if k.lower() in (ab_key, ab_key[:3])), ability_increase)
+            old_val = abilities.get(target_key, 11)
+            abilities[target_key] = max(1, old_val - 1)
+            
+            if ab_key in ("constitution", "con"):
+                # If reverting CON score reduced CON modifier, revert retroactive HP (previous_level * delta_mod)
+                prev_con_mod = (old_val - 1 - 10) // 2
+                new_con_mod = (old_val - 10) // 2
+                if new_con_mod > prev_con_mod:
+                    previous_level = char_data.get("level", 1)
+                    retroactive_hp_to_remove = previous_level * (new_con_mod - prev_con_mod)
+                    if "max_hp" in char_data:
+                        char_data["max_hp"] = max(1, char_data.get("max_hp", 10) - retroactive_hp_to_remove)
+                    char_data["hit_points"] = max(1, char_data.get("hit_points", 10) - retroactive_hp_to_remove)
 
         # 6. Remove learned spells
         spells = char_data.get("spells", [])

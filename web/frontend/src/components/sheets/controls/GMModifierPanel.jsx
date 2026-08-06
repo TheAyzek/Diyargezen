@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
-import { Plus, Trash2, WandSparkles, ShieldCheck, ShieldAlert, Sparkles } from 'lucide-react';
+import { Plus, Trash2, WandSparkles, ShieldCheck, ShieldAlert, Sparkles, AlertTriangle } from 'lucide-react';
 import { useCharacterStore } from '../../../store/characterStore';
 
 const STAT_OPTIONS = [
   ['ac', '🛡 Armor Class (AC)'],
   ['hp', '❤️ Hit Points (HP)'],
   ['bab', '⚔ Base Attack Bonus (BAB)'],
+  ['init', '✨ İnisiyatif (Initiative)'],
+  ['speed', '🏃 Hız (Speed)'],
   ['fortitude', '🏰 Fortitude Save'],
   ['reflex', '⚡ Reflex Save'],
-  ['will', '🔮 Will Save']
+  ['will', '🔮 Will Save'],
+  ['skill:Stealth', '✦ Skill: Stealth'],
+  ['skill:Perception', '✦ Skill: Perception'],
+  ['skill:Acrobatics', '✦ Skill: Acrobatics'],
+  ['skill:Spellcraft', '✦ Skill: Spellcraft'],
+  ['skill:Use Magic Device', '✦ Skill: Use Magic Device']
 ];
 
 export default function GMModifierPanel() {
@@ -74,6 +81,26 @@ export default function GMModifierPanel() {
       <p style={{ color: '#8b949e', fontSize: '0.78rem', marginTop: 0, marginBottom: '12px' }}>
         Masa kuralları, geçici büyü buff/debuff etkileri veya özel stat modifikatörlerini (+X / -X) canlı hesaplamaya ekleyin.
       </p>
+
+      {/* Soft-Block Rule Violation Inspector */}
+      {store.warnings && store.warnings.length > 0 && !is_overridden && (
+        <div style={{
+          background: 'rgba(232, 112, 112, 0.1)',
+          border: '1px solid rgba(232, 112, 112, 0.3)',
+          borderRadius: '8px',
+          padding: '10px 14px',
+          marginBottom: '14px'
+        }}>
+          <div style={{ fontSize: '0.78rem', color: '#e87070', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '6px' }}>
+            <AlertTriangle size={14} /> Soft-Block Kural İhlal Uyarıları ({store.warnings.length})
+          </div>
+          <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '0.75rem', color: '#f0e6d2' }}>
+            {store.warnings.map((w, idx) => (
+              <li key={idx} style={{ marginBottom: '2px' }}>{w}</li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {/* Input controls grid */}
       <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 80px 1.5fr auto', gap: '8px', marginBottom: '14px' }}>

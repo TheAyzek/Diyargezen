@@ -198,8 +198,7 @@ export default function FeatSelectorModal({
     <div
       style={{
         position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-        backgroundColor: 'rgba(10,10,20,0.90)',
-        backdropFilter: 'blur(10px)',
+        backgroundColor: 'rgba(7, 6, 15, 0.96)',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         zIndex: 99999, padding: '16px', boxSizing: 'border-box'
       }}
@@ -465,7 +464,7 @@ export default function FeatSelectorModal({
         {overrideModalTarget && (
           <div style={{
             position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
-            background: 'rgba(5, 4, 10, 0.85)', backdropFilter: 'blur(5px)',
+            background: 'rgba(7, 6, 15, 0.96)',
             display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 100000, padding: '16px'
           }}>
             <div className="sheet-card" style={{ maxWidth: '480px', width: '100%', padding: '24px', border: '1px solid var(--crimson-bright)', boxShadow: '0 0 30px rgba(233,69,96,0.3)' }}>

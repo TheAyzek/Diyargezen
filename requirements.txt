@@ -1,26 +1,29 @@
 # Diyargezer - TTRPG Karakter Oluşturucu - Bağımlılıklar
 
-# GUI - Ana framework
+# Web Backend API
+fastapi>=0.110.0
+uvicorn[standard]>=0.28.0
+python-multipart>=0.0.9
+pypdf>=4.0.0
+SQLAlchemy>=2.0.0
+PyJWT>=2.8.0
+passlib[bcrypt]>=1.7.4
+bcrypt>=4.0.0
+httpx>=0.27.0
+
+# GUI & Graphics
 PySide6>=6.5.0
-
-# PDF export
 reportlab>=4.0.0
-
-# Image processing (portreler için)
 Pillow>=10.0.0
 
-# Web scraping pipeline
+# Web scraping & ETL pipeline
 requests>=2.31.0
 beautifulsoup4>=4.12.0
 lxml>=4.9.0
 pydantic>=2.0.0
 
-# CLI (opsiyonel)
+# CLI & Development
 rich>=13.0.0
 inquirerpy>=0.3.0
-
-# EXE packaging
 pyinstaller>=6.0.0
-
-# Development
 pytest>=7.0.0

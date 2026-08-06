@@ -214,6 +214,8 @@ class MainWindow(QMainWindow):
 
 def run_app() -> None:
     """PySide6 uygulamasını başlat."""
+    import os
+    os.environ["QTWEBENGINE_CHROMIUM_FLAGS"] = "--disable-gpu-compositing --disable-gpu-rasterization --enable-begin-frame-scheduling"
     from PySide6.QtCore import Qt, QCoreApplication
     QCoreApplication.setAttribute(Qt.AA_ShareOpenGLContexts)
 

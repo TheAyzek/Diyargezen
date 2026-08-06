@@ -873,8 +873,34 @@ export default function PF1eLiveSheet() {
               </p>
             </div>
             <div style={{ fontSize: '12px', fontWeight: 'bold', color: '#a594ff', background: 'rgba(124,110,247,0.2)', padding: '4px 12px', borderRadius: '12px', border: '1px solid rgba(124,110,247,0.4)' }}>
-              Seviye {level || 1} {charClass || 'Büyücü'}
+              Seviye {level || 1} {charClass || 'Büyücü'} (CL {recalcedData.spellcasting?.caster_level || level || 1})
             </div>
+          </div>
+
+          {/* Spellcasting Engine Stat Header (DCs, Concentration, CL) */}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '10px', background: '#121124', padding: '14px', borderRadius: '8px', border: '1px solid rgba(124,110,247,0.25)' }}>
+            <div style={{ textAlign: 'center', padding: '6px', background: 'rgba(124,110,247,0.1)', borderRadius: '6px' }}>
+              <div style={{ fontSize: '10px', color: '#a594ff', fontWeight: 'bold' }}>BÜYÜCÜ SEVİYESİ (CL)</div>
+              <div style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#ffffff' }}>+{recalcedData.spellcasting?.caster_level || level || 1}</div>
+            </div>
+
+            <div style={{ textAlign: 'center', padding: '6px', background: 'rgba(124,110,247,0.1)', borderRadius: '6px' }}>
+              <div style={{ fontSize: '10px', color: '#a594ff', fontWeight: 'bold' }}>ODAKLANMA (CONCENTRATION)</div>
+              <div style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#38bdf8' }}>
+                {(recalcedData.spellcasting?.concentration_bonus ?? 0) >= 0 ? `+${recalcedData.spellcasting?.concentration_bonus || 0}` : recalcedData.spellcasting?.concentration_bonus || 0}
+              </div>
+            </div>
+
+            {/* Spell DC Cards per Level (0..5) */}
+            {[0, 1, 2, 3, 4, 5].map(lvlIdx => {
+              const dcVal = recalcedData.spellcasting?.spell_dcs?.[String(lvlIdx)] || (10 + lvlIdx + (recalcedData.ability_modifiers?.Intelligence || 0));
+              return (
+                <div key={lvlIdx} style={{ textAlign: 'center', padding: '6px', background: 'rgba(255,255,255,0.03)', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.06)' }}>
+                  <div style={{ fontSize: '10px', color: 'var(--color-text-secondary)' }}>{lvlIdx}. SEVİYE DC</div>
+                  <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--accent-gold)' }}>{dcVal}</div>
+                </div>
+              );
+            })}
           </div>
 
           {(!store.spells || store.spells.length === 0) ? (

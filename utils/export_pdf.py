@@ -84,9 +84,8 @@ def _stamp_portrait_on_pdf(pdf_path: Path, portrait_path: Path, system: str) -> 
         overlay_reader = PdfReader(overlay_path)
         
         writer = PdfWriter()
-        for page in reader.pages:
-            writer.add_page(page)
-            
+        writer.append(reader)
+
         if writer.pages and overlay_reader.pages:
             writer.pages[0].merge_page(overlay_reader.pages[0])
                 
@@ -362,7 +361,9 @@ PDF_MAPPINGS = {
         "hit points": lambda c: str(c.get("hit_points", 0)),
         "armor class": lambda c: str(c.get("armor_class", 10)),
         "touch_ac": lambda c: str(c.get("touch_ac", 10)),
+        "TOUCH": lambda c: str(c.get("touch_ac", 10)),
         "flat_footed_ac": lambda c: str(c.get("flat_footed_ac", 10)),
+        "FLATFOOTED": lambda c: str(c.get("flat_footed_ac", 10)),
         "INITIATIVE": lambda c: format_mod(c.get("initiative", get_modifier(c, "dexterity"))),
         "BASE ATTACK BONUS": lambda c: format_mod(c.get("bab", 0)),
         "CMB": lambda c: format_mod(c.get("cmb", 0)),
@@ -411,6 +412,28 @@ PDF_MAPPINGS = {
         "Survival":                lambda c: _skill(c, "survival"),
         "Swim":                    lambda c: _skill(c, "swim"),
         "Use Magic Device":        lambda c: _skill(c, "use_magic_device"),
+
+        # ── PF1e TAŞIMA KAPASİTESİ & ENVANTER ───────────────────────────────
+        "TOTAL WEIGHT": lambda c: str(c.get("derived", {}).get("total_weight") or c.get("total_weight", 0.0)),
+        "Light": lambda c: str(c.get("derived", {}).get("carrying_capacity", {}).get("light_max") or c.get("carrying_capacity", {}).get("light_max") or c.get("carrying_capacity", {}).get("light", "")),
+        "Medium": lambda c: str(c.get("derived", {}).get("carrying_capacity", {}).get("medium_max") or c.get("carrying_capacity", {}).get("medium_max") or c.get("carrying_capacity", {}).get("medium", "")),
+        "Heavy": lambda c: str(c.get("derived", {}).get("carrying_capacity", {}).get("heavy_max") or c.get("carrying_capacity", {}).get("heavy_max") or c.get("carrying_capacity", {}).get("heavy", "")),
+        "Lift Over": lambda c: str(c.get("derived", {}).get("carrying_capacity", {}).get("heavy_max") or c.get("carrying_capacity", {}).get("heavy_max") or c.get("carrying_capacity", {}).get("heavy", "")),
+        "Drag or": lambda c: str(round(float(c.get("derived", {}).get("carrying_capacity", {}).get("heavy_max") or c.get("carrying_capacity", {}).get("heavy_max") or c.get("carrying_capacity", {}).get("heavy", 0) or 0) * 5, 1)),
+
+        # ── PF1e AC BREAKDOWN (ZIRH SINIFI AYRIŞTIRMASI) ───────────────────
+        "Armor": lambda c: str(c.get("derived", {}).get("ac_breakdown", {}).get("armor") or c.get("armor_bonus", 0)),
+        "Shield": lambda c: str(c.get("derived", {}).get("ac_breakdown", {}).get("shield") or c.get("shield_bonus", 0)),
+        "Dex_2": lambda c: format_mod(c.get("derived", {}).get("ac_breakdown", {}).get("dex") or get_modifier(c, "dexterity")),
+        "Natural": lambda c: str(c.get("derived", {}).get("ac_breakdown", {}).get("natural") or c.get("natural_armor", 0)),
+        "Deflect": lambda c: str(c.get("derived", {}).get("ac_breakdown", {}).get("deflection") or 0),
+        "Misc": lambda c: str(c.get("derived", {}).get("ac_breakdown", {}).get("misc") or 0),
+
+        # ── PF1e PARA / GOLD ──────────────────────────────────────────────
+        "Gold": lambda c: str(c.get("money", {}).get("gp", c.get("gold", 0))),
+        "Silver": lambda c: str(c.get("money", {}).get("sp", c.get("silver", 0))),
+        "Copper": lambda c: str(c.get("money", {}).get("cp", c.get("copper", 0))),
+        "Platinum": lambda c: str(c.get("money", {}).get("pp", c.get("platinum", 0))),
 
         # Multiline
         "Feats": lambda c: "\n".join(c.get("feats", [])),
@@ -605,17 +628,80 @@ def _fill_pdf_form(character: dict, template_name: str, mapping: dict, output_pa
                 except Exception:
                     pass
 
-    # 1. Equipment sequential matching
+    # 1. Equipment & Individual Weights sequential matching
     eq_list = character.get("equipment", [])
     for idx, item in enumerate(eq_list, 1):
-        name = item.get("name", "") if isinstance(item, dict) else str(item)
-        qty = f" x{item.get('quantity')}" if isinstance(item, dict) and item.get("quantity") else ""
-        item_str = f"{name}{qty}"
+        if idx > 26:
+            break
+        name = item.get("name") or item.get("isim") or str(item) if isinstance(item, dict) else str(item)
+        qty = item.get("quantity", 1) if isinstance(item, dict) else 1
+        qty_str = f" x{qty}" if qty > 1 else ""
+        item_str = f"{name}{qty_str}"
         
-        for prefix in ["eq", "eq_", "equipment", "equipment_", "item", "item_"]:
+        # Item name field (e.g., "Item 1", "Item 2")
+        for prefix in ["Item ", "Item", "eq", "eq_", "equipment", "equipment_"]:
             f_name = f"{prefix}{idx}"
             if f_name in all_pdf_fields:
                 fields_to_fill[f_name] = item_str
+                break
+
+        # Item total weight field (e.g., "WT 1", "WT 2")
+        if isinstance(item, dict):
+            try:
+                from rules.calculators import extract_weight_and_qty
+                w_val, q_val = extract_weight_and_qty(item)
+                item_total_wt = round(w_val * q_val, 1)
+                if item_total_wt > 0:
+                    for wt_prefix in ["WT ", "WT", "wt_", "Weight"]:
+                        wt_fname = f"{wt_prefix}{idx}"
+                        if wt_fname in all_pdf_fields:
+                            fields_to_fill[wt_fname] = str(item_total_wt)
+                            break
+            except Exception:
+                pass
+
+    # 1b. Weapon Cards matching (Weapon 1..5, Attack 1..5, Damage 1..5, Critical 1..5, Range 1..5, Type 1..5)
+    weapons_list = character.get("derived", {}).get("weapons") or character.get("weapons") or []
+    for idx, w in enumerate(weapons_list[:5], 1):
+        if isinstance(w, dict):
+            w_name = w.get("name") or w.get("isim") or "Silah"
+            atk_str = w.get("calculated_attack") or "+0"
+            dmg_str = w.get("calculated_damage") or "1d6"
+            crit_str = w.get("crit_range") or "20/x2"
+            range_str = w.get("range") or "Melee"
+            type_str = w.get("type") or "Slashing"
+            
+            if f"Weapon {idx}" in all_pdf_fields:
+                fields_to_fill[f"Weapon {idx}"] = w_name
+            if f"Attack {idx}" in all_pdf_fields:
+                fields_to_fill[f"Attack {idx}"] = atk_str
+            elif f"Bonus {idx}" in all_pdf_fields:
+                fields_to_fill[f"Bonus {idx}"] = atk_str
+            if f"Damage {idx}" in all_pdf_fields:
+                fields_to_fill[f"Damage {idx}"] = dmg_str
+            if f"Critical {idx}" in all_pdf_fields:
+                fields_to_fill[f"Critical {idx}"] = crit_str
+            if f"Range {idx}" in all_pdf_fields:
+                fields_to_fill[f"Range {idx}"] = range_str
+            if f"Type {idx}" in all_pdf_fields:
+                fields_to_fill[f"Type {idx}"] = type_str
+
+    # 1c. Companion & Familiar PDF Mapping
+    comp_obj = character.get("derived", {}).get("companion") or character.get("companion")
+    if comp_obj and isinstance(comp_obj, dict):
+        comp_name = comp_obj.get("name") or "Yoldaş"
+        comp_species = comp_obj.get("species") or comp_obj.get("type") or "Animal Companion"
+        comp_hp = comp_obj.get("hp", 0)
+        comp_ac = comp_obj.get("ac", 10)
+        comp_attacks = comp_obj.get("attacks") or "Doğal Saldırı"
+        comp_summary = f"YOLDAŞ: {comp_name} ({comp_species}) | Can: {comp_hp} HP | Zırh: {comp_ac} AC | Saldırı: {comp_attacks}"
+        
+        for comp_field in ["Special Attacks", "Special Attacks 2", "Notes", "Character Notes"]:
+            if comp_field in all_pdf_fields and comp_field not in fields_to_fill:
+                fields_to_fill[comp_field] = comp_summary
+                break
+            elif comp_field in fields_to_fill:
+                fields_to_fill[comp_field] = f"{fields_to_fill[comp_field]} | {comp_summary}"
                 break
                 
     # 2. Feats sequential matching
@@ -633,9 +719,27 @@ def _fill_pdf_form(character: dict, template_name: str, mapping: dict, output_pa
         # Bazı D&D5e PDF'lerinde "Spells 1014" gibi numaralar vardır, bu basit sequential eşleşme bazılarını yakalayabilir
         for prefix in ["spell", "spell_", "Spells", "Spells "]:
             f_name = f"{prefix}{idx}"
-            if f_name in all_pdf_fields:
-                fields_to_fill[f_name] = str(spell)
-                break
+    # 3b. Spellcasting Engine PDF Mapping (DCs, Concentration, CL)
+    sc_obj = character.get("derived", {}).get("spellcasting") or character.get("spellcasting")
+    if sc_obj and isinstance(sc_obj, dict):
+        cl_val = sc_obj.get("caster_level", 1)
+        conc_val = sc_obj.get("concentration_bonus", 0)
+        conc_str = f"+{conc_val}" if conc_val >= 0 else str(conc_val)
+        
+        for cl_field in ["CL", "Caster Level", "CASTER LEVEL"]:
+            if cl_field in all_pdf_fields:
+                fields_to_fill[cl_field] = str(cl_val)
+        for conc_field in ["Concentration", "CONCENTRATION", "Concentration Check"]:
+            if conc_field in all_pdf_fields:
+                fields_to_fill[conc_field] = conc_str
+
+        dcs = sc_obj.get("spell_dcs", {})
+        for lvl_i in range(0, 10):
+            dc_val = dcs.get(str(lvl_i)) or dcs.get(lvl_i)
+            if dc_val:
+                for dc_prefix in [f"Spell DC {lvl_i}", f"DC {lvl_i}", f"SPELL DC {lvl_i}"]:
+                    if dc_prefix in all_pdf_fields:
+                        fields_to_fill[dc_prefix] = str(dc_val)
                 
     # Fill values on all pages
     if fields_to_fill:

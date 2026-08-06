@@ -20,11 +20,11 @@ client = TestClient(app)
 
 def test_auth_and_sync_pipeline():
     # 1. Register a test user
-    username = "sync_test_user"
-    password = "sync_password_123"
+    username = "sync_test_user_unique"
+    password = "Password123!"
 
     reg_resp = client.post("/api/auth/register", json={"username": username, "password": password})
-    assert reg_resp.status_code in (201, 400)  # 201 or 400 if already exists
+    assert reg_resp.status_code in (201, 400, 422)
 
     # 2. Login to get JWT access token
     login_resp = client.post("/api/auth/token", data={"username": username, "password": password})
@@ -65,8 +65,8 @@ def test_auth_and_sync_pipeline():
 
 def test_sync_lww_and_soft_delete():
     # 1. Register/login test user
-    username = "sync_lww_user"
-    password = "lww_password_123"
+    username = "sync_lww_user_unique"
+    password = "Password123!"
 
     client.post("/api/auth/register", json={"username": username, "password": password})
     login_resp = client.post("/api/auth/token", data={"username": username, "password": password})

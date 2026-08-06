@@ -241,8 +241,16 @@ def validate_character_soft(
     data: Optional[Dict[str, Any]] = None,
 ) -> SoftValidationResult:
     """Sistem anahtarına göre soft validation."""
-    from pathlib import Path
-    db_path = Path(__file__).resolve().parent.parent / "data" / "characters.db"
+    try:
+        from app.core.config import DB_PATH as DEFAULT_DB_PATH
+    except ImportError:
+        try:
+            from web.backend.app.core.config import DB_PATH as DEFAULT_DB_PATH
+        except ImportError:
+            DEFAULT_DB_PATH = Path(__file__).resolve().parent.parent / "data" / "characters.db"
+
+    db_path = DEFAULT_DB_PATH
+
     
     key = system_key.lower().replace("_", "").replace("-", "")
     result = SoftValidationResult()

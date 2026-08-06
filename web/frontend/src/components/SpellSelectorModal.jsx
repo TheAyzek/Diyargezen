@@ -117,7 +117,7 @@ export default function SpellSelectorModal({
   const modalContent = (
     <div style={{
       position: 'fixed', inset: 0, zIndex: 9999,
-      backgroundColor: 'rgba(0, 0, 0, 0.85)', backdropFilter: 'blur(8px)',
+      backgroundColor: 'rgba(7, 6, 15, 0.96)',
       display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1.5rem'
     }}>
       <div style={{

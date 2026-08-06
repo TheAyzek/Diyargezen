@@ -1011,23 +1011,56 @@ class PF1e_Calculator(BaseCalculator):
             if m.get("makes_class_skill") and m.get("skill_name"):
                 class_skills_set.add(m.get("skill_name"))
 
-        # BAB (PF1e Core: Full=level, Medium=3/4*level, Poor=1/2*level)
-        if bab_prog == "full":
-            bab = level
-        elif bab_prog == "medium":
-            bab = (level * 3) // 4
+        # Multiclass Stacking Support (PF1e CRB p. 30)
+        multiclass_data = character.get("multiclass")
+        if multiclass_data and isinstance(multiclass_data, dict) and len(multiclass_data) > 0:
+            from rules.archetype_engine import PF1eMulticlassEngine
+            mc_res = PF1eMulticlassEngine.calculate_multiclass_progression(multiclass_data)
+            bab = mc_res["total_bab"]
+            derived["bab"] = bab
+            saves: Dict[str, int] = {
+                "Fortitude": mc_res["base_fort"] + mods["constitution"],
+                "Reflex": mc_res["base_ref"] + mods["dexterity"],
+                "Will": mc_res["base_will"] + mods["wisdom"]
+            }
+            derived["saving_throws"] = saves
         else:
-            bab = level // 2
-        derived["bab"] = bab
+            # BAB (PF1e Core: Full=level, Medium=3/4*level, Poor=1/2*level)
+            if bab_prog == "full":
+                bab = level
+            elif bab_prog == "medium":
+                bab = (level * 3) // 4
+            else:
+                bab = level // 2
+            derived["bab"] = bab
 
-        # Base Saves (Good: 2 + level/2, Poor: level/3)
-        save_prog = class_data.get("saving_throws", {}) or {}
-        saves: Dict[str, int] = {}
-        for save_type, ab in [("fortitude", "constitution"), ("reflex", "dexterity"), ("will", "wisdom")]:
-            prog      = str(save_prog.get(save_type, "poor")).lower()
-            base_save = (2 + level // 2) if prog == "good" else (level // 3)
-            saves[save_type.title()] = base_save + mods[ab]
-        derived["saving_throws"] = saves
+            # Base Saves (Good: 2 + level/2, Poor: level/3)
+            save_prog = class_data.get("saving_throws", {}) or {}
+            saves: Dict[str, int] = {}
+            for save_type, ab in [("fortitude", "constitution"), ("reflex", "dexterity"), ("will", "wisdom")]:
+                prog      = str(save_prog.get(save_type, "poor")).lower()
+                base_save = (2 + level // 2) if prog == "good" else (level // 3)
+                saves[save_type.title()] = base_save + mods[ab]
+            derived["saving_throws"] = saves
+
+        # Archetype Compatibility & Feature Replacements (PF1e APG p. 72)
+        from rules.archetype_engine import PF1eArchetypeEngine
+        raw_archs = character.get("archetypes") or character.get("archetype") or []
+        if isinstance(raw_archs, str):
+            raw_archs = [raw_archs]
+        elif not isinstance(raw_archs, list):
+            raw_archs = []
+
+        if raw_archs:
+            char_cls = character.get("class", "Fighter")
+            is_compat, conflicts = PF1eArchetypeEngine.validate_archetype_compatibility(char_cls, raw_archs)
+            arch_feats = PF1eArchetypeEngine.get_archetype_features(char_cls, raw_archs)
+            derived["archetype_details"] = {
+                "is_compatible": is_compat,
+                "conflicts": conflicts,
+                "replaced_features": arch_feats["replaced_features"],
+                "granted_features": arch_feats["granted_features"]
+            }
 
         # HP (PF1e: Max at 1st, average+1 thereafter)
         hit_die_raw = str(class_data.get("hit_die", "8")).lower()
@@ -1195,6 +1228,7 @@ class PF1e_Calculator(BaseCalculator):
 
         # ── ADIM 5: Nihai AC, CMB, CMD, Inisiyatif ve Silah Atak/Hasar Bloğu ────────
         size_cmb = int(character.get("size_modifier", 0))
+        derived["initiative"] = derived.get("initiative", mods["dexterity"])
 
         derived["armor_class"]    = 10 + dex_contrib + armor_bonus + shield_bonus + natural_armor + deflect_bonus + misc_ac_bonus + size_ac
         derived["touch_ac"]       = 10 + dex_contrib + deflect_bonus + misc_ac_bonus + size_ac
@@ -1203,6 +1237,15 @@ class PF1e_Calculator(BaseCalculator):
         derived["cmd"]            = 10 + derived["bab"] + mods["strength"] + dex_contrib - size_cmb + deflect_bonus
         derived["melee_attack_bonus"]  = derived["bab"] + mods["strength"]
         derived["ranged_attack_bonus"] = derived["bab"] + mods["dexterity"]
+
+        derived["ac_breakdown"] = {
+            "armor": armor_bonus,
+            "shield": shield_bonus,
+            "dex": dex_contrib,
+            "natural": natural_armor,
+            "deflection": deflect_bonus,
+            "misc": misc_ac_bonus + size_ac
+        }
 
         # Calculate Weapon Cards (Attacks & Damage)
         calculated_weapons = []
@@ -1376,6 +1419,51 @@ class PF1e_Calculator(BaseCalculator):
                     
         derived["spell_slots"] = spell_slots
 
+        # PF1e Spellcasting Engine Deepening (Caster Level, Concentration, Spell Save DCs, Bonus Slots)
+        from rules.spell_engine import (
+            get_casting_ability_for_class,
+            calculate_bonus_spell_slots,
+            calculate_spell_save_dc,
+            calculate_total_spell_slots
+        )
+
+        c_ability = get_casting_ability_for_class(class_name_lower) or casting_ability or "intelligence"
+        c_stat_mod = mods.get(c_ability.lower(), 0)
+        c_score = derived["ability_scores"].get(c_ability.title(), 10)
+
+        # Caster Level (CL)
+        if any(r in class_name_lower for r in ("ranger", "paladin")):
+            cl_val = max(1, level - 3) if level >= 4 else 0
+        else:
+            cl_val = level
+
+        # Concentration Check (CL + Casting Mod + Combat Casting (+4 if present))
+        has_combat_casting = any("combat casting" in str(f).lower() for f in character.get("feats", []))
+        concentration_bonus = cl_val + c_stat_mod + (4 if has_combat_casting else 0)
+
+        # Spell Save DCs (10 + Spell Level + Casting Mod + Spell Focus (+1 if present))
+        has_spell_focus = any("spell focus" in str(f).lower() for f in character.get("feats", []))
+        misc_dc_bonus = 1 if has_spell_focus else 0
+        spell_dcs = {
+            str(lvl_i): calculate_spell_save_dc(lvl_i, c_stat_mod, misc_dc_bonus)
+            for lvl_i in range(0, 10)
+        }
+
+        bonus_slots_dict = calculate_bonus_spell_slots(c_score)
+        tot_slots_dict = calculate_total_spell_slots(class_name_lower, level, c_score)
+
+        derived["spellcasting"] = {
+            "primary_ability": c_ability,
+            "ability_modifier": c_stat_mod,
+            "caster_level": cl_val,
+            "concentration_bonus": concentration_bonus,
+            "has_combat_casting": has_combat_casting,
+            "has_spell_focus": has_spell_focus,
+            "spell_dcs": spell_dcs,
+            "bonus_slots": bonus_slots_dict,
+            "total_slots": tot_slots_dict
+        }
+
         # snake_case aliases (PDF export bunları kullanır)
         derived["skills"] = {
             k.lower().replace(" ", "_"): v
@@ -1444,6 +1532,51 @@ class PF1e_Calculator(BaseCalculator):
                 elif stat_key in ("will",):
                     if "Will" in derived.get("saving_throws", {}):
                         derived["saving_throws"]["Will"] += val_int
+                elif stat_key.startswith("skill:"):
+                    sk_name = stat_key.split(":", 1)[1].lower().replace(" ", "_")
+                    if "skills" in derived and sk_name in derived["skills"]:
+                        derived["skills"][sk_name] += val_int
+                elif stat_key in ("speed", "hiz"):
+                    derived["speed"] = max(0, derived.get("speed", 30) + val_int)
+                elif stat_key == "cmb":
+                    derived["cmb"] += val_int
+                elif stat_key == "cmd":
+                    derived["cmd"] += val_int
+
+        # ADIM 7: Companion & Familiar Calculation & Master Bonus Application
+        companion_raw = character.get("companion")
+        if companion_raw and isinstance(companion_raw, dict):
+            from rules.companion_calculator import PF1eCompanionCalculator
+            comp_type = str(companion_raw.get("type", "animal_companion")).lower()
+            if comp_type == "familiar":
+                calc_comp = PF1eCompanionCalculator.calculate_familiar(
+                    companion_raw,
+                    master_level=level,
+                    master_max_hp=derived.get("hit_points", 10)
+                )
+                master_bonus = calc_comp.get("master_bonus")
+                if master_bonus and isinstance(master_bonus, dict):
+                    target = master_bonus.get("target")
+                    val = master_bonus.get("value", 0)
+                    if target == "hp":
+                        derived["hit_points"] += val
+                    elif target == "initiative":
+                        derived["initiative"] += val
+                    elif target == "saving_throws.Reflex":
+                        if "Reflex" in derived.get("saving_throws", {}):
+                            derived["saving_throws"]["Reflex"] += val
+                    elif target and target.startswith("skill:"):
+                        sk_name = target.split(":", 1)[1]
+                        sk_key = sk_name.lower().replace(" ", "_")
+                        if "skills" in derived and sk_key in derived["skills"]:
+                            derived["skills"][sk_key] += val
+            else:
+                calc_comp = PF1eCompanionCalculator.calculate_animal_companion(
+                    companion_raw,
+                    master_class=character.get("class", "Druid"),
+                    master_level=level
+                )
+            derived["companion"] = calc_comp
 
         return derived
 

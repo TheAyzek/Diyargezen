@@ -15,13 +15,14 @@ from parsers.base import CATEGORY_TO_SECTION
 logger = logging.getLogger(__name__)
 
 # data_file → sistem anahtarı
-DATA_FILE_TO_SYSTEM: Dict[str, str] = {
-    "dnd_data.json": "dnd5e",
-    "pathfinder_1e_data.json": "pathfinder1e",
-    "mm_data.json": "mm3e",
-}
+try:
+    from app.core.config import DB_PATH as DEFAULT_DB
+except ImportError:
+    try:
+        from web.backend.app.core.config import DB_PATH as DEFAULT_DB
+    except ImportError:
+        DEFAULT_DB = Path(__file__).resolve().parent.parent / "data" / "characters.db"
 
-DEFAULT_DB = Path(__file__).resolve().parent.parent / "data" / "characters.db"
 
 
 class EntityRepository:

@@ -29,13 +29,21 @@ import sys
 if getattr(sys, 'frozen', False):
     BASE_DIR = Path(getattr(sys, '_MEIPASS', ''))
     EXEC_DIR = Path(sys.executable).parent
-    DEFAULT_DB = EXEC_DIR / "data" / "characters.db"
-    DATA_DIR = BASE_DIR / "data"
 else:
     BASE_DIR = Path(__file__).resolve().parent.parent
     EXEC_DIR = BASE_DIR
-    DEFAULT_DB = BASE_DIR / "data" / "characters.db"
-    DATA_DIR = BASE_DIR / "data"
+
+DATA_DIR = BASE_DIR / "data"
+
+try:
+    from app.core.config import DB_PATH as DEFAULT_DB
+except ImportError:
+    try:
+        from web.backend.app.core.config import DB_PATH as DEFAULT_DB
+    except ImportError:
+        DEFAULT_DB = BASE_DIR / "data" / "characters.db"
+
+
 
 SYSTEM_FILES: Dict[str, List[str]] = {
     "pathfinder1e": ["pathfinder_1e_data.json"],

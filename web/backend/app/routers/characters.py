@@ -33,6 +33,7 @@ class LevelUpPayload(BaseModel):
     feats: List[str] = Field(default_factory=list, description="Feats selected in this level")
     ability_increase: Optional[str] = Field(None, description="Ability score increased in this level (+1)")
     hp_added: int = Field(default=6, description="Base hit die roll/added for this level")
+    favored_class_bonus: Optional[str] = Field("hp", description="Favored Class Bonus choice: 'hp' or 'skill'")
     spells_learned: List[str] = Field(default_factory=list, description="Spells learned in this level")
 
 @router.get("", response_model=List[CharacterResponse])

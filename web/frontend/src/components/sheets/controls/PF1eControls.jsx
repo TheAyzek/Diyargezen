@@ -60,14 +60,15 @@ export default function PF1eControls() {
   const {
     id, name, level, race, class: charClass, feat, abilities, skills, recalcedData,
     alignment, gender, age, height, weight, deity, homeland, hair, eyes,
-    backstory, personality, allies, notes, usedSpellSlots = {}, preparedSpells = {}, gold = 150,
-    traits, feats, spells = [], raceData = {}, classData = {},
+    traits, feats, spells = [],
     racialAbilityChoice = 'strength', secondaryRacialAbilityChoice = 'dexterity', selectedRacialTraits = [],
     updateField, updateAbility, updateSkillRank, addEquipment, removeEquipment,
     addTrait, removeTrait, addFeat, removeFeat, addSpell, removeSpell, toggleRacialTrait, applyLevelUp,
     toggleSpellSlotUsed, setPreparedSpell, togglePreparedSpellCast, restCharacter, deductGold
-
   } = store;
+
+  const raceData = store.raceData || store.recalcedData?.race_data || {};
+  const classData = store.classData || store.recalcedData?.class_data || {};
 
   const [tab, setTab] = useState('identity');
   const scrollRef = useRef(null);

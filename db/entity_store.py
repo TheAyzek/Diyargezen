@@ -96,7 +96,8 @@ def _source_fingerprint(data_dir: Path, filenames: List[str]) -> str:
 
 
 def needs_rebuild(db_path: Path, data_dir: Path, systems: List[str]) -> bool:
-    """JSON dosyaları değiştiyse veya DB boşsa True."""
+    """JSON dosyaları değiştiyse veya DB boşsa True. Doldurulmuş veritabanı varsa asla sıfırlama."""
+    import sys
     if not db_path.exists():
         return True
     try:
@@ -104,6 +105,9 @@ def needs_rebuild(db_path: Path, data_dir: Path, systems: List[str]) -> bool:
             count = conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
         if count == 0:
             return True
+        # Projeye paketlenmiş veya işlenmiş 22,000+ verisi olan veritabanını açılışta ASLA silme/sıfırlama!
+        if getattr(sys, 'frozen', False) or count > 500:
+            return False
     except Exception:
         return True
 
@@ -113,8 +117,8 @@ def needs_rebuild(db_path: Path, data_dir: Path, systems: List[str]) -> bool:
         "mm3e": ["mm_data.json"],
     }
     expected_parts = []
-    for sys in systems:
-        for fn in file_map.get(sys, []):
+    for sys_item in systems:
+        for fn in file_map.get(sys_item, []):
             expected_parts.append(fn)
     fingerprint = _source_fingerprint(data_dir, expected_parts)
     stored = get_etl_meta(db_path, "source_fingerprint")

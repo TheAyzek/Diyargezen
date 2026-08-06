@@ -819,4 +819,53 @@ a:hover {
   animation: spin 2s linear infinite;
 }
 
+/* ── Compendium & Sheet Dropdown Select Controls ── */
+select,
+option,
+.sheet-input,
+.form-select {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+.sheet-input {
+  background: rgba(16, 14, 28, 0.95) !important;
+  border: 1px solid rgba(201, 168, 76, 0.3) !important;
+  color: var(--gold-light) !important;
+  font-family: var(--font-body);
+  border-radius: 6px;
+  padding: 8px 12px;
+  outline: none !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.sheet-input:focus,
+.sheet-input:focus-visible,
+.sheet-input:hover {
+  border-color: var(--gold-bright) !important;
+  box-shadow: 0 0 10px rgba(201, 168, 76, 0.25) !important;
+  outline: none !important;
+}
+
+.sheet-input option,
+select option {
+  background-color: #0d0b18 !important;
+  color: var(--gold-light) !important;
+  padding: 8px 12px;
+}
+
+.sheet-input option:hover,
+.sheet-input option:focus,
+.sheet-input option:active,
+.sheet-input option:checked,
+select option:hover,
+select option:focus,
+select option:active,
+select option:checked {
+  background-color: rgba(201, 168, 76, 0.25) !important;
+  color: var(--gold-bright) !important;
+}
+
+
 

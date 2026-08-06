@@ -143,7 +143,13 @@ export default function LevelUpWizardModal({
       skillRanksGained: spentSkills,
       newFeat: selectedFeat,
       abilityIncrease: grantsAbilityIncrease ? selectedAbility : null,
-      fcbChoice
+      fcbChoice,
+      class_name: character.class || 'Fighter',
+      hp_added: hpRoll,
+      favored_class_bonus: fcbChoice,
+      skill_ranks: spentSkills,
+      feats: selectedFeat ? [selectedFeat.name || selectedFeat.isim || selectedFeat] : [],
+      ability_increase: grantsAbilityIncrease ? selectedAbility : null
     };
 
     onApplyLevelUp(levelUpPayload);
@@ -153,7 +159,7 @@ export default function LevelUpWizardModal({
   return ReactDOM.createPortal(
     <div style={{
       position: 'fixed', inset: 0, zIndex: 9999,
-      backgroundColor: 'rgba(0, 0, 0, 0.88)', backdropFilter: 'blur(10px)',
+      backgroundColor: 'rgba(7, 6, 15, 0.96)',
       display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1.5rem'
     }}>
       <div style={{

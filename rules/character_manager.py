@@ -784,6 +784,7 @@ class CharacterManager:
             derived = calc.calculate(self.active_character)
 
         self.active_character.update(derived)
+        self.active_character["derived"] = derived
         return self.active_character
 
     def calculate_level_up_slots(self, character: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:

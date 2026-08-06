@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: diyargezen-web
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt && cd web/frontend && npm install && npm run build"
+    startCommand: "PYTHONPATH=. python web/backend/run.py"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.6
+      - key: NODE_VERSION
+        value: 20.10.0

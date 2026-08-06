@@ -344,8 +344,22 @@ export const useCharacterStore = create((set, get) => ({
     get().recalculate();
   },
 
-  applyLevelUp: (levelUpData) => {
-    const { newLevel, hpGained, skillRanksGained, newFeat, abilityIncrease } = levelUpData;
+  applyLevelUp: async (levelUpData) => {
+    const state = get();
+    if (state.id) {
+      const payload = {
+        class_name: levelUpData.class_name || state.class || 'Fighter',
+        hp_added: levelUpData.hp_added || levelUpData.hpGained || 6,
+        favored_class_bonus: levelUpData.favored_class_bonus || levelUpData.fcbChoice || 'hp',
+        skill_ranks: levelUpData.skill_ranks || levelUpData.skillRanksGained || {},
+        feats: levelUpData.feats || (levelUpData.newFeat ? [levelUpData.newFeat.name || levelUpData.newFeat.isim || levelUpData.newFeat] : []),
+        ability_increase: levelUpData.ability_increase || levelUpData.abilityIncrease || null,
+        spells_learned: levelUpData.spells_learned || []
+      };
+      return await get().levelUp(payload.class_name, payload);
+    }
+
+    const { newLevel, hpGained, skillRanksGained, newFeat, abilityIncrease, fcbChoice } = levelUpData;
     set(state => {
       const nextSkills = { ...(state.skills || {}) };
       if (skillRanksGained && typeof skillRanksGained === 'object') {
@@ -365,14 +379,15 @@ export const useCharacterStore = create((set, get) => ({
         nextAbilities[abKey] = (parseInt(nextAbilities[abKey]) || 10) + 1;
       }
 
+      const fcbHp = fcbChoice === 'hp' ? 1 : 0;
       const currentHp = state.recalcedData?.hit_points || 10;
 
       return {
-        level: newLevel,
+        level: newLevel || (parseInt(state.level) || 1) + 1,
         skills: nextSkills,
         feats: nextFeats,
         abilities: nextAbilities,
-        hit_points: currentHp + (hpGained || 0)
+        hit_points: currentHp + (hpGained || 0) + fcbHp
       };
     });
     get().recalculate();

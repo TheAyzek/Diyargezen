@@ -23,11 +23,11 @@ SETUP_EXE = DIST_DIR / "Diyargezen_Setup_v2.0.exe"
 SETUP_ZIP = DIST_DIR / "Diyargezen_Portable_v2.0.zip"
 
 
-def check_and_build_app() -> bool:
-    """Dağıtım klasörünün varlığını doğrular veya PyInstaller betiğini tetikler."""
+def check_and_build_app(force_rebuild: bool = True) -> bool:
+    """Dağıtım klasörünü PyInstaller ile günceller."""
     exe_file = APP_DIR / "Diyargezen.exe"
-    if not exe_file.exists():
-        print("🔨 Standalone .exe paketi henüz derlenmemiş. Derleme başlatılıyor...")
+    if force_rebuild or not exe_file.exists():
+        print("🔨 Standalone .exe paketi derlemesi başlatılıyor...")
         build_script = WORKSPACE_ROOT / "desktop" / "build_exe.py"
         res = subprocess.run([sys.executable, str(build_script)], cwd=WORKSPACE_ROOT)
         if res.returncode != 0 or not exe_file.exists():
@@ -38,17 +38,15 @@ def check_and_build_app() -> bool:
 
 def find_iscc() -> Path | None:
     """Inno Setup Derleyicisi (ISCC.exe) yolunu tespit eder."""
-    # Check PATH
     iscc_path = shutil.which("ISCC.exe") or shutil.which("iscc")
     if iscc_path:
         return Path(iscc_path)
 
-    # Check standard Windows Program Files paths
     standard_paths = [
-        Path(os.environ.get("ProgramFiles(x86)", "C:\\Program Files (x86)")) / "Inno Setup 6" / "ISCC.exe",
-        Path(os.environ.get("ProgramFiles", "C:\\Program Files")) / "Inno Setup 6" / "ISCC.exe",
-        Path("C:\\Program Files (x86)\\Inno Setup 6\\ISCC.exe"),
-        Path("C:\\Program Files\\Inno Setup 6\\ISCC.exe"),
+        Path(r"C:\Program Files (x86)\Inno Setup 6\ISCC.exe"),
+        Path(r"C:\Program Files\Inno Setup 6\ISCC.exe"),
+        Path(os.environ.get("ProgramFiles(x86)", r"C:\Program Files (x86)")) / "Inno Setup 6" / "ISCC.exe",
+        Path(os.environ.get("ProgramFiles", r"C:\Program Files")) / "Inno Setup 6" / "ISCC.exe",
     ]
 
     for p in standard_paths:
@@ -56,6 +54,7 @@ def find_iscc() -> Path | None:
             return p
 
     return None
+
 
 
 def build_zip_package() -> bool:
