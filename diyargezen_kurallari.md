@@ -74,4 +74,64 @@ Aşağıdaki terimler ve kod karşılıkları tüm projede (UI metinleri, API pa
 - **Feat (Hüner / Yetenek):** Entity Kategori: `feat`. Alt Türler: `Combat`, `Metamagic`, `Teamwork`, `Item Creation`, `Racial`, `General`, `Mythic`, `Style`, `Critical`.
 - **Trait (Karakter / Soy Özelliği):** Entity Kategori: `trait`. Alt Türler: `Combat`, `Social`, `Faith`, `Magic`, `Racial`, `Regional`, `Campaign`, `Equipment`.
 - **Class Feature (Sınıf Yeteneği):** Entity Kategori: `class-feature`.
-- **Spell (Büyü):** Entity Kategori: `spell`.
+- **Spell (Büyü):** Entity Kategori: `spell`.
+
+### G. Yönelimler (Alignments - 9 Yönelim)
+- **Lawful Good (LG):** `Düzenli İyi`
+- **Neutral Good (NG):** `Tarafsız İyi`
+- **Chaotic Good (CG):** `Kaotik İyi`
+- **Lawful Neutral (LN):** `Düzenli Tarafsız`
+- **True Neutral (TN):** `Tam Tarafsız`
+- **Chaotic Neutral (CN):** `Kaotik Tarafsız`
+- **Lawful Evil (LE):** `Düzenli Kötü`
+- **Neutral Evil (NE):** `Tarafsız Kötü`
+- **Chaotic Evil (CE):** `Kaotik Kötü`
+
+### H. Büyü Okları (Magic Schools - 8 Okul)
+- **Abjuration:** `Koruma Okulu`
+- **Conjuration:** `Çağırma Okulu`
+- **Divination:** `Kehanet Okulu`
+- **Enchantment:** `Efsun Okulu`
+- **Evocation:** `Yıkım Okulu`
+- **Illusion:** `Yanılsama Okulu`
+- **Necromancy:** `Ölüm Büyüsü Okulu`
+- **Transmutation:** `Dönüşüm Okulu`
+
+### I. Boyut Sınıfları (Size Categories - 9 Boyut)
+- **Fine:** `İğne Boyu` (-8 Size Mod)
+- **Diminutive:** `Ufak` (-4 Size Mod)
+- **Tiny:** `Minyatür` (-2 Size Mod)
+- **Small:** `Küçük` (+1 AC/BAB)
+- **Medium:** `Orta` (+0 Size Mod)
+- **Large:** `Büyük` (-1 AC/BAB)
+- **Huge:** `Devasa` (-2 AC/BAB)
+- **Gargantuan:** `Dev` (-4 AC/BAB)
+- **Colossal:** `Karasal / Devasa` (-8 AC/BAB)
+
+### J. Standart PF1e Skill (Yetenek) Listesi (25 Yetenek)
+- **Acrobatics:** `Akrobasi` (DEX)
+- **Appraise:** `Değer Biçme` (INT)
+- **Bluff:** `Blöf` (CHA)
+- **Climb:** `Tırmanma` (STR)
+- **Craft:** `Zanaat` (INT)
+- **Diplomacy:** `Diplomasi` (CHA)
+- **Disable Device:** `Cihaz Devre Dışı Bırakma / Tuzak Çözme` (DEX)
+- **Disguise:** `Kılık Değiştirme` (CHA)
+- **Escape Artist:** `Kaçış Artisti` (DEX)
+- **Fly:** `Uçma` (DEX)
+- **Handle Animal:** `Hayvan Eğitimi` (CHA)
+- **Heal:** `İyileştirme` (WIS)
+- **Intimidate:** `Gözdağı` (CHA)
+- **Knowledge:** `Bilgi` (INT - Arcana, Dungeoneering, Engineering, Geography, History, Local, Nature, Nobility, Planes, Religion)
+- **Linguistics:** `Dilbilim` (INT)
+- **Perception:** `Algı` (WIS)
+- **Perform:** `Gösteri Sanatı` (CHA)
+- **Profession:** `Meslek` (WIS)
+- **Ride:** `Binicilik` (DEX)
+- **Sense Motive:** `Niyet Sezme` (WIS)
+- **Sleight of Hand:** `El Çabukluğu` (DEX)
+- **Spellcraft:** `Büyü Sanatı` (INT)
+- **Stealth:** `Gizlilik` (DEX)
+- **Survival:** `Hayatta Kalma` (WIS)
+- **Swim:** `Yüzme` (STR)
+- **Use Magic Device:** `Büyülü Cihaz Kullanımı` (CHA)

@@ -3,4 +3,8 @@
 ## 1. PRODUCT SCOPE & CORE PURPOSE
 - **Strict Role:** Diyargezen is strictly a **Pathfinder 1st Edition (PF1e) Character Creator & Builder**.
 - **Out of Scope:** The application is **NOT** a VTT (Virtual Tabletop), combat initiative tracker, map engine, or battle simulator.
-- **Core Focus:** 100% legal character creation, Level-Up Wizard state machine, soft-block GM rule overrides, offline-first desktop/web synchronization, and live fillable AcroForm PDF export.
+## 2. TERMINOLOGY STANDARDIZATION & NAMING CONVENTIONS
+- **Strict Rule:** All UI labels, API schemas, DB categories, and model responses MUST strictly follow the standardized terms defined in `diyargezen_kurallari.md` Section 9.
+- **Weapon Categories:** Simple (`weapons_simple`), Martial (`weapons_martial`), Exotic (`weapons_exotic`), Firearms & Ammo (`weapons_firearm`), Siege Engines (`weapons_siege`).
+- **Armor Categories:** Light (`armor_light`), Medium (`armor_medium`), Heavy (`armor_heavy`), Shields (`armor_shield`).
+- **Alignments & Skills:** Standardized 9 alignments (LG, NG, CG, LN, TN, CN, LE, NE, CE) and 25 official PF1e skills.
