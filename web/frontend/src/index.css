@@ -867,5 +867,79 @@ select option:checked {
   color: var(--gold-bright) !important;
 }
 
+/* ==========================================================================
+   Mobile Responsive & Touch Optimization Rules (<768px & <480px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  body {
+    font-size: 13px;
+  }
+
+  .main-content {
+    margin: 12px auto !important;
+    padding: 0 10px !important;
+  }
+
+  .app-header {
+    padding: 10px 14px !important;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .app-logo {
+    font-size: 18px !important;
+  }
+
+  /* Grid layout fallbacks */
+  .ability-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)) !important;
+    gap: 8px !important;
+  }
+
+  /* Full screen modals on mobile */
+  .glass-card[style*="maxWidth: 750px"],
+  .glass-card[style*="maxWidth: 800px"],
+  .glass-card[style*="maxWidth: 900px"],
+  div[style*="zIndex: 99999"] > div {
+    max-width: 100% !important;
+    max-height: 98vh !important;
+    padding: 14px 10px !important;
+    border-radius: 6px !important;
+  }
+
+  /* Touch scrolling containers */
+  div[style*="overflowX: auto"],
+  div[style*="overflow-x: auto"] {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  div[style*="overflowX: auto"]::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Mobile button sizing & touch targets */
+  button, .btn {
+    min-height: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .glass-card {
+    padding: 14px 10px !important;
+  }
+
+  /* Compendium pills font size scaling */
+  button[style*="fontFamily: Cinzel"] {
+    font-size: 0.72rem !important;
+    padding: 4px 10px !important;
+  }
+}
+
 
 

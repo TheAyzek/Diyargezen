@@ -128,7 +128,7 @@ export default function App() {
     <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: 'var(--void)' }}>
       
       {/* High-Fantasy App Header Bar */}
-      <header className="app-header" style={{ background: 'linear-gradient(180deg, rgba(10,8,20,0.99) 0%, rgba(7,6,15,0.97) 100%)', borderBottom: '1px solid rgba(201,168,76,0.25)', height: 58, padding: '0 24px' }}>
+      <header className="app-header" style={{ background: 'linear-gradient(180deg, rgba(10,8,20,0.99) 0%, rgba(7,6,15,0.97) 100%)', borderBottom: '1px solid rgba(201,168,76,0.25)', minHeight: 58, height: 'auto', padding: '8px 16px', flexWrap: 'wrap', gap: '10px' }}>
         <div className="header-border-top" />
         
         <div style={{ display: 'flex', alignItems: 'center', gap: '24px' }}>
