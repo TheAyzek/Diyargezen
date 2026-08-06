@@ -7,10 +7,10 @@ import './index.css'
 // Configure Axios default base URL for desktop / file:// / web environments
 if (typeof window !== 'undefined') {
   const origin = window.location.origin || '';
-  if (origin.startsWith('http://127.0.0.1:8000') || origin.startsWith('http://localhost:8000')) {
-    axios.defaults.baseURL = '';
-  } else {
+  if (origin.startsWith('file:') || origin.startsWith('app:') || origin.includes('qtwebengine')) {
     axios.defaults.baseURL = 'http://127.0.0.1:8000';
+  } else {
+    axios.defaults.baseURL = '';
   }
 }
 
