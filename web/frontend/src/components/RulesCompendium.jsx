@@ -208,12 +208,13 @@ export default function RulesCompendium({ onBack }) {
   const [entities, setEntities] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedEntity, setSelectedEntity] = useState(null);
+  const [coldStartMsg, setColdStartMsg] = useState('');
 
   useEffect(() => {
     fetchEntities();
   }, [activeTab]);
 
-  const fetchEntities = async () => {
+  const fetchEntities = async (retryCount = 0) => {
     setLoading(true);
     const catObj = CATEGORIES.find(c => c.id === activeTab);
     if (!catObj) return;
@@ -238,15 +239,27 @@ export default function RulesCompendium({ onBack }) {
         const res = await axios.get(catObj.endpoint, { params });
         setEntities(res.data || []);
       }
+      setColdStartMsg('');
     } catch (err) {
       console.error('Error fetching compendium entities:', err);
+      const status = err?.response?.status;
+      // Render free tier cold start: retry on 502/503 up to 3 times
+      if ((status === 502 || status === 503 || !err.response) && retryCount < 3) {
+        const waitMs = (retryCount + 1) * 2000; // 2s, 4s, 6s
+        setColdStartMsg(`Sunucu uyanıyor... (Deneme ${retryCount + 2}/4) — Render ücretsiz plan ilk istekte ~30 saniye sürebilir.`);
+        setTimeout(() => fetchEntities(retryCount + 1), waitMs);
+        return; // Don't clear loading
+      }
+      setColdStartMsg('');
       if (activeTab === 'mechanics') {
         setEntities(CURATED_MECHANICS);
       } else {
         setEntities([]);
       }
     } finally {
-      setLoading(false);
+      if (retryCount === 0 || retryCount >= 3) {
+        setLoading(false);
+      }
     }
   };
 
@@ -1028,7 +1041,12 @@ export default function RulesCompendium({ onBack }) {
       {loading ? (
         <div className="sheet-card" style={{ padding: '60px', textAlign: 'center', color: 'var(--gold-light)' }}>
           <Sparkles className="spin" size={32} style={{ marginBottom: '12px' }} />
-          <p style={{ fontFamily: 'Cinzel, serif' }}>Kural Kütüphanesi Yükleniyor...</p>
+          <p style={{ fontFamily: 'Cinzel, serif', fontSize: '1rem', margin: '0 0 6px 0' }}>Kural Kütüphanesi Yükleniyor...</p>
+          {coldStartMsg && (
+            <p style={{ fontSize: '0.82rem', color: '#ffd700', fontFamily: 'Inter, sans-serif', margin: 0 }}>
+              {coldStartMsg}
+            </p>
+          )}
         </div>
       ) : sortedEntities.length === 0 ? (
         <div className="sheet-card" style={{ padding: '40px', textAlign: 'center', color: 'var(--text-muted)' }}>
