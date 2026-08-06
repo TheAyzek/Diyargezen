@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Search, X, ChevronDown, ChevronRight, Sparkles } from 'lucide-react';
 import { cleanText, formatTitle, toSentenceCase } from '../utils/textSanitizer';
-import { getEquipmentCategory, EQUIPMENT_CATEGORIES } from '../utils/equipmentClassifier';
+import { getEquipmentCategory, EQUIPMENT_CATEGORIES, MAIN_EQUIPMENT_CATEGORIES, SUB_EQUIPMENT_CATEGORIES, matchesEquipmentSubfilter } from '../utils/equipmentClassifier';
 
 export default function EntitySelectorModal({ isOpen, onClose, system, category, title, onSelect }) {
   const [entities, setEntities] = useState([]);
@@ -108,7 +108,8 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
 
   const filteredGenericEntities = entities.filter(ent => {
     if (category === 'equipment' && equipmentTypeFilter !== 'all') {
-      if (getEquipmentCategory(ent) !== equipmentTypeFilter) return false;
+      const cat = getEquipmentCategory(ent);
+      if (!matchesEquipmentSubfilter(cat, equipmentTypeFilter)) return false;
     }
     if (searchQuery) {
       const q = searchQuery.trim().toLowerCase();
@@ -193,30 +194,63 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
 
         {/* Equipment Category Filter Pills */}
         {category === 'equipment' && (
-          <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '8px', marginBottom: '12px' }}>
-            {EQUIPMENT_CATEGORIES.map(cat => {
-              const isActive = equipmentTypeFilter === cat.id;
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginBottom: '12px' }}>
+            {/* Main Categories Row */}
+            <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '4px' }}>
+              {(MAIN_EQUIPMENT_CATEGORIES || EQUIPMENT_CATEGORIES).map(cat => {
+                const isActive = (equipmentTypeFilter === cat.id) || (equipmentTypeFilter && equipmentTypeFilter.startsWith(cat.id)) || (!equipmentTypeFilter && cat.id === 'all');
+                return (
+                  <button
+                    key={cat.id}
+                    onClick={() => setEquipmentTypeFilter(cat.id)}
+                    style={{
+                      fontSize: '11px',
+                      padding: '5px 12px',
+                      borderRadius: '4px',
+                      cursor: 'pointer',
+                      whiteSpace: 'nowrap',
+                      background: isActive ? 'rgba(201,168,76,0.25)' : 'rgba(255,255,255,0.04)',
+                      border: isActive ? '1px solid #c9a84c' : '1px solid rgba(255,255,255,0.1)',
+                      color: isActive ? '#ffd700' : '#8b949e',
+                      fontWeight: isActive ? 'bold' : 'normal',
+                      transition: 'all 0.2s ease'
+                    }}
+                  >
+                    {cat.label}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Sub-Categories Pills Row */}
+            {(() => {
+              const currentMainKey = Object.keys(SUB_EQUIPMENT_CATEGORIES).find(k => equipmentTypeFilter && (equipmentTypeFilter === k || equipmentTypeFilter.startsWith(k)));
+              const subItems = currentMainKey ? SUB_EQUIPMENT_CATEGORIES[currentMainKey] : null;
+              if (!subItems) return null;
               return (
-                <button
-                  key={cat.id}
-                  onClick={() => setEquipmentTypeFilter(cat.id)}
-                  style={{
-                    fontSize: '11px',
-                    padding: '6px 12px',
-                    borderRadius: '4px',
-                    cursor: 'pointer',
-                    whiteSpace: 'nowrap',
-                    background: isActive ? 'rgba(201,168,76,0.25)' : 'rgba(255,255,255,0.04)',
-                    border: isActive ? '1px solid #c9a84c' : '1px solid rgba(255,255,255,0.1)',
-                    color: isActive ? '#ffd700' : '#8b949e',
-                    fontWeight: isActive ? 'bold' : 'normal',
-                    transition: 'all 0.2s ease'
-                  }}
-                >
-                  {cat.label}
-                </button>
+                <div style={{ display: 'flex', gap: '4px', overflowX: 'auto', paddingBottom: '4px', paddingLeft: '6px', borderLeft: '2px solid rgba(201,168,76,0.3)' }}>
+                  {subItems.map(sub => (
+                    <button
+                      key={sub.id}
+                      onClick={() => setEquipmentTypeFilter(sub.id)}
+                      style={{
+                        fontSize: '10px',
+                        padding: '3px 8px',
+                        borderRadius: '4px',
+                        cursor: 'pointer',
+                        whiteSpace: 'nowrap',
+                        background: equipmentTypeFilter === sub.id ? 'rgba(78,201,176,0.2)' : 'rgba(255,255,255,0.02)',
+                        border: equipmentTypeFilter === sub.id ? '1px solid #4ec9b0' : '1px solid rgba(255,255,255,0.06)',
+                        color: equipmentTypeFilter === sub.id ? '#7ee787' : '#8b949e',
+                        transition: 'all 0.2s ease'
+                      }}
+                    >
+                      {sub.label}
+                    </button>
+                  ))}
+                </div>
               );
-            })}
+            })()}
           </div>
         )}
 
