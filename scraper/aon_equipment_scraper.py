@@ -1,9 +1,12 @@
 """
-Archives of Nethys (aonprd.com) Equipment Scraper & ETL Ingestion Engine
-==========================================================================
-Bu betik Archives of Nethys (aonprd.com) portalındaki tüm non-magical ve alchemical
-ekipman kategorilerini tarar, fiyat, ağırlık ve açıklamalarını ayrıştırıp
-`data/pf1e_scraped_items.json` dosyasına ekler ve SQLite veritabanına aktarır.
+Archives of Nethys (aonprd.com) Complete Equipment, Weapon & Armor Scraper
+===========================================================================
+Bu betik Archives of Nethys (aonprd.com) portalındaki:
+1. Tüm Genel & Simyasal Ekipmanları (EquipmentMisc.aspx)
+2. Tüm Silahları (EquipmentWeapons.aspx - Simple, Martial, Exotic, Ammo, Firearm, Siege vb.)
+3. Tüm Zırh & Kalkanları (EquipmentArmor.aspx - Light, Medium, Heavy, Shield vb.)
+
+birebir ayrıştırarak `data/pf1e_scraped_items.json` dosyasına ekler ve SQLite veritabanına aktarır.
 
 Kullanım:
     python scraper/aon_equipment_scraper.py [--max-items 500]
@@ -28,28 +31,20 @@ DATA_DIR = BASE_DIR / "data"
 OUTPUT_JSON = DATA_DIR / "pf1e_scraped_items.json"
 
 AON_BASE_URL = "https://aonprd.com/"
-CATEGORIES = [
-    "AdventuringGear",
-    "AlchemicalRemedies",
-    "AlchemicalTools",
-    "AlchemicalWeapons",
-    "AnimalGear",
-    "BlackMarket",
-    "ChannelFoci",
-    "Clothing",
-    "Concoction",
-    "Dragoncraft",
-    "DungeonGuides",
-    "Entertainment",
-    "FoodDrink",
-    "Herbs",
-    "Kit",
-    "MountsPets",
-    "Tincture",
-    "Tools",
-    "TransportAir",
-    "TransportLand",
-    "TransportSea"
+
+MISC_CATEGORIES = [
+    "AdventuringGear", "AlchemicalRemedies", "AlchemicalTools", "AlchemicalWeapons",
+    "AnimalGear", "BlackMarket", "ChannelFoci", "Clothing", "Concoction",
+    "Dragoncraft", "DungeonGuides", "Entertainment", "FoodDrink", "Herbs",
+    "Kit", "MountsPets", "Tincture", "Tools", "TransportAir", "TransportLand", "TransportSea"
+]
+
+WEAPON_PROFICIENCIES = [
+    "Simple", "Martial", "Exotic", "Ammo", "Firearm", "Mod", "Siege", "Special"
+]
+
+ARMOR_CATEGORIES = [
+    "Light", "Medium", "Heavy", "Shield", "Extra", "Mod"
 ]
 
 HEADERS = {
@@ -90,16 +85,23 @@ def parse_weight_lbs(weight_str: str) -> float:
     return float(val_str.split('/')[0]) / float(val_str.split('/')[1]) if '/' in val_str else float(val_str)
 
 
-def scrape_category_item_links(category: str, session: requests.Session) -> List[tuple]:
-    """AoN kategori sayfasından tüm eşya bağlantılarını çeker."""
+def parse_int_safe(val_str: str) -> int:
+    """Metin içindeki ilk tam sayıyı okur (örn: '+6' -> 6, '-5' -> -5, '30%' -> 30)."""
+    if not val_str:
+        return 0
+    m = re.search(r'([+-]?\d+)', val_str)
+    return int(m.group(1)) if m else 0
+
+
+# ==================== MISC EQUIPMENT SCRAPER ====================
+
+def scrape_misc_links(category: str, session: requests.Session) -> List[tuple]:
     url = f"{AON_BASE_URL}EquipmentMisc.aspx?Category={category}"
-    logger.info(f"Kategori taranıyor: {category} -> {url}")
+    logger.info(f"Ekipman Kategori: {category}")
     try:
         r = session.get(url, headers=HEADERS, timeout=12)
         if r.status_code != 200:
-            logger.warning(f"Kategori {category} isteği başarısız: HTTP {r.status_code}")
             return []
-        
         soup = BeautifulSoup(r.text, "html.parser")
         items = []
         for a in soup.find_all("a", href=True):
@@ -108,31 +110,26 @@ def scrape_category_item_links(category: str, session: requests.Session) -> List
                 item_name = a.text.strip()
                 if item_name and (item_name, href) not in items:
                     items.append((item_name, href))
-        logger.info(f"Kategori [{category}]: {len(items)} adet eşya bağlantısı bulundu.")
         return items
     except Exception as exc:
-        logger.error(f"Kategori {category} çekilirken hata: {exc}")
+        logger.error(f"Kategori {category} hata: {exc}")
         return []
 
 
-def scrape_item_details(item_name: str, rel_href: str, session: requests.Session) -> Optional[Dict[str, Any]]:
-    """Eşyanın detay sayfasından açıklama, fiyat, ağırlık ve kategori bilgilerini çeker."""
+def scrape_misc_detail(item_name: str, rel_href: str, session: requests.Session) -> Optional[Dict[str, Any]]:
     full_url = f"{AON_BASE_URL}{rel_href}" if not rel_href.startswith("http") else rel_href
     try:
         r = session.get(full_url, headers=HEADERS, timeout=10)
         if r.status_code != 200:
             return None
-        
         soup = BeautifulSoup(r.text, "html.parser")
         span = soup.find('span', id=lambda i: i and 'MainContent_DataListTypes_LabelName' in i)
         if not span:
             return None
         
-        # Item title
         h1 = span.find('h1')
         raw_name = h1.text.strip() if h1 else item_name
         
-        # Extract bold meta fields (Source, Price, Weight, Category, Recipe, etc.)
         meta = {}
         for b in span.find_all('b'):
             key = b.text.strip()
@@ -143,25 +140,16 @@ def scrape_item_details(item_name: str, rel_href: str, session: requests.Session
                 next_node = next_node.next_sibling
             meta[key] = ''.join(val_parts).strip().rstrip(';')
 
-        # Extract description text after Description H3
         desc_h3 = span.find('h3', class_='framing')
         if desc_h3:
-            desc_parts = []
-            for sibling in desc_h3.next_siblings:
-                if hasattr(sibling, 'text'):
-                    desc_parts.append(sibling.text)
-                elif isinstance(sibling, str):
-                    desc_parts.append(sibling)
+            desc_parts = [s.text if hasattr(s, 'text') else str(s) for s in desc_h3.next_siblings]
             description_raw = ''.join(desc_parts).strip()
         else:
-            description_raw = f"{raw_name} - Pathfinder 1e Equipment item."
+            description_raw = f"{raw_name} - Pathfinder 1e Equipment."
 
         price_raw = meta.get("Price", "0 gp")
         weight_raw = meta.get("Weight", "0 lb.")
         category_raw = meta.get("Category", "Adventuring Gear")
-        
-        price_gp = parse_price_gp(price_raw)
-        weight_lbs = parse_weight_lbs(weight_raw)
         
         return {
             "isim": raw_name,
@@ -172,24 +160,222 @@ def scrape_item_details(item_name: str, rel_href: str, session: requests.Session
                 "type": "equipment",
                 "subType": "gear",
                 "price": price_raw,
-                "price_gp": price_gp,
-                "weight": {
-                    "value": weight_lbs
-                },
+                "price_gp": parse_price_gp(price_raw),
+                "weight": {"value": parse_weight_lbs(weight_raw)},
                 "category": category_raw,
                 "source": meta.get("Source", "Archives of Nethys (aonprd.com)"),
                 "source_url": full_url,
                 "data_source": "aon_scraper"
             }
         }
+    except Exception:
+        return None
+
+
+# ==================== WEAPONS SCRAPER ====================
+
+def scrape_weapon_links(prof: str, session: requests.Session) -> List[tuple]:
+    url = f"{AON_BASE_URL}EquipmentWeapons.aspx?Proficiency={prof}"
+    logger.info(f"Silah Türü: {prof}")
+    try:
+        r = session.get(url, headers=HEADERS, timeout=12)
+        if r.status_code != 200:
+            return []
+        soup = BeautifulSoup(r.text, "html.parser")
+        items = []
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            if "EquipmentWeaponsDisplay.aspx?ItemName=" in href:
+                item_name = a.text.strip()
+                if item_name and (item_name, href) not in items:
+                    items.append((item_name, href))
+        return items
     except Exception as exc:
-        logger.warning(f"Eşya detay çekimi başarısız [{item_name}]: {exc}")
+        logger.error(f"Silah Türü {prof} hata: {exc}")
+        return []
+
+
+def scrape_weapon_detail(item_name: str, rel_href: str, session: requests.Session) -> Optional[Dict[str, Any]]:
+    full_url = f"{AON_BASE_URL}{rel_href}" if not rel_href.startswith("http") else rel_href
+    try:
+        r = session.get(full_url, headers=HEADERS, timeout=10)
+        if r.status_code != 200:
+            return None
+        soup = BeautifulSoup(r.text, "html.parser")
+        span = soup.find('span', id=lambda i: i and 'MainContent_DataListTypes_LabelName' in i)
+        if not span:
+            return None
+        
+        h1 = span.find('h1')
+        raw_name = h1.text.strip() if h1 else item_name
+        
+        meta = {}
+        for b in span.find_all('b'):
+            key = b.text.strip()
+            next_node = b.next_sibling
+            val_parts = []
+            while next_node and next_node.name not in ('b', 'h3'):
+                val_parts.append(next_node.text if hasattr(next_node, 'text') else str(next_node))
+                next_node = next_node.next_sibling
+            meta[key] = ''.join(val_parts).strip().rstrip(';')
+
+        desc_h3 = span.find('h3', class_='framing')
+        if desc_h3:
+            desc_parts = [s.text if hasattr(s, 'text') else str(s) for s in desc_h3.next_siblings]
+            description_raw = ''.join(desc_parts).strip()
+        else:
+            description_raw = ""
+
+        dmg_raw = meta.get("Damage", "")
+        # Standard medium damage parsing e.g. "1d6 (small), 1d8 (medium)" -> "1d8"
+        med_dmg_match = re.search(r'([\d\+d]+)\s*\(\s*medium\s*\)', dmg_raw, re.I)
+        if med_dmg_match:
+            damage = med_dmg_match.group(1)
+        elif dmg_raw:
+            damage = dmg_raw.split(',')[0].strip()
+        else:
+            damage = "1d6"
+
+        cost_raw = meta.get("Cost", meta.get("Price", "0 gp"))
+        weight_raw = meta.get("Weight", "0 lbs.")
+        crit_raw = meta.get("Critical", "x2")
+        range_raw = meta.get("Range", "Melee")
+        type_raw = meta.get("Type", "")
+        prof_raw = meta.get("Proficiency", "Martial")
+        cat_raw = meta.get("Category", "One-Handed")
+        groups_raw = meta.get("Weapon Groups", "")
+
+        desc_full = f"Pathfinder 1e {prof_raw} {cat_raw} Weapon. Cost: {cost_raw}, Weight: {weight_raw}, Damage: {damage}, Crit: {crit_raw}, Range: {range_raw}, Type: {type_raw}."
+        if description_raw:
+            desc_full += f"\n\n{description_raw}"
+
+        # Subtype mapping
+        sub_type = "oneHanded"
+        if "light" in cat_raw.lower(): sub_type = "light"
+        elif "two-handed" in cat_raw.lower() or "two handed" in cat_raw.lower(): sub_type = "twoHanded"
+        elif "ranged" in cat_raw.lower() or "ranged" in prof_raw.lower() or "ammo" in prof_raw.lower(): sub_type = "ranged"
+
+        return {
+            "isim": raw_name,
+            "sistem": "pathfinder1e",
+            "kategori": "item",
+            "aciklama": desc_full,
+            "sistem_verisi": {
+                "type": "weapon",
+                "subType": sub_type,
+                "price": cost_raw,
+                "price_gp": parse_price_gp(cost_raw),
+                "weight": {"value": parse_weight_lbs(weight_raw)},
+                "damage": damage,
+                "crit": crit_raw,
+                "dmgType": type_raw,
+                "range": range_raw,
+                "proficiency": prof_raw,
+                "category": f"{prof_raw} Weapons",
+                "weapon_groups": groups_raw,
+                "source": meta.get("Source", "Archives of Nethys (aonprd.com)"),
+                "source_url": full_url,
+                "data_source": "aon_scraper"
+            }
+        }
+    except Exception:
+        return None
+
+
+# ==================== ARMOR SCRAPER ====================
+
+def scrape_armor_links(cat: str, session: requests.Session) -> List[tuple]:
+    url = f"{AON_BASE_URL}EquipmentArmor.aspx?Category={cat}"
+    logger.info(f"Zırh Kategorisi: {cat}")
+    try:
+        r = session.get(url, headers=HEADERS, timeout=12)
+        if r.status_code != 200:
+            return []
+        soup = BeautifulSoup(r.text, "html.parser")
+        items = []
+        for a in soup.find_all("a", href=True):
+            href = a["href"]
+            if "EquipmentArmorDisplay.aspx?ItemName=" in href:
+                item_name = a.text.strip()
+                if item_name and (item_name, href) not in items:
+                    items.append((item_name, href))
+        return items
+    except Exception as exc:
+        logger.error(f"Zırh Kategorisi {cat} hata: {exc}")
+        return []
+
+
+def scrape_armor_detail(item_name: str, rel_href: str, category_name: str, session: requests.Session) -> Optional[Dict[str, Any]]:
+    full_url = f"{AON_BASE_URL}{rel_href}" if not rel_href.startswith("http") else rel_href
+    try:
+        r = session.get(full_url, headers=HEADERS, timeout=10)
+        if r.status_code != 200:
+            return None
+        soup = BeautifulSoup(r.text, "html.parser")
+        span = soup.find('span', id=lambda i: i and 'MainContent_DataListTypes_LabelName' in i)
+        if not span:
+            return None
+        
+        h1 = span.find('h1')
+        raw_name = h1.text.strip() if h1 else item_name
+        
+        meta = {}
+        for b in span.find_all('b'):
+            key = b.text.strip()
+            next_node = b.next_sibling
+            val_parts = []
+            while next_node and next_node.name not in ('b', 'h3'):
+                val_parts.append(next_node.text if hasattr(next_node, 'text') else str(next_node))
+                next_node = next_node.next_sibling
+            meta[key] = ''.join(val_parts).strip().rstrip(';')
+
+        desc_h3 = span.find('h3', class_='framing')
+        if desc_h3:
+            desc_parts = [s.text if hasattr(s, 'text') else str(s) for s in desc_h3.next_siblings]
+            description_raw = ''.join(desc_parts).strip()
+        else:
+            description_raw = ""
+
+        cost_raw = meta.get("Cost", meta.get("Price", "0 gp"))
+        weight_raw = meta.get("Weight", "0 lbs.")
+        ac_raw = meta.get("Armor Bonus", meta.get("Shield Bonus", "0"))
+        max_dex_raw = meta.get("Max Dex Bonus", "999")
+        acp_raw = meta.get("Armor Check Penalty", "0")
+        asf_raw = meta.get("Arcane Spell Failure Chance", "0%")
+
+        sub_type = "shield" if "shield" in category_name.lower() or "shield" in raw_name.lower() else "armor"
+        desc_full = f"Pathfinder 1e {category_name} Armor. Cost: {cost_raw}, Weight: {weight_raw}, AC Bonus: {ac_raw}, Max Dex: {max_dex_raw}, ACP: {acp_raw}, ASF: {asf_raw}."
+        if description_raw:
+            desc_full += f"\n\n{description_raw}"
+
+        return {
+            "isim": raw_name,
+            "sistem": "pathfinder1e",
+            "kategori": "item",
+            "aciklama": desc_full,
+            "sistem_verisi": {
+                "type": "equipment",
+                "subType": sub_type,
+                "price": cost_raw,
+                "price_gp": parse_price_gp(cost_raw),
+                "weight": {"value": parse_weight_lbs(weight_raw)},
+                "acBonus": parse_int_safe(ac_raw),
+                "maxDex": parse_int_safe(max_dex_raw) if max_dex_raw != '999' else 999,
+                "acp": parse_int_safe(acp_raw),
+                "asf": parse_int_safe(asf_raw),
+                "category": f"{category_name} Armor",
+                "source": meta.get("Source", "Archives of Nethys (aonprd.com)"),
+                "source_url": full_url,
+                "data_source": "aon_scraper"
+            }
+        }
+    except Exception:
         return None
 
 
 def run_aon_equipment_scraper(max_per_category: Optional[int] = None):
-    """Tüm AoN ekipman kategorilerini tarar ve pf1e_scraped_items.json dosyasına aktarır."""
-    logger.info("=== Archives of Nethys (AoN) Ekipman Scraper Başlatılıyor ===")
+    """AoN üzerindeki Genel Ekipmanları, Silahları ve Zırhları tarar."""
+    logger.info("=== Archives of Nethys (AoN) Complete Scraper Başlatılıyor ===")
     
     existing_items = []
     if OUTPUT_JSON.exists():
@@ -200,7 +386,6 @@ def run_aon_equipment_scraper(max_per_category: Optional[int] = None):
         except Exception:
             existing_items = []
 
-    # Map existing items by lowercase (sistem, kategori, isim)
     seen_keys = {
         (d.get("sistem", "pathfinder1e"), d.get("kategori", "item"), d.get("isim", "").lower().strip())
         for d in existing_items
@@ -209,38 +394,59 @@ def run_aon_equipment_scraper(max_per_category: Optional[int] = None):
     session = requests.Session()
     new_scraped = []
 
-    for cat in CATEGORIES:
-        links = scrape_category_item_links(cat, session)
+    # 1. SCRAPE MISC EQUIPMENT
+    logger.info("--- Phase 1: General & Alchemical Equipment ---")
+    for cat in MISC_CATEGORIES:
+        links = scrape_misc_links(cat, session)
         if max_per_category and len(links) > max_per_category:
             links = links[:max_per_category]
-        
-        count_cat = 0
         for name, href in links:
             key = ("pathfinder1e", "item", name.lower().strip())
-            if key in seen_keys:
-                continue
-            
-            detail = scrape_item_details(name, href, session)
+            if key in seen_keys: continue
+            detail = scrape_misc_detail(name, href, session)
             if detail:
                 new_scraped.append(detail)
                 seen_keys.add(key)
-                count_cat += 1
-                if count_cat % 20 == 0:
-                    logger.info(f"[{cat}] {count_cat} eşya çekildi ve işlendi.")
-            
-            # Etik rate-limiting (0.05sn hızlı & etik gecikme)
-            time.sleep(0.05)
+            time.sleep(0.04)
 
-        logger.info(f"Kategori [{cat}] tamamlandı. Toplam {count_cat} yeni eşya eklendi.")
+    # 2. SCRAPE WEAPONS (Simple, Martial, Exotic, Firearms, Siege, Ammo etc.)
+    logger.info("--- Phase 2: All PF1e Weapons ---")
+    for prof in WEAPON_PROFICIENCIES:
+        links = scrape_weapon_links(prof, session)
+        if max_per_category and len(links) > max_per_category:
+            links = links[:max_per_category]
+        for name, href in links:
+            key = ("pathfinder1e", "item", name.lower().strip())
+            if key in seen_keys: continue
+            detail = scrape_weapon_detail(name, href, session)
+            if detail:
+                new_scraped.append(detail)
+                seen_keys.add(key)
+            time.sleep(0.04)
+
+    # 3. SCRAPE ARMORS & SHIELDS
+    logger.info("--- Phase 3: All PF1e Armors & Shields ---")
+    for cat in ARMOR_CATEGORIES:
+        links = scrape_armor_links(cat, session)
+        if max_per_category and len(links) > max_per_category:
+            links = links[:max_per_category]
+        for name, href in links:
+            key = ("pathfinder1e", "item", name.lower().strip())
+            if key in seen_keys: continue
+            detail = scrape_armor_detail(name, href, cat, session)
+            if detail:
+                new_scraped.append(detail)
+                seen_keys.add(key)
+            time.sleep(0.04)
 
     if new_scraped:
         all_combined = existing_items + new_scraped
         DATA_DIR.mkdir(parents=True, exist_ok=True)
         with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
             json.dump(all_combined, f, ensure_ascii=False, indent=2)
-        logger.info(f"✅ Başarıyla {len(new_scraped)} yeni ekipman eklendi. Toplam kayıt: {len(all_combined)}")
+        logger.info(f"✅ Başarıyla {len(new_scraped)} yeni varlık (silah, zırh, teçhizat) eklendi. Toplam kayıt: {len(all_combined)}")
     else:
-        logger.info("Yeni eklenecek benzersiz ekipman bulunamadı veya tümü zaten veritabanında mevcut.")
+        logger.info("Yeni eklenecek benzersiz varlık bulunamadı. Tüm varlıklar zaten güncel.")
 
 
 if __name__ == "__main__":
