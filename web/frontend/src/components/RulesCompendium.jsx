@@ -6,7 +6,7 @@ import {
   Dices, Star, Award, Heart, CheckCircle2
 } from 'lucide-react';
 import { cleanText, formatTitle, toSentenceCase, parseTraitsDetailed } from '../utils/textSanitizer';
-import { getEquipmentCategory, EQUIPMENT_CATEGORIES, matchesEquipmentSubfilter } from '../utils/equipmentClassifier';
+import { getEquipmentCategory, EQUIPMENT_CATEGORIES, MAIN_EQUIPMENT_CATEGORIES, SUB_EQUIPMENT_CATEGORIES, matchesEquipmentSubfilter } from '../utils/equipmentClassifier';
 
 const CATEGORIES = [
   { id: 'races', label: 'Irklar & Miraslar', icon: UserCheck, endpoint: '/api/rules/pf1e/races' },
@@ -963,16 +963,42 @@ export default function RulesCompendium({ onBack }) {
         )}
 
         {activeTab === 'equipment' && (
-          <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '4px', alignItems: 'center' }}>
-            {EQUIPMENT_CATEGORIES.map(cat => (
-              <button key={cat.id} onClick={() => setSubFilter(cat.id)}
-                style={{
-                  padding: '5px 14px', borderRadius: '12px', fontSize: '0.78rem', fontFamily: 'Cinzel, serif', cursor: 'pointer', whiteSpace: 'nowrap',
-                  background: (subFilter === cat.id || (!subFilter && cat.id === 'all')) ? 'linear-gradient(135deg, rgba(201,168,76,0.3) 0%, rgba(130,95,25,0.4) 100%)' : 'rgba(15,12,28,0.7)',
-                  border: (subFilter === cat.id || (!subFilter && cat.id === 'all')) ? '1px solid var(--gold-bright)' : '1px solid rgba(201,168,76,0.2)',
-                  color: (subFilter === cat.id || (!subFilter && cat.id === 'all')) ? 'var(--gold-bright)' : 'var(--text-muted)'
-                }}>{cat.label}</button>
-            ))}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {/* Main Equipment Categories Row */}
+            <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '4px', alignItems: 'center' }}>
+              {(MAIN_EQUIPMENT_CATEGORIES || EQUIPMENT_CATEGORIES).map(cat => {
+                const isActive = (subFilter === cat.id) || (subFilter && subFilter.startsWith(cat.id)) || (!subFilter && cat.id === 'all');
+                return (
+                  <button key={cat.id} onClick={() => setSubFilter(cat.id)}
+                    style={{
+                      padding: '5px 14px', borderRadius: '12px', fontSize: '0.78rem', fontFamily: 'Cinzel, serif', cursor: 'pointer', whiteSpace: 'nowrap',
+                      background: isActive ? 'linear-gradient(135deg, rgba(201,168,76,0.35) 0%, rgba(130,95,25,0.45) 100%)' : 'rgba(15,12,28,0.7)',
+                      border: isActive ? '1px solid var(--gold-bright)' : '1px solid rgba(201,168,76,0.2)',
+                      color: isActive ? 'var(--gold-bright)' : 'var(--text-muted)'
+                    }}>{cat.label}</button>
+                );
+              })}
+            </div>
+
+            {/* Sub-Category Pills Row (If current main category has sub-categories) */}
+            {(() => {
+              const currentMainKey = Object.keys(SUB_EQUIPMENT_CATEGORIES).find(k => subFilter && (subFilter === k || subFilter.startsWith(k)));
+              const subItems = currentMainKey ? SUB_EQUIPMENT_CATEGORIES[currentMainKey] : null;
+              if (!subItems) return null;
+              return (
+                <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '4px', alignItems: 'center', paddingLeft: '8px', borderLeft: '2px solid rgba(201,168,76,0.3)' }}>
+                  {subItems.map(sub => (
+                    <button key={sub.id} onClick={() => setSubFilter(sub.id)}
+                      style={{
+                        padding: '4px 12px', borderRadius: '10px', fontSize: '0.74rem', fontFamily: 'Cinzel, serif', cursor: 'pointer', whiteSpace: 'nowrap',
+                        background: subFilter === sub.id ? 'linear-gradient(135deg, rgba(78,201,176,0.25) 0%, rgba(30,100,90,0.35) 100%)' : 'rgba(15,12,28,0.5)',
+                        border: subFilter === sub.id ? '1px solid #4ec9b0' : '1px solid rgba(78,201,176,0.2)',
+                        color: subFilter === sub.id ? '#7ee787' : 'var(--text-muted)'
+                      }}>{sub.label}</button>
+                  ))}
+                </div>
+              );
+            })()}
           </div>
         )}
 
