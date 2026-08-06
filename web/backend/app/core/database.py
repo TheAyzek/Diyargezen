@@ -42,7 +42,40 @@ def get_db_connection() -> Iterator[sqlite3.Connection]:
         conn.close()
 
 def check_db_exists() -> bool:
-    """Verify that the database file exists and contains the expected tables."""
+    """Verify that the database file exists and contains the expected tables.
+    Decompresses pre-populated seed_characters.db.gz on cloud deployment if DB is missing or empty.
+    """
+    import gzip
+    import shutil
+    import logging
+    logger = logging.getLogger(__name__)
+
+    seed_gz = DB_PATH.parent / "seed_characters.db.gz"
+
+    need_unpack = False
+    if not DB_PATH.exists() or DB_PATH.stat().st_size < 100000:
+        need_unpack = True
+    else:
+        try:
+            with sqlite3.connect(str(DB_PATH), timeout=5) as conn:
+                cur = conn.cursor()
+                cur.execute("SELECT COUNT(*) FROM entities")
+                count = cur.fetchone()[0]
+                if count < 1000:
+                    need_unpack = True
+        except Exception:
+            need_unpack = True
+
+    if need_unpack and seed_gz.exists():
+        logger.info("📦 Unpacking pre-populated seed database (%s) -> (%s)...", seed_gz, DB_PATH)
+        try:
+            DB_PATH.parent.mkdir(parents=True, exist_ok=True)
+            with gzip.open(seed_gz, 'rb') as f_in, open(DB_PATH, 'wb') as f_out:
+                shutil.copyfileobj(f_in, f_out)
+            logger.info("✅ Pre-populated seed database unpacked successfully (%d bytes).", DB_PATH.stat().st_size)
+        except Exception as e:
+            logger.error("❌ Failed to unpack seed database: %s", e)
+
     if not DB_PATH.exists():
         return False
     try:
