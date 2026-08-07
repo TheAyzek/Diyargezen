@@ -143,15 +143,28 @@ export async function exportCharacterPDF(store) {
 
     weapons.slice(0, 5).forEach((w, idx) => {
       const sys = w.sistem_verisi?.system || {};
-      const isRanged = String(w.type || sys.weaponType || '').toLowerCase().includes('ranged') || String(w.name).toLowerCase().includes('bow');
-      const attackBonus = babValue + (isRanged ? dexMod : strMod);
-      const dmg = sys.actions?.[0]?.damage?.parts?.[0]?.[0] || w.sistem_verisi?.damage?.parts?.[0]?.[0] || sys.damage || '-';
-      const crit = sys.critRange ? `${sys.critRange}/${sys.critMult || 'x2'}` : (sys.critical || '20/x2');
+      const wName = w.name || w.isim || 'Silah';
+      const isRanged = String(w.type || sys.weaponType || '').toLowerCase().includes('ranged') || String(wName).toLowerCase().includes('bow');
+      const attackBonusStr = w.calculated_attack || formatMod(babValue + (isRanged ? dexMod : strMod));
+      
+      let dmg = w.calculated_damage;
+      if (!dmg) {
+        const rawDmg = String(sys.actions?.[0]?.damage?.parts?.[0]?.[0] || w.sistem_verisi?.damage?.parts?.[0]?.[0] || sys.damage || '');
+        const mSize = rawDmg.match(/sizeRoll\s*\(\s*(\d+)\s*,\s*(\d+)[^)]*\)/i);
+        if (mSize) {
+          dmg = `${mSize[1]}d${mSize[2]}`;
+        } else {
+          const mDice = rawDmg.match(/\b\d+d\d+\b/i);
+          dmg = mDice ? mDice[0] : '1d8';
+        }
+      }
+      
+      const crit = w.crit_range || (sys.critRange ? `${sys.critRange}/${sys.critMult || 'x2'}` : (sys.critical || '20/x2'));
       const dmgType = sys.damageType || sys.damage_type || 'Physical';
       const rangeInc = sys.range || sys.range_increment || '-';
 
-      setField(`Weapon ${idx + 1}`, w.name);
-      setField(`Attack Bonus ${idx + 1}`, formatMod(attackBonus));
+      setField(`Weapon ${idx + 1}`, wName);
+      setField(`Attack Bonus ${idx + 1}`, attackBonusStr);
       setField(`Damage ${idx + 1}`, dmg);
       setField(`Critical ${idx + 1}`, crit);
       setField(`Type ${idx + 1}`, dmgType);

@@ -1402,10 +1402,21 @@ class PF1e_Calculator(BaseCalculator):
             atk_str = f"+{total_atk}" if total_atk >= 0 else str(total_atk)
             
             # Base damage determination
-            base_damage = sys_w.get("damage") or sv_w.get("damage")
-            if isinstance(base_damage, dict):
-                parts = base_damage.get("parts", [])
-                base_damage = parts[0][0] if parts and isinstance(parts[0], (list, tuple)) else "1d8"
+            raw_base = sys_w.get("damage") or sv_w.get("damage")
+            if isinstance(raw_base, dict):
+                parts = raw_base.get("parts", [])
+                raw_base = parts[0][0] if parts and isinstance(parts[0], (list, tuple)) else "1d8"
+            
+            base_damage = None
+            if raw_base and isinstance(raw_base, str):
+                m_size = re.search(r'sizeRoll\(\s*(\d+)\s*,\s*(\d+)', raw_base, re.I)
+                if m_size:
+                    base_damage = f"{m_size.group(1)}d{m_size.group(2)}"
+                else:
+                    m_dice = re.search(r'\b(\d+d\d+)\b', raw_base, re.I)
+                    if m_dice:
+                        base_damage = m_dice.group(1)
+
             if not base_damage or base_damage == "-":
                 if "dagger" in w_name_lower or "knife" in w_name_lower: base_damage = "1d4"
                 elif "shortsword" in w_name_lower or "scimitar" in w_name_lower or "club" in w_name_lower or "shortbow" in w_name_lower or "kama" in w_name_lower: base_damage = "1d6"
