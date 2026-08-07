@@ -8,6 +8,7 @@ import SystemSelector from './components/SystemSelector';
 import PF1eSheet from './components/sheets/PF1eSheet';
 import Auth from './components/Auth';
 import RulesCompendium from './components/RulesCompendium';
+import NotFound from './components/NotFound';
 import { useCharacterStore } from './store/characterStore';
 import { exportCharacterPDF } from './utils/pdfExportUtil';
 
@@ -24,9 +25,34 @@ export default function App() {
 
   const { isOnline, syncStatus, setOnlineStatus } = useCharacterStore();
 
+  // Dynamic Page Title
+  useEffect(() => {
+    switch (view) {
+      case 'dashboard':
+        document.title = 'Diyargezen — Karakterlerim';
+        break;
+      case 'rules-compendium':
+        document.title = 'Diyargezen — Kural Kütüphanesi (PF1e)';
+        break;
+      case 'select-system':
+        document.title = 'Diyargezen — Sistem Seçimi';
+        break;
+      case 'edit-character':
+        document.title = `Diyargezen — ${selectedCharacter?.name || 'Karakter Kağıdı'}`;
+        break;
+      case 'auth':
+        document.title = 'Diyargezen — Giriş / Kayıt';
+        break;
+      default:
+        document.title = 'Diyargezen — 404 Bulunamadı';
+        break;
+    }
+  }, [view, selectedCharacter]);
+
   useEffect(() => {
     const handleOnline = () => setOnlineStatus(true);
     const handleOffline = () => setOnlineStatus(false);
+
 
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
@@ -315,9 +341,14 @@ export default function App() {
         )}
 
         {view === 'edit-character' && renderActiveSheet()}
+
+        {!['auth', 'dashboard', 'rules-compendium', 'select-system', 'edit-character'].includes(view) && (
+          <NotFound onGoHome={() => setView('dashboard')} />
+        )}
       </main>
 
     </div>
   );
 }
+
 

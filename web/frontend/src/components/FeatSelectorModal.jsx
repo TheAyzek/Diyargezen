@@ -136,6 +136,8 @@ export default function FeatSelectorModal({
   const [ruleError, setRuleError] = useState(null);
   const [gmOverrideEnabled, setGmOverrideEnabled] = useState(false);
   const [lastNotification, setLastNotification] = useState(null);
+  const [overrideModalTarget, setOverrideModalTarget] = useState(null);
+
 
   useEffect(() => {
     if (isOpen && initialCategory) {
@@ -197,6 +199,19 @@ export default function FeatSelectorModal({
     return { ok: true, msg: '' };
   };
 
+  const handleConfirmOverride = () => {
+    if (overrideModalTarget) {
+      onAddFeat({
+        ...overrideModalTarget.feat,
+        is_overridden: true,
+        override_reason: 'GM İzniyle Ezildi'
+      });
+      setLastNotification(`⚠ "${overrideModalTarget.feat.isim || overrideModalTarget.feat.name}" GM izniyle eklendi.`);
+      setTimeout(() => setLastNotification(null), 3000);
+      setOverrideModalTarget(null);
+    }
+  };
+
   const handleSelectClick = (feat) => {
     const featName = feat.isim || feat.name || feat;
     if (isSelected(featName)) {
@@ -216,26 +231,27 @@ export default function FeatSelectorModal({
     }
 
     const prereqResult = evaluatePrerequisites(feat, character, selectedFeats);
-    if (!prereqResult.valid && !gmOverrideEnabled) {
-      setRuleError(`Ön koşul karşılanmadı: ${prereqResult.warnings.join(' | ')}`);
-      setTimeout(() => setRuleError(null), 4000);
+    if (!prereqResult.valid) {
+      if (gmOverrideEnabled) {
+        onAddFeat({
+          ...feat,
+          is_overridden: true,
+          override_reason: 'GM İzniyle Ezildi'
+        });
+        setLastNotification(`⚠ "${featName}" GM izniyle eklendi.`);
+        setTimeout(() => setLastNotification(null), 3000);
+      } else {
+        setOverrideModalTarget({ feat, warnings: prereqResult.warnings });
+      }
       return;
     }
 
     setRuleError(null);
-    if (!prereqResult.valid && gmOverrideEnabled) {
-      onAddFeat({
-        ...feat,
-        is_overridden: true,
-        override_reason: 'GM İzniyle Ezildi'
-      });
-    } else {
-      onAddFeat(feat);
-    }
-
+    onAddFeat(feat);
     setLastNotification(`✓ "${featName}" eklendi!`);
     setTimeout(() => setLastNotification(null), 3000);
   };
+
 
   const modal = (
     <div

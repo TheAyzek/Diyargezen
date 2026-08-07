@@ -27,10 +27,13 @@ const TABS = [
   { id: 'abilities', icon: 'ᛟ', label: 'Skorlar' },
   { id: 'combat', icon: '⚔', label: 'Dövüş' },
   { id: 'skills', icon: '✦', label: 'Beceriler' },
+  { id: 'feats', icon: '📜', label: 'Feat & Trait' },
+  { id: 'spells', icon: '✨', label: 'Büyüler' },
   { id: 'gear', icon: '⚗', label: 'Ekipman' },
   { id: 'backstory', icon: '📜', label: 'Hikaye' },
   { id: 'companion', icon: '🐾', label: 'Yoldaş' },
 ];
+
 
 function FieldLabel({ children }) {
   return (
@@ -54,6 +57,96 @@ function SectionHeader({ icon, title }) {
 }
 
 const fmtMod = (n) => (n >= 0 ? `+${n}` : `${n}`);
+
+const NORM_RACE_MAP = {
+  'insan': 'human', 'i̇nsan': 'human', 'human': 'human',
+  'yarım-elf': 'half-elf', 'yarim-elf': 'half-elf', 'yarım elf': 'half-elf', 'yarim elf': 'half-elf', 'half-elf': 'half-elf', 'halfelf': 'half-elf',
+  'yarım-ork': 'half-orc', 'yarim-ork': 'half-orc', 'yarım ork': 'half-orc', 'yarim ork': 'half-orc', 'half-orc': 'half-orc', 'halforc': 'half-orc',
+  'cüce': 'dwarf', 'cuce': 'dwarf', 'dwarf': 'dwarf',
+  'elf': 'elf',
+  'gnom': 'gnome', 'gnome': 'gnome',
+  'buçukluk': 'halfling', 'bucukluk': 'halfling', 'halfling': 'halfling',
+  'ork': 'orc', 'orc': 'orc',
+  'goblin': 'goblin', 'hobgoblin': 'hobgoblin',
+  'kobold': 'kobold', 'tiefling': 'tiefling', 'aasimar': 'aasimar'
+};
+
+const PF1E_RACE_ASI_MAP = {
+  "dwarf": { constitution: 2, wisdom: 2, charisma: -2 },
+  "elf": { dexterity: 2, intelligence: 2, constitution: -2 },
+  "gnome": { constitution: 2, charisma: 2, strength: -2 },
+  "halfling": { dexterity: 2, charisma: 2, strength: -2 },
+  "aasimar": { wisdom: 2, charisma: 2 },
+  "android": { dexterity: 2, intelligence: 2, charisma: -2 },
+  "catfolk": { dexterity: 2, charisma: 2, wisdom: -2 },
+  "changeling": { wisdom: 2, charisma: 2, constitution: -2 },
+  "deep one hybrid": { constitution: 2, wisdom: 2, dexterity: -2 },
+  "dhampir": { dexterity: 2, charisma: 2, constitution: -2 },
+  "drow": { dexterity: 2, charisma: 2, constitution: -2 },
+  "drow noble": { dexterity: 4, intelligence: 2, wisdom: 2, charisma: 2, constitution: -2 },
+  "duergar": { constitution: 2, wisdom: 2, charisma: -4 },
+  "fetchling": { dexterity: 2, charisma: 2, wisdom: -2 },
+  "goblin": { dexterity: 4, strength: -2, charisma: -2 },
+  "grippli": { dexterity: 2, wisdom: 2, strength: -2 },
+  "hobgoblin": { dexterity: 2, constitution: 2 },
+  "ifrit": { dexterity: 2, charisma: 2, wisdom: -2 },
+  "kitsune": { dexterity: 2, charisma: 2, strength: -2 },
+  "kobold": { dexterity: 2, strength: -4, constitution: -2 },
+  "merfolk": { dexterity: 2, constitution: 2, charisma: 2 },
+  "nagaji": { strength: 2, charisma: 2, intelligence: -2 },
+  "orc": { strength: 4, intelligence: -2, wisdom: -2, charisma: -2 },
+  "oread": { strength: 2, wisdom: 2, charisma: -2 },
+  "ratfolk": { dexterity: 2, intelligence: 2, strength: -2 },
+  "skinwalker": { wisdom: 2, intelligence: -2 },
+  "suli": { strength: 2, charisma: 2, intelligence: -2 },
+  "svirfneblin": { dexterity: 2, wisdom: 2, strength: -2, charisma: -4 },
+  "sylph": { dexterity: 2, intelligence: 2, constitution: -2 },
+  "tengu": { dexterity: 2, wisdom: 2, constitution: -2 },
+  "tiefling": { dexterity: 2, intelligence: 2, charisma: -2 },
+  "trox": { strength: 6, dexterity: -2, intelligence: -2, wisdom: -2, charisma: -2 },
+  "undine": { dexterity: 2, wisdom: 2, charisma: -2 },
+  "vanara": { dexterity: 2, wisdom: 2, charisma: -2 },
+  "vishkanya": { dexterity: 2, charisma: 2, wisdom: -2 },
+  "wayang": { dexterity: 2, intelligence: 2, wisdom: -2 },
+  "wyrwood": { dexterity: 2, intelligence: 2, constitution: -2 }
+};
+
+function normalizeRaceName(r) {
+  const str = (r || '').toLowerCase().trim();
+  return NORM_RACE_MAP[str] || str;
+}
+
+/** Client-side racial ASI computation (fallback when backend is unavailable) */
+function getClientRacialASI(race, raceData, racialAbilityChoice, secondaryRacialAbilityChoice, selectedRacialTraits) {
+  const canon = normalizeRaceName(race);
+  const isFlexible = ['human', 'half-elf', 'half-orc', 'primitive human'].includes(canon);
+  
+  if (isFlexible) {
+    const primary = (racialAbilityChoice || 'strength').toLowerCase();
+    const hasDual = (selectedRacialTraits || []).some(t => String(t).toLowerCase().includes('dual talent'));
+    const res = { [primary]: 2 };
+    if (hasDual) {
+      const secondary = (secondaryRacialAbilityChoice || 'dexterity').toLowerCase();
+      if (secondary !== primary) res[secondary] = 2;
+    }
+    return res;
+  }
+  
+  // Check raceData.sistem_verisi.ability_score_increase first
+  const sv = raceData?.sistem_verisi || {};
+  if (sv.ability_score_increase && typeof sv.ability_score_increase === 'object') {
+    const keys = Object.keys(sv.ability_score_increase).filter(k => k !== 'any');
+    if (keys.length > 0) {
+      const result = {};
+      for (const [k, v] of Object.entries(sv.ability_score_increase)) {
+        if (k !== 'any') result[k.toLowerCase()] = parseInt(v) || 0;
+      }
+      return result;
+    }
+  }
+  
+  return PF1E_RACE_ASI_MAP[canon] || {};
+}
 
 export default function PF1eControls() {
   const store = useCharacterStore();
@@ -887,46 +980,304 @@ export default function PF1eControls() {
           </div>
         )}
 
-        {/* ── TAB 5: GEAR, FEATS, TRAITS & SPELLS ── */}
-        {tab === 'gear' && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        {/* ── TAB: FEATS & TRAITS ── */}
+        {tab === 'feats' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
             
             {/* Feats Section */}
-            <SectionHeader icon="✧" title="Feat & Hücre Seçimi" />
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
-              <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.52rem', color: 'var(--gold-dim)' }}>{feats?.length || 0} / {maxFeatSlots} Feat Seçildi</span>
-              <button className="gold-btn primary" style={{ padding: '4px 10px' }} onClick={() => setFeatModalOpen(true)}>
-                + Feat Ekle
-              </button>
-            </div>
-            {featError && <div style={{ color: '#e87070', fontSize: '0.75rem' }}>{featError}</div>}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginBottom: 8 }}>
-              {(feats || []).map((f, i) => (
-                <span key={i} style={{ border: '1px solid var(--border-gold)', background: 'rgba(201,168,76,0.08)', padding: '3px 8px', borderRadius: 1, fontSize: '0.75rem', color: 'var(--gold-light)', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-                  {f.isim || f} <X size={10} style={{ cursor: 'pointer' }} onClick={() => removeFeat(f.isim || f)} />
+            <div>
+              <SectionHeader icon="✧" title="Featler & Hünerler" />
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+                <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.72rem', color: 'var(--gold-dim)' }}>
+                  {feats?.length || 0} / {maxFeatSlots} Feat Seçildi
                 </span>
-              ))}
+                <button className="gold-btn primary" style={{ padding: '5px 12px', fontSize: '0.75rem' }} onClick={() => setFeatModalOpen(true)}>
+                  + Feat Ekle
+                </button>
+              </div>
+              {featError && <div style={{ color: '#e87070', fontSize: '0.75rem', marginBottom: 6 }}>{featError}</div>}
+              
+              {(!feats || feats.length === 0) ? (
+                <div style={{ fontSize: '0.8rem', color: 'var(--gold-dim)', fontStyle: 'italic', padding: '10px', background: 'rgba(15,12,28,0.5)', borderRadius: 6, border: '1px solid rgba(201,168,76,0.15)' }}>
+                  Henüz hüner (feat) seçilmedi. "+ Feat Ekle" butonuna basarak PF1e Feat kataloğundan seçim yapabilirsiniz.
+                </div>
+              ) : (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                  {feats.map((f, i) => {
+                    const fName = typeof f === 'object' ? (f.isim || f.name) : f;
+                    const fDesc = typeof f === 'object' ? (f.aciklama || f.description || f.sistem_verisi?.description) : '';
+                    const fCat = typeof f === 'object' ? (f.sistem_verisi?.feat_category || f.kategori) : null;
+                    return (
+                      <div key={i} className="dark-panel" style={{ padding: '10px 12px', border: '1px solid rgba(201,168,76,0.25)', borderRadius: 6, display: 'flex', flexDirection: 'column', gap: 4 }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                          <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.9rem', color: 'var(--gold-bright)', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 6 }}>
+                            ✦ {fName}
+                            {fCat && (
+                              <span style={{ fontSize: '0.62rem', padding: '1px 6px', borderRadius: 4, background: 'rgba(201,168,76,0.15)', border: '1px solid rgba(201,168,76,0.3)', color: 'var(--gold-light)' }}>
+                                {fCat}
+                              </span>
+                            )}
+                          </span>
+                          <X size={14} style={{ color: '#e87070', cursor: 'pointer', opacity: 0.8 }} onClick={() => removeFeat(fName)} />
+                        </div>
+                        {fDesc && (
+                          <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: '1.4', fontFamily: 'Outfit, sans-serif' }}>
+                            {cleanText(fDesc)}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
 
             {/* Traits Section */}
-            <SectionHeader icon="🛡" title="Traitler (Karakter Özellikleri)" />
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
-              <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.52rem', color: 'var(--gold-dim)' }}>{traits?.length || 0} / 2 Trait Seçildi</span>
-              <button className="gold-btn" style={{ padding: '4px 10px' }} onClick={() => setTraitModalOpen(true)}>
-                + Trait Ekle
-              </button>
-            </div>
-            {traitError && <div style={{ color: '#e87070', fontSize: '0.75rem' }}>{traitError}</div>}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, marginBottom: 8 }}>
-              {(traits || []).map((t, i) => (
-                <span key={i} style={{ border: '1px solid rgba(63,185,80,0.3)', background: 'rgba(63,185,80,0.08)', padding: '3px 8px', borderRadius: 1, fontSize: '0.75rem', color: '#3fb950', display: 'inline-flex', alignItems: 'center', gap: 4 }}>
-                  {t.isim || t} <X size={10} style={{ cursor: 'pointer' }} onClick={() => removeTrait(t.isim || t)} />
+            <div style={{ marginTop: 10 }}>
+              <SectionHeader icon="🛡" title="Karakter Traitleri (Character Traits)" />
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+                <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.72rem', color: 'var(--gold-dim)' }}>
+                  {traits?.length || 0} / 2 Trait Seçildi
                 </span>
-              ))}
+                <button className="gold-btn" style={{ padding: '5px 12px', fontSize: '0.75rem' }} onClick={() => setTraitModalOpen(true)}>
+                  + Trait Ekle
+                </button>
+              </div>
+              {traitError && <div style={{ color: '#e87070', fontSize: '0.75rem', marginBottom: 6 }}>{traitError}</div>}
+
+              {(!traits || traits.length === 0) ? (
+                <div style={{ fontSize: '0.8rem', color: 'var(--gold-dim)', fontStyle: 'italic', padding: '10px', background: 'rgba(15,12,28,0.5)', borderRadius: 6, border: '1px solid rgba(201,168,76,0.15)' }}>
+                  Henüz karakter traiti seçilmedi. "+ Trait Ekle" butonuna basarak Combat, Social, Faith, Magic veya Racial traitlerini seçebilirsiniz.
+                </div>
+              ) : (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                  {traits.map((t, i) => {
+                    const tName = typeof t === 'object' ? (t.isim || t.name) : t;
+                    const tDesc = typeof t === 'object' ? (t.aciklama || t.description) : '';
+                    const tCat = typeof t === 'object' ? (t.sistem_verisi?.trait_category || t.kategori) : null;
+                    return (
+                      <div key={i} className="dark-panel" style={{ padding: '10px 12px', border: '1px solid rgba(78,201,176,0.25)', borderRadius: 6, display: 'flex', flexDirection: 'column', gap: 4 }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                          <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.88rem', color: '#7ee787', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 6 }}>
+                            🛡 {tName}
+                            {tCat && (
+                              <span style={{ fontSize: '0.62rem', padding: '1px 6px', borderRadius: 4, background: 'rgba(78,201,176,0.15)', border: '1px solid rgba(78,201,176,0.3)', color: '#7ee787' }}>
+                                {tCat}
+                              </span>
+                            )}
+                          </span>
+                          <X size={14} style={{ color: '#e87070', cursor: 'pointer', opacity: 0.8 }} onClick={() => removeTrait(tName)} />
+                        </div>
+                        {tDesc && (
+                          <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: '1.4', fontFamily: 'Outfit, sans-serif' }}>
+                            {cleanText(tDesc)}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
             </div>
 
+          </div>
+        )}
+
+        {/* ── TAB: SPELLS ── */}
+        {tab === 'spells' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <SectionHeader icon="✨" title="Büyüler & Mucizeler (Spells)" />
+              <button className="gold-btn primary" style={{ padding: '5px 12px', fontSize: '0.75rem' }} onClick={() => setSpellModalOpen(true)}>
+                + Büyü Ekle
+              </button>
+            </div>
+
+            {hasSpellcasting && (
+              <>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
+                  <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.7rem', color: 'var(--gold-bright)' }}>Günlük Büyü Slotları & Dinlenme</span>
+                  <button
+                    className="gold-btn"
+                    onClick={() => restCharacter()}
+                    style={{ padding: '4px 10px', fontSize: '0.72rem', display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(124,110,247,0.15)', border: '1px solid #7c6ef7', color: '#a594ff' }}
+                  >
+                    🌙 Uzun Dinlenme Yap
+                  </button>
+                </div>
+
+                {/* Spell Slots per Day Tracker */}
+                {recalcedData.spell_slots && Object.keys(recalcedData.spell_slots).length > 0 && (
+                  <div style={{ backgroundColor: '#161622', border: '1px solid var(--border-gold)', borderRadius: '8px', padding: '10px', marginBottom: '10px' }}>
+                    <FieldLabel>Günlük Büyü Hakkı Takibi (Tıklayarak Harcayın)</FieldLabel>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
+                      {Object.entries(recalcedData.spell_slots).map(([lvlStr, totalSlots]) => {
+                        const lvl = parseInt(lvlStr);
+                        const usedCount = usedSpellSlots[lvlStr] || 0;
+                        const remaining = Math.max(0, totalSlots - usedCount);
+
+                        return (
+                          <div key={lvlStr} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.8rem', backgroundColor: '#0f0f15', padding: '4px 8px', borderRadius: '6px' }}>
+                            <span style={{ color: 'var(--gold-bright)', fontWeight: 600 }}>
+                              {lvl === 0 ? 'Cantrips (0. Seviye)' : `Seviye ${lvl} Büyüler`}
+                            </span>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                              <span style={{ fontSize: '0.72rem', color: '#94a3b8' }}>
+                                {remaining} / {totalSlots} Kalan
+                              </span>
+                              <div style={{ display: 'flex', gap: '3px' }}>
+                                {Array.from({ length: totalSlots }).map((_, i) => {
+                                  const isUsed = i < usedCount;
+                                  return (
+                                    <div
+                                      key={i}
+                                      onClick={() => toggleSpellSlotUsed(lvlStr, totalSlots)}
+                                      style={{
+                                        width: '16px', height: '16px', borderRadius: '4px', cursor: 'pointer',
+                                        backgroundColor: isUsed ? '#e94560' : 'rgba(78, 201, 176, 0.2)',
+                                        border: `1px solid ${isUsed ? '#ff6b81' : '#4ec9b0'}`,
+                                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                        fontSize: '0.6rem', color: isUsed ? '#fff' : '#4ec9b0', fontWeight: 'bold'
+                                      }}
+                                    >
+                                      {isUsed ? '✕' : '✓'}
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Prepared Spells Manager for Prepared Spellcasters */}
+                {isPreparedSpellcaster && recalcedData.spell_slots && (
+                  <div style={{ backgroundColor: '#161622', border: '1px solid #7c6ef7', borderRadius: '8px', padding: '10px', marginBottom: '10px' }}>
+                    <FieldLabel>🔮 Günlük Büyü Hazırlama Paneli (Prepared Spells)</FieldLabel>
+                    <div style={{ fontSize: '0.7rem', color: '#a594ff', marginBottom: '8px' }}>
+                      {charClass} sınıfı hazırlamalı büyücüdür. Günlük slotlarınıza defterinizdeki büyüleri seçip bağlayabilirsiniz:
+                    </div>
+
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                      {Object.entries(recalcedData.spell_slots).map(([lvlStr, totalSlots]) => {
+                        const lvl = parseInt(lvlStr);
+                        if (lvl === 0) return null;
+
+                        const currentPrepared = preparedSpells[lvlStr] || [];
+
+                        return (
+                          <div key={lvlStr} style={{ backgroundColor: '#0f0f15', border: '1px solid #2a2a3a', borderRadius: '6px', padding: '8px' }}>
+                            <div style={{ fontSize: '0.78rem', color: 'var(--gold-bright)', fontWeight: 700, marginBottom: '6px' }}>
+                              Seviye {lvl} Büyü Slotları ({totalSlots} Slot Hak)
+                            </div>
+
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                              {Array.from({ length: totalSlots }).map((_, slotIdx) => {
+                                const preparedItem = currentPrepared[slotIdx] || { name: '', cast: false };
+                                const isCast = preparedItem.cast;
+
+                                return (
+                                  <div key={slotIdx} style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                    <span style={{ fontSize: '0.7rem', color: '#64748b', width: '42px', flexShrink: 0 }}>
+                                      Slot #{slotIdx + 1}:
+                                    </span>
+                                    <select
+                                      className="rune-input"
+                                      value={preparedItem.name || ''}
+                                      onChange={e => setPreparedSpell(lvlStr, slotIdx, e.target.value)}
+                                      style={{ flex: 1, padding: '4px 6px', fontSize: '0.78rem' }}
+                                    >
+                                      <option value="">-- Büyü Hazırla --</option>
+                                      {spells.map((sp, sIdx) => {
+                                        const spName = sp.isim || sp.name;
+                                        return <option key={sIdx} value={spName}>{spName}</option>;
+                                      })}
+                                    </select>
+                                    <button
+                                      onClick={() => togglePreparedSpellCast(lvlStr, slotIdx)}
+                                      style={{
+                                        padding: '3px 8px', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 'bold', cursor: 'pointer',
+                                        backgroundColor: isCast ? '#e94560' : 'rgba(78, 201, 176, 0.2)',
+                                        border: `1px solid ${isCast ? '#ff6b81' : '#4ec9b0'}`,
+                                        color: isCast ? '#fff' : '#4ec9b0'
+                                      }}
+                                    >
+                                      {isCast ? '✕ Atıldı' : '✓ Hazır'}
+                                    </button>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+              </>
+            )}
+
+            {/* Selected Spells List */}
+            <div style={{ marginTop: 6 }}>
+              <div style={{ fontFamily: 'Cinzel, serif', fontSize: '0.72rem', color: 'var(--gold-dim)', marginBottom: 8 }}>
+                Büyü Defterinizdeki Büyüler ({spells?.length || 0})
+              </div>
+
+              {(!spells || spells.length === 0) ? (
+                <div style={{ fontSize: '0.8rem', color: 'var(--gold-dim)', fontStyle: 'italic', padding: '10px', background: 'rgba(15,12,28,0.5)', borderRadius: 6, border: '1px solid rgba(201,168,76,0.15)' }}>
+                  Henüz büyü defterinize büyü eklenmedi. "+ Büyü Ekle" butonuna tıklayarak büyü kataloğundan seçim yapabilirsiniz.
+                </div>
+              ) : (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                  {spells.map((sp, idx) => {
+                    const sName = typeof sp === 'object' ? (sp.isim || sp.name) : sp;
+                    const sDesc = typeof sp === 'object' ? (sp.aciklama || sp.description) : '';
+                    const sSchool = typeof sp === 'object' ? (sp.sistem_verisi?.school) : null;
+                    const sLvl = typeof sp === 'object' ? (sp.sistem_verisi?.level) : null;
+
+                    return (
+                      <div key={idx} className="dark-panel" style={{ padding: '10px 12px', border: '1px solid rgba(124,110,247,0.25)', borderRadius: 6, display: 'flex', flexDirection: 'column', gap: 4 }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                          <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.88rem', color: '#a594ff', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 6 }}>
+                            ✨ {sName}
+                            {sLvl !== null && sLvl !== undefined && (
+                              <span style={{ fontSize: '0.62rem', padding: '1px 6px', borderRadius: 4, background: 'rgba(124,110,247,0.2)', border: '1px solid rgba(124,110,247,0.4)', color: '#d8b4fe' }}>
+                                Seviye {sLvl}
+                              </span>
+                            )}
+                            {sSchool && (
+                              <span style={{ fontSize: '0.62rem', padding: '1px 6px', borderRadius: 4, background: 'rgba(30,120,180,0.2)', border: '1px solid rgba(60,160,220,0.4)', color: '#93c5fd' }}>
+                                {sSchool}
+                              </span>
+                            )}
+                          </span>
+                          <X size={14} style={{ color: '#e87070', cursor: 'pointer', opacity: 0.8 }} onClick={() => removeSpell(sName)} />
+                        </div>
+                        {sDesc && (
+                          <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: '1.4', fontFamily: 'Outfit, sans-serif' }}>
+                            {cleanText(sDesc)}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+
+          </div>
+        )}
+
+        {/* ── TAB: GEAR ── */}
+        {tab === 'gear' && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+            
             {/* Equipment Section */}
             <SectionHeader icon="⚗" title="Zırh & Ekipman" />
+
 
             {/* Encumbrance & Carrying Capacity Meter */}
             {(() => {

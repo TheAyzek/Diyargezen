@@ -134,4 +134,30 @@ Aşağıdaki terimler ve kod karşılıkları tüm projede (UI metinleri, API pa
 - **Stealth:** `Gizlilik` (DEX)
 - **Survival:** `Hayatta Kalma` (WIS)
 - **Swim:** `Yüzme` (STR)
-- **Use Magic Device:** `Büyülü Cihaz Kullanımı` (CHA)
+- **Use Magic Device:** `Büyülü Cihaz Kullanımı` (CHA)
+
+
+## 10. WEB AESTHETICS, SEO VE VIBECODING ÖNLEME STANDARTLARI (20 MADDE)
+
+Diyargezen web uygulamasında acemi/yapaysı ("vibecoded") web uygulaması izlenimi vermemek için aşağıdaki 20 kurala KESİNLİKLE uyulacaktır:
+
+1. **Özel Domain Standardı:** Canlı dağıtımlarda jenerik Vercel subdomain yerine production kanonik domainleri ve yönlendirmeleri kullanılmalıdır.
+2. **View Source & Prerender Desteği:** `index.html` içinde arama motorları ve ilk yükleme için semantic fallback HTML ve `<noscript>` içerikleri yer almalıdır.
+3. **Özel High-Fantasy 404 Sayfası:** Tanımsız rotalar veya 404 durumlarında jenerik tarayıcı hatası yerine temaya uygun `NotFound` ekranı gösterilmelidir.
+4. **Marka Sekme Başlığı:** Tarayıcı sekmesinde hiçbir zaman "Vite + React" veya varsayılan jenerik başlıklar görünmemelidir.
+5. **Dinamik Ekran Başlıkları (Dynamic Page Titles):** Görünümler arasında (`Dashboard`, `RulesCompendium`, Karakter Formu) geçiş yapıldığında `document.title` dinamik olarak güncellenmelidir (örn: `Diyargezen - Kural Kütüphanesi`).
+6. **Bölüm Meta Açıklamaları:** HTML ve ekran bazında arama motorlarına uygun net meta açıklamaları (description) bulunmalıdır.
+7. **Sosyal Ağ Önizleme Etiketleri (Open Graph & Twitter Cards):** `og:title`, `og:description`, `og:image`, `og:url` ve `twitter:card` etiketleri tam ve güncel olmalıdır.
+8. **Yapılandırılmış Veri (JSON-LD Structured Data):** `index.html` içerisinde arama motorları ve AI botlar için Schema.org (`SoftwareApplication` / `WebApplication`) verisi tanımlanmalıdır.
+9. **Tek `<h1>` Standardı:** Her ana görünümde semantic olarak yalnızca TEK bir `<h1>` başlığı yer almalı, alt başlıklar `<h2>`-`<h6>` sırasını izlemelidir.
+10. **`<h1>` Varlığı Zorunluluğu:** Hiçbir ana ekran başsız veya `<h1>` etiketsiz bırakılamaz.
+11. **Kanonik Bağlantı (`<link rel="canonical">`):** Tekrarlayan URL ve SEO karmaşasını önlemek için `canonical` etiket zorunludur.
+12. **Yapay Zeka Bağlam Dosyası (`/llms.txt`):** AI agent'lar ve LLM'lerin Diyargezen mimarisini anlayabilmesi için `public/llms.txt` dosyası sunulmalıdır.
+13. **Optimize Edilmiş `robots.txt`:** Tarayıcılar ve botlar için düzgün yapılandırılmış, `sitemap.xml` referanslı `public/robots.txt` olmalıdır.
+14. **Çoklu Favicon ve Touch Icon Seti:** SVG, PNG, Apple Touch Icon ve Manifest iconları eksiksiz tanımlanmalıdır.
+15. **Site Haritası (`/sitemap.xml`):** Web istemcisinde `public/sitemap.xml` yer almalıdır.
+16. **Dil Özniteliği (`lang` attribute):** `<html>` etiketinde geçerli dil özniteliği (`lang="tr"`) zorunludur.
+17. **Görsel Alt Metinleri (`alt` attribute):** Tüm `<img>` ögelerinde boş veya jenerik olmayan anlamlı `alt` açıklamaları olmalıdır.
+18. **Production Source Map Gizleme:** Canlı build (`vite.config.js`) işleminde `.map` dosyalarının sızmaması için `sourcemap: false` yapılmalıdır.
+19. **Konsol Temizliği (Console Error Hygiene):** Üretim modunda React key uyarıları, uncaught promise rejection veya gereksiz console log hataları birikmemelidir.
+20. **JS Bundle Kod Bölme (Code Splitting):** Tek parçalık devasa bundle yerine `vite.config.js` `manualChunks` ve dinamik import yapılandırması kullanılmalıdır.

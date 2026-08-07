@@ -7,6 +7,8 @@ import {
 } from 'lucide-react';
 import { cleanText, formatTitle, toSentenceCase, parseTraitsDetailed } from '../utils/textSanitizer';
 import { getEquipmentCategory, EQUIPMENT_CATEGORIES, MAIN_EQUIPMENT_CATEGORIES, SUB_EQUIPMENT_CATEGORIES, matchesEquipmentSubfilter } from '../utils/equipmentClassifier';
+import CompendiumLoader from './common/CompendiumLoader';
+
 
 const CATEGORIES = [
   { id: 'races', label: 'Irklar & Miraslar', icon: UserCheck, endpoint: '/api/rules/pf1e/races' },
@@ -1050,16 +1052,12 @@ export default function RulesCompendium({ onBack }) {
 
       {/* Main Grid */}
       {loading ? (
-        <div className="sheet-card" style={{ padding: '60px', textAlign: 'center', color: 'var(--gold-light)' }}>
-          <Sparkles className="spin" size={32} style={{ marginBottom: '12px' }} />
-          <p style={{ fontFamily: 'Cinzel, serif', fontSize: '1rem', margin: '0 0 6px 0' }}>Kural Kütüphanesi Yükleniyor...</p>
-          {coldStartMsg && (
-            <p style={{ fontSize: '0.82rem', color: '#ffd700', fontFamily: 'Inter, sans-serif', margin: 0 }}>
-              {coldStartMsg}
-            </p>
-          )}
-        </div>
+        <CompendiumLoader 
+          activeCategory={CATEGORIES.find(c => c.id === activeTab)?.label || 'Kural Kütüphanesi'} 
+          coldStartMsg={coldStartMsg} 
+        />
       ) : sortedEntities.length === 0 ? (
+
         <div className="sheet-card" style={{ padding: '40px', textAlign: 'center', color: 'var(--text-muted)' }}>
           <Info size={32} style={{ color: 'var(--border-gold)', marginBottom: '8px' }} />
           <p>Aradığınız kritere uygun kural varlığı bulunamadı.</p>

@@ -3,10 +3,11 @@ import { useCharacterStore } from '../../store/characterStore';
 import { ArrowRight, ArrowLeft, Check, Sparkles, AlertCircle, Plus, Minus, Wand2, Award, BookOpen } from 'lucide-react';
 import SpellSelectorModal from '../SpellSelectorModal';
 import FeatSelectorModal from '../FeatSelectorModal';
+import TraitSelectorModal from '../TraitSelectorModal';
 
 export default function LevelUpWizard({ isOpen, onClose }) {
   const { 
-    id, name, level, class: currentClass, abilities, skills, recalcedData, levelUp, system, portrait 
+    id, name, level, class: currentClass, abilities, skills, recalcedData, levelUp, system, portrait, race, addTrait, addSpell
   } = useCharacterStore();
 
   const targetLevel = level + 1;
@@ -19,7 +20,8 @@ export default function LevelUpWizard({ isOpen, onClose }) {
   const isSpellcaster = [
     'wizard', 'sorcerer', 'cleric', 'druid', 'bard', 'paladin',
     'ranger', 'magus', 'alchemist', 'witch', 'oracle', 'inquisitor',
-    'summoner', 'arcanist', 'bloodrager', 'shaman'
+    'summoner', 'arcanist', 'bloodrager', 'shaman', 'warpriest', 'hunter',
+    'investigator', 'medium', 'mesmerist', 'occultist', 'spiritualist'
   ].includes(currentClass?.toLowerCase());
 
   // Dynamic screens based on TTRPG system
@@ -29,8 +31,9 @@ export default function LevelUpWizard({ isOpen, onClose }) {
   } else if (system === 'dnd5e') {
     screens = ['hp', 'feat', 'confirm'];
   } else { // pf1e
-    screens = ['hp', 'skills', 'feat', 'confirm'];
+    screens = ['hp', 'skills', 'feat', 'traits', ...(isSpellcaster ? ['spells'] : []), 'confirm'];
   }
+
 
   // Step state
   const [step, setStep] = useState(1);
@@ -72,9 +75,13 @@ export default function LevelUpWizard({ isOpen, onClose }) {
   const [abilityIncrease, setAbilityIncrease] = useState('');
   const [spellsLearned, setSpellsLearned] = useState([]);
   const [customSpellText, setCustomSpellText] = useState('');
+  const [traitsLearned, setTraitsLearned] = useState([]);
+  const [customTraitText, setCustomTraitText] = useState('');
+  const [isTraitModalOpen, setIsTraitModalOpen] = useState(false);
   const [isSpellModalOpen, setIsSpellModalOpen] = useState(false);
   const [isFeatModalOpen, setIsFeatModalOpen] = useState(false);
   const [featModalCategory, setFeatModalCategory] = useState('All');
+
   
   // DND5e specific states
   const [dndChoiceType, setDndChoiceType] = useState('asi'); // 'asi' or 'feat'
@@ -361,8 +368,11 @@ export default function LevelUpWizard({ isOpen, onClose }) {
             let label = '';
             if (scr === 'hp') label = '1. HP & Sınıf';
             if (scr === 'skills') label = '2. Beceriler';
-            if (scr === 'feat') label = system === 'dnd5e' ? '2. Yetenek & Feat' : '3. Feat & Yetenek';
-            if (scr === 'confirm') label = system === 'mnm' ? 'Seçimleri Onayla' : `${screens.length}. Büyü & Onay`;
+            if (scr === 'feat') label = system === 'dnd5e' ? '2. Yetenek & Feat' : '3. Featler';
+            if (scr === 'traits') label = '4. Traitler';
+            if (scr === 'spells') label = '5. Büyüler';
+            if (scr === 'confirm') label = `${screens.length}. Onayla`;
+
             return (
               <span 
                 key={scr}
@@ -748,8 +758,204 @@ export default function LevelUpWizard({ isOpen, onClose }) {
             </div>
           )}
 
-          {/* SCREEN: Spells & Confirm */}
+          {/* SCREEN: Character Traits */}
+          {currentScreen === 'traits' && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <h4 style={{ fontSize: '1.1rem', color: 'var(--accent-gold)', margin: 0, display: 'flex', alignItems: 'center', gap: 8 }}>
+                <BookOpen size={20} /> Karakter Traitleri (Character Traits)
+              </h4>
+              <p style={{ fontSize: '0.85rem', color: '#8b949e', margin: 0, lineHeight: 1.5 }}>
+                Pathfinder 1e kuralları uyarınca karakteriniz geçmişinden ve yetişme tarzından 2 adet Karakter Traiti kazanır.
+              </p>
+
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <input 
+                  type="text" 
+                  placeholder="Trait adı girin veya kataloğdan seçin"
+                  value={customTraitText}
+                  onChange={(e) => setCustomTraitText(e.target.value)}
+                  className="form-input"
+                />
+                <button 
+                  type="button" 
+                  className="btn btn-primary"
+                  onClick={() => {
+                    if (customTraitText.trim() && !traitsLearned.includes(customTraitText.trim())) {
+                      const newT = customTraitText.trim();
+                      setTraitsLearned([...traitsLearned, newT]);
+                      addTrait({ isim: newT });
+                      setCustomTraitText('');
+                    }
+                  }}
+                  style={{ minHeight: 'unset', padding: '8px 16px' }}
+                >
+                  Ekle
+                </button>
+                <button 
+                  type="button" 
+                  className="btn btn-secondary"
+                  onClick={() => setIsTraitModalOpen(true)}
+                  style={{ minHeight: 'unset', padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '6px' }}
+                >
+                  <Award size={16} /> Kataloğdan Seç
+                </button>
+              </div>
+
+              <TraitSelectorModal
+                isOpen={isTraitModalOpen}
+                onClose={() => setIsTraitModalOpen(false)}
+                system={system || 'pf1e'}
+                character={{ race, class: currentClass, abilities, level: targetLevel }}
+                selectedTraits={traitsLearned}
+                onAddTrait={(traitObj) => {
+                  const name = traitObj.isim || traitObj.name;
+                  if (name && !traitsLearned.includes(name)) {
+                    setTraitsLearned([...traitsLearned, name]);
+                    addTrait(traitObj);
+                  }
+                }}
+              />
+
+              {traitsLearned.length > 0 ? (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--accent-gold)' }}>Seçilen Traitler:</span>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                    {traitsLearned.map((t, i) => (
+                      <span 
+                        key={i} 
+                        style={{ 
+                          background: 'rgba(78,201,176,0.15)', 
+                          border: '1px solid #4ec9b0', 
+                          color: '#4ec9b0',
+                          padding: '6px 12px', 
+                          borderRadius: '6px',
+                          fontSize: '12px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '8px'
+                        }}
+                      >
+                        🛡 {t}
+                        <button 
+                          type="button" 
+                          style={{ background: 'none', border: 'none', color: '#e87070', cursor: 'pointer', fontSize: 14 }}
+                          onClick={() => setTraitsLearned(traitsLearned.filter((_, idx) => idx !== i))}
+                        >
+                          &times;
+                        </button>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div style={{ fontSize: '0.82rem', color: '#8b949e', fontStyle: 'italic' }}>
+                  Henüz trait seçilmedi. İsteğe bağlı olarak yukarıdaki butonla ekleyebilirsiniz.
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* SCREEN: Dedicated Spells Selection */}
+          {currentScreen === 'spells' && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <h4 style={{ fontSize: '1.1rem', color: 'var(--accent-gold)', margin: 0, display: 'flex', alignItems: 'center', gap: 8 }}>
+                <Sparkles size={20} /> Büyü Seçimi (Known / Prepared Spells)
+              </h4>
+              <p style={{ fontSize: '0.85rem', color: '#8b949e', margin: 0, lineHeight: 1.5 }}>
+                {currentClass} sınıfı için bu seviyede büyü defterinize veya bilinen büyülerinize ekleyeceğiniz büyüleri seçin.
+              </p>
+
+              <div style={{ display: 'flex', gap: '8px' }}>
+                <input 
+                  type="text" 
+                  placeholder="Büyü adı girin veya kataloğdan seçin"
+                  value={customSpellText}
+                  onChange={(e) => setCustomSpellText(e.target.value)}
+                  className="form-input"
+                />
+                <button 
+                  type="button" 
+                  className="btn btn-primary"
+                  onClick={() => {
+                    if (customSpellText.trim() && !spellsLearned.includes(customSpellText.trim())) {
+                      const newS = customSpellText.trim();
+                      setSpellsLearned([...spellsLearned, newS]);
+                      addSpell({ isim: newS });
+                      setCustomSpellText('');
+                    }
+                  }}
+                  style={{ minHeight: 'unset', padding: '8px 16px' }}
+                >
+                  Ekle
+                </button>
+                <button 
+                  type="button" 
+                  className="btn btn-secondary"
+                  onClick={() => setIsSpellModalOpen(true)}
+                  style={{ minHeight: 'unset', padding: '8px 16px', display: 'flex', alignItems: 'center', gap: '6px' }}
+                >
+                  <Wand2 size={16} /> Kataloğdan Seç
+                </button>
+              </div>
+
+              <SpellSelectorModal
+                isOpen={isSpellModalOpen}
+                onClose={() => setIsSpellModalOpen(false)}
+                system={system || 'pf1e'}
+                characterClass={currentClass}
+                characterLevel={targetLevel}
+                selectedSpells={spellsLearned}
+                onAddSpell={(spellObj) => {
+                  const name = spellObj.isim || spellObj.name;
+                  if (name && !spellsLearned.includes(name)) {
+                    setSpellsLearned([...spellsLearned, name]);
+                    addSpell(spellObj);
+                  }
+                }}
+              />
+
+              {spellsLearned.length > 0 ? (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                  <span style={{ fontSize: '0.8rem', color: 'var(--accent-gold)' }}>Öğrenilen / Seçilen Büyüler:</span>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+                    {spellsLearned.map((s, i) => (
+                      <span 
+                        key={i} 
+                        style={{ 
+                          background: 'rgba(124,110,247,0.15)', 
+                          border: '1px solid #7c6ef7', 
+                          color: '#a594ff',
+                          padding: '6px 12px', 
+                          borderRadius: '6px',
+                          fontSize: '12px',
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          gap: '8px'
+                        }}
+                      >
+                        ✨ {s}
+                        <button 
+                          type="button" 
+                          style={{ background: 'none', border: 'none', color: '#e87070', cursor: 'pointer', fontSize: 14 }}
+                          onClick={() => setSpellsLearned(spellsLearned.filter((_, idx) => idx !== i))}
+                        >
+                          &times;
+                        </button>
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div style={{ fontSize: '0.82rem', color: '#8b949e', fontStyle: 'italic' }}>
+                  Henüz büyü seçilmedi. "+ Kataloğdan Seç" butonuna tıklayarak büyü kataloğundan dilediğiniz büyüleri ekleyebilirsiniz.
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* SCREEN: Confirm */}
           {currentScreen === 'confirm' && (
+
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               
               {/* Celebration Banner */}

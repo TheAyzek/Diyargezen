@@ -1,0 +1,21 @@
+# Diyargezen — Pathfinder 1st Edition TTRPG Character Creator & Rule Engine
+
+> Diyargezen is a dedicated Pathfinder 1st Edition (PF1e) Character Creator, Builder, and Rule Engine platform.
+
+## Overview
+Diyargezen offers 100% Pathfinder 1st Edition rule-compliant character management, level-up workflows, soft-block validation, offline-first synchronization, and live PDF character sheet rendering.
+
+## System Capabilities
+- **Character Creator & Level-Up Wizard:** Step-by-step stat allocation, class selection, skill distribution, feat filtering, and spell selection.
+- **Flexible GM Engine (Soft-Block):** Validates prerequisites while permitting manual GM override flags and custom attribute modifiers.
+- **Rules Compendium:** Searchable index of PF1e Feats, Spells, Classes, Races, and Equipment with standardized terminology.
+- **Live PDF Rendering:** Live client-side PDF AcroForm filling using `pdf-lib` for official Paizo PF1e character sheets.
+- **Offline-First:** Local SQLite storage on desktop client with automatic background synchronization to FastAPI backend.
+
+## Tech Stack
+- Frontend: React, Vite, Tailwind CSS, Lucide Icons, pdf-lib
+- Backend: FastAPI, Python 3.11, Pydantic v2, SQLite, JWT Auth
+
+## Links
+- App: https://diyargezen-web.onrender.com
+- API Base: /api

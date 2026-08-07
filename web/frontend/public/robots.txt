@@ -1,0 +1,9 @@
+# Diyargezen Robots.txt
+User-agent: *
+Allow: /
+Allow: /templates/
+Allow: /llms.txt
+Allow: /sitemap.xml
+
+# Sitemap reference
+Sitemap: https://diyargezen-web.onrender.com/sitemap.xml
