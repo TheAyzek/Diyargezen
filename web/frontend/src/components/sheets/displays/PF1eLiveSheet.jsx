@@ -16,7 +16,7 @@
  */
 
 import React, { useEffect, useState, useRef } from 'react';
-import { PDFDocument, StandardFonts } from 'pdf-lib';
+import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
 import { FileText, RefreshCw, Download, Shield, Heart, Sword, Sparkles, Activity, Wand2, Scroll } from 'lucide-react';
 
 /**
@@ -435,7 +435,7 @@ export default function PF1eLiveSheet() {
         setField(`WT ${idx + 1}`, `${wVal} lb`);
       });
 
-      // Embed Character Portrait image onto Page 2 clean top-right empty space if available
+      // Embed Character Portrait image over the top-left Pathfinder logo on Page 1 if available
       if (portrait && typeof portrait === 'string') {
         try {
           let image;
@@ -445,21 +445,39 @@ export default function PF1eLiveSheet() {
             image = await pdfDoc.embedJpg(portrait);
           }
           if (image) {
-            const pages = pdfDoc.getPages();
-            const targetPage = pages.length > 1 ? pages[1] : pages[0];
-            const maxWidth = 95;
-            const maxHeight = 52;
-            const scale = Math.min(maxWidth / image.width, maxHeight / image.height);
-            const drawWidth = image.width * scale;
-            const drawHeight = image.height * scale;
-            const drawX = 470 + (maxWidth - drawWidth) / 2;
-            const drawY = 718 + (maxHeight - drawHeight) / 2;
+            const page1 = pdfDoc.getPages()[0];
+            const boxX = 28;
+            const boxY = 682;
+            const boxW = 195;
+            const boxH = 84;
 
-            targetPage.drawImage(image, {
+            // 1. Draw clean white background rectangle with gold border over the Pathfinder logo
+            page1.drawRectangle({
+              x: boxX,
+              y: boxY,
+              width: boxW,
+              height: boxH,
+              color: rgb(1, 1, 1),
+              borderColor: rgb(0.78, 0.65, 0.3),
+              borderWidth: 1.5
+            });
+
+            // 2. Compute proportional scaling to fit inside the portrait frame
+            const padding = 2;
+            const availW = boxW - (padding * 2);
+            const availH = boxH - (padding * 2);
+            const scale = Math.min(availW / image.width, availH / image.height);
+            const drawW = image.width * scale;
+            const drawH = image.height * scale;
+            const drawX = boxX + padding + (availW - drawW) / 2;
+            const drawY = boxY + padding + (availH - drawH) / 2;
+
+            // 3. Draw portrait image cleanly centered
+            page1.drawImage(image, {
               x: drawX,
               y: drawY,
-              width: drawWidth,
-              height: drawHeight
+              width: drawW,
+              height: drawH
             });
           }
         } catch (e) {
