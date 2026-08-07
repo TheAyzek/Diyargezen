@@ -60,8 +60,9 @@ export default function PF1eControls() {
   const {
     id, name, level, race, class: charClass, feat, abilities, skills, recalcedData,
     alignment, gender, age, height, weight, deity, homeland, hair, eyes,
-    backstory = '', personality = '', allies = '',
+    backstory = '', personality = '', allies = '', notes = '',
     traits, feats, spells = [], usedSpellSlots = {}, preparedSpells = {},
+    equipment = [], gold = 150, portrait = '', archetype = '', companion = null,
     racialAbilityChoice = 'strength', secondaryRacialAbilityChoice = 'dexterity', selectedRacialTraits = [],
     updateField, updateAbility, updateSkillRank, addEquipment, removeEquipment,
     addTrait, removeTrait, addFeat, removeFeat, addSpell, removeSpell, toggleRacialTrait, applyLevelUp,
