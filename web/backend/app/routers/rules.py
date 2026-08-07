@@ -84,9 +84,14 @@ def search_feats(
     summary="Ekipman & Eşya Arama",
     description="Silah, zırh, kalkan ve maceracı eşyalarını arar."
 )
-def search_equipment(system: str, query: str = Query("", description="Eşya adı filtresi")):
-    items = service.get_equipment(system, query)
+def search_equipment(
+    system: str,
+    query: str = Query("", description="Eşya adı filtresi"),
+    category: str = Query("", description="Kategori filtresi (weapons, armor, gear, potions vb.)")
+):
+    items = service.get_equipment(system, query=query, category=category)
     return [EntityResponseSchema.model_validate(i, from_attributes=True) for i in items]
+
 
 @router.get(
     "/{system}/spells",

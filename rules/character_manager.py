@@ -717,21 +717,12 @@ class CharacterManager:
         return results
 
     def get_clean_equipment(self, system: str, query: str = "", category: str = "") -> List[DiyargezenEntity]:
-        """Return only real equipment items, filtering template/index garbage.
-
-        Accepted inner types: weapon, armor, equipment, consumable, gear, shield, loot.
-        Rejected:
-        - Names starting with +, (, #, [, *, -, or a digit (index/chapter/ability entries)
-        - Items whose inner type is set but not in VALID_TYPES
-        - Non-equipment entries (e.g. Special Abilities)
-        """
+        """Return only real equipment items, filtering template/index garbage."""
         sys_norm = system.lower().replace("_", "").replace("-", "")
         if sys_norm in ("pf1e", "pf1"):
             sys_norm = "pathfinder1e"
         results: List[DiyargezenEntity] = []
         VALID_TYPES = {"weapon", "armor", "equipment", "consumable", "gear", "shield", "loot"}
-
-        # Characters that mark non-equipment entries at the START of the name
         _BAD_START_CHARS = tuple("+(#[*-0123456789")
 
         cat_norm = (category or "").lower().strip()
@@ -739,38 +730,51 @@ class CharacterManager:
         try:
             conn = sqlite3.connect(str(self.db_path))
             cursor = conn.cursor()
-            like_q = f"%{query}%" if query else "%"
-            cursor.execute(
-                "SELECT isim, sistem, kategori, aciklama, sistem_verisi "
-                "FROM entities "
-                "WHERE sistem = ? AND kategori IN ('item','equipment') "
-                "AND isim LIKE ? "
-                "AND isim NOT LIKE '+%' "      # +1 Ammunition...
-                "AND isim NOT LIKE '(%)%' "   # (Index) ...
-                "AND isim NOT LIKE '#%' "      # #[CF_...] templates
-                "AND isim NOT LIKE '[%' "      # [bracket] entries
-                "AND isim NOT LIKE '*%' "      # *template entries
-                "AND isim NOT LIKE '- %' "     # - bullet entries
-                "AND isim NOT LIKE '--%' "     # -- separator lines
-                "AND isim NOT GLOB '[0-9]*' "  # digit-prefixed chapter titles
-                "ORDER BY isim COLLATE NOCASE LIMIT 3000",
-                (sys_norm, like_q)
-            )
+
+            where_clauses = [
+                "sistem = ?",
+                "kategori IN ('item','equipment')",
+                "isim NOT LIKE '+%'",
+                "isim NOT LIKE '(%)%'",
+                "isim NOT LIKE '#%'",
+                "isim NOT LIKE '[%'",
+                "isim NOT LIKE '*%'",
+                "isim NOT LIKE '- %'",
+                "isim NOT LIKE '--%'",
+                "isim NOT GLOB '[0-9]*'",
+                "isim NOT LIKE '%[Artifact]%'",
+                "isim NOT LIKE '%[Cursed]%'",
+                "isim NOT LIKE '%(Spellbook%'"
+            ]
+            params = [sys_norm]
+
+            if query:
+                where_clauses.append("(isim LIKE ? OR aciklama LIKE ?)")
+                params.extend([f"%{query}%", f"%{query}%"])
+
+            if cat_norm.startswith("weapon"):
+                where_clauses.append("(sistem_verisi LIKE '%weapon%' OR isim LIKE '%sword%' OR isim LIKE '%axe%' OR isim LIKE '%bow%' OR isim LIKE '%dagger%' OR isim LIKE '%spear%' OR isim LIKE '%mace%' OR isim LIKE '%hammer%' OR isim LIKE '%flail%' OR isim LIKE '%staff%' OR isim LIKE '%blade%' OR isim LIKE '%pistol%' OR isim LIKE '%musket%' OR isim LIKE '%rifle%' OR isim LIKE '%crossbow%' OR isim LIKE '%scimitar%' OR isim LIKE '%rapier%' OR isim LIKE '%halberd%' OR isim LIKE '%lance%' OR isim LIKE '%club%')")
+            elif cat_norm.startswith("armor"):
+                where_clauses.append("(sistem_verisi LIKE '%armor%' OR sistem_verisi LIKE '%shield%' OR isim LIKE '%armor%' OR isim LIKE '%shield%' OR isim LIKE '%plate%' OR isim LIKE '%chainmail%' OR isim LIKE '%leather%' OR isim LIKE '%hauberk%' OR isim LIKE '%buckler%' OR isim LIKE '%cuirass%')")
+
+            sql = f"SELECT isim, sistem, kategori, aciklama, sistem_verisi FROM entities WHERE {' AND '.join(where_clauses)} ORDER BY isim COLLATE NOCASE"
+
+
+            cursor.execute(sql, tuple(params))
             for row in cursor.fetchall():
                 try:
                     name: str = row[0]
-                    # Extra Python-side guard: reject single-char or very short names
                     if len(name.strip()) < 2:
                         continue
-                    # Reject names starting with bad characters (catches edge cases SQL missed)
                     if name.startswith(_BAD_START_CHARS):
                         continue
                     if "special abilities" in name.lower():
                         continue
 
                     payload = json.loads(row[4]) if row[4] else {}
-                    inner_type = str(payload.get("type", "")).lower()
-                    # If type is explicitly set, it must be a valid gear type
+                    sys_obj = payload.get("system", {}) if isinstance(payload.get("system"), dict) else {}
+                    inner_type = str(sys_obj.get("type") or payload.get("type") or "").lower()
+
                     if inner_type and inner_type not in VALID_TYPES:
                         continue
                     if not inner_type:
@@ -781,8 +785,9 @@ class CharacterManager:
                     # Category subfiltering
                     if cat_norm and cat_norm != "all":
                         n_lower = name.lower()
-                        p_prof = str(payload.get("proficiency") or payload.get("category") or "").lower()
-                        p_sub = str(payload.get("subType") or payload.get("equipmentSubtype") or "").lower()
+                        desc_text = str(row[3] or "")
+                        p_prof = (str(sys_obj.get("weaponType") or "") + " " + str(sys_obj.get("armorType") or "") + " " + str(sys_obj.get("proficiency") or "") + " " + str(payload.get("proficiency") or "") + " " + str(payload.get("category") or "") + " " + desc_text).lower()
+                        p_sub = str(sys_obj.get("subType") or sys_obj.get("equipmentSubtype") or "").lower()
 
                         if cat_norm.startswith("weapon"):
                             is_wep = inner_type == "weapon" or "weapon" in p_prof or "weapon" in p_sub or re.search(r'\b(weapon|sword|greatsword|longsword|shortsword|rapier|scimitar|dagger|knife|axe|greataxe|handaxe|halberd|spear|lance|bow|longbow|shortbow|crossbow|mace|hammer|warhammer|flail|scythe|club|staff|blade|glaive|trident|katana|musket|pistol|blunderbuss|rifle|bullet|bolt|arrow)\b', n_lower)
@@ -790,15 +795,15 @@ class CharacterManager:
                                 continue
                             if cat_norm == "weapons_simple" and not ("simple" in p_prof or "simple" in p_sub or re.search(r'\b(dagger|mace|spear|crossbow|club|staff|sickle|javelin|dart|sling)\b', n_lower)):
                                 continue
-                            if cat_norm == "weapons_martial" and not ("martial" in p_prof or "martial" in p_sub or re.search(r'\b(longsword|greatsword|greataxe|battleaxe|warhammer|rapier|scimitar|halberd|shortbow|longbow|lance|glaive|flail)\b', n_lower)):
+                            if cat_norm == "weapons_martial" and not ("martial" in p_prof or "martial" in p_sub or re.search(r'\b(longsword|greatsword|greataxe|battleaxe|warhammer|rapier|scimitar|halberd|shortbow|longbow|lance|glaive|flail|falchion|kukri|starknife|trident)\b', n_lower)):
                                 continue
-                            if cat_norm == "weapons_exotic" and not ("exotic" in p_prof or "exotic" in p_sub or re.search(r'\b(katana|whip|nunchaku|shuriken|kama|bastard|sai|bolas)\b', n_lower)):
+                            if cat_norm == "weapons_exotic" and not ("exotic" in p_prof or "exotic" in p_sub or re.search(r'\b(katana|whip|nunchaku|shuriken|kama|bastard|sai|bolas|chain|hookhammer|waraxe|curve)\b', n_lower)):
                                 continue
                             if cat_norm == "weapons_firearm" and not ("firearm" in p_prof or "ammo" in p_prof or re.search(r'\b(musket|pistol|blunderbuss|rifle|bullet|powder|ammo)\b', n_lower)):
                                 continue
 
                         elif cat_norm.startswith("armor"):
-                            is_arm = inner_type in ("armor", "shield") or "armor" in p_prof or "shield" in p_prof or re.search(r'\b(armor|shield|leather|padded|studded|chainmail|breastplate|plate|splint|scale|hauberk|buckler)\b', n_lower)
+                            is_arm = inner_type in ("armor", "shield") or "armor" in p_prof or "shield" in p_prof or p_sub in ("armor", "shield") or re.search(r'\b(armor|shield|leather|padded|studded|chainmail|breastplate|plate|splint|scale|hauberk|buckler)\b', n_lower)
                             if not is_arm:
                                 continue
                             if cat_norm == "armor_light" and not ("light" in p_prof or "light" in p_sub or re.search(r'\b(leather|padded|studded|hide|shirt)\b', n_lower)):
@@ -807,7 +812,7 @@ class CharacterManager:
                                 continue
                             if cat_norm == "armor_heavy" and not ("heavy" in p_prof or "heavy" in p_sub or re.search(r'\b(splint|banded|half-plate|full plate|plate)\b', n_lower)):
                                 continue
-                            if cat_norm == "armor_shield" and not (inner_type == "shield" or "shield" in p_prof or "buckler" in n_lower or "shield" in n_lower):
+                            if cat_norm == "armor_shield" and not ("shield" in p_prof or "shield" in p_sub or "buckler" in n_lower or "shield" in n_lower):
                                 continue
 
                         elif cat_norm.startswith("potion"):
@@ -830,7 +835,6 @@ class CharacterManager:
         except Exception:
             pass
         return results
-
 
     def add_item_to_inventory(self, item_entity: DiyargezenEntity) -> Dict[str, Any]:
         """Add an item to character inventory and automatically recalculate statistics (such as AC)."""
