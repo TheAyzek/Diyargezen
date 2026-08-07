@@ -446,10 +446,10 @@ export default function PF1eLiveSheet() {
           }
           if (image) {
             const page1 = pdfDoc.getPages()[0];
-            const boxX = 28;
-            const boxY = 682;
-            const boxW = 195;
-            const boxH = 84;
+            const boxX = 25;
+            const boxY = 680;
+            const boxW = 212;
+            const boxH = 88;
 
             // 1. Draw clean white background rectangle with gold border over the Pathfinder logo
             page1.drawRectangle({
