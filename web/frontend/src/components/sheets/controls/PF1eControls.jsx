@@ -382,21 +382,105 @@ export default function PF1eControls() {
                 </div>
 
                 {/* Bonus text display */}
-                <div style={{ fontSize: '0.82rem', color: '#3fb950', fontWeight: 'bold', fontFamily: 'DM Mono, monospace', marginBottom: 4 }}>
-                  ✨ Status Bonusu: {(() => {
+                <div style={{ fontSize: '0.82rem', fontWeight: 'bold', fontFamily: 'DM Mono, monospace', marginBottom: 6, display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
+                  <span style={{ color: '#c9a84c' }}>✨ Status Bonusu:</span>
+                  {(() => {
                     const sv = raceData.sistem_verisi || {};
-                    let txt = sv.ability_score_increase_text;
-                    if (!txt && sv.ability_score_increase && typeof sv.ability_score_increase === 'object') {
-                      const parts = Object.entries(sv.ability_score_increase).map(([k, v]) => `${v >= 0 ? '+' : ''}${v} ${k.slice(0, 3).toUpperCase()}`);
-                      if (parts.length > 0) txt = parts.join(', ');
-                    }
+                    const rLower = (race || '').toLowerCase().trim();
+                    
                     if (isFlexibleRace) {
-                      txt = `+2 ${racialAbilityChoice.toUpperCase()} (Esnek Puan)`;
-                      if (selectedRacialTraits.includes('Dual Talent')) {
-                        txt += ` & +2 ${secondaryRacialAbilityChoice.toUpperCase()} (Dual Talent)`;
-                      }
+                      const primary = (racialAbilityChoice || 'strength').toUpperCase();
+                      const secondary = (secondaryRacialAbilityChoice || 'dexterity').toUpperCase();
+                      const hasDual = selectedRacialTraits.includes('Dual Talent');
+                      return (
+                        <span>
+                          <span style={{ color: '#3fb950', background: 'rgba(63,185,80,0.12)', padding: '1px 6px', borderRadius: '4px', border: '1px solid rgba(63,185,80,0.3)' }}>
+                            +2 {primary} (Esnek Puan)
+                          </span>
+                          {hasDual && (
+                            <span style={{ color: '#3fb950', background: 'rgba(63,185,80,0.12)', padding: '1px 6px', borderRadius: '4px', border: '1px solid rgba(63,185,80,0.3)', marginLeft: '4px' }}>
+                              & +2 {secondary} (Dual Talent)
+                            </span>
+                          )}
+                        </span>
+                      );
                     }
-                    return txt || 'Standart Irksal Skorlar';
+
+                    // Check sistem_verisi or fallback to canonical PF1E_RACE_ASI map
+                    const PF1E_RACE_ASI_MAP = {
+                      "dwarf": { constitution: 2, wisdom: 2, charisma: -2 },
+                      "elf": { dexterity: 2, intelligence: 2, constitution: -2 },
+                      "gnome": { constitution: 2, charisma: 2, strength: -2 },
+                      "halfling": { dexterity: 2, charisma: 2, strength: -2 },
+                      "aasimar": { wisdom: 2, charisma: 2 },
+                      "android": { dexterity: 2, intelligence: 2, charisma: -2 },
+                      "catfolk": { dexterity: 2, charisma: 2, wisdom: -2 },
+                      "changeling": { wisdom: 2, charisma: 2, constitution: -2 },
+                      "deep one hybrid": { constitution: 2, wisdom: 2, dexterity: -2 },
+                      "dhampir": { dexterity: 2, charisma: 2, constitution: -2 },
+                      "drow": { dexterity: 2, charisma: 2, constitution: -2 },
+                      "drow noble": { dexterity: 4, intelligence: 2, wisdom: 2, charisma: 2, constitution: -2 },
+                      "duergar": { constitution: 2, wisdom: 2, charisma: -4 },
+                      "fetchling": { dexterity: 2, charisma: 2, wisdom: -2 },
+                      "goblin": { dexterity: 4, strength: -2, charisma: -2 },
+                      "grippli": { dexterity: 2, wisdom: 2, strength: -2 },
+                      "hobgoblin": { dexterity: 2, constitution: 2 },
+                      "ifrit": { dexterity: 2, charisma: 2, wisdom: -2 },
+                      "kitsune": { dexterity: 2, charisma: 2, strength: -2 },
+                      "kobold": { dexterity: 2, strength: -4, constitution: -2 },
+                      "merfolk": { dexterity: 2, constitution: 2, charisma: 2 },
+                      "nagaji": { strength: 2, charisma: 2, intelligence: -2 },
+                      "orc": { strength: 4, intelligence: -2, wisdom: -2, charisma: -2 },
+                      "oread": { strength: 2, wisdom: 2, charisma: -2 },
+                      "ratfolk": { dexterity: 2, intelligence: 2, strength: -2 },
+                      "skinwalker": { wisdom: 2, intelligence: -2 },
+                      "suli": { strength: 2, charisma: 2, intelligence: -2 },
+                      "svirfneblin": { dexterity: 2, wisdom: 2, strength: -2, charisma: -4 },
+                      "sylph": { dexterity: 2, intelligence: 2, constitution: -2 },
+                      "tengu": { dexterity: 2, wisdom: 2, constitution: -2 },
+                      "tiefling": { dexterity: 2, intelligence: 2, charisma: -2 },
+                      "trox": { strength: 6, dexterity: -2, intelligence: -2, wisdom: -2, charisma: -2 },
+                      "undine": { dexterity: 2, wisdom: 2, charisma: -2 },
+                      "vanara": { dexterity: 2, wisdom: 2, charisma: -2 },
+                      "vishkanya": { dexterity: 2, charisma: 2, wisdom: -2 },
+                      "wayang": { dexterity: 2, intelligence: 2, wisdom: -2 },
+                      "wyrwood": { dexterity: 2, intelligence: 2, constitution: -2 }
+                    };
+
+                    let asiObj = (sv.ability_score_increase && typeof sv.ability_score_increase === 'object' && Object.keys(sv.ability_score_increase).length > 0)
+                      ? sv.ability_score_increase
+                      : (PF1E_RACE_ASI_MAP[rLower] || {});
+
+                    const entries = Object.entries(asiObj);
+                    if (entries.length > 0) {
+                      return (
+                        <span>
+                          {entries.map(([k, v], i) => {
+                            const statName = k.slice(0, 3).toUpperCase();
+                            const valText = v >= 0 ? `+${v}` : `${v}`;
+                            const isNeg = v < 0;
+                            return (
+                              <span key={k} style={{
+                                color: isNeg ? '#f87171' : '#3fb950',
+                                background: isNeg ? 'rgba(248,113,113,0.12)' : 'rgba(63,185,80,0.12)',
+                                border: `1px solid ${isNeg ? 'rgba(248,113,113,0.3)' : 'rgba(63,185,80,0.3)'}`,
+                                padding: '1px 6px',
+                                borderRadius: '4px',
+                                marginRight: i < entries.length - 1 ? '4px' : '0'
+                              }}>
+                                {valText} {statName}
+                              </span>
+                            );
+                          })}
+                        </span>
+                      );
+                    }
+
+                    if (sv.ability_score_increase_text) {
+                      return <span style={{ color: '#3fb950' }}>{sv.ability_score_increase_text}</span>;
+                    }
+
+                    return <span style={{ color: '#8b949e' }}>Standart Irksal Skorlar</span>;
                   })()}
                 </div>
 

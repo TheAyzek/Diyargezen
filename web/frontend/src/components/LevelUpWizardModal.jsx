@@ -401,13 +401,59 @@ export default function LevelUpWizardModal({
                 </p>
               </div>
 
+              {/* Selected Feat Banner */}
+              {selectedFeat ? (
+                <div style={{
+                  background: 'linear-gradient(135deg, rgba(201,168,76,0.2) 0%, rgba(30,25,12,0.9) 100%)',
+                  border: '1px solid #ffd700',
+                  borderRadius: '10px',
+                  padding: '12px 16px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  boxShadow: '0 4px 15px rgba(255,215,0,0.15)'
+                }}>
+                  <div>
+                    <span style={{ fontSize: '0.7rem', color: '#ffd700', fontWeight: 'bold', letterSpacing: '0.5px', textTransform: 'uppercase' }}>✓ SEÇİLEN YETENEK (FEAT):</span>
+                    <div style={{ fontSize: '1.1rem', color: '#fff', fontWeight: 'bold', fontFamily: 'Cinzel, serif' }}>
+                      {selectedFeat.name || selectedFeat.isim}
+                    </div>
+                  </div>
+                  <span style={{
+                    fontSize: '0.75rem',
+                    color: '#3fb950',
+                    background: 'rgba(63,185,80,0.15)',
+                    padding: '5px 12px',
+                    borderRadius: '20px',
+                    border: '1px solid rgba(63,185,80,0.4)',
+                    fontWeight: 'bold'
+                  }}>
+                    Seçim Onaylandı
+                  </span>
+                </div>
+              ) : (
+                <div style={{
+                  background: 'rgba(255,255,255,0.03)',
+                  border: '1px dashed rgba(201,168,76,0.3)',
+                  borderRadius: '10px',
+                  padding: '12px 16px',
+                  color: '#94a3b8',
+                  fontSize: '0.85rem',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px'
+                }}>
+                  <span>⚠️ Lütfen aşağıdaki listeden kazanmak istediğiniz Feat yeteneğini tıklayarak seçin.</span>
+                </div>
+              )}
+
               <input
                 type="text"
                 placeholder="Feat ara..."
                 value={featSearch}
                 onChange={e => setFeatSearch(e.target.value)}
                 style={{
-                  width: '100%', padding: '0.5rem 0.8rem', backgroundColor: '#181824', border: '1px solid #2a2a3a',
+                  width: '100%', padding: '0.6rem 0.9rem', backgroundColor: '#181824', border: '1px solid #2a2a3a',
                   borderRadius: '8px', color: '#fff', fontSize: '0.85rem', outline: 'none'
                 }}
               />
@@ -415,24 +461,38 @@ export default function LevelUpWizardModal({
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '0.75rem', maxHeight: '300px', overflowY: 'auto' }}>
                 {availableFeats
                   .filter(f => (f.name || f.isim || '').toLowerCase().includes(featSearch.toLowerCase()))
-                  .slice(0, 30)
+                  .slice(0, 40)
                   .map((feat, idx) => {
                     const fName = feat.isim || feat.name;
-                    const isPicked = selectedFeat?.name === fName;
+                    const isPicked = selectedFeat?.name === fName || selectedFeat?.isim === fName;
+
+                    const rawDesc = feat.aciklama || feat.sistem_verisi?.description || 'Feat açıklaması.';
+                    const cleanDesc = rawDesc.replace(/<[^>]*>?/gm, '').trim();
 
                     return (
                       <div
                         key={idx}
                         onClick={() => setSelectedFeat(feat)}
                         style={{
-                          backgroundColor: isPicked ? 'rgba(255,215,0,0.1)' : '#161622',
-                          border: `1px solid ${isPicked ? '#ffd700' : '#2a2a3a'}`,
-                          borderRadius: '8px', padding: '0.75rem', cursor: 'pointer', position: 'relative'
+                          backgroundColor: isPicked ? 'rgba(201,168,76,0.18)' : '#161622',
+                          border: isPicked ? '2px solid #ffd700' : '1px solid #2a2a3a',
+                          boxShadow: isPicked ? '0 0 15px rgba(255,215,0,0.3), inset 0 0 10px rgba(255,215,0,0.1)' : 'none',
+                          borderRadius: '8px', padding: '0.85rem', cursor: 'pointer', position: 'relative',
+                          transition: 'all 0.2s ease'
                         }}
                       >
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '6px' }}>
-                          <div style={{ color: isPicked ? '#ffd700' : '#fff', fontWeight: 700, fontSize: '0.85rem' }}>{fName}</div>
-                          {feat.type_badge && (
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '6px', marginBottom: '4px' }}>
+                          <div style={{ color: isPicked ? '#ffd700' : '#fff', fontWeight: 700, fontSize: '0.9rem' }}>
+                            {fName}
+                          </div>
+                          {isPicked ? (
+                            <span style={{
+                              fontSize: '0.65rem', fontWeight: 800, padding: '2px 8px', borderRadius: '12px',
+                              backgroundColor: '#ffd700', color: '#0d1117', whiteSpace: 'nowrap', boxShadow: '0 2px 6px rgba(255,215,0,0.4)'
+                            }}>
+                              ✓ SEÇİLDİ
+                            </span>
+                          ) : feat.type_badge ? (
                             <span style={{
                               fontSize: '0.65rem', fontWeight: 700, padding: '2px 6px', borderRadius: '4px',
                               backgroundColor: feat.type_badge.includes('Feat') ? 'rgba(124,110,247,0.2)' : 'rgba(255,215,0,0.2)',
@@ -442,13 +502,12 @@ export default function LevelUpWizardModal({
                             }}>
                               {feat.type_badge}
                             </span>
-                          )}
+                          ) : null}
                         </div>
-                        <p style={{ color: '#94a3b8', fontSize: '0.72rem', margin: '4px 0 0 0', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                          {feat.aciklama || feat.sistem_verisi?.description || 'Feat açıklaması.'}
+                        <p style={{ color: isPicked ? '#e6edf3' : '#94a3b8', fontSize: '0.75rem', margin: '4px 0 0 0', lineHeight: '1.4', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
+                          {cleanDesc}
                         </p>
                       </div>
-
                     );
                   })}
               </div>

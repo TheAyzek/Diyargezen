@@ -391,15 +391,68 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
               const sv = ent.sistem_verisi || {};
 
               // Extract racial ability bonus text & formatted JSX
-              const asiObj = sv.ability_score_increase || {};
+              const PF1E_RACE_ASI_MAP = {
+                "dwarf": { constitution: 2, wisdom: 2, charisma: -2 },
+                "elf": { dexterity: 2, intelligence: 2, constitution: -2 },
+                "gnome": { constitution: 2, charisma: 2, strength: -2 },
+                "halfling": { dexterity: 2, charisma: 2, strength: -2 },
+                "aasimar": { wisdom: 2, charisma: 2 },
+                "android": { dexterity: 2, intelligence: 2, charisma: -2 },
+                "catfolk": { dexterity: 2, charisma: 2, wisdom: -2 },
+                "changeling": { wisdom: 2, charisma: 2, constitution: -2 },
+                "deep one hybrid": { constitution: 2, wisdom: 2, dexterity: -2 },
+                "dhampir": { dexterity: 2, charisma: 2, constitution: -2 },
+                "drow": { dexterity: 2, charisma: 2, constitution: -2 },
+                "drow noble": { dexterity: 4, intelligence: 2, wisdom: 2, charisma: 2, constitution: -2 },
+                "duergar": { constitution: 2, wisdom: 2, charisma: -4 },
+                "fetchling": { dexterity: 2, charisma: 2, wisdom: -2 },
+                "goblin": { dexterity: 4, strength: -2, charisma: -2 },
+                "grippli": { dexterity: 2, wisdom: 2, strength: -2 },
+                "hobgoblin": { dexterity: 2, constitution: 2 },
+                "ifrit": { dexterity: 2, charisma: 2, wisdom: -2 },
+                "kitsune": { dexterity: 2, charisma: 2, strength: -2 },
+                "kobold": { dexterity: 2, strength: -4, constitution: -2 },
+                "merfolk": { dexterity: 2, constitution: 2, charisma: 2 },
+                "nagaji": { strength: 2, charisma: 2, intelligence: -2 },
+                "orc": { strength: 4, intelligence: -2, wisdom: -2, charisma: -2 },
+                "oread": { strength: 2, wisdom: 2, charisma: -2 },
+                "ratfolk": { dexterity: 2, intelligence: 2, strength: -2 },
+                "skinwalker": { wisdom: 2, intelligence: -2 },
+                "suli": { strength: 2, charisma: 2, intelligence: -2 },
+                "svirfneblin": { dexterity: 2, wisdom: 2, strength: -2, charisma: -4 },
+                "sylph": { dexterity: 2, intelligence: 2, constitution: -2 },
+                "tengu": { dexterity: 2, wisdom: 2, constitution: -2 },
+                "tiefling": { dexterity: 2, intelligence: 2, charisma: -2 },
+                "trox": { strength: 6, dexterity: -2, intelligence: -2, wisdom: -2, charisma: -2 },
+                "undine": { dexterity: 2, wisdom: 2, charisma: -2 },
+                "vanara": { dexterity: 2, wisdom: 2, charisma: -2 },
+                "vishkanya": { dexterity: 2, charisma: 2, wisdom: -2 },
+                "wayang": { dexterity: 2, intelligence: 2, wisdom: -2 },
+                "wyrwood": { dexterity: 2, intelligence: 2, constitution: -2 }
+              };
+
+              const nameL = (ent.isim || ent.name || '').toLowerCase().trim();
+              const isFlexible = ['human', 'half-elf', 'half-orc', 'primitive human'].includes(nameL);
+
+              let asiObj = (sv.ability_score_increase && typeof sv.ability_score_increase === 'object' && Object.keys(sv.ability_score_increase).length > 0)
+                ? sv.ability_score_increase
+                : (PF1E_RACE_ASI_MAP[nameL] || {});
+
               let racialBonusJsx = null;
               let hasBonus = false;
 
-              if (typeof asiObj === 'object' && Object.keys(asiObj).length > 0) {
+              if (isFlexible) {
+                hasBonus = true;
+                racialBonusJsx = (
+                  <span style={{ color: '#3fb950', fontWeight: 'bold' }}>
+                    +2 Herhangi Bir Yetenek Puanı (Esnek Puan)
+                  </span>
+                );
+              } else if (typeof asiObj === 'object' && Object.keys(asiObj).length > 0) {
                 hasBonus = true;
                 const entries = Object.entries(asiObj);
                 racialBonusJsx = entries.map(([k, v], i) => {
-                  const statName = k === 'any' ? 'Herhangi Bir Yetenek Puanı' : (k.charAt(0).toUpperCase() + k.slice(1));
+                  const statName = k === 'any' ? 'Herhangi' : (k.charAt(0).toUpperCase() + k.slice(1));
                   const valText = v >= 0 ? `+${v}` : `${v}`;
                   const isNeg = v < 0;
                   return (
@@ -411,23 +464,13 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
                     </React.Fragment>
                   );
                 });
-              } else {
-                const nameL = (ent.isim || ent.name || '').toLowerCase();
-                if (nameL.includes('human') || nameL.includes('half-elf') || nameL.includes('half-orc')) {
-                  hasBonus = true;
-                  racialBonusJsx = (
-                    <span style={{ color: '#3fb950', fontWeight: 'bold' }}>
-                      +2 Herhangi Bir Yetenek Puanı (Esnek Puan)
-                    </span>
-                  );
-                } else if (sv.ability_score_increase_text) {
-                  hasBonus = true;
-                  racialBonusJsx = (
-                    <span style={{ color: '#3fb950', fontWeight: 'bold' }}>
-                      {sv.ability_score_increase_text}
-                    </span>
-                  );
-                }
+              } else if (sv.ability_score_increase_text) {
+                hasBonus = true;
+                racialBonusJsx = (
+                  <span style={{ color: '#3fb950', fontWeight: 'bold' }}>
+                    {sv.ability_score_increase_text}
+                  </span>
+                );
               }
 
               const sizeText = sv.size || 'Medium';
