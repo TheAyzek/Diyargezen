@@ -2275,7 +2275,7 @@ def _dnd5e_calculate_spells(self, character: Dict[str, Any]) -> Dict[str, Any]:
         # Sınıf adını büyü listesiyle eşleştir (siniflar sütununda arama)
         cur.execute(
             "SELECT isim, seviye, aciklama FROM spells WHERE sistem = 'dnd5e' "
-            "AND siniflar LIKE ? ORDER BY seviye, isim LIMIT 30",
+            "AND siniflar LIKE ? ORDER BY seviye, isim",
             (f"%{class_name}%",)
         )
         rows = cur.fetchall()
@@ -2304,7 +2304,7 @@ def _pf1e_calculate_spells(self, character: Dict[str, Any]) -> Dict[str, Any]:
         casting_type          : str   — "prepared_arcane" / "prepared_divine" / "spontaneous" / "none"
         bonus_slots           : dict  — Yüksek ability'den gelen ekstra slot sayıları
                                          {1: n, 2: n, 3: n, 4: n} (PF1e CRB Table 1-3)
-        known_spells          : list  — DB'den sınıf büyü listesi (ilk 30)
+        known_spells          : list  — DB'den sınıf büyü listesi
     """
     import sqlite3
 
@@ -2373,7 +2373,7 @@ def _pf1e_calculate_spells(self, character: Dict[str, Any]) -> Dict[str, Any]:
         cur = conn.cursor()
         cur.execute(
             "SELECT isim, seviye, aciklama FROM spells WHERE sistem = 'pathfinder1e' "
-            "AND siniflar LIKE ? ORDER BY seviye, isim LIMIT 30",
+            "AND siniflar LIKE ? ORDER BY seviye, isim",
             (f"%{class_name_raw}%",)
         )
         rows = cur.fetchall()

@@ -199,8 +199,6 @@ class CharacterManager:
                         isim=row[0], sistem=row[1], kategori=row[2],
                         aciklama=row[3] or "", sistem_verisi=payload
                     ))
-                    if len(results) >= 1500:
-                        break
                 except Exception:
                     continue
             conn.close()
@@ -267,171 +265,8 @@ class CharacterManager:
                         isim=feat_name, sistem=row[1], kategori=row[2],
                         aciklama=row[3] or "", sistem_verisi=payload
                     ))
-                    if len(results) >= 2000:
-                        break
                 except Exception:
                     continue
-        except Exception:
-            pass
-        return results
-
-    def get_class_features(self, system: str, class_name: str = "", query: str = "") -> List[DiyargezenEntity]:
-        """Return class-specific talents and features (Rage Powers, Rogue Talents, Discoveries, Hexes, Arcana, etc.)."""
-        sys_norm = system.lower().replace("_", "").replace("-", "")
-        results: List[DiyargezenEntity] = []
-        c_lower = class_name.lower().strip() if class_name else ""
-
-        try:
-            conn = sqlite3.connect(str(self.db_path))
-            cursor = conn.cursor()
-            
-            sql = (
-                "SELECT isim, sistem, kategori, aciklama, sistem_verisi "
-                "FROM entities "
-                "WHERE sistem = ? AND kategori IN ('feat', 'advantage', 'class_feature') "
-                "AND length(isim) > 2 "
-            )
-            params = [sys_norm]
-
-            if query:
-                sql += " AND (isim LIKE ? OR aciklama LIKE ?)"
-                params.extend([f"%{query}%", f"%{query}%"])
-
-            sql += " ORDER BY isim COLLATE NOCASE"
-            cursor.execute(sql, tuple(params))
-            rows = cursor.fetchall()
-            conn.close()
-
-            for row in rows:
-                try:
-                    name: str = row[0]
-                    payload = json.loads(row[4]) if row[4] else {}
-                    feat_cat = payload.get('feat_category') or self._parse_entity_category(name, payload)
-                    if feat_cat.lower() != 'classfeature':
-                        continue
-
-                    # Filter strictly by character class if provided
-                    if c_lower:
-                        sys_data = payload.get('system', {})
-                        assoc_classes = sys_data.get('associations', {}).get('classes') or []
-                        if assoc_classes and isinstance(assoc_classes, list) and len(assoc_classes) > 0:
-                            assoc_cls = (assoc_classes[0][0] if isinstance(assoc_classes[0], list) else str(assoc_classes[0])).lower().strip()
-                            if assoc_cls and c_lower not in assoc_cls and assoc_cls not in c_lower:
-                                continue
-
-                    results.append(DiyargezenEntity(
-                        isim=row[0], sistem=row[1], kategori="class_feature",
-                        aciklama=row[3] or "", sistem_verisi=payload
-                    ))
-                    if len(results) >= 2000:
-                        break
-                except Exception:
-                    continue
-        except Exception:
-            pass
-
-        return results
-
-    def get_spells(
-        self,
-        system: str,
-        query: str = "",
-        level: Optional[int] = None,
-        caster_class: str = "",
-        school: str = ""
-    ) -> List[DiyargezenEntity]:
-        """Fetch spells filtered by query, spell level, caster class, and magic school."""
-        sys_norm = system.lower().replace("_", "").replace("-", "")
-        results: List[DiyargezenEntity] = []
-        try:
-            conn = sqlite3.connect(str(self.db_path))
-            cursor = conn.cursor()
-
-            sql = (
-                "SELECT isim, sistem, kategori, aciklama, sistem_verisi "
-                "FROM entities "
-                "WHERE sistem = ? AND kategori = 'spell' "
-            )
-            params: list = [sys_norm]
-
-            if query:
-                sql += "AND isim LIKE ? "
-                params.append(f"%{query}%")
-
-            sql += "ORDER BY isim COLLATE NOCASE ASC LIMIT 300"
-            cursor.execute(sql, params)
-            rows = cursor.fetchall()
-            conn.close()
-
-            for row in rows:
-                try:
-                    payload = json.loads(row[4]) if row[4] else {}
-                    spell_lvl = payload.get("level")
-                    spell_school = str(payload.get("school", "")).lower()
-                    levels_by_class = payload.get("levels_by_class", {})
-
-                    # Level filter
-                    if level is not None:
-                        matched = False
-                        if isinstance(levels_by_class, dict) and caster_class:
-                            for cname, clvl in levels_by_class.items():
-                                if cname.lower() == caster_class.lower() and clvl == level:
-                                    matched = True
-                                    break
-                        if not matched and spell_lvl != level:
-                            continue
-
-                    # Class filter
-                    if caster_class and isinstance(levels_by_class, dict) and levels_by_class:
-                        if not any(cname.lower() == caster_class.lower() for cname in levels_by_class.keys()):
-                            continue
-
-                    # School filter
-                    if school and school.lower() not in spell_school:
-                        continue
-
-                    results.append(DiyargezenEntity(
-                        isim=row[0], sistem=row[1], kategori=row[2],
-                        aciklama=row[3] or "", sistem_verisi=payload
-                    ))
-                except Exception:
-                    continue
-
-            # Fallback/supplement from dedicated spells table if needed
-            if len(results) < 50:
-                seen_names = {e.isim.lower() for e in results}
-                sp_sql = "SELECT isim, sistem, seviye, siniflar, aciklama FROM spells WHERE (sistem = ? OR sistem = 'pf1e')"
-                sp_params = [sys_norm]
-                if query:
-                    sp_sql += " AND isim LIKE ?"
-                    sp_params.append(f"%{query}%")
-                if level is not None:
-                    sp_sql += " AND seviye = ?"
-                    sp_params.append(level)
-                sp_sql += " ORDER BY isim COLLATE NOCASE ASC LIMIT 300"
-
-                conn = sqlite3.connect(str(self.db_path))
-                cursor = conn.cursor()
-                cursor.execute(sp_sql, sp_params)
-                for r_name, r_sys, r_lvl, r_classes, r_desc in cursor.fetchall():
-                    if r_name.lower() not in seen_names:
-                        seen_names.add(r_name.lower())
-                        try:
-                            classes_dict = json.loads(r_classes) if r_classes and r_classes.startswith("{") else {}
-                        except Exception:
-                            classes_dict = {}
-                        
-                        if caster_class and classes_dict and not any(c.lower() == caster_class.lower() for c in classes_dict.keys()):
-                            continue
-
-                        results.append(DiyargezenEntity(
-                            isim=r_name,
-                            sistem=r_sys,
-                            kategori="spell",
-                            aciklama=r_desc or "",
-                            sistem_verisi={"level": r_lvl, "levels_by_class": classes_dict}
-                        ))
-                conn.close()
         except Exception:
             pass
         return results
@@ -482,7 +317,7 @@ class CharacterManager:
                 sql += " AND (isim LIKE ? OR aciklama LIKE ?)"
                 params.extend([f"%{query}%", f"%{query}%"])
 
-            sql += " ORDER BY isim COLLATE NOCASE LIMIT 500"
+            sql += " ORDER BY isim COLLATE NOCASE"
             
             cursor.execute(sql, tuple(params))
             for row in cursor.fetchall():
@@ -520,7 +355,7 @@ class CharacterManager:
                 if query:
                     sql += " AND (isim LIKE ? OR aciklama LIKE ?)"
                     params.extend([f"%{query}%", f"%{query}%"])
-                sql += " ORDER BY isim COLLATE NOCASE LIMIT 300"
+                sql += " ORDER BY isim COLLATE NOCASE"
                 cursor.execute(sql, tuple(params))
                 for row in cursor.fetchall():
                     name: str = row[0]
@@ -540,7 +375,109 @@ class CharacterManager:
 
         return results
 
+    def get_spells(
+        self,
+        system: str,
+        query: str = "",
+        level: Optional[int] = None,
+        caster_class: str = "",
+        school: str = ""
+    ) -> List[DiyargezenEntity]:
+        """Fetch spells filtered by query, spell level, caster class, and magic school."""
+        sys_norm = system.lower().replace("_", "").replace("-", "")
+        results: List[DiyargezenEntity] = []
+        try:
+            conn = sqlite3.connect(str(self.db_path))
+            cursor = conn.cursor()
 
+            sql = (
+                "SELECT isim, sistem, kategori, aciklama, sistem_verisi "
+                "FROM entities "
+                "WHERE sistem = ? AND kategori = 'spell' "
+            )
+            params: list = [sys_norm]
+
+            if query:
+                sql += "AND isim LIKE ? "
+                params.append(f"%{query}%")
+
+            sql += "ORDER BY isim COLLATE NOCASE ASC"
+            cursor.execute(sql, params)
+            rows = cursor.fetchall()
+            conn.close()
+
+            for row in rows:
+                try:
+                    payload = json.loads(row[4]) if row[4] else {}
+                    spell_lvl = payload.get("level")
+                    spell_school = str(payload.get("school", "")).lower()
+                    levels_by_class = payload.get("levels_by_class", {})
+
+                    # Level filter
+                    if level is not None:
+                        matched = False
+                        if isinstance(levels_by_class, dict) and caster_class:
+                            for cname, clvl in levels_by_class.items():
+                                if cname.lower() == caster_class.lower() and clvl == level:
+                                    matched = True
+                                    break
+                        if not matched and spell_lvl != level:
+                            continue
+
+                    # Class filter
+                    if caster_class and isinstance(levels_by_class, dict) and levels_by_class:
+                        if not any(cname.lower() == caster_class.lower() for cname in levels_by_class.keys()):
+                            continue
+
+                    # School filter
+                    if school and school.lower() not in spell_school:
+                        continue
+
+                    results.append(DiyargezenEntity(
+                        isim=row[0], sistem=row[1], kategori=row[2],
+                        aciklama=row[3] or "", sistem_verisi=payload
+                    ))
+                except Exception:
+                    continue
+
+            # Fallback/supplement from dedicated spells table if needed
+            if len(results) < 50:
+                seen_names = {e.isim.lower() for e in results}
+                sp_sql = "SELECT isim, sistem, seviye, siniflar, aciklama FROM spells WHERE (sistem = ? OR sistem = 'pf1e')"
+                sp_params = [sys_norm]
+                if query:
+                    sp_sql += " AND isim LIKE ?"
+                    sp_params.append(f"%{query}%")
+                if level is not None:
+                    sp_sql += " AND seviye = ?"
+                    sp_params.append(level)
+                sp_sql += " ORDER BY isim COLLATE NOCASE ASC"
+
+                conn = sqlite3.connect(str(self.db_path))
+                cursor = conn.cursor()
+                cursor.execute(sp_sql, sp_params)
+                for r_name, r_sys, r_lvl, r_classes, r_desc in cursor.fetchall():
+                    if r_name.lower() not in seen_names:
+                        seen_names.add(r_name.lower())
+                        try:
+                            classes_dict = json.loads(r_classes) if r_classes and r_classes.startswith("{") else {}
+                        except Exception:
+                            classes_dict = {}
+                        
+                        if caster_class and classes_dict and not any(c.lower() == caster_class.lower() for c in classes_dict.keys()):
+                            continue
+
+                        results.append(DiyargezenEntity(
+                            isim=r_name,
+                            sistem=r_sys,
+                            kategori="spell",
+                            aciklama=r_desc or "",
+                            sistem_verisi={"level": r_lvl, "levels_by_class": classes_dict}
+                        ))
+                conn.close()
+        except Exception:
+            pass
+        return results
 
     def search_entities(self, system: str, category: str, query: str) -> List[DiyargezenEntity]:
         """Search database entities using standard LIKE search on name/isim.
@@ -563,14 +500,14 @@ class CharacterManager:
                     "AND isim NOT LIKE '#%' "      # remove #[CF_...] entries
                     "AND isim NOT LIKE '[%' "      # remove [bracket] entries
                     "AND isim NOT LIKE '*%' "      # remove *template entries
-                    "ORDER BY isim COLLATE NOCASE LIMIT 200",
+                    "ORDER BY isim COLLATE NOCASE",
                     (sys_norm, f"%{query}%")
                 )
             else:
                 cursor.execute(
                     "SELECT isim, sistem, kategori, aciklama, sistem_verisi FROM entities "
                     "WHERE sistem = ? AND kategori = ? AND isim LIKE ? "
-                    "ORDER BY isim COLLATE NOCASE LIMIT 200",
+                    "ORDER BY isim COLLATE NOCASE",
                     (sys_norm, category, f"%{query}%")
                 )
             for r in cursor.fetchall():

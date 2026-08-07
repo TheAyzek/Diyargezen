@@ -461,7 +461,6 @@ export default function LevelUpWizardModal({
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '0.75rem', maxHeight: '300px', overflowY: 'auto' }}>
                 {availableFeats
                   .filter(f => (f.name || f.isim || '').toLowerCase().includes(featSearch.toLowerCase()))
-                  .slice(0, 40)
                   .map((feat, idx) => {
                     const fName = feat.isim || feat.name;
                     const isPicked = selectedFeat?.name === fName || selectedFeat?.isim === fName;
