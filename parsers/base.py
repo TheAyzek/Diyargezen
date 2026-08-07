@@ -548,12 +548,15 @@ def parse_raw_file(path: Path, system: str) -> List[DiyargezenEntity]:
         if not isinstance(item, dict):
             continue
         
-        name = safe_str(item.get("name") or item.get("id") or item.get("key"))
+        name = safe_str(item.get("name") or item.get("isim") or item.get("id") or item.get("key"))
         if not name:
             continue
             
         kategori = None
-        item_type = safe_str(item.get("type")).lower()
+        sv_obj = item.get("sistem_verisi") or item.get("system") or item.get("data")
+        sv_type = sv_obj.get("type") if isinstance(sv_obj, dict) else None
+        raw_type = item.get("type") or item.get("kategori") or sv_type
+        item_type = safe_str(raw_type).lower()
 
         # STRICT TYPE RESOLUTION — FoundryVTT inner 'type' field is the
         # ground truth.  CRITICAL: 'race_trait', 'racial', 'feat' are NOT races.

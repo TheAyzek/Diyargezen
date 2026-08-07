@@ -60,6 +60,7 @@ export default function PF1eControls() {
   const {
     id, name, level, race, class: charClass, feat, abilities, skills, recalcedData,
     alignment, gender, age, height, weight, deity, homeland, hair, eyes,
+    backstory = '', personality = '', allies = '',
     traits, feats, spells = [],
     racialAbilityChoice = 'strength', secondaryRacialAbilityChoice = 'dexterity', selectedRacialTraits = [],
     updateField, updateAbility, updateSkillRank, addEquipment, removeEquipment,
@@ -107,8 +108,9 @@ export default function PF1eControls() {
   const isFlexibleRace = ['human', 'half-elf', 'half-orc'].includes((race || '').toLowerCase().trim()) ||
     JSON.stringify(raceData.sistem_verisi || {}).toLowerCase().includes('any');
 
-  const rawRacialTraits = raceData.sistem_verisi?.traits ||
-    (raceData.sistem_verisi?.traits_detailed ? Object.keys(raceData.sistem_verisi.traits_detailed) : []);
+  const svData = raceData.sistem_verisi || raceData || {};
+  const rawRacialTraits = svData.alternate_traits || svData.traits ||
+    (svData.traits_detailed ? Object.keys(svData.traits_detailed) : []);
   const availableRacialTraits = Array.isArray(rawRacialTraits) ? rawRacialTraits : [];
 
   const [modalOpen, setModalOpen] = useState(false);
@@ -438,22 +440,80 @@ export default function PF1eControls() {
             )}
 
             {/* Optional Racial Traits */}
-            {race && availableRacialTraits.length > 0 && (
-              <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(201,168,76,0.15)', borderRadius: 2, padding: 10, marginBottom: 6 }}>
-                <FieldLabel>Alternatif Irksal Özellikler ({race})</FieldLabel>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 5, maxHeight: 140, overflowY: 'auto' }}>
-                  {availableRacialTraits.map((tName, tIdx) => {
-                    const isChecked = selectedRacialTraits.includes(tName);
-                    return (
-                      <label key={tIdx} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '0.8rem', color: isChecked ? 'var(--gold-bright)' : 'var(--gold-light)', cursor: 'pointer' }}>
-                        <input type="checkbox" checked={isChecked} onChange={() => toggleRacialTrait(tName)} style={{ accentColor: 'var(--gold)' }} />
-                        <span>{tName}</span>
-                      </label>
-                    );
-                  })}
+            {race && availableRacialTraits.length > 0 && (() => {
+              const currentlyReplaced = new Map();
+              availableRacialTraits.forEach(item => {
+                const name = typeof item === 'string' ? item : item?.name;
+                if (selectedRacialTraits.includes(name)) {
+                  const replaces = Array.isArray(item?.replaces) ? item.replaces : [];
+                  replaces.forEach(r => currentlyReplaced.set(r, name));
+                }
+              });
+
+              return (
+                <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(201,168,76,0.15)', borderRadius: 2, padding: 10, marginBottom: 6 }}>
+                  <FieldLabel>Alternatif Irksal Özellikler ({race})</FieldLabel>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 6, maxHeight: 160, overflowY: 'auto' }}>
+                    {availableRacialTraits.map((item, tIdx) => {
+                      const tName = typeof item === 'string' ? item : item?.name || '';
+                      const replaces = Array.isArray(item?.replaces) ? item.replaces : [];
+                      const isChecked = selectedRacialTraits.includes(tName);
+                      
+                      let conflictingWith = null;
+                      if (!isChecked && replaces.length > 0) {
+                        for (const r of replaces) {
+                          if (currentlyReplaced.has(r)) {
+                            conflictingWith = { replacedTrait: r, chosenTrait: currentlyReplaced.get(r) };
+                            break;
+                          }
+                        }
+                      }
+
+                      return (
+                        <label key={tIdx} style={{
+                          display: 'flex',
+                          alignItems: 'flex-start',
+                          gap: 8,
+                          fontSize: '0.78rem',
+                          color: isChecked ? 'var(--gold-bright)' : conflictingWith ? '#888' : 'var(--gold-light)',
+                          opacity: conflictingWith ? 0.6 : 1,
+                          cursor: conflictingWith ? 'not-allowed' : 'pointer'
+                        }} title={conflictingWith ? `'${conflictingWith.replacedTrait}' varsayılan özelliği '${conflictingWith.chosenTrait}' tarafından değiştirildiği için seçilemez.` : ''}>
+                          <input
+                            type="checkbox"
+                            checked={isChecked}
+                            disabled={Boolean(conflictingWith)}
+                            onChange={() => {
+                              const res = toggleRacialTrait(tName);
+                              if (res?.error) {
+                                setTraitError(res.message);
+                                setTimeout(() => setTraitError(null), 3500);
+                              }
+                            }}
+                            style={{ accentColor: 'var(--gold)', marginTop: 2 }}
+                          />
+                          <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <span>
+                              <b>{tName}</b>
+                              {replaces.length > 0 && (
+                                <span style={{ fontSize: '0.7rem', color: '#8888a0', marginLeft: 6 }}>
+                                  (Değiştirir: {replaces.join(', ')})
+                                </span>
+                              )}
+                            </span>
+                            {conflictingWith && (
+                              <span style={{ fontSize: '0.68rem', color: '#f87171', fontStyle: 'italic' }}>
+                                ⚠️ Çakışma: '{conflictingWith.replacedTrait}' özelliği '{conflictingWith.chosenTrait}' tarafından zaten değiştirilmiş
+                              </span>
+                            )}
+                          </div>
+                        </label>
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
-            )}
+              );
+            })()}
 
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
               <div>
@@ -669,14 +729,41 @@ export default function PF1eControls() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: 2, maxHeight: 440, overflowY: 'auto' }}>
               {pfSkillsList.map(skillName => {
                 const ranks = skills[skillName] || 0;
-                const classSkills = recalcedData.class_data?.class_skills || [];
-                const isClassSkill = classSkills.includes(skillName);
-                const total = ranks + (isClassSkill && ranks > 0 ? 3 : 0);
+                const skillDetail = recalcedData.skills_detail?.[skillName] || {};
+                const activeClassSkills = (recalcedData.class_skills_active || []).map(s => String(s).toLowerCase());
+                const rawClassSkills = (recalcedData.class_data?.class_skills || classData.class_skills || []).map(s => String(s).toLowerCase());
+                const hasKnowledgeAll = rawClassSkills.some(s => s.includes('knowledge') && s.includes('all'));
+                
+                const isClassSkill = skillDetail.is_class_skill !== undefined
+                  ? skillDetail.is_class_skill
+                  : (activeClassSkills.includes(skillName.toLowerCase()) || rawClassSkills.includes(skillName.toLowerCase()) || (hasKnowledgeAll && skillName.toLowerCase().startsWith('knowledge')));
+
+                const classBonus = skillDetail.class_bonus !== undefined
+                  ? skillDetail.class_bonus
+                  : (isClassSkill && ranks > 0 ? 3 : 0);
+
+                const total = skillDetail.total !== undefined
+                  ? skillDetail.total
+                  : (recalcedData.skills?.[skillName] !== undefined ? recalcedData.skills[skillName] : ranks + classBonus);
+
+                const abMod = skillDetail.ability_modifier !== undefined ? skillDetail.ability_modifier : 0;
 
                 return (
-                  <div key={skillName} className="skill-row">
+                  <div key={skillName} className="skill-row" title={`${ranks} Rank + ${abMod} Mod ${classBonus > 0 ? '+ 3 Sınıf Bonusu' : ''}`}>
                     <div style={{ fontFamily: 'EB Garamond, serif', fontSize: '0.82rem', color: ranks > 0 ? 'var(--gold-light)' : 'var(--gold-dim)', display: 'flex', alignItems: 'center', gap: 5 }}>
-                      {skillName} {isClassSkill && <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.42rem', color: 'var(--gold-bright)' }}>★</span>}
+                      {skillName} {isClassSkill && (
+                        <span style={{ 
+                          fontFamily: 'Cinzel, serif', 
+                          fontSize: '0.42rem', 
+                          color: ranks > 0 ? '#4cd964' : 'var(--gold-bright)',
+                          background: ranks > 0 ? 'rgba(76,217,100,0.12)' : 'rgba(201,168,76,0.15)',
+                          padding: '1px 4px',
+                          borderRadius: '3px',
+                          border: ranks > 0 ? '1px solid rgba(76,217,100,0.3)' : '1px solid rgba(201,168,76,0.3)'
+                        }}>
+                          {ranks > 0 ? '★ Sınıf (+3)' : '★ Sınıf'}
+                        </span>
+                      )}
                     </div>
                     <input type="checkbox" checked={isClassSkill} readOnly style={{ accentColor: 'var(--gold)', justifySelf: 'center' }} />
                     <div style={{ display: 'flex', alignItems: 'center', gap: 2 }}>

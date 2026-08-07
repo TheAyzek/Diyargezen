@@ -89,6 +89,25 @@ def parse_pf1e(data: Dict[str, Any] | None = None, base_dir: Path | None = None)
 
 
     unique_entities = list(seen_map.values())
+
+    # Enrich class entities with full PF1e Class Details dataset (class_skills, hit_die, etc.)
+    try:
+        from scraper.seed_pf1e_class_details import PF1E_CLASS_FULL_DETAILS
+        for ent in unique_entities:
+            if ent.kategori in ("class", "archetype") and isinstance(ent.sistem_verisi, dict):
+                for cls_name, info in PF1E_CLASS_FULL_DETAILS.items():
+                    if cls_name.lower() in ent.isim.lower():
+                        ent.sistem_verisi["hit_die"] = info["hit_die"]
+                        ent.sistem_verisi["skill_ranks_per_level"] = info["skill_ranks_per_level"]
+                        ent.sistem_verisi["saving_throws"] = info["saving_throws"]
+                        ent.sistem_verisi["proficiencies"] = info["proficiencies"]
+                        ent.sistem_verisi["class_skills"] = info["class_skills"]
+                        ent.sistem_verisi["spellcasting"] = info["spellcasting"]
+                        ent.sistem_verisi["spellcasting_type"] = info["spellcasting_type"]
+                        break
+    except Exception as exc:
+        logger.warning("Class details enrichment warning: %s", exc)
+
     logger.info("PF 1e: %d unique entity parse edildi (zengin açıklamalar birleştirildi)", len(unique_entities))
     return unique_entities
 

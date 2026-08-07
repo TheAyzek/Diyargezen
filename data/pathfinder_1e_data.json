@@ -5,13 +5,15 @@
     "Dwarf": {
       "ability_score_increase": {
         "constitution": 2,
-        "wisdom": 2
+        "wisdom": 2,
+        "charisma": -2
       },
-      "ability_score_increase_text": "+2 Constitution, +2 Wisdom",
+      "ability_score_increase_text": "+2 Constitution, +2 Wisdom, -2 Charisma",
       "speed": 20,
       "speed_special": "of 20 feet, but their speed is never modified by armor or encumbrance. Darkvision: Dwarves can see in the dark up to 60 feet. Defensive Training: Dwarves get a +4 dodge bonus to their AC against monst",
       "traits": [
         "Medium",
+        "Slow and Steady",
         "Darkvision",
         "Defensive Training",
         "Greed",
@@ -19,54 +21,7 @@
         "Hardy",
         "Stability",
         "Stonecunning",
-        "Weapon Familiarity",
-        "Low-Light Vision",
-        "Minesight",
-        "Surface Survivalist",
-        "Dusksight",
-        "Deep Warrior",
-        "Desert Delver",
-        "Poison Minion",
-        "Barrow Warden",
-        "Deep Tradition",
-        "Iron Within",
-        "Lasting Grudge",
-        "Slag Child",
-        "Spell Smasher",
-        "Saltbeard",
-        "Sky Sentinel",
-        "Stoic Negotiator",
-        "Wyrmscourged",
-        "Craftsman",
-        "Lorekeeper",
-        "Shadowplay",
-        "Spiritual Support",
-        "Siege Survivor",
-        "Breath Weapon",
-        "Dimdweller",
-        "Fey Magic",
-        "Healthy",
-        "Magic Resistant",
-        "Stubborn",
-        "Unstoppable",
-        "Viscous Blood",
-        "Wanderer",
-        "Ancient Enmity",
-        "Fey Thoughts",
-        "Giant Hunter",
-        "Industrious Urbanite",
-        "Xenophobic",
-        "Iron Citizen",
-        "Mountaineer",
-        "Relentless",
-        "Tightfisted",
-        "Treasure Sense",
-        "Barrow Scholar",
-        "Conservative Diplomacy",
-        "Rock Stepper",
-        "Sense Aberration",
-        "Stonesinger",
-        "Shadowhunter"
+        "Weapon Familiarity"
       ],
       "traits_detailed": {
         "Medium": "Dwarves are Medium creatures and have no bonuses or penalties due to their size",
@@ -150,45 +105,179 @@
       "armor_proficiencies": [],
       "racial_spells": [],
       "spell_resistance": null,
-      "description": "Dwarves are a stoic but stern race, ensconced in cities carved from the hearts of mountains and fiercely determined to repel the depredations of savage races like orcs and goblins"
+      "description": "Dwarves are a stoic but stern race, ensconced in cities carved from the hearts of mountains and fiercely determined to repel the depredations of savage races like orcs and goblins",
+      "standard_traits": [
+        "Medium",
+        "Slow and Steady",
+        "Darkvision",
+        "Defensive Training",
+        "Greed",
+        "Hatred",
+        "Hardy",
+        "Stability",
+        "Stonecunning",
+        "Weapon Familiarity"
+      ],
+      "alternate_traits": [
+        {
+          "name": "Barrow Warden",
+          "replaces": [
+            "Hatred"
+          ],
+          "description": "Replaces hatred."
+        },
+        {
+          "name": "Craftsman",
+          "replaces": [
+            "Greed"
+          ],
+          "description": "Replaces greed."
+        },
+        {
+          "name": "Deep Warrior",
+          "replaces": [
+            "Defensive Training",
+            "Hatred"
+          ],
+          "description": "Replaces defensive training and hatred."
+        },
+        {
+          "name": "Desert Delver",
+          "replaces": [
+            "Greed",
+            "Stonecunning"
+          ],
+          "description": "Replaces greed and stonecunning."
+        },
+        {
+          "name": "Dusksight",
+          "replaces": [
+            "Darkvision"
+          ],
+          "description": "Replaces darkvision."
+        },
+        {
+          "name": "Iron Within",
+          "replaces": [
+            "Defensive Training",
+            "Hatred"
+          ],
+          "description": "Replaces defensive training and hatred."
+        },
+        {
+          "name": "Lorekeeper",
+          "replaces": [
+            "Greed"
+          ],
+          "description": "Replaces greed."
+        },
+        {
+          "name": "Minesight",
+          "replaces": [
+            "Darkvision"
+          ],
+          "description": "Replaces darkvision."
+        },
+        {
+          "name": "Relentless",
+          "replaces": [
+            "Stability"
+          ],
+          "description": "Replaces stability."
+        },
+        {
+          "name": "Rock Stepper",
+          "replaces": [
+            "Stonecunning"
+          ],
+          "description": "Replaces stonecunning."
+        },
+        {
+          "name": "Saltbeard",
+          "replaces": [
+            "Defensive Training",
+            "Hatred",
+            "Stonecunning"
+          ],
+          "description": "Replaces defensive training, hatred, and stonecunning."
+        },
+        {
+          "name": "Shadowplay",
+          "replaces": [
+            "Greed"
+          ],
+          "description": "Replaces greed."
+        },
+        {
+          "name": "Siege Survivor",
+          "replaces": [
+            "Hardy"
+          ],
+          "description": "Replaces hardy."
+        },
+        {
+          "name": "Sky Sentinel",
+          "replaces": [
+            "Defensive Training",
+            "Hatred"
+          ],
+          "description": "Replaces defensive training and hatred."
+        },
+        {
+          "name": "Slag Child",
+          "replaces": [
+            "Hardy"
+          ],
+          "description": "Replaces hardy."
+        },
+        {
+          "name": "Spell Smasher",
+          "replaces": [
+            "Hatred"
+          ],
+          "description": "Replaces hatred."
+        },
+        {
+          "name": "Stoic Negotiator",
+          "replaces": [
+            "Greed"
+          ],
+          "description": "Replaces greed."
+        },
+        {
+          "name": "Surface Survivalist",
+          "replaces": [
+            "Stonecunning"
+          ],
+          "description": "Replaces stonecunning."
+        },
+        {
+          "name": "Wyrmscourged",
+          "replaces": [
+            "Defensive Training",
+            "Hatred"
+          ],
+          "description": "Replaces defensive training and hatred."
+        }
+      ]
     },
     "Elf": {
       "ability_score_increase": {
         "dexterity": 2,
-        "intelligence": 2
+        "intelligence": 2,
+        "constitution": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Intelligence",
+      "ability_score_increase_text": "+2 Dexterity, +2 Intelligence, -2 Constitution",
       "speed": 30,
       "speed_special": "Elves have a base speed of 30 feet. Low-Light Vision: Elves can see twice as far as humans in conditions of dim light. Elven Immunities: Elves are immune to magic sleep effects and get a +2 racial bon",
       "traits": [
         "Medium",
-        "Normal Speed",
+        "Elven Speed",
         "Low-Light Vision",
         "Elven Immunities",
         "Elven Magic",
         "Keen Senses",
-        "Weapon Familiarity",
-        "Blightborn",
-        "Dreamspeaker",
-        "Elemental Resistance",
-        "Perfect",
-        "Slender",
-        "Lightbringer",
-        "Memories Beyond Death",
-        "Moonkissed",
-        "Sense Thoughts",
-        "Creepy",
-        "Desert Runner",
-        "Envoy",
-        "Devoted Companion",
-        "Disinterested Observer",
-        "Overwhelming Magic",
-        "Poison Minion",
-        "Blended View",
-        "Dimdweller",
-        "Fey Thoughts",
-        "Jininese Weapon Mastery",
-        "Shadowhunter"
+        "Weapon Familiarity"
       ],
       "traits_detailed": {
         "Medium": "Elves are Medium creatures and have no bonuses or penalties due to their size",
@@ -244,14 +333,117 @@
       "armor_proficiencies": [],
       "racial_spells": [],
       "spell_resistance": null,
-      "description": "The long-lived elves are children of the natural world, similar in many superficial ways to fey creatures, though with key differences"
+      "description": "The long-lived elves are children of the natural world, similar in many superficial ways to fey creatures, though with key differences",
+      "standard_traits": [
+        "Medium",
+        "Elven Speed",
+        "Low-Light Vision",
+        "Elven Immunities",
+        "Elven Magic",
+        "Keen Senses",
+        "Weapon Familiarity"
+      ],
+      "alternate_traits": [
+        {
+          "name": "Arcane Focus",
+          "replaces": [
+            "Weapon Familiarity"
+          ],
+          "description": "Replaces weapon familiarity."
+        },
+        {
+          "name": "Crossbow Training",
+          "replaces": [
+            "Weapon Familiarity"
+          ],
+          "description": "Replaces weapon familiarity."
+        },
+        {
+          "name": "Desert Fleet",
+          "replaces": [
+            "Elven Speed"
+          ],
+          "description": "Replaces elven speed."
+        },
+        {
+          "name": "Dreamspeaker",
+          "replaces": [
+            "Elven Immunities"
+          ],
+          "description": "Replaces elven immunities."
+        },
+        {
+          "name": "Elemental Resistance",
+          "replaces": [
+            "Elven Immunities"
+          ],
+          "description": "Replaces elven immunities."
+        },
+        {
+          "name": "Envoy",
+          "replaces": [
+            "Elven Magic"
+          ],
+          "description": "Replaces elven magic."
+        },
+        {
+          "name": "Fleet-Footed",
+          "replaces": [
+            "Weapon Familiarity"
+          ],
+          "description": "Replaces weapon familiarity."
+        },
+        {
+          "name": "Lightbringer",
+          "replaces": [
+            "Elven Magic"
+          ],
+          "description": "Replaces elven magic."
+        },
+        {
+          "name": "Long-Lived",
+          "replaces": [
+            "Elven Magic"
+          ],
+          "description": "Replaces elven magic."
+        },
+        {
+          "name": "Silent Hunter",
+          "replaces": [
+            "Elven Magic"
+          ],
+          "description": "Replaces elven magic."
+        },
+        {
+          "name": "Spirit of the Waters",
+          "replaces": [
+            "Elven Magic"
+          ],
+          "description": "Replaces elven magic."
+        },
+        {
+          "name": "Urbanite",
+          "replaces": [
+            "Keen Senses"
+          ],
+          "description": "Replaces keen senses."
+        },
+        {
+          "name": "Woodcraft",
+          "replaces": [
+            "Elven Magic"
+          ],
+          "description": "Replaces elven magic."
+        }
+      ]
     },
     "Gnome": {
       "ability_score_increase": {
         "constitution": 2,
-        "charisma": 2
+        "charisma": 2,
+        "strength": -2
       },
-      "ability_score_increase_text": "+2 Constitution, +2 Charisma",
+      "ability_score_increase_text": "+2 Constitution, +2 Charisma, -2 Strength",
       "speed": 20,
       "speed_special": "Gnomes have a base speed of 20 feet. Low-Light Vision: Gnomes can see twice as far as humans in conditions of dim light. Defensive Training: Gnomes get a +4 dodge bonus to their AC against monsters of",
       "traits": [
@@ -264,44 +456,7 @@
         "Illusion Resistance",
         "Keen Senses",
         "Obsessive",
-        "Weapon Familiarity",
-        "Poison Minion",
-        "Eternal Hope",
-        "Master Tinker",
-        "Shadow Foe",
-        "Dirty Trickster",
-        "Fairy Catcher",
-        "Stalker",
-        "Shadow Dodger",
-        "Bleachling Magic",
-        "Faerie Dragon Magic",
-        "Fell Magic",
-        "Genial Magic",
-        "Shadowplay",
-        "Utilitarian Magic",
-        "Magical Linguist",
-        "Pyromaniac",
-        "Vivacious",
-        "Bleachling",
-        "Explorer",
-        "Wright",
-        "Intrepid Settler",
-        "Blended View",
-        "Dusksight",
-        "Nature Affinity",
-        "Architectural Ingenuity",
-        "Inquisitive",
-        "Darkvision",
-        "Academician",
-        "Artistic",
-        "Nosophobia",
-        "Dimdweller",
-        "Fey Fortitude",
-        "Fey Thoughts",
-        "Shadowhunter",
-        "Sound Mimicry",
-        "Kinetcist",
-        "Medium"
+        "Weapon Familiarity"
       ],
       "traits_detailed": {
         "Small": "Gnomes are Small creatures and gain a +1 size bonus to their AC, a +1 size bonus on attack rolls, a –1 penalty on combat maneuver checks and to their Combat Maneuver Defense, and a +4 size bonus on Stealth checks",
@@ -376,7 +531,109 @@
       "armor_proficiencies": [],
       "racial_spells": [],
       "spell_resistance": null,
-      "description": "Gnomes are distant relatives of the fey, and their history tells of a time when they lived in the fey's mysterious realm, a place where colors are brighter, the wildlands wilder, and emotions more primal"
+      "description": "Gnomes are distant relatives of the fey, and their history tells of a time when they lived in the fey's mysterious realm, a place where colors are brighter, the wildlands wilder, and emotions more primal",
+      "standard_traits": [
+        "Small",
+        "Slow Speed",
+        "Low-Light Vision",
+        "Defensive Training",
+        "Gnome Magic",
+        "Hatred",
+        "Illusion Resistance",
+        "Keen Senses",
+        "Obsessive",
+        "Weapon Familiarity"
+      ],
+      "alternate_traits": [
+        {
+          "name": "Academician",
+          "replaces": [
+            "Obsessive"
+          ],
+          "description": "Replaces obsessive."
+        },
+        {
+          "name": "Artisan",
+          "replaces": [
+            "Obsessive"
+          ],
+          "description": "Replaces obsessive."
+        },
+        {
+          "name": "Bog-Treader",
+          "replaces": [
+            "Defensive Training",
+            "Hatred"
+          ],
+          "description": "Replaces defensive training and hatred."
+        },
+        {
+          "name": "Darkvision",
+          "replaces": [
+            "Low-Light Vision"
+          ],
+          "description": "Replaces low-light vision."
+        },
+        {
+          "name": "Eternal Hope",
+          "replaces": [
+            "Defensive Training",
+            "Hatred"
+          ],
+          "description": "Replaces defensive training and hatred."
+        },
+        {
+          "name": "Fell Magic",
+          "replaces": [
+            "Gnome Magic"
+          ],
+          "description": "Replaces gnome magic."
+        },
+        {
+          "name": "First World Magic",
+          "replaces": [
+            "Gnome Magic"
+          ],
+          "description": "Replaces gnome magic."
+        },
+        {
+          "name": "Gift of Tongues",
+          "replaces": [
+            "Defensive Training",
+            "Hatred"
+          ],
+          "description": "Replaces defensive training and hatred."
+        },
+        {
+          "name": "Inquisitive",
+          "replaces": [
+            "Keen Senses"
+          ],
+          "description": "Replaces keen senses."
+        },
+        {
+          "name": "Master Tinker",
+          "replaces": [
+            "Defensive Training",
+            "Hatred"
+          ],
+          "description": "Replaces defensive training and hatred."
+        },
+        {
+          "name": "Pyromaniac",
+          "replaces": [
+            "Gnome Magic"
+          ],
+          "description": "Replaces gnome magic."
+        },
+        {
+          "name": "Utilitarian Magic",
+          "replaces": [
+            "Gnome Magic"
+          ],
+          "description": "Replaces gnome magic."
+        }
+      ]
     },
     "Half-Elf": {
       "ability_score_increase": {
@@ -393,44 +650,7 @@
         "Elf Blood",
         "Elven Immunities",
         "Keen Senses",
-        "Multitalented",
-        "Ancestral Arms",
-        "Dimdweller",
-        "Dual Minded",
-        "Integrated",
-        "Mordant Envoy",
-        "Sea Legs",
-        "Sociable",
-        "Starchild",
-        "Weapon Familiarity",
-        "Dragon Soul",
-        "Spell Resistance",
-        "Round Ears",
-        "Drow Magic",
-        "Lesser Spell-Like Abilities",
-        "Reflexive Improvisation",
-        "Water Child",
-        "Drow Heritage",
-        "Dreamer",
-        "Shadowhunter",
-        "Sophisticate",
-        "Thinblood Resistance",
-        "Poison Minion",
-        "Psychic Sensitivity",
-        "Darklands Guide",
-        "Disregarded",
-        "Dusksight",
-        "Fey Magic",
-        "Fraudulent",
-        "Sure Step",
-        "Wary",
-        "Mismatched",
-        "Arcane Training",
-        "Blended View",
-        "Fey Thoughts",
-        "Jungle Affinity",
-        "Multidisciplined",
-        "Inspire Imitation"
+        "Multitalented"
       ],
       "traits_detailed": {
         "Medium": "Half-elves are Medium creatures and have no bonuses or penalties due to their size",
@@ -503,14 +723,99 @@
       "armor_proficiencies": [],
       "racial_spells": [],
       "spell_resistance": null,
-      "description": "Elves have long drawn the covetous gazes of other races"
+      "description": "Elves have long drawn the covetous gazes of other races",
+      "standard_traits": [
+        "Medium",
+        "Normal Speed",
+        "Low-Light Vision",
+        "Adaptability",
+        "Elf Blood",
+        "Elven Immunities",
+        "Keen Senses",
+        "Multitalented"
+      ],
+      "alternate_traits": [
+        {
+          "name": "Ancestral Arms",
+          "replaces": [
+            "Adaptability"
+          ],
+          "description": "Replaces adaptability."
+        },
+        {
+          "name": "Arcane Training",
+          "replaces": [
+            "Multitalented"
+          ],
+          "description": "Replaces multitalented."
+        },
+        {
+          "name": "Dual Talent",
+          "replaces": [
+            "Adaptability",
+            "Multitalented"
+          ],
+          "description": "Replaces adaptability and multitalented. Grants +2 to a second ability score."
+        },
+        {
+          "name": "Elven Arcane Focus",
+          "replaces": [
+            "Adaptability"
+          ],
+          "description": "Replaces adaptability."
+        },
+        {
+          "name": "Integrated",
+          "replaces": [
+            "Adaptability"
+          ],
+          "description": "Replaces adaptability."
+        },
+        {
+          "name": "Kindred-Raised",
+          "replaces": [
+            "Adaptability"
+          ],
+          "description": "Replaces adaptability."
+        },
+        {
+          "name": "Overlook",
+          "replaces": [
+            "Adaptability"
+          ],
+          "description": "Replaces adaptability."
+        },
+        {
+          "name": "Sociable",
+          "replaces": [
+            "Adaptability"
+          ],
+          "description": "Replaces adaptability."
+        },
+        {
+          "name": "Water Child",
+          "replaces": [
+            "Adaptability",
+            "Multitalented"
+          ],
+          "description": "Replaces adaptability and multitalented."
+        },
+        {
+          "name": "Wary",
+          "replaces": [
+            "Adaptability"
+          ],
+          "description": "Replaces adaptability."
+        }
+      ]
     },
     "Halfling": {
       "ability_score_increase": {
         "dexterity": 2,
-        "charisma": 2
+        "charisma": 2,
+        "strength": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Charisma",
+      "ability_score_increase_text": "+2 Dexterity, +2 Charisma, -2 Strength",
       "speed": 20,
       "speed_special": "Halflings have a base speed of 20 feet. Fearless: Halflings receive a +2 racial bonus on all saving throws against fear. This bonus stacks with the bonus granted by halfling luck. Halfling Luck: Halfl",
       "traits": [
@@ -519,47 +824,8 @@
         "Fearless",
         "Halfling Luck",
         "Keen Senses",
-        "Weapon Familiarity",
-        "Blessed",
-        "Evasive Nomad",
-        "Fey Thoughts",
-        "Irrepressible",
-        "Small Quarter Ally",
-        "Craven",
-        "Wanderlust",
-        "Practicality",
-        "Joyous Companion",
-        "Skulker",
-        "Underfoot Dodger",
-        "Adaptable Luck",
-        "Halfling Jinx",
-        "Luckbringer",
-        "Underfoot",
-        "Unlucky Halfling",
-        "Unfettered",
-        "Caretaker",
-        "Acquisitive",
-        "Attentive",
-        "Danger Detection",
-        "Dusksight",
-        "Fey Magic",
-        "Low Blow",
-        "Polyglot",
-        "Creepy Doll",
-        "Human Shadow",
-        "Ingratiating",
-        "Driven Worker",
-        "Festive",
-        "Outrider",
-        "Secretive Survivor",
-        "Shiftless",
-        "Surreptitious",
-        "Warslinger",
-        "Deep Jungle",
-        "Dimdweller",
-        "Shadowhunter",
-        "Shadowplay",
-        "Medium"
+        "Sure-Footed",
+        "Weapon Familiarity"
       ],
       "traits_detailed": {
         "Small": "Halflings are Small creatures and gain a +1 size bonus to their AC, a +1 size bonus on attack rolls, a –1 penalty on combat maneuver checks and to their Combat Maneuver Defense, and a +4 size bonus on Stealth checks",
@@ -633,7 +899,97 @@
       "armor_proficiencies": [],
       "racial_spells": [],
       "spell_resistance": null,
-      "description": "Optimistic and cheerful by nature, blessed with uncanny luck, and driven by a powerful wanderlust, halflings make up for their short stature with an abundance of bravado and curiosity"
+      "description": "Optimistic and cheerful by nature, blessed with uncanny luck, and driven by a powerful wanderlust, halflings make up for their short stature with an abundance of bravado and curiosity",
+      "standard_traits": [
+        "Small",
+        "Slow Speed",
+        "Fearless",
+        "Halfling Luck",
+        "Keen Senses",
+        "Sure-Footed",
+        "Weapon Familiarity"
+      ],
+      "alternate_traits": [
+        {
+          "name": "Adaptable Luck",
+          "replaces": [
+            "Halfling Luck"
+          ],
+          "description": "Replaces halfling luck."
+        },
+        {
+          "name": "Craven",
+          "replaces": [
+            "Fearless"
+          ],
+          "description": "Replaces fearless."
+        },
+        {
+          "name": "Fleet of Foot",
+          "replaces": [
+            "Slow Speed",
+            "Sure-Footed"
+          ],
+          "description": "Replaces slow speed and sure-footed."
+        },
+        {
+          "name": "Ingratiating",
+          "replaces": [
+            "Fearless"
+          ],
+          "description": "Replaces fearless."
+        },
+        {
+          "name": "Low-Light Vision",
+          "replaces": [
+            "Keen Senses"
+          ],
+          "description": "Replaces keen senses."
+        },
+        {
+          "name": "Outrider",
+          "replaces": [
+            "Sure-Footed"
+          ],
+          "description": "Replaces sure-footed."
+        },
+        {
+          "name": "Polyglot",
+          "replaces": [
+            "Keen Senses"
+          ],
+          "description": "Replaces keen senses."
+        },
+        {
+          "name": "Practicality",
+          "replaces": [
+            "Fearless"
+          ],
+          "description": "Replaces fearless."
+        },
+        {
+          "name": "Shiftless",
+          "replaces": [
+            "Sure-Footed"
+          ],
+          "description": "Replaces sure-footed."
+        },
+        {
+          "name": "Underfoot",
+          "replaces": [
+            "Halfling Luck"
+          ],
+          "description": "Replaces halfling luck."
+        },
+        {
+          "name": "Wanderlust",
+          "replaces": [
+            "Fearless",
+            "Halfling Luck"
+          ],
+          "description": "Replaces fearless and halfling luck."
+        }
+      ]
     },
     "Half-Orc": {
       "ability_score_increase": {
@@ -649,50 +1005,7 @@
         "Intimidating",
         "Orc Blood",
         "Orc Ferocity",
-        "Weapon Familiarity",
-        "Orc Atavism",
-        "Forest Walker",
-        "Low-Light Vision",
-        "Sea Raider",
-        "Skilled",
-        "Smog Sight",
-        "Vigilant Gaze",
-        "Dragon Sight",
-        "Burning Assurance",
-        "Cavewight",
-        "Evader",
-        "Rock Climber",
-        "Scavenger",
-        "Shadowplay",
-        "Unflinching Valor",
-        "Divided Attention",
-        "Hatred",
-        "Monstrous Sympathy",
-        "Pain Tolerance",
-        "Plagueborn",
-        "Stoic",
-        "Overlooked Mastermind",
-        "Shaman Enhancement",
-        "Acute Darkvision",
-        "Beastmaster",
-        "Bestial",
-        "Dragon Slayer",
-        "Fey Magic",
-        "Gatecrasher",
-        "Innured",
-        "Sacred Tattoo",
-        "Tenacious",
-        "Toothy",
-        "Warded Skin",
-        "Cliffside Charger",
-        "Poison Minion",
-        "Projection",
-        "Chain Fighter",
-        "Dimdweller",
-        "Dusksight",
-        "Fey Thoughts",
-        "Pariah",
-        "Shadowhunter"
+        "Weapon Familiarity"
       ],
       "traits_detailed": {
         "Medium": "Half-orcs are Medium creatures and have no bonuses or penalties due to their size",
@@ -805,7 +1118,81 @@
       "armor_proficiencies": [],
       "racial_spells": [],
       "spell_resistance": null,
-      "description": "As seen by civilized races, half-orcs are monstrosities, the result of perversion and violence—whether or not this is actually true"
+      "description": "As seen by civilized races, half-orcs are monstrosities, the result of perversion and violence—whether or not this is actually true",
+      "standard_traits": [
+        "Medium",
+        "Normal Speed",
+        "Darkvision",
+        "Intimidating",
+        "Orc Blood",
+        "Orc Ferocity",
+        "Weapon Familiarity"
+      ],
+      "alternate_traits": [
+        {
+          "name": "Bestial",
+          "replaces": [
+            "Orc Ferocity"
+          ],
+          "description": "Replaces orc ferocity."
+        },
+        {
+          "name": "Chain Fighter",
+          "replaces": [
+            "Weapon Familiarity"
+          ],
+          "description": "Replaces weapon familiarity."
+        },
+        {
+          "name": "City-Raised",
+          "replaces": [
+            "Weapon Familiarity"
+          ],
+          "description": "Replaces weapon familiarity."
+        },
+        {
+          "name": "Fate's Favored",
+          "replaces": [
+            "Orc Ferocity"
+          ],
+          "description": "Replaces orc ferocity."
+        },
+        {
+          "name": "Overlooked Inkeeper",
+          "replaces": [
+            "Intimidating"
+          ],
+          "description": "Replaces intimidating."
+        },
+        {
+          "name": "Sacred Tattoo",
+          "replaces": [
+            "Orc Ferocity"
+          ],
+          "description": "Replaces orc ferocity."
+        },
+        {
+          "name": "Scavenger",
+          "replaces": [
+            "Intimidating"
+          ],
+          "description": "Replaces intimidating."
+        },
+        {
+          "name": "Shaman's Apprentice",
+          "replaces": [
+            "Orc Ferocity"
+          ],
+          "description": "Replaces orc ferocity."
+        },
+        {
+          "name": "Toothy",
+          "replaces": [
+            "Orc Ferocity"
+          ],
+          "description": "Replaces orc ferocity."
+        }
+      ]
     },
     "Human": {
       "ability_score_increase": {
@@ -818,39 +1205,7 @@
         "Medium",
         "Normal Speed",
         "Bonus Feat",
-        "Skilled",
-        "Dual Talent",
-        "Adoptive Parentage",
-        "Awareness",
-        "Dragon Scholar",
-        "Focused Study",
-        "Heroic",
-        "Military Tradition",
-        "Mixed Heritage",
-        "Piety",
-        "Powerful Presence",
-        "Psychic Defense",
-        "Rationalize",
-        "Reptilian Ancestry",
-        "Shadowhunter",
-        "Unstoppable Magic",
-        "Tribalistic",
-        "Aquatic Ancestry",
-        "Comprehensive Education",
-        "Dimdweller",
-        "Draconic Heritage",
-        "Fey Magic",
-        "Fey Thoughts",
-        "Giant Ancestry",
-        "Industrious",
-        "Innovative",
-        "Institutional Memory",
-        "Low-Light Vision",
-        "Poison Minion",
-        "Practiced Hunter",
-        "Silver Tongued",
-        "Social Ties",
-        "Wayfarer"
+        "Skilled"
       ],
       "traits_detailed": {
         "Medium": "Humans are Medium creatures and have no bonuses or penalties due to their size",
@@ -918,18 +1273,107 @@
       "armor_proficiencies": [],
       "racial_spells": [],
       "spell_resistance": null,
-      "description": "Humans possess exceptional drive and a great capacity to endure and expand, and as such are currently the dominant race in the world"
+      "description": "Humans possess exceptional drive and a great capacity to endure and expand, and as such are currently the dominant race in the world",
+      "standard_traits": [
+        "Medium",
+        "Normal Speed",
+        "Bonus Feat",
+        "Skilled"
+      ],
+      "alternate_traits": [
+        {
+          "name": "Adopted Heritage",
+          "replaces": [
+            "Bonus Feat"
+          ],
+          "description": "Replaces bonus feat."
+        },
+        {
+          "name": "Dual Talent",
+          "replaces": [
+            "Bonus Feat",
+            "Skilled"
+          ],
+          "description": "Replaces bonus feat and skilled. Grants +2 to a second ability score."
+        },
+        {
+          "name": "Eye for Talent",
+          "replaces": [
+            "Bonus Feat"
+          ],
+          "description": "Replaces bonus feat."
+        },
+        {
+          "name": "Focused Study",
+          "replaces": [
+            "Bonus Feat"
+          ],
+          "description": "Replaces bonus feat."
+        },
+        {
+          "name": "Heart of the Fields",
+          "replaces": [
+            "Skilled"
+          ],
+          "description": "Replaces skilled."
+        },
+        {
+          "name": "Heart of the Mountains",
+          "replaces": [
+            "Skilled"
+          ],
+          "description": "Replaces skilled."
+        },
+        {
+          "name": "Heart of the Sea",
+          "replaces": [
+            "Skilled"
+          ],
+          "description": "Replaces skilled."
+        },
+        {
+          "name": "Heart of the Slums",
+          "replaces": [
+            "Skilled"
+          ],
+          "description": "Replaces skilled."
+        },
+        {
+          "name": "Heart of the Snows",
+          "replaces": [
+            "Skilled"
+          ],
+          "description": "Replaces skilled."
+        },
+        {
+          "name": "Heart of the Streets",
+          "replaces": [
+            "Skilled"
+          ],
+          "description": "Replaces skilled."
+        },
+        {
+          "name": "Heart of the Sun",
+          "replaces": [
+            "Skilled"
+          ],
+          "description": "Replaces skilled."
+        },
+        {
+          "name": "Heart of the Wilderness",
+          "replaces": [
+            "Skilled"
+          ],
+          "description": "Replaces skilled."
+        }
+      ]
     },
     "Aasimar": {
       "ability_score_increase": {
-        "strength": 2,
-        "dexterity": 2,
-        "constitution": 2,
-        "intelligence": 2,
         "wisdom": 2,
         "charisma": 2
       },
-      "ability_score_increase_text": "+2 Strength, +2 Dexterity, +2 Constitution, +2 Intelligence, +2 Wisdom, +2 Charisma",
+      "ability_score_increase_text": "+2 Wisdom, +2 Charisma",
       "speed": 30,
       "speed_special": "Aasimars have a base speed of 30 feet. Darkvision: Aasimars can see in the dark up to 60 feet. Skilled: Aasimars have a +2 racial bonus on Diplomacy and Perception checks. Aasimars of specific bloodli",
       "traits": [
@@ -1070,9 +1514,10 @@
     "Android": {
       "ability_score_increase": {
         "dexterity": 2,
-        "intelligence": 2
+        "intelligence": 2,
+        "charisma": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Intelligence",
+      "ability_score_increase_text": "+2 Dexterity, +2 Intelligence, -2 Charisma",
       "speed": 30,
       "speed_special": "",
       "traits": [
@@ -1104,9 +1549,10 @@
     "Aphorite": {
       "ability_score_increase": {
         "strength": 2,
-        "intelligence": 2
+        "wisdom": 2,
+        "charisma": -2
       },
-      "ability_score_increase_text": "+2 Strength, +2 Intelligence",
+      "ability_score_increase_text": "+2 Strength, +2 Wisdom, -2 Charisma",
       "speed": 30,
       "speed_special": "Aphorites have a base speed of 30 feet. Darkvision: Aphorites can see in the dark up to 60 feet. Skilled: Aphorites gain a +2 racial bonus on checks with a single Craft skill of their choice. Spell-Li",
       "traits": [
@@ -1171,9 +1617,10 @@
     "Aquatic Elf": {
       "ability_score_increase": {
         "dexterity": 2,
-        "intelligence": 2
+        "intelligence": 2,
+        "constitution": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Intelligence",
+      "ability_score_increase_text": "+2 Dexterity, +2 Intelligence, -2 Constitution",
       "speed": 30,
       "speed_special": "Aquatic elves have a base speed of 30 feet. They also have a swim speed of 30 feet, can move in water without making Swim checks, and always treat Swim as a class skill.  Aquatic: Aquatic elves are hu",
       "traits": [
@@ -1384,9 +1831,10 @@
     "Catfolk": {
       "ability_score_increase": {
         "dexterity": 2,
-        "charisma": 2
+        "charisma": 2,
+        "wisdom": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Charisma",
+      "ability_score_increase_text": "+2 Dexterity, +2 Charisma, -2 Wisdom",
       "speed": 30,
       "speed_special": "Catfolk have a base speed of 30 feet. Low-Light Vision: In dim light, catfolk can see twice as far as humans. Cat’s Luck: Once per day when a catfolk attempts a Reflex saving throw, he can roll the sa",
       "traits": [
@@ -1499,13 +1947,11 @@
     },
     "Changeling": {
       "ability_score_increase": {
-        "strength": 2,
-        "dexterity": 2,
-        "intelligence": 2,
         "wisdom": 2,
-        "charisma": 2
+        "charisma": 2,
+        "constitution": -2
       },
-      "ability_score_increase_text": "+2 Strength, +2 Dexterity, +2 Intelligence, +2 Wisdom, +2 Charisma",
+      "ability_score_increase_text": "+2 Wisdom, +2 Charisma, -2 Constitution",
       "speed": 30,
       "speed_special": "Changelings have a base speed of 30 feet. Hag Racial Trait: Each changeling inherits one of the following racial traits, depending on her mother’s hag type. (As outsiders, night hags produce half-fien",
       "traits": [
@@ -1607,13 +2053,11 @@
     },
     "Dhampir": {
       "ability_score_increase": {
-        "strength": 2,
         "dexterity": 2,
-        "intelligence": 2,
-        "wisdom": 2,
-        "charisma": 2
+        "charisma": 2,
+        "constitution": -2
       },
-      "ability_score_increase_text": "+2 Strength, +2 Dexterity, +2 Intelligence, +2 Wisdom, +2 Charisma",
+      "ability_score_increase_text": "+2 Dexterity, +2 Charisma, -2 Constitution",
       "speed": 30,
       "speed_special": "Dhampirs have a base speed of 30 feet. Senses: Dhampirs get low-light vision and darkvision with a range of 60 feet. Manipulative: Dhampirs gain a +2 racial bonus on Bluff and Perception checks. Dhamp",
       "traits": [
@@ -1677,9 +2121,10 @@
     "Drow": {
       "ability_score_increase": {
         "dexterity": 2,
-        "charisma": 2
+        "charisma": 2,
+        "constitution": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Charisma",
+      "ability_score_increase_text": "+2 Dexterity, +2 Charisma, -2 Constitution",
       "speed": 30,
       "speed_special": "Drow have a base speed of 30 feet. Darkvision: Drow can see in the dark up to 120 feet. Drow Immunities: Drow are immune to magic sleep effects and gain a +2 racial bonus on saving throws against ench",
       "traits": [
@@ -1822,9 +2267,10 @@
     "Duergar": {
       "ability_score_increase": {
         "constitution": 2,
-        "wisdom": 2
+        "wisdom": 2,
+        "charisma": -4
       },
-      "ability_score_increase_text": "+2 Constitution, +2 Wisdom",
+      "ability_score_increase_text": "+2 Constitution, +2 Wisdom, -4 Charisma",
       "speed": 20,
       "speed_special": "of 20 feet, but their speed is never modified by armor or encumbrance. Superior Darkvision: Duergar can see in the dark up to 120 feet. Duergar Immunities: Duergar are immune to paralysis, phantasms, ",
       "traits": [
@@ -1894,9 +2340,10 @@
     "Duskwalker": {
       "ability_score_increase": {
         "dexterity": 2,
-        "wisdom": 2
+        "wisdom": 2,
+        "constitution": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Wisdom",
+      "ability_score_increase_text": "+2 Dexterity, +2 Wisdom, -2 Constitution",
       "speed": 30,
       "speed_special": "Duskwalkers have a base speed of 30 feet. Darkvision: Duskwalkers can see in the dark up to 60 feet. Skilled: Duskwalkers gain a +2 racial bonus on Knowledge (religion) and Heal checks. Ghost Hunter (",
       "traits": [
@@ -1973,9 +2420,10 @@
     "Fetchling": {
       "ability_score_increase": {
         "dexterity": 2,
-        "charisma": 2
+        "charisma": 2,
+        "wisdom": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Charisma",
+      "ability_score_increase_text": "+2 Dexterity, +2 Charisma, -2 Wisdom",
       "speed": 30,
       "speed_special": "Fetchlings have a base speed of 30 feet. Darkvision: Fetchlings can see in the dark up to 60 feet. Low-Light Vision: Fetchlings can see twice as far as humans in conditions of dim light. Skilled: Fetc",
       "traits": [
@@ -2051,9 +2499,10 @@
     "Ganzi": {
       "ability_score_increase": {
         "constitution": 2,
-        "charisma": 2
+        "charisma": 2,
+        "intelligence": -2
       },
-      "ability_score_increase_text": "+2 Constitution, +2 Charisma",
+      "ability_score_increase_text": "+2 Constitution, +2 Charisma, -2 Intelligence",
       "speed": 30,
       "speed_special": "Ganzis have a base speed of 30 feet. Darkvision: Ganzis can see in the dark up to 60 feet. Maelstrom Resistance: Ganzis have acid resistance 5, electricity resistance 5, and sonic resistance 5, and th",
       "traits": [
@@ -2277,9 +2726,10 @@
     "Gillman": {
       "ability_score_increase": {
         "constitution": 2,
-        "charisma": 2
+        "charisma": 2,
+        "wisdom": -2
       },
-      "ability_score_increase_text": "+2 Constitution, +2 Charisma",
+      "ability_score_increase_text": "+2 Constitution, +2 Charisma, -2 Wisdom",
       "speed": 30,
       "speed_special": "Gillmen have a base speed of 30 feet on land. As aquatic creatures, they also have a swim speed of 30 feet, can move in water without making Swim checks, and always treat Swim as a class skill.  Amphi",
       "traits": [
@@ -2348,9 +2798,11 @@
     },
     "Goblin": {
       "ability_score_increase": {
-        "dexterity": 4
+        "dexterity": 4,
+        "strength": -2,
+        "charisma": -2
       },
-      "ability_score_increase_text": "+4 Dexterity",
+      "ability_score_increase_text": "+4 Dexterity, -2 Strength, -2 Charisma",
       "speed": 30,
       "speed_special": "Goblins are fast for their size, and have a base speed of 30 feet. Darkvision: Goblins can see in the dark up to 60 feet. Skilled: +4 racial bonus on Ride and Stealth checks. Languages: Goblins begin ",
       "traits": [
@@ -2520,9 +2972,10 @@
     "Grippli": {
       "ability_score_increase": {
         "dexterity": 2,
-        "wisdom": 2
+        "wisdom": 2,
+        "strength": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Wisdom",
+      "ability_score_increase_text": "+2 Dexterity, +2 Wisdom, -2 Strength",
       "speed": 30,
       "speed_special": "Gripplis have a base speed of 30 feet. Natural Climber: Gripplis have a climb speed of 20 feet. Darkvision: Gripplis can see in the dark up to 60 feet. Camouflage: Gripplis receive a +4 racial bonus o",
       "traits": [
@@ -2657,13 +3110,11 @@
     },
     "Ifrit": {
       "ability_score_increase": {
-        "strength": 2,
         "dexterity": 2,
-        "constitution": 2,
-        "intelligence": 2,
-        "charisma": 2
+        "charisma": 2,
+        "wisdom": -2
       },
-      "ability_score_increase_text": "+2 Strength, +2 Dexterity, +2 Constitution, +2 Intelligence, +2 Charisma",
+      "ability_score_increase_text": "+2 Dexterity, +2 Charisma, -2 Wisdom",
       "speed": 30,
       "speed_special": "Ifrits have a base speed of 30 feet. Darkvision: Ifrits can see in the dark up to 60 feet. Spell-Like Ability: Ifrits can use burning hands 1/day as a spell-like ability (caster level equals the ifrit",
       "traits": [
@@ -2794,9 +3245,10 @@
     "Kitsune": {
       "ability_score_increase": {
         "dexterity": 2,
-        "charisma": 2
+        "charisma": 2,
+        "strength": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Charisma",
+      "ability_score_increase_text": "+2 Dexterity, +2 Charisma, -2 Strength",
       "speed": 30,
       "speed_special": "Kitsune have a base speed of 30 feet. Low-Light Vision: Kitsune can see twice as far as humans in conditions of dim light. Change Shape: A kitsune can assume the appearance of a specific single human ",
       "traits": [
@@ -2861,9 +3313,11 @@
     },
     "Kobold": {
       "ability_score_increase": {
-        "dexterity": 2
+        "dexterity": 2,
+        "strength": -4,
+        "constitution": -2
       },
-      "ability_score_increase_text": "+2 Dexterity",
+      "ability_score_increase_text": "+2 Dexterity, -4 Strength, -2 Constitution",
       "speed": 30,
       "speed_special": "Kobolds have a base speed of 30 feet. Darkvision: Kobolds can see in the dark up to 60 feet. Armor: Kobolds have a +1 natural armor bonus. Crafty: Kobolds gain a +2 racial bonus on Craft (traps), Perc",
       "traits": [
@@ -3179,9 +3633,11 @@
     },
     "Monkey Goblin": {
       "ability_score_increase": {
-        "dexterity": 4
+        "dexterity": 4,
+        "wisdom": -2,
+        "charisma": -2
       },
-      "ability_score_increase_text": "+4 Dexterity",
+      "ability_score_increase_text": "+4 Dexterity, -2 Wisdom, -2 Charisma",
       "speed": 20,
       "speed_special": "Monkey goblins have a base speed of 20 feet. Low-Light Vision: Monkey goblins can see twice as far as humans in conditions of dim light. Acrobatic: Monkey goblins gain a +2 racial bonus on Acrobatics ",
       "traits": [
@@ -3280,9 +3736,10 @@
     "Nagaji": {
       "ability_score_increase": {
         "strength": 2,
-        "charisma": 2
+        "charisma": 2,
+        "intelligence": -2
       },
-      "ability_score_increase_text": "+2 Strength, +2 Charisma",
+      "ability_score_increase_text": "+2 Strength, +2 Charisma, -2 Intelligence",
       "speed": 30,
       "speed_special": "Nagaji have a base speed of 30 feet. Low-Light Vision: Nagaji can see twice as far as humans in conditions of dim light. Armored Scales: Nagaji have a +1 natural armor bonus because of their scaly fle",
       "traits": [
@@ -3450,9 +3907,12 @@
     },
     "Orc": {
       "ability_score_increase": {
-        "strength": 4
+        "strength": 4,
+        "intelligence": -2,
+        "wisdom": -2,
+        "charisma": -2
       },
-      "ability_score_increase_text": "+4 Strength",
+      "ability_score_increase_text": "+4 Strength, -2 Intelligence, -2 Wisdom, -2 Charisma",
       "speed": 30,
       "speed_special": "Orcs have a base speed of 30 feet. Darkvision: Orcs can see in the dark up to 60 feet. Light Sensitivity: Orcs are dazzled in areas of bright sunlight or within the radius of a daylight spell. Ferocit",
       "traits": [
@@ -3521,12 +3981,10 @@
     "Oread": {
       "ability_score_increase": {
         "strength": 2,
-        "dexterity": 1,
-        "constitution": 2,
         "wisdom": 2,
-        "charisma": 2
+        "charisma": -2
       },
-      "ability_score_increase_text": "+2 Strength, +1 Dexterity, +2 Constitution, +2 Wisdom, +2 Charisma",
+      "ability_score_increase_text": "+2 Strength, +2 Wisdom, -2 Charisma",
       "speed": 20,
       "speed_special": "Oreads have a base speed of 20 feet. Darkvision: Oreads can see in the dark up to 60 feet. Spell-Like Ability: Oreads can use magic stone 1/day as spell-like ability (with a caster level equal to the ",
       "traits": [
@@ -3669,9 +4127,10 @@
     "Ratfolk": {
       "ability_score_increase": {
         "dexterity": 2,
-        "intelligence": 2
+        "intelligence": 2,
+        "strength": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Intelligence",
+      "ability_score_increase_text": "+2 Dexterity, +2 Intelligence, -2 Strength",
       "speed": 20,
       "speed_special": "Ratfolk have a base speed of 20 feet. Darkvision: Ratfolk can see in the dark up to 60 feet. Rodent Empathy: Ratfolk gain a +4 racial bonus on Handle Animal checks made to influence rodents. Swarming:",
       "traits": [
@@ -3968,9 +4427,10 @@
     "Samsaran": {
       "ability_score_increase": {
         "intelligence": 2,
-        "wisdom": 2
+        "wisdom": 2,
+        "constitution": -2
       },
-      "ability_score_increase_text": "+2 Intelligence, +2 Wisdom",
+      "ability_score_increase_text": "+2 Intelligence, +2 Wisdom, -2 Constitution",
       "speed": 30,
       "speed_special": "Samsarans have a base speed of 30 feet. Low-Light Vision: Samsarans can see twice as far as humans in conditions of dim light. Lifebound: Samsarans gain a +2 racial bonus on all saving throws to resis",
       "traits": [
@@ -4138,9 +4598,10 @@
     },
     "Strix": {
       "ability_score_increase": {
-        "dexterity": 2
+        "dexterity": 2,
+        "charisma": -2
       },
-      "ability_score_increase_text": "+2 Dexterity",
+      "ability_score_increase_text": "+2 Dexterity, -2 Charisma",
       "speed": 30,
       "speed_special": "Strix have a base speed of 30 feet on land. They also have a fly speed of 60 feet (average). Low-Light Vision: Strix can see twice as far as humans in conditions of dim light. Darkvision: Strix can se",
       "traits": [
@@ -4207,9 +4668,10 @@
     "Suli": {
       "ability_score_increase": {
         "strength": 2,
-        "charisma": 2
+        "charisma": 2,
+        "intelligence": -2
       },
-      "ability_score_increase_text": "+2 Strength, +2 Charisma",
+      "ability_score_increase_text": "+2 Strength, +2 Charisma, -2 Intelligence",
       "speed": 30,
       "speed_special": "Sulis have a base speed of 30 feet. Low-Light Vision: Sulis can see twice as far as humans in dim light. Negotiator: Sulis are keen negotiators, and gain a +2 racial bonus on Diplomacy and Sense Motiv",
       "traits": [
@@ -4273,9 +4735,11 @@
     "Svirfneblin": {
       "ability_score_increase": {
         "dexterity": 2,
-        "wisdom": 2
+        "wisdom": 2,
+        "strength": -2,
+        "charisma": -4
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Wisdom",
+      "ability_score_increase_text": "+2 Dexterity, +2 Wisdom, -2 Strength, -4 Charisma",
       "speed": 20,
       "speed_special": "Svirfneblin have a base speed of 20 feet. Defensive Training: Svirfneblin gain a +2 dodge bonus to their AC. Senses: Svirfneblin have darkvision 120 feet and lowlight vision. Fortunate: Svirfneblin ga",
       "traits": [
@@ -4344,9 +4808,9 @@
       "ability_score_increase": {
         "dexterity": 2,
         "intelligence": 2,
-        "charisma": 2
+        "constitution": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Intelligence, +2 Charisma",
+      "ability_score_increase_text": "+2 Dexterity, +2 Intelligence, -2 Constitution",
       "speed": 30,
       "speed_special": "Sylphs have a base speed of 30 feet. Darkvision: Sylphs can see in the dark up to 60 feet. Spell-Like Ability: Sylphs can use feather fall 1/day as a spell-like ability (with a caster level equal to t",
       "traits": [
@@ -4472,9 +4936,10 @@
     "Tengu": {
       "ability_score_increase": {
         "dexterity": 2,
-        "wisdom": 2
+        "wisdom": 2,
+        "constitution": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Wisdom",
+      "ability_score_increase_text": "+2 Dexterity, +2 Wisdom, -2 Constitution",
       "speed": 30,
       "speed_special": "Tengus have a base speed of 30 feet. Senses: Tengus have low-light vision. Sneaky: Tengus gain a +2 racial bonus on Perception and Stealth checks. Gifted Linguist: Tengus gain a +4 racial bonus on Lin",
       "traits": [
@@ -4552,40 +5017,21 @@
     },
     "Tiefling": {
       "ability_score_increase": {
-        "strength": 2,
         "dexterity": 2,
-        "constitution": 2,
         "intelligence": 2,
-        "wisdom": 2,
-        "charisma": 2
+        "charisma": -2
       },
-      "ability_score_increase_text": "+2 Strength, +2 Dexterity, +2 Constitution, +2 Intelligence, +2 Wisdom, +2 Charisma",
+      "ability_score_increase_text": "+2 Dexterity, +2 Intelligence, -2 Charisma",
       "speed": 30,
       "speed_special": "Tieflings have a base speed of 30 feet. Darkvision: Tieflings see in the dark for up to 60 feet. Skilled: Tieflings gain a +2 racial bonus on Bluff and Stealth checks. Tieflings of specific bloodlines",
       "traits": [
-        "Monster Entry",
-        "Native Outsider",
         "Medium",
         "Normal Speed",
         "Darkvision",
-        "Skilled",
-        "Spell-Like Ability",
         "Fiendish Resistance",
         "Fiendish Sorcery",
-        "Ancestry",
-        "Ability Modifiers",
-        "Scaled Skin",
-        "Prehensile Tail",
-        "Smite Good",
-        "Soul Seer",
-        "Beguiling Liar",
-        "Bullying",
-        "Fiendish Sprinter",
-        "Vestigial Wings",
-        "Darklands Guide",
-        "Variant Tiefling Abilities",
-        "Ability",
-        "Feature"
+        "Preternatural Awareness",
+        "Skilled"
       ],
       "traits_detailed": {
         "Monster Entry": "No two tieflings look alike; the fiendish blood running through their veins manifests inconsistently, granting them an array of fiendish traits",
@@ -4638,7 +5084,67 @@
       "armor_proficiencies": [],
       "racial_spells": [],
       "spell_resistance": null,
-      "description": "Simultaneously more and less than mortal, tieflings are the offspring of humans and fiends"
+      "description": "Simultaneously more and less than mortal, tieflings are the offspring of humans and fiends",
+      "standard_traits": [
+        "Medium",
+        "Normal Speed",
+        "Darkvision",
+        "Fiendish Resistance",
+        "Fiendish Sorcery",
+        "Preternatural Awareness",
+        "Skilled"
+      ],
+      "alternate_traits": [
+        {
+          "name": "Beguiling Liar",
+          "replaces": [
+            "Fiendish Sorcery"
+          ],
+          "description": "Replaces fiendish sorcery."
+        },
+        {
+          "name": "Claws",
+          "replaces": [
+            "Fiendish Sorcery"
+          ],
+          "description": "Replaces fiendish sorcery."
+        },
+        {
+          "name": " Maw or Claw",
+          "replaces": [
+            "Fiendish Sorcery"
+          ],
+          "description": "Replaces fiendish sorcery."
+        },
+        {
+          "name": "Pass for Human",
+          "replaces": [
+            "Darkvision"
+          ],
+          "description": "Replaces darkvision."
+        },
+        {
+          "name": "Scaled Skin",
+          "replaces": [
+            "Fiendish Resistance"
+          ],
+          "description": "Replaces fiendish resistance."
+        },
+        {
+          "name": "Soul Seer",
+          "replaces": [
+            "Fiendish Sorcery"
+          ],
+          "description": "Replaces fiendish sorcery."
+        },
+        {
+          "name": "Vestigial Wings",
+          "replaces": [
+            "Fiendish Sorcery"
+          ],
+          "description": "Replaces fiendish sorcery."
+        }
+      ]
     },
     "Triaxian": {
       "ability_score_increase": {
@@ -4786,11 +5292,10 @@
     "Undine": {
       "ability_score_increase": {
         "dexterity": 2,
-        "constitution": 2,
-        "intelligence": 2,
-        "wisdom": 2
+        "wisdom": 2,
+        "charisma": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Constitution, +2 Intelligence, +2 Wisdom",
+      "ability_score_increase_text": "+2 Dexterity, +2 Wisdom, -2 Charisma",
       "speed": 30,
       "speed_special": "Undines have a base speed of 30 feet on land. They also have a swim speed of 30 feet, can move in water without needing to attempt Swim checks, and always treat Swim as a class skill. Darkvision: Undi",
       "traits": [
@@ -4877,9 +5382,10 @@
     "Vanara": {
       "ability_score_increase": {
         "dexterity": 2,
-        "wisdom": 2
+        "wisdom": 2,
+        "charisma": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Wisdom",
+      "ability_score_increase_text": "+2 Dexterity, +2 Wisdom, -2 Charisma",
       "speed": 30,
       "speed_special": "Vanaras have a base speed of 30 feet and a Climb speed of 20 feet. Low-Light Vision: A vanara can see twice as far as a human in dim light. Nimble: Vanaras have a +2 racial bonus on Acrobatics and Ste",
       "traits": [
@@ -5026,9 +5532,10 @@
     "Vishkanya": {
       "ability_score_increase": {
         "dexterity": 2,
-        "charisma": 2
+        "charisma": 2,
+        "wisdom": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Charisma",
+      "ability_score_increase_text": "+2 Dexterity, +2 Charisma, -2 Wisdom",
       "speed": 30,
       "speed_special": "Vishkanyas have a base speed of 30 feet. Low-Light Vision: Vishkanyas can see twice as far as humans in conditions of dim light. Keen Senses: Vishkanyas receive a +2 racial bonus on Perception checks.",
       "traits": [
@@ -5092,9 +5599,10 @@
     "Wayang": {
       "ability_score_increase": {
         "dexterity": 2,
-        "intelligence": 2
+        "intelligence": 2,
+        "wisdom": -2
       },
-      "ability_score_increase_text": "+2 Dexterity, +2 Intelligence",
+      "ability_score_increase_text": "+2 Dexterity, +2 Intelligence, -2 Wisdom",
       "speed": 20,
       "speed_special": "Wayangs have a base speed of 20 feet. Darkvision: Wayangs can see in the dark up to 60 feet. Light and Dark: Once per day as an immediate action, a wayang can treat positive and negative energy effect",
       "traits": [

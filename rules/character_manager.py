@@ -162,6 +162,11 @@ class CharacterManager:
     def get_traits(self, system: str, query: str = "", category: str = "") -> List[DiyargezenEntity]:
         """Fetch character traits, filtered by optional search query and/or trait category."""
         sys_norm = system.lower().replace("_", "").replace("-", "")
+        if sys_norm in ("pf1e", "pf1", "pathfinder1e"):
+            sys_norm = "pathfinder1e"
+        elif sys_norm in ("5e", "dnd5e"):
+            sys_norm = "dnd5e"
+
         results: List[DiyargezenEntity] = []
         try:
             conn = sqlite3.connect(str(self.db_path))
@@ -178,7 +183,7 @@ class CharacterManager:
                 base_sql += "AND (isim LIKE ? OR aciklama LIKE ?) "
                 params.extend([f"%{query}%", f"%{query}%"])
 
-            base_sql += "ORDER BY isim COLLATE NOCASE ASC LIMIT 1000"
+            base_sql += "ORDER BY isim COLLATE NOCASE ASC"
 
             cursor.execute(base_sql, params)
             for row in cursor.fetchall():
@@ -194,6 +199,8 @@ class CharacterManager:
                         isim=row[0], sistem=row[1], kategori=row[2],
                         aciklama=row[3] or "", sistem_verisi=payload
                     ))
+                    if len(results) >= 1500:
+                        break
                 except Exception:
                     continue
             conn.close()
@@ -204,6 +211,11 @@ class CharacterManager:
     def get_feats(self, system: str, query: str = "", category: str = "") -> List[DiyargezenEntity]:
         """Retrieve feats filtered by search query and/or category."""
         sys_norm = system.lower().replace("_", "").replace("-", "")
+        if sys_norm in ("pf1e", "pf1", "pathfinder1e"):
+            sys_norm = "pathfinder1e"
+        elif sys_norm in ("5e", "dnd5e"):
+            sys_norm = "dnd5e"
+
         results: List[DiyargezenEntity] = []
         try:
             conn = sqlite3.connect(str(self.db_path))
@@ -224,7 +236,7 @@ class CharacterManager:
                 sql += "AND (isim LIKE ? OR aciklama LIKE ?) "
                 params.extend([f"%{query}%", f"%{query}%"])
 
-            sql += "ORDER BY isim COLLATE NOCASE ASC LIMIT 1500"
+            sql += "ORDER BY isim COLLATE NOCASE ASC"
 
             cursor.execute(sql, params)
             rows = cursor.fetchall()
@@ -244,6 +256,8 @@ class CharacterManager:
                         isim=feat_name, sistem=row[1], kategori=row[2],
                         aciklama=row[3] or "", sistem_verisi=payload
                     ))
+                    if len(results) >= 2000:
+                        break
                 except Exception:
                     continue
         except Exception:

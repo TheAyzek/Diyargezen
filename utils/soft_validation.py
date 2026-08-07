@@ -93,6 +93,32 @@ def validate_pf1e_soft(char: Dict[str, Any], data: Optional[Dict[str, Any]] = No
         if isinstance(score, int) and not (7 <= score <= 18) and level == 1:
             result.warnings.append(f"PF1e başlangıç puanı dışı: {ab} = {score} (genelde 7-18)")
 
+    # Check alternate racial trait replacement mutual exclusion conflicts
+    selected_alt_traits = char.get("selected_racial_traits") or char.get("selectedRacialTraits") or []
+    if selected_alt_traits and isinstance(selected_alt_traits, list):
+        race_data = char.get("race_data") or char.get("raceData") or {}
+        sv = race_data.get("sistem_verisi") or race_data if isinstance(race_data, dict) else {}
+        alt_traits = sv.get("alternate_traits") or []
+        
+        replaced_map = {}
+        for sel in selected_alt_traits:
+            sel_name = sel if isinstance(sel, str) else (sel.get("name") if isinstance(sel, dict) else "")
+            trait_obj = None
+            if isinstance(alt_traits, list):
+                for t in alt_traits:
+                    t_name = t.get("name") if isinstance(t, dict) else t
+                    if t_name == sel_name:
+                        trait_obj = t
+                        break
+            if trait_obj and isinstance(trait_obj, dict) and "replaces" in trait_obj:
+                for rep in trait_obj["replaces"]:
+                    if rep in replaced_map:
+                        result.warnings.append(
+                            f"Alternatif irk özelliği çakışması: '{sel_name}' ve '{replaced_map[rep]}' ikisi de '{rep}' varsayılan özelliğinin yerini alamaz."
+                        )
+                    else:
+                        replaced_map[rep] = sel_name
+
     return result
 
 

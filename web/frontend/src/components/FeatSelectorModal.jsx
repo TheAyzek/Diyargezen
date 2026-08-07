@@ -22,7 +22,7 @@ const CATEGORY_CONFIG = {
 };
 
 // Frontend prerequisite evaluator helper
-function evaluatePrerequisites(feat, character) {
+function evaluatePrerequisites(feat, character, currentSelectedFeats = []) {
   if (!character) return { valid: true, warnings: [] };
 
   const warnings = [];
@@ -34,51 +34,79 @@ function evaluatePrerequisites(feat, character) {
     prereqs = [];
   }
 
-  const scores = character.abilities || { strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10 };
-  const bab = Number(character.bab || 0);
+  if (feat.prerequisite && typeof feat.prerequisite === 'string' && !prereqs.includes(feat.prerequisite)) {
+    prereqs.push(feat.prerequisite);
+  }
+
+  const abilities = character.abilities || character.ability_scores || {};
+  const scores = {
+    str: Number(abilities.strength || abilities.Strength || 10),
+    dex: Number(abilities.dexterity || abilities.Dexterity || 10),
+    con: Number(abilities.constitution || abilities.Constitution || 10),
+    int: Number(abilities.intelligence || abilities.Intelligence || 10),
+    wis: Number(abilities.wisdom || abilities.Wisdom || 10),
+    cha: Number(abilities.charisma || abilities.Charisma || 10),
+  };
+
+  const derived = character.derived || character.recalcedData || {};
+  const bab = Number(character.bab || derived.bab || 0);
   const totalLevel = Number(character.level || 1);
 
-  const currentFeats = new Set((character.feats || []).map(f => (typeof f === 'object' ? f.isim || f.name : String(f)).toLowerCase()));
+  const existingFeats = (character.feats || []).map(f => (typeof f === 'object' ? f.isim || f.name || f : String(f)).toLowerCase().trim());
+  const wizardSelected = (currentSelectedFeats || []).map(f => (typeof f === 'object' ? f.isim || f.name || f : String(f)).toLowerCase().trim());
+  const allKnownFeats = new Set([...existingFeats, ...wizardSelected]);
 
   for (const p of prereqs) {
     const pStr = String(p).trim();
-    if (!pStr) continue;
+    if (!pStr || pStr.toLowerCase() === 'none' || pStr === '-') continue;
 
-    // Ability Score check e.g. "Str 13", "Dex 15"
-    const mAb = pStr.match(/(Str|Dex|Con|Int|Wis|Cha)\s*(\d+)/i);
+    // Ability Score regex e.g. "Str 13", "Dexterity 15", "Int 13"
+    const mAb = pStr.match(/(?:Str(?:ength)?|Dex(?:terity)?|Con(?:stitution)?|Int(?:elligence)?|Wis(?:dom)?|Cha(?:risma)?)\s*(\d+)/gi);
     if (mAb) {
-      const statMap = { str: 'strength', dex: 'dexterity', con: 'constitution', int: 'intelligence', wis: 'wisdom', cha: 'charisma' };
-      const statKey = statMap[mAb[1].toLowerCase()];
-      const reqVal = parseInt(mAb[2], 10);
-      const currVal = Number(scores[statKey] || 10);
-      if (currVal < reqVal) {
-        warnings.push(`${mAb[1].toUpperCase()} >= ${reqVal} gerekli (Mevcut: ${currVal})`);
+      for (const singleMatch of mAb) {
+        const parts = singleMatch.match(/([a-z]+)\s*(\d+)/i);
+        if (parts) {
+          const statPrefix = parts[1].toLowerCase().substring(0, 3);
+          const reqVal = parseInt(parts[2], 10);
+          const currVal = scores[statPrefix] || 10;
+          if (currVal < reqVal) {
+            const statNamesTr = { str: 'Güç (STR)', dex: 'El Çabukluğu (DEX)', con: 'Dayanıklılık (CON)', int: 'Zeka (INT)', wis: 'Wisdom (WIS)', cha: 'Karizma (CHA)' };
+            warnings.push(`${statNamesTr[statPrefix] || statPrefix.toUpperCase()} >= ${reqVal} gerekli (Mevcut: ${currVal})`);
+          }
+        }
       }
     }
 
-    // BAB check e.g. "Base attack bonus +1"
-    const mBab = pStr.match(/(?:Base attack bonus|BAB)\s*\+?(\d+)/i);
+    // BAB regex e.g. "Base attack bonus +1", "BAB +6"
+    const mBab = pStr.match(/(?:Base attack bonus|BAB)\s*\+?\s*(\d+)/i);
     if (mBab) {
       const reqBab = parseInt(mBab[1], 10);
       if (bab < reqBab) {
-        warnings.push(`BAB >= +${reqBab} gerekli (Mevcut: +${bab})`);
+        warnings.push(`Taban Saldırı Bonusu (BAB) >= +${reqBab} gerekli (Mevcut: +${bab})`);
       }
     }
 
-    // Level check e.g. "Character level 3rd"
-    const mLvl = pStr.match(/(?:Character level|Level)\s*(\d+)/i);
+    // Level regex e.g. "Character level 3rd", "Caster level 5th"
+    const mLvl = pStr.match(/(?:Character level|Caster level|Level)\s*(\d+)/i);
     if (mLvl) {
       const reqLvl = parseInt(mLvl[1], 10);
       if (totalLevel < reqLvl) {
-        warnings.push(`Seviye >= ${reqLvl} gerekli (Mevcut: ${totalLevel})`);
+        warnings.push(`Karakter Seviyesi >= ${reqLvl} gerekli (Mevcut: ${totalLevel})`);
       }
     }
 
     // Common Prerequisite Feat check
-    const knownFeats = ["Power Attack", "Dodge", "Point-Blank Shot", "Precise Shot", "Combat Expertise", "Weapon Focus", "Mobility"];
-    for (const kf of knownFeats) {
-      if (pStr.toLowerCase().includes(kf.toLowerCase()) && !currentFeats.has(kf.toLowerCase())) {
-        warnings.push(`Ön Feat Gerekli: ${kf}`);
+    const commonFeatPrereqs = [
+      "Power Attack", "Dodge", "Point-Blank Shot", "Precise Shot", "Combat Expertise",
+      "Weapon Focus", "Mobility", "Deadly Aim", "Dazzling Display", "Improved Unarmed Strike",
+      "Cleave", "Great Cleave", "Vital Strike", "Arcane Strike", "Spell Focus", "Iron Will"
+    ];
+    for (const cfp of commonFeatPrereqs) {
+      if (pStr.toLowerCase().includes(cfp.toLowerCase())) {
+        const hasIt = Array.from(allKnownFeats).some(kf => kf.includes(cfp.toLowerCase()));
+        if (!hasIt) {
+          warnings.push(`Ön Koşul Feat Gerekli: "${cfp}"`);
+        }
       }
     }
   }
@@ -98,14 +126,16 @@ export default function FeatSelectorModal({
   initialCategory = 'All',
   selectedFeats = [],
   maxFeats = 1,
-  onAddFeat
+  onAddFeat,
+  onRemoveFeat
 }) {
   const [feats, setFeats] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState(initialCategory || 'All');
   const [loading, setLoading] = useState(false);
   const [ruleError, setRuleError] = useState(null);
-  const [overrideModalTarget, setOverrideModalTarget] = useState(null);
+  const [gmOverrideEnabled, setGmOverrideEnabled] = useState(false);
+  const [lastNotification, setLastNotification] = useState(null);
 
   useEffect(() => {
     if (isOpen && initialCategory) {
@@ -136,7 +166,6 @@ export default function FeatSelectorModal({
       });
   };
 
-  // Hook'lar her zaman early return'den ÖNCE çağrılmalı (React Rules of Hooks)
   const categories = ['All', ...Object.keys(CATEGORY_CONFIG)];
 
   const catCounts = useMemo(() => {
@@ -153,45 +182,54 @@ export default function FeatSelectorModal({
   const isSelected = (featName) => selectedFeats.some(f => (f.isim || f.name || f) === featName);
 
   const canAdd = (featEntity) => {
-    if (selectedFeats.length >= maxFeats) {
-      return { ok: false, msg: `Bu seviyede en fazla ${maxFeats} feat seçebilirsiniz.` };
-    }
     const featName = featEntity.isim || featEntity.name || featEntity;
     if (isSelected(featName)) {
-      return { ok: false, msg: 'Bu feat zaten seçili.' };
+      return { ok: true, msg: '' };
+    }
+    if (selectedFeats.length >= maxFeats) {
+      return { ok: false, msg: `Bu seviyede en fazla ${maxFeats} feat seçebilirsiniz.` };
     }
     return { ok: true, msg: '' };
   };
 
   const handleSelectClick = (feat) => {
+    const featName = feat.isim || feat.name || feat;
+    if (isSelected(featName)) {
+      if (onRemoveFeat) {
+        onRemoveFeat(featName);
+        setLastNotification(`"${featName}" seçimden çıkarıldı.`);
+        setTimeout(() => setLastNotification(null), 3000);
+      }
+      return;
+    }
+
     const check = canAdd(feat);
     if (!check.ok) {
       setRuleError(check.msg);
       setTimeout(() => setRuleError(null), 3000);
       return;
     }
-    setRuleError(null);
 
-    // Evaluate prerequisites
-    const prereqResult = evaluatePrerequisites(feat, character);
-    if (!prereqResult.valid) {
-      // Open GM Soft-Block Override Dialog
-      setOverrideModalTarget({ feat, warnings: prereqResult.warnings });
-    } else {
-      // Add directly
-      onAddFeat(feat);
+    const prereqResult = evaluatePrerequisites(feat, character, selectedFeats);
+    if (!prereqResult.valid && !gmOverrideEnabled) {
+      setRuleError(`Ön koşul karşılanmadı: ${prereqResult.warnings.join(' | ')}`);
+      setTimeout(() => setRuleError(null), 4000);
+      return;
     }
-  };
 
-  const handleConfirmOverride = () => {
-    if (overrideModalTarget) {
+    setRuleError(null);
+    if (!prereqResult.valid && gmOverrideEnabled) {
       onAddFeat({
-        ...overrideModalTarget.feat,
+        ...feat,
         is_overridden: true,
         override_reason: 'GM İzniyle Ezildi'
       });
-      setOverrideModalTarget(null);
+    } else {
+      onAddFeat(feat);
     }
+
+    setLastNotification(`✓ "${featName}" eklendi!`);
+    setTimeout(() => setLastNotification(null), 3000);
   };
 
   const modal = (
@@ -235,44 +273,54 @@ export default function FeatSelectorModal({
             </button>
           </div>
 
-          {/* Slots & Rule Hint */}
+          {/* Slots & Rule Hint Bar */}
           <div style={{
             fontSize: '12px', color: '#8b949e', background: 'rgba(255,255,255,0.03)',
             borderRadius: '6px', padding: '8px 12px', marginBottom: '12px',
             border: '1px solid rgba(255,255,255,0.05)',
-            display: 'flex', justifyContent: 'space-between', alignItems: 'center'
+            display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px'
           }}>
-            <span>
-              <b style={{ color: '#c9a84c' }}>Feat Motoru:</b> Ön koşullar canlı denetlenir. Uymayan feat'lerde <i>GM Override</i> seçeneği aktiftir.
+            <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <b style={{ color: '#c9a84c' }}>Ön Koşul Kuralları:</b> 
+              <span>Şartları sağlanmayan feat'lerin seçimi engellenir.</span>
+              <label style={{ display: 'inline-flex', alignItems: 'center', gap: '4px', cursor: 'pointer', color: gmOverrideEnabled ? '#f87171' : '#8b949e', marginLeft: '8px', fontSize: '11px' }}>
+                <input 
+                  type="checkbox" 
+                  checked={gmOverrideEnabled} 
+                  onChange={(e) => setGmOverrideEnabled(e.target.checked)} 
+                  style={{ accentColor: '#e94560' }}
+                />
+                GM Kural Ezme İzni
+              </label>
             </span>
+
             <span style={{
               fontWeight: 'bold',
-              color: selectedFeats.length >= maxFeats ? '#e94560' : '#c9a84c',
-              background: 'rgba(201,168,76,0.1)', padding: '2px 10px', borderRadius: '12px',
-              border: '1px solid rgba(201,168,76,0.2)'
+              color: selectedFeats.length >= maxFeats ? '#4cd964' : '#c9a84c',
+              background: selectedFeats.length >= maxFeats ? 'rgba(76,217,100,0.15)' : 'rgba(201,168,76,0.1)',
+              padding: '3px 12px', borderRadius: '12px',
+              border: selectedFeats.length >= maxFeats ? '1px solid rgba(76,217,100,0.4)' : '1px solid rgba(201,168,76,0.2)'
             }}>
-              Seçilen: {selectedFeats.length} / {maxFeats}
+              {selectedFeats.length >= maxFeats ? '🎉 Seçim Tamamlandı' : `Seçilen: ${selectedFeats.length} / ${maxFeats}`}
             </span>
           </div>
 
-          {/* Selected Feats Chips */}
-          {selectedFeats.length > 0 && (
-            <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '10px' }}>
-              {selectedFeats.map((f, i) => {
-                const fname = f.isim || f.name || f;
-                const isOverridden = f.is_overridden;
-                return (
-                  <span key={i} style={{
-                    display: 'inline-flex', alignItems: 'center', gap: '6px',
-                    background: isOverridden ? 'rgba(233,69,96,0.15)' : 'rgba(201,168,76,0.15)',
-                    border: `1px solid ${isOverridden ? 'rgba(233,69,96,0.4)' : 'rgba(201,168,76,0.4)'}`,
-                    borderRadius: '20px', padding: '4px 12px', fontSize: '12px', color: isOverridden ? '#fca5a5' : '#f0e6d2'
-                  }}>
-                    <Award size={12} style={{ color: isOverridden ? '#e94560' : '#c9a84c' }} />
-                    {fname} {isOverridden && <span style={{ fontSize: '10px', color: '#f87171' }}>(GM Override)</span>}
-                  </span>
-                );
-              })}
+          {/* Toast Notification */}
+          {lastNotification && (
+            <div style={{
+              background: 'rgba(76, 217, 100, 0.15)',
+              border: '1px solid rgba(76, 217, 100, 0.4)',
+              color: '#4cd964',
+              borderRadius: '6px',
+              padding: '8px 12px',
+              fontSize: '12px',
+              fontWeight: 'bold',
+              marginBottom: '10px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px'
+            }}>
+              <CheckCircle2 size={16} /> {lastNotification}
             </div>
           )}
 
@@ -367,24 +415,25 @@ export default function FeatSelectorModal({
               const rawSysDesc = (sys.description?.value || sys.description) && !isDummy(sys.description?.value || sys.description) ? (sys.description?.value || sys.description) : null;
               const benefit = rawDesc || rawSysBenefit || rawSysDesc || feat.aciklama || '';
 
-              const prereqEvaluation = evaluatePrerequisites(feat, character);
+              const prereqEvaluation = evaluatePrerequisites(feat, character, selectedFeats);
 
               return (
                 <div
                   key={idx}
                   style={{
                     display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start',
-                    gap: '12px', padding: '12px 16px',
-                    background: selected ? `${cfg.color}18` : 'rgba(255,255,255,0.025)',
-                    border: `1px solid ${selected ? cfg.color + '50' : 'rgba(255,255,255,0.05)'}`,
-                    borderRadius: '8px',
-                    opacity: !selected && !check.ok ? 0.5 : 1,
-                    transition: 'all 0.15s'
+                    gap: '12px', padding: '14px 18px',
+                    background: selected ? 'rgba(201, 168, 76, 0.16)' : 'rgba(255,255,255,0.025)',
+                    border: selected ? '2px solid #c9a84c' : (prereqEvaluation.valid ? '1px solid rgba(255,255,255,0.06)' : '1px solid rgba(233,69,96,0.25)'),
+                    boxShadow: selected ? '0 0 20px rgba(201, 168, 76, 0.35), inset 0 0 10px rgba(201, 168, 76, 0.1)' : 'none',
+                    borderRadius: '10px',
+                    opacity: !selected && !check.ok && selectedFeats.length >= maxFeats ? 0.45 : 1,
+                    transition: 'all 0.15s ease-in-out'
                   }}
                 >
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: '4px' }}>
-                      <span style={{ fontWeight: 'bold', color: '#f0e6d2', fontSize: '14px' }}>
+                      <span style={{ fontWeight: 'bold', color: selected ? '#ffe89c' : '#f0e6d2', fontSize: '14px' }}>
                         {featName}
                       </span>
                       <span style={{
@@ -419,7 +468,7 @@ export default function FeatSelectorModal({
                     )}
 
                     {!prereqEvaluation.valid && (
-                      <div style={{ fontSize: '11px', color: '#fca5a5', margin: '2px 0 6px' }}>
+                      <div style={{ fontSize: '11px', color: '#fca5a5', margin: '2px 0 6px', fontWeight: '500' }}>
                         ⚠ {prereqEvaluation.warnings.join(' | ')}
                       </div>
                     )}
@@ -434,23 +483,36 @@ export default function FeatSelectorModal({
 
                   <div style={{ flexShrink: 0, display: 'flex', alignItems: 'center' }}>
                     {selected ? (
-                      <span style={{
-                        display: 'flex', alignItems: 'center', gap: '4px',
-                        fontSize: '11px', color: cfg.color, fontWeight: 'bold',
-                        padding: '6px 12px', borderRadius: '20px',
-                        background: `${cfg.color}20`, border: `1px solid ${cfg.color}40`
-                      }}>
-                        ✓ Seçildi
-                      </span>
+                      <button
+                        type="button"
+                        className="btn"
+                        onClick={() => handleSelectClick(feat)}
+                        style={{
+                          background: 'linear-gradient(135deg, #2ecc71 0%, #27ae60 100%)',
+                          color: '#ffffff', fontWeight: 'bold', fontSize: '12px',
+                          padding: '6px 14px', borderRadius: '20px', border: 'none',
+                          boxShadow: '0 0 12px rgba(46, 204, 113, 0.4)', cursor: 'pointer',
+                          display: 'flex', alignItems: 'center', gap: '5px'
+                        }}
+                        title="Seçimi Kaldır"
+                      >
+                        <CheckCircle2 size={14} /> ✓ SEÇİLDİ
+                      </button>
                     ) : (
                       <button
+                        type="button"
                         className="btn btn-secondary"
-                        disabled={!check.ok}
-                        title={check.ok ? '' : check.msg}
-                        style={{ padding: '6px 14px', fontSize: '12px', minHeight: 'unset' }}
+                        disabled={!check.ok || (!prereqEvaluation.valid && !gmOverrideEnabled)}
+                        title={!prereqEvaluation.valid && !gmOverrideEnabled ? `Ön Koşul Karşılanmadı: ${prereqEvaluation.warnings.join(', ')}` : (check.ok ? '' : check.msg)}
+                        style={{
+                          padding: '6px 14px', fontSize: '12px', minHeight: 'unset',
+                          opacity: (!prereqEvaluation.valid && !gmOverrideEnabled) ? 0.45 : 1,
+                          cursor: (!prereqEvaluation.valid && !gmOverrideEnabled) ? 'not-allowed' : 'pointer',
+                          border: (!prereqEvaluation.valid && !gmOverrideEnabled) ? '1px solid rgba(233,69,96,0.3)' : undefined
+                        }}
                         onClick={() => handleSelectClick(feat)}
                       >
-                        {!prereqEvaluation.valid ? '⚠ Seç (GM Override)' : '+ Seç'}
+                        {!prereqEvaluation.valid ? (gmOverrideEnabled ? '⚠ Seç (GM Override)' : '🚫 Ön Koşul Eksik') : '+ Seç'}
                       </button>
                     )}
                   </div>

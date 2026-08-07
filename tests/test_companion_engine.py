@@ -76,6 +76,6 @@ def test_familiar_scaling_and_toad_master_bonus():
     }
 
     derived = calc.update_all_stats(char_sheet)
-    # Master base HP = 27. With Toad +3 HP = 30 HP.
-    assert derived["hit_points"] == 30
-    assert derived["companion"]["hp"] == 13  # 50% of master base 27 HP
+    # Master base HP (Level 4 Wizard d6 + 1 Con mod): 6 + 1 + 3*(3 + 1 + 1) = 22. With Toad +3 HP = 25 HP.
+    assert derived["hit_points"] == 25
+    assert derived["companion"]["hp"] == 11  # 50% of master base 22 HP

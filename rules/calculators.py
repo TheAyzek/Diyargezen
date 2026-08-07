@@ -621,7 +621,7 @@ class BaseCalculator(ABC):
 
 
 def get_ability(char: dict, name: str, default: int = 10) -> int:
-    abilities = char.get("abilities", {})
+    abilities = char.get("abilities") or char.get("ability_scores") or {}
     for k, v in abilities.items():
         if k.lower() == name.lower():
             try:
@@ -999,17 +999,52 @@ class PF1e_Calculator(BaseCalculator):
 
         # ── ADIM 2: Sinif → BAB, Base Saves, Class Skills, HP die ───────────────
         class_data   = character.get("class_data", {}) or {}
-        bab_prog     = str(class_data.get("bab_progression", "medium")).lower()
-        class_skills = class_data.get("class_skills", []) or []
+        if isinstance(class_data, dict) and "sistem_verisi" in class_data and isinstance(class_data["sistem_verisi"], dict):
+            sv = class_data["sistem_verisi"]
+            for k, v in sv.items():
+                if k not in class_data or not class_data[k]:
+                    class_data[k] = v
+
+        char_class_name = str(character.get("class") or class_data.get("isim") or class_data.get("name") or "").strip()
+        class_skills = class_data.get("class_skills") or []
+        
+        # Fallback to PF1E_CLASS_FULL_DETAILS if class_skills is empty
+        if not class_skills and char_class_name:
+            try:
+                from scraper.seed_pf1e_class_details import PF1E_CLASS_FULL_DETAILS
+                for cls_k, cls_info in PF1E_CLASS_FULL_DETAILS.items():
+                    if cls_k.lower() in char_class_name.lower():
+                        class_skills = cls_info.get("class_skills", [])
+                        if not class_data.get("hit_die"):
+                            class_data["hit_die"] = cls_info.get("hit_die")
+                        if not class_data.get("skill_ranks_per_level"):
+                            class_data["skill_ranks_per_level"] = cls_info.get("skill_ranks_per_level")
+                        if not class_data.get("saving_throws"):
+                            class_data["saving_throws"] = cls_info.get("saving_throws")
+                        break
+            except Exception:
+                pass
+
+        bab_prog = str(class_data.get("bab_progression", "medium")).lower()
 
         # ── ADIM 3 Pre-fetch: Fetch mechanics early to find extra class skills ──
         active    = self.get_active_mechanics(character)
         mechanics = active.get("mechanics", [])
 
-        class_skills_set = set(class_skills)
+        # Build normalized class_skills_set with Knowledge (all) expansion
+        class_skills_set = set()
+        for cs in class_skills:
+            cs_str = str(cs).strip()
+            if cs_str.lower() in ("knowledge (all)", "knowledge(all)", "all knowledge"):
+                for sk in self.PF_SKILL_LIST:
+                    if sk.startswith("Knowledge"):
+                        class_skills_set.add(sk.lower())
+            else:
+                class_skills_set.add(cs_str.lower())
+
         for m in mechanics:
             if m.get("makes_class_skill") and m.get("skill_name"):
-                class_skills_set.add(m.get("skill_name"))
+                class_skills_set.add(str(m.get("skill_name")).strip().lower())
 
         # Multiclass Stacking Support (PF1e CRB p. 30)
         multiclass_data = character.get("multiclass")
@@ -1078,12 +1113,25 @@ class PF1e_Calculator(BaseCalculator):
         # ── ADIM 2b: Skill base values (Rank + Ability Mod + Class Skill +3) ────
         # PF1e Class Skill rule: +3 bonus ONLY if rank >= 1 AND skill is a class skill
         raw_skills: Dict[str, int] = {}
+        skills_detail: Dict[str, Dict[str, Any]] = {}
         for sk in self.PF_SKILL_LIST:
-            ranks      = max(0, int(skill_ranks.get(sk, 0)))
-            ab         = self.PF_SKILL_AB.get(sk, "intelligence")
-            class_bonus = 3 if (sk in class_skills_set and ranks > 0) else 0
-            raw_skills[sk] = ranks + mods.get(ab, 0) + class_bonus
+            ranks       = max(0, int(skill_ranks.get(sk, 0)))
+            ab          = self.PF_SKILL_AB.get(sk, "intelligence")
+            ab_mod      = mods.get(ab, 0)
+            is_class    = sk.lower() in class_skills_set
+            class_bonus = 3 if (is_class and ranks > 0) else 0
+            total       = ranks + ab_mod + class_bonus
+            raw_skills[sk] = total
+            skills_detail[sk] = {
+                "ranks": ranks,
+                "ability_modifier": ab_mod,
+                "is_class_skill": is_class,
+                "class_bonus": class_bonus,
+                "total": total
+            }
         derived["skills"] = raw_skills
+        derived["skills_detail"] = skills_detail
+        derived["class_skills_active"] = [sk for sk in self.PF_SKILL_LIST if sk.lower() in class_skills_set]
 
         # ── ADIM 3: Feat/Trait/Race mekanikleri uygula ──────────────────────────
         # (standard_mechanics JSON'dan ve traits'den gelen dogrudan bonus'lar)

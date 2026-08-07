@@ -376,7 +376,7 @@ export default function PF1eLiveSheet() {
 
       weapons.slice(0, 5).forEach((w, idx) => {
         const sys = w.sistem_verisi?.system || {};
-        const isRanged = str(w.type || sys.weaponType || '').toLowerCase().includes('ranged') || str(w.name).toLowerCase().includes('bow');
+        const isRanged = String(w.type || sys.weaponType || '').toLowerCase().includes('ranged') || String(w.name || w.isim || '').toLowerCase().includes('bow');
         const attackBonus = babValue + (isRanged ? dexMod : strMod);
         const dmg = sys.actions?.[0]?.damage?.parts?.[0]?.[0] || w.sistem_verisi?.damage?.parts?.[0]?.[0] || sys.damage || '-';
         const crit = sys.critRange ? `${sys.critRange}/${sys.critMult || 'x2'}` : (sys.critical || '20/x2');

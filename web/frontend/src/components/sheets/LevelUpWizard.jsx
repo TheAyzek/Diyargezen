@@ -637,34 +637,55 @@ export default function LevelUpWizard({ isOpen, onClose }) {
 
                     {/* Selected Feats List */}
                     <div style={{ marginTop: '10px' }}>
-                      <div style={{ fontSize: '12px', fontWeight: 'bold', marginBottom: '6px', color: '#f0e6d2' }}>
-                        Bu Seviyede Seçilen Yetenekler:
+                      <div style={{ fontSize: '12px', fontWeight: 'bold', marginBottom: '8px', color: '#f0e6d2', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <span>Bu Seviyede Seçilen Yetenekler ({selectedFeats.length} / {requiredFeatsCount}):</span>
+                        {selectedFeats.length >= requiredFeatsCount && requiredFeatsCount > 0 && (
+                          <span style={{ fontSize: '10px', color: '#4cd964', background: 'rgba(76,217,100,0.15)', padding: '2px 8px', borderRadius: '10px', border: '1px solid rgba(76,217,100,0.3)', display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                            <Check size={12} /> ✓ Tamamlandı
+                          </span>
+                        )}
                       </div>
                       {selectedFeats.length === 0 ? (
-                        <div style={{ fontStyle: 'italic', fontSize: '12px', color: '#8b949e' }}>Henüz yetenek seçilmedi.</div>
+                        <div style={{ 
+                          padding: '10px 14px', 
+                          background: 'rgba(233, 160, 69, 0.1)', 
+                          border: '1px dashed rgba(233, 160, 69, 0.35)', 
+                          borderRadius: '8px', 
+                          color: '#f39c12', 
+                          fontSize: '12px',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '8px'
+                        }}>
+                          <AlertCircle size={16} />
+                          <span>Bu seviye için henüz yetenek seçilmedi. Yukarıdaki <b>"📚 Tüm Feat'lerde Ara"</b> veya <b>"🎯 Sınıf Özel Yetenek Seç"</b> butonlarını kullanarak seçebilirsiniz.</span>
+                        </div>
                       ) : (
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
                           {selectedFeats.map((f, i) => (
                             <span 
                               key={i} 
                               style={{ 
-                                background: 'rgba(201,168,76,0.15)', 
-                                border: '1px solid var(--accent-gold)', 
-                                padding: '4px 10px', 
-                                borderRadius: '6px',
-                                fontSize: '12px',
+                                background: 'rgba(201,168,76,0.18)', 
+                                border: '1px solid #c9a84c', 
+                                boxShadow: '0 0 10px rgba(201, 168, 76, 0.25)',
+                                padding: '6px 12px', 
+                                borderRadius: '8px',
+                                fontSize: '13px',
+                                fontWeight: 'bold',
                                 display: 'inline-flex',
                                 alignItems: 'center',
-                                gap: '6px',
-                                color: '#f0e6d2'
+                                gap: '8px',
+                                color: '#ffe89c'
                               }}
                             >
-                              <Wand2 size={12} style={{ color: 'var(--accent-gold)' }} />
-                              {f}
+                              <Award size={14} style={{ color: '#c9a84c' }} />
+                              {typeof f === 'object' ? (f.isim || f.name) : f}
                               <button 
                                 type="button" 
-                                style={{ background: 'none', border: 'none', color: 'var(--color-ruby)', cursor: 'pointer', fontSize: '14px', lineHeight: 1 }}
+                                style={{ background: 'rgba(233,69,96,0.2)', border: '1px solid rgba(233,69,96,0.4)', color: '#f87171', borderRadius: '50%', width: 18, height: 18, cursor: 'pointer', fontSize: '11px', display: 'flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1 }}
                                 onClick={() => handleRemoveFeat(i)}
+                                title="Seçimi Kaldır"
                               >
                                 &times;
                               </button>

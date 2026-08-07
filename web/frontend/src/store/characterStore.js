@@ -335,13 +335,49 @@ export const useCharacterStore = create((set, get) => ({
   },
 
   toggleRacialTrait: (traitName) => {
+    let traitWarning = null;
     set(state => {
       const current = state.selectedRacialTraits || [];
       const exists = current.includes(traitName);
-      const next = exists ? current.filter(t => t !== traitName) : [...current, traitName];
-      return { selectedRacialTraits: next };
+      if (exists) {
+        return { selectedRacialTraits: current.filter(t => t !== traitName) };
+      }
+
+      // Check replacement conflict against currently selected alternate traits
+      const sv = state.raceData?.sistem_verisi || state.raceData || {};
+      const altTraits = sv.alternate_traits || [];
+      const targetObj = Array.isArray(altTraits) ? altTraits.find(t => (typeof t === 'object' && t ? t.name : t) === traitName) : null;
+      const targetReplaces = (targetObj && Array.isArray(targetObj.replaces)) ? targetObj.replaces : [];
+
+      if (targetReplaces.length > 0) {
+        const currentlyReplaced = new Map();
+        current.forEach(selName => {
+          const selObj = Array.isArray(altTraits) ? altTraits.find(t => (typeof t === 'object' && t ? t.name : t) === selName) : null;
+          if (selObj && Array.isArray(selObj.replaces)) {
+            selObj.replaces.forEach(rep => currentlyReplaced.set(rep, selName));
+          }
+        });
+
+        for (const rep of targetReplaces) {
+          if (currentlyReplaced.has(rep)) {
+            const conflictTrait = currentlyReplaced.get(rep);
+            traitWarning = `Alternatif özellik çakışması: '${traitName}' ve '${conflictTrait}' ikisi de '${rep}' varsayılan özelliğinin yerini alamaz.`;
+            break;
+          }
+        }
+      }
+
+      if (traitWarning && !state.is_overridden && !state.gm_override) {
+        const existingWarnings = state.warnings || [];
+        return {
+          warnings: [...existingWarnings.filter(w => !w.includes('Alternatif özellik çakışması')), traitWarning]
+        };
+      }
+
+      return { selectedRacialTraits: [...current, traitName] };
     });
     get().recalculate();
+    return traitWarning ? { error: true, message: traitWarning } : { success: true };
   },
 
   applyLevelUp: async (levelUpData) => {

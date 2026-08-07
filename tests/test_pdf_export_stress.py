@@ -97,7 +97,7 @@ def test_pdf_export_stress_full_character():
     assert fields.get("strength", {}).get("/V") == "16"
     assert fields.get("intelligence", {}).get("/V") == "26"
     assert fields.get("INITIATIVE", {}).get("/V") == "+8"
-    assert fields.get("hit points", {}).get("/V") == "167"
+    assert fields.get("hit points", {}).get("/V") == "146"
     assert fields.get("BASE ATTACK BONUS", {}).get("/V") == "+15"
 
     # Equipment & Weapons
