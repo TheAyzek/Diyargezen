@@ -435,7 +435,7 @@ export default function PF1eLiveSheet() {
         setField(`WT ${idx + 1}`, `${wVal} lb`);
       });
 
-      // Embed Character Portrait image onto Page 1 if available
+      // Embed Character Portrait image onto Page 2 clean top-right empty space if available
       if (portrait && typeof portrait === 'string') {
         try {
           let image;
@@ -445,13 +445,21 @@ export default function PF1eLiveSheet() {
             image = await pdfDoc.embedJpg(portrait);
           }
           if (image) {
-            const page = pdfDoc.getPages()[0];
-            // Draw image on Page 1 top-right portrait area of Pathfinder 1e sheet
-            page.drawImage(image, {
-              x: 430,
-              y: 635,
-              width: 125,
-              height: 135
+            const pages = pdfDoc.getPages();
+            const targetPage = pages.length > 1 ? pages[1] : pages[0];
+            const maxWidth = 95;
+            const maxHeight = 52;
+            const scale = Math.min(maxWidth / image.width, maxHeight / image.height);
+            const drawWidth = image.width * scale;
+            const drawHeight = image.height * scale;
+            const drawX = 470 + (maxWidth - drawWidth) / 2;
+            const drawY = 718 + (maxHeight - drawHeight) / 2;
+
+            targetPage.drawImage(image, {
+              x: drawX,
+              y: drawY,
+              width: drawWidth,
+              height: drawHeight
             });
           }
         } catch (e) {

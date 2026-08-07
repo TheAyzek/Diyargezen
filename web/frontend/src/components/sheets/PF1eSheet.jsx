@@ -43,6 +43,7 @@ export default function PF1eSheet({ character, onSave, onCancel }) {
     onSave({
       name: state.name,
       system: 'pf1e',
+      portrait: state.portrait,
       data: fullData
     });
   };

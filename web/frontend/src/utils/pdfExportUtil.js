@@ -283,6 +283,39 @@ export async function exportCharacterPDF(store) {
       }
     });
 
+    // Embed Character Portrait image onto Page 2 clean top-right empty space if available
+    const portrait = store.portrait;
+    if (portrait && typeof portrait === 'string') {
+      try {
+        let image;
+        if (portrait.startsWith('data:image/png')) {
+          image = await pdfDoc.embedPng(portrait);
+        } else if (portrait.startsWith('data:image/jpeg') || portrait.startsWith('data:image/jpg')) {
+          image = await pdfDoc.embedJpg(portrait);
+        }
+        if (image) {
+          const pages = pdfDoc.getPages();
+          const targetPage = pages.length > 1 ? pages[1] : pages[0];
+          const maxWidth = 95;
+          const maxHeight = 52;
+          const scale = Math.min(maxWidth / image.width, maxHeight / image.height);
+          const drawWidth = image.width * scale;
+          const drawHeight = image.height * scale;
+          const drawX = 470 + (maxWidth - drawWidth) / 2;
+          const drawY = 718 + (maxHeight - drawHeight) / 2;
+
+          targetPage.drawImage(image, {
+            x: drawX,
+            y: drawY,
+            width: drawWidth,
+            height: drawHeight
+          });
+        }
+      } catch (e) {
+        console.warn('PDF export portrait embedding note:', e);
+      }
+    }
+
     // Phase 3: Appearance Stream Updates & Save
     try {
       form.updateFieldAppearances(font);

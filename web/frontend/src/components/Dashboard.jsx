@@ -302,31 +302,38 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
               <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
                 
                 {/* Portrait or System Icon */}
-                <div style={{ 
-                  width: '44px', 
-                  height: '44px', 
-                  borderRadius: '8px', 
-                  backgroundColor: '#161625', 
-                  display: 'flex', 
-                  alignItems: 'center', 
-                  justifyContent: 'center',
-                  border: '1px solid rgba(255, 255, 255, 0.05)',
-                  overflow: 'hidden'
-                }}>
-                  {char.data?.portrait ? (
-                    <img 
-                      src={char.data.portrait} 
-                      alt={char.name} 
-                      style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-                    />
-                  ) : char.system.toLowerCase().includes('dnd') ? (
-                    <Sword size={18} style={{ color: '#e94560' }} />
-                  ) : char.system.toLowerCase().includes('pf') ? (
-                    <Shield size={18} style={{ color: '#3fb950' }} />
-                  ) : (
-                    <Sparkles size={18} style={{ color: '#c9a84c' }} />
-                  )}
-                </div>
+                {(() => {
+                  const charPortrait = char.data?.portrait || char.portrait;
+                  return (
+                    <div style={{ 
+                      width: '46px', 
+                      height: '46px', 
+                      borderRadius: '8px', 
+                      backgroundColor: '#161625', 
+                      display: 'flex', 
+                      alignItems: 'center', 
+                      justifyContent: 'center',
+                      border: charPortrait ? '1.5px solid var(--accent-gold, #c9a84c)' : '1px solid rgba(255, 255, 255, 0.05)',
+                      boxShadow: charPortrait ? '0 0 10px rgba(201,168,76,0.25)' : 'none',
+                      overflow: 'hidden',
+                      flexShrink: 0
+                    }}>
+                      {charPortrait ? (
+                        <img 
+                          src={charPortrait} 
+                          alt={char.name} 
+                          style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                        />
+                      ) : char.system.toLowerCase().includes('dnd') ? (
+                        <Sword size={18} style={{ color: '#e94560' }} />
+                      ) : char.system.toLowerCase().includes('pf') ? (
+                        <Shield size={18} style={{ color: '#3fb950' }} />
+                      ) : (
+                        <Sparkles size={18} style={{ color: '#c9a84c' }} />
+                      )}
+                    </div>
+                  );
+                })()}
 
                 <div>
                   <h3 style={{ fontSize: '1.2rem', color: '#f0e6d2', fontWeight: 'bold', margin: '0 0 4px 0' }}>
