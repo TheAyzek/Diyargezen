@@ -5,7 +5,6 @@ import { Search, X, Swords, Users, Sparkles, Hammer, Star, Shield, Award, Wand2,
 import { cleanText } from '../utils/textSanitizer';
 
 const CATEGORY_CONFIG = {
-  ClassFeature:  { icon: Wand2,     color: '#f39c12', label: 'Sınıf Özelliği',       short: 'Sınıf' },
   Combat:        { icon: Swords,    color: '#e94560', label: 'Savaş (Combat)',         short: 'Savaş' },
   Teamwork:      { icon: Users,     color: '#4ec9b0', label: 'İşbirliği (Teamwork)',  short: 'Teamwork' },
   Metamagic:     { icon: Sparkles,  color: '#7c6ef7', label: 'Metamagic',             short: 'Metamagic' },
@@ -20,6 +19,7 @@ const CATEGORY_CONFIG = {
   Magic:         { icon: Sparkles,  color: '#a594ff', label: 'Sihir (Magic)',          short: 'Sihir' },
   General:       { icon: Shield,    color: '#9cdcfe', label: 'Genel (General)',        short: 'Genel' },
 };
+
 
 // Frontend prerequisite evaluator helper
 function evaluatePrerequisites(feat, character, currentSelectedFeats = []) {
@@ -163,7 +163,15 @@ export default function FeatSelectorModal({
       }
     })
       .then(res => {
-        setFeats(res.data);
+        const raw = res.data || [];
+        const clean = raw.filter(f => {
+          const sv = f.sistem_verisi || {};
+          const sysObj = sv.system || {};
+          const ft = String(sysObj.featType || sv.featType || '').toLowerCase();
+          const cat = String(sv.feat_category || '').toLowerCase();
+          return ft !== 'classfeat' && ft !== 'classfeature' && cat !== 'classfeature';
+        });
+        setFeats(clean);
         setLoading(false);
       })
       .catch(err => {
@@ -172,6 +180,7 @@ export default function FeatSelectorModal({
         setLoading(false);
       });
   };
+
 
   const categories = ['All', ...Object.keys(CATEGORY_CONFIG)];
 

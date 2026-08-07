@@ -246,20 +246,21 @@ class CharacterManager:
                 try:
                     feat_name = row[0]
                     payload = json.loads(row[4]) if row[4] else {}
+                    sys_data = payload.get('system', {}) if isinstance(payload.get('system'), dict) else {}
+                    feat_type = str(sys_data.get('featType') or payload.get('featType') or '').lower()
+
+                    # Exclude class features, character traits, and racial traits from standard Feat list
+                    if feat_type in ('classfeat', 'classfeature', 'trait', 'racial'):
+                        continue
+
                     feat_cat = payload.get('feat_category') or self._parse_entity_category(feat_name, payload)
                     payload["feat_category"] = feat_cat
 
-                    if category and category != 'All' and feat_cat.lower() != category.lower():
+                    if feat_cat.lower() in ('classfeature', 'trait', 'racial'):
                         continue
 
-                    # Filter class features strictly by chosen character class
-                    if cls_norm and (category.lower() == 'classfeature' or feat_cat.lower() == 'classfeature'):
-                        sys_data = payload.get('system', {})
-                        assoc_classes = sys_data.get('associations', {}).get('classes') or []
-                        if assoc_classes and isinstance(assoc_classes, list) and len(assoc_classes) > 0:
-                            assoc_cls = (assoc_classes[0][0] if isinstance(assoc_classes[0], list) else str(assoc_classes[0])).lower().strip()
-                            if assoc_cls and cls_norm not in assoc_cls and assoc_cls not in cls_norm:
-                                continue
+                    if category and category != 'All' and feat_cat.lower() != category.lower():
+                        continue
 
                     results.append(DiyargezenEntity(
                         isim=feat_name, sistem=row[1], kategori=row[2],
@@ -267,6 +268,7 @@ class CharacterManager:
                     ))
                 except Exception:
                     continue
+
         except Exception:
             pass
         return results
