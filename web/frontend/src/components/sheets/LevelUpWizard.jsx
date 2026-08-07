@@ -4,8 +4,10 @@ import { ArrowRight, ArrowLeft, Check, Sparkles, AlertCircle, Plus, Minus, Wand2
 import SpellSelectorModal from '../SpellSelectorModal';
 import FeatSelectorModal from '../FeatSelectorModal';
 import TraitSelectorModal from '../TraitSelectorModal';
+import ClassFeatureSelectorModal from '../ClassFeatureSelectorModal';
 
 export default function LevelUpWizard({ isOpen, onClose }) {
+
   const { 
     id, name, level, class: currentClass, abilities, skills, recalcedData, levelUp, system, portrait, race, addTrait, addSpell
   } = useCharacterStore();
@@ -80,7 +82,9 @@ export default function LevelUpWizard({ isOpen, onClose }) {
   const [isTraitModalOpen, setIsTraitModalOpen] = useState(false);
   const [isSpellModalOpen, setIsSpellModalOpen] = useState(false);
   const [isFeatModalOpen, setIsFeatModalOpen] = useState(false);
+  const [isClassFeatureModalOpen, setIsClassFeatureModalOpen] = useState(false);
   const [featModalCategory, setFeatModalCategory] = useState('All');
+
 
   
   // DND5e specific states
@@ -605,12 +609,11 @@ export default function LevelUpWizard({ isOpen, onClose }) {
                         className="btn btn-primary"
                         style={{ padding: '8px 14px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '6px', background: 'linear-gradient(135deg, #f39c12 0%, #d35400 100%)', borderColor: '#f39c12' }}
                         onClick={() => {
-                          setFeatModalCategory('ClassFeature');
-                          setIsFeatModalOpen(true);
+                          setIsClassFeatureModalOpen(true);
                         }}
                       >
                         <Wand2 size={15} />
-                        🎯 {currentClass || 'Sınıf'} Özel Yetenek Seç (Rage Power / Hex / Discovery)
+                        🎯 {currentClass || 'Sınıf'} Özel Yetenek Seç (Rage Power / Hex / Discovery / Talent)
                       </button>
 
                       <button
@@ -626,6 +629,18 @@ export default function LevelUpWizard({ isOpen, onClose }) {
                         📚 Tüm Feat'lerde Ara
                       </button>
                     </div>
+
+                    <ClassFeatureSelectorModal
+                      isOpen={isClassFeatureModalOpen}
+                      onClose={() => setIsClassFeatureModalOpen(false)}
+                      system={system || 'pf1e'}
+                      characterClass={currentClass}
+                      characterLevel={targetLevel}
+                      character={{ race, class: currentClass, abilities, level: targetLevel }}
+                      selectedFeatures={selectedFeats}
+                      onAddFeature={(featObj) => handleAddFeat(featObj)}
+                    />
+
 
                     <div style={{ display: 'flex', gap: '8px' }}>
                       <input 
