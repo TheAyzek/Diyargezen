@@ -526,7 +526,9 @@ export default function PF1eControls() {
                 <div style={{ fontSize: '0.82rem', fontWeight: 'bold', fontFamily: 'DM Mono, monospace', marginBottom: 6, display: 'flex', alignItems: 'center', gap: '6px', flexWrap: 'wrap' }}>
                   <span style={{ color: '#c9a84c' }}>✨ Status Bonusu:</span>
                   {(() => {
-                    const sv = raceData.sistem_verisi || {};
+                    const sv = typeof raceData?.sistem_verisi === 'string'
+                      ? (raceData.sistem_verisi.trim().startsWith('{') ? JSON.parse(raceData.sistem_verisi) : {})
+                      : (raceData?.sistem_verisi || {});
                     const rLower = (race || '').toLowerCase().trim();
                     
                     if (isFlexibleRace) {
@@ -554,38 +556,68 @@ export default function PF1eControls() {
                       "gnome": { constitution: 2, charisma: 2, strength: -2 },
                       "halfling": { dexterity: 2, charisma: 2, strength: -2 },
                       "aasimar": { wisdom: 2, charisma: 2 },
+                      "adaro": { dexterity: 2, constitution: 2, intelligence: -2 },
                       "android": { dexterity: 2, intelligence: 2, charisma: -2 },
+                      "aphorite": { strength: 2, wisdom: 2, charisma: -2 },
+                      "aquatic elf": { dexterity: 2, intelligence: 2, constitution: -2 },
+                      "astomoi": { intelligence: 2, wisdom: 2, constitution: -2 },
+                      "boggard": { constitution: 2, wisdom: 2, charisma: -2 },
+                      "caligni": { dexterity: 2, constitution: 2, intelligence: -2 },
                       "catfolk": { dexterity: 2, charisma: 2, wisdom: -2 },
+                      "cecaelia": { dexterity: 2, wisdom: 2, constitution: -2 },
                       "changeling": { wisdom: 2, charisma: 2, constitution: -2 },
                       "deep one hybrid": { constitution: 2, wisdom: 2, dexterity: -2 },
                       "dhampir": { dexterity: 2, charisma: 2, constitution: -2 },
                       "drow": { dexterity: 2, charisma: 2, constitution: -2 },
                       "drow noble": { dexterity: 4, intelligence: 2, wisdom: 2, charisma: 2, constitution: -2 },
                       "duergar": { constitution: 2, wisdom: 2, charisma: -4 },
+                      "duskwalker": { dexterity: 2, wisdom: 2, constitution: -2 },
                       "fetchling": { dexterity: 2, charisma: 2, wisdom: -2 },
+                      "ganzi": { constitution: 2, charisma: 2, intelligence: -2 },
+                      "gathlain": { dexterity: 2, charisma: 2, constitution: -2 },
+                      "ghoran": { constitution: 2, charisma: 2, intelligence: -2 },
+                      "gillman": { constitution: 2, charisma: 2, wisdom: -2 },
                       "goblin": { dexterity: 4, strength: -2, charisma: -2 },
+                      "green martian": { strength: 2, wisdom: 2, charisma: -2 },
+                      "grindylow": { dexterity: 4, strength: -2, wisdom: -2 },
                       "grippli": { dexterity: 2, wisdom: 2, strength: -2 },
                       "hobgoblin": { dexterity: 2, constitution: 2 },
                       "ifrit": { dexterity: 2, charisma: 2, wisdom: -2 },
+                      "kasatha": { dexterity: 2, wisdom: 2 },
                       "kitsune": { dexterity: 2, charisma: 2, strength: -2 },
                       "kobold": { dexterity: 2, strength: -4, constitution: -2 },
+                      "kuru": { dexterity: 2, constitution: 2, intelligence: -2 },
+                      "lashunta": { intelligence: 2, charisma: 2, constitution: -2 },
+                      "locathah": { dexterity: 2, wisdom: 2, strength: -2 },
                       "merfolk": { dexterity: 2, constitution: 2, charisma: 2 },
+                      "monkey goblin": { dexterity: 4, wisdom: -2, charisma: -2 },
+                      "munavri": { dexterity: 2, intelligence: 2, charisma: 2, strength: -2 },
                       "nagaji": { strength: 2, charisma: 2, intelligence: -2 },
+                      "naiad": { dexterity: 2, charisma: 2, strength: -2 },
                       "orc": { strength: 4, intelligence: -2, wisdom: -2, charisma: -2 },
                       "oread": { strength: 2, wisdom: 2, charisma: -2 },
                       "ratfolk": { dexterity: 2, intelligence: 2, strength: -2 },
+                      "samsaran": { intelligence: 2, wisdom: 2, constitution: -2 },
+                      "shabti": { constitution: 2, charisma: 2 },
                       "skinwalker": { wisdom: 2, intelligence: -2 },
+                      "strix": { dexterity: 2, charisma: -2 },
                       "suli": { strength: 2, charisma: 2, intelligence: -2 },
                       "svirfneblin": { dexterity: 2, wisdom: 2, strength: -2, charisma: -4 },
                       "sylph": { dexterity: 2, intelligence: 2, constitution: -2 },
+                      "syrinx": { wisdom: 2, dexterity: -2 },
                       "tengu": { dexterity: 2, wisdom: 2, constitution: -2 },
                       "tiefling": { dexterity: 2, intelligence: 2, charisma: -2 },
+                      "triaxian": { constitution: 2, wisdom: 2, strength: -2 },
+                      "triton": { strength: 2, charisma: 2, intelligence: -2 },
                       "trox": { strength: 6, dexterity: -2, intelligence: -2, wisdom: -2, charisma: -2 },
                       "undine": { dexterity: 2, wisdom: 2, charisma: -2 },
                       "vanara": { dexterity: 2, wisdom: 2, charisma: -2 },
+                      "vine leshy": { constitution: 2, wisdom: 2, intelligence: -2 },
                       "vishkanya": { dexterity: 2, charisma: 2, wisdom: -2 },
                       "wayang": { dexterity: 2, intelligence: 2, wisdom: -2 },
-                      "wyrwood": { dexterity: 2, intelligence: 2, constitution: -2 }
+                      "wyrwood": { dexterity: 2, intelligence: 2, constitution: -2 },
+                      "wyvaran": { dexterity: 2, wisdom: 2, intelligence: -2 },
+                      "yaddithian": { constitution: 2, intelligence: 2, wisdom: -2 }
                     };
 
                     let asiObj = (sv.ability_score_increase && typeof sv.ability_score_increase === 'object' && Object.keys(sv.ability_score_increase).length > 0)
