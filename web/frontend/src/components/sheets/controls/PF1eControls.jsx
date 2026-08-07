@@ -393,13 +393,34 @@ export default function PF1eControls() {
               disabled={id !== null} />
           </div>
 
-          <button
-            className="gold-btn primary"
-            onClick={() => setLevelUpModalOpen(true)}
-            style={{ padding: '0 12px', height: 32, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4, background: 'linear-gradient(135deg, #c9a84c 0%, #ffd700 100%)', color: '#121218', fontWeight: 800, fontSize: '0.8rem' }}
-          >
-            <Sparkles size={14} /> ⬆ Seviye Atla
-          </button>
+          {(() => {
+            const canLevelUp = Boolean(race && String(race).trim() && charClass && String(charClass).trim());
+            return (
+              <button
+                className="gold-btn primary"
+                onClick={() => {
+                  if (!canLevelUp) {
+                    alert("Seviye atlayabilmek için önce Karakter Kimliği sekmesinden Irk ve Sınıf seçmiş olmalısınız!");
+                    return;
+                  }
+                  setLevelUpModalOpen(true);
+                }}
+                disabled={!canLevelUp}
+                title={canLevelUp ? "Seviye Atla" : "Seviye atlamak için önce Irk ve Sınıf seçmelisiniz."}
+                style={{
+                  padding: '0 12px', height: 32, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4,
+                  background: canLevelUp ? 'linear-gradient(135deg, #c9a84c 0%, #ffd700 100%)' : 'rgba(100,100,100,0.3)',
+                  color: canLevelUp ? '#121218' : '#888',
+                  opacity: canLevelUp ? 1 : 0.6,
+                  cursor: canLevelUp ? 'pointer' : 'not-allowed',
+                  fontWeight: 800, fontSize: '0.8rem'
+                }}
+              >
+                <Sparkles size={14} /> ⬆ Seviye Atla
+              </button>
+            );
+          })()}
+
 
           <div style={{ marginLeft: 'auto', display: 'flex', gap: 8 }}>
             <button

@@ -282,9 +282,32 @@ export default function LevelUpWizard({ isOpen, onClose }) {
     "Point-Blank Shot", "Precise Shot", "Rapid Shot", "Two-Weapon Fighting"
   ];
 
-  const currentScreen = screens[step - 1];
+  if (!isOpen) return null;
+
+  const hasRaceAndClass = Boolean(race && String(race).trim() && currentClass && String(currentClass).trim());
+
+  if (!hasRaceAndClass) {
+    return (
+      <div style={{
+        position: 'fixed', inset: 0, backgroundColor: 'rgba(7, 6, 15, 0.96)',
+        display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000, padding: '20px'
+      }}>
+        <div style={{ maxWidth: '500px', background: 'rgba(20,18,35,0.95)', border: '1px solid #e94560', borderRadius: '12px', padding: '24px', textAlign: 'center' }}>
+          <AlertCircle size={48} style={{ color: '#e94560', marginBottom: '16px' }} />
+          <h3 style={{ color: '#f0e6d2', fontFamily: 'Cinzel, serif', margin: '0 0 12px 0' }}>Seviye Atlama Engellendi</h3>
+          <p style={{ color: '#8b949e', fontSize: '0.9rem', lineHeight: '1.5', marginBottom: '20px' }}>
+            Seviye atlayabilmek için önce Karakter Kimliğinde <b>Irk (Race)</b> ve <b>Sınıf (Class)</b> seçilmiş olmalıdır.
+          </p>
+          <button className="btn btn-primary" onClick={onClose} style={{ padding: '8px 24px' }}>
+            Anlaşıldı, Kapat
+          </button>
+        </div>
+      </div>
+    );
+  }
 
   return (
+
     <div style={{
       position: 'fixed',
       top: 0,

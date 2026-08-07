@@ -94,6 +94,27 @@ export default function LevelUpWizardModal({
 
   if (!isOpen) return null;
 
+  const hasRaceAndClass = Boolean(character?.race && String(character.race).trim() && character?.class && String(character.class).trim());
+
+  if (!hasRaceAndClass) {
+    return ReactDOM.createPortal(
+      <div style={{ position: 'fixed', inset: 0, zIndex: 9999, background: 'rgba(5, 5, 12, 0.85)', backdropFilter: 'blur(8px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px' }} onClick={onClose}>
+        <div style={{ width: '100%', maxWidth: '500px', background: 'linear-gradient(180deg, #161426 0%, #0d0b18 100%)', border: '1px solid #e94560', borderRadius: '12px', padding: '24px', textAlign: 'center', boxShadow: '0 20px 50px rgba(0,0,0,0.8)' }} onClick={e => e.stopPropagation()}>
+          <AlertTriangle size={48} style={{ color: '#e94560', marginBottom: '16px' }} />
+          <h3 style={{ color: '#f0e6d2', fontFamily: 'Cinzel, serif', margin: '0 0 12px 0' }}>Seviye Atlama Engellendi</h3>
+          <p style={{ color: '#8b949e', fontSize: '0.9rem', lineHeight: '1.5', marginBottom: '20px' }}>
+            Seviye atlayabilmek için önce Karakter Kimliğinde <b>Irk (Race)</b> ve <b>Sınıf (Class)</b> seçilmiş olmalıdır.
+          </p>
+          <button className="gold-btn primary" onClick={onClose} style={{ padding: '8px 24px' }}>
+            Anlaşıldı, Kapat
+          </button>
+        </div>
+      </div>,
+      document.body
+    );
+  }
+
+
   const handleRollHp = () => {
     setIsRolling(true);
     let count = 0;
