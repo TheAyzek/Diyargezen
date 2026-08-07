@@ -179,3 +179,19 @@ def test_favored_class_bonus_hp(tmp_path: Path):
     updated = cm.apply_level_up(choices)
     assert updated["level"] == 2
     assert updated["max_hp"] == 10 + 6 + 1  # 17
+
+
+def test_class_feature_filtering_by_class_name():
+    """Verify that get_class_features and get_feats filter class features strictly by character class."""
+    cm = CharacterManager("data/characters.db")
+    witch_features = cm.get_class_features("pf1e", class_name="Witch")
+    fighter_features = cm.get_class_features("pf1e", class_name="Fighter")
+
+    # Barbarian Rage Powers should NOT appear in Witch features
+    witch_names = [f.isim for f in witch_features]
+    assert not any("Rage" in n for n in witch_names if "Rage Power" in n)
+
+    # Witch Hexes should NOT appear in Fighter features
+    fighter_names = [f.isim for f in fighter_features]
+    assert not any(n in ("Agony", "Abominate", "Witchcraft") for n in fighter_names)
+

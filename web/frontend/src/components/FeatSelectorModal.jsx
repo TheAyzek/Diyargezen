@@ -152,8 +152,13 @@ export default function FeatSelectorModal({
   const fetchFeats = () => {
     setLoading(true);
     const sys = (system || 'pf1e').toLowerCase();
+    const activeClass = className || character?.class || character?.className || '';
     axios.get(`/api/rules/${sys}/feats`, {
-      params: { query: searchQuery, category: activeCategory }
+      params: { 
+        query: searchQuery, 
+        category: activeCategory,
+        class_name: activeClass
+      }
     })
       .then(res => {
         setFeats(res.data);

@@ -72,9 +72,10 @@ def get_classes(system: str, query: str = Query("", description="Sınıf adı ve
 def search_feats(
     system: str,
     query: str = Query("", description="Feat adı veya açıklama arama filtresi"),
-    category: str = Query("", description="Feat kategorisi (Combat, Teamwork, Metamagic vb.)")
+    category: str = Query("", description="Feat kategorisi (Combat, Teamwork, Metamagic vb.)"),
+    class_name: str = Query("", description="Kullanıcı sınıfı filtresi (Fighter, Barbarian, Wizard vb.)")
 ):
-    feats = service.get_feats(system, query, category)
+    feats = service.get_feats(system, query=query, category=category, class_name=class_name)
     return [EntityResponseSchema.model_validate(f, from_attributes=True) for f in feats]
 
 @router.get(

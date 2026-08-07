@@ -208,8 +208,8 @@ class CharacterManager:
             pass
         return results
 
-    def get_feats(self, system: str, query: str = "", category: str = "") -> List[DiyargezenEntity]:
-        """Retrieve feats filtered by search query and/or category."""
+    def get_feats(self, system: str, query: str = "", category: str = "", className: str = "") -> List[DiyargezenEntity]:
+        """Retrieve feats filtered by search query, category, and character class."""
         sys_norm = system.lower().replace("_", "").replace("-", "")
         if sys_norm in ("pf1e", "pf1", "pathfinder1e"):
             sys_norm = "pathfinder1e"
@@ -217,6 +217,8 @@ class CharacterManager:
             sys_norm = "dnd5e"
 
         results: List[DiyargezenEntity] = []
+        cls_norm = className.lower().strip() if className else ""
+
         try:
             conn = sqlite3.connect(str(self.db_path))
             cursor = conn.cursor()
@@ -252,6 +254,15 @@ class CharacterManager:
                     if category and category != 'All' and feat_cat.lower() != category.lower():
                         continue
 
+                    # Filter class features strictly by chosen character class
+                    if cls_norm and (category.lower() == 'classfeature' or feat_cat.lower() == 'classfeature'):
+                        sys_data = payload.get('system', {})
+                        assoc_classes = sys_data.get('associations', {}).get('classes') or []
+                        if assoc_classes and isinstance(assoc_classes, list) and len(assoc_classes) > 0:
+                            assoc_cls = (assoc_classes[0][0] if isinstance(assoc_classes[0], list) else str(assoc_classes[0])).lower().strip()
+                            if assoc_cls and cls_norm not in assoc_cls and assoc_cls not in cls_norm:
+                                continue
+
                     results.append(DiyargezenEntity(
                         isim=feat_name, sistem=row[1], kategori=row[2],
                         aciklama=row[3] or "", sistem_verisi=payload
@@ -262,6 +273,63 @@ class CharacterManager:
                     continue
         except Exception:
             pass
+        return results
+
+    def get_class_features(self, system: str, class_name: str = "", query: str = "") -> List[DiyargezenEntity]:
+        """Return class-specific talents and features (Rage Powers, Rogue Talents, Discoveries, Hexes, Arcana, etc.)."""
+        sys_norm = system.lower().replace("_", "").replace("-", "")
+        results: List[DiyargezenEntity] = []
+        c_lower = class_name.lower().strip() if class_name else ""
+
+        try:
+            conn = sqlite3.connect(str(self.db_path))
+            cursor = conn.cursor()
+            
+            sql = (
+                "SELECT isim, sistem, kategori, aciklama, sistem_verisi "
+                "FROM entities "
+                "WHERE sistem = ? AND kategori IN ('feat', 'advantage', 'class_feature') "
+                "AND length(isim) > 2 "
+            )
+            params = [sys_norm]
+
+            if query:
+                sql += " AND (isim LIKE ? OR aciklama LIKE ?)"
+                params.extend([f"%{query}%", f"%{query}%"])
+
+            sql += " ORDER BY isim COLLATE NOCASE"
+            cursor.execute(sql, tuple(params))
+            rows = cursor.fetchall()
+            conn.close()
+
+            for row in rows:
+                try:
+                    name: str = row[0]
+                    payload = json.loads(row[4]) if row[4] else {}
+                    feat_cat = payload.get('feat_category') or self._parse_entity_category(name, payload)
+                    if feat_cat.lower() != 'classfeature':
+                        continue
+
+                    # Filter strictly by character class if provided
+                    if c_lower:
+                        sys_data = payload.get('system', {})
+                        assoc_classes = sys_data.get('associations', {}).get('classes') or []
+                        if assoc_classes and isinstance(assoc_classes, list) and len(assoc_classes) > 0:
+                            assoc_cls = (assoc_classes[0][0] if isinstance(assoc_classes[0], list) else str(assoc_classes[0])).lower().strip()
+                            if assoc_cls and c_lower not in assoc_cls and assoc_cls not in c_lower:
+                                continue
+
+                    results.append(DiyargezenEntity(
+                        isim=row[0], sistem=row[1], kategori="class_feature",
+                        aciklama=row[3] or "", sistem_verisi=payload
+                    ))
+                    if len(results) >= 2000:
+                        break
+                except Exception:
+                    continue
+        except Exception:
+            pass
+
         return results
 
     def get_spells(

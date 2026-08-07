@@ -49,9 +49,9 @@ class RulesService:
             feats = self.manager.search_entities(db_system, "advantage", query)
         return feats
 
-    def get_feats(self, system: str, query: str = "", category: str = "") -> List[DiyargezenEntity]:
+    def get_feats(self, system: str, query: str = "", category: str = "", class_name: str = "") -> List[DiyargezenEntity]:
         db_system = self._normalize_system(system)
-        return self.manager.get_feats(db_system, query, category)
+        return self.manager.get_feats(db_system, query=query, category=category, className=class_name)
 
     def get_spells(
         self,
