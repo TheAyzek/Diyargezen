@@ -52,6 +52,8 @@ export default function SpellSelectorModal({
     }
   }, [isOpen, system, activeLevel, selectedClass, selectedSchool, searchQuery]);
 
+  const NON_SPELL_REGEX = /^\s*[\#\*\+]|\b(scrolls?|wands?|potions?|oils?)\b|\bspecial abilities\b|\bmagic items?\b|\bspells\s*&\s*scrolls\b|\bcommon level\b|\buncommon level\b|\bgreater major\b|\blesser minor\b|\blesser medium\b|\bgreater medium\b|\bmajor potion\b|\bmedium potion\b|\bminor potion\b/i;
+
   const fetchSpells = () => {
     setLoading(true);
     const lvlParam = activeLevel === 'All' ? '' : activeLevel;
@@ -68,7 +70,12 @@ export default function SpellSelectorModal({
       }
     })
       .then(res => {
-        setSpells(res.data || []);
+        const raw = res.data || [];
+        const clean = raw.filter(sp => {
+          const name = sp.isim || sp.name || '';
+          return name && !NON_SPELL_REGEX.test(name);
+        });
+        setSpells(clean);
         setLoading(false);
       })
       .catch(err => {
@@ -77,6 +84,7 @@ export default function SpellSelectorModal({
         setLoading(false);
       });
   };
+
 
   if (!isOpen) return null;
 

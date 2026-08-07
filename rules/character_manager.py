@@ -386,6 +386,26 @@ class CharacterManager:
         """Fetch spells filtered by query, spell level, caster class, and magic school."""
         sys_norm = system.lower().replace("_", "").replace("-", "")
         results: List[DiyargezenEntity] = []
+
+        # Non-spell entity filter regex (wands, scrolls, potions, generator tables, etc.)
+        NON_SPELL_PATTERN = re.compile(
+            r'^\s*[\#\*\+]|'
+            r'\b(scrolls?|wands?|potions?|oils?)\b|'
+            r'\bspecial abilities\b|'
+            r'\bmagic items?\b|'
+            r'\bspells\s*&\s*scrolls\b|'
+            r'\bcommon level\b|'
+            r'\buncommon level\b|'
+            r'\bgreater major\b|'
+            r'\blesser minor\b|'
+            r'\blesser medium\b|'
+            r'\bgreater medium\b|'
+            r'\bmajor potion\b|'
+            r'\bmedium potion\b|'
+            r'\bminor potion\b',
+            re.IGNORECASE
+        )
+
         try:
             conn = sqlite3.connect(str(self.db_path))
             cursor = conn.cursor()
@@ -408,6 +428,10 @@ class CharacterManager:
 
             for row in rows:
                 try:
+                    s_name = row[0]
+                    if NON_SPELL_PATTERN.search(s_name):
+                        continue
+
                     payload = json.loads(row[4]) if row[4] else {}
                     spell_lvl = payload.get("level")
                     spell_school = str(payload.get("school", "")).lower()
@@ -460,6 +484,8 @@ class CharacterManager:
             cursor = conn.cursor()
             cursor.execute(sp_sql, sp_params)
             for r_name, r_sys, r_lvl, r_classes, r_desc in cursor.fetchall():
+                if NON_SPELL_PATTERN.search(r_name):
+                    continue
                 if r_name.lower() not in seen_names:
                     seen_names.add(r_name.lower())
                     classes_dict = {}
@@ -478,6 +504,7 @@ class CharacterManager:
 
                     results.append(DiyargezenEntity(
                         isim=r_name,
+
                         sistem=r_sys,
                         kategori="spell",
                         aciklama=r_desc or "",
