@@ -196,7 +196,11 @@ export default function PF1eControls() {
     if (tab === 'companion' && !hasCompanion) {
       setTab('identity');
     }
-  }, [charClass, hasCompanion, tab]);
+    if (tab === 'spells' && !hasSpellcasting) {
+      setTab('identity');
+    }
+  }, [charClass, hasCompanion, hasSpellcasting, tab]);
+
 
   const normRace = (r) => {
     const str = (r || '').toLowerCase().trim();
@@ -455,7 +459,11 @@ export default function PF1eControls() {
 
       {/* Tabs Header */}
       <div style={{ position: 'relative', zIndex: 2, display: 'flex', borderBottom: '1px solid rgba(201,168,76,0.18)', background: 'rgba(4,3,10,0.6)', flexShrink: 0 }}>
-        {TABS.filter(t => (t.id === 'companion' ? hasCompanion : true)).map(t => (
+        {TABS.filter(t => {
+          if (t.id === 'spells') return hasSpellcasting;
+          if (t.id === 'companion') return hasCompanion;
+          return true;
+        }).map(t => (
           <button key={t.id} onClick={() => setTab(t.id)}
             className={`epic-tab ${tab === t.id ? 'active' : ''}`}
             style={{ flex: 1 }}>
@@ -464,6 +472,7 @@ export default function PF1eControls() {
           </button>
         ))}
       </div>
+
 
       {/* Tab Content Area */}
       <div ref={scrollRef} key={tab}

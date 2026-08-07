@@ -36,9 +36,10 @@ class RulesService:
         db_system = self._normalize_system(system)
         return self.manager.search_entities(db_system, category, query)
 
-    def get_equipment(self, system: str, query: str = "") -> List[DiyargezenEntity]:
+    def get_equipment(self, system: str, query: str = "", category: str = "") -> List[DiyargezenEntity]:
         db_system = self._normalize_system(system)
-        return self.manager.get_clean_equipment(db_system, query)
+        return self.manager.get_clean_equipment(db_system, query=query, category=category)
+
 
     def get_feats_or_advantages(self, system: str, query: str = "") -> List[DiyargezenEntity]:
         db_system = self._normalize_system(system)
