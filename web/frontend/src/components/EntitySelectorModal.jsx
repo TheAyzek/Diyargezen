@@ -390,15 +390,44 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
               const isRaceCategory = category === 'races' || category === 'race';
               const sv = ent.sistem_verisi || {};
 
-              // Extract racial ability bonus text
-              let racialBonusText = sv.ability_score_increase_text;
-              if (!racialBonusText && sv.ability_score_increase && typeof sv.ability_score_increase === 'object') {
-                const parts = Object.entries(sv.ability_score_increase).map(([k, v]) => `${v >= 0 ? '+' : ''}${v} ${k.charAt(0).toUpperCase() + k.slice(1)}`);
-                if (parts.length > 0) racialBonusText = parts.join(', ');
-              }
-              const nameL = (ent.isim || ent.name || '').toLowerCase();
-              if (!racialBonusText && (nameL.includes('human') || nameL.includes('half-elf') || nameL.includes('half-orc'))) {
-                racialBonusText = '+2 Herhangi Bir Yetenek Puanı (Esnek Puan)';
+              // Extract racial ability bonus text & formatted JSX
+              const asiObj = sv.ability_score_increase || {};
+              let racialBonusJsx = null;
+              let hasBonus = false;
+
+              if (typeof asiObj === 'object' && Object.keys(asiObj).length > 0) {
+                hasBonus = true;
+                const entries = Object.entries(asiObj);
+                racialBonusJsx = entries.map(([k, v], i) => {
+                  const statName = k === 'any' ? 'Herhangi Bir Yetenek Puanı' : (k.charAt(0).toUpperCase() + k.slice(1));
+                  const valText = v >= 0 ? `+${v}` : `${v}`;
+                  const isNeg = v < 0;
+                  return (
+                    <React.Fragment key={k}>
+                      <span style={{ color: isNeg ? '#f87171' : '#3fb950', fontWeight: 'bold' }}>
+                        {valText} {statName}
+                      </span>
+                      {i < entries.length - 1 && <span style={{ color: '#8b949e', margin: '0 4px' }}>,</span>}
+                    </React.Fragment>
+                  );
+                });
+              } else {
+                const nameL = (ent.isim || ent.name || '').toLowerCase();
+                if (nameL.includes('human') || nameL.includes('half-elf') || nameL.includes('half-orc')) {
+                  hasBonus = true;
+                  racialBonusJsx = (
+                    <span style={{ color: '#3fb950', fontWeight: 'bold' }}>
+                      +2 Herhangi Bir Yetenek Puanı (Esnek Puan)
+                    </span>
+                  );
+                } else if (sv.ability_score_increase_text) {
+                  hasBonus = true;
+                  racialBonusJsx = (
+                    <span style={{ color: '#3fb950', fontWeight: 'bold' }}>
+                      {sv.ability_score_increase_text}
+                    </span>
+                  );
+                }
               }
 
               const sizeText = sv.size || 'Medium';
@@ -450,7 +479,7 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
                   </div>
 
                   {/* Highlighted Racial Bonus Box */}
-                  {isRaceCategory && racialBonusText && (
+                  {isRaceCategory && hasBonus && (
                     <div style={{
                       background: 'linear-gradient(90deg, rgba(201,168,76,0.12) 0%, rgba(63,185,80,0.08) 100%)',
                       border: '1px solid rgba(201,168,76,0.35)',
@@ -462,9 +491,9 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
                       gap: '8px'
                     }}>
                       <span style={{ fontSize: '13px', color: '#f0e6d2' }}>✨ <b>Irk Bonusları:</b></span>
-                      <span style={{ fontSize: '13px', fontWeight: 'bold', color: '#3fb950' }}>
-                        {racialBonusText}
-                      </span>
+                      <div style={{ fontSize: '13px' }}>
+                        {racialBonusJsx}
+                      </div>
                     </div>
                   )}
 

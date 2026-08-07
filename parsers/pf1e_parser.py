@@ -108,6 +108,19 @@ def parse_pf1e(data: Dict[str, Any] | None = None, base_dir: Path | None = None)
     except Exception as exc:
         logger.warning("Class details enrichment warning: %s", exc)
 
+    # Enrich race entities with official PF1e Race Ability Score Increase (ASI) dataset
+    try:
+        from tools.update_race_data import OFFICIAL_PF1E_ASI, format_asi_text
+        for ent in unique_entities:
+            if ent.kategori == "race" and isinstance(ent.sistem_verisi, dict):
+                r_name = ent.isim.lower().strip()
+                if r_name in OFFICIAL_PF1E_ASI:
+                    asi = OFFICIAL_PF1E_ASI[r_name]
+                    ent.sistem_verisi["ability_score_increase"] = asi
+                    ent.sistem_verisi["ability_score_increase_text"] = format_asi_text(asi)
+    except Exception as exc:
+        logger.warning("Race ASI enrichment warning: %s", exc)
+
     logger.info("PF 1e: %d unique entity parse edildi (zengin açıklamalar birleştirildi)", len(unique_entities))
     return unique_entities
 
