@@ -61,7 +61,7 @@ export default function PF1eControls() {
     id, name, level, race, class: charClass, feat, abilities, skills, recalcedData,
     alignment, gender, age, height, weight, deity, homeland, hair, eyes,
     backstory = '', personality = '', allies = '',
-    traits, feats, spells = [], usedSpellSlots = {},
+    traits, feats, spells = [], usedSpellSlots = {}, preparedSpells = {},
     racialAbilityChoice = 'strength', secondaryRacialAbilityChoice = 'dexterity', selectedRacialTraits = [],
     updateField, updateAbility, updateSkillRank, addEquipment, removeEquipment,
     addTrait, removeTrait, addFeat, removeFeat, addSpell, removeSpell, toggleRacialTrait, applyLevelUp,
