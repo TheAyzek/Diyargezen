@@ -537,12 +537,31 @@ class BaseCalculator(ABC):
 
         # Helper: extract ASI dict from a data dict (entity.sistem_verisi or similar)
         def extract_asi(data: Any, race_name: str = "") -> Dict[str, int]:
-            r_name = (race_name or (data.get("name") if isinstance(data, dict) else "") or (data.get("isim") if isinstance(data, dict) else "")).lower().strip()
+            r_raw = (race_name or (data.get("name") if isinstance(data, dict) else "") or (data.get("isim") if isinstance(data, dict) else "")).lower().strip()
             
+            TURKISH_RACE_MAP = {
+                "insan": "human", "i̇nsan": "human", "human": "human",
+                "yarım-elf": "half-elf", "yarim-elf": "half-elf", "yarım elf": "half-elf", "yarim elf": "half-elf", "half-elf": "half-elf",
+                "yarım-ork": "half-orc", "yarim-ork": "half-orc", "yarım ork": "half-orc", "yarim ork": "half-orc", "half-orc": "half-orc",
+                "cüce": "dwarf", "cuce": "dwarf", "dwarf": "dwarf",
+                "elf": "elf", "gnom": "gnome", "gnome": "gnome",
+                "buçukluk": "halfling", "bucukluk": "halfling", "halfling": "halfling",
+                "ork": "orc", "orc": "orc", "goblin": "goblin"
+            }
+            r_name = TURKISH_RACE_MAP.get(r_raw, r_raw)
+
             # Check for Human / Half-Elf / Half-Orc user-selected stat choice
             user_choice = character.get("racial_ability_choice", "").lower().strip()
-            if r_name in ("human", "half-elf", "half-orc") and user_choice:
-                return {user_choice: 2}
+            sec_choice = character.get("secondary_racial_ability_choice", "").lower().strip()
+            sel_traits = character.get("selected_racial_traits") or []
+            has_dual = any("dual talent" in str(t).lower() for t in sel_traits)
+
+            if r_name in ("human", "half-elf", "half-orc"):
+                choice_stat = user_choice or "strength"
+                res = {choice_stat: 2}
+                if has_dual and sec_choice and sec_choice != choice_stat:
+                    res[sec_choice] = 2
+                return res
 
             # Check built-in PF1e core race table first
             if r_name in PF1E_RACE_ASI:

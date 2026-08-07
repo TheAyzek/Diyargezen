@@ -61,7 +61,7 @@ export default function PF1eControls() {
     id, name, level, race, class: charClass, feat, abilities, skills, recalcedData,
     alignment, gender, age, height, weight, deity, homeland, hair, eyes,
     backstory = '', personality = '', allies = '',
-    traits, feats, spells = [],
+    traits, feats, spells = [], usedSpellSlots = {},
     racialAbilityChoice = 'strength', secondaryRacialAbilityChoice = 'dexterity', selectedRacialTraits = [],
     updateField, updateAbility, updateSkillRank, addEquipment, removeEquipment,
     addTrait, removeTrait, addFeat, removeFeat, addSpell, removeSpell, toggleRacialTrait, applyLevelUp,
@@ -78,8 +78,7 @@ export default function PF1eControls() {
     'wizard', 'sorcerer', 'cleric', 'druid', 'bard', 'paladin',
     'ranger', 'magus', 'alchemist', 'witch', 'oracle', 'inquisitor',
     'summoner', 'arcanist', 'bloodrager', 'hunter', 'investigator',
-    'warpriest', 'kineticist', 'occultist', 'psychic', 'shaman',
-    'skald', 'spiritualist', 'medium', 'mesmerist'
+    'shaman', 'warpriest', 'medium', 'mesmerist', 'occultist', 'spiritualist'
   ];
 
   const PREPARED_SPELLCASTERS = ['wizard', 'cleric', 'druid', 'paladin', 'ranger', 'magus', 'witch', 'inquisitor', 'warpriest', 'shaman', 'alchemist'];
@@ -105,7 +104,25 @@ export default function PF1eControls() {
     }
   }, [charClass, hasCompanion, tab]);
 
-  const isFlexibleRace = ['human', 'half-elf', 'half-orc'].includes((race || '').toLowerCase().trim()) ||
+  const normRace = (r) => {
+    const str = (r || '').toLowerCase().trim();
+    const map = {
+      'insan': 'human', 'i̇nsan': 'human', 'human': 'human',
+      'yarım-elf': 'half-elf', 'yarim-elf': 'half-elf', 'yarım elf': 'half-elf', 'yarim elf': 'half-elf', 'half-elf': 'half-elf', 'halfelf': 'half-elf',
+      'yarım-ork': 'half-orc', 'yarim-ork': 'half-orc', 'yarım ork': 'half-orc', 'yarim ork': 'half-orc', 'half-orc': 'half-orc', 'halforc': 'half-orc',
+      'cüce': 'dwarf', 'cuce': 'dwarf', 'dwarf': 'dwarf',
+      'elf': 'elf',
+      'gnom': 'gnome', 'gnome': 'gnome',
+      'buçukluk': 'halfling', 'bucukluk': 'halfling', 'halfling': 'halfling',
+      'ork': 'orc', 'orc': 'orc',
+      'goblin': 'goblin', 'hobgoblin': 'hobgoblin',
+      'kobold': 'kobold', 'tiefling': 'tiefling', 'aasimar': 'aasimar'
+    };
+    return map[str] || str;
+  };
+
+  const canonRace = normRace(race);
+  const isFlexibleRace = ['human', 'half-elf', 'half-orc', 'primitive human'].includes(canonRace) ||
     JSON.stringify(raceData.sistem_verisi || {}).toLowerCase().includes('any');
 
   const svData = raceData.sistem_verisi || raceData || {};
@@ -449,7 +466,7 @@ export default function PF1eControls() {
 
                     let asiObj = (sv.ability_score_increase && typeof sv.ability_score_increase === 'object' && Object.keys(sv.ability_score_increase).length > 0)
                       ? sv.ability_score_increase
-                      : (PF1E_RACE_ASI_MAP[rLower] || {});
+                      : (PF1E_RACE_ASI_MAP[canonRace] || PF1E_RACE_ASI_MAP[rLower] || {});
 
                     const entries = Object.entries(asiObj);
                     if (entries.length > 0) {

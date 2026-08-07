@@ -431,12 +431,30 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
                 "wyrwood": { dexterity: 2, intelligence: 2, constitution: -2 }
               };
 
-              const nameL = (ent.isim || ent.name || '').toLowerCase().trim();
-              const isFlexible = ['human', 'half-elf', 'half-orc', 'primitive human'].includes(nameL);
+              const normRace = (r) => {
+                const str = (r || '').toLowerCase().trim();
+                const map = {
+                  'insan': 'human', 'i̇nsan': 'human', 'human': 'human',
+                  'yarım-elf': 'half-elf', 'yarim-elf': 'half-elf', 'yarım elf': 'half-elf', 'yarim elf': 'half-elf', 'half-elf': 'half-elf', 'halfelf': 'half-elf',
+                  'yarım-ork': 'half-orc', 'yarim-ork': 'half-orc', 'yarım ork': 'half-orc', 'yarim ork': 'half-orc', 'half-orc': 'half-orc', 'halforc': 'half-orc',
+                  'cüce': 'dwarf', 'cuce': 'dwarf', 'dwarf': 'dwarf',
+                  'elf': 'elf',
+                  'gnom': 'gnome', 'gnome': 'gnome',
+                  'buçukluk': 'halfling', 'bucukluk': 'halfling', 'halfling': 'halfling',
+                  'ork': 'orc', 'orc': 'orc',
+                  'goblin': 'goblin', 'hobgoblin': 'hobgoblin',
+                  'kobold': 'kobold', 'tiefling': 'tiefling', 'aasimar': 'aasimar'
+                };
+                return map[str] || str;
+              };
+
+              const rawName = (ent.isim || ent.name || '').toLowerCase().trim();
+              const canonName = normRace(rawName);
+              const isFlexible = ['human', 'half-elf', 'half-orc', 'primitive human'].includes(canonName);
 
               let asiObj = (sv.ability_score_increase && typeof sv.ability_score_increase === 'object' && Object.keys(sv.ability_score_increase).length > 0)
                 ? sv.ability_score_increase
-                : (PF1E_RACE_ASI_MAP[nameL] || {});
+                : (PF1E_RACE_ASI_MAP[canonName] || PF1E_RACE_ASI_MAP[rawName] || {});
 
               let racialBonusJsx = null;
               let hasBonus = false;
