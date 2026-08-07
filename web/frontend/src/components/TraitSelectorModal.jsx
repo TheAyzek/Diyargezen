@@ -5,21 +5,59 @@ import { Search, X, Shield, Heart, Sparkles, Users, Star, MapPin, BookOpen, Swor
 import { cleanText } from '../utils/textSanitizer';
 
 const CATEGORY_CONFIG = {
-  Combat:   { icon: Swords,    color: '#e94560', label: 'Savaş (Combat)' },
-  Faith:    { icon: Heart,     color: '#c9a84c', label: 'İnanç (Faith)' },
-  Magic:    { icon: Sparkles,  color: '#7c6ef7', label: 'Büyü (Magic)' },
-  Social:   { icon: Users,     color: '#4ec9b0', label: 'Sosyal (Social)' },
-  Race:     { icon: Star,      color: '#ce9178', label: 'Irk (Race)' },
-  Regional: { icon: MapPin,    color: '#6a9955', label: 'Bölgesel (Regional)' },
-  Religion: { icon: BookOpen,  color: '#d7ba7d', label: 'Din (Religion)' },
-  Campaign: { icon: Shield,    color: '#9cdcfe', label: 'Kampanya (Campaign)' },
+  Combat:    { icon: Swords,    color: '#e94560', label: 'Savaş' },
+  Faith:     { icon: Heart,     color: '#c9a84c', label: 'İnanç' },
+  Magic:     { icon: Sparkles,  color: '#7c6ef7', label: 'Büyü' },
+  Social:    { icon: Users,     color: '#4ec9b0', label: 'Sosyal' },
+  Racial:    { icon: Star,      color: '#ce9178', label: 'Irk' },
+  Regional:  { icon: MapPin,    color: '#6a9955', label: 'Bölgesel' },
+  Campaign:  { icon: Shield,    color: '#9cdcfe', label: 'Kampanya' },
+  Equipment: { icon: Shield,    color: '#e06c75', label: 'Ekipman' },
+  General:   { icon: BookOpen,  color: '#d7ba7d', label: 'Genel' },
 };
+
+function getTraitCategory(t) {
+  if (!t) return 'General';
+  let sv = t.sistem_verisi || {};
+  if (typeof sv === 'string') {
+    try { sv = JSON.parse(sv); } catch (e) { sv = {}; }
+  }
+  let cat = sv.trait_category || sv.category || t.kategori;
+  if (!cat || cat === 'trait' || cat === 'feat') {
+    if (Array.isArray(sv.tags)) {
+      for (const tagPair of sv.tags) {
+        const tagStr = Array.isArray(tagPair) ? tagPair[0] : String(tagPair);
+        if (tagStr && tagStr !== '3.5' && tagStr !== 'PFS') {
+          cat = tagStr;
+          break;
+        }
+      }
+    }
+  }
+
+  if (!cat) cat = 'General';
+
+  const norm = cat.toString().trim().toLowerCase();
+  if (norm.includes('combat') || norm.includes('savaş')) return 'Combat';
+  if (norm.includes('faith') || norm.includes('religion') || norm.includes('inanç') || norm.includes('din')) return 'Faith';
+  if (norm.includes('magic') || norm.includes('spell') || norm.includes('büyü')) return 'Magic';
+  if (norm.includes('social') || norm.includes('sosyal')) return 'Social';
+  if (norm.includes('race') || norm.includes('racial') || norm.includes('irk')) return 'Racial';
+  if (norm.includes('region') || norm.includes('bölge')) return 'Regional';
+  if (norm.includes('campaign') || norm.includes('kampanya')) return 'Campaign';
+  if (norm.includes('equipment') || norm.includes('gear') || norm.includes('ekipman')) return 'Equipment';
+
+  return 'General';
+}
 
 function evaluateTraitPrerequisites(trait, character) {
   if (!character) return { valid: true, warnings: [] };
   const warnings = [];
-  const sys = trait.sistem_verisi || {};
-  let prereqs = sys.prerequisites || sys.prereqs || trait.prerequisites || [];
+  let sv = trait.sistem_verisi || {};
+  if (typeof sv === 'string') {
+    try { sv = JSON.parse(sv); } catch (e) { sv = {}; }
+  }
+  let prereqs = sv.prerequisites || sv.prereqs || trait.prerequisites || [];
   if (typeof prereqs === 'string') prereqs = [prereqs];
   else if (!Array.isArray(prereqs)) prereqs = [];
 
@@ -52,13 +90,18 @@ export default function TraitSelectorModal({ isOpen, onClose, system, character,
 
   useEffect(() => {
     if (isOpen) {
+      setLoading(true);
       const sys = (system || 'pf1e').toLowerCase();
       axios.get(`/api/rules/${sys}/traits`)
         .then(res => {
-          setAllTraits(res.data);
+          setAllTraits(res.data || []);
           setLoading(false);
         })
-        .catch(() => setLoading(false));
+        .catch(err => {
+          console.error('Traits fetch error:', err);
+          setAllTraits([]);
+          setLoading(false);
+        });
     }
   }, [isOpen, system]);
 
@@ -67,10 +110,10 @@ export default function TraitSelectorModal({ isOpen, onClose, system, character,
   const categories = ['All', ...Object.keys(CATEGORY_CONFIG)];
 
   const filteredTraits = allTraits.filter(t => {
-    const cat = t.sistem_verisi?.trait_category || 'Unknown';
+    const cat = getTraitCategory(t);
     const matchCat = activeCategory === 'All' || cat === activeCategory;
-    const q = searchQuery.toLowerCase();
-    const matchQ = !q || t.isim.toLowerCase().includes(q) || (t.aciklama || '').toLowerCase().includes(q);
+    const q = searchQuery.toLowerCase().trim();
+    const matchQ = !q || (t.isim || t.name || '').toLowerCase().includes(q) || (t.aciklama || t.description || '').toLowerCase().includes(q);
     return matchCat && matchQ;
   });
 
@@ -78,12 +121,14 @@ export default function TraitSelectorModal({ isOpen, onClose, system, character,
   
   const canAdd = (traitEntity) => {
     if (selectedTraits.length >= 2) return { ok: false, msg: 'Maksimum 2 trait seçebilirsiniz.' };
-    const cat = traitEntity.sistem_verisi?.trait_category || 'Unknown';
-    const sameCat = selectedTraits.find(t => (t.sistem_verisi?.trait_category || 'Unknown') === cat);
+    const cat = getTraitCategory(traitEntity);
+    const sameCat = selectedTraits.find(t => getTraitCategory(t) === cat);
     if (sameCat) return { ok: false, msg: `"${cat}" kategorisinden zaten bir trait seçtiniz. (PF1e kuralı)` };
-    if (isSelected(traitEntity.isim)) return { ok: false, msg: 'Bu trait zaten seçili.' };
+    const name = traitEntity.isim || traitEntity.name;
+    if (isSelected(name)) return { ok: false, msg: 'Bu trait zaten seçili.' };
     return { ok: true, msg: '' };
   };
+
 
   const handleSelectClick = (trait) => {
     const check = canAdd(trait);
@@ -209,6 +254,9 @@ export default function TraitSelectorModal({ isOpen, onClose, system, character,
             const cfg = CATEGORY_CONFIG[cat];
             const Icon = cfg?.icon || BookOpen;
             const isActive = activeCategory === cat;
+            const count = cat === 'All'
+              ? allTraits.length
+              : allTraits.filter(t => getTraitCategory(t) === cat).length;
 
             return (
               <button
@@ -225,7 +273,7 @@ export default function TraitSelectorModal({ isOpen, onClose, system, character,
                 }}
               >
                 {cat !== 'All' && <Icon size={14} />}
-                {cat === 'All' ? 'Tümü' : (cfg?.label?.split(' ')[0] || cat)}
+                {cat === 'All' ? `Tümü (${count})` : `${cfg?.label || cat} (${count})`}
               </button>
             );
           })}
@@ -244,9 +292,10 @@ export default function TraitSelectorModal({ isOpen, onClose, system, character,
               const traitName = trait.isim || trait.name;
               const selected = isSelected(traitName);
               const check = canAdd(trait);
-              const cat = trait.sistem_verisi?.trait_category || 'Unknown';
-              const cfg = CATEGORY_CONFIG[cat] || { color: '#8b949e' };
+              const cat = getTraitCategory(trait);
+              const cfg = CATEGORY_CONFIG[cat] || { color: '#8b949e', label: cat };
               const prereqEvaluation = evaluateTraitPrerequisites(trait, character);
+
 
               return (
                 <div
@@ -271,7 +320,7 @@ export default function TraitSelectorModal({ isOpen, onClose, system, character,
                         background: `${cfg.color}22`, color: cfg.color, border: `1px solid ${cfg.color}44`,
                         fontWeight: 'bold'
                       }}>
-                        {cat}
+                        {cfg.label || cat}
                       </span>
                       {prereqEvaluation.valid ? (
                         <span style={{ fontSize: '10px', color: '#4ec9b0' }}>✓ Uygun</span>
