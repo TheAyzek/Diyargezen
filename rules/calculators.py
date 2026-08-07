@@ -1375,9 +1375,10 @@ class PF1e_Calculator(BaseCalculator):
             w_name = w.get("name") or w.get("isim") or "Silah"
             w_name_lower = w_name.lower()
             sv_w = w.get("sistem_verisi") or {}
+            sys_w = sv_w.get("system", {}) if isinstance(sv_w.get("system"), dict) else {}
             
-            is_ranged = any(r in w_name_lower for r in ("bow", "crossbow", "sling", "dart", "javelin", "shuriken", "gun", "pistol", "rifle"))
-            is_finesseable = any(f in w_name_lower for f in ("dagger", "rapier", "shortsword", "kama", "nunchaku", "sai", "whip")) or ("light" in str(sv_w.get("weapon_type", "")).lower())
+            is_ranged = any(r in w_name_lower for r in ("bow", "crossbow", "sling", "dart", "javelin", "shuriken", "gun", "pistol", "rifle", "musket", "blunderbuss")) or ("ranged" in str(sys_w.get("weaponType", "")).lower())
+            is_finesseable = any(f in w_name_lower for f in ("dagger", "rapier", "shortsword", "kama", "nunchaku", "sai", "whip")) or ("light" in str(sys_w.get("weaponType", "")).lower())
             
             if is_ranged:
                 atk_stat_mod = mods["dexterity"]
@@ -1391,7 +1392,7 @@ class PF1e_Calculator(BaseCalculator):
             if enh_match:
                 enhancement = int(enh_match.group(1))
             else:
-                enhancement = int(sv_w.get("enhancement") or 0)
+                enhancement = int(sv_w.get("enhancement") or sys_w.get("enhancement") or 0)
                 
             wf_bonus = 1 if has_weapon_focus else 0
             pbs_atk = 1 if (is_ranged and has_point_blank) else 0
@@ -1400,12 +1401,33 @@ class PF1e_Calculator(BaseCalculator):
             total_atk = derived["bab"] + atk_stat_mod + enhancement + wf_bonus + pbs_atk
             atk_str = f"+{total_atk}" if total_atk >= 0 else str(total_atk)
             
-            base_damage = sv_w.get("damage") or "1d8"
-            if "dagger" in w_name_lower: base_damage = "1d4"
-            elif "shortsword" in w_name_lower or "scimitar" in w_name_lower or "club" in w_name_lower: base_damage = "1d6"
-            elif "greatsword" in w_name_lower or "greataxe" in w_name_lower: base_damage = "2d6"
-            
-            is_two_handed = any(t in w_name_lower for t in ("greatsword", "greataxe", "spear", "halberd", "scythe", "quarterstaff"))
+            # Base damage determination
+            base_damage = sys_w.get("damage") or sv_w.get("damage")
+            if isinstance(base_damage, dict):
+                parts = base_damage.get("parts", [])
+                base_damage = parts[0][0] if parts and isinstance(parts[0], (list, tuple)) else "1d8"
+            if not base_damage or base_damage == "-":
+                if "dagger" in w_name_lower or "knife" in w_name_lower: base_damage = "1d4"
+                elif "shortsword" in w_name_lower or "scimitar" in w_name_lower or "club" in w_name_lower or "shortbow" in w_name_lower or "kama" in w_name_lower: base_damage = "1d6"
+                elif "greatsword" in w_name_lower or "greataxe" in w_name_lower: base_damage = "2d6"
+                elif "falchion" in w_name_lower: base_damage = "2d4"
+                elif "longsword" in w_name_lower or "battleaxe" in w_name_lower or "warhammer" in w_name_lower or "longbow" in w_name_lower or "heavy crossbow" in w_name_lower: base_damage = "1d8"
+                elif "bastard" in w_name_lower or "halberd" in w_name_lower or "musket" in w_name_lower: base_damage = "1d10"
+                else: base_damage = "1d8"
+
+            # Crit Range determination
+            crit_range = sys_w.get("critRange") or sv_w.get("crit_range")
+            crit_mult = sys_w.get("critMult") or sv_w.get("crit_mult") or "x2"
+            if not crit_range:
+                if any(k in w_name_lower for k in ("rapier", "scimitar", "falchion", "kukri")): crit_range = "18-20/x2"
+                elif any(k in w_name_lower for k in ("greatsword", "longsword", "shortsword", "bastard")): crit_range = "19-20/x2"
+                elif any(k in w_name_lower for k in ("battleaxe", "greataxe", "heavy crossbow", "longbow")): crit_range = "20/x3"
+                elif any(k in w_name_lower for k in ("scythe", "pick")): crit_range = "20/x4"
+                else: crit_range = f"20/{crit_mult}"
+            elif "/" not in str(crit_range):
+                crit_range = f"{crit_range}/{crit_mult}"
+
+            is_two_handed = any(t in w_name_lower for t in ("greatsword", "greataxe", "spear", "halberd", "scythe", "quarterstaff", "falchion", "heavy crossbow", "longbow"))
             if is_two_handed and not is_ranged:
                 dmg_stat_mod = int(mods["strength"] * 1.5)
             elif is_ranged:
@@ -1414,12 +1436,14 @@ class PF1e_Calculator(BaseCalculator):
                 dmg_stat_mod = mods["strength"]
                 
             total_dmg_mod = dmg_stat_mod + enhancement + pbs_dmg
-            dmg_str = f"{base_damage} + {total_dmg_mod}" if total_dmg_mod > 0 else (f"{base_damage} - {abs(total_dmg_mod)}" if total_dmg_mod < 0 else base_damage)
+            dmg_str = f"{base_damage} + {total_dmg_mod}" if total_dmg_mod > 0 else (f"{base_damage} - {abs(total_dmg_mod)}" if total_dmg_mod < 0 else str(base_damage))
             
             w_copy = dict(w)
             w_copy["calculated_attack"] = atk_str
             w_copy["calculated_damage"] = dmg_str
-            w_copy["crit_range"] = sv_w.get("crit_range") or ("19-20/x2" if ("rapier" in w_name_lower or "scimitar" in w_name_lower) else "20/x2")
+            w_copy["crit_range"] = str(crit_range)
+            w_copy["name"] = w_name
+            w_copy["isim"] = w_name
             calculated_weapons.append(w_copy)
 
         derived["weapons"] = calculated_weapons
@@ -1783,10 +1807,14 @@ class PF1e_Calculator(BaseCalculator):
             if not isinstance(sv, dict): sv = {}
             sys_obj = sv.get("system", {}) if isinstance(sv.get("system"), dict) else {}
             
+            name = str(item.get("name") or item.get("isim") or "").lower()
             itype = str(item.get("type", sv.get("type", sys_obj.get("type", "")))).lower()
             
-            # Check for armor
-            if itype in ("armor", "equipment") or "armor" in str(item.get("name", "")).lower() or "mail" in str(item.get("name", "")).lower() or "plate" in str(item.get("name", "")).lower():
+            # Check for armor vs shield
+            is_armor_item = itype in ("armor", "equipment") or any(w in name for w in ("armor", "mail", "plate", "leather", "padded", "hide", "cuirass", "hauberk", "corset", "breastplate", "shirt"))
+            is_shield_item = "shield" in name or "buckler" in name or itype == "shield"
+
+            if is_armor_item and not is_shield_item:
                 ac_data = sv.get("armor_class") or sv.get("armorClass") or sys_obj.get("armor") or {}
                 if isinstance(ac_data, dict):
                     ab_val = ac_data.get("value") or ac_data.get("base") or 0
@@ -1799,6 +1827,21 @@ class PF1e_Calculator(BaseCalculator):
                 try: ab_val = int(ab_val)
                 except: ab_val = 0
                 
+                # Name-based fallback for PF1e Armors if ab_val is 0
+                if ab_val == 0:
+                    if "full plate" in name: ab_val, dm_val, acp_val = 9, 1, -6
+                    elif "half-plate" in name or "half plate" in name: ab_val, dm_val, acp_val = 8, 0, -7
+                    elif "splint" in name: ab_val, dm_val, acp_val = 7, 0, -7
+                    elif "banded" in name: ab_val, dm_val, acp_val = 7, 1, -6
+                    elif "chainmail" in name: ab_val, dm_val, acp_val = 6, 2, -5
+                    elif "breastplate" in name: ab_val, dm_val, acp_val = 6, 3, -4
+                    elif "scale mail" in name or "scale" in name: ab_val, dm_val, acp_val = 5, 3, -4
+                    elif "chain shirt" in name: ab_val, dm_val, acp_val = 4, 4, -2
+                    elif "hide" in name: ab_val, dm_val, acp_val = 4, 4, -3
+                    elif "studded" in name: ab_val, dm_val, acp_val = 3, 5, -1
+                    elif "leather" in name: ab_val, dm_val, acp_val = 2, 6, 0
+                    elif "padded" in name: ab_val, dm_val, acp_val = 1, 8, 0
+
                 if ab_val > 0:
                     armor_bonus = max(armor_bonus, ab_val)
                     if dm_val is not None:
@@ -1816,17 +1859,25 @@ class PF1e_Calculator(BaseCalculator):
                     acp = min(acp, acp_val)
             
             # Check for shield
-            if "shield" in str(item.get("name", "")).lower() or itype == "shield":
+            if is_shield_item:
                 sb_data = sv.get("armor_class") or sv.get("shield_bonus") or sys_obj.get("armor") or {}
                 if isinstance(sb_data, dict):
                     sb_val = sb_data.get("value") or sb_data.get("base") or 0
                 else:
                     try: sb_val = int(sb_data)
-                    except: sb_val = 2
+                    except: sb_val = 0
                 
                 try: sb_val = int(sb_val)
-                except: sb_val = 2
+                except: sb_val = 0
                 
+                # Name-based fallback for PF1e Shields if sb_val is 0
+                if sb_val == 0:
+                    if "tower" in name: sb_val, acp_val = 4, -10
+                    elif "heavy" in name: sb_val, acp_val = 2, -2
+                    elif "light" in name: sb_val, acp_val = 1, -1
+                    elif "buckler" in name: sb_val, acp_val = 1, -1
+                    else: sb_val, acp_val = 2, -2
+
                 shield_bonus = max(shield_bonus, sb_val)
                 
                 acp_val = sv.get("check_penalty") or sys_obj.get("check_penalty") or sys_obj.get("acp") or 0
