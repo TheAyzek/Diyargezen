@@ -267,12 +267,14 @@ export default function PF1eLiveSheet() {
       };
 
       const userSkills = skills || {};
-      const classSkills = recalcedData.class_data?.class_skills || [];
+      const classSkillsList = (recalcedData.class_skills_active || recalcedData.class_data?.class_skills || [])
+        .map(s => String(s).toLowerCase().trim());
 
       Object.entries(skillPdfMapping).forEach(([skillName, pdfFields]) => {
         const ranks = parseInt(userSkills[skillName]) || 0;
         const abMod = derivedMods[pdfFields.ab] || 0;
-        const isClassSkill = classSkills.includes(skillName);
+        const normSkill = skillName.toLowerCase().trim();
+        const isClassSkill = classSkillsList.some(cs => cs === normSkill || cs.includes(normSkill) || normSkill.includes(cs));
         const classSkillBonus = (isClassSkill && ranks > 0) ? 3 : 0;
         const totalBonus = ranks + abMod + classSkillBonus;
 
@@ -280,12 +282,18 @@ export default function PF1eLiveSheet() {
         setField(pdfFields.mod, abMod >= 0 ? `+${abMod}` : `${abMod}`);
         setField(pdfFields.total, totalBonus >= 0 ? `+${totalBonus}` : `${totalBonus}`);
 
-        // Class Skill Checkbox
+        // Class Skill Checkbox checking in PDF
         if (isClassSkill) {
+          const pdfCheckboxName = skillName.replace(/\(([^)]+)\)/g, '$1').trim();
           try {
-            const btnField = form.getCheckBox(skillName);
-            if (btnField) btnField.check();
-          } catch (e) {}
+            const cb = form.getCheckBox(pdfCheckboxName);
+            if (cb) cb.check();
+          } catch (e) {
+            try {
+              const cb2 = form.getCheckBox(skillName);
+              if (cb2) cb2.check();
+            } catch (err) {}
+          }
         }
       });
 

@@ -214,12 +214,74 @@ export async function exportCharacterPDF(store) {
       setField('SPELLS KNOWN', spellText);
     }
 
-    // Skills Mapping
-    if (recalcedData.skills) {
-      Object.entries(recalcedData.skills).forEach(([skillName, bonus]) => {
-        setField(skillName.toUpperCase(), formatMod(bonus));
-      });
-    }
+    // Detailed Skills Mapping & Class Skill Checkboxes
+    const skillPdfMapping = {
+      'Acrobatics': { total: 'Bonus 1', mod: 'Mod 33333', ranks: 'undefined_13', misc: 'undefined_14', ab: 'Dexterity' },
+      'Appraise': { total: 'Bonus 2', mod: 'Mod 2222', ranks: 'undefined_20', misc: 'undefined_21', ab: 'Intelligence' },
+      'Bluff': { total: 'Bonus 3', mod: 'Mod 11111111111', ranks: 'undefined_28', misc: 'undefined_29', ab: 'Charisma' },
+      'Climb': { total: 'Bonus 4', mod: 'Mod 111111', ranks: 'undefined_30', misc: 'undefined_31', ab: 'Strength' },
+      'Craft': { total: 'Bonus 5', mod: 'Int_2', ranks: 'undefined_32', misc: 'undefined_33', ab: 'Intelligence' },
+      'Diplomacy': { total: 'Bonus 8', mod: 'Cha_2', ranks: 'undefined_38', misc: 'undefined_39', ab: 'Charisma' },
+      'Disable Device': { total: 'Bonus 9', mod: 'Dex_2', ranks: 'undefined_55', misc: 'undefined_56', ab: 'Dexterity' },
+      'Disguise': { total: 'Bonus 10', mod: 'Cha_3', ranks: 'undefined_57', misc: 'undefined_58', ab: 'Charisma' },
+      'Escape Artist': { total: 'Bonus 11', mod: 'Dex_3', ranks: 'undefined_59', misc: 'undefined_60', ab: 'Dexterity' },
+      'Fly': { total: 'Bonus 12', mod: 'Dex_4', ranks: 'undefined_61', misc: 'undefined_62', ab: 'Dexterity' },
+      'Handle Animal': { total: 'Bonus 13', mod: 'Cha_4', ranks: 'undefined_63', misc: 'undefined_64', ab: 'Charisma' },
+      'Heal': { total: 'Bonus 14', mod: 'Mod100000', ranks: 'undefined_65', misc: 'undefined_66', ab: 'Wisdom' },
+      'Intimidate': { total: 'Bonus 15', mod: 'Cha_5', ranks: 'undefined_67', misc: 'undefined_68', ab: 'Charisma' },
+      'Knowledge (arcana)': { total: 'Bonus 16', mod: 'Int_5', ranks: 'undefined_72', misc: 'undefined_73', ab: 'Intelligence' },
+      'Knowledge (dungeoneering)': { total: 'Bonus 17', mod: 'Int_6', ranks: 'undefined_74', misc: 'undefined_75', ab: 'Intelligence' },
+      'Knowledge (engineering)': { total: 'Bonus 18', mod: 'Int_7', ranks: 'undefined_76', misc: 'undefined_77', ab: 'Intelligence' },
+      'Knowledge (geography)': { total: 'Bonus 19', mod: 'Int_8', ranks: 'undefined_82', misc: 'undefined_83', ab: 'Intelligence' },
+      'Knowledge (history)': { total: 'Bonus 20', mod: 'Int_9', ranks: 'undefined_84', misc: 'undefined_85', ab: 'Intelligence' },
+      'Knowledge (local)': { total: 'Bonus 21', mod: 'Int_10', ranks: 'undefined_86', misc: 'undefined_87', ab: 'Intelligence' },
+      'Knowledge (nature)': { total: 'Bonus 22', mod: 'Int_11', ranks: 'undefined_88', misc: 'undefined_89', ab: 'Intelligence' },
+      'Knowledge (nobility)': { total: 'Bonus 23', mod: 'Int_12', ranks: 'undefined_90', misc: 'undefined_91', ab: 'Intelligence' },
+      'Knowledge (planes)': { total: 'Bonus 24', mod: 'Int_13', ranks: 'undefined_92', misc: 'undefined_93', ab: 'Intelligence' },
+      'Knowledge (religion)': { total: 'Bonus 25', mod: 'Int_14', ranks: 'undefined_94', misc: 'undefined_95', ab: 'Intelligence' },
+      'Linguistics': { total: 'Bonus 26', mod: 'Int_15', ranks: 'undefined_96', misc: 'undefined_97', ab: 'Intelligence' },
+      'Perception': { total: 'Bonus 27', mod: 'Wis_2', ranks: 'undefined_98', misc: 'undefined_99', ab: 'Wisdom' },
+      'Perform': { total: 'Bonus 28', mod: 'Cha_6', ranks: 'undefined_100', misc: 'undefined_101', ab: 'Charisma' },
+      'Profession': { total: 'Bonus 30', mod: 'Wis_3', ranks: 'undefined_104', misc: 'undefined_105', ab: 'Wisdom' },
+      'Ride': { total: 'Bonus 32', mod: 'Dex_5', ranks: 'undefined_108', misc: 'undefined_109', ab: 'Dexterity' },
+      'Sense Motive': { total: 'Bonus 33', mod: 'Wis_5', ranks: 'undefined_110', misc: 'undefined_111', ab: 'Wisdom' },
+      'Sleight of Hand': { total: 'Bonus 34', mod: 'Dex_6', ranks: 'undefined_112', misc: 'undefined_113', ab: 'Dexterity' },
+      'Spellcraft': { total: 'Bonus 35', mod: 'Int_16', ranks: 'undefined_114', misc: 'undefined_115', ab: 'Intelligence' },
+      'Stealth': { total: 'Bonus 36', mod: 'Dex_7', ranks: 'undefined_116', misc: 'undefined_117', ab: 'Dexterity' },
+      'Survival': { total: 'Bonus 37', mod: 'Wis_6', ranks: 'undefined_118', misc: 'undefined_119', ab: 'Wisdom' },
+      'Swim': { total: 'Bonus 38', mod: 'Str_2', ranks: 'undefined_120', misc: 'undefined_121', ab: 'Strength' },
+      'Use Magic Device': { total: 'Bonus 39', mod: 'Cha_8', ranks: 'undefined_122', misc: 'undefined_123', ab: 'Charisma' }
+    };
+
+    const userSkills = store.skills || {};
+    const classSkillsList = (recalcedData.class_skills_active || recalcedData.class_data?.class_skills || [])
+      .map(s => String(s).toLowerCase().trim());
+
+    Object.entries(skillPdfMapping).forEach(([skillName, pdfFields]) => {
+      const ranks = parseInt(userSkills[skillName]) || 0;
+      const abMod = derivedMods[pdfFields.ab] || 0;
+      const normSkill = skillName.toLowerCase().trim();
+      const isClassSkill = classSkillsList.some(cs => cs === normSkill || cs.includes(normSkill) || normSkill.includes(cs));
+      const classSkillBonus = (isClassSkill && ranks > 0) ? 3 : 0;
+      const totalBonus = ranks + abMod + classSkillBonus;
+
+      setField(pdfFields.ranks, ranks > 0 ? ranks : '');
+      setField(pdfFields.mod, abMod >= 0 ? `+${abMod}` : `${abMod}`);
+      setField(pdfFields.total, totalBonus >= 0 ? `+${totalBonus}` : `${totalBonus}`);
+
+      if (isClassSkill) {
+        const pdfCheckboxName = skillName.replace(/\(([^)]+)\)/g, '$1').trim();
+        try {
+          const cb = form.getCheckBox(pdfCheckboxName);
+          if (cb) cb.check();
+        } catch (e) {
+          try {
+            const cb2 = form.getCheckBox(skillName);
+            if (cb2) cb2.check();
+          } catch (err) {}
+        }
+      }
+    });
 
     // Phase 3: Appearance Stream Updates & Save
     try {
