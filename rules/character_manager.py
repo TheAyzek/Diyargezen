@@ -425,9 +425,13 @@ class CharacterManager:
                             continue
 
                     # Class filter
-                    if caster_class and isinstance(levels_by_class, dict) and levels_by_class:
-                        if not any(cname.lower() == caster_class.lower() for cname in levels_by_class.keys()):
-                            continue
+                    if caster_class:
+                        if isinstance(levels_by_class, dict) and len(levels_by_class) > 0:
+                            if not any(cname.lower() == caster_class.lower() for cname in levels_by_class.keys()):
+                                continue
+                        elif isinstance(levels_by_class, str) and levels_by_class:
+                            if caster_class.lower() not in levels_by_class.lower():
+                                continue
 
                     # School filter
                     if school and school.lower() not in spell_school:
@@ -440,41 +444,46 @@ class CharacterManager:
                 except Exception:
                     continue
 
-            # Fallback/supplement from dedicated spells table if needed
-            if len(results) < 50:
-                seen_names = {e.isim.lower() for e in results}
-                sp_sql = "SELECT isim, sistem, seviye, siniflar, aciklama FROM spells WHERE (sistem = ? OR sistem = 'pf1e')"
-                sp_params = [sys_norm]
-                if query:
-                    sp_sql += " AND isim LIKE ?"
-                    sp_params.append(f"%{query}%")
-                if level is not None:
-                    sp_sql += " AND seviye = ?"
-                    sp_params.append(level)
-                sp_sql += " ORDER BY isim COLLATE NOCASE ASC"
+            # Supplement from dedicated spells table for maximum completeness
+            seen_names = {e.isim.lower() for e in results}
+            sp_sql = "SELECT isim, sistem, seviye, siniflar, aciklama FROM spells WHERE 1=1"
+            sp_params = []
+            if query:
+                sp_sql += " AND isim LIKE ?"
+                sp_params.append(f"%{query}%")
+            if level is not None:
+                sp_sql += " AND seviye = ?"
+                sp_params.append(level)
+            sp_sql += " ORDER BY isim COLLATE NOCASE ASC"
 
-                conn = sqlite3.connect(str(self.db_path))
-                cursor = conn.cursor()
-                cursor.execute(sp_sql, sp_params)
-                for r_name, r_sys, r_lvl, r_classes, r_desc in cursor.fetchall():
-                    if r_name.lower() not in seen_names:
-                        seen_names.add(r_name.lower())
-                        try:
-                            classes_dict = json.loads(r_classes) if r_classes and r_classes.startswith("{") else {}
-                        except Exception:
-                            classes_dict = {}
-                        
-                        if caster_class and classes_dict and not any(c.lower() == caster_class.lower() for c in classes_dict.keys()):
-                            continue
+            conn = sqlite3.connect(str(self.db_path))
+            cursor = conn.cursor()
+            cursor.execute(sp_sql, sp_params)
+            for r_name, r_sys, r_lvl, r_classes, r_desc in cursor.fetchall():
+                if r_name.lower() not in seen_names:
+                    seen_names.add(r_name.lower())
+                    classes_dict = {}
+                    if r_classes:
+                        if r_classes.startswith("{"):
+                            try:
+                                classes_dict = json.loads(r_classes)
+                            except Exception:
+                                classes_dict = {}
+                        else:
+                            parts = [p.strip() for p in r_classes.split(",") if p.strip()]
+                            classes_dict = {p: r_lvl for p in parts}
+                    
+                    if caster_class and classes_dict and not any(c.lower() == caster_class.lower() for c in classes_dict.keys()):
+                        continue
 
-                        results.append(DiyargezenEntity(
-                            isim=r_name,
-                            sistem=r_sys,
-                            kategori="spell",
-                            aciklama=r_desc or "",
-                            sistem_verisi={"level": r_lvl, "levels_by_class": classes_dict}
-                        ))
-                conn.close()
+                    results.append(DiyargezenEntity(
+                        isim=r_name,
+                        sistem=r_sys,
+                        kategori="spell",
+                        aciklama=r_desc or "",
+                        sistem_verisi={"level": r_lvl, "levels_by_class": classes_dict}
+                    ))
+            conn.close()
         except Exception:
             pass
         return results
