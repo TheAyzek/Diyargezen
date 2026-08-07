@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { Lock, User, UserPlus, LogIn, AlertCircle } from 'lucide-react';
 
-export default function Auth({ onLoginSuccess }) {
+export default function Auth({ onLoginSuccess, onGuestContinue }) {
   const [isLogin, setIsLogin] = useState(true);
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -292,6 +292,48 @@ export default function Auth({ onLoginSuccess }) {
                 Giriş Yapın
               </button>
             </>
+          )}
+
+          {onGuestContinue && (
+            <div style={{
+              marginTop: '20px',
+              paddingTop: '16px',
+              borderTop: '1px solid rgba(201, 168, 76, 0.15)',
+              textAlign: 'center'
+            }}>
+              <button
+                type="button"
+                onClick={onGuestContinue}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  border: '1px solid rgba(201, 168, 76, 0.35)',
+                  borderRadius: '8px',
+                  color: '#d4c5a9',
+                  fontSize: '0.85rem',
+                  padding: '10px 16px',
+                  cursor: 'pointer',
+                  width: '100%',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: '8px',
+                  fontWeight: 'bold',
+                  transition: 'all 0.2s ease'
+                }}
+                onMouseOver={(e) => {
+                  e.currentTarget.style.background = 'rgba(201, 168, 76, 0.12)';
+                  e.currentTarget.style.color = '#f0e6d2';
+                  e.currentTarget.style.borderColor = 'rgba(201, 168, 76, 0.6)';
+                }}
+                onMouseOut={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)';
+                  e.currentTarget.style.color = '#d4c5a9';
+                  e.currentTarget.style.borderColor = 'rgba(201, 168, 76, 0.35)';
+                }}
+              >
+                ✨ Üyeliksiz / Misafir Olarak Devam Et →
+              </button>
+            </div>
           )}
         </div>
       </div>

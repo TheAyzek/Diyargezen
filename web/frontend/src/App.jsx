@@ -12,8 +12,12 @@ import { useCharacterStore } from './store/characterStore';
 import { exportCharacterPDF } from './utils/pdfExportUtil';
 
 export default function App() {
-  const [token, setToken] = useState(localStorage.getItem('token') || 'offline-guest-token');
-  const [username, setUsername] = useState(localStorage.getItem('username') || 'Yerel Gezgin');
+  const initialToken = localStorage.getItem('token');
+  const initialGuest = localStorage.getItem('isGuest') === 'true';
+
+  const [token, setToken] = useState(initialToken || (initialGuest ? 'offline-guest-token' : ''));
+  const [username, setUsername] = useState(localStorage.getItem('username') || (initialGuest ? 'Yerel Gezgin' : ''));
+  const [isGuest, setIsGuest] = useState(initialGuest);
   const [view, setView] = useState('dashboard'); // 'dashboard', 'select-system', 'edit-character', 'rules-compendium'
   const [selectedCharacter, setSelectedCharacter] = useState(null);
   const [selectedSystem, setSelectedSystem] = useState('pf1e');
@@ -44,14 +48,30 @@ export default function App() {
   const handleLoginSuccess = (newToken, newUser) => {
     setToken(newToken);
     setUsername(newUser);
+    setIsGuest(false);
+    localStorage.setItem('token', newToken);
+    localStorage.setItem('username', newUser);
+    localStorage.removeItem('isGuest');
+    setView('dashboard');
+  };
+
+  const handleGuestContinue = () => {
+    setToken('offline-guest-token');
+    setUsername('Yerel Gezgin');
+    setIsGuest(true);
+    localStorage.setItem('isGuest', 'true');
+    localStorage.removeItem('token');
+    localStorage.removeItem('username');
     setView('dashboard');
   };
 
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('username');
-    setToken('offline-guest-token');
-    setUsername('Yerel Gezgin');
+    localStorage.removeItem('isGuest');
+    setToken('');
+    setUsername('');
+    setIsGuest(false);
     setView('dashboard');
   };
 
@@ -105,7 +125,7 @@ export default function App() {
     );
   };
 
-  if (!token) {
+  if (!token && !isGuest) {
     return (
       <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', background: 'var(--void)' }}>
         <header className="app-header" style={{ background: 'rgba(7,6,15,0.95)', borderBottom: '1px solid var(--border-gold)' }}>
@@ -118,7 +138,7 @@ export default function App() {
           </div>
         </header>
         <main className="main-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 1 }}>
-          <Auth onLoginSuccess={handleLoginSuccess} />
+          <Auth onLoginSuccess={handleLoginSuccess} onGuestContinue={handleGuestContinue} />
         </main>
       </div>
     );
