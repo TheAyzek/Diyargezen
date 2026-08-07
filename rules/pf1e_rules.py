@@ -141,5 +141,26 @@ class PF1EValidator(BaseValidator):
                     warnings.append(f"PF1e kurallarına göre aynı kategoriden ({cat.title()}) birden fazla trait seçilemez.")
                 seen_trait_categories.add(cat)
 
+        # Rule 6: Alternate Racial Traits Replacement Conflict Check
+        selected_racial_traits = character.get("selected_racial_traits", []) or character.get("selectedRacialTraits", [])
+        race_data = character.get("race_data", {})
+        sv = race_data.get("sistem_verisi", {}) if isinstance(race_data, dict) else {}
+        alt_traits = sv.get("alternate_traits", []) if isinstance(sv, dict) else []
+
+        if selected_racial_traits and isinstance(alt_traits, list):
+            replaced_map: Dict[str, str] = {}
+            for sel_name in selected_racial_traits:
+                sel_obj = next((t for t in alt_traits if isinstance(t, dict) and t.get("name") == sel_name), None)
+                if sel_obj and isinstance(sel_obj.get("replaces"), list):
+                    for rep in sel_obj["replaces"]:
+                        rep_norm = str(rep).lower().strip()
+                        if rep_norm in replaced_map:
+                            prev_trait = replaced_map[rep_norm]
+                            warnings.append(
+                                f"Alternatif ırksal özellik çakışması: '{sel_name}' ve '{prev_trait}' her ikisi de '{rep}' varsayılan özelliğinin yerini alamaz."
+                            )
+                        else:
+                            replaced_map[rep_norm] = sel_name
+
         return warnings
 

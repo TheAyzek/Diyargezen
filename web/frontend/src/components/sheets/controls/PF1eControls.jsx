@@ -109,9 +109,8 @@ export default function PF1eControls() {
     JSON.stringify(raceData.sistem_verisi || {}).toLowerCase().includes('any');
 
   const svData = raceData.sistem_verisi || raceData || {};
-  const rawRacialTraits = svData.alternate_traits || svData.traits ||
-    (svData.traits_detailed ? Object.keys(svData.traits_detailed) : []);
-  const availableRacialTraits = Array.isArray(rawRacialTraits) ? rawRacialTraits : [];
+  const rawRacialTraits = Array.isArray(svData.alternate_traits) ? svData.alternate_traits : [];
+  const availableRacialTraits = rawRacialTraits;
 
   const [modalOpen, setModalOpen] = useState(false);
   const [modalCategory, setModalCategory] = useState('races');
@@ -439,14 +438,16 @@ export default function PF1eControls() {
               </div>
             )}
 
-            {/* Optional Racial Traits */}
+            {/* Optional Alternate Racial Traits */}
             {race && availableRacialTraits.length > 0 && (() => {
               const currentlyReplaced = new Map();
               availableRacialTraits.forEach(item => {
                 const name = typeof item === 'string' ? item : item?.name;
                 if (selectedRacialTraits.includes(name)) {
                   const replaces = Array.isArray(item?.replaces) ? item.replaces : [];
-                  replaces.forEach(r => currentlyReplaced.set(r, name));
+                  replaces.forEach(r => {
+                    if (r) currentlyReplaced.set(r.toLowerCase().trim(), { traitName: name, origReplaced: r });
+                  });
                 }
               });
 
@@ -462,8 +463,10 @@ export default function PF1eControls() {
                       let conflictingWith = null;
                       if (!isChecked && replaces.length > 0) {
                         for (const r of replaces) {
-                          if (currentlyReplaced.has(r)) {
-                            conflictingWith = { replacedTrait: r, chosenTrait: currentlyReplaced.get(r) };
+                          const rNorm = (r || '').toLowerCase().trim();
+                          if (currentlyReplaced.has(rNorm)) {
+                            const found = currentlyReplaced.get(rNorm);
+                            conflictingWith = { replacedTrait: found.origReplaced || r, chosenTrait: found.traitName };
                             break;
                           }
                         }
@@ -484,6 +487,7 @@ export default function PF1eControls() {
                             checked={isChecked}
                             disabled={Boolean(conflictingWith)}
                             onChange={() => {
+                              if (conflictingWith) return;
                               const res = toggleRacialTrait(tName);
                               if (res?.error) {
                                 setTraitError(res.message);

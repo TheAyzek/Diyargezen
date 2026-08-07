@@ -345,23 +345,26 @@ export const useCharacterStore = create((set, get) => ({
 
       // Check replacement conflict against currently selected alternate traits
       const sv = state.raceData?.sistem_verisi || state.raceData || {};
-      const altTraits = sv.alternate_traits || [];
-      const targetObj = Array.isArray(altTraits) ? altTraits.find(t => (typeof t === 'object' && t ? t.name : t) === traitName) : null;
+      const altTraits = Array.isArray(sv.alternate_traits) ? sv.alternate_traits : [];
+      const targetObj = altTraits.find(t => (typeof t === 'object' && t ? t.name : t) === traitName);
       const targetReplaces = (targetObj && Array.isArray(targetObj.replaces)) ? targetObj.replaces : [];
 
       if (targetReplaces.length > 0) {
         const currentlyReplaced = new Map();
         current.forEach(selName => {
-          const selObj = Array.isArray(altTraits) ? altTraits.find(t => (typeof t === 'object' && t ? t.name : t) === selName) : null;
+          const selObj = altTraits.find(t => (typeof t === 'object' && t ? t.name : t) === selName);
           if (selObj && Array.isArray(selObj.replaces)) {
-            selObj.replaces.forEach(rep => currentlyReplaced.set(rep, selName));
+            selObj.replaces.forEach(rep => {
+              if (rep) currentlyReplaced.set(rep.toLowerCase().trim(), { traitName: selName, origReplaced: rep });
+            });
           }
         });
 
         for (const rep of targetReplaces) {
-          if (currentlyReplaced.has(rep)) {
-            const conflictTrait = currentlyReplaced.get(rep);
-            traitWarning = `Alternatif özellik çakışması: '${traitName}' ve '${conflictTrait}' ikisi de '${rep}' varsayılan özelliğinin yerini alamaz.`;
+          const repNorm = (rep || '').toLowerCase().trim();
+          if (currentlyReplaced.has(repNorm)) {
+            const found = currentlyReplaced.get(repNorm);
+            traitWarning = `Alternatif özellik çakışması: '${traitName}' ve '${found.traitName}' ikisi de '${found.origReplaced}' varsayılan özelliğinin yerini alamaz.`;
             break;
           }
         }
