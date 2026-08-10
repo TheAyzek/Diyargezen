@@ -745,6 +745,237 @@ export async function exportCharacterPDF(store) {
       console.warn('PDF Export Spellbook page note:', sbErr);
     }
 
+    // Phase 2.6: Append Feats & Traits Cards Pages (Page 4 / Codex)
+    const appendFeatsAndTraitsPages = async () => {
+      const fontBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+      const fontReg = await pdfDoc.embedFont(StandardFonts.Helvetica);
+
+      const featsList = store.feats || (store.feat ? [{ isim: store.feat }] : []);
+      const traitsList = store.traits || [];
+      const racialTraitsList = store.selectedRacialTraits || [];
+
+      if (featsList.length === 0 && traitsList.length === 0 && racialTraitsList.length === 0) {
+        return;
+      }
+
+      const p1 = pdfDoc.getPages()[0];
+      const { width, height } = p1.getSize();
+
+      const createNewPage = () => {
+        const page = pdfDoc.addPage([width, height]);
+
+        page.drawRectangle({
+          x: 20,
+          y: 20,
+          width: width - 40,
+          height: height - 40,
+          borderColor: rgb(0.78, 0.65, 0.3),
+          borderWidth: 1.5
+        });
+
+        page.drawRectangle({
+          x: 25,
+          y: height - 62,
+          width: width - 50,
+          height: 38,
+          color: rgb(0.08, 0.06, 0.14),
+          borderColor: rgb(0.78, 0.65, 0.3),
+          borderWidth: 1
+        });
+
+        page.drawText(sanitizeTurkishForPDF('PATHFINDER 1E FEAT & TRAIT KARTLARI (FEAT & TRAIT CODEX)'), {
+          x: 35,
+          y: height - 42,
+          size: 12,
+          font: fontBold,
+          color: rgb(0.95, 0.82, 0.4)
+        });
+
+        const cNameStr = (store.name || recalcedData.name || 'Kahraman');
+        const classTitle = (store.class || recalcedData.class_name || 'Bilinmiyor');
+        const clLvl = store.level || recalcedData.level || 1;
+        const headerInfo = `Karakter: ${cNameStr}  |  Irk: ${store.race || '-'}  |  Sinif: ${classTitle} (Seviye ${clLvl})  |  Toplam Feat: ${featsList.length}  |  Toplam Trait: ${traitsList.length}`;
+        page.drawText(sanitizeTurkishForPDF(headerInfo), {
+          x: 35,
+          y: height - 56,
+          size: 8,
+          font: fontReg,
+          color: rgb(0.85, 0.85, 0.9)
+        });
+
+        return page;
+      };
+
+      let currentPage = createNewPage();
+      let currY = height - 80;
+
+      // Section 1: Feats
+      if (featsList.length > 0) {
+        currentPage.drawRectangle({
+          x: 25,
+          y: currY - 22,
+          width: width - 50,
+          height: 22,
+          color: rgb(0.95, 0.92, 0.85),
+          borderColor: rgb(0.78, 0.65, 0.3),
+          borderWidth: 1
+        });
+
+        currentPage.drawText(sanitizeTurkishForPDF(`HUNERLER VE YETENEKLER (FEATS) -- Toplam ${featsList.length} Feat`), {
+          x: 32,
+          y: currY - 15,
+          size: 9.5,
+          font: fontBold,
+          color: rgb(0.12, 0.08, 0.04)
+        });
+
+        currY -= 28;
+
+        for (const f of featsList) {
+          const fName = typeof f === 'object' ? (f.isim || f.name || 'Feat') : String(f);
+          const sys = typeof f === 'object' ? (f.sistem_verisi || f.system || {}) : {};
+          const fCat = typeof f === 'object' ? (sys.feat_category || sys.category || f.kategori || f.category || 'General') : 'General';
+          const prereq = sys.prerequisites || sys.prereq || sys.onkosullar || f.prerequisite || f.prereq || '-';
+          const desc = sys.description?.value || sys.description || sys.benefit || sys.fayda || f.aciklama || f.description || 'Etkili hüner yeteneği';
+
+          const cleanDesc = sanitizeTurkishForPDF(String(desc).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim()).slice(0, 160);
+          const cleanPrereq = sanitizeTurkishForPDF(String(prereq).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim()).slice(0, 60);
+
+          if (currY < 75) {
+            currentPage = createNewPage();
+            currY = height - 80;
+          }
+
+          currentPage.drawRectangle({
+            x: 25,
+            y: currY - 40,
+            width: width - 50,
+            height: 40,
+            color: rgb(0.98, 0.97, 0.95),
+            borderColor: rgb(0.85, 0.8, 0.7),
+            borderWidth: 0.8
+          });
+
+          currentPage.drawText(sanitizeTurkishForPDF(`✦ ${fName}`), {
+            x: 32,
+            y: currY - 14,
+            size: 9.5,
+            font: fontBold,
+            color: rgb(0.65, 0.45, 0.1)
+          });
+
+          const metaStr = `Kategori: [${fCat}]  |  On Kosul: ${cleanPrereq}`;
+          currentPage.drawText(sanitizeTurkishForPDF(metaStr), {
+            x: 200,
+            y: currY - 14,
+            size: 7.8,
+            font: fontReg,
+            color: rgb(0.3, 0.35, 0.4)
+          });
+
+          currentPage.drawText(sanitizeTurkishForPDF(`Fayda: ${cleanDesc}${cleanDesc.length >= 160 ? '...' : ''}`), {
+            x: 32,
+            y: currY - 30,
+            size: 8,
+            font: fontReg,
+            color: rgb(0.15, 0.15, 0.2)
+          });
+
+          currY -= 46;
+        }
+        currY -= 10;
+      }
+
+      // Section 2: Traits
+      if (traitsList.length > 0 || racialTraitsList.length > 0) {
+        if (currY < 90) {
+          currentPage = createNewPage();
+          currY = height - 80;
+        }
+
+        currentPage.drawRectangle({
+          x: 25,
+          y: currY - 22,
+          width: width - 50,
+          height: 22,
+          color: rgb(0.92, 0.94, 0.98),
+          borderColor: rgb(0.4, 0.55, 0.75),
+          borderWidth: 1
+        });
+
+        currentPage.drawText(sanitizeTurkishForPDF(`KARAKTER VE SOY OZELLIKLERI (TRAITS) -- Toplam ${traitsList.length + racialTraitsList.length} Trait`), {
+          x: 32,
+          y: currY - 15,
+          size: 9.5,
+          font: fontBold,
+          color: rgb(0.08, 0.15, 0.3)
+        });
+
+        currY -= 28;
+
+        const allTraits = [
+          ...traitsList.map(t => ({ ...t, isRacial: false })),
+          ...racialTraitsList.map(rt => (typeof rt === 'object' ? { ...rt, isRacial: true } : { isim: String(rt), isRacial: true }))
+        ];
+
+        for (const t of allTraits) {
+          const tName = typeof t === 'object' ? (t.isim || t.name || 'Trait') : String(t);
+          const sys = typeof t === 'object' ? (t.sistem_verisi || t.system || {}) : {};
+          const tCat = t.isRacial ? 'Racial Trait' : (sys.trait_category || sys.category || t.kategori || t.category || 'Character Trait');
+          const desc = sys.description?.value || sys.description || sys.aciklama || t.aciklama || t.description || 'Trait etkisi aktif';
+
+          const cleanDesc = sanitizeTurkishForPDF(String(desc).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim()).slice(0, 160);
+
+          if (currY < 70) {
+            currentPage = createNewPage();
+            currY = height - 80;
+          }
+
+          currentPage.drawRectangle({
+            x: 25,
+            y: currY - 36,
+            width: width - 50,
+            height: 36,
+            color: rgb(0.96, 0.97, 0.99),
+            borderColor: rgb(0.7, 0.78, 0.88),
+            borderWidth: 0.8
+          });
+
+          currentPage.drawText(sanitizeTurkishForPDF(`🛡 ${tName}`), {
+            x: 32,
+            y: currY - 13,
+            size: 9,
+            font: fontBold,
+            color: rgb(0.15, 0.35, 0.6)
+          });
+
+          currentPage.drawText(sanitizeTurkishForPDF(`[${tCat}]`), {
+            x: 200,
+            y: currY - 13,
+            size: 7.8,
+            font: fontReg,
+            color: rgb(0.3, 0.4, 0.55)
+          });
+
+          currentPage.drawText(sanitizeTurkishForPDF(`Aciklama: ${cleanDesc}${cleanDesc.length >= 160 ? '...' : ''}`), {
+            x: 32,
+            y: currY - 27,
+            size: 8,
+            font: fontReg,
+            color: rgb(0.15, 0.15, 0.2)
+          });
+
+          currY -= 42;
+        }
+      }
+    };
+
+    try {
+      await appendFeatsAndTraitsPages();
+    } catch (ftErr) {
+      console.warn('PDF Export Feats & Traits pages note:', ftErr);
+    }
+
     // Phase 3: Appearance Stream Updates & Save
     try {
       form.updateFieldAppearances(font);
