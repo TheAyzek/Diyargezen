@@ -5,10 +5,10 @@ import { Search, X, ChevronDown, ChevronRight, Sparkles } from 'lucide-react';
 import { cleanText, formatTitle, toSentenceCase } from '../utils/textSanitizer';
 import { getEquipmentCategory, EQUIPMENT_CATEGORIES, MAIN_EQUIPMENT_CATEGORIES, SUB_EQUIPMENT_CATEGORIES, matchesEquipmentSubfilter } from '../utils/equipmentClassifier';
 
-export default function EntitySelectorModal({ isOpen, onClose, system, category, title, onSelect }) {
+export default function EntitySelectorModal({ isOpen, onClose, system, category, title, onSelect, initialFilter }) {
   const [entities, setEntities] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [equipmentTypeFilter, setEquipmentTypeFilter] = useState('all');
+  const [equipmentTypeFilter, setEquipmentTypeFilter] = useState(initialFilter || 'all');
   const [loading, setLoading] = useState(false);
   const [expandedClasses, setExpandedClasses] = useState({});
 
@@ -17,9 +17,10 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
       setEntities([]);
       setSearchQuery('');
       setExpandedClasses({});
+      setEquipmentTypeFilter(initialFilter || 'all');
       loadEntities();
     }
-  }, [isOpen, category, system]);
+  }, [isOpen, category, system, initialFilter]);
 
   const loadEntities = () => {
     setLoading(true);

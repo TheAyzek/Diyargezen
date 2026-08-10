@@ -230,6 +230,7 @@ export default function PF1eControls() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalCategory, setModalCategory] = useState('races');
   const [modalTitle, setModalTitle] = useState('Irk Seçin');
+  const [modalInitialFilter, setModalInitialFilter] = useState('all');
   const [traitModalOpen, setTraitModalOpen] = useState(false);
   const [traitError, setTraitError] = useState(null);
   const [featModalOpen, setFeatModalOpen] = useState(false);
@@ -265,9 +266,10 @@ export default function PF1eControls() {
     updateSkillRank(skillName, next);
   };
 
-  const handleOpenSelector = (category, title) => {
+  const handleOpenSelector = (category, title, filter = 'all') => {
     setModalCategory(category);
     setModalTitle(title);
+    setModalInitialFilter(filter);
     setModalOpen(true);
   };
 
@@ -893,7 +895,18 @@ export default function PF1eControls() {
               </div>
             </div>
 
-            <SectionHeader icon="⚔" title="Kuşanılan Silahlar & Saldırı Zarları" />
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 2 }}>
+              <div style={{ flexGrow: 1 }}>
+                <SectionHeader icon="⚔" title="Kuşanılan Silahlar & Saldırı Zarları" />
+              </div>
+              <button 
+                className="gold-btn" 
+                style={{ padding: '3px 8px', fontSize: '0.68rem', display: 'flex', alignItems: 'center', gap: 3, marginLeft: 8, flexShrink: 0 }} 
+                onClick={() => handleOpenSelector('equipment', 'Silah Kataloğundan Ekle', 'weapons')}
+              >
+                <Sword size={12} /> + Silah Ekle
+              </button>
+            </div>
             {recalcedData.weapons && recalcedData.weapons.length > 0 ? (
               <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
                 {recalcedData.weapons.map((w, idx) => (
@@ -1395,11 +1408,33 @@ export default function PF1eControls() {
               );
             })()}
 
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
-              <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.52rem', color: 'var(--gold-dim)' }}>Kategorize Envanter Listesi</span>
-              <button className="gold-btn" style={{ padding: '4px 10px' }} onClick={() => handleOpenSelector('equipment', 'Ekipman Ekle')}>
-                + Ekle
-              </button>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 10, flexWrap: 'wrap', gap: 6 }}>
+              <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.62rem', color: 'var(--gold-pale)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600 }}>
+                Kategorize Envanter Listesi
+              </span>
+              <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+                <button 
+                  className="gold-btn" 
+                  style={{ padding: '4px 9px', fontSize: '0.72rem', display: 'flex', alignItems: 'center', gap: 4, background: 'linear-gradient(135deg, rgba(201,168,76,0.2) 0%, rgba(139,94,20,0.3) 100%)', border: '1px solid rgba(201,168,76,0.4)' }} 
+                  onClick={() => handleOpenSelector('equipment', 'Silah Kataloğundan Ekle', 'weapons')}
+                >
+                  <Sword size={13} /> + Silah Ekle
+                </button>
+                <button 
+                  className="gold-btn" 
+                  style={{ padding: '4px 9px', fontSize: '0.72rem', display: 'flex', alignItems: 'center', gap: 4, background: 'linear-gradient(135deg, rgba(78,201,176,0.18) 0%, rgba(20,94,139,0.3) 100%)', border: '1px solid rgba(78,201,176,0.4)', color: '#a3e635' }} 
+                  onClick={() => handleOpenSelector('equipment', 'Zırh & Kalkan Kataloğundan Ekle', 'armor')}
+                >
+                  <Shield size={13} /> + Zırh Ekle
+                </button>
+                <button 
+                  className="gold-btn" 
+                  style={{ padding: '4px 9px', fontSize: '0.72rem', display: 'flex', alignItems: 'center', gap: 4, background: 'linear-gradient(135deg, rgba(168,85,247,0.18) 0%, rgba(100,20,139,0.3) 100%)', border: '1px solid rgba(168,85,247,0.4)', color: '#c084fc' }} 
+                  onClick={() => handleOpenSelector('equipment', 'Ekipman Kataloğundan Ekle', 'gear')}
+                >
+                  <Package size={13} /> + Ekipman Ekle
+                </button>
+              </div>
             </div>
 
             {/* Grouped Equipment Inventory */}
@@ -1407,8 +1442,8 @@ export default function PF1eControls() {
               const eqList = recalcedData.equipment || [];
               if (eqList.length === 0) {
                 return (
-                  <div style={{ fontSize: '0.8rem', color: 'var(--gold-dim)', fontStyle: 'italic', padding: '8px 0', marginBottom: 8 }}>
-                    Henüz envanterinize ekipman eklenmedi. Eşya eklemek için yukarıdaki "+ Ekle" butonunu kullanın.
+                  <div style={{ fontSize: '0.8rem', color: 'var(--gold-dim)', fontStyle: 'italic', padding: '12px 14px', marginBottom: 8, background: 'rgba(15,12,28,0.5)', border: '1px border-dashed rgba(201,168,76,0.2)', borderRadius: 6, textAlign: 'center' }}>
+                    Henüz envanterinize ekipman eklenmedi. Eşya eklemek için yukarıdaki <b style={{ color: 'var(--gold-bright)' }}>"+ Silah Ekle"</b>, <b style={{ color: '#a3e635' }}>"+ Zırh Ekle"</b> veya <b style={{ color: '#c084fc' }}>"+ Ekipman Ekle"</b> butonlarını kullanabilirsiniz.
                   </div>
                 );
               }
@@ -1732,6 +1767,7 @@ export default function PF1eControls() {
         system="pf1e"
         category={modalCategory}
         title={modalTitle}
+        initialFilter={modalInitialFilter}
         onSelect={handleSelectEntity}
       />
 
