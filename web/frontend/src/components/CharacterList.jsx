@@ -191,7 +191,6 @@ export default function CharacterList({ onSelectCharacter, onNewCharacter }) {
                         {charData.class && ` • ${charData.class}`}
                         {charData.archetype && ` (${charData.archetype})`}
                         {charData.level && ` • Seviye ${charData.level}`}
-                        {charData.pl_value && ` • PL ${charData.pl_value}`}
                       </span>
                     </div>
                   </div>

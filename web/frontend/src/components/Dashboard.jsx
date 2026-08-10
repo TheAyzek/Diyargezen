@@ -342,9 +342,9 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     {getSystemBadge(char.system)}
                     <span style={{ fontSize: '12px', color: '#8b949e' }}>
-                      {char.data.race || char.data.archetype || 'Özel Sınıf'} 
+                      {char.data.race || 'Irk Belirtilmedi'}
+                      {(char.data.class || char.data.archetype) && ` • ${char.data.class || char.data.archetype}`}
                       {char.data.level && ` • Seviye ${char.data.level}`}
-                      {char.data.pl_value && ` • PL ${char.data.pl_value}`}
                     </span>
                   </div>
                 </div>

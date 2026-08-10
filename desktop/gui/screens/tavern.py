@@ -53,8 +53,8 @@ class CharacterCard(QFrame):
 
         race = data.get("race", data.get("clan", ""))
         cls = data.get("class", data.get("archetype", ""))
-        level = data.get("level", data.get("pl_value", ""))
-        detail_text = " | ".join(filter(None, [race, cls, f"Lv {level}" if level else ""]))
+        level = data.get("level", 1)
+        detail_text = " | ".join(filter(None, [race, cls, f"Seviye {level}" if level else ""]))
         detail_lbl = QLabel(detail_text)
         detail_lbl.setStyleSheet("color: #e8dbbf; font-size: 13px;")
 
