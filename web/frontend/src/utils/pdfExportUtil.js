@@ -501,18 +501,16 @@ export async function exportCharacterPDF(store) {
       // Still attempt to save — fields will have values even without updated appearances
     }
 
-    const pdfBytes = await pdfDoc.save();
+    const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: true });
 
-    // Phase 4: Download Blob URL Creation
-    const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+    // Phase 4: Download Link Creation
     const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
+    link.href = pdfDataUri;
     const safeName = (store.name || 'Karakter').replace(/[^a-zA-Z0-9_\-]/g, '_');
     link.download = `${safeName}_PF1e_Sheet.pdf`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-    URL.revokeObjectURL(link.href);
     return true;
   } catch (error) {
     console.error('PDF Export Error:', error);

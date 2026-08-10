@@ -651,15 +651,8 @@ export default function PF1eLiveSheet() {
         // Still attempt to save — fields will have values even without updated appearances
       }
 
-      const pdfBytes = await pdfDoc.save();
-      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
-      const blobUrl = URL.createObjectURL(blob);
-      setPdfUrl((prevUrl) => {
-        if (prevUrl && prevUrl.startsWith('blob:')) {
-          URL.revokeObjectURL(prevUrl);
-        }
-        return blobUrl;
-      });
+      const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: true });
+      setPdfUrl(pdfDataUri);
 
     } catch (err) {
       console.error('pdf-lib Canlı PDF Oluşturma Hatası:', err);
