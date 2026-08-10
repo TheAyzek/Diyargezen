@@ -437,7 +437,7 @@ export default function PF1eLiveSheet() {
 
       // Pathfinder 1e Spellcasting PDF AcroForm Mapping & Calculation Engine
       const fillSpellcastingPdfFields = () => {
-        const charClass = String(charClassProp || store.class || recalcedData.class_name || '').trim().toLowerCase();
+        const charClass = String(store.class || recalcedData.class_name || '').trim().toLowerCase();
         const charLvl = parseInt(level || store.level || recalcedData.level || 1, 10);
         const derivedScores = recalcedData.ability_scores || {};
         const derivedMods = recalcedData.ability_modifiers || {};
