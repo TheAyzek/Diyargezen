@@ -132,7 +132,10 @@ function getClientRacialASI(race, raceData, racialAbilityChoice, secondaryRacial
     return res;
   }
   
-  // Check raceData.sistem_verisi.ability_score_increase first
+  const mapBonus = PF1E_RACE_ASI_MAP[canon] || PF1E_RACE_ASI_MAP[rLower];
+  if (mapBonus) return mapBonus;
+
+  // Check raceData.sistem_verisi.ability_score_increase fallback
   const sv = raceData?.sistem_verisi || {};
   if (sv.ability_score_increase && typeof sv.ability_score_increase === 'object') {
     const keys = Object.keys(sv.ability_score_increase).filter(k => k !== 'any');
@@ -144,8 +147,8 @@ function getClientRacialASI(race, raceData, racialAbilityChoice, secondaryRacial
       return result;
     }
   }
-  
-  return PF1E_RACE_ASI_MAP[canon] || {};
+
+  return {};
 }
 
 export default function PF1eControls() {
@@ -622,9 +625,11 @@ export default function PF1eControls() {
                       "yaddithian": { constitution: 2, intelligence: 2, wisdom: -2 }
                     };
 
-                    let asiObj = (sv.ability_score_increase && typeof sv.ability_score_increase === 'object' && Object.keys(sv.ability_score_increase).length > 0)
-                      ? sv.ability_score_increase
-                      : (PF1E_RACE_ASI_MAP[canonRace] || PF1E_RACE_ASI_MAP[rLower] || {});
+                    let asiObj = (PF1E_RACE_ASI_MAP[canonRace] || PF1E_RACE_ASI_MAP[rLower])
+                      ? (PF1E_RACE_ASI_MAP[canonRace] || PF1E_RACE_ASI_MAP[rLower])
+                      : ((sv.ability_score_increase && typeof sv.ability_score_increase === 'object' && Object.keys(sv.ability_score_increase).length > 0)
+                        ? sv.ability_score_increase
+                        : {});
 
                     const entries = Object.entries(asiObj);
                     if (entries.length > 0) {

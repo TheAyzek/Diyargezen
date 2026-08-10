@@ -485,9 +485,11 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
               const canonName = normRace(rawName);
               const isFlexible = ['human', 'half-elf', 'half-orc', 'primitive human'].includes(canonName);
 
-              let asiObj = (sv.ability_score_increase && typeof sv.ability_score_increase === 'object' && Object.keys(sv.ability_score_increase).length > 0)
-                ? sv.ability_score_increase
-                : (PF1E_RACE_ASI_MAP[canonName] || PF1E_RACE_ASI_MAP[rawName] || {});
+              let asiObj = (PF1E_RACE_ASI_MAP[canonName] || PF1E_RACE_ASI_MAP[rawName])
+                ? (PF1E_RACE_ASI_MAP[canonName] || PF1E_RACE_ASI_MAP[rawName])
+                : ((sv.ability_score_increase && typeof sv.ability_score_increase === 'object' && Object.keys(sv.ability_score_increase).length > 0)
+                  ? sv.ability_score_increase
+                  : {});
 
               let racialBonusJsx = null;
               let hasBonus = false;
