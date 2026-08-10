@@ -644,6 +644,260 @@ export default function PF1eLiveSheet() {
         }
       }
 
+      // Phase 2.5: Append Page 3+ (Spellbook & Categorized Spell Cards) for Spellcasters
+      const appendSpellbookPages = async () => {
+        const charClass = String(store.class || recalcedData.class_name || '').trim().toLowerCase();
+        const charLvl = parseInt(level || store.level || recalcedData.level || 1, 10);
+        const derivedScores = recalcedData.ability_scores || {};
+        const derivedMods = recalcedData.ability_modifiers || {};
+
+        const classCastingAbilityMap = {
+          wizard: 'Intelligence', witch: 'Intelligence', magus: 'Intelligence', alchemist: 'Intelligence', arcanist: 'Intelligence', psychic: 'Intelligence', occultist: 'Intelligence',
+          cleric: 'Wisdom', druid: 'Wisdom', inquisitor: 'Wisdom', ranger: 'Wisdom', shaman: 'Wisdom', warpriest: 'Wisdom', hunter: 'Wisdom', spiritualist: 'Wisdom',
+          sorcerer: 'Charisma', oracle: 'Charisma', bard: 'Charisma', paladin: 'Charisma', summoner: 'Charisma', bloodrager: 'Charisma', skald: 'Charisma', medium: 'Charisma', mesmerist: 'Charisma'
+        };
+
+        const primaryAbilityName = classCastingAbilityMap[charClass];
+        const is4LvlCaster = ['paladin', 'ranger', 'bloodrager', 'medium'].includes(charClass);
+        const isSpellcaster = Boolean(primaryAbilityName) && (!is4LvlCaster || charLvl >= 4);
+
+        if (!isSpellcaster) return;
+
+        const fontBold = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+        const fontReg = await pdfDoc.embedFont(StandardFonts.Helvetica);
+
+        const keyStatMod = derivedMods[primaryAbilityName] || 0;
+        const keyStatScore = derivedScores[primaryAbilityName] || 10;
+        const feats = store.feats || recalcedData.feats || [];
+        const hasSpellFocus = feats.some(f => String(typeof f === 'string' ? f : (f.isim || f.name || '')).toLowerCase().includes('spell focus'));
+        const dcMiscBonus = hasSpellFocus ? 1 : 0;
+
+        const fullCasterSlots = {
+          1: {0: 3, 1: 1}, 2: {0: 4, 1: 2}, 3: {0: 4, 1: 2, 2: 1}, 4: {0: 4, 1: 3, 2: 2},
+          5: {0: 4, 1: 3, 2: 2, 3: 1}, 6: {0: 4, 1: 3, 2: 3, 3: 2}, 7: {0: 4, 1: 4, 2: 3, 3: 2, 4: 1},
+          8: {0: 4, 1: 4, 2: 3, 3: 3, 4: 2}, 9: {0: 4, 1: 4, 2: 4, 3: 3, 4: 2, 5: 1}, 10: {0: 4, 1: 4, 2: 4, 3: 3, 4: 3, 5: 2},
+          11: {0: 4, 1: 4, 2: 4, 3: 4, 4: 3, 5: 2, 6: 1}, 12: {0: 4, 1: 4, 2: 4, 3: 4, 4: 3, 5: 3, 6: 2},
+          13: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 3, 6: 2, 7: 1}, 14: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 3, 6: 3, 7: 2},
+          15: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 3, 7: 2, 8: 1}, 16: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 3, 7: 3, 8: 2},
+          17: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 3, 8: 2, 9: 1}, 18: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 3, 8: 3, 9: 2},
+          19: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 4, 8: 3, 9: 3}, 20: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 4, 8: 4, 9: 4}
+        };
+
+        const midCasterSlots = {
+          1: {0: 4, 1: 1}, 2: {0: 5, 1: 2}, 3: {0: 5, 1: 3}, 4: {0: 6, 1: 3, 2: 1},
+          5: {0: 6, 1: 4, 2: 2}, 6: {0: 6, 1: 4, 2: 3}, 7: {0: 6, 1: 4, 2: 3, 3: 1},
+          8: {0: 6, 1: 4, 2: 4, 3: 2}, 9: {0: 6, 1: 5, 2: 4, 3: 3}, 10: {0: 6, 1: 5, 2: 4, 3: 3, 4: 1},
+          11: {0: 6, 1: 5, 2: 5, 3: 4, 4: 2}, 12: {0: 6, 1: 5, 2: 5, 3: 4, 4: 3},
+          13: {0: 6, 1: 5, 2: 5, 3: 4, 4: 3, 5: 1}, 14: {0: 6, 1: 5, 2: 5, 3: 4, 4: 4, 5: 2},
+          15: {0: 6, 1: 5, 2: 5, 3: 5, 4: 4, 5: 3}, 16: {0: 6, 1: 5, 2: 5, 3: 5, 4: 4, 5: 3, 6: 1},
+          17: {0: 6, 1: 5, 2: 5, 3: 5, 4: 4, 5: 4, 6: 2}, 18: {0: 6, 1: 5, 2: 5, 3: 5, 4: 5, 5: 4, 6: 3},
+          19: {0: 6, 1: 5, 2: 5, 3: 5, 4: 5, 5: 5, 6: 4}, 20: {0: 6, 1: 5, 2: 5, 3: 5, 4: 5, 5: 5, 6: 5}
+        };
+
+        const cl = Math.max(1, Math.min(20, charLvl));
+        let baseSlots = {};
+        if (['wizard', 'cleric', 'druid', 'sorcerer', 'witch', 'oracle', 'arcanist', 'shaman', 'psychic'].includes(charClass)) {
+          baseSlots = fullCasterSlots[cl] || {};
+        } else if (['bard', 'magus', 'alchemist', 'inquisitor', 'summoner', 'skald', 'warpriest', 'hunter', 'mesmerist', 'occultist', 'spiritualist'].includes(charClass)) {
+          baseSlots = midCasterSlots[cl] || {};
+        } else if (is4LvlCaster) {
+          if (cl >= 4) {
+            const idx = cl - 3;
+            const raw = midCasterSlots[idx] || {};
+            Object.entries(raw).forEach(([lvl, count]) => {
+              const lNum = parseInt(lvl, 10);
+              if (lNum >= 1 && lNum <= 4) baseSlots[lNum] = count;
+            });
+          }
+        }
+
+        const userSpells = store.spells || recalcedData.spells || [];
+        const spellsByLevel = {};
+        for (let l = 0; l <= 9; l++) spellsByLevel[l] = [];
+        if (Array.isArray(userSpells)) {
+          userSpells.forEach(s => {
+            const lvl = typeof s === 'object' ? (s.level ?? s.seviye ?? 0) : 0;
+            if (spellsByLevel[lvl]) spellsByLevel[lvl].push(s);
+          });
+        }
+
+        const p1 = pdfDoc.getPages()[0];
+        const { width, height } = p1.getSize();
+
+        const createNewPage = () => {
+          const page = pdfDoc.addPage([width, height]);
+          page.drawRectangle({
+            x: 20,
+            y: 20,
+            width: width - 40,
+            height: height - 40,
+            borderColor: rgb(0.78, 0.65, 0.3),
+            borderWidth: 1.5
+          });
+
+          page.drawRectangle({
+            x: 25,
+            y: height - 62,
+            width: width - 50,
+            height: 38,
+            color: rgb(0.08, 0.06, 0.14),
+            borderColor: rgb(0.78, 0.65, 0.3),
+            borderWidth: 1
+          });
+
+          page.drawText(sanitizeTurkishForPDF('PATHFINDER 1E BUYU DEFTERI & BUYU KARTLARI (SPELLBOOK & GRIMOIRE)'), {
+            x: 35,
+            y: height - 42,
+            size: 12,
+            font: fontBold,
+            color: rgb(0.95, 0.82, 0.4)
+          });
+
+          const cNameStr = (store.name || recalcedData.name || 'Kahraman');
+          const classTitle = (store.class || recalcedData.class_name || 'Buyucu');
+          const headerInfo = `Karakter: ${cNameStr}  |  Sinif: ${classTitle} (Seviye ${cl})  |  Ana Stat: ${primaryAbilityName} (${keyStatScore} / Mod ${keyStatMod >= 0 ? '+' : ''}${keyStatMod})  |  Konsantrasyon: +${cl + keyStatMod}`;
+          page.drawText(sanitizeTurkishForPDF(headerInfo), {
+            x: 35,
+            y: height - 56,
+            size: 8,
+            font: fontReg,
+            color: rgb(0.85, 0.85, 0.9)
+          });
+
+          return page;
+        };
+
+        let currentPage = createNewPage();
+        let currY = height - 80;
+
+        for (let sLvl = 0; sLvl <= 9; sLvl++) {
+          let bonusCount = 0;
+          if (sLvl >= 1) {
+            if (keyStatScore >= 10 + sLvl && keyStatMod >= sLvl) {
+              bonusCount = Math.max(0, Math.ceil((keyStatMod - sLvl + 1) / 4));
+            }
+          }
+
+          const baseCount = baseSlots[sLvl] ?? (is4LvlCaster && sLvl === 1 && charLvl >= 4 && bonusCount > 0 ? 0 : null);
+          const spList = spellsByLevel[sLvl] || [];
+          const isAccessible = baseCount !== null || spList.length > 0;
+
+          if (!isAccessible) continue;
+
+          const totalSlots = (baseCount || 0) + bonusCount;
+          const dcValue = (keyStatScore >= 10 + sLvl) ? (10 + sLvl + keyStatMod + dcMiscBonus) : '-';
+
+          if (currY < 100) {
+            currentPage = createNewPage();
+            currY = height - 80;
+          }
+
+          currentPage.drawRectangle({
+            x: 25,
+            y: currY - 22,
+            width: width - 50,
+            height: 22,
+            color: rgb(0.95, 0.92, 0.85),
+            borderColor: rgb(0.78, 0.65, 0.3),
+            borderWidth: 1
+          });
+
+          let slotText = '';
+          if (sLvl === 0) {
+            slotText = `Gunluk Hak: ${baseCount ?? 4} Hak (Cantrip / Orison - Sinirsiz Kullanim)`;
+          } else {
+            slotText = `Gunluk Hak: ${baseCount ?? 0} Temel + ${bonusCount} Bonus = ${totalSlots} Hak/Gun`;
+          }
+
+          const headerLabel = `${sLvl}. SEVIYE BUYULER (LEVEL ${sLvl} SPELLS)  --  ${slotText}  |  Kurtarma DC: ${dcValue}`;
+          currentPage.drawText(sanitizeTurkishForPDF(headerLabel), {
+            x: 32,
+            y: currY - 15,
+            size: 9.5,
+            font: fontBold,
+            color: rgb(0.12, 0.08, 0.04)
+          });
+
+          currY -= 28;
+
+          if (spList.length === 0) {
+            if (currY < 50) {
+              currentPage = createNewPage();
+              currY = height - 80;
+            }
+            currentPage.drawText(sanitizeTurkishForPDF(`• Henuz bu seviyede eklenmis bir buyu karti bulunmuyor. (Gunluk Hak: ${totalSlots} Slot/Gun)`), {
+              x: 35,
+              y: currY - 12,
+              size: 8.5,
+              font: fontReg,
+              color: rgb(0.45, 0.45, 0.5)
+            });
+            currY -= 22;
+          } else {
+            for (const sp of spList) {
+              if (currY < 65) {
+                currentPage = createNewPage();
+                currY = height - 80;
+              }
+
+              const spName = typeof sp === 'object' ? (sp.isim || sp.name || 'Buyu') : String(sp);
+              const sys = typeof sp === 'object' ? (sp.sistem_verisi || sp.system || {}) : {};
+              const school = sys.school || sys.okul || sp.school || 'General';
+              const castTime = sys.casting_time || sys.castingTime || sp.casting_time || '1 std action';
+              const sRange = sys.range || sys.menzil || sp.range || 'Close';
+              const duration = sys.duration || sys.sure || sp.duration || 'Instantaneous';
+              const desc = sys.description?.value || sys.description || sp.aciklama || sp.description || 'Effect active';
+
+              const cleanDesc = sanitizeTurkishForPDF(String(desc).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim()).slice(0, 110);
+
+              currentPage.drawRectangle({
+                x: 25,
+                y: currY - 32,
+                width: width - 50,
+                height: 32,
+                color: rgb(0.98, 0.97, 0.95),
+                borderColor: rgb(0.85, 0.8, 0.7),
+                borderWidth: 0.8
+              });
+
+              currentPage.drawText(sanitizeTurkishForPDF(`• ${spName}`), {
+                x: 32,
+                y: currY - 12,
+                size: 9,
+                font: fontBold,
+                color: rgb(0.45, 0.2, 0.7)
+              });
+
+              const metaStr = `Okul: ${school}  |  Sure: ${castTime}  |  Menzil: ${sRange}  |  Etki Suresi: ${duration}`;
+              currentPage.drawText(sanitizeTurkishForPDF(metaStr), {
+                x: 175,
+                y: currY - 12,
+                size: 7.8,
+                font: fontReg,
+                color: rgb(0.3, 0.35, 0.4)
+              });
+
+              currentPage.drawText(sanitizeTurkishForPDF(`Etki: ${cleanDesc}...`), {
+                x: 32,
+                y: currY - 26,
+                size: 7.8,
+                font: fontReg,
+                color: rgb(0.15, 0.15, 0.2)
+              });
+
+              currY -= 36;
+            }
+          }
+          currY -= 6;
+        }
+      };
+
+      try {
+        await appendSpellbookPages();
+      } catch (sbErr) {
+        console.warn('Page 3 Spellbook generation note:', sbErr);
+      }
+
       try {
         form.updateFieldAppearances(font);
       } catch (appearanceErr) {
