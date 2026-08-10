@@ -5,6 +5,53 @@ import { Search, X, ChevronDown, ChevronRight, Sparkles } from 'lucide-react';
 import { cleanText, formatTitle, toSentenceCase } from '../utils/textSanitizer';
 import { getEquipmentCategory, EQUIPMENT_CATEGORIES, MAIN_EQUIPMENT_CATEGORIES, SUB_EQUIPMENT_CATEGORIES, matchesEquipmentSubfilter } from '../utils/equipmentClassifier';
 
+export const PF1E_ARCHETYPES_MAP = {
+  "alchemist": ["Grenadier", "Vivisectionist", "Beastmorph", "Mindchemist", "Chirurgeon", "Preservationist", "Reanimator", "Crypt Breaker", "Inspired Chemist"],
+  "antipaladin": ["Dread Knight", "Knight of the Sepulcher", "Insinuator", "Tyrant"],
+  "arcanist": ["School Savant", "Unlettered Arcanist", "White Mage", "Blood Arcanist", "Spell Specialist"],
+  "barbarian": ["Urban Barbarian", "Titan Mauler", "Invulnerable Rager", "Hurler", "Mad Dog", "Superstitious", "Savage Technologist"],
+  "barbarian (unchained)": ["Urban Barbarian", "Titan Mauler", "Invulnerable Rager", "Mad Dog", "Savage Technologist"],
+  "bard": ["Dervish Dancer", "Court Bard", "Magician", "Archaeologist", "Sound Striker", "Arcane Duelist"],
+  "bloodrager": ["Primalist", "Steelblood", "Untouchable Rager", "Crossblooded Rager"],
+  "brawler": ["Mutagenic Mauler", "Shield Champion", "Wild Child", "Snakebite Striker", "Exemplar"],
+  "cavalier": ["Gendarme", "Beast Rider", "Honor Guard", "Musketeer", "Strategist"],
+  "cleric": ["Crusader", "Evangelist", "Undead Lord", "Cloistered Cleric", "Theologian", "Merciful Healer"],
+  "druid": ["Menhir Savant", "Nature Fang", "Blight Druid", "Tempest Druid", "World Walker", "Mooncaller"],
+  "fighter": ["Weapon Master", "Armor Master", "Two-Weapon Warrior", "Dragoon", "Tower Shield Specialist", "Trench Fighter", "Mutation Warrior", "Brawler (Fighter)", "Tactician"],
+  "gunslinger": ["Musket Master", "Pistolero", "Mysterious Stranger", "Gun Tank", "Maverick"],
+  "hunter": ["Divine Hunter", "Packmaster", "Primal Companion Hunter", "Verminous Hunter"],
+  "inquisitor": ["Preacher", "Sacred Slayer", "Monster Tactician", "Infiltrator", "Spellbreaker", "Sanctified Slayer"],
+  "investigator": ["Empiricist", "Sleuth", "Mastermind", "Infiltrator Investigator", "Questioner"],
+  "kineticist": ["Elemental Annihilator", "Kinetic Knight", "Overwhelming Soul", "Blood Kineticist", "Psychokineticist"],
+  "magus": ["Bladebound", "Eldritch Scion", "Kensai", "Eldritch Archer", "Hextracker", "Staff Magus", "Myrmidarch"],
+  "medium": ["Spirit Dancer", "Fiend Keeper", "Storyteller"],
+  "mesmerist": ["Cult Master", "Vexing Daredevil", "Material Manipulator"],
+  "monk": ["Zen Archer", "Master of Many Styles", "Sohei", "Tetori", "Drunken Master", "Qinggong Monk", "Hungry Ghost Monk"],
+  "monk (unchained)": ["Zen Archer", "Master of Many Styles", "Tetori", "Qinggong Monk"],
+  "ninja": ["Shadow Hunter", "Shinobi"],
+  "occultist": ["Battle Mage", "Relic Companion", "Silkbound Puppet", "Tome Eater"],
+  "oracle": ["Dual-Cursed Oracle", "Ancient Lorekeeper", "Spirit Guide", "Black-Blooded Oracle", "Seer"],
+  "paladin": ["Divine Hunter", "Sacred Shield", "Oathbound Paladin", "Hospitaler", "Warrior of the Holy Light", "Undead Scourge"],
+  "psychic": ["Amnesiac", "Formless Adept", "Psychic Marauder"],
+  "ranger": ["Falconer", "Freebooter", "Skirmisher", "Trophy Hunter", "Guide", "Deep Walker"],
+  "rogue": ["Knife Master", "Scout", "Sniper", "Underground Chemist", "Swashbuckler (Rogue)", "Rake", "Acrobat"],
+  "rogue (unchained)": ["Knife Master", "Scout", "Sniper", "Underground Chemist", "Rake"],
+  "samurai": ["Sword Saint", "Bountiful Samurai"],
+  "shaman": ["Speaker for the Past", "Unsworn Shaman", "Witch Doctor", "Spirit Warden"],
+  "shifter": ["Elementalist Shifter", "Feyform Shifter", "Rageshaper"],
+  "skald": ["Furious Guardian", "Urban Skald", "Wyrm Singer", "Dragon Ycaller"],
+  "slayer": ["Bounty Hunter", "Executioner", "Stygian Slayer", "Anisette Slayer", "Vanguard"],
+  "sorcerer": ["Crossblooded", "Wildblooded", "Seeker (Sorcerer)", "Tattooed Sorcerer"],
+  "spiritualist": ["Ectoplasmatist", "Phantom Blade", "Priest of the Fallen"],
+  "summoner": ["Master Summoner", "Synthesist", "Broodmaster", "Wild Caller"],
+  "summoner (unchained)": ["Master Summoner", "Synthesist", "Wild Caller"],
+  "swashbuckler": ["Inspired Blade", "Musketeer", "Mysterious Avenger", "Flying Blade"],
+  "vigilante": ["Avenger", "Stalker", "Warlock", "Zealot"],
+  "warpriest": ["Champion of the Faith", "Sacred Fist", "Disenchanter", "Cult Leader"],
+  "witch": ["Hedge Witch", "Ley Line Guardian", "Stargazer", "Gravewalker", "Winter Witch"],
+  "wizard": ["Arcane Bomber", "Spellslinger", "Exploiter Wizard", "Evoker", "Necromancer", "Transmuter"]
+};
+
 export default function EntitySelectorModal({ isOpen, onClose, system, category, title, onSelect, initialFilter }) {
   const [entities, setEntities] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
@@ -66,7 +113,6 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
 
   const isClassCategory = category === 'classes' || category === 'class';
 
-  // Helper to group classes and archetypes
   const groupClasses = () => {
     const mainClasses = [];
     const archetypesMap = {};
@@ -100,6 +146,26 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
         if (!archetypesMap[parentKey]) archetypesMap[parentKey] = [];
         archetypesMap[parentKey].push(ent);
       }
+    });
+
+    // Merge static PF1E_ARCHETYPES_MAP entries for each base class
+    mainClasses.forEach(cls => {
+      const cKey = cls.isim.toLowerCase().trim();
+      const predefined = PF1E_ARCHETYPES_MAP[cKey] || [];
+      const existingMap = archetypesMap[cls.isim] || [];
+      const existingNames = new Set(existingMap.map(a => a.isim.toLowerCase()));
+
+      predefined.forEach(pName => {
+        if (!existingNames.has(pName.toLowerCase())) {
+          existingMap.push({
+            isim: pName,
+            parentClass: cls.isim,
+            archetype: pName,
+            aciklama: `${cls.isim} sınıfının ${pName} arketipi.`
+          });
+        }
+      });
+      archetypesMap[cls.isim] = existingMap;
     });
 
     return { mainClasses, archetypesMap };
@@ -372,7 +438,7 @@ export default function EntitySelectorModal({ isOpen, onClose, system, category,
                             className="btn btn-secondary"
                             style={{ padding: '4px 10px', fontSize: '11px', flexShrink: 0 }}
                             onClick={() => {
-                              onSelect(arch);
+                              onSelect({ ...cls, isim: cls.isim, archetype: arch.archetype || arch.isim });
                               onClose();
                             }}
                           >

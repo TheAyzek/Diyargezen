@@ -3,7 +3,7 @@ import { Plus, Trash, Shield, X, Award, Wand2, Sparkles, User, Activity, Sword, 
 import { useCharacterStore, computeFeatSlots } from '../../../store/characterStore';
 import { exportCharacterPDF } from '../../../utils/pdfExportUtil';
 import { exportCharacterJSON, copyCharacterJSONToClipboard } from '../../../utils/jsonExportUtil';
-import EntitySelectorModal from '../../EntitySelectorModal';
+import EntitySelectorModal, { PF1E_ARCHETYPES_MAP } from '../../EntitySelectorModal';
 import TraitSelectorModal from '../../TraitSelectorModal';
 import FeatSelectorModal from '../../FeatSelectorModal';
 import SpellSelectorModal from '../../SpellSelectorModal';
@@ -283,6 +283,11 @@ export default function PF1eControls() {
     } else if (modalCategory === 'classes') {
       updateField('class', entity.isim || entity.name);
       updateField('classData', entity);
+      if (entity.archetype) {
+        updateField('archetype', entity.archetype);
+      } else {
+        updateField('archetype', '');
+      }
     } else if (modalCategory === 'feats') {
       updateField('feat', entity.isim || entity.name);
     } else if (modalCategory === 'equipment') {
@@ -359,7 +364,7 @@ export default function PF1eControls() {
                 style={{ fontSize: '1.05rem', fontFamily: 'Cinzel, serif', letterSpacing: '0.04em', padding: '8px 12px', width: '100%' }} />
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 10 }}>
               <div>
                 <FieldLabel>Irk (Race)</FieldLabel>
                 <div style={{ display: 'flex', gap: 4 }}>
@@ -378,6 +383,21 @@ export default function PF1eControls() {
                     Seç
                   </button>
                 </div>
+              </div>
+
+              <div>
+                <FieldLabel>Arketip (Archetype)</FieldLabel>
+                <select
+                  className="rune-select"
+                  value={archetype || ''}
+                  onChange={e => updateField('archetype', e.target.value)}
+                  style={{ padding: '7px 10px', width: '100%', height: 34, fontSize: '0.85rem' }}
+                >
+                  <option value="">Standart Sınıf (Arketipsiz)</option>
+                  {(PF1E_ARCHETYPES_MAP[(charClass || '').toLowerCase().trim()] || []).map(arch => (
+                    <option key={arch} value={arch}>{arch}</option>
+                  ))}
+                </select>
               </div>
             </div>
           </div>
