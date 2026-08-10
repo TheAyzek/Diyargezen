@@ -283,6 +283,165 @@ export async function exportCharacterPDF(store) {
       }
     });
 
+    // Pathfinder 1e Spellcasting PDF AcroForm Mapping & Calculation Engine
+    const fillSpellcastingPdfFields = () => {
+      const charClass = String(store.class || recalcedData.class_name || '').trim().toLowerCase();
+      const charLvl = parseInt(store.level || recalcedData.level || 1, 10);
+      const derivedScores = recalcedData.ability_scores || {};
+      const derivedMods = recalcedData.ability_modifiers || {};
+
+      // AcroForm field name dictionary for Page 2 SPELLS Table (Levels 0 to 9)
+      const spellLevelPdfFields = [
+        { level: 0, known: 'KNOWN', dc: 'SAVE DC', perDay: '0', bonus: null },
+        { level: 1, known: 'undefined_124', dc: 'undefined_125', perDay: '1st', bonus: 'undefined_126' },
+        { level: 2, known: 'undefined_127', dc: 'undefined_128', perDay: '2nd', bonus: 'undefined_129' },
+        { level: 3, known: 'undefined_130', dc: 'undefined_131', perDay: '3rd', bonus: 'undefined_132' },
+        { level: 4, known: 'undefined_133', dc: 'undefined_134', perDay: '4th', bonus: 'undefined_135' },
+        { level: 5, known: 'undefined_136', dc: 'undefined_137', perDay: '5th', bonus: 'undefined_138' },
+        { level: 6, known: 'undefined_139', dc: 'undefined_140', perDay: '6th', bonus: 'undefined_141' },
+        { level: 7, known: 'undefined_142', dc: 'undefined_143', perDay: '7th', bonus: 'undefined_144' },
+        { level: 8, known: 'undefined_145', dc: 'undefined_146', perDay: '8th', bonus: 'undefined_147' },
+        { level: 9, known: 'undefined_148', dc: 'undefined_149', perDay: '9th', bonus: 'undefined_150' },
+      ];
+
+      // Primary casting ability lookup for PF1e spellcasting classes
+      const classCastingAbilityMap = {
+        wizard: 'Intelligence', witch: 'Intelligence', magus: 'Intelligence', alchemist: 'Intelligence', arcanist: 'Intelligence', psychic: 'Intelligence', occultist: 'Intelligence',
+        cleric: 'Wisdom', druid: 'Wisdom', inquisitor: 'Wisdom', ranger: 'Wisdom', shaman: 'Wisdom', warpriest: 'Wisdom', hunter: 'Wisdom', spiritualist: 'Wisdom',
+        sorcerer: 'Charisma', oracle: 'Charisma', bard: 'Charisma', paladin: 'Charisma', summoner: 'Charisma', bloodrager: 'Charisma', skald: 'Charisma', medium: 'Charisma', mesmerist: 'Charisma'
+      };
+
+      const primaryAbilityName = classCastingAbilityMap[charClass];
+      const is4LvlCaster = ['paladin', 'ranger', 'bloodrager', 'medium'].includes(charClass);
+      const isSpellcaster = Boolean(primaryAbilityName) && (!is4LvlCaster || charLvl >= 4);
+
+      if (!isSpellcaster) {
+        spellLevelPdfFields.forEach((row) => {
+          setField(row.known, '');
+          setField(row.dc, '');
+          setField(row.perDay, '');
+          if (row.bonus) setField(row.bonus, '');
+        });
+        setField('DOMAINSSPECIALTY SCHOOL 1', '');
+        setField('DOMAINSSPECIALTy SCHOOL 2', '');
+        return;
+      }
+
+      const keyStatMod = derivedMods[primaryAbilityName] || 0;
+      const keyStatScore = derivedScores[primaryAbilityName] || 10;
+
+      // Spell Focus feat check
+      const feats = store.feats || recalcedData.feats || [];
+      const hasSpellFocus = feats.some(f => String(typeof f === 'string' ? f : (f.isim || f.name || '')).toLowerCase().includes('spell focus'));
+      const dcMiscBonus = hasSpellFocus ? 1 : 0;
+
+      // Class base spell slots per day
+      const fullCasterSlots = {
+        1: {0: 3, 1: 1}, 2: {0: 4, 1: 2}, 3: {0: 4, 1: 2, 2: 1}, 4: {0: 4, 1: 3, 2: 2},
+        5: {0: 4, 1: 3, 2: 2, 3: 1}, 6: {0: 4, 1: 3, 2: 3, 3: 2}, 7: {0: 4, 1: 4, 2: 3, 3: 2, 4: 1},
+        8: {0: 4, 1: 4, 2: 3, 3: 3, 4: 2}, 9: {0: 4, 1: 4, 2: 4, 3: 3, 4: 2, 5: 1}, 10: {0: 4, 1: 4, 2: 4, 3: 3, 4: 3, 5: 2},
+        11: {0: 4, 1: 4, 2: 4, 3: 4, 4: 3, 5: 2, 6: 1}, 12: {0: 4, 1: 4, 2: 4, 3: 4, 4: 3, 5: 3, 6: 2},
+        13: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 3, 6: 2, 7: 1}, 14: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 3, 6: 3, 7: 2},
+        15: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 3, 7: 2, 8: 1}, 16: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 3, 7: 3, 8: 2},
+        17: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 3, 8: 2, 9: 1}, 18: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 3, 8: 3, 9: 2},
+        19: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 4, 8: 3, 9: 3}, 20: {0: 4, 1: 4, 2: 4, 3: 4, 4: 4, 5: 4, 6: 4, 7: 4, 8: 4, 9: 4}
+      };
+
+      const midCasterSlots = {
+        1: {0: 4, 1: 1}, 2: {0: 5, 1: 2}, 3: {0: 5, 1: 3}, 4: {0: 6, 1: 3, 2: 1},
+        5: {0: 6, 1: 4, 2: 2}, 6: {0: 6, 1: 4, 2: 3}, 7: {0: 6, 1: 4, 2: 3, 3: 1},
+        8: {0: 6, 1: 4, 2: 4, 3: 2}, 9: {0: 6, 1: 5, 2: 4, 3: 3}, 10: {0: 6, 1: 5, 2: 4, 3: 3, 4: 1},
+        11: {0: 6, 1: 5, 2: 5, 3: 4, 4: 2}, 12: {0: 6, 1: 5, 2: 5, 3: 4, 4: 3},
+        13: {0: 6, 1: 5, 2: 5, 3: 4, 4: 3, 5: 1}, 14: {0: 6, 1: 5, 2: 5, 3: 4, 4: 4, 5: 2},
+        15: {0: 6, 1: 5, 2: 5, 3: 5, 4: 4, 5: 3}, 16: {0: 6, 1: 5, 2: 5, 3: 5, 4: 4, 5: 3, 6: 1},
+        17: {0: 6, 1: 5, 2: 5, 3: 5, 4: 4, 5: 4, 6: 2}, 18: {0: 6, 1: 5, 2: 5, 3: 5, 4: 5, 5: 4, 6: 3},
+        19: {0: 6, 1: 5, 2: 5, 3: 5, 4: 5, 5: 5, 6: 4}, 20: {0: 6, 1: 5, 2: 5, 3: 5, 4: 5, 5: 5, 6: 5}
+      };
+
+      const cl = Math.max(1, Math.min(20, charLvl));
+      let baseSlots = {};
+      if (['wizard', 'cleric', 'druid', 'sorcerer', 'witch', 'oracle', 'arcanist', 'shaman', 'psychic'].includes(charClass)) {
+        baseSlots = fullCasterSlots[cl] || {};
+      } else if (['bard', 'magus', 'alchemist', 'inquisitor', 'summoner', 'skald', 'warpriest', 'hunter', 'mesmerist', 'occultist', 'spiritualist'].includes(charClass)) {
+        baseSlots = midCasterSlots[cl] || {};
+      } else if (is4LvlCaster) {
+        if (cl >= 4) {
+          const idx = cl - 3;
+          const raw = midCasterSlots[idx] || {};
+          Object.entries(raw).forEach(([lvl, count]) => {
+            const lNum = parseInt(lvl, 10);
+            if (lNum >= 1 && lNum <= 4) baseSlots[lNum] = count;
+          });
+        }
+      }
+
+      // User's selected spells by level count
+      const userSpells = store.spells || recalcedData.spells || [];
+      const userSpellsByLevel = {};
+      if (Array.isArray(userSpells)) {
+        userSpells.forEach(s => {
+          const sLevel = typeof s === 'object' ? (s.level ?? s.seviye ?? 0) : 0;
+          userSpellsByLevel[sLevel] = (userSpellsByLevel[sLevel] || 0) + 1;
+        });
+      }
+
+      // Fill SPELLS Table (Levels 0 to 9)
+      spellLevelPdfFields.forEach(({ level: sLvl, known: knownField, dc: dcField, perDay: perDayField, bonus: bonusField }) => {
+        // 1. Bonus Spells per Day
+        let bonusCount = 0;
+        if (sLvl >= 1) {
+          if (keyStatScore >= 10 + sLvl && keyStatMod >= sLvl) {
+            bonusCount = Math.max(0, Math.ceil((keyStatMod - sLvl + 1) / 4));
+          }
+        }
+
+        // Accessibility check
+        const baseCount = baseSlots[sLvl] ?? (is4LvlCaster && sLvl === 1 && charLvl >= 4 && bonusCount > 0 ? 0 : null);
+        const isAccessible = baseCount !== null || (userSpellsByLevel[sLvl] > 0);
+
+        if (!isAccessible) {
+          setField(knownField, '');
+          setField(dcField, '');
+          setField(perDayField, '');
+          if (bonusField) setField(bonusField, '');
+          return;
+        }
+
+        // 2. Spell Save DC: 10 + Spell Level + Key Mod + Misc Bonus
+        const dcValue = (keyStatScore >= 10 + sLvl) ? (10 + sLvl + keyStatMod + dcMiscBonus) : '';
+        setField(dcField, dcValue ? String(dcValue) : '');
+
+        // 3. Spells Per Day (Base)
+        setField(perDayField, String(baseCount ?? 0));
+
+        // 4. Bonus Spells Per Day
+        if (bonusField) {
+          setField(bonusField, bonusCount > 0 ? String(bonusCount) : '-');
+        }
+
+        // 5. Spells Known
+        let knownStr = '';
+        if (userSpellsByLevel[sLvl] > 0) {
+          knownStr = String(userSpellsByLevel[sLvl]);
+        } else if (['cleric', 'druid', 'shaman', 'warpriest'].includes(charClass)) {
+          knownStr = 'All';
+        } else if (['wizard', 'witch'].includes(charClass)) {
+          knownStr = sLvl === 0 ? 'All' : String(Math.max(2, (baseCount || 1) + 2));
+        } else {
+          knownStr = String(Math.max(1, (baseCount || 1) + 1));
+        }
+        setField(knownField, knownStr);
+      });
+
+      // Domains / Specialty School
+      const specSchool = store.specialty_school || recalcedData.specialty_school || store.domain || recalcedData.domain || '';
+      if (specSchool) {
+        setField('DOMAINSSPECIALTY SCHOOL 1', specSchool);
+      }
+    };
+
+    fillSpellcastingPdfFields();
+
     // Embed Character Portrait image over the top-left Pathfinder logo on Page 1 if available
     const portrait = store.portrait;
     if (portrait && typeof portrait === 'string') {
