@@ -36,8 +36,17 @@ export default function LevelUpWizardModal({
   const [step, setStep] = useState(1);
   const currentLevel = parseInt(character.level) || 1;
   const newLevel = currentLevel + 1;
-  const className = (character.class || 'Fighter').toLowerCase();
   
+  const [selectedClass, setSelectedClass] = useState(character.class || 'Fighter');
+  const className = (selectedClass || character.class || 'Fighter').toLowerCase();
+
+  const multiclassDict = character.multiclass || {};
+  const availableClassesList = Array.from(new Set([
+    character.class || 'Fighter',
+    ...Object.keys(multiclassDict),
+    'Fighter', 'Rogue', 'Wizard', 'Cleric', 'Barbarian', 'Bard', 'Druid', 'Monk', 'Paladin', 'Ranger', 'Sorcerer', 'Alchemist', 'Cavalier', 'Gunslinger', 'Inquisitor', 'Magus', 'Oracle', 'Witch', 'Summoner'
+  ]));
+
   // Hit Die calculation
   const hitDie = CLASS_HIT_DICE[className] || 8;
   const baseSkillRanks = CLASS_BASE_SKILLS[className] || 4;
@@ -165,7 +174,7 @@ export default function LevelUpWizardModal({
       newFeat: selectedFeat,
       abilityIncrease: grantsAbilityIncrease ? selectedAbility : null,
       fcbChoice,
-      class_name: character.class || 'Fighter',
+      class_name: selectedClass || character.class || 'Fighter',
       hp_added: hpRoll,
       favored_class_bonus: fcbChoice,
       skill_ranks: spentSkills,

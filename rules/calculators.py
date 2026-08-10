@@ -304,8 +304,8 @@ class BaseCalculator(ABC):
                     except (ValueError, TypeError):
                         pass
             
-            # Dynamic parsing for missing targets
-            parsed = RuleParser.parse_description(desc, sys_db, name, category)
+            # Dynamic parsing for missing targets (skip for equipment to avoid parsing armor stats as stat modifiers)
+            parsed = RuleParser.parse_description(desc, sys_db, name, category) if category != "equipment" else []
             for p in parsed:
                 if p["target"] not in explicit_targets:
                     active_mechanics.append(p)
@@ -417,7 +417,7 @@ class BaseCalculator(ABC):
                     })
                     explicit_targets.add(m.get("target", ""))
                 
-                parsed = RuleParser.parse_description(desc, sys_db, name, category)
+                parsed = RuleParser.parse_description(desc, sys_db, name, category) if category != "equipment" else []
                 for p in parsed:
                     if p["target"] not in explicit_targets:
                         active_mechanics.append(p)
@@ -1734,6 +1734,40 @@ class PF1e_Calculator(BaseCalculator):
                     master_level=level
                 )
             derived["companion"] = calc_comp
+
+        # ADIM 8: Variant Multiclassing (VMC) Calculation & Feature Granting
+        vmc_class = str(character.get("variant_multiclass") or character.get("vmc_class") or "").strip()
+        if vmc_class:
+            from rules.vmc_engine import PF1eVMCEngine
+            char_class = str(character.get("class", "Fighter"))
+            is_vmc_valid, vmc_err = PF1eVMCEngine.is_vmc_allowed(char_class, vmc_class)
+            sacrificed_feats = PF1eVMCEngine.get_sacrificed_feat_count(level, vmc_class)
+            granted_vmc_feats = PF1eVMCEngine.get_granted_vmc_features(vmc_class, level)
+
+            for v_feat in granted_vmc_feats:
+                target = v_feat.get("target")
+                val = v_feat.get("value", 0)
+                if target == "hp":
+                    derived["hit_points"] += val
+                elif target == "initiative":
+                    derived["initiative"] += val
+                elif target == "attack_bonus":
+                    derived["melee_attack_bonus"] += val
+                    derived["ranged_attack_bonus"] += val
+                elif target == "armor_check_penalty":
+                    derived["armor_check_penalty"] = min(0, derived.get("armor_check_penalty", 0) + val)
+                elif target and target.startswith("saving_throws."):
+                    st_key = target.split(".")[1].capitalize()
+                    if st_key in derived.get("saving_throws", {}):
+                        derived["saving_throws"][st_key] += val
+
+            derived["variant_multiclass_details"] = {
+                "vmc_class": vmc_class.title(),
+                "is_valid": is_vmc_valid,
+                "error": vmc_err,
+                "sacrificed_feat_count": sacrificed_feats,
+                "granted_features": granted_vmc_feats
+            }
 
         return derived
 

@@ -28,6 +28,18 @@ class CharacterManager:
     def __init__(self, db_path: Path):
         self.db_path = Path(db_path).resolve()
         self.active_character: Dict[str, Any] = {}
+        self._ensure_indexes()
+
+    def _ensure_indexes(self) -> None:
+        try:
+            if self.db_path.exists():
+                conn = sqlite3.connect(str(self.db_path))
+                conn.execute("CREATE INDEX IF NOT EXISTS idx_entities_sys_cat ON entities(sistem, kategori);")
+                conn.execute("CREATE INDEX IF NOT EXISTS idx_entities_sys_cat_name ON entities(sistem, kategori, isim);")
+                conn.commit()
+                conn.close()
+        except Exception:
+            pass
 
     def set_active_character(self, character: Dict[str, Any]) -> None:
         self.active_character = character

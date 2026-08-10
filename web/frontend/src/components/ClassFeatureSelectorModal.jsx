@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import { Search, X, Wand2, Shield, Zap, AlertTriangle, CheckCircle2, Award, BookOpen } from 'lucide-react';
+import { Search, X, Wand2, Shield, Zap, AlertTriangle, CheckCircle2, Award, BookOpen, Sparkles } from 'lucide-react';
+import { useDebounce } from '../utils/useDebounce';
 import { cleanText } from '../utils/textSanitizer';
 
 function evaluatePrerequisites(feature, character) {
@@ -47,24 +48,37 @@ export default function ClassFeatureSelectorModal({
   const [loading, setLoading] = useState(false);
   const [overrideModalTarget, setOverrideModalTarget] = useState(null);
 
+  const debouncedSearchQuery = useDebounce(searchQuery, 300);
+  const clientCache = useRef(new Map());
+
   useEffect(() => {
     if (isOpen) {
       fetchFeatures();
     }
-  }, [isOpen, system, characterClass, searchQuery]);
+  }, [isOpen, system, characterClass, debouncedSearchQuery]);
 
   const fetchFeatures = () => {
-    setLoading(true);
     const sys = (system || 'pf1e').toLowerCase();
     const cls = characterClass || character?.class || character?.className || '';
+    const cacheKey = `${sys}_${cls}_${debouncedSearchQuery}`;
+
+    if (clientCache.current.has(cacheKey)) {
+      setFeatures(clientCache.current.get(cacheKey));
+      setLoading(false);
+      return;
+    }
+
+    setLoading(true);
     axios.get(`/api/rules/${sys}/class-features`, {
       params: {
         class_name: cls,
-        query: searchQuery
+        query: debouncedSearchQuery
       }
     })
       .then(res => {
-        setFeatures(res.data || []);
+        const clean = res.data || [];
+        clientCache.current.set(cacheKey, clean);
+        setFeatures(clean);
         setLoading(false);
       })
       .catch(err => {

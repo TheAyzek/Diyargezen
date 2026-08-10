@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Search, X, Swords, Users, Sparkles, Hammer, Star, Shield, Award, Wand2, AlertTriangle, CheckCircle2, ShieldAlert, Music, Zap, Heart, Flame, BookOpen } from 'lucide-react';
 import { cleanText } from '../utils/textSanitizer';
+import { useDebounce } from '../utils/useDebounce';
 
 const CATEGORY_CONFIG = {
   Combat:        { icon: Swords,    color: '#e94560', label: 'Savaş (Combat)',         short: 'Savaş' },
@@ -139,6 +140,9 @@ export default function FeatSelectorModal({
   const [overrideModalTarget, setOverrideModalTarget] = useState(null);
 
 
+  const debouncedSearchQuery = useDebounce(searchQuery, 300);
+  const clientCache = useRef(new Map());
+
   useEffect(() => {
     if (isOpen && initialCategory) {
       setActiveCategory(initialCategory);
@@ -149,15 +153,23 @@ export default function FeatSelectorModal({
     if (isOpen) {
       fetchFeats();
     }
-  }, [isOpen, system, className, activeCategory, searchQuery]);
+  }, [isOpen, system, className, activeCategory, debouncedSearchQuery]);
 
   const fetchFeats = () => {
-    setLoading(true);
     const sys = (system || 'pf1e').toLowerCase();
     const activeClass = className || character?.class || character?.className || '';
+    const cacheKey = `${sys}_${activeClass}_${activeCategory}_${debouncedSearchQuery}`;
+
+    if (clientCache.current.has(cacheKey)) {
+      setFeats(clientCache.current.get(cacheKey));
+      setLoading(false);
+      return;
+    }
+
+    setLoading(true);
     axios.get(`/api/rules/${sys}/feats`, {
       params: { 
-        query: searchQuery, 
+        query: debouncedSearchQuery, 
         category: activeCategory,
         class_name: activeClass
       }
@@ -171,6 +183,7 @@ export default function FeatSelectorModal({
           const cat = String(sv.feat_category || '').toLowerCase();
           return ft !== 'classfeat' && ft !== 'classfeature' && cat !== 'classfeature';
         });
+        clientCache.current.set(cacheKey, clean);
         setFeats(clean);
         setLoading(false);
       })

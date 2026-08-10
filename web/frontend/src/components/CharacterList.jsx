@@ -209,7 +209,8 @@ export default function CharacterList({ onSelectCharacter, onNewCharacter }) {
                 <ChevronRight size={20} style={{ color: '#8b949e' }} />
               </div>
             </div>
-          ))}
+          );
+        })}
         </div>
       )}
     </div>

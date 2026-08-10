@@ -159,11 +159,14 @@ export default function PF1eControls() {
     backstory = '', personality = '', allies = '', notes = '',
     traits, feats, spells = [], usedSpellSlots = {}, preparedSpells = {},
     equipment = [], gold = 150, portrait = '', archetype = '', companion = null,
+    variant_multiclass = '', variantMulticlass: storeVmc = '', multiclass = {},
     racialAbilityChoice = 'strength', secondaryRacialAbilityChoice = 'dexterity', selectedRacialTraits = [],
     updateField, updateAbility, updateSkillRank, addEquipment, removeEquipment,
     addTrait, removeTrait, addFeat, removeFeat, addSpell, removeSpell, toggleRacialTrait, applyLevelUp,
     toggleSpellSlotUsed, setPreparedSpell, togglePreparedSpellCast, restCharacter, deductGold
   } = store;
+
+  const vmcClass = variant_multiclass || storeVmc || '';
 
   const raceData = store.raceData || store.recalcedData?.race_data || {};
   const classData = store.classData || store.recalcedData?.class_data || {};
@@ -241,7 +244,7 @@ export default function PF1eControls() {
   const [spellModalOpen, setSpellModalOpen] = useState(false);
   const [levelUpModalOpen, setLevelUpModalOpen] = useState(false);
 
-  const maxFeatSlots = computeFeatSlots(charClass, race, level);
+  const maxFeatSlots = computeFeatSlots(charClass, race, level, vmcClass);
   const costMap = { 7: -4, 8: -2, 9: -1, 10: 0, 11: 1, 12: 2, 13: 3, 14: 5, 15: 7, 16: 10, 17: 13, 18: 17 };
 
   const getRemainingPoints = () => {
@@ -528,6 +531,158 @@ export default function PF1eControls() {
         {tab === 'identity' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             <SectionHeader icon="⚜" title="Karakter Kimliği & Detayları" />
+
+            {/* Variant Multiclassing (VMC) Panel */}
+            <div style={{ background: 'rgba(124,110,247,0.08)', border: '1px solid rgba(124,110,247,0.3)', borderRadius: '4px', padding: '10px 14px', marginBottom: '4px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+                <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.55rem', letterSpacing: '0.12em', color: '#a594ff', textTransform: 'uppercase', fontWeight: 600 }}>
+                  ✨ Variant Multiclassing (VMC - Pathfinder Unchained)
+                </span>
+                <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer', fontSize: '0.75rem', color: '#e0e0e0' }}>
+                  <input
+                    type="checkbox"
+                    checked={!!vmcClass}
+                    onChange={(e) => {
+                      if (!e.target.checked) updateField('variant_multiclass', '');
+                      else updateField('variant_multiclass', 'Wizard');
+                    }}
+                    style={{ accentColor: '#7c6ef7' }}
+                  />
+                  <b style={{ color: !!vmcClass ? '#7c6ef7' : '#8888a0' }}>VMC Aktif</b>
+                </label>
+              </div>
+
+              {vmcClass ? (
+                <div>
+                  <FieldLabel>İkincil VMC Sınıfı Seçimi</FieldLabel>
+                  <select
+                    className="rune-select"
+                    value={vmcClass}
+                    onChange={e => updateField('variant_multiclass', e.target.value)}
+                  >
+                    <option value="">-- VMC Sınıfı Seçin --</option>
+                    {["Barbarian", "Bard", "Cleric", "Druid", "Fighter", "Gunslinger", "Inquisitor", "Magus", "Monk", "Oracle", "Paladin", "Ranger", "Rogue", "Sorcerer", "Wizard", "Alchemist"].map(c => (
+                      <option key={c} value={c} disabled={c.toLowerCase() === (charClass || '').toLowerCase()}>
+                        {c} {c.toLowerCase() === (charClass || '').toLowerCase() ? '(Ana Sınıfınız ile Aynı Olamaz)' : ''}
+                      </option>
+                    ))}
+                  </select>
+
+                  {recalcedData?.variant_multiclass_details && (
+                    <div style={{ marginTop: '8px', fontSize: '0.75rem', background: 'rgba(0,0,0,0.3)', padding: '8px 10px', borderRadius: '4px', border: '1px solid rgba(124,110,247,0.2)' }}>
+                      <div style={{ color: '#c9a84c', fontWeight: 'bold', marginBottom: '4px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <span>📜 VMC Kural Etkileri (3, 7, 11, 15, 19. Seviye):</span>
+                      </div>
+                      <div style={{ color: '#94a3b8' }}>
+                        • Feda Edilen Genel Feat Sayısı: <b style={{ color: '#ff6b81' }}>{recalcedData.variant_multiclass_details.sacrificed_feat_count} Feat</b>
+                      </div>
+                      {recalcedData.variant_multiclass_details.granted_features?.length > 0 && (
+                        <div style={{ marginTop: '6px' }}>
+                          <div style={{ color: '#4ec9b0', fontWeight: 'bold', marginBottom: '2px' }}>Kazanılan VMC Sınıf Yetenekleri:</div>
+                          {recalcedData.variant_multiclass_details.granted_features.map((f, i) => (
+                            <div key={i} style={{ color: '#e0e0e0', fontSize: '0.72rem', marginTop: '2px', paddingLeft: '6px', borderLeft: '2px solid #7c6ef7' }}>
+                              <b style={{ color: '#7c6ef7' }}>Lv {f.granted_at_level} - {f.name}</b>: {f.description}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <p style={{ fontSize: '0.72rem', color: '#8888a0', margin: 0, fontStyle: 'italic' }}>
+                  Opsiyonel VMC kuralı: 3, 7, 11, 15 ve 19. seviye genel feat seçimlerinden feragat ederek seçilen ikincil sınıfın özgün yeteneklerini kazandırır.
+                </p>
+              )}
+            </div>
+
+            {/* Standard Multiclassing (Çoklu Sınıf Dağılımı) UI Panel */}
+            <div style={{ background: 'rgba(56,189,248,0.06)', border: '1px solid rgba(56,189,248,0.25)', borderRadius: '4px', padding: '10px 14px', marginBottom: '6px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
+                <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.55rem', letterSpacing: '0.12em', color: '#38bdf8', textTransform: 'uppercase', fontWeight: 600 }}>
+                  ⚔️ Çoklu Sınıf Dağılımı (Multiclassing Stacking)
+                </span>
+                <span style={{ fontSize: '0.72rem', color: '#38bdf8', fontFamily: 'DM Mono, monospace', fontWeight: 'bold' }}>
+                  Mevcut BAB: +{recalcedData?.bab || 0}
+                </span>
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                {Object.entries(multiclass || {}).length > 0 ? (
+                  Object.entries(multiclass).map(([cName, cLvl]) => (
+                    <div key={cName} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'rgba(0,0,0,0.25)', padding: '6px 10px', borderRadius: '4px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <span style={{ fontWeight: 'bold', color: '#f0e6d2', fontSize: '0.8rem' }}>{cName}</span>
+                        <span style={{ fontSize: '0.7rem', color: '#8b949e', background: 'rgba(255,255,255,0.08)', padding: '1px 6px', borderRadius: '4px' }}>
+                          Seviye {cLvl}
+                        </span>
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const next = Math.max(1, (parseInt(cLvl) || 1) - 1);
+                            const updated = { ...multiclass, [cName]: next };
+                            updateField('multiclass', updated);
+                          }}
+                          className="rune-btn" style={{ padding: '2px 6px', fontSize: '0.7rem' }}>-</button>
+                        <span style={{ fontSize: '0.8rem', fontWeight: 'bold', minWidth: '18px', textAlign: 'center' }}>{cLvl}</span>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const next = (parseInt(cLvl) || 1) + 1;
+                            const updated = { ...multiclass, [cName]: next };
+                            updateField('multiclass', updated);
+                          }}
+                          className="rune-btn" style={{ padding: '2px 6px', fontSize: '0.7rem' }}>+</button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            const updated = { ...multiclass };
+                            delete updated[cName];
+                            updateField('multiclass', updated);
+                          }}
+                          style={{ background: 'none', border: 'none', color: '#f87171', cursor: 'pointer', padding: '2px 4px', fontSize: '0.8rem' }}
+                          title="Sınıfı Kaldır">✕</button>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <div style={{ fontSize: '0.75rem', color: '#8b949e' }}>
+                    Tek Sınıf ({charClass || 'Seçilmedi'} Lv {level}). İkincil sınıf eklemek için aşağıdaki menüyü kullanabilirsiniz.
+                  </div>
+                )}
+
+                {/* Add Secondary Class Controls */}
+                <div style={{ display: 'flex', gap: '6px', marginTop: '4px' }}>
+                  <select
+                    className="rune-select"
+                    style={{ flex: 1, fontSize: '0.75rem' }}
+                    id="add-multiclass-select"
+                    value=""
+                    onChange={(e) => {
+                      const newCls = e.target.value;
+                      if (!newCls) return;
+                      const current = { ...(multiclass || {}) };
+                      if (!current[charClass]) {
+                        current[charClass] = level;
+                      }
+                      if (!current[newCls]) {
+                        current[newCls] = 1;
+                      }
+                      updateField('multiclass', current);
+                    }}
+                  >
+                    <option value="">+ İkincil Sınıf Ekle (Multiclass)...</option>
+                    {["Fighter", "Rogue", "Wizard", "Cleric", "Barbarian", "Bard", "Druid", "Monk", "Paladin", "Ranger", "Sorcerer", "Alchemist", "Cavalier", "Gunslinger", "Inquisitor", "Magus", "Oracle", "Witch", "Summoner"].map(cls => (
+                      <option key={cls} value={cls} disabled={!!multiclass[cls] || cls.toLowerCase() === (charClass || '').toLowerCase()}>
+                        {cls} {cls.toLowerCase() === (charClass || '').toLowerCase() ? '(Mevcut Ana Sınıf)' : ''}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            </div>
 
             {/* Selected Race Summary & Ability Bonus Display */}
             {race && (

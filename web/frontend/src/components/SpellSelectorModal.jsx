@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import { Search, X, Wand2, BookOpen, Shield, Flame, Zap, AlertTriangle, CheckCircle2, Sparkles, Plus } from 'lucide-react';
 import { getMaxSpellLevel, getMaxSpellsAllowed } from '../utils/spellLimitCalculator';
+import { useDebounce } from '../utils/useDebounce';
 
 const SCHOOL_COLORS = {
   evocation: '#e94560',
@@ -43,6 +44,9 @@ export default function SpellSelectorModal({
   const maxAllowedSpells = Math.min(maxSpells, getMaxSpellsAllowed(characterClass || selectedClass, characterLevel));
   const isLimitReached = selectedSpells.length >= maxAllowedSpells;
 
+  const debouncedSearchQuery = useDebounce(searchQuery, 300);
+  const clientCache = useRef(new Map());
+
   useEffect(() => {
     if (isOpen) {
       if (characterClass && selectedClass === 'All') {
@@ -50,20 +54,28 @@ export default function SpellSelectorModal({
       }
       fetchSpells();
     }
-  }, [isOpen, system, activeLevel, selectedClass, selectedSchool, searchQuery]);
+  }, [isOpen, system, activeLevel, selectedClass, selectedSchool, debouncedSearchQuery]);
 
   const NON_SPELL_REGEX = /^\s*[\#\*\+]|\b(scrolls?|wands?|potions?|oils?)\b|\bspecial abilities\b|\bmagic items?\b|\bspells\s*&\s*scrolls\b|\bcommon level\b|\buncommon level\b|\bgreater major\b|\blesser minor\b|\blesser medium\b|\bgreater medium\b|\bmajor potion\b|\bmedium potion\b|\bminor potion\b/i;
 
   const fetchSpells = () => {
-    setLoading(true);
     const lvlParam = activeLevel === 'All' ? '' : activeLevel;
     const classParam = selectedClass === 'All' ? '' : selectedClass;
     const schoolParam = selectedSchool === 'All' ? '' : selectedSchool;
 
     const sys = (system || 'pf1e').toLowerCase();
+    const cacheKey = `${sys}_${lvlParam}_${classParam}_${schoolParam}_${debouncedSearchQuery}`;
+
+    if (clientCache.current.has(cacheKey)) {
+      setSpells(clientCache.current.get(cacheKey));
+      setLoading(false);
+      return;
+    }
+
+    setLoading(true);
     axios.get(`/api/rules/${sys}/spells`, {
       params: {
-        query: searchQuery,
+        query: debouncedSearchQuery,
         level: lvlParam,
         caster_class: classParam,
         school: schoolParam
@@ -75,6 +87,7 @@ export default function SpellSelectorModal({
           const name = sp.isim || sp.name || '';
           return name && !NON_SPELL_REGEX.test(name);
         });
+        clientCache.current.set(cacheKey, clean);
         setSpells(clean);
         setLoading(false);
       })

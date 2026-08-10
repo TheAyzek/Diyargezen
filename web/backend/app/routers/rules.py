@@ -73,9 +73,10 @@ def search_feats(
     system: str,
     query: str = Query("", description="Feat adı veya açıklama arama filtresi"),
     category: str = Query("", description="Feat kategorisi (Combat, Teamwork, Metamagic vb.)"),
-    class_name: str = Query("", description="Kullanıcı sınıfı filtresi (Fighter, Barbarian, Wizard vb.)")
+    class_name: str = Query("", description="Kullanıcı sınıfı filtresi (Fighter, Barbarian, Wizard vb.)"),
+    limit: Optional[int] = Query(None, description="Döndürülecek maksimum nesne sayısı")
 ):
-    feats = service.get_feats(system, query=query, category=category, class_name=class_name)
+    feats = service.get_feats(system, query=query, category=category, class_name=class_name, limit=limit)
     return [EntityResponseSchema.model_validate(f, from_attributes=True) for f in feats]
 
 @router.get(
@@ -87,9 +88,10 @@ def search_feats(
 def search_equipment(
     system: str,
     query: str = Query("", description="Eşya adı filtresi"),
-    category: str = Query("", description="Kategori filtresi (weapons, armor, gear, potions vb.)")
+    category: str = Query("", description="Kategori filtresi (weapons, armor, gear, potions vb.)"),
+    limit: Optional[int] = Query(None, description="Döndürülecek maksimum nesne sayısı")
 ):
-    items = service.get_equipment(system, query=query, category=category)
+    items = service.get_equipment(system, query=query, category=category, limit=limit)
     return [EntityResponseSchema.model_validate(i, from_attributes=True) for i in items]
 
 
@@ -104,9 +106,10 @@ def search_spells(
     query: str = Query("", description="Büyü ismi arama filtresi"),
     level: Optional[int] = Query(None, description="Büyü seviyesi filtresi (0-9)"),
     caster_class: str = Query("", description="Büyücü sınıfı (Wizard, Cleric, Sorcerer vb.)"),
-    school: str = Query("", description="Büyü okulu (Evocation, Abjuration vb.)")
+    school: str = Query("", description="Büyü okulu (Evocation, Abjuration vb.)"),
+    limit: Optional[int] = Query(None, description="Döndürülecek maksimum nesne sayısı")
 ):
-    spells = service.get_spells(system, query=query, level=level, caster_class=caster_class, school=school)
+    spells = service.get_spells(system, query=query, level=level, caster_class=caster_class, school=school, limit=limit)
     return [EntityResponseSchema.model_validate(s, from_attributes=True) for s in spells]
 
 @router.get(
@@ -125,8 +128,8 @@ def search_powers(system: str, query: str = Query("", description="Güç ismi fi
     summary="Karakter Trait (Karakter Özelliği) Arama",
     description="PF1e karakter trait'lerini kategori ve isim filtresiyle arar."
 )
-def search_traits(system: str, query: str = Query("", description="Trait ismi filtresi"), category: str = Query("", description="Trait kategorisi (Combat, Social, Magic vb.)")):
-    traits = service.get_traits(system, query, category)
+def search_traits(system: str, query: str = Query("", description="Trait ismi filtresi"), category: str = Query("", description="Trait kategorisi (Combat, Social, Magic vb.)"), limit: Optional[int] = Query(None, description="Döndürülecek maksimum nesne sayısı")):
+    traits = service.get_traits(system, query, category, limit=limit)
     return [EntityResponseSchema.model_validate(t, from_attributes=True) for t in traits]
 
 @router.get(
@@ -138,9 +141,10 @@ def search_traits(system: str, query: str = Query("", description="Trait ismi fi
 def search_class_features(
     system: str,
     class_name: str = Query("", description="Sınıf adı (Barbarian, Rogue, Witch, Alchemist vb.)"),
-    query: str = Query("", description="Yetenek ismi filtresi")
+    query: str = Query("", description="Yetenek ismi filtresi"),
+    limit: Optional[int] = Query(None, description="Döndürülecek maksimum nesne sayısı")
 ):
-    features = service.get_class_features(system, class_name=class_name, query=query)
+    features = service.get_class_features(system, class_name=class_name, query=query, limit=limit)
     return [EntityResponseSchema.model_validate(f, from_attributes=True) for f in features]
 
 @router.get(

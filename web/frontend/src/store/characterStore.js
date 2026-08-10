@@ -7,13 +7,19 @@ import axios from 'axios';
 // PF1e gives 1 feat at every odd level: 1,3,5,7,9,11,13,15,17,19
 // Plus class bonus feats at level 1 (and beyond for Fighter etc.)
 // Plus +1 if Human race
-export function computeFeatSlots(className = '', race = '', level = 1) {
+export function computeFeatSlots(className = '', race = '', level = 1, vmcClass = '') {
   const lvl = parseInt(level) || 1;
   const cls = (className || '').toLowerCase();
   const raceL = (race || '').toLowerCase();
 
   // Normal feats: 1 at level 1, then every odd level after
-  const normalFeats = Math.ceil(lvl / 2);
+  let normalFeats = Math.ceil(lvl / 2);
+
+  // Variant Multiclassing (VMC) deducts general feats at levels 3, 7, 11, 15, 19
+  if (vmcClass) {
+    const vmcDeductions = [3, 7, 11, 15, 19].filter(l => lvl >= l).length;
+    normalFeats = Math.max(1, normalFeats - vmcDeductions);
+  }
 
   // Human racial bonus feat (+1 at level 1)
   const humanBonus = raceL.includes('human') && !raceL.includes('half') ? 1 : 0;
@@ -62,6 +68,8 @@ export const useCharacterStore = create((set, get) => ({
   archetype: '',
   portrait: '',
   companion: null,
+  multiclass: {}, // e.g. {"Fighter": 3, "Rogue": 2}
+  variant_multiclass: '',
   
   // Custom defenses state for M&M
   defenses: {
@@ -655,6 +663,8 @@ export const useCharacterStore = create((set, get) => ({
       } : undefined,
       equipment: state.equipment,
       custom_modifiers: state.customModifiers,
+      multiclass: state.multiclass,
+      variant_multiclass: state.variant_multiclass || state.variantMulticlass,
       feats: (state.feats || []).map(f => f.isim || f),
       traits: (state.traits || []).map(t => ({ isim: t.isim, kategori: t.sistem_verisi?.trait_category })),
       proficient_skills: state.recalcedData.proficient_skills || [],
