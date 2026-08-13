@@ -73,14 +73,12 @@ export default function SpellSelectorModal({
     }
 
     setLoading(true);
-    axios.get(`/api/rules/${sys}/spells`, {
-      params: {
-        query: debouncedSearchQuery,
-        level: lvlParam,
-        caster_class: classParam,
-        school: schoolParam
-      }
-    })
+    const queryParams = { query: debouncedSearchQuery };
+    if (lvlParam !== '' && lvlParam !== null && lvlParam !== undefined) queryParams.level = lvlParam;
+    if (classParam) queryParams.caster_class = classParam;
+    if (schoolParam) queryParams.school = schoolParam;
+
+    axios.get(`/api/rules/${sys}/spells`, { params: queryParams })
       .then(res => {
         const raw = res.data || [];
         const clean = raw.filter(sp => {

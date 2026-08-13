@@ -393,6 +393,21 @@ export const useCharacterStore = create((set, get) => ({
 
   applyLevelUp: async (levelUpData) => {
     const state = get();
+    const existingSpells = state.spells || [];
+    const incomingSpells = levelUpData.spells_learned || levelUpData.spells || [];
+
+    const spellMap = new Map();
+    existingSpells.forEach(s => {
+      const name = typeof s === 'object' ? (s.isim || s.name) : s;
+      if (name) spellMap.set(name, s);
+    });
+    incomingSpells.forEach(s => {
+      const name = typeof s === 'object' ? (s.isim || s.name) : s;
+      if (name && !spellMap.has(name)) spellMap.set(name, s);
+    });
+
+    const mergedSpells = Array.from(spellMap.values());
+
     if (state.id) {
       const payload = {
         class_name: levelUpData.class_name || state.class || 'Fighter',
@@ -401,7 +416,8 @@ export const useCharacterStore = create((set, get) => ({
         skill_ranks: levelUpData.skill_ranks || levelUpData.skillRanksGained || {},
         feats: levelUpData.feats || (levelUpData.newFeat ? [levelUpData.newFeat.name || levelUpData.newFeat.isim || levelUpData.newFeat] : []),
         ability_increase: levelUpData.ability_increase || levelUpData.abilityIncrease || null,
-        spells_learned: levelUpData.spells_learned || []
+        spells_learned: mergedSpells,
+        spells: mergedSpells
       };
       return await get().levelUp(payload.class_name, payload);
     }
@@ -434,6 +450,7 @@ export const useCharacterStore = create((set, get) => ({
         skills: nextSkills,
         feats: nextFeats,
         abilities: nextAbilities,
+        spells: mergedSpells,
         hit_points: currentHp + (hpGained || 0) + fcbHp
       };
     });

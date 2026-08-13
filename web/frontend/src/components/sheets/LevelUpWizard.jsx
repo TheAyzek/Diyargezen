@@ -85,6 +85,15 @@ export default function LevelUpWizard({ isOpen, onClose }) {
   const [isClassFeatureModalOpen, setIsClassFeatureModalOpen] = useState(false);
   const [featModalCategory, setFeatModalCategory] = useState('All');
 
+  // Auto-carry over all previously selected spells when LevelUpWizard opens
+  useEffect(() => {
+    if (isOpen) {
+      const prevSpells = recalcedData?.spells || useCharacterStore.getState().spells || [];
+      const formattedPrevSpells = prevSpells.map(s => typeof s === 'object' ? (s.name || s.isim) : s).filter(Boolean);
+      setSpellsLearned(formattedPrevSpells);
+    }
+  }, [isOpen]);
+
 
   
   // DND5e specific states

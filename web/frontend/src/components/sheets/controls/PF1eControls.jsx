@@ -13,7 +13,7 @@ import PortraitUpload from './PortraitUpload';
 import CompanionPanel from './CompanionPanel';
 import GMModifierPanel from './GMModifierPanel';
 import RuneField from '../../common/RuneField';
-import { getEquipmentCategory, EQUIPMENT_CATEGORIES } from '../../../utils/equipmentClassifier';
+import { getEquipmentCategory, EQUIPMENT_CATEGORIES, MAIN_EQUIPMENT_CATEGORIES, isItemMagical } from '../../../utils/equipmentClassifier';
 import { cleanText } from '../../../utils/textSanitizer';
 
 
@@ -227,7 +227,7 @@ export default function PF1eControls() {
 
   const canonRace = normRace(race);
   const isFlexibleRace = ['human', 'half-elf', 'half-orc', 'primitive human'].includes(canonRace) ||
-    JSON.stringify(raceData.sistem_verisi || {}).toLowerCase().includes('any');
+    (raceData?.sistem_verisi?.ability_score_increase && typeof raceData.sistem_verisi.ability_score_increase === 'object' && !!raceData.sistem_verisi.ability_score_increase.any);
 
   const svData = raceData.sistem_verisi || raceData || {};
   const rawRacialTraits = Array.isArray(svData.alternate_traits) ? svData.alternate_traits : [];
@@ -296,8 +296,11 @@ export default function PF1eControls() {
     } else if (modalCategory === 'equipment') {
       addEquipment({
         name: entity.isim || entity.name,
-        type: entity.kategori,
-        description: entity.aciklama,
+        isim: entity.isim || entity.name,
+        type: entity.kategori || entity.type || 'equipment',
+        kategori: entity.kategori || entity.type || 'equipment',
+        description: entity.aciklama || entity.description || '',
+        aciklama: entity.aciklama || entity.description || '',
         sistem_verisi: entity.sistem_verisi || {}
       });
     }
@@ -1637,18 +1640,44 @@ export default function PF1eControls() {
 
               return (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 12 }}>
-                  {EQUIPMENT_CATEGORIES.filter(c => c.id !== 'all' && grouped[c.id]?.length > 0).map(cat => (
-                    <div key={cat.id} style={{ background: 'rgba(15,12,28,0.6)', border: '1px solid rgba(201,168,76,0.18)', borderRadius: 6, padding: '8px 10px' }}>
-                      <div style={{ fontSize: '0.72rem', fontFamily: 'Cinzel, serif', color: 'var(--gold-bright)', fontWeight: 'bold', marginBottom: 6 }}>
-                        {cat.label} ({grouped[cat.id].length})
+                  {MAIN_EQUIPMENT_CATEGORIES.filter(c => c.id !== 'all' && grouped[c.id]?.length > 0).map(cat => (
+                    <div key={cat.id} style={{
+                      background: cat.id.includes('magic') ? 'linear-gradient(135deg, rgba(124,110,247,0.15) 0%, rgba(15,12,28,0.7) 100%)' : 'rgba(15,12,28,0.6)',
+                      border: cat.id.includes('magic') ? '1px solid #7c6ef7' : '1px solid rgba(201,168,76,0.18)',
+                      borderRadius: 6, padding: '8px 10px'
+                    }}>
+                      <div style={{ fontSize: '0.75rem', fontFamily: 'Cinzel, serif', color: cat.id.includes('magic') ? '#ffd700' : 'var(--gold-bright)', fontWeight: 'bold', marginBottom: 6, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                        <span>{cat.label} ({grouped[cat.id].length})</span>
+                        {cat.id.includes('magic') && (
+                          <span style={{ fontSize: '0.62rem', background: 'rgba(255,215,0,0.15)', color: '#ffd700', border: '1px solid rgba(255,215,0,0.3)', padding: '1px 6px', borderRadius: '4px' }}>
+                            ✨ Büyülü Ekipman
+                          </span>
+                        )}
                       </div>
                       <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-                        {grouped[cat.id].map(({ item, index }) => (
-                          <div key={index} className="dark-panel" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 10px' }}>
-                            <span style={{ fontFamily: 'EB Garamond, serif', fontSize: '0.88rem', color: 'var(--gold-light)' }}>{item.name || item.isim}</span>
-                            <Trash size={13} style={{ color: '#e87070', cursor: 'pointer', opacity: 0.8 }} onClick={() => removeEquipment(index)} />
-                          </div>
-                        ))}
+                        {grouped[cat.id].map(({ item, index }) => {
+                          const isMag = isItemMagical(item);
+
+                          return (
+                            <div key={index} className="dark-panel" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 10px' }}>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                <span style={{ fontFamily: 'EB Garamond, serif', fontSize: '0.88rem', color: isMag ? '#fff' : 'var(--gold-light)', fontWeight: isMag ? 600 : 400 }}>
+                                  {item.name || item.isim}
+                                </span>
+                                {isMag ? (
+                                  <span style={{ fontSize: '0.62rem', color: '#ffd700', background: 'rgba(255,215,0,0.15)', border: '1px solid rgba(255,215,0,0.3)', padding: '1px 6px', borderRadius: '4px' }}>
+                                    ✨ Büyülü
+                                  </span>
+                                ) : (
+                                  <span style={{ fontSize: '0.62rem', color: '#94a3b8', background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', padding: '1px 6px', borderRadius: '4px' }}>
+                                    Normal
+                                  </span>
+                                )}
+                              </div>
+                              <Trash size={13} style={{ color: '#e87070', cursor: 'pointer', opacity: 0.8 }} onClick={() => removeEquipment(index)} />
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
                   ))}

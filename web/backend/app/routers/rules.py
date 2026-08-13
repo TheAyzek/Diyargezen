@@ -104,12 +104,19 @@ def search_equipment(
 def search_spells(
     system: str,
     query: str = Query("", description="Büyü ismi arama filtresi"),
-    level: Optional[int] = Query(None, description="Büyü seviyesi filtresi (0-9)"),
+    level: Optional[str] = Query(None, description="Büyü seviyesi filtresi (0-9)"),
     caster_class: str = Query("", description="Büyücü sınıfı (Wizard, Cleric, Sorcerer vb.)"),
     school: str = Query("", description="Büyü okulu (Evocation, Abjuration vb.)"),
     limit: Optional[int] = Query(None, description="Döndürülecek maksimum nesne sayısı")
 ):
-    spells = service.get_spells(system, query=query, level=level, caster_class=caster_class, school=school, limit=limit)
+    parsed_level: Optional[int] = None
+    if level is not None and str(level).strip() != "":
+        try:
+            parsed_level = int(level)
+        except ValueError:
+            parsed_level = None
+
+    spells = service.get_spells(system, query=query, level=parsed_level, caster_class=caster_class, school=school, limit=limit)
     return [EntityResponseSchema.model_validate(s, from_attributes=True) for s in spells]
 
 @router.get(

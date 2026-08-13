@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
-import { Sparkles, Dices, Shield, Wand2, Award, ArrowRight, ArrowLeft, CheckCircle2, X, Plus, Minus, AlertTriangle } from 'lucide-react';
+import { Sparkles, Dices, Shield, Wand2, Award, ArrowRight, ArrowLeft, CheckCircle2, X, Plus, Minus, AlertTriangle, Trash2 } from 'lucide-react';
+
+import SpellSelectorModal from './SpellSelectorModal';
 
 const CLASS_HIT_DICE = {
   barbarian: 12,
@@ -40,6 +42,13 @@ export default function LevelUpWizardModal({
   const [selectedClass, setSelectedClass] = useState(character.class || 'Fighter');
   const className = (selectedClass || character.class || 'Fighter').toLowerCase();
 
+  const isSpellcaster = [
+    'wizard', 'sorcerer', 'cleric', 'druid', 'bard', 'paladin',
+    'ranger', 'magus', 'alchemist', 'witch', 'oracle', 'inquisitor',
+    'summoner', 'arcanist', 'bloodrager', 'shaman', 'warpriest', 'hunter',
+    'investigator', 'medium', 'mesmerist', 'occultist', 'spiritualist'
+  ].includes(className);
+
   const multiclassDict = character.multiclass || {};
   const availableClassesList = Array.from(new Set([
     character.class || 'Fighter',
@@ -75,6 +84,10 @@ export default function LevelUpWizardModal({
   const grantsAbilityIncrease = newLevel % 4 === 0;
   const [selectedAbility, setSelectedAbility] = useState('Strength');
 
+  // Step 5: Spells State (Auto-preserve previous level spells)
+  const [selectedSpells, setSelectedSpells] = useState([]);
+  const [isSpellModalOpen, setIsSpellModalOpen] = useState(false);
+
   useEffect(() => {
     if (isOpen) {
       setStep(1);
@@ -83,11 +96,16 @@ export default function LevelUpWizardModal({
       setSpentSkills({});
       setSelectedFeat(null);
       setSelectedAbility('Strength');
+
+      // Auto-load all spells chosen in previous level(s) so none are lost
+      const existingSpells = character.spells || character.recalcedData?.spells || [];
+      setSelectedSpells(existingSpells);
+
       if (grantsFeat) {
         fetchFeats();
       }
     }
-  }, [isOpen, newLevel]);
+  }, [isOpen, newLevel, character]);
 
   const fetchFeats = () => {
     Promise.all([
@@ -179,7 +197,9 @@ export default function LevelUpWizardModal({
       favored_class_bonus: fcbChoice,
       skill_ranks: spentSkills,
       feats: selectedFeat ? [selectedFeat.name || selectedFeat.isim || selectedFeat] : [],
-      ability_increase: grantsAbilityIncrease ? selectedAbility : null
+      ability_increase: grantsAbilityIncrease ? selectedAbility : null,
+      spells_learned: selectedSpells,
+      spells: selectedSpells
     };
 
     onApplyLevelUp(levelUpPayload);
@@ -233,7 +253,8 @@ export default function LevelUpWizardModal({
             { num: 2, label: '2. Beceriler' },
             { num: 3, label: '3. Feat Seçimi', skip: !grantsFeat },
             { num: 4, label: '4. Stat Artışı', skip: !grantsAbilityIncrease },
-            { num: 5, label: '5. Özet & Onay' }
+            { num: 5, label: '5. Büyüler', skip: !isSpellcaster },
+            { num: 6, label: '6. Özet & Onay' }
           ].map(s => {
             if (s.skip) return null;
             const isActive = step === s.num;
@@ -263,40 +284,57 @@ export default function LevelUpWizardModal({
           {/* STEP 1: HP & FCB */}
           {step === 1 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
-              <div style={{ textAlign: 'center' }}>
-                <h3 style={{ color: '#fff', fontSize: '1.1rem', margin: '0 0 0.4rem 0', fontFamily: 'Cinzel, serif' }}>
-                  Can Puanı (HP) Artışı • Sınıf Zarı (d{hitDie})
-                </h3>
-                <p style={{ color: '#94a3b8', fontSize: '0.82rem', margin: 0 }}>
-                  Yeni seviye için can puanı zarınızı atın veya sınıfınızın ortalama zar değerini alın.
-                </p>
+              <div style={{ backgroundColor: '#181824', border: '1px solid #2a2a3a', borderRadius: '12px', padding: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                <div>
+                  <label style={{ fontSize: '0.75rem', color: '#94a3b8', display: 'block', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                    Yükseltilecek Sınıf
+                  </label>
+                  <select
+                    value={selectedClass}
+                    onChange={e => setSelectedClass(e.target.value)}
+                    style={{
+                      backgroundColor: '#121218', border: '1px solid #c9a84c', borderRadius: '8px',
+                      color: '#ffd700', fontSize: '1rem', fontWeight: 700, padding: '6px 12px', outline: 'none'
+                    }}
+                  >
+                    {availableClassesList.map(cName => (
+                      <option key={cName} value={cName}>{cName}</option>
+                    ))}
+                  </select>
+                </div>
+                <div style={{ fontSize: '0.82rem', color: '#94a3b8' }}>
+                  Hit Die: <b style={{ color: '#ffd700' }}>d{hitDie}</b> • Beceri Tabanı: <b style={{ color: '#ffd700' }}>{baseSkillRanks}</b>
+                </div>
               </div>
 
+              {/* HP Roll Card */}
               <div style={{
-                display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2rem',
-                backgroundColor: '#181824', border: '1px solid #2a2a3a', borderRadius: '14px', padding: '1.5rem'
+                backgroundColor: '#181824', border: '1px solid #c9a84c', borderRadius: '12px', padding: '1.25rem',
+                display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.75rem'
               }}>
-                <div style={{ textAlign: 'center' }}>
-                  <div style={{ fontSize: '0.75rem', color: '#94a3b8', marginBottom: '4px' }}>Zar Sonucu (d{hitDie})</div>
-                  <div style={{
-                    fontSize: '2.5rem', fontWeight: 800, color: '#ffd700', fontFamily: 'DM Mono, monospace',
-                    minWidth: '70px', height: '60px', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    background: 'rgba(201, 168, 76, 0.1)', border: '1px solid #c9a84c', borderRadius: '12px'
-                  }}>
-                    {hpRoll}
-                  </div>
+                <div style={{ color: '#ffd700', fontSize: '0.9rem', fontWeight: 700, fontFamily: 'Cinzel, serif' }}>
+                  Hit Die Zarı (d{hitDie})
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+                <div style={{
+                  fontSize: '2.5rem', fontWeight: 800, color: '#fff', fontFamily: 'DM Mono, monospace',
+                  backgroundColor: '#121218', border: '2px solid #ffd700', borderRadius: '12px',
+                  width: '80px', height: '80px', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  boxShadow: '0 0 20px rgba(255,215,0,0.2)'
+                }}>
+                  {hpRoll}
+                </div>
+
+                <div style={{ display: 'flex', gap: '0.75rem' }}>
                   <button
                     onClick={handleRollHp}
                     disabled={isRolling}
                     style={{
-                      padding: '0.6rem 1.2rem', backgroundColor: '#7c6ef7', border: 'none', borderRadius: '8px',
-                      color: '#fff', fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem'
+                      padding: '0.5rem 1.2rem', backgroundColor: '#7c6ef7', border: 'none', borderRadius: '8px',
+                      color: '#fff', fontSize: '0.8rem', fontWeight: 600, cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.4rem'
                     }}
                   >
-                    <Dices size={18} /> Rastgele Zar At (Roll d{hitDie})
+                    <Dices size={16} /> {isRolling ? 'Zar Atılıyor...' : 'Zar At'}
                   </button>
 
                   <button
@@ -581,8 +619,127 @@ export default function LevelUpWizardModal({
             </div>
           )}
 
-          {/* STEP 5: SUMMARY & CONFIRM */}
+          {/* STEP 5: SPELLS (For Spellcasters) */}
           {step === 5 && (
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <div>
+                <h3 style={{ color: '#fff', fontSize: '1.1rem', margin: '0 0 0.3rem 0', fontFamily: 'Cinzel, serif' }}>
+                  🔮 Büyü Defteri & Seviye Büyüleri (Level {newLevel})
+                </h3>
+                <p style={{ color: '#94a3b8', fontSize: '0.82rem', margin: 0 }}>
+                  Önceki seviyelerdeki tüm büyüleriniz otomatik olarak korundu ve yeni seviyenize devredildi. İsterseniz yeni seviyeniz için ilave büyüler ekleyebilirsiniz.
+                </p>
+              </div>
+
+              {/* Auto-Preserved Banner */}
+              <div style={{
+                background: 'linear-gradient(135deg, rgba(78, 201, 176, 0.15) 0%, rgba(18, 18, 24, 0.9) 100%)',
+                border: '1px solid #4ec9b0', borderRadius: '10px', padding: '12px 16px',
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between'
+              }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <Wand2 size={20} color="#4ec9b0" />
+                  <div>
+                    <div style={{ color: '#4ec9b0', fontWeight: 'bold', fontSize: '0.9rem' }}>
+                      ✓ Önceki Seviyelerden Devredilen & Seçilen Büyüler
+                    </div>
+                    <div style={{ color: '#94a3b8', fontSize: '0.78rem' }}>
+                      Mevcut büyü sayınız: <b style={{ color: '#ffd700' }}>{selectedSpells.length} Büyü</b>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  className="gold-btn"
+                  style={{ padding: '6px 14px', fontSize: '0.8rem', display: 'flex', alignItems: 'center', gap: '6px' }}
+                  onClick={() => setIsSpellModalOpen(true)}
+                >
+                  <Plus size={14} /> + Kataloktan Yeni Büyü Ekle
+                </button>
+              </div>
+
+              {/* Selected Spells List */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', maxHeight: '280px', overflowY: 'auto' }}>
+                {selectedSpells.length === 0 ? (
+                  <div style={{ textAlign: 'center', color: '#64748b', fontSize: '0.82rem', fontStyle: 'italic', padding: '20px' }}>
+                    Henüz büyü eklenmedi. Yukarıdaki "+ Kataloktan Yeni Büyü Ekle" butonunu kullanarak büyü seçebilirsiniz.
+                  </div>
+                ) : (
+                  selectedSpells.map((sp, idx) => {
+                    const sName = typeof sp === 'object' ? (sp.isim || sp.name) : sp;
+                    const sSchool = typeof sp === 'object' ? sp.sistem_verisi?.school : null;
+                    const sLvl = typeof sp === 'object' ? sp.sistem_verisi?.level : null;
+
+                    return (
+                      <div key={idx} style={{
+                        backgroundColor: '#161622', border: '1px solid rgba(124,110,247,0.3)', borderRadius: '8px',
+                        padding: '8px 12px', display: 'flex', justifyContent: 'space-between', alignItems: 'center'
+                      }}>
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          <span style={{ color: '#ffd700', fontSize: '0.9rem' }}>✨</span>
+                          <span style={{ color: '#fff', fontWeight: 600, fontSize: '0.88rem' }}>{sName}</span>
+                          {sLvl !== null && sLvl !== undefined && (
+                            <span style={{ fontSize: '0.65rem', background: 'rgba(124,110,247,0.2)', border: '1px solid rgba(124,110,247,0.4)', color: '#d8b4fe', padding: '1px 6px', borderRadius: '4px' }}>
+                              Sev {sLvl}
+                            </span>
+                          )}
+                          {sSchool && (
+                            <span style={{ fontSize: '0.65rem', background: 'rgba(56,189,248,0.15)', border: '1px solid rgba(56,189,248,0.3)', color: '#38bdf8', padding: '1px 6px', borderRadius: '4px' }}>
+                              {sSchool}
+                            </span>
+                          )}
+                        </div>
+
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                          <span style={{ fontSize: '0.7rem', color: '#4ec9b0', background: 'rgba(78,201,176,0.12)', border: '1px solid rgba(78,201,176,0.3)', padding: '2px 8px', borderRadius: '12px' }}>
+                            ✓ Devredildi
+                          </span>
+                          <button
+                            type="button"
+                            title="Bu büyüyü listeden çıkar veya başka bir büyüyle değiştir (Spell Swap)"
+                            onClick={() => {
+                              setSelectedSpells(selectedSpells.filter((_, i) => i !== idx));
+                            }}
+                            style={{
+                              background: 'rgba(233,69,96,0.15)', border: '1px solid rgba(233,69,96,0.35)', color: '#ff6b81',
+                              borderRadius: '6px', padding: '3px 8px', fontSize: '0.72rem', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '4px'
+                            }}
+                          >
+                            <Trash2 size={12} /> Çıkar / Değiştir
+                          </button>
+                        </div>
+                      </div>
+                    );
+                  })
+                )}
+              </div>
+
+              {/* Rule Guidance Tooltip */}
+              <div style={{ fontSize: '0.76rem', color: '#cbd5e1', fontStyle: 'italic', background: 'rgba(201,168,76,0.08)', border: '1px solid rgba(201,168,76,0.25)', padding: '8px 12px', borderRadius: '6px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span>💡 <b>Kural İpucu:</b> Tüm büyüleriniz varsayılan olarak korunur. Sorcerer, Bard, Oracle vb. spontane büyücüler 4. seviyeden itibaren her 2 seviyede bir eski bir büyüsünü başkasıyla değiştirebilir. İhtiyaç halinde <b style={{ color: '#ff6b81' }}>"Çıkar / Değiştir"</b> butonunu kullanabilirsiniz.</span>
+              </div>
+
+              {/* Spell Selector Modal */}
+              {isSpellModalOpen && (
+                <SpellSelectorModal
+                  isOpen={isSpellModalOpen}
+                  onClose={() => setIsSpellModalOpen(false)}
+                  system="pathfinder1e"
+                  characterClass={selectedClass || character.class}
+                  characterLevel={newLevel}
+                  selectedSpells={selectedSpells}
+                  onAddSpell={(spellObj) => {
+                    const sName = typeof spellObj === 'object' ? (spellObj.isim || spellObj.name) : spellObj;
+                    if (!selectedSpells.some(s => (typeof s === 'object' ? (s.isim || s.name) : s) === sName)) {
+                      setSelectedSpells([...selectedSpells, spellObj]);
+                    }
+                  }}
+                />
+              )}
+            </div>
+          )}
+
+          {/* STEP 6: SUMMARY & CONFIRM */}
+          {step === 6 && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <div style={{ textAlign: 'center' }}>
                 <h3 style={{ color: '#ffd700', fontSize: '1.2rem', margin: '0 0 0.3rem 0', fontFamily: 'Cinzel, serif' }}>
@@ -617,9 +774,16 @@ export default function LevelUpWizardModal({
                 )}
 
                 {grantsAbilityIncrease && (
-                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid #2a2a3a', paddingBottom: '0.5rem' }}>
                     <span style={{ color: '#94a3b8', fontSize: '0.85rem' }}>Yetenek Skoru Artışı:</span>
                     <b style={{ color: '#ffd700', fontSize: '0.95rem' }}>+1 {selectedAbility}</b>
+                  </div>
+                )}
+
+                {isSpellcaster && (
+                  <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                    <span style={{ color: '#94a3b8', fontSize: '0.85rem' }}>Büyü Defteri (Korunan & Yeni Büyüler):</span>
+                    <b style={{ color: '#a594ff', fontSize: '0.95rem' }}>{selectedSpells.length} Büyü Devredildi</b>
                   </div>
                 )}
               </div>
@@ -637,6 +801,7 @@ export default function LevelUpWizardModal({
             <button
               onClick={() => {
                 let prev = step - 1;
+                if (prev === 5 && !isSpellcaster) prev--;
                 if (prev === 4 && !grantsAbilityIncrease) prev--;
                 if (prev === 3 && !grantsFeat) prev--;
                 setStep(prev);
@@ -650,12 +815,13 @@ export default function LevelUpWizardModal({
             </button>
           ) : <div />}
 
-          {step < 5 ? (
+          {step < 6 ? (
             <button
               onClick={() => {
                 let next = step + 1;
                 if (next === 3 && !grantsFeat) next++;
                 if (next === 4 && !grantsAbilityIncrease) next++;
+                if (next === 5 && !isSpellcaster) next++;
                 setStep(next);
               }}
               style={{

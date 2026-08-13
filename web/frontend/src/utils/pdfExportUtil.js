@@ -32,8 +32,12 @@ function sanitizeTurkishForPDF(text) {
     'Ü': 'U', 'ü': 'u',
     'Ö': 'O', 'ö': 'o',
     'Ç': 'C', 'ç': 'c',
+    '✦': '*', '★': '*', '☆': '*', '•': '*', '⚜': '*', '⚔': '*', '📜': '*', '✨': '*', '⚗': '*', '🐾': '*', '👑': '*',
+    '’': "'", '‘': "'", '“': '"', '”': '"', '–': '-', '—': '-'
   };
-  return str.replace(/[İıŞşĞğÜüÖöÇç]/g, ch => map[ch] || ch);
+  const replaced = str.replace(/[İıŞşĞğÜüÖöÇç✦★☆•⚜⚔📜✨⚗🐾👑’‘“”–—]/g, ch => map[ch] || ch);
+  // Strip any remaining characters outside WinAnsi Latin-1 encoding range (0x20..0x7E and 0xA0..0xFF)
+  return replaced.replace(/[^\x20-\x7E\xA0-\xFF]/g, '');
 }
 
 export async function exportCharacterPDF(store) {

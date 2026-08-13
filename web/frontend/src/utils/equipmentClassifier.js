@@ -3,10 +3,33 @@
  * Classifies PF1e equipment entities into clean human-readable categories & subcategories.
  */
 
+export function isItemMagical(item) {
+  if (!item) return false;
+  if (item.is_magical === true || item.magical === true) return true;
+  if (item.rarity === 'magic' || item.rarity === 'magical') return true;
+
+  const sv = item.sistem_verisi || {};
+  if (sv.is_magical === true || sv.magical === true) return true;
+  if (sv.rarity === 'magic' || sv.rarity === 'magical') return true;
+  if (parseInt(sv.enhancement || 0) > 0) return true;
+
+  const kat = (item.kategori || '').toLowerCase();
+  if (kat.includes('magic') || kat.includes('büyülü') || kat.includes('buyulu')) return true;
+
+  const name = (item.isim || item.name || '').toLowerCase();
+  if (/(\+\d+|büyülü|buyulu|magic|magical|flaming|keen|frost|shock|holy|unholy|bane|vorpal|defending|fortification|speed|ghost touch|wounding|enhancement|adamantine|mithral)/i.test(name)) {
+    return true;
+  }
+
+  return false;
+}
+
 export const MAIN_EQUIPMENT_CATEGORIES = [
   { id: 'all', label: '🎒 Tüm Ekipmanlar', icon: '🎒' },
-  { id: 'weapons', label: '⚔ Silahlar', icon: '⚔' },
-  { id: 'armor', label: '🛡 Zırhlar & Kalkanlar', icon: '🛡' },
+  { id: 'weapons_normal', label: '🗡 Normal Silahlar', icon: '🗡' },
+  { id: 'weapons_magic', label: '✨ Büyülü Silahlar', icon: '✨' },
+  { id: 'armor_normal', label: '🛡 Normal Zırhlar & Kalkanlar', icon: '🛡' },
+  { id: 'armor_magic', label: '✨ Büyülü Zırhlar & Kalkanlar', icon: '✨' },
   { id: 'potions', label: '🧪 İksirler & Simya', icon: '🧪' },
   { id: 'scrolls_wands', label: '📜 Parşömenler & Asalar', icon: '📜' },
   { id: 'rings_wondrous', label: '💍 Yüzükler & Takılar', icon: '💍' },
@@ -18,6 +41,8 @@ export const MAIN_EQUIPMENT_CATEGORIES = [
 export const SUB_EQUIPMENT_CATEGORIES = {
   weapons: [
     { id: 'weapons', label: '⚔ Silahlar (Tümü)' },
+    { id: 'weapons_normal', label: '🗡 Normal Silahlar' },
+    { id: 'weapons_magic', label: '✨ Büyülü Silahlar' },
     { id: 'weapons_simple', label: '🗡 Basit Silahlar' },
     { id: 'weapons_martial', label: '⚔ Savaş Silahları' },
     { id: 'weapons_exotic', label: '🥷 Ezoterik / Özel Silahlar' },
@@ -26,6 +51,8 @@ export const SUB_EQUIPMENT_CATEGORIES = {
   ],
   armor: [
     { id: 'armor', label: '🛡 Zırhlar & Kalkanlar (Tümü)' },
+    { id: 'armor_normal', label: '🛡 Normal Zırhlar & Kalkanlar' },
+    { id: 'armor_magic', label: '✨ Büyülü Zırhlar & Kalkanlar' },
     { id: 'armor_light', label: '🎽 Hafif Zırhlar' },
     { id: 'armor_medium', label: '🛡 Orta Zırhlar' },
     { id: 'armor_heavy', label: '🧱 Ağır Zırhlar' },
@@ -87,46 +114,50 @@ export function getEquipmentCategory(item) {
   const eqSubtype = (sys.equipmentSubtype || sys.weaponSubtype || sys.slot || sv.subType || '').toLowerCase();
   const prof = (sv.proficiency || sv.category || dictCat || '').toLowerCase();
   const catText = (sv.category || sv.proficiency || dictCat || '').toLowerCase();
+  const magical = isItemMagical(item);
 
   // 1. Weapons & Subcategories
-  if (kat === 'weapon' || eqType === 'weapon' || eqSubtype === 'martial' || eqSubtype === 'simple' || eqSubtype === 'exotic' ||
-      /\b(weapon|sword|greatsword|longsword|shortsword|rapier|scimitar|dagger|knife|axe|greataxe|handaxe|halberd|spear|lance|bow|longbow|shortbow|crossbow|mace|hammer|warhammer|flail|scythe|club|staff|blade|glaive|trident|katana|musket|pistol|blunderbuss|rifle|bullet|bolt|arrow)\b/i.test(name)) {
+  if (kat === 'weapon' || kat.startsWith('weapon') || kat === 'silah' || eqType === 'weapon' || eqSubtype === 'martial' || eqSubtype === 'simple' || eqSubtype === 'exotic' ||
+      /\b(weapon|sword|greatsword|longsword|shortsword|rapier|scimitar|dagger|knife|axe|greataxe|handaxe|halberd|spear|lance|bow|longbow|shortbow|crossbow|mace|hammer|warhammer|flail|scythe|club|staff|blade|glaive|trident|katana|musket|pistol|blunderbuss|rifle|bullet|bolt|arrow|silah|kılıç|kilic|hançer|hancer|mızrak|mizrak|balta|gürz|gurz|yay|arbalet|tüfek|tufek|top)\b/i.test(name)) {
     
-    if (prof.includes('firearm') || prof.includes('ammo') || catText.includes('firearm') || catText.includes('ammunition') || /\b(musket|pistol|blunderbuss|rifle|bullet|powder|ammo)\b/i.test(name)) {
+    if (kat === 'weapons_magic' || magical) {
+      return 'weapons_magic';
+    }
+    if (kat === 'weapons_firearm' || prof.includes('firearm') || prof.includes('ammo') || catText.includes('firearm') || catText.includes('ammunition') || /\b(musket|pistol|blunderbuss|rifle|bullet|powder|ammo|tüfek|tufek|tabanca|kurşun|kursun|mermi|barut)\b/i.test(name)) {
       return 'weapons_firearm';
     }
-    if (prof.includes('siege') || catText.includes('siege')) {
+    if (kat === 'weapons_siege' || prof.includes('siege') || catText.includes('siege') || /\b(siege|kuşatma|kusatma|mancınık|mancinik|top)\b/i.test(name)) {
       return 'weapons_siege';
     }
-    if (prof.includes('simple') || catText.includes('simple') || eqSubtype === 'simple' || /\b(dagger|club|mace|sickle|spear|quarterstaff|javelin|dart|sling|crossbow)\b/i.test(name)) {
+    if (kat === 'weapons_simple' || prof.includes('simple') || catText.includes('simple') || catText.includes('basit') || eqSubtype === 'simple' || /\b(dagger|club|mace|sickle|spear|quarterstaff|javelin|dart|sling|crossbow|hançer|hancer|gürz|gurz|mızrak|mizrak|orak|arbalet|sapan)\b/i.test(name)) {
       return 'weapons_simple';
     }
-    if (prof.includes('martial') || catText.includes('martial') || eqSubtype === 'martial' || /\b(longsword|greatsword|shortsword|rapier|scimitar|falchion|greataxe|battleaxe|handaxe|halberd|lance|longbow|shortbow|warhammer|flail|glaive|trident|ranseur|guisarme|bardiche|scythe)\b/i.test(name)) {
-      return 'weapons_martial';
-    }
-    if (prof.includes('exotic') || catText.includes('exotic') || eqSubtype === 'exotic' || /\b(katana|whip|nunchaku|shuriken|bolas|kama|sai|urumi|katar|elven curve blade|dwarven waraxe|orc double axe|bastard sword)\b/i.test(name)) {
+    if (kat === 'weapons_exotic' || prof.includes('exotic') || catText.includes('exotic') || catText.includes('ezoterik') || catText.includes('özel') || eqSubtype === 'exotic' || /\b(katana|whip|nunchaku|shuriken|bolas|kama|sai|urumi|katar|elven curve blade|dwarven waraxe|orc double axe|bastard sword|kamçı|kamci)\b/i.test(name)) {
       return 'weapons_exotic';
     }
-    return 'weapons_martial';
+    return 'weapons_normal';
   }
 
   // 2. Armor & Shields Subcategories
-  if (kat === 'armor' || eqType === 'armor' || eqSubtype === 'shield' || eqSubtype === 'light' || eqSubtype === 'medium' || eqSubtype === 'heavy' ||
-      /\b(armor|armour|shield|buckler|chainmail|leather|plate|breastplate|helmet|helm|barding|greaves|cuirass|hauberk|gauntlet)\b/i.test(name)) {
+  if (kat === 'armor' || kat.startsWith('armor') || kat === 'zırh' || kat === 'zirh' || kat === 'kalkan' || eqType === 'armor' || eqSubtype === 'shield' || eqSubtype === 'light' || eqSubtype === 'medium' || eqSubtype === 'heavy' ||
+      /\b(armor|armour|zırh|zirh|kalkan|shield|buckler|chainmail|leather|plate|breastplate|helmet|helm|barding|greaves|cuirass|hauberk|gauntlet|deri|zincir|göğüslük|gogusluk|pullu|halka|plaka|çivili|civili|kapitone|oluklu|bantlı|pantlı)\b/i.test(name)) {
     
-    if (eqSubtype === 'shield' || catText.includes('shield') || /\b(shield|buckler)\b/i.test(name)) {
+    if (kat === 'armor_magic' || magical) {
+      return 'armor_magic';
+    }
+    if (kat === 'armor_shield' || eqSubtype === 'shield' || catText.includes('shield') || catText.includes('kalkan') || /\b(shield|buckler|kalkan)\b/i.test(name)) {
       return 'armor_shield';
     }
-    if (catText.includes('light') || eqSubtype === 'light' || /\b(padded|leather|chain shirt|stud)\b/i.test(name)) {
+    if (kat === 'armor_light' || catText.includes('light') || catText.includes('hafif') || eqSubtype === 'light' || /\b(padded|leather|chain shirt|stud|deri|çivili|civili|kapitone|hafif)\b/i.test(name)) {
       return 'armor_light';
     }
-    if (catText.includes('medium') || eqSubtype === 'medium' || /\b(breastplate|hide|scale mail|chainmail)\b/i.test(name)) {
-      return 'armor_medium';
-    }
-    if (catText.includes('heavy') || eqSubtype === 'heavy' || /\b(full plate|splint mail|half-plate|banded mail)\b/i.test(name)) {
+    if (kat === 'armor_heavy' || catText.includes('heavy') || catText.includes('ağır') || catText.includes('agir') || eqSubtype === 'heavy' || /\b(full plate|splint|half-plate|banded|plaka|tam plaka|yarım plaka|yarim plaka|oluklu|bantlı|bantli|ağır|agir)\b/i.test(name)) {
       return 'armor_heavy';
     }
-    return 'armor_medium';
+    if (kat === 'armor_medium' || catText.includes('medium') || catText.includes('orta') || eqSubtype === 'medium' || /\b(breastplate|hide|scale|chainmail|zincir|göğüslük|gogusluk|pullu|kürk|post|orta)\b/i.test(name)) {
+      return 'armor_medium';
+    }
+    return 'armor_normal';
   }
 
   // 3. Potions & Alchemy
@@ -188,18 +219,26 @@ export function getEquipmentCategory(item) {
   return 'gear_general';
 }
 
-export function matchesEquipmentSubfilter(itemCategory, selectedFilter) {
+export function matchesEquipmentSubfilter(itemCategory, selectedFilter, item) {
   if (!selectedFilter || selectedFilter === 'all') return true;
   if (selectedFilter === itemCategory) return true;
   
-  if (selectedFilter === 'weapons' && itemCategory.startsWith('weapons')) return true;
-  if (selectedFilter === 'armor' && itemCategory.startsWith('armor')) return true;
-  if (selectedFilter === 'potions' && itemCategory.startsWith('potions')) return true;
-  if (selectedFilter === 'scrolls_wands' && itemCategory.startsWith('scrolls')) return true;
-  if (selectedFilter === 'rings_wondrous' && (itemCategory.startsWith('rings') || itemCategory.startsWith('wondrous') || itemCategory.startsWith('rings_'))) return true;
-  if (selectedFilter === 'tools' && itemCategory.startsWith('tools')) return true;
-  if (selectedFilter === 'mounts' && itemCategory.startsWith('mounts')) return true;
-  if (selectedFilter === 'gear' && itemCategory.startsWith('gear')) return true;
+  const isMagic = isItemMagical(item);
+
+  if (selectedFilter === 'weapons') return itemCategory.startsWith('weapons');
+  if (selectedFilter === 'weapons_normal') return itemCategory.startsWith('weapons') && !isMagic;
+  if (selectedFilter === 'weapons_magic') return itemCategory.startsWith('weapons') && isMagic;
+
+  if (selectedFilter === 'armor') return itemCategory.startsWith('armor');
+  if (selectedFilter === 'armor_normal') return itemCategory.startsWith('armor') && !isMagic;
+  if (selectedFilter === 'armor_magic') return itemCategory.startsWith('armor') && isMagic;
+
+  if (selectedFilter === 'potions') return itemCategory.startsWith('potions');
+  if (selectedFilter === 'scrolls_wands') return itemCategory.startsWith('scrolls');
+  if (selectedFilter === 'rings_wondrous') return itemCategory.startsWith('rings') || itemCategory.startsWith('wondrous') || itemCategory.startsWith('rings_');
+  if (selectedFilter === 'tools') return itemCategory.startsWith('tools');
+  if (selectedFilter === 'mounts') return itemCategory.startsWith('mounts');
+  if (selectedFilter === 'gear') return itemCategory.startsWith('gear');
 
   return false;
 }

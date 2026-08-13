@@ -71,10 +71,37 @@ def extract_weight_and_qty(item: Dict[str, Any]) -> tuple[float, int]:
         
     return weight_val, qty
 
+def is_item_magical(item: Dict[str, Any]) -> bool:
+    if not isinstance(item, dict):
+        return False
+    if item.get("is_magical") or item.get("magical"):
+        return True
+    if item.get("rarity") in ("magic", "magical"):
+        return True
+    sv = item.get("sistem_verisi") or item.get("system_data") or {}
+    if isinstance(sv, dict):
+        if sv.get("is_magical") or sv.get("magical"):
+            return True
+        if sv.get("rarity") in ("magic", "magical"):
+            return True
+        if int(sv.get("enhancement") or 0) > 0:
+            return True
+    kat = str(item.get("kategori") or "").lower()
+    if "magic" in kat or "büyülü" in kat or "buyulu" in kat:
+        return True
+    name = str(item.get("name") or item.get("isim") or "").lower()
+    if re.search(r"(\+\d+|büyülü|buyulu|magic|magical|flaming|keen|frost|shock|holy|unholy|bane|vorpal|defending|fortification|speed|ghost touch|wounding|enhancement|adamantine|mithral)", name):
+        return True
+    return False
+
 def categorize_items(equipment_list: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
     categories = {
         "weapons": [],
+        "weapons_normal": [],
+        "weapons_magic": [],
         "armor_shields": [],
+        "armor_normal": [],
+        "armor_magic": [],
         "consumables": [],
         "gear": []
     }
@@ -86,14 +113,43 @@ def categorize_items(equipment_list: List[Dict[str, Any]]) -> Dict[str, List[Dic
             sv = {}
         sys_obj = sv.get("system", {}) if isinstance(sv.get("system"), dict) else {}
         
-        itype = str(item.get("type", sv.get("type", sys_obj.get("type", "")))).lower()
-        name_lower = str(item.get("name", "")).lower()
-        
-        if itype == "weapon" or "weapon" in name_lower or "sword" in name_lower or "dagger" in name_lower or "mace" in name_lower or "bow" in name_lower or "hammer" in name_lower or "axe" in name_lower:
+        name_lower = str(item.get("name") or item.get("isim") or "").lower()
+        itype = str(item.get("type", item.get("kategori", sv.get("type", sv.get("category", sys_obj.get("type", ""))))))
+        ikategori = str(item.get("kategori", item.get("category", sv.get("kategori", sv.get("category", ""))))).lower()
+
+        is_armor_or_shield = (
+            itype in ("armor", "shield") or 
+            any(k in ikategori for k in ("armor", "shield", "zırh", "zirh", "kalkan")) or
+            any(w in name_lower for w in ("armor", "armour", "shield", "buckler", "chainmail", "leather", "plate", "breastplate", "zırh", "zirh", "kalkan", "deri", "plaka", "zincir", "pullu", "halka", "göğüslük", "gogusluk", "çivili", "civili", "kapitone"))
+        )
+
+        is_weapon = not is_armor_or_shield and (
+            itype in ("weapon", "weapons") or 
+            any(k in ikategori for k in ("weapon", "silah")) or
+            any(w in name_lower for w in ("sword", "dagger", "mace", "bow", "hammer", "axe", "spear", "lance", "flail", "rapier", "scimitar", "musket", "pistol", "rifle", "silah", "kılıç", "kilic", "hançer", "hancer", "mızrak", "mizrak", "balta", "gürz", "gurz", "yay", "arbalet", "tüfek", "tufek"))
+        )
+
+        is_consumable = (
+            itype in ("consumable", "potion", "scroll", "wand") or
+            any(k in ikategori for k in ("potion", "scroll", "wand", "iksir", "parşömen", "parsomen", "asa")) or
+            any(w in name_lower for w in ("potion", "scroll", "wand", "elixir", "oil", "iksir", "parşömen", "parsomen", "asa", "yağ", "yag"))
+        )
+
+        magical = is_item_magical(item)
+
+        if is_weapon:
             categories["weapons"].append(item)
-        elif itype in ("armor", "shield") or "armor" in name_lower or "shield" in name_lower or "mail" in name_lower or "plate" in name_lower:
+            if magical:
+                categories["weapons_magic"].append(item)
+            else:
+                categories["weapons_normal"].append(item)
+        elif is_armor_or_shield:
             categories["armor_shields"].append(item)
-        elif itype == "consumable" or "potion" in name_lower or "scroll" in name_lower or "wand" in name_lower or "elixir" in name_lower or "oil" in name_lower:
+            if magical:
+                categories["armor_magic"].append(item)
+            else:
+                categories["armor_normal"].append(item)
+        elif is_consumable:
             categories["consumables"].append(item)
         else:
             categories["gear"].append(item)
@@ -1853,39 +1909,62 @@ class PF1e_Calculator(BaseCalculator):
             sys_obj = sv.get("system", {}) if isinstance(sv.get("system"), dict) else {}
             
             name = str(item.get("name") or item.get("isim") or "").lower()
-            itype = str(item.get("type", sv.get("type", sys_obj.get("type", "")))).lower()
-            
-            # Check for armor vs shield
-            is_armor_item = itype in ("armor", "equipment") or any(w in name for w in ("armor", "mail", "plate", "leather", "padded", "hide", "cuirass", "hauberk", "corset", "breastplate", "shirt"))
-            is_shield_item = "shield" in name or "buckler" in name or itype == "shield"
+            itype = str(item.get("type", item.get("kategori", sv.get("type", sv.get("category", sys_obj.get("type", ""))))))
+            ikategori = str(item.get("kategori", item.get("category", sv.get("kategori", sv.get("category", ""))))).lower()
 
-            if is_armor_item and not is_shield_item:
-                ac_data = sv.get("armor_class") or sv.get("armorClass") or sys_obj.get("armor") or {}
+            is_shield_item = "shield" in name or "buckler" in name or "kalkan" in name or "shield" in itype or "shield" in ikategori
+            is_armor_item = (
+                not is_shield_item and (
+                    itype in ("armor", "equipment") or 
+                    any(k in ikategori for k in ("armor", "zırh", "zirh")) or
+                    any(w in name for w in ("armor", "zırh", "zirh", "mail", "plate", "leather", "padded", "hide", "cuirass", "hauberk", "corset", "breastplate", "shirt", "deri", "plaka", "zincir", "pullu", "halka", "göğüslük", "gogusluk", "çivili", "civili", "kapitone"))
+                )
+            )
+
+            # Process armor
+            if is_armor_item:
+                ac_data = (
+                    sv.get("armor_class") or 
+                    sv.get("armor_bonus") or 
+                    sv.get("ac_bonus") or 
+                    sv.get("armorClass") or 
+                    sv.get("ac") or 
+                    sv.get("bonus") or 
+                    sys_obj.get("armor") or 
+                    {}
+                )
+                ab_val = 0
+                dm_val = None
+
                 if isinstance(ac_data, dict):
-                    ab_val = ac_data.get("value") or ac_data.get("base") or 0
-                    dm_val = ac_data.get("dex")
+                    ab_val = ac_data.get("value") or ac_data.get("base") or ac_data.get("ac") or 0
+                    dm_val = ac_data.get("dex") or ac_data.get("max_dex")
                 else:
                     try: ab_val = int(ac_data)
                     except: ab_val = 0
-                    dm_val = None
                 
                 try: ab_val = int(ab_val)
                 except: ab_val = 0
-                
+
+                # Check max dex from sv directly if not found in ac_data
+                if dm_val is None:
+                    dm_val = sv.get("max_dex") or sv.get("max_dex_bonus") or sys_obj.get("max_dex")
+
                 # Name-based fallback for PF1e Armors if ab_val is 0
                 if ab_val == 0:
-                    if "full plate" in name: ab_val, dm_val, acp_val = 9, 1, -6
-                    elif "half-plate" in name or "half plate" in name: ab_val, dm_val, acp_val = 8, 0, -7
-                    elif "splint" in name: ab_val, dm_val, acp_val = 7, 0, -7
-                    elif "banded" in name: ab_val, dm_val, acp_val = 7, 1, -6
-                    elif "chainmail" in name: ab_val, dm_val, acp_val = 6, 2, -5
-                    elif "breastplate" in name: ab_val, dm_val, acp_val = 6, 3, -4
-                    elif "scale mail" in name or "scale" in name: ab_val, dm_val, acp_val = 5, 3, -4
-                    elif "chain shirt" in name: ab_val, dm_val, acp_val = 4, 4, -2
-                    elif "hide" in name: ab_val, dm_val, acp_val = 4, 4, -3
-                    elif "studded" in name: ab_val, dm_val, acp_val = 3, 5, -1
-                    elif "leather" in name: ab_val, dm_val, acp_val = 2, 6, 0
-                    elif "padded" in name: ab_val, dm_val, acp_val = 1, 8, 0
+                    if "full plate" in name or "tam plaka" in name: ab_val, dm_val, acp_val = 9, 1, -6
+                    elif "half-plate" in name or "half plate" in name or "yarım plaka" in name or "yarim plaka" in name: ab_val, dm_val, acp_val = 8, 0, -7
+                    elif "splint" in name or "oluklu" in name: ab_val, dm_val, acp_val = 7, 0, -7
+                    elif "banded" in name or "bantlı" in name or "bantli" in name: ab_val, dm_val, acp_val = 7, 1, -6
+                    elif "chainmail" in name or "zincir zırh" in name or "zincir zirh" in name: ab_val, dm_val, acp_val = 6, 2, -5
+                    elif "breastplate" in name or "göğüslük" in name or "gogusluk" in name: ab_val, dm_val, acp_val = 6, 3, -4
+                    elif "scale" in name or "pullu" in name: ab_val, dm_val, acp_val = 5, 3, -4
+                    elif "chain shirt" in name or "zincir gömlek" in name or "zincir gomlek" in name: ab_val, dm_val, acp_val = 4, 4, -2
+                    elif "hide" in name or "kürk" in name or "post" in name: ab_val, dm_val, acp_val = 4, 4, -3
+                    elif "studded" in name or "çivili" in name or "civili" in name: ab_val, dm_val, acp_val = 3, 5, -1
+                    elif "leather" in name or "deri" in name: ab_val, dm_val, acp_val = 2, 6, 0
+                    elif "padded" in name or "kapitone" in name or "doldurmalı" in name: ab_val, dm_val, acp_val = 1, 8, 0
+                    elif "zırh" in name or "zirh" in name or "armor" in name: ab_val, dm_val, acp_val = 4, 4, -2
 
                 if ab_val > 0:
                     armor_bonus = max(armor_bonus, ab_val)
@@ -1902,12 +1981,19 @@ class PF1e_Calculator(BaseCalculator):
                     if acp_val == 0 and ab_val >= 6:
                         acp_val = -(ab_val - 3)
                     acp = min(acp, acp_val)
-            
-            # Check for shield
+
+            # Process shield
             if is_shield_item:
-                sb_data = sv.get("armor_class") or sv.get("shield_bonus") or sys_obj.get("armor") or {}
+                sb_data = (
+                    sv.get("shield_bonus") or 
+                    sv.get("armor_class") or 
+                    sv.get("ac_bonus") or 
+                    sv.get("armor") or 
+                    sys_obj.get("shield") or 
+                    {}
+                )
                 if isinstance(sb_data, dict):
-                    sb_val = sb_data.get("value") or sb_data.get("base") or 0
+                    sb_val = sb_data.get("value") or sb_data.get("base") or sb_data.get("ac") or 0
                 else:
                     try: sb_val = int(sb_data)
                     except: sb_val = 0
@@ -1917,18 +2003,19 @@ class PF1e_Calculator(BaseCalculator):
                 
                 # Name-based fallback for PF1e Shields if sb_val is 0
                 if sb_val == 0:
-                    if "tower" in name: sb_val, acp_val = 4, -10
-                    elif "heavy" in name: sb_val, acp_val = 2, -2
-                    elif "light" in name: sb_val, acp_val = 1, -1
+                    if "tower" in name or "kule" in name: sb_val, acp_val = 4, -10
+                    elif "heavy" in name or "ağır" in name or "agir" in name: sb_val, acp_val = 2, -2
+                    elif "light" in name or "hafif" in name: sb_val, acp_val = 1, -1
                     elif "buckler" in name: sb_val, acp_val = 1, -1
                     else: sb_val, acp_val = 2, -2
 
                 shield_bonus = max(shield_bonus, sb_val)
                 
-                acp_val = sv.get("check_penalty") or sys_obj.get("check_penalty") or sys_obj.get("acp") or 0
+                acp_val = sv.get("check_penalty") or sv.get("armor_check_penalty") or sys_obj.get("check_penalty") or sys_obj.get("acp") or 0
                 try: acp_val = int(acp_val)
                 except: acp_val = 0
                 acp += acp_val
+
         return armor_bonus, shield_bonus, natural_armor, acp, dex_max
 
     def calculate(self, character: Dict[str, Any]) -> Dict[str, Any]:

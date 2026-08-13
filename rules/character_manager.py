@@ -1031,6 +1031,20 @@ class CharacterManager:
                 if ft not in curr_feats:
                     curr_feats.append(ft)
 
+        # Apply new/carried over spells while preserving previous level spells
+        new_spells = choices.get("spells_learned", []) or choices.get("spells", [])
+        if new_spells:
+            curr_spells = char.setdefault("spells", [])
+            existing_names = set(
+                (s.get("isim") or s.get("name") if isinstance(s, dict) else str(s)).lower()
+                for s in curr_spells
+            )
+            for sp in new_spells:
+                sp_name = (sp.get("isim") or sp.get("name") if isinstance(sp, dict) else str(sp)).lower()
+                if sp_name and sp_name not in existing_names:
+                    existing_names.add(sp_name)
+                    curr_spells.append(sp)
+
         # Recalculate derived statistics
         self.active_character = char
         self.recalculate_character()
