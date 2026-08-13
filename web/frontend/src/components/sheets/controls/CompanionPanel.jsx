@@ -22,7 +22,10 @@ const COMPANION_PRESETS = {
     { key: 'bat', label: 'Yarasa (Bat)', str: 1, dex: 15, con: 8, int: 6, wis: 14, cha: 5, masterBonus: '+3 Uçma (Fly)', notes: 'Blindsight 20 ft.' },
     { key: 'viper', label: 'Engerek (Viper)', str: 4, dex: 17, con: 11, int: 6, wis: 12, cha: 2, masterBonus: '+3 Blöf (Bluff)', notes: 'Zehirli Isırık' },
     { key: 'owl', label: 'Baykuş (Owl)', str: 4, dex: 17, con: 11, int: 6, wis: 15, cha: 6, masterBonus: '+3 Algı (Perception Gölgelerde)', notes: 'Sessiz Uçuş' },
-    { key: 'toad', label: 'Kurbağa (Toad)', str: 1, dex: 12, con: 12, int: 6, wis: 14, cha: 4, masterBonus: '+3 Can Puanı (HP Efendiye)', notes: 'Amfibi' }
+    { key: 'toad', label: 'Kurbağa (Toad)', str: 1, dex: 12, con: 12, int: 6, wis: 14, cha: 4, masterBonus: '+3 Can Puanı (HP Efendiye)', notes: 'Amfibi' },
+    { key: 'weasel', label: 'Gelincik (Weasel)', str: 3, dex: 15, con: 10, int: 6, wis: 12, cha: 5, masterBonus: '+2 Reflex Save Efendiye', notes: 'Scent, Squeeze' },
+    { key: 'scorpion', label: 'Yeşil İğneli Akrep (Scorpion)', str: 3, dex: 16, con: 10, int: 6, wis: 10, cha: 2, masterBonus: '+4 İnisiyatif (Initiative)', notes: 'Tremorsense 30 ft.' },
+    { key: 'compsognathus', label: 'Kompsognatus (Compsognathus)', str: 8, dex: 15, con: 14, int: 6, wis: 12, cha: 5, masterBonus: '+4 İnisiyatif (Initiative)', notes: 'Scent, Low-light vision' }
   ],
   mount: [
     { key: 'warhorse', label: 'Savaş Atı (Heavy Warhorse)', str: 16, dex: 13, con: 17, int: 2, wis: 13, cha: 6, speed: '50 ft.', acBonus: 4, attacks: 'Nal 1d4 (2x), Isırık 1d4', notes: 'Savaş eğitimli' },

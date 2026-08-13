@@ -64,8 +64,10 @@ def test_auth_and_sync_pipeline():
 
 
 def test_sync_lww_and_soft_delete():
-    # 1. Register/login test user
-    username = "sync_lww_user_unique"
+    import uuid
+    uid = str(uuid.uuid4())[:8]
+    # 1. Register/login test user with unique credentials
+    username = f"sync_lww_user_{uid}"
     password = "Password123!"
 
     client.post("/api/auth/register", json={"username": username, "password": password})
@@ -73,7 +75,7 @@ def test_sync_lww_and_soft_delete():
     token = login_resp.json()["access_token"]
     headers = {"Authorization": f"Bearer {token}"}
 
-    server_id = "test-uuid-lww-100"
+    server_id = f"test-uuid-lww-{uid}"
 
     # Step A: Push initial version (v1) with timestamp T1
     p1 = {

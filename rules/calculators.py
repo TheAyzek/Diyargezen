@@ -71,6 +71,142 @@ def extract_weight_and_qty(item: Dict[str, Any]) -> tuple[float, int]:
         
     return weight_val, qty
 
+def is_item_equipped(item: Dict[str, Any]) -> bool:
+    if not isinstance(item, dict):
+        return False
+    if "is_equipped" in item:
+        return bool(item.get("is_equipped"))
+    if "equipped" in item:
+        return bool(item.get("equipped"))
+    sv = item.get("sistem_verisi") or item.get("system_data") or {}
+    if isinstance(sv, dict):
+        if "is_equipped" in sv:
+            return bool(sv.get("is_equipped"))
+        if "equipped" in sv:
+            return bool(sv.get("equipped"))
+    return False
+
+def extract_magic_item_modifiers(equipment_list: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Extract magic item modifiers (ability enhancements, deflection AC, natural armor,
+    resistance saves, skill bonuses) from equipped magic items, adhering strictly to
+    PF1e bonus stacking rules (highest bonus of each type applies).
+    """
+    ability_enhancements = {
+        "strength": 0, "dexterity": 0, "constitution": 0,
+        "intelligence": 0, "wisdom": 0, "charisma": 0
+    }
+    deflection_ac = 0
+    natural_armor = 0
+    resistance_saves = 0
+    skill_bonuses = {}
+
+    has_explicit_status = any(
+        isinstance(it, dict) and (
+            "is_equipped" in it or "equipped" in it or
+            ("is_equipped" in (it.get("sistem_verisi") or {}) if isinstance(it.get("sistem_verisi"), dict) else False)
+        )
+        for it in equipment_list
+    )
+
+    for item in equipment_list:
+        if not isinstance(item, dict):
+            continue
+        if has_explicit_status and not is_item_equipped(item):
+            continue
+
+        name = str(item.get("name") or item.get("isim") or "").lower()
+        sv = item.get("sistem_verisi") or item.get("system_data") or {}
+        if not isinstance(sv, dict):
+            sv = {}
+
+        # 1. Ability Score Enhancements (Enhancement Bonuses to Ability Scores)
+        # Belt of Giant Strength (+2, +4, +6)
+        m_str = re.search(r'belt of (?:giant )?strength \+([246])', name) or re.search(r'\+([246])\s*(?:enhancement\s*)?(?:bonus\s*to\s*)?(?:str|strength)', name)
+        if m_str:
+            ability_enhancements["strength"] = max(ability_enhancements["strength"], int(m_str.group(1)))
+
+        # Belt of Incredible Dexterity (+2, +4, +6)
+        m_dex = re.search(r'belt of (?:incredible )?dexterity \+([246])', name) or re.search(r'\+([246])\s*(?:enhancement\s*)?(?:bonus\s*to\s*)?(?:dex|dexterity)', name)
+        if m_dex:
+            ability_enhancements["dexterity"] = max(ability_enhancements["dexterity"], int(m_dex.group(1)))
+
+        # Belt of Mighty Constitution (+2, +4, +6)
+        m_con = re.search(r'belt of (?:mighty )?constitution \+([246])', name) or re.search(r'\+([246])\s*(?:enhancement\s*)?(?:bonus\s*to\s*)?(?:con|constitution)', name)
+        if m_con:
+            ability_enhancements["constitution"] = max(ability_enhancements["constitution"], int(m_con.group(1)))
+
+        # Headband of Vast Intelligence (+2, +4, +6)
+        m_int = re.search(r'headband of (?:vast )?intelligence \+([246])', name) or re.search(r'\+([246])\s*(?:enhancement\s*)?(?:bonus\s*to\s*)?(?:int|intelligence)', name)
+        if m_int:
+            ability_enhancements["intelligence"] = max(ability_enhancements["intelligence"], int(m_int.group(1)))
+
+        # Headband of Inspired Wisdom (+2, +4, +6)
+        m_wis = re.search(r'headband of (?:inspired )?wisdom \+([246])', name) or re.search(r'\+([246])\s*(?:enhancement\s*)?(?:bonus\s*to\s*)?(?:wis|wisdom)', name)
+        if m_wis:
+            ability_enhancements["wisdom"] = max(ability_enhancements["wisdom"], int(m_wis.group(1)))
+
+        # Headband of Alluring Charisma (+2, +4, +6)
+        m_cha = re.search(r'headband of (?:alluring )?charisma \+([246])', name) or re.search(r'\+([246])\s*(?:enhancement\s*)?(?:bonus\s*to\s*)?(?:cha|charisma)', name)
+        if m_cha:
+            ability_enhancements["charisma"] = max(ability_enhancements["charisma"], int(m_cha.group(1)))
+
+        # Multi-attribute belts/headbands (Physical Might, Physical Perfection, Mental Prowess, Mental Superiority)
+        if "physical perfection" in name or "mental superiority" in name:
+            m_all = re.search(r'\+([246])', name)
+            if m_all:
+                val = int(m_all.group(1))
+                if "physical perfection" in name:
+                    for ab in ("strength", "dexterity", "constitution"):
+                        ability_enhancements[ab] = max(ability_enhancements[ab], val)
+                else:
+                    for ab in ("intelligence", "wisdom", "charisma"):
+                        ability_enhancements[ab] = max(ability_enhancements[ab], val)
+
+        # 2. Deflection AC (Ring of Protection +1..+5)
+        m_def = re.search(r'ring of protection \+([1-5])', name) or re.search(r'\+([1-5])\s*deflection', name)
+        if m_def:
+            deflection_ac = max(deflection_ac, int(m_def.group(1)))
+
+        # 3. Natural Armor (Amulet of Natural Armor +1..+5)
+        m_nat = re.search(r'amulet of natural armor \+([1-5])', name) or re.search(r'\+([1-5])\s*natural armor', name)
+        if m_nat:
+            natural_armor = max(natural_armor, int(m_nat.group(1)))
+
+        # 4. Resistance Saves (Cloak of Resistance +1..+5)
+        m_res = re.search(r'cloak of resistance \+([1-5])', name) or re.search(r'\+([1-5])\s*resistance', name)
+        if m_res:
+            resistance_saves = max(resistance_saves, int(m_res.group(1)))
+
+        # 5. Skill Competence Bonuses
+        if "boots of elvenkind" in name:
+            skill_bonuses["Acrobatics"] = max(skill_bonuses.get("Acrobatics", 0), 5)
+        elif "cloak of elvenkind" in name:
+            skill_bonuses["Stealth"] = max(skill_bonuses.get("Stealth", 0), 5)
+
+        # Check explicit sistem_verisi effects if available
+        effects = sv.get("effects") or sv.get("modifiers") or []
+        if isinstance(effects, list):
+            for eff in effects:
+                if isinstance(eff, dict):
+                    target = str(eff.get("target") or "").lower()
+                    val = int(eff.get("value") or 0)
+                    if target in ability_enhancements:
+                        ability_enhancements[target] = max(ability_enhancements[target], val)
+                    elif target == "ac_deflection":
+                        deflection_ac = max(deflection_ac, val)
+                    elif target == "ac_natural":
+                        natural_armor = max(natural_armor, val)
+                    elif target == "saving_throws_all":
+                        resistance_saves = max(resistance_saves, val)
+
+    return {
+        "ability_enhancements": ability_enhancements,
+        "deflection_ac": deflection_ac,
+        "natural_armor": natural_armor,
+        "resistance_saves": resistance_saves,
+        "skill_bonuses": skill_bonuses
+    }
+
 def is_item_magical(item: Dict[str, Any]) -> bool:
     if not isinstance(item, dict):
         return False
@@ -707,10 +843,12 @@ class BaseCalculator(ABC):
                         scores[clean_target] += val_int
                     except (ValueError, TypeError):
                         pass
-            elif target in scores:
-                val = m.get("value", 0)
-                if isinstance(val, int):
-                    scores[target] += val
+        # Equipped Magic Items Ability Score Enhancements (Belt of Strength, Headband of Intelligence, etc.)
+        item_mods = extract_magic_item_modifiers(character.get("equipment", []))
+        for ab, val in item_mods["ability_enhancements"].items():
+            if ab in scores:
+                scores[ab] += val
+
         return scores
 
     def _get_entity_data(self, character: Dict[str, Any], field: str) -> Optional[Dict[str, Any]]:
@@ -1403,6 +1541,23 @@ class PF1e_Calculator(BaseCalculator):
 
         dex_contrib = min(mods["dexterity"], dex_max) if dex_max < 999 else mods["dexterity"]
 
+
+        # Apply Magic Item Effects (Deflection AC, Natural Armor, Resistance Saves, Competence Skill Bonuses)
+        item_mods = extract_magic_item_modifiers(character.get("equipment", []))
+        deflect_bonus = max(deflect_bonus, item_mods["deflection_ac"])
+        natural_armor = max(natural_armor, item_mods["natural_armor"])
+
+        res_saves = item_mods["resistance_saves"]
+        if res_saves > 0 and isinstance(derived.get("saving_throws"), dict):
+            for st_k in derived["saving_throws"]:
+                derived["saving_throws"][st_k] += res_saves
+
+        if item_mods["skill_bonuses"]:
+            for sk_k, sk_val in item_mods["skill_bonuses"].items():
+                if sk_k in derived.get("skills", {}):
+                    derived["skills"][sk_k] += sk_val
+                if sk_k in derived.get("skills_detail", {}):
+                    derived["skills_detail"][sk_k]["total"] += sk_val
 
         # ── ADIM 5: Nihai AC, CMB, CMD, Inisiyatif ve Silah Atak/Hasar Bloğu ────────
         size_cmb = int(character.get("size_modifier", 0))

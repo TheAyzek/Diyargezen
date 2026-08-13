@@ -12,6 +12,8 @@ import SpellCard from '../../SpellCard';
 import PortraitUpload from './PortraitUpload';
 import CompanionPanel from './CompanionPanel';
 import GMModifierPanel from './GMModifierPanel';
+import LivePDFModal from '../../LivePDFModal';
+import PointBuyStudio from '../../PointBuyStudio';
 import RuneField from '../../common/RuneField';
 import { getEquipmentCategory, EQUIPMENT_CATEGORIES, MAIN_EQUIPMENT_CATEGORIES, isItemMagical } from '../../../utils/equipmentClassifier';
 import { cleanText } from '../../../utils/textSanitizer';
@@ -243,6 +245,8 @@ export default function PF1eControls() {
   const [featError, setFeatError] = useState(null);
   const [spellModalOpen, setSpellModalOpen] = useState(false);
   const [levelUpModalOpen, setLevelUpModalOpen] = useState(false);
+  const [livePdfModalOpen, setLivePdfModalOpen] = useState(false);
+  const [pointBuyModalOpen, setPointBuyModalOpen] = useState(false);
 
   const maxFeatSlots = computeFeatSlots(charClass, race, level, vmcClass);
   const costMap = { 7: -4, 8: -2, 9: -1, 10: 0, 11: 1, 12: 2, 13: 3, 14: 5, 15: 7, 16: 10, 17: 13, 18: 17 };
@@ -456,10 +460,19 @@ export default function PF1eControls() {
           <div style={{ marginLeft: 'auto', display: 'flex', gap: 8 }}>
             <button
               className="gold-btn"
+              onClick={() => setLivePdfModalOpen(true)}
+              style={{ padding: '0 10px', height: 32, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4, background: 'linear-gradient(135deg, rgba(124,110,247,0.3) 0%, rgba(201,168,76,0.3) 100%)', border: '1px solid #7c6ef7', color: '#ffd700', fontWeight: 700, fontSize: '0.78rem' }}
+              title="Resmi PF1e AcroForm Canlı PDF Önizleme"
+            >
+              <FileText size={14} /> 📄 Canlı PDF
+            </button>
+
+            <button
+              className="gold-btn"
               onClick={() => exportCharacterPDF(store)}
               style={{ padding: '0 10px', height: 32, whiteSpace: 'nowrap', display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(201,168,76,0.15)', border: '1px solid var(--border-gold)', color: 'var(--gold-bright)', fontWeight: 700, fontSize: '0.78rem' }}
             >
-              <FileText size={14} /> 📄 PDF
+              <FileText size={14} /> 📄 İndir
             </button>
 
             <button
@@ -1024,11 +1037,20 @@ export default function PF1eControls() {
         {tab === 'abilities' && (
           <div>
             <SectionHeader icon="ᛟ" title="Yetenek Skorları & Point Buy" />
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12, padding: '6px 10px', background: 'rgba(201,168,76,0.06)', border: '1px solid var(--border-gold)' }}>
-              <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.52rem', color: 'var(--gold-pale)', textTransform: 'uppercase' }}>Kalan Satın Alma Puanı</span>
-              <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '1rem', color: getRemainingPoints() >= 0 ? 'var(--gold-bright)' : '#e87070', fontWeight: 600 }}>
-                {getRemainingPoints()} / 15
-              </span>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12, padding: '6px 10px', background: 'rgba(201,168,76,0.06)', border: '1px solid var(--border-gold)', borderRadius: '4px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.55rem', color: 'var(--gold-pale)', textTransform: 'uppercase' }}>Kalan Satın Alma Puanı</span>
+                <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '1rem', color: getRemainingPoints() >= 0 ? 'var(--gold-bright)' : '#e87070', fontWeight: 600 }}>
+                  {getRemainingPoints()} / 15
+                </span>
+              </div>
+              <button
+                className="gold-btn primary"
+                onClick={() => setPointBuyModalOpen(true)}
+                style={{ padding: '4px 12px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: 4 }}
+              >
+                📊 Point Buy Stüdyosu
+              </button>
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 10, marginBottom: 18 }}>
@@ -1374,11 +1396,19 @@ export default function PF1eControls() {
                         const usedCount = usedSpellSlots[lvlStr] || 0;
                         const remaining = Math.max(0, totalSlots - usedCount);
 
+                        const spellDcs = recalcedData.spellcasting?.spell_dcs || {};
+                        const dcVal = spellDcs[lvlStr] || (10 + lvl + (recalcedData.spellcasting?.ability_modifier || 0));
+
                         return (
                           <div key={lvlStr} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.8rem', backgroundColor: '#0f0f15', padding: '4px 8px', borderRadius: '6px' }}>
-                            <span style={{ color: 'var(--gold-bright)', fontWeight: 600 }}>
-                              {lvl === 0 ? 'Cantrips (0. Seviye)' : `Seviye ${lvl} Büyüler`}
-                            </span>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                              <span style={{ color: 'var(--gold-bright)', fontWeight: 600 }}>
+                                {lvl === 0 ? 'Cantrips (0. Seviye)' : `Seviye ${lvl} Büyüler`}
+                              </span>
+                              <span style={{ fontSize: '0.65rem', padding: '1px 6px', borderRadius: '4px', background: 'rgba(124,110,247,0.2)', border: '1px solid rgba(124,110,247,0.4)', color: '#d8b4fe', fontWeight: 'bold' }}>
+                                DC {dcVal}
+                              </span>
+                            </div>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                               <span style={{ fontSize: '0.72rem', color: '#94a3b8' }}>
                                 {remaining} / {totalSlots} Kalan
@@ -1657,10 +1687,45 @@ export default function PF1eControls() {
                       <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                         {grouped[cat.id].map(({ item, index }) => {
                           const isMag = isItemMagical(item);
+                          const isEquipped = !!(item.is_equipped || item.equipped);
+
+                          const toggleEquip = (eqIndex) => {
+                            const curEq = Array.isArray(equipment) ? [...equipment] : [];
+                            if (curEq[eqIndex]) {
+                              const curState = !!(curEq[eqIndex].is_equipped || curEq[eqIndex].equipped);
+                              curEq[eqIndex] = {
+                                ...curEq[eqIndex],
+                                is_equipped: !curState,
+                                equipped: !curState
+                              };
+                              updateField('equipment', curEq);
+                            }
+                          };
 
                           return (
-                            <div key={index} className="dark-panel" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 10px' }}>
+                            <div key={index} className="dark-panel" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '6px 10px', border: isEquipped ? '1px solid rgba(34,197,94,0.4)' : undefined, background: isEquipped ? 'linear-gradient(135deg, rgba(34,197,94,0.08) 0%, rgba(15,12,28,0.7) 100%)' : undefined }}>
                               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                <button
+                                  type="button"
+                                  style={{
+                                    background: isEquipped ? 'rgba(34,197,94,0.2)' : 'rgba(255,255,255,0.05)',
+                                    border: isEquipped ? '1px solid rgba(34,197,94,0.5)' : '1px solid rgba(255,255,255,0.15)',
+                                    color: isEquipped ? '#4ade80' : '#94a3b8',
+                                    padding: '2px 8px',
+                                    borderRadius: '4px',
+                                    fontSize: '0.68rem',
+                                    cursor: 'pointer',
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: '4px',
+                                    fontWeight: isEquipped ? 600 : 400
+                                  }}
+                                  onClick={() => toggleEquip(index)}
+                                  title={isEquipped ? "Kuşanmayı Kaldır" : "Kuşan (Karakter Statlarına Uygula)"}
+                                >
+                                  <Shield size={11} />
+                                  {isEquipped ? 'Kuşanıldı' : 'Kuşan'}
+                                </button>
                                 <span style={{ fontFamily: 'EB Garamond, serif', fontSize: '0.88rem', color: isMag ? '#fff' : 'var(--gold-light)', fontWeight: isMag ? 600 : 400 }}>
                                   {item.name || item.isim}
                                 </span>
@@ -2014,6 +2079,17 @@ export default function PF1eControls() {
         onClose={() => setLevelUpModalOpen(false)}
         character={store}
         onApplyLevelUp={(payload) => applyLevelUp(payload)}
+      />
+
+      <LivePDFModal
+        isOpen={livePdfModalOpen}
+        onClose={() => setLivePdfModalOpen(false)}
+        store={store}
+      />
+
+      <PointBuyStudio
+        isOpen={pointBuyModalOpen}
+        onClose={() => setPointBuyModalOpen(false)}
       />
     </div>
   );

@@ -40,36 +40,35 @@ function sanitizeTurkishForPDF(text) {
   return replaced.replace(/[^\x20-\x7E\xA0-\xFF]/g, '');
 }
 
-export async function exportCharacterPDF(store) {
-  try {
-    // Phase 1: Robust Multi-Path Template Fetching
-    let response;
-    const fetchPaths = [
-      '/templates/pf1e_sheet.pdf',
-      'http://127.0.0.1:8000/templates/pf1e_sheet.pdf',
-      '/public/templates/pf1e_sheet.pdf',
-      '/sheets/pf1e_sheet.pdf'
-    ];
-    for (const pathUrl of fetchPaths) {
-      try {
-        const res = await fetch(pathUrl);
-        if (res.ok) {
-          response = res;
-          break;
-        }
-      } catch (e) {
-        // Try next fallback path
+export async function generateCharacterPDFBytes(store) {
+  // Phase 1: Robust Multi-Path Template Fetching
+  let response;
+  const fetchPaths = [
+    '/templates/pf1e_sheet.pdf',
+    'http://127.0.0.1:8000/templates/pf1e_sheet.pdf',
+    '/public/templates/pf1e_sheet.pdf',
+    '/sheets/pf1e_sheet.pdf'
+  ];
+  for (const pathUrl of fetchPaths) {
+    try {
+      const res = await fetch(pathUrl);
+      if (res.ok) {
+        response = res;
+        break;
       }
+    } catch (e) {
+      // Try next fallback path
     }
-    if (!response || !response.ok) {
-      throw new Error('PDF şablonu (/templates/pf1e_sheet.pdf) sunucuda veya yerel dizinde bulunamadı.');
-    }
-    const existingPdfBytes = await response.arrayBuffer();
+  }
+  if (!response || !response.ok) {
+    throw new Error('PDF şablonu (/templates/pf1e_sheet.pdf) sunucuda veya yerel dizinde bulunamadı.');
+  }
+  const existingPdfBytes = await response.arrayBuffer();
 
-    // Phase 2: PDF Document Loading & AcroForm Mapping
-    const pdfDoc = await PDFDocument.load(existingPdfBytes, { ignoreEncryption: true });
-    const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
-    const form = pdfDoc.getForm();
+  // Phase 2: PDF Document Loading & AcroForm Mapping
+  const pdfDoc = await PDFDocument.load(existingPdfBytes, { ignoreEncryption: true });
+  const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+  const form = pdfDoc.getForm();
 
     const setField = (fieldName, val) => {
       try {
@@ -985,19 +984,32 @@ export async function exportCharacterPDF(store) {
       form.updateFieldAppearances(font);
     } catch (appearanceErr) {
       console.warn('PDF appearance update partially failed (likely unsupported glyph):', appearanceErr.message);
-      // Still attempt to save — fields will have values even without updated appearances
     }
 
-    const pdfDataUri = await pdfDoc.saveAsBase64({ dataUri: true });
+    const pdfBytes = await pdfDoc.save();
+    return pdfBytes;
+}
 
-    // Phase 4: Download Link Creation
+export async function generateCharacterPDFBlobUrl(store) {
+  const pdfBytes = await generateCharacterPDFBytes(store);
+  const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+  return URL.createObjectURL(blob);
+}
+
+export async function exportCharacterPDF(store) {
+  try {
+    const pdfBytes = await generateCharacterPDFBytes(store);
+    const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+    const blobUrl = URL.createObjectURL(blob);
+
     const link = document.createElement('a');
-    link.href = pdfDataUri;
+    link.href = blobUrl;
     const safeName = (store.name || 'Karakter').replace(/[^a-zA-Z0-9_\-]/g, '_');
     link.download = `${safeName}_PF1e_Sheet.pdf`;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    setTimeout(() => URL.revokeObjectURL(blobUrl), 10000);
     return true;
   } catch (error) {
     console.error('PDF Export Error:', error);

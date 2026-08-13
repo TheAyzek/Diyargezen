@@ -11,6 +11,8 @@ import RulesCompendium from './components/RulesCompendium';
 import NotFound from './components/NotFound';
 import { useCharacterStore } from './store/characterStore';
 import { exportCharacterPDF } from './utils/pdfExportUtil';
+import SyncStatusBadge from './components/SyncStatusBadge';
+import { initSyncEngine } from './utils/syncEngine';
 
 export default function App() {
   const initialToken = localStorage.getItem('token');
@@ -24,6 +26,10 @@ export default function App() {
   const [selectedSystem, setSelectedSystem] = useState('pf1e');
 
   const { isOnline, syncStatus, setOnlineStatus } = useCharacterStore();
+
+  useEffect(() => {
+    initSyncEngine(() => localStorage.getItem('token'));
+  }, []);
 
   // Dynamic Page Title
   useEffect(() => {
@@ -272,6 +278,8 @@ export default function App() {
           <div style={{ border: '1px solid var(--border-crimson)', borderRadius: 1, padding: '4px 12px', background: 'rgba(110,16,16,0.15)' }}>
             <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.55rem', letterSpacing: '0.14em', color: '#e87070', textTransform: 'uppercase' }}>Pathfinder 1e</span>
           </div>
+
+          <SyncStatusBadge token={token} />
 
           {(token && token !== 'offline-guest-token') ? (
             <>

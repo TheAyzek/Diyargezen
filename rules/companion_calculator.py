@@ -83,6 +83,7 @@ FAMILIAR_MASTER_BONUSES: Dict[str, Dict[str, Any]] = {
     "gelincik": {"target": "saving_throws.Reflex", "value": 2, "reason": "Familiar Bonusu (Gelincik +2 Reflex)"},
     "compsognathus": {"target": "initiative", "value": 4, "reason": "Familiar Bonusu (Compsognathus +4 Init)"},
     "greensting scorpion": {"target": "initiative", "value": 4, "reason": "Familiar Bonusu (Scorpion +4 Init)"},
+    "scorpion": {"target": "initiative", "value": 4, "reason": "Familiar Bonusu (Scorpion +4 Init)"},
     "akrep": {"target": "initiative", "value": 4, "reason": "Familiar Bonusu (Akrep +4 Init)"},
     "thrush": {"target": "skill:Diplomacy", "value": 3, "reason": "Familiar Bonusu (Thrush +3 Diplomacy)"},
     "bluejay": {"target": "skill:Knowledge (local)", "value": 3, "reason": "Familiar Bonusu (Bluejay +3 Know Local)"}
