@@ -31,10 +31,11 @@ export function getPointCost(score) {
 }
 
 export default function PointBuyStudio({ isOpen, onClose }) {
-  const { abilities, updateAbility, race, recalcedData } = useCharacterStore();
+  const store = useCharacterStore();
+  const { abilities, updateAbility, updateField, pointBuyBudget } = store;
 
   const [selectedPreset, setSelectedPreset] = useState('high');
-  const [totalBudget, setTotalBudget] = useState(20);
+  const [totalBudget, setTotalBudget] = useState(pointBuyBudget || 20);
   const [baseScores, setBaseScores] = useState({
     strength: abilities?.strength || 10,
     dexterity: abilities?.dexterity || 10,
@@ -58,6 +59,7 @@ export default function PointBuyStudio({ isOpen, onClose }) {
     const pObj = POINT_BUY_PRESETS.find(p => p.key === presetKey);
     if (pObj && presetKey !== 'custom') {
       setTotalBudget(pObj.points);
+      updateField('pointBuyBudget', pObj.points);
     }
   };
 

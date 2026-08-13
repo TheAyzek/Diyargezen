@@ -69,7 +69,10 @@ export const PRESET_AVATARS = [
 ];
 
 export function generatePollinationsImageUrl(prompt, seed = 42) {
-  const encoded = encodeURIComponent(prompt);
+  const cleanPrompt = (prompt || 'heroic fantasy character portrait')
+    .replace(/[^a-zA-Z0-9, ]/g, '')
+    .trim();
+  const encoded = encodeURIComponent(cleanPrompt);
   return `https://image.pollinations.ai/prompt/${encoded}?width=512&height=512&seed=${seed}&nologo=true`;
 }
 
@@ -83,6 +86,7 @@ export default function PortraitGeneratorModal({ isOpen, onClose }) {
   const [selectedAvatarSvg, setSelectedAvatarSvg] = useState(PRESET_AVATARS[0].svg);
   const [aiImageUrl, setAiImageUrl] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
+  const [aiError, setAiError] = useState('');
   const [seed, setSeed] = useState(Math.floor(Math.random() * 10000));
 
   // Filters
@@ -111,13 +115,13 @@ export default function PortraitGeneratorModal({ isOpen, onClose }) {
 
   const handleGenerateFreeAi = () => {
     setIsGenerating(true);
+    setAiError('');
     const newSeed = Math.floor(Math.random() * 10000);
     setSeed(newSeed);
     const url = generatePollinationsImageUrl(customPrompt, newSeed);
     
     // Preload image
     const img = new Image();
-    img.crossOrigin = 'anonymous';
     img.src = url;
     img.onload = () => {
       setAiImageUrl(url);

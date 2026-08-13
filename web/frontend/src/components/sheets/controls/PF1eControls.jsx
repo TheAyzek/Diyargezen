@@ -14,6 +14,7 @@ import CompanionPanel from './CompanionPanel';
 import GMModifierPanel from './GMModifierPanel';
 import LivePDFModal from '../../LivePDFModal';
 import PointBuyStudio from '../../PointBuyStudio';
+import DeitySelectorModal from '../../DeitySelectorModal';
 import RuneField from '../../common/RuneField';
 import { getEquipmentCategory, EQUIPMENT_CATEGORIES, MAIN_EQUIPMENT_CATEGORIES, isItemMagical } from '../../../utils/equipmentClassifier';
 import { cleanText } from '../../../utils/textSanitizer';
@@ -247,16 +248,19 @@ export default function PF1eControls() {
   const [levelUpModalOpen, setLevelUpModalOpen] = useState(false);
   const [livePdfModalOpen, setLivePdfModalOpen] = useState(false);
   const [pointBuyModalOpen, setPointBuyModalOpen] = useState(false);
+  const [deityModalOpen, setDeityModalOpen] = useState(false);
 
   const maxFeatSlots = computeFeatSlots(charClass, race, level, vmcClass);
   const costMap = { 7: -4, 8: -2, 9: -1, 10: 0, 11: 1, 12: 2, 13: 3, 14: 5, 15: 7, 16: 10, 17: 13, 18: 17 };
+
+  const targetBudget = store.pointBuyBudget || 20;
 
   const getRemainingPoints = () => {
     let spent = 0;
     Object.entries(abilities).forEach(([k, v]) => {
       if (k !== 'power_points') spent += costMap[v] || 0;
     });
-    return 15 - spent;
+    return targetBudget - spent;
   };
 
   const getAvailableSkillRanks = () => {
@@ -991,7 +995,20 @@ export default function PF1eControls() {
               </div>
 
               <div>
-                <FieldLabel>Tanrı / İnanç</FieldLabel>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <FieldLabel>Tanrı / İnanç</FieldLabel>
+                  <button
+                    type="button"
+                    onClick={() => setDeityModalOpen(true)}
+                    style={{
+                      background: 'rgba(201,168,76,0.15)', border: '1px solid var(--border-gold)',
+                      color: 'var(--gold-bright)', fontSize: '0.68rem', padding: '1px 6px', borderRadius: '4px',
+                      cursor: 'pointer', fontWeight: 'bold'
+                    }}
+                  >
+                    ✨ Tanrı Seç...
+                  </button>
+                </div>
                 <input className="rune-input" value={deity || ''} onChange={e => updateField('deity', e.target.value)} placeholder="Iomedae, Sarenrae..." />
               </div>
 
@@ -1041,7 +1058,7 @@ export default function PF1eControls() {
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.55rem', color: 'var(--gold-pale)', textTransform: 'uppercase' }}>Kalan Satın Alma Puanı</span>
                 <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '1rem', color: getRemainingPoints() >= 0 ? 'var(--gold-bright)' : '#e87070', fontWeight: 600 }}>
-                  {getRemainingPoints()} / 15
+                  {getRemainingPoints()} / {targetBudget}
                 </span>
               </div>
               <button
@@ -2090,6 +2107,11 @@ export default function PF1eControls() {
       <PointBuyStudio
         isOpen={pointBuyModalOpen}
         onClose={() => setPointBuyModalOpen(false)}
+      />
+
+      <DeitySelectorModal
+        isOpen={deityModalOpen}
+        onClose={() => setDeityModalOpen(false)}
       />
     </div>
   );

@@ -201,11 +201,26 @@ export async function generateCharacterPDFBytes(store) {
     setField('ARMOR CHECK PENALTY', recalcedData.armor_check_penalty ?? enc.encumbrance_acp ?? 0);
     setField('MAX DEX', recalcedData.max_dex_bonus ?? enc.max_dex_bonus ?? 'None');
 
-    const featsList = store.feats ? store.feats.map(f => typeof f === 'string' ? f : (f.isim || f.name)).join(', ') : (store.feat || '');
-    setField('FEATS', featsList);
+    function formatItemWithDescription(item) {
+      if (item == null) return '';
+      if (typeof item === 'string') return `• ${item}`;
+      const name = item.name || item.isim || 'Ozellik';
+      const sys = item.sistem_verisi || item.system || {};
+      let desc = sys.description?.value || sys.description || item.description || item.aciklama || item.effect || item.kural || item.benefit || item.fayda || '';
+      if (typeof desc === 'object') desc = JSON.stringify(desc);
+      const cleanDesc = String(desc).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+      return cleanDesc ? `• ${name}: ${cleanDesc}` : `• ${name}`;
+    }
 
-    const traitsList = store.traits ? store.traits.map(t => typeof t === 'string' ? t : (t.isim || t.name)).join(', ') : '';
-    setField('SPECIAL ABILITIES', traitsList);
+    const featsListText = store.feats && store.feats.length > 0
+      ? store.feats.map(formatItemWithDescription).join('\n')
+      : (store.feat || '');
+    setField('FEATS', featsListText);
+
+    const traitsListText = store.traits && store.traits.length > 0
+      ? store.traits.map(formatItemWithDescription).join('\n')
+      : '';
+    setField('SPECIAL ABILITIES', traitsListText);
 
     // Languages & Spells Known
     if (store.languages) {
@@ -839,21 +854,30 @@ export async function generateCharacterPDFBytes(store) {
           const sys = typeof f === 'object' ? (f.sistem_verisi || f.system || {}) : {};
           const fCat = typeof f === 'object' ? (sys.feat_category || sys.category || f.kategori || f.category || 'General') : 'General';
           const prereq = sys.prerequisites || sys.prereq || sys.onkosullar || f.prerequisite || f.prereq || '-';
-          const desc = sys.description?.value || sys.description || sys.benefit || sys.fayda || f.aciklama || f.description || 'Etkili hüner yeteneği';
+          const desc = sys.description?.value || sys.description || sys.benefit || sys.fayda || f.aciklama || f.description || f.kural || f.effect || 'Etkili huner yetenegi';
 
-          const cleanDesc = sanitizeTurkishForPDF(String(desc).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim()).slice(0, 160);
+          const cleanDesc = sanitizeTurkishForPDF(String(desc).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim());
           const cleanPrereq = sanitizeTurkishForPDF(String(prereq).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim()).slice(0, 60);
 
-          if (currY < 75) {
+          const descLines = [];
+          const maxLineLen = 85;
+          for (let i = 0; i < cleanDesc.length; i += maxLineLen) {
+            descLines.push(cleanDesc.slice(i, i + maxLineLen));
+          }
+          if (descLines.length === 0) descLines.push('Aktif yetenek');
+
+          const boxHeight = 24 + (descLines.length * 11);
+
+          if (currY - boxHeight < 50) {
             currentPage = createNewPage();
             currY = height - 80;
           }
 
           currentPage.drawRectangle({
             x: 25,
-            y: currY - 40,
+            y: currY - boxHeight,
             width: width - 50,
-            height: 40,
+            height: boxHeight,
             color: rgb(0.98, 0.97, 0.95),
             borderColor: rgb(0.85, 0.8, 0.7),
             borderWidth: 0.8
@@ -876,15 +900,17 @@ export async function generateCharacterPDFBytes(store) {
             color: rgb(0.3, 0.35, 0.4)
           });
 
-          currentPage.drawText(sanitizeTurkishForPDF(`Fayda: ${cleanDesc}${cleanDesc.length >= 160 ? '...' : ''}`), {
-            x: 32,
-            y: currY - 30,
-            size: 8,
-            font: fontReg,
-            color: rgb(0.15, 0.15, 0.2)
+          descLines.forEach((lineText, lineIdx) => {
+            currentPage.drawText(lineText, {
+              x: 32,
+              y: currY - 27 - (lineIdx * 11),
+              size: 8,
+              font: fontReg,
+              color: rgb(0.15, 0.15, 0.2)
+            });
           });
 
-          currY -= 46;
+          currY -= (boxHeight + 6);
         }
         currY -= 10;
       }
@@ -925,20 +951,29 @@ export async function generateCharacterPDFBytes(store) {
           const tName = typeof t === 'object' ? (t.isim || t.name || 'Trait') : String(t);
           const sys = typeof t === 'object' ? (t.sistem_verisi || t.system || {}) : {};
           const tCat = t.isRacial ? 'Racial Trait' : (sys.trait_category || sys.category || t.kategori || t.category || 'Character Trait');
-          const desc = sys.description?.value || sys.description || sys.aciklama || t.aciklama || t.description || 'Trait etkisi aktif';
+          const desc = sys.description?.value || sys.description || sys.aciklama || t.aciklama || t.description || t.effect || t.kural || 'Trait etkisi aktif';
 
-          const cleanDesc = sanitizeTurkishForPDF(String(desc).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim()).slice(0, 160);
+          const cleanDesc = sanitizeTurkishForPDF(String(desc).replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim());
 
-          if (currY < 70) {
+          const descLines = [];
+          const maxLineLen = 85;
+          for (let i = 0; i < cleanDesc.length; i += maxLineLen) {
+            descLines.push(cleanDesc.slice(i, i + maxLineLen));
+          }
+          if (descLines.length === 0) descLines.push('Aktif trait');
+
+          const boxHeight = 24 + (descLines.length * 11);
+
+          if (currY - boxHeight < 50) {
             currentPage = createNewPage();
             currY = height - 80;
           }
 
           currentPage.drawRectangle({
             x: 25,
-            y: currY - 36,
+            y: currY - boxHeight,
             width: width - 50,
-            height: 36,
+            height: boxHeight,
             color: rgb(0.96, 0.97, 0.99),
             borderColor: rgb(0.7, 0.78, 0.88),
             borderWidth: 0.8
@@ -960,15 +995,17 @@ export async function generateCharacterPDFBytes(store) {
             color: rgb(0.3, 0.4, 0.55)
           });
 
-          currentPage.drawText(sanitizeTurkishForPDF(`Aciklama: ${cleanDesc}${cleanDesc.length >= 160 ? '...' : ''}`), {
-            x: 32,
-            y: currY - 27,
-            size: 8,
-            font: fontReg,
-            color: rgb(0.15, 0.15, 0.2)
+          descLines.forEach((lineText, lineIdx) => {
+            currentPage.drawText(lineText, {
+              x: 32,
+              y: currY - 26 - (lineIdx * 11),
+              size: 8,
+              font: fontReg,
+              color: rgb(0.15, 0.15, 0.2)
+            });
           });
 
-          currY -= 42;
+          currY -= (boxHeight + 6);
         }
       }
     };

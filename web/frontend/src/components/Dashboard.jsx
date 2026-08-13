@@ -5,7 +5,7 @@ import {
   TrendingUp, Users, Award, BookOpen, Download
 } from 'lucide-react';
 import PresetCharactersModal from './PresetCharactersModal';
-import { importCharacterJSONFile } from '../utils/jsonExportUtil';
+import { importCharacterJSONFile, exportFullVaultBackup, importFullVaultBackup } from '../utils/jsonExportUtil';
 import { useCharacterStore } from '../store/characterStore';
 
 export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAuth }) {
@@ -217,6 +217,19 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
 
           <button
             className="btn"
+            onClick={() => exportFullVaultBackup()}
+            style={{
+              backgroundColor: 'rgba(124, 110, 247, 0.15)', border: '1px solid #7c6ef7',
+              color: '#a594ff', fontSize: '0.85rem', fontWeight: 700,
+              display: 'flex', alignItems: 'center', gap: '6px'
+            }}
+            title="Tüm karakterlerinizi tek tıkla şifreli/şemalı JSON dosyası olarak yedekleyin"
+          >
+            <Download size={16} /> 📦 Mahzeni Yedekle
+          </button>
+
+          <button
+            className="btn"
             onClick={() => fileInputRef.current?.click()}
             style={{
               backgroundColor: 'rgba(78, 201, 176, 0.15)', border: '1px solid #4ec9b0',
@@ -224,7 +237,7 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
               display: 'flex', alignItems: 'center', gap: '6px'
             }}
           >
-            <Download size={16} /> 📥 Karakter Yükle (.json)
+            <Download size={16} /> 📥 Karakter / Mahzen Yükle
           </button>
 
           <button

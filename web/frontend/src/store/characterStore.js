@@ -70,6 +70,7 @@ export const useCharacterStore = create((set, get) => ({
   companion: null,
   multiclass: {}, // e.g. {"Fighter": 3, "Rogue": 2}
   variant_multiclass: '',
+  pointBuyBudget: 20,
   
   // Custom defenses state for M&M
   defenses: {

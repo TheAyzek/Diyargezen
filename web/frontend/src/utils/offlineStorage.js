@@ -60,7 +60,7 @@ export async function saveLocalCharacter(character, isDirty = true) {
       system: (character.system || 'pathfinder1e').toLowerCase(),
       data: character.data || character,
       is_dirty: isDirty,
-      is_deleted: character.is_deleted || False || false,
+      is_deleted: !!(character.is_deleted),
       created_at: character.created_at || now,
       updated_at: character.updated_at || now
     };
