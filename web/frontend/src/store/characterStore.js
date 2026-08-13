@@ -408,21 +408,24 @@ export const useCharacterStore = create((set, get) => ({
     });
 
     const mergedSpells = Array.from(spellMap.values());
+    const isServerNumericId = Boolean(state.id && !isNaN(Number(state.id)));
 
-    if (state.id) {
+    if (isServerNumericId) {
+      const featsList = levelUpData.feats || (levelUpData.newFeat ? [levelUpData.newFeat] : []);
       const payload = {
         class_name: levelUpData.class_name || state.class || 'Fighter',
         hp_added: levelUpData.hp_added || levelUpData.hpGained || 6,
         favored_class_bonus: levelUpData.favored_class_bonus || levelUpData.fcbChoice || 'hp',
         skill_ranks: levelUpData.skill_ranks || levelUpData.skillRanksGained || {},
-        feats: levelUpData.feats || (levelUpData.newFeat ? [levelUpData.newFeat.name || levelUpData.newFeat.isim || levelUpData.newFeat] : []),
+        feats: featsList,
         ability_increase: levelUpData.ability_increase || levelUpData.abilityIncrease || null,
-        spells_learned: mergedSpells,
-        spells: mergedSpells
+        spells_learned: mergedSpells
       };
-      return await get().levelUp(payload.class_name, payload);
+      const apiSuccess = await get().levelUp(payload.class_name, payload);
+      if (apiSuccess) return true;
     }
 
+    // Local / Offline-First Fallback Level Up
     const { newLevel, hpGained, skillRanksGained, newFeat, abilityIncrease, fcbChoice } = levelUpData;
     set(state => {
       const nextSkills = { ...(state.skills || {}) };
@@ -456,6 +459,7 @@ export const useCharacterStore = create((set, get) => ({
       };
     });
     get().recalculate();
+    return true;
   },
 
   updateField: (field, value) => {

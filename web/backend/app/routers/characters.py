@@ -2,7 +2,7 @@ import json
 import base64
 import tempfile
 from pathlib import Path
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict, Any, Union
 from fastapi import APIRouter, HTTPException, Query, Response, status, UploadFile, File, Depends
 from fastapi.responses import FileResponse
 from sqlalchemy.orm import Session
@@ -28,13 +28,13 @@ router = APIRouter(prefix="/characters", tags=["Characters"])
 service = CharacterService()
 
 class LevelUpPayload(BaseModel):
-    class_name: str = Field(..., description="The name of the class chosen for this level")
+    class_name: Optional[str] = Field("Fighter", description="The name of the class chosen for this level")
     skill_ranks: Dict[str, int] = Field(default_factory=dict, description="Skill ranks allocated in this level")
-    feats: List[str] = Field(default_factory=list, description="Feats selected in this level")
+    feats: List[Union[str, Dict[str, Any]]] = Field(default_factory=list, description="Feats selected in this level")
     ability_increase: Optional[str] = Field(None, description="Ability score increased in this level (+1)")
     hp_added: int = Field(default=6, description="Base hit die roll/added for this level")
     favored_class_bonus: Optional[str] = Field("hp", description="Favored Class Bonus choice: 'hp' or 'skill'")
-    spells_learned: List[str] = Field(default_factory=list, description="Spells learned in this level")
+    spells_learned: List[Union[str, Dict[str, Any]]] = Field(default_factory=list, description="Spells learned in this level")
 
 @router.get("", response_model=List[CharacterResponse])
 def list_characters(system: Optional[str] = Query(None), db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):

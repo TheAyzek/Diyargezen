@@ -883,7 +883,7 @@ export async function generateCharacterPDFBytes(store) {
             borderWidth: 0.8
           });
 
-          currentPage.drawText(sanitizeTurkishForPDF(`✦ ${fName}`), {
+          currentPage.drawText(sanitizeTurkishForPDF(`* ${fName}`), {
             x: 32,
             y: currY - 14,
             size: 9.5,
@@ -979,7 +979,7 @@ export async function generateCharacterPDFBytes(store) {
             borderWidth: 0.8
           });
 
-          currentPage.drawText(sanitizeTurkishForPDF(`🛡 ${tName}`), {
+          currentPage.drawText(sanitizeTurkishForPDF(`* ${tName}`), {
             x: 32,
             y: currY - 13,
             size: 9,
