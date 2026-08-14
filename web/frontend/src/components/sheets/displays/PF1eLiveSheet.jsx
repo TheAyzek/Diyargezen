@@ -1199,7 +1199,9 @@ export default function PF1eLiveSheet() {
       display: 'flex',
       flexDirection: 'column',
       gap: '20px',
-      borderRadius: '12px'
+      borderRadius: '12px',
+      maxWidth: '100%',
+      overflow: 'hidden'
     }}>
       
       {/* Header bar with controls and view mode toggles */}
@@ -1245,7 +1247,7 @@ export default function PF1eLiveSheet() {
           </div>
         </div>
 
-        <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+        <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap', maxWidth: '100%' }}>
           <button 
             onClick={() => setViewMode('pdf')}
             style={{

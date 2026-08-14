@@ -108,6 +108,10 @@
   padding: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--bg-midnight);
   color: var(--color-text-primary);
@@ -117,6 +121,8 @@ body {
   letter-spacing: 0.01em;
   overflow-x: hidden;
   min-height: 100vh;
+  width: 100%;
+  max-width: 100vw;
 }
 
 h1, h2, h3, h4, h5, h6, .cinzel-title {
@@ -460,6 +466,8 @@ a:hover {
   max-width: 1400px;
   margin: 32px auto;
   padding: 0 24px;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 /* ==========================================================================
