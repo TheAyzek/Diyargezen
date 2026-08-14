@@ -211,8 +211,10 @@ export default function RulesCompendium({ onBack }) {
   const [loading, setLoading] = useState(false);
   const [selectedEntity, setSelectedEntity] = useState(null);
   const [coldStartMsg, setColdStartMsg] = useState('');
+  const [displayLimit, setDisplayLimit] = useState(60);
 
   useEffect(() => {
+    setDisplayLimit(60);
     fetchEntities();
   }, [activeTab]);
 
@@ -1063,64 +1065,83 @@ export default function RulesCompendium({ onBack }) {
           <p>Aradığınız kritere uygun kural varlığı bulunamadı.</p>
         </div>
       ) : (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '16px', marginBottom: '30px' }}>
-          {sortedEntities.map((item, idx) => (
-            <div
-              key={idx}
-              className="sheet-card hover-glow"
-              onClick={() => setSelectedEntity(item)}
-              style={{
-                padding: '16px',
-                cursor: 'pointer',
-                display: 'flex',
-                flexDirection: 'column',
-                justify: 'space-between',
-                transition: 'all 0.2s ease',
-                border: '1px solid rgba(201,168,76,0.2)'
-              }}
-            >
-              <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                  <h3 style={{ margin: 0, fontSize: '1.05rem', fontFamily: 'Cinzel, serif', color: 'var(--gold-light)' }}>
-                    {item.isim}
-                  </h3>
-                  <ChevronRight size={16} style={{ color: 'var(--gold-bright)', opacity: 0.7 }} />
+        <>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))', gap: '16px', marginBottom: '20px' }}>
+            {sortedEntities.slice(0, displayLimit).map((item, idx) => (
+              <div
+                key={idx}
+                className="sheet-card hover-glow"
+                onClick={() => setSelectedEntity(item)}
+                style={{
+                  padding: '16px',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justify: 'space-between',
+                  transition: 'all 0.2s ease',
+                  border: '1px solid rgba(201,168,76,0.2)'
+                }}
+              >
+                <div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+                    <h3 style={{ margin: 0, fontSize: '1.05rem', fontFamily: 'Cinzel, serif', color: 'var(--gold-light)' }}>
+                      {item.isim}
+                    </h3>
+                    <ChevronRight size={16} style={{ color: 'var(--gold-bright)', opacity: 0.7 }} />
+                  </div>
+
+                  {renderEntityBadges(item)}
+
+                  <p style={{
+                    fontSize: '0.82rem',
+                    color: 'var(--text-muted)',
+                    marginTop: '10px',
+                    lineHeight: '1.4',
+                    display: '-webkit-box',
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden'
+                  }}>
+                    {(() => {
+                      const rawText = item.aciklama || item.description || (item.sistem_verisi?.description);
+                      const cleaned = cleanText(rawText);
+                      if (cleaned && cleaned.toLowerCase() !== 'contents' && !cleaned.toLowerCase().startsWith('subpages')) {
+                        return cleaned;
+                      }
+                      return `${item.isim || item.name} sınıfı Pathfinder 1e temel kural ve yetenek şablonu.`;
+                    })()}
+                  </p>
                 </div>
 
-                {renderEntityBadges(item)}
-
-                <p style={{
-                  fontSize: '0.82rem',
-                  color: 'var(--text-muted)',
-                  marginTop: '10px',
-                  lineHeight: '1.4',
-                  display: '-webkit-box',
-                  WebkitLineClamp: 3,
-                  WebkitBoxOrient: 'vertical',
-                  overflow: 'hidden'
-                }}>
-                  {(() => {
-                    const rawText = item.aciklama || item.description || (item.sistem_verisi?.description);
-                    const cleaned = cleanText(rawText);
-                    if (cleaned && cleaned.toLowerCase() !== 'contents' && !cleaned.toLowerCase().startsWith('subpages')) {
-                      return cleaned;
-                    }
-                    return `${item.isim || item.name} sınıfı Pathfinder 1e temel kural ve yetenek şablonu.`;
-                  })()}
-                </p>
+                <div style={{ marginTop: '12px', paddingTop: '8px', borderTop: '1px dashed rgba(201,168,76,0.15)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: '0.72rem', color: 'var(--gold-pale)' }}>
+                    Detayları İncele
+                  </span>
+                  <span style={{ fontSize: '0.72rem', color: 'var(--border-gold)', textTransform: 'uppercase' }}>
+                    PF1e SRD
+                  </span>
+                </div>
               </div>
+            ))}
+          </div>
 
-              <div style={{ marginTop: '12px', paddingTop: '8px', borderTop: '1px dashed rgba(201,168,76,0.15)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ fontSize: '0.72rem', color: 'var(--gold-pale)' }}>
-                  Detayları İncele
-                </span>
-                <span style={{ fontSize: '0.72rem', color: 'var(--border-gold)', textTransform: 'uppercase' }}>
-                  PF1e SRD
-                </span>
-              </div>
+          {sortedEntities.length > displayLimit && (
+            <div style={{ textAlign: 'center', marginBottom: '30px' }}>
+              <button
+                type="button"
+                onClick={() => setDisplayLimit(prev => prev + 60)}
+                style={{
+                  padding: '10px 24px', backgroundColor: 'rgba(201, 168, 76, 0.12)',
+                  border: '1px solid var(--border-gold)', borderRadius: '8px', color: 'var(--gold-light)',
+                  fontSize: '0.85rem', fontWeight: 'bold', cursor: 'pointer',
+                  transition: 'all 0.2s ease', fontFamily: 'Cinzel, serif'
+                }}
+              >
+                ✨ Daha Fazla Kural Göster ({displayLimit} / {sortedEntities.length} Görüntüleniyor)
+              </button>
             </div>
-          ))}
-        </div>
+          )}
+        </>
       )}
 
       {/* Detailed Modal */}

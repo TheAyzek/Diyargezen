@@ -17,7 +17,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
-import { FileText, RefreshCw, Download, Shield, Heart, Sword, Sparkles, Activity, Wand2, Scroll } from 'lucide-react';
+import { FileText, RefreshCw, Download, Shield, Heart, Sword, Sparkles, Activity, Wand2, Scroll, Scale } from 'lucide-react';
 
 /**
  * Transliterates Turkish special characters to WinAnsi-safe equivalents.
@@ -40,6 +40,12 @@ function sanitizeTurkishForPDF(text) {
 import { useCharacterStore } from '../../../store/characterStore';
 import SpellCard from '../../SpellCard';
 import ParchmentSheetDisplay from './ParchmentSheetDisplay';
+import CharacterDiffModal from '../../CharacterDiffModal';
+import CharacterCardModal from '../../CharacterCardModal';
+import ProgressionPlannerModal from '../../ProgressionPlannerModal';
+import StatblockModal from '../../StatblockModal';
+import PartyLootModal from '../../PartyLootModal';
+import ConditionsBuffsPanel from './ConditionsBuffsPanel';
 
 export default function PF1eLiveSheet() {
   const store = useCharacterStore();
@@ -51,6 +57,13 @@ export default function PF1eLiveSheet() {
   const [rendering, setRendering] = useState(false);
   const [viewMode, setViewMode] = useState('pdf'); // 'pdf', 'summary', 'spells'
   const [activeEqTab, setActiveEqTab] = useState('weapons');
+  const [spellLevelFilter, setSpellLevelFilter] = useState('all');
+  const [spellSchoolFilter, setSpellSchoolFilter] = useState('all');
+  const [isDiffModalOpen, setIsDiffModalOpen] = useState(false);
+  const [showCardModal, setShowCardModal] = useState(false);
+  const [showProgressionModal, setShowProgressionModal] = useState(false);
+  const [showStatblockModal, setShowStatblockModal] = useState(false);
+  const [showPartyLootModal, setShowPartyLootModal] = useState(false);
   const debounceTimerRef = useRef(null);
 
   // Core PDF fill function using pdf-lib
@@ -1327,6 +1340,46 @@ export default function PF1eLiveSheet() {
           >
             <Download size={14} /> İndir
           </button>
+          <button 
+            onClick={() => setIsDiffModalOpen(true)}
+            className="btn btn-secondary"
+            style={{ padding: '6px 10px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '4px', border: '1px solid #7c6ef7', color: '#d8b4fe' }}
+            title="Bu karakteri başka bir karakterle veya snapshot ile kıyasla"
+          >
+            <Scale size={14} /> Karşılaştır
+          </button>
+          <button 
+            onClick={() => setShowCardModal(true)}
+            className="btn btn-secondary"
+            style={{ padding: '6px 10px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '4px', border: '1px solid #d4af37', color: '#ffd700' }}
+            title="Karakteri şık sosyal medya / vitrin kartı olarak görüntüle ve PNG indir"
+          >
+            <Sparkles size={14} /> 🎨 Vitrin Kartı
+          </button>
+          <button 
+            onClick={() => setShowProgressionModal(true)}
+            className="btn btn-secondary"
+            style={{ padding: '6px 10px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '4px', border: '1px solid #38bdf8', color: '#38bdf8' }}
+            title="1'den 20'ye Seviye Atlama ve Kariyer Yol Haritasını Görüntüle"
+          >
+            <Zap size={14} /> 📊 1-20 Yol Haritası
+          </button>
+          <button 
+            onClick={() => setShowStatblockModal(true)}
+            className="btn btn-secondary"
+            style={{ padding: '6px 10px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '4px', border: '1px solid #4ec9b0', color: '#4ec9b0' }}
+            title="Resmi Paizo Statblock ve JSON Yedeği Görüntüle / İndir"
+          >
+            <FileText size={14} /> 📜 Statblock & JSON
+          </button>
+          <button 
+            onClick={() => setShowPartyLootModal(true)}
+            className="btn btn-secondary"
+            style={{ padding: '6px 10px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: '4px', border: '1px solid #ffd700', color: '#ffd700' }}
+            title="Parti Hazine Kasası ve Ganimet Paylaştırıcı"
+          >
+            <Coins size={14} /> 💰 Parti Kasası
+          </button>
         </div>
       </div>
 
@@ -1372,11 +1425,208 @@ export default function PF1eLiveSheet() {
         /* Summary view alternative with detailed mathematical stat breakdowns */
         <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
           
+          {/* Character Identity & Archetypes Banner */}
+          <div style={{
+            background: 'linear-gradient(135deg, rgba(201,168,76,0.12) 0%, rgba(15,15,26,0.85) 100%)',
+            border: '1px solid rgba(201,168,76,0.3)',
+            borderRadius: '8px',
+            padding: '14px 18px',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '12px'
+          }}>
+            <div>
+              <div style={{ fontSize: '1.3rem', fontWeight: 'bold', color: 'var(--accent-gold)', fontFamily: 'Cinzel, serif' }}>
+                {name || 'İsimsiz Kahraman'}
+              </div>
+              <div style={{ fontSize: '0.85rem', color: '#d4c5a9', marginTop: '2px', display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+                <span>{race || 'Irk'}</span>
+                <span>•</span>
+                <span style={{ fontWeight: 'bold', color: '#f0e6d2' }}>
+                  {charClass || 'Sınıf'} {archetype ? `(${archetype})` : ''} Seviye {level || 1}
+                </span>
+                {recalcedData?.multiclass && Object.keys(recalcedData.multiclass).length > 0 && (
+                  <span style={{ fontSize: '0.75rem', background: 'rgba(56,189,248,0.15)', color: '#38bdf8', border: '1px solid rgba(56,189,248,0.3)', padding: '1px 6px', borderRadius: '4px' }}>
+                    Multiclass: {Object.entries(recalcedData.multiclass).map(([c, l]) => `${c} ${l}`).join(' / ')}
+                  </span>
+                )}
+                {recalcedData?.age_details && (
+                  <span style={{
+                    fontSize: '0.75rem',
+                    background: `${recalcedData.age_details.badge_color}20`,
+                    color: recalcedData.age_details.badge_color,
+                    border: `1px solid ${recalcedData.age_details.badge_color}50`,
+                    padding: '1px 6px',
+                    borderRadius: '4px',
+                    fontWeight: 'bold'
+                  }}>
+                    ⏳ Yaş: {recalcedData.age_details.age} ({recalcedData.age_details.category_name})
+                  </span>
+                )}
+              </div>
+            </div>
+
+            {/* Archetype Features Badges */}
+            {recalcedData?.archetype_details && (
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '4px' }}>
+                {recalcedData.archetype_details.granted_features?.length > 0 && (
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px', justifyContent: 'flex-end' }}>
+                    {recalcedData.archetype_details.granted_features.map((g, idx) => (
+                      <span key={idx} style={{ fontSize: '0.72rem', color: '#3fb950', background: 'rgba(63,185,80,0.12)', border: '1px solid rgba(63,185,80,0.3)', padding: '2px 6px', borderRadius: '4px' }}>
+                        ✦ {g}
+                      </span>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+
+          {/* Favored Class Bonus (FCB) Summary & Allocation Banner */}
+          {recalcedData?.favored_class_bonus && (
+            <div style={{
+              background: '#121124',
+              border: '1px solid rgba(201,168,76,0.3)',
+              borderRadius: '8px',
+              padding: '12px 16px',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              gap: '10px'
+            }}>
+              <div>
+                <div style={{ fontSize: '0.85rem', fontWeight: 'bold', color: 'var(--accent-gold)', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  ⭐ Favored Class: <span style={{ color: '#f0e6d2' }}>{recalcedData.favored_class_bonus.favored_class}</span>
+                  {recalcedData.favored_class_bonus.secondary_favored_class && (
+                    <span style={{ color: '#38bdf8' }}> / {recalcedData.favored_class_bonus.secondary_favored_class}</span>
+                  )}
+                  <span style={{ fontSize: '11px', color: '#8b949e', marginLeft: '6px' }}>
+                    ({recalcedData.favored_class_bonus.allocated_count} / {recalcedData.favored_class_bonus.total_eligible_levels} Seviye Tahsis Edildi)
+                  </span>
+                </div>
+                <div style={{ display: 'flex', gap: '8px', marginTop: '4px', flexWrap: 'wrap' }}>
+                  <span style={{ fontSize: '11px', background: 'rgba(233,69,96,0.15)', color: '#ff6b81', border: '1px solid rgba(233,69,96,0.3)', padding: '2px 8px', borderRadius: '4px' }}>
+                    💖 +{recalcedData.favored_class_bonus.hp_bonus} Can Puanı (HP)
+                  </span>
+                  <span style={{ fontSize: '11px', background: 'rgba(56,189,248,0.15)', color: '#38bdf8', border: '1px solid rgba(56,189,248,0.3)', padding: '2px 8px', borderRadius: '4px' }}>
+                    📚 +{recalcedData.favored_class_bonus.skill_bonus} Yetenek Puanı (Skill Rank)
+                  </span>
+                  {(recalcedData.favored_class_bonus.racial_bonuses || []).map((rb, rIdx) => (
+                    <span key={rIdx} style={{ fontSize: '11px', background: 'rgba(124,110,247,0.15)', color: '#a594ff', border: '1px solid rgba(124,110,247,0.3)', padding: '2px 8px', borderRadius: '4px' }}>
+                      ✦ {rb.name} ({rb.allocated_ranks} Seviye: +{rb.effective_value})
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Quick FCB Bulk Allocation Buttons */}
+              <div style={{ display: 'flex', gap: '6px' }}>
+                <button
+                  type="button"
+                  onClick={() => store.autoAllocateFCB && store.autoAllocateFCB('hp')}
+                  style={{
+                    background: 'rgba(233,69,96,0.15)',
+                    color: '#ff6b81',
+                    border: '1px solid rgba(233,69,96,0.4)',
+                    borderRadius: '4px',
+                    padding: '4px 8px',
+                    fontSize: '11px',
+                    fontWeight: 'bold',
+                    cursor: 'pointer'
+                  }}
+                  title="Tüm seviye FCB puanlarını Can Puanına (HP) ver"
+                >
+                  💖 Tümünü HP'ye Ver
+                </button>
+                <button
+                  type="button"
+                  onClick={() => store.autoAllocateFCB && store.autoAllocateFCB('skill')}
+                  style={{
+                    background: 'rgba(56,189,248,0.15)',
+                    color: '#38bdf8',
+                    border: '1px solid rgba(56,189,248,0.4)',
+                    borderRadius: '4px',
+                    padding: '4px 8px',
+                    fontSize: '11px',
+                    fontWeight: 'bold',
+                    cursor: 'pointer'
+                  }}
+                  title="Tüm seviye FCB puanlarını Yetenek Puanına (Skill) ver"
+                >
+                  📚 Tümünü Skill'e Ver
+                </button>
+              </div>
+            </div>
+          )}
+
+          {/* Languages & Linguistics Tracking Card */}
+          {recalcedData?.languages_analysis && (
+            <div style={{
+              background: '#121124',
+              border: '1px solid rgba(56,189,248,0.25)',
+              borderRadius: '8px',
+              padding: '12px 16px',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+              gap: '10px'
+            }}>
+              <div>
+                <div style={{ fontSize: '0.85rem', fontWeight: 'bold', color: '#38bdf8', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  🗣️ Bilinen Diller (Languages):
+                  <span style={{ fontSize: '11px', color: '#8b949e', marginLeft: '6px' }}>
+                    ({recalcedData.languages_analysis.total_selected_languages} / {recalcedData.languages_analysis.total_allowed_languages} Dil • {recalcedData.languages_analysis.automatic_languages?.length || 1} Otomatik + {recalcedData.languages_analysis.bonus_slots || 0} INT + {recalcedData.languages_analysis.linguistics_slots || 0} Linguistics)
+                  </span>
+                </div>
+                <div style={{ display: 'flex', gap: '6px', marginTop: '6px', flexWrap: 'wrap' }}>
+                  {(recalcedData.languages_analysis.selected_languages || []).map((lang, lIdx) => (
+                    <span key={lIdx} style={{ fontSize: '11px', background: 'rgba(56,189,248,0.12)', color: '#38bdf8', border: '1px solid rgba(56,189,248,0.3)', padding: '2px 8px', borderRadius: '4px', fontWeight: 'bold' }}>
+                      {lang}
+                    </span>
+                  ))}
+                  {recalcedData.languages_analysis.unallocated_slots > 0 && (
+                    <span style={{ fontSize: '11px', background: 'rgba(254,202,87,0.15)', color: '#feca57', border: '1px solid rgba(254,202,87,0.3)', padding: '2px 8px', borderRadius: '4px' }}>
+                      + {recalcedData.languages_analysis.unallocated_slots} Seçilebilir Dil Hakkı
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              {recalcedData.languages_analysis.warnings?.length > 0 && (
+                <div style={{ fontSize: '11px', color: '#ff6b81', background: 'rgba(233,69,96,0.15)', border: '1px solid rgba(233,69,96,0.3)', padding: '4px 10px', borderRadius: '6px' }}>
+                  ⚠️ {recalcedData.languages_analysis.warnings.join(' • ')}
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Active Conditions & Situational Buffs Panel */}
+          <ConditionsBuffsPanel />
+
           {/* Ability Scores Breakdown Grid */}
           <div>
-            <h4 style={{ color: 'var(--accent-gold)', fontSize: '1.1rem', marginBottom: '10px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Activity size={16} /> Yetenek Puanları ve Katkıları (Ability Breakdown)
-            </h4>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+              <h4 style={{ color: 'var(--accent-gold)', fontSize: '1.1rem', margin: 0, display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <Activity size={16} /> Yetenek Puanları ve Katkıları (Ability Breakdown)
+              </h4>
+              {recalcedData.point_buy_analysis && (
+                <span style={{
+                  fontSize: '11px',
+                  fontWeight: 'bold',
+                  padding: '3px 8px',
+                  borderRadius: '6px',
+                  background: `${recalcedData.point_buy_analysis.badge_color}20`,
+                  color: recalcedData.point_buy_analysis.badge_color,
+                  border: `1px solid ${recalcedData.point_buy_analysis.badge_color}60`
+                }}>
+                  🎲 {recalcedData.point_buy_analysis.total_points} Puan • {recalcedData.point_buy_analysis.tier_name} (Ort: {recalcedData.point_buy_analysis.average_score})
+                </span>
+              )}
+            </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '10px' }}>
               {Object.entries(recalcedData.ability_scores || store.abilities || {}).map(([abName, totalScore]) => {
                 if (abName === 'power_points') return null;
@@ -1508,6 +1758,102 @@ export default function PF1eLiveSheet() {
             </div>
           </div>
 
+          {/* Savaş & Manevra Matrisi (Combat & Maneuver Matrix - PF1e CRB p. 198-201) */}
+          {recalcedData.maneuvers && Object.keys(recalcedData.maneuvers).length > 0 && (
+            <div style={{ background: '#141426', border: '1px solid rgba(201,168,76,0.3)', padding: '14px', borderRadius: '8px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                <h4 style={{ margin: 0, color: 'var(--accent-gold)', fontSize: '1rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <Sword size={16} /> Savaş Manevraları Matrisi (Combat Maneuvers & Defense)
+                </h4>
+                <span style={{ fontSize: '11px', color: '#d4c5a9' }}>
+                  Temel CMB: <b style={{ color: '#ffd700' }}>+{recalcedData.cmb || 0}</b> | Temel CMD: <b style={{ color: '#ffd700' }}>{recalcedData.cmd || 10}</b>
+                </span>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(170px, 1fr))', gap: '8px' }}>
+                {Object.entries(recalcedData.maneuvers).map(([mName, mData]) => {
+                  const hasFeatBonus = mData.bonus_cmb > 0 || mData.bonus_cmd > 0;
+                  return (
+                    <div key={mName} style={{
+                      background: hasFeatBonus ? 'rgba(201,168,76,0.08)' : '#1a1a2e',
+                      border: `1px solid ${hasFeatBonus ? 'rgba(201,168,76,0.4)' : 'rgba(255,255,255,0.05)'}`,
+                      borderRadius: '6px',
+                      padding: '8px 10px',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '4px'
+                    }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <span style={{ fontSize: '12px', fontWeight: 'bold', color: hasFeatBonus ? '#ffd700' : '#f0e6d2' }}>
+                          {mName}
+                        </span>
+                        {hasFeatBonus && (
+                          <span style={{ fontSize: '9px', background: 'rgba(201,168,76,0.2)', color: '#ffd700', padding: '1px 4px', borderRadius: '3px' }}>
+                            Feat
+                          </span>
+                        )}
+                      </div>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#8b949e' }}>
+                        <span>CMB: <b style={{ color: '#38bdf8' }}>{mData.cmb_str}</b></span>
+                        <span>CMD: <b style={{ color: '#4ec9b0' }}>{mData.cmd}</b></span>
+                      </div>
+                      {hasFeatBonus && (
+                        <div style={{ fontSize: '9px', color: '#a594ff', marginTop: '2px' }}>
+                          {mData.bonus_summary !== 'Standart' && mData.bonus_summary}
+                          {mData.cmd_summary !== 'Standart' && ` | ${mData.cmd_summary}`}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Kuşanılmış Silahlar & Tam Saldırı Dizilimi Kartı */}
+          {recalcedData.weapons && recalcedData.weapons.length > 0 && (
+            <div style={{ background: '#141426', border: '1px solid rgba(124,110,247,0.3)', padding: '14px', borderRadius: '8px' }}>
+              <h4 style={{ color: '#a594ff', fontSize: '1rem', marginBottom: '12px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <Sword size={16} /> Silah Saldırı & Hasar Dizilimleri (Weapons & Full Attack)
+              </h4>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '10px' }}>
+                {recalcedData.weapons.map((w, idx) => (
+                  <div key={idx} style={{
+                    background: '#1a1a2e',
+                    border: '1px solid rgba(124,110,247,0.2)',
+                    borderRadius: '8px',
+                    padding: '10px 12px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '6px'
+                  }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontWeight: 'bold', color: '#fff', fontSize: '13px' }}>{w.name}</span>
+                      <span style={{ fontSize: '10px', color: '#a594ff', background: 'rgba(124,110,247,0.15)', padding: '2px 6px', borderRadius: '4px' }}>
+                        Kritik: {w.crit_range || '20/x2'}
+                      </span>
+                    </div>
+                    <div style={{ fontSize: '11px', color: '#d4c5a9' }}>
+                      Saldırı (Tek / Tam): <b style={{ color: '#38bdf8' }}>{w.full_attack || w.calculated_attack}</b>
+                      <br />
+                      Hasar: <b style={{ color: '#f87171' }}>{w.calculated_damage}</b>
+                    </div>
+                    {w.power_attack && (
+                      <div style={{ marginTop: '4px', padding: '6px 8px', background: 'rgba(233,69,96,0.1)', border: '1px solid rgba(233,69,96,0.3)', borderRadius: '6px', fontSize: '10px' }}>
+                        <div style={{ color: '#e94560', fontWeight: 'bold' }}>⚡ Güç Saldırısı (Power Attack):</div>
+                        <div style={{ color: '#d4c5a9' }}>
+                          Saldırı: <b>{w.power_attack.full_attack}</b> ({w.power_attack.penalty} Penaltı)
+                          <br />
+                          Hasar: <b style={{ color: '#f87171' }}>{w.power_attack.damage}</b> (+{w.power_attack.bonus_damage} Hasar)
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Applied Modifiers Breakdown List */}
           {(recalcedData.applied_modifiers || []).length > 0 && (
             <div style={{ background: 'rgba(201,168,76,0.04)', border: '1px solid rgba(201,168,76,0.2)', padding: '14px', borderRadius: '8px' }}>
@@ -1530,19 +1876,100 @@ export default function PF1eLiveSheet() {
             </div>
           )}
 
-          {/* Encumbrance */}
-          <div style={{ background: 'rgba(255, 255, 255, 0.02)', padding: '12px', borderRadius: '8px', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', marginBottom: '6px' }}>
-              <span>Toplam Ağırlık: <b>{recalcedData.total_weight || 0} lbs</b></span>
-              <span style={{ color: 'var(--accent-gold)', fontWeight: 'bold' }}>
-                Yük Durumu: {recalcedData.encumbrance_status || 'Light'}
-              </span>
-            </div>
-          </div>
+          {/* Encumbrance & Carrying Capacity Visualizer */}
+          {(() => {
+            const enc = recalcedData.encumbrance || {};
+            const cap = enc.carrying_capacity || recalcedData.carrying_capacity || {};
+            const lightMax = cap.light_max || 33;
+            const mediumMax = cap.medium_max || 66;
+            const heavyMax = cap.heavy_max || 100;
+            const totalWt = recalcedData.total_weight || enc.total_weight || 0;
+            const percent = Math.min(100, Math.round((totalWt / (heavyMax || 100)) * 100));
+            const status = enc.status || recalcedData.encumbrance_status || 'Light Load';
+            const isMediumOrAbove = status.includes('Medium') || status.includes('Heavy') || status.includes('Overload');
+            const statusColor = status.includes('Overload') ? '#e94560' : status.includes('Heavy') ? '#ff9f43' : status.includes('Medium') ? '#feca57' : '#4ec9b0';
 
-          {/* Categorized Equipment List */}
+            return (
+              <div style={{ background: '#141426', padding: '14px', borderRadius: '8px', border: `1px solid ${statusColor}40` }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                  <span style={{ fontSize: '0.85rem', color: '#f0e6d2', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                    <Shield size={16} style={{ color: statusColor }} /> Taşınabilirlik & Yük Durumu (Encumbrance)
+                  </span>
+                  <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                    <span style={{ fontSize: '11px', padding: '2px 8px', borderRadius: '4px', background: `${statusColor}20`, border: `1px solid ${statusColor}`, color: statusColor, fontWeight: 'bold' }}>
+                      {status}
+                    </span>
+                    <span style={{ fontSize: '11px', color: (recalcedData.armor_check_penalty || 0) < 0 ? '#f87171' : '#8b949e', fontWeight: 'bold' }}>
+                      ACP: {recalcedData.armor_check_penalty || 0}
+                    </span>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '11px', color: '#8b949e', marginBottom: '4px' }}>
+                  <span>Toplam Yük: <b style={{ color: '#f0e6d2' }}>{totalWt} lbs</b></span>
+                  <span>Maksimum Kapasite: <b style={{ color: '#f0e6d2' }}>{heavyMax} lbs</b></span>
+                </div>
+
+                {/* Progress bar */}
+                <div style={{ height: '8px', backgroundColor: '#0a0a14', borderRadius: '4px', overflow: 'hidden', border: '1px solid #2a2a3a', marginBottom: '6px' }}>
+                  <div style={{ width: `${percent}%`, height: '100%', backgroundColor: statusColor, transition: 'width 0.3s ease' }} />
+                </div>
+
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '10px', color: '#64748b' }}>
+                  <span>Hafif: {lightMax} lbs</span>
+                  <span>Orta: {mediumMax} lbs</span>
+                  <span>Ağır: {heavyMax} lbs</span>
+                </div>
+
+                {isMediumOrAbove && (
+                  <div style={{ marginTop: '8px', padding: '6px 10px', borderRadius: '4px', background: `${statusColor}15`, border: `1px solid ${statusColor}30`, fontSize: '11px', color: statusColor }}>
+                    ⚠️ {status} Kısıtlaması: Hareket hızı düşüşü ve Max DEX kısıtlaması aktif.
+                  </div>
+                )}
+              </div>
+            );
+          })()}
+
+          {/* Categorized Equipment List & Quick-Equip Management */}
           <div>
-            <h4 style={{ color: 'var(--accent-gold)', fontSize: '1.1rem', marginBottom: '10px' }}>Kategorize Envanter (Inventory)</h4>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+              <h4 style={{ color: 'var(--accent-gold)', fontSize: '1.1rem', margin: 0 }}>Kategorize Envanter & Donanım (Inventory)</h4>
+              <div style={{ display: 'flex', gap: '6px' }}>
+                <button
+                  onClick={() => store.equipAllItems && store.equipAllItems()}
+                  style={{
+                    background: 'rgba(63, 185, 80, 0.15)',
+                    color: '#3fb950',
+                    border: '1px solid rgba(63, 185, 80, 0.4)',
+                    borderRadius: '4px',
+                    padding: '3px 8px',
+                    fontSize: '11px',
+                    fontWeight: 'bold',
+                    cursor: 'pointer'
+                  }}
+                  title="Tüm giyilebilir eşyaları kuşan"
+                >
+                  ⚔️ Tümünü Kuşan
+                </button>
+                <button
+                  onClick={() => store.unequipAllItems && store.unequipAllItems()}
+                  style={{
+                    background: 'rgba(139, 148, 158, 0.15)',
+                    color: '#8b949e',
+                    border: '1px solid rgba(139, 148, 158, 0.4)',
+                    borderRadius: '4px',
+                    padding: '3px 8px',
+                    fontSize: '11px',
+                    fontWeight: 'bold',
+                    cursor: 'pointer'
+                  }}
+                  title="Tüm eşyaları çantaya kaldır"
+                >
+                  🎒 Tümünü Çıkar
+                </button>
+              </div>
+            </div>
+
             <div style={{ display: 'flex', gap: '4px', background: 'rgba(0,0,0,0.3)', padding: '4px', borderRadius: '8px', marginBottom: '12px' }}>
               {['weapons', 'armor_shields', 'consumables', 'gear'].map(cat => (
                 <button
@@ -1565,19 +1992,195 @@ export default function PF1eLiveSheet() {
               ))}
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', maxHeight: '250px', overflowY: 'auto' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', maxHeight: '280px', overflowY: 'auto' }}>
               {(recalcedData[activeEqTab] || []).length === 0 ? (
                 <p style={{ fontSize: '12px', color: '#8b949e', fontStyle: 'italic' }}>Bu kategoride eşya yok.</p>
               ) : (
-                (recalcedData[activeEqTab] || []).map((item, i) => (
-                  <div key={i} style={{ display: 'flex', justifyContent: 'space-between', padding: '8px 12px', background: '#16213e', borderRadius: '6px', fontSize: '12px' }}>
-                    <span><b>{item.name}</b></span>
-                    <span style={{ color: '#8b949e' }}>{item.sistem_verisi?.weight?.value || 0} lb</span>
-                  </div>
-                ))
+                (recalcedData[activeEqTab] || []).map((item, i) => {
+                  const isEquipped = item.is_equipped !== false && item.equipped !== false;
+                  // Find index in master store.equipment
+                  const storeIdx = (store.equipment || []).findIndex(
+                    it => (it.name || it.isim) === (item.name || item.isim)
+                  );
+
+                  return (
+                    <div
+                      key={i}
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        padding: '8px 12px',
+                        background: isEquipped ? '#16213e' : 'rgba(20, 20, 38, 0.5)',
+                        border: isEquipped ? '1px solid rgba(63, 185, 80, 0.3)' : '1px solid rgba(255, 255, 255, 0.05)',
+                        borderRadius: '6px',
+                        fontSize: '12px'
+                      }}
+                    >
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        {storeIdx >= 0 && (
+                          <button
+                            onClick={() => store.toggleEquipItem && store.toggleEquipItem(storeIdx)}
+                            style={{
+                              background: isEquipped ? 'rgba(63, 185, 80, 0.2)' : 'rgba(139, 148, 158, 0.15)',
+                              color: isEquipped ? '#3fb950' : '#8b949e',
+                              border: `1px solid ${isEquipped ? '#3fb95060' : '#8b949e40'}`,
+                              borderRadius: '4px',
+                              padding: '2px 6px',
+                              fontSize: '10px',
+                              fontWeight: 'bold',
+                              cursor: 'pointer'
+                            }}
+                            title={isEquipped ? 'Çantaya kaldır (Unequip)' : 'Kuşan (Equip)'}
+                          >
+                            {isEquipped ? '⚔️ Kuşanıldı' : '🎒 Çantada'}
+                          </button>
+                        )}
+                        <span style={{ color: isEquipped ? '#f0e6d2' : '#8b949e', fontWeight: isEquipped ? 'bold' : 'normal' }}>
+                          {item.name || item.isim}
+                        </span>
+                      </div>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '11px', color: '#8b949e' }}>
+                        {item.price_gp ? <span style={{ color: '#ffd700' }}>{item.price_gp} gp</span> : null}
+                        <span>{item.sistem_verisi?.weight?.value || item.weight || 0} lb</span>
+                      </div>
+                    </div>
+                  );
+                })
               )}
             </div>
           </div>
+
+          {/* Servet & Seviye Başı Bütçe Takipçisi (Wealth by Level - PF1e CRB Table 12-4) */}
+          {recalcedData.wealth && (
+            <div style={{ background: '#141426', border: '1px solid var(--border-gold)', borderRadius: '8px', padding: '14px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                <h4 style={{ margin: 0, color: 'var(--gold-bright)', fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <Sparkles size={16} /> Servet & Seviye Başı Bütçe (Wealth by Level)
+                </h4>
+                <span style={{
+                  fontSize: '11px',
+                  fontWeight: 'bold',
+                  padding: '3px 8px',
+                  borderRadius: '6px',
+                  background: recalcedData.wealth.status_code === 'over' ? 'rgba(233,69,96,0.2)' : recalcedData.wealth.status_code === 'under' ? 'rgba(56,189,248,0.2)' : 'rgba(63,185,80,0.2)',
+                  color: recalcedData.wealth.status_code === 'over' ? '#e94560' : recalcedData.wealth.status_code === 'under' ? '#38bdf8' : '#3fb950',
+                  border: `1px solid ${recalcedData.wealth.status_code === 'over' ? '#e94560' : recalcedData.wealth.status_code === 'under' ? '#38bdf8' : '#3fb950'}`
+                }}>
+                  {recalcedData.wealth.status} ({recalcedData.wealth.percentage}%)
+                </span>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '8px', marginBottom: '10px' }}>
+                <div style={{ background: '#1a1a2e', padding: '8px 10px', borderRadius: '6px' }}>
+                  <div style={{ fontSize: '10px', color: '#8b949e' }}>TOPLAM SERVET (GP)</div>
+                  <div style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#ffd700' }}>
+                    {recalcedData.wealth.total_wealth_gp.toLocaleString()} gp
+                  </div>
+                </div>
+                <div style={{ background: '#1a1a2e', padding: '8px 10px', borderRadius: '6px' }}>
+                  <div style={{ fontSize: '10px', color: '#8b949e' }}>BEKLENEN WBL (Seviye {recalcedData.wealth.level})</div>
+                  <div style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#f0e6d2' }}>
+                    {recalcedData.wealth.expected_wbl_gp.toLocaleString()} gp
+                  </div>
+                </div>
+                <div style={{ background: '#1a1a2e', padding: '8px 10px', borderRadius: '6px' }}>
+                  <div style={{ fontSize: '10px', color: '#8b949e' }}>FARK (BÜTÇE DENGESİ)</div>
+                  <div style={{ fontSize: '1.1rem', fontWeight: 'bold', color: recalcedData.wealth.difference_gp >= 0 ? '#3fb950' : '#38bdf8' }}>
+                    {recalcedData.wealth.difference_gp >= 0 ? `+${recalcedData.wealth.difference_gp.toLocaleString()}` : `${recalcedData.wealth.difference_gp.toLocaleString()}`} gp
+                  </div>
+                </div>
+              </div>
+
+              {/* Progress Bar */}
+              <div style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '4px', height: '8px', overflow: 'hidden' }}>
+                <div style={{
+                  width: `${Math.min(100, recalcedData.wealth.percentage)}%`,
+                  height: '100%',
+                  background: recalcedData.wealth.status_code === 'over' ? '#e94560' : recalcedData.wealth.status_code === 'under' ? '#38bdf8' : '#3fb950',
+                  transition: 'width 0.3s ease'
+                }} />
+              </div>
+            </div>
+          )}
+
+          {/* 12 Büyülü Eşya Vücut Slotu Matrisi (12 Magic Item Body Slots - PF1e CRB p. 458) */}
+          {recalcedData.magic_item_slots && (
+            <div style={{ background: '#141426', border: '1px solid rgba(124,110,247,0.3)', borderRadius: '8px', padding: '14px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                <h4 style={{ margin: 0, color: '#a594ff', fontSize: '0.95rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <Shield size={16} /> 12 Büyülü Eşya Vücut Slotu (Magic Item Body Slots)
+                </h4>
+                {recalcedData.has_slot_conflicts && (
+                  <span style={{ fontSize: '11px', background: 'rgba(233,69,96,0.2)', color: '#e94560', border: '1px solid #e94560', padding: '2px 8px', borderRadius: '4px', fontWeight: 'bold' }}>
+                    ⚠️ {recalcedData.slot_conflicts.length} Slot Çakışması Var!
+                  </span>
+                )}
+              </div>
+
+              {/* Slot Conflicts Alert Banner */}
+              {recalcedData.has_slot_conflicts && (
+                <div style={{ background: 'rgba(233,69,96,0.1)', border: '1px solid rgba(233,69,96,0.4)', borderRadius: '6px', padding: '8px 12px', marginBottom: '12px', fontSize: '11px', color: '#ffb3b3' }}>
+                  {recalcedData.slot_conflicts.map((c, i) => (
+                    <div key={i} style={{ marginBottom: i < recalcedData.slot_conflicts.length - 1 ? '4px' : 0 }}>
+                      ⚠️ <b>{c.slot_display}:</b> {c.message}
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {/* 12 Slots Grid */}
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(190px, 1fr))', gap: '8px' }}>
+                {[
+                  { key: 'headband', label: 'Alınlık / Taç (Headband)' },
+                  { key: 'head', label: 'Baş / Miğfer (Head)' },
+                  { key: 'eyes', label: 'Göz / Gözlük (Eyes)' },
+                  { key: 'neck', label: 'Boyun / Muska (Neck)' },
+                  { key: 'shoulders', label: 'Omuz / Pelerin (Shoulders)' },
+                  { key: 'armor', label: 'Zırh / Cübbe (Armor)' },
+                  { key: 'body', label: 'Beden / Kaftan (Body)' },
+                  { key: 'chest', label: 'Göğüs / Gömlek (Chest)' },
+                  { key: 'belts', label: 'Kemer (Belt)' },
+                  { key: 'wrists', label: 'Bilek / Bileklik (Wrists)' },
+                  { key: 'hands', label: 'El / Eldiven (Hands)' },
+                  { key: 'feet', label: 'Ayak / Bot (Feet)' },
+                  { key: 'ring_1', label: 'Yüzük 1 (Ring 1)' },
+                  { key: 'ring_2', label: 'Yüzük 2 (Ring 2)' }
+                ].map(({ key, label }) => {
+                  const equipped = recalcedData.magic_item_slots[key];
+                  return (
+                    <div key={key} style={{
+                      background: equipped ? 'rgba(124,110,247,0.1)' : '#1a1a2e',
+                      border: `1px solid ${equipped ? 'rgba(124,110,247,0.4)' : 'rgba(255,255,255,0.05)'}`,
+                      borderRadius: '6px',
+                      padding: '8px 10px',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '4px'
+                    }}>
+                      <div style={{ fontSize: '10px', color: '#8b949e', fontWeight: 'bold' }}>{label}</div>
+                      {equipped ? (
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                          <span style={{ fontSize: '12px', fontWeight: 'bold', color: '#ffd700' }}>
+                            {equipped.name}
+                          </span>
+                          {equipped.price_gp > 0 && (
+                            <span style={{ fontSize: '10px', color: '#38bdf8' }}>
+                              {equipped.price_gp.toLocaleString()} gp
+                            </span>
+                          )}
+                        </div>
+                      ) : (
+                        <span style={{ fontSize: '11px', color: '#555a64', fontStyle: 'italic' }}>
+                          [Boş Slot]
+                        </span>
+                      )}
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
         </div>
       ) : viewMode === 'spells' ? (
@@ -1587,19 +2190,30 @@ export default function PF1eLiveSheet() {
             <div>
               <h3 style={{ margin: 0, fontSize: '1.2rem', color: '#a594ff', display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <Wand2 size={20} />
-                Büyü Kitabı & Etkileşimli Büyü Kartları ({name})
+                Büyü Kitabı & Günlük Yuva Takipçisi ({name})
               </h3>
               <p style={{ margin: '4px 0 0', fontSize: '12px', color: '#8b949e' }}>
-                Hazırlanan veya bilinen büyüleri kart şeklinde görüntüleyin, zar atın veya büyü etkisi uygulayın.
+                Günlük büyü yuvalarınızı harcayın, hazırlanan büyülerinizi yönetin veya büyü kartlarından zar atın.
               </p>
             </div>
-            <div style={{ fontSize: '12px', fontWeight: 'bold', color: '#a594ff', background: 'rgba(124,110,247,0.2)', padding: '4px 12px', borderRadius: '12px', border: '1px solid rgba(124,110,247,0.4)' }}>
-              Seviye {level || 1} {charClass || 'Büyücü'} (CL {recalcedData.spellcasting?.caster_level || level || 1})
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <button
+                type="button"
+                className="gold-btn"
+                onClick={() => store.restCharacter()}
+                style={{ padding: '6px 14px', fontSize: '12px', display: 'flex', alignItems: 'center', gap: 6, background: 'rgba(124,110,247,0.2)', border: '1px solid #7c6ef7', color: '#d8b4fe', fontWeight: 'bold' }}
+                title="Tüm büyü yuvalarını ve hazırlanan büyüleri sıfırlar"
+              >
+                🌙 Uzun Dinlenme Yap
+              </button>
+              <div style={{ fontSize: '12px', fontWeight: 'bold', color: '#a594ff', background: 'rgba(124,110,247,0.15)', padding: '6px 12px', borderRadius: '8px', border: '1px solid rgba(124,110,247,0.3)' }}>
+                CL +{recalcedData.spellcasting?.caster_level || level || 1}
+              </div>
             </div>
           </div>
 
           {/* Spellcasting Engine Stat Header (DCs, Concentration, CL) */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '10px', background: '#121124', padding: '14px', borderRadius: '8px', border: '1px solid rgba(124,110,247,0.25)' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '10px', background: '#121124', padding: '14px', borderRadius: '8px', border: '1px solid rgba(124,110,247,0.25)' }}>
             <div style={{ textAlign: 'center', padding: '6px', background: 'rgba(124,110,247,0.1)', borderRadius: '6px' }}>
               <div style={{ fontSize: '10px', color: '#a594ff', fontWeight: 'bold' }}>BÜYÜCÜ SEVİYESİ (CL)</div>
               <div style={{ fontSize: '1.3rem', fontWeight: 'bold', color: '#ffffff' }}>+{recalcedData.spellcasting?.caster_level || level || 1}</div>
@@ -1617,11 +2231,228 @@ export default function PF1eLiveSheet() {
               const dcVal = recalcedData.spellcasting?.spell_dcs?.[String(lvlIdx)] || (10 + lvlIdx + (recalcedData.ability_modifiers?.Intelligence || 0));
               return (
                 <div key={lvlIdx} style={{ textAlign: 'center', padding: '6px', background: 'rgba(255,255,255,0.03)', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.06)' }}>
-                  <div style={{ fontSize: '10px', color: 'var(--color-text-secondary)' }}>{lvlIdx}. SEVİYE DC</div>
+                  <div style={{ fontSize: '10px', color: 'var(--color-text-secondary)' }}>{lvlIdx === 0 ? 'Cantrip DC' : `${lvlIdx}. Seviye DC`}</div>
                   <div style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--accent-gold)' }}>{dcVal}</div>
                 </div>
               );
             })}
+          </div>
+
+          {/* Spellbook Capacity & Scribing Cost Tracker (PF1e CRB p. 219, Table 9-3) */}
+          {recalcedData.spellbook_scribing && (
+            <div style={{ background: '#121124', border: '1px solid rgba(124,110,247,0.3)', borderRadius: '10px', padding: '16px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+                <h4 style={{ margin: 0, color: 'var(--gold-bright)', fontSize: '0.95rem', fontFamily: 'Cinzel, serif', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  📜 Büyü Kitabı Sayfa & Mürekkep Analizi (Spellbook Capacity & Scribing)
+                </h4>
+                <span style={{
+                  fontSize: '11px',
+                  fontWeight: 'bold',
+                  padding: '3px 8px',
+                  borderRadius: '6px',
+                  background: recalcedData.spellbook_scribing.is_overflow ? 'rgba(233,69,96,0.2)' : 'rgba(78,201,176,0.2)',
+                  color: recalcedData.spellbook_scribing.is_overflow ? '#e94560' : '#4ec9b0',
+                  border: `1px solid ${recalcedData.spellbook_scribing.is_overflow ? '#e94560' : '#4ec9b0'}`
+                }}>
+                  {recalcedData.spellbook_scribing.books_needed} Cilt Gerekli ({recalcedData.spellbook_scribing.total_pages_used} / 100 Sayfa)
+                </span>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '8px', marginBottom: '10px' }}>
+                <div style={{ background: '#0a0914', padding: '8px 10px', borderRadius: '6px' }}>
+                  <div style={{ fontSize: '10px', color: '#8b949e' }}>TOPLAM SAYFA</div>
+                  <div style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#f0e6d2' }}>
+                    {recalcedData.spellbook_scribing.total_pages_used} / {recalcedData.spellbook_scribing.books_needed * 100}
+                  </div>
+                </div>
+                <div style={{ background: '#0a0914', padding: '8px 10px', borderRadius: '6px' }}>
+                  <div style={{ fontSize: '10px', color: '#8b949e' }}>MÜREKKEP MALİYETİ</div>
+                  <div style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#ffd700' }}>
+                    {recalcedData.spellbook_scribing.total_cost_gp.toLocaleString()} gp
+                  </div>
+                </div>
+                <div style={{ background: '#0a0914', padding: '8px 10px', borderRadius: '6px' }}>
+                  <div style={{ fontSize: '10px', color: '#8b949e' }}>KİTAP DOLULUK ORANI</div>
+                  <div style={{ fontSize: '1.1rem', fontWeight: 'bold', color: '#38bdf8' }}>
+                    %{recalcedData.spellbook_scribing.percentage}
+                  </div>
+                </div>
+              </div>
+
+              {/* Progress Bar */}
+              <div style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '4px', height: '8px', overflow: 'hidden' }}>
+                <div style={{
+                  width: `${Math.min(100, (recalcedData.spellbook_scribing.total_pages_used % 100) || 100)}%`,
+                  height: '100%',
+                  background: recalcedData.spellbook_scribing.is_overflow ? '#e94560' : 'linear-gradient(90deg, #7c6ef7 0%, #4ec9b0 100%)',
+                  transition: 'width 0.3s ease'
+                }} />
+              </div>
+            </div>
+          )}
+
+          {/* Interactive Daily Spell Slots Grid */}
+          {recalcedData.spell_slots && Object.keys(recalcedData.spell_slots).length > 0 && (
+            <div style={{ background: '#121124', border: '1px solid var(--border-gold)', borderRadius: '10px', padding: '16px' }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                <h4 style={{ margin: 0, color: 'var(--gold-bright)', fontSize: '0.95rem', fontFamily: 'Cinzel, serif', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  ✨ Günlük Büyü Yuvaları (Canlı Takip - Tıklayarak Harcayın)
+                </h4>
+                <span style={{ fontSize: '11px', color: '#8b949e' }}>
+                  {recalcedData.spellcasting?.is_prepared ? 'Hazırlamalı Büyücü' : 'Spontane Büyücü'}
+                </span>
+              </div>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
+                {Object.entries(recalcedData.spell_slots).map(([lvlStr, totalSlots]) => {
+                  const lvl = parseInt(lvlStr);
+                  const usedCount = store.usedSpellSlots?.[lvlStr] || 0;
+                  const remaining = Math.max(0, totalSlots - usedCount);
+                  const dcVal = recalcedData.spellcasting?.spell_dcs?.[lvlStr] || (10 + lvl);
+
+                  return (
+                    <div key={lvlStr} style={{ background: '#0a0914', border: '1px solid rgba(124,110,247,0.2)', borderRadius: '8px', padding: '10px', display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <span style={{ fontSize: '0.82rem', fontWeight: 'bold', color: 'var(--gold-bright)' }}>
+                          {lvl === 0 ? '0. Seviye (Cantrips)' : `${lvl}. Seviye Slotlar`}
+                        </span>
+                        <span style={{ fontSize: '0.65rem', background: 'rgba(124,110,247,0.2)', color: '#d8b4fe', padding: '1px 6px', borderRadius: '4px', fontWeight: 'bold' }}>
+                          DC {dcVal}
+                        </span>
+                      </div>
+
+                      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '2px' }}>
+                        <span style={{ fontSize: '0.72rem', color: remaining > 0 ? '#4ec9b0' : '#e94560', fontWeight: 600 }}>
+                          {remaining} / {totalSlots} Slot Kalan
+                        </span>
+
+                        <div style={{ display: 'flex', gap: '4px' }}>
+                          {Array.from({ length: totalSlots }).map((_, i) => {
+                            const isUsed = i < usedCount;
+                            return (
+                              <div
+                                key={i}
+                                onClick={() => store.toggleSpellSlotUsed(lvlStr, totalSlots)}
+                                title={isUsed ? `${lvl}. Seviye Slot Harcandı (Geri Almak İçin Tıkla)` : `${lvl}. Seviye Slot Hazır (Harcamak İçin Tıkla)`}
+                                style={{
+                                  width: '20px', height: '20px', borderRadius: '4px', cursor: 'pointer',
+                                  backgroundColor: isUsed ? '#e94560' : 'rgba(78, 201, 176, 0.2)',
+                                  border: `1px solid ${isUsed ? '#ff6b81' : '#4ec9b0'}`,
+                                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                  fontSize: '0.65rem', color: isUsed ? '#fff' : '#4ec9b0', fontWeight: 'bold',
+                                  transition: 'all 0.15s ease'
+                                }}
+                              >
+                                {isUsed ? '✕' : '✓'}
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Prepared Spells Daily Overview for Prepared Casters */}
+          {store.preparedSpells && Object.values(store.preparedSpells).some(arr => Array.isArray(arr) && arr.some(item => item && item.name)) && (
+            <div style={{ background: '#121124', border: '1px solid rgba(124,110,247,0.3)', borderRadius: '10px', padding: '16px' }}>
+              <h4 style={{ margin: '0 0 12px 0', color: '#a594ff', fontSize: '0.95rem', fontFamily: 'Cinzel, serif', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                🔮 Günün Hazırlanan Büyüleri (Prepared Spells)
+              </h4>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                {Object.entries(store.preparedSpells).map(([lvlStr, slots]) => {
+                  if (!Array.isArray(slots) || !slots.some(s => s && s.name)) return null;
+                  const lvl = parseInt(lvlStr);
+
+                  return (
+                    <div key={lvlStr} style={{ background: '#0a0914', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '8px', padding: '10px' }}>
+                      <div style={{ fontSize: '0.78rem', color: 'var(--gold-bright)', fontWeight: 'bold', marginBottom: '8px', fontFamily: 'Cinzel, serif' }}>
+                        {lvl === 0 ? '0. Seviye Hazırlanan Büyüler' : `${lvl}. Seviye Hazırlanan Büyüler`}
+                      </div>
+
+                      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '8px' }}>
+                        {slots.map((pItem, sIdx) => {
+                          if (!pItem || !pItem.name) return null;
+                          const isCast = pItem.cast;
+                          const appliedMeta = pItem.metamagic || [];
+
+                          return (
+                            <div
+                              key={sIdx}
+                              style={{
+                                background: isCast ? 'rgba(233,69,96,0.08)' : 'rgba(78,201,176,0.08)',
+                                border: `1px solid ${isCast ? 'rgba(233,69,96,0.3)' : 'rgba(78,201,176,0.3)'}`,
+                                borderRadius: '6px', padding: '8px 10px', display: 'flex', justifyContent: 'space-between', alignItems: 'center'
+                              }}
+                            >
+                              <div>
+                                <div style={{ fontSize: '0.82rem', fontWeight: 'bold', color: isCast ? '#ff6b81' : '#f0e6d2' }}>
+                                  #{sIdx + 1}: {pItem.name}
+                                </div>
+                                {appliedMeta.length > 0 && (
+                                  <div style={{ display: 'flex', gap: '4px', marginTop: '2px' }}>
+                                    {appliedMeta.map((m, mIdx) => (
+                                      <span key={mIdx} style={{ fontSize: '0.6rem', color: '#d8b4fe', background: 'rgba(124,110,247,0.2)', padding: '1px 4px', borderRadius: '3px' }}>
+                                        ✦ {m}
+                                      </span>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
+
+                              <button
+                                type="button"
+                                onClick={() => store.togglePreparedSpellCast(lvlStr, sIdx)}
+                                style={{
+                                  padding: '3px 8px', borderRadius: '4px', fontSize: '0.68rem', fontWeight: 'bold', cursor: 'pointer',
+                                  backgroundColor: isCast ? '#e94560' : 'rgba(78, 201, 176, 0.2)',
+                                  border: `1px solid ${isCast ? '#ff6b81' : '#4ec9b0'}`,
+                                  color: isCast ? '#fff' : '#4ec9b0'
+                                }}
+                              >
+                                {isCast ? '✕ Atıldı' : '✓ Hazır'}
+                              </button>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Grimoire Explorer & Filters Header */}
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '10px' }}>
+            <h4 style={{ margin: 0, color: 'var(--gold-bright)', fontSize: '1.1rem', fontFamily: 'Cinzel, serif', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              ✦ Büyü Defteri & Kartları ({store.spells?.length || 0})
+            </h4>
+
+            {/* Level & School Filter Pills */}
+            <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', alignItems: 'center' }}>
+              <span style={{ fontSize: '11px', color: '#8b949e' }}>Seviye:</span>
+              {['all', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'].map(fLvl => (
+                <button
+                  key={fLvl}
+                  type="button"
+                  onClick={() => setSpellLevelFilter(fLvl)}
+                  style={{
+                    padding: '3px 8px', borderRadius: '4px', fontSize: '0.68rem', cursor: 'pointer',
+                    backgroundColor: spellLevelFilter === fLvl ? 'var(--accent-gold)' : 'rgba(255,255,255,0.05)',
+                    border: `1px solid ${spellLevelFilter === fLvl ? 'var(--accent-gold)' : 'rgba(255,255,255,0.1)'}`,
+                    color: spellLevelFilter === fLvl ? '#0f0f1a' : '#94a3b8',
+                    fontWeight: 'bold'
+                  }}
+                >
+                  {fLvl === 'all' ? 'Tümü' : `Lv ${fLvl}`}
+                </button>
+              ))}
+            </div>
           </div>
 
           {(!store.spells || store.spells.length === 0) ? (
@@ -1634,16 +2465,22 @@ export default function PF1eLiveSheet() {
             </div>
           ) : (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '16px' }}>
-              {store.spells.map((sp, idx) => (
-                <SpellCard
-                  key={idx}
-                  spell={sp}
-                  characterLevel={level}
-                  characterClass={charClass}
-                  onRemoveSpell={(spellNameToRemove) => store.removeSpell(spellNameToRemove)}
-                  compact={false}
-                />
-              ))}
+              {store.spells
+                .filter(sp => {
+                  if (spellLevelFilter === 'all') return true;
+                  const sLvl = typeof sp === 'object' ? (sp.sistem_verisi?.level ?? sp.level ?? 0) : 0;
+                  return String(sLvl) === String(spellLevelFilter);
+                })
+                .map((sp, idx) => (
+                  <SpellCard
+                    key={idx}
+                    spell={sp}
+                    characterLevel={level}
+                    characterClass={charClass}
+                    onRemoveSpell={(spellNameToRemove) => store.removeSpell(spellNameToRemove)}
+                    compact={false}
+                  />
+                ))}
             </div>
           )}
         </div>
@@ -1812,6 +2649,44 @@ export default function PF1eLiveSheet() {
             </div>
           )}
         </div>
+      )}
+
+      {isDiffModalOpen && (
+        <CharacterDiffModal
+          isOpen={isDiffModalOpen}
+          onClose={() => setIsDiffModalOpen(false)}
+          initialCharA={store.characterData || store}
+        />
+      )}
+
+      {showCardModal && (
+        <CharacterCardModal
+          character={store}
+          recalcedData={recalcedData}
+          onClose={() => setShowCardModal(false)}
+        />
+      )}
+
+      {showProgressionModal && (
+        <ProgressionPlannerModal
+          character={store}
+          onClose={() => setShowProgressionModal(false)}
+        />
+      )}
+
+      {showStatblockModal && (
+        <StatblockModal
+          character={store.characterData || store}
+          recalcedData={recalcedData}
+          onClose={() => setShowStatblockModal(false)}
+        />
+      )}
+
+      {showPartyLootModal && (
+        <PartyLootModal
+          character={store.characterData || store}
+          onClose={() => setShowPartyLootModal(false)}
+        />
       )}
 
     </div>

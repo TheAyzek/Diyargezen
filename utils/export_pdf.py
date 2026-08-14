@@ -215,6 +215,21 @@ def _safe_pf1e_concentration(char: dict) -> str:
         return ""
 
 
+def _format_classes_and_levels(char: dict) -> str:
+    """Format single class with archetype or multiclass progression for character sheet headers."""
+    mc = char.get("derived", {}).get("multiclass") or char.get("multiclass")
+    if mc and isinstance(mc, dict) and len(mc) > 0:
+        return " / ".join(f"{cls_name} {lvl}" for cls_name, lvl in mc.items())
+    
+    cls_name = char.get("class") or char.get("sinif") or ""
+    arch = char.get("archetype") or char.get("derived", {}).get("archetype") or ""
+    lvl = char.get("level") or char.get("seviye") or 1
+    
+    if arch:
+        return f"{cls_name} ({arch}) {lvl}"
+    return f"{cls_name} {lvl}"
+
+
 # Mapping dictionaries for systems with placeholder mappings
 PDF_MAPPINGS = {
     "dnd5e": {
@@ -336,7 +351,7 @@ PDF_MAPPINGS = {
     "pf1e": {
         # Ortak Başlık & RPG Detayları
         "Character Name": lambda c: c.get("name", ""),
-        "Classes & Levels": lambda c: f"{c.get('class', '')} {c.get('level', 1)}",
+        "Classes & Levels": lambda c: _format_classes_and_levels(c),
         "Race": lambda c: c.get("race", ""),
         "Alignment": lambda c: c.get("alignment", ""),
         "Deity": lambda c: c.get("deity", ""),
@@ -456,6 +471,9 @@ PDF_MAPPINGS = {
         # Arcane Spell Failure — 0 eğer büyücü değilse boş bırak
         "Arcane Spell Failure": lambda c: (
             "0%" if c.get("class_data", {}).get("spellcasting_ability") else ""
+        ),
+        "DOMAINSSPECIALTY SCHOOL 1": lambda c: str(
+            c.get("specialty_school") or c.get("domain") or c.get("bloodline") or ""
         ),
     },
     "mm3e": {
@@ -704,15 +722,43 @@ def _fill_pdf_form(character: dict, template_name: str, mapping: dict, output_pa
                 fields_to_fill[comp_field] = f"{fields_to_fill[comp_field]} | {comp_summary}"
                 break
                 
-    # 2. Feats sequential matching
+    # 2. Feats sequential matching (FEATS 1..12)
     feat_list = character.get("feats", [])
     for idx, feat in enumerate(feat_list, 1):
-        for prefix in ["feat", "feat_", "feature", "feature_", "power", "power_"]:
+        if idx > 12:
+            break
+        feat_name = feat.get("name") or feat.get("isim") if isinstance(feat, dict) else str(feat)
+        for prefix in ["FEATS ", "FEATS", "FEAT ", "FEAT", "feat ", "feat", "feat_", "feature", "feature_", "power", "power_"]:
             f_name = f"{prefix}{idx}"
             if f_name in all_pdf_fields:
-                fields_to_fill[f_name] = str(feat)
+                fields_to_fill[f_name] = str(feat_name)
                 break
-                
+
+    # 2b. Special Abilities, Traits & Archetype Features (SPECIAL ABILITIES 1..20)
+    special_abilities = []
+    # Traits
+    for tr in character.get("traits", []):
+        tr_name = tr.get("name") or tr.get("isim") if isinstance(tr, dict) else str(tr)
+        special_abilities.append(f"Trait: {tr_name}")
+    # Archetype granted features
+    arch_granted = character.get("derived", {}).get("archetype_details", {}).get("granted_features", [])
+    for g in arch_granted:
+        special_abilities.append(f"Arketip: {g}")
+    # Class & Racial Features / Special Abilities
+    for sa in (character.get("special_abilities", []) or character.get("racial_traits", [])):
+        sa_name = sa.get("name") or sa.get("isim") if isinstance(sa, dict) else str(sa)
+        if sa_name and sa_name not in special_abilities:
+            special_abilities.append(sa_name)
+
+    for idx, ab_text in enumerate(special_abilities, 1):
+        if idx > 20:
+            break
+        for prefix in ["SPECIAL ABILITIES ", "SPECIAL ABILITIES", "Special Abilities ", "Special Ability ", "special_ability_", "special_ability"]:
+            f_name = f"{prefix}{idx}"
+            if f_name in all_pdf_fields:
+                fields_to_fill[f_name] = str(ab_text)
+                break
+
     # 3. Spells sequential matching
     spell_list = character.get("spells", [])
     for idx, spell in enumerate(spell_list, 1):

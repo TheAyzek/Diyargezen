@@ -99,6 +99,9 @@ def test_pdf_export_stress_full_character():
     assert fields.get("INITIATIVE", {}).get("/V") == "+8"
     assert fields.get("hit points", {}).get("/V") == "146"
     assert fields.get("BASE ATTACK BONUS", {}).get("/V") == "+15"
+    assert fields.get("Classes & Levels", {}).get("/V") == "Fighter 10 / Wizard 10"
+    assert fields.get("FEATS 1", {}).get("/V") == "Combat Casting"
+    assert fields.get("SPECIAL ABILITIES 1", {}).get("/V") == "Trait: Reactionary"
 
     # Equipment & Weapons
     assert fields.get("Weapon 1", {}).get("/V") == "+3 Spell Storing Longsword"
@@ -111,3 +114,40 @@ def test_pdf_export_stress_full_character():
 
     # Cleanup temp PDF
     pdf_path.unlink()
+
+
+def test_pdf_export_archetype_and_specialty_school():
+    """Verify single class with archetype and specialty school PDF formatting."""
+    calc = PF1e_Calculator()
+
+    raw_char = {
+        "name": "Valeros Weapon Master",
+        "system": "pathfinder1e",
+        "level": 5,
+        "class": "Fighter",
+        "archetype": "Weapon Master",
+        "specialty_school": "Evocation",
+        "race": "Human",
+        "feats": ["Weapon Focus (Longsword)", "Power Attack"],
+        "traits": ["Armor Expert"]
+    }
+
+    recalced = calc.update_all_stats(raw_char)
+    raw_char.update(recalced)
+    raw_char["derived"] = recalced
+
+    temp_dir = tempfile.gettempdir()
+    pdf_path = Path(temp_dir) / "test_valeros_arch.pdf"
+    export_pdf(raw_char, pdf_path)
+
+    assert pdf_path.exists()
+    reader = PdfReader(pdf_path)
+    fields = reader.get_fields() or {}
+
+    assert fields.get("Classes & Levels", {}).get("/V") == "Fighter (Weapon Master) 5"
+    assert fields.get("FEATS 1", {}).get("/V") == "Weapon Focus (Longsword)"
+    assert fields.get("SPECIAL ABILITIES 1", {}).get("/V") == "Trait: Armor Expert"
+    assert fields.get("DOMAINSSPECIALTY SCHOOL 1", {}).get("/V") == "Evocation"
+
+    pdf_path.unlink()
+

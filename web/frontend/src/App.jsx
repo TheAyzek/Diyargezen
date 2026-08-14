@@ -13,6 +13,7 @@ import { useCharacterStore } from './store/characterStore';
 import { exportCharacterPDF } from './utils/pdfExportUtil';
 import SyncStatusBadge from './components/SyncStatusBadge';
 import { initSyncEngine } from './utils/syncEngine';
+import { saveLocalCharacter } from './utils/offlineStorage';
 
 export default function App() {
   const initialToken = localStorage.getItem('token');
@@ -123,27 +124,41 @@ export default function App() {
     setView('edit-character');
   };
 
-  const handleSaveCharacter = (charPayload) => {
-    if (selectedCharacter?.id) {
-      // Update existing character
-      axios.put(`/api/characters/${selectedCharacter.id}`, charPayload)
-        .then(() => {
-          setView('dashboard');
-        })
-        .catch(err => {
-          console.error('Error saving character:', err);
-          alert('Karakter kaydedilemedi!');
-        });
-    } else {
-      // Create new character
-      axios.post('/api/characters', charPayload)
-        .then(() => {
-          setView('dashboard');
-        })
-        .catch(err => {
-          console.error('Error creating character:', err);
-          alert('Karakter oluşturulamadı!');
-        });
+  const handleSaveCharacter = async (charPayload) => {
+    try {
+      // 1. Always save to local IndexedDB first for offline safety & immediate persistence
+      const targetId = selectedCharacter?.id || `local_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      const localRecord = {
+        id: targetId,
+        server_id: selectedCharacter?.server_id || (typeof targetId === 'number' ? targetId : null),
+        name: charPayload.name || 'İsimsiz Kahraman',
+        system: (charPayload.system || selectedSystem || 'pathfinder1e').toLowerCase(),
+        data: charPayload.data || charPayload,
+        is_dirty: true
+      };
+      await saveLocalCharacter(localRecord, true);
+
+      // 2. If logged in and online, attempt server sync
+      if (token && token !== 'offline-guest-token' && isOnline) {
+        try {
+          if (selectedCharacter?.server_id || (selectedCharacter?.id && typeof selectedCharacter.id === 'number')) {
+            await axios.put(`/api/characters/${selectedCharacter.server_id || selectedCharacter.id}`, charPayload);
+          } else {
+            const res = await axios.post('/api/characters', charPayload);
+            if (res.data?.id) {
+              localRecord.server_id = res.data.id;
+              localRecord.is_dirty = false;
+              await saveLocalCharacter(localRecord, false);
+            }
+          }
+        } catch (serverErr) {
+          console.warn('Server sync failed, preserved safely in local vault:', serverErr);
+        }
+      }
+      setView('dashboard');
+    } catch (err) {
+      console.error('Error saving character:', err);
+      alert('Karakter kaydedilirken hata oluştu: ' + (err.message || 'Bilinmeyen hata'));
     }
   };
 

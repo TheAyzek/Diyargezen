@@ -85,9 +85,16 @@ export async function generateCharacterPDFBytes(store) {
     const formatMod = (val) => (val >= 0 ? `+${val}` : `${val}`);
 
     // General Header Info
+    const archName = store.archetype || recalcedData.archetype || '';
+    const multiObj = recalcedData.multiclass || store.multiclass || {};
+    let classLvlStr = `${store.class || 'Bilinmiyor'}${archName ? ` (${archName})` : ''} (Seviye ${store.level || 1})`;
+    if (multiObj && Object.keys(multiObj).length > 0) {
+      classLvlStr = Object.entries(multiObj).map(([c, l]) => `${c} ${l}`).join(' / ');
+    }
+
     setField('Character Name', store.name || 'İsimsiz Kahraman');
     setField('Class', store.class || '');
-    setField('Classes & Levels', `${store.class || 'Bilinmiyor'} (Seviye ${store.level || 1})`);
+    setField('Classes & Levels', classLvlStr);
     setField('Level', store.level || 1);
     setField('Race', store.race || '');
     setField('Gender', store.gender || '');
@@ -217,10 +224,31 @@ export async function generateCharacterPDFBytes(store) {
       : (store.feat || '');
     setField('FEATS', featsListText);
 
+    // Sequential FEATS 1..12
+    (store.feats || []).forEach((f, idx) => {
+      if (idx < 12) {
+        const fname = typeof f === 'string' ? f : (f.name || f.isim || '');
+        setField(`FEATS ${idx + 1}`, fname);
+      }
+    });
+
     const traitsListText = store.traits && store.traits.length > 0
       ? store.traits.map(formatItemWithDescription).join('\n')
       : '';
     setField('SPECIAL ABILITIES', traitsListText);
+
+    // Sequential SPECIAL ABILITIES 1..20 (Traits, Archetype features, Racial traits)
+    const specAbilitiesList = [
+      ...(store.traits || []),
+      ...(recalcedData?.archetype_details?.granted_features || []).map(g => ({ name: `Arketip: ${g}` })),
+      ...(store.racial_traits || [])
+    ];
+    specAbilitiesList.forEach((sa, idx) => {
+      if (idx < 20) {
+        const saname = typeof sa === 'string' ? sa : (sa.name || sa.isim || '');
+        setField(`SPECIAL ABILITIES ${idx + 1}`, saname);
+      }
+    });
 
     // Languages & Spells Known
     if (store.languages) {

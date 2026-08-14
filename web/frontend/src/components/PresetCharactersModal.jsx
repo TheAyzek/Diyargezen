@@ -388,25 +388,105 @@ const ALL_CLASS_PRESETS = [
   }
 ];
 
+export function buildPresetForTier(basePreset, tier = 1) {
+  const p = JSON.parse(JSON.stringify(basePreset));
+  const t = parseInt(tier) || 1;
+  p.level = t;
+
+  if (t === 5) {
+    p.title = `${p.title.replace('İkonik', 'Kıdemli İkonik')} (Seviye 5)`;
+    // Scale abilities (+1 to primary)
+    if (p.class === 'Fighter' || p.class === 'Barbarian' || p.class === 'Paladin') p.abilities.strength += 1;
+    else if (p.class === 'Rogue' || p.class === 'Monk' || p.class === 'Ranger') p.abilities.dexterity += 1;
+    else if (p.class === 'Wizard' || p.class === 'Alchemist') p.abilities.intelligence += 1;
+    else if (p.class === 'Cleric' || p.class === 'Druid') p.abilities.wisdom += 1;
+    else if (p.class === 'Sorcerer' || p.class === 'Bard') p.abilities.charisma += 1;
+
+    // Extra feats
+    if (p.class === 'Fighter') {
+      p.feats.push({ isim: 'Weapon Specialization', sistem_verisi: { weapon: 'Longsword' } }, { isim: 'Iron Will' }, { isim: 'Cleave' });
+    } else if (p.class === 'Wizard') {
+      p.feats.push({ isim: 'Empower Spell' }, { isim: 'Craft Wondrous Item' });
+    } else {
+      p.feats.push({ isim: 'Iron Will' }, { isim: 'Combat Casting' });
+    }
+
+    // Upgraded equipment
+    p.equipment.push({ name: 'Cloak of Resistance +1', category: 'gear' });
+    p.equipment.push({ name: 'Potion of Cure Moderate Wounds', category: 'gear' });
+
+    // Extra spells for casters
+    if (p.spells && p.spells.length > 0) {
+      if (p.class === 'Wizard') {
+        p.spells.push({ isim: 'Fireball', level: 3 }, { isim: 'Haste', level: 3 }, { isim: 'Invisibility', level: 2 }, { isim: 'Scorching Ray', level: 2 });
+      } else if (p.class === 'Cleric') {
+        p.spells.push({ isim: 'Prayer', level: 3 }, { isim: 'Dispel Magic', level: 3 }, { isim: "Bull's Strength", level: 2 }, { isim: 'Spiritual Weapon', level: 2 });
+      } else if (p.class === 'Sorcerer') {
+        p.spells.push({ isim: 'Lightning Bolt', level: 3 }, { isim: 'Mirror Image', level: 2 });
+      } else if (p.class === 'Bard') {
+        p.spells.push({ isim: 'Heroism', level: 3 }, { isim: 'Glitterdust', level: 2 });
+      }
+    }
+  } else if (t === 10) {
+    p.title = `${p.title.replace('İkonik', 'Efsanevi Şampiyon')} (Seviye 10)`;
+    // Scale abilities (+2 to primary, +1 to secondary)
+    if (p.class === 'Fighter' || p.class === 'Barbarian' || p.class === 'Paladin') {
+      p.abilities.strength += 2;
+      p.abilities.constitution += 1;
+    } else if (p.class === 'Rogue' || p.class === 'Monk' || p.class === 'Ranger') {
+      p.abilities.dexterity += 2;
+      p.abilities.constitution += 1;
+    } else if (p.class === 'Wizard' || p.class === 'Alchemist') {
+      p.abilities.intelligence += 2;
+      p.abilities.dexterity += 1;
+    } else if (p.class === 'Cleric' || p.class === 'Druid') {
+      p.abilities.wisdom += 2;
+      p.abilities.constitution += 1;
+    } else if (p.class === 'Sorcerer' || p.class === 'Bard') {
+      p.abilities.charisma += 2;
+      p.abilities.dexterity += 1;
+    }
+
+    // Extra high-level feats
+    p.feats.push({ isim: 'Greater Weapon Focus' }, { isim: 'Improved Critical' }, { isim: 'Quicken Spell' }, { isim: 'Maximize Spell' });
+
+    // Upgraded magic equipment
+    p.equipment.push({ name: 'Belt of Physical Might +2', category: 'gear' });
+    p.equipment.push({ name: 'Cloak of Resistance +3', category: 'gear' });
+    p.equipment.push({ name: 'Ring of Protection +2', category: 'gear' });
+
+    // High level spells
+    if (p.spells && p.spells.length > 0) {
+      if (p.class === 'Wizard') {
+        p.spells.push({ isim: 'Cone of Cold', level: 5 }, { isim: 'Teleport', level: 5 }, { isim: 'Stoneskin', level: 4 }, { isim: 'Dimension Door', level: 4 }, { isim: 'Fireball', level: 3 }, { isim: 'Haste', level: 3 });
+      } else if (p.class === 'Cleric') {
+        p.spells.push({ isim: 'Flame Strike', level: 5 }, { isim: 'Righteous Might', level: 5 }, { isim: 'Restoration', level: 4 }, { isim: 'Divine Power', level: 4 });
+      } else if (p.class === 'Sorcerer') {
+        p.spells.push({ isim: 'Telekinesis', level: 5 }, { isim: 'Greater Invisibility', level: 4 }, { isim: 'Lightning Bolt', level: 3 });
+      }
+    }
+  }
+  return p;
+}
+
 export default function PresetCharactersModal({ isOpen, onClose, onSelectPreset }) {
   const { loadPresetCharacter } = useCharacterStore();
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedClassFilter, setSelectedClassFilter] = useState('ALL');
+  const [selectedTier, setSelectedTier] = useState(1); // 1, 5, 10
 
   if (!isOpen) return null;
 
-  const handleSelect = (preset) => {
-    loadPresetCharacter(preset);
-    if (onSelectPreset) onSelectPreset(preset);
+  const handleSelect = (rawPreset) => {
+    const tieredPreset = buildPresetForTier(rawPreset, selectedTier);
+    loadPresetCharacter(tieredPreset);
+    if (onSelectPreset) onSelectPreset(tieredPreset);
     onClose();
   };
 
   const filteredPresets = ALL_CLASS_PRESETS.filter(p => {
-    const matchesSearch = p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          p.class.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          p.race.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesClass = selectedClassFilter === 'ALL' || p.class.toUpperCase() === selectedClassFilter.toUpperCase();
-    return matchesSearch && matchesClass;
+    return p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+           p.class.toLowerCase().includes(searchTerm.toLowerCase()) ||
+           p.race.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
   return (
@@ -417,7 +497,7 @@ export default function PresetCharactersModal({ isOpen, onClose, onSelectPreset 
     }}>
       <div style={{
         backgroundColor: '#12101f', border: '1px solid var(--border-gold)', borderRadius: '14px',
-        width: '100%', maxWidth: '920px', maxHeight: '92vh', overflowY: 'auto',
+        width: '100%', maxWidth: '940px', maxHeight: '92vh', overflowY: 'auto',
         boxShadow: '0 20px 50px rgba(0,0,0,0.85)', padding: '24px', display: 'flex', flexDirection: 'column', gap: '16px'
       }}>
         
@@ -426,7 +506,7 @@ export default function PresetCharactersModal({ isOpen, onClose, onSelectPreset 
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <Sparkles size={22} color="var(--gold-bright)" />
             <h2 style={{ fontFamily: 'Cinzel Decorative, serif', fontSize: '1.25rem', color: 'var(--gold-bright)', margin: 0 }}>
-              Tüm Sınıflar İçin Hazır Karakter Şablonları ({ALL_CLASS_PRESETS.length} Sınıf)
+              İkonik Karakter Şablonları Galerisi ({ALL_CLASS_PRESETS.length} Sınıf)
             </h2>
           </div>
           <button onClick={onClose} style={{ background: 'none', border: 'none', color: '#94a3b8', cursor: 'pointer' }}>
@@ -434,75 +514,114 @@ export default function PresetCharactersModal({ isOpen, onClose, onSelectPreset 
           </button>
         </div>
 
-        {/* Search & Filter Controls */}
-        <div style={{ display: 'flex', gap: '10px', alignItems: 'center', flexWrap: 'wrap' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', backgroundColor: '#19162a', border: '1px solid var(--border-gold)', borderRadius: '6px', padding: '6px 12px', flex: 1 }}>
+        {/* Tier Selector & Search Bar */}
+        <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+          {/* Search Box */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '6px', backgroundColor: '#19162a', border: '1px solid var(--border-gold)', borderRadius: '6px', padding: '6px 12px', flex: 1, minWidth: '240px' }}>
             <Search size={16} color="var(--gold-light)" />
             <input
               type="text"
-              placeholder="Sınıf veya isim ara (Örn: Alchemist, Barbarian, Wizard)..."
+              placeholder="Sınıf veya isim ara (Örn: Wizard, Fighter, Amiri)..."
               value={searchTerm}
               onChange={e => setSearchTerm(e.target.value)}
               style={{ background: 'transparent', border: 'none', color: '#fff', outline: 'none', width: '100%', fontSize: '0.85rem' }}
             />
           </div>
+
+          {/* Tier Pills */}
+          <div style={{ display: 'flex', gap: '6px', alignItems: 'center' }}>
+            <span style={{ fontSize: '0.72rem', color: '#a594ff', fontWeight: 'bold' }}>Karakter Kademesi:</span>
+            {[
+              { tier: 1, label: '🌱 Seviye 1 (Başlangıç)' },
+              { tier: 5, label: '⚔️ Seviye 5 (Kıdemli)' },
+              { tier: 10, label: '👑 Seviye 10 (Şampiyon)' }
+            ].map(tObj => (
+              <button
+                key={tObj.tier}
+                type="button"
+                onClick={() => setSelectedTier(tObj.tier)}
+                style={{
+                  padding: '5px 12px', borderRadius: '6px', fontSize: '0.75rem', cursor: 'pointer',
+                  backgroundColor: selectedTier === tObj.tier ? 'var(--accent-gold)' : 'rgba(255,255,255,0.05)',
+                  border: `1px solid ${selectedTier === tObj.tier ? 'var(--accent-gold)' : 'rgba(255,255,255,0.15)'}`,
+                  color: selectedTier === tObj.tier ? '#0f0f1a' : '#f0e6d2',
+                  fontWeight: 'bold',
+                  transition: 'all 0.15s ease'
+                }}
+              >
+                {tObj.label}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Preset Character Cards Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(390px, 1fr))', gap: '14px' }}>
-          {filteredPresets.map((char) => (
-            <div
-              key={char.id}
-              style={{
-                backgroundColor: '#181528', border: '1px solid rgba(201,168,76,0.3)', borderRadius: '10px',
-                padding: '16px', display: 'flex', flexDirection: 'column', gap: '10px',
-                boxShadow: '0 4px 15px rgba(0,0,0,0.3)'
-              }}
-            >
-              <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-                <div style={{
-                  width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'rgba(201,168,76,0.15)',
-                  border: '1px solid var(--border-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: '1.6rem', flexShrink: 0
-                }}>
-                  {char.avatar}
-                </div>
-                <div>
-                  <h3 style={{ fontFamily: 'Cinzel, serif', fontSize: '1.1rem', color: 'var(--gold-bright)', margin: 0 }}>
-                    {char.name} ({char.class})
-                  </h3>
-                  <div style={{ fontSize: '0.72rem', color: 'var(--gold-light)', fontFamily: 'Cinzel, serif' }}>
-                    {char.title} • {char.race}
-                  </div>
-                </div>
-              </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '14px' }}>
+          {filteredPresets.map((rawChar) => {
+            const char = buildPresetForTier(rawChar, selectedTier);
 
-              <p style={{ fontSize: '0.78rem', color: '#94a3b8', margin: 0, lineHeight: 1.4 }}>
-                {char.description}
-              </p>
-
-              {/* Detailed Loadouts Summary */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', fontSize: '0.72rem', backgroundColor: '#0f0d1a', padding: '8px', borderRadius: '6px', border: '1px solid #2a2540' }}>
-                <div><b style={{ color: 'var(--gold-bright)' }}>Statlar:</b> STR {char.abilities.strength} | DEX {char.abilities.dexterity} | CON {char.abilities.constitution} | INT {char.abilities.intelligence} | WIS {char.abilities.wisdom} | CHA {char.abilities.charisma}</div>
-                <div><b style={{ color: 'var(--gold-bright)' }}>Silah & Zırh:</b> {char.equipment.map(e => e.name).join(', ')}</div>
-                {char.spells?.length > 0 && <div><b style={{ color: '#a594ff' }}>Büyüler:</b> {char.spells.map(s => s.isim).join(', ')}</div>}
-                {char.companion && <div><b style={{ color: '#4ec9b0' }}>Yoldaş:</b> {char.companion.name} ({char.companion.type})</div>}
-              </div>
-
-              {/* Action Button */}
-              <button
-                onClick={() => handleSelect(char)}
+            return (
+              <div
+                key={char.id}
                 style={{
-                  marginTop: 'auto', padding: '9px 14px', backgroundColor: 'rgba(201,168,76,0.2)',
-                  border: '1px solid var(--border-gold)', borderRadius: '6px', color: 'var(--gold-bright)',
-                  fontSize: '0.82rem', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center',
-                  justifyContent: 'center', gap: '6px', fontFamily: 'Cinzel, serif'
+                  backgroundColor: '#181528', border: '1px solid rgba(201,168,76,0.3)', borderRadius: '10px',
+                  padding: '16px', display: 'flex', flexDirection: 'column', gap: '10px',
+                  boxShadow: '0 4px 15px rgba(0,0,0,0.3)'
                 }}
               >
-                <Zap size={14} /> ⚡ Bu Karakteri Yükle ve Başla
-              </button>
-            </div>
-          ))}
+                <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                  <div style={{
+                    width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'rgba(201,168,76,0.15)',
+                    border: '1px solid var(--border-gold)', display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    fontSize: '1.6rem', flexShrink: 0
+                  }}>
+                    {char.avatar}
+                  </div>
+                  <div style={{ flex: 1 }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <h3 style={{ fontFamily: 'Cinzel, serif', fontSize: '1.1rem', color: 'var(--gold-bright)', margin: 0 }}>
+                        {char.name} ({char.class})
+                      </h3>
+                      <span style={{ fontSize: '0.65rem', padding: '2px 8px', borderRadius: '4px', background: 'rgba(124,110,247,0.2)', border: '1px solid #7c6ef7', color: '#d8b4fe', fontWeight: 'bold' }}>
+                        Seviye {selectedTier}
+                      </span>
+                    </div>
+                    <div style={{ fontSize: '0.72rem', color: 'var(--gold-light)', fontFamily: 'Cinzel, serif' }}>
+                      {char.title} • {char.race}
+                    </div>
+                  </div>
+                </div>
+
+                <p style={{ fontSize: '0.78rem', color: '#94a3b8', margin: 0, lineHeight: 1.4 }}>
+                  {char.description}
+                </p>
+
+                {/* Detailed Loadouts Summary */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', fontSize: '0.72rem', backgroundColor: '#0f0d1a', padding: '8px', borderRadius: '6px', border: '1px solid #2a2540' }}>
+                  <div><b style={{ color: 'var(--gold-bright)' }}>Statlar:</b> STR {char.abilities.strength} | DEX {char.abilities.dexterity} | CON {char.abilities.constitution} | INT {char.abilities.intelligence} | WIS {char.abilities.wisdom} | CHA {char.abilities.charisma}</div>
+                  <div><b style={{ color: 'var(--gold-bright)' }}>Hünerler (Feats):</b> {char.feats.map(f => f.isim || f.name).join(', ')}</div>
+                  <div><b style={{ color: 'var(--gold-bright)' }}>Ekipman:</b> {char.equipment.map(e => e.name).join(', ')}</div>
+                  {char.spells?.length > 0 && <div><b style={{ color: '#a594ff' }}>Büyüler:</b> {char.spells.map(s => s.isim || s.name).join(', ')}</div>}
+                  {char.companion && <div><b style={{ color: '#4ec9b0' }}>Yoldaş:</b> {char.companion.name} ({char.companion.type})</div>}
+                </div>
+
+                {/* Action Button */}
+                <button
+                  type="button"
+                  onClick={() => handleSelect(rawChar)}
+                  style={{
+                    marginTop: 'auto', padding: '10px 14px', backgroundColor: 'rgba(201,168,76,0.2)',
+                    border: '1px solid var(--border-gold)', borderRadius: '6px', color: 'var(--gold-bright)',
+                    fontSize: '0.85rem', fontWeight: 700, cursor: 'pointer', display: 'flex', alignItems: 'center',
+                    justifyContent: 'center', gap: '6px', fontFamily: 'Cinzel, serif',
+                    transition: 'all 0.15s ease'
+                  }}
+                >
+                  <Zap size={15} /> ⚡ {char.name} ({selectedTier}. Seviye) Yükle
+                </button>
+              </div>
+            );
+          })}
         </div>
 
       </div>

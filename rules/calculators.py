@@ -84,7 +84,7 @@ def is_item_equipped(item: Dict[str, Any]) -> bool:
             return bool(sv.get("is_equipped"))
         if "equipped" in sv:
             return bool(sv.get("equipped"))
-    return False
+    return True
 
 def extract_magic_item_modifiers(equipment_list: List[Dict[str, Any]]) -> Dict[str, Any]:
     """Extract magic item modifiers (ability enhancements, deflection AC, natural armor,
@@ -111,7 +111,7 @@ def extract_magic_item_modifiers(equipment_list: List[Dict[str, Any]]) -> Dict[s
     for item in equipment_list:
         if not isinstance(item, dict):
             continue
-        if has_explicit_status and not is_item_equipped(item):
+        if not is_item_equipped(item):
             continue
 
         name = str(item.get("name") or item.get("isim") or "").lower()
@@ -297,13 +297,13 @@ HEAVY_MAX_TABLE: Dict[int, int] = {
     11: 115, 12: 130, 13: 150, 14: 175, 15: 200, 16: 230, 17: 260, 18: 300, 19: 350, 20: 400
 }
 
-def calculate_carrying_capacity(strength_score: int, size: str = "Medium") -> Dict[str, float]:
+def calculate_carrying_capacity(strength_score: int, size: str = "Medium", is_quadruped: bool = False, multiplier: float = 1.0) -> Dict[str, float]:
     """Calculate Pathfinder 1e carrying capacity thresholds (Light, Medium, Heavy Max) in lbs.
     
     Academic Architecture:
     ----------------------
     Reference: PF1e Core Rulebook, Chapter 7 (Carrying Capacity).
-    Calculates capacity limits based on Strength score and creature Size category.
+    Calculates capacity limits based on Strength score, creature Size category, and Quadruped status.
     For Strength > 20, Heavy Max doubles for every +5 Strength (+10 multiplies by 4).
     """
     str_val = max(1, int(strength_score or 10))
@@ -316,12 +316,18 @@ def calculate_carrying_capacity(strength_score: int, size: str = "Medium") -> Di
         heavy_max = float(base_heavy * (4 ** multiplier_pow))
 
     size_norm = str(size or "Medium").capitalize()
-    size_mult = {
-        "Fine": 0.125, "Diminutive": 0.25, "Tiny": 0.5, "Small": 0.75,
-        "Medium": 1.0, "Large": 2.0, "Huge": 4.0, "Gargantuan": 8.0, "Colossal": 16.0
-    }.get(size_norm, 1.0)
+    if is_quadruped:
+        size_mult = {
+            "Fine": 0.25, "Diminutive": 0.5, "Tiny": 0.75, "Small": 1.0,
+            "Medium": 1.5, "Large": 3.0, "Huge": 6.0, "Gargantuan": 12.0, "Colossal": 24.0
+        }.get(size_norm, 1.5)
+    else:
+        size_mult = {
+            "Fine": 0.125, "Diminutive": 0.25, "Tiny": 0.5, "Small": 0.75,
+            "Medium": 1.0, "Large": 2.0, "Huge": 4.0, "Gargantuan": 8.0, "Colossal": 16.0
+        }.get(size_norm, 1.0)
 
-    heavy_max = float(heavy_max * size_mult)
+    heavy_max = float(heavy_max * size_mult * (multiplier or 1.0))
     light_max = round(heavy_max / 3.0, 1)
     medium_max = round((heavy_max * 2.0) / 3.0, 1)
     heavy_max = round(heavy_max, 1)
@@ -849,6 +855,14 @@ class BaseCalculator(ABC):
             if ab in scores:
                 scores[ab] += val
 
+        # Aging Effects (PF1e CRB Table 7-2: Middle Age, Old, Venerable)
+        if character.get("age") is not None:
+            from rules.age_height_weight import get_age_category_and_modifiers
+            age_info = get_age_category_and_modifiers(character.get("race", "Human"), character.get("age"))
+            for ab, val in age_info["modifiers"].items():
+                if ab in scores:
+                    scores[ab] += val
+
         return scores
 
     def _get_entity_data(self, character: Dict[str, Any], field: str) -> Optional[Dict[str, Any]]:
@@ -1261,6 +1275,18 @@ class PF1e_Calculator(BaseCalculator):
         # ── ADIM 1: Stat skorlari + irk bonuslari → modifierlar ─────────────────
         scores = self.get_adjusted_abilities(character)
         abilities = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]
+
+        # Active conditions and situational buffs (PF1e CRB p. 565-568)
+        from rules.conditions_engine import calculate_conditions_and_buffs_modifiers
+        raw_conds = character.get("active_conditions") or character.get("conditions") or []
+        cond_mods = calculate_conditions_and_buffs_modifiers(raw_conds, character)
+
+        for ab in abilities:
+            enh_val = cond_mods["ability_enhancements"].get(ab, 0)
+            mor_val = cond_mods["ability_morale"].get(ab, 0)
+            pen_val = cond_mods["ability_penalties"].get(ab, 0)
+            scores[ab] = scores.get(ab, 10) + enh_val + mor_val - pen_val
+
         mods = {ab: (scores.get(ab, 10) - 10) // 2 for ab in abilities}
         derived["ability_scores"]    = {ab.title(): scores.get(ab, 10) for ab in abilities}
         derived["ability_modifiers"] = {ab.title(): mods[ab] for ab in abilities}
@@ -1283,6 +1309,8 @@ class PF1e_Calculator(BaseCalculator):
                 for cls_k, cls_info in PF1E_CLASS_FULL_DETAILS.items():
                     if cls_k.lower() in char_class_name.lower():
                         class_skills = cls_info.get("class_skills", [])
+                        if not class_data.get("bab_progression") and (cls_info.get("bab_progression") or cls_info.get("bab")):
+                            class_data["bab_progression"] = cls_info.get("bab_progression") or cls_info.get("bab")
                         if not class_data.get("hit_die"):
                             class_data["hit_die"] = cls_info.get("hit_die")
                         if not class_data.get("skill_ranks_per_level"):
@@ -1292,6 +1320,15 @@ class PF1e_Calculator(BaseCalculator):
                         break
             except Exception:
                 pass
+
+        if not class_data.get("bab_progression") and char_class_name:
+            cn_low = char_class_name.lower()
+            if any(fc in cn_low for fc in ("fighter", "barbarian", "paladin", "ranger", "cavalier", "gunslinger", "samurai", "bloodrager", "brawler", "slayer", "swashbuckler")):
+                class_data["bab_progression"] = "full"
+            elif any(sc in cn_low for sc in ("wizard", "sorcerer", "arcanist", "witch")):
+                class_data["bab_progression"] = "poor"
+            else:
+                class_data["bab_progression"] = "medium"
 
         bab_prog = str(class_data.get("bab_progression", "medium")).lower()
 
@@ -1341,21 +1378,33 @@ class PF1e_Calculator(BaseCalculator):
             save_prog = class_data.get("saving_throws", {}) or {}
             saves: Dict[str, int] = {}
             for save_type, ab in [("fortitude", "constitution"), ("reflex", "dexterity"), ("will", "wisdom")]:
-                prog      = str(save_prog.get(save_type, "poor")).lower()
-                base_save = (2 + level // 2) if prog == "good" else (level // 3)
+                short_k = save_type[:4] if save_type != "reflex" else "ref"
+                raw_prog_val = str(save_prog.get(save_type) or save_prog.get(short_k) or "poor").lower()
+                is_good_save = any(g in raw_prog_val for g in ("good", "iyi", "+2"))
+                base_save = (2 + level // 2) if is_good_save else (level // 3)
                 saves[save_type.title()] = base_save + mods[ab]
             derived["saving_throws"] = saves
+
+        # Apply condition & buff saving throw modifiers (CRB p. 565-568)
+        if isinstance(derived.get("saving_throws"), dict):
+            for st_k in derived["saving_throws"]:
+                b_val = cond_mods["save_bonuses"].get(st_k, 0)
+                p_val = cond_mods["save_penalties"]
+                derived["saving_throws"][st_k] += b_val - p_val
 
         # Archetype Compatibility & Feature Replacements (PF1e APG p. 72)
         from rules.archetype_engine import PF1eArchetypeEngine
         raw_archs = character.get("archetypes") or character.get("archetype") or []
         if isinstance(raw_archs, str):
             raw_archs = [raw_archs]
-        elif not isinstance(raw_archs, list):
-            raw_archs = []
-
+        derived["archetype_details"] = {
+            "is_compatible": True,
+            "conflicts": [],
+            "replaced_features": [],
+            "granted_features": []
+        }
         if raw_archs:
-            char_cls = character.get("class", "Fighter")
+            char_cls = str(character.get("class") or "Fighter")
             is_compat, conflicts = PF1eArchetypeEngine.validate_archetype_compatibility(char_cls, raw_archs)
             arch_feats = PF1eArchetypeEngine.get_archetype_features(char_cls, raw_archs)
             derived["archetype_details"] = {
@@ -1374,6 +1423,13 @@ class PF1e_Calculator(BaseCalculator):
         con_mod = mods["constitution"]
         hp = hit_die + con_mod + (level - 1) * (hit_die // 2 + 1 + con_mod)
         derived["hit_points"] = max(1, hp)
+
+        # Favored Class Bonus (FCB) Engine (PF1e CRB p. 31 & APG)
+        from rules.favored_class_engine import evaluate_favored_class_bonuses
+        fcb_summary = evaluate_favored_class_bonuses(character)
+        derived["favored_class_bonus"] = fcb_summary
+        if fcb_summary["hp_bonus"] > 0:
+            derived["hit_points"] += fcb_summary["hp_bonus"]
 
         # Skill Ranks (each level: class_int_modifier + int_mod ranks; default rank source = character)
         skill_ranks = character.get("skill_ranks") or character.get("skills") or {}
@@ -1400,6 +1456,15 @@ class PF1e_Calculator(BaseCalculator):
         derived["skills"] = raw_skills
         derived["skills_detail"] = skills_detail
         derived["class_skills_active"] = [sk for sk in self.PF_SKILL_LIST if sk.lower() in class_skills_set]
+
+        # Calculate Total Available Skill Ranks (Class ranks + INT mod + Human bonus + FCB skill bonus)
+        class_base_skills = int(class_data.get("skill_points") or class_data.get("skill_ranks_per_level") or 2)
+        is_human = "human" in str(character.get("race", "")).lower() or "insan" in str(character.get("race", "")).lower()
+        human_skill_bonus = level if is_human else 0
+        int_mod = mods["intelligence"]
+        total_available_skill_points = max(level, (class_base_skills + int_mod) * level + human_skill_bonus + fcb_summary["skill_bonus"])
+        derived["total_available_skill_points"] = total_available_skill_points
+        derived["total_allocated_skill_ranks"] = sum(skills_detail[sk]["ranks"] for sk in skills_detail)
 
         # ── ADIM 3: Feat/Trait/Race mekanikleri uygula ──────────────────────────
         # (standard_mechanics JSON'dan ve traits'den gelen dogrudan bonus'lar)
@@ -1464,8 +1529,14 @@ class PF1e_Calculator(BaseCalculator):
         if has_dodge:
             misc_ac_bonus += 1
 
-        # Fleet Feat (+5 ft Speed)
-        base_speed = 30
+        # Base Speed (PF1e: Dwarves, Gnomes, Halflings = 20 ft; Humans, Elves, Orcs = 30 ft)
+        char_race_lower = str(character.get("race", "")).lower()
+        char_size_val = str(character.get("size") or character.get("raceData", {}).get("size") or "Medium")
+        if "dwarf" in char_race_lower or "halfling" in char_race_lower or "gnome" in char_race_lower or char_size_val == "Small":
+            default_race_speed = 20
+        else:
+            default_race_speed = 30
+        base_speed = int(character.get("speed") or character.get("raceData", {}).get("speed") or default_race_speed)
         if has_fleet:
             base_speed += 5
 
@@ -1493,26 +1564,52 @@ class PF1e_Calculator(BaseCalculator):
 
         str_score = scores.get("strength", 10)
         char_size = str(character.get("size") or character.get("raceData", {}).get("size") or "Medium")
-        capacity = calculate_carrying_capacity(str_score, char_size)
+        is_quadruped = bool(character.get("is_quadruped") or character.get("raceData", {}).get("is_quadruped"))
+        capacity = calculate_carrying_capacity(str_score, char_size, is_quadruped)
         encumbrance = calculate_encumbrance_status(total_weight, capacity)
 
         derived["total_weight"] = encumbrance["total_weight"]
         derived["carrying_capacity"] = capacity
         derived["encumbrance"] = encumbrance
 
+        # 12 Magic Item Body Slots & Wealth by Level (WBL) Engine (PF1e CRB p. 458-459, Table 12-4)
+        from rules.magic_item_slots import evaluate_magic_item_slots_and_wealth
+        magic_slots_eval = evaluate_magic_item_slots_and_wealth(eq_list, level=level)
+        derived["magic_item_slots"] = magic_slots_eval["occupied_slots"]
+        derived["slotless_items"] = magic_slots_eval["slotless_items"]
+        derived["slot_conflicts"] = magic_slots_eval["slot_conflicts"]
+        derived["has_slot_conflicts"] = magic_slots_eval["has_conflicts"]
+        derived["wealth"] = magic_slots_eval["wealth"]
+
+        # Fighter Armor Training (PF1e CRB p. 55)
+        fighter_at_bonus = 0
+        if char_class_name.lower() == "fighter" and level >= 3:
+            fighter_at_bonus = min(4, (level + 1) // 4)
+
         # Speed Penalty from Medium/Heavy Armor or Encumbrance Load
         is_dwarf = "dwarf" in str(character.get("race", "")).lower()
         armor_type = "light"
         for arm in categorized["armor_shields"]:
+            if not is_item_equipped(arm):
+                continue
             sv_arm = arm.get("sistem_verisi") or {}
             a_category = str(sv_arm.get("category") or sv_arm.get("armor_type") or "").lower()
             a_name = str(arm.get("name") or arm.get("isim") or "").lower()
-            if "heavy" in a_category or "plate" in a_name or "full plate" in a_name:
+            if "heavy" in a_category or "full plate" in a_name or "half-plate" in a_name or "half plate" in a_name or ("plate" in a_name and "breastplate" not in a_name):
                 armor_type = "heavy"
-            elif "medium" in a_category or "breastplate" in a_name or "chainmail" in a_name or "scale" in a_name:
+            elif "medium" in a_category or "breastplate" in a_name or "chainmail" in a_name or "scale" in a_name or "hide" in a_name:
                 armor_type = "medium"
 
-        if (armor_type in ("medium", "heavy") or encumbrance["status"] in ("Medium Load", "Heavy Load", "Overloaded")) and not is_dwarf:
+        # Check armor speed penalty exception from Dwarf or Fighter Armor Training
+        armor_speed_penalty = False
+        if armor_type == "medium" and not is_dwarf and fighter_at_bonus < 1:
+            armor_speed_penalty = True
+        elif armor_type == "heavy" and not is_dwarf and fighter_at_bonus < 2:
+            armor_speed_penalty = True
+
+        load_speed_penalty = (encumbrance["status"] in ("Medium Load", "Heavy Load", "Overloaded")) and not is_dwarf
+
+        if armor_speed_penalty or load_speed_penalty:
             derived["speed"] = max(15, base_speed - 10)
         else:
             derived["speed"] = base_speed
@@ -1520,22 +1617,34 @@ class PF1e_Calculator(BaseCalculator):
         # Apply Encumbrance Armor Check Penalty (ACP)
         acp += encumbrance["encumbrance_acp"]
 
-        # Armor Check Penalty (ACP) adjustment with Armor Expert trait (-1 ACP)
-        if acp < 0:
-            if has_armor_expert:
-                acp = min(0, acp + 1)
-            if acp_reduction != 0:
-                acp_adj = abs(acp_reduction) if acp_reduction < 0 else acp_reduction
-                acp = min(0, acp + acp_adj)
-            for sk in self.ACP_SKILLS:
+        # Armor Check Penalty (ACP) adjustment with Armor Training & Armor Expert trait (-1 ACP)
+        if fighter_at_bonus > 0 and acp < 0:
+            acp = min(0, acp + fighter_at_bonus)
+        if has_armor_expert and acp < 0:
+            acp = min(0, acp + 1)
+        if acp_reduction != 0 and acp < 0:
+            acp_adj = abs(acp_reduction) if acp_reduction < 0 else acp_reduction
+            acp = min(0, acp + acp_adj)
+
+        # Apply ACP to all 9 ACP skills (trained & untrained)
+        for sk in self.PF_SKILL_LIST:
+            if sk in self.ACP_SKILLS:
+                penalty_for_sk = acp
                 if sk in derived["skills"]:
-                    ranks = max(0, int(skill_ranks.get(sk, 0)))
-                    if ranks > 0:
-                        derived["skills"][sk] += acp
+                    derived["skills"][sk] += penalty_for_sk
+                if sk in derived.get("skills_detail", {}):
+                    derived["skills_detail"][sk]["acp_penalty"] = penalty_for_sk
+                    derived["skills_detail"][sk]["total"] += penalty_for_sk
+            else:
+                if sk in derived.get("skills_detail", {}):
+                    derived["skills_detail"][sk]["acp_penalty"] = 0
 
         derived["armor_check_penalty"] = acp
 
-        # Max Dex kısıtlamasını uygula (Armor & Encumbrance)
+        # Max Dex kısıtlamasını uygula (Armor & Encumbrance & Armor Training)
+        if fighter_at_bonus > 0 and dex_max < 999:
+            dex_max += fighter_at_bonus
+
         if encumbrance["max_dex_bonus"] is not None:
             dex_max = min(dex_max, encumbrance["max_dex_bonus"])
 
@@ -1560,16 +1669,104 @@ class PF1e_Calculator(BaseCalculator):
                     derived["skills_detail"][sk_k]["total"] += sk_val
 
         # ── ADIM 5: Nihai AC, CMB, CMD, Inisiyatif ve Silah Atak/Hasar Bloğu ────────
+        # Condition AC adjustments (Mage Armor, Shield spell, Barkskin, Dodge, Loss of Dex)
+        if cond_mods["ac_armor_bonus"] > 0:
+            armor_bonus = max(armor_bonus, cond_mods["ac_armor_bonus"])
+        if cond_mods["ac_shield_bonus"] > 0:
+            shield_bonus = max(shield_bonus, cond_mods["ac_shield_bonus"])
+        if cond_mods["ac_natural_bonus"] > 0:
+            natural_armor = max(natural_armor, cond_mods["ac_natural_bonus"])
+
+        misc_ac_bonus += cond_mods["ac_dodge_bonus"] - cond_mods["ac_penalty"]
+        if cond_mods["loses_dex_ac"]:
+            dex_contrib = min(0, dex_contrib)
+
+        # Condition Speed adjustments
+        if cond_mods["speed_bonus"] > 0:
+            derived["speed"] = derived.get("speed", base_speed) + cond_mods["speed_bonus"]
+        if cond_mods["speed_halved"]:
+            derived["speed"] = max(5, derived.get("speed", base_speed) // 2)
+
+        # Condition Skill adjustments
+        sk_cond_delta = cond_mods["skill_bonus"] - cond_mods["skill_penalties"]
+        if sk_cond_delta != 0:
+            for sk_k in derived.get("skills", {}):
+                derived["skills"][sk_k] += sk_cond_delta
+            for sk_k in derived.get("skills_detail", {}):
+                derived["skills_detail"][sk_k]["total"] += sk_cond_delta
+
         size_cmb = int(character.get("size_modifier", 0))
-        derived["initiative"] = derived.get("initiative", mods["dexterity"])
+        derived["initiative"] = derived.get("initiative", mods["dexterity"]) - cond_mods["initiative_penalty"]
 
         derived["armor_class"]    = 10 + dex_contrib + armor_bonus + shield_bonus + natural_armor + deflect_bonus + misc_ac_bonus + size_ac
         derived["touch_ac"]       = 10 + dex_contrib + deflect_bonus + misc_ac_bonus + size_ac
         derived["flat_footed_ac"] = 10 + armor_bonus + shield_bonus + natural_armor + deflect_bonus + misc_ac_bonus + size_ac
-        derived["cmb"]            = derived["bab"] + mods["strength"] - size_cmb
-        derived["cmd"]            = 10 + derived["bab"] + mods["strength"] + dex_contrib - size_cmb + deflect_bonus
-        derived["melee_attack_bonus"]  = derived["bab"] + mods["strength"]
-        derived["ranged_attack_bonus"] = derived["bab"] + mods["dexterity"]
+        
+        # Base CMB and CMD (PF1e CRB p. 198-201)
+        has_agile_maneuvers = any("agile maneuvers" in f for f in feat_names)
+        base_cmb_stat_mod = mods["dexterity"] if has_agile_maneuvers else mods["strength"]
+        base_cmb_val = derived["bab"] + base_cmb_stat_mod - size_cmb
+        base_cmd_val = 10 + derived["bab"] + mods["strength"] + dex_contrib - size_cmb + deflect_bonus
+
+        derived["cmb"] = base_cmb_val
+        derived["cmd"] = base_cmd_val
+        derived["melee_attack_bonus"]  = derived["bab"] + mods["strength"] + cond_mods["attack_bonus"] + cond_mods["melee_attack_bonus"]
+        derived["ranged_attack_bonus"] = derived["bab"] + mods["dexterity"] + cond_mods["attack_bonus"] + cond_mods["ranged_attack_bonus"]
+        derived["condition_attack_mod"] = cond_mods["attack_bonus"]
+        derived["condition_damage_mod"] = cond_mods["damage_bonus"]
+        derived["condition_modifiers"] = cond_mods
+        derived["applied_conditions"] = cond_mods["applied_conditions"]
+
+        # ── 10 Resmi Savaş Manevrası Matrisi (Combat & Maneuver Matrix) ───────
+        MANEUVER_FEATS = {
+            "Grapple": ("improved grapple", "greater grapple"),
+            "Trip": ("improved trip", "greater trip"),
+            "Disarm": ("improved disarm", "greater disarm"),
+            "Sunder": ("improved sunder", "greater sunder"),
+            "Bull Rush": ("improved bull rush", "greater bull rush"),
+            "Overrun": ("improved overrun", "greater overrun"),
+            "Dirty Trick": ("improved dirty trick", "greater dirty trick"),
+            "Steal": ("improved steal", "greater steal"),
+            "Reposition": ("improved reposition", "greater reposition"),
+            "Drag": ("improved drag", "greater drag"),
+        }
+
+        maneuvers_matrix: Dict[str, Dict[str, Any]] = {}
+        for m_name, (imp_f, grt_f) in MANEUVER_FEATS.items():
+            bonus_cmb = 0
+            bonus_cmd = 0
+            bonuses_list = []
+            cmd_bonuses_list = []
+
+            if any(imp_f in f for f in feat_names):
+                bonus_cmb += 2
+                bonus_cmd += 2
+                bonuses_list.append(f"+2 ({imp_f.title()})")
+            if any(grt_f in f for f in feat_names):
+                bonus_cmb += 2
+                bonus_cmd += 2
+                bonuses_list.append(f"+2 ({grt_f.title()})")
+
+            # Dwarf Stability (+4 CMD vs Bull Rush & Trip)
+            if is_dwarf and m_name in ("Bull Rush", "Trip"):
+                bonus_cmd += 4
+                cmd_bonuses_list.append("+4 (Dwarf Stability)")
+
+            total_m_cmb = base_cmb_val + bonus_cmb
+            total_m_cmd = base_cmd_val + bonus_cmd
+
+            maneuvers_matrix[m_name] = {
+                "name": m_name,
+                "cmb": total_m_cmb,
+                "cmb_str": f"+{total_m_cmb}" if total_m_cmb >= 0 else str(total_m_cmb),
+                "cmd": total_m_cmd,
+                "bonus_cmb": bonus_cmb,
+                "bonus_cmd": bonus_cmd,
+                "bonus_summary": ", ".join(bonuses_list) if bonuses_list else "Standart",
+                "cmd_summary": ", ".join(cmd_bonuses_list) if cmd_bonuses_list else "Standart"
+            }
+
+        derived["maneuvers"] = maneuvers_matrix
 
         derived["ac_breakdown"] = {
             "armor": armor_bonus,
@@ -1580,7 +1777,19 @@ class PF1e_Calculator(BaseCalculator):
             "misc": misc_ac_bonus + size_ac
         }
 
-        # Calculate Weapon Cards (Attacks & Damage)
+        # Iterative Attacks Generator (+11/+6/+1)
+        def generate_full_attack(first_atk: int, bab_val: int) -> str:
+            attacks = [first_atk]
+            curr_bab = bab_val
+            while curr_bab >= 6:
+                curr_bab -= 5
+                attacks.append(attacks[-1] - 5)
+            return " / ".join(f"+{a}" if a >= 0 else str(a) for a in attacks)
+
+        has_power_attack = any("power attack" in f for f in feat_names)
+        pa_penalty = (1 + (derived["bab"] // 4)) if (has_power_attack and derived["bab"] >= 1) else 0
+
+        # Calculate Weapon Cards (Attacks, Full Attack, Power Attack & Damage)
         calculated_weapons = []
         for w in categorized["weapons"]:
             w_name = w.get("name") or w.get("isim") or "Silah"
@@ -1611,6 +1820,7 @@ class PF1e_Calculator(BaseCalculator):
             
             total_atk = derived["bab"] + atk_stat_mod + enhancement + wf_bonus + pbs_atk
             atk_str = f"+{total_atk}" if total_atk >= 0 else str(total_atk)
+            full_atk_str = generate_full_attack(total_atk, derived["bab"])
             
             # Base damage determination
             raw_base = sys_w.get("damage") or sv_w.get("damage")
@@ -1662,63 +1872,40 @@ class PF1e_Calculator(BaseCalculator):
             
             w_copy = dict(w)
             w_copy["calculated_attack"] = atk_str
+            w_copy["full_attack"] = full_atk_str
             w_copy["calculated_damage"] = dmg_str
             w_copy["crit_range"] = str(crit_range)
             w_copy["name"] = w_name
             w_copy["isim"] = w_name
+
+            # Power Attack calculations
+            if has_power_attack and derived["bab"] >= 1 and not is_ranged:
+                if is_two_handed:
+                    pa_bonus_dmg = pa_penalty * 3
+                elif is_finesseable and "light" in str(sys_w.get("weaponType", "")).lower():
+                    pa_bonus_dmg = pa_penalty * 1
+                else:
+                    pa_bonus_dmg = pa_penalty * 2
+
+                pa_atk = total_atk - pa_penalty
+                pa_atk_str = f"+{pa_atk}" if pa_atk >= 0 else str(pa_atk)
+                pa_full_atk_str = generate_full_attack(pa_atk, derived["bab"])
+                pa_total_dmg_mod = total_dmg_mod + pa_bonus_dmg
+                pa_dmg_str = f"{base_damage} + {pa_total_dmg_mod}" if pa_total_dmg_mod > 0 else (f"{base_damage} - {abs(pa_total_dmg_mod)}" if pa_total_dmg_mod < 0 else str(base_damage))
+
+                w_copy["power_attack"] = {
+                    "penalty": -pa_penalty,
+                    "bonus_damage": pa_bonus_dmg,
+                    "attack": pa_atk_str,
+                    "full_attack": pa_full_atk_str,
+                    "damage": pa_dmg_str
+                }
+            else:
+                w_copy["power_attack"] = None
+
             calculated_weapons.append(w_copy)
 
         derived["weapons"] = calculated_weapons
-
-        # Envanter Ağıralık Hesabı
-        total_weight = 0.0
-        for item in character.get("equipment", []):
-            if isinstance(item, dict):
-                w_val, qty = extract_weight_and_qty(item)
-                total_weight += w_val * qty
-        derived["total_weight"] = round(total_weight, 2)
-        
-        # Strength'e göre PF1e Carrying Capacity limitleri
-        str_score = derived["ability_scores"].get("Strength", 10)
-        
-        PF_STR_LOADS = {
-            1: (3, 6, 10), 2: (6, 13, 20), 3: (10, 20, 30), 4: (13, 26, 40), 5: (16, 33, 50),
-            6: (20, 40, 60), 7: (23, 46, 70), 8: (26, 53, 80), 9: (30, 60, 90), 10: (33, 66, 100),
-            11: (38, 76, 115), 12: (43, 86, 130), 13: (50, 100, 150), 14: (58, 116, 175), 15: (66, 133, 200),
-            16: (76, 153, 230), 17: (86, 173, 260), 18: (100, 200, 300), 19: (116, 233, 350), 20: (133, 266, 400),
-            21: (153, 306, 460), 22: (173, 346, 520), 23: (200, 400, 600), 24: (233, 466, 700), 25: (266, 533, 800),
-            26: (306, 613, 920), 27: (346, 693, 1040), 28: (400, 800, 1200), 29: (466, 933, 1400)
-        }
-        
-        if str_score <= 29:
-            light, med, heavy = PF_STR_LOADS.get(max(1, str_score), (33, 66, 100))
-        else:
-            factor = 4 ** ((str_score - 20) // 10)
-            base_str = (str_score - 20) % 10 + 20
-            base_light, base_med, base_heavy = PF_STR_LOADS[base_str]
-            light, med, heavy = base_light * factor, base_med * factor, base_heavy * factor
-            
-        derived["carrying_capacity"] = {
-            "light": light,
-            "medium": med,
-            "heavy": heavy
-        }
-        
-        if total_weight <= light:
-            derived["encumbrance_status"] = "Light"
-        elif total_weight <= med:
-            derived["encumbrance_status"] = "Medium"
-            dex_max = min(dex_max, 3)
-            if not is_dwarf:
-                derived["speed"] = min(derived["speed"], 20 if base_speed >= 30 else 15)
-        elif total_weight <= heavy:
-            derived["encumbrance_status"] = "Heavy"
-            dex_max = min(dex_max, 1)
-            if not is_dwarf:
-                derived["speed"] = min(derived["speed"], 20 if base_speed >= 30 else 15)
-        else:
-            derived["encumbrance_status"] = "Overloaded"
-            derived["speed"] = 0
 
         # PF1e Büyü Slotları
         spell_slots = {}
@@ -1792,7 +1979,9 @@ class PF1e_Calculator(BaseCalculator):
             get_casting_ability_for_class,
             calculate_bonus_spell_slots,
             calculate_spell_save_dc,
-            calculate_total_spell_slots
+            calculate_total_spell_slots,
+            is_prepared_caster,
+            is_spontaneous_caster
         )
 
         c_ability = get_casting_ability_for_class(class_name_lower) or casting_ability or "intelligence"
@@ -1829,16 +2018,48 @@ class PF1e_Calculator(BaseCalculator):
             "has_spell_focus": has_spell_focus,
             "spell_dcs": spell_dcs,
             "bonus_slots": bonus_slots_dict,
-            "total_slots": tot_slots_dict
+            "total_slots": tot_slots_dict,
+            "is_prepared": is_prepared_caster(class_name_lower),
+            "is_spontaneous": is_spontaneous_caster(class_name_lower)
         }
 
-        # snake_case aliases (PDF export bunları kullanır)
-        derived["skills"] = {
-            k.lower().replace(" ", "_"): v
-            for k, v in derived["skills"].items()
-        }
+        # Provide both snake_case and Title Case in derived["skills"] for PDF export and direct key lookups
+        skills_normalized = {}
+        for k, v in derived["skills"].items():
+            skills_normalized[k] = v
+            skills_normalized[k.lower().replace(" ", "_")] = v
+            skills_normalized[k.title()] = v
+        derived["skills"] = skills_normalized
 
         derived["applied_modifiers"] = self.get_active_mechanics(character).get("applied_modifiers", [])
+
+        # Spellbook Scribing & Capacity Analysis (PF1e CRB p. 219)
+        from rules.spellbook_scribing import calculate_spellbook_pages_and_cost
+        spells_list = character.get("spells", [])
+        derived["spellbook_scribing"] = calculate_spellbook_pages_and_cost(spells_list)
+
+        # Advanced Point Buy & Dice Analytics (PF1e CRB p. 15-16)
+        from rules.dice_analytics import calculate_point_buy_equivalent
+        base_abilities = character.get("abilities") or character.get("ability_scores") or scores
+        derived["point_buy_analysis"] = calculate_point_buy_equivalent(base_abilities)
+
+        # Languages & Linguistics Engine (PF1e CRB p. 65 & p. 100)
+        from rules.languages_engine import evaluate_character_languages
+        lang_eval = evaluate_character_languages(character)
+        derived["languages_analysis"] = lang_eval
+        derived["languages"] = lang_eval["formatted_string"]
+
+        # Age & Physical Attributes Engine (PF1e CRB p. 168-169)
+        from rules.age_height_weight import get_age_category_and_modifiers
+        age_info = get_age_category_and_modifiers(character.get("race", "Human"), character.get("age"))
+        derived["age_details"] = age_info
+        derived["physical_traits"] = {
+            "age": character.get("age") or age_info["age"],
+            "age_category": age_info["category_name"],
+            "height": character.get("height", ""),
+            "weight": character.get("weight", ""),
+            "gender": character.get("gender", "male")
+        }
 
         # ── ADIM 6: GM Custom Modifiers (Manuel Müdahaleler +X / -X) ─────────
         custom_mods = character.get("custom_modifiers", [])
@@ -2059,6 +2280,7 @@ class PF1e_Calculator(BaseCalculator):
         armor_bonus, shield_bonus, natural_armor, acp, dex_max = 0, 0, 0, 0, 999
         for item in character.get("equipment", []):
             if not isinstance(item, dict): continue
+            if not is_item_equipped(item): continue
             sv = item.get("sistem_verisi") or item.get("system_data") or {}
             if not isinstance(sv, dict): sv = {}
             sys_obj = sv.get("system", {}) if isinstance(sv.get("system"), dict) else {}
@@ -2748,4 +2970,6 @@ def _pf1e_calculate_spells(self, character: Dict[str, Any]) -> Dict[str, Any]:
 # -- Metodları sınıflara bağla (monkey-patch — hiçbir sınıf gövdesi değişmez) --
 DND5e_Calculator.calculate_spells = _dnd5e_calculate_spells
 PF1e_Calculator.calculate_spells  = _pf1e_calculate_spells
+
+Pathfinder1eCalculator = PF1e_Calculator
 

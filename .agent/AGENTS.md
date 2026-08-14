@@ -13,3 +13,9 @@
 - **Strict Rule:** All web implementations MUST strictly adhere to the 20 web standards and SEO / aesthetic rules defined in `diyargezen_kurallari.md` Section 10.
 - **Key Mandatory Requirements:** Dynamic page titles (`document.title`), single `<h1>` hierarchy per view, Open Graph meta tags, Schema.org JSON-LD structured data, `llms.txt`, `robots.txt`, `sitemap.xml`, custom high-fantasy 404 page, `sourcemap: false` in production build, and JS code-splitting (`manualChunks`).
 
+## 4. MASTER ROADMAP & TASK TRACKING (ZORUNLU KURAL)
+- **Strict Rule:** All feature planning, sequence of development, and historical accomplishments MUST strictly be synchronized with `GOREVLER_VE_YOL_HARITASI.md`.
+- **Workflow Requirement:** Before starting any new development session or answering "Sırada ne var?", always check `GOREVLER_VE_YOL_HARITASI.md` for the first unchecked `[ ]` task. As each task is implemented and tested, mark it as `[x]`.
+
+
+

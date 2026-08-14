@@ -2,10 +2,21 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { 
   UserPlus, Trash, ChevronRight, Search, Shield, Sword, Sparkles, 
-  TrendingUp, Users, Award, BookOpen, Download
+  TrendingUp, Users, Award, BookOpen, Download, Copy, FileDown
 } from 'lucide-react';
 import PresetCharactersModal from './PresetCharactersModal';
-import { importCharacterJSONFile, exportFullVaultBackup, importFullVaultBackup } from '../utils/jsonExportUtil';
+import { 
+  importCharacterJSONFile, 
+  exportFullVaultBackup, 
+  importFullVaultBackup,
+  exportCharacterRecordJSON 
+} from '../utils/jsonExportUtil';
+import { 
+  getAllLocalCharacters, 
+  deleteLocalCharacter, 
+  cloneLocalCharacter,
+  saveLocalCharacter 
+} from '../utils/offlineStorage';
 import { useCharacterStore } from '../store/characterStore';
 
 export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAuth }) {
@@ -14,7 +25,7 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
   const [loading, setLoading] = useState(true);
   const [presetModalOpen, setPresetModalOpen] = useState(false);
   const fileInputRef = useRef(null);
-  const { loadPresetCharacter } = useCharacterStore();
+  const { loadPresetCharacter, isOnline } = useCharacterStore();
 
   const token = localStorage.getItem('token');
   const username = localStorage.getItem('username');
@@ -23,8 +34,17 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
   const handleImportFile = (e) => {
     const file = e.target.files?.[0];
     if (file) {
-      importCharacterJSONFile(file, (parsed) => {
+      importCharacterJSONFile(file, async (parsed) => {
         loadPresetCharacter(parsed);
+        const record = {
+          id: `local_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+          name: parsed.name || 'İsimsiz Kahraman',
+          system: (parsed.system || 'pf1e').toLowerCase(),
+          data: parsed,
+          is_dirty: true
+        };
+        await saveLocalCharacter(record, true);
+        loadCharacters();
         onSelectCharacter({ ...parsed, system: 'pf1e' });
       });
     }
@@ -34,38 +54,117 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
     loadCharacters();
   }, []);
 
-  const loadCharacters = () => {
+  const loadCharacters = async () => {
     setLoading(true);
-    // Guest users (no valid JWT) can't fetch from server — show empty list
-    if (!isLoggedIn) {
-      setCharacters([]);
-      setLoading(false);
-      return;
-    }
-    axios.get('/api/characters')
-      .then(res => {
-        setCharacters(Array.isArray(res.data) ? res.data : []);
-        setLoading(false);
-      })
-      .catch(err => {
-        console.error('Error fetching characters:', err);
-        // On 401/403 (invalid or expired token), show empty list gracefully
-        setCharacters([]);
-        setLoading(false);
+    try {
+      // 1. Fetch local characters from IndexedDB
+      const localChars = await getAllLocalCharacters();
+      let mergedMap = new Map();
+
+      // Store local chars by ID/server_id
+      localChars.forEach(c => {
+        const key = c.server_id || c.id;
+        mergedMap.set(String(key), {
+          id: c.id,
+          server_id: c.server_id,
+          name: c.name || c.data?.name || 'İsimsiz Gezgin',
+          system: c.system || c.data?.system || 'pf1e',
+          data: c.data || c,
+          created_at: c.created_at,
+          updated_at: c.updated_at,
+          isLocalOnly: !c.server_id
+        });
       });
+
+      // 2. If logged in and online, fetch server characters and merge
+      if (isLoggedIn) {
+        try {
+          const res = await axios.get('/api/characters');
+          if (Array.isArray(res.data)) {
+            res.data.forEach(srvChar => {
+              const key = String(srvChar.id);
+              const existing = mergedMap.get(key);
+              mergedMap.set(key, {
+                id: existing?.id || srvChar.id,
+                server_id: srvChar.id,
+                name: srvChar.name,
+                system: srvChar.system,
+                data: srvChar.data || srvChar,
+                created_at: srvChar.created_at,
+                updated_at: srvChar.updated_at,
+                isLocalOnly: false
+              });
+            });
+          }
+        } catch (serverErr) {
+          console.warn('Server fetch skipped or offline, using local vault:', serverErr);
+        }
+      }
+
+      setCharacters(Array.from(mergedMap.values()));
+    } catch (err) {
+      console.error('Error loading vault characters:', err);
+      setCharacters([]);
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const handleDelete = (id, e) => {
+  const handleDelete = async (char, e) => {
     e.stopPropagation();
-    if (window.confirm('Bu karakteri silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.')) {
-      axios.delete(`/api/characters/${id}`)
-        .then(() => {
-          loadCharacters();
-        })
-        .catch(err => {
-          console.error('Error deleting character:', err);
-        });
+    if (!window.confirm(`"${char.name}" karakterini mahzenden silmek istediğinizden emin misiniz?`)) {
+      return;
     }
+
+    try {
+      // Delete from server if server_id exists and user is logged in
+      if (char.server_id && isLoggedIn) {
+        try {
+          await axios.delete(`/api/characters/${char.server_id}`);
+        } catch (err) {
+          console.warn('Could not delete from server:', err);
+        }
+      }
+
+      // Always delete from local IndexedDB
+      await deleteLocalCharacter(char.id);
+      loadCharacters();
+    } catch (err) {
+      console.error('Error deleting character:', err);
+      alert('Karakter silinirken hata oluştu.');
+    }
+  };
+
+  const handleClone = async (char, e) => {
+    e.stopPropagation();
+    try {
+      const cloned = await cloneLocalCharacter(char.id);
+      alert(`✨ "${char.name}" başarıyla klonlandı! Yeni kopya mahzene eklendi.`);
+      loadCharacters();
+    } catch (err) {
+      // Fallback clone by re-saving data
+      try {
+        const rawData = char.data || char;
+        const newRecord = {
+          id: `local_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+          name: `${char.name} (Kopya)`,
+          system: char.system || 'pf1e',
+          data: { ...rawData, name: `${char.name} (Kopya)` },
+          is_dirty: true
+        };
+        await saveLocalCharacter(newRecord, true);
+        alert(`✨ "${char.name}" başarıyla klonlandı!`);
+        loadCharacters();
+      } catch (cloneErr) {
+        console.error('Error cloning character:', cloneErr);
+        alert('Klonlama sırasında bir hata oluştu.');
+      }
+    }
+  };
+
+  const handleExportSingle = (char, e) => {
+    e.stopPropagation();
+    exportCharacterRecordJSON(char);
   };
 
   const getSystemBadge = (system) => {
@@ -349,31 +448,56 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
                 })()}
 
                 <div>
-                  <h3 style={{ fontSize: '1.2rem', color: '#f0e6d2', fontWeight: 'bold', margin: '0 0 4px 0' }}>
-                    {char.name}
-                  </h3>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <h3 style={{ fontSize: '1.2rem', color: '#f0e6d2', fontWeight: 'bold', margin: '0' }}>
+                      {char.name}
+                    </h3>
+                    {char.isLocalOnly && (
+                      <span style={{ fontSize: '10px', padding: '1px 6px', borderRadius: '4px', background: 'rgba(255,215,0,0.12)', color: '#ffd700', border: '1px solid rgba(255,215,0,0.3)', fontWeight: 'bold' }} title="Bu karakter yerel tarayıcı mahzeninde saklanmaktadır">
+                        📦 Yerel
+                      </span>
+                    )}
+                  </div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '4px' }}>
                     {getSystemBadge(char.system)}
                     <span style={{ fontSize: '12px', color: '#8b949e' }}>
-                      {char.data.race || 'Irk Belirtilmedi'}
-                      {(char.data.class || char.data.archetype) && ` • ${char.data.class || char.data.archetype}`}
-                      {char.data.level && ` • Seviye ${char.data.level}`}
+                      {char.data?.race || 'Irk Belirtilmedi'}
+                      {(char.data?.class || char.data?.archetype) && ` • ${char.data?.class || char.data?.archetype}`}
+                      {char.data?.level && ` • Seviye ${char.data?.level}`}
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                 <button 
+                  type="button"
                   className="btn btn-secondary" 
-                  onClick={(e) => handleDelete(char.id, e)}
-                  style={{ padding: '6px 12px', minHeight: 'unset', borderColor: 'transparent', color: '#8b949e' }}
-                  onMouseOver={(e) => e.target.style.color = '#e94560'}
-                  onMouseOut={(e) => e.target.style.color = '#8b949e'}
+                  onClick={(e) => handleExportSingle(char, e)}
+                  style={{ padding: '6px 10px', minHeight: 'unset', color: '#4ec9b0', display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.75rem', background: 'rgba(78,201,176,0.1)', border: '1px solid rgba(78,201,176,0.25)' }}
+                  title="Bu karakteri JSON dosyası olarak indir"
                 >
-                  <Trash size={15} />
+                  <FileDown size={14} /> JSON
                 </button>
-                <ChevronRight size={20} style={{ color: '#8b949e' }} />
+                <button 
+                  type="button"
+                  className="btn btn-secondary" 
+                  onClick={(e) => handleClone(char, e)}
+                  style={{ padding: '6px 10px', minHeight: 'unset', color: '#a594ff', display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.75rem', background: 'rgba(124,110,247,0.1)', border: '1px solid rgba(124,110,247,0.25)' }}
+                  title="Karakteri klonla ve yeni bir slot oluştur"
+                >
+                  <Copy size={14} /> Klonla
+                </button>
+                <button 
+                  type="button"
+                  className="btn btn-secondary" 
+                  onClick={(e) => handleDelete(char, e)}
+                  style={{ padding: '6px 10px', minHeight: 'unset', color: '#e87070', display: 'flex', alignItems: 'center', gap: '4px', fontSize: '0.75rem', background: 'rgba(233,69,96,0.1)', border: '1px solid rgba(233,69,96,0.25)' }}
+                  title="Karakteri mahzenden sil"
+                >
+                  <Trash size={14} />
+                </button>
+                <ChevronRight size={18} style={{ color: '#8b949e', marginLeft: '4px' }} />
               </div>
             </div>
           ))}

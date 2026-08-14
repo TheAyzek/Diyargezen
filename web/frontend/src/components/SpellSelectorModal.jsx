@@ -39,6 +39,7 @@ export default function SpellSelectorModal({
   const [loading, setLoading] = useState(false);
   const [isOverridden, setIsOverridden] = useState(false);
   const [customSpellText, setCustomSpellText] = useState('');
+  const [displayLimit, setDisplayLimit] = useState(60);
 
   const maxSpellLevel = getMaxSpellLevel(characterClass || selectedClass, characterLevel);
   const maxAllowedSpells = Math.min(maxSpells, getMaxSpellsAllowed(characterClass || selectedClass, characterLevel));
@@ -52,6 +53,7 @@ export default function SpellSelectorModal({
       if (characterClass && selectedClass === 'All') {
         setSelectedClass(characterClass);
       }
+      setDisplayLimit(60);
       fetchSpells();
     }
   }, [isOpen, system, activeLevel, selectedClass, selectedSchool, debouncedSearchQuery]);
@@ -326,7 +328,7 @@ export default function SpellSelectorModal({
             </div>
           ) : (
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(290px, 1fr))', gap: '1rem' }}>
-              {spells.map((spell, idx) => {
+              {spells.slice(0, displayLimit).map((spell, idx) => {
                 const sv = spell.sistem_verisi || {};
                 const name = spell.isim || spell.name;
                 const level = sv.level ?? 0;
@@ -426,9 +428,24 @@ export default function SpellSelectorModal({
                         </button>
                       );
                     })()}
-                  </div>
-                );
-              })}
+                    </div>
+                  );
+                })}
+              </div>
+            )}
+          {spells.length > displayLimit && (
+            <div style={{ textAlign: 'center', marginTop: '1.5rem', marginBottom: '0.5rem' }}>
+              <button
+                onClick={() => setDisplayLimit(prev => prev + 60)}
+                style={{
+                  padding: '0.65rem 1.5rem', backgroundColor: 'rgba(124, 110, 247, 0.15)',
+                  border: '1px solid #7c6ef7', borderRadius: '8px', color: '#a594ff',
+                  fontSize: '0.85rem', fontWeight: 600, cursor: 'pointer',
+                  transition: 'all 0.2s ease'
+                }}
+              >
+                ✨ Daha Fazla Büyü Göster ({displayLimit} / {spells.length} Görüntüleniyor)
+              </button>
             </div>
           )}
         </div>

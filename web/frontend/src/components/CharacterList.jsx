@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { UserPlus, Trash, ChevronRight, Search, Shield, Sword, Sparkles } from 'lucide-react';
+import { UserPlus, Trash, ChevronRight, Search, Shield, Sword, Sparkles, Scale } from 'lucide-react';
+import CharacterDiffModal from './CharacterDiffModal';
+import CharacterCardModal from './CharacterCardModal';
 
 export default function CharacterList({ onSelectCharacter, onNewCharacter }) {
   const [characters, setCharacters] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [isDiffModalOpen, setIsDiffModalOpen] = useState(false);
+  const [selectedShowcaseChar, setSelectedShowcaseChar] = useState(null);
 
   useEffect(() => {
     loadCharacters();
@@ -38,7 +42,7 @@ export default function CharacterList({ onSelectCharacter, onNewCharacter }) {
   };
 
   const getSystemBadge = (system) => {
-    const sys = system.toLowerCase();
+    const sys = (system || '').toLowerCase();
     let label = system;
     let bgColor = 'rgba(255, 255, 255, 0.05)';
     let border = '1px solid rgba(255, 255, 255, 0.1)';
@@ -78,8 +82,8 @@ export default function CharacterList({ onSelectCharacter, onNewCharacter }) {
   };
 
   const filteredCharacters = characters.filter(char => 
-    char.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-    char.system.toLowerCase().includes(searchQuery.toLowerCase())
+    (char.name || '').toLowerCase().includes(searchQuery.toLowerCase()) ||
+    (char.system || '').toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
@@ -89,9 +93,20 @@ export default function CharacterList({ onSelectCharacter, onNewCharacter }) {
           <h2 style={{ fontSize: '2rem' }}>Karakterlerim</h2>
           <p style={{ color: '#8b949e', fontSize: '0.95rem' }}>Diyarlar arası gezginlerinizin listesi.</p>
         </div>
-        <button className="btn btn-primary" onClick={onNewCharacter}>
-          <UserPlus size={16} /> Yeni Karakter Oluştur
-        </button>
+        <div style={{ display: 'flex', gap: '10px' }}>
+          {characters.length >= 2 && (
+            <button
+              className="btn btn-secondary"
+              onClick={() => setIsDiffModalOpen(true)}
+              style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
+            >
+              <Scale size={16} /> Karşılaştır (Diff)
+            </button>
+          )}
+          <button className="btn btn-primary" onClick={onNewCharacter}>
+            <UserPlus size={16} /> Yeni Karakter Oluştur
+          </button>
+        </div>
       </div>
 
       {/* Search Input */}
@@ -196,22 +211,51 @@ export default function CharacterList({ onSelectCharacter, onNewCharacter }) {
                   </div>
                 </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-                <button 
-                  className="btn btn-secondary" 
-                  onClick={(e) => handleDelete(char.id, e)}
-                  style={{ padding: '6px 12px', minHeight: 'unset', borderColor: 'transparent', color: '#8b949e' }}
-                  onMouseOver={(e) => e.target.style.color = '#e94560'}
-                  onMouseOut={(e) => e.target.style.color = '#8b949e'}
-                >
-                  <Trash size={15} />
-                </button>
-                <ChevronRight size={20} style={{ color: '#8b949e' }} />
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <button 
+                    className="btn btn-secondary" 
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setSelectedShowcaseChar(charData);
+                    }}
+                    style={{ padding: '6px 10px', minHeight: 'unset', borderColor: 'rgba(212,175,55,0.4)', color: '#ffd700' }}
+                    title="Karakter Vitrin Kartı (Showcase Card)"
+                  >
+                    <Sparkles size={15} />
+                  </button>
+                  <button 
+                    className="btn btn-secondary" 
+                    onClick={(e) => handleDelete(char.id, e)}
+                    style={{ padding: '6px 12px', minHeight: 'unset', borderColor: 'transparent', color: '#8b949e' }}
+                    onMouseOver={(e) => e.target.style.color = '#e94560'}
+                    onMouseOut={(e) => e.target.style.color = '#8b949e'}
+                    title="Karakteri Sil"
+                  >
+                    <Trash size={15} />
+                  </button>
+                  <ChevronRight size={20} style={{ color: '#8b949e' }} />
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
         </div>
+      )}
+
+      {isDiffModalOpen && (
+        <CharacterDiffModal
+          isOpen={isDiffModalOpen}
+          onClose={() => setIsDiffModalOpen(false)}
+          allCharacters={characters}
+          initialCharA={characters[0]?.data || characters[0]}
+          initialCharB={characters[1]?.data || characters[1]}
+        />
+      )}
+
+      {selectedShowcaseChar && (
+        <CharacterCardModal
+          character={selectedShowcaseChar}
+          onClose={() => setSelectedShowcaseChar(null)}
+        />
       )}
     </div>
   );

@@ -68,8 +68,10 @@ export default function LevelUpWizardModal({
   const [isRolling, setIsRolling] = useState(false);
   const [fcbChoice, setFcbChoice] = useState('hp'); // 'hp' or 'skill'
 
-  // Step 2: Skill Ranks State
-  const totalSkillRanksAvailable = Math.max(1, baseSkillRanks + intMod + (fcbChoice === 'skill' ? 1 : 0));
+  // Step 2: Skill Ranks State (Human race gets +1 extra skill point per level in PF1e CRB p. 27)
+  const isHuman = (character.race || '').toLowerCase().includes('human') && !(character.race || '').toLowerCase().includes('half');
+  const humanSkillBonus = isHuman ? 1 : 0;
+  const totalSkillRanksAvailable = Math.max(1, baseSkillRanks + intMod + (fcbChoice === 'skill' ? 1 : 0) + humanSkillBonus);
   const [spentSkills, setSpentSkills] = useState({});
 
   // Step 3: Feat State
@@ -325,7 +327,7 @@ export default function LevelUpWizardModal({
                   {hpRoll}
                 </div>
 
-                <div style={{ display: 'flex', gap: '0.75rem' }}>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem', justifyContent: 'center' }}>
                   <button
                     onClick={handleRollHp}
                     disabled={isRolling}
@@ -340,11 +342,21 @@ export default function LevelUpWizardModal({
                   <button
                     onClick={() => setHpRoll(Math.floor(hitDie / 2) + 1)}
                     style={{
-                      padding: '0.5rem 1.2rem', backgroundColor: '#2a2a3a', border: 'none', borderRadius: '8px',
+                      padding: '0.5rem 1.2rem', backgroundColor: '#2a2a3a', border: '1px solid rgba(255,255,255,0.1)', borderRadius: '8px',
                       color: '#cbd5e1', fontSize: '0.8rem', fontWeight: 600, cursor: 'pointer'
                     }}
                   >
                     ⚖ Ortalama Al ({Math.floor(hitDie / 2) + 1})
+                  </button>
+
+                  <button
+                    onClick={() => setHpRoll(hitDie)}
+                    style={{
+                      padding: '0.5rem 1.2rem', backgroundColor: 'rgba(201,168,76,0.18)', border: '1px solid #c9a84c', borderRadius: '8px',
+                      color: '#ffd700', fontSize: '0.8rem', fontWeight: 600, cursor: 'pointer'
+                    }}
+                  >
+                    👑 Maksimum Al ({hitDie})
                   </button>
                 </div>
               </div>
@@ -616,6 +628,18 @@ export default function LevelUpWizardModal({
                   );
                 })}
               </div>
+
+              {/* Retroactive CON HP Notification Banner */}
+              {selectedAbility === 'Constitution' && ((character.recalcedData?.ability_scores?.Constitution || 10) % 2 === 1) && (
+                <div style={{
+                  background: 'linear-gradient(135deg, rgba(56,189,248,0.15) 0%, rgba(18,18,24,0.9) 100%)',
+                  border: '1px solid rgba(56,189,248,0.4)',
+                  borderRadius: '10px', padding: '12px 16px', color: '#38bdf8', fontSize: '0.82rem',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px'
+                }}>
+                  <span>⚡ <b>Geriye Dönük CON Artışı:</b> Dayanıklılık modifikatörünüz arttığı için önceki {currentLevel} seviyenin her biri için geriye dönük +1 HP (toplam <b>+{currentLevel} HP</b>) kazanacaksınız! (PF1e CRB p. 16)</span>
+                </div>
+              )}
             </div>
           )}
 

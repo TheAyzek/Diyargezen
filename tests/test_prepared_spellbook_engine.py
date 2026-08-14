@@ -79,3 +79,69 @@ def test_spontaneous_spellcaster_and_slot_tracking():
     # Lvl 2 -> 10 + 2 + 4 = 16
     assert sc["spell_dcs"]["1"] == 15
     assert sc["spell_dcs"]["2"] == 16
+    assert sc["is_spontaneous"] is True
+    assert sc["is_prepared"] is False
+
+
+def test_caster_classification_and_prepared_slot_validation():
+    """Verify prepared vs spontaneous caster identification and metamagic slot validation."""
+    from rules.spell_engine import (
+        is_prepared_caster,
+        is_spontaneous_caster,
+        validate_prepared_spell_slot
+    )
+
+    # Classification
+    assert is_prepared_caster("Wizard") is True
+    assert is_prepared_caster("Cleric") is True
+    assert is_prepared_caster("Druid") is True
+    assert is_prepared_caster("Magus") is True
+    assert is_prepared_caster("Sorcerer") is False
+    assert is_prepared_caster("Bard") is False
+
+    assert is_spontaneous_caster("Sorcerer") is True
+    assert is_spontaneous_caster("Oracle") is True
+    assert is_spontaneous_caster("Bard") is True
+    assert is_spontaneous_caster("Wizard") is False
+
+    # Legal: Level 1 spell in Level 1 slot
+    res1 = validate_prepared_spell_slot(slot_level=1, base_spell_level=1)
+    assert res1["valid"] is True
+    assert res1["effective_spell_level"] == 1
+
+    # Legal: Level 1 spell in Level 2 slot (under-preparation allowed in PF1e)
+    res2 = validate_prepared_spell_slot(slot_level=2, base_spell_level=1)
+    assert res2["valid"] is True
+
+    # Illegal: Level 2 spell in Level 1 slot
+    res3 = validate_prepared_spell_slot(slot_level=1, base_spell_level=2)
+    assert res3["valid"] is False
+    assert len(res3["reasons"]) > 0
+
+    # Metamagic: Level 1 spell + Empower (+2) = Effective 3 -> In Level 3 slot: VALID
+    res4 = validate_prepared_spell_slot(
+        slot_level=3,
+        base_spell_level=1,
+        applied_metamagic=["Empower Spell"]
+    )
+    assert res4["valid"] is True
+    assert res4["effective_spell_level"] == 3
+
+    # Metamagic: Level 1 spell + Empower (+2) = Effective 3 -> In Level 2 slot: INVALID
+    res5 = validate_prepared_spell_slot(
+        slot_level=2,
+        base_spell_level=1,
+        applied_metamagic=["Empower Spell"]
+    )
+    assert res5["valid"] is False
+
+    # GM Override: Overriding illegal preparation
+    res6 = validate_prepared_spell_slot(
+        slot_level=2,
+        base_spell_level=1,
+        applied_metamagic=["Empower Spell"],
+        is_overridden=True
+    )
+    assert res6["valid"] is True
+    assert res6["is_overridden"] is True
+

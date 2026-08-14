@@ -196,6 +196,23 @@ export async function getLastSyncTimestamp() {
   }
 }
 
+export async function getLocalCharacter(id) {
+  try {
+    const db = await openOfflineDB();
+    const tx = db.transaction(['characters'], 'readonly');
+    const store = tx.objectStore('characters');
+
+    return new Promise((resolve, reject) => {
+      const req = store.get(id);
+      req.onsuccess = () => resolve(req.result || null);
+      req.onerror = (e) => reject(e.target.error);
+    });
+  } catch (err) {
+    console.error('Error fetching local character:', err);
+    return null;
+  }
+}
+
 export async function deleteLocalCharacter(id) {
   try {
     const db = await openOfflineDB();
@@ -212,3 +229,35 @@ export async function deleteLocalCharacter(id) {
     return false;
   }
 }
+
+export async function cloneLocalCharacter(id) {
+  try {
+    const charRecord = await getLocalCharacter(id);
+    if (!charRecord) throw new Error('Klonlanacak karakter bulunamadı.');
+
+    const newId = `local_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    const clonedData = JSON.parse(JSON.stringify(charRecord.data || charRecord));
+    clonedData.id = newId;
+    clonedData.server_id = null;
+    clonedData.name = `${charRecord.name || 'Kahraman'} (Kopya)`;
+
+    const clonedRecord = {
+      id: newId,
+      server_id: null,
+      name: clonedData.name,
+      system: charRecord.system || 'pathfinder1e',
+      data: clonedData,
+      is_dirty: true,
+      is_deleted: false,
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString()
+    };
+
+    await saveLocalCharacter(clonedRecord, true);
+    return clonedRecord;
+  } catch (err) {
+    console.error('Error cloning character in IndexedDB:', err);
+    throw err;
+  }
+}
+

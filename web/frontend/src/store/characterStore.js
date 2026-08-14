@@ -115,10 +115,36 @@ export const useCharacterStore = create((set, get) => ({
   usedDailyResources: {},
   preparedSpells: {},
 
-  setPreparedSpell: (spellLevel, slotIndex, spellName) => {
+  setPreparedSpell: (spellLevel, slotIndex, spellData) => {
     set(state => {
       const levelSlots = [...(state.preparedSpells[spellLevel] || [])];
-      levelSlots[slotIndex] = { name: spellName, cast: false };
+      let preparedObj = { name: '', cast: false, metamagic: [], baseLevel: parseInt(spellLevel), effectiveLevel: parseInt(spellLevel) };
+      if (typeof spellData === 'string') {
+        preparedObj.name = spellData;
+      } else if (typeof spellData === 'object' && spellData !== null) {
+        preparedObj = {
+          name: spellData.name || spellData.isim || '',
+          cast: Boolean(spellData.cast),
+          metamagic: Array.isArray(spellData.metamagic) ? spellData.metamagic : [],
+          baseLevel: spellData.baseLevel ?? parseInt(spellLevel),
+          effectiveLevel: spellData.effectiveLevel ?? parseInt(spellLevel)
+        };
+      }
+      levelSlots[slotIndex] = preparedObj;
+      return {
+        preparedSpells: {
+          ...state.preparedSpells,
+          [spellLevel]: levelSlots
+        }
+      };
+    });
+    get().recalculate();
+  },
+
+  clearPreparedSpell: (spellLevel, slotIndex) => {
+    set(state => {
+      const levelSlots = [...(state.preparedSpells[spellLevel] || [])];
+      levelSlots[slotIndex] = { name: '', cast: false, metamagic: [], baseLevel: parseInt(spellLevel), effectiveLevel: parseInt(spellLevel) };
       return {
         preparedSpells: {
           ...state.preparedSpells,
@@ -133,10 +159,11 @@ export const useCharacterStore = create((set, get) => ({
     set(state => {
       const levelSlots = [...(state.preparedSpells[spellLevel] || [])];
       if (levelSlots[slotIndex]) {
-        levelSlots[slotIndex] = {
-          ...levelSlots[slotIndex],
-          cast: !levelSlots[slotIndex].cast
-        };
+        const item = levelSlots[slotIndex];
+        const isObj = typeof item === 'object' && item !== null;
+        levelSlots[slotIndex] = isObj
+          ? { ...item, cast: !item.cast }
+          : { name: String(item), cast: true };
       }
       return {
         preparedSpells: {
@@ -162,11 +189,25 @@ export const useCharacterStore = create((set, get) => ({
     get().recalculate();
   },
 
+  setUsedSpellSlots: (spellLevel, count) => {
+    set(state => ({
+      usedSpellSlots: {
+        ...state.usedSpellSlots,
+        [spellLevel]: Math.max(0, count)
+      }
+    }));
+    get().recalculate();
+  },
+
   restCharacter: () => {
     set(state => {
       const resetPrepared = {};
       Object.entries(state.preparedSpells || {}).forEach(([lvl, slots]) => {
-        resetPrepared[lvl] = (slots || []).map(s => s ? { ...s, cast: false } : s);
+        resetPrepared[lvl] = (slots || []).map(s => {
+          if (!s) return s;
+          if (typeof s === 'object') return { ...s, cast: false };
+          return { name: s, cast: false };
+        });
       });
       return {
         usedSpellSlots: {},
@@ -467,6 +508,76 @@ export const useCharacterStore = create((set, get) => ({
     get().recalculate();
   },
 
+  toggleEquipItem: (index) => {
+    set(state => {
+      const eq = [...(state.equipment || [])];
+      if (eq[index]) {
+        const isCurrEq = eq[index].is_equipped !== false && eq[index].equipped !== false;
+        eq[index] = {
+          ...eq[index],
+          is_equipped: !isCurrEq,
+          equipped: !isCurrEq
+        };
+      }
+      return { equipment: eq };
+    });
+    get().recalculate();
+  },
+
+  equipAllItems: () => {
+    set(state => {
+      const eq = (state.equipment || []).map(item => ({
+        ...item,
+        is_equipped: true,
+        equipped: true
+      }));
+      return { equipment: eq };
+    });
+    get().recalculate();
+  },
+
+  unequipAllItems: () => {
+    set(state => {
+      const eq = (state.equipment || []).map(item => ({
+        ...item,
+        is_equipped: false,
+        equipped: false
+      }));
+      return { equipment: eq };
+    });
+    get().recalculate();
+  },
+
+  setFavoredClassBonusChoice: (level, choice) => {
+    set(state => {
+      const current = Array.isArray(state.favored_class_bonuses)
+        ? [...state.favored_class_bonuses]
+        : [];
+      // Find or insert level
+      const idx = current.findIndex(c => c.level === level);
+      if (idx >= 0) {
+        current[idx] = { level, choice };
+      } else {
+        current.push({ level, choice });
+      }
+      current.sort((a, b) => a.level - b.level);
+      return { favored_class_bonuses: current };
+    });
+    get().recalculate();
+  },
+
+  autoAllocateFCB: (defaultChoice = 'hp') => {
+    set(state => {
+      const lvl = state.level || 1;
+      const fcbList = [];
+      for (let i = 1; i <= lvl; i++) {
+        fcbList.push({ level: i, choice: defaultChoice });
+      }
+      return { favored_class_bonuses: fcbList };
+    });
+    get().recalculate();
+  },
+
   updateCompanion: (companionData) => {
     set(state => ({
       companion: companionData ? {
@@ -689,8 +800,8 @@ export const useCharacterStore = create((set, get) => ({
       variant_multiclass: state.variant_multiclass || state.variantMulticlass,
       feats: (state.feats || []).map(f => f.isim || f),
       traits: (state.traits || []).map(t => ({ isim: t.isim, kategori: t.sistem_verisi?.trait_category })),
-      proficient_skills: state.recalcedData.proficient_skills || [],
       archetype: state.archetype,
+      archetypes: (state.archetypes && state.archetypes.length > 0) ? state.archetypes : (state.archetype ? [state.archetype] : []),
       racial_ability_choice: state.racialAbilityChoice || 'strength',
       secondary_racial_ability_choice: state.secondaryRacialAbilityChoice || 'dexterity',
       selected_racial_traits: state.selectedRacialTraits || [],
@@ -698,7 +809,15 @@ export const useCharacterStore = create((set, get) => ({
       class_data: state.classData,
       pl_value: parseInt(state.pl_value),
       remaining_power_points: remainingPoints,
-      portrait: state.portrait
+      portrait: state.portrait,
+      spells: state.spells || [],
+      prepared_spells: state.preparedSpells || {},
+      used_spell_slots: state.usedSpellSlots || {},
+      active_conditions: state.active_conditions || state.conditions || [],
+      conditions: state.active_conditions || state.conditions || [],
+      favored_class: state.favored_class || state.favoredClass,
+      secondary_favored_class: state.secondary_favored_class || state.secondaryFavoredClass,
+      favored_class_bonuses: state.favored_class_bonuses || state.favoredClassBonuses || []
     };
 
     set({ loading: true });

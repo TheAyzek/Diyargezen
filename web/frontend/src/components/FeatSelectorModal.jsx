@@ -138,7 +138,7 @@ export default function FeatSelectorModal({
   const [gmOverrideEnabled, setGmOverrideEnabled] = useState(false);
   const [lastNotification, setLastNotification] = useState(null);
   const [overrideModalTarget, setOverrideModalTarget] = useState(null);
-
+  const [displayLimit, setDisplayLimit] = useState(50);
 
   const debouncedSearchQuery = useDebounce(searchQuery, 300);
   const clientCache = useRef(new Map());
@@ -151,6 +151,7 @@ export default function FeatSelectorModal({
 
   useEffect(() => {
     if (isOpen) {
+      setDisplayLimit(50);
       fetchFeats();
     }
   }, [isOpen, system, className, activeCategory, debouncedSearchQuery]);
@@ -443,7 +444,7 @@ export default function FeatSelectorModal({
               {searchQuery ? `"${searchQuery}" için feat bulunamadı.` : 'Bu kategoride feat bulunamadı.'}
             </div>
           ) : (
-            feats.map((feat, idx) => {
+            feats.slice(0, displayLimit).map((feat, idx) => {
               const featName = feat.isim || feat.name;
               const selected = isSelected(featName);
               const check = canAdd(feat);
@@ -562,6 +563,22 @@ export default function FeatSelectorModal({
                 </div>
               );
             })
+          )}
+          {feats.length > displayLimit && (
+            <div style={{ textAlign: 'center', marginTop: '1rem', marginBottom: '0.5rem' }}>
+              <button
+                type="button"
+                onClick={() => setDisplayLimit(prev => prev + 50)}
+                style={{
+                  padding: '8px 20px', backgroundColor: 'rgba(201, 168, 76, 0.12)',
+                  border: '1px solid #c9a84c', borderRadius: '8px', color: '#ffe89c',
+                  fontSize: '12px', fontWeight: 'bold', cursor: 'pointer',
+                  transition: 'all 0.2s ease'
+                }}
+              >
+                ✨ Daha Fazla Feat Göster ({displayLimit} / {feats.length} Görüntüleniyor)
+              </button>
+            </div>
           )}
         </div>
 

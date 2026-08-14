@@ -100,6 +100,8 @@ export default function SpellCard({
   const [expanded, setExpanded] = useState(false);
   const [castCount, setCastCount] = useState(0);
   const [lastCastResult, setLastCastResult] = useState(null);
+  const [showMetamagic, setShowMetamagic] = useState(false);
+  const [activeMetamagics, setActiveMetamagics] = useState([]);
 
   const spellObj = typeof spell === 'object' && spell !== null ? spell : { isim: String(spell) };
   const name = spellObj.isim || spellObj.name || 'Büyü';
@@ -116,46 +118,106 @@ export default function SpellCard({
   const savingThrow = sv.saving_throw || 'Yok';
   const description = sv.description || spellObj.aciklama || 'Büyü açıklaması bulunmuyor.';
 
-  const formulaInfo = getSpellFormula(spellObj, characterLevel);
+  // Metamagic definitions
+  const METAMAGIC_OPTIONS = [
+    { key: 'empower', name: 'Empower', slot: 2, label: '+2 Empower (+%50)' },
+    { key: 'maximize', name: 'Maximize', slot: 3, label: '+3 Maximize (Max Zar)' },
+    { key: 'quicken', name: 'Quicken', slot: 4, label: '+4 Quicken (Swift)' },
+    { key: 'extend', name: 'Extend', slot: 1, label: '+1 Extend (2x Süre)' },
+    { key: 'enlarge', name: 'Enlarge', slot: 1, label: '+1 Enlarge (2x Menzil)' },
+    { key: 'silent', name: 'Silent', slot: 1, label: '+1 Silent (Sözsüz)' },
+    { key: 'still', name: 'Still', slot: 1, label: '+1 Still (Hareketsiz)' },
+    { key: 'intensified', name: 'Intensified', slot: 1, label: '+1 Intensified (+5 CL)' },
+    { key: 'persistent', name: 'Persistent', slot: 2, label: '+2 Persistent' },
+  ];
+
+  const totalSlotAdj = activeMetamagics.reduce((acc, mKey) => {
+    const meta = METAMAGIC_OPTIONS.find(o => o.key === mKey);
+    return acc + (meta ? meta.slot : 0);
+  }, 0);
+
+  const effectiveSlotLevel = Math.min(9, level + totalSlotAdj);
+  const isSpontaneous = ['sorcerer', 'oracle', 'bard', 'inquisitor', 'bloodrager'].includes((characterClass || '').toLowerCase());
+  const effectiveCastingTime = activeMetamagics.includes('quicken')
+    ? 'Swift Action (Hızlı Eylem)'
+    : (isSpontaneous && activeMetamagics.length > 0)
+      ? 'Full-Round Action (Tam Tur)'
+      : castingTime;
+
+  const toggleMetamagic = (mKey) => {
+    if (activeMetamagics.includes(mKey)) {
+      setActiveMetamagics(activeMetamagics.filter(k => k !== mKey));
+    } else {
+      setActiveMetamagics([...activeMetamagics, mKey]);
+    }
+  };
+
+  const effectiveCL = activeMetamagics.includes('intensified') ? characterLevel + 5 : characterLevel;
+  const formulaInfo = getSpellFormula({ ...spellObj, sistem_verisi: { ...sv, description } }, effectiveCL);
 
   const handleCast = () => {
     setCastCount(prev => prev + 1);
 
-    const cl = Math.max(1, parseInt(characterLevel) || 1);
+    const cl = Math.max(1, parseInt(effectiveCL) || 1);
     let total = 0;
     const rolls = [];
 
     if (formulaInfo.diceCount > 0) {
-      for (let i = 0; i < formulaInfo.diceCount; i++) {
-        const r = Math.floor(Math.random() * (formulaInfo.dieSides || 6)) + 1;
-        rolls.push(r);
-        total += r;
+      if (activeMetamagics.includes('maximize')) {
+        for (let i = 0; i < formulaInfo.diceCount; i++) {
+          const maxVal = formulaInfo.dieSides || 6;
+          rolls.push(maxVal);
+          total += maxVal;
+        }
+      } else {
+        for (let i = 0; i < formulaInfo.diceCount; i++) {
+          const r = Math.floor(Math.random() * (formulaInfo.dieSides || 6)) + 1;
+          rolls.push(r);
+          total += r;
+        }
       }
       if (formulaInfo.flatBonus) {
         total += formulaInfo.flatBonus;
       }
-    }
 
-    let msg = `✨ ${name} kullanıldı! (${formulaInfo.desc})`;
-    if (formulaInfo.type === 'damage') {
-      msg = `🔥 ${name} kullanıldı! (${formulaInfo.formula}): ${total} HASAR VERİLDİ! (Zarlar: [${rolls.join(', ')}])`;
-    } else if (formulaInfo.type === 'healing') {
-      msg = `✨ ${name} kullanıldı! (${formulaInfo.formula}): ${total} CAN YENİLENDİ! (Zarlar: [${rolls.join(', ')}])`;
-    } else if (formulaInfo.diceCount > 0) {
-      msg = `⚡ ${name} kullanıldı! (${formulaInfo.formula}): ${total} Toplam Değer! (Zarlar: [${rolls.join(', ')}])`;
+      if (activeMetamagics.includes('empower')) {
+        const bonusHalf = Math.floor(total * 0.5);
+        const empoweredTotal = total + bonusHalf;
+        setLastCastResult({
+          msg: `✨ Güçlendirilmiş Zarlar: [${rolls.join(', ')}] = ${total} + %50 (${bonusHalf}) = ${empoweredTotal} ${formulaInfo.type === 'healing' ? 'Can Yenilendi' : 'Hasar Verildi'} (Slot: Lv ${effectiveSlotLevel})`,
+          total: empoweredTotal,
+          rolls,
+          formula: formulaInfo.formula
+        });
+      } else {
+        let msg = `✨ ${name} kullanıldı! (Slot Lv ${effectiveSlotLevel}, ${formulaInfo.desc})`;
+        if (formulaInfo.type === 'damage') {
+          msg = `🔥 ${name} kullanıldı! (${formulaInfo.formula}): ${total} HASAR VERİLDİ! [${rolls.join(', ')}] (Slot Lv ${effectiveSlotLevel})`;
+        } else if (formulaInfo.type === 'healing') {
+          msg = `✨ ${name} kullanıldı! (${formulaInfo.formula}): ${total} CAN YENİLENDİ! [${rolls.join(', ')}] (Slot Lv ${effectiveSlotLevel})`;
+        } else {
+          msg = `⚡ ${name} kullanıldı! (${formulaInfo.formula}): ${total} Toplam Değer! [${rolls.join(', ')}] (Slot Lv ${effectiveSlotLevel})`;
+        }
+        setLastCastResult({
+          msg,
+          total,
+          rolls,
+          formula: formulaInfo.formula
+        });
+      }
+    } else {
+      setLastCastResult({
+        msg: `✨ ${name} büyüsü döküldü! (Gereken Slot: Lv ${effectiveSlotLevel}, Süre: ${effectiveCastingTime})`,
+        total: 0,
+        rolls: [],
+        formula: formulaInfo.formula
+      });
     }
-
-    setLastCastResult({
-      msg,
-      total,
-      rolls,
-      formula: formulaInfo.formula
-    });
 
     setTimeout(() => setLastCastResult(null), 6000);
 
     if (onCastSpell) {
-      onCastSpell({ spell: name, level, total, rolls, formula: formulaInfo.formula });
+      onCastSpell({ spell: name, level: effectiveSlotLevel, total, rolls, formula: formulaInfo.formula });
     }
   };
 
@@ -301,6 +363,64 @@ export default function SpellCard({
           {cleanText(description)}
         </div>
       )}
+
+      {/* Metamagic Controls & Simulator Panel */}
+      <div style={{ marginTop: '6px', background: 'rgba(124, 110, 247, 0.06)', border: '1px solid rgba(124, 110, 247, 0.25)', borderRadius: '6px', padding: '8px 10px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <button
+            type="button"
+            onClick={() => setShowMetamagic(!showMetamagic)}
+            style={{
+              background: 'transparent',
+              border: 'none',
+              color: '#a594ff',
+              fontSize: '11px',
+              fontWeight: 'bold',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+              padding: 0
+            }}
+          >
+            <Sparkles size={13} /> 🔮 Metamagic (Metabüyü) {activeMetamagics.length > 0 && `(${activeMetamagics.length} Seçili)`}
+          </button>
+
+          {activeMetamagics.length > 0 && (
+            <span style={{ fontSize: '11px', color: '#ffd700', fontWeight: 'bold' }}>
+              ⚡ Gerekli Slot: Seviye {effectiveSlotLevel} ({effectiveCastingTime})
+            </span>
+          )}
+        </div>
+
+        {showMetamagic && (
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px', marginTop: '8px' }}>
+            {METAMAGIC_OPTIONS.map(opt => {
+              const isSelected = activeMetamagics.includes(opt.key);
+              return (
+                <button
+                  key={opt.key}
+                  type="button"
+                  onClick={() => toggleMetamagic(opt.key)}
+                  style={{
+                    fontSize: '10px',
+                    padding: '3px 8px',
+                    borderRadius: '4px',
+                    border: isSelected ? '1px solid #d4af37' : '1px solid rgba(255,255,255,0.1)',
+                    background: isSelected ? 'rgba(212,175,55,0.2)' : 'rgba(0,0,0,0.3)',
+                    color: isSelected ? '#ffd700' : '#8b949e',
+                    fontWeight: isSelected ? 'bold' : 'normal',
+                    cursor: 'pointer',
+                    transition: 'all 0.15s ease'
+                  }}
+                >
+                  {opt.label}
+                </button>
+              );
+            })}
+          </div>
+        )}
+      </div>
 
       {/* Card Action Controls */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '4px', paddingTop: '6px', borderTop: `1px solid ${theme.color}20` }}>

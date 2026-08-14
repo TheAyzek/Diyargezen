@@ -160,4 +160,10 @@ Diyargezen web uygulamasında acemi/yapaysı ("vibecoded") web uygulaması izlen
 17. **Görsel Alt Metinleri (`alt` attribute):** Tüm `<img>` ögelerinde boş veya jenerik olmayan anlamlı `alt` açıklamaları olmalıdır.
 18. **Production Source Map Gizleme:** Canlı build (`vite.config.js`) işleminde `.map` dosyalarının sızmaması için `sourcemap: false` yapılmalıdır.
 19. **Konsol Temizliği (Console Error Hygiene):** Üretim modunda React key uyarıları, uncaught promise rejection veya gereksiz console log hataları birikmemelidir.
-20. **JS Bundle Kod Bölme (Code Splitting):** Tek parçalık devasa bundle yerine `vite.config.js` `manualChunks` ve dinamik import yapılandırması kullanılmalıdır.
+20. **JS Bundle Kod Bölme (Code Splitting):** Tek parçalık devasa bundle yerine `vite.config.js` `manualChunks` ve dinamik import yapılandırması kullanılmalıdır.
+
+## 11. ANA GÖREV ÇİZELGESİ VE YOL HARİTASI TAKİBİ (ZORUNLU)
+- Projenin tüm geliştirme hedefleri ve tamamlanan sistemleri ana dizindeki `GOREVLER_VE_YOL_HARITASI.md` dosyasında kayıtlıdır.
+- Her çalışma oturumu öncesinde ve "Sırada ne var?" sorgularında doğrudan `GOREVLER_VE_YOL_HARITASI.md` referans alınacaktır.
+- Tamamlanan her görev için `[x]` atılacak, bir sonraki `[ ]` maddesine sırayla geçilecektir.
+

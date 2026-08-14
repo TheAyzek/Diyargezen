@@ -66,20 +66,210 @@ ARCHETYPE_DATABASE: Dict[str, Dict[str, Dict[str, List[str]]]] = {
         "two-handed fighter": {
             "replaces": ["Armor Training 1", "Armor Training 2", "Armor Training 3", "Armor Training 4"],
             "grants": ["Shatter Defenses", "Overhand Chop", "Weapon Training (Two-Handed)"]
+        },
+        "tower shield specialist": {
+            "replaces": ["Armor Training 1", "Armor Training 2", "Armor Training 3", "Armor Training 4", "Weapon Training 1"],
+            "grants": ["Tower Shield Defense", "Tower Shield Specialist", "Tower Shield Evasion"]
+        },
+        "mutation warrior": {
+            "replaces": ["Armor Training 1", "Armor Training 2", "Armor Training 3", "Armor Training 4", "Armor Mastery"],
+            "grants": ["Mutagen", "Mutagen Discoveries"]
+        },
+        "trench fighter": {
+            "replaces": ["Armor Training 1", "Armor Training 2", "Armor Training 3", "Armor Training 4"],
+            "grants": ["Firearm Training", "Trench Warfare"]
+        },
+        "dragoon": {
+            "replaces": ["Bravery", "Weapon Training 1", "Armor Training 1", "Armor Training 2"],
+            "grants": ["Spear Fighter", "Spinning Lance", "Banner Charge"]
         }
     },
     "rogue": {
-        "swashbuckler": {
+        "knife master": {
             "replaces": ["Trapfinding"],
-            "grants": ["Martial Weapon Proficiency", "Daring Attempt"]
+            "grants": ["Hidden Blade", "Sneak Stab (d8/d4)"]
         },
         "scout": {
             "replaces": ["Uncanny Dodge"],
             "grants": ["Scout's Charge", "Skirmish"]
         },
+        "swashbuckler": {
+            "replaces": ["Trapfinding"],
+            "grants": ["Martial Weapon Proficiency", "Daring Attempt"]
+        },
+        "sniper": {
+            "replaces": ["Trapfinding"],
+            "grants": ["Accuracy", "Deadly Range"]
+        },
+        "underground chemist": {
+            "replaces": ["Evasion", "Rogue Talent 4"],
+            "grants": ["Chemical Weapons", "Precise Thrower"]
+        },
+        "rake": {
+            "replaces": ["Trapfinding"],
+            "grants": ["Bravado's Blade", "Rake's Smile"]
+        },
+        "acrobat": {
+            "replaces": ["Trapfinding", "Trap Sense"],
+            "grants": ["Expert Acrobat", "Second Chance"]
+        },
         "arcane trickster": {
             "replaces": ["Trap Sense"],
             "grants": ["Roguish Spellcasting", "Mage Hand Legerdemain"]
+        }
+    },
+    "wizard": {
+        "spellslinger": {
+            "replaces": ["Arcane Bond", "Cantrips", "Bonus Feats 5"],
+            "grants": ["Gunsmith", "Arcane Gun", "Mage Bullets"]
+        },
+        "scrollmaster": {
+            "replaces": ["Arcane Bond", "Bonus Feats 5"],
+            "grants": ["Scroll Blade", "Scroll Shield"]
+        },
+        "arcane bomber": {
+            "replaces": ["Arcane Bond", "Cantrips"],
+            "grants": ["Bomb 1d6", "Bomb Discoveries", "Explosion Specialty"]
+        },
+        "exploiter wizard": {
+            "replaces": ["Arcane School", "Arcane Bond"],
+            "grants": ["Arcane Reservoir", "Arcanist Exploits"]
+        }
+    },
+    "cleric": {
+        "crusader": {
+            "replaces": ["Domain 2", "Spells per Day"],
+            "grants": ["Bonus Combat Feats", "Legion's Blessing"]
+        },
+        "evangelist": {
+            "replaces": ["Channel Energy", "Armor Proficiency Medium", "Shield Proficiency"],
+            "grants": ["Sermon", "Inspire Courage", "Spontaneous Casting (Enchantment)"]
+        },
+        "undead lord": {
+            "replaces": ["Domain 2"],
+            "grants": ["Undead Companion", "Corpse Companion"]
+        },
+        "theologian": {
+            "replaces": ["Domain 2"],
+            "grants": ["Focused Domain", "Domain Secret"]
+        },
+        "cloistered cleric": {
+            "replaces": ["Armor Proficiency Medium", "Armor Proficiency Heavy", "Shield Proficiency"],
+            "grants": ["Lore Lorekeeper", "Verbal Spellcasting"]
+        }
+    },
+    "barbarian": {
+        "urban barbarian": {
+            "replaces": ["Fast Movement", "Damage Reduction"],
+            "grants": ["Controlled Rage", "Crowd Control"]
+        },
+        "titan mauler": {
+            "replaces": ["Fast Movement", "Trap Sense"],
+            "grants": ["Big Game Hunter", "Jotungrip", "Massive Weapons"]
+        },
+        "invulnerable rager": {
+            "replaces": ["Uncanny Dodge", "Improved Uncanny Dodge"],
+            "grants": ["Damage Reduction (Heavy)", "Extreme Endurance"]
+        },
+        "hurler": {
+            "replaces": ["Fast Movement"],
+            "grants": ["Long Hurler", "Powerful Throw"]
+        },
+        "mad dog": {
+            "replaces": ["Trap Sense", "Damage Reduction"],
+            "grants": ["War Beast Companion", "Pack Tactics", "Ferocious Fetch"]
+        },
+        "savage technologist": {
+            "replaces": ["Fast Movement", "Trap Sense"],
+            "grants": ["Sword and Gun", "Rage (Strength + Dexterity)"]
+        }
+    },
+    "bard": {
+        "archaeologist": {
+            "replaces": ["Bardic Performance", "Inspire Courage", "Inspire Competence"],
+            "grants": ["Archaeologist's Luck", "Clever Explorer", "Uncanny Dodge"]
+        },
+        "dervish dancer": {
+            "replaces": ["Bardic Performance", "Inspire Competence"],
+            "grants": ["Dervish Dance", "Fleet", "Dance of Fury"]
+        },
+        "sound striker": {
+            "replaces": ["Inspire Competence", "Suggestion"],
+            "grants": ["Word of Strike", "Weird Words"]
+        },
+        "court bard": {
+            "replaces": ["Inspire Courage", "Inspire Competence"],
+            "grants": ["Satire", "Mockery", "Glorious Presence"]
+        },
+        "magician": {
+            "replaces": ["Inspire Courage", "Inspire Competence"],
+            "grants": ["Dweomercraft", "Expanded Spell Repertory"]
+        }
+    },
+    "druid": {
+        "menhir savant": {
+            "replaces": ["Nature Sense", "Wild Empathy", "Woodland Stride"],
+            "grants": ["Spirit Sense", "Place of Power", "Walk the Lines"]
+        },
+        "tempest druid": {
+            "replaces": ["Nature Sense", "Wild Shape"],
+            "grants": ["Storm Shield", "Wind Walker", "Tempest Form"]
+        },
+        "mooncaller": {
+            "replaces": ["Venom Immunity", "A Thousand Faces"],
+            "grants": ["Night Sight", "Purity of Body", "Moon Shape"]
+        },
+        "nature fang": {
+            "replaces": ["Wild Shape"],
+            "grants": ["Studied Target", "Slayer Talents", "Sneak Attack"]
+        },
+        "blight druid": {
+            "replaces": ["Nature Sense", "Woodland Stride"],
+            "grants": ["Miasma", "Blighted Blood", "Plaguebearer"]
+        }
+    },
+    "monk": {
+        "zen archer": {
+            "replaces": ["Flurry of Blows", "Stunning Fist", "Evasion"],
+            "grants": ["Flurry of Bows", "Perfect Strike", "Zen Archery (Wis to Attack)"]
+        },
+        "master of many styles": {
+            "replaces": ["Flurry of Blows"],
+            "grants": ["Fuse Style", "Bonus Style Feats"]
+        },
+        "tetori": {
+            "replaces": ["Flurry of Blows", "Fast Movement"],
+            "grants": ["Graceful Grappler", "Snatch and Squeeze", "Inescapable Grasp"]
+        },
+        "sohei": {
+            "replaces": ["Stunning Fist", "Evasion", "Fast Movement"],
+            "grants": ["Weapon Training (Sohei)", "Devoted Mount", "Ki Weapon Flurry"]
+        },
+        "qinggong monk": {
+            "replaces": ["Slow Fall", "Wholeness of Body", "Diamond Body"],
+            "grants": ["Qinggong Ki Powers", "Spell-Like Abilities"]
+        }
+    },
+    "paladin": {
+        "hospitaler": {
+            "replaces": ["Smite Evil 2", "Smite Evil 4", "Smite Evil 6"],
+            "grants": ["Healing Hands", "Separate Channel Energy Pool"]
+        },
+        "divine hunter": {
+            "replaces": ["Heavy Armor Proficiency", "Aura of Courage"],
+            "grants": ["Ranged Smite", "Distant Mercy", "Aura of Protection (Ranged)"]
+        },
+        "sacred shield": {
+            "replaces": ["Smite Evil"],
+            "grants": ["Bastion of Good", "Holy Shield", "Aura of Protection (Shield)"]
+        },
+        "undead scourge": {
+            "replaces": ["Aura of Resolve"],
+            "grants": ["Smite Undead", "Aura of Life"]
+        },
+        "warrior of the holy light": {
+            "replaces": ["Spellcasting"],
+            "grants": ["Power of Light", "Shining Light", "Aura of Brilliant Light"]
         }
     },
     "ranger": {
@@ -90,16 +280,200 @@ ARCHETYPE_DATABASE: Dict[str, Dict[str, Dict[str, List[str]]]] = {
         "wild stalker": {
             "replaces": ["Combat Style Feat 1", "Combat Style Feat 2"],
             "grants": ["Rage", "Uncanny Dodge"]
+        },
+        "falconer": {
+            "replaces": ["Hunter's Bond"],
+            "grants": ["Falcon Companion", "Feathered Ally"]
+        },
+        "freebooter": {
+            "replaces": ["Favored Enemy"],
+            "grants": ["Freebooter's Bane", "Freebooter's Bond"]
+        },
+        "skirmisher": {
+            "replaces": ["Spellcasting"],
+            "grants": ["Hunter's Tricks", "Skirmish Actions"]
+        },
+        "guide": {
+            "replaces": ["Favored Enemy", "Favored Terrain"],
+            "grants": ["Ranger's Focus", "Inspired Wayfinding"]
         }
     },
-    "wizard": {
-        "spellslinger": {
-            "replaces": ["Arcane Bond", "Cantrips"],
-            "grants": ["Gunsmith", "Arcane Gun"]
+    "sorcerer": {
+        "crossblooded": {
+            "replaces": ["Bloodline Arcana", "Bloodline Feats"],
+            "grants": ["Dual Bloodline Powers", "Crossblooded Spells"]
         },
-        "scrollmaster": {
-            "replaces": ["Arcane Bond"],
-            "grants": ["Scroll Blade", "Scroll Shield"]
+        "wildblooded": {
+            "replaces": ["Bloodline Power 1"],
+            "grants": ["Mutated Bloodline Power"]
+        },
+        "tattooed sorcerer": {
+            "replaces": ["Bloodline Power 1"],
+            "grants": ["Familiar Tattoo", "Mage's Tattoo", "Enhanced Varisian Magic"]
+        }
+    },
+    "alchemist": {
+        "vivisectionist": {
+            "replaces": ["Bomb 1d6", "Bomb Discoveries"],
+            "grants": ["Sneak Attack", "Torturer's Eye", "Cruel Anatomist"]
+        },
+        "grenadier": {
+            "replaces": ["Brew Potion", "Poison Resistance"],
+            "grants": ["Martial Weapon Proficiency", "Alchemical Weapon", "Directed Blast"]
+        },
+        "mindchemist": {
+            "replaces": ["Mutagen"],
+            "grants": ["Cognatogen", "Perfect Recall"]
+        },
+        "chirurgeon": {
+            "replaces": ["Poison Resistance"],
+            "grants": ["Infused Curative", "Anaesthetic"]
+        },
+        "beastmorph": {
+            "replaces": ["Poison Resistance", "Poison Immunity"],
+            "grants": ["Beastform Mutagen", "Beastform Wings"]
+        }
+    },
+    "inquisitor": {
+        "sanctified slayer": {
+            "replaces": ["Judgment"],
+            "grants": ["Studied Target", "Sneak Attack", "Slayer Talents"]
+        },
+        "monster tactician": {
+            "replaces": ["Judgment"],
+            "grants": ["Summon Monster", "Tactical Teamwork"]
+        },
+        "preacher": {
+            "replaces": ["Solo Tactics"],
+            "grants": ["Determination", "Guiding Words"]
+        },
+        "infiltrator": {
+            "replaces": ["Monster Lore", "Stern Gaze"],
+            "grants": ["Misdirection", "Guile"]
+        }
+    },
+    "magus": {
+        "bladebound": {
+            "replaces": ["Arcane Pool (Size)", "Magus Arcana 3"],
+            "grants": ["Black Blade", "Strike of the Blade"]
+        },
+        "eldritch archer": {
+            "replaces": ["Spell Combat", "Spellstrike"],
+            "grants": ["Ranged Spell Combat", "Ranged Spellstrike"]
+        },
+        "kensai": {
+            "replaces": ["Armor Proficiency Light", "Armor Proficiency Medium", "Armor Proficiency Heavy", "Spell Recall"],
+            "grants": ["Canny Defense (Int to AC)", "Weapon Focus", "Perfect Strike", "Critical Perfection"]
+        },
+        "hextracker": {
+            "replaces": ["Magus Arcana 3"],
+            "grants": ["Witch Hex", "Accursed Strike"]
+        },
+        "staff magus": {
+            "replaces": ["Medium Armor Proficiency", "Heavy Armor Proficiency"],
+            "grants": ["Quarterstaff Defense", "Staff Weapon"]
+        }
+    },
+    "gunslinger": {
+        "pistolero": {
+            "replaces": ["Gun Training 1"],
+            "grants": ["Pistol Training", "Pistolero's Deed"]
+        },
+        "musket master": {
+            "replaces": ["Gun Training 1"],
+            "grants": ["Musket Training", "Fast Musket Reload"]
+        },
+        "mysterious stranger": {
+            "replaces": ["Grit (Wisdom)"],
+            "grants": ["Stranger's Grit (Charisma)", "Focused Aim"]
+        },
+        "gun tank": {
+            "replaces": ["Nimble 1", "Nimble 2", "Nimble 3"],
+            "grants": ["Armor Training (Gunslinger)", "Shield Defense"]
+        }
+    },
+    "cavalier": {
+        "gendarme": {
+            "replaces": ["Tactician", "Greater Tactician", "Master Tactician"],
+            "grants": ["Bonus Combat Feats", "Transfixing Charge"]
+        },
+        "beast rider": {
+            "replaces": ["Mount (Standard)"],
+            "grants": ["Exotic Mount", "Monstrous Steed"]
+        },
+        "strategist": {
+            "replaces": ["Cavalier's Charge"],
+            "grants": ["Tactician Master", "Drill Instructor"]
+        }
+    },
+    "witch": {
+        "gravewalker": {
+            "replaces": ["Witch's Familiar"],
+            "grants": ["Poppet Familiar", "Aura of Desecration", "Command Undead"]
+        },
+        "hedge witch": {
+            "replaces": ["Hex 4", "Hex 8"],
+            "grants": ["Spontaneous Healing", "Empathic Touch"]
+        },
+        "winter witch": {
+            "replaces": ["Hex 4"],
+            "grants": ["Ice Magic", "Cold Hexes", "Freeze"]
+        }
+    },
+    "summoner": {
+        "synthesist": {
+            "replaces": ["Summon Monster", "Life Link"],
+            "grants": ["Fused Eidolon", "Fused Link", "Shielded Meld"]
+        },
+        "master summoner": {
+            "replaces": ["Eidolon Power (Half HD)"],
+            "grants": ["Expanded Summon Monster", "Multiple Summons"]
+        },
+        "broodmaster": {
+            "replaces": ["Eidolon (Single)"],
+            "grants": ["Brood Eidolons (Multiple Smaller)"]
+        }
+    },
+    "oracle": {
+        "dual-cursed oracle": {
+            "replaces": ["Class Skills", "Mystery Spells 2"],
+            "grants": ["Dual Curse", "Misfortune", "Fortune"]
+        },
+        "ancient lorekeeper": {
+            "replaces": ["Bonus Spells"],
+            "grants": ["Elven Lore", "Arcane Spells in Divine Slots"]
+        },
+        "spirit guide": {
+            "replaces": ["Mystery Revelations 3", "Mystery Revelations 7"],
+            "grants": ["Shaman Spirits", "Spirit Magic"]
+        }
+    },
+    "slayer": {
+        "bounty hunter": {
+            "replaces": ["Slayer Talent 2"],
+            "grants": ["Submission Hold", "Incapacitating Strike"]
+        },
+        "executioner": {
+            "replaces": ["Stalker"],
+            "grants": ["Focused Execution", "Assassination Strike"]
+        },
+        "stygian slayer": {
+            "replaces": ["Medium Armor Proficiency", "Shield Proficiency"],
+            "grants": ["Invisibility", "Shadowy Disguise", "Mist Form"]
+        }
+    },
+    "swashbuckler": {
+        "inspired blade": {
+            "replaces": ["Panache (Charisma)", "Swashbuckler Finesse"],
+            "grants": ["Inspired Panache (Int + Cha)", "Rapier Finesse", "Rapier Weapon Focus"]
+        },
+        "musketeer": {
+            "replaces": ["Swashbuckler Finesse"],
+            "grants": ["Firearm Proficiency", "Gunsmithing", "Rapid Reload"]
+        },
+        "mysterious avenger": {
+            "replaces": ["Swashbuckler Weapon Training"],
+            "grants": ["Avenger's Disguise", "Whip Finesse"]
         }
     }
 }
@@ -167,11 +541,23 @@ class PF1eArchetypeEngine:
     """Validates PF1e Archetype compatibility and handles feature replacements."""
 
     @staticmethod
-    def validate_archetype_compatibility(base_class: str, archetypes: List[str]) -> Tuple[bool, List[str]]:
+    def get_available_archetypes(base_class: str) -> List[str]:
+        """Returns list of all official archetype names registered for a base class."""
+        c_key = str(base_class).lower().strip()
+        class_archs = ARCHETYPE_DATABASE.get(c_key, {})
+        return [name.title() for name in class_archs.keys()]
+
+    @staticmethod
+    def validate_archetype_compatibility(base_class: str, archetypes: Any) -> Tuple[bool, List[str]]:
         """
         Checks if multiple archetypes for the same class conflict (i.e. replace the same base feature).
         Returns (is_compatible: bool, conflict_reasons: List[str]).
         """
+        if isinstance(archetypes, str):
+            archetypes = [archetypes] if archetypes.strip() else []
+        elif not isinstance(archetypes, (list, tuple, set)):
+            archetypes = []
+
         c_key = str(base_class).lower().strip()
         class_archs = ARCHETYPE_DATABASE.get(c_key, {})
 
@@ -189,16 +575,21 @@ class PF1eArchetypeEngine:
                 if feat_norm in replaced_features:
                     existing_arch = replaced_features[feat_norm]
                     conflicts.append(
-                        f"Çakışma: Hem '{existing_arch.title()}' hem de '{arch_name.title()}' arketipleri '{feat}' yeteneğini değiştiriyor!"
+                        f"Çakışma: Hem '{existing_arch.title()}' hem de '{str(arch_name).title()}' arketipleri '{feat}' yeteneğini değiştiriyor!"
                     )
                 else:
-                    replaced_features[feat_norm] = arch_name
+                    replaced_features[feat_norm] = str(arch_name)
 
         return (len(conflicts) == 0, conflicts)
 
     @staticmethod
-    def get_archetype_features(base_class: str, archetypes: List[str]) -> Dict[str, List[str]]:
+    def get_archetype_features(base_class: str, archetypes: Any) -> Dict[str, List[str]]:
         """Returns lists of replaced features and granted features for selected archetypes."""
+        if isinstance(archetypes, str):
+            archetypes = [archetypes] if archetypes.strip() else []
+        elif not isinstance(archetypes, (list, tuple, set)):
+            archetypes = []
+
         c_key = str(base_class).lower().strip()
         class_archs = ARCHETYPE_DATABASE.get(c_key, {})
 
@@ -218,3 +609,4 @@ class PF1eArchetypeEngine:
             "replaced_features": sorted(list(replaced_all)),
             "granted_features": sorted(list(granted_all))
         }
+

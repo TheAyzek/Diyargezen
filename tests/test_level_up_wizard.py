@@ -195,3 +195,92 @@ def test_class_feature_filtering_by_class_name():
     fighter_names = [f.isim for f in fighter_features]
     assert not any(n in ("Agony", "Abominate", "Witchcraft") for n in fighter_names)
 
+
+def test_level_up_max_hp_choice(tmp_path: Path):
+    """Verify level up using Maximum HP mode (full Hit Die)."""
+    db_path = tmp_path / "dummy.db"
+    cm = CharacterManager(db_path)
+
+    char = {
+        "name": "Valeros Max",
+        "system": "pathfinder1e",
+        "level": 1,
+        "max_hp": 12,
+        "hit_die": 10,
+        "abilities": {"str": 16, "dex": 13, "con": 14, "int": 10, "wis": 12, "cha": 8},
+    }
+    cm.set_active_character(char)
+
+    # Level up 1 -> 2 choosing Maximum HP (10 Hit Die + 2 CON mod = 12)
+    choices = {
+        "hp_gain": 12,
+        "favored_class_bonus": "hp"
+    }
+
+    updated = cm.apply_level_up(choices)
+    assert updated["level"] == 2
+    # 12 + 12 (max roll + con) + 1 (FCB) = 25
+    assert updated["max_hp"] == 25
+
+
+def test_level_up_human_bonus_skill_points(tmp_path: Path):
+    """Verify that Humans gain +1 bonus skill rank per level during Level-Up (PF1e CRB p. 27)."""
+    db_path = tmp_path / "dummy.db"
+    cm = CharacterManager(db_path)
+
+    human_fighter = {
+        "name": "Human Fighter",
+        "system": "pathfinder1e",
+        "race": "Human",
+        "class": "Fighter",
+        "class_skill_points": 2,
+        "abilities": {"int": 10} # 0 mod
+    }
+
+    slots = cm.calculate_level_up_slots(human_fighter)
+    # 2 (Base) + 0 (Int) + 1 (Human) = 3
+    assert slots["skill_ranks_available"] == 3
+
+    elf_fighter = {
+        "name": "Elf Fighter",
+        "system": "pathfinder1e",
+        "race": "Elf",
+        "class": "Fighter",
+        "class_skill_points": 2,
+        "abilities": {"int": 10}
+    }
+    slots_elf = cm.calculate_level_up_slots(elf_fighter)
+    # 2 (Base) + 0 (Int) + 0 (Elf) = 2
+    assert slots_elf["skill_ranks_available"] == 2
+
+
+def test_level_up_preserves_spells_across_multiple_levels(tmp_path: Path):
+    """Verify that learning new spells at level-up accumulates without wiping previous spells."""
+    db_path = tmp_path / "dummy.db"
+    cm = CharacterManager(db_path)
+
+    char = {
+        "name": "Ezren",
+        "system": "pathfinder1e",
+        "level": 1,
+        "class": "Wizard",
+        "spells": [{"name": "Magic Missile", "level": 1}, {"name": "Mage Armor", "level": 1}]
+    }
+    cm.set_active_character(char)
+
+    # Level up to 2, adding Shield and Burning Hands
+    choices_l2 = {
+        "hp_gain": 6,
+        "spells_learned": [{"name": "Shield", "level": 1}, {"name": "Burning Hands", "level": 1}]
+    }
+    updated_l2 = cm.apply_level_up(choices_l2)
+    assert updated_l2["level"] == 2
+    assert len(updated_l2["spells"]) == 4
+
+    spell_names = [s.get("name") for s in updated_l2["spells"]]
+    assert "Magic Missile" in spell_names
+    assert "Mage Armor" in spell_names
+    assert "Shield" in spell_names
+    assert "Burning Hands" in spell_names
+
+

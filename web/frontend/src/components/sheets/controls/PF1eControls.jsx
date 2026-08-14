@@ -166,7 +166,7 @@ export default function PF1eControls() {
     racialAbilityChoice = 'strength', secondaryRacialAbilityChoice = 'dexterity', selectedRacialTraits = [],
     updateField, updateAbility, updateSkillRank, addEquipment, removeEquipment,
     addTrait, removeTrait, addFeat, removeFeat, addSpell, removeSpell, toggleRacialTrait, applyLevelUp,
-    toggleSpellSlotUsed, setPreparedSpell, togglePreparedSpellCast, restCharacter, deductGold
+    toggleSpellSlotUsed, setUsedSpellSlots, setPreparedSpell, clearPreparedSpell, togglePreparedSpellCast, restCharacter, deductGold
   } = store;
 
   const vmcClass = variant_multiclass || storeVmc || '';
@@ -249,6 +249,20 @@ export default function PF1eControls() {
   const [livePdfModalOpen, setLivePdfModalOpen] = useState(false);
   const [pointBuyModalOpen, setPointBuyModalOpen] = useState(false);
   const [deityModalOpen, setDeityModalOpen] = useState(false);
+  const [spellFilterLevel, setSpellFilterLevel] = useState('all');
+  const [editingMetamagicSlot, setEditingMetamagicSlot] = useState(null);
+
+  const METAMAGIC_OPTIONS = [
+    { name: 'Empower Spell', cost: 2, label: 'Empower (+2)' },
+    { name: 'Maximize Spell', cost: 3, label: 'Maximize (+3)' },
+    { name: 'Extend Spell', cost: 1, label: 'Extend (+1)' },
+    { name: 'Quicken Spell', cost: 4, label: 'Quicken (+4)' },
+    { name: 'Silent Spell', cost: 1, label: 'Silent (+1)' },
+    { name: 'Still Spell', cost: 1, label: 'Still (+1)' },
+    { name: 'Enlarge Spell', cost: 1, label: 'Enlarge (+1)' },
+    { name: 'Widen Spell', cost: 3, label: 'Widen (+3)' },
+    { name: 'Heighten Spell', cost: 1, label: 'Heighten (+1)' },
+  ];
 
   const maxFeatSlots = computeFeatSlots(charClass, race, level, vmcClass);
   const costMap = { 7: -4, 8: -2, 9: -1, 10: 0, 11: 1, 12: 2, 13: 3, 14: 5, 15: 7, 16: 10, 17: 13, 18: 17 };
@@ -522,6 +536,83 @@ export default function PF1eControls() {
             <p style={{ margin: 0, fontSize: '0.8rem', color: '#d4c5a9', lineHeight: '1.45' }}>
               {cleanText(classData?.aciklama || classData?.description) || `${charClass} sınıfı Pathfinder 1e yetenek ve kural şablonu.`}
             </p>
+          </div>
+        )}
+
+        {/* Selected Archetype Details & Feature Replacement Inspector Banner */}
+        {((archetype || (store.archetypes && store.archetypes.length > 0)) || (recalcedData?.archetype_details?.granted_features?.length > 0 || recalcedData?.archetype_details?.replaced_features?.length > 0)) && (
+          <div style={{
+            marginTop: '8px',
+            padding: '10px 14px',
+            borderRadius: '6px',
+            background: recalcedData?.archetype_details?.is_compatible === false ? 'rgba(239,68,68,0.12)' : 'rgba(124,110,247,0.08)',
+            border: `1px solid ${recalcedData?.archetype_details?.is_compatible === false ? 'rgba(239,68,68,0.4)' : 'rgba(124,110,247,0.3)'}`,
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '8px'
+          }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '6px' }}>
+              <span style={{ fontFamily: 'Cinzel, serif', fontWeight: 'bold', color: recalcedData?.archetype_details?.is_compatible === false ? '#f87171' : '#a594ff', fontSize: '0.85rem', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <span>⚜️</span> {store.archetypes?.length > 1 ? `Çoklu Arketip Dağılımı (${store.archetypes.join(', ')})` : `${archetype || store.archetypes?.[0]} Arketip Detayları`}
+              </span>
+              {recalcedData?.archetype_details?.is_compatible ? (
+                <span style={{ fontSize: '0.7rem', color: '#3fb950', background: 'rgba(63,185,80,0.12)', padding: '2px 8px', borderRadius: '4px', border: '1px solid rgba(63,185,80,0.3)', fontWeight: 'bold' }}>
+                  ✓ Paizo APG Kurallarına Uyumlu
+                </span>
+              ) : (
+                <span style={{ fontSize: '0.7rem', color: '#f87171', background: 'rgba(239,68,68,0.15)', padding: '2px 8px', borderRadius: '4px', border: '1px solid rgba(239,68,68,0.4)', fontWeight: 'bold' }}>
+                  ⚠️ Arketip Çakışması!
+                </span>
+              )}
+            </div>
+
+            {/* Conflict Warnings */}
+            {recalcedData?.archetype_details?.conflicts?.length > 0 && (
+              <div style={{ background: 'rgba(0,0,0,0.3)', padding: '6px 10px', borderRadius: '4px', borderLeft: '3px solid #ef4444' }}>
+                {recalcedData.archetype_details.conflicts.map((conf, cIdx) => (
+                  <div key={cIdx} style={{ fontSize: '0.75rem', color: '#fca5a5' }}>
+                    {conf}
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Granted & Replaced Features Badges */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '10px' }}>
+              <div>
+                <div style={{ fontSize: '0.72rem', color: '#3fb950', fontWeight: 'bold', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  ✦ Kazanılan Arketip Yetenekleri:
+                </div>
+                {recalcedData?.archetype_details?.granted_features?.length > 0 ? (
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+                    {recalcedData.archetype_details.granted_features.map((g, i) => (
+                      <span key={i} style={{ fontSize: '0.72rem', color: '#f0e6d2', background: 'rgba(63,185,80,0.15)', border: '1px solid rgba(63,185,80,0.35)', padding: '2px 6px', borderRadius: '4px' }}>
+                        +{g}
+                      </span>
+                    ))}
+                  </div>
+                ) : (
+                  <span style={{ fontSize: '0.72rem', color: '#8b949e', fontStyle: 'italic' }}>Standart yetenek seti</span>
+                )}
+              </div>
+
+              <div>
+                <div style={{ fontSize: '0.72rem', color: '#f87171', fontWeight: 'bold', marginBottom: '4px', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                  ✕ Değiştirilen Temel Yetenekler:
+                </div>
+                {recalcedData?.archetype_details?.replaced_features?.length > 0 ? (
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+                    {recalcedData.archetype_details.replaced_features.map((r, i) => (
+                      <span key={i} style={{ fontSize: '0.72rem', color: '#fca5a5', background: 'rgba(239,68,68,0.12)', border: '1px solid rgba(239,68,68,0.3)', padding: '2px 6px', borderRadius: '4px', textDecoration: 'line-through' }}>
+                        -{r}
+                      </span>
+                    ))}
+                  </div>
+                ) : (
+                  <span style={{ fontSize: '0.72rem', color: '#8b949e', fontStyle: 'italic' }}>Yok (Tam İstifleme)</span>
+                )}
+              </div>
+            </div>
           </div>
         )}
       </div>
@@ -1179,10 +1270,16 @@ export default function PF1eControls() {
               ))}
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 6, marginTop: 4 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: 6, marginTop: 4 }}>
               <div className="dark-panel" style={{ padding: 6, textAlign: 'center' }}>
                 <FieldLabel>Hareket Hızı</FieldLabel>
                 <div style={{ fontFamily: 'DM Mono, monospace', fontSize: '1.1rem', color: '#9cdcfe' }}>{recalcedData.speed || 30} ft</div>
+              </div>
+              <div className="dark-panel" style={{ padding: 6, textAlign: 'center' }}>
+                <FieldLabel>Zırh Cezası (ACP)</FieldLabel>
+                <div style={{ fontFamily: 'DM Mono, monospace', fontSize: '1.1rem', color: (recalcedData.armor_check_penalty || 0) < 0 ? '#f87171' : 'var(--gold-bright)' }}>
+                  {recalcedData.armor_check_penalty || 0}
+                </div>
               </div>
               <div className="dark-panel" style={{ padding: 6, textAlign: 'center' }}>
                 <FieldLabel>Yakın Atak</FieldLabel>
@@ -1218,6 +1315,20 @@ export default function PF1eControls() {
               <span style={{ fontFamily: 'DM Mono, monospace', fontSize: '0.95rem', color: 'var(--gold-bright)', fontWeight: 600 }}>{getAvailableSkillRanks()}</span>
             </div>
 
+            {recalcedData.armor_check_penalty < 0 && (
+              <div style={{
+                display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+                padding: '5px 10px', marginBottom: '8px', borderRadius: '4px',
+                backgroundColor: 'rgba(239, 68, 68, 0.1)', border: '1px solid rgba(239, 68, 68, 0.3)',
+                fontSize: '0.72rem', color: '#fca5a5'
+              }}>
+                <span>🛡️ Aktif Zırh & Yük Cezası (ACP):</span>
+                <span style={{ fontFamily: 'DM Mono, monospace', fontWeight: 'bold', color: '#f87171' }}>
+                  {recalcedData.armor_check_penalty}
+                </span>
+              </div>
+            )}
+
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 24px 42px 36px', gap: 4, padding: '4px 8px 6px', fontFamily: 'Cinzel, serif', fontSize: '0.42rem', letterSpacing: '0.1em', color: 'var(--gold-dim)', textTransform: 'uppercase', borderBottom: '1px solid rgba(201,168,76,0.12)', marginBottom: 4 }}>
               <span>Skill</span><span style={{ textAlign: 'center' }}>CS</span><span style={{ textAlign: 'center' }}>Ranks</span><span style={{ textAlign: 'center' }}>Total</span>
             </div>
@@ -1243,11 +1354,13 @@ export default function PF1eControls() {
                   : (recalcedData.skills?.[skillName] !== undefined ? recalcedData.skills[skillName] : ranks + classBonus);
 
                 const abMod = skillDetail.ability_modifier !== undefined ? skillDetail.ability_modifier : 0;
+                const acpPen = skillDetail.acp_penalty !== undefined ? skillDetail.acp_penalty : 0;
 
                 return (
-                  <div key={skillName} className="skill-row" title={`${ranks} Rank + ${abMod} Mod ${classBonus > 0 ? '+ 3 Sınıf Bonusu' : ''}`}>
+                  <div key={skillName} className="skill-row" title={`${ranks} Rank + ${abMod} Mod ${classBonus > 0 ? '+ 3 Sınıf Bonusu' : ''} ${acpPen !== 0 ? `${acpPen} ACP` : ''}`}>
                     <div style={{ fontFamily: 'EB Garamond, serif', fontSize: '0.82rem', color: ranks > 0 ? 'var(--gold-light)' : 'var(--gold-dim)', display: 'flex', alignItems: 'center', gap: 5 }}>
-                      {skillName} {isClassSkill && (
+                      {skillName}
+                      {isClassSkill && (
                         <span style={{ 
                           fontFamily: 'Cinzel, serif', 
                           fontSize: '0.42rem', 
@@ -1258,6 +1371,19 @@ export default function PF1eControls() {
                           border: ranks > 0 ? '1px solid rgba(76,217,100,0.3)' : '1px solid rgba(201,168,76,0.3)'
                         }}>
                           {ranks > 0 ? '★ Sınıf (+3)' : '★ Sınıf'}
+                        </span>
+                      )}
+                      {acpPen < 0 && (
+                        <span style={{ 
+                          fontFamily: 'Cinzel, serif', 
+                          fontSize: '0.42rem', 
+                          color: '#f87171',
+                          background: 'rgba(239, 68, 68, 0.12)',
+                          padding: '1px 4px',
+                          borderRadius: '3px',
+                          border: '1px solid rgba(239, 68, 68, 0.3)'
+                        }} title={`Zırh / Yük Cezası (ACP): ${acpPen}`}>
+                          ACP {acpPen}
                         </span>
                       )}
                     </div>
@@ -1384,29 +1510,51 @@ export default function PF1eControls() {
         {tab === 'spells' && (
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <SectionHeader icon="✨" title="Büyüler & Mucizeler (Spells)" />
-              <button className="gold-btn primary" style={{ padding: '5px 12px', fontSize: '0.75rem' }} onClick={() => setSpellModalOpen(true)}>
-                + Büyü Ekle
-              </button>
+              <SectionHeader icon="✨" title="Büyüler & Büyü Yuvası Yöneticisi" />
+              <div style={{ display: 'flex', gap: '6px' }}>
+                <button
+                  type="button"
+                  className="gold-btn"
+                  onClick={() => restCharacter()}
+                  style={{ padding: '5px 12px', fontSize: '0.75rem', display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(124,110,247,0.15)', border: '1px solid #7c6ef7', color: '#a594ff' }}
+                  title="Tüm harcanan büyü yuvalarını ve hazırlanan büyüleri yeniler"
+                >
+                  🌙 Uzun Dinlenme Yap
+                </button>
+                <button className="gold-btn primary" style={{ padding: '5px 12px', fontSize: '0.75rem' }} onClick={() => setSpellModalOpen(true)}>
+                  + Büyü Ekle
+                </button>
+              </div>
             </div>
 
             {hasSpellcasting && (
               <>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 4 }}>
-                  <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.7rem', color: 'var(--gold-bright)' }}>Günlük Büyü Slotları & Dinlenme</span>
-                  <button
-                    className="gold-btn"
-                    onClick={() => restCharacter()}
-                    style={{ padding: '4px 10px', fontSize: '0.72rem', display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(124,110,247,0.15)', border: '1px solid #7c6ef7', color: '#a594ff' }}
-                  >
-                    🌙 Uzun Dinlenme Yap
-                  </button>
+                {/* Caster Stats Summary Banner */}
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '8px', background: 'rgba(124,110,247,0.08)', border: '1px solid rgba(124,110,247,0.25)', borderRadius: '8px', padding: '10px' }}>
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ fontSize: '0.65rem', color: '#a594ff', textTransform: 'uppercase', fontWeight: 600 }}>Büyücü Seviyesi (CL)</div>
+                    <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#fff' }}>
+                      +{recalcedData.spellcasting?.caster_level || level || 1}
+                    </div>
+                  </div>
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ fontSize: '0.65rem', color: '#a594ff', textTransform: 'uppercase', fontWeight: 600 }}>Odaklanma (Concentration)</div>
+                    <div style={{ fontSize: '1.1rem', fontWeight: 700, color: '#38bdf8' }}>
+                      {(recalcedData.spellcasting?.concentration_bonus ?? 0) >= 0 ? `+${recalcedData.spellcasting?.concentration_bonus || 0}` : recalcedData.spellcasting?.concentration_bonus || 0}
+                    </div>
+                  </div>
+                  <div style={{ textAlign: 'center' }}>
+                    <div style={{ fontSize: '0.65rem', color: '#a594ff', textTransform: 'uppercase', fontWeight: 600 }}>Büyü Tipi</div>
+                    <div style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--gold-bright)', marginTop: '3px' }}>
+                      {isPreparedSpellcaster ? 'Hazırlamalı (Prepared)' : 'Spontane (Spontaneous)'}
+                    </div>
+                  </div>
                 </div>
 
-                {/* Spell Slots per Day Tracker */}
+                {/* Spell Slots per Day & DCs Tracker */}
                 {recalcedData.spell_slots && Object.keys(recalcedData.spell_slots).length > 0 && (
-                  <div style={{ backgroundColor: '#161622', border: '1px solid var(--border-gold)', borderRadius: '8px', padding: '10px', marginBottom: '10px' }}>
-                    <FieldLabel>Günlük Büyü Hakkı Takibi (Tıklayarak Harcayın)</FieldLabel>
+                  <div style={{ backgroundColor: '#161622', border: '1px solid var(--border-gold)', borderRadius: '8px', padding: '10px' }}>
+                    <FieldLabel>Günlük Büyü Yuvaları & Kurtarma DC'leri (Tıklayarak Harcayın)</FieldLabel>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
                       {Object.entries(recalcedData.spell_slots).map(([lvlStr, totalSlots]) => {
                         const lvl = parseInt(lvlStr);
@@ -1417,32 +1565,34 @@ export default function PF1eControls() {
                         const dcVal = spellDcs[lvlStr] || (10 + lvl + (recalcedData.spellcasting?.ability_modifier || 0));
 
                         return (
-                          <div key={lvlStr} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.8rem', backgroundColor: '#0f0f15', padding: '4px 8px', borderRadius: '6px' }}>
+                          <div key={lvlStr} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.8rem', backgroundColor: '#0f0f15', padding: '6px 10px', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.05)' }}>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                              <span style={{ color: 'var(--gold-bright)', fontWeight: 600 }}>
-                                {lvl === 0 ? 'Cantrips (0. Seviye)' : `Seviye ${lvl} Büyüler`}
+                              <span style={{ color: 'var(--gold-bright)', fontWeight: 600, fontFamily: 'Cinzel, serif' }}>
+                                {lvl === 0 ? '0. Seviye (Cantrip)' : `${lvl}. Seviye Büyüler`}
                               </span>
                               <span style={{ fontSize: '0.65rem', padding: '1px 6px', borderRadius: '4px', background: 'rgba(124,110,247,0.2)', border: '1px solid rgba(124,110,247,0.4)', color: '#d8b4fe', fontWeight: 'bold' }}>
                                 DC {dcVal}
                               </span>
                             </div>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                              <span style={{ fontSize: '0.72rem', color: '#94a3b8' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                              <span style={{ fontSize: '0.72rem', color: remaining > 0 ? '#4ec9b0' : '#e94560', fontWeight: 600 }}>
                                 {remaining} / {totalSlots} Kalan
                               </span>
-                              <div style={{ display: 'flex', gap: '3px' }}>
+                              <div style={{ display: 'flex', gap: '4px' }}>
                                 {Array.from({ length: totalSlots }).map((_, i) => {
                                   const isUsed = i < usedCount;
                                   return (
                                     <div
                                       key={i}
                                       onClick={() => toggleSpellSlotUsed(lvlStr, totalSlots)}
+                                      title={isUsed ? `${lvl}. Seviye Slot Harcandı (Geri Almak İçin Tıkla)` : `${lvl}. Seviye Slot Hazır (Harcamak İçin Tıkla)`}
                                       style={{
-                                        width: '16px', height: '16px', borderRadius: '4px', cursor: 'pointer',
+                                        width: '18px', height: '18px', borderRadius: '4px', cursor: 'pointer',
                                         backgroundColor: isUsed ? '#e94560' : 'rgba(78, 201, 176, 0.2)',
                                         border: `1px solid ${isUsed ? '#ff6b81' : '#4ec9b0'}`,
                                         display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                        fontSize: '0.6rem', color: isUsed ? '#fff' : '#4ec9b0', fontWeight: 'bold'
+                                        fontSize: '0.62rem', color: isUsed ? '#fff' : '#4ec9b0', fontWeight: 'bold',
+                                        transition: 'all 0.15s ease'
                                       }}
                                     >
                                       {isUsed ? '✕' : '✓'}
@@ -1458,60 +1608,184 @@ export default function PF1eControls() {
                   </div>
                 )}
 
-                {/* Prepared Spells Manager for Prepared Spellcasters */}
+                {/* Prepared Spells Studio for Prepared Spellcasters */}
                 {isPreparedSpellcaster && recalcedData.spell_slots && (
-                  <div style={{ backgroundColor: '#161622', border: '1px solid #7c6ef7', borderRadius: '8px', padding: '10px', marginBottom: '10px' }}>
-                    <FieldLabel>🔮 Günlük Büyü Hazırlama Paneli (Prepared Spells)</FieldLabel>
-                    <div style={{ fontSize: '0.7rem', color: '#a594ff', marginBottom: '8px' }}>
-                      {charClass} sınıfı hazırlamalı büyücüdür. Günlük slotlarınıza defterinizdeki büyüleri seçip bağlayabilirsiniz:
+                  <div style={{ backgroundColor: '#161622', border: '1px solid #7c6ef7', borderRadius: '8px', padding: '12px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
+                      <FieldLabel>🔮 Günlük Büyü Hazırlama Stüdyosu (Prepared Spells)</FieldLabel>
+                      <span style={{ fontSize: '0.65rem', color: '#a594ff', background: 'rgba(124,110,247,0.15)', padding: '2px 8px', borderRadius: '4px' }}>
+                        {charClass} Hazırlık Motoru
+                      </span>
+                    </div>
+                    <div style={{ fontSize: '0.72rem', color: '#c4beff', marginBottom: '10px', lineHeight: 1.4 }}>
+                      Günlük büyü yuvalarınıza defterinizdeki büyüleri yerleştirin. Metamagic hünerleriniz varsa yuva seviyesini yükselterek uygulayabilirsiniz:
                     </div>
 
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
                       {Object.entries(recalcedData.spell_slots).map(([lvlStr, totalSlots]) => {
                         const lvl = parseInt(lvlStr);
-                        if (lvl === 0) return null;
-
                         const currentPrepared = preparedSpells[lvlStr] || [];
 
+                        // Filter spells in grimoire that can fit in this slot
+                        const availableSpellsForSlot = spells.filter(sp => {
+                          const sLvl = typeof sp === 'object' ? (sp.sistem_verisi?.level ?? sp.level ?? 0) : 0;
+                          return sLvl <= lvl;
+                        });
+
                         return (
-                          <div key={lvlStr} style={{ backgroundColor: '#0f0f15', border: '1px solid #2a2a3a', borderRadius: '6px', padding: '8px' }}>
-                            <div style={{ fontSize: '0.78rem', color: 'var(--gold-bright)', fontWeight: 700, marginBottom: '6px' }}>
-                              Seviye {lvl} Büyü Slotları ({totalSlots} Slot Hak)
+                          <div key={lvlStr} style={{ backgroundColor: '#0f0f15', border: '1px solid rgba(124,110,247,0.2)', borderRadius: '8px', padding: '10px' }}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
+                              <div style={{ fontSize: '0.8rem', color: 'var(--gold-bright)', fontWeight: 700, fontFamily: 'Cinzel, serif' }}>
+                                {lvl === 0 ? '0. Seviye Cantrip Yuvaları' : `${lvl}. Seviye Yuvalar (${totalSlots} Slot)`}
+                              </div>
+                              <span style={{ fontSize: '0.68rem', color: '#8b949e' }}>
+                                {currentPrepared.filter(p => p && p.name).length} / {totalSlots} Hazırlandı
+                              </span>
                             </div>
 
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                               {Array.from({ length: totalSlots }).map((_, slotIdx) => {
-                                const preparedItem = currentPrepared[slotIdx] || { name: '', cast: false };
+                                const preparedItem = currentPrepared[slotIdx] || { name: '', cast: false, metamagic: [], baseLevel: lvl, effectiveLevel: lvl };
                                 const isCast = preparedItem.cast;
+                                const isEditingMeta = editingMetamagicSlot?.lvlStr === lvlStr && editingMetamagicSlot?.slotIdx === slotIdx;
+                                const appliedMeta = preparedItem.metamagic || [];
 
                                 return (
-                                  <div key={slotIdx} style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                                    <span style={{ fontSize: '0.7rem', color: '#64748b', width: '42px', flexShrink: 0 }}>
-                                      Slot #{slotIdx + 1}:
-                                    </span>
-                                    <select
-                                      className="rune-input"
-                                      value={preparedItem.name || ''}
-                                      onChange={e => setPreparedSpell(lvlStr, slotIdx, e.target.value)}
-                                      style={{ flex: 1, padding: '4px 6px', fontSize: '0.78rem' }}
-                                    >
-                                      <option value="">-- Büyü Hazırla --</option>
-                                      {spells.map((sp, sIdx) => {
-                                        const spName = sp.isim || sp.name;
-                                        return <option key={sIdx} value={spName}>{spName}</option>;
-                                      })}
-                                    </select>
-                                    <button
-                                      onClick={() => togglePreparedSpellCast(lvlStr, slotIdx)}
-                                      style={{
-                                        padding: '3px 8px', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 'bold', cursor: 'pointer',
-                                        backgroundColor: isCast ? '#e94560' : 'rgba(78, 201, 176, 0.2)',
-                                        border: `1px solid ${isCast ? '#ff6b81' : '#4ec9b0'}`,
-                                        color: isCast ? '#fff' : '#4ec9b0'
-                                      }}
-                                    >
-                                      {isCast ? '✕ Atıldı' : '✓ Hazır'}
-                                    </button>
+                                  <div key={slotIdx} style={{ display: 'flex', flexDirection: 'column', gap: '4px', background: 'rgba(255,255,255,0.02)', padding: '6px 8px', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.05)' }}>
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                                      <span style={{ fontSize: '0.7rem', color: '#8b949e', width: '38px', flexShrink: 0, fontWeight: 600 }}>
+                                        #{slotIdx + 1}:
+                                      </span>
+
+                                      <select
+                                        className="rune-input"
+                                        value={preparedItem.name || ''}
+                                        onChange={e => {
+                                          const chosenName = e.target.value;
+                                          if (!chosenName) {
+                                            clearPreparedSpell(lvlStr, slotIdx);
+                                          } else {
+                                            const matchedSpell = spells.find(s => (s.isim || s.name) === chosenName);
+                                            const baseLvl = matchedSpell ? (matchedSpell.sistem_verisi?.level ?? matchedSpell.level ?? 0) : 0;
+                                            setPreparedSpell(lvlStr, slotIdx, {
+                                              name: chosenName,
+                                              cast: false,
+                                              metamagic: appliedMeta,
+                                              baseLevel: baseLvl,
+                                              effectiveLevel: baseLvl
+                                            });
+                                          }
+                                        }}
+                                        style={{ flex: 1, padding: '4px 6px', fontSize: '0.78rem' }}
+                                      >
+                                        <option value="">-- Büyü Seçip Hazırla --</option>
+                                        {availableSpellsForSlot.map((sp, sIdx) => {
+                                          const spName = sp.isim || sp.name;
+                                          const spLvl = sp.sistem_verisi?.level ?? sp.level ?? 0;
+                                          return (
+                                            <option key={sIdx} value={spName}>
+                                              [Lv {spLvl}] {spName}
+                                            </option>
+                                          );
+                                        })}
+                                      </select>
+
+                                      {/* Metamagic Button */}
+                                      {preparedItem.name && lvl > 0 && (
+                                        <button
+                                          type="button"
+                                          onClick={() => setEditingMetamagicSlot(isEditingMeta ? null : { lvlStr, slotIdx })}
+                                          style={{
+                                            padding: '3px 6px', borderRadius: '4px', fontSize: '0.65rem', fontWeight: 'bold', cursor: 'pointer',
+                                            backgroundColor: appliedMeta.length > 0 ? 'rgba(124, 110, 247, 0.3)' : 'rgba(255, 255, 255, 0.05)',
+                                            border: `1px solid ${appliedMeta.length > 0 ? '#7c6ef7' : '#4a4a60'}`,
+                                            color: appliedMeta.length > 0 ? '#d8b4fe' : '#94a3b8'
+                                          }}
+                                          title="Metamagic Hünerleri Ekle"
+                                        >
+                                          ✦ Meta{appliedMeta.length > 0 ? ` (${appliedMeta.length})` : ''}
+                                        </button>
+                                      )}
+
+                                      {/* Cast Status Toggle */}
+                                      {preparedItem.name && (
+                                        <button
+                                          type="button"
+                                          onClick={() => togglePreparedSpellCast(lvlStr, slotIdx)}
+                                          style={{
+                                            padding: '3px 8px', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 'bold', cursor: 'pointer',
+                                            backgroundColor: isCast ? '#e94560' : 'rgba(78, 201, 176, 0.2)',
+                                            border: `1px solid ${isCast ? '#ff6b81' : '#4ec9b0'}`,
+                                            color: isCast ? '#fff' : '#4ec9b0'
+                                          }}
+                                        >
+                                          {isCast ? '✕ Atıldı' : '✓ Hazır'}
+                                        </button>
+                                      )}
+
+                                      {/* Clear Slot */}
+                                      {preparedItem.name && (
+                                        <button
+                                          type="button"
+                                          onClick={() => clearPreparedSpell(lvlStr, slotIdx)}
+                                          style={{
+                                            padding: '3px 6px', borderRadius: '4px', fontSize: '0.7rem', cursor: 'pointer',
+                                            backgroundColor: 'transparent', border: '1px solid rgba(233,69,96,0.3)', color: '#ff6b81'
+                                          }}
+                                          title="Slotu Boşalt"
+                                        >
+                                          <Trash size={12} />
+                                        </button>
+                                      )}
+                                    </div>
+
+                                    {/* Metamagic Drawer / Pills for Slot */}
+                                    {isEditingMeta && preparedItem.name && (
+                                      <div style={{ marginTop: '4px', padding: '6px 8px', background: 'rgba(15,15,26,0.8)', border: '1px dashed #7c6ef7', borderRadius: '6px' }}>
+                                        <div style={{ fontSize: '0.65rem', color: '#a594ff', fontWeight: 'bold', marginBottom: '4px' }}>
+                                          Metamagic Feat Ekle / Kaldır (Yuva Limiti: Seviye {lvl}):
+                                        </div>
+                                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+                                          {METAMAGIC_OPTIONS.map(mOpt => {
+                                            const isSelected = appliedMeta.includes(mOpt.name);
+                                            return (
+                                              <button
+                                                key={mOpt.name}
+                                                type="button"
+                                                onClick={() => {
+                                                  const newMeta = isSelected
+                                                    ? appliedMeta.filter(m => m !== mOpt.name)
+                                                    : [...appliedMeta, mOpt.name];
+                                                  const totalIncrease = newMeta.reduce((acc, m) => {
+                                                    const f = METAMAGIC_OPTIONS.find(o => o.name === m);
+                                                    return acc + (f ? f.cost : 1);
+                                                  }, 0);
+                                                  const effLvl = (preparedItem.baseLevel || 0) + totalIncrease;
+                                                  setPreparedSpell(lvlStr, slotIdx, {
+                                                    ...preparedItem,
+                                                    metamagic: newMeta,
+                                                    effectiveLevel: effLvl
+                                                  });
+                                                }}
+                                                style={{
+                                                  padding: '2px 6px', borderRadius: '4px', fontSize: '0.62rem', cursor: 'pointer',
+                                                  backgroundColor: isSelected ? '#7c6ef7' : 'rgba(255,255,255,0.05)',
+                                                  border: `1px solid ${isSelected ? '#a594ff' : '#3a3a50'}`,
+                                                  color: isSelected ? '#fff' : '#c4beff'
+                                                }}
+                                              >
+                                                {mOpt.label}
+                                              </button>
+                                            );
+                                          })}
+                                        </div>
+                                        {preparedItem.effectiveLevel > lvl && (
+                                          <div style={{ fontSize: '0.65rem', color: '#ff6b81', marginTop: '4px', fontWeight: 'bold' }}>
+                                            ⚠️ Efektif seviye ({preparedItem.effectiveLevel}) slot seviyesini ({lvl}) aşıyor!
+                                          </div>
+                                        )}
+                                      </div>
+                                    )}
                                   </div>
                                 );
                               })}
@@ -1525,50 +1799,81 @@ export default function PF1eControls() {
               </>
             )}
 
-            {/* Selected Spells List */}
+            {/* Grimoire / Selected Spells List */}
             <div style={{ marginTop: 6 }}>
-              <div style={{ fontFamily: 'Cinzel, serif', fontSize: '0.72rem', color: 'var(--gold-dim)', marginBottom: 8 }}>
-                Büyü Defterinizdeki Büyüler ({spells?.length || 0})
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+                <div style={{ fontFamily: 'Cinzel, serif', fontSize: '0.75rem', color: 'var(--gold-bright)' }}>
+                  Büyü Defterinizdeki Büyüler ({spells?.length || 0})
+                </div>
+                {/* Level Filter Pills */}
+                <div style={{ display: 'flex', gap: '4px', flexWrap: 'wrap' }}>
+                  {['all', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'].map(fLvl => (
+                    <button
+                      key={fLvl}
+                      type="button"
+                      onClick={() => setSpellFilterLevel(fLvl)}
+                      style={{
+                        padding: '2px 6px', borderRadius: '4px', fontSize: '0.62rem', cursor: 'pointer',
+                        backgroundColor: spellFilterLevel === fLvl ? 'var(--accent-gold)' : 'rgba(255,255,255,0.05)',
+                        border: `1px solid ${spellFilterLevel === fLvl ? 'var(--accent-gold)' : 'rgba(255,255,255,0.1)'}`,
+                        color: spellFilterLevel === fLvl ? '#0f0f1a' : '#94a3b8',
+                        fontWeight: 'bold'
+                      }}
+                    >
+                      {fLvl === 'all' ? 'Tümü' : `Lv ${fLvl}`}
+                    </button>
+                  ))}
+                </div>
               </div>
 
               {(!spells || spells.length === 0) ? (
-                <div style={{ fontSize: '0.8rem', color: 'var(--gold-dim)', fontStyle: 'italic', padding: '10px', background: 'rgba(15,12,28,0.5)', borderRadius: 6, border: '1px solid rgba(201,168,76,0.15)' }}>
-                  Henüz büyü defterinize büyü eklenmedi. "+ Büyü Ekle" butonuna tıklayarak büyü kataloğundan seçim yapabilirsiniz.
+                <div style={{ fontSize: '0.8rem', color: 'var(--gold-dim)', fontStyle: 'italic', padding: '12px', background: 'rgba(15,12,28,0.5)', borderRadius: 6, border: '1px solid rgba(201,168,76,0.15)', textAlign: 'center' }}>
+                  Henüz büyü defterinize büyü eklenmedi. "+ Büyü Ekle" butonuna tıklayarak Pathfinder 1e büyü kataloğundan seçim yapabilirsiniz.
                 </div>
               ) : (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
-                  {spells.map((sp, idx) => {
-                    const sName = typeof sp === 'object' ? (sp.isim || sp.name) : sp;
-                    const sDesc = typeof sp === 'object' ? (sp.aciklama || sp.description) : '';
-                    const sSchool = typeof sp === 'object' ? (sp.sistem_verisi?.school) : null;
-                    const sLvl = typeof sp === 'object' ? (sp.sistem_verisi?.level) : null;
+                  {spells
+                    .filter(sp => {
+                      if (spellFilterLevel === 'all') return true;
+                      const sLvl = typeof sp === 'object' ? (sp.sistem_verisi?.level ?? sp.level ?? 0) : 0;
+                      return String(sLvl) === String(spellFilterLevel);
+                    })
+                    .map((sp, idx) => {
+                      const sName = typeof sp === 'object' ? (sp.isim || sp.name) : sp;
+                      const sDesc = typeof sp === 'object' ? (sp.aciklama || sp.description) : '';
+                      const sSchool = typeof sp === 'object' ? (sp.sistem_verisi?.school) : null;
+                      const sLvl = typeof sp === 'object' ? (sp.sistem_verisi?.level ?? sp.level ?? 0) : 0;
 
-                    return (
-                      <div key={idx} className="dark-panel" style={{ padding: '10px 12px', border: '1px solid rgba(124,110,247,0.25)', borderRadius: 6, display: 'flex', flexDirection: 'column', gap: 4 }}>
-                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                          <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.88rem', color: '#a594ff', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 6 }}>
-                            ✨ {sName}
-                            {sLvl !== null && sLvl !== undefined && (
+                      const spellDcs = recalcedData.spellcasting?.spell_dcs || {};
+                      const dcVal = spellDcs[String(sLvl)] || (10 + sLvl + (recalcedData.spellcasting?.ability_modifier || 0));
+
+                      return (
+                        <div key={idx} className="dark-panel" style={{ padding: '10px 12px', border: '1px solid rgba(124,110,247,0.25)', borderRadius: 6, display: 'flex', flexDirection: 'column', gap: 4 }}>
+                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.88rem', color: '#a594ff', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 6 }}>
+                              ✨ {sName}
                               <span style={{ fontSize: '0.62rem', padding: '1px 6px', borderRadius: 4, background: 'rgba(124,110,247,0.2)', border: '1px solid rgba(124,110,247,0.4)', color: '#d8b4fe' }}>
                                 Seviye {sLvl}
                               </span>
-                            )}
-                            {sSchool && (
-                              <span style={{ fontSize: '0.62rem', padding: '1px 6px', borderRadius: 4, background: 'rgba(30,120,180,0.2)', border: '1px solid rgba(60,160,220,0.4)', color: '#93c5fd' }}>
-                                {sSchool}
+                              <span style={{ fontSize: '0.62rem', padding: '1px 6px', borderRadius: 4, background: 'rgba(78,201,176,0.15)', border: '1px solid rgba(78,201,176,0.3)', color: '#4ec9b0', fontWeight: 'bold' }}>
+                                DC {dcVal}
                               </span>
-                            )}
-                          </span>
-                          <X size={14} style={{ color: '#e87070', cursor: 'pointer', opacity: 0.8 }} onClick={() => removeSpell(sName)} />
-                        </div>
-                        {sDesc && (
-                          <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: '1.4', fontFamily: 'Outfit, sans-serif' }}>
-                            {cleanText(sDesc)}
+                              {sSchool && (
+                                <span style={{ fontSize: '0.62rem', padding: '1px 6px', borderRadius: 4, background: 'rgba(30,120,180,0.2)', border: '1px solid rgba(60,160,220,0.4)', color: '#93c5fd' }}>
+                                  {sSchool}
+                                </span>
+                              )}
+                            </span>
+                            <X size={14} style={{ color: '#e87070', cursor: 'pointer', opacity: 0.8 }} onClick={() => removeSpell(sName)} />
                           </div>
-                        )}
-                      </div>
-                    );
-                  })}
+                          {sDesc && (
+                            <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: '1.4', fontFamily: 'Outfit, sans-serif' }}>
+                              {cleanText(sDesc)}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
                 </div>
               )}
             </div>
@@ -1767,140 +2072,9 @@ export default function PF1eControls() {
               );
             })()}
 
-            {/* Spells & Spell Slots Section */}
+            {/* Spell Components & Focus Equipment Tracker */}
             {hasSpellcasting && (
-              <>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
-                  <SectionHeader icon="✦" title="Günlük Büyü Slotları & Defter" />
-                  <button
-                    className="gold-btn"
-                    onClick={() => restCharacter()}
-                    style={{ padding: '3px 8px', fontSize: '0.72rem', display: 'flex', alignItems: 'center', gap: 4, background: 'rgba(124,110,247,0.15)', border: '1px solid #7c6ef7', color: '#a594ff' }}
-                  >
-                    🌙 Uzun Dinlenme Yap
-                  </button>
-                </div>
-
-                {/* Spell Slots per Day Tracker */}
-                {recalcedData.spell_slots && Object.keys(recalcedData.spell_slots).length > 0 && (
-                  <div style={{ backgroundColor: '#161622', border: '1px solid var(--border-gold)', borderRadius: '8px', padding: '10px', marginBottom: '10px' }}>
-                    <FieldLabel>Günlük Büyü Hakkı Takibi (Tıklayarak Harcayın)</FieldLabel>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', marginTop: '6px' }}>
-                      {Object.entries(recalcedData.spell_slots).map(([lvlStr, totalSlots]) => {
-                        const lvl = parseInt(lvlStr);
-                        const usedCount = usedSpellSlots[lvlStr] || 0;
-                        const remaining = Math.max(0, totalSlots - usedCount);
-
-                        return (
-                          <div key={lvlStr} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.8rem', backgroundColor: '#0f0f15', padding: '4px 8px', borderRadius: '6px' }}>
-                            <span style={{ color: 'var(--gold-bright)', fontWeight: 600 }}>
-                              {lvl === 0 ? 'Cantrips (0. Seviye)' : `Seviye ${lvl} Büyüler`}
-                            </span>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                              <span style={{ fontSize: '0.72rem', color: '#94a3b8' }}>
-                                {remaining} / {totalSlots} Kalan
-                              </span>
-                              <div style={{ display: 'flex', gap: '3px' }}>
-                                {Array.from({ length: totalSlots }).map((_, i) => {
-                                  const isUsed = i < usedCount;
-                                  return (
-                                    <div
-                                      key={i}
-                                      onClick={() => toggleSpellSlotUsed(lvlStr, totalSlots)}
-                                      style={{
-                                        width: '16px', height: '16px', borderRadius: '4px', cursor: 'pointer',
-                                        backgroundColor: isUsed ? '#e94560' : 'rgba(78, 201, 176, 0.2)',
-                                        border: `1px solid ${isUsed ? '#ff6b81' : '#4ec9b0'}`,
-                                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                        fontSize: '0.6rem', color: isUsed ? '#fff' : '#4ec9b0', fontWeight: 'bold'
-                                      }}
-                                    >
-                                      {isUsed ? '✕' : '✓'}
-                                    </div>
-                                  );
-                                })}
-                              </div>
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-
-                {/* Prepared Spells Manager for Prepared Spellcasters */}
-                {isPreparedSpellcaster && recalcedData.spell_slots && (
-                  <div style={{ backgroundColor: '#161622', border: '1px solid #7c6ef7', borderRadius: '8px', padding: '10px', marginBottom: '10px' }}>
-                    <FieldLabel>🔮 Günlük Büyü Hazırlama Paneli (Prepared Spells)</FieldLabel>
-                    <div style={{ fontSize: '0.7rem', color: '#a594ff', marginBottom: '8px' }}>
-                      {charClass} sınıfı hazırlamalı büyücüdür. Günlük slotlarınıza defterinizdeki büyüleri seçip bağlayabilirsiniz:
-                    </div>
-
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                      {Object.entries(recalcedData.spell_slots).map(([lvlStr, totalSlots]) => {
-                        const lvl = parseInt(lvlStr);
-                        if (lvl === 0) return null;
-
-                        const currentPrepared = preparedSpells[lvlStr] || [];
-
-                        return (
-                          <div key={lvlStr} style={{ backgroundColor: '#0f0f15', border: '1px solid #2a2a3a', borderRadius: '6px', padding: '8px' }}>
-                            <div style={{ fontSize: '0.78rem', color: 'var(--gold-bright)', fontWeight: 700, marginBottom: '6px' }}>
-                              Seviye {lvl} Büyü Slotları ({totalSlots} Slot Hak)
-                            </div>
-
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                              {Array.from({ length: totalSlots }).map((_, slotIdx) => {
-                                const preparedItem = currentPrepared[slotIdx] || { name: '', cast: false };
-                                const isCast = preparedItem.cast;
-
-                                return (
-                                  <div key={slotIdx} style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                                    <span style={{ fontSize: '0.7rem', color: '#64748b', width: '42px', flexShrink: 0 }}>
-                                      Slot #{slotIdx + 1}:
-                                    </span>
-                                    <select
-                                      className="rune-input"
-                                      value={preparedItem.name || ''}
-                                      onChange={e => setPreparedSpell(lvlStr, slotIdx, e.target.value)}
-                                      style={{ flex: 1, padding: '4px 6px', fontSize: '0.78rem' }}
-                                    >
-                                      <option value="">-- Büyü Hazırla --</option>
-                                      {spells.map((sp, sIdx) => {
-                                        const spName = sp.isim || sp.name;
-                                        return <option key={sIdx} value={spName}>{spName}</option>;
-                                      })}
-                                    </select>
-                                    <button
-                                      onClick={() => togglePreparedSpellCast(lvlStr, slotIdx)}
-                                      style={{
-                                        padding: '3px 8px', borderRadius: '4px', fontSize: '0.7rem', fontWeight: 'bold', cursor: 'pointer',
-                                        backgroundColor: isCast ? '#e94560' : 'rgba(78, 201, 176, 0.2)',
-                                        border: `1px solid ${isCast ? '#ff6b81' : '#4ec9b0'}`,
-                                        color: isCast ? '#fff' : '#4ec9b0'
-                                      }}
-                                    >
-                                      {isCast ? '✕ Atıldı' : '✓ Hazır'}
-                                    </button>
-                                  </div>
-                                );
-                              })}
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
-                  <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.52rem', color: 'var(--gold-dim)' }}>{spells?.length || 0} Büyü Seçildi</span>
-                  <button className="gold-btn primary" style={{ padding: '4px 10px' }} onClick={() => setSpellModalOpen(true)}>
-                    + Büyü Ekle
-                  </button>
-                </div>
-
-                {/* Spell Components & Focus Equipment Tracker */}
+              <div>
                 {(() => {
                   const equipNames = (recalcedData.equipment || []).map(e => (e.name || e.isim || '').toLowerCase());
                   const hasPouch = equipNames.some(e => e.includes('pouch') || e.includes('torba') || e.includes('component'));
@@ -1980,7 +2154,7 @@ export default function PF1eControls() {
                     );
                   })}
                 </div>
-              </>
+              </div>
             )}
 
           </div>

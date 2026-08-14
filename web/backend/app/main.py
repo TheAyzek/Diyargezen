@@ -102,6 +102,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from fastapi.middleware.gzip import GZipMiddleware
+# Enable GZip compression for payloads >= 1000 bytes (compresses large JSON rule arrays by 80-90%)
+app.add_middleware(GZipMiddleware, minimum_size=1000)
+
+
 from fastapi import Request
 from fastapi.responses import JSONResponse
 
@@ -171,7 +176,12 @@ def serve_pf1e_pdf_template():
 
     for pdf_path in candidates:
         if pdf_path.exists():
-            return FileResponse(str(pdf_path), media_type="application/pdf", filename="pf1e_sheet.pdf")
+            return FileResponse(
+                str(pdf_path),
+                media_type="application/pdf",
+                filename="pf1e_sheet.pdf",
+                headers={"Cache-Control": "public, max-age=86400"}
+            )
 
     raise HTTPException(status_code=404, detail="PDF template pf1e_sheet.pdf not found.")
 

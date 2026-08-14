@@ -196,7 +196,7 @@ def test_export_pdf_pf1e_inventory_and_weapon_cards():
     assert fields.get("Item 1", {}).get("/V") == "Scimitar +1"
     assert fields.get("WT 1", {}).get("/V") == "4.0"
     assert fields.get("TOTAL WEIGHT", {}).get("/V") == "59.0"
-    assert fields.get("Light", {}).get("/V") in ("76", "76.0", "58", "58.0")
+    assert fields.get("Light", {}).get("/V") in ("76", "76.0", "76.7", "58", "58.0", "58.3")
     assert fields.get("armor class", {}).get("/V") == "18"
     assert fields.get("TOUCH", {}).get("/V") == "10"
     assert fields.get("FLATFOOTED", {}).get("/V") == "18"

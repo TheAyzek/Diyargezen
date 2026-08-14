@@ -51,6 +51,58 @@ export function exportCharacterJSON(store) {
   }
 }
 
+export function exportCharacterRecordJSON(charRecord) {
+  try {
+    const raw = charRecord.data || charRecord;
+    const charData = {
+      name: raw.name || raw.isim || charRecord.name || 'İsimsiz Kahraman',
+      system: (raw.system || charRecord.system || 'pf1e').toLowerCase(),
+      level: raw.level || 1,
+      race: raw.race || '',
+      class: raw.class || raw.sinif || '',
+      alignment: raw.alignment || '',
+      gender: raw.gender || '',
+      age: raw.age || '',
+      height: raw.height || '',
+      weight: raw.weight || '',
+      deity: raw.deity || '',
+      homeland: raw.homeland || '',
+      hair: raw.hair || '',
+      eyes: raw.eyes || '',
+      abilities: raw.abilities || {},
+      skills: raw.skills || {},
+      feats: raw.feats || [],
+      traits: raw.traits || [],
+      equipment: raw.equipment || [],
+      spells: raw.spells || [],
+      backstory: raw.backstory || '',
+      personality: raw.personality || '',
+      allies: raw.allies || '',
+      notes: raw.notes || '',
+      portrait: raw.portrait || '',
+      companion: raw.companion || null,
+      preparedSpells: raw.preparedSpells || {},
+      usedSpellSlots: raw.usedSpellSlots || {}
+    };
+
+    const jsonString = JSON.stringify(charData, null, 2);
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    const safeName = (charData.name || 'Karakter').replace(/[^a-zA-Z0-9_\-]/g, '_');
+    link.download = `${safeName}_Diyargezen.json`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+    return true;
+  } catch (error) {
+    console.error('Character Record Export Error:', error);
+    alert('JSON aktarılırken hata oluştu: ' + error.message);
+    return false;
+  }
+}
+
 export function copyCharacterJSONToClipboard(store) {
   try {
     const charData = {

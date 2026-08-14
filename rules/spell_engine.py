@@ -38,7 +38,42 @@ CLASS_CASTING_ABILITIES: Dict[str, str] = {
     "arcanist": "intelligence",
     "bloodrager": "charisma",
     "shaman": "wisdom",
+    "warpriest": "wisdom",
+    "skald": "charisma",
+    "mesmerist": "charisma",
+    "hunter": "wisdom",
+    "psychic": "intelligence",
+    "spiritualist": "wisdom",
+    "occultist": "intelligence",
 }
+
+# Official PF1e Prepared vs Spontaneous Caster Categories
+PREPARED_CLASSES: List[str] = [
+    "wizard", "cleric", "druid", "witch", "magus",
+    "paladin", "ranger", "alchemist", "shaman", "warpriest",
+    "inquisitor", "arcanist"
+]
+
+SPONTANEOUS_CLASSES: List[str] = [
+    "sorcerer", "bard", "oracle", "bloodrager",
+    "summoner", "skald", "mesmerist", "hunter",
+    "psychic", "spiritualist"
+]
+
+def is_prepared_caster(class_name: str) -> bool:
+    """Check if the class prepares spells per slot daily."""
+    if not class_name:
+        return False
+    cn = class_name.strip().lower()
+    return any(p in cn for p in PREPARED_CLASSES)
+
+def is_spontaneous_caster(class_name: str) -> bool:
+    """Check if the class is a spontaneous spellcaster using a shared pool of daily slots."""
+    if not class_name:
+        return False
+    cn = class_name.strip().lower()
+    return any(s in cn for s in SPONTANEOUS_CLASSES)
+
 
 # Base spell slot progression per class type
 # 9-level casters (Wizard, Cleric, Druid, Sorcerer, Witch, Oracle, Arcanist)
@@ -311,4 +346,47 @@ def validate_metamagic_application(
         "effective_spell_level": effective_lvl,
         "is_overridden": False
     }
+
+
+def validate_prepared_spell_slot(
+    slot_level: int,
+    base_spell_level: int,
+    applied_metamagic: Optional[List[str]] = None,
+    character: Optional[Dict[str, Any]] = None,
+    is_overridden: bool = False
+) -> Dict[str, Any]:
+    """
+    Validate if a spell (with any applied metamagic feats) can be legally prepared into a specific slot level.
+    PF1e Rule: Effective spell level (base + metamagic increase) must be <= slot_level.
+    """
+    if is_overridden:
+        return {
+            "valid": True,
+            "reasons": ["[GM İZNİ] Büyü hazırlama kuralı ezildi (Override)"],
+            "is_overridden": True,
+            "slot_level": slot_level,
+            "effective_spell_level": base_spell_level
+        }
+
+    metamagic = applied_metamagic or []
+    meta_info = calculate_metamagic_spell_slot(base_spell_level, metamagic)
+    effective_level = meta_info["effective_spell_level"]
+
+    reasons: List[str] = []
+    if effective_level > slot_level:
+        reasons.append(
+            f"Büyünün efektif seviyesi ({effective_level}. Seviye) hazırlanan yuva seviyesinden ({slot_level}. Seviye) büyüktür."
+        )
+
+    valid = len(reasons) == 0
+    return {
+        "valid": valid,
+        "reasons": reasons,
+        "base_spell_level": base_spell_level,
+        "effective_spell_level": effective_level,
+        "slot_level": slot_level,
+        "metamagic_details": meta_info.get("applied_details", []),
+        "is_overridden": False
+    }
+
 
