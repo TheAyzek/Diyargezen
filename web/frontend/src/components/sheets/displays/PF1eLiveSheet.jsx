@@ -17,7 +17,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
-import { FileText, RefreshCw, Download, Shield, Heart, Sword, Sparkles, Activity, Wand2, Scroll, Scale } from 'lucide-react';
+import { FileText, RefreshCw, Download, Shield, Heart, Sword, Sparkles, Activity, Wand2, Scroll, Scale, Zap, Coins } from 'lucide-react';
 
 /**
  * Transliterates Turkish special characters to WinAnsi-safe equivalents.
