@@ -33,8 +33,20 @@ function sanitizeTurkishForPDF(text) {
     'Ü': 'U', 'ü': 'u',
     'Ö': 'O', 'ö': 'o',
     'Ç': 'C', 'ç': 'c',
+    '✦': '*', '★': '*', '☆': '*', '•': '-',
+    '⚜': '*', '⚔': '*', '✨': '*', '⚗': '*',
+    '\u2018': "'", '\u2019': "'", '\u201C': '"', '\u201D': '"',
+    '\u2013': '-', '\u2014': '-',
   };
-  return str.replace(/[İıŞşĞğÜüÖöÇç]/g, ch => map[ch] || ch);
+  // First replace known chars, then strip any remaining non-WinAnsi (above 0xFF) chars
+  const replaced = str.replace(/[İıŞşĞğÜüÖöÇç✦★☆•⚜⚔✨⚗\u2018\u2019\u201C\u201D\u2013\u2014]/g, ch => map[ch] || ch);
+  // Remove emojis and other characters outside WinAnsi range
+  return replaced.replace(/[\u0100-\uFFFF]/g, ch => {
+    const code = ch.charCodeAt(0);
+    // Keep standard Latin-1 supplement (0x00A0 - 0x00FF)
+    if (code >= 0x00A0 && code <= 0x00FF) return ch;
+    return '';
+  });
 }
 
 import { useCharacterStore } from '../../../store/characterStore';
