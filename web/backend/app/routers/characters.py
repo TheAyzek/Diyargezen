@@ -10,6 +10,7 @@ from pydantic import BaseModel, Field
 
 from utils.export_pdf import export_pdf
 from app.core.database import get_db
+from app.core.concurrency import revision_guard, commit_revision
 from app.services.auth_service import get_current_user
 from app.models.user import User, Character
 from app.models.gm import CharacterModifier, GMOverride, LevelUpSession
@@ -27,6 +28,13 @@ from app.services.character_service import CharacterService
 router = APIRouter(prefix="/characters", tags=["Characters"])
 service = CharacterService()
 
+
+def _character_response(record):
+    return CharacterResponse(id=record.id, server_id=record.server_id, revision=record.revision,
+                             system=record.system, name=record.name, data=json.loads(record.data),
+                             created_at=record.created_at, updated_at=record.updated_at,
+                             is_deleted=bool(record.is_deleted))
+
 class LevelUpPayload(BaseModel):
     class_name: Optional[str] = Field("Fighter", description="The name of the class chosen for this level")
     skill_ranks: Dict[str, int] = Field(default_factory=dict, description="Skill ranks allocated in this level")
@@ -35,6 +43,9 @@ class LevelUpPayload(BaseModel):
     hp_added: int = Field(default=6, description="Base hit die roll/added for this level")
     favored_class_bonus: Optional[str] = Field("hp", description="Favored Class Bonus choice: 'hp' or 'skill'")
     spells_learned: List[Union[str, Dict[str, Any]]] = Field(default_factory=list, description="Spells learned in this level")
+    traits_learned: List[Union[str, Dict[str, Any]]] = Field(default_factory=list)
+    is_overridden: bool = False
+    override_reason: str = Field(default='', max_length=1000)
 
 @router.get("", response_model=List[CharacterResponse])
 def list_characters(system: Optional[str] = Query(None), db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
@@ -42,7 +53,7 @@ def list_characters(system: Optional[str] = Query(None), db: Session = Depends(g
     records = service.list_characters(db, current_user.id, system)
     return [
         CharacterResponse(
-            id=r.id,
+            id=r.id, server_id=r.server_id, revision=r.revision,
             system=r.system,
             name=r.name,
             data=json.loads(r.data) if isinstance(r.data, str) else r.data,
@@ -60,13 +71,13 @@ def get_character(character_id: int, db: Session = Depends(get_db), current_user
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Character ID {character_id} not found."
         )
-    if record.user_id and record.user_id != current_user.id:
+    if record.user_id != current_user.id:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Bu karaktere erişim yetkiniz yok."
         )
     return CharacterResponse(
-        id=record.id,
+        id=record.id, server_id=record.server_id, revision=record.revision,
         system=record.system,
         name=record.name,
         data=json.loads(record.data) if isinstance(record.data, str) else record.data,
@@ -80,7 +91,7 @@ def create_character(payload: CharacterCreateUpdate, db: Session = Depends(get_d
     try:
         record = service.create_character(db, payload.system, payload.name, payload.data, current_user.id)
         return CharacterResponse(
-            id=record.id,
+            id=record.id, server_id=record.server_id, revision=record.revision,
             system=record.system,
             name=record.name,
             data=json.loads(record.data) if isinstance(record.data, str) else record.data,
@@ -93,7 +104,7 @@ def create_character(payload: CharacterCreateUpdate, db: Session = Depends(get_d
             detail=f"Failed to create character: {str(exc)}"
         )
 
-@router.put("/{character_id}")
+@router.put("/{character_id}", dependencies=[Depends(revision_guard)])
 def update_character(character_id: int, payload: CharacterCreateUpdate, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     """Update an existing character sheet, checking user ownership."""
     record = service.get_character(db, character_id)
@@ -102,7 +113,7 @@ def update_character(character_id: int, payload: CharacterCreateUpdate, db: Sess
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Character ID {character_id} not found."
         )
-    if record.user_id and record.user_id != current_user.id:
+    if record.user_id != current_user.id:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Bu karakteri güncelleme yetkiniz yok."
@@ -113,9 +124,9 @@ def update_character(character_id: int, payload: CharacterCreateUpdate, db: Sess
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail="Failed to update character."
         )
-    return {"message": "Character updated successfully"}
+    return {"message": "Character updated successfully", "revision": record.revision}
 
-@router.delete("/{character_id}", status_code=status.HTTP_204_NO_CONTENT)
+@router.delete("/{character_id}", status_code=status.HTTP_204_NO_CONTENT, dependencies=[Depends(revision_guard)])
 def delete_character(character_id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     """Delete a character sheet by ID, checking ownership."""
     record = service.get_character(db, character_id)
@@ -124,7 +135,7 @@ def delete_character(character_id: int, db: Session = Depends(get_db), current_u
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Character ID {character_id} not found."
         )
-    if record.user_id and record.user_id != current_user.id:
+    if record.user_id != current_user.id:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Bu karakteri silme yetkiniz yok."
@@ -181,7 +192,7 @@ def _owned_character(db: Session, character_id: int, user_id: int) -> Character:
         raise HTTPException(status_code=status.HTTP_422_UNPROCESSABLE_ENTITY, detail="Yalnızca PF1e desteklenir.")
     return record
 
-@router.post("/{character_id}/gm/modifiers", status_code=status.HTTP_201_CREATED)
+@router.post("/{character_id}/gm/modifiers", status_code=status.HTTP_201_CREATED, dependencies=[Depends(revision_guard)])
 def add_custom_modifier(character_id: int, payload: CustomModifierPayload, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     """Persist an explainable +X/-X GM adjustment and mirror it into sheet data."""
     record = _owned_character(db, character_id, current_user.id)
@@ -193,14 +204,14 @@ def add_custom_modifier(character_id: int, payload: CustomModifierPayload, db: S
     record.data = json.dumps(recalculated, ensure_ascii=False)
     record.updated_at = now
     db.add(modifier)
-    db.commit()
+    commit_revision(db)
     db.refresh(modifier)
-    return {"id": modifier.id, "data": recalculated}
+    return {"id": modifier.id, "data": recalculated, "revision": record.revision}
 
-@router.post("/{character_id}/gm/overrides", status_code=status.HTTP_201_CREATED)
+@router.post("/{character_id}/gm/overrides", status_code=status.HTTP_201_CREATED, dependencies=[Depends(revision_guard)])
 def record_override(character_id: int, payload: OverridePayload, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     """Record a GM-approved exception; this is audit data, never a silent bypass."""
-    _owned_character(db, character_id, current_user.id)
+    record = _owned_character(db, character_id, current_user.id)
     now = __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat()
     override = GMOverride(
         character_id=character_id, selection_type=payload.selection_type,
@@ -208,11 +219,12 @@ def record_override(character_id: int, payload: OverridePayload, db: Session = D
         reason=payload.reason, is_overridden=True, created_at=now,
     )
     db.add(override)
-    db.commit()
+    record.updated_at = now
+    commit_revision(db)
     db.refresh(override)
-    return {"id": override.id, "is_overridden": True}
+    return {"id": override.id, "is_overridden": True, "revision": record.revision}
 
-@router.put("/{character_id}/level-up-session")
+@router.put("/{character_id}/level-up-session", dependencies=[Depends(revision_guard)])
 def save_level_up_session(character_id: int, payload: LevelUpSessionPayload, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     """Save a resumable state-machine checkpoint; commit still uses the level-up endpoint."""
     record = _owned_character(db, character_id, current_user.id)
@@ -239,9 +251,10 @@ def save_level_up_session(character_id: int, payload: LevelUpSessionPayload, db:
         session.choices = json.dumps(payload.choices, ensure_ascii=False)
         session.is_overridden = payload.is_overridden
         session.updated_at = now
-    db.commit()
+    record.updated_at = now
+    commit_revision(db)
     db.refresh(session)
-    return {"id": session.id, "state": session.state, "target_level": session.target_level}
+    return {"id": session.id, "state": session.state, "target_level": session.target_level, "revision": record.revision}
 
 import re
 
@@ -262,7 +275,7 @@ def export_character_to_pdf(character_id: int, db: Session = Depends(get_db), cu
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Character ID {character_id} not found."
         )
-    if record.user_id and record.user_id != current_user.id:
+    if record.user_id != current_user.id:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Bu karakterin PDF belgesini dışa aktarma yetkiniz yok."
@@ -317,7 +330,7 @@ def export_raw_data_to_pdf(payload: RecalculateRequest):
             detail=f"PDF export failed: {str(exc)}"
         )
 
-@router.post("/{character_id}/portrait")
+@router.post("/{character_id}/portrait", dependencies=[Depends(revision_guard)])
 def upload_character_portrait(character_id: int, file: UploadFile = File(...), db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     """Upload an image file as character portrait, convert to base64, and save it in character data, checking ownership."""
     if not file.content_type.startswith("image/"):
@@ -332,7 +345,7 @@ def upload_character_portrait(character_id: int, file: UploadFile = File(...), d
             status_code=status.HTTP_404_NOT_FOUND,
             detail=f"Character ID {character_id} not found."
         )
-    if record.user_id and record.user_id != current_user.id:
+    if record.user_id != current_user.id:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Bu karakterin portresini değiştirme yetkiniz yok."
@@ -359,7 +372,7 @@ def upload_character_portrait(character_id: int, file: UploadFile = File(...), d
                 detail="Failed to update character with portrait."
             )
             
-        return {"message": "Portrait uploaded successfully", "portrait": data_url}
+        return {"message": "Portrait uploaded successfully", "portrait": data_url, "revision": record.revision}
     except Exception as exc:
         if isinstance(exc, HTTPException):
             raise exc
@@ -368,14 +381,15 @@ def upload_character_portrait(character_id: int, file: UploadFile = File(...), d
             detail=f"Portrait upload failed: {str(exc)}"
         )
 
-@router.post("/{character_id}/level-up", response_model=RecalculateResponse)
+@router.post("/{character_id}/level-up", response_model=RecalculateResponse, dependencies=[Depends(revision_guard)])
 def level_up(character_id: int, payload: LevelUpPayload, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     """Level up the character by one step, processing and validating choices."""
     try:
         choices_dict = payload.model_dump()
         recalced_data = service.level_up(db, character_id, payload.class_name, choices_dict, current_user.id)
         warnings = service.validate(recalced_data)
-        return RecalculateResponse(data=recalced_data, warnings=warnings)
+        record = service.get_character(db, character_id)
+        return RecalculateResponse(data=recalced_data, warnings=warnings, revision=record.revision, character=_character_response(record))
     except HTTPException as exc:
         raise exc
     except Exception as exc:
@@ -384,13 +398,14 @@ def level_up(character_id: int, payload: LevelUpPayload, db: Session = Depends(g
             detail=f"Level-up process failed: {str(exc)}"
         )
 
-@router.post("/{character_id}/level-undo", response_model=RecalculateResponse)
+@router.post("/{character_id}/level-undo", response_model=RecalculateResponse, dependencies=[Depends(revision_guard)])
 def level_undo(character_id: int, db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     """Revert the highest level progression, reverting character stats to previous level."""
     try:
         recalced_data = service.level_undo(db, character_id, current_user.id)
         warnings = service.validate(recalced_data)
-        return RecalculateResponse(data=recalced_data, warnings=warnings)
+        record = service.get_character(db, character_id)
+        return RecalculateResponse(data=recalced_data, warnings=warnings, revision=record.revision, character=_character_response(record))
     except HTTPException as exc:
         raise exc
     except Exception as exc:

@@ -41,7 +41,23 @@ def override_get_db():
     finally:
         db.close()
 
-app.dependency_overrides[get_db] = override_get_db
+import pytest
+
+
+@pytest.fixture(autouse=True)
+def isolated_database(request):
+    Base.metadata.drop_all(bind=engine)
+    Base.metadata.create_all(bind=engine)
+    previous = app.dependency_overrides.get(get_db)
+    app.dependency_overrides[get_db] = override_get_db
+    try:
+        yield
+    finally:
+        if previous is None:
+            app.dependency_overrides.pop(get_db, None)
+        else:
+            app.dependency_overrides[get_db] = previous
+        Base.metadata.drop_all(bind=engine)
 
 client = TestClient(app)
 
@@ -98,6 +114,7 @@ def test_progression_workflow():
     assert char_res.status_code == status.HTTP_201_CREATED
     char_data = char_res.json()
     char_id = char_data["id"]
+    headers1['If-Match'] = str(char_data['revision'])
     
     # Check initial level 1 stats
     assert char_data["data"]["level"] == 1
@@ -125,6 +142,7 @@ def test_progression_workflow():
     lvl_ok_res = client.post(f"/api/characters/{char_id}/level-up", json=level_up_payload, headers=headers1)
     assert lvl_ok_res.status_code == status.HTTP_200_OK
     lvl_data = lvl_ok_res.json()["data"]
+    headers1['If-Match'] = str(lvl_ok_res.json()['revision'])
     
     # Verify level 2 updates
     assert lvl_data["level"] == 2
@@ -173,6 +191,7 @@ def test_progression_workflow():
     undo_ok_res = client.post(f"/api/characters/{char_id}/level-undo", headers=headers1)
     assert undo_ok_res.status_code == status.HTTP_200_OK
     undo_data = undo_ok_res.json()["data"]
+    headers1['If-Match'] = str(undo_ok_res.json()['revision'])
     
     # Verify character returned to level 1 stats
     assert undo_data["level"] == 1

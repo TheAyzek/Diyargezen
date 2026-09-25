@@ -83,16 +83,23 @@ def get_etl_meta(db_path: Path, key: str) -> Optional[str]:
 
 
 def _source_fingerprint(data_dir: Path, filenames: List[str]) -> str:
-    parts = []
+    import hashlib
+    from parsers.pf1e_unified import VERSION
+    parts = [VERSION]
     for fn in sorted(filenames):
         fp = data_dir / fn
         if fp.exists():
-            parts.append(f"{fn}:{os.path.getmtime(fp)}")
+            parts.append(f"{fn}:{fp.stat().st_mtime_ns}:{fp.stat().st_size}")
+    foundry = data_dir / 'pf1e-content-main'
+    if foundry.exists():
+        from utils.source_files import source_files
+        for fp, metadata in sorted(source_files(foundry), key=lambda item: str(item[0])):
+            parts.append(f'{fp.relative_to(data_dir)}:{metadata.st_mtime_ns}:{metadata.st_size}')
     bg_dir = data_dir / "backgrounds"
     if bg_dir.exists():
         for fp in sorted(bg_dir.glob("*.json")):
             parts.append(f"bg/{fp.name}:{os.path.getmtime(fp)}")
-    return "|".join(parts)
+    return hashlib.sha256('|'.join(parts).encode()).hexdigest()
 
 
 def needs_rebuild(db_path: Path, data_dir: Path, systems: List[str]) -> bool:
@@ -105,15 +112,12 @@ def needs_rebuild(db_path: Path, data_dir: Path, systems: List[str]) -> bool:
             count = conn.execute("SELECT COUNT(*) FROM entities").fetchone()[0]
         if count == 0:
             return True
-        # Projeye paketlenmiş veya işlenmiş 22,000+ verisi olan veritabanını açılışta ASLA silme/sıfırlama!
-        if getattr(sys, 'frozen', False) or count > 500:
-            return False
     except Exception:
         return True
 
     file_map = {
         "dnd5e": ["dnd_data.json"],
-        "pathfinder1e": ["pathfinder_1e_data.json"],
+        "pathfinder1e": ["pathfinder_1e_data.json", "pf1e_scraped_items.json"],
         "mm3e": ["mm_data.json"],
     }
     expected_parts = []
@@ -126,15 +130,27 @@ def needs_rebuild(db_path: Path, data_dir: Path, systems: List[str]) -> bool:
 
 
 def bulk_upsert_entities(db_path: Path, entities: List[DiyargezenEntity], sistem: str) -> int:
-    """Bir sistemin tüm entity'lerini yeniden yazar."""
+    """Update the supplied catalog rows without deleting unrelated/curated rows."""
     if not entities:
         return 0
+    from parsers.base import SpellParser
+    spell_parser = SpellParser(db_path)
+    spell_rows = []
+    for entity in entities:
+        if entity.kategori == 'spell':
+            spell_rows.append((entity.isim, entity.sistem, spell_parser.get_spell_level(entity.sistem_verisi),
+                               ','.join(spell_parser.get_spell_classes(entity.sistem_verisi, entity.isim)), entity.aciklama))
     with _connect(db_path) as conn:
-        conn.execute("DELETE FROM entities WHERE sistem = ?", (sistem,))
         conn.executemany(
-            "INSERT OR REPLACE INTO entities (isim, sistem, kategori, aciklama, sistem_verisi) "
-            "VALUES (?, ?, ?, ?, ?)",
-            [e.to_db_row() for e in entities],
+            "INSERT INTO entities (isim, sistem, kategori, aciklama, sistem_verisi) "
+            "VALUES (?, ?, ?, ?, ?) ON CONFLICT(sistem,kategori,isim) DO UPDATE SET "
+            "aciklama=excluded.aciklama,sistem_verisi=excluded.sistem_verisi",
+            (e.to_db_row() for e in entities),
+        )
+        conn.executemany(
+            'INSERT INTO spells(isim,sistem,seviye,siniflar,aciklama) VALUES(?,?,?,?,?) '
+            'ON CONFLICT(sistem,isim) DO UPDATE SET seviye=excluded.seviye,siniflar=excluded.siniflar,aciklama=excluded.aciklama',
+            spell_rows,
         )
     logger.info("%s: %d entity SQLite'a yazıldı", sistem, len(entities))
     return len(entities)

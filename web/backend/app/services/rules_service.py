@@ -65,6 +65,13 @@ def _cached_get_class_features(db_path_str: str, system: str, class_name: str, q
     return res
 
 
+def clear_rules_cache():
+    for cached in (_cached_get_races, _cached_get_subraces, _cached_get_classes,
+                   _cached_get_feats, _cached_get_spells, _cached_get_equipment,
+                   _cached_get_traits, _cached_get_class_features):
+        cached.cache_clear()
+
+
 class RulesService:
     def __init__(self):
         self.db_path_str = str(Path(DB_PATH).resolve())

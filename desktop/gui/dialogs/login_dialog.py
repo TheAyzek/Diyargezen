@@ -49,12 +49,10 @@ class LoginDialog(QDialog):
 
         self.login_user = QLineEdit()
         self.login_user.setPlaceholderText("Kullanıcı Adı")
-        self.login_user.setText("ayzek")
 
         self.login_pass = QLineEdit()
         self.login_pass.setPlaceholderText("Şifre")
         self.login_pass.setEchoMode(QLineEdit.Password)
-        self.login_pass.setText("ayzek1234")
 
         login_btn = QPushButton("Giriş Yap")
         login_btn.setCursor(Qt.PointingHandCursor)

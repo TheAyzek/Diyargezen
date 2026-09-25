@@ -1,4 +1,6 @@
-import { getAllLocalCharacters, saveLocalCharacter } from './offlineStorage';
+import { getAllLocalCharacters, getBrowserLocalCharacters, saveLocalCharacter } from './offlineStorage';
+import { captureSession, assertSession } from './sessionScope';
+import { characterPayload } from './characterContract';
 
 export function exportCharacterJSON(store) {
   try {
@@ -33,6 +35,7 @@ export function exportCharacterJSON(store) {
       usedSpellSlots: store.usedSpellSlots || {}
     };
 
+    Object.assign(charData, characterPayload(store));
     const jsonString = JSON.stringify(charData, null, 2);
     const blob = new Blob([jsonString], { type: 'application/json' });
     const link = document.createElement('a');
@@ -85,6 +88,7 @@ export function exportCharacterRecordJSON(charRecord) {
       usedSpellSlots: raw.usedSpellSlots || {}
     };
 
+    Object.assign(charData, raw);
     const jsonString = JSON.stringify(charData, null, 2);
     const blob = new Blob([jsonString], { type: 'application/json' });
     const link = document.createElement('a');
@@ -137,7 +141,7 @@ export function importCharacterJSONFile(file, loadPresetCallback) {
     }
 
     const reader = new FileReader();
-    reader.onload = (e) => {
+    reader.onload = async (e) => {
       try {
         const parsed = JSON.parse(e.target.result);
         if (!parsed || typeof parsed !== 'object') {
@@ -149,7 +153,7 @@ export function importCharacterJSONFile(file, loadPresetCallback) {
         }
 
         if (loadPresetCallback) {
-          loadPresetCallback(parsed);
+          await loadPresetCallback(parsed);
         }
         resolve(parsed);
       } catch (err) {
@@ -163,9 +167,9 @@ export function importCharacterJSONFile(file, loadPresetCallback) {
   });
 }
 
-export async function exportFullVaultBackup() {
+export async function exportFullVaultBackup({ browserStore = false } = {}) {
   try {
-    const characters = await getAllLocalCharacters();
+    const characters = await (browserStore ? getBrowserLocalCharacters() : getAllLocalCharacters());
 
     const vaultBackup = {
       app_name: 'Diyargezen',
@@ -195,6 +199,7 @@ export async function exportFullVaultBackup() {
 }
 
 export async function importFullVaultBackup(file, onCompleteCallback) {
+  const session = captureSession();
   try {
     if (!file) throw new Error('Dosya seçilmedi.');
     const text = await file.text();
@@ -211,7 +216,10 @@ export async function importFullVaultBackup(file, onCompleteCallback) {
 
     let count = 0;
     for (const charRecord of importedChars) {
-      await saveLocalCharacter(charRecord, true);
+      assertSession(session);
+      // Import is an explicit copy, never reuse another account's server UUID.
+      const id = crypto.randomUUID();
+      await saveLocalCharacter({ ...charRecord, id, server_id: id, remote_id: null, revision: 0 }, true, session);
       count++;
     }
 

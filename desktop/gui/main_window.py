@@ -65,60 +65,24 @@ DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 LOGO_PATH = BASE_DIR / "assets" / "diyargezer_logo.png"
 
 
-def ensure_local_server_running() -> None:
-    """Arka planda port 8000 aktif değilse gömülü FastAPI/Uvicorn sunucu thread'ini başlatır."""
-    import urllib.request
-    try:
-        req = urllib.request.urlopen("http://127.0.0.1:8000/api/health", timeout=0.3)
-        if req.status == 200:
-            logger.info("Aktif yerel FastAPI sunucusu bulundu: http://127.0.0.1:8000/")
-            return
-    except Exception:
-        pass
+_owned_server = None
 
-    logger.info("Port 8000 sunucusu kapalı. Arka planda gömülü Uvicorn/FastAPI sunucu thread'i başlatılıyor...")
-    import threading
-    try:
-        backend_path = BASE_DIR / "web" / "backend"
-        if str(backend_path) not in sys.path:
-            sys.path.insert(0, str(backend_path))
-        if str(BASE_DIR) not in sys.path:
-            sys.path.insert(0, str(BASE_DIR))
 
-        import uvicorn
-        try:
-            from web.backend.app.main import app as fastapi_app
-        except ImportError:
-            import importlib
-            fastapi_app = importlib.import_module("app.main").app
+def ensure_local_server_running():
+    """Only return a listener owned by this application, never a discovered URL."""
+    global _owned_server
+    from desktop.local_server import OwnedLocalServer
+    if _owned_server is not None:
+        if not _owned_server.is_running():
+            raise RuntimeError("Yerel sunucu durdu; uygulamayı yeniden başlatın.")
+        return _owned_server
 
-        def _start_uvicorn():
-            try:
-                import asyncio
-                loop = asyncio.new_event_loop()
-                asyncio.set_event_loop(loop)
-                config = uvicorn.Config(fastapi_app, host="127.0.0.1", port=8000, log_level="info", loop="asyncio")
-                server = uvicorn.Server(config)
-                server.install_signal_handlers = lambda: None
-                server.run()
-            except Exception as e:
-                logger.error("Gömülü Uvicorn sunucusu başlatılırken hata: %s", e, exc_info=True)
+    def load_app():
+        from app.main import app
+        return app
 
-        server_thread = threading.Thread(target=_start_uvicorn, daemon=True)
-        server_thread.start()
-
-        # Gömülü Uvicorn sunucusunun port 8000 üzerinde dinlemeye başlamasını bekle (max 8 saniye)
-        import time
-        for _ in range(80):
-            try:
-                req = urllib.request.urlopen("http://127.0.0.1:8000/api/health", timeout=0.2)
-                if req.status == 200:
-                    logger.info("Gömülü FastAPI sunucusu başarıyla hazır hale geldi: http://127.0.0.1:8000/")
-                    break
-            except Exception:
-                time.sleep(0.1)
-    except Exception as exc:
-        logger.error("Gömülü Uvicorn sunucusu başlatılamadı: %s", exc)
+    _owned_server = OwnedLocalServer(load_app)
+    return _owned_server
 
 
 class MainWindow(QMainWindow):
@@ -134,7 +98,11 @@ class MainWindow(QMainWindow):
         if LOGO_PATH.exists():
             self.setWindowIcon(QIcon(str(LOGO_PATH)))
 
-        ensure_local_server_running()
+        self._local_server = None
+        try:
+            self._local_server = ensure_local_server_running()
+        except Exception:
+            logger.exception("Güvenilir yerel sunucu başlatılamadı")
 
         from desktop import local_db
         from desktop.api_client import api_client
@@ -144,16 +112,8 @@ class MainWindow(QMainWindow):
         if auth_info:
             api_client.set_token(auth_info[1], auth_info[0])
 
-        # Run ETL in background thread so GUI launches instantly without freezing
-        import threading
-        def _bg_etl():
-            try:
-                totals = run_etl_if_needed(DB_PATH)
-                logger.info("Oyun verisi hazır: %s", totals)
-            except Exception as exc:
-                logger.warning("ETL başlatılamadı (JSON fallback aktif): %s", exc)
-
-        threading.Thread(target=_bg_etl, daemon=True).start()
+        # The owned API lifespan is the sole ETL owner. A second writer could
+        # race catalog backup/import while the UI is already querying it.
 
         self._build_ui()
 
@@ -169,11 +129,11 @@ class MainWindow(QMainWindow):
         root.setSpacing(0)
 
         # ---- Main Content: QWebEngineView ----
-        self._web_view = DiyargezerWebView(self)
+        self._web_view = DiyargezerWebView(self, local_server=self._local_server, storage_path=DB_PATH)
         root.addWidget(self._web_view, stretch=1)
 
         # ---- Status bar ----
-        status = QLabel("Hazır  •  PF1e Offline-First SQLite Sync Aktif")
+        status = QLabel("PF1e • Masaüstü deposu: SQLite • Senkronizasyon: web v2 kuyruğu")
         status.setObjectName("StatusBar")
         self.statusBar().addPermanentWidget(status, stretch=1)
         self.statusBar().setStyleSheet(
@@ -205,6 +165,8 @@ class MainWindow(QMainWindow):
         """Qt kapanırken arka plan iş parçacıklarını güvenle durdur."""
         if hasattr(self, "_sync_thread"):
             self._sync_thread.stop()
+        if self._local_server:
+            self._local_server.stop()
         event.accept()
 
 
@@ -229,4 +191,3 @@ def run_app() -> None:
     window.showMaximized()
 
     sys.exit(app.exec())
-

@@ -36,8 +36,8 @@ def register(payload: AuthPayload, db: Session = Depends(get_db)):
     description="OAuth2 Form standartlarına uygun kullanıcı adı ve şifre ile JWT oturum anahtarı alır."
 )
 def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
-    user = AuthService.get_user_by_username(db, form_data.username)
-    if not user or not AuthService.verify_password(form_data.password, user.hashed_password):
+    user = AuthService.authenticate_user(db, form_data.username, form_data.password)
+    if not user:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Incorrect username or password",
@@ -53,8 +53,8 @@ def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(), db:
     description="JSON gövdesi (username/password) göndererek JWT token alır (Web/Masaüstü istemciler için)."
 )
 def login_json(payload: AuthPayload, db: Session = Depends(get_db)):
-    user = AuthService.get_user_by_username(db, payload.username)
-    if not user or not AuthService.verify_password(payload.password, user.hashed_password):
+    user = AuthService.authenticate_user(db, payload.username, payload.password)
+    if not user:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Incorrect username or password",

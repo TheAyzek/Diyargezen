@@ -66,3 +66,30 @@ def test_pf1e_validator_gm_override():
 
     # Should return empty list because gm_override is True
     assert validator.validate(invalid_char) == []
+
+
+def test_compound_prerequisites_check_every_clause_and_dict_feats():
+    engine = PF1eGMEngine()
+    failed = engine.check_prerequisites({'abilities': {'strength': 10}, 'bab': 0}, ['Str 13, BAB +1'])
+    assert [item.code for item in failed] == ['ability_prerequisite', 'bab_prerequisite']
+    assert engine.check_prerequisites({'feats': [{'isim': 'Dodge'}]}, ['Feat: Dodge']) == []
+
+
+def test_unknown_or_alternative_rules_are_not_silently_validated():
+    engine = PF1eGMEngine()
+    for text in ['Str 13 or Dex 13', 'Ability to cast arcane spells']:
+        result = engine.check_prerequisites({}, [text])
+        assert result and result[0].severity == 'warning'
+        assert result[0].can_override
+
+
+def test_selection_override_requires_a_reason_and_source_fallback_is_visible():
+    character = {'abilities': {'strength': 8}, 'selections': [
+        {'prerequisites': ['Str 13'], 'is_overridden': True, 'reason': ''}],
+        'class_data': {'_provenance': {'fallback_fields': ['hit_die']}}}
+    engine = PF1eGMEngine()
+    result = engine.evaluate_character(character)
+    assert not result[0]['overridden']
+    assert any(item['code'] == 'scraper_fallback' for item in result)
+    character['selections'][0]['reason'] = 'Campaign exception'
+    assert engine.evaluate_character(character)[0]['overridden']

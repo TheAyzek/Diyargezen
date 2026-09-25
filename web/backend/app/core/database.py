@@ -53,24 +53,14 @@ def check_db_exists() -> bool:
     seed_gz = DB_PATH.parent / "seed_characters.db.gz"
 
     need_unpack = False
-    if not DB_PATH.exists() or DB_PATH.stat().st_size < 100000:
+    if not DB_PATH.exists():
         need_unpack = True
-    else:
-        try:
-            with sqlite3.connect(str(DB_PATH), timeout=5) as conn:
-                cur = conn.cursor()
-                cur.execute("SELECT COUNT(*) FROM entities")
-                count = cur.fetchone()[0]
-                if count < 1000:
-                    need_unpack = True
-        except Exception:
-            need_unpack = True
 
     if need_unpack and seed_gz.exists():
         logger.info("📦 Unpacking pre-populated seed database (%s) -> (%s)...", seed_gz, DB_PATH)
         try:
             DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-            with gzip.open(seed_gz, 'rb') as f_in, open(DB_PATH, 'wb') as f_out:
+            with gzip.open(seed_gz, 'rb') as f_in, open(DB_PATH, 'xb') as f_out:
                 shutil.copyfileobj(f_in, f_out)
             logger.info("✅ Pre-populated seed database unpacked successfully (%d bytes).", DB_PATH.stat().st_size)
         except Exception as e:
@@ -92,6 +82,10 @@ def initialize_orm_schemas() -> None:
     import logging
     # Import models locally to avoid circular imports during startup
     from app.models import User, Character, LevelProgression
+    from app.models.sync_operation import SyncOperation
+    from app.core.sync_migration import migrate_character_revision
+    # Fail startup if the backed-up migration cannot complete.
+    migrate_character_revision(DB_PATH)
     
     try:
         Base.metadata.create_all(bind=engine)
@@ -112,5 +106,7 @@ def initialize_orm_schemas() -> None:
             conn.commit()
     except Exception as e:
         logging.getLogger(__name__).error(f"Error altering characters table schema: {e}")
+    # Very old schemas gained server_id above; assign stable UUIDs as well.
+    migrate_character_revision(DB_PATH)
 
 

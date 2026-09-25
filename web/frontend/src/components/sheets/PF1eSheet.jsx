@@ -4,6 +4,7 @@ import PF1eControls from './controls/PF1eControls';
 import PF1eLiveSheet from './displays/PF1eLiveSheet';
 import LevelUpWizard from './LevelUpWizard';
 import { AlertTriangle, Sparkles, History, FileDown, Save, ArrowLeft } from 'lucide-react';
+import { characterPayload } from '../../utils/characterContract';
 
 export default function PF1eSheet({ character, onSave, onCancel }) {
   const { 
@@ -25,20 +26,7 @@ export default function PF1eSheet({ character, onSave, onCancel }) {
 
   const handleSave = () => {
     const state = useCharacterStore.getState();
-    const fullData = {
-      ...state.recalcedData,
-      abilities: state.abilities,
-      race: state.race,
-      class: state.class,
-      level: state.level,
-      race_data: state.raceData,
-      class_data: state.classData,
-      skill_ranks: state.skills,
-      feat: state.feat,
-      equipment: state.equipment,
-      custom_modifiers: state.customModifiers,
-      portrait: state.portrait
-    };
+    const fullData = characterPayload(state);
     
     onSave({
       name: state.name,
@@ -73,7 +61,7 @@ export default function PF1eSheet({ character, onSave, onCancel }) {
           )}
           <div>
             <h2 className="shimmer-text" style={{ fontSize: '1.4rem', fontFamily: 'Cinzel Decorative, Cinzel, serif', margin: 0 }}>
-              {id ? `${name || 'Karakter'} — Düzenle` : 'Yeni Kahraman Yarat'}
+              {character?.server_id || character?.id || id ? `${name || 'Karakter'} — Düzenle` : 'Yeni Kahraman Yarat'}
             </h2>
             <div style={{ color: 'var(--gold-dim)', fontSize: '0.75rem', fontFamily: 'Cinzel, serif', letterSpacing: '0.08em', marginTop: '2px' }}>
               Pathfinder 1st Edition · Diyargezen Character Forge
@@ -136,7 +124,7 @@ export default function PF1eSheet({ character, onSave, onCancel }) {
       )}
 
       {/* Split panel grid: left side controls (560px), right side live sheet (1fr) */}
-      <div style={{ display: 'grid', gridTemplateColumns: '560px 1fr', gap: '20px', alignItems: 'start' }}>
+      <div className="character-workspace">
         <div>
           <PF1eControls />
         </div>

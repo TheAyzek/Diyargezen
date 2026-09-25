@@ -58,6 +58,7 @@ class LocalCharacterRecord:
     is_deleted: bool = False
     created_at: str = ""
     updated_at: str = ""
+    owner: str = ""
 
 
 @contextmanager
@@ -108,14 +109,16 @@ def init_local_db(db_path: Path) -> None:
             is_dirty INTEGER DEFAULT 1,
             is_deleted INTEGER DEFAULT 0,
             created_at TEXT NOT NULL,
-            updated_at TEXT NOT NULL
+            updated_at TEXT NOT NULL,
+            owner TEXT NOT NULL DEFAULT ''
         );
 
         CREATE TABLE IF NOT EXISTS local_auth (
             id INTEGER PRIMARY KEY CHECK (id = 1),
             username TEXT NOT NULL,
             access_token TEXT NOT NULL,
-            updated_at TEXT NOT NULL
+            updated_at TEXT NOT NULL,
+            session_id TEXT NOT NULL DEFAULT ''
         );
 
         CREATE INDEX IF NOT EXISTS idx_local_chars_server_id ON local_characters(server_id);
@@ -125,21 +128,71 @@ def init_local_db(db_path: Path) -> None:
             key TEXT PRIMARY KEY,
             value TEXT NOT NULL
         );
+        CREATE TABLE IF NOT EXISTS sync_v2_records (
+            owner TEXT NOT NULL,
+            server_id TEXT NOT NULL,
+            state TEXT NOT NULL,
+            PRIMARY KEY (owner, server_id)
+        );
         """)
+        # Legacy rows have no trustworthy owner: keep them local-only, never
+        # silently assign them to the next account that signs in.
+        columns = {row[1] for row in conn.execute("PRAGMA table_info(local_characters)")}
+        if "owner" not in columns:
+            backup_dir = db_path.parent / "backups"
+            backup_dir.mkdir(exist_ok=True)
+            backup_path = backup_dir / f"{db_path.stem}-before-account-scope-{uuid.uuid4().hex}.db"
+            backup = sqlite3.connect(str(backup_path))
+            try:
+                conn.backup(backup)
+            finally:
+                backup.close()
+            conn.execute("BEGIN IMMEDIATE")
+            conn.execute("ALTER TABLE local_characters ADD COLUMN owner TEXT NOT NULL DEFAULT ''")
+        else:
+            conn.execute("BEGIN IMMEDIATE")
+        conn.execute("CREATE INDEX IF NOT EXISTS idx_local_chars_owner_dirty ON local_characters(owner, is_dirty)")
+        auth_columns = {row[1] for row in conn.execute("PRAGMA table_info(local_auth)")}
+        if "session_id" not in auth_columns:
+            conn.execute("ALTER TABLE local_auth ADD COLUMN session_id TEXT NOT NULL DEFAULT ''")
+
+
+def _session(conn):
+    row = conn.execute("SELECT username, access_token, session_id FROM local_auth WHERE id=1").fetchone()
+    return tuple(row) if row else None
+
+
+def get_sync_session(db_path: Path):
+    with _connect(db_path) as conn:
+        return _session(conn)
+
+
+def _owner(conn, expected_session=None):
+    session = _session(conn)
+    if expected_session is not None and session != expected_session:
+        raise ValueError("Oturum değişti; eski senkronizasyon yanıtı uygulanmadı.")
+    return session[0] if session else ""
+
+
+def _checkpoint_key(owner):
+    return "account_checkpoint:" + json.dumps(owner, ensure_ascii=False)
 
 
 def save_local_auth(db_path: Path, username: str, token: str) -> None:
     """JWT Token ve kullanıcı bilgisini yerelde saklar."""
+    if not username or not token:
+        raise ValueError("Kullanıcı ve oturum anahtarı boş olamaz")
     now_str = datetime.now(timezone.utc).isoformat()
     with _connect(db_path) as conn:
         conn.execute("""
-        INSERT INTO local_auth (id, username, access_token, updated_at)
-        VALUES (1, ?, ?, ?)
+        INSERT INTO local_auth (id, username, access_token, updated_at, session_id)
+        VALUES (1, ?, ?, ?, ?)
         ON CONFLICT(id) DO UPDATE SET
             username=excluded.username,
             access_token=excluded.access_token,
-            updated_at=excluded.updated_at
-        """, (username, token, now_str))
+            updated_at=excluded.updated_at,
+            session_id=excluded.session_id
+        """, (username, token, now_str, uuid.uuid4().hex))
 
 
 def get_local_auth(db_path: Path) -> Optional[tuple[str, str]]:
@@ -157,28 +210,34 @@ def clear_local_auth(db_path: Path) -> None:
         conn.execute("DELETE FROM local_auth WHERE id=1")
 
 
-def get_sync_checkpoint(db_path: Path) -> Optional[str]:
+def get_sync_checkpoint(db_path: Path, *, expected_session=None) -> Optional[str]:
     """Son başarılı senkronizasyon zaman damgasını döner."""
     with _connect(db_path) as conn:
-        row = conn.execute("SELECT value FROM sync_state WHERE key='last_sync_timestamp'").fetchone()
+        conn.execute("BEGIN")
+        owner = _owner(conn, expected_session)
+        row = conn.execute("SELECT value FROM sync_state WHERE key=?", (_checkpoint_key(owner),)).fetchone()
     return row[0] if row else None
 
 
 def set_sync_checkpoint(db_path: Path, timestamp: str) -> None:
     """Son senkronizasyon checkpoint zaman damgasını günceller."""
     with _connect(db_path) as conn:
+        conn.execute("BEGIN IMMEDIATE")
+        owner = _owner(conn)
         conn.execute(
-            "INSERT INTO sync_state (key, value) VALUES ('last_sync_timestamp', ?) "
+            "INSERT INTO sync_state (key, value) VALUES (?, ?) "
             "ON CONFLICT(key) DO UPDATE SET value=excluded.value",
-            (timestamp,),
+            (_checkpoint_key(owner), timestamp),
         )
 
 
 def list_local_characters(db_path: Path, system: Optional[str] = None) -> List[LocalCharacterRecord]:
     """Silinmemiş yerel karakterleri listeler."""
     with _connect(db_path) as conn:
-        query = "SELECT id, server_id, user_id, system, name, data, is_dirty, is_deleted, created_at, updated_at FROM local_characters WHERE is_deleted=0"
-        params = []
+        conn.execute("BEGIN")
+        owner = _owner(conn)
+        query = "SELECT id, server_id, user_id, system, name, data, is_dirty, is_deleted, created_at, updated_at FROM local_characters WHERE is_deleted=0 AND owner=?"
+        params = [owner]
         if system:
             query += " AND system=?"
             params.append(system)
@@ -190,7 +249,7 @@ def list_local_characters(db_path: Path, system: Optional[str] = None) -> List[L
             result.append(LocalCharacterRecord(
                 id=r[0], server_id=r[1], user_id=r[2], system=r[3], name=r[4],
                 data=json.loads(r[5]), is_dirty=bool(r[6]), is_deleted=bool(r[7]),
-                created_at=r[8], updated_at=r[9]
+                created_at=r[8], updated_at=r[9], owner=owner
             ))
         return result
 
@@ -198,15 +257,17 @@ def list_local_characters(db_path: Path, system: Optional[str] = None) -> List[L
 def get_local_character(db_path: Path, record_id: int) -> Optional[LocalCharacterRecord]:
     """ID'ye göre yerel karakter kaydını döner."""
     with _connect(db_path) as conn:
+        conn.execute("BEGIN")
+        owner = _owner(conn)
         row = conn.execute(
-            "SELECT id, server_id, user_id, system, name, data, is_dirty, is_deleted, created_at, updated_at FROM local_characters WHERE id=?",
-            (record_id,)
+            "SELECT id, server_id, user_id, system, name, data, is_dirty, is_deleted, created_at, updated_at FROM local_characters WHERE id=? AND owner=?",
+            (record_id, owner)
         ).fetchone()
         if row:
             return LocalCharacterRecord(
                 id=row[0], server_id=row[1], user_id=row[2], system=row[3], name=row[4],
                 data=json.loads(row[5]), is_dirty=bool(row[6]), is_deleted=bool(row[7]),
-                created_at=row[8], updated_at=row[9]
+                created_at=row[8], updated_at=row[9], owner=owner
             )
     return None
 
@@ -220,10 +281,13 @@ def save_local_character(db_path: Path, character_data: dict, record_id: Optiona
         raise ValueError("Yerel Offline-First istemci yalnızca PF1e karakterlerini saklar.")
 
     with _connect(db_path) as conn:
+        conn.execute("BEGIN IMMEDIATE")
+        owner = _owner(conn)
         if record_id:
-            row = conn.execute("SELECT server_id, created_at FROM local_characters WHERE id=?", (record_id,)).fetchone()
-            server_id = row[0] if row else str(uuid.uuid4())
-            created_at = row[1] if row else now_str
+            row = conn.execute("SELECT server_id, created_at FROM local_characters WHERE id=? AND owner=?", (record_id, owner)).fetchone()
+            if not row:
+                raise ValueError("Karakter bu hesaba ait değil veya bulunamadı")
+            server_id, created_at = row
 
             conn.execute("""
             UPDATE local_characters
@@ -235,15 +299,15 @@ def save_local_character(db_path: Path, character_data: dict, record_id: Optiona
             server_id = str(uuid.uuid4())
             created_at = now_str
             cursor = conn.execute("""
-            INSERT INTO local_characters (server_id, user_id, system, name, data, is_dirty, is_deleted, created_at, updated_at)
-            VALUES (?, NULL, ?, ?, ?, 1, 0, ?, ?)
-            """, (server_id, system, name, json.dumps(character_data, ensure_ascii=False), created_at, now_str))
+            INSERT INTO local_characters (server_id, user_id, system, name, data, is_dirty, is_deleted, created_at, updated_at, owner)
+            VALUES (?, NULL, ?, ?, ?, 1, 0, ?, ?, ?)
+            """, (server_id, system, name, json.dumps(character_data, ensure_ascii=False), created_at, now_str, owner))
             rec_id = cursor.lastrowid
 
     return LocalCharacterRecord(
         id=rec_id, server_id=server_id, user_id=None, system=system, name=name,
         data=character_data, is_dirty=True, is_deleted=False,
-        created_at=created_at, updated_at=now_str
+        created_at=created_at, updated_at=now_str, owner=owner
     )
 
 
@@ -251,30 +315,36 @@ def delete_local_character(db_path: Path, record_id: int) -> None:
     """Karakteri yerelde soft-delete (is_deleted=1, is_dirty=1) işaretler."""
     now_str = datetime.now(timezone.utc).isoformat()
     with _connect(db_path) as conn:
+        conn.execute("BEGIN IMMEDIATE")
+        owner = _owner(conn)
         conn.execute("""
         UPDATE local_characters
         SET is_deleted=1, is_dirty=1, updated_at=?
-        WHERE id=?
-        """, (now_str, record_id))
+        WHERE id=? AND owner=?
+        """, (now_str, record_id, owner))
 
 
-def get_dirty_characters(db_path: Path) -> List[LocalCharacterRecord]:
+def get_dirty_characters(db_path: Path, *, expected_session=None) -> List[LocalCharacterRecord]:
     """Sunucuya iletilmeyi bekleyen (`is_dirty=1`) karakterleri döner."""
     with _connect(db_path) as conn:
+        conn.execute("BEGIN")
+        owner = _owner(conn, expected_session)
         rows = conn.execute(
-            "SELECT id, server_id, user_id, system, name, data, is_dirty, is_deleted, created_at, updated_at FROM local_characters WHERE is_dirty=1"
+            "SELECT id, server_id, user_id, system, name, data, is_dirty, is_deleted, created_at, updated_at FROM local_characters WHERE is_dirty=1 AND owner=?", (owner,)
         ).fetchall()
         result = []
         for r in rows:
             result.append(LocalCharacterRecord(
                 id=r[0], server_id=r[1], user_id=r[2], system=r[3], name=r[4],
                 data=json.loads(r[5]), is_dirty=bool(r[6]), is_deleted=bool(r[7]),
-                created_at=r[8], updated_at=r[9]
+                created_at=r[8], updated_at=r[9], owner=owner
             ))
         return result
 
 
-def apply_sync_response(db_path: Path, updated_characters: List[dict], deleted_server_ids: List[str]) -> None:
+def apply_sync_response(db_path: Path, updated_characters: List[dict], deleted_server_ids: List[str],
+                        *, sent_records: Optional[List[LocalCharacterRecord]] = None,
+                        synced_at: Optional[str] = None, expected_session=None) -> None:
     """
     FastAPI sunucusundan dönen senkronizasyon paketini atomik olarak yerel SQLite veritabanına uygular.
     
@@ -282,16 +352,38 @@ def apply_sync_response(db_path: Path, updated_characters: List[dict], deleted_s
         db_path (Path): Yerel SQLite veritabanı dosya yolu.
         updated_characters (List[dict]): Sunucudan indirilen güncel karakter verileri (PULL).
         deleted_server_ids (List[str]): Sunucuda silinmiş olan karakter kimlikleri.
+        sent_records: İstekten önce alınan PUSH kopyası. Yalnızca yanıtta bulunan
+            ve hâlâ aynı olan kayıtlar onaylanır. Verilmezse dirty kayıtlar korunur.
+        synced_at: Yanıtla aynı işlemde kaydedilecek checkpoint.
     """
     now_str = datetime.now(timezone.utc).isoformat()
     with _connect(db_path) as conn:
+        # Hold the write lock through acknowledgement, PULL and checkpoint.
+        conn.execute("BEGIN IMMEDIATE")
+        owner = _owner(conn, expected_session)
+        returned_ids = {c.get("server_id") for c in updated_characters} | set(deleted_server_ids)
+        for sent in sent_records or []:
+            if sent.server_id not in returned_ids or sent.owner != owner:
+                continue
+            # A later edit/delete must remain queued, even when the clock repeats.
+            conn.execute("""
+                UPDATE local_characters SET is_dirty=0
+                WHERE server_id=? AND updated_at=? AND name=? AND system=?
+                  AND data=? AND is_deleted=? AND owner=?
+            """, (sent.server_id, sent.updated_at, sent.name, sent.system,
+                  json.dumps(sent.data, ensure_ascii=False), int(sent.is_deleted), owner))
         # 1. Sunucuda silinen kayıtları yerel veritabanından tamamen kaldır
         for s_id in deleted_server_ids:
-            conn.execute("DELETE FROM local_characters WHERE server_id=?", (s_id,))
+            conn.execute("DELETE FROM local_characters WHERE server_id=? AND is_dirty=0 AND owner=?", (s_id, owner))
 
         # 2. Sunucudan gelen güncel karakterleri yaz ve is_dirty=0 yap
         for char in updated_characters:
-            s_id = char.get("server_id") or str(uuid.uuid4())
+            s_id = char.get("server_id")
+            if not s_id:
+                raise ValueError("Sync response character is missing server_id")
+            existing = conn.execute("SELECT owner FROM local_characters WHERE server_id=?", (s_id,)).fetchone()
+            if existing and existing[0] != owner:
+                raise ValueError("Sunucu kimliği başka yerel hesaba ait; aktarım durduruldu")
             sys_code = char.get("system", "")
             name = char.get("name", "")
             c_data = char.get("data") or {}
@@ -300,8 +392,8 @@ def apply_sync_response(db_path: Path, updated_characters: List[dict], deleted_s
             updated_at = char.get("updated_at") or now_str
 
             conn.execute("""
-            INSERT INTO local_characters (server_id, user_id, system, name, data, is_dirty, is_deleted, created_at, updated_at)
-            VALUES (?, NULL, ?, ?, ?, 0, 0, ?, ?)
+            INSERT INTO local_characters (server_id, user_id, system, name, data, is_dirty, is_deleted, created_at, updated_at, owner)
+            VALUES (?, NULL, ?, ?, ?, 0, 0, ?, ?, ?)
             ON CONFLICT(server_id) DO UPDATE SET
                 system=excluded.system,
                 name=excluded.name,
@@ -309,9 +401,11 @@ def apply_sync_response(db_path: Path, updated_characters: List[dict], deleted_s
                 is_dirty=0,
                 is_deleted=0,
                 updated_at=excluded.updated_at
-            """, (s_id, sys_code, name, data_str, created_at, updated_at))
+            WHERE local_characters.is_dirty=0
+            """, (s_id, sys_code, name, data_str, created_at, updated_at, owner))
 
-        # 3. PUSH edilen kirli kayıtların kirli bayrağını temizle ve silinenleri kaldır
-        conn.execute("UPDATE local_characters SET is_dirty=0 WHERE is_deleted=0")
-        conn.execute("DELETE FROM local_characters WHERE is_deleted=1")
-
+        if synced_at:
+            conn.execute(
+                "INSERT INTO sync_state (key, value) VALUES (?, ?) "
+                "ON CONFLICT(key) DO UPDATE SET value=excluded.value", (_checkpoint_key(owner), synced_at)
+            )

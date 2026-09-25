@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
 
 from app.core.config import DB_PATH, SYSTEM_MAPPING
+from app.core.concurrency import commit_revision
 from app.models.user import Character, User
 from app.models.progression import LevelProgression
 from rules.character_manager import CharacterManager
@@ -80,18 +81,17 @@ class CharacterService:
         db_char.updated_at = now
         
         db.add(db_char)
-        db.commit()
+        commit_revision(db)
         db.refresh(db_char)
         return db_char
 
     def get_character(self, db: Session, character_id: int) -> Optional[Character]:
         """Retrieve a character by ID."""
-        return db.query(Character).filter(Character.id == character_id).first()
+        return db.query(Character).filter(Character.id == character_id, Character.is_deleted.is_not(True)).first()
 
     def list_characters(self, db: Session, user_id: int, system: Optional[str] = None) -> List[Character]:
         """List all characters belonging to a specific user, optionally filtered by system."""
-        # Also return characters with user_id == None (public/seeded characters)
-        query = db.query(Character).filter((Character.user_id == user_id) | (Character.user_id == None))
+        query = db.query(Character).filter(Character.user_id == user_id, Character.is_deleted.is_not(True))
         if system:
             query = query.filter(Character.system == system)
         return query.order_by(Character.id.desc()).all()
@@ -108,7 +108,7 @@ class CharacterService:
         db_char.data = json.dumps(data_recalced, ensure_ascii=False)
         db_char.updated_at = datetime.now(timezone.utc).isoformat()
         
-        db.commit()
+        commit_revision(db)
         return True
 
     def delete_character(self, db: Session, character_id: int) -> bool:
@@ -116,8 +116,9 @@ class CharacterService:
         db_char = self.get_character(db, character_id)
         if not db_char:
             return False
-        db.delete(db_char)
-        db.commit()
+        db_char.is_deleted = True
+        db_char.updated_at = datetime.now(timezone.utc).isoformat()
+        commit_revision(db)
         return True
 
     # ---------------------------------------------------------
@@ -130,10 +131,12 @@ class CharacterService:
         if not db_char:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Karakter bulunamadı.")
             
-        if db_char.user_id and db_char.user_id != user_id:
+        if db_char.user_id != user_id:
             raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Bu karakter üzerinde işlem yetkiniz yok.")
 
         char_data = json.loads(db_char.data)
+        if choices.get('is_overridden') and not str(choices.get('override_reason', '')).strip():
+            raise HTTPException(status_code=422, detail='GM istisnası için gerekçe zorunludur.')
         current_level = int(char_data.get("level", 1))
         target_level = current_level + 1
 
@@ -154,16 +157,31 @@ class CharacterService:
             "stat_increase": choices.get("ability_increase"),
             "skill_ranks": choices.get("skill_ranks", {}),
             "feats": choices.get("feats", []),
-            "favored_class_bonus": choices.get("favored_class_bonus", "hp")
+            "favored_class_bonus": choices.get("favored_class_bonus", "hp"),
+            "is_overridden": bool(choices.get('is_overridden')),
         }
         recalculated_char = manager.apply_level_up(cm_choices)
         recalculated_char["class"] = class_name
 
         # Spells learned
         spells = recalculated_char.setdefault("spells", [])
+        choices['_added_spells'] = []
         for spell in choices.get("spells_learned", []):
             if spell not in spells:
                 spells.append(spell)
+                choices['_added_spells'].append(spell)
+        traits = recalculated_char.setdefault('traits', [])
+        choices['_added_traits'] = []
+        for trait in choices.get('traits_learned', []):
+            if trait not in traits:
+                traits.append(trait)
+                choices['_added_traits'].append(trait)
+        if choices.get('is_overridden'):
+            recalculated_char.setdefault('override_history', []).append({
+                'selection_type': 'level_up', 'selection_key': str(target_level),
+                'is_overridden': True, 'reason': choices['override_reason'],
+                'created_at': datetime.now(timezone.utc).isoformat(),
+            })
 
         # Recalculate derived statistics
         recalced_data = self.recalculate(recalculated_char)
@@ -181,7 +199,7 @@ class CharacterService:
         # Update character state
         db_char.data = json.dumps(recalced_data, ensure_ascii=False)
         db_char.updated_at = datetime.now(timezone.utc).isoformat()
-        db.commit()
+        commit_revision(db)
 
         return recalced_data
 
@@ -191,7 +209,7 @@ class CharacterService:
         if not db_char:
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Karakter bulunamadı.")
             
-        if db_char.user_id and db_char.user_id != user_id:
+        if db_char.user_id != user_id:
             raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Bu karakter üzerinde işlem yetkiniz yok.")
 
         # Find highest progression record
@@ -256,9 +274,12 @@ class CharacterService:
 
         # 6. Remove learned spells
         spells = char_data.get("spells", [])
-        for spell in choices.get("spells_learned", []):
+        for spell in choices.get('_added_spells', choices.get("spells_learned", [])):
             if spell in spells:
                 spells.remove(spell)
+        for trait in choices.get('_added_traits', []):
+            if trait in char_data.get('traits', []):
+                char_data['traits'].remove(trait)
 
         # Remove the progression record
         db.delete(highest_prog)
@@ -269,6 +290,6 @@ class CharacterService:
         # Update character state
         db_char.data = json.dumps(recalced_data, ensure_ascii=False)
         db_char.updated_at = datetime.now(timezone.utc).isoformat()
-        db.commit()
+        commit_revision(db)
 
         return recalced_data

@@ -27,6 +27,12 @@ COPY etl /app/etl
 COPY utils /app/utils
 COPY models /app/models
 COPY parsers /app/parsers
+COPY db /app/db
+COPY scraper /app/scraper
+COPY core /app/core
+COPY tools /app/tools
+COPY scraping /app/scraping
+COPY templates /app/templates
 COPY assets /app/assets
 COPY data /app/data
 COPY web/backend /app/web/backend

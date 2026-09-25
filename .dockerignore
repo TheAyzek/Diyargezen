@@ -30,3 +30,7 @@ build/
 dist/
 scratch/
 desktop/data/
+data/characters.db*
+data/backups/
+data/seed_characters.db.gz
+tmp/

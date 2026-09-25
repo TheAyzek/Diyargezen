@@ -67,7 +67,7 @@ export default function PortraitUpload() {
 
   return (
     <div className="form-group" style={{ marginBottom: '16px' }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
         <label className="form-label">Karakter Portresi (Avatar)</label>
         <button
           type="button"

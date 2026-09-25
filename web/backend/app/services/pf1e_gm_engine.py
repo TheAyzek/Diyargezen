@@ -39,7 +39,17 @@ class PF1eGMEngine:
         feats = {self._normalise_name(x) for x in character.get("feats", [])}
         diagnostics: List[RuleDiagnostic] = []
 
+        if isinstance(prerequisites, str):
+            prerequisites = [prerequisites]
+        clauses = []
         for raw in prerequisites or []:
+            if isinstance(raw, dict) and 'prerequisite' in raw:
+                raw = f"{raw['prerequisite']} {raw.get('value', '')}"
+            if re.search(r'\bor\b', str(raw), re.I):
+                diagnostics.append(RuleDiagnostic('unparsed_prerequisite', f'Alternatif koşullar GM incelemesi gerektirir: {raw}', 'warning', True, is_overridden))
+                continue
+            clauses.extend(re.split(r'\s*(?:[,;]|\band\b)\s*', str(raw)))
+        for raw in clauses:
             text = str(raw).strip()
             lower = text.lower()
             ability_match = re.search(r"\b(str|dex|con|int|wis|cha)(?:ength|terity|stitution|elligence|dom|risma)?\s*(?:>=|≥)?\s*(\d+)", lower)
@@ -66,7 +76,7 @@ class PF1eGMEngine:
                 if required not in feats:
                     diagnostics.append(self._diagnostic("feat_prerequisite", f"Ön koşul feat eksik: {feat_match.group(1).strip()}.", is_overridden))
             elif text:
-                diagnostics.append(RuleDiagnostic("unparsed_prerequisite", f"Manuel GM incelemesi gerekli ön koşul: {text}", "info", True, is_overridden))
+                diagnostics.append(RuleDiagnostic("unparsed_prerequisite", f"Manuel GM incelemesi gerekli ön koşul: {text}", "warning", True, is_overridden))
         return diagnostics
 
     def evaluate_character(self, character: Dict[str, Any]) -> List[Dict[str, Any]]:
@@ -75,8 +85,34 @@ class PF1eGMEngine:
             diagnostics.extend(self.check_prerequisites(
                 character,
                 selection.get("prerequisites", []),
-                bool(selection.get("is_overridden", False)),
+                bool(selection.get("is_overridden", False) and str(selection.get('reason', '')).strip()),
             ))
+        for group in ('feats', 'spells'):
+            for selection in character.get(group, []) or []:
+                if not isinstance(selection, dict):
+                    continue
+                data = selection.get('sistem_verisi') or selection
+                prerequisites = data.get('raw_prerequisites') or (data.get('system') or {}).get('prerequisites') or data.get('prerequisites') or []
+                diagnostics.extend(self.check_prerequisites(character, prerequisites,
+                    bool(selection.get('is_overridden') and str(selection.get('override_reason', '')).strip())))
+        def inspect_sources(value):
+            if isinstance(value, dict):
+                provenance = value.get('_provenance') or {}
+                if provenance.get('fallback_fields'):
+                    diagnostics.append(RuleDiagnostic('scraper_fallback',
+                        'Foundry eksikleri scraper verisinden tamamlandı: ' + ', '.join(provenance['fallback_fields']),
+                        'info', False, False))
+                if provenance.get('conflicts'):
+                    diagnostics.append(RuleDiagnostic('source_conflict',
+                        'Kural kaynakları arasında çelişki var; Foundry önceliği kullanıldı. GM incelemesi önerilir.',
+                        'info', False, False))
+                for key, child in value.items():
+                    if key != '_provenance':
+                        inspect_sources(child)
+            elif isinstance(value, list):
+                for child in value:
+                    inspect_sources(child)
+        inspect_sources(character)
         return [asdict(item) for item in diagnostics]
 
     @staticmethod
@@ -86,4 +122,6 @@ class PF1eGMEngine:
 
     @staticmethod
     def _normalise_name(value: Any) -> str:
+        if isinstance(value, dict):
+            value = value.get('isim') or value.get('name') or ''
         return " ".join(str(value).lower().split())

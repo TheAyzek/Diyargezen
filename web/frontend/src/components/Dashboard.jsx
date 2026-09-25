@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
+import { captureSession, assertSession, isCurrentSession } from '../utils/sessionScope';
+import { triggerSync } from '../utils/syncEngine';
 import { 
   UserPlus, Trash, ChevronRight, Search, Shield, Sword, Sparkles, 
   TrendingUp, Users, Award, BookOpen, Download, Copy, FileDown
@@ -15,12 +16,19 @@ import {
   getAllLocalCharacters, 
   deleteLocalCharacter, 
   cloneLocalCharacter,
+  getSyncConflicts,
+  resolveSyncConflict,
   saveLocalCharacter 
 } from '../utils/offlineStorage';
 import { useCharacterStore } from '../store/characterStore';
+import { hasNativeStorage } from '../utils/nativeStorage';
+import { getConflictArchives, restoreConflictArchive } from '../utils/offlineStorage';
 
 export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAuth }) {
   const [characters, setCharacters] = useState([]);
+  const [conflicts, setConflicts] = useState([]);
+  const [archives, setArchives] = useState([]);
+  const [storageError, setStorageError] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [loading, setLoading] = useState(true);
   const [presetModalOpen, setPresetModalOpen] = useState(false);
@@ -31,10 +39,19 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
   const username = localStorage.getItem('username');
   const isLoggedIn = token && token !== 'offline-guest-token';
 
-  const handleImportFile = (e) => {
+  const handleImportFile = async (e) => {
+    const session = captureSession();
     const file = e.target.files?.[0];
     if (file) {
-      importCharacterJSONFile(file, async (parsed) => {
+      try {
+      const envelope = JSON.parse(await file.text());
+      assertSession(session);
+      if (Array.isArray(envelope.characters)) {
+        await importFullVaultBackup(file, loadCharacters);
+        return;
+      }
+      await importCharacterJSONFile(file, async (parsed) => {
+        assertSession(session);
         loadPresetCharacter(parsed);
         const record = {
           id: `local_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -43,105 +60,83 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
           data: parsed,
           is_dirty: true
         };
-        await saveLocalCharacter(record, true);
+        const saved = await saveLocalCharacter(record, true, session);
+        assertSession(session);
         loadCharacters();
-        onSelectCharacter({ ...parsed, system: 'pf1e' });
+        onSelectCharacter(saved);
       });
+      } catch (error) { if (isCurrentSession(session)) setStorageError(error.message); }
+      finally { e.target.value = ''; }
     }
   };
 
   useEffect(() => {
     loadCharacters();
+    const session = captureSession();
+    const refresh = async () => {
+      try {
+        const [records, pending] = await Promise.all([getAllLocalCharacters(session), getSyncConflicts(session)]);
+        if (isCurrentSession(session)) { setCharacters(records); setConflicts(pending); }
+      } catch { /* Session changed; do not update the old view. */ }
+    };
+    window.addEventListener('diyargezen-sync-updated', refresh);
+    return () => window.removeEventListener('diyargezen-sync-updated', refresh);
   }, []);
 
   const loadCharacters = async () => {
+    const session = captureSession();
     setLoading(true);
     try {
-      // 1. Fetch local characters from IndexedDB
-      const localChars = await getAllLocalCharacters();
-      let mergedMap = new Map();
-
-      // Store local chars by ID/server_id
-      localChars.forEach(c => {
-        const key = c.server_id || c.id;
-        mergedMap.set(String(key), {
-          id: c.id,
-          server_id: c.server_id,
-          name: c.name || c.data?.name || 'İsimsiz Gezgin',
-          system: c.system || c.data?.system || 'pf1e',
-          data: c.data || c,
-          created_at: c.created_at,
-          updated_at: c.updated_at,
-          isLocalOnly: !c.server_id
-        });
-      });
-
-      // 2. If logged in and online, fetch server characters and merge
-      if (isLoggedIn) {
-        try {
-          const res = await axios.get('/api/characters');
-          if (Array.isArray(res.data)) {
-            res.data.forEach(srvChar => {
-              const key = String(srvChar.id);
-              const existing = mergedMap.get(key);
-              mergedMap.set(key, {
-                id: existing?.id || srvChar.id,
-                server_id: srvChar.id,
-                name: srvChar.name,
-                system: srvChar.system,
-                data: srvChar.data || srvChar,
-                created_at: srvChar.created_at,
-                updated_at: srvChar.updated_at,
-                isLocalOnly: false
-              });
-            });
-          }
-        } catch (serverErr) {
-          console.warn('Server fetch skipped or offline, using local vault:', serverErr);
-        }
-      }
-
-      setCharacters(Array.from(mergedMap.values()));
-    } catch (err) {
-      console.error('Error loading vault characters:', err);
-      setCharacters([]);
+      const local = await getAllLocalCharacters(session);
+      if (!isCurrentSession(session)) return;
+      setCharacters(local);
+      await triggerSync(session.token);
+      const updated = await getAllLocalCharacters(session);
+      const pending = await getSyncConflicts(session);
+      const recovered = await getConflictArchives(session);
+      if (isCurrentSession(session)) { setCharacters(updated); setConflicts(pending); setArchives(recovered); setStorageError(''); }
+    } catch (error) {
+      if (isCurrentSession(session)) setStorageError(error.message);
     } finally {
-      setLoading(false);
+      if (isCurrentSession(session)) setLoading(false);
+    }
+  };
+
+  const resolveConflict = async (record, choice) => {
+    const session = captureSession();
+    if (!window.confirm(choice === 'local'
+      ? 'Yerel sürüm sunucuya yeni bir işlem olarak gönderilecek. Sunucuda yeni değişiklik varsa tekrar çakışabilir. Devam edilsin mi?'
+      : 'Sunucu sürümü kullanılacak. Yerel sürüm kurtarma arşivinde korunacak. Devam edilsin mi?')) return;
+    try {
+      await resolveSyncConflict(record.id, record.conflict.operation_id, record.local_revision, choice, session);
+      if (isCurrentSession(session)) await loadCharacters();
+    } catch (error) {
+      if (isCurrentSession(session)) alert('Çözüm uygulanamadı; listeyi yenileyin. ' + error.message);
     }
   };
 
   const handleDelete = async (char, e) => {
     e.stopPropagation();
-    if (!window.confirm(`"${char.name}" karakterini mahzenden silmek istediğinizden emin misiniz?`)) {
-      return;
-    }
-
+    const session = captureSession();
+    if (!window.confirm(`"${char.name}" karakterini silmek istediğinizden emin misiniz?`)) return;
     try {
-      // Delete from server if server_id exists and user is logged in
-      if (char.server_id && isLoggedIn) {
-        try {
-          await axios.delete(`/api/characters/${char.server_id}`);
-        } catch (err) {
-          console.warn('Could not delete from server:', err);
-        }
-      }
-
-      // Always delete from local IndexedDB
-      await deleteLocalCharacter(char.id);
-      loadCharacters();
-    } catch (err) {
-      console.error('Error deleting character:', err);
-      alert('Karakter silinirken hata oluştu.');
+      await deleteLocalCharacter(char.id, session);
+      await triggerSync(session.token);
+      if (isCurrentSession(session)) loadCharacters();
+    } catch (error) {
+      if (isCurrentSession(session)) alert('Karakter silinemedi: ' + error.message);
     }
   };
 
   const handleClone = async (char, e) => {
+    const session = captureSession();
     e.stopPropagation();
     try {
-      const cloned = await cloneLocalCharacter(char.id);
+      const cloned = await cloneLocalCharacter(char.id, session);
       alert(`✨ "${char.name}" başarıyla klonlandı! Yeni kopya mahzene eklendi.`);
       loadCharacters();
     } catch (err) {
+      if (!isCurrentSession(session)) return;
       // Fallback clone by re-saving data
       try {
         const rawData = char.data || char;
@@ -152,7 +147,7 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
           data: { ...rawData, name: `${char.name} (Kopya)` },
           is_dirty: true
         };
-        await saveLocalCharacter(newRecord, true);
+        await saveLocalCharacter(newRecord, true, session);
         alert(`✨ "${char.name}" başarıyla klonlandı!`);
         loadCharacters();
       } catch (cloneErr) {
@@ -231,6 +226,47 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
 
   return (
     <div className="animate-fade-in" style={{ maxWidth: '1000px', margin: '0 auto', paddingBottom: '40px' }}>
+      <section className="journal-hero">
+        <span className="eyebrow">Karakter mahzeni • Pathfinder 1e</span>
+        <h1>Bir sonraki maceran burada.</h1>
+        <p>Kahramanlarının hikâyesini kaldığın yerden sürdür ya da yeni bir efsanenin ilk sayfasını aç.</p>
+        <button className="btn btn-primary" onClick={onNewCharacter}><UserPlus size={17} /> Yeni bir kahraman yarat</button>
+      </section>
+      {storageError && <p role="alert">Yerel depo açılamadı: {storageError} <button onClick={loadCharacters}>Tekrar dene</button></p>}
+      {hasNativeStorage() && <p>
+        Masaüstü kayıtları SQLite içinde tutulur. Önceki tarayıcı kayıtları silinmedi.
+        <button onClick={() => exportFullVaultBackup({ browserStore: true })}>Önceki tarayıcı deposunu yedekle</button>
+        {' '}İsterseniz yedeği inceleyip yeni kopyalar olarak içe aktarabilirsiniz.
+      </p>}
+      {archives.length > 0 && <details className="recovery-archive">
+        <summary>Kurtarma arşivi ({archives.length})</summary>
+        <p>Çakışma çözülmeden önce korunan yerel sürümler. Kurtarma yeni bir karakter oluşturur; mevcut kaydı değiştirmez.</p>
+        {archives.map(archive => <div key={archive.key}>
+          <span>{archive.value.name}</span>{' '}
+          <button onClick={async () => {
+            try { await restoreConflictArchive(archive.key); await loadCharacters(); }
+            catch (error) { setStorageError(error.message); }
+          }}>Yeni kopya olarak kurtar</button>
+        </div>)}
+      </details>}
+      {conflicts.map(record => (
+        <section key={record.id} style={{ border: '1px solid #d99b32', padding: 16, marginBottom: 16 }}>
+          <h3>Senkronizasyon çakışması: {record.name}</h3>
+          <p>Yerel değişiklik korunuyor; çözüm seçilene kadar gönderilmeyecek.</p>
+          <details><summary>Yerel sürüm {record.is_deleted ? '(silme isteği)' : ''}</summary>
+            <pre style={{ whiteSpace: 'pre-wrap', maxHeight: 240, overflow: 'auto' }}>{JSON.stringify({ name: record.name, data: record.data }, null, 2)}</pre>
+          </details>
+          <details><summary>Sunucu sürümü (revizyon {record.conflict.actual_revision})</summary>
+            <pre style={{ whiteSpace: 'pre-wrap', maxHeight: 240, overflow: 'auto' }}>{JSON.stringify(record.conflict.server_character, null, 2)}</pre>
+          </details>
+          <button onClick={() => resolveConflict(record, 'local')}>Yerel sürümü gönder</button>
+          <button onClick={() => resolveConflict(record, 'server')}>Sunucu sürümünü kullan</button>
+        </section>
+      ))}
+      <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
+        Eski sürümün ortak yerel deposu korunur ancak bu listeye otomatik aktarılmaz.
+        Misafir kayıtları da hesaplardan ayrıdır. Elinizdeki JSON yedeğini içe aktararak bu hesaba kopyalayabilirsiniz.
+      </p>
       
       {/* Member Account / Guest Status Banner */}
       {isLoggedIn ? (
@@ -249,7 +285,7 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <Shield size={20} style={{ color: '#3fb950' }} />
             <span style={{ fontSize: '0.88rem', color: '#f0e6d2' }}>
-              Üye Hesabı: <b style={{ color: '#3fb950', fontFamily: 'Cinzel, serif' }}>{username}</b> — Tüm karakterleriniz şifrelenmiş üye alanınızda saklanıyor.
+              Üye Hesabı: <b style={{ color: '#3fb950', fontFamily: 'Cinzel, serif' }}>{username}</b> — Bu hesabın karakterleri ayrı yerel depoda tutulur; bağlantı olduğunda senkronize edilir.
             </span>
           </div>
           <span style={{ fontSize: '0.75rem', padding: '3px 10px', borderRadius: '12px', background: 'rgba(63,185,80,0.2)', border: '1px solid rgba(63,185,80,0.4)', color: '#3fb950', fontWeight: 'bold' }}>
@@ -272,7 +308,7 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <Sparkles size={20} style={{ color: 'var(--gold-bright)' }} />
             <span style={{ fontSize: '0.85rem', color: '#f0e6d2' }}>
-              <b>Misafir Modundasınız:</b> Oluşturduğunuz karakterlerin üye hesabınıza kaydolması ve tüm cihazlarınızdan erişilmesi için ücretsiz üye olun!
+              <b>Misafir Modundasınız:</b> Kayıtlar yalnızca bu cihazın yerel deposundadır. Hesabınıza taşımak için mahzeni JSON olarak yedekleyip giriş sonrası içe aktarın.
             </span>
           </div>
           {onOpenAuth && (
@@ -322,7 +358,7 @@ export default function Dashboard({ onSelectCharacter, onNewCharacter, onOpenAut
               color: '#a594ff', fontSize: '0.85rem', fontWeight: 700,
               display: 'flex', alignItems: 'center', gap: '6px'
             }}
-            title="Tüm karakterlerinizi tek tıkla şifreli/şemalı JSON dosyası olarak yedekleyin"
+            title="Karakterlerinizi JSON dosyası olarak yedekleyin. Dosya şifrelenmez; güvenli yerde saklayın."
           >
             <Download size={16} /> 📦 Mahzeni Yedekle
           </button>

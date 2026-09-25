@@ -16,6 +16,7 @@
  */
 
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
+import { loadPdfTemplate } from './pdfTemplate.js';
 
 /**
  * Transliterates Turkish special characters to their closest WinAnsi (Latin-1)
@@ -41,29 +42,7 @@ function sanitizeTurkishForPDF(text) {
 }
 
 export async function generateCharacterPDFBytes(store) {
-  // Phase 1: Robust Multi-Path Template Fetching
-  let response;
-  const fetchPaths = [
-    '/templates/pf1e_sheet.pdf',
-    'http://127.0.0.1:8000/templates/pf1e_sheet.pdf',
-    '/public/templates/pf1e_sheet.pdf',
-    '/sheets/pf1e_sheet.pdf'
-  ];
-  for (const pathUrl of fetchPaths) {
-    try {
-      const res = await fetch(pathUrl);
-      if (res.ok) {
-        response = res;
-        break;
-      }
-    } catch (e) {
-      // Try next fallback path
-    }
-  }
-  if (!response || !response.ok) {
-    throw new Error('PDF şablonu (/templates/pf1e_sheet.pdf) sunucuda veya yerel dizinde bulunamadı.');
-  }
-  const existingPdfBytes = await response.arrayBuffer();
+  const existingPdfBytes = await loadPdfTemplate();
 
   // Phase 2: PDF Document Loading & AcroForm Mapping
   const pdfDoc = await PDFDocument.load(existingPdfBytes, { ignoreEncryption: true });
@@ -108,8 +87,12 @@ export async function generateCharacterPDFBytes(store) {
     setField('Homeland', store.homeland || '');
 
     // Ability Scores & Modifiers
-    const derivedScores = recalcedData.ability_scores || {};
-    const derivedMods = recalcedData.ability_modifiers || {};
+    const derivedScores = { ...recalcedData.ability_scores };
+    const derivedMods = { ...recalcedData.ability_modifiers };
+    for (const key of ['Strength', 'Dexterity', 'Constitution', 'Intelligence', 'Wisdom', 'Charisma']) {
+      derivedScores[key] ??= store.abilities?.[key.toLowerCase()] ?? 10;
+      derivedMods[key] ??= Math.floor((derivedScores[key] - 10) / 2);
+    }
 
     setField('strength', derivedScores.Strength || 10);
     setField('modifier', formatMod(derivedMods.Strength || 0));
@@ -131,11 +114,14 @@ export async function generateCharacterPDFBytes(store) {
 
     // Combat Stats
     setField('INITIATIVE', formatMod(recalcedData.initiative || 0));
-    setField('hit points', recalcedData.hit_points || 8);
-    setField('armor class', recalcedData.armor_class || 10);
-    setField('TOUCH', recalcedData.touch_ac || 10);
-    setField('FLATFOOTED', recalcedData.flat_footed_ac || 10);
-    setField('SPEED', `${recalcedData.speed || 30} ft`);
+    setField('hit points', store.hit_points ?? recalcedData.hit_points ?? 8);
+    setField('armor class', recalcedData.armor_class ?? 10);
+    setField('TOUCH', recalcedData.touch_ac ?? 10);
+    setField('FLATFOOTED', recalcedData.flat_footed_ac ?? 10);
+    // Canonical land-speed fields in the original AcroForm (there is no SPEED field).
+    const landSpeed = Number(recalcedData.speed ?? store.speed ?? 30);
+    setField('Base', Number.isFinite(landSpeed) ? landSpeed : 30);
+    setField('Squares1', Number.isFinite(landSpeed) ? landSpeed / 5 : 6);
     setField('BASE ATTACK BONUS', formatMod(recalcedData.bab || 0));
     setField('CMB', formatMod(recalcedData.cmb || 0));
     setField('CMD', recalcedData.cmd || 10);
@@ -194,7 +180,15 @@ export async function generateCharacterPDFBytes(store) {
     });
 
     // Equipment Weight, Encumbrance & Carrying Capacity
-    const totalWeight = recalcedData.total_weight ?? (store.equipment ? store.equipment.reduce((sum, item) => sum + (parseFloat(item.weight || 0) * (parseInt(item.quantity || 1, 10))), 0) : 0);
+    const numeric = (value, fallback = 0) => {
+      const parsed = Number.parseFloat(typeof value === 'object' ? value?.value : value);
+      return Number.isFinite(parsed) ? Math.max(0, parsed) : fallback;
+    };
+    const computedWeight = (store.equipment || []).reduce((sum, item) => {
+      const data = item.sistem_verisi?.system || item.sistem_verisi || item.system || {};
+      return sum + numeric(item.weight ?? data.weight) * numeric(item.quantity ?? data.quantity, 1);
+    }, 0);
+    const totalWeight = numeric(recalcedData.total_weight, computedWeight);
     setField('TOTAL WEIGHT', `${totalWeight.toFixed(1)} lbs`);
 
     const enc = recalcedData.encumbrance || {};
@@ -1082,5 +1076,3 @@ export async function exportCharacterPDF(store) {
     return false;
   }
 }
-
-

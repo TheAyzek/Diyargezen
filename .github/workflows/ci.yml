@@ -2,7 +2,7 @@ name: Diyargezen CI/CD Pipeline
 
 on:
   push:
-    branches: [ main, master, "feature/**" ]
+    branches: [ main, master, "feature/**", "codex/**" ]
   pull_request:
     branches: [ main, master ]
 
@@ -27,11 +27,14 @@ jobs:
           pip install -r requirements.txt
           pip install -r web/backend/requirements.txt
 
+      - name: Install Qt headless runtime libraries
+        run: sudo apt-get update && sudo apt-get install -y libegl1 libopengl0 libnss3 libasound2t64 libxkbcommon0 libxcb-cursor0
+
       - name: Run Pytest Suite
         env:
           PYTHONPATH: .
         run: |
-          pytest --tb=short
+          pytest tests web/backend/tests --tb=short --import-mode=importlib -p no:cacheprovider
 
   frontend-build:
     name: Build React Frontend App
@@ -52,6 +55,10 @@ jobs:
         working-directory: web/frontend
         run: npm ci
 
+      - name: Test frontend contracts
+        working-directory: web/frontend
+        run: npm test
+
       - name: Build Vite Bundle
         working-directory: web/frontend
         run: npm run build
@@ -68,6 +75,8 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Verify Docker Compose Syntax & Build
+        env:
+          DIYARGEZEN_JWT_SECRET: ci-only-ephemeral-key-never-use-in-production-12345
         run: |
           docker compose config
           docker compose build

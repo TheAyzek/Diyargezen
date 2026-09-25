@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { captureSession, assertSession } from '../utils/sessionScope';
 import { Lock, User, UserPlus, LogIn, AlertCircle } from 'lucide-react';
 
 export default function Auth({ onLoginSuccess, onGuestContinue }) {
@@ -11,6 +12,7 @@ export default function Auth({ onLoginSuccess, onGuestContinue }) {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
+    const session = captureSession();
     e.preventDefault();
     setError('');
 
@@ -35,9 +37,7 @@ export default function Auth({ onLoginSuccess, onGuestContinue }) {
 
         const token = response.data.access_token;
         const uname = response.data.username || username;
-        localStorage.setItem('token', token);
-        localStorage.setItem('username', uname);
-        axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+        assertSession(session);
         onLoginSuccess(token, uname);
       } else {
         const response = await axios.post('/api/auth/register', {
@@ -47,9 +47,7 @@ export default function Auth({ onLoginSuccess, onGuestContinue }) {
 
         const token = response.data.access_token;
         const uname = response.data.username || username;
-        localStorage.setItem('token', token);
-        localStorage.setItem('username', uname);
-        axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+        assertSession(session);
         onLoginSuccess(token, uname);
       }
     } catch (err) {
@@ -80,12 +78,7 @@ export default function Auth({ onLoginSuccess, onGuestContinue }) {
   };
 
   return (
-    <div style={{
-      maxWidth: '450px',
-      margin: '60px auto',
-      width: '100%',
-      padding: '0 16px'
-    }}>
+    <div className="auth-shell">
       <div className="glass-card animate-fade-in" style={{
         padding: '40px',
         borderRadius: '16px',
@@ -101,7 +94,7 @@ export default function Auth({ onLoginSuccess, onGuestContinue }) {
             WebkitTextFillColor: 'transparent',
             fontFamily: 'Cinzel, serif'
           }}>
-            🎲 DİYARGEZEN
+            {isLogin ? 'Yolculuğuna devam et' : 'Diyara ilk adımını at'}
           </h1>
           <p style={{ color: 'var(--color-text-secondary)', fontSize: '13px', margin: 0 }}>
             {isLogin ? 'Karakter Mahzeninize Giriş Yapın' : 'Yeni Bir Gezgin Üyeliği Oluşturun'}
@@ -178,11 +171,12 @@ export default function Auth({ onLoginSuccess, onGuestContinue }) {
 
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '18px' }}>
           <div className="form-group" style={{ marginBottom: 0 }}>
-            <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <label htmlFor="auth-username" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
               <User size={13} /> Kullanıcı Adı
             </label>
             <input
               type="text"
+              id="auth-username"
               className="form-input"
               placeholder="Gezgin adı"
               value={username}
@@ -193,11 +187,12 @@ export default function Auth({ onLoginSuccess, onGuestContinue }) {
           </div>
 
           <div className="form-group" style={{ marginBottom: 0 }}>
-            <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <label htmlFor="auth-password" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
               <Lock size={13} /> Şifre
             </label>
             <input
               type="password"
+              id="auth-password"
               className="form-input"
               placeholder="••••••••"
               value={password}
@@ -209,11 +204,12 @@ export default function Auth({ onLoginSuccess, onGuestContinue }) {
 
           {!isLogin && (
             <div className="form-group" style={{ marginBottom: 0 }}>
-              <label className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <label htmlFor="auth-confirm" className="form-label" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <Lock size={13} /> Şifre Tekrar
               </label>
               <input
                 type="password"
+                id="auth-confirm"
                 className="form-input"
                 placeholder="••••••••"
                 value={confirmPassword}

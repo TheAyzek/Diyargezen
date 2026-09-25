@@ -24,6 +24,8 @@ export default function GMModifierPanel() {
   const [stat, setStat] = useState('ac');
   const [value, setValue] = useState(1);
   const [name, setName] = useState('GM Masa Kuralı');
+  const [selectionName, setSelectionName] = useState('');
+  const [overrideReason, setOverrideReason] = useState('');
 
   const add = () => {
     if (!name.trim() || !Number.isInteger(Number(value)) || Number(value) === 0) return;
@@ -33,7 +35,20 @@ export default function GMModifierPanel() {
   };
 
   const toggleOverride = () => {
-    updateField('is_overridden', !is_overridden);
+    if (!selectionName.trim() || !overrideReason.trim()) return;
+    const entry = { selection_key: selectionName.trim(), selection_type: 'selection',
+      is_overridden: true, reason: overrideReason.trim(), created_at: new Date().toISOString(),
+      prerequisites: [] };
+    useCharacterStore.setState(state => ({
+      override_history: [...(state.override_history || []), entry],
+      selections: [...(state.selections || []).filter(item => item.selection_key !== entry.selection_key), entry],
+      feats: (state.feats || []).map(item => (item.isim || item.name || item) === entry.selection_key
+        ? { ...(typeof item === 'object' ? item : { isim: item }), is_overridden: true, override_reason: entry.reason } : item),
+      spells: (state.spells || []).map(item => (item.isim || item.name || item) === entry.selection_key
+        ? { ...(typeof item === 'object' ? item : { isim: item }), is_overridden: true, override_reason: entry.reason } : item),
+    }));
+    store.recalculate();
+    setOverrideReason('');
   };
 
   return (
@@ -71,19 +86,29 @@ export default function GMModifierPanel() {
             border: `1px solid ${is_overridden ? '#52b788' : 'var(--accent-gold)'}`,
             color: is_overridden ? '#52b788' : '#d4c5a9'
           }}
-          title="Tüm soft-validation önkoşul uyarılarını GM izniyle onaylar/ezar"
+          disabled={!selectionName.trim() || !overrideReason.trim()}
+          title="Yalnızca belirtilen seçim için gerekçeli GM istisnası kaydeder; uyarıları gizlemez"
         >
           {is_overridden ? <ShieldCheck size={14} /> : <ShieldAlert size={14} />}
-          {is_overridden ? 'GM İzni Aktif (Overridden)' : 'GM İzniyle Ez (Override)'}
+          GM İstisnasını Kaydet
         </button>
       </div>
+
+      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 12 }}>
+        <input aria-label="GM istisnası seçimi" placeholder="Feat veya büyünün tam adı" value={selectionName} onChange={e => setSelectionName(e.target.value)} />
+        <input aria-label="GM istisnası gerekçesi" placeholder="GM gerekçesi (zorunlu)" value={overrideReason} onChange={e => setOverrideReason(e.target.value)} />
+      </div>
+      {(store.override_history || []).length > 0 && <details>
+        <summary>GM karar geçmişi ({store.override_history.length})</summary>
+        {store.override_history.map((entry, index) => <p key={index}>{entry.selection_key}: {entry.reason}</p>)}
+      </details>}
 
       <p style={{ color: '#8b949e', fontSize: '0.78rem', marginTop: 0, marginBottom: '12px' }}>
         Masa kuralları, geçici büyü buff/debuff etkileri veya özel stat modifikatörlerini (+X / -X) canlı hesaplamaya ekleyin.
       </p>
 
       {/* Soft-Block Rule Violation Inspector */}
-      {store.warnings && store.warnings.length > 0 && !is_overridden && (
+      {store.warnings && store.warnings.length > 0 && (
         <div style={{
           background: 'rgba(232, 112, 112, 0.1)',
           border: '1px solid rgba(232, 112, 112, 0.3)',
@@ -196,4 +221,3 @@ export default function GMModifierPanel() {
     </section>
   );
 }
-

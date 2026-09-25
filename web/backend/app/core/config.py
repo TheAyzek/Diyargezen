@@ -21,9 +21,8 @@ if str(WORKSPACE_ROOT) not in sys.path:
     sys.path.insert(0, str(WORKSPACE_ROOT))
 
 import stat
-import shutil
 
-DB_PATH = WORKSPACE_ROOT / "data" / "characters.db"
+DB_PATH = Path(os.getenv('DIYARGEZEN_DB_PATH', str(WORKSPACE_ROOT / 'data' / 'characters.db'))).resolve()
 DB_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 def _ensure_database_populated():
@@ -44,59 +43,13 @@ def _ensure_database_populated():
             print("⚠️ Bundled pre-populated database not found in MEIPASS or EXEC_DIR.")
             return
 
-        import sqlite3
         try:
-            from db.entity_store import init_game_schema
-            init_game_schema(DB_PATH)
-        except Exception as schema_exc:
-            print(f"⚠️ Could not pre-initialize game schema: {schema_exc}")
-
-        def get_entity_count(target_p: Path) -> int:
-            if not target_p.exists():
-                return 0
-            try:
-                with sqlite3.connect(str(target_p), timeout=5) as conn:
-                    cur = conn.cursor()
-                    cur.execute("SELECT COUNT(*) FROM entities")
-                    return cur.fetchone()[0]
-            except Exception:
-                return 0
-
-        target_count = get_entity_count(DB_PATH)
-        bundled_count = get_entity_count(bundled_db)
-
-        if target_count < 10000 or (bundled_count > 0 and target_count < (bundled_count - 500)):
-            print(f"📦 Pre-populating database (Target entities: {target_count}, Bundled entities: {bundled_count})...")
-            copied = False
-            # Attempt 1: Direct file copy if target has fewer entities
-            try:
-                if DB_PATH.exists():
-                    try: os.chmod(DB_PATH, stat.S_IWRITE | stat.S_IREAD)
-                    except Exception: pass
-                shutil.copyfile(bundled_db, DB_PATH)
-                try: os.chmod(DB_PATH, stat.S_IWRITE | stat.S_IREAD)
-                except Exception: pass
-                print(f"✅ Bundled database copied directly to LocalAppData: {DB_PATH}")
-                copied = True
-            except Exception as copy_exc:
-                print(f"⚠️ Direct file copy failed ({copy_exc}). Falling back to SQLite ATTACH merge...")
-
-            # Attempt 2: SQLite ATTACH database merge if direct file copy failed or file was in use
-            if not copied:
-                try:
-                    from db.entity_store import init_game_schema
-                    init_game_schema(DB_PATH)
-                    with sqlite3.connect(str(DB_PATH), timeout=30) as conn:
-                        conn.execute(f"ATTACH DATABASE '{bundled_db}' AS bundled_src")
-                        conn.execute("""
-                        INSERT OR REPLACE INTO entities (isim, sistem, kategori, aciklama, sistem_verisi)
-                        SELECT isim, sistem, kategori, aciklama, sistem_verisi FROM bundled_src.entities
-                        """)
-                        conn.execute("DETACH DATABASE bundled_src")
-                        conn.commit()
-                    print(f"✅ SQLite ATTACH merge completed successfully. Entities in DB_PATH: {get_entity_count(DB_PATH)}")
-                except Exception as attach_exc:
-                    print(f"❌ Error during SQLite ATTACH merge: {attach_exc}")
+            from db.bundled_catalog import import_missing_catalog
+            added = import_missing_catalog(DB_PATH, bundled_db)
+            print(f"Bundled PF1e catalog: {added} missing records added; user data preserved.")
+        except Exception as exc:
+            # Failure must never fall back to overwriting the user's database.
+            print(f"Bundled catalog import skipped; user database retained: {exc}")
 
 _ensure_database_populated()
 
@@ -110,6 +63,14 @@ if DB_PATH.exists():
 # deliberately only suitable for local development, so an accidental production
 # deployment is visible in logs/tests rather than silently sharing a key.
 JWT_SECRET_KEY = os.getenv("DIYARGEZEN_JWT_SECRET", "development-only-change-me-please-set-a-real-secret")
+ENVIRONMENT = os.getenv('DIYARGEZEN_ENV', 'development').lower()
+if ENVIRONMENT == 'production' and (len(JWT_SECRET_KEY) < 32 or JWT_SECRET_KEY.startswith('development-only')):
+    raise RuntimeError('Production requires a unique DIYARGEZEN_JWT_SECRET of at least 32 characters.')
+CORS_ORIGINS = [origin.strip() for origin in os.getenv(
+    'DIYARGEZEN_CORS_ORIGINS', 'http://127.0.0.1:5173,http://localhost:5173'
+).split(',') if origin.strip()]
+if ENVIRONMENT == 'production' and '*' in CORS_ORIGINS:
+    raise RuntimeError('Production CORS origins must be explicit, not a wildcard.')
 JWT_ALGORITHM = "HS256"
 JWT_ACCESS_TOKEN_EXPIRE_MINUTES = int(os.getenv("DIYARGEZEN_JWT_EXPIRE_MINUTES", "1440"))
 

@@ -1186,6 +1186,13 @@ export default function RulesCompendium({ onBack }) {
             </div>
 
             {renderEntityBadges(selectedEntity)}
+            {selectedEntity.sistem_verisi?._provenance && <details className="rule-provenance">
+              <summary>Veri kaynakları ve fallback</summary>
+              <p>Şema: {selectedEntity.sistem_verisi._provenance.version}</p>
+              <p>Scraper ile tamamlanan alanlar: {selectedEntity.sistem_verisi._provenance.fallback_fields.join(', ') || 'Yok'}</p>
+              <p>Çelişen alanlar: {selectedEntity.sistem_verisi._provenance.conflicts.map(item => item.field).join(', ') || 'Yok'}</p>
+              <p>Öncelik: Foundry → scraper → paket verisi. Çelişkiler GM incelemesi gerektirir.</p>
+            </details>}
 
             <hr style={{ borderColor: 'rgba(201,168,76,0.2)', margin: '16px 0' }} />
 

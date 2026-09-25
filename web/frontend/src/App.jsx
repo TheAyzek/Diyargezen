@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { LogOut, BookOpen, User, FileText, Wifi, WifiOff, RefreshCw } from 'lucide-react';
 
 import diyargezerLogo from './diyargezer_logo.png';
 import Dashboard from './components/Dashboard';
 import SystemSelector from './components/SystemSelector';
-import PF1eSheet from './components/sheets/PF1eSheet';
+const PF1eSheet = lazy(() => import('./components/sheets/PF1eSheet'));
 import Auth from './components/Auth';
-import RulesCompendium from './components/RulesCompendium';
+const RulesCompendium = lazy(() => import('./components/RulesCompendium'));
 import NotFound from './components/NotFound';
 import { useCharacterStore } from './store/characterStore';
-import { exportCharacterPDF } from './utils/pdfExportUtil';
+const exportCharacterPDF = async state => (await import('./utils/pdfExportUtil')).exportCharacterPDF(state);
 import SyncStatusBadge from './components/SyncStatusBadge';
-import { initSyncEngine } from './utils/syncEngine';
+import { initSyncEngine, triggerSync } from './utils/syncEngine';
+import { captureSession, assertSession, rotateSession } from './utils/sessionScope';
 import { saveLocalCharacter } from './utils/offlineStorage';
 
 export default function App() {
@@ -22,6 +22,8 @@ export default function App() {
   const [token, setToken] = useState(initialToken || (initialGuest ? 'offline-guest-token' : ''));
   const [username, setUsername] = useState(localStorage.getItem('username') || (initialGuest ? 'Yerel Gezgin' : ''));
   const [isGuest, setIsGuest] = useState(initialGuest);
+  const [sessionExpired, setSessionExpired] = useState(false);
+  const [catalogStatus, setCatalogStatus] = useState('unknown');
   const [view, setView] = useState('dashboard'); // 'dashboard', 'select-system', 'edit-character', 'rules-compendium'
   const [selectedCharacter, setSelectedCharacter] = useState(null);
   const [selectedSystem, setSelectedSystem] = useState('pf1e');
@@ -29,7 +31,34 @@ export default function App() {
   const { isOnline, syncStatus, setOnlineStatus } = useCharacterStore();
 
   useEffect(() => {
+    let stopped = false;
+    let timer;
+    const check = async () => {
+      try {
+        const response = await fetch('/api/health');
+        if (!response.ok) return;
+        const health = await response.json();
+        if (!stopped) {
+          setCatalogStatus(health.catalog_status);
+          if (health.catalog_status === 'updating') timer = setTimeout(check, 5000);
+        }
+      } catch { /* Offline local records remain available. */ }
+    };
+    check();
+    return () => { stopped = true; clearTimeout(timer); };
+  }, []);
+
+  useEffect(() => {
     initSyncEngine(() => localStorage.getItem('token'));
+    // Another tab's login must not leave this tab editing the old account.
+    const changed = () => window.location.reload();
+    const expired = () => setSessionExpired(true);
+    window.addEventListener('storage', changed);
+    window.addEventListener('diyargezen-session-expired', expired);
+    return () => {
+      window.removeEventListener('storage', changed);
+      window.removeEventListener('diyargezen-session-expired', expired);
+    };
   }, []);
 
   // Dynamic Page Title
@@ -70,15 +99,10 @@ export default function App() {
     };
   }, [setOnlineStatus]);
 
-  useEffect(() => {
-    if (token) {
-      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-    } else {
-      axios.defaults.headers.common['Authorization'] = `Bearer offline-guest-token`;
-    }
-  }, [token]);
-
   const handleLoginSuccess = (newToken, newUser) => {
+    setSessionExpired(false);
+    rotateSession();
+    setSelectedCharacter(null);
     setToken(newToken);
     setUsername(newUser);
     setIsGuest(false);
@@ -89,6 +113,9 @@ export default function App() {
   };
 
   const handleGuestContinue = () => {
+    setSessionExpired(false);
+    rotateSession();
+    setSelectedCharacter(null);
     setToken('offline-guest-token');
     setUsername('Yerel Gezgin');
     setIsGuest(true);
@@ -99,6 +126,10 @@ export default function App() {
   };
 
   const handleLogout = () => {
+    setSessionExpired(false);
+    rotateSession();
+    setSelectedCharacter(null);
+    useCharacterStore.getState().initCharacter('pf1e');
     localStorage.removeItem('token');
     localStorage.removeItem('username');
     localStorage.removeItem('isGuest');
@@ -109,7 +140,8 @@ export default function App() {
   };
 
   const handleSelectCharacter = (character) => {
-    setSelectedCharacter(character);
+    // Numeric API ID is separate from the stable UUID used by local sync.
+    setSelectedCharacter({ ...character, id: character.remote_id ?? null });
     setSelectedSystem(character.system.toLowerCase());
     setView('edit-character');
   };
@@ -125,40 +157,24 @@ export default function App() {
   };
 
   const handleSaveCharacter = async (charPayload) => {
+    const session = captureSession();
     try {
-      // 1. Always save to local IndexedDB first for offline safety & immediate persistence
-      const targetId = selectedCharacter?.id || `local_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      const localRecord = {
-        id: targetId,
-        server_id: selectedCharacter?.server_id || (typeof targetId === 'number' ? targetId : null),
+      await saveLocalCharacter({
+        id: selectedCharacter?.server_id || selectedCharacter?.id || crypto.randomUUID(),
+        server_id: selectedCharacter?.server_id,
+        remote_id: selectedCharacter?.remote_id,
+        revision: useCharacterStore.getState().revision ?? selectedCharacter?.revision ?? 0,
         name: charPayload.name || 'İsimsiz Kahraman',
-        system: (charPayload.system || selectedSystem || 'pathfinder1e').toLowerCase(),
+        system: (charPayload.system || selectedSystem || 'pf1e').toLowerCase(),
         data: charPayload.data || charPayload,
-        is_dirty: true
-      };
-      await saveLocalCharacter(localRecord, true);
-
-      // 2. If logged in and online, attempt server sync
-      if (token && token !== 'offline-guest-token' && isOnline) {
-        try {
-          if (selectedCharacter?.server_id || (selectedCharacter?.id && typeof selectedCharacter.id === 'number')) {
-            await axios.put(`/api/characters/${selectedCharacter.server_id || selectedCharacter.id}`, charPayload);
-          } else {
-            const res = await axios.post('/api/characters', charPayload);
-            if (res.data?.id) {
-              localRecord.server_id = res.data.id;
-              localRecord.is_dirty = false;
-              await saveLocalCharacter(localRecord, false);
-            }
-          }
-        } catch (serverErr) {
-          console.warn('Server sync failed, preserved safely in local vault:', serverErr);
-        }
-      }
+      }, true, session);
+      assertSession(session);
+      // A single UUID-based protocol owns all uploads, including new records.
+      triggerSync(session.token);
       setView('dashboard');
     } catch (err) {
       console.error('Error saving character:', err);
-      alert('Karakter kaydedilirken hata oluştu: ' + (err.message || 'Bilinmeyen hata'));
+      alert('Karakter kaydedilirken hata oluştu: ' + err.message);
     }
   };
 
@@ -184,7 +200,17 @@ export default function App() {
             Pathfinder 1st Edition TTRPG Web Platform
           </div>
         </header>
-        <main className="main-content" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', flex: 1 }}>
+        <main className="arrival">
+          <section className="arrival-copy" aria-labelledby="arrival-title">
+            <span className="eyebrow">Pathfinder 1st Edition • Sefer günlüğün</span>
+            <h1 id="arrival-title">Her efsane<br />bir <em>gezginle</em> başlar.</h1>
+            <p>Kahramanını yarat, diyarları keşfet. Karakterlerin, kuralların ve zarların aynı yolculukta buluşsun.</p>
+            <div className="arrival-features">
+              <span><BookOpen size={16} /> Birleşik kural kütüphanesi</span>
+              <span><FileText size={16} /> Canlı karakter PDF’i</span>
+              <span><WifiOff size={16} /> Çevrimdışı yerel kayıt</span>
+            </div>
+          </section>
           <Auth onLoginSuccess={handleLoginSuccess} onGuestContinue={handleGuestContinue} />
         </main>
       </div>
@@ -248,7 +274,7 @@ export default function App() {
         <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
           {/* Sync Status Badge */}
           <div 
-            title={isOnline ? 'Sunucu ve yerel veritabanı ile senkronize' : 'İnternet bağlantısı yok - Tüm değişiklikler yerel SQLite/IndexedDB kasanıza kaydediliyor'}
+            title={isOnline ? 'Senkronizasyon durumu' : 'İnternet bağlantısı yok; kaydedilen değişiklikler yerel depoda bekler'}
             style={{
               display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.72rem',
               padding: '4px 10px', borderRadius: '12px', cursor: 'help',
@@ -265,7 +291,7 @@ export default function App() {
                 </span>
               ) : (
                 <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
-                  <Wifi size={12} color="#4ec9b0" /> 🟢 Senkronize (Yerel + Bulut)
+                  <Wifi size={12} color="#4ec9b0" /> {isGuest ? 'Yerel misafir deposu' : syncStatus === 'synced' ? 'Senkronize' : 'Senkronizasyon bekliyor'}
                 </span>
               )
             ) : (
@@ -294,7 +320,7 @@ export default function App() {
             <span style={{ fontFamily: 'Cinzel, serif', fontSize: '0.55rem', letterSpacing: '0.14em', color: '#e87070', textTransform: 'uppercase' }}>Pathfinder 1e</span>
           </div>
 
-          <SyncStatusBadge token={token} />
+          {!isGuest && <SyncStatusBadge token={token} />}
 
           {(token && token !== 'offline-guest-token') ? (
             <>
@@ -338,6 +364,15 @@ export default function App() {
 
       {/* Main Container */}
       <main className="main-content" style={{ marginTop: '16px', marginBottom: '24px' }}>
+        {catalogStatus === 'updating' && <p role="status">Kural kataloğu arka planda hazırlanıyor. Mevcut kayıtlar kullanılabilir; hesapları güncelleme tamamlandıktan sonra yeniden kontrol edin.</p>}
+        {catalogStatus === 'error' && <p role="alert">Kural kataloğu güncellenemedi. Mevcut katalog korunuyor; hesaplarda eski veya eksik veri olabilir.</p>}
+        {sessionExpired && (
+          <p role="alert" style={{ color: '#fbbf24', padding: '12px', border: '1px solid currentColor', borderRadius: '8px' }}>
+            Sunucu oturumunuzu kabul etmiyor. Yerel kayıtlarınız korunuyor; senkronizasyon için yeniden giriş yapın.
+            Çıkış yapmadan önce açık karakterdeki değişiklikleri kaydedin.
+          </p>
+        )}
+        <Suspense fallback={<p role="status">Diyar hazırlanıyor…</p>}>
         {view === 'auth' && (
           <Auth onLoginSuccess={handleLoginSuccess} />
         )}
@@ -368,10 +403,10 @@ export default function App() {
         {!['auth', 'dashboard', 'rules-compendium', 'select-system', 'edit-character'].includes(view) && (
           <NotFound onGoHome={() => setView('dashboard')} />
         )}
+        </Suspense>
       </main>
+      <footer className="app-footer">Diyargezen · Pathfinder 1st Edition için sefer günlüğün</footer>
 
     </div>
   );
 }
-
-

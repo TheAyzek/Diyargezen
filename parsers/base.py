@@ -776,6 +776,8 @@ def make_entity(
                 kategori = "trait"
 
         mechanics = extract_standard_mechanics(data, sistem)
+        if data.get('prerequisites'):
+            data['raw_prerequisites'] = data['prerequisites']
         data["standard_mechanics"] = mechanics.get("standard_mechanics", [])
         data["prerequisites"] = mechanics.get("prerequisites", [])
 
@@ -787,13 +789,8 @@ def make_entity(
             data["parent_race"] = parent
             # Do NOT override kategori here; feats/traits stay feats/traits.
 
-        # ADIM 1: Büyü verilerini izole 'spells' tablosuna yaz
-        if kategori == "spell":
-            try:
-                parser = SpellParser()
-                parser.store_single_spell(sistem, data)
-            except Exception as exc:
-                logger.warning("SpellParser entegrasyon hatası (%s): %s", name, exc)
+        # Parsing is pure. Catalog persistence belongs to the ETL transaction;
+        # opening a default database per spell bypassed the caller's DB path.
 
         return DiyargezenEntity(
             isim=name,

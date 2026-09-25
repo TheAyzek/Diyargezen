@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Plus, Trash, Shield, X, Award, Wand2, Sparkles, User, Activity, Sword, BookOpen, Package, FileText, Download, Copy, AlertTriangle } from 'lucide-react';
 import { useCharacterStore, computeFeatSlots } from '../../../store/characterStore';
-import { exportCharacterPDF } from '../../../utils/pdfExportUtil';
+const exportCharacterPDF = async state => (await import('../../../utils/pdfExportUtil')).exportCharacterPDF(state);
 import { exportCharacterJSON, copyCharacterJSONToClipboard } from '../../../utils/jsonExportUtil';
 import EntitySelectorModal, { PF1E_ARCHETYPES_MAP } from '../../EntitySelectorModal';
 import TraitSelectorModal from '../../TraitSelectorModal';
 import FeatSelectorModal from '../../FeatSelectorModal';
 import SpellSelectorModal from '../../SpellSelectorModal';
-import LevelUpWizardModal from '../../LevelUpWizardModal';
+import LevelUpWizard from '../LevelUpWizard';
 import SpellCard from '../../SpellCard';
 import PortraitUpload from './PortraitUpload';
 import CompanionPanel from './CompanionPanel';
@@ -431,7 +431,7 @@ export default function PF1eControls() {
           </div>
 
           {/* Right Block: Portrait Upload */}
-          <div style={{ flexShrink: 0, minWidth: 260 }}>
+          <div style={{ flex: '1 1 260px', minWidth: 0, maxWidth: '100%' }}>
             <PortraitUpload />
           </div>
         </div>
@@ -2265,11 +2265,9 @@ export default function PF1eControls() {
         onAddSpell={(sp) => addSpell(sp)}
       />
 
-      <LevelUpWizardModal
+      <LevelUpWizard
         isOpen={levelUpModalOpen}
         onClose={() => setLevelUpModalOpen(false)}
-        character={store}
-        onApplyLevelUp={(payload) => applyLevelUp(payload)}
       />
 
       <LivePDFModal

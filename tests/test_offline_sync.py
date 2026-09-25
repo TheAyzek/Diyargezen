@@ -42,7 +42,7 @@ def test_local_db_offline_crud(tmp_path: Path):
         "updated_at": rec1.updated_at,
         "is_deleted": False
     }
-    local_db.apply_sync_response(db_path, [synced_item], [])
+    local_db.apply_sync_response(db_path, [synced_item], [], sent_records=dirty_list)
 
     # 4. Verify is_dirty is now False
     dirty_after = local_db.get_dirty_characters(db_path)
@@ -91,9 +91,8 @@ def test_local_db_offline_soft_delete(tmp_path: Path):
     assert dirty_chars[0].is_deleted is True
 
     # 3. Apply sync response for soft deletion handshake
-    local_db.apply_sync_response(db_path, [], [rec.server_id])
+    local_db.apply_sync_response(db_path, [], [rec.server_id], sent_records=dirty_chars)
 
     # Dirty queue and local records should be purged
     assert len(local_db.get_dirty_characters(db_path)) == 0
     assert len(local_db.list_local_characters(db_path)) == 0
-

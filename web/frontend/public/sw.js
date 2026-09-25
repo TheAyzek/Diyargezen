@@ -1,9 +1,12 @@
-const CACHE_NAME = 'diyargezen-cache-v4';
+const CACHE_NAME = 'diyargezen-cache-v5';
+const BUILD_ASSETS = []; // Filled with hashed chunks by the production build.
 const STATIC_ASSETS = [
   '/',
   '/index.html',
   '/manifest.json',
-  '/diyargezer_logo.png'
+  '/diyargezer_logo.png',
+  '/templates/pf1e_sheet.pdf',
+  '/art/diyargezen-realm.webp'
 ];
 
 // Install Event: Pre-cache static assets
@@ -11,7 +14,7 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       console.log('[SW] Pre-caching static assets');
-      return cache.addAll(STATIC_ASSETS);
+      return cache.addAll([...STATIC_ASSETS, ...BUILD_ASSETS]);
     })
   );
   self.skipWaiting();
@@ -23,7 +26,7 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames
-          .filter((name) => name !== CACHE_NAME)
+          .filter((name) => name.startsWith('diyargezen-cache-') && name !== CACHE_NAME)
           .map((name) => caches.delete(name))
       );
     })
@@ -35,6 +38,7 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   const request = event.request;
   const url = new URL(request.url);
+  if (url.origin !== self.location.origin) return;
 
   // Skip non-GET requests or Vite dev server internal scripts
   if (
@@ -45,8 +49,10 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // API Requests: Network-first with cache fallback
+  // Only public rule/template responses may enter a shared HTTP cache.
+  // Private character/auth/sync responses belong exclusively to scoped storage.
   if (url.pathname.startsWith('/api/')) {
+    if (!url.pathname.startsWith('/api/rules/') && url.pathname !== '/api/pdf-template/pf1e') return;
     event.respondWith(
       fetch(request)
         .then((response) => {

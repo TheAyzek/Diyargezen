@@ -5,6 +5,8 @@ import SpellSelectorModal from '../SpellSelectorModal';
 import FeatSelectorModal from '../FeatSelectorModal';
 import TraitSelectorModal from '../TraitSelectorModal';
 import ClassFeatureSelectorModal from '../ClassFeatureSelectorModal';
+import { getLevelDraft, saveLevelDraft } from '../../utils/offlineStorage';
+import { captureSession, assertSession } from '../../utils/sessionScope';
 
 export default function LevelUpWizard({ isOpen, onClose }) {
 
@@ -39,7 +41,13 @@ export default function LevelUpWizard({ isOpen, onClose }) {
 
   // Step state
   const [step, setStep] = useState(1);
+  const currentScreen = screens[step - 1];
   const [error, setError] = useState('');
+  const [gmOverride, setGmOverride] = useState(false);
+  const [overrideReason, setOverrideReason] = useState('');
+  const [draftReady, setDraftReady] = useState(false);
+  const [committing, setCommitting] = useState(false);
+  const [favoredBonus, setFavoredBonus] = useState('hp');
 
   // Class configuration mapping for ALL Pathfinder 1e & Fantasy classes
   const hitDieMap = {
@@ -62,7 +70,6 @@ export default function LevelUpWizard({ isOpen, onClose }) {
     if (c.includes('fighter')) return (tgtLevel === 1 || tgtLevel % 2 === 0) ? 1 : 0;
     if (c.includes('wizard')) return [5, 10, 15, 20].includes(tgtLevel) ? 1 : 0;
     if (c.includes('monk') || c.includes('ranger')) return [1, 2, 6, 10, 14, 18].includes(tgtLevel) ? 1 : 0;
-    if (c.includes('rogue')) return [2, 4, 6, 8, 10, 12, 14, 16, 18, 20].includes(tgtLevel) ? 1 : 0;
     return 0;
   };
 
@@ -85,14 +92,6 @@ export default function LevelUpWizard({ isOpen, onClose }) {
   const [isClassFeatureModalOpen, setIsClassFeatureModalOpen] = useState(false);
   const [featModalCategory, setFeatModalCategory] = useState('All');
 
-  // Auto-carry over all previously selected spells when LevelUpWizard opens
-  useEffect(() => {
-    if (isOpen) {
-      const prevSpells = recalcedData?.spells || useCharacterStore.getState().spells || [];
-      const formattedPrevSpells = prevSpells.map(s => typeof s === 'object' ? (s.name || s.isim) : s).filter(Boolean);
-      setSpellsLearned(formattedPrevSpells);
-    }
-  }, [isOpen]);
 
 
   
@@ -102,7 +101,8 @@ export default function LevelUpWizard({ isOpen, onClose }) {
   const intScore = abilities.intelligence || 10;
   const intMod = Math.floor((intScore - 10) / 2);
   const classBaseRanks = skillBaseMap[currentClass?.toLowerCase()] || 2;
-  const allowedRanksThisLevel = Math.max(1, classBaseRanks + intMod);
+  const allowedRanksThisLevel = Math.max(1, classBaseRanks + intMod) +
+    (race?.toLowerCase() === 'human' ? 1 : 0) + (favoredBonus === 'skill' ? 1 : 0);
 
   const pfSkillsList = [
     "Acrobatics", "Appraise", "Bluff", "Climb", "Craft", "Diplomacy", "Disable Device",
@@ -123,6 +123,11 @@ export default function LevelUpWizard({ isOpen, onClose }) {
 
   // Recalculate default HP when wizard opens/class changes
   useEffect(() => {
+    if (!isOpen) return;
+    let cancelled = false;
+    const session = captureSession();
+    const draftId = useCharacterStore.getState().server_id;
+    setDraftReady(false);
     setHpAdded(defaultHpRoll);
     setAllocatedRanks({});
     setSelectedFeats([]);
@@ -133,7 +138,40 @@ export default function LevelUpWizard({ isOpen, onClose }) {
     setStep(1);
     setError('');
     setDndChoiceType('asi');
+    setTraitsLearned([]);
+    setGmOverride(false);
+    setOverrideReason('');
+    setFavoredBonus('hp');
+    const restore = async () => {
+      try {
+        const draft = draftId ? await getLevelDraft(draftId, session) : null;
+        assertSession(session);
+        if (cancelled) return;
+        if (draft?.version === 1 && draft.baseLevel === level && draft.className === currentClass) {
+          setHpAdded(draft.hpAdded); setAllocatedRanks(draft.allocatedRanks || {});
+          setSelectedFeats(draft.selectedFeats || []); setAbilityIncrease(draft.abilityIncrease || '');
+          setSpellsLearned(draft.spellsLearned || []); setTraitsLearned(draft.traitsLearned || []);
+          setGmOverride(!!draft.gmOverride); setOverrideReason(draft.overrideReason || '');
+          setFavoredBonus(draft.favoredBonus || 'hp');
+          setStep(Math.max(1, Math.min(draft.step || 1, screens.length)));
+        }
+      } catch (error) { if (!cancelled) setError('Taslak açılamadı: ' + error.message); }
+      finally { if (!cancelled) setDraftReady(true); }
+    };
+    restore();
+    return () => { cancelled = true; };
   }, [isOpen, level, currentClass, system]);
+
+  const saveDraftAndClose = async () => {
+    const draftId = useCharacterStore.getState().server_id;
+    if (!draftId) { setError('Taslak saklamak için önce karakteri kaydedip yeniden açın.'); return; }
+    try {
+      await saveLevelDraft(draftId, { version: 1, baseLevel: level, className: currentClass,
+        step, hpAdded, allocatedRanks, selectedFeats, abilityIncrease, spellsLearned,
+        traitsLearned, gmOverride, overrideReason, favoredBonus });
+      onClose();
+    } catch (error) { setError('Taslak saklanamadı: ' + error.message); }
+  };
 
   if (!isOpen) return null;
 
@@ -161,9 +199,9 @@ export default function LevelUpWizard({ isOpen, onClose }) {
     const nextAllocated = currentAllocated + delta;
 
     if (nextAllocated < 0) return;
-    if (delta > 0 && remainingRanks <= 0) return;
+    if (!gmOverride && delta > 0 && remainingRanks <= 0) return;
 
-    if (currentBase + nextAllocated > targetLevel) {
+    if (!gmOverride && currentBase + nextAllocated > targetLevel) {
       setError(`Bir beceriye verilen toplam puan karakter seviyesini (${targetLevel}) aşamaz!`);
       return;
     }
@@ -183,7 +221,7 @@ export default function LevelUpWizard({ isOpen, onClose }) {
     if (!clean) return;
     if (selectedFeats.includes(clean)) return;
 
-    if (selectedFeats.length >= requiredFeatsCount) {
+    if (!gmOverride && selectedFeats.length >= requiredFeatsCount) {
       setError(`Bu seviyede en fazla ${requiredFeatsCount} yetenek (feat) seçebilirsiniz.`);
       return;
     }
@@ -211,7 +249,13 @@ export default function LevelUpWizard({ isOpen, onClose }) {
   };
 
   const handleNext = () => {
+    if (!draftReady || committing) return;
     setError('');
+    if (gmOverride) {
+      if (!overrideReason.trim()) { setError('GM istisnası için gerekçe yazın.'); return; }
+      setStep(previous => Math.min(previous + 1, screens.length));
+      return;
+    }
     const currentScreen = screens[step - 1];
 
     if (currentScreen === 'hp') {
@@ -250,6 +294,9 @@ export default function LevelUpWizard({ isOpen, onClose }) {
       }
       setStep(step + 1);
     }
+    else if (currentScreen === 'traits' || currentScreen === 'spells') {
+      setStep(previous => Math.min(previous + 1, screens.length));
+    }
   };
 
   const handlePrev = () => {
@@ -258,6 +305,13 @@ export default function LevelUpWizard({ isOpen, onClose }) {
   };
 
   const handleConfirm = async () => {
+    if (committing || !draftReady || step !== screens.length) return;
+    if (gmOverride && !overrideReason.trim()) { setError('GM istisnası için gerekçe yazın.'); return; }
+    if (!gmOverride && (hpAdded < 1 || hpAdded > classHitDie || remainingRanks !== 0 ||
+        selectedFeats.length !== requiredFeatsCount || (isAbilityIncreaseLevel && !abilityIncrease))) {
+      setError('Seçimler tamamlanmadı. Önceki adımları tamamlayın veya gerekçeli GM istisnası kullanın.'); return;
+    }
+    setCommitting(true);
     const skillRanksPayload = {};
     Object.entries(allocatedRanks).forEach(([sk, ranks]) => {
       if (ranks > 0) {
@@ -269,15 +323,24 @@ export default function LevelUpWizard({ isOpen, onClose }) {
     const payloadAbilityIncrease = (system === 'dnd5e' && dndChoiceType !== 'asi') ? null : (abilityIncrease || null);
     const payloadFeats = (system === 'dnd5e' && dndChoiceType !== 'feat') ? [] : selectedFeats;
 
-    const success = await levelUp(currentClass || 'Fighter', {
+    const success = await useCharacterStore.getState().applyLevelUp({
+      class_name: currentClass || 'Fighter',
+      favored_class_bonus: favoredBonus,
       hp_added: system === 'mnm' ? 0 : hpAdded,
       skill_ranks: system === 'mnm' ? {} : skillRanksPayload,
       feats: system === 'mnm' ? [] : payloadFeats,
       ability_increase: system === 'mnm' ? null : payloadAbilityIncrease,
-      spells_learned: system === 'mnm' ? [] : spellsLearned
+      spells_learned: spellsLearned,
+      traits_learned: traitsLearned,
+      is_overridden: gmOverride,
+      override_reason: overrideReason.trim(),
     });
 
+    setCommitting(false);
     if (success) {
+      // The stored base level makes an old draft inert even if cleanup fails offline.
+      const draftId = useCharacterStore.getState().server_id;
+      if (draftId) await saveLevelDraft(draftId, null).catch(() => {});
       onClose();
     }
   };
@@ -374,7 +437,9 @@ export default function LevelUpWizard({ isOpen, onClose }) {
               </span>
             </div>
           </div>
-          <button 
+          <button disabled={!draftReady || committing} onClick={saveDraftAndClose} className="btn">Taslağı sakla ve kapat</button>
+          <button
+            aria-label="Taslak kaydetmeden kapat"
             onClick={onClose}
             style={{
               background: 'none',
@@ -452,6 +517,13 @@ export default function LevelUpWizard({ isOpen, onClose }) {
           {/* SCREEN: HP and Class */}
           {currentScreen === 'hp' && (
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+              <label>Favori sınıf bonusu
+                <select className="form-input" value={favoredBonus} onChange={event => setFavoredBonus(event.target.value)}>
+                  <option value="hp">+1 HP (favori sınıf)</option>
+                  <option value="skill">+1 beceri puanı (favori sınıf)</option>
+                  <option value="none">Yok / farklı sınıf / özel tercih</option>
+                </select>
+              </label>
               <div className="form-group">
                 <label className="form-label">Seviye Sınıfı (Assumed Class)</label>
                 <input 
@@ -830,7 +902,6 @@ export default function LevelUpWizard({ isOpen, onClose }) {
                     if (customTraitText.trim() && !traitsLearned.includes(customTraitText.trim())) {
                       const newT = customTraitText.trim();
                       setTraitsLearned([...traitsLearned, newT]);
-                      addTrait({ isim: newT });
                       setCustomTraitText('');
                     }
                   }}
@@ -858,7 +929,6 @@ export default function LevelUpWizard({ isOpen, onClose }) {
                   const name = traitObj.isim || traitObj.name;
                   if (name && !traitsLearned.includes(name)) {
                     setTraitsLearned([...traitsLearned, name]);
-                    addTrait(traitObj);
                   }
                 }}
               />
@@ -927,7 +997,6 @@ export default function LevelUpWizard({ isOpen, onClose }) {
                     if (customSpellText.trim() && !spellsLearned.includes(customSpellText.trim())) {
                       const newS = customSpellText.trim();
                       setSpellsLearned([...spellsLearned, newS]);
-                      addSpell({ isim: newS });
                       setCustomSpellText('');
                     }
                   }}
@@ -956,7 +1025,6 @@ export default function LevelUpWizard({ isOpen, onClose }) {
                   const name = spellObj.isim || spellObj.name;
                   if (name && !spellsLearned.includes(name)) {
                     setSpellsLearned([...spellsLearned, name]);
-                    addSpell(spellObj);
                   }
                 }}
               />
@@ -1161,6 +1229,11 @@ export default function LevelUpWizard({ isOpen, onClose }) {
           justifyContent: 'space-between',
           alignItems: 'center'
         }}>
+          <label style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+            <input type="checkbox" checked={gmOverride} onChange={event => setGmOverride(event.target.checked)} />
+            GM izniyle eksik adımları geç
+            {gmOverride && <input aria-label="GM level-up gerekçesi" placeholder="Gerekçe (zorunlu)" value={overrideReason} onChange={event => setOverrideReason(event.target.value)} />}
+          </label>
           {step > 1 ? (
             <button type="button" className="btn btn-secondary" onClick={handlePrev}>
               <ArrowLeft size={16} /> Geri

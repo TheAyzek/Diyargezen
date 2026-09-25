@@ -9,6 +9,7 @@ class CharacterCreateUpdate(BaseModel):
 
 class CharacterResponse(BaseModel):
     id: int
+    revision: int = 1
     server_id: Optional[str] = None
     system: str
     name: str
@@ -41,6 +42,8 @@ class RecalculateRequest(BaseModel):
 
 class RecalculateResponse(BaseModel):
     data: Dict[str, Any]
+    revision: Optional[int] = None
+    character: Optional[CharacterResponse] = None
     warnings: List[str]
     diagnostics: List[Dict[str, Any]] = Field(default_factory=list)
 

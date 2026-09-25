@@ -30,7 +30,7 @@ from PySide6.QtWidgets import (
 
 from creators import CreatorFactory
 from creators.base_creator import BaseCharacterCreator
-from utils.storage import load_character, CharacterRecord
+from utils.storage import CharacterRecord
 
 logger = logging.getLogger(__name__)
 
@@ -55,7 +55,8 @@ class CharacterSheetPage(QWidget):
         from desktop import local_db
         lr = local_db.get_local_character(self._db_path, record_id)
         if not lr:
-            rec = load_character(self._db_path, record_id)
+            # Do not bypass account scoping through the legacy character table.
+            return
         else:
             rec = CharacterRecord(
                 id=lr.id, system=lr.system, name=lr.name, data=lr.data,

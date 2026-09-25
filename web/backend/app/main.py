@@ -5,8 +5,9 @@ from fastapi.middleware.cors import CORSMiddleware
 
 # Importing config first registers the workspace root for shared PF1e modules
 # when the backend is started from web/backend.
-from app.core.config import DB_PATH
+from app.core.config import DB_PATH, CORS_ORIGINS
 from app.routers import systems, rules, characters, auth, sync
+from app.routers import sync_v2
 from app.core.database import check_db_exists
 
 # Configure logging
@@ -67,12 +68,23 @@ async def lifespan(app: FastAPI):
     initialize_orm_schemas()
     logger.info("ORM schemas initialized and checked.")
 
-    try:
-        from etl.pipeline import run_etl_if_needed
-        etl_res = run_etl_if_needed(DB_PATH)
-        logger.info("ETL pipeline checked during startup: %s", etl_res)
-    except Exception as exc:
-        logger.warning("Startup ETL failed: %s", exc)
+    # Large source packs must not block the owned desktop listener's startup.
+    # Existing catalog rows remain available until the additive import commits.
+    import threading
+    app.state.catalog_status = 'updating'
+    def update_catalog():
+        try:
+            from etl.pipeline import run_etl_if_needed
+            from app.services.rules_service import clear_rules_cache
+            totals = run_etl_if_needed(DB_PATH)
+            clear_rules_cache()
+            app.state.catalog_status = 'ready' if totals and all(totals.values()) else 'error'
+            logger.info('Catalog update completed: %s', totals)
+        except Exception:
+            app.state.catalog_status = 'error'
+            logger.exception('Catalog update failed; existing catalog preserved')
+    app.state.catalog_worker = threading.Thread(target=update_catalog, daemon=True, name='catalog-update')
+    app.state.catalog_worker.start()
 
     yield
 
@@ -96,8 +108,8 @@ app = FastAPI(
 # Set up CORS middleware to allow React frontend connection
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow React frontend dev servers on any local/network port
-    allow_credentials=True,
+    allow_origins=CORS_ORIGINS,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -147,6 +159,7 @@ from fastapi.responses import FileResponse
 def read_root():
     return {
         "status": "healthy",
+        "catalog_status": getattr(app.state, 'catalog_status', 'unknown'),
         "app": "Diyargezen TTRPG Web Backend",
         "supported_systems": ["pathfinder1e"]
     }
@@ -157,6 +170,7 @@ app.include_router(systems.router, prefix="/api")
 app.include_router(rules.router, prefix="/api")
 app.include_router(characters.router, prefix="/api")
 app.include_router(sync.router, prefix="/api")
+app.include_router(sync_v2.router, prefix="/api")
 
 @app.get("/api/pdf-template/pf1e", tags=["Characters"], summary="PF1e AcroForm PDF Şablonunu Sunar")
 @app.get("/templates/pf1e_sheet.pdf", tags=["Characters"])
@@ -219,6 +233,3 @@ if frontend_dist:
         return FileResponse(frontend_dist / "index.html")
 
     app.mount("/", StaticFiles(directory=str(frontend_dist), html=True), name="frontend")
-
-
-

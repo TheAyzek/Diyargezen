@@ -1,109 +1,58 @@
-/**
- * Diyargezen Offline-First Background Synchronization Engine
- * 
- * Manages bi-directional synchronization between local IndexedDB storage
- * and the FastAPI server `/api/sync` endpoint using Last-Write-Wins (LWW).
- */
-
 import axios from 'axios';
-import {
-  getDirtyCharacters,
-  getLastSyncTimestamp,
-  markCharactersSynced,
-  saveLocalCharacter,
-  deleteLocalCharacter
-} from './offlineStorage';
-import { useCharacterStore } from '../store/characterStore';
+import { getDirtyCharacters, prepareSyncOperations, applySyncV2 } from './offlineStorage.js';
+import { captureSession, assertSession, isCurrentSession } from './sessionScope.js';
+import { useCharacterStore } from '../store/characterStore.js';
 
-let isSyncing = false;
+const inFlight = new Map();
 let syncListenersInitialized = false;
 
-export async function triggerSync(token) {
-  if (isSyncing) return;
-  if (!navigator.onLine) {
-    useCharacterStore.getState().setSyncStatus('offline_pending');
-    return;
-  }
+export function triggerSync(token) {
+  const session = captureSession();
+  if (!session.authenticated || token !== session.token) return Promise.resolve();
+  if (inFlight.has(session.key)) return inFlight.get(session.key);
+  const task = sync(session).finally(() => inFlight.delete(session.key));
+  inFlight.set(session.key, task);
+  return task;
+}
 
-  // Guest users without authentic token stay local
-  if (!token || token === 'offline-guest-token') {
-    useCharacterStore.getState().setSyncStatus('synced');
-    return;
-  }
-
-  isSyncing = true;
-  useCharacterStore.getState().setSyncStatus('syncing');
-
+async function sync(session) {
+  const status = value => {
+    if (isCurrentSession(session)) useCharacterStore.getState().setSyncStatus(value);
+  };
+  if (!navigator.onLine) { status('offline_pending'); return; }
+  status('syncing');
   try {
-    const dirtyChars = await getDirtyCharacters();
-    const lastSyncTs = await getLastSyncTimestamp();
-
-    const payload = {
-      last_sync_timestamp: lastSyncTs || null,
-      dirty_characters: dirtyChars
-    };
-
-    const response = await axios.post('/api/sync', payload, {
-      headers: {
-        Authorization: `Bearer ${token}`
-      }
-    });
-
-    if (response.data) {
-      const { updated_characters, deleted_server_ids, synced_at } = response.data;
-
-      // 1. Mark pushed dirty records as synced
-      await markCharactersSynced(dirtyChars, synced_at);
-
-      // 2. Save pulled server updates to local IndexedDB
-      if (Array.isArray(updated_characters)) {
-        for (const charItem of updated_characters) {
-          await saveLocalCharacter(charItem, false);
-        }
-      }
-
-      // 3. Process deleted tombstones
-      if (Array.isArray(deleted_server_ids)) {
-        for (const delId of deleted_server_ids) {
-          await deleteLocalCharacter(delId);
-        }
-      }
-
-      useCharacterStore.getState().setSyncStatus('synced');
+    const operations = await prepareSyncOperations(session);
+    assertSession(session);
+    const response = await axios.post('/api/sync/v2', {
+      operations,
+    }, { sessionScope: session, headers: { Authorization: `Bearer ${session.token}` } });
+    assertSession(session);
+    await applySyncV2(operations, response.data, session);
+    const pending = await getDirtyCharacters(session);
+    status(pending.length ? 'offline_pending' : 'synced');
+    if (isCurrentSession(session) && typeof window !== 'undefined') {
+      window.dispatchEvent(new Event('diyargezen-sync-updated'));
     }
-  } catch (err) {
-    console.warn('Background sync warning:', err.message || err);
-    useCharacterStore.getState().setSyncStatus('offline_pending');
-  } finally {
-    isSyncing = false;
+  } catch (error) {
+    status('offline_pending');
+    if (isCurrentSession(session)) console.warn('Background sync:', error.message);
   }
 }
 
 export function initSyncEngine(getTokenFn) {
   if (syncListenersInitialized) return;
   syncListenersInitialized = true;
-
-  const handleOnline = () => {
+  const run = () => triggerSync(getTokenFn?.());
+  window.addEventListener('online', () => {
     useCharacterStore.getState().setOnlineStatus(true);
-    const token = getTokenFn ? getTokenFn() : null;
-    if (token) {
-      triggerSync(token);
-    }
-  };
-
-  const handleOffline = () => {
+    run();
+  });
+  window.addEventListener('offline', () => {
     useCharacterStore.getState().setOnlineStatus(false);
-    useCharacterStore.getState().setSyncStatus('offline_pending');
-  };
-
-  window.addEventListener('online', handleOnline);
-  window.addEventListener('offline', handleOffline);
-
-  // Initial sync check if online
-  if (navigator.onLine) {
-    setTimeout(() => {
-      const token = getTokenFn ? getTokenFn() : null;
-      if (token) triggerSync(token);
-    }, 1500);
-  }
+  });
+  window.addEventListener('storage', run);
+  // Retry queued edits without requiring a connectivity toggle.
+  setInterval(run, 15000);
+  run();
 }

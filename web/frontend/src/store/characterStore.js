@@ -1,5 +1,7 @@
 import { create } from 'zustand';
 import axios from 'axios';
+import { editorFingerprint, requestRevisionAction } from '../utils/revisionActions.js';
+import { characterPayload, normalizeCharacterRecord } from '../utils/characterContract.js';
 
 // ---------------------------------------------------------------------------
 // PF1e Feat Slot Calculator
@@ -47,6 +49,9 @@ export function computeFeatSlots(className = '', race = '', level = 1, vmcClass 
 
 export const useCharacterStore = create((set, get) => ({
   id: null,
+  server_id: null,
+  revision: null,
+  editorBaseline: null,
   name: 'İsimsiz Kahraman',
   system: '',
   level: 1,
@@ -219,54 +224,36 @@ export const useCharacterStore = create((set, get) => ({
   },
 
   loadPresetCharacter: (preset) => {
-    set({
-      id: null,
-      name: preset.name || 'İsimsiz Kahraman',
-      system: 'pf1e',
-      level: 1,
-      race: preset.race || 'Human',
-      class: preset.class || 'Fighter',
-      alignment: preset.alignment || 'Neutral Good',
-      gender: preset.gender || '',
-      age: preset.age || '25',
-      height: preset.height || '',
-      weight: preset.weight || '',
-      deity: preset.deity || '',
-      homeland: preset.homeland || '',
-      hair: preset.hair || '',
-      eyes: preset.eyes || '',
-      abilities: preset.abilities || { strength: 10, dexterity: 10, constitution: 10, intelligence: 10, wisdom: 10, charisma: 10 },
-      skills: preset.skills || {},
-      feats: preset.feats || [],
-      traits: preset.traits || [],
-      equipment: preset.equipment || [],
-      spells: preset.spells || [],
-      backstory: preset.backstory || '',
-      personality: preset.personality || '',
-      allies: preset.allies || '',
-      notes: preset.notes || '',
-      portrait: preset.portrait || '',
-      usedSpellSlots: {},
-      preparedSpells: {},
-      recalcedData: {},
-      warnings: []
-    });
-    get().recalculate();
+    get().initCharacter('pf1e', { ...normalizeCharacterRecord(preset), id: null, server_id: null, revision: null });
   },
 
   // Offline-First & Sync state
   isOnline: typeof navigator !== 'undefined' ? navigator.onLine : true,
-  syncStatus: typeof navigator !== 'undefined' && !navigator.onLine ? 'offline_pending' : 'synced',
+  syncStatus: 'offline_pending',
 
   setOnlineStatus: (status) => set({
     isOnline: status,
-    syncStatus: status ? 'synced' : 'offline_pending'
+    syncStatus: 'offline_pending'
   }),
 
   setSyncStatus: (status) => set({ syncStatus: status }),
 
   // Actions
   initCharacter: (system, char = null) => {
+    if (!['pf1e', 'pathfinder1e'].includes(system.toLowerCase())) throw new Error('Yalnızca PF1e desteklenir.');
+    if (char) char = normalizeCharacterRecord(char);
+    const data = char?.data || {};
+    set({ spells: data.spells || [], multiclass: data.multiclass || {}, archetypes: data.archetypes || [],
+      variant_multiclass: data.variant_multiclass || '', gold: data.gold ?? 150,
+      pointBuyBudget: data.pointBuyBudget ?? 20, hit_points: data.hit_points ?? null,
+      max_hp: data.max_hp ?? null, active_conditions: data.active_conditions || data.conditions || [],
+      conditions: data.active_conditions || data.conditions || [],
+      favored_class: data.favored_class || '', secondary_favored_class: data.secondary_favored_class || '',
+      favored_class_bonuses: data.favored_class_bonuses || [],
+      selections: data.selections || [], override_history: data.override_history || [],
+      is_overridden: false, usedDailyResources: data.used_daily_resources || {},
+      preparedSpells: data.prepared_spells || {}, usedSpellSlots: data.used_spell_slots || {},
+    });
     const sys = system.toLowerCase();
     
     if (char) {
@@ -292,6 +279,8 @@ export const useCharacterStore = create((set, get) => ({
 
       set({
         id: char.id,
+        server_id: char.server_id || null,
+        revision: char.revision || null,
         name: char.name,
         system: char.system.toLowerCase(),
         level: char.data?.level || 1,
@@ -329,8 +318,8 @@ export const useCharacterStore = create((set, get) => ({
         personality: char.data?.personality || char.personality || '',
         allies: char.data?.allies || char.allies || '',
         notes: char.data?.notes || char.notes || '',
-        preparedSpells: char.data?.preparedSpells || char.preparedSpells || {},
-        usedSpellSlots: char.data?.usedSpellSlots || {},
+        preparedSpells: char.data?.prepared_spells || {},
+        usedSpellSlots: char.data?.used_spell_slots || {},
         defenses: defState,
         recalcedData: char.data || {},
         warnings: []
@@ -344,6 +333,8 @@ export const useCharacterStore = create((set, get) => ({
         
       set({
         id: null,
+        server_id: null,
+        revision: null,
         name: 'İsimsiz Kahraman',
         system: sys,
         level: 1,
@@ -381,6 +372,7 @@ export const useCharacterStore = create((set, get) => ({
         warnings: []
       });
     }
+    set({ editorBaseline: editorFingerprint(get()) });
     get().recalculate();
   },
 
@@ -460,14 +452,21 @@ export const useCharacterStore = create((set, get) => ({
         skill_ranks: levelUpData.skill_ranks || levelUpData.skillRanksGained || {},
         feats: featsList,
         ability_increase: levelUpData.ability_increase || levelUpData.abilityIncrease || null,
-        spells_learned: mergedSpells
+        spells_learned: mergedSpells,
+        traits_learned: levelUpData.traits_learned || [],
+        is_overridden: !!levelUpData.is_overridden, override_reason: levelUpData.override_reason || '',
       };
-      const apiSuccess = await get().levelUp(payload.class_name, payload);
-      if (apiSuccess) return true;
+      return await get().levelUp(payload.class_name, payload);
     }
 
     // Local / Offline-First Fallback Level Up
-    const { newLevel, hpGained, skillRanksGained, newFeat, abilityIncrease, fcbChoice } = levelUpData;
+    const { newLevel } = levelUpData;
+    const hpGained = levelUpData.hp_added ?? levelUpData.hpGained ?? 0;
+    const skillRanksGained = levelUpData.skill_ranks ?? levelUpData.skillRanksGained ?? {};
+    const newFeats = levelUpData.feats ?? (levelUpData.newFeat ? [levelUpData.newFeat] : []);
+    const abilityIncrease = levelUpData.ability_increase ?? levelUpData.abilityIncrease;
+    const fcbChoice = levelUpData.favored_class_bonus ?? levelUpData.fcbChoice ?? 'hp';
+    if (levelUpData.is_overridden && !levelUpData.override_reason?.trim()) return false;
     set(state => {
       const nextSkills = { ...(state.skills || {}) };
       if (skillRanksGained && typeof skillRanksGained === 'object') {
@@ -477,9 +476,7 @@ export const useCharacterStore = create((set, get) => ({
       }
 
       const nextFeats = [...(state.feats || [])];
-      if (newFeat) {
-        nextFeats.push(newFeat);
-      }
+      nextFeats.push(...newFeats);
 
       const nextAbilities = { ...(state.abilities || {}) };
       if (abilityIncrease) {
@@ -488,7 +485,10 @@ export const useCharacterStore = create((set, get) => ({
       }
 
       const fcbHp = fcbChoice === 'hp' ? 1 : 0;
-      const currentHp = state.recalcedData?.hit_points || 10;
+      const currentHp = state.hit_points ?? state.recalcedData?.hit_points ?? 10;
+      const conMod = Math.floor(((state.abilities?.constitution ?? 10) - 10) / 2);
+      const newConMod = Math.floor(((nextAbilities.constitution ?? 10) - 10) / 2);
+      const hpGain = Math.max(1, hpGained + newConMod) + fcbHp + state.level * (newConMod - conMod);
 
       return {
         level: newLevel || (parseInt(state.level) || 1) + 1,
@@ -496,7 +496,13 @@ export const useCharacterStore = create((set, get) => ({
         feats: nextFeats,
         abilities: nextAbilities,
         spells: mergedSpells,
-        hit_points: currentHp + (hpGained || 0) + fcbHp
+        traits: [...(state.traits || []), ...(levelUpData.traits_learned || [])],
+        override_history: [...(state.override_history || []), ...(levelUpData.is_overridden ? [{
+          selection_type: 'level_up', selection_key: String(state.level + 1), is_overridden: true,
+          reason: levelUpData.override_reason, created_at: new Date().toISOString(),
+        }] : [])],
+        hit_points: currentHp + hpGain,
+        max_hp: (state.max_hp ?? state.recalcedData?.max_hp ?? currentHp) + hpGain,
       };
     });
     get().recalculate();
@@ -745,151 +751,30 @@ export const useCharacterStore = create((set, get) => ({
   recalculate: () => {
     const state = get();
     
-    // Calculate remaining points dynamically for M&M
-    let remainingPoints = state.pl_value * 15;
-    if (state.system.includes('mm') || state.system.includes('mnm')) {
-      let spent = 0;
-      Object.entries(state.abilities).forEach(([k, v]) => {
-        if (k !== 'power_points') spent += v * 2;
-      });
-      
-      const mmDefenses = state.defenses || { dodge: 0, parry: 0, fortitude: 0, toughness: 0, will: 0 };
-      Object.values(mmDefenses).forEach(v => spent += parseInt(v) || 0);
-      
-      let skillRanks = 0;
-      Object.values(state.skills).forEach(v => skillRanks += parseInt(v) || 0);
-      spent += Math.ceil(skillRanks / 2);
-      
-      spent += state.advantages.length;
-      Object.values(state.powers).forEach(p => spent += p.cost || 0);
-      
-      remainingPoints = (state.pl_value * 15) - spent;
-    }
-
-    // Map client system keys to backend keys
-    let backendSystem = state.system;
-    if (state.system.includes('dnd')) backendSystem = 'dnd5e';
-    else if (state.system.includes('pf') || state.system.includes('pathfinder')) backendSystem = 'pf1e';
-    else backendSystem = 'mnm';
-
-    // Build payload matching character_service.py expected payload
-    const payload = {
-      system: backendSystem,
-      name: state.name,
-      level: parseInt(state.level),
-      race: state.race,
-      class: state.class,
-      background: state.background,
-      abilities: {
-        ...state.abilities,
-        power_points: remainingPoints
-      },
-      skill_ranks: state.skills,
-      advantages: state.advantages,
-      powers: state.powers,
-      defenses: (state.system.includes('mm') || state.system.includes('mnm')) ? {
-        Dodge: state.defenses.dodge || 0,
-        Parry: state.defenses.parry || 0,
-        Fortitude: state.defenses.fortitude || 0,
-        Toughness: state.defenses.toughness || 0,
-        Will: state.defenses.will || 0
-      } : undefined,
-      equipment: state.equipment,
-      custom_modifiers: state.customModifiers,
-      multiclass: state.multiclass,
-      variant_multiclass: state.variant_multiclass || state.variantMulticlass,
-      feats: (state.feats || []).map(f => f.isim || f),
-      traits: (state.traits || []).map(t => ({ isim: t.isim, kategori: t.sistem_verisi?.trait_category })),
-      archetype: state.archetype,
-      archetypes: (state.archetypes && state.archetypes.length > 0) ? state.archetypes : (state.archetype ? [state.archetype] : []),
-      racial_ability_choice: state.racialAbilityChoice || 'strength',
-      secondary_racial_ability_choice: state.secondaryRacialAbilityChoice || 'dexterity',
-      selected_racial_traits: state.selectedRacialTraits || [],
-      race_data: state.raceData,
-      class_data: state.classData,
-      pl_value: parseInt(state.pl_value),
-      remaining_power_points: remainingPoints,
-      portrait: state.portrait,
-      spells: state.spells || [],
-      prepared_spells: state.preparedSpells || {},
-      used_spell_slots: state.usedSpellSlots || {},
-      active_conditions: state.active_conditions || state.conditions || [],
-      conditions: state.active_conditions || state.conditions || [],
-      favored_class: state.favored_class || state.favoredClass,
-      secondary_favored_class: state.secondary_favored_class || state.secondaryFavoredClass,
-      favored_class_bonuses: state.favored_class_bonuses || state.favoredClassBonuses || []
-    };
+    const payload = characterPayload(state);
 
     set({ loading: true });
+    const requestFingerprint = editorFingerprint(get());
     axios.post('/api/characters/recalculate', { data: payload })
       .then(res => {
+        if (editorFingerprint(get()) !== requestFingerprint) return;
         set({
           recalcedData: res.data.data,
-          warnings: res.data.warnings,
+          warnings: [...(res.data.warnings || []), ...(res.data.diagnostics || []).map(item => item.message)],
           loading: false
         });
       })
       .catch(err => {
+        if (editorFingerprint(get()) !== requestFingerprint) return;
         console.error('Recalculation failed:', err);
         set({ loading: false });
       });
   },
 
   exportPdf: async () => {
-    const state = get();
-    set({ loading: true });
-
-    try {
-      let response;
-
-      if (state.id) {
-        // Kayıtlı karakter: sunucu tarafında hesaplama yapılır
-        response = await axios.get(`/api/characters/${state.id}/pdf`, { responseType: 'blob' });
-      } else {
-        // Kaydedilmemiş karakter: stateless export
-        let backendSystem = state.system;
-        if (state.system.includes('dnd')) backendSystem = 'dnd5e';
-        else if (state.system.includes('pf') || state.system.includes('pathfinder')) backendSystem = 'pf1e';
-        else backendSystem = 'mnm';
-
-        const payload = {
-          system: backendSystem,
-          name: state.name,
-          level: parseInt(state.level),
-          race: state.race,
-          class: state.class,
-          background: state.background,
-          abilities: state.abilities,
-          skill_ranks: state.skills,
-          advantages: state.advantages,
-          powers: state.powers,
-          equipment: state.equipment,
-          feats: (state.feats || []).map(f => f.isim || f),
-          proficient_skills: state.recalcedData.proficient_skills || [],
-          race_data: state.raceData,
-          class_data: state.classData,
-          portrait: state.portrait,
-          ...state.recalcedData
-        };
-        response = await axios.post('/api/characters/export/pdf', { data: payload }, { responseType: 'blob' });
-      }
-
-      const blob = new Blob([response.data], { type: 'application/pdf' });
-      const link = document.createElement('a');
-      link.href = window.URL.createObjectURL(blob);
-      link.download = `${state.name.replace(/\s+/g, '_')}_sheet.pdf`;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(link.href);
-    } catch (err) {
-      console.error('PDF export failed:', err);
-      alert('PDF dışa aktarılamadı! Backend çalışıyor mu kontrol edin.');
-    } finally {
-      set({ loading: false });
-    }
+    const { exportCharacterPDF } = await import('../utils/pdfExportUtil.js');
+    return exportCharacterPDF(get());
   },
-
 
   levelUp: async (className, choices) => {
     const state = get();
@@ -899,16 +784,23 @@ export const useCharacterStore = create((set, get) => ({
     }
     set({ loading: true });
     try {
-      const response = await axios.post(`/api/characters/${state.id}/level-up`, {
+      const response = await requestRevisionAction(state, 'level-up', {
         class_name: className,
         ...choices
-      });
+      }, get);
       const charData = response.data.data;
       set({
+        revision: response.data.revision,
         level: charData.level,
         class: charData.class,
         abilities: charData.abilities || {},
         skills: charData.skill_ranks || {},
+        feats: charData.feats || [],
+        traits: charData.traits || [],
+        override_history: charData.override_history || [],
+        spells: charData.spells || [],
+        hit_points: charData.hit_points,
+        max_hp: charData.max_hp,
         advantages: charData.advantages || [],
         powers: charData.powers || {},
         equipment: charData.equipment || [],
@@ -916,6 +808,7 @@ export const useCharacterStore = create((set, get) => ({
         warnings: response.data.warnings || [],
         loading: false
       });
+      set({ editorBaseline: editorFingerprint(get()) });
       return true;
     } catch (err) {
       console.error("Level up failed:", err);
@@ -930,13 +823,20 @@ export const useCharacterStore = create((set, get) => ({
     if (!state.id) return false;
     set({ loading: true });
     try {
-      const response = await axios.post(`/api/characters/${state.id}/level-undo`);
+      const response = await requestRevisionAction(state, 'level-undo', {}, get);
       const charData = response.data.data;
       set({
+        revision: response.data.revision,
         level: charData.level,
         class: charData.class,
         abilities: charData.abilities || {},
         skills: charData.skill_ranks || {},
+        feats: charData.feats || [],
+        traits: charData.traits || [],
+        override_history: charData.override_history || [],
+        spells: charData.spells || [],
+        hit_points: charData.hit_points,
+        max_hp: charData.max_hp,
         advantages: charData.advantages || [],
         powers: charData.powers || {},
         equipment: charData.equipment || [],
@@ -944,6 +844,7 @@ export const useCharacterStore = create((set, get) => ({
         warnings: response.data.warnings || [],
         loading: false
       });
+      set({ editorBaseline: editorFingerprint(get()) });
       return true;
     } catch (err) {
       console.error("Level undo failed:", err);

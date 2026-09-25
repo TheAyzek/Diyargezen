@@ -2,34 +2,7 @@
    Diyargezen High-Fantasy Web Design System & Theme
    ========================================================================== */
 
-@font-face {
-  font-family: 'Cinzel';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://static.figma.com/font/Cinzel_wght__1') format('woff2');
-}
-@font-face {
-  font-family: 'Cinzel Decorative';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://static.figma.com/font/CinzelDecorative-Regular_1') format('woff2');
-}
-@font-face {
-  font-family: 'EB Garamond';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://static.figma.com/font/EBGaramond_wght__1') format('woff2');
-}
-@font-face {
-  font-family: 'DM Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://static.figma.com/font/DMMono-Regular_1') format('woff2');
-}
+/* System serif/sans fallbacks keep typography available without a font CDN. */
 
 :root {
   --font-heading: 'Cinzel', serif;

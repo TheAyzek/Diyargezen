@@ -23,7 +23,7 @@ from typing import Optional, Dict, Any
 
 from PySide6.QtCore import QThread, Signal, QObject
 
-from desktop.api_client import api_client
+from desktop.api_client import api_client, ApiClient
 from desktop import local_db
 
 logger = logging.getLogger(__name__)
@@ -56,58 +56,30 @@ class SyncWorker(QObject):
         Adımlar:
         1. Oturum durumunu denetler; geçerli JWT token varsa `api_client` yetkilendirilir.
         2. Yerel veritabanından `is_dirty=1` bayrağı taşıyan PF1e karakterlerini sorgular.
-        3. `POST /api/sync` uç noktasına PUSH yükü gönderir ve PULL yanıtı alır.
-        4. Gelen güncellemeleri yerel SQLite veritabanına uygular ve checkpoint zaman damgasını kaydeder.
+        3. Kalıcı işlem kuyruğunu `POST /api/sync/v2` uç noktasına gönderir.
+        4. İşlem onaylarını, revizyonları ve çakışmaları atomik olarak saklar.
         """
-        if not api_client.is_authenticated():
-            auth_info = local_db.get_local_auth(self.db_path)
-            if auth_info:
-                api_client.set_token(auth_info[1], auth_info[0])
-
-        if not api_client.is_authenticated():
+        session = local_db.get_sync_session(self.db_path)
+        if not session:
             return
 
         try:
-            # 1. Yereldeki dirty karakterleri çek
-            dirty_records = [
-                record for record in local_db.get_dirty_characters(self.db_path)
-                if record.system.lower() in {"pf1e", "pathfinder1e"}
-            ]
-            dirty_payload = [
-                {
-                    "server_id": r.server_id,
-                    "system": r.system,
-                    "name": r.name,
-                    "data": r.data,
-                    "updated_at": r.updated_at,
-                    "is_deleted": r.is_deleted,
-                    "created_at": getattr(r, "created_at", None)
-                }
-                for r in dirty_records
-            ]
-
-            # 2. api_client üzerinden /api/sync endpoint'ini çağır
-            data = api_client.sync_characters(
-                dirty_characters=dirty_payload,
-                last_sync_timestamp=self._last_sync_timestamp
-            )
-
-            synced_at = data.get("synced_at")
-            updated_chars = data.get("updated_characters", [])
-            deleted_ids = data.get("deleted_server_ids", [])
-
-            # 3. Yerel SQLite veritabanına yanıtı uygula
-            local_db.apply_sync_response(self.db_path, updated_chars, deleted_ids)
-            self._last_sync_timestamp = synced_at
-            if synced_at:
-                local_db.set_sync_checkpoint(self.db_path, synced_at)
-
-            count = len(updated_chars) + len(dirty_payload)
-            self.sync_finished.emit(count, f"Senkronize edildi ({count} kayıt)")
+            # Never share a mutable login token with the UI while a request runs.
+            client = ApiClient(base_url=api_client.base_url)
+            client.set_token(session[1], session[0])
+            from desktop import sync_v2_store
+            operations = sync_v2_store.prepare_operations(self.db_path, session)
+            data = client.sync_v2(operations)
+            sync_v2_store.apply_response(self.db_path, operations, data, session)
+            conflicts = sync_v2_store.list_conflicts(self.db_path)
+            pending = local_db.get_dirty_characters(self.db_path, expected_session=session)
+            accepted = sum(item['status'] == 'accepted' for item in data['results'])
+            message = f"{accepted} işlem onaylandı; {len(pending)} bekleyen kayıt, {len(conflicts)} çakışma"
+            self.sync_finished.emit(accepted, message)
 
         except Exception as exc:
             logger.debug("Senkronizasyon pas geçildi (Çevrimdışı mod): %s", exc)
-            self.sync_failed.emit("Çevrimdışı mod (Sunucuya ulaşılamadı)")
+            self.sync_failed.emit("Senkronizasyon tamamlanamadı; yerel kayıtlar korundu.")
 
 
 class BackgroundSyncThread(QThread):
@@ -131,6 +103,8 @@ class BackgroundSyncThread(QThread):
         """İş parçacığının ana çalıştırma döngüsü."""
         logger.info("Masaüstü Arka Plan Senkronizasyon Motoru başlatıldı.")
         worker = SyncWorker(self.db_path)
+        worker.sync_finished.connect(self.sync_completed.emit)
+        worker.sync_failed.connect(self.status_changed.emit)
 
         while self._running:
             try:
@@ -148,4 +122,3 @@ class BackgroundSyncThread(QThread):
         """İş parçacığını güvenli bir şekilde sonlandırır."""
         self._running = False
         self.wait()
-

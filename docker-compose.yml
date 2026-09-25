@@ -7,14 +7,15 @@ services:
       dockerfile: web/backend/Dockerfile
     container_name: diyargezen-backend
     ports:
-      - "8000:8000"
+      - "127.0.0.1:8000:8000"
     environment:
-      - SECRET_KEY=diyargezen_super_secret_jwt_key_2026
-      - ALGORITHM=HS256
-      - ACCESS_TOKEN_EXPIRE_MINUTES=1440
-      - DATABASE_URL=sqlite:////app/data/diyargezen.db
+      - DIYARGEZEN_ENV=production
+      - DIYARGEZEN_JWT_SECRET=${DIYARGEZEN_JWT_SECRET:?Set a unique secret of at least 32 characters}
+      - DIYARGEZEN_JWT_EXPIRE_MINUTES=1440
+      - DIYARGEZEN_DB_PATH=/var/lib/diyargezen/characters.db
+      - DIYARGEZEN_CORS_ORIGINS=${DIYARGEZEN_CORS_ORIGINS:-http://localhost}
     volumes:
-      - ./data:/app/data
+      - diyargezen-data:/var/lib/diyargezen
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/docs"]
@@ -36,3 +37,6 @@ services:
 networks:
   default:
     name: diyargezen-network
+
+volumes:
+  diyargezen-data:

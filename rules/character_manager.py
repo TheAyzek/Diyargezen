@@ -988,7 +988,7 @@ class CharacterManager:
         char["level"] = new_level
 
         # Apply stat increase if applicable
-        if slots["has_stat_increase"] and "stat_increase" in choices:
+        if choices.get('stat_increase') and (slots["has_stat_increase"] or choices.get('is_overridden')):
             stat_name = choices["stat_increase"]
             target_key = stat_name
             for k in abilities.keys():

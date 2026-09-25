@@ -109,16 +109,13 @@ class ApiClient:
         resp.raise_for_status()
         return resp.json()
 
-    def save_character(self, character_data: Dict[str, Any], character_id: Optional[int] = None) -> Dict[str, Any]:
+    def save_character(self, character_data: Dict[str, Any], character_id: Optional[int] = None, *, revision: Optional[int] = None) -> Dict[str, Any]:
         """Karakteri sunucuda yeni oluşturur veya günceller."""
         name = character_data.get("name", "İsimsiz Kahraman")
         system = character_data.get("system", "pathfinder1e").lower()
         if system not in {"pf1e", "pathfinder1e"}:
             raise ValueError("Masaüstü istemcisi yalnızca Pathfinder 1e karakterlerini senkronize eder.")
 
-        invalid_systems = [item.get("system") for item in dirty_characters if item.get("system", "").lower() not in {"pf1e", "pathfinder1e"}]
-        if invalid_systems:
-            raise ValueError("PF1e dışı karakterler senkronize edilemez.")
         payload = {
             "system": system,
             "name": name,
@@ -126,8 +123,10 @@ class ApiClient:
         }
 
         if character_id:
+            if revision is None:
+                raise ValueError('Güncelleme için sunucu revizyonu gerekli.')
             url = f"{self.base_url}/characters/{character_id}"
-            resp = requests.put(url, json=payload, headers=self._headers(), timeout=10)
+            resp = requests.put(url, json=payload, headers={**self._headers(), 'If-Match': str(revision)}, timeout=10)
         else:
             url = f"{self.base_url}/characters"
             resp = requests.post(url, json=payload, headers=self._headers(), timeout=10)
@@ -135,10 +134,12 @@ class ApiClient:
         resp.raise_for_status()
         return resp.json()
 
-    def delete_character(self, character_id: int) -> bool:
+    def delete_character(self, character_id: int, *, revision: Optional[int] = None) -> bool:
         """Karakteri sunucudan siler."""
         url = f"{self.base_url}/characters/{character_id}"
-        resp = requests.delete(url, headers=self._headers(), timeout=10)
+        if revision is None:
+            raise ValueError('Silme için sunucu revizyonu gerekli.')
+        resp = requests.delete(url, headers={**self._headers(), 'If-Match': str(revision)}, timeout=10)
         resp.raise_for_status()
         return True
 
@@ -166,6 +167,9 @@ class ApiClient:
         }
         """
         url = f"{self.base_url}/sync"
+        if any(str(item.get("system", "")).lower() not in {"pf1e", "pathfinder1e"}
+               for item in dirty_characters):
+            raise ValueError("PF1e dışı karakterler senkronize edilemez.")
         payload = {
             "last_sync_timestamp": last_sync_timestamp,
             "dirty_characters": dirty_characters
@@ -182,6 +186,14 @@ class ApiClient:
         with open(save_path, "wb") as f:
             f.write(resp.content)
         return True
+
+    def sync_v2(self, operations: List[Dict[str, Any]]) -> Dict[str, Any]:
+        if any(op.get('system') not in {'pf1e', 'pathfinder1e'} for op in operations):
+            raise ValueError('PF1e dışı karakterler senkronize edilemez.')
+        response = requests.post(f'{self.base_url}/sync/v2', json={'operations': operations},
+                                 headers=self._headers(), timeout=15)
+        response.raise_for_status()
+        return response.json()
 
 
 

@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, String, Text, ForeignKey, Boolean
 from sqlalchemy.orm import relationship
+import uuid
 from app.core.database import Base
 
 class User(Base):
@@ -17,13 +18,15 @@ class Character(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=True)
-    server_id = Column(String, unique=True, index=True, nullable=True)
+    server_id = Column(String, unique=True, index=True, nullable=True, default=lambda: str(uuid.uuid4()))
     system = Column(String, nullable=False)
     name = Column(String, nullable=False)
     data = Column(Text, nullable=False)
     created_at = Column(String, nullable=False)
     updated_at = Column(String, nullable=False)
     is_deleted = Column(Boolean, default=False)
+    revision = Column(Integer, nullable=False, default=1, server_default="1")
+    __mapper_args__ = {"version_id_col": revision}
 
     owner = relationship("User", back_populates="characters")
     progressions = relationship("LevelProgression", back_populates="character", cascade="all, delete-orphan")

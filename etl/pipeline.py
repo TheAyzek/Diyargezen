@@ -68,7 +68,11 @@ def run_etl(
     """
     db_path = db_path or DEFAULT_DB
     data_dir = DATA_DIR
-    systems = systems or list(PARSERS.keys())
+    # pf1e is an API alias, not a second dataset. Never parse/write it twice.
+    systems = list(dict.fromkeys(
+        'pathfinder1e' if system == 'pf1e' else system
+        for system in (systems or list(SYSTEM_FILES))
+    ))
 
     init_game_schema(db_path)
 
@@ -77,6 +81,7 @@ def run_etl(
         return {s: count_entities(db_path, s) for s in systems}
 
     totals: Dict[str, int] = {}
+    backed_up = False
     for sistem in systems:
         parser = PARSERS.get(sistem)
         if not parser:
@@ -84,13 +89,23 @@ def run_etl(
             continue
         try:
             entities = parser(base_dir=BASE_DIR)
+            if entities and not backed_up and db_path.exists() and count_entities(db_path):
+                import sqlite3
+                import uuid
+                backup_dir = db_path.parent / 'backups'
+                backup_dir.mkdir(exist_ok=True)
+                backup_path = backup_dir / f'{db_path.stem}-before-catalog-{uuid.uuid4().hex}.db'
+                with sqlite3.connect(str(db_path)) as source, sqlite3.connect(str(backup_path)) as backup:
+                    source.backup(backup)
+                backed_up = True
             totals[sistem] = bulk_upsert_entities(db_path, entities, sistem)
         except Exception as exc:
             logger.exception("%s ETL hatası: %s", sistem, exc)
             totals[sistem] = 0
 
-    set_etl_meta(db_path, "source_fingerprint", _fingerprint(data_dir))
-    set_etl_meta(db_path, "last_etl_systems", ",".join(systems))
+    if totals and all(value > 0 for value in totals.values()):
+        set_etl_meta(db_path, "source_fingerprint", _fingerprint(data_dir))
+        set_etl_meta(db_path, "last_etl_systems", ",".join(systems))
     logger.info("ETL tamamlandı: %s", totals)
     return totals
 

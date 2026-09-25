@@ -4,20 +4,14 @@ Diyargezer Web View Module
 Masaüstü (PySide6) istemcisinde React tabanlı High-Fantasy web uygulamasını
 birebir render eden QWebEngineView kapsayıcı sınıfıdır.
 
-Akademik Mimari Notu:
----------------------
-Bu sınıf, Web SPA (Single Page Application) frontend'i ile PySide6 native
-masaüstü pencere yöneticisi arasında köprü görevi görür. Öncelik sırasına göre:
-1. Vite Geliştirici Sunucusu (http://127.0.0.1:5173) - Anlık kod güncellemeleri için
-2. FastAPI Sunucusu (http://127.0.0.1:8000) - Yayın (Production) modunda statik SPA dağıtımı için
-3. Yerel Statik Dosya / Sunucu Fallback'i - İnternet/Sunucu yokken offline çalışma için
+Yalnızca uygulamanın kendi başlattığı yerel sunucu yüklenir. Port keşfi,
+başka sunucuya veya file:// adresine otomatik geri dönüş yapılmaz.
 """
 
 from __future__ import annotations
 
 import logging
-import urllib.request
-from pathlib import Path
+import json
 from typing import Optional
 
 from PySide6.QtCore import Qt, QUrl, Signal
@@ -29,18 +23,9 @@ from PySide6.QtWidgets import (
 from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtWebEngineCore import QWebEnginePage
 
-import sys
-import time
+from desktop.local_server import allows_navigation
 
 logger = logging.getLogger(__name__)
-
-if getattr(sys, 'frozen', False):
-    BASE_DIR = Path(getattr(sys, '_MEIPASS', ''))
-else:
-    BASE_DIR = Path(__file__).resolve().parent.parent.parent
-
-FRONTEND_DIST = BASE_DIR / "web" / "frontend" / "dist"
-
 
 class DebugWebPage(QWebEnginePage):
     """JavaScript konsol mesajlarını Python loglarına yönlendiren QWebEnginePage."""
@@ -50,6 +35,20 @@ class DebugWebPage(QWebEnginePage):
         QWebEnginePage.JavaScriptConsoleMessageLevel.WarningMessageLevel: "JS:WARN",
         QWebEnginePage.JavaScriptConsoleMessageLevel.ErrorMessageLevel: "JS:ERROR",
     }
+
+    def __init__(self, parent, local_server):
+        super().__init__(parent)
+        self._local_server = local_server
+
+    def acceptNavigationRequest(self, url, navigation_type, is_main_frame):
+        server = self._local_server
+        return bool(server and server.is_running() and allows_navigation(
+            url.toString(), server.origin, main_frame=is_main_frame,
+        ))
+
+    def createWindow(self, window_type):
+        # No unguarded popup page inheriting a future native bridge.
+        return None
 
     def javaScriptConsoleMessage(self, level, message, line, source_id):
         tag = self._JS_LEVELS.get(level, "JS")
@@ -63,32 +62,12 @@ class DiyargezerWebView(QWidget):
 
     page_loaded = Signal(bool)
 
-    def __init__(self, parent: Optional[QWidget] = None) -> None:
+    def __init__(self, parent: Optional[QWidget] = None, *, local_server=None, storage_path=None) -> None:
         super().__init__(parent)
-        self._target_url = self._determine_target_url()
+        self._local_server = local_server
+        self._storage_path = storage_path
+        self._target_url = local_server.origin + "/" if local_server else None
         self._build_ui()
-
-    def _determine_target_url(self) -> str:
-        """
-        Web uygulamasının sunulduğu aktif adresi tespit eder.
-        Öncelik: FastAPI Üretim Sunucusu (http://127.0.0.1:8000)
-        """
-        for _ in range(60):
-            try:
-                req = urllib.request.urlopen("http://127.0.0.1:8000/api/health", timeout=0.2)
-                if req.status == 200:
-                    logger.info("WebView yerel FastAPI sunucusuna bağlandı: http://127.0.0.1:8000/")
-                    return "http://127.0.0.1:8000/"
-            except Exception:
-                pass
-            time.sleep(0.1)
-
-        if FRONTEND_DIST.exists() and (FRONTEND_DIST / "index.html").exists():
-            dist_index = (FRONTEND_DIST / "index.html").as_uri()
-            logger.info("WebView yerel static dist kullanıyor: %s", dist_index)
-            return dist_index
-
-        return "http://127.0.0.1:8000/"
 
 
     def _build_ui(self) -> None:
@@ -106,16 +85,28 @@ class DiyargezerWebView(QWidget):
         )
         layout.addWidget(self._progress_bar)
 
+        self._error_label = QLabel(
+            "Güvenilir yerel sunucu açılamadı veya durdu.\n"
+            "8000 portunu kullanan başka bir Diyargezen/sunucu varsa kapatıp uygulamayı yeniden başlatın.\n"
+            "Yerel kayıtlarınız silinmedi; güvenlik için başka bir sunucuya bağlanılmadı."
+        )
+        self._error_label.setWordWrap(True)
+        self._error_label.setAlignment(Qt.AlignCenter)
+        self._error_label.hide()
+        layout.addWidget(self._error_label)
+
         # QWebEngineView Ana Görünümü — DebugWebPage ile JS hataları yakalanıyor
         self._web_view = QWebEngineView()
+        self._debug_page = DebugWebPage(self._web_view, self._local_server)
+        self._web_view.setPage(self._debug_page)
+        if self._local_server and self._storage_path:
+            self._install_storage_bridge()
         from PySide6.QtWebEngineCore import QWebEngineSettings
         settings = self._web_view.settings()
-        settings.setAttribute(QWebEngineSettings.WebAttribute.LocalContentCanAccessRemoteUrls, True)
-        settings.setAttribute(QWebEngineSettings.WebAttribute.LocalContentCanAccessFileUrls, True)
+        settings.setAttribute(QWebEngineSettings.WebAttribute.LocalContentCanAccessRemoteUrls, False)
+        settings.setAttribute(QWebEngineSettings.WebAttribute.LocalContentCanAccessFileUrls, False)
         settings.setAttribute(QWebEngineSettings.WebAttribute.LocalStorageEnabled, True)
 
-        self._debug_page = DebugWebPage(self._web_view)
-        self._web_view.setPage(self._debug_page)
         self._web_view.setContextMenuPolicy(Qt.CustomContextMenu)
         self._web_view.customContextMenuRequested.connect(self._show_context_menu)
 
@@ -128,10 +119,60 @@ class DiyargezerWebView(QWidget):
         # Sayfayı yükle
         self.reload_page()
 
+    def _install_storage_bridge(self):
+        from PySide6.QtCore import QFile, QIODevice
+        from PySide6.QtWebChannel import QWebChannel
+        from PySide6.QtWebEngineCore import QWebEngineScript
+        from desktop.web_bridge import StorageBridge
+        source = QFile(':/qtwebchannel/qwebchannel.js')
+        if not source.open(QIODevice.ReadOnly):
+            raise RuntimeError('Qt SQLite köprü kaynağı bulunamadı')
+        try:
+            channel_js = bytes(source.readAll()).decode('utf-8')
+        finally:
+            source.close()
+        self._storage_bridge = StorageBridge(self._debug_page, self._local_server, self._storage_path)
+        self._channel = QWebChannel(self._debug_page)
+        self._channel.registerObject('storage', self._storage_bridge)
+        self._debug_page.setWebChannel(self._channel)
+        bootstrap = '''
+        (() => {
+          if (location.origin !== ORIGIN) return;
+          const ready = new Promise((resolve, reject) => {
+            const startup = setTimeout(() => reject(new Error('SQLite köprüsü açılamadı')), 10000);
+            new QWebChannel(qt.webChannelTransport, channel => {
+              clearTimeout(startup);
+              resolve(request => new Promise((done, fail) => {
+                const timer = setTimeout(() => fail(new Error('SQLite yanıt vermedi; tekrar yükleyin')), 15000);
+                channel.objects.storage.dispatch(JSON.stringify({...request, secret: SECRET}), raw => {
+                  clearTimeout(timer);
+                  try { done(JSON.parse(raw)); } catch (error) { fail(error); }
+                });
+              }));
+            });
+          });
+          Object.defineProperty(window, '__diyargezenNativeReady', { value: ready });
+        })();
+        '''.replace('ORIGIN', json.dumps(self._local_server.origin)).replace('SECRET', json.dumps(self._storage_bridge.secret))
+        script = QWebEngineScript()
+        script.setName('diyargezen-sqlite-storage')
+        script.setInjectionPoint(QWebEngineScript.DocumentCreation)
+        script.setWorldId(QWebEngineScript.MainWorld)
+        script.setRunsOnSubFrames(False)
+        script.setSourceCode(channel_js + '\n' + bootstrap)
+        self._debug_page.scripts().insert(script)
+
 
     def reload_page(self) -> None:
-        """Hedef adresi yeniden tespit et ve yükle."""
-        self._target_url = self._determine_target_url()
+        """Reload only the owned origin; never rediscover a server."""
+        if not self._local_server or not self._local_server.is_running():
+            self._web_view.stop()
+            self._web_view.hide()
+            self._progress_bar.hide()
+            self._error_label.show()
+            return
+        self._error_label.hide()
+        self._web_view.show()
         logger.info("WebView yükleniyor: %s", self._target_url)
         self._progress_bar.setValue(10)
         self._progress_bar.show()
@@ -139,7 +180,10 @@ class DiyargezerWebView(QWidget):
 
     def navigate_to(self, url_str: str) -> None:
         """Belirtilen URL'e git."""
-        self._web_view.setUrl(QUrl(url_str))
+        if self._local_server and self._local_server.is_running() and allows_navigation(
+            url_str, self._local_server.origin, main_frame=True,
+        ):
+            self._web_view.setUrl(QUrl(url_str))
 
     def _on_load_progress(self, progress: int) -> None:
         self._progress_bar.setValue(progress)

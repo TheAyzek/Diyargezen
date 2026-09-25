@@ -18,6 +18,21 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/token")
 
 class AuthService:
     @staticmethod
+    def is_reserved_account(username: str) -> bool:
+        # The legacy shared guest account used a public, fixed password.
+        # Keep its records intact, but never issue or accept a session for it.
+        return username.strip().casefold() == "Yerel Gezgin".casefold()
+
+    @staticmethod
+    def authenticate_user(db: Session, username: str, password: str) -> Optional[User]:
+        if AuthService.is_reserved_account(username):
+            return None
+        user = AuthService.get_user_by_username(db, username)
+        if not user or not AuthService.verify_password(password, user.hashed_password):
+            return None
+        return user
+
+    @staticmethod
     def hash_password(password: str) -> str:
         pwd_bytes = password.encode('utf-8')
         salt = bcrypt.gensalt()
@@ -50,6 +65,8 @@ class AuthService:
 
     @staticmethod
     def register_user(db: Session, username: str, password: str) -> User:
+        if AuthService.is_reserved_account(username):
+            raise HTTPException(status_code=400, detail="This username is reserved.")
         # Check if already exists
         existing = AuthService.get_user_by_username(db, username)
         if existing:
@@ -70,23 +87,6 @@ class AuthService:
 
 
 def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)) -> User:
-    if token in ("offline-guest-token", "offline_guest_token"):
-        user = AuthService.get_user_by_username(db, "Yerel Gezgin")
-        if not user:
-            try:
-                user = User(
-                    username="Yerel Gezgin",
-                    hashed_password=AuthService.hash_password("local_guest_password"),
-                    created_at=datetime.now(timezone.utc).isoformat()
-                )
-                db.add(user)
-                db.commit()
-                db.refresh(user)
-            except Exception:
-                db.rollback()
-                user = AuthService.get_user_by_username(db, "Yerel Gezgin")
-        return user
-
     credentials_exception = HTTPException(
         status_code=status.HTTP_401_UNAUTHORIZED,
         detail="Could not validate credentials",
@@ -95,7 +95,7 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
     try:
         payload = jwt.decode(token, JWT_SECRET_KEY, algorithms=[JWT_ALGORITHM])
         username: str = payload.get("sub")
-        if username is None:
+        if not isinstance(username, str) or AuthService.is_reserved_account(username):
             raise credentials_exception
     except jwt.PyJWTError:
         raise credentials_exception

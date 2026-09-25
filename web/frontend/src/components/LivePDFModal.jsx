@@ -1,19 +1,23 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { X, RefreshCw, Download, FileText, Sparkles, AlertCircle } from 'lucide-react';
-import { generateCharacterPDFBlobUrl, exportCharacterPDF } from '../utils/pdfExportUtil';
+const generateCharacterPDFBlobUrl = async state => (await import('../utils/pdfExportUtil')).generateCharacterPDFBlobUrl(state);
+const exportCharacterPDF = async state => (await import('../utils/pdfExportUtil')).exportCharacterPDF(state);
 
 export default function LivePDFModal({ isOpen, onClose, store }) {
   const [pdfUrl, setPdfUrl] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const activeUrlRef = useRef(null);
+  const generation = useRef(0);
 
   const renderPDF = async () => {
     if (!store) return;
+    const request = ++generation.current;
     setLoading(true);
     setError(null);
     try {
       const newUrl = await generateCharacterPDFBlobUrl(store);
+      if (request !== generation.current) { URL.revokeObjectURL(newUrl); return; }
       if (activeUrlRef.current) {
         URL.revokeObjectURL(activeUrlRef.current);
       }
@@ -21,9 +25,9 @@ export default function LivePDFModal({ isOpen, onClose, store }) {
       setPdfUrl(newUrl);
     } catch (err) {
       console.error('Live PDF generation failed:', err);
-      setError(err.message || 'Canlı PDF oluşturulamadı.');
+      if (request === generation.current) setError(err.message || 'Canlı PDF oluşturulamadı.');
     } finally {
-      setLoading(false);
+      if (request === generation.current) setLoading(false);
     }
   };
 
@@ -35,7 +39,7 @@ export default function LivePDFModal({ isOpen, onClose, store }) {
       renderPDF();
     }, 400);
 
-    return () => clearTimeout(timer);
+    return () => { clearTimeout(timer); generation.current++; };
   }, [
     isOpen,
     store?.name,
@@ -54,6 +58,7 @@ export default function LivePDFModal({ isOpen, onClose, store }) {
   // Clean up object URLs on unmount
   useEffect(() => {
     return () => {
+      generation.current++;
       if (activeUrlRef.current) {
         URL.revokeObjectURL(activeUrlRef.current);
         activeUrlRef.current = null;
